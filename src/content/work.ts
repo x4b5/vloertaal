@@ -2006,6 +2006,972 @@ const carserviceUnit = unit('carservice', 'Tyres, oil and brakes', 'Banden, olie
   ),
 ]);
 
+// ---- Mowing and pruning, and Planting, weeds and the street (the owner's request, 23 November 2026) ----
+// The two own units of the new sector Groen (green-space work: hoveniers, groenvoorziening, the
+// plantsoenendienst; src/content/sectors.ts): mowing, pruning, the hedge and the machines; weeding,
+// planting, work by the road and litter. In the path of a learner who chose Groen they come in the
+// sector slot; in every other course they are appended at the very end (workUnits below), so no
+// existing course changes. Already words of other lessons, used here in a sentence or the chat
+// only: "het hesje", "de vrachtwagen", "tanken", "de ingang", "de gemeente" and "de motor". The
+// drawings (placeholders for now): src/pictures/groupGroen.tsx.
+
+const mowingUnit = unit('mowing', 'Mowing and pruning', 'Maaien en snoeien', '🌳', '#4f7a28', [
+  lesson(
+    'mowing',
+    'Mowing the grass',
+    [
+      ['gras', 'het gras', 'the grass', '🌱'],
+      ['maaien', 'maaien', 'to mow (to cut grass)', '🌾'],
+      ['grasmaaier', 'de grasmaaier', 'the lawnmower', '🚜'],
+      ['zitmaaier', 'de zitmaaier', 'the ride-on mower (a mower you sit on)', '🏎️'],
+      ['bosmaaier', 'de bosmaaier', 'the brush cutter (a mower on a long stick)', '🪓'],
+      ['gelaatsscherm', 'het gelaatsscherm', 'the face shield', '🥽'],
+    ],
+    [
+      ['Maai eerst het gras langs de rand.', 'First mow the grass along the edge.'],
+      ['Het gras is te nat. We maaien morgen.', 'The grass is too wet. We will mow tomorrow.'],
+      ['Zet je gelaatsscherm op.', 'Put on your face shield.'],
+    ],
+    [['Mag ik de zitmaaier pakken?', 'May I take the ride-on mower?'], ['Ja, maar haal eerst de stenen weg.', 'Yes, but first take the stones away.']],
+  ),
+  lesson(
+    'pruning',
+    'Pruning',
+    [
+      ['snoeien', 'snoeien', 'to prune (to cut branches off a plant)', '🌿'],
+      ['snoeischaar', 'de snoeischaar', 'the pruning shears', '✂️'],
+      ['tak', 'de tak', 'the branch', '🎋'],
+      ['struik', 'de struik', 'the bush, the shrub', '🌳'],
+      ['boom', 'de boom', 'the tree', '🌲'],
+      ['snoeizaag', 'de snoeizaag', 'the pruning saw', '🪚'],
+    ],
+    [
+      ['Snoei de struiken langs het pad.', 'Prune the bushes along the path.'],
+      ['Deze tak is dood. Zaag hem eraf.', 'This branch is dead. Saw it off.'],
+      ['Leg de takken op een hoop.', 'Put the branches on a pile.'],
+    ],
+    [['Welke takken moeten eraf?', 'Which branches must come off?'], ['Alleen de dode takken.', 'Only the dead branches.']],
+  ),
+  lesson(
+    'hedge',
+    'Trimming the hedge',
+    [
+      ['heg', 'de heg', 'the hedge', '🟩'],
+      ['heggenschaar', 'de heggenschaar', 'the hedge trimmer (a machine that cuts a hedge)', '⚡'],
+      ['kruiwagen', 'de kruiwagen', 'the wheelbarrow', '🛺'],
+      ['hark', 'de hark', 'the rake', '🔱'],
+      ['snoeiafval', 'het snoeiafval', 'the green waste (cut branches and leaves)', '♻️'],
+      ['zeil', 'het zeil', 'the tarp (a big plastic sheet)', '⛺'],
+    ],
+    [
+      ['Leg het zeil onder de heg.', 'Put the tarp under the hedge.'],
+      ['Knip de heg mooi recht.', 'Cut the hedge nice and straight.'],
+      ['Breng het snoeiafval weg met de kruiwagen.', 'Take the green waste away with the wheelbarrow.'],
+    ],
+    [['Hoe hoog moet de heg blijven?', 'How high must the hedge stay?'], ['Tot het touw. Niet lager.', 'Up to the line. Not lower.']],
+  ),
+  lesson(
+    'chainsaw',
+    'The chainsaw and the leaf blower',
+    [
+      ['kettingzaag', 'de kettingzaag', 'the chainsaw', '⛓️'],
+      ['stam', 'de stam', 'the trunk (of a tree)', '🪵'],
+      ['zaagbroek', 'de zaagbroek', 'the chainsaw trousers (they stop the chain)', '👖'],
+      ['bladblazer', 'de bladblazer', 'the leaf blower', '🌬️'],
+      ['bladeren', 'de bladeren', 'the leaves', '🍂'],
+      ['jerrycan', 'de jerrycan', 'the jerrycan (a can for fuel)', '⛽'],
+    ],
+    [
+      ['Trek je zaagbroek aan.', 'Put on your chainsaw trousers.'],
+      ['Blaas de bladeren op een hoop.', 'Blow the leaves onto a pile.'],
+      ['Tank pas als de motor koud is.', 'Only fill up when the engine is cold.'],
+    ],
+    [['Mag ik met de kettingzaag werken?', 'May I work with the chainsaw?'], ['Nog niet. Eerst krijg je een cursus.', 'Not yet. First you get a course.']],
+  ),
+]);
+
+const plantingUnit = unit('planting', 'Planting, weeds and the street', 'Planten, onkruid en de straat', '🌷', '#6a8f2a', [
+  lesson(
+    'weeding',
+    'Weeding',
+    [
+      ['onkruid', 'het onkruid', 'the weeds (plants that must go)', '🥀'],
+      ['wieden', 'wieden', 'to weed (to pull out weeds)', '🤏'],
+      ['schoffel', 'de schoffel', 'the hoe', '⛏️'],
+      ['perk', 'het perk', 'the flower bed', '🌷'],
+      ['onkruidbrander', 'de onkruidbrander', 'the weed burner (it kills weeds with heat)', '🔥'],
+      ['wortel', 'de wortel', 'the root (of a plant)', '🫚'],
+    ],
+    [
+      ['Trek het onkruid eruit, met de wortel.', 'Pull the weeds out, with the root.'],
+      ['Schoffel het perk bij de ingang.', 'Hoe the flower bed by the entrance.'],
+      ['Pas op: de onkruidbrander is heet.', 'Careful: the weed burner is hot.'],
+    ],
+    [['Is dit onkruid?', 'Is this a weed?'], ['Nee, dat is een plant. Laat hem staan.', 'No, that is a plant. Leave it.']],
+  ),
+  lesson(
+    'planting',
+    'Planting',
+    [
+      ['planten', 'planten', 'to plant', '🪴'],
+      ['schep', 'de schep', 'the shovel, the spade', '🪏'],
+      ['plantgat', 'het plantgat', 'the planting hole', '🕳️'],
+      ['kluit', 'de kluit', 'the root ball (the soil around the roots)', '🥔'],
+      ['compost', 'de compost', 'the compost', '🪱'],
+      ['boompaal', 'de boompaal', 'the tree stake (a pole that holds a young tree)', '📍'],
+    ],
+    [
+      ['Graaf een plantgat voor de boom.', 'Dig a planting hole for the tree.'],
+      ['Zet de boom recht, naast de boompaal.', 'Put the tree straight, next to the stake.'],
+      ['Geef de nieuwe planten veel water.', 'Give the new plants a lot of water.'],
+    ],
+    [['Waar moet deze plant?', 'Where does this plant go?'], ['Achter in het perk, bij de muur.', 'At the back of the flower bed, by the wall.']],
+  ),
+  lesson(
+    'roadside',
+    'Working by the road',
+    [
+      ['pion', 'de pion', 'the traffic cone', '🔶'],
+      ['verkeer', 'het verkeer', 'the traffic', '🚦'],
+      ['stoep', 'de stoep', 'the pavement (the path next to the road)', '⬜'],
+      ['fietser', 'de fietser', 'the cyclist', '🚴'],
+      ['pijlwagen', 'de pijlwagen', 'the arrow trailer (a trailer with a big arrow that warns drivers)', '➡️'],
+      ['berm', 'de berm', 'the verge (the grass next to the road)', '🛣️'],
+    ],
+    [
+      ['Trek je hesje aan. We werken langs de weg.', 'Put on your vest. We are working by the road.'],
+      ['Zet de pionnen achter de bus.', 'Put the cones behind the van.'],
+      ['Kijk uit voor de fietsers.', 'Watch out for the cyclists.'],
+    ],
+    [['Kan ik nu oversteken?', 'Can I cross now?'], ['Nee, wacht. Er komt een vrachtwagen.', 'No, wait. A truck is coming.']],
+  ),
+  lesson(
+    'litter',
+    'Litter and the neighbourhood',
+    [
+      ['zwerfafval', 'het zwerfafval', 'the litter (rubbish on the street)', '🥤'],
+      ['grijper', 'de grijper', 'the litter picker (a stick that grabs rubbish)', '🦾'],
+      ['vuilniszak', 'de vuilniszak', 'the rubbish bag', '🛍️'],
+      ['scherven', 'de scherven', 'the broken glass (sharp pieces)', '💔'],
+      ['aanhanger', 'de aanhanger', 'the trailer', '🔗'],
+      ['bewoner', 'de bewoner', 'the resident (someone who lives here)', '🏠'],
+    ],
+    [
+      ['Pak het zwerfafval met de grijper.', 'Pick up the litter with the litter picker.'],
+      ['Pas op, hier liggen scherven.', 'Careful, there is broken glass here.'],
+      ['Zet de vuilniszakken bij de aanhanger.', 'Put the rubbish bags by the trailer.'],
+    ],
+    [['Wanneer wordt deze boom gesnoeid?', 'When will this tree be pruned?'], ['Dat weet ik niet. Vraag het aan de gemeente.', 'I do not know. Ask the municipality.']],
+  ),
+]);
+
+// ---- Reception, post and meetings, and Faults, repairs and moving (the owner's request, 23 November 2026) ----
+// The two own units of the new sector Facilitair (facility services; src/content/sectors.ts; the
+// cleaning work stays the sector Schoonmaak): the front desk, visitors, post and parcels, the meeting
+// room and the coffee; reporting faults, small repairs, moving a workplace, and opening and closing
+// the building. In the path of a learner who chose Facilitair they come in the sector slot; in
+// every other course they are appended at the very end (workUnits below). Already words of other
+// lessons, used here in a sentence or the chat only: "de afspraak", "het pakket", "beschadigd",
+// "de verdieping", "de koffie", "de tafel", "de stoel", "de storing", "de monteur", "kapot", "de
+// lamp", "de gang", "de trap", "de doos", "de steekwagen" and "leegmaken". The drawings
+// (placeholders for now): src/pictures/groupFacilitair.tsx.
+
+const frontdeskUnit = unit('frontdesk', 'Reception, post and meetings', 'Receptie, post en vergaderen', '🛎️', '#3d5a80', [
+  lesson(
+    'reception',
+    'At the front desk',
+    [
+      ['balie', 'de balie', 'the front desk, the counter', '🛎️'],
+      ['bezoeker', 'de bezoeker', 'the visitor', '🧍'],
+      ['intercom', 'de intercom', 'the intercom (you talk to someone at the door)', '📟'],
+      ['doorverbinden', 'doorverbinden', 'to put through (a phone call)', '↔️'],
+      ['toestel', 'het toestel', 'the extension (a phone number inside the building)', '☎️'],
+      ['wachtruimte', 'de wachtruimte', 'the waiting area', '🛋️'],
+    ],
+    [
+      ['Goedemorgen, kan ik u helpen?', 'Good morning, can I help you?'],
+      ['Ik verbind u door.', 'I will put you through.'],
+      ['Neemt u even plaats in de wachtruimte.', 'Please take a seat in the waiting area.'],
+    ],
+    [['Ik heb een afspraak met mevrouw Jansen.', 'I have an appointment with Mrs Jansen.'], ['Een moment. Ik bel haar even.', 'One moment. I will call her.']],
+  ),
+  lesson(
+    'visitors',
+    'Receiving visitors',
+    [
+      ['bezoekerspasje', 'het bezoekerspasje', 'the visitor pass', '📛'],
+      ['lift', 'de lift', 'the lift, the elevator', '🛗'],
+      ['garderobe', 'de garderobe', 'the cloakroom (where you hang your coat)', '🧣'],
+      ['parkeerplaats', 'de parkeerplaats', 'the parking space', '🚙'],
+      ['hal', 'de hal', 'the hall (the big room at the entrance)', '🏛️'],
+      ['begeleiden', 'begeleiden', 'to take someone somewhere (to walk with them)', '🚶'],
+    ],
+    [
+      ['Wilt u hier uw naam schrijven?', 'Would you write your name here?'],
+      ['Hier is uw bezoekerspasje.', 'Here is your visitor pass.'],
+      ['Ik breng u naar de lift.', 'I will take you to the lift.'],
+    ],
+    [['Waar kan ik mijn jas laten?', 'Where can I leave my coat?'], ['In de garderobe, naast de lift.', 'In the cloakroom, next to the lift.']],
+  ),
+  lesson(
+    'mailroom',
+    'Post and parcels',
+    [
+      ['postkamer', 'de postkamer', 'the post room', '📮'],
+      ['koerier', 'de koerier', 'the courier (someone who brings parcels)', '🛵'],
+      ['postvak', 'het postvak', 'the pigeonhole (a box for post, one per person)', '📫'],
+      ['envelop', 'de envelop', 'the envelope', '✉️'],
+      ['afdeling', 'de afdeling', 'the department', '🏬'],
+      ['postkar', 'de postkar', 'the post trolley', '🛒'],
+    ],
+    [
+      ['De koerier brengt een pakket.', 'The courier brings a parcel.'],
+      ['Leg de brieven in het goede postvak.', 'Put the letters in the right pigeonhole.'],
+      ['Dit pakket is beschadigd.', 'This parcel is damaged.'],
+    ],
+    [['Voor wie is dit pakket?', 'Who is this parcel for?'], ['Voor Financiën, op de tweede verdieping.', 'For Finance, on the second floor.']],
+  ),
+  lesson(
+    'meetingroom',
+    'Setting up a meeting room',
+    [
+      ['vergaderzaal', 'de vergaderzaal', 'the meeting room', '🪑'],
+      ['beamer', 'de beamer', 'the projector', '📽️'],
+      ['whiteboard', 'het whiteboard', 'the whiteboard', '⬜'],
+      ['thermoskan', 'de thermoskan', 'the thermos jug (it keeps coffee hot)', '🫖'],
+      ['kopje', 'het kopje', 'the cup', '☕'],
+      ['koffieautomaat', 'de koffieautomaat', 'the coffee machine', '🎛️'],
+    ],
+    [
+      ['Zet tien stoelen rond de tafel.', 'Put ten chairs around the table.'],
+      ['Zet koffie en thee klaar.', 'Get coffee and tea ready.'],
+      ['De beamer doet het niet.', 'The projector does not work.'],
+    ],
+    [['Hoe laat begint de vergadering?', 'What time does the meeting start?'], ['Om tien uur. Zorg dat alles klaarstaat.', 'At ten. Make sure everything is ready.']],
+  ),
+]);
+
+const maintenanceUnit = unit('maintenance', 'Faults, repairs and moving', 'Storingen, onderhoud en verhuizen', '🧰', '#7a5a2e', [
+  lesson(
+    'faults',
+    'Reporting a fault',
+    [
+      ['melding', 'de melding', 'the report (you tell that something is wrong)', '📢'],
+      ['lekkage', 'de lekkage', 'the leak (water comes out)', '🚿'],
+      ['verwarming', 'de verwarming', 'the heating', '♨️'],
+      ['airco', 'de airco', 'the air conditioning', '❄️'],
+      ['afvoer', 'de afvoer', 'the drain', '🚽'],
+      ['verstopt', 'verstopt', 'blocked (nothing goes through)', '🚫'],
+    ],
+    [
+      ['Ik maak een melding van de storing.', 'I am reporting the fault.'],
+      ['Er is een lekkage in de keuken.', 'There is a leak in the kitchen.'],
+      ['De afvoer van de wc is verstopt.', 'The toilet drain is blocked.'],
+    ],
+    [['Waarom is het hier zo koud?', 'Why is it so cold here?'], ['De verwarming is kapot. De monteur komt morgen.', 'The heating is broken. The technician comes tomorrow.']],
+  ),
+  lesson(
+    'repairs',
+    'Small repairs',
+    [
+      ['vervangen', 'vervangen', 'to replace (to put a new one in)', '🔄'],
+      ['deurklink', 'de deurklink', 'the door handle', '🚪'],
+      ['scharnier', 'het scharnier', 'the hinge', '📎'],
+      ['gereedschapskist', 'de gereedschapskist', 'the toolbox', '🧰'],
+      ['rookmelder', 'de rookmelder', 'the smoke alarm', '🔔'],
+      ['batterij', 'de batterij', 'the battery', '🔋'],
+    ],
+    [
+      ['Vervang de lamp in de gang.', 'Replace the lamp in the corridor.'],
+      ['De deurklink zit los.', 'The door handle is loose.'],
+      ['Pak de trap, niet een stoel.', 'Take the stepladder, not a chair.'],
+    ],
+    [['Piept de rookmelder?', 'Is the smoke alarm beeping?'], ['Ja, de batterij is bijna leeg.', 'Yes, the battery is almost empty.']],
+  ),
+  lesson(
+    'moving',
+    'Moving a workplace',
+    [
+      ['verhuisdoos', 'de verhuisdoos', 'the moving box', '📦'],
+      ['bureau', 'het bureau', 'the desk', '🗄️'],
+      ['bureaustoel', 'de bureaustoel', 'the office chair', '💺'],
+      ['werkplek', 'de werkplek', 'the workplace (the desk where someone works)', '💻'],
+      ['kamernummer', 'het kamernummer', 'the room number', '🔢'],
+      ['plattegrond', 'de plattegrond', 'the floor plan (a map of the building)', '🗺️'],
+    ],
+    [
+      ['Schrijf het kamernummer op elke doos.', 'Write the room number on every box.'],
+      ['Zet de dozen op de steekwagen.', 'Put the boxes on the hand truck.'],
+      ['Maak de werkplek leeg.', 'Clear the workplace.'],
+    ],
+    [['Waar moet dit bureau naartoe?', 'Where must this desk go?'], ['Naar kamer twaalf. Kijk op de plattegrond.', 'To room twelve. Look at the floor plan.']],
+  ),
+  lesson(
+    'closing',
+    'Opening and closing the building',
+    [
+      ['sleutelbos', 'de sleutelbos', 'the bunch of keys', '🗝️'],
+      ['afsluiten', 'afsluiten', 'to lock up', '🔐'],
+      ['ronde', 'de ronde', 'the round (a walk past every room)', '🔁'],
+      ['raam', 'het raam', 'the window', '🪟'],
+      ['alarmcode', 'de alarmcode', 'the alarm code', '🚨'],
+      ['nachtslot', 'het nachtslot', 'the deadlock (the extra lock for the night)', '🌙'],
+    ],
+    [
+      ['Ik loop de laatste ronde door het gebouw.', 'I am doing the last round of the building.'],
+      ['Zijn alle ramen dicht?', 'Are all the windows closed?'],
+      ['Doe de deur op het nachtslot.', 'Put the door on the deadlock.'],
+    ],
+    [['Is er nog iemand binnen?', 'Is anyone still inside?'], ['Nee, iedereen is weg. Ik sluit af.', 'No, everyone has gone. I am locking up.']],
+  ),
+]);
+
+// ---- Patrols and access, and Emergencies and the shop (the owner's request, 23 November 2026) ----
+// The two own units of the new sector Beveiliging (security guards; src/content/sectors.ts): the
+// round, access control, the cameras and the control room, the radio and the report; fire and
+// evacuation, first aid and 112, shop theft, and difficult people. In the path of a learner who
+// chose Beveiliging they come in the sector slot; in every other course they are appended at the
+// very end (workUnits below), so no existing course changes. Already words of other lessons, used
+// here in a sentence or the chat only: "de beveiliger", "het pasje", "de camera", "het alarm",
+// "verdacht", "melden", "de getuige", "de brand", "ontruimen", "de verzamelplaats", "de
+// brandblusser", "de ambulance", "de politie", "de dief", "de tas", "het bewijs", "de aangifte",
+// "dreigen", "de ronde", "de EHBO-doos" and "de BHV’er". The drawings (placeholders for now):
+// src/pictures/groupBeveiliging.tsx.
+
+const guardingUnit = unit('guarding', 'Patrols and access', 'Ronde en toegang', '🛡️', '#2c3e66', [
+  lesson(
+    'patrol',
+    'The round',
+    [
+      ['surveilleren', 'surveilleren', 'to patrol (to walk around and watch)', '👮'],
+      ['zaklamp', 'de zaklamp', 'the torch, the flashlight', '🔦'],
+      ['terrein', 'het terrein', 'the grounds (the land around a building)', '🏞️'],
+      ['hek', 'het hek', 'the fence, the gate', '🔒'],
+      ['inbraak', 'de inbraak', 'the break-in (someone gets in to steal)', '🥷'],
+      ['openstaan', 'openstaan', 'to be open (a door or window that should be closed)', '🚪'],
+    ],
+    [
+      ['Ik loop elke twee uur een ronde.', 'I do a round every two hours.'],
+      ['Het hek achter de hal staat open.', 'The gate behind the hall is open.'],
+      ['Neem je zaklamp mee.', 'Take your torch with you.'],
+    ],
+    [['Heb je iets gezien tijdens je ronde?', 'Did you see anything during your round?'], ['Ja. Er stond een raam open bij de achterdeur.', 'Yes. A window was open by the back door.']],
+  ),
+  lesson(
+    'access',
+    'Access control',
+    [
+      ['slagboom', 'de slagboom', 'the barrier (a bar across the road that goes up)', '🚧'],
+      ['toegangspas', 'de toegangspas', 'the access card (a card that opens the door)', '💳'],
+      ['legitimatie', 'de legitimatie', 'the ID (a passport or an ID card)', '🪪'],
+      ['draaihek', 'het draaihek', 'the turnstile (a gate that turns, for one person at a time)', '🔄'],
+      ['kenteken', 'het kenteken', 'the registration number (the letters and numbers of a car)', '🚗'],
+      ['toegang', 'de toegang', 'the access (you may go in)', '🔑'],
+    ],
+    [
+      ['Mag ik uw legitimatie zien?', 'May I see your ID?'],
+      ['Uw pas werkt niet. Ik bel even.', 'Your card does not work. I will make a call.'],
+      ['Ik doe de slagboom open.', 'I will open the barrier.'],
+    ],
+    [['Mag ik even naar binnen? Ik ben mijn pas vergeten.', 'May I go in? I forgot my card.'], ['Sorry, zonder pas mag u niet naar binnen.', 'Sorry, without a card you may not go in.']],
+  ),
+  lesson(
+    'cameras',
+    'Cameras and the control room',
+    [
+      ['meldkamer', 'de meldkamer', 'the control room (where people watch the cameras and take calls)', '🖥️'],
+      ['beeldscherm', 'het beeldscherm', 'the monitor, the screen', '📺'],
+      ['camerabeelden', 'de camerabeelden', 'the camera footage (what the camera has filmed)', '📹'],
+      ['inzoomen', 'inzoomen', 'to zoom in', '🔍'],
+      ['bewegingsmelder', 'de bewegingsmelder', 'the motion sensor (it sees when something moves)', '📡'],
+      ['verdachte', 'de verdachte', 'the suspect', '🕵️'],
+    ],
+    [
+      ['Op camera drie zie ik iemand bij het hek.', 'On camera three I see someone by the fence.'],
+      ['Ik zoom even in.', 'I will zoom in.'],
+      ['De meldkamer belt de politie.', 'The control room calls the police.'],
+    ],
+    [['Wat zie je op het scherm?', 'What do you see on the screen?'], ['Een man bij het hek. Ik stuur een collega.', 'A man by the fence. I am sending a colleague.']],
+  ),
+  lesson(
+    'report',
+    'The radio and the report',
+    [
+      ['portofoon', 'de portofoon', 'the two-way radio, the walkie-talkie', '📻'],
+      ['rapport', 'het rapport', 'the report (what happened, written down)', '📝'],
+      ['incident', 'het incident', 'the incident (something that went wrong)', '⚠️'],
+      ['tijdstip', 'het tijdstip', 'the time (when something happened)', '🕒'],
+      ['logboek', 'het logboek', 'the logbook (a book or an app where you write down everything)', '📓'],
+      ['oproepen', 'oproepen', 'to call (on the radio)', '🗣️'],
+    ],
+    [
+      ['Ik schrijf een rapport van het incident.', 'I am writing a report of the incident.'],
+      ['Hoe laat was het precies?', 'What time was it exactly?'],
+      ['Ik hoor je niet goed. Herhaal het even.', 'I cannot hear you well. Say it again.'],
+    ],
+    [['Wat moet er in het rapport?', 'What must go in the report?'], ['Wat er gebeurde, waar en hoe laat.', 'What happened, where and at what time.']],
+  ),
+]);
+
+const incidentsUnit = unit('incidents', 'Emergencies and the shop', 'Noodgevallen en de winkel', '🚨', '#8c2f39', [
+  lesson(
+    'evacuation',
+    'Fire and evacuation',
+    [
+      ['brandmelder', 'de brandmelder', 'the fire alarm button (a red box you press when there is a fire)', '🟥'],
+      ['brandweer', 'de brandweer', 'the fire brigade', '🚒'],
+      ['branddeur', 'de branddeur', 'the fire door (it stops fire and smoke)', '🚪'],
+      ['brandmeldcentrale', 'de brandmeldcentrale', 'the fire alarm panel (it shows where the alarm is)', '🎛️'],
+      ['ontruimingsplan', 'het ontruimingsplan', 'the evacuation plan (who does what when everyone must go out)', '🗺️'],
+      ['sirene', 'de sirene', 'the siren', '🔊'],
+    ],
+    [
+      ['Er is brandalarm in hal twee.', 'There is a fire alarm in hall two.'],
+      ['Houd de branddeuren dicht.', 'Keep the fire doors closed.'],
+      ['Ik wacht op de brandweer bij de ingang.', 'I am waiting for the fire brigade at the entrance.'],
+    ],
+    [['Is iedereen buiten?', 'Is everyone outside?'], ['Nee, ik mis nog twee mensen van de lijst.', 'No, two people on the list are still missing.']],
+  ),
+  lesson(
+    'firstaid',
+    'First aid and 112',
+    [
+      ['ehbo', 'de EHBO', 'first aid', '⛑️'],
+      ['aed', 'de AED', 'the AED (a machine that helps a heart that stopped)', '❤️‍🩹'],
+      ['reanimeren', 'reanimeren', 'to do CPR (to press on the chest to save a life)', '🫀'],
+      ['bewusteloos', 'bewusteloos', 'unconscious (the person does not wake up)', '😵'],
+      ['ademen', 'ademen', 'to breathe', '😮‍💨'],
+      ['alarmnummer', 'het alarmnummer', 'the emergency number (112)', '☎️'],
+    ],
+    [
+      ['Bel 112. Vraag om een ambulance.', 'Call 112. Ask for an ambulance.'],
+      ['Haal de AED bij de receptie.', 'Get the AED from the reception.'],
+      ['Hij ademt niet. Ik ga reanimeren.', 'He is not breathing. I am going to do CPR.'],
+    ],
+    [['Waar hangt de AED?', 'Where is the AED?'], ['Bij de ingang, naast de lift.', 'At the entrance, next to the lift.']],
+  ),
+  lesson(
+    'shoplifting',
+    'Shop theft',
+    [
+      ['winkeldiefstal', 'de winkeldiefstal', 'the shoplifting', '🛍️'],
+      ['heterdaad', 'op heterdaad', 'in the act (you see it happen)', '👁️'],
+      ['aanhouden', 'aanhouden', 'to hold someone (until the police come)', '✋'],
+      ['detectiepoortje', 'het detectiepoortje', 'the security gate (it beeps at the door)', '🚥'],
+      ['alarmlabel', 'het alarmlabel', 'the security tag (it makes the gate beep)', '🏷️'],
+      ['verstoppen', 'verstoppen', 'to hide', '🫣'],
+    ],
+    [
+      ['Het poortje piept bij de uitgang.', 'The gate beeps at the exit.'],
+      ['Ik zag het op heterdaad.', 'I saw it happen.'],
+      ['Ik houd hem aan tot de politie komt.', 'I am holding him until the police come.'],
+    ],
+    [['Mag ik zijn tas doorzoeken?', 'May I search his bag?'], ['Nee. Dat doet de politie.', 'No. The police do that.']],
+  ),
+  lesson(
+    'aggression',
+    'Difficult people',
+    [
+      ['agressie', 'de agressie', 'the aggression (angry, violent behaviour)', '😡'],
+      ['schelden', 'schelden', 'to swear at someone', '🤬'],
+      ['kalmeren', 'kalmeren', 'to calm down', '😌'],
+      ['afstand', 'de afstand', 'the distance', '↔️'],
+      ['huisverbod', 'het huisverbod', 'the ban (you may not come in here any more)', '⛔'],
+      ['bodycam', 'de bodycam', 'the body camera (a small camera on your uniform)', '📷'],
+    ],
+    [
+      ['Rustig, meneer. Ik wil u helpen.', 'Calm down, sir. I want to help you.'],
+      ['Houd afstand en blijf kalm.', 'Keep your distance and stay calm.'],
+      ['U hebt een huisverbod. U moet nu weggaan.', 'You are banned. You must leave now.'],
+    ],
+    [['Waarom mag ik niet naar binnen?', 'Why may I not go in?'], ['U hebt hier een huisverbod.', 'You are banned here.']],
+  ),
+]);
+
+// ---- Hygiene and the cold, and The production line (the owner's request, 23 November 2026) ----
+// The two own units of the new sector Voedingsindustrie (food production: meat, fish, bakery and
+// food packing; src/content/sectors.ts): the hygiene lock, allergens, the cold room and the
+// freezer, glass and metal in the food; cutting and weighing, packing and labels, cleaning the line
+// and HACCP in simple words. In the path of a learner who chose Voedingsindustrie they come in the
+// sector slot; in every other course they are appended at the very end (workUnits below). Already
+// words of other lessons (many of "Werken met voedsel", l.food), used here in a sentence or the
+// chat only: "het haarnetje", "de sieraden", "handen wassen", "de koelcel", "de vriescel", "de
+// thermometer", "de pleister", "afkeuren", "de afkeurbak", "snijden", "het mes", "de
+// snijhandschoen", "slijpen", "de weegschaal", "het etiket", "de houdbaarheidsdatum", "het bakje",
+// "de sealmachine", "spoelen", "het schoonmaakmiddel", "aftekenen", "de lijst" and "de kwaliteit".
+// The drawings (placeholders for now): src/pictures/groupVoeding.tsx.
+
+const foodhygieneUnit = unit('foodhygiene', 'Hygiene and the cold', 'Hygiëne en kou', '🧼', '#2f7f8a', [
+  lesson(
+    'hygienelock',
+    'The hygiene lock',
+    [
+      ['hygienesluis', 'de hygiënesluis', 'the hygiene lock (the room where you get clean before you go in)', '🚿'],
+      ['baardnetje', 'het baardnetje', 'the beard net', '🧔'],
+      ['laarzenwasser', 'de laarzenwasser', 'the boot washer (brushes that clean your boots)', '👢'],
+      ['desinfecteren', 'desinfecteren', 'to disinfect (to kill germs)', '🧴'],
+      ['werkjas', 'de werkjas', 'the work coat', '🥼'],
+      ['bacterie', 'de bacterie', 'the germ, the bacteria', '🦠'],
+    ],
+    [
+      ['Was je handen en desinfecteer ze.', 'Wash your hands and disinfect them.'],
+      ['Zet je haarnetje en je baardnetje op.', 'Put on your hair net and your beard net.'],
+      ['Loop door de laarzenwasser.', 'Walk through the boot washer.'],
+    ],
+    [['Mag mijn horloge om?', 'May I keep my watch on?'], ['Nee, alle sieraden gaan af.', 'No, all jewellery comes off.']],
+  ),
+  lesson(
+    'allergens',
+    'Allergens',
+    [
+      ['allergeen', 'het allergeen', 'the allergen (food that makes some people very ill)', '⚠️'],
+      ['noten', 'de noten', 'the nuts', '🌰'],
+      ['pinda', 'de pinda', 'the peanut', '🥜'],
+      ['gluten', 'de gluten', 'the gluten (in wheat, so in bread and cake)', '🌾'],
+      ['sesam', 'de sesam', 'the sesame (small seeds, for example on bread)', '🥯'],
+      ['kruisbesmetting', 'de kruisbesmetting', 'the cross-contamination (something gets into food where it should not be)', '🔀'],
+    ],
+    [
+      ['Dit product bevat noten.', 'This product contains nuts.'],
+      ['Kijk op het etiket welke allergenen erin zitten.', 'Look on the label which allergens are in it.'],
+      ['Maak alles goed schoon na de pinda’s.', 'Clean everything well after the peanuts.'],
+    ],
+    [['Mag dit bakje bij de andere?', 'May this tub go with the others?'], ['Nee, daar zitten noten in.', 'No, there are nuts in it.']],
+  ),
+  lesson(
+    'coldroom',
+    'The cold room and the freezer',
+    [
+      ['temperatuur', 'de temperatuur', 'the temperature', '🌡️'],
+      ['graden', 'de graden', 'the degrees (°C)', '🔢'],
+      ['bevroren', 'bevroren', 'frozen', '🧊'],
+      ['ontdooien', 'ontdooien', 'to thaw, to defrost', '💧'],
+      ['koelketen', 'de koelketen', 'the cold chain (food stays cold all the way)', '⛓️'],
+      ['thermokleding', 'de thermokleding', 'the thermal clothes (warm clothes for the cold)', '🧥'],
+    ],
+    [
+      ['Het is min achttien graden in de vriescel.', 'It is minus eighteen degrees in the freezer room.'],
+      ['Zet het vlees meteen in de koelcel.', 'Put the meat in the cold room at once.'],
+      ['Schrijf de temperatuur op de lijst.', 'Write the temperature on the list.'],
+    ],
+    [['Waarom piept de koelcel?', 'Why is the cold room beeping?'], ['De deur staat open. Doe hem snel dicht.', 'The door is open. Close it quickly.']],
+  ),
+  lesson(
+    'foreignbody',
+    'Glass, metal and plastic in the food',
+    [
+      ['metaaldetector', 'de metaaldetector', 'the metal detector', '🧲'],
+      ['glasbreuk', 'de glasbreuk', 'the glass breakage (glass that broke)', '🔨'],
+      ['splinter', 'de splinter', 'the splinter (a small sharp piece)', '🪵'],
+      ['vreemdvoorwerp', 'het vreemde voorwerp', 'the foreign body (something in the food that does not belong there)', '🔩'],
+      ['vervuild', 'vervuild', 'contaminated (something dirty got in)', '🚱'],
+      ['ploegleider', 'de ploegleider', 'the shift leader', '🧑‍🏭'],
+    ],
+    [
+      ['De metaaldetector piept. Zet de band stil.', 'The metal detector beeps. Stop the line.'],
+      ['Er is glasbreuk bij lijn twee.', 'Glass has broken at line two.'],
+      ['Leg het product in de afkeurbak.', 'Put the product in the reject bin.'],
+    ],
+    [['Wat doe ik met dit stukje plastic?', 'What do I do with this bit of plastic?'], ['Laat het aan de ploegleider zien.', 'Show it to the shift leader.']],
+  ),
+]);
+
+const foodlineUnit = unit('foodline', 'The production line', 'De productielijn', '🥩', '#a0522d', [
+  lesson(
+    'cutting',
+    'Cutting and weighing',
+    [
+      ['uitbenen', 'uitbenen', 'to bone (to cut the bones out of meat)', '🍖'],
+      ['fileren', 'fileren', 'to fillet (to cut fish or meat into flat pieces)', '🐟'],
+      ['portie', 'de portie', 'the portion', '🍱'],
+      ['wegen', 'wegen', 'to weigh', '⚖️'],
+      ['gewicht', 'het gewicht', 'the weight', '🏋️'],
+      ['snijplank', 'de snijplank', 'the cutting board', '🟫'],
+    ],
+    [
+      ['Weeg elke portie.', 'Weigh every portion.'],
+      ['Het gewicht is te laag.', 'The weight is too low.'],
+      ['Slijp je mes voor je begint.', 'Sharpen your knife before you start.'],
+    ],
+    [['Hoeveel moet er in een bakje?', 'How much must go in a tub?'], ['Vijfhonderd gram. Kijk op de weegschaal.', 'Five hundred grams. Look at the scales.']],
+  ),
+  lesson(
+    'labels',
+    'Packing and labels',
+    [
+      ['etiketteren', 'etiketteren', 'to label (to put labels on)', '🏷️'],
+      ['lotnummer', 'het lotnummer', 'the batch number (one number for one batch of products)', '#️⃣'],
+      ['vacuum', 'vacuüm', 'vacuum-packed (all the air is out)', '🫙'],
+      ['schaal', 'de schaal', 'the tray (a flat dish for food)', '🍽️'],
+      ['printer', 'de printer', 'the printer', '🖨️'],
+      ['omdoos', 'de omdoos', 'the outer box (the big box around the small packs)', '📦'],
+    ],
+    [
+      ['Kijk of de datum op het etiket klopt.', 'Check that the date on the label is right.'],
+      ['Dit pak is niet vacuüm. Pak het opnieuw in.', 'This pack is not vacuum-packed. Pack it again.'],
+      ['Schrijf het lotnummer op de lijst.', 'Write the batch number on the list.'],
+    ],
+    [['Welke datum moet erop?', 'Which date must go on it?'], ['Over tien dagen. Kijk op de lijst.', 'In ten days. Look at the list.']],
+  ),
+  lesson(
+    'linecleaning',
+    'Cleaning the line',
+    [
+      ['schuim', 'het schuim', 'the foam', '🫧'],
+      ['hogedrukspuit', 'de hogedrukspuit', 'the pressure washer', '💦'],
+      ['naspoelen', 'naspoelen', 'to rinse (to wash off with clean water)', '🚿'],
+      ['demonteren', 'demonteren', 'to take apart', '🔧'],
+      ['borstel', 'de borstel', 'the brush', '🪥'],
+      ['restjes', 'de restjes', 'the leftovers (small bits of food)', '🍞'],
+    ],
+    [
+      ['Zet eerst de machine uit.', 'First turn the machine off.'],
+      ['Spuit het schuim op de band.', 'Spray the foam onto the belt.'],
+      ['Spoel daarna alles na met schoon water.', 'Then rinse everything with clean water.'],
+    ],
+    [['Is de band al schoon?', 'Is the belt clean yet?'], ['Nog niet. Ik moet nog naspoelen.', 'Not yet. I still have to rinse it.']],
+  ),
+  lesson(
+    'haccp',
+    'Checking and writing down (HACCP)',
+    [
+      ['controlepunt', 'het controlepunt', 'the check point (a step where you must check something)', '📍'],
+      ['kerntemperatuur', 'de kerntemperatuur', 'the core temperature (the temperature inside the food)', '🔥'],
+      ['prikthermometer', 'de prikthermometer', 'the probe thermometer (you stick it into the food)', '🌡️'],
+      ['afwijking', 'de afwijking', 'the deviation (something is not as it should be)', '📉'],
+      ['steekproef', 'de steekproef', 'the spot check (you test a few products)', '🎯'],
+      ['kwaliteitsdienst', 'de kwaliteitsdienst', 'the quality department (QA)', '🧪'],
+    ],
+    [
+      ['Meet de kerntemperatuur met de prikthermometer.', 'Measure the core temperature with the probe thermometer.'],
+      ['Schrijf alles op de lijst.', 'Write everything on the list.'],
+      ['Is er een afwijking? Meld het meteen.', 'Is something wrong? Report it at once.'],
+    ],
+    [['Waarom moet ik alles opschrijven?', 'Why must I write everything down?'], ['Zo weten we dat het eten veilig is.', 'That way we know the food is safe.']],
+  ),
+]);
+
+// ---- Collecting waste, and The recycling yard (the owner's request, 23 November 2026) ----
+// The two own units of the new sector Afval en recycling (src/content/sectors.ts): the bin lorry,
+// reversing safely, sorting waste, and sharp things and lifting; the recycling yard, chemical
+// waste, the baler and the wheel loader. In the path of a learner who chose Afval en recycling
+// they come in the sector slot; in every other course they are appended at the very end (workUnits
+// below). Already words of other lessons, used here in a sentence or the chat only: "de
+// container", "ophalen", "de route", "de spiegel", "het glas", "de accu", "de batterij", "de
+// noodstop", "tillen", "de lekbak", "het hesje", "gevaarlijk", "de vuilniszak", "de chauffeur",
+// "de verf" and "de handschoenen". The drawings (placeholders for now): src/pictures/groupAfval.tsx.
+
+const collectionUnit = unit('collection', 'Collecting waste', 'Afval ophalen', '🚛', '#4d6b3c', [
+  lesson(
+    'binlorry',
+    'The bin lorry',
+    [
+      ['vuilniswagen', 'de vuilniswagen', 'the bin lorry, the garbage truck', '🚛'],
+      ['kliko', 'de kliko', 'the wheelie bin (a bin on wheels)', '🗑️'],
+      ['kieplift', 'de kieplift', 'the bin lift (it lifts the bin and tips it out)', '🏗️'],
+      ['treeplank', 'de treeplank', 'the back step (a step at the back of the lorry)', '🪜'],
+      ['bijplaatsing', 'de bijplaatsing', 'the extra rubbish (bags left next to the bin)', '🛍️'],
+      ['ophaaldag', 'de ophaaldag', 'the collection day', '📅'],
+    ],
+    [
+      ['Zet de kliko aan de kieplift.', 'Put the wheelie bin on the bin lift.'],
+      ['Er staan zakken naast de container.', 'There are bags next to the container.'],
+      ['De kliko is te zwaar. Laat hem staan.', 'The wheelie bin is too heavy. Leave it.'],
+    ],
+    [['Mag ik achterop meerijden?', 'May I ride on the back?'], ['Nee, je stapt in de cabine.', 'No, you get into the cab.']],
+  ),
+  lesson(
+    'reversing',
+    'Reversing safely',
+    [
+      ['achteruitrijden', 'achteruitrijden', 'to reverse (to drive backwards)', '🔙'],
+      ['dodehoek', 'de dode hoek', 'the blind spot (where the driver cannot see you)', '🙈'],
+      ['aanwijzer', 'de aanwijzer', 'the banksman (the person who guides the driver)', '🙋'],
+      ['oogcontact', 'het oogcontact', 'the eye contact', '👀'],
+      ['piepen', 'piepen', 'to beep', '🔊'],
+      ['cabine', 'de cabine', 'the cab (where the driver sits)', '🚚'],
+    ],
+    [
+      ['Ga nooit achter de wagen staan.', 'Never stand behind the lorry.'],
+      ['Ik zie je niet in de spiegel.', 'I cannot see you in the mirror.'],
+      ['Maak oogcontact met de chauffeur.', 'Make eye contact with the driver.'],
+    ],
+    [['Kun je mij helpen met achteruitrijden?', 'Can you help me reverse?'], ['Ja, ik sta links. Kijk in je spiegel.', 'Yes, I am on the left. Look in your mirror.']],
+  ),
+  lesson(
+    'wastesorting',
+    'Sorting waste',
+    [
+      ['papier', 'het papier', 'the paper', '📰'],
+      ['plastic', 'het plastic', 'the plastic', '🧴'],
+      ['gft', 'het gft', 'the food and garden waste (fruit, vegetables and plants)', '🍂'],
+      ['restafval', 'het restafval', 'the general waste (what cannot be sorted)', '🚮'],
+      ['karton', 'het karton', 'the cardboard', '📦'],
+      ['blik', 'het blik', 'the can, the tin', '🥫'],
+    ],
+    [
+      ['Het glas gaat in de glasbak.', 'The glass goes in the bottle bank.'],
+      ['Dit hoort bij het restafval.', 'This belongs with the general waste.'],
+      ['Vouw het karton plat.', 'Fold the cardboard flat.'],
+    ],
+    [['Waar moet een pizzadoos heen?', 'Where does a pizza box go?'], ['Bij het restafval. Er zit vet op.', 'With the general waste. There is grease on it.']],
+  ),
+  lesson(
+    'wastesafety',
+    'Sharp things and lifting',
+    [
+      ['snijwond', 'de snijwond', 'the cut (a wound from something sharp)', '🩸'],
+      ['prikken', 'prikken', 'to prick (a sharp point goes into your skin)', '📌'],
+      ['naald', 'de naald', 'the needle', '📍'],
+      ['scherp', 'scherp', 'sharp', '🔪'],
+      ['rugpijn', 'de rugpijn', 'the back pain', '🤕'],
+      ['tetanusprik', 'de tetanusprik', 'the tetanus jab (an injection against an illness from dirt in a wound)', '💉'],
+    ],
+    [
+      ['Pak een zak nooit van onderen vast.', 'Never hold a bag from below.'],
+      ['Pas op, er zit glas in deze zak.', 'Careful, there is glass in this bag.'],
+      ['Ik heb me geprikt aan een naald.', 'I pricked myself on a needle.'],
+    ],
+    [['Ik heb me gesneden. Wat moet ik doen?', 'I have cut myself. What must I do?'], ['Was de wond goed. En zeg het tegen mij.', 'Wash the wound well. And tell me.']],
+  ),
+]);
+
+const recyclingUnit = unit('recycling', 'The recycling yard', 'De milieustraat', '♻️', '#3b7d5c', [
+  lesson(
+    'yard',
+    'At the recycling yard',
+    [
+      ['milieustraat', 'de milieustraat', 'the recycling yard (where people bring big or special waste)', '♻️'],
+      ['grofvuil', 'het grofvuil', 'the bulky waste (big things, like a sofa)', '🛋️'],
+      ['puin', 'het puin', 'the rubble (broken stones and bricks)', '🧱'],
+      ['matras', 'de matras', 'the mattress', '🛏️'],
+      ['weegbrug', 'de weegbrug', 'the weighbridge (a scale for cars and lorries)', '⚖️'],
+      ['afvalpas', 'de afvalpas', 'the waste pass (residents show it at the gate)', '💳'],
+    ],
+    [
+      ['Het puin gaat in container vier.', 'The rubble goes in container four.'],
+      ['Mag ik uw afvalpas zien?', 'May I see your waste pass?'],
+      ['Rijd eerst over de weegbrug.', 'First drive over the weighbridge.'],
+    ],
+    [['Waar moet deze matras heen?', 'Where does this mattress go?'], ['In de container voor grofvuil, achteraan.', 'In the container for bulky waste, at the back.']],
+  ),
+  lesson(
+    'hazardous',
+    'Chemical waste',
+    [
+      ['chemischafval', 'het chemisch afval', 'the chemical waste (dangerous waste, like paint and oil)', '☣️'],
+      ['spuitbus', 'de spuitbus', 'the spray can', '🧯'],
+      ['asbest', 'het asbest', 'the asbestos (a dangerous material in old buildings)', '☠️'],
+      ['lekken', 'lekken', 'to leak', '💧'],
+      ['gevarensymbool', 'het gevarensymbool', 'the hazard symbol (a picture that warns for danger)', '🔶'],
+      ['vat', 'het vat', 'the drum, the barrel', '🛢️'],
+    ],
+    [
+      ['Zet de verf bij het chemisch afval.', 'Put the paint with the chemical waste.'],
+      ['Deze fles lekt. Pak hem met handschoenen.', 'This bottle is leaking. Pick it up with gloves.'],
+      ['Asbest moet goed ingepakt zijn.', 'Asbestos must be packed well.'],
+    ],
+    [['Wat zit er in deze fles?', 'What is in this bottle?'], ['Ik weet het niet. Zet hem apart.', 'I do not know. Put it aside.']],
+  ),
+  lesson(
+    'baler',
+    'The baler',
+    [
+      ['balenpers', 'de balenpers', 'the baler (a machine that presses waste into blocks)', '🗜️'],
+      ['baal', 'de baal', 'the bale (a pressed block of paper or plastic)', '🟫'],
+      ['persen', 'persen', 'to press', '⬇️'],
+      ['vastlopen', 'vastlopen', 'to get stuck, to jam', '⛔'],
+      ['binddraad', 'het binddraad', 'the baling wire', '➰'],
+      ['vulopening', 'de vulopening', 'the loading opening (where the waste goes in)', '⬛'],
+    ],
+    [
+      ['De pers zit vast. Druk op de noodstop.', 'The press is stuck. Push the emergency stop.'],
+      ['Steek nooit je hand in de pers.', 'Never put your hand into the press.'],
+      ['Bind de baal goed vast.', 'Tie the bale well.'],
+    ],
+    [['De pers loopt vast. Mag ik even kijken?', 'The press is jamming. May I take a look?'], ['Nee. Eerst gaat de stroom eraf.', 'No. First the power goes off.']],
+  ),
+  lesson(
+    'shovel',
+    'The wheel loader on the yard',
+    [
+      ['shovel', 'de shovel', 'the wheel loader (a big machine with a bucket in front)', '🚜'],
+      ['zwaailamp', 'de zwaailamp', 'the flashing light (an orange light on top of a machine)', '🟠'],
+      ['bunker', 'de bunker', 'the bay (a big concrete space for one kind of waste)', '🏗️'],
+      ['looppad', 'het looppad', 'the walkway (a path only for people)', '🚶'],
+      ['toeteren', 'toeteren', 'to sound the horn', '📯'],
+      ['opscheppen', 'opscheppen', 'to scoop up', '🪏'],
+    ],
+    [
+      ['Blijf op het looppad.', 'Stay on the walkway.'],
+      ['De shovel rijdt achteruit. Pas op!', 'The wheel loader is reversing. Careful!'],
+      ['De zwaailamp brandt. De machine rijdt.', 'The flashing light is on. The machine is moving.'],
+    ],
+    [['Mag ik even langs de shovel lopen?', 'May I walk past the wheel loader?'], ['Alleen als de chauffeur je ziet.', 'Only if the driver sees you.']],
+  ),
+]);
+
+// ---- The children, and Parents, safety and the group (the owner's request, 23 November 2026) ----
+// The two own units of the new sector Kinderopvang (day care and after-school care;
+// src/content/sectors.ts): nappies, eating and drinking, sleeping and playing; bringing and picking
+// up, safety in the group, a sick child and allergies, and the group and its rules. In the path
+// of a learner who chose Kinderopvang they come in the sector slot; in every other course they are
+// appended at the very end (workUnits below). Already words of other lessons, used here in a
+// sentence or the chat only: "de kinderopvang", "ophalen", "brengen", "halen", "slapen",
+// "opruimen", "de overdracht", "de koorts", "de allergie", "het medicijn", "het stopcontact",
+// "handen wassen", "de EHBO-doos", "de pleister", "de thermometer" and "de toestemming". The
+// drawings (placeholders for now): src/pictures/groupKinderopvang.tsx.
+
+const toddlersUnit = unit('toddlers', 'The children', 'De kinderen', '🧸', '#c0628a', [
+  lesson(
+    'nappies',
+    'Changing nappies',
+    [
+      ['luier', 'de luier', 'the nappy, the diaper', '🧷'],
+      ['verschonen', 'verschonen', 'to change (a nappy)', '🔄'],
+      ['commode', 'de commode', 'the changing table', '🚼'],
+      ['billendoekje', 'het billendoekje', 'the baby wipe', '🧻'],
+      ['potje', 'het potje', 'the potty', '🚽'],
+      ['zindelijk', 'zindelijk', 'potty-trained (the child can use the toilet)', '🙌'],
+    ],
+    [
+      ['Ik verschoon Sem even.', 'I am going to change Sem.'],
+      ['Was na het verschonen je handen.', 'Wash your hands after changing a nappy.'],
+      ['Laat een kind nooit alleen op de commode.', 'Never leave a child alone on the changing table.'],
+    ],
+    [['Wanneer heb je Noor verschoond?', 'When did you change Noor?'], ['Om tien uur. Het staat in de app.', 'At ten. It is in the app.']],
+  ),
+  lesson(
+    'mealtime',
+    'Eating and drinking',
+    [
+      ['fles', 'de fles', 'the bottle (for a baby)', '🍼'],
+      ['slabbetje', 'het slabbetje', 'the bib', '🧣'],
+      ['beker', 'de beker', 'the cup (with a handle)', '🥤'],
+      ['kinderstoel', 'de kinderstoel', 'the high chair', '🪑'],
+      ['fruithap', 'de fruithap', 'the fruit mash', '🍎'],
+      ['boertje', 'het boertje', 'the burp', '😮'],
+    ],
+    [
+      ['Was je handen voor het eten.', 'Wash your hands before the meal.'],
+      ['Geef Lisa haar fles om twaalf uur.', 'Give Lisa her bottle at twelve.'],
+      ['Iedereen zit aan tafel.', 'Everyone sits at the table.'],
+    ],
+    [['Mag Daan een koekje?', 'May Daan have a biscuit?'], ['Nee, hij heeft een allergie. Kijk op de lijst.', 'No, he has an allergy. Look at the list.']],
+  ),
+  lesson(
+    'naptime',
+    'Sleeping',
+    [
+      ['bedje', 'het bedje', 'the cot (a small bed for a baby)', '🛏️'],
+      ['slaapkamer', 'de slaapkamer', 'the bedroom', '🌙'],
+      ['knuffel', 'de knuffel', 'the cuddly toy', '🧸'],
+      ['speen', 'de speen', 'the dummy, the pacifier', '🍭'],
+      ['babyfoon', 'de babyfoon', 'the baby monitor', '🎧'],
+      ['slaapzak', 'de slaapzak', 'the baby sleeping bag', '💤'],
+    ],
+    [
+      ['Leg de baby op zijn rug.', 'Lay the baby on its back.'],
+      ['Ik kijk vaak even in de slaapkamer.', 'I often look into the bedroom.'],
+      ['Hier is je knuffel. Slaap lekker.', 'Here is your cuddly toy. Sleep well.'],
+    ],
+    [['Slaapt Mila al?', 'Is Mila asleep yet?'], ['Ja, sinds één uur. Ik kijk zo weer even.', 'Yes, since one o’clock. I will look again soon.']],
+  ),
+  lesson(
+    'playtime',
+    'Playing',
+    [
+      ['spelen', 'spelen', 'to play', '⚽'],
+      ['speelgoed', 'het speelgoed', 'the toys', '🪀'],
+      ['zandbak', 'de zandbak', 'the sandpit', '🏖️'],
+      ['glijbaan', 'de glijbaan', 'the slide', '🛝'],
+      ['puzzel', 'de puzzel', 'the puzzle', '🧩'],
+      ['buitenspelen', 'buitenspelen', 'to play outside', '🌳'],
+    ],
+    [
+      ['We gaan buitenspelen. Jassen aan!', 'We are going to play outside. Coats on!'],
+      ['Ruim het speelgoed op.', 'Tidy up the toys.'],
+      ['Eén kind tegelijk op de glijbaan.', 'One child at a time on the slide.'],
+    ],
+    [['Mag ik met de puzzel spelen?', 'May I play with the puzzle?'], ['Ja, aan tafel. Daarna ruim je hem op.', 'Yes, at the table. Then you tidy it up.']],
+  ),
+]);
+
+const daycareUnit = unit('daycare', 'Parents, safety and the group', 'Ouders, veiligheid en de groep', '👪', '#7a4f9a', [
+  lesson(
+    'pickup',
+    'Bringing and picking up',
+    [
+      ['ouder', 'de ouder', 'the parent', '👪'],
+      ['afscheid', 'het afscheid', 'the goodbye', '🙋'],
+      ['oppas', 'de oppas', 'the babysitter', '🧑‍🍼'],
+      ['schriftje', 'het schriftje', 'the notebook (for notes between parents and staff)', '📒'],
+      ['ouderapp', 'de ouderapp', 'the parent app (for photos and messages to parents)', '📱'],
+      ['wennen', 'wennen', 'to settle in (to get used to a new place)', '🌱'],
+    ],
+    [
+      ['Ik schrijf het in het schriftje.', 'I will write it in the notebook.'],
+      ['Zeg maar dag tegen papa.', 'Say bye-bye to daddy.'],
+      ['Ik zet een foto in de ouderapp.', 'I am putting a photo in the parent app.'],
+    ],
+    [['Wie haalt Sem vandaag op?', 'Who is picking Sem up today?'], ['Zijn oma. Ze staat op de lijst.', 'His grandma. She is on the list.']],
+  ),
+  lesson(
+    'childsafety',
+    'Safety in the group',
+    [
+      ['traphekje', 'het traphekje', 'the stair gate', '🚧'],
+      ['vingerstrip', 'de vingerstrip', 'the finger guard (on a door, so fingers do not get stuck)', '🖐️'],
+      ['verslikken', 'zich verslikken', 'to choke (food goes the wrong way)', '😣'],
+      ['bult', 'de bult', 'the bump (on the head)', '🤕'],
+      ['schaafwond', 'de schaafwond', 'the graze (the skin is scraped)', '🩹'],
+      ['toezicht', 'het toezicht', 'the supervision (you watch the children)', '👀'],
+    ],
+    [
+      ['Doe het traphekje altijd dicht.', 'Always close the stair gate.'],
+      ['Ik leg wat ijs op de bult.', 'I am putting some ice on the bump.'],
+      ['Sem verslikt zich. Ik help hem.', 'Sem is choking. I am helping him.'],
+    ],
+    [['Is Bo gevallen?', 'Did Bo fall?'], ['Ja, ze heeft een bult. Ik bel haar moeder.', 'Yes, she has a bump. I am calling her mother.']],
+  ),
+  lesson(
+    'sickchild',
+    'A sick child and allergies',
+    [
+      ['huiduitslag', 'de huiduitslag', 'the rash (red spots on the skin)', '🔴'],
+      ['diarree', 'de diarree', 'the diarrhoea', '🚾'],
+      ['overgeven', 'overgeven', 'to throw up, to vomit', '🤮'],
+      ['allergielijst', 'de allergielijst', 'the allergy list', '📋'],
+      ['adrenalinepen', 'de adrenalinepen', 'the adrenaline pen (a medicine pen for a strong allergy)', '💉'],
+      ['temperaturen', 'temperaturen', 'to take the temperature', '🌡️'],
+    ],
+    [
+      ['Sem heeft koorts. Ik bel zijn vader.', 'Sem has a fever. I am calling his father.'],
+      ['Kijk voor het eten op de allergielijst.', 'Look at the allergy list before the meal.'],
+      ['Geef nooit een medicijn zonder toestemming.', 'Never give a medicine without permission.'],
+    ],
+    [['Hoe gaat het met Jip?', 'How is Jip?'], ['Hij is erg warm. Ik ga hem temperaturen.', 'He is very warm. I am going to take his temperature.']],
+  ),
+  lesson(
+    'grouprules',
+    'The group and the rules',
+    [
+      ['pedagogischmedewerker', 'de pedagogisch medewerker', 'the childcare worker', '🧑‍🏫'],
+      ['mentor', 'de mentor', 'the mentor (the worker who follows one child closely)', '🤝'],
+      ['vierogenprincipe', 'het vierogenprincipe', 'the four-eyes rule (another adult can always see or hear you)', '👁️'],
+      ['observeren', 'observeren', 'to observe (to watch carefully, and write it down)', '🔍'],
+      ['peuter', 'de peuter', 'the toddler (a child of two or three)', '🧒'],
+      ['groep', 'de groep', 'the group (the children who are together every day)', '🧑‍🧒'],
+    ],
+    [
+      ['Ik ben de mentor van Lisa.', 'I am Lisa’s mentor.'],
+      ['Een collega kan ons altijd zien of horen.', 'A colleague can always see or hear us.'],
+      ['Ik maak me zorgen over Daan.', 'I am worried about Daan.'],
+    ],
+    [['Mag ik alleen met de groep naar buiten?', 'May I go outside alone with the group?'], ['Ja, maar zeg het eerst tegen een collega.', 'Yes, but tell a colleague first.']],
+  ),
+]);
+
 // ---- In the shop, and Time, money and measures (docs/entree-aanvulling.md, part 5) ----
 // Basis units (no sector of their own), after the sector units: the course of every existing
 // sector keeps its order, the two units come at the end of it.
@@ -3260,6 +4226,22 @@ export const workUnits: Unit[] = [
   // sorting and the greenhouse" and "Tyres, oil and brakes" above).
   kweekUnit,
   carserviceUnit,
+  // The own units of the new sectors Groen and Facilitair (23 November 2026), at the very end (see
+  // "Mowing and pruning" and "Reception, post and meetings" above).
+  mowingUnit,
+  plantingUnit,
+  frontdeskUnit,
+  maintenanceUnit,
+  // The own units of the new sectors Beveiliging, Voedingsindustrie, Afval en recycling and
+  // Kinderopvang (23 November 2026), at the very end (see "Patrols and access" and the units after it above).
+  guardingUnit,
+  incidentsUnit,
+  foodhygieneUnit,
+  foodlineUnit,
+  collectionUnit,
+  recyclingUnit,
+  toddlersUnit,
+  daycareUnit,
 ];
 
 

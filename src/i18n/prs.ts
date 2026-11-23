@@ -292,7 +292,7 @@ const lang: HelpLanguageSource = {
     settingOn: 'روشن',
     settingOff: 'خاموش',
     sectorGroupMake: 'ساخت و انتقال',
-    sectorGroupCare: 'مراقبت و خدمات',
+    sectorGroupCare: "مراقبت و اطفال", // nieuw, nalezen
     sectorGroupShop: 'دکان و رستورانت', // nieuw, nalezen
     sectorGroupBuild: 'ساختمان و فنی', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'صدای زن',
@@ -483,22 +483,20 @@ const lang: HelpLanguageSource = {
     speakFromMemory: 'حالا از یاد: به هالندی چه بود؟', // nieuw, nalezen
     keptNofM: 'کلمه‌های دو هفته پیش یا قدیمی‌تر: هنوز {n} از {m} را می‌دانستید.', // nieuw, nalezen
     verbSecond: 'فعل در جای دوم است.', // nieuw, nalezen
-    calmScreen: 'صفحهٔ آرام', // nieuw, nalezen
-    calmAuto: 'مثل تیلفون شما', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    calmHint: 'روشن: هیچ چیز حرکت نمی‌کند، بعد از درس جشنی برای روزهای پیهم نیست، و روزها و کلمه‌ها در صفحهٔ اصلی نشان داده نمی‌شوند.', // nieuw, nalezen
-    playMode: 'حالت بازی', // nieuw, nalezen
-    playHint: 'روشن: برای هر جواب درست امتیاز، و اگر چند جواب پیهم درست باشد امتیاز بیشتر. صدا و حرکت بیشتر. اشتباه چیزی از شما کم نمی‌کند.', // nieuw, nalezen
     playPoints: 'امتیاز', // nieuw, nalezen
     playTotal: 'همهٔ امتیازهای شما', // nieuw, nalezen
-    playAskTitle: 'چطور می‌خواهید تمرین کنید؟', // nieuw, nalezen
-    playAskCalm: 'آرام', // nieuw, nalezen
-    playAskFun: 'با بازی', // nieuw, nalezen
-    playAskHint: 'با بازی: امتیاز، صدا و حرکت. می‌توانید آن را در تنظیمات تبدیل کنید.', // nieuw, nalezen
     sfeer: 'حال و هوا', // nieuw, nalezen
     sfeerCalm: 'آرام', // nieuw, nalezen
-    sfeerStandard: 'عادی', // nieuw, nalezen
     sfeerGame: 'بازی', // nieuw, nalezen
-    sfeerHint: 'آرام: هیچ چیز حرکت نمی‌کند، جشنی نیست. عادی: اپ همان‌طور که هست. بازی: امتیاز، صدا و حرکت زیاد.', // nieuw, nalezen
+    sfeerHint: 'آرام: هیچ چیز حرکت نمی‌کند، جشنی نیست. بازی: امتیاز، صدا و حرکت زیاد.', // nieuw, nalezen
+    sectorGroupService: "خدمات و امنیت", // nieuw, nalezen
+    sectorGroupOutdoor: "کار در بیرون", // nieuw, nalezen
+    sectorChildcare: "کودکستان", // nieuw, nalezen
+    sectorWaste: "کثافات و بازیافت", // nieuw, nalezen
+    sectorFood: "صنعت مواد خوراکی", // nieuw, nalezen
+    sectorSecurity: "امنیت", // nieuw, nalezen
+    sectorFacility: "خدمات ساختمان", // nieuw, nalezen
+    sectorGreen: "سبزه‌زارها و باغ‌ها", // nieuw, nalezen
     playLevel: 'سطح', // nieuw, nalezen
     playLevel1: 'تازه‌کار', // nieuw, nalezen
     playLevel2: 'شاگرد', // nieuw, nalezen

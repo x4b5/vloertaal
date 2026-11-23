@@ -204,6 +204,55 @@ const t: CultureTranslation = {
     'c.oilchange.a.why': "Waxaa la weydiiyay immisa: litirrada, iyo sida loo hubiyo.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.a.why': "Waxaa la weydiiyay in mid cusub loo baahan yahay: haa, iyo sababta.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "Waxaa la weydiiyay waxa la qabanayo: eeg kaarka shaqada.", // nieuw, nalezen // nagelezen AI 22 nov
+    // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
+    'c.mowing.a.why': "Waxaa la weydiiyay in la qaadan karo: haa, iyo waxa marka hore la sameeyo.", // nieuw, nalezen
+    'c.pruning.a.why': "Waxaa la weydiiyay laamahee: kuwa dhintay oo keliya.", // nieuw, nalezen
+    'c.hedge.a.why': "Waxaa la weydiiyay intee dherer le'eg: ilaa xarigga, oo ka hooseysiin maya.", // nieuw, nalezen
+    'c.chainsaw.a.why': "Waxaa la weydiiyay in la oggol yahay: weli maya, iyo waxa marka hore imanaya.", // nieuw, nalezen
+    'c.weeding.a.why': "Waxaa la weydiiyay inuu haramo yahay: maya, iyo waxa lagu sameeyo.", // nieuw, nalezen
+    'c.planting.a.why': "Waxaa la weydiiyay meesha uu galayo: meesha beerta ubaxa.", // nieuw, nalezen
+    'c.roadside.a.why': "Waxaa la weydiiyay in la tallaabi karo: maya, sug, iyo sababta.", // nieuw, nalezen
+    'c.litter.a.why': "Deggane ayaa weydiiyay goorma: ma garanaysid, iyo cidda garanaysa.", // nieuw, nalezen
+    'c.reception.a.why': "Booqde ballan ayuu leeyahay: daqiiqad, waad u yeeraysaa.", // nieuw, nalezen
+    'c.visitors.a.why': "Waxaa la weydiiyay meesha jaakaddu aado: meesha, iyo halka ay ku taal.", // nieuw, nalezen
+    'c.mailroom.a.why': "Waxaa la weydiiyay cidda iska leh: qaybta, iyo dabaqa.", // nieuw, nalezen
+    'c.meetingroom.a.why': "Waxaa la weydiiyay saacadda: waqtiga, iyo waxa la samaynayo.", // nieuw, nalezen
+    'c.faults.a.why': "Waxaa la weydiiyay sababta ay u qabow tahay: waxa jaban, iyo goorta caawimaaddu imanayso.", // nieuw, nalezen
+    'c.repairs.a.why': "Waxaa la weydiiyay inuu dhawaaqayo: haa, iyo sababta.", // nieuw, nalezen
+    'c.moving.a.why': "Waxaa la weydiiyay meesha uu aado: qolka, iyo meesha la eego.", // nieuw, nalezen
+    'c.closing.a.why': "Waxaa la weydiiyay in qof gudaha joogo: maya, iyo waxa aad hadda samaynayso.", // nieuw, nalezen
+    'c.patrol.a.why': "Waxaa la weydiiyay inaad wax aragtay: haa, waxa, iyo meesha.", // nieuw, nalezen
+    'c.access.a.why': "Waxaa la weydiiyay in la galo kaar la'aan: waan ka xumahay, kaar la'aan maya.", // nieuw, nalezen
+    'c.cameras.a.why': "Waxaa la weydiiyay waxa aad aragto: cidda, meesha, iyo waxa aad samaynayso.", // nieuw, nalezen
+    'c.report.a.why': "Waxaa la weydiiyay waxa warbixinta galaya: waxa, meesha iyo goorta.", // nieuw, nalezen
+    'c.evacuation.a.why': "Waxaa la weydiiyay in qof walba baxay: maya, iyo immisa ayaa maqan.", // nieuw, nalezen
+    'c.firstaid.a.why': "Waxaa la weydiiyay meesha AED-gu yaal: meesha, iyo waxa agtiisa ah.", // nieuw, nalezen
+    'c.shoplifting.a.why': "Waxaa la weydiiyay in bac la baari karo: maya, iyo cidda taas samaysa.", // nieuw, nalezen
+    'c.aggression.a.why': "Waxaa la weydiiyay sababta maya: sababta, oo si deggan loo sheegay.", // nieuw, nalezen
+    'c.hygienelock.a.why': "Waxaa la weydiiyay saacad: maya, iyo xeerka ka dambeeya.", // nieuw, nalezen
+    'c.allergens.a.why': "Waxaa la weydiiyay in la wada dhigi karo: maya, iyo sababta.", // nieuw, nalezen
+    'c.coldroom.a.why': "Waxaa la weydiiyay sababta uu u dhawaaqayo: sababta, iyo waxa la sameeyo.", // nieuw, nalezen
+    'c.foreignbody.a.why': "Waxaa la weydiiyay waxa la sameeyo: cidda la tusayo.", // nieuw, nalezen
+    'c.cutting.a.why': "Waxaa la weydiiyay immisa: miisaanka, iyo meesha la eego.", // nieuw, nalezen
+    'c.labels.a.why': "Waxaa la weydiiyay taariikhdee: goorta, iyo meesha la eego.", // nieuw, nalezen
+    'c.linecleaning.a.why': "Waxaa la weydiiyay inuu nadiif yahay: weli maya, iyo waxa haray.", // nieuw, nalezen
+    'c.haccp.a.why': "Waxaa la weydiiyay sababta: si aan u ogaano in cuntadu ammaan tahay.", // nieuw, nalezen
+    'c.binlorry.a.why': "Waxaa la weydiiyay in gadaasha lagu raaci karo: maya, iyo meesha lagu raaco.", // nieuw, nalezen
+    'c.reversing.a.why': "Waxaa la weydiiyay caawimaad: haa, meesha aad taagan tahay, iyo waxa la sameeyo.", // nieuw, nalezen
+    'c.wastesorting.a.why': "Waxaa la weydiiyay meesha uu galo: weelka, iyo sababta.", // nieuw, nalezen
+    'c.wastesafety.a.why': "Waxaa la weydiiyay waxa la sameeyo goyn kadib: dhaq, oo sheeg.", // nieuw, nalezen
+    'c.yard.a.why': "Waxaa la weydiiyay meesha uu galayo: konteenarka, iyo halka uu yaal.", // nieuw, nalezen
+    'c.hazardous.a.why': "Waxaa la weydiiyay waxa ku jira: ma garanaysid, sidaas darteed dhinac dhig.", // nieuw, nalezen
+    'c.baler.a.why': "Waxaa la weydiiyay in la eegi karo: maya, iyo waxa marka hore imanaya.", // nieuw, nalezen
+    'c.shovel.a.why': "Waxaa la weydiiyay in la dhaafi karo: oo keliya marka darawalku ku arko.", // nieuw, nalezen
+    'c.nappies.a.why': "Waxaa la weydiiyay goorma: waqtiga, iyo meesha lagu qoray.", // nieuw, nalezen
+    'c.mealtime.a.why': "Waxaa la weydiiyay in la siin karo: maya, sababta, iyo meesha la eego.", // nieuw, nalezen
+    'c.naptime.a.why': "Waxaa la weydiiyay inay hurudo: haa, tan iyo goorma, iyo inaad hubinayso.", // nieuw, nalezen
+    'c.playtime.a.why': "Waxaa la weydiiyay in ilmuhu ciyaari karo: haa, meesha, iyo waxa xiga.", // nieuw, nalezen
+    'c.pickup.a.why': "Waxaa la weydiiyay cidda qaadaysa: qofka, iyo inay liiska ku jirto.", // nieuw, nalezen
+    'c.childsafety.a.why': "Waxaa la weydiiyay inay dhacday: haa, waxa ay leedahay, iyo cidda aad wacayso.", // nieuw, nalezen
+    'c.sickchild.a.why': "Waxaa la weydiiyay sida uu yahay: waxa aad aragto, iyo waxa aad samaynayso.", // nieuw, nalezen
+    'c.grouprules.a.why': "Waxaa la weydiiyay in keligaa la bixi karo: haa, laakiin marka hore u sheeg saaxiib shaqo.", // nieuw, nalezen
   },
 };
 export default t;

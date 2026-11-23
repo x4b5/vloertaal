@@ -70,9 +70,8 @@ import { recoverFromLoadError, screenChanged, setReloadWhen } from './lib/appUpd
 import { clearSave } from './lib/resume';
 import { applyTextSize } from './lib/textSize';
 import { applyCalm, calmOn } from './lib/calm';
-import { applyPlay, finishPlayLesson, playAskDue, playOn, withPlay, withSfeer, type PlayOutcome } from './lib/play';
+import { applyPlay, finishPlayLesson, playOn, withSfeer, type PlayOutcome } from './lib/play';
 import { PlayStrip } from './components/PlayStrip';
-import { PlayAskCard } from './components/PlayAskCard';
 import { applyEnglish, englishLangFor } from './lib/english';
 import { SocialMap, SocialMapLink } from './components/SocialMap';
 import { regionOf, type RegionChoice } from './content/regio';
@@ -661,7 +660,7 @@ export default function App() {
   useEffect(() => { applyTextSize(progress.textSize); }, [progress.textSize]);
   useEffect(() => { applyCalm(progress.calm); }, [progress.calm]);
   // "Spelmodus" (src/lib/play.ts): data-play on <html>, never with the calm screen.
-  useEffect(() => { applyPlay(playOn(progress)); }, [progress.play, progress.calm]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => { applyPlay(playOn(progress)); }, [progress.calm]); // eslint-disable-line react-hooks/exhaustive-deps
   // Also on `onboarded`: Back to the language page clears the setting (English shows there), and
   // picking the same language again must hide the English again, though helpLang did not change.
   useEffect(() => { applyEnglish(englishLangFor(progress.helpLang, progress.onboarded)); }, [progress.helpLang, progress.onboarded]);
@@ -1379,7 +1378,6 @@ export default function App() {
         bridge: () => bridgeDue(progress),
         nudge: () => nudgeDue(lessonsDone, nudgeRecord(), progressAtRisk(nudgeEnv())),
         reason: () => reasonDue(progress, lessonsDone),
-        play: () => playAskDue(progress, lessonsDone),
       });
       // "Eén app": the language course's review counts the rule questions of "Zo werkt het hier" too.
       const daily = Object.keys(progress.completed).length || progress.reviewDay
@@ -1438,8 +1436,6 @@ export default function App() {
               />
             ) : card === 'reason' ? (
               <ReasonCard lang={lang} onDone={(ids) => setProgress((p) => withReasons(p, ids))} />
-            ) : card === 'play' ? (
-              <PlayAskCard lang={lang} onPick={(on) => setProgress((p) => withPlay(p, on))} />
             ) : undefined}
           />
           <BottomNav current="route" onTab={tab} lang={lang} />

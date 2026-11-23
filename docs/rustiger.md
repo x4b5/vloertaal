@@ -160,3 +160,15 @@ Alles speelt één keer, en alles staat stil bij Kalm en bij "minder beweging" o
   landt de klap met gewicht (`HIT_STOP_MS`, `src/components/LessonPlayer.tsx`). De oefening die nog
   wegschuift na een snel antwoord bevriest niet mee.
 
+### Spel is de standaard (23 november 2026)
+
+De eigenaar: "Wat ik goed vind aan spelmodus is dat de juice alleen gebeurt wanneer je op een button
+klikt. Dat wil ik zo houden. Daarom mag spelmodus nu op standaard en verwijder standaard."
+
+- **Sfeer** heeft nog twee keuzes: **Spel** (de standaard) en **Kalm**. "Standaard" is weg.
+- Spel staat aan zolang Kalm niet aan staat (`playOn` in `src/lib/play.ts`): ook voor wie niets koos. Een
+  telefoon die om minder beweging vraagt, krijgt zonder eigen keuze Kalm (`calm: 'auto'`).
+- De kaart "Hoe wil je oefenen?" na de eerste les is weg: er valt niets meer aan te zetten.
+- De regel blijft: de juice gebeurt alleen als de leerder op een knop tikt (een antwoord, Verder). Niets
+  beweegt uit zichzelf, behalve de tekening op de woordkaart (docs/tekenstijl.md).
+

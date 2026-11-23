@@ -33,6 +33,13 @@ export function sayMode(soundOff: boolean, silent: boolean): SayMode {
  */
 export const SAY_FALLBACK_MS = 8000;
 
+/**
+ * The line shows this long after the word starts to sound, without waiting for its end (the owner,
+ * 23 November 2026: "Zeg het hardop" and Continue came too late). The "your turn" sign still waits
+ * for the end of the word and a still picture.
+ */
+export const SAY_EARLY_MS = 500;
+
 /** An end counts when the word has not started again this soon after it. */
 export const SAY_SETTLE_MS = 150;
 
@@ -75,8 +82,11 @@ export function followSayAloud(text: string, mode: SayMode, on: SayEvents, env: 
   let shown = wasShown;
   /** The word started to sound since the last end (an end without a start is another line's stop). */
   let sounding = false;
-  const show = (m: SayMode) => {
+  const showLine = (m: SayMode) => {
     if (!shown) { shown = true; on.shown(m); }
+  };
+  const show = (m: SayMode) => {
+    showLine(m);
     later(e.stillIn(), on.pulse);
   };
   if (wasShown) on.shown(mode);
@@ -84,7 +94,12 @@ export function followSayAloud(text: string, mode: SayMode, on: SayEvents, env: 
   else later(SAY_FALLBACK_MS, () => { if (!shown) show('aloud'); });
   const offSpeech = e.onSpeech((said, speaking) => {
     if (said !== text) return;
-    if (speaking) { sounding = true; return; }
+    if (speaking) {
+      sounding = true;
+      // The line comes while the word sounds; the sign after it.
+      later(SAY_EARLY_MS, () => showLine(mode));
+      return;
+    }
     if (!sounding) return;
     sounding = false;
     // A play cut off by the next one (a tap on the speaker, the card drawn again) ends and starts

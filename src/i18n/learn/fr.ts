@@ -207,6 +207,55 @@ const t: CultureTranslation = {
     'c.oilchange.a.why': "On demande combien : les litres, et comment contrôler.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.a.why': "On demande s’il doit être changé : oui, et pourquoi.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "On demande ce qu’il faut faire : regarder le bon de travail.", // nieuw, nalezen // nagelezen AI 22 nov
+    // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
+    'c.mowing.a.why': "On demande si on peut la prendre : oui, et ce qu’il faut faire d’abord.", // nieuw, nalezen
+    'c.pruning.a.why': "On demande quelles branches : seulement les mortes.", // nieuw, nalezen
+    'c.hedge.a.why': "On demande à quelle hauteur : jusqu’à la corde, pas plus bas.", // nieuw, nalezen
+    'c.chainsaw.a.why': "On demande si on peut : pas encore, et ce qui vient d’abord.", // nieuw, nalezen
+    'c.weeding.a.why': "On demande si c’est une mauvaise herbe : non, et quoi en faire.", // nieuw, nalezen
+    'c.planting.a.why': "On demande où elle va : l’endroit dans le parterre.", // nieuw, nalezen
+    'c.roadside.a.why': "On demande si on peut traverser : non, attendre, et pourquoi.", // nieuw, nalezen
+    'c.litter.a.why': "Un habitant demande quand : on ne sait pas, et qui le sait.", // nieuw, nalezen
+    'c.reception.a.why': "Un visiteur a rendez-vous : un moment, on appelle.", // nieuw, nalezen
+    'c.visitors.a.why': "On demande où va le manteau : l’endroit, et où il se trouve.", // nieuw, nalezen
+    'c.mailroom.a.why': "On demande pour qui c’est : le service, et l’étage.", // nieuw, nalezen
+    'c.meetingroom.a.why': "On demande à quelle heure : l’heure, et ce qu’il faut faire.", // nieuw, nalezen
+    'c.faults.a.why': "On demande pourquoi il fait froid : ce qui est en panne, et quand l’aide arrive.", // nieuw, nalezen
+    'c.repairs.a.why': "On demande si ça bipe : oui, et pourquoi.", // nieuw, nalezen
+    'c.moving.a.why': "On demande où ça va : le bureau, et où regarder.", // nieuw, nalezen
+    'c.closing.a.why': "On demande s’il y a quelqu’un : non, et ce qu’on fait maintenant.", // nieuw, nalezen
+    'c.patrol.a.why': "On demande si on a vu quelque chose : oui, quoi, et où.", // nieuw, nalezen
+    'c.access.a.why': "On demande à entrer sans carte : on regrette, pas sans carte.", // nieuw, nalezen
+    'c.cameras.a.why': "On demande ce qu’on voit : qui, où, et ce qu’on fait.", // nieuw, nalezen
+    'c.report.a.why': "On demande ce qui va dans le rapport : quoi, où et quand.", // nieuw, nalezen
+    'c.evacuation.a.why': "On demande si tout le monde est sorti : non, combien manquent.", // nieuw, nalezen
+    'c.firstaid.a.why': "On demande où est le défibrillateur : l’endroit, et ce qu’il y a à côté.", // nieuw, nalezen
+    'c.shoplifting.a.why': "On demande si on peut fouiller un sac : non, et qui fait ça.", // nieuw, nalezen
+    'c.aggression.a.why': "On demande pourquoi pas : la raison, dite calmement.", // nieuw, nalezen
+    'c.hygienelock.a.why': "On demande pour une montre : non, et la règle derrière.", // nieuw, nalezen
+    'c.allergens.a.why': "On demande si ça peut aller ensemble : non, et pourquoi.", // nieuw, nalezen
+    'c.coldroom.a.why': "On demande pourquoi ça bipe : la cause, et quoi faire.", // nieuw, nalezen
+    'c.foreignbody.a.why': "On demande quoi faire : à qui le montrer.", // nieuw, nalezen
+    'c.cutting.a.why': "On demande combien : le poids, et où regarder.", // nieuw, nalezen
+    'c.labels.a.why': "On demande quelle date : quand, et où regarder.", // nieuw, nalezen
+    'c.linecleaning.a.why': "On demande si c’est propre : pas encore, et ce qui reste à faire.", // nieuw, nalezen
+    'c.haccp.a.why': "On demande pourquoi : pour savoir que la nourriture est sûre.", // nieuw, nalezen
+    'c.binlorry.a.why': "On demande si on peut monter à l’arrière : non, et où monter.", // nieuw, nalezen
+    'c.reversing.a.why': "On demande de l’aide : oui, où on se trouve, et quoi faire.", // nieuw, nalezen
+    'c.wastesorting.a.why': "On demande où ça va : la poubelle, et pourquoi.", // nieuw, nalezen
+    'c.wastesafety.a.why': "On demande quoi faire après une coupure : laver, et le dire.", // nieuw, nalezen
+    'c.yard.a.why': "On demande où ça va : le conteneur, et où il se trouve.", // nieuw, nalezen
+    'c.hazardous.a.why': "On demande ce qu’il y a dedans : on ne sait pas, alors on le met de côté.", // nieuw, nalezen
+    'c.baler.a.why': "On demande si on peut regarder : non, et ce qui vient d’abord.", // nieuw, nalezen
+    'c.shovel.a.why': "On demande si on peut passer : seulement si le conducteur voit la personne.", // nieuw, nalezen
+    'c.nappies.a.why': "On demande quand : l’heure, et où c’est noté.", // nieuw, nalezen
+    'c.mealtime.a.why': "On demande s’il peut en avoir : non, pourquoi, et où regarder.", // nieuw, nalezen
+    'c.naptime.a.why': "On demande si elle dort : oui, depuis quand, et qu’on va vérifier.", // nieuw, nalezen
+    'c.playtime.a.why': "On demande si l’enfant peut jouer : oui, où, et quoi ensuite.", // nieuw, nalezen
+    'c.pickup.a.why': "On demande qui vient chercher : la personne, et qu’elle est sur la liste.", // nieuw, nalezen
+    'c.childsafety.a.why': "On demande si elle est tombée : oui, ce qu’elle a, et qui on appelle.", // nieuw, nalezen
+    'c.sickchild.a.why': "On demande comment il va : ce qu’on voit, et ce qu’on fait.", // nieuw, nalezen
+    'c.grouprules.a.why': "On demande si on peut sortir sans collègue : oui, mais en prévenant d’abord un collègue.", // nieuw, nalezen
   },
 };
 

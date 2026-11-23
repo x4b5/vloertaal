@@ -72,6 +72,24 @@ tweede helft van het pad. De woorden zijn dan bekend. "Woorden" telt alleen de g
 | 28 | `g.winkel.datum` | Winkel | Over de datum | `u.shop` | Henk, leerling | 34 | zacht | ⚖️ |
 | 29 | `g.winkel.klant` | Winkel | Een klant wil rijst | `u.shop` | Jada, leerling | 29 | zacht |  |
 | 30 | `g.winkel.kassa` | Winkel | Op de kassa | `u.shop` | Henk, leerling | 37 | midden | ⚖️ |
+| 31 | `g.groen.bosmaaier` | Groen | Met de bosmaaier | `u.mowing` | Henk, leerling | 30 | midden | ⚖️ |
+| 32 | `g.groen.weg` | Groen | Langs de weg | `u.planting` | Jada, leerling | 30 | midden | ⚖️ |
+| 33 | `g.groen.heg` | Groen | De heg bij de school | `u.mowing` | Henk, Bram | 36 | zacht |  |
+| 34 | `g.facilitair.bezoek` | Facilitair | Een bezoeker aan de balie | `u.frontdesk` | Henk, leerling | 34 | zacht |  |
+| 35 | `g.facilitair.lekkage` | Facilitair | Een lekkage in de gang | `u.maintenance` | Jada, leerling | 37 | zacht | ⚖️ |
+| 36 | `g.facilitair.afsluiten` | Facilitair | Jij sluit vandaag af | `u.maintenance` | Henk, leerling | 30 | zacht | ⚖️ |
+| 37 | `g.beveiliging.hek` | Beveiliging | Iemand bij het hek | `u.guarding` | Henk, leerling | 37 | midden | ⚖️ |
+| 38 | `g.beveiliging.pas` | Beveiliging | Zonder pas | `u.guarding` | Jada, leerling | 31 | zacht |  |
+| 39 | `g.beveiliging.winkel` | Beveiliging | Het poortje piept | `u.incidents` | Henk, leerling | 30 | midden | ⚖️ |
+| 40 | `g.voeding.sluis` | Voedingsindustrie | Door de hygiënesluis | `u.foodhygiene` | Jada, leerling | 26 | zacht | ⚖️ |
+| 41 | `g.voeding.koelcel` | Voedingsindustrie | De koelcel piept | `u.foodhygiene` | Henk, leerling | 35 | zacht | ⚖️ |
+| 42 | `g.voeding.etiket` | Voedingsindustrie | De verkeerde datum | `u.foodline` | Jada, Bram | 40 | zacht |  |
+| 43 | `g.afval.achteruit` | Afval en recycling | Achteruitrijden | `u.collection` | Henk, leerling | 30 | midden | ⚖️ |
+| 44 | `g.afval.kliko` | Afval en recycling | Een zware kliko | `u.collection` | Jada, Bram | 31 | midden |  |
+| 45 | `g.afval.pers` | Afval en recycling | De pers zit vast | `u.recycling` | Henk, leerling | 30 | midden | ⚖️ |
+| 46 | `g.kinderopvang.ophalen` | Kinderopvang | Wie haalt Sem op? | `u.daycare` | Jada, leerling | 32 | zacht | ⚖️ |
+| 47 | `g.kinderopvang.slapen` | Kinderopvang | Slaapt Mila al? | `u.toddlers` | Jada, leerling | 27 | zacht |  |
+| 48 | `g.kinderopvang.bult` | Kinderopvang | Bo is gevallen | `u.daycare` | Jada, leerling | 30 | midden |  |
 
 ## De scènes
 
@@ -579,6 +597,313 @@ Na `u.shop`. Geluid (midden, -18 dB): Supermarkt bij de kassa: scanners piepen, 
 - **Hoe laat is je pauze?** Om half twee. · Om drie uur. · **Om half één.** ✔  
   Uitleg: Henk zegt: je pauze is om half één. *(Henk says: your break is at half past twelve.)*
 
+### Groen
+
+#### 31. Met de bosmaaier ⚖️ · `g.groen.bosmaaier`
+
+Na `u.mowing`. Geluid (midden, -18 dB): Park buiten: wind in de bomen, vogels, ver weg een grasmaaier en een auto.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.groen.bosmaaier.1` | Henk (Daniel) | Vandaag maai jij het gras langs het pad. |
+| `g.groen.bosmaaier.2` | Henk (Daniel) | Eerst je gelaatsscherm op. En je gehoorbescherming. |
+| `g.groen.bosmaaier.3` | Leerling (Thijmen én Ariël) | Oké. En als er iemand komt? |
+| `g.groen.bosmaaier.4` | Henk (Daniel) | Dan stop je de bosmaaier. Pas op voor stenen. |
+
+- **Wat doe je als er iemand komt?** **Je stopt de bosmaaier.** ✔ · Je gaat snel verder. · Je roept naar hem.  
+  Uitleg: Stenen van de bosmaaier zijn gevaarlijk. *(Stones from the brush cutter are dangerous.)*
+- **Waar maai je vandaag?** Bij de heg. · **Langs het pad.** ✔ · Langs de weg.  
+  Uitleg: Henk zegt: het gras langs het pad. *(Henk says: the grass along the path.)*
+
+#### 32. Langs de weg ⚖️ · `g.groen.weg`
+
+Na `u.planting`. Geluid (midden, -18 dB): Langs een drukke weg: auto’s rijden voorbij, een fietsbel, een bus die remt.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.groen.weg.1` | Jada (Noa) | We werken vandaag langs de weg. Trek je hesje aan. |
+| `g.groen.weg.2` | Leerling (Thijmen én Ariël) | Oké. Waar zet ik de pionnen? |
+| `g.groen.weg.3` | Jada (Noa) | Achter de bus. Pas daarna beginnen we. |
+| `g.groen.weg.4` | Jada (Noa) | En kijk goed uit voor de fietsers. |
+
+- **Wat trek je aan?** Je regenpak. · Je laarzen. · **Je hesje.** ✔  
+  Uitleg: Langs de weg draag je altijd je hesje. *(By the road you always wear your vest.)*
+- **Waar zet je de pionnen?** **Achter de bus.** ✔ · Op de stoep. · In de berm.  
+  Uitleg: Jada zegt: achter de bus. *(Jada says: behind the van.)*
+
+#### 33. De heg bij de school · `g.groen.heg`
+
+Na `u.mowing`. Geluid (zacht, -24 dB): Bij een school: kinderen spelen ver weg, een heggenschaar zoemt kort, vogels.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.groen.heg.1` | Henk (Daniel) | Bram, knip jij vandaag de heg bij de school? |
+| `g.groen.heg.2` | Bram (Thijmen) | Ja. Hoe hoog moet hij blijven? |
+| `g.groen.heg.3` | Henk (Daniel) | Tot het touw. Leg eerst het zeil eronder. |
+| `g.groen.heg.4` | Bram (Thijmen) | Oké. En het snoeiafval? |
+| `g.groen.heg.5` | Henk (Daniel) | Dat breng je met de kruiwagen naar de aanhanger. |
+
+- **Wat moet Bram eerst onder de heg leggen?** De hark. · **Het zeil.** ✔ · Een krat.  
+  Uitleg: Henk zegt: leg eerst het zeil eronder. *(Henk says: first put the tarp under it.)*
+- **Waar gaat het snoeiafval naartoe?** Naar de school. · In de container. · **Naar de aanhanger.** ✔  
+  Uitleg: Het snoeiafval gaat met de kruiwagen naar de aanhanger. *(The green waste goes to the trailer in the wheelbarrow.)*
+
+### Facilitair
+
+#### 34. Een bezoeker aan de balie · `g.facilitair.bezoek`
+
+Na `u.frontdesk`. Geluid (zacht, -24 dB): Hal van een kantoor: een deur die open en dicht schuift, een telefoon, zachte stemmen.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.facilitair.bezoek.1` | Henk (Daniel) | Goedemorgen. Ik heb om tien uur een afspraak met mevrouw Jansen. |
+| `g.facilitair.bezoek.2` | Leerling (Thijmen én Ariël) | Een moment. Ik bel haar even. |
+| `g.facilitair.bezoek.3` | Henk (Daniel) | Moet ik hier mijn naam schrijven? |
+| `g.facilitair.bezoek.4` | Leerling (Thijmen én Ariël) | Ja, graag. Hier is uw bezoekerspasje. |
+| `g.facilitair.bezoek.5` | Henk (Daniel) | Goed. Dan wacht ik even. |
+
+- **Hoe laat is de afspraak?** **Om tien uur.** ✔ · Om elf uur. · Om twaalf uur.  
+  Uitleg: De bezoeker zegt: om tien uur. *(The visitor says: at ten.)*
+- **Wat geef je de bezoeker?** Een kopje koffie. · **Een bezoekerspasje.** ✔ · Een plattegrond.  
+  Uitleg: Elke bezoeker moet een bezoekerspasje hebben. *(Every visitor must have a visitor pass.)*
+
+#### 35. Een lekkage in de gang ⚖️ · `g.facilitair.lekkage`
+
+Na `u.maintenance`. Geluid (zacht, -24 dB): Gang van een kantoor: water druppelt in een emmer, een lift gaat open, voetstappen.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.facilitair.lekkage.1` | Jada (Noa) | Er is een lekkage in de gang, bij de lift. |
+| `g.facilitair.lekkage.2` | Leerling (Thijmen én Ariël) | Oké. Ik zet er een emmer onder. |
+| `g.facilitair.lekkage.3` | Jada (Noa) | Goed. En maak een melding. De vloer is nat. |
+| `g.facilitair.lekkage.4` | Jada (Noa) | Zet er ook een geel bord bij. Dan valt er niemand. |
+
+- **Waar is de lekkage?** In de keuken. · In de lift. · **In de gang.** ✔  
+  Uitleg: Jada zegt: in de gang, bij de lift. *(Jada says: in the corridor, by the lift.)*
+- **Wat moet je ook doen?** **Een melding maken.** ✔ · De lift stoppen. · De monteur bellen.  
+  Uitleg: Je maakt een melding en zet een bord bij de vloer. *(You report it and put a sign by the floor.)*
+
+#### 36. Jij sluit vandaag af ⚖️ · `g.facilitair.afsluiten`
+
+Na `u.maintenance`. Geluid (zacht, -24 dB): Leeg kantoor in de avond: een printer zoemt nog, een sleutelbos rinkelt, een deur valt dicht.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.facilitair.afsluiten.1` | Henk (Daniel) | Jij sluit vandaag af. Loop eerst de laatste ronde. |
+| `g.facilitair.afsluiten.2` | Henk (Daniel) | Kijk of alle ramen dicht zijn. |
+| `g.facilitair.afsluiten.3` | Leerling (Thijmen én Ariël) | Oké. En de alarmcode? |
+| `g.facilitair.afsluiten.4` | Henk (Daniel) | Die krijg je van mij. Geef hem nooit aan iemand anders. |
+
+- **Wat doe je eerst?** Het alarm aanzetten. · **De laatste ronde lopen.** ✔ · De sleutelbos halen.  
+  Uitleg: Henk zegt: loop eerst de laatste ronde. *(Henk says: first walk the last round.)*
+- **Aan wie geef je de alarmcode?** Aan de bezoeker. · Aan een collega. · **Aan niemand.** ✔  
+  Uitleg: Geef de alarmcode aan niemand. *(Give the alarm code to nobody.)*
+
+### Beveiliging
+
+#### 37. Iemand bij het hek ⚖️ · `g.beveiliging.hek`
+
+Na `u.guarding`. Geluid (midden, -18 dB): Bedrijfsterrein in de nacht: wind, een hek dat tikt, ver weg een auto.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.beveiliging.hek.1` | Henk (Daniel) | Op camera drie zie ik iemand bij het hek. |
+| `g.beveiliging.hek.2` | Henk (Daniel) | Loop jij er even heen? Neem je zaklamp mee. |
+| `g.beveiliging.hek.3` | Leerling (Thijmen én Ariël) | Oké. En als er iemand binnen is? |
+| `g.beveiliging.hek.4` | Henk (Daniel) | Dan ga je niet alleen naar binnen. Bel mij met de portofoon. |
+
+- **Waar ziet Henk iemand?** Bij de ingang. · **Bij het hek.** ✔ · Bij de slagboom.  
+  Uitleg: Henk ziet iemand op camera drie, bij het hek. *(Henk sees someone on camera three, by the fence.)*
+- **Wat doe je als er iemand binnen is?** Je gaat alleen naar binnen. · Je wacht bij de slagboom. · **Je belt Henk met de portofoon.** ✔  
+  Uitleg: Alleen naar binnen gaan is te gevaarlijk. *(Going in alone is too dangerous.)*
+
+#### 38. Zonder pas · `g.beveiliging.pas`
+
+Na `u.guarding`. Geluid (zacht, -24 dB): Hal van een bedrijf: een draaihek klikt, een deur schuift open, zachte stemmen.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.beveiliging.pas.1` | Jada (Noa) | Goedemorgen. Ik ben mijn pas vergeten. |
+| `g.beveiliging.pas.2` | Leerling (Thijmen én Ariël) | Mag ik uw legitimatie zien? |
+| `g.beveiliging.pas.3` | Jada (Noa) | Ja, hier. Ik werk op de tweede verdieping. |
+| `g.beveiliging.pas.4` | Leerling (Thijmen én Ariël) | Een moment. Ik bel uw afdeling even. |
+| `g.beveiliging.pas.5` | Jada (Noa) | Goed. Dan wacht ik hier. |
+
+- **Wat is de bezoeker vergeten?** **Haar pas.** ✔ · Haar tas. · Haar jas.  
+  Uitleg: Ze zegt: ik ben mijn pas vergeten. *(She says: I forgot my card.)*
+- **Wat vraag je eerst?** Haar naam en afdeling. · Haar telefoonnummer. · **Haar legitimatie.** ✔  
+  Uitleg: Zonder pas vraag je om legitimatie. *(Without a card you ask for ID.)*
+
+#### 39. Het poortje piept ⚖️ · `g.beveiliging.winkel`
+
+Na `u.incidents`. Geluid (midden, -18 dB): Supermarkt bij de uitgang: een poortje piept, karren rijden, stemmen.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.beveiliging.winkel.1` | Henk (Daniel) | Het poortje piept. Die man loopt snel naar buiten. |
+| `g.beveiliging.winkel.2` | Leerling (Thijmen én Ariël) | Mag ik in zijn tas kijken? |
+| `g.beveiliging.winkel.3` | Henk (Daniel) | Nee, dat mag niet. Vraag hem rustig om terug te komen. |
+| `g.beveiliging.winkel.4` | Henk (Daniel) | Ik bel de politie. |
+
+- **Mag je in zijn tas kijken?** Ja, dat mag altijd. · **Nee, dat mag niet.** ✔ · Ja, als hij snel loopt.  
+  Uitleg: In een tas kijken doet de politie. *(Looking in a bag is for the police.)*
+- **Wie belt de politie?** **Henk.** ✔ · De man. · Jij.  
+  Uitleg: Henk zegt: ik bel de politie. *(Henk says: I will call the police.)*
+
+### Voedingsindustrie
+
+#### 40. Door de hygiënesluis ⚖️ · `g.voeding.sluis`
+
+Na `u.foodhygiene`. Geluid (zacht, -24 dB): Een hygiënesluis: water stroomt, een laarzenwasser borstelt, een deur piept.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.voeding.sluis.1` | Jada (Noa) | Eerst je haarnetje en je baardnetje op. |
+| `g.voeding.sluis.2` | Leerling (Thijmen én Ariël) | Oké. Mag mijn horloge om? |
+| `g.voeding.sluis.3` | Jada (Noa) | Nee, alle sieraden gaan af. |
+| `g.voeding.sluis.4` | Jada (Noa) | Was dan je handen en loop door de laarzenwasser. |
+
+- **Mag je horloge om?** Ja, onder de jas. · Ja, als het schoon is. · **Nee, het gaat af.** ✔  
+  Uitleg: Alle sieraden gaan af, ook je horloge. *(All jewellery comes off, your watch too.)*
+- **Wat doe je na het handen wassen?** **Door de laarzenwasser lopen.** ✔ · Naar de koelcel lopen. · Naar de kantine gaan.  
+  Uitleg: Jada zegt: was je handen en loop door de laarzenwasser. *(Jada says: wash your hands and walk through the boot washer.)*
+
+#### 41. De koelcel piept ⚖️ · `g.voeding.koelcel`
+
+Na `u.foodhygiene`. Geluid (zacht, -24 dB): Een gang bij de koelcel: een koelmachine zoemt, een alarm piept, een deur valt dicht.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.voeding.koelcel.1` | Henk (Daniel) | Hoor je dat? De koelcel piept. |
+| `g.voeding.koelcel.2` | Leerling (Thijmen én Ariël) | Ja. De deur staat nog open. |
+| `g.voeding.koelcel.3` | Henk (Daniel) | Doe hem snel dicht. Wat is de temperatuur? |
+| `g.voeding.koelcel.4` | Leerling (Thijmen én Ariël) | Zeven graden. |
+| `g.voeding.koelcel.5` | Henk (Daniel) | Dat is te warm. Schrijf het op de lijst en bel de ploegleider. |
+
+- **Waarom piept de koelcel?** Het licht is uit. · **De deur staat open.** ✔ · Hij is te koud.  
+  Uitleg: De deur van de koelcel stond nog open. *(The door of the cold room was still open.)*
+- **Wie bel je?** **De ploegleider.** ✔ · De monteur. · De chauffeur.  
+  Uitleg: Henk zegt: bel de ploegleider. *(Henk says: call the shift leader.)*
+
+#### 42. De verkeerde datum · `g.voeding.etiket`
+
+Na `u.foodline`. Geluid (zacht, -24 dB): Een inpakhal: een printer ratelt, een sealmachine sist, een band loopt.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.voeding.etiket.1` | Jada (Noa) | Bram, kijk naar dit etiket. |
+| `g.voeding.etiket.2` | Bram (Thijmen) | De datum klopt niet. Hij is een week te laat. |
+| `g.voeding.etiket.3` | Jada (Noa) | Zet de printer stil. Ik haal de ploegleider. |
+| `g.voeding.etiket.4` | Bram (Thijmen) | En de producten die al klaar zijn? |
+| `g.voeding.etiket.5` | Jada (Noa) | Die zetten we apart. Die gaan niet naar de klant. |
+
+- **Wat is er mis met het etiket?** De naam. · De prijs. · **De datum.** ✔  
+  Uitleg: De datum op het etiket is een week te laat. *(The date on the label is a week too late.)*
+- **Wat doen ze met de producten?** Ze gaan naar de klant. · **Ze zetten ze apart.** ✔ · Ze pakken ze opnieuw in.  
+  Uitleg: Jada zegt: die zetten we apart. *(Jada says: we put them aside.)*
+
+### Afval en recycling
+
+#### 43. Achteruitrijden ⚖️ · `g.afval.achteruit`
+
+Na `u.collection`. Geluid (midden, -18 dB): Een smalle straat: een vrachtwagen piept achteruit, een motor bromt, een fiets rijdt voorbij.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.afval.achteruit.1` | Henk (Daniel) | Ik moet hier achteruitrijden. Help je mij? |
+| `g.afval.achteruit.2` | Leerling (Thijmen én Ariël) | Ja. Waar moet ik staan? |
+| `g.afval.achteruit.3` | Henk (Daniel) | Links, naast de wagen. Niet achter de wagen. |
+| `g.afval.achteruit.4` | Henk (Daniel) | Zie ik je niet in de spiegel? Dan stop ik. |
+
+- **Waar sta je?** Achter de wagen. · **Links, naast de wagen.** ✔ · Rechts, in de cabine.  
+  Uitleg: Achter de wagen kan de chauffeur je niet zien. *(Behind the lorry the driver cannot see you.)*
+- **Wat doet Henk als hij je niet ziet?** **Hij stopt.** ✔ · Hij belt je. · Hij rijdt door.  
+  Uitleg: Henk zegt: dan stop ik. *(Henk says: then I stop.)*
+
+#### 44. Een zware kliko · `g.afval.kliko`
+
+Na `u.collection`. Geluid (midden, -18 dB): Een straat in de ochtend: de vuilniswagen bromt, een kieplift ratelt, een kliko rolt.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.afval.kliko.1` | Jada (Noa) | Bram, deze kliko is veel te zwaar. |
+| `g.afval.kliko.2` | Bram (Thijmen) | Er zit puin in. Dat mag niet. |
+| `g.afval.kliko.3` | Jada (Noa) | Laat hem staan. Ik doe er een sticker op. |
+| `g.afval.kliko.4` | Bram (Thijmen) | Goed. Ik meld het ook in de app. |
+
+- **Wat zit er in de kliko?** **Puin.** ✔ · Papier. · Glas.  
+  Uitleg: Bram zegt: er zit puin in. *(Bram says: there is rubble in it.)*
+- **Wat doen ze met de kliko?** Ze maken hem leeg. · Ze nemen hem mee. · **Ze laten hem staan.** ✔  
+  Uitleg: Puin mag niet in de kliko. *(Rubble may not go in the wheelie bin.)*
+
+#### 45. De pers zit vast ⚖️ · `g.afval.pers`
+
+Na `u.recycling`. Geluid (midden, -18 dB): Een milieustraat: een balenpers bromt en stopt, een shovel rijdt, een container bonkt.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.afval.pers.1` | Leerling (Thijmen én Ariël) | Henk, de pers zit vast. |
+| `g.afval.pers.2` | Henk (Daniel) | Druk eerst op de noodstop. |
+| `g.afval.pers.3` | Leerling (Thijmen én Ariël) | Oké. Er zit karton in de vulopening. |
+| `g.afval.pers.4` | Henk (Daniel) | Pak het niet. Eerst gaat de stroom eraf. |
+| `g.afval.pers.5` | Henk (Daniel) | Dan haal ik het eruit. |
+
+- **Wat zit er in de vulopening?** Plastic. · Hout. · **Karton.** ✔  
+  Uitleg: Er zit karton in de vulopening. *(There is cardboard in the loading opening.)*
+- **Wat moet er eerst gebeuren?** **De stroom gaat eraf.** ✔ · Jij pakt het karton. · De pers gaat weer aan.  
+  Uitleg: Zonder stroom gaat de pers niet aan. *(Without power the press cannot start.)*
+
+### Kinderopvang
+
+#### 46. Wie haalt Sem op? ⚖️ · `g.kinderopvang.ophalen`
+
+Na `u.daycare`. Geluid (zacht, -24 dB): De hal van een kinderdagverblijf: kinderen spelen ver weg, een deur gaat open, een jas ritselt.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.kinderopvang.ophalen.1` | Jada (Noa) | Hallo. Ik kom Sem ophalen. Ik ben de oppas. |
+| `g.kinderopvang.ophalen.2` | Leerling (Thijmen én Ariël) | U staat niet op de lijst. |
+| `g.kinderopvang.ophalen.3` | Jada (Noa) | Klopt. Zijn moeder kan vandaag niet. |
+| `g.kinderopvang.ophalen.4` | Leerling (Thijmen én Ariël) | Een moment. Ik bel even zijn moeder. |
+| `g.kinderopvang.ophalen.5` | Jada (Noa) | Goed, ik wacht wel. |
+
+- **Wie komt Sem ophalen?** Zijn moeder. · **De oppas.** ✔ · Zijn oma.  
+  Uitleg: Jada zegt: ik ben de oppas. *(Jada says: I am the babysitter.)*
+- **Wat doe je?** **Je belt zijn moeder.** ✔ · Sem gaat met haar mee. · Je vraagt het aan Sem.  
+  Uitleg: De oppas staat niet op de lijst, dus je belt eerst. *(The babysitter is not on the list, so you call first.)*
+
+#### 47. Slaapt Mila al? · `g.kinderopvang.slapen`
+
+Na `u.toddlers`. Geluid (zacht, -24 dB): Een slaapkamer van een kinderdagverblijf: zachte muziek, een baby zucht, een deur gaat zacht dicht.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.kinderopvang.slapen.1` | Jada (Noa) | Slaapt Mila al? |
+| `g.kinderopvang.slapen.2` | Leerling (Thijmen én Ariël) | Ja, sinds één uur. Op haar rug. |
+| `g.kinderopvang.slapen.3` | Jada (Noa) | Goed. Kijk over tien minuten nog even. |
+| `g.kinderopvang.slapen.4` | Jada (Noa) | En Daan wil zijn knuffel. Die ligt in zijn tas. |
+
+- **Hoe ligt Mila?** Op haar buik. · Bij het raam. · **Op haar rug.** ✔  
+  Uitleg: Op de rug slaapt een baby veilig. *(On its back a baby sleeps safely.)*
+- **Waar is de knuffel van Daan?** **In zijn tas.** ✔ · In zijn bedje. · Op de tafel.  
+  Uitleg: Jada zegt: die ligt in zijn tas. *(Jada says: it is in his bag.)*
+
+#### 48. Bo is gevallen · `g.kinderopvang.bult`
+
+Na `u.daycare`. Geluid (midden, -18 dB): Een speelplaats: kinderen roepen, een schommel piept, iemand huilt zacht.
+
+| Clip | Stem | Tekst |
+|---|---|---|
+| `g.kinderopvang.bult.1` | Jada (Noa) | Bo is van de glijbaan gevallen. |
+| `g.kinderopvang.bult.2` | Leerling (Thijmen én Ariël) | Heeft ze pijn? |
+| `g.kinderopvang.bult.3` | Jada (Noa) | Ze heeft een bult op haar hoofd. Leg er wat ijs op. |
+| `g.kinderopvang.bult.4` | Jada (Noa) | Ik bel straks haar moeder. En schrijf het op. |
+
+- **Waar is Bo van gevallen?** Van de trap. · **Van de glijbaan.** ✔ · Van haar stoel.  
+  Uitleg: Jada zegt: van de glijbaan. *(Jada says: from the slide.)*
+- **Wat doe je op de bult?** Wat water. · Wat zeep. · **Wat ijs.** ✔  
+  Uitleg: IJs op een bult helpt tegen de pijn. *(Ice on a bump helps against the pain.)*
+
 ## Zo maak je het met ElevenLabs
 
 ### 1. De stemmen (het bestaande opnamescript)
@@ -645,7 +970,7 @@ ffmpeg -y -i beurt1.mp3 -i beurt2.mp3 -i beurt3.mp3 -stream_loop -1 -i geluid.mp
 (`-stream_loop -1` herhaalt het geluid; `amix ... duration=first` stopt als de stem klaar is;
 `areverse,afade,areverse` is de uitfade. Nodig: ffmpeg 4.4 of nieuwer.) Getest met ffmpeg 6.1.
 
-Alle 30 scènes in één keer, met de goede bestanden en het goede niveau per scène:
+Alle 48 scènes in één keer, met de goede bestanden en het goede niveau per scène:
 
 ```sh
 npm run scenes:lines -- --mix         # schrijft public/audio/scene-mix.sh
@@ -764,5 +1089,8 @@ Echte stemmen en echt geluid klinken het meest als de werkvloer. Dat kan bij een
    [In de app](#in-de-app)). Later kan de scène ook in de herhaling komen.
 5. **De ⚖️-scènes** noemen een veiligheidsregel of rechtenfeit (valbeveiliging, last van de kraan,
    spanningsloos werken, rijbewijs, storing aan een machine, heftruck, bespoten kas, hitte, gevallen cliënt, pillen,
-   allergie, datum in de koelcel, natte vloer, middelen mengen, vlees over de datum, alcohol onder de 18). Laat ze nalezen zoals de andere
+   allergie, datum in de koelcel, natte vloer, middelen mengen, vlees over de datum, alcohol onder de 18,
+   stoppen met de bosmaaier, hesje en pionnen langs de weg, een natte gang, de alarmcode geheim,
+   niet alleen naar binnen, niet in een tas kijken, sieraden af, een warme koelcel, achteruitrijden,
+   de stroom eraf bij de pers, een kind alleen mee met wie op de lijst staat). Laat ze nalezen zoals de andere
    ⚖️-teksten.

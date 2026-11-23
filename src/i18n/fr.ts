@@ -292,7 +292,7 @@ const lang: HelpLanguageSource = {
     settingOn: 'Activé',
     settingOff: 'Désactivé',
     sectorGroupMake: 'Fabriquer et transporter',
-    sectorGroupCare: 'Soins et services',
+    sectorGroupCare: "Soins et enfants", // nieuw, nalezen
     sectorGroupShop: 'Commerce et restauration', // nieuw, nalezen
     sectorGroupBuild: 'Bâtiment et technique', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'Voix de femme',
@@ -484,22 +484,20 @@ const lang: HelpLanguageSource = {
     speakFromMemory: 'Maintenant de mémoire : c’était quoi en néerlandais ?', // nieuw, nalezen
     keptNofM: 'Mots d’il y a 2 semaines ou plus : tu en connaissais encore {n} sur {m}.', // nieuw, nalezen
     verbSecond: 'Le verbe est en 2e position.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    calmScreen: 'Écran calme', // nieuw, nalezen
-    calmAuto: 'Comme ton téléphone', // nieuw, nalezen
-    calmHint: 'Activé : rien ne bouge, pas de fête pour ta série après une leçon, et ta série et tes mots ne sont pas sur l’écran d’accueil.', // nieuw, nalezen
-    playMode: 'Mode jeu', // nieuw, nalezen
-    playHint: 'Activé : des points pour chaque bonne réponse, plus si tu en as plusieurs justes de suite. Plus de sons et de mouvement. Une erreur ne coûte rien.', // nieuw, nalezen
     playPoints: 'Points', // nieuw, nalezen
     playTotal: 'Tous tes points', // nieuw, nalezen
-    playAskTitle: 'Comment veux-tu t’entraîner ?', // nieuw, nalezen
-    playAskCalm: 'Calme', // nieuw, nalezen
-    playAskFun: 'Avec un jeu', // nieuw, nalezen
-    playAskHint: 'Avec un jeu : des points, des sons et du mouvement. Tu peux changer ça dans les Réglages.', // nieuw, nalezen
     sfeer: 'Ambiance', // nieuw, nalezen
     sfeerCalm: 'Calme', // nieuw, nalezen
-    sfeerStandard: 'Standard', // nieuw, nalezen
     sfeerGame: 'Jeu', // nieuw, nalezen
-    sfeerHint: 'Calme : rien ne bouge, pas de fête. Standard : l’appli telle qu’elle est. Jeu : des points, des sons et beaucoup de mouvement.', // nieuw, nalezen
+    sfeerHint: 'Calme : rien ne bouge, pas de fête. Jeu : des points, des sons et beaucoup de mouvement.', // nieuw, nalezen
+    sectorGroupService: "Services et sécurité", // nieuw, nalezen
+    sectorGroupOutdoor: "Travailler dehors", // nieuw, nalezen
+    sectorChildcare: "Garde d’enfants", // nieuw, nalezen
+    sectorWaste: "Déchets et recyclage", // nieuw, nalezen
+    sectorFood: "Industrie alimentaire", // nieuw, nalezen
+    sectorSecurity: "Sécurité et surveillance", // nieuw, nalezen
+    sectorFacility: "Services généraux", // nieuw, nalezen
+    sectorGreen: "Espaces verts et jardins", // nieuw, nalezen
     playLevel: 'Niveau', // nieuw, nalezen
     playLevel1: 'Novice', // nieuw, nalezen
     playLevel2: 'Élève', // nieuw, nalezen

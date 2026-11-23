@@ -292,7 +292,7 @@ const lang: HelpLanguageSource = {
     settingOn: 'Pornit',
     settingOff: 'Oprit',
     sectorGroupMake: 'Producție și transport',
-    sectorGroupCare: 'Îngrijire și servicii',
+    sectorGroupCare: "Îngrijire și copii", // nieuw, nalezen
     sectorGroupShop: 'Magazine și restaurante', // nieuw, nalezen
     sectorGroupBuild: 'Construcții și tehnică', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'Voce de femeie',
@@ -484,22 +484,20 @@ const lang: HelpLanguageSource = {
     speakFromMemory: 'Acum din memorie: cum era în olandeză?', // nieuw, nalezen
     keptNofM: 'Cuvinte de acum 2 săptămâni sau mai vechi: încă știai {n} din {m}.', // nieuw, nalezen
     verbSecond: 'Verbul stă pe locul 2.', // nieuw, nalezen
-    calmScreen: 'Ecran liniștit', // nieuw, nalezen
-    calmAuto: 'Ca telefonul tău', // nieuw, nalezen
-    calmHint: 'Pornit: nimic nu se mișcă, nicio sărbătoare pentru seria ta după o lecție, iar seria și cuvintele nu apar pe ecranul principal.', // nieuw, nalezen
-    playMode: 'Mod joc', // nieuw, nalezen
-    playHint: 'Pornit: puncte pentru fiecare răspuns corect, mai multe dacă ai câteva corecte la rând. Mai multe sunete și mișcare. O greșeală nu costă nimic.', // nieuw, nalezen
     playPoints: 'Puncte', // nieuw, nalezen
     playTotal: 'Toate punctele tale', // nieuw, nalezen
-    playAskTitle: 'Cum vrei să exersezi?', // nieuw, nalezen
-    playAskCalm: 'În liniște', // nieuw, nalezen
-    playAskFun: 'Cu joc', // nieuw, nalezen
-    playAskHint: 'Cu joc: puncte, sunete și mișcare. Poți schimba asta din Setări.', // nieuw, nalezen
     sfeer: 'Atmosferă', // nieuw, nalezen
     sfeerCalm: 'Liniște', // nieuw, nalezen
-    sfeerStandard: 'Standard', // nieuw, nalezen
     sfeerGame: 'Joc', // nieuw, nalezen
-    sfeerHint: 'Liniște: nimic nu se mișcă, fără sărbători. Standard: aplicația așa cum este. Joc: puncte, sunete și multă mișcare.', // nieuw, nalezen
+    sfeerHint: 'Liniște: nimic nu se mișcă, fără sărbători. Joc: puncte, sunete și multă mișcare.', // nieuw, nalezen
+    sectorGroupService: "Servicii și pază", // nieuw, nalezen
+    sectorGroupOutdoor: "Munca în aer liber", // nieuw, nalezen
+    sectorChildcare: "Creșă și grădiniță", // nieuw, nalezen
+    sectorWaste: "Deșeuri și reciclare", // nieuw, nalezen
+    sectorFood: "Industria alimentară", // nieuw, nalezen
+    sectorSecurity: "Pază și securitate", // nieuw, nalezen
+    sectorFacility: "Servicii pentru clădiri", // nieuw, nalezen
+    sectorGreen: "Spații verzi și grădini", // nieuw, nalezen
     playLevel: 'Nivel', // nieuw, nalezen
     playLevel1: 'Început', // nieuw, nalezen
     playLevel2: 'Învățare', // nieuw, nalezen

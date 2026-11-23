@@ -207,6 +207,55 @@ const t: CultureTranslation = {
     'c.oilchange.a.why': "Te preguntan cuánto: los litros, y cómo comprobarlo.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.a.why': "Te preguntan si hay que cambiarlo: sí, y por qué.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "Te preguntan qué hay que hacer: mirar la orden de trabajo.", // nieuw, nalezen // nagelezen AI 22 nov
+    // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
+    'c.mowing.a.why': "Te preguntan si se puede coger: sí, y qué hacer primero.", // nieuw, nalezen
+    'c.pruning.a.why': "Te preguntan qué ramas: solo las muertas.", // nieuw, nalezen
+    'c.hedge.a.why': "Te preguntan a qué altura: hasta la línea, no más bajo.", // nieuw, nalezen
+    'c.chainsaw.a.why': "Te preguntan si se puede: todavía no, y qué va primero.", // nieuw, nalezen
+    'c.weeding.a.why': "Te preguntan si es una mala hierba: no, y qué hacer con ella.", // nieuw, nalezen
+    'c.planting.a.why': "Te preguntan dónde va: el sitio en el parterre.", // nieuw, nalezen
+    'c.roadside.a.why': "Te preguntan si se puede cruzar: no, esperar, y por qué.", // nieuw, nalezen
+    'c.litter.a.why': "Un vecino pregunta cuándo: no lo sabes, y quién lo sabe.", // nieuw, nalezen
+    'c.reception.a.why': "Un visitante tiene una cita: un momento, y llamas.", // nieuw, nalezen
+    'c.visitors.a.why': "Te preguntan dónde va el abrigo: el sitio, y dónde está.", // nieuw, nalezen
+    'c.mailroom.a.why': "Te preguntan para quién es: el departamento, y la planta.", // nieuw, nalezen
+    'c.meetingroom.a.why': "Te preguntan a qué hora: la hora, y qué hay que hacer.", // nieuw, nalezen
+    'c.faults.a.why': "Te preguntan por qué hace frío: qué está roto, y cuándo llega ayuda.", // nieuw, nalezen
+    'c.repairs.a.why': "Te preguntan si pita: sí, y por qué.", // nieuw, nalezen
+    'c.moving.a.why': "Te preguntan adónde va: la sala, y dónde mirar.", // nieuw, nalezen
+    'c.closing.a.why': "Te preguntan si queda alguien: no, y qué haces ahora.", // nieuw, nalezen
+    'c.patrol.a.why': "Te preguntan si has visto algo: sí, qué, y dónde.", // nieuw, nalezen
+    'c.access.a.why': "Te piden entrar sin tarjeta: lo siento, sin tarjeta no.", // nieuw, nalezen
+    'c.cameras.a.why': "Te preguntan qué ves: quién, dónde, y qué haces.", // nieuw, nalezen
+    'c.report.a.why': "Te preguntan qué va en el informe: qué, dónde y cuándo.", // nieuw, nalezen
+    'c.evacuation.a.why': "Te preguntan si están todos fuera: no, y cuántos faltan.", // nieuw, nalezen
+    'c.firstaid.a.why': "Te preguntan dónde está el DEA: el sitio, y qué hay al lado.", // nieuw, nalezen
+    'c.shoplifting.a.why': "Te preguntan si se puede registrar una bolsa: no, y quién lo hace.", // nieuw, nalezen
+    'c.aggression.a.why': "Te preguntan por qué no: el motivo, dicho con calma.", // nieuw, nalezen
+    'c.hygienelock.a.why': "Te preguntan por un reloj: no, y la norma que hay detrás.", // nieuw, nalezen
+    'c.allergens.a.why': "Te preguntan si puede ir junto: no, y por qué.", // nieuw, nalezen
+    'c.coldroom.a.why': "Te preguntan por qué pita: la causa, y qué hacer.", // nieuw, nalezen
+    'c.foreignbody.a.why': "Te preguntan qué hacer: a quién enseñárselo.", // nieuw, nalezen
+    'c.cutting.a.why': "Te preguntan cuánto: el peso, y dónde mirar.", // nieuw, nalezen
+    'c.labels.a.why': "Te preguntan qué fecha: cuándo, y dónde mirar.", // nieuw, nalezen
+    'c.linecleaning.a.why': "Te preguntan si está limpia: todavía no, y qué falta.", // nieuw, nalezen
+    'c.haccp.a.why': "Te preguntan por qué: para saber que la comida es segura.", // nieuw, nalezen
+    'c.binlorry.a.why': "Te preguntan si se puede ir detrás: no, y dónde ir.", // nieuw, nalezen
+    'c.reversing.a.why': "Te piden ayuda: sí, dónde estás, y qué hacer.", // nieuw, nalezen
+    'c.wastesorting.a.why': "Te preguntan dónde va: el contenedor, y por qué.", // nieuw, nalezen
+    'c.wastesafety.a.why': "Te preguntan qué hacer después de un corte: lavarlo, y avisar.", // nieuw, nalezen
+    'c.yard.a.why': "Te preguntan dónde va: el contenedor, y dónde está.", // nieuw, nalezen
+    'c.hazardous.a.why': "Te preguntan qué hay dentro: no lo sabes, así que va aparte.", // nieuw, nalezen
+    'c.baler.a.why': "Te preguntan si se puede mirar: no, y qué va primero.", // nieuw, nalezen
+    'c.shovel.a.why': "Te preguntan si se puede pasar: solo cuando el conductor te ve.", // nieuw, nalezen
+    'c.nappies.a.why': "Te preguntan cuándo: la hora, y dónde está apuntado.", // nieuw, nalezen
+    'c.mealtime.a.why': "Te preguntan si puede comerlo: no, por qué, y dónde mirar.", // nieuw, nalezen
+    'c.naptime.a.why': "Te preguntan si duerme: sí, desde cuándo, y que vas a mirar.", // nieuw, nalezen
+    'c.playtime.a.why': "Te preguntan si un niño puede jugar: sí, dónde, y qué después.", // nieuw, nalezen
+    'c.pickup.a.why': "Te preguntan quién lo recoge: la persona, y que está en la lista.", // nieuw, nalezen
+    'c.childsafety.a.why': "Te preguntan si se ha caído: sí, qué tiene, y a quién llamas.", // nieuw, nalezen
+    'c.sickchild.a.why': "Te preguntan cómo está: lo que ves, y lo que haces.", // nieuw, nalezen
+    'c.grouprules.a.why': "Te preguntan si se puede ir a solas: sí, pero antes avisar a un compañero.", // nieuw, nalezen
   },
 };
 

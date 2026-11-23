@@ -140,6 +140,31 @@ const t: CultureTranslation = {
     'kjn.u.kweek.2': "می‌توانم بپرسم که یک بادنجان رومی به اندازهٔ کافی پخته است یا نی.", // nieuw, nalezen
     'kjn.u.carservice.1': "می‌توانم بگویم که چراغ اخطار روشن است.", // nieuw, nalezen
     'kjn.u.carservice.2': "می‌توانم بپرسم که چقدر روغن باید انداخته شود.", // nieuw, nalezen
+    // The new sectors (23 November 2026).
+    'kjn.u.mowing.1': "می‌توانم بگویم که علف خیلی تر است.", // nieuw, nalezen
+    'kjn.u.mowing.2': "می‌توانم بپرسم که کدام شاخه‌ها باید بریده شوند.", // nieuw, nalezen
+    'kjn.u.planting.1': "می‌توانم بگویم که شیشهٔ شکسته افتاده است.", // nieuw, nalezen
+    'kjn.u.planting.2': "می‌توانم بپرسم که اجازه دارم از سرک تیر شوم یا نی.", // nieuw, nalezen
+    'kjn.u.frontdesk.1': "می‌توانم به یک مراجعه‌کننده سلام بدهم و کمکش کنم.", // nieuw, nalezen
+    'kjn.u.frontdesk.2': "می‌توانم بپرسم که یک بسته برای کیست.", // nieuw, nalezen
+    'kjn.u.maintenance.1': "می‌توانم یک خرابی را گزارش بدهم.", // nieuw, nalezen
+    'kjn.u.maintenance.2': "می‌توانم بپرسم که یک میز کار باید کجا برود.", // nieuw, nalezen
+    'kjn.u.guarding.1': "می‌توانم بپرسم که کارت هویت کسی را دیده می‌توانم یا نی.", // nieuw, nalezen
+    'kjn.u.guarding.2': "می‌توانم با مخابره بگویم که چه می‌بینم.", // nieuw, nalezen
+    'kjn.u.incidents.1': "می‌توانم به ۱۱۲ زنگ بزنم و بگویم که چه شده.", // nieuw, nalezen
+    'kjn.u.incidents.2': "می‌توانم با یک مشتری قهر آرام گپ بزنم.", // nieuw, nalezen
+    'kjn.u.foodhygiene.1': "می‌توانم بگویم که سردخانه خیلی گرم است.", // nieuw, nalezen
+    'kjn.u.foodhygiene.2': "می‌توانم بپرسم که در آن مغزیجات است یا نی.", // nieuw, nalezen
+    'kjn.u.foodline.1': "می‌توانم بگویم که لیبل درست نیست.", // nieuw, nalezen
+    'kjn.u.foodline.2': "می‌توانم بپرسم که در یک ظرف چقدر باید برود.", // nieuw, nalezen
+    'kjn.u.collection.1': "می‌توانم به راننده در عقب رفتن کمک کنم.", // nieuw, nalezen
+    'kjn.u.collection.2': "می‌توانم بگویم که یک سطل چرخ‌دار خیلی سنگین است.", // nieuw, nalezen
+    'kjn.u.recycling.1': "می‌توانم به یک مراجعه‌کننده بگویم که کثافاتش کجا می‌رود.", // nieuw, nalezen
+    'kjn.u.recycling.2': "می‌توانم بگویم که پرس گیر مانده.", // nieuw, nalezen
+    'kjn.u.toddlers.1': "می‌توانم بگویم که پمپرز یک طفل را تبدیل می‌کنم.", // nieuw, nalezen
+    'kjn.u.toddlers.2': "می‌توانم بپرسم که یک طفل خواب رفته یا نی.", // nieuw, nalezen
+    'kjn.u.daycare.1': "می‌توانم به یکی از والدین بگویم که روز چطور گذشت.", // nieuw, nalezen
+    'kjn.u.daycare.2': "می‌توانم بپرسم که چه کسی برای بردن یک طفل می‌آید.", // nieuw, nalezen
   },
 };
 

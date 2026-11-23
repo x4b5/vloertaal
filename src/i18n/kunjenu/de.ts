@@ -139,6 +139,31 @@ const t: CultureTranslation = {
     'kjn.u.kweek.2': "Ich kann fragen, ob eine Tomate reif genug ist.", // nieuw, nalezen
     'kjn.u.carservice.1': "Ich kann sagen, dass die Warnleuchte an ist.", // nieuw, nalezen
     'kjn.u.carservice.2': "Ich kann fragen, wie viel Öl rein muss.", // nieuw, nalezen
+    // The new sectors (23 November 2026).
+    'kjn.u.mowing.1': "Ich kann sagen, dass das Gras zu nass ist.", // nieuw, nalezen
+    'kjn.u.mowing.2': "Ich kann fragen, welche Äste abmüssen.", // nieuw, nalezen
+    'kjn.u.planting.1': "Ich kann sagen, dass da Scherben liegen.", // nieuw, nalezen
+    'kjn.u.planting.2': "Ich kann fragen, ob ich über die Straße gehen darf.", // nieuw, nalezen
+    'kjn.u.frontdesk.1': "Ich kann einen Besucher begrüßen und ihm helfen.", // nieuw, nalezen
+    'kjn.u.frontdesk.2': "Ich kann fragen, für wen ein Paket ist.", // nieuw, nalezen
+    'kjn.u.maintenance.1': "Ich kann eine Störung melden.", // nieuw, nalezen
+    'kjn.u.maintenance.2': "Ich kann fragen, wohin ein Schreibtisch muss.", // nieuw, nalezen
+    'kjn.u.guarding.1': "Ich kann fragen, ob ich jemandes Ausweis sehen darf.", // nieuw, nalezen
+    'kjn.u.guarding.2': "Ich kann über Funk sagen, was ich sehe.", // nieuw, nalezen
+    'kjn.u.incidents.1': "Ich kann 112 anrufen und sagen, was los ist.", // nieuw, nalezen
+    'kjn.u.incidents.2': "Ich kann ruhig mit einem wütenden Kunden sprechen.", // nieuw, nalezen
+    'kjn.u.foodhygiene.1': "Ich kann sagen, dass der Kühlraum zu warm ist.", // nieuw, nalezen
+    'kjn.u.foodhygiene.2': "Ich kann fragen, ob Nüsse drin sind.", // nieuw, nalezen
+    'kjn.u.foodline.1': "Ich kann sagen, dass das Etikett nicht stimmt.", // nieuw, nalezen
+    'kjn.u.foodline.2': "Ich kann fragen, wie viel in einen Behälter muss.", // nieuw, nalezen
+    'kjn.u.collection.1': "Ich kann dem Fahrer beim Rückwärtsfahren helfen.", // nieuw, nalezen
+    'kjn.u.collection.2': "Ich kann sagen, dass eine Mülltonne zu schwer ist.", // nieuw, nalezen
+    'kjn.u.recycling.1': "Ich kann einem Besucher sagen, wohin sein Müll kommt.", // nieuw, nalezen
+    'kjn.u.recycling.2': "Ich kann sagen, dass die Presse klemmt.", // nieuw, nalezen
+    'kjn.u.toddlers.1': "Ich kann sagen, dass ich ein Kind wickle.", // nieuw, nalezen
+    'kjn.u.toddlers.2': "Ich kann fragen, ob ein Kind schon schläft.", // nieuw, nalezen
+    'kjn.u.daycare.1': "Ich kann einem Elternteil erzählen, wie der Tag war.", // nieuw, nalezen
+    'kjn.u.daycare.2': "Ich kann fragen, wer ein Kind abholt.", // nieuw, nalezen
   },
 };
 

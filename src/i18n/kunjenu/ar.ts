@@ -141,6 +141,31 @@ const t: CultureTranslation = {
     'kjn.u.kweek.2': "أستطيع أن أسأل هل حبة الطماطم ناضجة بما يكفي.", // nieuw, nalezen
     'kjn.u.carservice.1': "أستطيع أن أقول إن ضوء التحذير مضاء.", // nieuw, nalezen
     'kjn.u.carservice.2': "أستطيع أن أسأل كم من الزيت يجب أن يدخل.", // nieuw, nalezen
+    // The new sectors (23 November 2026).
+    'kjn.u.mowing.1': "أستطيع أن أقول إن العشب مبلّل جداً.", // nieuw, nalezen
+    'kjn.u.mowing.2': "أستطيع أن أسأل أيّ أغصان يجب أن تُقطع.", // nieuw, nalezen
+    'kjn.u.planting.1': "أستطيع أن أقول إن هناك زجاجاً مكسوراً.", // nieuw, nalezen
+    'kjn.u.planting.2': "أستطيع أن أسأل هل يُسمح لي أن أعبر الطريق.", // nieuw, nalezen
+    'kjn.u.frontdesk.1': "أستطيع أن أرحّب بزائر وأساعده.", // nieuw, nalezen
+    'kjn.u.frontdesk.2': "أستطيع أن أسأل لمن الطرد.", // nieuw, nalezen
+    'kjn.u.maintenance.1': "أستطيع أن أبلّغ عن عطل.", // nieuw, nalezen
+    'kjn.u.maintenance.2': "أستطيع أن أسأل إلى أين يجب أن يذهب مكتب.", // nieuw, nalezen
+    'kjn.u.guarding.1': "أستطيع أن أطلب رؤية هوية شخص.", // nieuw, nalezen
+    'kjn.u.guarding.2': "أستطيع أن أقول عبر جهاز اللاسلكي ما أراه.", // nieuw, nalezen
+    'kjn.u.incidents.1': "أستطيع أن أتصل بـ112 وأقول ماذا حدث.", // nieuw, nalezen
+    'kjn.u.incidents.2': "أستطيع أن أكلّم زبوناً غاضباً بهدوء.", // nieuw, nalezen
+    'kjn.u.foodhygiene.1': "أستطيع أن أقول إن غرفة التبريد حارّة جداً.", // nieuw, nalezen
+    'kjn.u.foodhygiene.2': "أستطيع أن أسأل هل فيه مكسّرات.", // nieuw, nalezen
+    'kjn.u.foodline.1': "أستطيع أن أقول إن الملصق غير صحيح.", // nieuw, nalezen
+    'kjn.u.foodline.2': "أستطيع أن أسأل كم يجب أن يكون في العلبة.", // nieuw, nalezen
+    'kjn.u.collection.1': "أستطيع أن أساعد السائق في الرجوع إلى الخلف.", // nieuw, nalezen
+    'kjn.u.collection.2': "أستطيع أن أقول إن حاوية النفايات ثقيلة جداً.", // nieuw, nalezen
+    'kjn.u.recycling.1': "أستطيع أن أقول لزائر أين تذهب نفاياته.", // nieuw, nalezen
+    'kjn.u.recycling.2': "أستطيع أن أقول إن المكبس عالق.", // nieuw, nalezen
+    'kjn.u.toddlers.1': "أستطيع أن أقول إنني سأغيّر حفاض طفل.", // nieuw, nalezen
+    'kjn.u.toddlers.2': "أستطيع أن أسأل هل نام الطفل.", // nieuw, nalezen
+    'kjn.u.daycare.1': "أستطيع أن أخبر أحد الوالدين كيف كان اليوم.", // nieuw, nalezen
+    'kjn.u.daycare.2': "أستطيع أن أسأل من سيأتي ليأخذ الطفل.", // nieuw, nalezen
   },
 };
 

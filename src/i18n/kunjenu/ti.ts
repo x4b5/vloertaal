@@ -141,6 +141,31 @@ const t: CultureTranslation = {
     'kjn.u.kweek.2': "ሓንቲ ኮሚደረ እኹል በሲላ እንተ ኾይና ክሓትት እኽእል እየ።", // nieuw, nalezen
     'kjn.u.carservice.1': "እቲ መጠንቀቕታ መብራህቲ ይበርህ ከም ዘሎ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.carservice.2': "ክንደይ ዘይቲ ክኣቱ ከም ዘለዎ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    // The new sectors (23 November 2026).
+    'kjn.u.mowing.1': "እቲ ሳዕሪ ኣዝዩ ጠሊሉ ምዃኑ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.mowing.2': "ኣየኖት ጨናፍር ክቑረጹ ከም ዘለዎም ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.planting.1': "ስባር ብርጭቆ ከም ዘሎ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.planting.2': "ጽርግያ ክሰግር ይፍቀደኒ ድዩ ኢለ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.frontdesk.1': "ንበጻሒ ሰላም ክብልን ክሕግዝን እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.frontdesk.2': "ሓደ ጥቕላል ንመን ምዃኑ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.maintenance.1': "ብልሽት ከሕብር እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.maintenance.2': "ሓደ ጠረጴዛ ናበይ ክኸይድ ከም ዘለዎ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.guarding.1': "መንነት ወረቐት ሓደ ሰብ ክርኢ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.guarding.2': "እንታይ ከም ዝርኢ ብሬድዮ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.incidents.1': "ናብ 112 ደዊለ እንታይ ከም ዘሎ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.incidents.2': "ምስ ሕሩቕ ዓሚል ብህድኣት ክዛረብ እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.foodhygiene.1': "እቲ ዝሑል ክፍሊ ኣዝዩ ውዑይ ምዃኑ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.foodhygiene.2': "ኣብኡ ለውዝ ኣሎ ድዩ ኢለ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.foodline.1': "እቲ ኤቲኬት ቅኑዕ ከም ዘይኮነ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.foodline.2': "ኣብ ሓደ ሳጹን ክንደይ ክኣቱ ከም ዘለዎ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.collection.1': "ነቲ መራሒ ንድሕሪት ክዝውር ክሕግዞ እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.collection.2': "ሓደ መጕሓፊ ኣዝዩ ከቢድ ምዃኑ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.recycling.1': "ንበጻሒ ጎሓፉ ናበይ ከም ዝኸይድ ክነግሮ እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.recycling.2': "እቲ መጸቕጢ ከም ዝተጣበቐ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.toddlers.1': "ንሓደ ቈልዓ ፓምፐርስ ክቕይረሉ ምዃነይ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.toddlers.2': "ሓደ ቈልዓ ደቂሱ ድዩ ኢለ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.daycare.1': "ንወላዲ እታ መዓልቲ ብኸመይ ከም ዝሓለፈት ክነግሮ እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.daycare.2': "ሓደ ቈልዓ መን ክወስዶ ይመጽእ ከም ዘሎ ክሓትት እኽእል እየ።", // nieuw, nalezen
   },
 };
 

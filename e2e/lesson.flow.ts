@@ -2,6 +2,8 @@ import { expect, test } from '@playwright/test';
 import { finishLesson, lessonPlace, openAsLearner, playSteps, progress, tapUntilChanged } from './helpers';
 
 test('a first start, to lesson 1.1 finished', async ({ page }) => {
+  // A whole first lesson with the game's juice (the standard since 23 November 2026): more than the default 60 s on a slow runner.
+  test.setTimeout(90_000);
   await page.goto('/');
   // The first page is the list of languages (on this Dutch test phone with "Ik spreek al
   // Nederlands" on top); then the sector, the country, and the page "use this one phone" with

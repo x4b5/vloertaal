@@ -209,6 +209,55 @@ const t: CultureTranslation = {
     'c.oilchange.a.why': "السؤال كم: اللترات، وطريقة الفحص.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.a.why': "السؤال هل يجب تغييره: نعم، والسبب.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "السؤال ماذا يجب أن يُعمل: النظر في أمر العمل.", // nieuw, nalezen // nagelezen AI 22 nov
+    // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
+    'c.mowing.a.why': "السؤال هل يُسمح بأخذها: نعم، وما الذي يأتي أولاً.", // nieuw, nalezen
+    'c.pruning.a.why': "السؤال أيّ أغصان: الميتة فقط.", // nieuw, nalezen
+    'c.hedge.a.why': "السؤال كم الارتفاع: حتى الخطّ، لا أقلّ.", // nieuw, nalezen
+    'c.chainsaw.a.why': "السؤال هل يُسمح: ليس بعد، وما الذي يأتي أولاً.", // nieuw, nalezen
+    'c.weeding.a.why': "السؤال هل هي عشبة ضارّة: لا، وماذا يُفعل بها.", // nieuw, nalezen
+    'c.planting.a.why': "السؤال أين توضع: المكان في حوض الزهور.", // nieuw, nalezen
+    'c.roadside.a.why': "السؤال هل يمكن العبور: لا، الانتظار، والسبب.", // nieuw, nalezen
+    'c.litter.a.why': "ساكن يسأل متى: الجواب غير معروف، ومن يعرفه.", // nieuw, nalezen
+    'c.reception.a.why': "زائر عنده موعد: لحظة، والاتصال به.", // nieuw, nalezen
+    'c.visitors.a.why': "السؤال أين يوضع المعطف: المكان، وأين هو.", // nieuw, nalezen
+    'c.mailroom.a.why': "السؤال لمن هو: القسم، والطابق.", // nieuw, nalezen
+    'c.meetingroom.a.why': "السؤال في أي ساعة: الوقت، وما يجب عمله.", // nieuw, nalezen
+    'c.faults.a.why': "السؤال لماذا الجو بارد: ما المعطّل، ومتى تأتي المساعدة.", // nieuw, nalezen
+    'c.repairs.a.why': "السؤال هل يصفّر: نعم، والسبب.", // nieuw, nalezen
+    'c.moving.a.why': "السؤال إلى أين يذهب: الغرفة، وأين يُنظر.", // nieuw, nalezen
+    'c.closing.a.why': "السؤال هل بقي أحد في الداخل: لا، وما يحدث الآن.", // nieuw, nalezen
+    'c.patrol.a.why': "السؤال هل كان هناك شيء: نعم، ماذا، وأين.", // nieuw, nalezen
+    'c.access.a.why': "طلب الدخول بدون بطاقة: عذراً، ليس بدون بطاقة.", // nieuw, nalezen
+    'c.cameras.a.why': "السؤال ماذا يظهر: من، وأين، وما العمل.", // nieuw, nalezen
+    'c.report.a.why': "السؤال ماذا يكون في التقرير: ماذا، وأين، ومتى.", // nieuw, nalezen
+    'c.evacuation.a.why': "السؤال هل الجميع في الخارج: لا، وكم شخصاً ناقصاً.", // nieuw, nalezen
+    'c.firstaid.a.why': "السؤال أين جهاز AED: المكان، وما بجانبه.", // nieuw, nalezen
+    'c.shoplifting.a.why': "السؤال هل يُسمح بتفتيش حقيبة: لا، ومن يفعل ذلك.", // nieuw, nalezen
+    'c.aggression.a.why': "السؤال لماذا لا: السبب، بهدوء.", // nieuw, nalezen
+    'c.hygienelock.a.why': "السؤال عن الساعة: لا، والقاعدة وراء ذلك.", // nieuw, nalezen
+    'c.allergens.a.why': "السؤال هل يمكن وضعهما معاً: لا، والسبب.", // nieuw, nalezen
+    'c.coldroom.a.why': "السؤال لماذا تصفّر: السبب، وما العمل.", // nieuw, nalezen
+    'c.foreignbody.a.why': "السؤال ما العمل: لمن تُعرض.", // nieuw, nalezen
+    'c.cutting.a.why': "السؤال كم: الوزن، وأين يُنظر.", // nieuw, nalezen
+    'c.labels.a.why': "السؤال أي تاريخ: متى، وأين يُنظر.", // nieuw, nalezen
+    'c.linecleaning.a.why': "السؤال هل هو نظيف: ليس بعد، وما الذي بقي.", // nieuw, nalezen
+    'c.haccp.a.why': "السؤال لماذا: حتى نعرف أن الطعام آمن.", // nieuw, nalezen
+    'c.binlorry.a.why': "السؤال هل يُسمح بالركوب في الخلف: لا، وأين يكون الركوب.", // nieuw, nalezen
+    'c.reversing.a.why': "طلب المساعدة: نعم، مكان الوقوف، وما العمل.", // nieuw, nalezen
+    'c.wastesorting.a.why': "السؤال أين تذهب: الحاوية، والسبب.", // nieuw, nalezen
+    'c.wastesafety.a.why': "السؤال ما العمل بعد الجرح: الغسل، والإخبار.", // nieuw, nalezen
+    'c.yard.a.why': "السؤال أين تذهب: الحاوية، وأين هي.", // nieuw, nalezen
+    'c.hazardous.a.why': "السؤال ماذا في الداخل: غير معروف، لذلك توضع جانباً.", // nieuw, nalezen
+    'c.baler.a.why': "السؤال هل يُسمح بالنظر: لا، وما الذي يأتي أولاً.", // nieuw, nalezen
+    'c.shovel.a.why': "السؤال هل يُسمح بالمرور: فقط عندما يرى السائق المارّ.", // nieuw, nalezen
+    'c.nappies.a.why': "السؤال متى: الوقت، وأين هو مكتوب.", // nieuw, nalezen
+    'c.mealtime.a.why': "السؤال هل يُسمح له: لا، والسبب، وأين يُنظر.", // nieuw, nalezen
+    'c.naptime.a.why': "السؤال هل نامت: نعم، منذ متى، وأن هناك نظرة أخرى.", // nieuw, nalezen
+    'c.playtime.a.why': "طفل يسأل هل يُسمح له أن يلعب: نعم، أين، وماذا بعد ذلك.", // nieuw, nalezen
+    'c.pickup.a.why': "السؤال من يأخذه: الشخص، وأن اسمها في القائمة.", // nieuw, nalezen
+    'c.childsafety.a.why': "السؤال هل سقطت: نعم، ما عندها، وبمن يكون الاتصال.", // nieuw, nalezen
+    'c.sickchild.a.why': "السؤال كيف حاله: ما يُرى، وما العمل.", // nieuw, nalezen
+    'c.grouprules.a.why': "السؤال هل يُسمح بالخروج بشكل فردي: نعم، لكن بعد إخبار زميل.", // nieuw, nalezen
   },
 };
 

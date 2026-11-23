@@ -1136,4 +1136,627 @@ export const geluidsscenes: Geluidsscene[] = [
       },
     ],
   },
+
+  // ---------------------------------------------------------------- Groen (23 November 2026)
+  {
+    id: 'g.groen.bosmaaier',
+    sector: 'green',
+    titel: 'Met de bosmaaier',
+    naUnit: 'u.mowing',
+    recht: true, // ⚖️ stop de machine als er iemand dichtbij komt
+    beurten: [
+      { wie: 'henk', nl: 'Vandaag maai jij het gras langs het pad.' },
+      { wie: 'henk', nl: 'Eerst je gelaatsscherm op. En je gehoorbescherming.' },
+      { wie: 'ik', nl: 'Oké. En als er iemand komt?' },
+      { wie: 'henk', nl: 'Dan stop je de bosmaaier. Pas op voor stenen.' },
+    ],
+    geluid: { nl: 'Park buiten: wind in de bomen, vogels, ver weg een grasmaaier en een auto.', niveau: 'midden' },
+    vragen: [
+      {
+        vraag: 'Wat doe je als er iemand komt?',
+        opties: [
+          { nl: 'Je stopt de bosmaaier.', goed: true },
+          { nl: 'Je gaat snel verder.' },
+          { nl: 'Je roept naar hem.' },
+        ],
+        uitleg: { nl: 'Stenen van de bosmaaier zijn gevaarlijk.', en: 'Stones from the brush cutter are dangerous.' },
+      },
+      {
+        vraag: 'Waar maai je vandaag?',
+        opties: [
+          { nl: 'Bij de heg.' },
+          { nl: 'Langs het pad.', goed: true },
+          { nl: 'Langs de weg.' },
+        ],
+        uitleg: { nl: 'Henk zegt: het gras langs het pad.', en: 'Henk says: the grass along the path.' },
+      },
+    ],
+  },
+  {
+    id: 'g.groen.weg',
+    sector: 'green',
+    titel: 'Langs de weg',
+    naUnit: 'u.planting',
+    recht: true, // ⚖️ langs de weg: een hesje aan en pionnen neer
+    beurten: [
+      { wie: 'jada', nl: 'We werken vandaag langs de weg. Trek je hesje aan.' },
+      { wie: 'ik', nl: 'Oké. Waar zet ik de pionnen?' },
+      { wie: 'jada', nl: 'Achter de bus. Pas daarna beginnen we.' },
+      { wie: 'jada', nl: 'En kijk goed uit voor de fietsers.' },
+    ],
+    geluid: { nl: 'Langs een drukke weg: auto’s rijden voorbij, een fietsbel, een bus die remt.', niveau: 'midden' },
+    vragen: [
+      {
+        vraag: 'Wat trek je aan?',
+        opties: [
+          { nl: 'Je regenpak.' },
+          { nl: 'Je laarzen.' },
+          { nl: 'Je hesje.', goed: true },
+        ],
+        uitleg: { nl: 'Langs de weg draag je altijd je hesje.', en: 'By the road you always wear your vest.' },
+      },
+      {
+        vraag: 'Waar zet je de pionnen?',
+        opties: [
+          { nl: 'Achter de bus.', goed: true },
+          { nl: 'Op de stoep.' },
+          { nl: 'In de berm.' },
+        ],
+        uitleg: { nl: 'Jada zegt: achter de bus.', en: 'Jada says: behind the van.' },
+      },
+    ],
+  },
+  {
+    id: 'g.groen.heg',
+    sector: 'green',
+    titel: 'De heg bij de school',
+    naUnit: 'u.mowing',
+    beurten: [
+      { wie: 'henk', nl: 'Bram, knip jij vandaag de heg bij de school?' },
+      { wie: 'bram', nl: 'Ja. Hoe hoog moet hij blijven?' },
+      { wie: 'henk', nl: 'Tot het touw. Leg eerst het zeil eronder.' },
+      { wie: 'bram', nl: 'Oké. En het snoeiafval?' },
+      { wie: 'henk', nl: 'Dat breng je met de kruiwagen naar de aanhanger.' },
+    ],
+    geluid: { nl: 'Bij een school: kinderen spelen ver weg, een heggenschaar zoemt kort, vogels.', niveau: 'zacht' },
+    vragen: [
+      {
+        vraag: 'Wat moet Bram eerst onder de heg leggen?',
+        opties: [
+          { nl: 'De hark.' },
+          { nl: 'Het zeil.', goed: true },
+          { nl: 'Een krat.' },
+        ],
+        uitleg: { nl: 'Henk zegt: leg eerst het zeil eronder.', en: 'Henk says: first put the tarp under it.' },
+      },
+      {
+        vraag: 'Waar gaat het snoeiafval naartoe?',
+        opties: [
+          { nl: 'Naar de school.' },
+          { nl: 'In de container.' },
+          { nl: 'Naar de aanhanger.', goed: true },
+        ],
+        uitleg: { nl: 'Het snoeiafval gaat met de kruiwagen naar de aanhanger.', en: 'The green waste goes to the trailer in the wheelbarrow.' },
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- Facilitair (23 November 2026)
+  {
+    id: 'g.facilitair.bezoek',
+    sector: 'facility',
+    titel: 'Een bezoeker aan de balie',
+    naUnit: 'u.frontdesk',
+    beurten: [
+      { wie: 'henk', nl: 'Goedemorgen. Ik heb om tien uur een afspraak met mevrouw Jansen.' },
+      { wie: 'ik', nl: 'Een moment. Ik bel haar even.' },
+      { wie: 'henk', nl: 'Moet ik hier mijn naam schrijven?' },
+      { wie: 'ik', nl: 'Ja, graag. Hier is uw bezoekerspasje.' },
+      { wie: 'henk', nl: 'Goed. Dan wacht ik even.' },
+    ],
+    geluid: { nl: 'Hal van een kantoor: een deur die open en dicht schuift, een telefoon, zachte stemmen.', niveau: 'zacht' },
+    vragen: [
+      {
+        vraag: 'Hoe laat is de afspraak?',
+        opties: [
+          { nl: 'Om tien uur.', goed: true },
+          { nl: 'Om elf uur.' },
+          { nl: 'Om twaalf uur.' },
+        ],
+        uitleg: { nl: 'De bezoeker zegt: om tien uur.', en: 'The visitor says: at ten.' },
+      },
+      {
+        vraag: 'Wat geef je de bezoeker?',
+        opties: [
+          { nl: 'Een kopje koffie.' },
+          { nl: 'Een bezoekerspasje.', goed: true },
+          { nl: 'Een plattegrond.' },
+        ],
+        uitleg: { nl: 'Elke bezoeker moet een bezoekerspasje hebben.', en: 'Every visitor must have a visitor pass.' },
+      },
+    ],
+  },
+  {
+    id: 'g.facilitair.lekkage',
+    sector: 'facility',
+    titel: 'Een lekkage in de gang',
+    naUnit: 'u.maintenance',
+    recht: true, // ⚖️ een natte vloer: zet er een bord bij
+    beurten: [
+      { wie: 'jada', nl: 'Er is een lekkage in de gang, bij de lift.' },
+      { wie: 'ik', nl: 'Oké. Ik zet er een emmer onder.' },
+      { wie: 'jada', nl: 'Goed. En maak een melding. De vloer is nat.' },
+      { wie: 'jada', nl: 'Zet er ook een geel bord bij. Dan valt er niemand.' },
+    ],
+    geluid: { nl: 'Gang van een kantoor: water druppelt in een emmer, een lift gaat open, voetstappen.', niveau: 'zacht' },
+    vragen: [
+      {
+        vraag: 'Waar is de lekkage?',
+        opties: [
+          { nl: 'In de keuken.' },
+          { nl: 'In de lift.' },
+          { nl: 'In de gang.', goed: true },
+        ],
+        uitleg: { nl: 'Jada zegt: in de gang, bij de lift.', en: 'Jada says: in the corridor, by the lift.' },
+      },
+      {
+        vraag: 'Wat moet je ook doen?',
+        opties: [
+          { nl: 'Een melding maken.', goed: true },
+          { nl: 'De lift stoppen.' },
+          { nl: 'De monteur bellen.' },
+        ],
+        uitleg: { nl: 'Je maakt een melding en zet een bord bij de vloer.', en: 'You report it and put a sign by the floor.' },
+      },
+    ],
+  },
+  {
+    id: 'g.facilitair.afsluiten',
+    sector: 'facility',
+    titel: 'Jij sluit vandaag af',
+    naUnit: 'u.maintenance',
+    recht: true, // ⚖️ de alarmcode is geheim
+    beurten: [
+      { wie: 'henk', nl: 'Jij sluit vandaag af. Loop eerst de laatste ronde.' },
+      { wie: 'henk', nl: 'Kijk of alle ramen dicht zijn.' },
+      { wie: 'ik', nl: 'Oké. En de alarmcode?' },
+      { wie: 'henk', nl: 'Die krijg je van mij. Geef hem nooit aan iemand anders.' },
+    ],
+    geluid: { nl: 'Leeg kantoor in de avond: een printer zoemt nog, een sleutelbos rinkelt, een deur valt dicht.', niveau: 'zacht' },
+    vragen: [
+      {
+        vraag: 'Wat doe je eerst?',
+        opties: [
+          { nl: 'Het alarm aanzetten.' },
+          { nl: 'De laatste ronde lopen.', goed: true },
+          { nl: 'De sleutelbos halen.' },
+        ],
+        uitleg: { nl: 'Henk zegt: loop eerst de laatste ronde.', en: 'Henk says: first walk the last round.' },
+      },
+      {
+        vraag: 'Aan wie geef je de alarmcode?',
+        opties: [
+          { nl: 'Aan de bezoeker.' },
+          { nl: 'Aan een collega.' },
+          { nl: 'Aan niemand.', goed: true },
+        ],
+        uitleg: { nl: 'Geef de alarmcode aan niemand.', en: 'Give the alarm code to nobody.' },
+      },
+    ],
+  },
+  // ---------------------------------------------------------------- Beveiliging (23 November 2026)
+  {
+    id: 'g.beveiliging.hek',
+    sector: 'security',
+    titel: 'Iemand bij het hek',
+    naUnit: 'u.guarding',
+    recht: true, // ⚖️ ga niet alleen naar binnen
+    beurten: [
+      { wie: 'henk', nl: 'Op camera drie zie ik iemand bij het hek.' },
+      { wie: 'henk', nl: 'Loop jij er even heen? Neem je zaklamp mee.' },
+      { wie: 'ik', nl: 'Oké. En als er iemand binnen is?' },
+      { wie: 'henk', nl: 'Dan ga je niet alleen naar binnen. Bel mij met de portofoon.' },
+    ],
+    geluid: { nl: 'Bedrijfsterrein in de nacht: wind, een hek dat tikt, ver weg een auto.', niveau: 'midden' },
+    vragen: [
+      {
+        vraag: 'Waar ziet Henk iemand?',
+        opties: [
+          { nl: 'Bij de ingang.' },
+          { nl: 'Bij het hek.', goed: true },
+          { nl: 'Bij de slagboom.' },
+        ],
+        uitleg: { nl: 'Henk ziet iemand op camera drie, bij het hek.', en: 'Henk sees someone on camera three, by the fence.' },
+      },
+      {
+        vraag: 'Wat doe je als er iemand binnen is?',
+        opties: [
+          { nl: 'Je gaat alleen naar binnen.' },
+          { nl: 'Je wacht bij de slagboom.' },
+          { nl: 'Je belt Henk met de portofoon.', goed: true },
+        ],
+        uitleg: { nl: 'Alleen naar binnen gaan is te gevaarlijk.', en: 'Going in alone is too dangerous.' },
+      },
+    ],
+  },
+  {
+    id: 'g.beveiliging.pas',
+    sector: 'security',
+    titel: 'Zonder pas',
+    naUnit: 'u.guarding',
+    beurten: [
+      { wie: 'jada', nl: 'Goedemorgen. Ik ben mijn pas vergeten.' },
+      { wie: 'ik', nl: 'Mag ik uw legitimatie zien?' },
+      { wie: 'jada', nl: 'Ja, hier. Ik werk op de tweede verdieping.' },
+      { wie: 'ik', nl: 'Een moment. Ik bel uw afdeling even.' },
+      { wie: 'jada', nl: 'Goed. Dan wacht ik hier.' },
+    ],
+    geluid: { nl: 'Hal van een bedrijf: een draaihek klikt, een deur schuift open, zachte stemmen.', niveau: 'zacht' },
+    vragen: [
+      {
+        vraag: 'Wat is de bezoeker vergeten?',
+        opties: [
+          { nl: 'Haar pas.', goed: true },
+          { nl: 'Haar tas.' },
+          { nl: 'Haar jas.' },
+        ],
+        uitleg: { nl: 'Ze zegt: ik ben mijn pas vergeten.', en: 'She says: I forgot my card.' },
+      },
+      {
+        vraag: 'Wat vraag je eerst?',
+        opties: [
+          { nl: 'Haar naam en afdeling.' },
+          { nl: 'Haar telefoonnummer.' },
+          { nl: 'Haar legitimatie.', goed: true },
+        ],
+        uitleg: { nl: 'Zonder pas vraag je om legitimatie.', en: 'Without a card you ask for ID.' },
+      },
+    ],
+  },
+  {
+    id: 'g.beveiliging.winkel',
+    sector: 'security',
+    titel: 'Het poortje piept',
+    naUnit: 'u.incidents',
+    recht: true, // ⚖️ alleen de politie kijkt in een tas
+    beurten: [
+      { wie: 'henk', nl: 'Het poortje piept. Die man loopt snel naar buiten.' },
+      { wie: 'ik', nl: 'Mag ik in zijn tas kijken?' },
+      { wie: 'henk', nl: 'Nee, dat mag niet. Vraag hem rustig om terug te komen.' },
+      { wie: 'henk', nl: 'Ik bel de politie.' },
+    ],
+    geluid: { nl: 'Supermarkt bij de uitgang: een poortje piept, karren rijden, stemmen.', niveau: 'midden' },
+    vragen: [
+      {
+        vraag: 'Mag je in zijn tas kijken?',
+        opties: [
+          { nl: 'Ja, dat mag altijd.' },
+          { nl: 'Nee, dat mag niet.', goed: true },
+          { nl: 'Ja, als hij snel loopt.' },
+        ],
+        uitleg: { nl: 'In een tas kijken doet de politie.', en: 'Looking in a bag is for the police.' },
+      },
+      {
+        vraag: 'Wie belt de politie?',
+        opties: [
+          { nl: 'Henk.', goed: true },
+          { nl: 'De man.' },
+          { nl: 'Jij.' },
+        ],
+        uitleg: { nl: 'Henk zegt: ik bel de politie.', en: 'Henk says: I will call the police.' },
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- Voedingsindustrie (23 November 2026)
+  {
+    id: 'g.voeding.sluis',
+    sector: 'food',
+    titel: 'Door de hygiënesluis',
+    naUnit: 'u.foodhygiene',
+    recht: true, // ⚖️ hygiëne: alle sieraden af
+    beurten: [
+      { wie: 'jada', nl: 'Eerst je haarnetje en je baardnetje op.' },
+      { wie: 'ik', nl: 'Oké. Mag mijn horloge om?' },
+      { wie: 'jada', nl: 'Nee, alle sieraden gaan af.' },
+      { wie: 'jada', nl: 'Was dan je handen en loop door de laarzenwasser.' },
+    ],
+    geluid: { nl: 'Een hygiënesluis: water stroomt, een laarzenwasser borstelt, een deur piept.', niveau: 'zacht' },
+    vragen: [
+      {
+        vraag: 'Mag je horloge om?',
+        opties: [
+          { nl: 'Ja, onder de jas.' },
+          { nl: 'Ja, als het schoon is.' },
+          { nl: 'Nee, het gaat af.', goed: true },
+        ],
+        uitleg: { nl: 'Alle sieraden gaan af, ook je horloge.', en: 'All jewellery comes off, your watch too.' },
+      },
+      {
+        vraag: 'Wat doe je na het handen wassen?',
+        opties: [
+          { nl: 'Door de laarzenwasser lopen.', goed: true },
+          { nl: 'Naar de koelcel lopen.' },
+          { nl: 'Naar de kantine gaan.' },
+        ],
+        uitleg: { nl: 'Jada zegt: was je handen en loop door de laarzenwasser.', en: 'Jada says: wash your hands and walk through the boot washer.' },
+      },
+    ],
+  },
+  {
+    id: 'g.voeding.koelcel',
+    sector: 'food',
+    titel: 'De koelcel piept',
+    naUnit: 'u.foodhygiene',
+    recht: true, // ⚖️ te warm in de koelcel: melden
+    beurten: [
+      { wie: 'henk', nl: 'Hoor je dat? De koelcel piept.' },
+      { wie: 'ik', nl: 'Ja. De deur staat nog open.' },
+      { wie: 'henk', nl: 'Doe hem snel dicht. Wat is de temperatuur?' },
+      { wie: 'ik', nl: 'Zeven graden.' },
+      { wie: 'henk', nl: 'Dat is te warm. Schrijf het op de lijst en bel de ploegleider.' },
+    ],
+    geluid: { nl: 'Een gang bij de koelcel: een koelmachine zoemt, een alarm piept, een deur valt dicht.', niveau: 'zacht' },
+    vragen: [
+      {
+        vraag: 'Waarom piept de koelcel?',
+        opties: [
+          { nl: 'Het licht is uit.' },
+          { nl: 'De deur staat open.', goed: true },
+          { nl: 'Hij is te koud.' },
+        ],
+        uitleg: { nl: 'De deur van de koelcel stond nog open.', en: 'The door of the cold room was still open.' },
+      },
+      {
+        vraag: 'Wie bel je?',
+        opties: [
+          { nl: 'De ploegleider.', goed: true },
+          { nl: 'De monteur.' },
+          { nl: 'De chauffeur.' },
+        ],
+        uitleg: { nl: 'Henk zegt: bel de ploegleider.', en: 'Henk says: call the shift leader.' },
+      },
+    ],
+  },
+  {
+    id: 'g.voeding.etiket',
+    sector: 'food',
+    titel: 'De verkeerde datum',
+    naUnit: 'u.foodline',
+    beurten: [
+      { wie: 'jada', nl: 'Bram, kijk naar dit etiket.' },
+      { wie: 'bram', nl: 'De datum klopt niet. Hij is een week te laat.' },
+      { wie: 'jada', nl: 'Zet de printer stil. Ik haal de ploegleider.' },
+      { wie: 'bram', nl: 'En de producten die al klaar zijn?' },
+      { wie: 'jada', nl: 'Die zetten we apart. Die gaan niet naar de klant.' },
+    ],
+    geluid: { nl: 'Een inpakhal: een printer ratelt, een sealmachine sist, een band loopt.', niveau: 'zacht' },
+    vragen: [
+      {
+        vraag: 'Wat is er mis met het etiket?',
+        opties: [
+          { nl: 'De naam.' },
+          { nl: 'De prijs.' },
+          { nl: 'De datum.', goed: true },
+        ],
+        uitleg: { nl: 'De datum op het etiket is een week te laat.', en: 'The date on the label is a week too late.' },
+      },
+      {
+        vraag: 'Wat doen ze met de producten?',
+        opties: [
+          { nl: 'Ze gaan naar de klant.' },
+          { nl: 'Ze zetten ze apart.', goed: true },
+          { nl: 'Ze pakken ze opnieuw in.' },
+        ],
+        uitleg: { nl: 'Jada zegt: die zetten we apart.', en: 'Jada says: we put them aside.' },
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- Afval en recycling (23 November 2026)
+  {
+    id: 'g.afval.achteruit',
+    sector: 'waste',
+    titel: 'Achteruitrijden',
+    naUnit: 'u.collection',
+    recht: true, // ⚖️ nooit achter een wagen die achteruitrijdt
+    beurten: [
+      { wie: 'henk', nl: 'Ik moet hier achteruitrijden. Help je mij?' },
+      { wie: 'ik', nl: 'Ja. Waar moet ik staan?' },
+      { wie: 'henk', nl: 'Links, naast de wagen. Niet achter de wagen.' },
+      { wie: 'henk', nl: 'Zie ik je niet in de spiegel? Dan stop ik.' },
+    ],
+    geluid: { nl: 'Een smalle straat: een vrachtwagen piept achteruit, een motor bromt, een fiets rijdt voorbij.', niveau: 'midden' },
+    vragen: [
+      {
+        vraag: 'Waar sta je?',
+        opties: [
+          { nl: 'Achter de wagen.' },
+          { nl: 'Links, naast de wagen.', goed: true },
+          { nl: 'Rechts, in de cabine.' },
+        ],
+        uitleg: { nl: 'Achter de wagen kan de chauffeur je niet zien.', en: 'Behind the lorry the driver cannot see you.' },
+      },
+      {
+        vraag: 'Wat doet Henk als hij je niet ziet?',
+        opties: [
+          { nl: 'Hij stopt.', goed: true },
+          { nl: 'Hij belt je.' },
+          { nl: 'Hij rijdt door.' },
+        ],
+        uitleg: { nl: 'Henk zegt: dan stop ik.', en: 'Henk says: then I stop.' },
+      },
+    ],
+  },
+  {
+    id: 'g.afval.kliko',
+    sector: 'waste',
+    titel: 'Een zware kliko',
+    naUnit: 'u.collection',
+    beurten: [
+      { wie: 'jada', nl: 'Bram, deze kliko is veel te zwaar.' },
+      { wie: 'bram', nl: 'Er zit puin in. Dat mag niet.' },
+      { wie: 'jada', nl: 'Laat hem staan. Ik doe er een sticker op.' },
+      { wie: 'bram', nl: 'Goed. Ik meld het ook in de app.' },
+    ],
+    geluid: { nl: 'Een straat in de ochtend: de vuilniswagen bromt, een kieplift ratelt, een kliko rolt.', niveau: 'midden' },
+    vragen: [
+      {
+        vraag: 'Wat zit er in de kliko?',
+        opties: [
+          { nl: 'Puin.', goed: true },
+          { nl: 'Papier.' },
+          { nl: 'Glas.' },
+        ],
+        uitleg: { nl: 'Bram zegt: er zit puin in.', en: 'Bram says: there is rubble in it.' },
+      },
+      {
+        vraag: 'Wat doen ze met de kliko?',
+        opties: [
+          { nl: 'Ze maken hem leeg.' },
+          { nl: 'Ze nemen hem mee.' },
+          { nl: 'Ze laten hem staan.', goed: true },
+        ],
+        uitleg: { nl: 'Puin mag niet in de kliko.', en: 'Rubble may not go in the wheelie bin.' },
+      },
+    ],
+  },
+  {
+    id: 'g.afval.pers',
+    sector: 'waste',
+    titel: 'De pers zit vast',
+    naUnit: 'u.recycling',
+    recht: true, // ⚖️ eerst de stroom eraf, dan pas kijken
+    beurten: [
+      { wie: 'ik', nl: 'Henk, de pers zit vast.' },
+      { wie: 'henk', nl: 'Druk eerst op de noodstop.' },
+      { wie: 'ik', nl: 'Oké. Er zit karton in de vulopening.' },
+      { wie: 'henk', nl: 'Pak het niet. Eerst gaat de stroom eraf.' },
+      { wie: 'henk', nl: 'Dan haal ik het eruit.' },
+    ],
+    geluid: { nl: 'Een milieustraat: een balenpers bromt en stopt, een shovel rijdt, een container bonkt.', niveau: 'midden' },
+    vragen: [
+      {
+        vraag: 'Wat zit er in de vulopening?',
+        opties: [
+          { nl: 'Plastic.' },
+          { nl: 'Hout.' },
+          { nl: 'Karton.', goed: true },
+        ],
+        uitleg: { nl: 'Er zit karton in de vulopening.', en: 'There is cardboard in the loading opening.' },
+      },
+      {
+        vraag: 'Wat moet er eerst gebeuren?',
+        opties: [
+          { nl: 'De stroom gaat eraf.', goed: true },
+          { nl: 'Jij pakt het karton.' },
+          { nl: 'De pers gaat weer aan.' },
+        ],
+        uitleg: { nl: 'Zonder stroom gaat de pers niet aan.', en: 'Without power the press cannot start.' },
+      },
+    ],
+  },
+
+  // ---------------------------------------------------------------- Kinderopvang (23 November 2026)
+  {
+    id: 'g.kinderopvang.ophalen',
+    sector: 'childcare',
+    titel: 'Wie haalt Sem op?',
+    naUnit: 'u.daycare',
+    recht: true, // ⚖️ een kind alleen mee met wie op de lijst staat
+    beurten: [
+      { wie: 'jada', nl: 'Hallo. Ik kom Sem ophalen. Ik ben de oppas.' },
+      { wie: 'ik', nl: 'U staat niet op de lijst.' },
+      { wie: 'jada', nl: 'Klopt. Zijn moeder kan vandaag niet.' },
+      { wie: 'ik', nl: 'Een moment. Ik bel even zijn moeder.' },
+      { wie: 'jada', nl: 'Goed, ik wacht wel.' },
+    ],
+    geluid: { nl: 'De hal van een kinderdagverblijf: kinderen spelen ver weg, een deur gaat open, een jas ritselt.', niveau: 'zacht' },
+    vragen: [
+      {
+        vraag: 'Wie komt Sem ophalen?',
+        opties: [
+          { nl: 'Zijn moeder.' },
+          { nl: 'De oppas.', goed: true },
+          { nl: 'Zijn oma.' },
+        ],
+        uitleg: { nl: 'Jada zegt: ik ben de oppas.', en: 'Jada says: I am the babysitter.' },
+      },
+      {
+        vraag: 'Wat doe je?',
+        opties: [
+          { nl: 'Je belt zijn moeder.', goed: true },
+          { nl: 'Sem gaat met haar mee.' },
+          { nl: 'Je vraagt het aan Sem.' },
+        ],
+        uitleg: { nl: 'De oppas staat niet op de lijst, dus je belt eerst.', en: 'The babysitter is not on the list, so you call first.' },
+      },
+    ],
+  },
+  {
+    id: 'g.kinderopvang.slapen',
+    sector: 'childcare',
+    titel: 'Slaapt Mila al?',
+    naUnit: 'u.toddlers',
+    beurten: [
+      { wie: 'jada', nl: 'Slaapt Mila al?' },
+      { wie: 'ik', nl: 'Ja, sinds één uur. Op haar rug.' },
+      { wie: 'jada', nl: 'Goed. Kijk over tien minuten nog even.' },
+      { wie: 'jada', nl: 'En Daan wil zijn knuffel. Die ligt in zijn tas.' },
+    ],
+    geluid: { nl: 'Een slaapkamer van een kinderdagverblijf: zachte muziek, een baby zucht, een deur gaat zacht dicht.', niveau: 'zacht' },
+    vragen: [
+      {
+        vraag: 'Hoe ligt Mila?',
+        opties: [
+          { nl: 'Op haar buik.' },
+          { nl: 'Bij het raam.' },
+          { nl: 'Op haar rug.', goed: true },
+        ],
+        uitleg: { nl: 'Op de rug slaapt een baby veilig.', en: 'On its back a baby sleeps safely.' },
+      },
+      {
+        vraag: 'Waar is de knuffel van Daan?',
+        opties: [
+          { nl: 'In zijn tas.', goed: true },
+          { nl: 'In zijn bedje.' },
+          { nl: 'Op de tafel.' },
+        ],
+        uitleg: { nl: 'Jada zegt: die ligt in zijn tas.', en: 'Jada says: it is in his bag.' },
+      },
+    ],
+  },
+  {
+    id: 'g.kinderopvang.bult',
+    sector: 'childcare',
+    titel: 'Bo is gevallen',
+    naUnit: 'u.daycare',
+    beurten: [
+      { wie: 'jada', nl: 'Bo is van de glijbaan gevallen.' },
+      { wie: 'ik', nl: 'Heeft ze pijn?' },
+      { wie: 'jada', nl: 'Ze heeft een bult op haar hoofd. Leg er wat ijs op.' },
+      { wie: 'jada', nl: 'Ik bel straks haar moeder. En schrijf het op.' },
+    ],
+    geluid: { nl: 'Een speelplaats: kinderen roepen, een schommel piept, iemand huilt zacht.', niveau: 'midden' },
+    vragen: [
+      {
+        vraag: 'Waar is Bo van gevallen?',
+        opties: [
+          { nl: 'Van de trap.' },
+          { nl: 'Van de glijbaan.', goed: true },
+          { nl: 'Van haar stoel.' },
+        ],
+        uitleg: { nl: 'Jada zegt: van de glijbaan.', en: 'Jada says: from the slide.' },
+      },
+      {
+        vraag: 'Wat doe je op de bult?',
+        opties: [
+          { nl: 'Wat water.' },
+          { nl: 'Wat zeep.' },
+          { nl: 'Wat ijs.', goed: true },
+        ],
+        uitleg: { nl: 'IJs op een bult helpt tegen de pijn.', en: 'Ice on a bump helps against the pain.' },
+      },
+    ],
+  },
 ];

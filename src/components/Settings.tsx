@@ -115,8 +115,8 @@ const TextA = ({ size }: { size: TextSize }) => <span className={`text-size-a te
 
 const TEXT_KEYS = { normal: 'textNormal', large: 'textLarge', xl: 'textXl' } as const;
 const THEME_KEYS = { auto: 'themeAuto', light: 'themeSand', haven: 'themeHarbour', werkjas: 'themeWorkwear', dark: 'themeDark' } as const;
-const SFEER_KEYS = { calm: 'sfeerCalm', standard: 'sfeerStandard', game: 'sfeerGame' } as const;
-const SFEER_NL = { calm: 'Kalm', standard: 'Standaard', game: 'Spel' } as const;
+const SFEER_KEYS = { calm: 'sfeerCalm', game: 'sfeerGame' } as const;
+const SFEER_NL = { calm: 'Kalm', game: 'Spel' } as const;
 /** "Rustig scherm": a line that settles (a wave that becomes still). */
 const CalmIcon = ({ size = 24, still }: { size?: number; still?: boolean }) => (
   <svg className="icon" viewBox="0 0 24 24" width={size} height={size} aria-hidden focusable="false">
@@ -160,6 +160,8 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
   'sector-make': { nl: 'Waar werk je?', key: 'chooseSector', icon: null },
   'sector-care': { nl: 'Waar werk je?', key: 'chooseSector', icon: null },
   'sector-shop': { nl: 'Waar werk je?', key: 'chooseSector', icon: null },
+  'sector-outdoor': { nl: 'Waar werk je?', key: 'chooseSector', icon: null },
+  'sector-service': { nl: 'Waar werk je?', key: 'chooseSector', icon: null },
   region: { nl: 'Waar woon je?', key: 'regionTitle', icon: <PinIcon size={24} /> },
   country: { nl: 'In welk land werk je?', key: 'countryTitle', icon: <FlagIcon size={24} /> },
   english: { nl: 'Ook Engels tonen', key: 'showEnglish', icon: <span className="set-en" lang="en">EN</span> },
@@ -505,7 +507,9 @@ export function Settings({
       case 'sector-build':
       case 'sector-make':
       case 'sector-care':
-      case 'sector-shop': {
+      case 'sector-shop':
+      case 'sector-outdoor':
+      case 'sector-service': {
         const g = sectorGroups.find((x) => `sector-${x.id}` === page)!;
         return (
           <>

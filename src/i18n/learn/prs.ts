@@ -208,6 +208,55 @@ const t: CultureTranslation = {
     'c.oilchange.a.why': "پرسیده‌اند چقدر: چند لیتر، و طریقهٔ کنترول آن.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.a.why': "پرسیده‌اند باید نو شود یا نی: بلی، و چرا.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "پرسیده‌اند چه کار باید شود: نگاه کردن به ورقهٔ کار.", // nieuw, nalezen // nagelezen AI 22 nov
+    // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
+    'c.mowing.a.why': "پرسیده‌اند اجازه دارد آن را بگیرد یا نی: بلی، و اول چه کار کند.", // nieuw, nalezen
+    'c.pruning.a.why': "پرسیده‌اند کدام شاخه‌ها: فقط شاخه‌های خشک.", // nieuw, nalezen
+    'c.hedge.a.why': "پرسیده‌اند چقدر بلند: تا خط، نه پایین‌تر.", // nieuw, nalezen
+    'c.chainsaw.a.why': "پرسیده‌اند اجازه دارد یا نی: هنوز نی، و اول چه می‌آید.", // nieuw, nalezen
+    'c.weeding.a.why': "پرسیده‌اند علف هرزه است یا نی: نی، و با آن چه کند.", // nieuw, nalezen
+    'c.planting.a.why': "پرسیده‌اند کجا می‌رود: جای آن در کرد گل.", // nieuw, nalezen
+    'c.roadside.a.why': "پرسیده‌اند از سرک تیر شده می‌تواند یا نی: نی، صبر، و چرا.", // nieuw, nalezen
+    'c.litter.a.why': "یک باشنده می‌پرسد کی: نمی‌داند، و چه کسی می‌داند.", // nieuw, nalezen
+    'c.reception.a.why': "یک مراجعه‌کننده وقت ملاقات دارد: یک لحظه، زنگ زده می‌شود.", // nieuw, nalezen
+    'c.visitors.a.why': "پرسیده‌اند کرتی کجا برود: جای آن، و کجاست.", // nieuw, nalezen
+    'c.mailroom.a.why': "پرسیده‌اند برای کیست: شعبه، و منزل آن.", // nieuw, nalezen
+    'c.meetingroom.a.why': "پرسیده‌اند چه وقت: ساعت آن، و چه باید شود.", // nieuw, nalezen
+    'c.faults.a.why': "پرسیده‌اند چرا سرد است: چه خراب است، و کمک کی می‌آید.", // nieuw, nalezen
+    'c.repairs.a.why': "پرسیده‌اند بیپ می‌زند یا نی: بلی، و چرا.", // nieuw, nalezen
+    'c.moving.a.why': "پرسیده‌اند کجا می‌رود: اتاق آن، و کجا نگاه کند.", // nieuw, nalezen
+    'c.closing.a.why': "پرسیده‌اند کسی داخل است یا نی: نی، و حالا چه کار می‌شود.", // nieuw, nalezen
+    'c.patrol.a.why': "پرسیده‌اند چیزی دیده یا نی: بلی، چه چیز، و کجا.", // nieuw, nalezen
+    'c.access.a.why': "پرسیده‌اند بدون کارت داخل شده می‌تواند یا نی: ببخشید، بدون کارت نی.", // nieuw, nalezen
+    'c.cameras.a.why': "پرسیده‌اند چه دیده می‌شود: چه کسی، کجا، و چه کار می‌شود.", // nieuw, nalezen
+    'c.report.a.why': "پرسیده‌اند در گزارش چه برود: چه، کجا و کی.", // nieuw, nalezen
+    'c.evacuation.a.why': "پرسیده‌اند همه بیرون هستند یا نی: نی، چند نفر کم است.", // nieuw, nalezen
+    'c.firstaid.a.why': "پرسیده‌اند AED کجاست: جای آن، و پهلوی چه است.", // nieuw, nalezen
+    'c.shoplifting.a.why': "پرسیده‌اند اجازه دارد بکس را تلاشی کند یا نی: نی، و چه کسی این کار را می‌کند.", // nieuw, nalezen
+    'c.aggression.a.why': "پرسیده‌اند چرا نی: دلیل آن، آرام گفته شده.", // nieuw, nalezen
+    'c.hygienelock.a.why': "پرسیده‌اند دربارهٔ ساعت: نی، و قاعدهٔ پشت آن.", // nieuw, nalezen
+    'c.allergens.a.why': "پرسیده‌اند یک جا شده می‌تواند یا نی: نی، و چرا.", // nieuw, nalezen
+    'c.coldroom.a.why': "پرسیده‌اند چرا بیپ می‌زند: علت آن، و چه باید کرد.", // nieuw, nalezen
+    'c.foreignbody.a.why': "پرسیده‌اند چه کند: به چه کسی نشانش بدهد.", // nieuw, nalezen
+    'c.cutting.a.why': "پرسیده‌اند چقدر: وزن آن، و کجا نگاه کند.", // nieuw, nalezen
+    'c.labels.a.why': "پرسیده‌اند کدام تاریخ: کی، و کجا نگاه کند.", // nieuw, nalezen
+    'c.linecleaning.a.why': "پرسیده‌اند پاک است یا نی: هنوز نی، و چه کار باقی مانده.", // nieuw, nalezen
+    'c.haccp.a.why': "پرسیده‌اند چرا: تا بدانیم که غذا مصئون است.", // nieuw, nalezen
+    'c.binlorry.a.why': "پرسیده‌اند اجازه دارد در عقب سوار شود یا نی: نی، و کجا سوار شود.", // nieuw, nalezen
+    'c.reversing.a.why': "برای کمک خواسته‌اند: بلی، کجا ایستاده، و چه باید کرد.", // nieuw, nalezen
+    'c.wastesorting.a.why': "پرسیده‌اند کجا می‌رود: سطل آن، و چرا.", // nieuw, nalezen
+    'c.wastesafety.a.why': "پرسیده‌اند بعد از بریدگی چه کند: آن را بشوید، و بگوید.", // nieuw, nalezen
+    'c.yard.a.why': "پرسیده‌اند کجا می‌رود: کانتینر آن، و کجاست.", // nieuw, nalezen
+    'c.hazardous.a.why': "پرسیده‌اند در داخل چه است: معلوم نیست، پس یک طرف گذاشته شود.", // nieuw, nalezen
+    'c.baler.a.why': "پرسیده‌اند اجازه دارد نگاه کند یا نی: نی، و اول چه می‌آید.", // nieuw, nalezen
+    'c.shovel.a.why': "پرسیده‌اند اجازه دارد تیر شود یا نی: فقط وقتی راننده او را ببیند.", // nieuw, nalezen
+    'c.nappies.a.why': "پرسیده‌اند کی: ساعت آن، و کجا نوشته شده.", // nieuw, nalezen
+    'c.mealtime.a.why': "پرسیده‌اند او اجازه دارد آن را بخورد یا نی: نی، چرا، و کجا نگاه شود.", // nieuw, nalezen
+    'c.naptime.a.why': "پرسیده‌اند خواب است یا نی: بلی، از کی، و اینکه باز نگاه می‌شود.", // nieuw, nalezen
+    'c.playtime.a.why': "پرسیده‌اند طفل اجازه دارد بازی کند یا نی: بلی، کجا، و بعد چه.", // nieuw, nalezen
+    'c.pickup.a.why': "پرسیده‌اند چه کسی می‌برد: آن نفر، و اینکه او در لست است.", // nieuw, nalezen
+    'c.childsafety.a.why': "پرسیده‌اند افتاده یا نی: بلی، چه شده، و به چه کسی زنگ زده می‌شود.", // nieuw, nalezen
+    'c.sickchild.a.why': "پرسیده‌اند حالش چطور است: چه دیده می‌شود، و چه کار می‌شود.", // nieuw, nalezen
+    'c.grouprules.a.why': "پرسیده‌اند اجازه دارد تنها برود یا نی: بلی، اما اول به یک همکار بگوید.", // nieuw, nalezen
   },
 };
 

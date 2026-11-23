@@ -209,6 +209,55 @@ const t: CultureTranslation = {
     'c.oilchange.a.why': "Питають, скільки: літри, і як перевірити.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.a.why': "Питають, чи треба новий: так, і чому.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "Питають, що треба зробити: подивитися в наряд.", // nieuw, nalezen // nagelezen AI 22 nov
+    // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
+    'c.mowing.a.why': "Питають, чи можна взяти: так, і що зробити спершу.", // nieuw, nalezen
+    'c.pruning.a.why': "Питають, які гілки: лише сухі.", // nieuw, nalezen
+    'c.hedge.a.why': "Питають, якої висоти: до мотузки, не нижче.", // nieuw, nalezen
+    'c.chainsaw.a.why': "Питають, чи можна: ще ні, і що спершу.", // nieuw, nalezen
+    'c.weeding.a.why': "Питають, чи це бур’ян: ні, і що з ним робити.", // nieuw, nalezen
+    'c.planting.a.why': "Питають, куди: місце на клумбі.", // nieuw, nalezen
+    'c.roadside.a.why': "Питають, чи можна перейти: ні, зачекати, і чому.", // nieuw, nalezen
+    'c.litter.a.why': "Мешканець питає, коли: ти не знаєш, і хто знає.", // nieuw, nalezen
+    'c.reception.a.why': "У відвідувача зустріч: хвилинку, ти дзвониш.", // nieuw, nalezen
+    'c.visitors.a.why': "Питають, куди пальто: місце, і де воно.", // nieuw, nalezen
+    'c.mailroom.a.why': "Питають, для кого: відділ і поверх.", // nieuw, nalezen
+    'c.meetingroom.a.why': "Питають, о котрій: година, і що треба зробити.", // nieuw, nalezen
+    'c.faults.a.why': "Питають, чому холодно: що зламалося, і коли прийде допомога.", // nieuw, nalezen
+    'c.repairs.a.why': "Питають, чи пищить: так, і чому.", // nieuw, nalezen
+    'c.moving.a.why': "Питають, куди: кімната, і куди дивитися.", // nieuw, nalezen
+    'c.closing.a.why': "Питають, чи хтось усередині: ні, і що ти робиш зараз.", // nieuw, nalezen
+    'c.patrol.a.why': "Питають, чи щось було видно: так, що і де.", // nieuw, nalezen
+    'c.access.a.why': "Просять зайти без картки: вибачте, без картки не можна.", // nieuw, nalezen
+    'c.cameras.a.why': "Питають, що видно: хто, де, і що ти робиш.", // nieuw, nalezen
+    'c.report.a.why': "Питають, що писати у звіті: що, де і коли.", // nieuw, nalezen
+    'c.evacuation.a.why': "Питають, чи всі вийшли: ні, скількох бракує.", // nieuw, nalezen
+    'c.firstaid.a.why': "Питають, де дефібрилятор: місце, і що поруч.", // nieuw, nalezen
+    'c.shoplifting.a.why': "Питають, чи можна обшукати сумку: ні, і хто це робить.", // nieuw, nalezen
+    'c.aggression.a.why': "Питають, чому не можна: причина, сказана спокійно.", // nieuw, nalezen
+    'c.hygienelock.a.why': "Питають про годинник: ні, і правило за цим.", // nieuw, nalezen
+    'c.allergens.a.why': "Питають, чи можна разом: ні, і чому.", // nieuw, nalezen
+    'c.coldroom.a.why': "Питають, чому пищить: причина, і що робити.", // nieuw, nalezen
+    'c.foreignbody.a.why': "Питають, що робити: кому це показати.", // nieuw, nalezen
+    'c.cutting.a.why': "Питають, скільки: вага, і куди дивитися.", // nieuw, nalezen
+    'c.labels.a.why': "Питають, яку дату: коли, і куди дивитися.", // nieuw, nalezen
+    'c.linecleaning.a.why': "Питають, чи чисто: ще ні, і що залишилося.", // nieuw, nalezen
+    'c.haccp.a.why': "Питають, навіщо: щоб знати, що їжа безпечна.", // nieuw, nalezen
+    'c.binlorry.a.why': "Питають, чи можна їхати ззаду: ні, і де їхати.", // nieuw, nalezen
+    'c.reversing.a.why': "Просять допомогти: так, де ти стоїш, і що робити.", // nieuw, nalezen
+    'c.wastesorting.a.why': "Питають, куди: бак, і чому.", // nieuw, nalezen
+    'c.wastesafety.a.why': "Питають, що робити після порізу: промити й сказати.", // nieuw, nalezen
+    'c.yard.a.why': "Питають, куди: контейнер, і де він.", // nieuw, nalezen
+    'c.hazardous.a.why': "Питають, що всередині: ти не знаєш, тож відстав окремо.", // nieuw, nalezen
+    'c.baler.a.why': "Питають, чи можна подивитися: ні, і що спершу.", // nieuw, nalezen
+    'c.shovel.a.why': "Питають, чи можна пройти: лише коли водій тебе бачить.", // nieuw, nalezen
+    'c.nappies.a.why': "Питають, коли: час, і де це записано.", // nieuw, nalezen
+    'c.mealtime.a.why': "Питають, чи йому можна: ні, чому, і куди дивитися.", // nieuw, nalezen
+    'c.naptime.a.why': "Питають, чи вона спить: так, з якого часу, і що ти перевіряєш.", // nieuw, nalezen
+    'c.playtime.a.why': "Питають, чи дитині можна гратися: так, де, і що потім.", // nieuw, nalezen
+    'c.pickup.a.why': "Питають, хто забирає: людина, і що вона є в списку.", // nieuw, nalezen
+    'c.childsafety.a.why': "Питають, чи вона впала: так, що в неї, і кому ти дзвониш.", // nieuw, nalezen
+    'c.sickchild.a.why': "Питають, як він: що ти бачиш, і що ти робиш.", // nieuw, nalezen
+    'c.grouprules.a.why': "Питають, чи можна без колег: так, але спершу сказати колезі.", // nieuw, nalezen
   },
 };
 

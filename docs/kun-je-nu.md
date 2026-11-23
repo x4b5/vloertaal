@@ -27,7 +27,7 @@ niveau**, geen toets en geen bewijs van een niveau.
 De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Starten, Veilig werken, Werk vinden, Je baan, Samenwerken, Je rechten, Leven in Nederland, Jouw sector
 (`src/i18n/kunjenu/`, gemarkeerd met "nieuw, nalezen"). Werkregels is alleen Nederlands.
 
-## Taal (53 onderwerpen, 121 zinnen)
+## Taal (65 onderwerpen, 145 zinnen)
 
 | Onderwerp | Zinnen | Past bij |
 |---|---|---|
@@ -152,6 +152,30 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 |  | Ik kan vragen of een tomaat rijp genoeg is. | A1 · gesprekken |
 | Banden, olie en remmen | Ik kan zeggen dat het waarschuwingslampje brandt. | A1 · spreken |
 |  | Ik kan vragen hoeveel olie erin moet. | A1 · gesprekken |
+| Maaien en snoeien | Ik kan zeggen dat het gras te nat is. | A1 · spreken |
+|  | Ik kan vragen welke takken eraf moeten. | A1 · gesprekken |
+| Planten, onkruid en de straat | Ik kan zeggen dat er scherven liggen. | A1 · spreken |
+|  | Ik kan vragen of ik mag oversteken. | A1 · gesprekken |
+| Receptie, post en vergaderen | Ik kan een bezoeker begroeten en helpen. | A1 · gesprekken |
+|  | Ik kan vragen voor wie een pakket is. | A1 · gesprekken |
+| Storingen, onderhoud en verhuizen | Ik kan een storing melden. | A1 · spreken |
+|  | Ik kan vragen waar een bureau naartoe moet. | A1 · gesprekken |
+| Ronde en toegang | Ik kan vragen of ik iemands legitimatie mag zien. | A1 · gesprekken |
+|  | Ik kan via de portofoon zeggen wat ik zie. | A1 · spreken |
+| Noodgevallen en de winkel | Ik kan 112 bellen en zeggen wat er is. | A1 · spreken |
+|  | Ik kan een boze klant rustig toespreken. | A1 · gesprekken |
+| Hygiëne en kou | Ik kan zeggen dat de koelcel te warm is. | A1 · spreken |
+|  | Ik kan vragen of er noten in zitten. | A1 · gesprekken |
+| De productielijn | Ik kan zeggen dat het etiket niet klopt. | A1 · spreken |
+|  | Ik kan vragen hoeveel er in een bakje moet. | A1 · gesprekken |
+| Afval ophalen | Ik kan de chauffeur helpen met achteruitrijden. | A1 · gesprekken |
+|  | Ik kan zeggen dat een kliko te zwaar is. | A1 · spreken |
+| De milieustraat | Ik kan een bezoeker zeggen waar zijn afval heen moet. | A1 · gesprekken |
+|  | Ik kan zeggen dat de pers vastzit. | A1 · spreken |
+| De kinderen | Ik kan zeggen dat ik een kind ga verschonen. | A1 · spreken |
+|  | Ik kan vragen of een kind al slaapt. | A1 · gesprekken |
+| Ouders, veiligheid en de groep | Ik kan een ouder vertellen hoe de dag ging. | A1 · gesprekken |
+|  | Ik kan vragen wie een kind komt ophalen. | A1 · gesprekken |
 
 ## Werkregels (28 onderwerpen, 59 zinnen)
 

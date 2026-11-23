@@ -27,7 +27,7 @@ afterEach(() => { vi.useRealTimers(); });
 
 describe('the wait', () => {
   it('is short, and ends before the say-it line would give up on a sound that never ends', () => {
-    expect(GO_DELAY_MS).toBe(1500);
+    expect(GO_DELAY_MS).toBe(800);
     expect(GO_HOLD_MAX_MS).toBeGreaterThan(GO_DELAY_MS);
     expect(GO_HOLD_MAX_MS).toBeLessThan(SAY_FALLBACK_MS);
   });

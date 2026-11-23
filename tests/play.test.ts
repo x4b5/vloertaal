@@ -1,20 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { addPoints, comboOf, DAY_GOAL, SFEER, sfeerOf, withSfeer, dayPoints, finishPlayLesson, levelOf, levelShare, PERFECT_BONUS, playAskDue, playOn, pointsFor, TOOLS, toolsFor, withCalm, withPlay } from '../src/lib/play';
+import { addPoints, comboOf, DAY_GOAL, SFEER, sfeerOf, withSfeer, dayPoints, finishPlayLesson, levelOf, levelShare, PERFECT_BONUS, playOn, pointsFor, TOOLS, toolsFor } from '../src/lib/play';
 
 /** "Spelmodus" (src/lib/play.ts): the owner's choice of 22 November 2026. */
 describe('the game mode', () => {
-  it('is off unless chosen, and never with "Rustig scherm" on', () => {
-    expect(playOn({})).toBe(false);
-    expect(playOn({ play: true, calm: 'off' })).toBe(true);
-    expect(playOn({ play: true, calm: 'on' })).toBe(false);
-  });
-
-  it('choosing it switches the calm screen off (also "auto"); "Rustig scherm: aan" switches it off', () => {
-    expect(withPlay({ calm: 'on' }, true)).toEqual({ play: true, calm: 'off', playAsked: true });
-    expect(withPlay({}, true)).toEqual({ play: true, calm: 'off', playAsked: true });
-    expect(withPlay({ play: true, calm: 'off' }, false)).toEqual({ calm: 'off', playAsked: true });
-    expect(withCalm({ play: true, calm: 'off' }, 'on')).toEqual({ calm: 'on' });
-    expect(withCalm({ play: true, calm: 'off' }, 'auto')).toEqual({ play: true, calm: 'auto' });
+  it('is on unless Kalm is chosen (Spel is the standard since 23 November 2026)', () => {
+    expect(playOn({})).toBe(true);
+    expect(playOn({ calm: 'off' })).toBe(true);
+    expect(playOn({ calm: 'on' })).toBe(false);
   });
 
   it('points: 10 a right answer, ×2 from 3 in a row, ×3 from 5; "almost" half; a mistake takes nothing', () => {
@@ -28,12 +20,6 @@ describe('the game mode', () => {
     expect(addPoints({}, 0)).toEqual({});
   });
 
-  it('the home asks once, after the first lesson, and not who chose already', () => {
-    expect(playAskDue({}, 0)).toBe(false);
-    expect(playAskDue({}, 1)).toBe(true);
-    expect(playAskDue({ playAsked: true }, 5)).toBe(false);
-    expect(playAskDue({ calm: 'on' }, 5)).toBe(false);
-  });
 });
 
 /** More game (the owner, 23 November 2026): levels, today's goal, the toolbox, a perfect lesson. */
@@ -72,19 +58,17 @@ describe('the game mode: more game', () => {
 });
 
 /** "Sfeer" (the owner, 23 November 2026): Kalm, Standaard, Spel as one setting over calm and play. */
-describe('Sfeer: one setting for calm and game', () => {
-  it('reads the mood from what was saved, so old progress keeps its choice', () => {
-    expect(sfeerOf({})).toBe('standard');
-    expect(sfeerOf({ calm: 'auto' })).toBe('standard');
+describe('Sfeer: Kalm or Spel', () => {
+  it('reads the mood from the calm screen, so old progress keeps its choice', () => {
+    expect(sfeerOf({})).toBe('game');
+    expect(sfeerOf({ calm: 'off' })).toBe('game');
     expect(sfeerOf({ calm: 'on' })).toBe('calm');
-    expect(sfeerOf({ play: true, calm: 'off' })).toBe('game');
-    expect(sfeerOf({ play: true, calm: 'on' })).toBe('calm');
   });
 
-  it('writes calm and play together; each choice reads back as itself', () => {
-    for (const s of SFEER) expect(sfeerOf(withSfeer({ play: true, calm: 'on' }, s))).toBe(s);
-    expect(withSfeer({ play: true, calm: 'off' }, 'calm')).toEqual({ calm: 'on', playAsked: true });
-    expect(withSfeer({ calm: 'on' }, 'standard')).toEqual({ calm: 'auto', playAsked: true });
-    expect(withSfeer({}, 'game')).toEqual({ play: true, calm: 'off', playAsked: true });
+  it('two choices, Spel first; each choice reads back as itself', () => {
+    expect(SFEER).toEqual(['game', 'calm']);
+    for (const s of SFEER) expect(sfeerOf(withSfeer({ calm: 'on' }, s))).toBe(s);
+    expect(withSfeer({ calm: 'on' }, 'game')).toEqual({ calm: 'off' });
+    expect(withSfeer({}, 'calm')).toEqual({ calm: 'on' });
   });
 });

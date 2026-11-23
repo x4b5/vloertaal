@@ -139,6 +139,31 @@ const t: CultureTranslation = {
     'kjn.u.kweek.2': "Puedo preguntar si un tomate está bastante maduro.", // nieuw, nalezen
     'kjn.u.carservice.1': "Puedo decir que el testigo está encendido.", // nieuw, nalezen
     'kjn.u.carservice.2': "Puedo preguntar cuánto aceite hay que echar.", // nieuw, nalezen
+    // The new sectors (23 November 2026).
+    'kjn.u.mowing.1': "Puedo decir que la hierba está demasiado mojada.", // nieuw, nalezen
+    'kjn.u.mowing.2': "Puedo preguntar qué ramas hay que quitar.", // nieuw, nalezen
+    'kjn.u.planting.1': "Puedo decir que hay cristales rotos.", // nieuw, nalezen
+    'kjn.u.planting.2': "Puedo preguntar si puedo cruzar.", // nieuw, nalezen
+    'kjn.u.frontdesk.1': "Puedo saludar y ayudar a un visitante.", // nieuw, nalezen
+    'kjn.u.frontdesk.2': "Puedo preguntar para quién es un paquete.", // nieuw, nalezen
+    'kjn.u.maintenance.1': "Puedo avisar de una avería.", // nieuw, nalezen
+    'kjn.u.maintenance.2': "Puedo preguntar adónde tiene que ir un escritorio.", // nieuw, nalezen
+    'kjn.u.guarding.1': "Puedo pedir a alguien que me enseñe su identificación.", // nieuw, nalezen
+    'kjn.u.guarding.2': "Puedo decir por la radio lo que veo.", // nieuw, nalezen
+    'kjn.u.incidents.1': "Puedo llamar al 112 y decir qué pasa.", // nieuw, nalezen
+    'kjn.u.incidents.2': "Puedo hablar con calma a un cliente enfadado.", // nieuw, nalezen
+    'kjn.u.foodhygiene.1': "Puedo decir que en la cámara frigorífica hace demasiado calor.", // nieuw, nalezen
+    'kjn.u.foodhygiene.2': "Puedo preguntar si lleva frutos secos.", // nieuw, nalezen
+    'kjn.u.foodline.1': "Puedo decir que la etiqueta no está bien.", // nieuw, nalezen
+    'kjn.u.foodline.2': "Puedo preguntar cuánto tiene que ir en una tarrina.", // nieuw, nalezen
+    'kjn.u.collection.1': "Puedo ayudar al conductor a dar marcha atrás.", // nieuw, nalezen
+    'kjn.u.collection.2': "Puedo decir que un contenedor con ruedas pesa demasiado.", // nieuw, nalezen
+    'kjn.u.recycling.1': "Puedo decirle a un visitante dónde va su basura.", // nieuw, nalezen
+    'kjn.u.recycling.2': "Puedo decir que la prensa está atascada.", // nieuw, nalezen
+    'kjn.u.toddlers.1': "Puedo decir que voy a cambiar a un niño.", // nieuw, nalezen
+    'kjn.u.toddlers.2': "Puedo preguntar si un niño ya está dormido.", // nieuw, nalezen
+    'kjn.u.daycare.1': "Puedo contarle a un padre o una madre cómo ha ido el día.", // nieuw, nalezen
+    'kjn.u.daycare.2': "Puedo preguntar quién viene a recoger a un niño.", // nieuw, nalezen
   },
 };
 

@@ -292,7 +292,7 @@ const lang: HelpLanguageSource = {
     settingOn: "Shidan", // nieuw, nalezen
     settingOff: "Dansan", // nieuw, nalezen
     sectorGroupMake: "Samaynta iyo gaadiidka", // nieuw, nalezen
-    sectorGroupCare: "Daryeelka iyo adeegga", // nieuw, nalezen
+    sectorGroupCare: "Daryeelka iyo carruurta", // nieuw, nalezen
     sectorGroupShop: "Dukaanka iyo martigelinta", // nieuw, nalezen
     sectorGroupBuild: "Dhismaha iyo farsamada", // nieuw, nalezen
     voiceWoman: "Cod naageed", // nieuw, nalezen
@@ -484,22 +484,20 @@ const lang: HelpLanguageSource = {
     speakFromMemory: "Hadda xusuustaada ka dheh: maxay ahayd Af-Holandiis?", // nieuw, nalezen
     keptNofM: "Erayada 2 toddobaad ama ka badan ka hor: weli waxaad taqaanay {n} ka mid ah {m}.", // nieuw, nalezen
     verbSecond: "Ficilku wuxuu ku jiraa booska 2aad.", // nieuw, nalezen
-    calmScreen: "Shaashad deggan", // nieuw, nalezen
-    calmAuto: "Sida taleefankaaga", // nieuw, nalezen
-    calmHint: "Shidan: waxba ma dhaqaaqaan. Dabaaldeg maalmahaaga isku xiga ah ma jiro cashar kadib. Maalmahaaga isku xiga iyo erayadaadu kuma jiraan shaashadda hore.", // nieuw, nalezen
-    playMode: "Habka ciyaarta", // nieuw, nalezen
-    playHint: "Shidan: dhibco jawaab kasta oo sax ah, dhibco badan haddii aad dhowr isku xiga saxdo. Cod iyo dhaqdhaqaaq badan. Khaladku waxba kaa ma jaro.", // nieuw, nalezen
     playPoints: "Dhibco", // nieuw, nalezen
     playTotal: "Dhammaan dhibcahaaga", // nieuw, nalezen
-    playAskTitle: "Sidee baad u rabtaa inaad ku celceliso?", // nieuw, nalezen
-    playAskCalm: "Deggan", // nieuw, nalezen
-    playAskFun: "Ciyaar leh", // nieuw, nalezen
-    playAskHint: "Ciyaar leh: dhibco, cod iyo dhaqdhaqaaq. Waxaad ku beddeli kartaa Dejinta.", // nieuw, nalezen
     sfeer: "Jawiga", // nieuw, nalezen
     sfeerCalm: "Deggan", // nieuw, nalezen
-    sfeerStandard: "Caadi", // nieuw, nalezen
     sfeerGame: "Ciyaar", // nieuw, nalezen
-    sfeerHint: "Deggan: waxba ma dhaqaaqaan, dabaaldeg ma jiro. Caadi: app-ka sidiisa. Ciyaar: dhibco, cod iyo dhaqdhaqaaq badan.", // nieuw, nalezen
+    sfeerHint: "Deggan: waxba ma dhaqaaqaan, dabaaldeg ma jiro. Ciyaar: dhibco, cod iyo dhaqdhaqaaq badan.", // nieuw, nalezen
+    sectorGroupService: "Adeegga iyo ammaanka", // nieuw, nalezen
+    sectorGroupOutdoor: "Ka shaqaynta bannaanka", // nieuw, nalezen
+    sectorChildcare: "Xannaanada carruurta", // nieuw, nalezen
+    sectorWaste: "Qashinka iyo dib-u-warshadaynta", // nieuw, nalezen
+    sectorFood: "Warshadaha cuntada", // nieuw, nalezen
+    sectorSecurity: "Ammaanka iyo ilaalinta", // nieuw, nalezen
+    sectorFacility: "Adeegyada dhismaha", // nieuw, nalezen
+    sectorGreen: "Beeraha iyo meelaha cagaaran", // nieuw, nalezen
     playLevel: "Heer", // nieuw, nalezen
     playLevel1: "Bilow", // nieuw, nalezen
     playLevel2: "Barte", // nieuw, nalezen

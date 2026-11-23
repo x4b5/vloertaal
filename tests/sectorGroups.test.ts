@@ -24,12 +24,26 @@ describe('the sector groups', () => {
     for (const s of sectors) expect(sectorGroups.filter((g) => g.sectors.includes(s.id)), s.id).toHaveLength(1);
     expect(sectorGroups.map((g) => [g.nl, g.sectors.map((id) => sectors.find((s) => s.id === id)!.nl)])).toEqual([
       ['Bouw en techniek', ['Bouw', 'Techniek', 'Garage']],
-      ['Maken en verplaatsen', ['Productie', 'Logistiek', 'Tuinbouw']],
-      ['Zorg en service', ['Zorg', 'Schoonmaak']],
+      // Six groups since 23 November 2026 (the owner's table, at most 3 sectors in a group).
+      ['Maken en verplaatsen', ['Productie', 'Voedingsindustrie', 'Logistiek']],
+      ['Buiten werken', ['Groen', 'Tuinbouw', 'Afval en recycling']],
+      ['Zorg en kinderen', ['Zorg', 'Kinderopvang']],
+      ['Service en veiligheid', ['Schoonmaak', 'Facilitair', 'Beveiliging']],
       ['Winkel en horeca', ['Winkel', 'Horeca']],
     ]);
     expect(isSectorGroupId('build')).toBe(true);
     expect(isSectorGroupId('other')).toBe(false);
+    expect(isSectorGroupId('service')).toBe(true);
+  });
+
+  it('keeps a stored sector when its group changes: progress holds the sector, never the group', () => {
+    // Tuinbouw moved from "Maken en verplaatsen" to "Buiten werken" (23 November 2026). A learner
+    // who chose it keeps the sector and the same path; only the place on the choice screen moved.
+    for (const id of ['horticulture', 'cleaning', 'facility', 'care', 'security', 'food', 'waste', 'childcare']) expect(isSectorId(id), id).toBe(true);
+    expect(isSectorId('outdoor')).toBe(false);
+    expect(isSectorId('service')).toBe(false);
+    expect(coursePlan('horticulture').main.map((u) => u.id)).toContain('u.kas');
+    expect(coursePlan('horticulture').main.map((u) => u.id)).toContain('u.kweek');
   });
 });
 
@@ -107,7 +121,8 @@ describe('a saved sector after the change', () => {
   afterEach(() => store.clear());
 
   it('keeps every old choice, "none" as "none", and the new ones', () => {
-    for (const s of ['logistics', 'construction', 'production', 'care', 'hospitality', 'cleaning', 'horticulture', 'technical', 'garage', 'none']) {
+    // Tuinbouw changed group on 23 November 2026 (to "Buiten werken"): the saved choice stays Tuinbouw.
+    for (const s of ['logistics', 'construction', 'production', 'care', 'hospitality', 'cleaning', 'horticulture', 'technical', 'garage', 'green', 'facility', 'security', 'food', 'waste', 'childcare', 'none']) {
       expect(saveAndLoad(s), s).toBe(s);
     }
     expect(isSectorId('technical')).toBe(true);
@@ -119,6 +134,9 @@ describe('a saved sector after the change', () => {
     expect(saveAndLoad('other')).toBeUndefined();
     expect(saveAndLoad('build')).toBeUndefined();
     expect(saveAndLoad(undefined)).toBeUndefined();
+    // A group id is never a stored sector, also not the groups of 23 November 2026.
+    expect(saveAndLoad('outdoor')).toBeUndefined();
+    expect(saveAndLoad('service')).toBeUndefined();
   });
 });
 

@@ -17,14 +17,21 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-11-23',
+    items: [
+      'Vier nieuwe sectoren: Beveiliging (de ronde, toegang, camera’s, het rapport, brand, EHBO en winkeldiefstal), Voedingsindustrie (hygiëne, allergenen, de koelcel, snijden, etiketten en HACCP), Afval en recycling (de vuilniswagen, achteruitrijden, sorteren, de milieustraat en de balenpers) en Kinderopvang (verschonen, eten, slapen, spelen, ouders, veiligheid en de groep). Elk met twee onderwerpen van vier lessen, en bij elke les een tip van "Zo werkt het hier". De keuze van je sector heeft nu zes groepen: Groen en Tuinbouw staan bij "Buiten werken", Facilitair bij het nieuwe "Service en veiligheid", en "Zorg en service" heet nu "Zorg en kinderen". De vertalingen, de stemmen en de tekeningen volgen.',
+      'Twee nieuwe sectoren: Groen (maaien, snoeien, planten, onkruid en werken langs de weg) en Facilitair (receptie, post, vergaderzalen, storingen en verhuizen). Elk met twee onderwerpen van vier lessen, en bij elke les een tip van "Zo werkt het hier". De vertalingen, de stemmen en de tekeningen volgen.',
+    ],
+  },
+  {
     date: '2026-11-22',
     items: [
       'Nieuw onderwerp in Taal voor de Tuinbouw: Kweken, sorteren en de kas. Wie Tuinbouw kiest, krijgt het direct na In de kas. Vier lessen: zaaien en stekken, sorteren en verpakken, de kas en het klimaat, en plagen en schoon werken.',
       'Nieuw onderwerp in Taal voor de Garage: Banden, olie en remmen. Wie Garage kiest, krijgt het direct na In de garage. Vier lessen: banden wisselen, olie verversen, remmen en lampen, en uitlezen en de werkorder.',
       'Bij elke les hoort een tip van "Zo werkt het hier" en een eigen tekening per woord. Alles staat in alle hulptalen; de vertalingen zijn nog niet nagekeken door een moedertaalspreker. De stemmen volgen: tot dan leest de stem van je telefoon de nieuwe zinnen voor.',
-      'Nieuw: de spelmodus, voor wie graag met een spel oefent. Je krijgt punten voor elk goed antwoord, meer als je vaker op rij goed hebt. Er is meer geluid en beweging, en confetti na een les. Een fout kost geen punten. Kies het bij Instellingen, Lessen, Sfeer: Kalm, Standaard of Spel. Na je eerste les vraagt de app één keer: met spel of standaard.',
+      'Nieuw: de spelmodus, voor wie graag met een spel oefent. Je krijgt punten voor elk goed antwoord, meer als je vaker op rij goed hebt. Er is meer geluid en beweging, en confetti na een les. Een fout kost geen punten. Spel staat gewoon aan. Wil je het rustig, kies dan Kalm bij Instellingen, Lessen, Sfeer.',
       'Meer spel in de spelmodus: niveaus van Starter tot Expert, een doel van 100 punten per dag, 50 punten extra voor een les zonder fout, en een gereedschapskist. Elke les met spel legt er een gereedschap in, met zijn tekening en naam (Instellingen, Taal en ik, Mijn gereedschapskist).',
-      'Rustig scherm en de spelmodus zijn nu één keuze: Sfeer (Instellingen, Lessen). Kies Kalm, Standaard of Spel. In Spel voelt elk antwoord voller: wat goed is deint, wat fout is wiebelt, sterretjes schieten uit je punten en je telefoon trilt even.',
+      'Rustig scherm en de spelmodus zijn nu één keuze: Sfeer (Instellingen, Lessen). Kies Spel (zo staat het) of Kalm. In Spel voelt elk antwoord voller: wat goed is deint, wat fout is wiebelt, sterretjes schieten uit je punten en je telefoon trilt even.',
       'Meer tekeningen bewegen nu één keer op de woordkaart: de zaag zaagt, de hamer slaat, de deur gaat open, de lamp gaat aan. Bij "Minder beweging" op je telefoon of bij Rustig scherm staat alles stil.',
     ],
   },

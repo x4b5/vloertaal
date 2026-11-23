@@ -141,6 +141,31 @@ const t: CultureTranslation = {
     'kjn.u.kweek.2': "Pot să întreb dacă o roșie e destul de coaptă.", // nieuw, nalezen
     'kjn.u.carservice.1': "Pot să spun că martorul de avertizare e aprins.", // nieuw, nalezen
     'kjn.u.carservice.2': "Pot să întreb cât ulei trebuie pus.", // nieuw, nalezen
+    // The new sectors (23 November 2026).
+    'kjn.u.mowing.1': "Pot să spun că iarba e prea udă.", // nieuw, nalezen
+    'kjn.u.mowing.2': "Pot să întreb ce crengi trebuie tăiate.", // nieuw, nalezen
+    'kjn.u.planting.1': "Pot să spun că sunt cioburi.", // nieuw, nalezen
+    'kjn.u.planting.2': "Pot să întreb dacă am voie să traversez drumul.", // nieuw, nalezen
+    'kjn.u.frontdesk.1': "Pot să salut și să ajut un vizitator.", // nieuw, nalezen
+    'kjn.u.frontdesk.2': "Pot să întreb pentru cine e un colet.", // nieuw, nalezen
+    'kjn.u.maintenance.1': "Pot să raportez o defecțiune.", // nieuw, nalezen
+    'kjn.u.maintenance.2': "Pot să întreb unde trebuie dus un birou.", // nieuw, nalezen
+    'kjn.u.guarding.1': "Pot să cer să văd actul de identitate al cuiva.", // nieuw, nalezen
+    'kjn.u.guarding.2': "Pot să spun prin stație ce văd.", // nieuw, nalezen
+    'kjn.u.incidents.1': "Pot să sun la 112 și să spun ce s-a întâmplat.", // nieuw, nalezen
+    'kjn.u.incidents.2': "Pot să vorbesc calm cu un client furios.", // nieuw, nalezen
+    'kjn.u.foodhygiene.1': "Pot să spun că în camera frigorifică e prea cald.", // nieuw, nalezen
+    'kjn.u.foodhygiene.2': "Pot să întreb dacă are nuci în el.", // nieuw, nalezen
+    'kjn.u.foodline.1': "Pot să spun că eticheta nu e corectă.", // nieuw, nalezen
+    'kjn.u.foodline.2': "Pot să întreb cât trebuie pus într-o caserolă.", // nieuw, nalezen
+    'kjn.u.collection.1': "Pot să-l ajut pe șofer să dea înapoi.", // nieuw, nalezen
+    'kjn.u.collection.2': "Pot să spun că o pubelă e prea grea.", // nieuw, nalezen
+    'kjn.u.recycling.1': "Pot să-i spun unui vizitator unde merge gunoiul lui.", // nieuw, nalezen
+    'kjn.u.recycling.2': "Pot să spun că presa s-a blocat.", // nieuw, nalezen
+    'kjn.u.toddlers.1': "Pot să spun că schimb scutecul unui copil.", // nieuw, nalezen
+    'kjn.u.toddlers.2': "Pot să întreb dacă un copil doarme deja.", // nieuw, nalezen
+    'kjn.u.daycare.1': "Pot să-i spun unui părinte cum a fost ziua.", // nieuw, nalezen
+    'kjn.u.daycare.2': "Pot să întreb cine vine să ia un copil.", // nieuw, nalezen
   },
 };
 

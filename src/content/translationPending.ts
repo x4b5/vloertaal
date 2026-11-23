@@ -4,8 +4,9 @@ import { workUnits } from './work';
  * Lessons whose help-language translations follow in a later round. While a lesson is listed, the
  * app shows its English with the Dutch (gloss() has no help text for it), its tip gets no page of
  * its own on the site (src/lib/tipPages.ts), and the translation tests leave its ids out. Remove a
- * lesson here once its translations are in. Empty since 21 November 2026: the fifteen lessons of
- * 20 and 21 November (l.paint, l.prep, u.ruwbouw, three of Rekenen and u.machines) are translated.
+ * lesson here once its translations are in. Empty from 21 November 2026 (the fifteen lessons of 20 and 21 November were translated) until
+ * the sixteen lessons of Groen and Facilitair and the thirty-two of Beveiliging, Voedingsindustrie,
+ * Afval en recycling and Kinderopvang (23 November 2026).
  */
 export const TRANSLATION_PENDING_LESSONS: readonly string[] = [];
 

@@ -292,7 +292,7 @@ const lang: HelpLanguageSource = {
     settingOn: 'Ligado',
     settingOff: 'Desligado',
     sectorGroupMake: 'Produção e transporte',
-    sectorGroupCare: 'Cuidados e serviços',
+    sectorGroupCare: "Cuidados e crianças", // nieuw, nalezen
     sectorGroupShop: 'Comércio e restauração', // nieuw, nalezen
     sectorGroupBuild: 'Construção e técnica', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'Voz de mulher',
@@ -484,22 +484,20 @@ const lang: HelpLanguageSource = {
     speakFromMemory: 'Agora de memória: como era em neerlandês?', // nieuw, nalezen
     keptNofM: 'Palavras de há 2 semanas ou mais: ainda sabias {n} de {m}.', // nieuw, nalezen
     verbSecond: 'O verbo fica no lugar 2.', // nieuw, nalezen
-    calmScreen: 'Ecrã calmo', // nieuw, nalezen
-    calmAuto: 'Como o teu telemóvel', // nieuw, nalezen
-    calmHint: 'Ligado: nada se mexe, não há festa pela tua série depois de uma lição, e a tua série e as palavras não aparecem no ecrã inicial.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    playMode: 'Modo jogo', // nieuw, nalezen
-    playHint: 'Ligado: pontos por cada resposta certa, mais se acertares várias seguidas. Mais sons e movimento. Um erro não custa nada.', // nieuw, nalezen
     playPoints: 'Pontos', // nieuw, nalezen
     playTotal: 'Todos os teus pontos', // nieuw, nalezen
-    playAskTitle: 'Como queres praticar?', // nieuw, nalezen
-    playAskCalm: 'Com calma', // nieuw, nalezen
-    playAskFun: 'Com jogo', // nieuw, nalezen
-    playAskHint: 'Com jogo: pontos, sons e movimento. Podes mudar isto nas Definições.', // nieuw, nalezen
     sfeer: 'Ambiente', // nieuw, nalezen
     sfeerCalm: 'Calma', // nieuw, nalezen
-    sfeerStandard: 'Padrão', // nieuw, nalezen
     sfeerGame: 'Jogo', // nieuw, nalezen
-    sfeerHint: 'Calma: nada se mexe, sem festas. Padrão: a app como é. Jogo: pontos, sons e muito movimento.', // nieuw, nalezen
+    sfeerHint: 'Calma: nada se mexe, sem festas. Jogo: pontos, sons e muito movimento.', // nieuw, nalezen
+    sectorGroupService: "Serviços e segurança", // nieuw, nalezen
+    sectorGroupOutdoor: "Trabalhar ao ar livre", // nieuw, nalezen
+    sectorChildcare: "Creche e infantário", // nieuw, nalezen
+    sectorWaste: "Resíduos e reciclagem", // nieuw, nalezen
+    sectorFood: "Indústria alimentar", // nieuw, nalezen
+    sectorSecurity: "Segurança", // nieuw, nalezen
+    sectorFacility: "Serviços gerais", // nieuw, nalezen
+    sectorGreen: "Espaços verdes e jardins", // nieuw, nalezen
     playLevel: 'Nível', // nieuw, nalezen
     playLevel1: 'Principiante', // nieuw, nalezen
     playLevel2: 'Aprendiz', // nieuw, nalezen

@@ -208,6 +208,55 @@ const t: CultureTranslation = {
     'c.oilchange.a.why': "Ne kadar olduğu soruluyor: kaç litre, bir de nasıl kontrol edileceği.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.a.why': "Yenisinin gerekip gerekmediği soruluyor: evet, bir de nedeni.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "Ne yapılması gerektiği soruluyor: iş emrine bakılır.", // nieuw, nalezen // nagelezen AI 22 nov
+    // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
+    'c.mowing.a.why': "Alıp alamayacağın soruluyor: evet, bir de önce ne yapılacağı.", // nieuw, nalezen
+    'c.pruning.a.why': "Hangi dallar olduğu soruluyor: sadece kuru olanlar.", // nieuw, nalezen
+    'c.hedge.a.why': "Ne kadar yüksek olacağı soruluyor: ipe kadar, daha alçak değil.", // nieuw, nalezen
+    'c.chainsaw.a.why': "İzin olup olmadığı soruluyor: henüz değil, bir de önce ne geldiği.", // nieuw, nalezen
+    'c.weeding.a.why': "Yabani ot olup olmadığı soruluyor: hayır, bir de onunla ne yapılacağı.", // nieuw, nalezen
+    'c.planting.a.why': "Nereye gittiği soruluyor: çiçek tarhındaki yeri.", // nieuw, nalezen
+    'c.roadside.a.why': "Karşıya geçilip geçilemeyeceği soruluyor: hayır, bekle, bir de nedeni.", // nieuw, nalezen
+    'c.litter.a.why': "Bir mahalle sakini ne zaman olacağını soruyor: bilmiyorsun, bir de kimin bildiği.", // nieuw, nalezen
+    'c.reception.a.why': "Bir ziyaretçinin randevusu var: bir dakika, sen arıyorsun.", // nieuw, nalezen
+    'c.visitors.a.why': "Montun nereye gideceği soruluyor: yeri, bir de nerede olduğu.", // nieuw, nalezen
+    'c.mailroom.a.why': "Kimin için olduğu soruluyor: bölüm, bir de kat.", // nieuw, nalezen
+    'c.meetingroom.a.why': "Saat kaçta olduğu soruluyor: saat, bir de ne yapılması gerektiği.", // nieuw, nalezen
+    'c.faults.a.why': "Neden soğuk olduğu soruluyor: neyin bozuk olduğu, bir de yardımın ne zaman geldiği.", // nieuw, nalezen
+    'c.repairs.a.why': "Ötüp ötmediği soruluyor: evet, bir de nedeni.", // nieuw, nalezen
+    'c.moving.a.why': "Nereye gittiği soruluyor: oda, bir de nereye bakılacağı.", // nieuw, nalezen
+    'c.closing.a.why': "İçeride biri olup olmadığı soruluyor: hayır, bir de şimdi ne yaptığın.", // nieuw, nalezen
+    'c.patrol.a.why': "Bir şey görüp görmediğin soruluyor: evet, ne, bir de nerede.", // nieuw, nalezen
+    'c.access.a.why': "Kartsız içeri girmek isteniyor: üzgünüm, kartsız olmaz.", // nieuw, nalezen
+    'c.cameras.a.why': "Ne gördüğün soruluyor: kimi, nerede, bir de ne yaptığın.", // nieuw, nalezen
+    'c.report.a.why': "Rapora ne yazılacağı soruluyor: ne, nerede ve ne zaman.", // nieuw, nalezen
+    'c.evacuation.a.why': "Herkesin dışarıda olup olmadığı soruluyor: hayır, kaç kişinin eksik olduğu.", // nieuw, nalezen
+    'c.firstaid.a.why': "AED’nin nerede olduğu soruluyor: yeri, bir de yanında ne olduğu.", // nieuw, nalezen
+    'c.shoplifting.a.why': "Bir çantanın aranıp aranamayacağı soruluyor: hayır, bir de bunu kimin yaptığı.", // nieuw, nalezen
+    'c.aggression.a.why': "Neden olmadığı soruluyor: nedeni, sakince söyleniyor.", // nieuw, nalezen
+    'c.hygienelock.a.why': "Saat soruluyor: hayır, bir de arkasındaki kural.", // nieuw, nalezen
+    'c.allergens.a.why': "Birlikte gidip gidemeyeceği soruluyor: hayır, bir de nedeni.", // nieuw, nalezen
+    'c.coldroom.a.why': "Neden öttüğü soruluyor: nedeni, bir de ne yapılacağı.", // nieuw, nalezen
+    'c.foreignbody.a.why': "Ne yapılacağı soruluyor: kime gösterileceği.", // nieuw, nalezen
+    'c.cutting.a.why': "Ne kadar olduğu soruluyor: ağırlık, bir de nereye bakılacağı.", // nieuw, nalezen
+    'c.labels.a.why': "Hangi tarih olduğu soruluyor: ne zaman, bir de nereye bakılacağı.", // nieuw, nalezen
+    'c.linecleaning.a.why': "Temiz olup olmadığı soruluyor: henüz değil, bir de ne kaldığı.", // nieuw, nalezen
+    'c.haccp.a.why': "Nedeni soruluyor: yiyeceğin güvenli olduğunu bilmek için.", // nieuw, nalezen
+    'c.binlorry.a.why': "Arkada gidilip gidilemeyeceği soruluyor: hayır, bir de nerede gidileceği.", // nieuw, nalezen
+    'c.reversing.a.why': "Yardım isteniyor: evet, nerede durduğun, bir de ne yapılacağı.", // nieuw, nalezen
+    'c.wastesorting.a.why': "Nereye gittiği soruluyor: hangi kutu, bir de nedeni.", // nieuw, nalezen
+    'c.wastesafety.a.why': "Kesikten sonra ne yapılacağı soruluyor: yıka, bir de söyle.", // nieuw, nalezen
+    'c.yard.a.why': "Nereye gittiği soruluyor: konteyner, bir de nerede olduğu.", // nieuw, nalezen
+    'c.hazardous.a.why': "İçinde ne olduğu soruluyor: bilmiyorsun, o yüzden kenara koy.", // nieuw, nalezen
+    'c.baler.a.why': "Bakılıp bakılamayacağı soruluyor: hayır, bir de önce ne geldiği.", // nieuw, nalezen
+    'c.shovel.a.why': "Geçilip geçilemeyeceği soruluyor: sadece şoför seni görüyorsa.", // nieuw, nalezen
+    'c.nappies.a.why': "Ne zaman olduğu soruluyor: saat, bir de nerede yazdığı.", // nieuw, nalezen
+    'c.mealtime.a.why': "Yiyip yiyemeyeceği soruluyor: hayır, nedeni, bir de nereye bakılacağı.", // nieuw, nalezen
+    'c.naptime.a.why': "Uyuyup uyumadığı soruluyor: evet, ne zamandan beri, bir de kontrol ettiğin.", // nieuw, nalezen
+    'c.playtime.a.why': "Bir çocuğun oynayıp oynayamayacağı soruluyor: evet, nerede, bir de sonra ne olacağı.", // nieuw, nalezen
+    'c.pickup.a.why': "Kimin alacağı soruluyor: kişi, bir de listede olduğu.", // nieuw, nalezen
+    'c.childsafety.a.why': "Düşüp düşmediği soruluyor: evet, neyi olduğu, bir de kimi aradığın.", // nieuw, nalezen
+    'c.sickchild.a.why': "Nasıl olduğu soruluyor: ne gördüğün, bir de ne yaptığın.", // nieuw, nalezen
+    'c.grouprules.a.why': "Tek başına gidip gidemeyeceğin soruluyor: evet, ama önce bir iş arkadaşına söyle.", // nieuw, nalezen
   },
 };
 

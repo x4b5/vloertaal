@@ -2978,6 +2978,979 @@ const t: CultureTranslation = {
     'c.diagnosis.o2': "Taayirka isla markiiba beddel.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.o3': "Waxba ha oran: shaqadaadu ma aha.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.w': "Macmiilka ayaa go'aamiya waxa la sameeyo oo la bixiyo. Laakiin waa inuu ogaadaa in taayirku khatar yahay.", // nieuw, nalezen // nagelezen AI 22 nov
+    // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang, two units each (23 November 2026).
+    'u.mowing': "Jarista cawska iyo jarista laamaha", // nieuw, nalezen
+    'l.mowing': "Jarista cawska", // nieuw, nalezen
+    'w.gras': "cawska", // nieuw, nalezen
+    'w.maaien': "jarid cawska (cawska oo la gooyo)", // nieuw, nalezen
+    'w.grasmaaier': "mashiinka cawska jara", // nieuw, nalezen
+    'w.zitmaaier': "mashiinka cawska ee lagu fadhiisto (mashiin cawska jara oo aad korkiisa fadhiisato)", // nieuw, nalezen
+    'w.bosmaaier': "mashiinka cawska ee ulka leh (mashiin cawska jara oo ku yaal ul dheer)", // nieuw, nalezen
+    'w.gelaatsscherm': "daboolka wejiga", // nieuw, nalezen
+    's.mowing.1': "Marka hore cawska ka jar cidhifka agtiisa.", // nieuw, nalezen
+    's.mowing.2': "Cawsku aad buu u qoyan yahay. Berri ayaan jaraynaa.", // nieuw, nalezen
+    's.mowing.3': "Xiro daboolka wejigaaga.", // nieuw, nalezen
+    'c.mowing.q': "Mashiinka lagu fadhiisto ma qaadan karaa?", // nieuw, nalezen
+    'c.mowing.a': "Haa, laakiin marka hore dhagxaanta ka qaad.", // nieuw, nalezen
+    'c.mowing': "Dhagxaantu meel fog ayay u duulaan", // nieuw, nalezen
+    'c.mowing.b': "Mashiinka cawska jara ama mashiinka ulka leh dhagax ayuu u tuuri karaa meel aad u fog, si aad u xoog badanna. Sidaas darteed marka hore cawska dul mar, oo ka qaad dhagxaanta, dhalada iyo laamaha. Xiro daboolka wejigaaga ama muraayadaha badbaadada, ilaaliyaha maqalka iyo kabaha badbaadada. Dadka kale meel fog ka dhig. Qof ma soo dhowaanayaa? Jooji mashiinka. Waligaa gacanta ha gelin mashiinka hoostiisa inta matoorku shaqaynayo: dami, oo sug ilaa sakiintu joogsato. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.mowing.p': "Fadlan, ma iga fogaan kartaa?", // nieuw, nalezen
+    'c.mowing.s': "Waxaad isticmaalaysaa mashiinka ulka leh. Nin eey wata ayaa kuu soo socda. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.mowing.o1': "Jooji mashiinka ilaa uu ka gudbo.", // nieuw, nalezen
+    'c.mowing.o2': "Sii wad: wuu ku arki karaa.", // nieuw, nalezen
+    'c.mowing.o3': "Dhinac uga leexo, oo sii wad.", // nieuw, nalezen
+    'c.mowing.w': "Dhagax ka yimid mashiinka ulka leh qof ayuu si xun u dhaawici karaa, xitaa meel fog.", // nieuw, nalezen
+    'l.pruning': "Jarista laamaha", // nieuw, nalezen
+    'w.snoeien': "jarid laamaha (laamo oo geed laga gooyo)", // nieuw, nalezen
+    'w.snoeischaar': "maqaska laamaha", // nieuw, nalezen
+    'w.tak': "laanta", // nieuw, nalezen
+    'w.struik': "geedka yar, duurka", // nieuw, nalezen
+    'w.boom': "geedka weyn", // nieuw, nalezen
+    'w.snoeizaag': "miinshaarka laamaha", // nieuw, nalezen
+    's.pruning.1': "Jar geedaha yaryar ee waddada yar agteeda.", // nieuw, nalezen
+    's.pruning.2': "Laantani way dhimatay. Ka jar miinshaarka.", // nieuw, nalezen
+    's.pruning.3': "Laamaha isku tuul dhig.", // nieuw, nalezen
+    'c.pruning.q': "Laamahee ayaa la jarayaa?", // nieuw, nalezen
+    'c.pruning.a': "Laamaha dhintay oo keliya.", // nieuw, nalezen
+    'c.pruning': "Goyn nadiif ah ayaa ugu fiican bogsashada", // nieuw, nalezen
+    'c.pruning.b': "Ku jar maqas fiiqan oo nadiif ah. Goyn nadiif ah si dhakhso ah ayay u bogsataa; laan la jeexjeexay way xanuunsataa. Ka jar wax yar kor ka xiga gun ama laan dhinaca ah, oo ha ka tagin gabal dheer. Marka hore ka jar laamaha dhintay iyo kuwa jabay. Gacantaada kale ka fogee sakiinta. Xiro gacmo-gashiyo: dhirta qaarkood qodxo ayay leeyihiin, ama maqaarkaaga ayay casaysaa. Shaqada kadib maqaska nadiifi.", // nieuw, nalezen
+    'c.pruning.p': "Xagee ayaan ka jaraa?", // nieuw, nalezen
+    'c.pruning.s': "Maqaskaaga laamuhu waa af-xun yahay. Laamaha ayuu jeexjeexaa. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.pruning.o1': "Weydiiso maqas fiiqan.", // nieuw, nalezen
+    'c.pruning.o2': "Laanta si xoog badan u jiid.", // nieuw, nalezen
+    'c.pruning.o3': "Sii wad: waa geed yar uun.", // nieuw, nalezen
+    'c.pruning.w': "Maqas af-xun laanta ayuu jeexjeexaa. Geedku wuu xanuunsadaa, adiguna si adag ayaad u shaqaysaa.", // nieuw, nalezen
+    'l.hedge': "Jarista ooda geedaha", // nieuw, nalezen
+    'w.heg': "ooda geedaha (geedo safaf ah oo xayn ah)", // nieuw, nalezen
+    'w.heggenschaar': "mashiinka ooda jara (mashiin ooda geedaha jara)", // nieuw, nalezen
+    'w.kruiwagen': "gaariga gacanta", // nieuw, nalezen
+    'w.hark': "fargeetada dhulka", // nieuw, nalezen
+    'w.snoeiafval': "qashinka cagaaran (laamo iyo caleemo la jaray)", // nieuw, nalezen
+    'w.zeil': "shiraaca (go' weyn oo caag ah)", // nieuw, nalezen
+    's.hedge.1': "Shiraaca dhig ooda hoosteeda.", // nieuw, nalezen
+    's.hedge.2': "Ooda si qurux badan oo toos ah u jar.", // nieuw, nalezen
+    's.hedge.3': "Qashinka cagaaran ku qaad gaariga gacanta.", // nieuw, nalezen
+    'c.hedge.q': "Intee le'eg ayay oodu dhererkeedu ahaanaysaa?", // nieuw, nalezen
+    'c.hedge.a': "Ilaa xarigga. Ka hoos ha u jarin.", // nieuw, nalezen
+    'c.hedge': "Marka hore buulal raadi", // nieuw, nalezen
+    'c.hedge.b': "Gu'ga iyo xagaaga, shimbiruhu buulal ayay ka sameystaan oodaha iyo geedaha yaryar. Buulasha ay shimbiruhu isticmaalaan waa la ilaaliyaa. Sidaas darteed ooda dhex eeg ka hor intaadan jarin. Ma aragtaa buul ukumo ama shimbiro yaryar ku jiraan? Halkaas ha jarin, oo u sheeg madaxaaga. Mashiinka ooda jara ku qabo labada gacmood. Si adag u istaag dhulka ama jaranjaro fiican, waligaa kursi ama baaldi ha ku istaagin. Fiilada gadaashaada ku hay.", // nieuw, nalezen
+    'c.hedge.p': "Halkan buul ayaa ku yaal.", // nieuw, nalezen
+    'c.hedge.s': "Bisha May ayaad ood jaraysaa. Waxaad aragtaa buul shimbiro yaryar ku jiraan. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.hedge.o1': "Halkaas ku jooji, oo u sheeg madaxaaga.", // nieuw, nalezen
+    'c.hedge.o2': "Si taxaddar leh agagaarkiisa u jar.", // nieuw, nalezen
+    'c.hedge.o3': "Buulka ka saar, oo sii wad.", // nieuw, nalezen
+    'c.hedge.w': "Buulasha ay shimbiruhu isticmaalaan waa la ilaaliyaa. Madaxaaga ayaa go'aamiya waxa ku dhacaya qaybtan oodda.", // nieuw, nalezen
+    'l.chainsaw': "Miinshaarka silsiladda iyo afuufaha caleemaha", // nieuw, nalezen
+    'w.kettingzaag': "miinshaarka silsiladda", // nieuw, nalezen
+    'w.stam': "jirridda (geedka)", // nieuw, nalezen
+    'w.zaagbroek': "surwaalka miinshaarka (silsiladda ayuu joojiyaa)", // nieuw, nalezen
+    'w.bladblazer': "afuufaha caleemaha", // nieuw, nalezen
+    'w.bladeren': "caleemaha", // nieuw, nalezen
+    'w.jerrycan': "jeerikaanka (weel shidaal)", // nieuw, nalezen
+    's.chainsaw.1': "Xiro surwaalkaaga miinshaarka.", // nieuw, nalezen
+    's.chainsaw.2': "Caleemaha u afuuf meel isku tuul ah.", // nieuw, nalezen
+    's.chainsaw.3': "Shidaal ku shub oo keliya marka matoorku qabow yahay.", // nieuw, nalezen
+    'c.chainsaw.q': "Miinshaarka silsiladda ma ku shaqayn karaa?", // nieuw, nalezen
+    'c.chainsaw.a': "Weli maya. Marka hore koorso ayaad qaadanaysaa.", // nieuw, nalezen
+    'c.chainsaw': "Miinshaarka silsiladda oo keliya tababar kadib", // nieuw, nalezen
+    'c.chainsaw.b': "Miinshaarka silsiladdu waa mid ka mid ah qalabka ugu khatarta badan shaqada cagaaran. Ku shaqee oo keliya marka aad koorso qaadatay, madaxaaguna kuu oggolaado. Mar walba xiro surwaalka miinshaarka, koofiyad leh daboolka wejiga iyo ilaaliyaha maqalka, gacmo-gashiyo iyo kabaha badbaadada. Waligaa keligaa ha ku shaqayn miinshaarka silsiladda. Ku qabo labada gacmood, waligaana ha ku jarin garbahaaga ka sarreeya. Afuufaha caleemaha: waligaa ha u afuufin dadka, baabuurta ama daaqadaha furan. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.chainsaw.p': "Weli koorso uma aanan qaadan tan.", // nieuw, nalezen
+    'c.chainsaw.s': "Saaxiib shaqo ayaa yiri: “Qaado miinshaarka silsiladda, waa fudud yahay.” Waligaa koorso ma aadan qaadan. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.chainsaw.o1': "Dheh inaadan weli koorso qaadan.", // nieuw, nalezen
+    'c.chainsaw.o2': "Si taxaddar leh isku day, hal mar oo keliya.", // nieuw, nalezen
+    'c.chainsaw.o3': "Qaado, oo marka hore daawo muuqaal.", // nieuw, nalezen
+    'c.chainsaw.w': "Miinshaarka silsiladdu lugtaada ayuu ku jari karaa hal ilbiriqsi. Tababar la'aan ma garanaysid sida uu dib ugu boodi karo.", // nieuw, nalezen
+    'u.planting': "Beerista, haramaha iyo waddada", // nieuw, nalezen
+    'l.weeding': "Saarista haramaha", // nieuw, nalezen
+    'w.onkruid': "haramaha (dhir waa in la saaraa)", // nieuw, nalezen
+    'w.wieden': "saarid haramaha (haramaha oo la siibo)", // nieuw, nalezen
+    'w.schoffel': "yaambada", // nieuw, nalezen
+    'w.perk': "beerta ubaxa", // nieuw, nalezen
+    'w.onkruidbrander': "gubaha haramaha (kulayl ayuu haramaha ku dilaa)", // nieuw, nalezen
+    'w.wortel': "xididka (geedka)", // nieuw, nalezen
+    's.weeding.1': "Haramaha siib, xididka la socda.", // nieuw, nalezen
+    's.weeding.2': "Beerta ubaxa ee albaabka agteeda yaambo ku qod.", // nieuw, nalezen
+    's.weeding.3': "Taxaddar: gubaha haramuhu waa kulul yahay.", // nieuw, nalezen
+    'c.weeding.q': "Kani ma haramo baa?", // nieuw, nalezen
+    'c.weeding.a': "Maya, taasi waa geed. Iska daa.", // nieuw, nalezen
+    'c.weeding': "Haramaha: xididku waa inuu baxaa", // nieuw, nalezen
+    'c.weeding.b': "Haramuhu dib ayuu u soo baxaa marka xididku dhulka ku hadho. Sidaas darteed xididka la socda u siib, ama yaambo ku qod wax yar carrada hoosteeda. Shaqee marka carradu wax yar qoyan tahay: markaas xididku si fudud ayuu u soo baxaa. Ha isticmaalin buufiyeyaal haramaha looga hortago, ilaa aad baratay sida loo isticmaalo oo madaxaagu sidaas yiraahdo. Gubaha haramuhu aad buu u kulul yahay: ka fogee cawska qallalan, caleemaha, oodaha, baabuurta iyo weelasha qashinka. Waligaa ha dhigin inta uu gubayo. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.weeding.p': "Kani ma haramo baa mise waa geed?", // nieuw, nalezen
+    'c.weeding.s': "Waxaad isticmaalaysaa gubaha haramaha. Waddada yar agteeda waxaa ku taal ood qallalan. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.weeding.o1': "Halkaas haramaha gacanta ku siib.", // nieuw, nalezen
+    'c.weeding.o2': "Si dhakhso ah u gub, oo sii soco.", // nieuw, nalezen
+    'c.weeding.o3': "Gub, oo hal mar dib u eeg.", // nieuw, nalezen
+    'c.weeding.w': "Ood qallalan si dhakhso ah ayay dab u qabsataa. Dab guryo ama baabuur u dhow aad buu khatar u yahay.", // nieuw, nalezen
+    'l.planting': "Beerista", // nieuw, nalezen
+    'w.planten': "beerid", // nieuw, nalezen
+    'w.schep': "majarafadda, yaambada weyn", // nieuw, nalezen
+    'w.plantgat': "godka beerista", // nieuw, nalezen
+    'w.kluit': "kubbadda xididka (carrada xididdada ku wareegsan)", // nieuw, nalezen
+    'w.compost': "bacriminta dabiiciga ah (kombost)", // nieuw, nalezen
+    'w.boompaal': "tiirka geedka (ul qabata geed yar)", // nieuw, nalezen
+    's.planting.1': "Geedka u qod god beereed.", // nieuw, nalezen
+    's.planting.2': "Geedka si toos ah u dhig, tiirka agtiisa.", // nieuw, nalezen
+    's.planting.3': "Dhirta cusub sii biyo badan.", // nieuw, nalezen
+    'c.planting.q': "Geedkan xagee buu galayaa?", // nieuw, nalezen
+    'c.planting.a': "Beerta ubaxa gadaasheeda, derbiga agtiisa.", // nieuw, nalezen
+    'c.planting': "Dhulka hoostiisa: fiilooyin iyo tuubooyin", // nieuw, nalezen
+    'c.planting.b': "Cawska iyo laamiga hoostooda badanaa waxaa ku jira fiilooyin iyo tuubooyin: koronto, gaas, biyo iyo internet. Sidaas darteed si taxaddar leh u qod. Ma aragtaa cajalad midab leh ama saxan caag ah oo dhulka ku jira, mise wax adag ayaad ku dhacday? Jooji qodista, oo u sheeg madaxaaga. Waligaa xoog ha ku sii qodin. Geed culus ama kubbad xidid oo weyn wada qaada, jilbahaaga oo laaban. Geed cusub isla maalintaas sii biyo. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.planting.p': "Wax adag ayaan ku dhacayaa.", // nieuw, nalezen
+    'c.planting.s': "Waxaad qodaysaa god beereed. Majarafaddaadu waxay ku dhacday cajalad caag ah oo casaan ah. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.planting.o1': "Jooji qodista, oo u sheeg madaxaaga.", // nieuw, nalezen
+    'c.planting.o2': "Si taxaddar leh u sii qod, cajaladda agteeda.", // nieuw, nalezen
+    'c.planting.o3': "Cajaladda soo jiid, oo sii wad.", // nieuw, nalezen
+    'c.planting.w': "Cajalad dhulka ku jirta waxay ka digaysaa in fiilo ama tuubo hoosteeda ku jirto. Tuubada gaaska ama fiilada korontadu aad bay khatar u yihiin.", // nieuw, nalezen
+    'l.roadside': "Ka shaqaynta waddada agteeda", // nieuw, nalezen
+    'w.pion': "koorta taraafikada", // nieuw, nalezen
+    'w.verkeer': "taraafikada (gaadiidka socda)", // nieuw, nalezen
+    'w.stoep': "waddada lugta (jidka waddada dhinaceeda ah)", // nieuw, nalezen
+    'w.fietser': "baaskiil-waduhu", // nieuw, nalezen
+    'w.pijlwagen': "tarelada fallaarta (tarelo leh fallaar weyn oo darawallada uga digta)", // nieuw, nalezen
+    'w.berm': "cidhifka cawska leh (cawska waddada dhinaceeda ah)", // nieuw, nalezen
+    's.roadside.1': "Xiro jaakaddaada. Waxaan ka shaqaynaynaa waddada agteeda.", // nieuw, nalezen
+    's.roadside.2': "Koorayaasha dhig gaariga gadaashiisa.", // nieuw, nalezen
+    's.roadside.3': "Ka feejignow baaskiil-wadayaasha.", // nieuw, nalezen
+    'c.roadside.q': "Hadda ma tallaabi karaa?", // nieuw, nalezen
+    'c.roadside.a': "Maya, sug. Gaari xamuul ayaa imanaya.", // nieuw, nalezen
+    'c.roadside': "Waddada agteeda: la arag, koorayaasha gadaashooda joog", // nieuw, nalezen
+    'c.roadside.b': "Shaqada waddada agteeda waa khatar: darawalladu taleefankooda ayay eegaan, ama si xad-dhaaf ah ayay u dheereeyaan. Sidaas darteed mar walba xiro jaakadda iftiinka leh, xitaa shaqo gaaban. Koorayaasha iyo calaamadaha dhig ka hor intaadan bilaabin, oo ugu dambayn soo qaad. Gaariga u dhig sidii gaashaan adiga iyo taraafikada dhexdooda ah. Koorayaasha gadaashooda joog. Waligaa dib ha u tallaabsan adigoon eegin, oo marka aad kartid, wejigaaga u jeedi taraafikada adigoo shaqaynaya. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.roadside.p': "Marka hore koorayaasha ayaan dhigayaa.", // nieuw, nalezen
+    'c.roadside.s': "Waa inaad jartaa geed yar oo waddada agteeda ah. Waxay qaadanaysaa shan daqiiqo. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.roadside.o1': "Xiro jaakadda, oo dhig koorayaasha.", // nieuw, nalezen
+    'c.roadside.o2': "Si dhakhso ah u samee, koorayaal la'aan.", // nieuw, nalezen
+    'c.roadside.o3': "Saaxiib shaqo ka codso inuu baabuurta kuu eego.", // nieuw, nalezen
+    'c.roadside.w': "Shil wuxuu qaataa hal ilbiriqsi oo keliya. Shan daqiiqo oo koorayaal la'aan ah waa shan daqiiqo oo ilaalin la'aan ah.", // nieuw, nalezen
+    'l.litter': "Qashinka daadsan iyo xaafadda", // nieuw, nalezen
+    'w.zwerfafval': "qashinka daadsan (qashin waddada yaal)", // nieuw, nalezen
+    'w.grijper': "qabsadaha qashinka (ul qashinka qabata)", // nieuw, nalezen
+    'w.vuilniszak': "bacda qashinka", // nieuw, nalezen
+    'w.scherven': "dhalada jabtay (jajab fiiqan)", // nieuw, nalezen
+    'w.aanhanger': "tarelada", // nieuw, nalezen
+    'w.bewoner': "deggane (qof halkan ku nool)", // nieuw, nalezen
+    's.litter.1': "Qashinka daadsan ku qaad qabsadaha qashinka.", // nieuw, nalezen
+    's.litter.2': "Taxaddar, halkan dhalo jabtay ayaa yaal.", // nieuw, nalezen
+    's.litter.3': "Bacaha qashinka dhig tarelada agteeda.", // nieuw, nalezen
+    'c.litter.q': "Goorma ayaa geedkan laamihiisa la jarayaa?", // nieuw, nalezen
+    'c.litter.a': "Ma garanayo. Weydii dowladda hoose.", // nieuw, nalezen
+    'c.litter': "Waligaa ha taaban irbad", // nieuw, nalezen
+    'c.litter.b': "Beerta dadweynaha iyo geedaha yaryar mararka qaarkood waxaad ka heshaa irbad duritaan. Waligaa gacanta ha ku qaadin, xitaa adigoo gacmo-gashiyo xiran. Isticmaal qabsadaha qashinka, oo irbadda geli sanduuq adag ama dhalo dabool leh, waligaa bac qashin ha gelin. U sheeg madaxaaga. Irbad ma ku muday? Nabarka ku dhaq biyo badan, oo isla markiiba wac dhakhtar. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.litter.p': "Halkan irbad ayaa taal.", // nieuw, nalezen
+    'c.litter.s': "Waxaad aragtaa irbad cawska ku jirta, kursi fadhi agtiisa. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.litter.o1': "Ku qaad qabsadaha qashinka.", // nieuw, nalezen
+    'c.litter.o2': "Ku qaad adigoo gacmo-gashiyo xiran.", // nieuw, nalezen
+    'c.litter.o3': "Geli bacda qashinka.", // nieuw, nalezen
+    'c.litter.w': "Irbaddu waxay sidi kartaa cudur. Gacmo-gashiyadu ma joojiyaan irbad, sanduuq adaguna dadka kale ayuu badbaadiyaa.", // nieuw, nalezen
+    'u.frontdesk': "Soo dhaweynta, boostada iyo shirarka", // nieuw, nalezen
+    'l.reception': "Miiska soo dhaweynta", // nieuw, nalezen
+    'w.balie': "miiska soo dhaweynta, miiska adeegga", // nieuw, nalezen
+    'w.bezoeker': "booqdaha", // nieuw, nalezen
+    'w.intercom': "intarkomka (qofka albaabka jooga ayaad la hadashaa)", // nieuw, nalezen
+    'w.doorverbinden': "u gudbin (wicitaan taleefan)", // nieuw, nalezen
+    'w.toestel': "lambarka gudaha (lambar taleefan oo dhismaha gudihiisa ah)", // nieuw, nalezen
+    'w.wachtruimte': "meesha sugitaanka", // nieuw, nalezen
+    's.reception.1': "Subax wanaagsan, ma ku caawin karaa?", // nieuw, nalezen
+    's.reception.2': "Waan kuu gudbinayaa.", // nieuw, nalezen
+    's.reception.3': "Fadlan ku fadhiiso meesha sugitaanka.", // nieuw, nalezen
+    'c.reception.q': "Ballan ayaan la leeyahay Marwo Jansen.", // nieuw, nalezen
+    'c.reception.a': "Daqiiqad. Waan u yeerayaa.", // nieuw, nalezen
+    'c.reception': "Adiga ayaa ah wejiga ugu horreeya", // nieuw, nalezen
+    'c.reception.b': "Miiska soo dhaweynta adiga ayaa ah qofka ugu horreeya ee booqduhu la kulmo. Kor u eeg, dhoola cadee oo salaan, xitaa marka aad taleefanka ku mashquulsan tahay. Booqdayaasha kula hadal “u”. Taleefanka ku jawaab magaca shirkadda iyo magacaaga. Jawaabta ma garanaysid? Sidaas dheh, oo raadi qof garanaya. Waligaa ha siin dad aanad aqoon magacyada, lambarrada taleefanka ama qolalka shaqaalaha.", // nieuw, nalezen
+    'c.reception.p': "Subax wanaagsan, sideen kuu caawin karaa?", // nieuw, nalezen
+    'c.reception.s': "Taleefanka ayaad ku jirtaa. Booqde ayaa miiska yimid oo sugaya. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.reception.o1': "Kor u eeg, oo tus inaad dhowaan imanayso.", // nieuw, nalezen
+    'c.reception.o2': "Wicitaankaaga dhammee, adigoon kor u eegin.", // nieuw, nalezen
+    'c.reception.o3': "Taleefanka isla markiiba dhig.", // nieuw, nalezen
+    'c.reception.w': "Booqde la arkay si deggan ayuu u sugaa. Booqde aan la arkin wuxuu dareemaa in aan la soo dhaweyn.", // nieuw, nalezen
+    'l.visitors': "Soo dhaweynta booqdayaasha", // nieuw, nalezen
+    'w.bezoekerspasje': "kaarka booqdaha", // nieuw, nalezen
+    'w.lift': "wiishka", // nieuw, nalezen
+    'w.garderobe': "qolka jaakadaha (meesha jaakaddaada lagu laadlaadiyo)", // nieuw, nalezen
+    'w.parkeerplaats': "meesha baabuurka la dhigto", // nieuw, nalezen
+    'w.hal': "hoolka (qolka weyn ee albaabka laga galo)", // nieuw, nalezen
+    'w.begeleiden': "gaarsiin (qof oo aad la socoto meel)", // nieuw, nalezen
+    's.visitors.1': "Fadlan magacaaga halkan ma ku qori kartaa?", // nieuw, nalezen
+    's.visitors.2': "Waa kan kaarkaaga booqdaha.", // nieuw, nalezen
+    's.visitors.3': "Waxaan ku geynayaa wiishka.", // nieuw, nalezen
+    'c.visitors.q': "Xagee jaakaddayda uga tagi karaa?", // nieuw, nalezen
+    'c.visitors.a': "Qolka jaakadaha, wiishka agtiisa.", // nieuw, nalezen
+    'c.visitors': "Booqde kasta wuu is-diiwaangeliyaa", // nieuw, nalezen
+    'c.visitors.b': "Booqde kasta magaciisa ayuu ku qoraa liiska, ama shaashadda ayuu iska diiwaangeliyaa, oo wuxuu helaa kaarka booqdaha. Markaas waad ogtahay cidda dhismaha ku jirta. Tani waa muhiim marka dab jiro: qof walba waa inuu baxaa, qofna liiska ayuu hubiyaa. Booqashada dhammaadkeeda, booqduhu kaarka ayuu soo celiyaa. Dad aanad aqoon ha u oggolaan inay gadaashaada ka soo galaan: si edeb leh u weydii cidda ay halkan u yimaadeen. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.visitors.p': "Yaad halkan u timid?", // nieuw, nalezen
+    'c.visitors.s': "Nin ayaa saaxiib shaqo gadaashiisa ka soo galay. Kaar ma haysto. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.visitors.o1': "Si edeb leh u weydii cidda uu halkan u yimid.", // nieuw, nalezen
+    'c.visitors.o2': "Iska daa: shaqaale ayuu la soo galay.", // nieuw, nalezen
+    'c.visitors.o3': "Isla markiiba wac booliska.", // nieuw, nalezen
+    'c.visitors.w': "Xaalad degdeg ah, waa inaad ogaataa cidda gudaha ku jirta. Qof kasta oo soo galana ma laha sabab uu halkaas u joogo.", // nieuw, nalezen
+    'l.mailroom': "Boostada iyo baakadaha", // nieuw, nalezen
+    'w.postkamer': "qolka boostada", // nieuw, nalezen
+    'w.koerier': "qaybiyaha (qof baakadaha keena)", // nieuw, nalezen
+    'w.postvak': "khaanadda boostada (sanduuq boosto, qof kasta mid)", // nieuw, nalezen
+    'w.envelop': "baqshadda", // nieuw, nalezen
+    'w.afdeling': "qaybta (shirkadda)", // nieuw, nalezen
+    'w.postkar': "gaariga boostada", // nieuw, nalezen
+    's.mailroom.1': "Qaybiyuhu baakad ayuu keenayaa.", // nieuw, nalezen
+    's.mailroom.2': "Waraaqaha geli khaanadda boostada ee saxda ah.", // nieuw, nalezen
+    's.mailroom.3': "Baakaddani waa dhaawacan tahay.", // nieuw, nalezen
+    'c.mailroom.q': "Baakaddani yaa iska leh?", // nieuw, nalezen
+    'c.mailroom.a': "Qaybta Maaliyadda, dabaqa labaad.", // nieuw, nalezen
+    'c.mailroom': "Boostadu waa sir", // nieuw, nalezen
+    'c.mailroom.b': "Boostada iyo baakaduhu waa sir. Waligaa ha furin warqad ama baakad qof kale leeyahay. Shay kasta ku hubi magaca iyo qaybta, oo geli khaanadda boostada ee saxda ah. Marka qaybiye baakad keeno, eeg ka hor intaadan saxiixin: ma dhaawacan tahay? Taas qor. Baakad ma yaab leh tahay: ur bay leedahay, way daadanaysaa, mise diraha lagama qorin? Ha furin, oo u sheeg madaxaaga. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.mailroom.p': "Sanduuqu waa qoyan yahay oo jaban yahay.", // nieuw, nalezen
+    'c.mailroom.s': "Qaybiye ayaa baakad keenay. Hal gees ayaa qoyan oo jeexan. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.mailroom.o1': "Qor dhaawaca ka hor intaadan saxiixin.", // nieuw, nalezen
+    'c.mailroom.o2': "Saxiix, oo qofna ha u sheegin.", // nieuw, nalezen
+    'c.mailroom.o3': "Fur, si aad u aragto inay wax walba ku jiraan.", // nieuw, nalezen
+    'c.mailroom.w': "Marka aad saxiixdo kadib, waxay u ekaanaysaa in baakaddu fiicnayd. Markaas qofna ma bixiyo dhaawaca.", // nieuw, nalezen
+    'l.meetingroom': "Diyaarinta qolka shirka", // nieuw, nalezen
+    'w.vergaderzaal': "qolka shirka", // nieuw, nalezen
+    'w.beamer': "borojektarka", // nieuw, nalezen
+    'w.whiteboard': "looxa cad", // nieuw, nalezen
+    'w.thermoskan': "termuska (kafeega kulul ayuu ku hayaa)", // nieuw, nalezen
+    'w.kopje': "koobka", // nieuw, nalezen
+    'w.koffieautomaat': "mashiinka kafeega", // nieuw, nalezen
+    's.meetingroom.1': "Toban kursi miiska ku wareeji.", // nieuw, nalezen
+    's.meetingroom.2': "Kafeega iyo shaaha diyaari.", // nieuw, nalezen
+    's.meetingroom.3': "Borojektarku ma shaqaynayo.", // nieuw, nalezen
+    'c.meetingroom.q': "Saacaddee ayuu shirku bilaabanayaa?", // nieuw, nalezen
+    'c.meetingroom.a': "Tobanka. Hubi in wax walba diyaar yihiin.", // nieuw, nalezen
+    'c.meetingroom': "Diyaar ka hor martida ugu horreysa", // nieuw, nalezen
+    'c.meetingroom.b': "Qolka shirku waa inuu diyaar yahay ka hor inta qofka ugu horreeya soo gelin. Hubi kuraasta, miiska, borojektarka iyo fiilooyinka. Dhig kafeeg, shaah iyo biyo, koobab iyo caano la socda. Cabbitaannada kulul si taxaddar leh u qaad, waligaana dadka korkooda ha ka qaadin. Shirka kadib, miiska nadiifi oo wax walba dib u celi. Waxa aad qolka shirka ka maqasho, naftaada ku hay.", // nieuw, nalezen
+    'c.meetingroom.p': "Qolku waa diyaar.", // nieuw, nalezen
+    'c.meetingroom.s': "Shirku wuxuu bilaabanayaa shan daqiiqo kadib. Borojektarku ma shaqaynayo. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.meetingroom.o1': "Isla markiiba u sheeg qabanqaabiyaha.", // nieuw, nalezen
+    'c.meetingroom.o2': "Sug: waxaa laga yaabaa in qofna u baahnayn.", // nieuw, nalezen
+    'c.meetingroom.o3': "Miiska kaga tag warqad yar.", // nieuw, nalezen
+    'c.meetingroom.w': "Shan daqiiqo weli waa waqti lagu hagaajiyo ama qol kale lagu helo. Hadhow, qof walba wuu sugaa.", // nieuw, nalezen
+    'u.maintenance': "Cilladaha, dayactirka iyo raridda", // nieuw, nalezen
+    'l.faults': "Sheegidda cillad", // nieuw, nalezen
+    'w.melding': "warbixinta (waxaad sheegtaa in wax khaldan yihiin)", // nieuw, nalezen
+    'w.lekkage': "daadashada (biyo ayaa soo baxaya)", // nieuw, nalezen
+    'w.verwarming': "kululeynta", // nieuw, nalezen
+    'w.airco': "qaboojiyaha hawada", // nieuw, nalezen
+    'w.afvoer': "bullaacadda (tuubada biyaha ka saarta)", // nieuw, nalezen
+    'w.verstopt': "xiran (waxba kama gudbaan)", // nieuw, nalezen
+    's.faults.1': "Cilladda ayaan sheegayaa.", // nieuw, nalezen
+    's.faults.2': "Jikada daadasho ayaa ka jirta.", // nieuw, nalezen
+    's.faults.3': "Bullaacadda musqusha waa xiran tahay.", // nieuw, nalezen
+    'c.faults.q': "Maxay halkan sidan ugu qabow tahay?", // nieuw, nalezen
+    'c.faults.a': "Kululeyntu waa jaban tahay. Farsamayaqaanku berri ayuu imanayaa.", // nieuw, nalezen
+    'c.faults': "Sheeg, keligaa ha hagaajin", // nieuw, nalezen
+    'c.faults.b': "Ma aragtaa wax jaban, sida daadasho, nal demay ama albaab aan xirmin? Sheeg, xitaa marka uu yar yahay: nidaamka ku qor ama u sheeg madaxaaga. Sheeg meesha uu ku yaal, waxa aad aragto iyo tan iyo goorma. Korontada, gaaska ama kululeynta adigu ha hagaajin. Ma urinaysaa gaas? Ha isticmaalin badhan ama taleefan agtiisa, fur daaqadaha, dadka ka saar, oo caawimaad ka wac bannaanka. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.faults.p': "Waxaan rabaa inaan cillad sheego.", // nieuw, nalezen
+    'c.faults.s': "Biyo ayaa ka soo tiifaya saqafka marinka. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.faults.o1': "Sheeg, oo baaldi hoos dhig.", // nieuw, nalezen
+    'c.faults.o2': "Sug: waxaa laga yaabaa inuu iskiis u joogsado.", // nieuw, nalezen
+    'c.faults.o3': "Fur saqafka si aad u eegto.", // nieuw, nalezen
+    'c.faults.w': "Daadasho yar waxay noqon kartaa waxyeelo weyn. Baaldigu sagxadda ayuu qallaliyaa, si aanu qofna u simbiriirixan.", // nieuw, nalezen
+    'l.repairs': "Dayactir yaryar", // nieuw, nalezen
+    'w.vervangen': "beddelid (mid cusub oo la geliyo)", // nieuw, nalezen
+    'w.deurklink': "gacanta albaabka", // nieuw, nalezen
+    'w.scharnier': "musmaarka albaabka (birta albaabka ku xirta)", // nieuw, nalezen
+    'w.gereedschapskist': "sanduuqa qalabka", // nieuw, nalezen
+    'w.rookmelder': "digaha qiiqa", // nieuw, nalezen
+    'w.batterij': "baytariga", // nieuw, nalezen
+    's.repairs.1': "Beddel nalka marinka.", // nieuw, nalezen
+    's.repairs.2': "Gacanta albaabku way debecsan tahay.", // nieuw, nalezen
+    's.repairs.3': "Qaado jaranjarada yar, ha qaadan kursi.", // nieuw, nalezen
+    'c.repairs.q': "Digaha qiiqu ma dhawaaqayaa?", // nieuw, nalezen
+    'c.repairs.a': "Haa, baytarigu ku dhowaad wuu dhammaaday.", // nieuw, nalezen
+    'c.repairs': "Jaranjaro yar, waligaa kursi", // nieuw, nalezen
+    'c.repairs.b': "Nal ama khaanad sare, isticmaal jaranjaro yar, waligaa kursi, miis ama sanduuq. Dhig sagxad siman, si buuxda u fur, oo ha istaagin jaranjarta ugu sarreysa. Nalka dami ka hor intaadan beddelin guluubka, oo guluubka duugga ah u daa inuu qaboobo. Samee oo keliya dayactirka aad baratay. Qalabkaaga dib ugu celi sanduuqa qalabka marka aad dhammeyso, si aanu qofna ugu turunturoon. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.repairs.p': "Jaranjarada yar ayaan keenayaa.", // nieuw, nalezen
+    'c.repairs.s': "Nal ku yaal xafiiska ayaa jaban. Jaranjarada yari waxay ku taal dabaq kale. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.repairs.o1': "Keen jaranjarada yar.", // nieuw, nalezen
+    'c.repairs.o2': "Ku istaag kursiga xafiiska.", // nieuw, nalezen
+    'c.repairs.o3': "Ku istaag miiska xafiiska.", // nieuw, nalezen
+    'c.repairs.w': "Kursigu wuu dhaqaaqi karaa ama wuu rogmi karaa. Ka dhicidda kursi si xun ayay kuu dhaawici kartaa.", // nieuw, nalezen
+    'l.moving': "Raridda goob shaqo", // nieuw, nalezen
+    'w.verhuisdoos': "sanduuqa raridda", // nieuw, nalezen
+    'w.bureau': "miiska xafiiska", // nieuw, nalezen
+    'w.bureaustoel': "kursiga xafiiska", // nieuw, nalezen
+    'w.werkplek': "goobta shaqada (miiska qof ka shaqeeyo)", // nieuw, nalezen
+    'w.kamernummer': "lambarka qolka", // nieuw, nalezen
+    'w.plattegrond': "khariidadda dhismaha (sawirka dhismaha)", // nieuw, nalezen
+    's.moving.1': "Lambarka qolka ku qor sanduuq kasta.", // nieuw, nalezen
+    's.moving.2': "Sanduuqyada saar gaariga gacanta.", // nieuw, nalezen
+    's.moving.3': "Goobta shaqada faaruqi.", // nieuw, nalezen
+    'c.moving.q': "Miiskan xagee buu aadayaa?", // nieuw, nalezen
+    'c.moving.a': "Qolka laba iyo tobnaad. Eeg khariidadda dhismaha.", // nieuw, nalezen
+    'c.moving': "Raridda: si caqli leh u qaad, wax walba calaamadee", // nieuw, nalezen
+    'c.moving.b': "Raridda waa shaqo culus. Sanduuq ha ka buuxin xad-dhaaf: buugaagta iyo faylasha waa culus yihiin. Ku qaad jilbahaaga oo laaban iyo dhabarkaaga oo toosan, jidhkaaga u dhow. Sanduuqyo badan u isticmaal gaariga gacanta, miiskana wada qaada. Lambarka qolka cusub ku qor sanduuq kasta, kursi kasta iyo kombiyuutar kasta. Marka hore fiilooyinka ka saar. Waligaa sanduuqyo ha dhigin marin ama albaabka gurmadka hortiisa.", // nieuw, nalezen
+    'c.moving.p': "Ma iga caawin kartaa inaan tan qaado?", // nieuw, nalezen
+    'c.moving.s': "Waa inaad rartaa miis culus. Saaxiibkaa shaqadu wuu nasanayaa. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.moving.o1': "Sug caawimaad, oo wada qaada.", // nieuw, nalezen
+    'c.moving.o2': "Keligaa jiid.", // nieuw, nalezen
+    'c.moving.o3': "Keligaa qaad, si aad u taxaddar badan.", // nieuw, nalezen
+    'c.moving.w': "Miis culus dhabarkaaga ayuu dhaawici karaa marka aad keligaa qaaddo. Wadajir waa fudud tahay oo waa ammaan.", // nieuw, nalezen
+    'l.closing': "Furidda iyo xiridda dhismaha", // nieuw, nalezen
+    'w.sleutelbos': "furayaasha (furayaal badan oo isku xiran)", // nieuw, nalezen
+    'w.afsluiten': "qufulid", // nieuw, nalezen
+    'w.ronde': "wareegga (socod qol kasta ah)", // nieuw, nalezen
+    'w.raam': "daaqadda", // nieuw, nalezen
+    'w.alarmcode': "koodhka alaarmiga", // nieuw, nalezen
+    'w.nachtslot': "qufulka habeenka (qufulka dheeriga ah ee habeenka)", // nieuw, nalezen
+    's.closing.1': "Wareegga ugu dambeeya ee dhismaha ayaan samaynayaa.", // nieuw, nalezen
+    's.closing.2': "Daaqadaha oo dhan ma xiran yihiin?", // nieuw, nalezen
+    's.closing.3': "Albaabka ku xir qufulka habeenka.", // nieuw, nalezen
+    'c.closing.q': "Qof weli gudaha ma joogaa?", // nieuw, nalezen
+    'c.closing.a': "Maya, qof walba wuu tagay. Waan qufulayaa.", // nieuw, nalezen
+    'c.closing': "Koodhka alaarmigu waa sir", // nieuw, nalezen
+    'c.closing.b': "Maalinta dhammaadkeeda waxaad samaynaysaa wareegga ugu dambeeya. Hubi in qofna gudaha ku harin, daaqaduhu xiran yihiin, nalaluna demsan yihiin. Albaabada gurmadku bannaan bay ahaanayaan. Furayaasha adiga kula jiraan, waligaa khaanad ha dhex dhigin. Koodhka alaarmigu waa sir: waligaa qofna ha siin, xitaa taleefanka. Alaarmigu ma dhawaaqay? Raac tallaabooyinka shirkaddaada. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.closing.p': "Koodhka alaarmiga qofna ma siiyo.", // nieuw, nalezen
+    'c.closing.s': "Qof ayaa wacay: “Waxaan ka socdaa shirkadda alaarmiga. Waa maxay koodhkaagu?” Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.closing.o1': "Maya dheh, oo u sheeg madaxaaga.", // nieuw, nalezen
+    'c.closing.o2': "Sii koodhka: wuxuu u ekaa mid naxariis leh.", // nieuw, nalezen
+    'c.closing.o3': "Sii badh koodhka oo keliya.", // nieuw, nalezen
+    'c.closing.w': "Shirkad alaarmi oo dhab ah koodhkaaga taleefanka kuma weydiiso. Tuug ayaa laga yaabaa inuu weydiiyo.", // nieuw, nalezen
+    'u.guarding': "Wareegyada ilaalinta iyo gelitaanka", // nieuw, nalezen
+    'l.patrol': "Wareegga", // nieuw, nalezen
+    'w.surveilleren': "ilaalin wareeg ah (agagaarka oo la maro oo la eego)", // nieuw, nalezen
+    'w.zaklamp': "tooshka", // nieuw, nalezen
+    'w.terrein': "dhulka goobta (dhulka dhismaha ku wareegsan)", // nieuw, nalezen
+    'w.hek': "xayndaabka, irridda", // nieuw, nalezen
+    'w.inbraak': "jabsashada (qof ayaa u soo gala si uu wax u xado)", // nieuw, nalezen
+    'w.openstaan': "furnaan (albaab ama daaqad ay ahayd inay xirnaato)", // nieuw, nalezen
+    's.patrol.1': "Labadii saacadoodba mar ayaan wareeg sameeyaa.", // nieuw, nalezen
+    's.patrol.2': "Irridda hoolka gadaashiisa waa furan tahay.", // nieuw, nalezen
+    's.patrol.3': "Tooshkaaga qaado.", // nieuw, nalezen
+    'c.patrol.q': "Wareeggaaga wax ma ku aragtay?", // nieuw, nalezen
+    'c.patrol.a': "Haa. Daaqad ayaa furnayd albaabka dambe agtiisa.", // nieuw, nalezen
+    'c.patrol': "Eeg oo sheeg, geesi ha iska dhigin", // nieuw, nalezen
+    'c.patrol.b': "Wareeggaaga waxaad eegtaa: albaabada iyo daaqaduhu ma xiran yihiin, xayndaabku ma dhan yahay, ma jiraa qof aan ahayn inuu halkaas joogo? Qor waxa aad aragto, iyo waqtiga. Ma aragtaa wax yaab leh, sida daaqad jaban ama qof habeenkii jooga? Keligaa ha gelin. Ku wac qolka xakamaynta ama booliska raadiyaha ama taleefanka, oo ku sug meel ammaan ah. Ammaankaaga ayaa ugu horreeya. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.patrol.p': "Qof ayaan ku arkaa xayndaabka agtiisa.", // nieuw, nalezen
+    'c.patrol.s': "Habeenkii waxaad aragtaa albaab la jabiyay oo la furay. Gudaha buuq ayaad ka maqlaysaa. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.patrol.o1': "Bannaanka joog, oo caawimaad wac.", // nieuw, nalezen
+    'c.patrol.o2': "Si dhakhso ah u gal, oo eeg.", // nieuw, nalezen
+    'c.patrol.o3': "Gudaha ugu qayli inaad imanayso.", // nieuw, nalezen
+    'c.patrol.w': "Tuug gudaha jooga wuxuu noqon karaa khatar. Booliisku wuu og yahay waxa la sameeyo; shaqadaadu waa inaad aragto oo sheegto.", // nieuw, nalezen
+    'l.access': "Xakamaynta gelitaanka", // nieuw, nalezen
+    'w.slagboom': "albaabka ulka (ul waddada ka gudubta oo kor u kacda)", // nieuw, nalezen
+    'w.toegangspas': "kaarka gelitaanka (kaar albaabka fura)", // nieuw, nalezen
+    'w.legitimatie': "aqoonsiga (baasaboor ama kaarka aqoonsiga)", // nieuw, nalezen
+    'w.draaihek': "irridda wareegta (irrid wareegta, hal qof mar)", // nieuw, nalezen
+    'w.kenteken': "taarikada (xarfaha iyo lambarrada baabuurka)", // nieuw, nalezen
+    'w.toegang': "gelitaanka (waad geli kartaa)", // nieuw, nalezen
+    's.access.1': "Ma arki karaa aqoonsigaaga?", // nieuw, nalezen
+    's.access.2': "Kaarkaagu ma shaqaynayo. Waan wacayaa.", // nieuw, nalezen
+    's.access.3': "Albaabka ulka ayaan furayaa.", // nieuw, nalezen
+    'c.access.q': "Ma geli karaa? Kaarkaygii waan ilaabay.", // nieuw, nalezen
+    'c.access.a': "Waan ka xumahay, kaar la'aan ma geli kartid.", // nieuw, nalezen
+    'c.access': "Kaar la'aan, gelitaan ma jiro", // nieuw, nalezen
+    'c.access.b': "Irridda ama miiska waxaad ku hubisaa cidda soo galaysa. Qof walba wuxuu u baahan yahay kaar, ama waa inuu liiska ku jiraa. Naxariis yeelo, xitaa marka qof xanaaqsan yahay ama degdegsan yahay. Ha samayn ka-reebis sababtoo ah qof ayaa yiri isagaa madaxa ah: hubi. Waligaa kaarkaaga qofna ha amaahin, waligaana qof ha u oggolaan inuu gadaashaada ka soo galo. Kaar lumay waa in isla markiiba la sheegaa. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.access.p': "Ma arki karaa kaarkaaga?", // nieuw, nalezen
+    'c.access.s': "Nin suud xiran ayaa yiri: “Waxaan ahay agaasimaha cusub. Weli kaar ma haysto.” Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.access.o1': "Hubi, ka hor intaadan u oggolaan inuu galo.", // nieuw, nalezen
+    'c.access.o2': "U oggolow inuu galo: wuxuu u eg yahay qof muhiim ah.", // nieuw, nalezen
+    'c.access.o3': "Sii kaarkaaga.", // nieuw, nalezen
+    'c.access.w': "Qof kasta wuxuu dhihi karaa isagaa agaasimaha ah. Hubin degdeg ah ayaa dhismaha ammaan ka dhigta, agaasime dhab ahna wuu fahmi doonaa.", // nieuw, nalezen
+    'l.cameras': "Kamaradaha iyo qolka xakamaynta", // nieuw, nalezen
+    'w.meldkamer': "qolka xakamaynta (meesha dadku ka daawadaan kamaradaha oo ka qaataan wicitaannada)", // nieuw, nalezen
+    'w.beeldscherm': "shaashadda", // nieuw, nalezen
+    'w.camerabeelden': "muuqaallada kamarada (waxa kamaradu duubtay)", // nieuw, nalezen
+    'w.inzoomen': "soo weynayn (sawirka oo la soo dhoweeyo)", // nieuw, nalezen
+    'w.bewegingsmelder': "dareemaha dhaqdhaqaaqa (wuu arkaa marka wax dhaqaaqaan)", // nieuw, nalezen
+    'w.verdachte': "qofka laga shakiyo", // nieuw, nalezen
+    's.cameras.1': "Kamarada saddexaad waxaan ku arkaa qof xayndaabka agtiisa ah.", // nieuw, nalezen
+    's.cameras.2': "Waan soo weyneynayaa.", // nieuw, nalezen
+    's.cameras.3': "Qolka xakamayntu booliska ayuu wacayaa.", // nieuw, nalezen
+    'c.cameras.q': "Maxaad shaashadda ku aragtaa?", // nieuw, nalezen
+    'c.cameras.a': "Nin xayndaabka agtiisa ah. Saaxiib shaqo ayaan u dirayaa.", // nieuw, nalezen
+    'c.cameras': "Muuqaallada kamaradu waa sir", // nieuw, nalezen
+    'c.cameras.b': "Kamaraduhu dadka ayay duubaan: shaqaalaha, booqdayaasha iyo dadka dhinaca maraya. Waxa aad shaashadaha ku aragto waa sir. U daawo oo keliya shaqadaada, waligaana shaashadda ha ku duubin taleefankaaga. Waligaa muuqaallo ha u dirin saaxiibbo, hana dhigin internetka. Dhacdo ma jirtaa? Qor kamarada iyo waqtiga, oo u sheeg madaxaaga. Shirkaddaada oo keliya ayaa go'aamisa cidda hesha muuqaallada, tusaale ahaan booliska. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.cameras.p': "Looma oggola inaan taas tuso.", // nieuw, nalezen
+    'c.cameras.s': "Saaxiib shaqo ayaa kaa codsaday inaad u dirto muuqaal qosol leh oo kamaradaha laga duubay. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.cameras.o1': "Maya dheh: muuqaalladu waa sir.", // nieuw, nalezen
+    'c.cameras.o2': "U dir, isaga oo keliya.", // nieuw, nalezen
+    'c.cameras.o3': "Shaashadda ku duub taleefankaaga.", // nieuw, nalezen
+    'c.cameras.w': "Dadka muuqaallada ku jira kuma raacin in la wadaago. Diristeedu waxay kaa qaadi kartaa shaqadaada.", // nieuw, nalezen
+    'l.report': "Raadiyaha iyo warbixinta", // nieuw, nalezen
+    'w.portofoon': "raadiyaha gacanta (walkie-talkie)", // nieuw, nalezen
+    'w.rapport': "warbixinta (waxa dhacay oo la qoray)", // nieuw, nalezen
+    'w.incident': "dhacdada (wax khaldamay)", // nieuw, nalezen
+    'w.tijdstip': "waqtiga (goorta wax dhaceen)", // nieuw, nalezen
+    'w.logboek': "buugga diiwaanka (buug ama app aad wax walba ku qorto)", // nieuw, nalezen
+    'w.oproepen': "u yeerid (raadiyaha)", // nieuw, nalezen
+    's.report.1': "Warbixin ayaan ka qorayaa dhacdada.", // nieuw, nalezen
+    's.report.2': "Saacaddu si sax ah immisa ayay ahayd?", // nieuw, nalezen
+    's.report.3': "Si fiican kuuma maqlayo. Mar kale dheh.", // nieuw, nalezen
+    'c.report.q': "Maxaa warbixinta ku jiraya?", // nieuw, nalezen
+    'c.report.a': "Waxa dhacay, meesha iyo saacadda.", // nieuw, nalezen
+    'c.report': "Isla markiiba qor", // nieuw, nalezen
+    'c.report.b': "Warbixin qor isla markiiba dhacdada kadib, inta aad weli si fiican u xasuusato. Qor waxa adigu aad aragtay oo maqashay: waxa dhacay, meesha, saacadda, iyo cidda joogtay. Qor xaqiiqooyin, ha qorin waxa aad u malaynayso. Raadiyaha, si gaaban oo cad u hadal, oo sug ilaa qofka kale dhammeeyo. Sheeg cidda aad tahay iyo meesha aad joogto. Warbixin fiican waxay caawisaa booliska, shirkaddaada iyo adiga.", // nieuw, nalezen
+    'c.report.p': "Isla markiiba ayaan qorayaa.", // nieuw, nalezen
+    'c.report.s': "Habeen mashquul ah kadib aad baad u daallan tahay. Hal dhacdo oo yar ayaa jirtay. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.report.o1': "Qor warbixinta ka hor intaadan guriga aadin.", // nieuw, nalezen
+    'c.report.o2': "Berri qor, hurdo fiican kadib.", // nieuw, nalezen
+    'c.report.o3': "Iska daa: waxay ahayd mid yar uun.", // nieuw, nalezen
+    'c.report.w': "Berri faahfaahinta waad ilaawaysaa. Warbixin aan waqti ama meel lahayn qofna ma caawiso.", // nieuw, nalezen
+    'u.incidents': "Xaaladaha degdegga ah iyo dukaanka", // nieuw, nalezen
+    'l.evacuation': "Dabka iyo ka bixinta dhismaha", // nieuw, nalezen
+    'w.brandmelder': "badhanka alaarmiga dabka (sanduuq cas oo aad riixdo marka dab jiro)", // nieuw, nalezen
+    'w.brandweer': "dab-demiska", // nieuw, nalezen
+    'w.branddeur': "albaabka dabka (wuxuu joojiyaa dabka iyo qiiqa)", // nieuw, nalezen
+    'w.brandmeldcentrale': "looxa alaarmiga dabka (wuxuu muujiyaa meesha alaarmigu ka dhacay)", // nieuw, nalezen
+    'w.ontruimingsplan': "qorshaha ka bixinta (cidda waxa ay samayso marka qof walba bannaanka u baxayo)", // nieuw, nalezen
+    'w.sirene': "jibbaaxa (sireenka)", // nieuw, nalezen
+    's.evacuation.1': "Alaarmiga dabka ayaa ka dhacay hoolka labaad.", // nieuw, nalezen
+    's.evacuation.2': "Albaabada dabka xiran ku hay.", // nieuw, nalezen
+    's.evacuation.3': "Dab-demiska ayaan ku sugayaa albaabka laga galo.", // nieuw, nalezen
+    'c.evacuation.q': "Qof walba bannaanka ma joogaa?", // nieuw, nalezen
+    'c.evacuation.a': "Maya, laba qof oo liiska ku jira ayaa weli maqan.", // nieuw, nalezen
+    'c.evacuation': "Dab: marka hore alaarmiga, kadib bannaanka", // nieuw, nalezen
+    'c.evacuation.b': "Ma aragtaa dab ama qiiq? Riix badhanka alaarmiga dabka, ama wac 112. Kadib dadka ka caawi inay ka baxaan waddooyinka baxsashada, waligaa wiishka. Albaabada xir markaad dhaafto, laakiin ha qufulin. Dab la dagaallan oo keliya marka uu yar yahay oo aad baratay sida loo sameeyo. Aad meesha isu imaatinka, oo tiri cidda joogta. Dab-demiska kula kulan albaabka laga galo, oo u sheeg waxa aad taqaan. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.evacuation.p': "Qof walba bannaanka, meesha isu imaatinka.", // nieuw, nalezen
+    'c.evacuation.s': "Alaarmiga dabka ayaa dhawaaqaya. Nin ayaa doonaya inuu wiishka qaato. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.evacuation.o1': "U dir jaranjarada.", // nieuw, nalezen
+    'c.evacuation.o2': "Iska daa: wiishku waa ka dhakhso badan yahay.", // nieuw, nalezen
+    'c.evacuation.o3': "La raac wiishka.", // nieuw, nalezen
+    'c.evacuation.w': "Dab marka uu jiro, wiishku wuu istaagi karaa ama qiiq ayuu ka buuxsami karaa. Jaranjaradu waa jidka ammaanka ah ee bannaanka loo baxo.", // nieuw, nalezen
+    'l.firstaid': "Gargaarka degdegga ah iyo 112", // nieuw, nalezen
+    'w.ehbo': "gargaarka degdegga ah", // nieuw, nalezen
+    'w.aed': "AED-ga (mashiin caawiya wadne istaagay)", // nieuw, nalezen
+    'w.reanimeren': "samaynta CPR (laabta oo la riixo si nolol loo badbaadiyo)", // nieuw, nalezen
+    'w.bewusteloos': "miyir la'aan (qofku ma soo toosayo)", // nieuw, nalezen
+    'w.ademen': "neefsasho", // nieuw, nalezen
+    'w.alarmnummer': "lambarka degdegga (112)", // nieuw, nalezen
+    's.firstaid.1': "Wac 112. Weydiiso ambalaas.", // nieuw, nalezen
+    's.firstaid.2': "AED-ga ka keen miiska soo dhaweynta.", // nieuw, nalezen
+    's.firstaid.3': "Ma neefsanayo. CPR ayaan samaynayaa.", // nieuw, nalezen
+    'c.firstaid.q': "Xagee AED-gu yaal?", // nieuw, nalezen
+    'c.firstaid.a': "Albaabka laga galo, wiishka agtiisa.", // nieuw, nalezen
+    'c.firstaid': "Wac 112, bilow CPR, keen AED-ga", // nieuw, nalezen
+    'c.firstaid.b': "Qof ayaa dhacay oo aan dhaqaaqin? Isla markiiba wac 112, ama qof kale ha waco. Hubi in qofku si caadi ah u neefsanayo. Haddii kale: bilow CPR, oo qof ha keeno AED-ga. AED-gu wuu hadlaa oo wuxuu kuu sheegaa waxa aad samayso; si khaldan uma samayn kartid. Sii wad ilaa ambalaasku la wareego. Ma qaadatay koorsada gargaarka degdegga ah? U sheeg saaxiibbadaa shaqada, si ay u ogaadaan cidda ay u yeeraan.", // nieuw, nalezen
+    'c.firstaid.p': "Wac 112 oo keen AED-ga.", // nieuw, nalezen
+    'c.firstaid.s': "Nin ayaa ku dhacay hoolka. Ma dhaqaaqo, mana neefsanayo. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.firstaid.o1': "Wac 112, oo bilow CPR.", // nieuw, nalezen
+    'c.firstaid.o2': "Sug si aad u aragto inuu soo toosayo.", // nieuw, nalezen
+    'c.firstaid.o3': "Kor u qaad, oo kursi saar.", // nieuw, nalezen
+    'c.firstaid.w': "Marka wadnuhu istaago, daqiiqad kastaa waa muhiim. CPR iyo AED waxay badbaadin karaan nolol ka hor inta ambalaasku iman.", // nieuw, nalezen
+    'l.shoplifting': "Tuugada dukaanka", // nieuw, nalezen
+    'w.winkeldiefstal': "tuugada dukaanka", // nieuw, nalezen
+    'w.heterdaad': "gacan-ku-dhiig (waxaad aragtaa marka ay dhacayso)", // nieuw, nalezen
+    'w.aanhouden': "qabasho (qof oo la hayo ilaa booliisku yimaado)", // nieuw, nalezen
+    'w.detectiepoortje': "irridda ammaanka (albaabka ayay ka dhawaaqdaa)", // nieuw, nalezen
+    'w.alarmlabel': "calaamadda ammaanka (waxay ka dhigtaa irridda inay dhawaaqdo)", // nieuw, nalezen
+    'w.verstoppen': "qarin", // nieuw, nalezen
+    's.shoplifting.1': "Irridda ammaanku waxay ka dhawaaqaysaa albaabka laga baxo.", // nieuw, nalezen
+    's.shoplifting.2': "Waxaan arkay markii ay dhacaysay.", // nieuw, nalezen
+    's.shoplifting.3': "Waan hayaa ilaa booliisku yimaado.", // nieuw, nalezen
+    'c.shoplifting.q': "Bacdiisa ma baari karaa?", // nieuw, nalezen
+    'c.shoplifting.a': "Maya. Booliiska ayaa taas sameeya.", // nieuw, nalezen
+    'c.shoplifting': "Tuugada dukaanka: eeg, sheeg, xoog qallafsan ha isticmaalin", // nieuw, nalezen
+    'c.shoplifting.b': "Ma aragtay qof wax xadaya? Deganow, oo isla markiiba wac booliska. Dukaamada qaarkood waxay u oggolaadaan ilaaliyaha inuu tuugga hayo ilaa booliisku yimaado; kuwa kalena waxay leeyihiin: eeg oo keliya, sheeg oo xasuuso sida uu qofku u eg yahay. Waligaa ha garaacin hana laadin, waligaana qof qoorta ha ka qaban. Waligaa ha baarin qof, jeebabkiisa ama bacdiisa: taasi waa shaqada booliiska. Qor waxa aad aragtay, oo kaydi muuqaallada kamarada. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.shoplifting.p': "Fadlan, ma i raaci kartaa?", // nieuw, nalezen
+    'c.shoplifting.s': "Waxaad aragtay naag dhalo bacdeeda gelisay. Way baxaysaa. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.shoplifting.o1': "Si deggan u jooji, oo wac booliska.", // nieuw, nalezen
+    'c.shoplifting.o2': "Bacdeeda si dhakhso ah ugu baar albaabka.", // nieuw, nalezen
+    'c.shoplifting.o3': "Si xoog leh dhulka ugu tuur.", // nieuw, nalezen
+    'c.shoplifting.w': "Baaritaanka qofku waa shaqada booliiska, xoog qallafsanna qof ayuu dhaawici karaa, adigana dhibaato ayuu kugu ridi karaa.", // nieuw, nalezen
+    'l.aggression': "Dadka adag", // nieuw, nalezen
+    'w.agressie': "gardarrada (dabeecad xanaaq iyo rabshad leh)", // nieuw, nalezen
+    'w.schelden': "caayid (qof oo la caayo)", // nieuw, nalezen
+    'w.kalmeren': "degid", // nieuw, nalezen
+    'w.afstand': "masaafada (fogaanta)", // nieuw, nalezen
+    'w.huisverbod': "mamnuucidda (halkan mar dambe ma soo geli kartid)", // nieuw, nalezen
+    'w.bodycam': "kamarada jidhka (kamarad yar oo labiskaaga ku taal)", // nieuw, nalezen
+    's.aggression.1': "Deganow, mudane. Waxaan rabaa inaan ku caawiyo.", // nieuw, nalezen
+    's.aggression.2': "Masaafo ilaali oo deganow.", // nieuw, nalezen
+    's.aggression.3': "Waa lagaa mamnuucay. Waa inaad hadda baxdo.", // nieuw, nalezen
+    'c.aggression.q': "Maxaan u geli waayay?", // nieuw, nalezen
+    'c.aggression.a': "Halkan waa lagaa mamnuucay.", // nieuw, nalezen
+    'c.aggression': "Deganow, masaafo ilaali", // nieuw, nalezen
+    'c.aggression.b': "Qof xanaaqsan si dhakhso ah ayuu u dego marka aad adigu deggan tahay. Si tartiib ah oo hoose u hadal, oo qofka kula hadal “u”. Dhexdiinna ku hay dherer gacan ama ka badan, oo gadaashaada ku hay meel aad ka baxdo. Qofka ha taaban, qaylona ha ku celin. Ma khatar bay noqonaysaa? Dib u dhaqaaq, oo wac saaxiib shaqo ama booliska. Kadib qor. Dhacdo xun kadib, qof kala hadal. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.aggression.p': "Deganow. Waxaan rabaa inaan ku caawiyo.", // nieuw, nalezen
+    'c.aggression.s': "Nin ayaa kugu qaylinaya oo aad kuugu soo dhowaanaya. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.aggression.o1': "Dib u dhaqaaq, oo si deggan u hadal.", // nieuw, nalezen
+    'c.aggression.o2': "Ugu qayli dib, isaga ka cod dheer.", // nieuw, nalezen
+    'c.aggression.o3': "Iska riix.", // nieuw, nalezen
+    'c.aggression.w': "Erayo deggan iyo meel bannaan ayaa kululaanta ka saara. Qaylada ama riixiddu way ka sii dartaa.", // nieuw, nalezen
+    'u.foodhygiene': "Nadaafadda iyo qabowga", // nieuw, nalezen
+    'l.hygienelock': "Qolka nadaafadda", // nieuw, nalezen
+    'w.hygienesluis': "qolka nadaafadda (qolka aad ku nadiifsato ka hor intaadan gelin)", // nieuw, nalezen
+    'w.baardnetje': "shabagga gadhka", // nieuw, nalezen
+    'w.laarzenwasser': "dhaqaha kabaha dhaadheer (burushyo kabahaaga nadiifiya)", // nieuw, nalezen
+    'w.desinfecteren': "jeermis-dilid (jeermiska oo la dilo)", // nieuw, nalezen
+    'w.werkjas': "koodhka shaqada", // nieuw, nalezen
+    'w.bacterie': "jeermiska, bakteeriyada", // nieuw, nalezen
+    's.hygienelock.1': "Gacmahaaga dhaq oo jeermis-dil.", // nieuw, nalezen
+    's.hygienelock.2': "Xiro shabagga timahaaga iyo shabagga gadhkaaga.", // nieuw, nalezen
+    's.hygienelock.3': "Dhex mar dhaqaha kabaha.", // nieuw, nalezen
+    'c.hygienelock.q': "Saacaddayda ma xiran karaa?", // nieuw, nalezen
+    'c.hygienelock.a': "Maya, dahabka iyo qurxinta oo dhan waa la iska siibaa.", // nieuw, nalezen
+    'c.hygienelock': "Nadiif u gal, mar kasta", // nieuw, nalezen
+    'c.hygienelock.b': "Warshad cunto, adiga ayaa ah khatarta ugu weyn ee cuntada: jeermisku wuxuu ka yimaadaa gacmahaaga, timahaaga iyo dharkaaga. Sidaas darteed mar kasta oo aad gasho dhex mar qolka nadaafadda, xitaa nasasho ama musqusha kadib. Shabagga timaha xiro, shabagga gadhka haddii aad gadh leedahay, dhar shaqo oo nadiif ah, dahabka iyo qurxinta oo dhan iska siib. Gacmahaaga saabuun ku dhaq, qallaji oo jeermis-dil. Ma xanuunsan tahay, shuban ama matag? U sheeg madaxaaga ka hor intaadan bilaabin. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.hygienelock.p': "Shuban ayaan qabaa. Maanta ma shaqayn karaa?", // nieuw, nalezen
+    'c.hygienelock.s': "Musqusha ayaad ka soo laabatay. Saaxiibkaa shaqadu wuxuu yiri: “Qolka nadaafadda ka bood, waan mashquulsannahay.” Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.hygienelock.o1': "Si kastaba ha ahaatee dhex mar qolka nadaafadda.", // nieuw, nalezen
+    'c.hygienelock.o2': "Ka bood, hal mar oo keliya.", // nieuw, nalezen
+    'c.hygienelock.o3': "Xiro gacmo-gashiyo cusub oo keliya.", // nieuw, nalezen
+    'c.hygienelock.w': "Jeermiska musqusha ka yimaada macaamiil badan ayuu xanuunsiin karaa. Dhawr daqiiqo oo qolka nadaafadda ah ayaa taas ka hortaga.", // nieuw, nalezen
+    'l.allergens': "Walxaha xasaasiyadda keena", // nieuw, nalezen
+    'w.allergeen': "walaxda xasaasiyadda keenta (cunto dadka qaarkood aad u xanuunsiisa)", // nieuw, nalezen
+    'w.noten': "loosta", // nieuw, nalezen
+    'w.pinda': "looska dhulka (fuul)", // nieuw, nalezen
+    'w.gluten': "gluteenka (wuxuu ku jiraa sarreenka, sidaas darteed rootiga iyo keega)", // nieuw, nalezen
+    'w.sesam': "sisinta (abuur yaryar, tusaale ahaan rootiga korkiisa)", // nieuw, nalezen
+    'w.kruisbesmetting': "isku-wasakhaynta (wax ayaa galaya cunto aanu ahayn inuu galo)", // nieuw, nalezen
+    's.allergens.1': "Alaabtan loos ayaa ku jira.", // nieuw, nalezen
+    's.allergens.2': "Calaamadda ka eeg walxaha xasaasiyadda keena ee ku jira.", // nieuw, nalezen
+    's.allergens.3': "Looska dhulka kadib wax walba si fiican u nadiifi.", // nieuw, nalezen
+    'c.allergens.q': "Weelkan ma la raaci karaa kuwa kale?", // nieuw, nalezen
+    'c.allergens.a': "Maya, loos ayaa ku jira.", // nieuw, nalezen
+    'c.allergens': "Raad yar ayaa ku filan", // nieuw, nalezen
+    'c.allergens.b': "Dadka qaarkood, xabbad aad u yar oo loos, loos dhulka, caano, ukun, gluteen ama sisin ah waxay noqon kartaa khatar nafeed. Taas darteed calaamaddu waa inay si sax ah u sheegtaa waxa alaab ku jira. Walxaha xasaasiyadda keena gooni u hay: weelal, qalab iyo midabyo u gaar ah. Alaab walax xasaasiyadeed leh kadib, khadka waa la nadiifiyaa ka hor alaabta xigta. Waligaa ha beddelin walax cuntada ka mid ah, xitaa marka ay isku mid u eg yihiin. Ma shakisan tahay? Weydii. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.allergens.p': "Tan loos ma ku jiraa?", // nieuw, nalezen
+    'c.allergens.s': "Looska yicibta ah waa dhammaaday. Saaxiib shaqo ayaa yiri: “Isticmaal looska kale, qofna ma ogaanayo.” Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.allergens.o1': "Maya dheh, oo u sheeg madaxaaga.", // nieuw, nalezen
+    'c.allergens.o2': "Isticmaal: loos waa loos.", // nieuw, nalezen
+    'c.allergens.o3': "Isticmaal, oo calaamadda waxba ha ka beddelin.", // nieuw, nalezen
+    'c.allergens.w': "Calaamaddu waa inay sheegtaa waxa ku jira. Loos khaldan qof xasaasiyad qaba aad ayuu u xanuunsiin karaa.", // nieuw, nalezen
+    'l.coldroom': "Qolka qabow iyo qaboojiyaha barafka", // nieuw, nalezen
+    'w.temperatuur': "heerkulka", // nieuw, nalezen
+    'w.graden': "darajooyinka (°C)", // nieuw, nalezen
+    'w.bevroren': "barafoobay", // nieuw, nalezen
+    'w.ontdooien': "dhalaalin (barafka oo laga saaro)", // nieuw, nalezen
+    'w.koelketen': "silsiladda qabowga (cuntadu waxay ahaanaysaa qabow jidka oo dhan)", // nieuw, nalezen
+    'w.thermokleding': "dharka qabowga (dhar diirran oo qabowga loogu talagalay)", // nieuw, nalezen
+    's.coldroom.1': "Qolka qaboojiyaha barafka waa siddeed iyo toban darajo ka hooseeya eber.", // nieuw, nalezen
+    's.coldroom.2': "Hilibka isla markiiba geli qolka qabow.", // nieuw, nalezen
+    's.coldroom.3': "Heerkulka ku qor liiska.", // nieuw, nalezen
+    'c.coldroom.q': "Maxuu qolka qabowgu u dhawaaqayaa?", // nieuw, nalezen
+    'c.coldroom.a': "Albaabku waa furan yahay. Si dhakhso ah u xir.", // nieuw, nalezen
+    'c.coldroom': "Shaqada qabowga: diirran u labiso, cuntada qabow ku hay", // nieuw, nalezen
+    'c.coldroom.b': "Cuntadu waa inay qabow ahaataa jidka oo dhan: gaariga xamuulka ilaa qolka qabow ilaa dukaanka. Sidaas darteed alaabta qabow isla markiiba meesheeda geli, oo albaabada qolka qabow iyo qaboojiyaha barafka xiran ku hay. Hubi heerkulka oo qor. Qaboojiyaha barafka, xiro dharkaaga qabowga, gacmo-gashiyo iyo koofiyad, oo waqtigeeda qaado nasasho diirran. Hubi inaad mar walba albaabka gudaha ka furi karto. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.coldroom.p': "Halkan aad bay u kulul tahay. Qaboojintu ma shaqaynayso.", // nieuw, nalezen
+    'c.coldroom.s': "Heerkulbeegga qolka qabow wuxuu muujinayaa lambar ka sarreeya kan caadiga ah si aad ah. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.coldroom.o1': "Isla markiiba u sheeg madaxaaga.", // nieuw, nalezen
+    'c.coldroom.o2': "Sug: mar kale ayuu qaboobi doonaa.", // nieuw, nalezen
+    'c.coldroom.o3': "Lambarka caadiga ah ku qor liiska.", // nieuw, nalezen
+    'c.coldroom.w': "Kulayl xad-dhaaf ah wuxuu ka dhigan yahay in jeermisku koro. Madaxaaga ayaa go'aamiya in cuntadu weli ammaan tahay.", // nieuw, nalezen
+    'l.foreignbody': "Dhalo, bir iyo caag cuntada ku jira", // nieuw, nalezen
+    'w.metaaldetector': "baaraha birta", // nieuw, nalezen
+    'w.glasbreuk': "dhalo jabtay", // nieuw, nalezen
+    'w.splinter': "jajabka (gabal yar oo fiiqan)", // nieuw, nalezen
+    'w.vreemdvoorwerp': "shay shisheeye (wax cuntada ku jira oo aan halkaas ka mid ahayn)", // nieuw, nalezen
+    'w.vervuild': "wasakhoobay (wax wasakh ah ayaa galay)", // nieuw, nalezen
+    'w.ploegleider': "hoggaamiyaha wareegga shaqada", // nieuw, nalezen
+    's.foreignbody.1': "Baaraha birtu wuu dhawaaqayaa. Jooji khadka.", // nieuw, nalezen
+    's.foreignbody.2': "Dhalo ayaa ku jabtay khadka labaad.", // nieuw, nalezen
+    's.foreignbody.3': "Alaabta geli weelka alaabta la diiday.", // nieuw, nalezen
+    'c.foreignbody.q': "Maxaan ku sameeyaa gabalkan caagga ah?", // nieuw, nalezen
+    'c.foreignbody.a': "Tus hoggaamiyaha wareegga shaqada.", // nieuw, nalezen
+    'c.foreignbody': "Wax ma ku jiraan cuntada? Jooji oo sheeg", // nieuw, nalezen
+    'c.foreignbody.b': "Dhalo, bir, caag, balaastar ama timo waligood waa inaysan cuntada gelin. Baaraha birtu ma dhawaaqayaa, mise wax yaab leh ayaad heshay? Alaabta dhinac dhig, oo u sheeg hoggaamiyaha wareegga shaqada. Dhalo ma jabtay? Jooji khadka u dhow: hoggaamiyaha wareegga shaqada ayaa go'aamiya waxa la tuurayo. Isticmaal oo keliya balaastar buluug ah, si si fudud loo arko. Waligaa ha keenin dhalo, qalimaan ama wax dabacsan goobta shaqada. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.foreignbody.p': "Wax ayaan ka helay alaabta.", // nieuw, nalezen
+    'c.foreignbody.s': "Nal dhalo ah ayaa ku jabay khadka korkiisa. Alaabtu way sii socotaa. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.foreignbody.o1': "Jooji khadka, oo u yeer hoggaamiyaha wareegga shaqada.", // nieuw, nalezen
+    'c.foreignbody.o2': "Ka soo saar dhalada aad arki karto.", // nieuw, nalezen
+    'c.foreignbody.o3': "Sii wad: baaruhu dhalada wuu helaa.", // nieuw, nalezen
+    'c.foreignbody.w': "Baaraha birtu dhalo ma helo. Jajab yar oo aanad arki karin macmiil ayay si xun u dhaawici karaan.", // nieuw, nalezen
+    'u.foodline': "Khadka wax soo saarka", // nieuw, nalezen
+    'l.cutting': "Goynta iyo miisaamidda", // nieuw, nalezen
+    'w.uitbenen': "lafo ka saarid (lafaha oo hilibka laga gooyo)", // nieuw, nalezen
+    'w.fileren': "fileeyn (kalluun ama hilib oo loo gooyo gabalo fidsan)", // nieuw, nalezen
+    'w.portie': "qaybta (cunto qof u go'an)", // nieuw, nalezen
+    'w.wegen': "miisaamid", // nieuw, nalezen
+    'w.gewicht': "miisaanka (culayska)", // nieuw, nalezen
+    'w.snijplank': "looxa wax lagu jaro", // nieuw, nalezen
+    's.cutting.1': "Qayb kasta miisaam.", // nieuw, nalezen
+    's.cutting.2': "Miisaanku aad buu u yar yahay.", // nieuw, nalezen
+    's.cutting.3': "Mindidaada afee ka hor intaadan bilaabin.", // nieuw, nalezen
+    'c.cutting.q': "Immisa ayaa weel galaya?", // nieuw, nalezen
+    'c.cutting.a': "Shan boqol oo garaam. Eeg miisaanka.", // nieuw, nalezen
+    'c.cutting': "Mindi fiiqan, gacan ammaan ah", // nieuw, nalezen
+    'c.cutting.b': "Mindi fiiqan waa ka ammaan badan tahay mid af-xun: xoog yar ayaad u baahan tahay, sidaas darteed way ka yar tahay simbiriirixdeedu. Mar walba gacanta kale ku xiro gacmo-gashigaaga goynta u adkaysta. Ka jar dhinaca jidhkaaga ka fog. Mindida si siman u dhig looxa, waligaa ha gelin weelka maydhista ama hilibka hoostiisa. Ha isku dayin inaad qabato mindi dhacaysa: dib u dhaqaaq. Mindida u qaad afka oo hoos u jeeda, lugtaada u dhow. Xitaa goyn yar waa in la daboolaa oo la sheegaa.", // nieuw, nalezen
+    'c.cutting.p': "Mindidaydu waa af-xun tahay.", // nieuw, nalezen
+    'c.cutting.s': "Mindidaadu gacantaada ayay ka siibatay oo way dhacaysaa. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.cutting.o1': "Dib u dhaqaaq, oo u daa inay dhacdo.", // nieuw, nalezen
+    'c.cutting.o2': "Si dhakhso ah u qabo.", // nieuw, nalezen
+    'c.cutting.o3': "Cagtaada ku jooji.", // nieuw, nalezen
+    'c.cutting.w': "Mindi dhacaysa si qoto dheer ayay u jartaa marka aad qabato. Dhulka dhexdiisa waxyeelo ma geysan karto.", // nieuw, nalezen
+    'l.labels': "Baakadeynta iyo calaamadaha", // nieuw, nalezen
+    'w.etiketteren': "calaamadeyn (calaamado oo la dhejiyo)", // nieuw, nalezen
+    'w.lotnummer': "lambarka dufcadda (hal lambar oo hal dufcad alaab ah leh)", // nieuw, nalezen
+    'w.vacuum': "faakuum lagu xiray (hawada oo dhan waa laga saaray)", // nieuw, nalezen
+    'w.schaal': "saxanka (weel fidsan oo cuntada loogu talagalay)", // nieuw, nalezen
+    'w.printer': "daabacaha", // nieuw, nalezen
+    'w.omdoos': "sanduuqa dibadda (sanduuqa weyn ee baakadaha yaryar ku wareegsan)", // nieuw, nalezen
+    's.labels.1': "Hubi in taariikhda calaamaddu sax tahay.", // nieuw, nalezen
+    's.labels.2': "Baakaddan faakuum laguma xirin. Mar kale baakadee.", // nieuw, nalezen
+    's.labels.3': "Lambarka dufcadda ku qor liiska.", // nieuw, nalezen
+    'c.labels.q': "Taariikhdee ayaa la dul dhigayaa?", // nieuw, nalezen
+    'c.labels.a': "Toban maalmood kadib. Eeg liiska.", // nieuw, nalezen
+    'c.labels': "Calaamad khaldan waa khatar", // nieuw, nalezen
+    'c.labels.b': "Calaamaddu waxay macmiilka u sheegtaa waxa ku jira, inta uu miisaamayo iyo ilaa goorma uu fiican yahay. Taariikh khaldan ama calaamad khaldan dadka ayay xanuunsiin kartaa, tusaale ahaan marka walax xasaasiyadeed ka maqan tahay. Sidaas darteed hubi calaamadaha ugu horreeya ee shaqo-socod cusub kasta: alaabta, taariikhda iyo lambarka dufcadda. Wax ma khaldan yihiin? Jooji, oo u sheeg madaxaaga. Alaabta calaamadda khaldan leh dhinac ayaa la dhigaa, waligeed lama iibiyo. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.labels.p': "Calaamaddu sax ma aha.", // nieuw, nalezen
+    'c.labels.s': "Waxaad aragtaa in taariikhda calaamadaha ay hal toddobaad ka dambayso. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.labels.o1': "Jooji baakadeynta, oo u sheeg madaxaaga.", // nieuw, nalezen
+    'c.labels.o2': "Sii wad: hal toddobaad waxba ma aha.", // nieuw, nalezen
+    'c.labels.o3': "Taariikhda qalin ku beddel.", // nieuw, nalezen
+    'c.labels.w': "Taariikh khaldan waxay dadka u oggolaan kartaa inay cunaan cunto aan hadda ammaan ahayn. Waa ka fiican tahay in hadda la joojiyo intii hadhow dib loo soo celin lahaa.", // nieuw, nalezen
+    'l.linecleaning': "Nadiifinta khadka", // nieuw, nalezen
+    'w.schuim': "xumbada", // nieuw, nalezen
+    'w.hogedrukspuit': "buufiyaha cadaadiska sare", // nieuw, nalezen
+    'w.naspoelen': "biyo raacin (biyo nadiif ah oo lagu dhaqo)", // nieuw, nalezen
+    'w.demonteren': "kala furid", // nieuw, nalezen
+    'w.borstel': "burushka", // nieuw, nalezen
+    'w.restjes': "hadhaaga (xabbado cunto ah oo yaryar)", // nieuw, nalezen
+    's.linecleaning.1': "Marka hore mashiinka dami.", // nieuw, nalezen
+    's.linecleaning.2': "Xumbada ku buufi suunka.", // nieuw, nalezen
+    's.linecleaning.3': "Kadib wax walba biyo nadiif ah ku raaci.", // nieuw, nalezen
+    'c.linecleaning.q': "Suunku ma nadiif yahay hadda?", // nieuw, nalezen
+    'c.linecleaning.a': "Weli maya. Weli waa inaan biyo raaciyo.", // nieuw, nalezen
+    'c.linecleaning': "Korontada dami ka hor intaadan nadiifin", // nieuw, nalezen
+    'c.linecleaning.b': "Waligaa ha nadiifin mashiin shaqaynaya. Dami, oo hubi inaan qofna dib u shidi karin: raac tallaabooyinka shirkaddaada. Xiro gacmo-gashiyada, muraayadaha iyo kabaha dhaadheer ee saxda ah: alaabta nadiifintu waxay gubi kartaa maqaarkaaga iyo indhahaaga. Waligaa alaabo ha isku darin. Marka hore hadhaaga ka qaad, kadib xumbee, xoqo oo biyo raaci. Biyo ha ku buufin sanduuqyada korontada ama fiilooyinka. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.linecleaning.p': "Mashiinku ma demsan yahay?", // nieuw, nalezen
+    'c.linecleaning.s': "Hilib ayaa ku dhegay suunka. Mashiinku weli wuu shaqaynayaa. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.linecleaning.o1': "Marka hore dami, kadib ka saar.", // nieuw, nalezen
+    'c.linecleaning.o2': "Gacantaada si dhakhso ah ugu soo saar.", // nieuw, nalezen
+    'c.linecleaning.o3': "Mindi ku riix oo ka saar.", // nieuw, nalezen
+    'c.linecleaning.w': "Suun shaqaynaya gacantaada ayuu jiidi karaa hal ilbiriqsi. Damintu waxay qaadataa waqti yar oo keliya.", // nieuw, nalezen
+    'l.haccp': "Hubinta iyo qorista (HACCP)", // nieuw, nalezen
+    'w.controlepunt': "barta hubinta (tallaabo aad wax ku hubiso)", // nieuw, nalezen
+    'w.kerntemperatuur': "heerkulka gudaha (heerkulka cuntada gudaheeda)", // nieuw, nalezen
+    'w.prikthermometer': "heerkulbeegga la mudo (cuntada ayaad ku mudaa)", // nieuw, nalezen
+    'w.afwijking': "leexashada (wax sidii ay ahayd ma aha)", // nieuw, nalezen
+    'w.steekproef': "baaritaan kedis ah (dhawr alaab ayaad tijaabisaa)", // nieuw, nalezen
+    'w.kwaliteitsdienst': "qaybta tayada (QA)", // nieuw, nalezen
+    's.haccp.1': "Heerkulka gudaha ku cabbir heerkulbeegga la mudo.", // nieuw, nalezen
+    's.haccp.2': "Wax walba ku qor liiska.", // nieuw, nalezen
+    's.haccp.3': "Wax ma khaldan yihiin? Isla markiiba sheeg.", // nieuw, nalezen
+    'c.haccp.q': "Maxaan wax walba u qoraa?", // nieuw, nalezen
+    'c.haccp.a': "Sidaas ayaan ku ogaanaa in cuntadu ammaan tahay.", // nieuw, nalezen
+    'c.haccp': "HACCP: hubi, qor, sheeg", // nieuw, nalezen
+    'c.haccp.b': "Shirkad kasta oo cunto waxay ku shaqaysaa qorshe badbaadada cuntada (HACCP). Wuxuu sheegaa tallaabooyinka aad wax ku hubinayso, sida heerkulka qolka qabow ama heerkulka gudaha ee hilib la kariyey. Waad hubisaa, waad qortaa, waadna saxiixdaa. Qor waxa aad dhab ahaan cabbirtay, xitaa marka uu khaldan yahay. Lambar khaldan eeddaada ma aha, laakiin qarintiisu waa khatar. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.haccp.p': "Heerkulku aad buu u sarreeyaa.", // nieuw, nalezen
+    'c.haccp.s': "Waad ilowday inaad cabbirto saacadda tobnaad. Saaxiibkaa shaqadu wuxuu yiri: “Iska qor lambar fiican.” Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.haccp.o1': "Hadda cabbir, oo qor waqtiga dhabta ah.", // nieuw, nalezen
+    'c.haccp.o2': "Qor lambar fiican saacadda tobnaad.", // nieuw, nalezen
+    'c.haccp.o3': "Safka banaan ka tag.", // nieuw, nalezen
+    'c.haccp.w': "Liisku waa inuu muujiyaa waxa dhab ahaan dhacay. Lambar la sameystay wuxuu qariyaa dhibaato dadka xanuunsiin karta.", // nieuw, nalezen
+    'u.collection': "Ururinta qashinka", // nieuw, nalezen
+    'l.binlorry': "Gaariga qashinka", // nieuw, nalezen
+    'w.vuilniswagen': "gaariga qashinka", // nieuw, nalezen
+    'w.kliko': "weelka qashinka ee shaagagga leh (weel qashin oo shaag leh)", // nieuw, nalezen
+    'w.kieplift': "wiishka weelka (weelka ayuu kor u qaadaa oo faaruqiyaa)", // nieuw, nalezen
+    'w.treeplank': "tallaabada dambe (meel lagu istaago oo gaariga gadaashiisa ah)", // nieuw, nalezen
+    'w.bijplaatsing': "qashinka dheeriga ah (bacaha laga tagay weelka agtiisa)", // nieuw, nalezen
+    'w.ophaaldag': "maalinta ururinta", // nieuw, nalezen
+    's.binlorry.1': "Weelka qashinka saar wiishka weelka.", // nieuw, nalezen
+    's.binlorry.2': "Bacaha ayaa yaal konteenarka agtiisa.", // nieuw, nalezen
+    's.binlorry.3': "Weelka qashinku aad buu u culus yahay. Iska daa.", // nieuw, nalezen
+    'c.binlorry.q': "Gadaasha ma ku raaci karaa?", // nieuw, nalezen
+    'c.binlorry.a': "Maya, qolka darawalka ayaad gelaysaa.", // nieuw, nalezen
+    'c.binlorry': "La arag, oo gudaha ku raac", // nieuw, nalezen
+    'c.binlorry.b': "Wareeg kasta xiro dharkaaga iftiinka leh. Ka gal oo ka bax dhinaca waddada lugta, waligaa dhinaca taraafikada. Ku raac qolka darawalka, ha ku raacin gaariga gadaashiisa: oo keliya marka shirkaddaadu si cad u oggolaato, waligaana marka uu dib u socdo ama uu dheereeyo. Ka fogow wiishka weelka inta uu dhaqaaqayo. Weel ma aad u culus yahay, mise wax ayaa ka soo baxaya? Iska daa, oo sheeg. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.binlorry.p': "Weelkan qashinku aad buu u culus yahay.", // nieuw, nalezen
+    'c.binlorry.s': "Waddada xigta aad bay u dhow tahay. Darawalku wuxuu yiri: “Ku istaag tallaabada dambe.” Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.binlorry.o1': "Si kastaba ha ahaatee gal qolka darawalka.", // nieuw, nalezen
+    'c.binlorry.o2': "Ku istaag tallaabada: waa dhow tahay.", // nieuw, nalezen
+    'c.binlorry.o3': "Gaariga gadaashiisa ka soco.", // nieuw, nalezen
+    'c.binlorry.w': "Ka dhicidda gaari socda waa mid ka mid ah khataraha ugu waaweyn ee shaqadan. Qolka darawalka waad ku ammaan tahay.", // nieuw, nalezen
+    'l.reversing': "Dib u socod ammaan ah", // nieuw, nalezen
+    'w.achteruitrijden': "dib u wadid (gaariga oo gadaal loo wado)", // nieuw, nalezen
+    'w.dodehoek': "meesha indha la'aanta (meesha darawalku ku arki karin)", // nieuw, nalezen
+    'w.aanwijzer': "tilmaamaha (qofka darawalka hago)", // nieuw, nalezen
+    'w.oogcontact': "isha-isu-eegidda", // nieuw, nalezen
+    'w.piepen': "dhawaaqid (biib)", // nieuw, nalezen
+    'w.cabine': "qolka darawalka (meesha darawalku fadhiyo)", // nieuw, nalezen
+    's.reversing.1': "Waligaa ha istaagin gaariga gadaashiisa.", // nieuw, nalezen
+    's.reversing.2': "Muraayadda kuguma arko.", // nieuw, nalezen
+    's.reversing.3': "Darawalka il-isu-eeg la samee.", // nieuw, nalezen
+    'c.reversing.q': "Ma iga caawin kartaa inaan dib u wado?", // nieuw, nalezen
+    'c.reversing.a': "Haa, bidix ayaan joogaa. Muraayaddaada eeg.", // nieuw, nalezen
+    'c.reversing': "Waligaa gaari dib u socda gadaashiisa ha joogin", // nieuw, nalezen
+    'c.reversing.b': "Shilal badan oo gaadiidka qashinka ah waxay dhacaan marka ay gadaal u socdaan. Darawalku ma arki karo meesha gaariga si toos ah uga dambeysa: meesha indha la'aanta. Sidaas darteed waligaa ha istaagin hana marin gaari dib u socon kara gadaashiisa. Darawalka ka hag dhinaca, meesha aad isku arki kartaan muraayadda. Isha-isu-eegiddu ma lumay? Darawalku wuu istaagaa. Ku heshiiya calaamado cad ka hor intaydaan bilaabin. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.reversing.p': "Jooji! Mar dambe kuma arko.", // nieuw, nalezen
+    'c.reversing.s': "Gaarigu dib ayuu u socdaa. Waxaad gadaashiisa u socotaa si aad bac u soo qaaddo. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.reversing.o1': "Sug ilaa gaarigu istaago.", // nieuw, nalezen
+    'c.reversing.o2': "Si dhakhso ah u soco: waa hal ilbiriqsi uun.", // nieuw, nalezen
+    'c.reversing.o3': "Darawalka gacanta u haadi, oo tag.", // nieuw, nalezen
+    'c.reversing.w': "Darawalku kuma arki karo gaariga gadaashiisa. Hal ilbiriqsi ayaa shil ku filan.", // nieuw, nalezen
+    'l.wastesorting': "Kala soocidda qashinka", // nieuw, nalezen
+    'w.papier': "warqadda", // nieuw, nalezen
+    'w.plastic': "caagga (balaastigga)", // nieuw, nalezen
+    'w.gft': "qashinka cuntada iyo beerta (miro, khudaar iyo dhir)", // nieuw, nalezen
+    'w.restafval': "qashinka guud (waxa aan la kala sooci karin)", // nieuw, nalezen
+    'w.karton': "kartoonka", // nieuw, nalezen
+    'w.blik': "qasacadda", // nieuw, nalezen
+    's.wastesorting.1': "Dhaladu waxay galaysaa weelka dhalooyinka.", // nieuw, nalezen
+    's.wastesorting.2': "Tani waxay ka mid tahay qashinka guud.", // nieuw, nalezen
+    's.wastesorting.3': "Kartoonka laab oo fidi.", // nieuw, nalezen
+    'c.wastesorting.q': "Sanduuqa pizza-da xagee buu galaa?", // nieuw, nalezen
+    'c.wastesorting.a': "Qashinka guud. Saliid ayaa ku taal.", // nieuw, nalezen
+    'c.wastesorting': "Kala sooc fiican shaqo ayuu badbaadiyaa", // nieuw, nalezen
+    'c.wastesorting.b': "Qashinka la kala sooco mar kale ayaa la isticmaali karaa: warqaddu warqad ayay noqotaa, dhaladuna dhalo. Laakiin hal shay oo khaldan ayaa halleyn kara rar dhan. Sidaas darteed weelka dhex eeg ka hor intaadan faaruqin. Wax ma ku jiraan oo aan halkaas ka mid ahayn, sida bac qashin guud ah oo warqadda ku jirta? Iska daa, ama raac xeerarka shirkaddaada. Qashinkee meeshee galaa way ku kala duwan tahay magaalo kasta: baro xeerarka deegaankaaga. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.wastesorting.p': "Tani halkan kama mid aha.", // nieuw, nalezen
+    'c.wastesorting.s': "Weel warqadeed ayaa ka buuxa bacaha qashinka ee madow. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.wastesorting.o1': "Iska daa, oo sheeg.", // nieuw, nalezen
+    'c.wastesorting.o2': "Ku faaruqi warqadda.", // nieuw, nalezen
+    'c.wastesorting.o3': "Bacaha gacanta ku soo saar.", // nieuw, nalezen
+    'c.wastesorting.w': "Qashinka warqadda ku jira rarka oo dhan ayuu halleeyaa. Bacaha waxaa kale oo ku jiri kara waxyaabo fiiqan ama wasakh ah.", // nieuw, nalezen
+    'l.wastesafety': "Waxyaabaha fiiqan iyo qaadista", // nieuw, nalezen
+    'w.snijwond': "goynta (nabar wax fiiqan ka yimid)", // nieuw, nalezen
+    'w.prikken': "mudid (af fiiqan ayaa maqaarkaaga gala)", // nieuw, nalezen
+    'w.naald': "irbadda", // nieuw, nalezen
+    'w.scherp': "fiiqan", // nieuw, nalezen
+    'w.rugpijn': "xanuunka dhabarka", // nieuw, nalezen
+    'w.tetanusprik': "tallaalka teetanada (irbad ka hortagta cudur ka yimaada wasakh nabar gasha)", // nieuw, nalezen
+    's.wastesafety.1': "Waligaa bac hoosta ha ka qaban.", // nieuw, nalezen
+    's.wastesafety.2': "Taxaddar, baccan dhalo ayaa ku jirta.", // nieuw, nalezen
+    's.wastesafety.3': "Irbad ayaa i muday.", // nieuw, nalezen
+    'c.wastesafety.q': "Waan is jaray. Maxaan sameeyaa?", // nieuw, nalezen
+    'c.wastesafety.a': "Nabarka si fiican u dhaq. Oo ii sheeg.", // nieuw, nalezen
+    'c.wastesafety': "Waligaa bac ha tuujin", // nieuw, nalezen
+    'c.wastesafety.b': "Bac qashin ah waxaa ku jiri kara dhalo, mindiyo ama irbado. Sidaas darteed waligaa bac jidhkaaga ha ku cadaadin, waligaa ha tuujin, waligaana lugtaada ha ku qaadin: kor ka qabo, adiga kaa fog. Xiro gacmo-gashiyadaada. Ku qaad jilbahaaga oo laaban iyo dhabarkaaga oo toosan, weelkana riix, ha qaadin. Wax ma ku mudeen ama ma ku jareen? Nabarka si fiican biyo ugu dhaq, oo isla maalintaas u sheeg madaxaaga.", // nieuw, nalezen
+    'c.wastesafety.p': "Wax ayaa i muday.", // nieuw, nalezen
+    'c.wastesafety.s': "Bac ayaa jeexantay. Waxaad ku dhex aragtaa irbad. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.wastesafety.o1': "Ha taaban, oo sheeg.", // nieuw, nalezen
+    'c.wastesafety.o2': "Ku qaad adigoo gacmo-gashiyo xiran.", // nieuw, nalezen
+    'c.wastesafety.o3': "Dib ugu riix bacda.", // nieuw, nalezen
+    'c.wastesafety.w': "Gacmo-gashiyadu ma joojiyaan irbad. Irbaddu waxay sidi kartaa cudur.", // nieuw, nalezen
+    'u.recycling': "Goobta dib-u-warshadaynta", // nieuw, nalezen
+    'l.yard': "Goobta dib-u-warshadaynta", // nieuw, nalezen
+    'w.milieustraat': "goobta dib-u-warshadaynta (meesha dadku keenaan qashin weyn ama gaar ah)", // nieuw, nalezen
+    'w.grofvuil': "qashinka waaweyn (waxyaabo waaweyn, sida fadhi)", // nieuw, nalezen
+    'w.puin': "burburka (dhagxaan iyo leben jabay)", // nieuw, nalezen
+    'w.matras': "furaashka", // nieuw, nalezen
+    'w.weegbrug': "miisaanka gaadiidka (miisaan baabuurta iyo gaadiidka xamuulka)", // nieuw, nalezen
+    'w.afvalpas': "kaarka qashinka (deggeneyaashu irridda ayay ka tusaan)", // nieuw, nalezen
+    's.yard.1': "Burburku wuxuu galayaa konteenarka afraad.", // nieuw, nalezen
+    's.yard.2': "Ma arki karaa kaarkaaga qashinka?", // nieuw, nalezen
+    's.yard.3': "Marka hore dul mar miisaanka gaadiidka.", // nieuw, nalezen
+    'c.yard.q': "Furaashkan xagee buu galayaa?", // nieuw, nalezen
+    'c.yard.a': "Konteenarka qashinka waaweyn, gadaasha.", // nieuw, nalezen
+    'c.yard': "Caawi, laakiin goobta ammaan ku hay", // nieuw, nalezen
+    'c.yard.b': "Goobta dib-u-warshadaynta waxaad booqdayaasha u sheegtaa meesha qashinkoodu galayo, waxaadna hubisaa in si fiican loo kala soocay. Naxariis yeelo: dad badan sannadkii dhawr jeer oo keliya ayay yimaadaan, xeerarkana ma yaqaanaan. Carruurta iyo booqdayaasha ka fogee mashiinnada iyo cidhifka konteenarrada dhaadheer. Waxyaabaha culus wada qaada, ama booqdaha u daa inuu isagu qaado. Qof ma keenay wax aanad aqoon? Weydii ka hor inta uusan gelin. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.yard.p': "Tani waxay galaysaa konteenarka afraad.", // nieuw, nalezen
+    'c.yard.s': "Nin ayaa doonaya inuu bac buuxda ku tuuro konteenarka alwaaxda. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.yard.o1': "Weydii waxa bacda ku jira.", // nieuw, nalezen
+    'c.yard.o2': "Iska daa: waa qashinkiisa.", // nieuw, nalezen
+    'c.yard.o3': "Adigu u tuur.", // nieuw, nalezen
+    'c.yard.w': "Hal shay oo khaldan ayaa halleyn kara konteenar buuxa. Su'aal naxariis leh ayaa qashinka nadiif ku haysa.", // nieuw, nalezen
+    'l.hazardous': "Qashinka kiimikada", // nieuw, nalezen
+    'w.chemischafval': "qashinka kiimikada (qashin khatar ah, sida rinji iyo saliid)", // nieuw, nalezen
+    'w.spuitbus': "gasacadda la buufiyo", // nieuw, nalezen
+    'w.asbest': "asbestoska (walax khatar ah oo ku jirta dhismayaasha duugga ah)", // nieuw, nalezen
+    'w.lekken': "daadasho", // nieuw, nalezen
+    'w.gevarensymbool': "astaanta khatarta (sawir khatar ka digaya)", // nieuw, nalezen
+    'w.vat': "fuustada", // nieuw, nalezen
+    's.hazardous.1': "Rinjiga dhig qashinka kiimikada.", // nieuw, nalezen
+    's.hazardous.2': "Dhaladani way daadanaysaa. Ku qaad gacmo-gashiyo.", // nieuw, nalezen
+    's.hazardous.3': "Asbestoska waa in si fiican loo baakadeeyo.", // nieuw, nalezen
+    'c.hazardous.q': "Maxaa dhaladan ku jira?", // nieuw, nalezen
+    'c.hazardous.a': "Ma garanayo. Dhinac dhig.", // nieuw, nalezen
+    'c.hazardous': "Lama yaqaan? Ha furin, ha urin", // nieuw, nalezen
+    'c.hazardous.b': "Qashinka kiimikada, sida rinjiga, saliidda, alaabta nadiifinta, baytariyada iyo gasacadaha la buufiyo, wuu gubi karaa, sumayn karaa ama qarxi karaa. Raadi astaamaha khatarta. Xiro gacmo-gashiyo iyo muraayadaha badbaadada. Waligaa ha furin dhalo si aad u uriso waxa ku jira, waligaana alaabo ha isku darin. Dhalo daadanaysa si toos ah u hay, oo geli saxan. Asbestoska waxaa la qaadan karaa oo keliya marka si fiican loo baakadeeyay: waligaa ha jebin, hana ka saarin baakadda. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.hazardous.p': "Maxaa halkan ku jira?", // nieuw, nalezen
+    'c.hazardous.s': "Naag ayaa keentay dhalo aan calaamad lahayn. Ur xooggan ayay leedahay. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.hazardous.o1': "Gooni u dhig, oo u sheeg madaxaaga.", // nieuw, nalezen
+    'c.hazardous.o2': "Fur, oo uri waxa ay tahay.", // nieuw, nalezen
+    'c.hazardous.o3': "Ku shub fuustada rinjiga.", // nieuw, nalezen
+    'c.hazardous.w': "Alaab aan la aqoon waxay la falgeli kartaa kuwa kale. Madaxaagu wuu og yahay meesha ay si ammaan ah u geli karto.", // nieuw, nalezen
+    'l.baler': "Mashiinka isku cadaadiya", // nieuw, nalezen
+    'w.balenpers': "mashiinka isku cadaadiya (mashiin qashinka u cadaadiya baloog)", // nieuw, nalezen
+    'w.baal': "baloogga (gabal warqad ama caag ah oo la cadaadiyay)", // nieuw, nalezen
+    'w.persen': "cadaadin", // nieuw, nalezen
+    'w.vastlopen': "ku dhegid, xannibmid", // nieuw, nalezen
+    'w.binddraad': "siligga xiridda", // nieuw, nalezen
+    'w.vulopening': "afka buuxinta (meesha qashinku galo)", // nieuw, nalezen
+    's.baler.1': "Mashiinka cadaadisku wuu xannibmay. Riix badhanka joojinta degdegga.", // nieuw, nalezen
+    's.baler.2': "Waligaa gacanta ha gelin mashiinka cadaadiska.", // nieuw, nalezen
+    's.baler.3': "Baloogga si fiican u xir.", // nieuw, nalezen
+    'c.baler.q': "Mashiinka cadaadisku wuu xannibmayaa. Ma eegi karaa?", // nieuw, nalezen
+    'c.baler.a': "Maya. Marka hore korontada ayaa la damiyaa.", // nieuw, nalezen
+    'c.baler': "Waligaa gacanta ha gelin mashiinka isku cadaadiya", // nieuw, nalezen
+    'c.baler.b': "Mashiinka isku cadaadiyaa wuxuu ku cadaadiyaa xoog aad u weyn. Isticmaal oo keliya marka aad baratay sida loo isticmaalo. Waligaa gacan, cudud ama cag ha gelin afka buuxinta, xitaa marka mashiinku u eg yahay mid istaagan. Ma xannibmay? Riix badhanka joojinta degdegga, dami oo hubi inaan qofna shidi karin: raac tallaabooyinka shirkaddaada. Markaas oo keliya eeg. Waligaa ha fuulin mashiinka isku cadaadiya ama konteenar. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.baler.p': "Mashiinka cadaadisku wuu xannibmay.", // nieuw, nalezen
+    'c.baler.s': "Gabal kartoon ah ayaa ku dhegay afka. Mashiinku wuu istaagan yahay. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.baler.o1': "Si buuxda u dami, kadib ka saar.", // nieuw, nalezen
+    'c.baler.o2': "Gacantaada si dhakhso ah ugu soo saar.", // nieuw, nalezen
+    'c.baler.o3': "Cagtaada ku riix oo geli.", // nieuw, nalezen
+    'c.baler.w': "Mashiin istaagan mar kale wuu bilaaban karaa. Korontada oo aan la damin, gacantaadu waxay ku jirtaa khatar.", // nieuw, nalezen
+    'l.shovel': "Shooladda goobta", // nieuw, nalezen
+    'w.shovel': "shooladda (mashiin weyn oo hore ka leh baaldi)", // nieuw, nalezen
+    'w.zwaailamp': "nalka wareega (nal oranji ah oo mashiinka korkiisa ku yaal)", // nieuw, nalezen
+    'w.bunker': "qaybta qashinka (meel weyn oo shub ah oo hal nooc qashin ah)", // nieuw, nalezen
+    'w.looppad': "jidka lugta (jid dadka oo keliya loogu talagalay)", // nieuw, nalezen
+    'w.toeteren': "hoonka garaacid", // nieuw, nalezen
+    'w.opscheppen': "majarafadayn (kor u qaadid)", // nieuw, nalezen
+    's.shovel.1': "Jidka lugta ku joog.", // nieuw, nalezen
+    's.shovel.2': "Shooladdu dib ayay u socotaa. Taxaddar!", // nieuw, nalezen
+    's.shovel.3': "Nalka wareegu wuu shidan yahay. Mashiinku wuu dhaqaaqayaa.", // nieuw, nalezen
+    'c.shovel.q': "Shooladda agteeda ma dhaafi karaa?", // nieuw, nalezen
+    'c.shovel.a': "Oo keliya haddii darawalku ku arko.", // nieuw, nalezen
+    'c.shovel': "Jidka shooladda ka bax", // nieuw, nalezen
+    'c.shovel.b': "Shooladdu way weyn tahay, darawalkeeduna wax yar ayuu agagaarkeeda ka arkaa, gaar ahaan gadaasheeda. Sidaas darteed ku joog jidadka lugta, oo xiro dharkaaga iftiinka leh. Waligaa ha marin mashiin dhaqaaqaya gadaashiisa. Ma rabtaa inaad dhaafto? Sug ilaa darawalku ku arko oo calaamad ku siiyo. Nalka wareegu wuxuu ka dhigan yahay: mashiinkani wuu shaqaynayaa. Booqdayaasha meel fog ka hay. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.shovel.p': "Ma i aragtay?", // nieuw, nalezen
+    'c.shovel.s': "Waa inaad dhaafto shoolad shaqaynaysa. Darawalku dhinaca kale ayuu eegayaa. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.shovel.o1': "Sug ilaa uu ku arko.", // nieuw, nalezen
+    'c.shovel.o2': "Si dhakhso ah u dhaaf.", // nieuw, nalezen
+    'c.shovel.o3': "Mashiinka gadaashiisa mar.", // nieuw, nalezen
+    'c.shovel.w': "Darawal aan ku arkin kuuma istaagi karo.", // nieuw, nalezen
+    'u.toddlers': "Carruurta", // nieuw, nalezen
+    'l.nappies': "Beddelidda xafaayadaha", // nieuw, nalezen
+    'w.luier': "xafaayadda (bambeerka)", // nieuw, nalezen
+    'w.verschonen': "beddelid (xafaayad)", // nieuw, nalezen
+    'w.commode': "miiska beddelidda", // nieuw, nalezen
+    'w.billendoekje': "masaxaadda ilmaha (maro qoyan)", // nieuw, nalezen
+    'w.potje': "weelka saxarada ilmaha (budo)", // nieuw, nalezen
+    'w.zindelijk': "musqusha bartay (ilmuhu musqusha wuu isticmaali karaa)", // nieuw, nalezen
+    's.nappies.1': "Sem ayaan beddelayaa.", // nieuw, nalezen
+    's.nappies.2': "Gacmahaaga dhaq kadib markaad xafaayad beddesho.", // nieuw, nalezen
+    's.nappies.3': "Waligaa ilmo keligiis ha kaga tagin miiska beddelidda.", // nieuw, nalezen
+    'c.nappies.q': "Goormaad beddeshay Noor?", // nieuw, nalezen
+    'c.nappies.a': "Tobanka. App-ka ayay ku qoran tahay.", // nieuw, nalezen
+    'c.nappies': "Hal gacan ilmaha ku hay", // nieuw, nalezen
+    'c.nappies.b': "Wax walba diyaari ka hor intaadan ilmo saarin miiska beddelidda: xafaayad nadiif ah, masaxaado iyo dhar. Kadib mar walba hal gacan ilmaha ku hay. Waligaa ha ka tagin, xitaa hal ilbiriqsi. Gacmahaaga dhaq beddelid kasta kadib, oo miiska nadiifi. Qor goorta aad xafaayadda beddeshay, si waalidku u ogaadaan. Ma aragtaa finan ama nabar? Qor, oo u sheeg saaxiib shaqo. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.nappies.p': "Hadda ayaan beddelayaa.", // nieuw, nalezen
+    'c.nappies.s': "Ilmo yar ayaad beddelaysaa. Waad ilowday masaxaadaha; waxay yaalaan qolka dhinaciisa kale. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.nappies.o1': "Ilmaha kaxee.", // nieuw, nalezen
+    'c.nappies.o2': "Si dhakhso ah u keen: waa dhow yihiin.", // nieuw, nalezen
+    'c.nappies.o3': "Ilmaha ka tag, oo u dhawaaq.", // nieuw, nalezen
+    'c.nappies.w': "Ilmo yar wuxuu ka rogman karaa miiska beddelidda hal ilbiriqsi. Waligaa ilmo keligiis ha kaga tagin halkaas korkeeda.", // nieuw, nalezen
+    'l.mealtime': "Cunidda iyo cabbidda", // nieuw, nalezen
+    'w.fles': "dhalada caanaha (ilmo yar)", // nieuw, nalezen
+    'w.slabbetje': "maro-laabeedka (maro ilmaha laabta loo xiro marka uu wax cunayo)", // nieuw, nalezen
+    'w.beker': "koobka (gacan leh)", // nieuw, nalezen
+    'w.kinderstoel': "kursiga dheer ee ilmaha", // nieuw, nalezen
+    'w.fruithap': "miraha la shiiday", // nieuw, nalezen
+    'w.boertje': "daacada (hawada ilmuhu afka ka soo saaro)", // nieuw, nalezen
+    's.mealtime.1': "Gacmahaaga dhaq ka hor cuntada.", // nieuw, nalezen
+    's.mealtime.2': "Lisa sii dhaladeeda laba iyo tobanka.", // nieuw, nalezen
+    's.mealtime.3': "Qof walba miiska ayuu fadhiyaa.", // nieuw, nalezen
+    'c.mealtime.q': "Daan buskud ma qaadan karaa?", // nieuw, nalezen
+    'c.mealtime.a': "Maya, xasaasiyad ayuu qabaa. Eeg liiska.", // nieuw, nalezen
+    'c.mealtime': "Hubi liiska ka hor intaadan cunto bixin", // nieuw, nalezen
+    'c.mealtime.b': "Ka hor intaadan ilmo siin cunto ama cabbitaan, hubi liiska: carruurta qaarkood xasaasiyad ayay qabaan, qaar kalena ma cuni karaan cunto gaar ah caafimaadkooda ama diintooda darteed. Gacmahaaga iyo gacmaha carruurta dhaq ka hor cunidda. Carruurta fadhiisi inta ay wax cunayaan oo cabbayaan, waligood ha socon hana ordin. Carruurta yaryar cuntada u jar yar, sida canabka oo gabalo loo jaro. Waligaa ilmo ha siin wax ilmo kale gurigiisa laga keenay. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.mealtime.p': "Tan ma cuni karaa?", // nieuw, nalezen
+    'c.mealtime.s': "Ilmo ayaa u ooyaya buskud. Ilmahan si fiican uma taqaan. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.mealtime.o1': "Marka hore hubi liiska.", // nieuw, nalezen
+    'c.mealtime.o2': "Sii: waa buskud uun.", // nieuw, nalezen
+    'c.mealtime.o3': "Sii badh buskud.", // nieuw, nalezen
+    'c.mealtime.w': "Buskud waxaa ku jiri kara loos, caano ama ukun. Ilmo xasaasiyad qaba, taasi aad bay khatar ugu noqon kartaa.", // nieuw, nalezen
+    'l.naptime': "Hurdada", // nieuw, nalezen
+    'w.bedje': "sariirta ilmaha (sariir yar oo ilmo yar)", // nieuw, nalezen
+    'w.slaapkamer': "qolka hurdada", // nieuw, nalezen
+    'w.knuffel': "caruusadda jilicsan", // nieuw, nalezen
+    'w.speen': "nuugaha (ibta been abuurka ah)", // nieuw, nalezen
+    'w.babyfoon': "dhegeysiga ilmaha (qalab aad ku maqasho ilmaha)", // nieuw, nalezen
+    'w.slaapzak': "kiishka hurdada ee ilmaha", // nieuw, nalezen
+    's.naptime.1': "Ilmaha dhabarka u seexi.", // nieuw, nalezen
+    's.naptime.2': "Inta badan ayaan qolka hurdada eegaa.", // nieuw, nalezen
+    's.naptime.3': "Waa tan caruusaddaada. Si fiican u seexo.", // nieuw, nalezen
+    'c.naptime.q': "Mila ma seexatay?", // nieuw, nalezen
+    'c.naptime.a': "Haa, tan iyo saacadda kowaad. Dhowaan mar kale ayaan eegayaa.", // nieuw, nalezen
+    'c.naptime': "Ilmaha yaryar dhabarka ayay u seexdaan", // nieuw, nalezen
+    'c.naptime.b': "Ilmo yar wuxuu si ugu ammaan badan u seexdaa dhabarkiisa, kiishka hurdada dhexdiisa, sariirtiisa gaarka ah. Barkin ma jiro, buste dabacsan ma jiro, caruusado waaweyna sariirta kuma jiraan. Qolka qabow oo hawo fiican ku hay. Carruurta hurudda inta badan hubi: eeg oo dhegeyso, xitaa marka dhegeysiga ilmuhu shidan yahay. Waalid ma kaa codsaday inaad ilmihiisa u seexiso si kale? Marka hore u sheeg madaxaaga. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.naptime.p': "Waan aadayaa inaan qolka hurdada eego.", // nieuw, nalezen
+    'c.naptime.s': "Ilmo yar ayaa ku seexday caloosha sariirtiisa. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.naptime.o1': "Si tartiib ah dhabarka ugu rog.", // nieuw, nalezen
+    'c.naptime.o2': "Iska daa ha seexdo: hadda wuu hurdaa.", // nieuw, nalezen
+    'c.naptime.o3': "Barkin agtiisa dhig.", // nieuw, nalezen
+    'c.naptime.w': "Dhabarkiisa, ilmo yar si xor ah ayuu u neefsan karaa. Barkin wejigiisa ayay dabooli kartaa.", // nieuw, nalezen
+    'l.playtime': "Ciyaarta", // nieuw, nalezen
+    'w.spelen': "ciyaarid", // nieuw, nalezen
+    'w.speelgoed': "alaabta ciyaarta", // nieuw, nalezen
+    'w.zandbak': "sanduuqa ciidda (meel ciid ah oo carruurtu ku ciyaaraan)", // nieuw, nalezen
+    'w.glijbaan': "siibiska (meel carruurtu ka siibtaan)", // nieuw, nalezen
+    'w.puzzel': "halxiraalaha (ciyaar gabalo la isku dhejiyo)", // nieuw, nalezen
+    'w.buitenspelen': "bannaanka ku ciyaarid", // nieuw, nalezen
+    's.playtime.1': "Waxaan u baxaynaa inaan bannaanka ku ciyaarno. Jaakadaha xirta!", // nieuw, nalezen
+    's.playtime.2': "Alaabta ciyaarta isku urursada.", // nieuw, nalezen
+    's.playtime.3': "Siibiska hal ilmo mar.", // nieuw, nalezen
+    'c.playtime.q': "Halxiraalaha ma ku ciyaari karaa?", // nieuw, nalezen
+    'c.playtime.a': "Haa, miiska. Kadib waad isku urursanaysaa.", // nieuw, nalezen
+    'c.playtime': "Si ammaan ah u ciyaar: eeg, tiri, hubi", // nieuw, nalezen
+    'c.playtime.b': "Carruurtu waxay wax ku bartaan ciyaarta, sidaas darteed u oggolow inay waxyaabo isku dayaan. Laakiin mar walba indhahaaga ku hay, xitaa bannaanka. Tiri carruurta marka aad bannaanka u baxdaan iyo marka aad gudaha dib ugu soo gashaan. Marka hore hubi goobta ciyaarta: irriddu ma xiran tahay, dhalo ama qashin ma jiraa? Alaabta ciyaarta ee leh qaybo yaryar uma aha carruurta ka yar saddex sano: way ku ceeshoon karaan. Alaabta ciyaarta ee afka la geliyo inta badan nadiifi. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.playtime.p': "Qof walba ma joogaa?", // nieuw, nalezen
+    'c.playtime.s': "Goobta ciyaarta ayaad gudaha uga soo gashay. Waxaad tirisay hal ilmo oo yar. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.playtime.o1': "U sheeg saaxiib shaqo, oo isla markiiba raadi.", // nieuw, nalezen
+    'c.playtime.o2': "Sug: ilmuhu iskiis ayuu u soo geli doonaa.", // nieuw, nalezen
+    'c.playtime.o3': "Berri mar kale tiri.", // nieuw, nalezen
+    'c.playtime.w': "Ilmo keligiis bannaanka jooga wuu dhaawacmi karaa ama wuu tagi karaa. Daqiiqad kastaa waa muhiim.", // nieuw, nalezen
+    'u.daycare': "Waalidka, ammaanka iyo kooxda", // nieuw, nalezen
+    'l.pickup': "Keenidda iyo qaadidda", // nieuw, nalezen
+    'w.ouder': "waalidka", // nieuw, nalezen
+    'w.afscheid': "nabadgelyada (sagootinta)", // nieuw, nalezen
+    'w.oppas': "ilaaliyaha carruurta (qof carruurta haya)", // nieuw, nalezen
+    'w.schriftje': "buugga yar (qoraallada u dhexeeya waalidka iyo shaqaalaha)", // nieuw, nalezen
+    'w.ouderapp': "app-ka waalidka (sawirro iyo fariimo waalidka loo diro)", // nieuw, nalezen
+    'w.wennen': "la qabsasho (meel cusub oo la baro)", // nieuw, nalezen
+    's.pickup.1': "Buugga yar ayaan ku qorayaa.", // nieuw, nalezen
+    's.pickup.2': "Aabbe nabadgelyo u dheh.", // nieuw, nalezen
+    's.pickup.3': "Sawir ayaan gelinayaa app-ka waalidka.", // nieuw, nalezen
+    'c.pickup.q': "Yaa maanta qaadaya Sem?", // nieuw, nalezen
+    'c.pickup.a': "Ayeeyadiis. Liiska ayay ku jirtaa.", // nieuw, nalezen
+    'c.pickup': "Oo keliya dadka liiska ku jira", // nieuw, nalezen
+    'c.pickup.b': "Ilmo u dhiib oo keliya waalid, ama qof waalidku kuu sheegeen. Qofka ma taqaanid? Weydii cidda uu yahay, eeg aqoonsigiisa, oo la hubi waalidka ama madaxaaga. Marka la qaadayo, u sheeg waalidka sida maalintu u dhacday: cunidda, hurdada, ciyaarta, iyo wax kasta oo gaar ah. Waxyaabaha muhiimka ah ku qor buugga yar ama app-ka. Carruurta kale kala hadal oo keliya waalidkooda. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.pickup.p': "Yaad tahay? Waalidka ayaan wacayaa.", // nieuw, nalezen
+    'c.pickup.s': "Nin aanad aqoon ayaa u yimid inuu qaado Sem. Liiska kuma jiro. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.pickup.o1': "Wac waalidka ka hor inta Sem uusan tagin.", // nieuw, nalezen
+    'c.pickup.o2': "Sem u oggolow inuu tago: magaca wuu yaqaan.", // nieuw, nalezen
+    'c.pickup.o3': "Sem weydii inuu isaga yaqaan.", // nieuw, nalezen
+    'c.pickup.w': "Adiga ayaa mas'uul ka ah ilmaha ilaa qof ay waalidku doorteen uu la wareego.", // nieuw, nalezen
+    'l.childsafety': "Ammaanka kooxda", // nieuw, nalezen
+    'w.traphekje': "irridda jaranjarada", // nieuw, nalezen
+    'w.vingerstrip': "ilaaliyaha farta (albaabka ku yaal, si aysan faruhu ugu qabsoomin)", // nieuw, nalezen
+    'w.verslikken': "ceeshoon (cuntada ayaa jid khaldan gashay)", // nieuw, nalezen
+    'w.bult': "barara (madaxa)", // nieuw, nalezen
+    'w.schaafwond': "xoqan (maqaarka ayaa xoqmay)", // nieuw, nalezen
+    'w.toezicht': "ilaalinta (carruurta ayaad eegaysaa)", // nieuw, nalezen
+    's.childsafety.1': "Mar walba xir irridda jaranjarada.", // nieuw, nalezen
+    's.childsafety.2': "Baraf yar ayaan saarayaa bararka.", // nieuw, nalezen
+    's.childsafety.3': "Sem wuu ceeshoonayaa. Waan caawinayaa.", // nieuw, nalezen
+    'c.childsafety.q': "Bo ma dhacday?", // nieuw, nalezen
+    'c.childsafety.a': "Haa, barar ayay leedahay. Hooyadeed ayaan wacayaa.", // nieuw, nalezen
+    'c.childsafety': "Agagaarka ku eeg indhaha ilmo", // nieuw, nalezen
+    'c.childsafety.b': "Carruurta yaryar wax walba afka ayay geliyaan oo wax walba way fuulaan. Sidaas darteed irridda jaranjarada xiran ku hay, alaabta nadiifinta iyo daawooyinka meel aysan gaari karin dhig, cabbitaannada kululna carruurta ka fogee. Qolka maalin kasta hubi. Ilmo ma dhaawacmay? Sii gargaarka degdegga ah, ilmaha qalbi qaboji, u sheeg waalidka, oo qor. Ma culus tahay? Wac 112. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.childsafety.p': "Irridda jaranjaradu waa furan tahay.", // nieuw, nalezen
+    'c.childsafety.s': "Kafeegaagii kulul waxaad dhigtay miis hooseeya. Ilmo yar ayaa u socda. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.childsafety.o1': "Kafeega isla markiiba meel sare dhig.", // nieuw, nalezen
+    'c.childsafety.o2': "U sheeg ilmaha yar inuusan taaban.", // nieuw, nalezen
+    'c.childsafety.o3': "Si dhakhso ah u cab.", // nieuw, nalezen
+    'c.childsafety.w': "Kafeeg kulul ilmo yar si xun ayuu u gubi karaa. Meel aysan gaari karin waa meesha keliya ee ammaanka ah.", // nieuw, nalezen
+    'l.sickchild': "Ilmo xanuunsan iyo xasaasiyadda", // nieuw, nalezen
+    'w.huiduitslag': "finanka (barro cas oo maqaarka ku yaal)", // nieuw, nalezen
+    'w.diarree': "shubanka", // nieuw, nalezen
+    'w.overgeven': "matagid", // nieuw, nalezen
+    'w.allergielijst': "liiska xasaasiyadda", // nieuw, nalezen
+    'w.adrenalinepen': "qalinka adrenaline-ka (qalin daawo ah oo xasaasiyad xooggan loogu talagalay)", // nieuw, nalezen
+    'w.temperaturen': "cabbirid heerkulka jidhka", // nieuw, nalezen
+    's.sickchild.1': "Sem qandho ayuu qabaa. Aabbihiis ayaan wacayaa.", // nieuw, nalezen
+    's.sickchild.2': "Eeg liiska xasaasiyadda ka hor cuntada.", // nieuw, nalezen
+    's.sickchild.3': "Waligaa daawo ha bixin oggolaansho la'aan.", // nieuw, nalezen
+    'c.sickchild.q': "Jip sidee buu yahay?", // nieuw, nalezen
+    'c.sickchild.a': "Aad buu u kulul yahay. Heerkulkiisa ayaan cabbirayaa.", // nieuw, nalezen
+    'c.sickchild': "Ilmo xanuunsan: sheeg, ha qiyaasin", // nieuw, nalezen
+    'c.sickchild.b': "Fiiri sida ay carruurtu u yihiin. Ilmo ma kulul yahay, ma aad u daallan yahay, ma matagayaa, mise finan ayuu leeyahay? Cabbir heerkulkiisa, u sheeg saaxiibkaa shaqada, oo wac waalidka. Daawo bixi oo keliya oggolaansho qoraal ah oo waalidka ka yimid, oo qor waxa aad siisay iyo goorta. Ogow carruurta xasaasiyadda qaba, iyo meesha daawadoodu ku jirto. Ilmo xasaasiyad xooggan ku dhacday: sii qalinka adrenaline-ka haddii aad baratay, oo wac 112. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.sickchild.p': "Ilmahaagu wuu xanuunsan yahay. Ma iman kartaa inaad qaaddo?", // nieuw, nalezen
+    'c.sickchild.s': "Hooyo ayaa tiri: “Sii daawada qandhada saacadda labaad.” Foom ma jiro. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.sickchild.o1': "Marka hore ka codso inay foomka saxiixdo.", // nieuw, nalezen
+    'c.sickchild.o2': "Sii: hooyada ayaa codsatay.", // nieuw, nalezen
+    'c.sickchild.o3': "Sii badh, si loo badbaado.", // nieuw, nalezen
+    'c.sickchild.w': "Oggolaansho qoraal ah la'aan looma oggola inaad daawo bixiso. Foomku wuxuu ilaaliyaa ilmaha iyo adiga.", // nieuw, nalezen
+    'l.grouprules': "Kooxda iyo xeerarka", // nieuw, nalezen
+    'w.pedagogischmedewerker': "shaqaalaha xannaanada carruurta", // nieuw, nalezen
+    'w.mentor': "la-taliyaha (shaqaalaha si dhow ula socda hal ilmo)", // nieuw, nalezen
+    'w.vierogenprincipe': "xeerka afarta il (qof weyn oo kale mar walba wuu ku arki karaa ama ku maqli karaa)", // nieuw, nalezen
+    'w.observeren': "daawasho (si taxaddar leh u eeg, oo qor)", // nieuw, nalezen
+    'w.peuter': "ilmaha yar (ilmo laba ama saddex jir ah)", // nieuw, nalezen
+    'w.groep': "kooxda (carruurta maalin kasta wada jooga)", // nieuw, nalezen
+    's.grouprules.1': "Waxaan ahay la-taliyaha Lisa.", // nieuw, nalezen
+    's.grouprules.2': "Saaxiib shaqo ayaa mar walba na arki kara ama na maqli kara.", // nieuw, nalezen
+    's.grouprules.3': "Daan ayaan ka welwelsanahay.", // nieuw, nalezen
+    'c.grouprules.q': "Kooxda keligay bannaanka ma ula bixi karaa?", // nieuw, nalezen
+    'c.grouprules.a': "Haa, laakiin marka hore u sheeg saaxiib shaqo.", // nieuw, nalezen
+    'c.grouprules': "Waligaa keligaa ha noqon meel aan lagu arkin", // nieuw, nalezen
+    'c.grouprules.b': "Xannaanada carruurta, qof weyn oo kale waa inuu mar walba ku arki karaa ama ku maqli karaa marka aad carruurta la joogto. Taasi waxay ilaalisaa carruurta iyo adiga. Ilmo kasta wuxuu leeyahay la-taliye: hal shaqaale oo si dhow ula socda ilmahaas oo la hadla waalidka. Ma ka welwelsan tahay ilmo gurigiisa, tusaale ahaan nabarro madow ama cabsi? Ilmaha su'aalo badan ha weydiin: u sheeg madaxaaga, oo yaqaan tallaabooyinka. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.grouprules.p': "Ilmahan ayaan ka welwelsanahay.", // nieuw, nalezen
+    'c.grouprules.s': "Mar kale ayaad ilmo ku aragtaa nabarro madow. Ilmuhu wuu aamusan yahay. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.grouprules.o1': "Isla maalintaas u sheeg madaxaaga.", // nieuw, nalezen
+    'c.grouprules.o2': "Ilmaha weydii su'aalo badan.", // nieuw, nalezen
+    'c.grouprules.o3': "Wac waalidka oo weydii sababta.", // nieuw, nalezen
+    'c.grouprules.w': "Madaxaagu wuu yaqaan tallaabooyinka marka laga welwelo ilmo. Su'aalo badan ilmaha way cabsiin karaan.", // nieuw, nalezen
   },
 };
 

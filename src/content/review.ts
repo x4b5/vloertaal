@@ -78,6 +78,23 @@ export const relatedUnits: Record<string, [string, string]> = {
   // Kweken, sorteren en de kas and Banden, olie en remmen (22 November 2026): their sector's first unit and safety.
   'u.kweek': ['u.kas', 'u.safety'],
   'u.carservice': ['u.garage', 'u.safety'],
+  // The new sectors Groen and Facilitair (23 November 2026): each other's unit and safety (Groen:
+  // working outside, the weather); the facility units with the cleaning work in the same building.
+  'u.mowing': ['u.planting', 'u.safety'],
+  'u.planting': ['u.mowing', 'u.kas'],
+  'u.frontdesk': ['u.maintenance', 'u.clean'],
+  'u.maintenance': ['u.frontdesk', 'u.safety'],
+  // Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026): each
+  // other's unit, and the basis unit their work leans on (when it goes wrong; safety; the factory's
+  // food lesson; care and its clients).
+  'u.guarding': ['u.incidents', 'u.safety'],
+  'u.incidents': ['u.guarding', 'u.emergency'],
+  'u.foodhygiene': ['u.foodline', 'u.factory'],
+  'u.foodline': ['u.foodhygiene', 'u.safety'],
+  'u.collection': ['u.recycling', 'u.safety'],
+  'u.recycling': ['u.collection', 'u.safety'],
+  'u.toddlers': ['u.daycare', 'u.care'],
+  'u.daycare': ['u.toddlers', 'u.emergency'],
 };
 
 /**
@@ -121,6 +138,23 @@ const relatedWords: Record<string, string[]> = {
   // Kweken, sorteren en de kas: the crate and the tomato; Banden, olie en remmen: the tyre and the oil.
   'u.kweek': ['w.krat', 'w.tomaat'],
   'u.carservice': ['w.band', 'w.olie'],
+  // Groen: the motor and filling up (Maaien en snoeien), the vest and the municipality (Planten,
+  // onkruid en de straat). Facilitair: the parcel and the coffee; the fault and the hand truck.
+  'u.mowing': ['w.motor', 'w.tanken'],
+  'u.planting': ['w.hesje', 'w.gemeente'],
+  'u.frontdesk': ['w.pakket', 'w.koffie'],
+  'u.maintenance': ['w.storing', 'w.steekwagen'],
+  // Beveiliging: the camera and the alarm; the thief and the fire. Voedingsindustrie: the hair net and
+  // the cold room; the knife and the label. Afval: the container and the rubbish bag; the emergency
+  // stop and the battery. Kinderopvang: sleeping and tidying up; the fever and the allergy.
+  'u.guarding': ['w.camera', 'w.alarm'],
+  'u.incidents': ['w.dief', 'w.brand'],
+  'u.foodhygiene': ['w.haarnetje', 'w.koelcel'],
+  'u.foodline': ['w.mes', 'w.etiket'],
+  'u.collection': ['w.container', 'w.vuilniszak'],
+  'u.recycling': ['w.noodstop', 'w.batterij'],
+  'u.toddlers': ['w.slapen', 'w.opruimen'],
+  'u.daycare': ['w.koorts', 'w.allergie'],
   // Goed communiceren: angry (l.speakup) and slowly (l.understand), what the lessons are about.
   'u.communicate': ['w.boos', 'w.langzaam'],
   // Feedback en overleg: "praten" (Samenwerken) and the word "de feedback" itself (l.mistakes).

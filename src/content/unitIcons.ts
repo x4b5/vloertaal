@@ -73,6 +73,20 @@ export const unitIcons: Record<string, string> = {
   // Kweken, sorteren en de kas and Banden, olie en remmen (22 November 2026).
   'u.kweek': 'w.kweekpot',
   'u.carservice': 'w.velg',
+  // Groen and Facilitair (23 November 2026; placeholder drawings for now).
+  'u.mowing': 'w.grasmaaier',
+  'u.planting': 'w.schep',
+  'u.frontdesk': 'w.balie',
+  'u.maintenance': 'w.gereedschapskist',
+  // Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026; placeholder drawings for now).
+  'u.guarding': 'w.slagboom',
+  'u.incidents': 'w.brandweer',
+  'u.foodhygiene': 'w.hygienesluis',
+  'u.foodline': 'w.portie',
+  'u.collection': 'w.vuilniswagen',
+  'u.recycling': 'w.milieustraat',
+  'u.toddlers': 'w.knuffel',
+  'u.daycare': 'w.ouder',
 };
 
 /**

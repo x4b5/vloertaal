@@ -25,7 +25,15 @@ const SHORT = ['c.translate', 'c.harvest', 'c.shelves', 'c.garage', 'c.illness',
   // "Tegels, stuc en verf" (u.afbouw, 20 November 2026): short from the start.
   'c.tiletools', 'c.tiling', 'c.plaster',
   // l.paint, l.prep, "Metselen, hout en vastmaken" and the shapes of Rekenen (20 November 2026).
-  'c.paint', 'c.prep', 'c.brick', 'c.wall', 'c.wood', 'c.square', 'c.screw', 'c.fix', 'c.shapes', 'c.angles', 'c.size'];
+  'c.paint', 'c.prep', 'c.brick', 'c.wall', 'c.wood', 'c.square', 'c.screw', 'c.fix', 'c.shapes', 'c.angles', 'c.size',
+  // Groen and Facilitair (23 November 2026): short from the start.
+  'c.mowing', 'c.pruning', 'c.hedge', 'c.chainsaw', 'c.weeding', 'c.planting', 'c.roadside', 'c.litter',
+  'c.reception', 'c.visitors', 'c.mailroom', 'c.meetingroom', 'c.faults', 'c.repairs', 'c.moving', 'c.closing',
+  // Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026): short from the start.
+  'c.patrol', 'c.access', 'c.cameras', 'c.report', 'c.evacuation', 'c.firstaid', 'c.shoplifting', 'c.aggression',
+  'c.hygienelock', 'c.allergens', 'c.coldroom', 'c.foreignbody', 'c.cutting', 'c.labels', 'c.linecleaning', 'c.haccp',
+  'c.binlorry', 'c.reversing', 'c.wastesorting', 'c.wastesafety', 'c.yard', 'c.hazardous', 'c.baler', 'c.shovel',
+  'c.nappies', 'c.mealtime', 'c.naptime', 'c.playtime', 'c.pickup', 'c.childsafety', 'c.sickchild', 'c.grouprules'];
 const SITUATION_MAX = 18; // words, without the question at the end
 const ANSWER_MAX = 10;
 const SCREEN_MAX = 42; // the situation and its three answers together

@@ -338,6 +338,91 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.brakes': L('A', 'A', 'nakijken: het remblok ("de remblok"), de remklauw, de achterlamp ("het achterlicht")'),
     'l.diagnosis': L('A', 'A', 'nakijken: de werkorder ("de werkfiche"), de kentekenplaat ("de nummerplaat"; in België wit met rode letters)'),
   } },
+  // Maaien en snoeien and Planten, onkruid en de straat (Groen, 23 November 2026): how the work is
+  // done, the same in Belgium. The tips name no rule, right, amount or Dutch body. Flemish words to check.
+  'u.mowing': { kind: 'A', lessons: {
+    'l.mowing': L('A', 'A', 'nakijken: de zitmaaier, de bosmaaier ("de bosmaaier" of "de kantenmaaier"), het gelaatsscherm ("het vizier")'),
+    'l.pruning': L('A', 'A', 'nakijken: de snoeischaar, de snoeizaag'),
+    'l.hedge': L('A', 'A', 'nakijken: de heggenschaar ("de haagschaar"), de heg ("de haag"), het snoeiafval ("het snoeisel")'),
+    'l.chainsaw': L('A', 'A', 'nakijken: de zaagbroek ("de kettingzaagbroek"), de jerrycan ("de bidon")'),
+  } },
+  'u.planting': { kind: 'A', lessons: {
+    'l.weeding': L('A', 'A', 'nakijken: de schoffel, het perk ("het bloemperk"), de onkruidbrander'),
+    'l.planting': L('A', 'A', 'nakijken: de schep ("de spade"), de kluit, de boompaal'),
+    'l.roadside': L('A', 'A', 'nakijken: de pion ("de kegel", "de verkeerskegel"), de stoep ("het voetpad"), de pijlwagen ("de pijlkar")'),
+    'l.litter': L('A', 'A', 'nakijken: het zwerfafval ("het zwerfvuil"), de grijper ("de afvalgrijper"), de aanhanger ("de aanhangwagen")'),
+  } },
+  // Receptie, post en vergaderen and Storingen, onderhoud en verhuizen (Facilitair, 23 November
+  // 2026): how the work is done, the same in Belgium. Flemish words to check.
+  'u.frontdesk': { kind: 'A', lessons: {
+    'l.reception': L('A', 'A', 'nakijken: de balie ("het onthaal"), de wachtruimte ("de wachtzaal"), het toestel ("het toestelnummer")'),
+    'l.visitors': L('A', 'A', 'nakijken: het bezoekerspasje ("de bezoekersbadge"), de garderobe ("de vestiaire")'),
+    'l.mailroom': L('A', 'A', 'nakijken: de postkamer, het postvak, de koerier'),
+    'l.meetingroom': L('A', 'A', 'nakijken: de beamer ("de projector"), de vergaderzaal, de thermoskan'),
+  } },
+  'u.maintenance': { kind: 'A', lessons: {
+    'l.faults': L('A', 'A', 'nakijken: de lekkage ("het lek"), de verwarming ("de chauffage"), de wc ("het toilet")'),
+    'l.repairs': L('A', 'A', 'nakijken: de deurklink, de gereedschapskist ("de gereedschapskoffer"), de trap ("de ladder")'),
+    'l.moving': L('A', 'A', 'nakijken: de plattegrond ("het grondplan"), de steekwagen ("de steekkar")'),
+    'l.closing': L('A', 'A', 'nakijken: het nachtslot, de sleutelbos'),
+  } },
+  // Ronde en toegang and Noodgevallen en de winkel (Beveiliging, 23 November 2026): how the work is
+  // done, the same in Belgium (112 too). The shop-theft tip names no law (holding a thief is a
+  // house rule; never search, little force). Flemish words to check.
+  'u.guarding': { kind: 'A', lessons: {
+    'l.patrol': L('A', 'A', 'nakijken: surveilleren ("patrouilleren"), de zaklamp ("de zaklantaarn"), het hek ("de poort", "de omheining")'),
+    'l.access': L('A', 'A', 'nakijken: de legitimatie ("de identiteitskaart"), het kenteken ("de nummerplaat")'),
+    'l.cameras': L('A', 'A', 'nakijken: de meldkamer ("de meldkamer" of "de controlekamer"), het beeldscherm'),
+    'l.report': L('A', 'A', 'nakijken: de portofoon ("de walkietalkie"), het rapport ("het verslag")'),
+  } },
+  'u.incidents': { kind: 'A', lessons: {
+    'l.evacuation': L('A', 'A', 'nakijken: de brandmelder ("de brandmeldknop"), het ontruimingsplan ("het evacuatieplan"), de branddeur ("de brandwerende deur")'),
+    'l.firstaid': L('A', 'A', 'nakijken: de EHBO ("de eerste hulp"), de AED (ook in België), 112 (ook in België)'),
+    'l.shoplifting': L('A', 'A', 'nakijken: aanhouden ("vasthouden"), het detectiepoortje ("het detectiepoortje" of "de antidiefstalpoort")'),
+    'l.aggression': L('A', 'A', 'nakijken: het huisverbod ("het winkelverbod"), schelden ("uitschelden")'),
+  } },
+  // Hygiëne en kou and De productielijn (Voedingsindustrie, 23 November 2026): how the work is done,
+  // the same in Belgium (HACCP too). Flemish words to check.
+  'u.foodhygiene': { kind: 'A', lessons: {
+    'l.hygienelock': L('A', 'A', 'nakijken: de hygiënesluis, de laarzenwasser ("de laarzenwasmachine"), de werkjas ("de stofjas")'),
+    'l.allergens': L('A', 'A', 'nakijken: de pinda ("de nootjes", "de aardnoot"), het allergeen'),
+    'l.coldroom': L('A', 'A', 'nakijken: de koelketen, de thermokleding ("de koelcelkledij")'),
+    'l.foreignbody': L('A', 'A', 'nakijken: de ploegleider ("de ploegbaas"), de glasbreuk'),
+  } },
+  'u.foodline': { kind: 'A', lessons: {
+    'l.cutting': L('A', 'A', 'nakijken: uitbenen ("uitbeenen"), de portie, de snijplank'),
+    'l.labels': L('A', 'A', 'nakijken: het lotnummer, de omdoos ("de buitendoos"), de schaal ("de schotel")'),
+    'l.linecleaning': L('A', 'A', 'nakijken: de hogedrukspuit ("de hogedrukreiniger"), naspoelen'),
+    'l.haccp': L('A', 'A', 'nakijken: de kwaliteitsdienst ("de kwaliteitsafdeling"), de prikthermometer ("de insteekthermometer")'),
+  } },
+  // Afval ophalen and De milieustraat (Afval en recycling, 23 November 2026): how the work is done,
+  // the same in Belgium; the names of the bins and the sorting differ (PMD), so these are words to check.
+  'u.collection': { kind: 'A', lessons: {
+    'l.binlorry': L('A', 'A', 'nakijken: de vuilniswagen ("de vuilniskar"), de kliko ("de container", "de rolcontainer"), de bijplaatsing'),
+    'l.reversing': L('A', 'A', 'nakijken: de aanwijzer ("de begeleider"), de dode hoek'),
+    'l.wastesorting': L('A', 'A', 'nakijken: het gft ("het gft-afval"), het plastic ("de PMD-zak" in Vlaanderen), het restafval'),
+    'l.wastesafety': L('A', 'A', 'nakijken: de tetanusprik ("de tetanusvaccinatie"), de snijwond'),
+  } },
+  'u.recycling': { kind: 'A', lessons: {
+    'l.yard': L('A', 'A', 'nakijken: de milieustraat ("het recyclagepark", "het containerpark"), het grofvuil ("het grofhuisvuil"), de afvalpas'),
+    'l.hazardous': L('A', 'A', 'nakijken: het chemisch afval ("het klein gevaarlijk afval", KGA), de spuitbus'),
+    'l.baler': L('A', 'A', 'nakijken: de balenpers, het binddraad ("de binddraad")'),
+    'l.shovel': L('A', 'A', 'nakijken: de shovel ("de wiellader"), de bunker ("het vak", "de box")'),
+  } },
+  // De kinderen and Ouders, veiligheid en de groep (Kinderopvang, 23 November 2026): how the work is
+  // done; the tips name no law (the four-eyes rule as a house rule). Flemish words to check.
+  'u.toddlers': { kind: 'A', lessons: {
+    'l.nappies': L('A', 'A', 'nakijken: de luier ("de pamper"), de commode ("de verzorgingstafel"), de billendoekjes'),
+    'l.mealtime': L('A', 'A', 'nakijken: het slabbetje ("de slab"), de fruithap ("de fruitpap")'),
+    'l.naptime': L('A', 'A', 'nakijken: de speen ("de fopspeen", "de tutter"), de babyfoon'),
+    'l.playtime': L('A', 'A', 'nakijken: de zandbak, de glijbaan ("de schuifaf")'),
+  } },
+  'u.daycare': { kind: 'A', lessons: {
+    'l.pickup': L('A', 'A', 'nakijken: het schriftje ("het heen-en-weerschriftje"), de oppas ("de babysit")'),
+    'l.childsafety': L('A', 'A', 'nakijken: het traphekje ("het traphekje" of "het veiligheidshekje"), de bult ("de buil")'),
+    'l.sickchild': L('A', 'A', 'nakijken: de adrenalinepen, temperaturen ("de temperatuur nemen")'),
+    'l.grouprules': L('A', 'A', 'nakijken: de pedagogisch medewerker ("de kinderbegeleider"), het vierogenprincipe, de mentor'),
+  } },
 };
 
 /** The units of the inventory that need a Belgian version (B or C). */

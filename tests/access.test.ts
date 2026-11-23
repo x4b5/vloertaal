@@ -102,8 +102,10 @@ describe('access', () => {
       expect(sampleLessons('taal').length).toBeGreaterThan(8);
       // 20 since 20 November 2026: Bouw has three own topics in Jouw sector; 21 since Productie has
       // two (21 November 2026); 22 since Techniek has two, 23 since Productie has three (the same day);
-      // 25 since Tuinbouw and Garage have two (22 November 2026).
-      expect(sampleLessons('taal').length).toBeLessThan(26);
+      // 25 since Tuinbouw and Garage have two (22 November 2026); 29 with the four units of Groen and
+      // Facilitair (23 November 2026); 37 with the eight units of Beveiliging, Voedingsindustrie, Afval
+      // en recycling and Kinderopvang (the same day).
+      expect(sampleLessons('taal').length).toBeLessThan(38);
     });
 
     it('locks the rest, whatever the progress says; the daily review stays open', () => {

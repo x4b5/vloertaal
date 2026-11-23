@@ -141,6 +141,31 @@ const t: CultureTranslation = {
     'kjn.u.kweek.2': "Umiem zapytać, czy pomidor jest wystarczająco dojrzały.", // nieuw, nalezen
     'kjn.u.carservice.1': "Umiem powiedzieć, że świeci się kontrolka ostrzegawcza.", // nieuw, nalezen
     'kjn.u.carservice.2': "Umiem zapytać, ile oleju trzeba wlać.", // nieuw, nalezen
+    // The new sectors (23 November 2026).
+    'kjn.u.mowing.1': "Umiem powiedzieć, że trawa jest za mokra.", // nieuw, nalezen
+    'kjn.u.mowing.2': "Umiem zapytać, które gałęzie trzeba obciąć.", // nieuw, nalezen
+    'kjn.u.planting.1': "Umiem powiedzieć, że jest tu potłuczone szkło.", // nieuw, nalezen
+    'kjn.u.planting.2': "Umiem zapytać, czy mogę przejść przez ulicę.", // nieuw, nalezen
+    'kjn.u.frontdesk.1': "Umiem przywitać gościa i mu pomóc.", // nieuw, nalezen
+    'kjn.u.frontdesk.2': "Umiem zapytać, dla kogo jest paczka.", // nieuw, nalezen
+    'kjn.u.maintenance.1': "Umiem zgłosić usterkę.", // nieuw, nalezen
+    'kjn.u.maintenance.2': "Umiem zapytać, gdzie ma iść biurko.", // nieuw, nalezen
+    'kjn.u.guarding.1': "Umiem poprosić kogoś o dokument tożsamości.", // nieuw, nalezen
+    'kjn.u.guarding.2': "Umiem powiedzieć przez krótkofalówkę, co widzę.", // nieuw, nalezen
+    'kjn.u.incidents.1': "Umiem zadzwonić pod 112 i powiedzieć, co się dzieje.", // nieuw, nalezen
+    'kjn.u.incidents.2': "Umiem spokojnie mówić do złego klienta.", // nieuw, nalezen
+    'kjn.u.foodhygiene.1': "Umiem powiedzieć, że w chłodni jest za ciepło.", // nieuw, nalezen
+    'kjn.u.foodhygiene.2': "Umiem zapytać, czy są w tym orzechy.", // nieuw, nalezen
+    'kjn.u.foodline.1': "Umiem powiedzieć, że etykieta jest zła.", // nieuw, nalezen
+    'kjn.u.foodline.2': "Umiem zapytać, ile ma iść do pojemnika.", // nieuw, nalezen
+    'kjn.u.collection.1': "Umiem pomóc kierowcy przy cofaniu.", // nieuw, nalezen
+    'kjn.u.collection.2': "Umiem powiedzieć, że pojemnik na kółkach jest za ciężki.", // nieuw, nalezen
+    'kjn.u.recycling.1': "Umiem powiedzieć gościowi, gdzie idą jego odpady.", // nieuw, nalezen
+    'kjn.u.recycling.2': "Umiem powiedzieć, że prasa się zablokowała.", // nieuw, nalezen
+    'kjn.u.toddlers.1': "Umiem powiedzieć, że idę przewinąć dziecko.", // nieuw, nalezen
+    'kjn.u.toddlers.2': "Umiem zapytać, czy dziecko już śpi.", // nieuw, nalezen
+    'kjn.u.daycare.1': "Umiem powiedzieć rodzicowi, jak minął dzień.", // nieuw, nalezen
+    'kjn.u.daycare.2': "Umiem zapytać, kto przyjdzie odebrać dziecko.", // nieuw, nalezen
   },
 };
 
