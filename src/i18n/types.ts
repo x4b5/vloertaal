@@ -635,24 +635,14 @@ export const uiEn = {
   /* "Zet het vooraan" feedback (src/components/LessonPlayer.tsx): the verb boxed, and why. */
   verbSecond: 'The verb is in place 2.',
   /* "Rustig scherm" (Settings › Lessons; src/lib/calm.ts). */
-  calmScreen: 'Calm screen',
-  calmAuto: 'Like your phone',
-  calmHint: 'On: nothing moves. No celebration of your streak after a lesson. Your streak and words are not on the home screen.',
   /* "Spelmodus" (Settings › Lessons, the card on the home; src/lib/play.ts): points, more sound and movement. */
-  playMode: 'Game mode',
-  playHint: 'On: points for every right answer, more for several right in a row. More sounds and movement. A mistake costs nothing.',
   playPoints: 'Points',
   playTotal: 'All your points',
-  playAskTitle: 'How do you want to practise?',
-  playAskCalm: 'Calm',
-  playAskFun: 'With a game',
-  playAskHint: 'With a game: points, sounds and movement. You can change it in Settings.',
   /* "Sfeer" (Settings › Lessons; src/lib/play.ts): the calm screen and the game mode as one setting. */
   sfeer: 'Mood',
   sfeerCalm: 'Calm',
-  sfeerStandard: 'Standard',
   sfeerGame: 'Game',
-  sfeerHint: 'Calm: nothing moves, no celebrations. Standard: the app as it is. Game: points, sounds and lots of movement.',
+  sfeerHint: 'Calm: nothing moves, no celebrations. Game: points, sounds and lots of movement.',
   playLevel: 'Level',
   playLevel1: 'Starter',
   playLevel2: 'Learner',

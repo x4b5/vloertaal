@@ -484,22 +484,12 @@ const lang: HelpLanguageSource = {
     speakFromMemory: 'Agora de memória: como era em neerlandês?', // nieuw, nalezen
     keptNofM: 'Palavras de há 2 semanas ou mais: ainda sabias {n} de {m}.', // nieuw, nalezen
     verbSecond: 'O verbo fica no lugar 2.', // nieuw, nalezen
-    calmScreen: 'Ecrã calmo', // nieuw, nalezen
-    calmAuto: 'Como o teu telemóvel', // nieuw, nalezen
-    calmHint: 'Ligado: nada se mexe, não há festa pela tua série depois de uma lição, e a tua série e as palavras não aparecem no ecrã inicial.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    playMode: 'Modo jogo', // nieuw, nalezen
-    playHint: 'Ligado: pontos por cada resposta certa, mais se acertares várias seguidas. Mais sons e movimento. Um erro não custa nada.', // nieuw, nalezen
     playPoints: 'Pontos', // nieuw, nalezen
     playTotal: 'Todos os teus pontos', // nieuw, nalezen
-    playAskTitle: 'Como queres praticar?', // nieuw, nalezen
-    playAskCalm: 'Com calma', // nieuw, nalezen
-    playAskFun: 'Com jogo', // nieuw, nalezen
-    playAskHint: 'Com jogo: pontos, sons e movimento. Podes mudar isto nas Definições.', // nieuw, nalezen
     sfeer: 'Ambiente', // nieuw, nalezen
     sfeerCalm: 'Calma', // nieuw, nalezen
-    sfeerStandard: 'Padrão', // nieuw, nalezen
     sfeerGame: 'Jogo', // nieuw, nalezen
-    sfeerHint: 'Calma: nada se mexe, sem festas. Padrão: a app como é. Jogo: pontos, sons e muito movimento.', // nieuw, nalezen
+    sfeerHint: 'Calma: nada se mexe, sem festas. Jogo: pontos, sons e muito movimento.', // nieuw, nalezen
     sectorGroupService: "Serviços e segurança", // nieuw, nalezen
     sectorGroupOutdoor: "Trabalhar ao ar livre", // nieuw, nalezen
     sectorChildcare: "Creche e infantário", // nieuw, nalezen

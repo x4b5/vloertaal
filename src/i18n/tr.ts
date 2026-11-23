@@ -484,22 +484,12 @@ const lang: HelpLanguageSource = {
     speakFromMemory: 'Şimdi ezberden: Hollandacası neydi?', // nieuw, nalezen
     keptNofM: '2 hafta veya daha önceki kelimeler: {m} kelimeden {n} tanesini hâlâ biliyordun.', // nieuw, nalezen
     verbSecond: 'Fiil 2. sıradadır.', // nieuw, nalezen
-    calmScreen: 'Sakin ekran', // nieuw, nalezen
-    calmAuto: 'Telefonundaki gibi', // nieuw, nalezen
-    calmHint: 'Açık: hiçbir şey hareket etmez, dersten sonra serin için kutlama olmaz, serin ve kelimelerin ana ekranda görünmez.', // nieuw, nalezen
-    playMode: 'Oyun modu', // nieuw, nalezen
-    playHint: 'Açık: her doğru cevap için puan, art arda birkaç doğru cevap için daha çok puan. Daha çok ses ve hareket. Hata yapmak hiçbir şey kaybettirmez.', // nieuw, nalezen
     playPoints: 'Puan', // nieuw, nalezen
     playTotal: 'Tüm puanların', // nieuw, nalezen
-    playAskTitle: 'Nasıl çalışmak istersin?', // nieuw, nalezen
-    playAskCalm: 'Sakin', // nieuw, nalezen
-    playAskFun: 'Oyunlu', // nieuw, nalezen
-    playAskHint: 'Oyunlu: puan, ses ve hareket. Bunu Ayarlar’dan değiştirebilirsin.', // nieuw, nalezen
     sfeer: 'Ortam', // nieuw, nalezen
     sfeerCalm: 'Sakin', // nieuw, nalezen
-    sfeerStandard: 'Standart', // nieuw, nalezen
     sfeerGame: 'Oyun', // nieuw, nalezen
-    sfeerHint: 'Sakin: hiçbir şey hareket etmez, kutlama olmaz. Standart: uygulama olduğu gibi. Oyun: puan, ses ve bol hareket.', // nieuw, nalezen
+    sfeerHint: 'Sakin: hiçbir şey hareket etmez, kutlama olmaz. Oyun: puan, ses ve bol hareket.', // nieuw, nalezen
     sectorGroupService: "Hizmet ve güvenlik", // nieuw, nalezen
     sectorGroupOutdoor: "Açık havada çalışmak", // nieuw, nalezen
     sectorChildcare: "Çocuk bakımı", // nieuw, nalezen

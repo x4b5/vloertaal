@@ -1567,7 +1567,7 @@ describe('pocket card phrases', () => {
       'Ik verbind u door.',
       'Neemt u even plaats in de wachtruimte.',
       'Ik heb een afspraak met mevrouw Jansen.',
-      'Een moment. Ik bel hem even.',
+      'Een moment. Ik bel haar even.',
       'Goedemorgen, waarmee kan ik u helpen?',
       'het bezoekerspasje',
       'de lift',

@@ -8,23 +8,10 @@ import { workUnits } from './work';
  * the sixteen lessons of Groen and Facilitair and the thirty-two of Beveiliging, Voedingsindustrie,
  * Afval en recycling and Kinderopvang (23 November 2026).
  */
-export const TRANSLATION_PENDING_LESSONS: readonly string[] = [
-  // The new sectors Groen and Facilitair (23 November 2026): their four units, translations to follow.
-  'mowing', 'pruning', 'hedge', 'chainsaw', 'weeding', 'planting', 'roadside', 'litter',
-  'reception', 'visitors', 'mailroom', 'meetingroom', 'faults', 'repairs', 'moving', 'closing',
-  // Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026): their
-  // eight units, translations to follow.
-  'patrol', 'access', 'cameras', 'report', 'evacuation', 'firstaid', 'shoplifting', 'aggression',
-  'hygienelock', 'allergens', 'coldroom', 'foreignbody', 'cutting', 'labels', 'linecleaning', 'haccp',
-  'binlorry', 'reversing', 'wastesorting', 'wastesafety', 'yard', 'hazardous', 'baler', 'shovel',
-  'nappies', 'mealtime', 'naptime', 'playtime', 'pickup', 'childsafety', 'sickchild', 'grouprules',
-];
+export const TRANSLATION_PENDING_LESSONS: readonly string[] = [];
 
 /** Units whose title waits for its translations too. */
-const PENDING_UNITS: readonly string[] = [
-  'u.mowing', 'u.planting', 'u.frontdesk', 'u.maintenance',
-  'u.guarding', 'u.incidents', 'u.foodhygiene', 'u.foodline', 'u.collection', 'u.recycling', 'u.toddlers', 'u.daycare',
-];
+const PENDING_UNITS: readonly string[] = [];
 
 const pendingIds = new Set<string>(PENDING_UNITS);
 for (const l of workUnits.flatMap((u) => u.lessons)) {

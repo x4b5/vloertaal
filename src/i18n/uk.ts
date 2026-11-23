@@ -484,22 +484,12 @@ const lang: HelpLanguageSource = {
     speakFromMemory: 'Тепер напам’ять: як це було нідерландською?', // nieuw, nalezen
     keptNofM: 'Слова двотижневої давності й старші: ти ще пам’ятаєш {n} з {m}.', // nieuw, nalezen
     verbSecond: 'Дієслово стоїть на місці 2.', // nieuw, nalezen
-    calmScreen: 'Спокійний екран', // nieuw, nalezen
-    calmAuto: 'Як у телефоні', // nieuw, nalezen
-    calmHint: 'Увімкнено: нічого не рухається, немає святкування серії після уроку, а серія і слова не показуються на головному екрані.', // nieuw, nalezen
-    playMode: 'Режим гри', // nieuw, nalezen
-    playHint: 'Увімкнено: бали за кожну правильну відповідь, більше за кілька правильних поспіль. Більше звуків і руху. Помилка нічого не коштує.', // nieuw, nalezen
     playPoints: 'Бали', // nieuw, nalezen
     playTotal: 'Усі твої бали', // nieuw, nalezen
-    playAskTitle: 'Як ти хочеш вправлятися?', // nieuw, nalezen
-    playAskCalm: 'Спокійно', // nieuw, nalezen
-    playAskFun: 'З грою', // nieuw, nalezen
-    playAskHint: 'З грою: бали, звуки і рух. Це можна змінити в Налаштуваннях.', // nieuw, nalezen
     sfeer: 'Настрій', // nieuw, nalezen
     sfeerCalm: 'Спокійно', // nieuw, nalezen
-    sfeerStandard: 'Стандартно', // nieuw, nalezen
     sfeerGame: 'Гра', // nieuw, nalezen
-    sfeerHint: 'Спокійно: нічого не рухається, без святкувань. Стандартно: застосунок як є. Гра: бали, звуки і багато руху.', // nieuw, nalezen
+    sfeerHint: 'Спокійно: нічого не рухається, без святкувань. Гра: бали, звуки і багато руху.', // nieuw, nalezen
     sectorGroupService: "Обслуговування й охорона", // nieuw, nalezen
     sectorGroupOutdoor: "Робота надворі", // nieuw, nalezen
     sectorChildcare: "Догляд за дітьми", // nieuw, nalezen

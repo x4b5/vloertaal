@@ -11,10 +11,9 @@
  *  - notice: "Er is iets veranderd" (src/lib/notice.ts);
  *  - bridge: "Wil je ook de werkregels leren?" (src/lib/bridge.ts);
  *  - nudge: "Bewaar je voortgang" (src/lib/backupNudge.ts);
- *  - reason: "Waarom leer jij Nederlands?" (src/lib/reason.ts);
- *  - play: "Hoe wil je oefenen? Rustig of met spel" (src/lib/play.ts), after the first lesson.
+ *  - reason: "Waarom leer jij Nederlands?" (src/lib/reason.ts).
  */
-export const HOME_CARDS = ['notice', 'bridge', 'nudge', 'reason', 'play'] as const;
+export const HOME_CARDS = ['notice', 'bridge', 'nudge', 'reason'] as const;
 export type HomeCard = (typeof HOME_CARDS)[number];
 
 /**

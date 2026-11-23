@@ -18,9 +18,13 @@ import { calmOn } from './calm';
  * Set as data-play on <html>, as data-calm (src/lib/calm.ts).
  */
 
-/** The game mode is on: chosen, and the calm screen is not on. */
-export function playOn(p: Pick<Progress, 'play' | 'calm'>): boolean {
-  return p.play === true && !calmOn(p.calm);
+/**
+ * The game mode is on whenever the calm screen is not (the owner, 23 November 2026: "Spel" is the
+ * standard, "Standaard" is gone; the juice only plays when a button is tapped). Kalm, or a phone
+ * that asks for less motion while nothing is chosen ("auto"), turns it off.
+ */
+export function playOn(p: Pick<Progress, 'calm'>): boolean {
+  return !calmOn(p.calm);
 }
 
 export function applyPlay(on: boolean): void {
@@ -47,29 +51,6 @@ export function pointsFor(run: number, correct: boolean, almost = false): number
   if (!correct) return 0;
   const p = POINTS * comboOf(run);
   return almost ? p / 2 : p;
-}
-
-/** The learner's choice in Settings: on or off. Choosing it switches "Rustig scherm" off when it was on. */
-export function withPlay<P extends Pick<Progress, 'play' | 'calm' | 'playAsked'>>(p: P, on: boolean): P {
-  const { play: _old, ...rest } = p;
-  // (Also "auto": on a phone that asks for less motion the calm screen would keep it off. The
-  // phone's own "less motion" still stops all movement; the sounds and points stay.)
-  return { ...rest, ...(on ? { play: true, calm: 'off' as const } : {}), playAsked: true } as P;
-}
-
-/** "Rustig scherm: aan" switches the game mode off (they are two sides of one choice). */
-export function withCalm<P extends Pick<Progress, 'play' | 'calm'>>(p: P, calm: NonNullable<Progress['calm']>): P {
-  const { play, ...rest } = p;
-  return { ...rest, calm, ...(play && calm !== 'on' ? { play } : {}) } as P;
-}
-
-/** After how many finished lessons the home asks once: "Hoe wil je oefenen? Rustig of met spel". */
-export const PLAY_ASK_AFTER = 1;
-
-/** The card on the home: once, after the first lesson; not for who already chose (Settings). */
-export function playAskDue(p: Pick<Progress, 'playAsked' | 'calm'>, lessonsDone: number): boolean {
-  // Who chose "Rustig scherm: aan" already said how: not asked.
-  return !p.playAsked && p.calm !== 'on' && lessonsDone >= PLAY_ASK_AFTER;
 }
 
 /** The points of a finished lesson added to the learner's total (shown on the result). */
@@ -180,21 +161,19 @@ export function finishPlayLesson<P extends Pick<Progress, 'playPoints' | 'playDa
   };
 }
 
-/* ---- "Sfeer" (the owner, 23 November 2026): calm screen and game mode as one setting ---- */
+/* ---- "Sfeer" (the owner, 23 November 2026): Kalm or Spel, one setting ---- */
 
-/** The three moods: Kalm ("Rustig scherm" on), Standaard (the app as it is; as the phone asks), Spel. */
-export type Sfeer = 'calm' | 'standard' | 'game';
-export const SFEER: Sfeer[] = ['calm', 'standard', 'game'];
+/** The two moods: Spel (the standard: points, sounds, the juice on a tap) and Kalm ("Rustig scherm"). */
+export type Sfeer = 'game' | 'calm';
+export const SFEER: Sfeer[] = ['game', 'calm'];
 
-/** The learner's mood, from the two stored choices (calm and play stay as they were saved). */
-export function sfeerOf(p: Pick<Progress, 'play' | 'calm'>): Sfeer {
-  if (p.play === true && p.calm !== 'on') return 'game';
-  return p.calm === 'on' ? 'calm' : 'standard';
+/** The learner's mood: Kalm when the calm screen is on (chosen, or the phone asks for less motion), else Spel. */
+export function sfeerOf(p: Pick<Progress, 'calm'>): Sfeer {
+  return calmOn(p.calm) ? 'calm' : 'game';
 }
 
-/** The progress with a mood chosen: Kalm = calm on; Standaard = calm as the phone, no game; Spel = the game. */
-export function withSfeer<P extends Pick<Progress, 'play' | 'calm' | 'playAsked'>>(p: P, s: Sfeer): P {
-  if (s === 'game') return withPlay(p, true);
-  const { play: _off, ...rest } = p;
-  return { ...rest, calm: s === 'calm' ? 'on' : 'auto', playAsked: true } as P;
+/** The progress with a mood chosen: Kalm = the calm screen on; Spel = off (also on a phone that asks for less
+ *  motion: the choice is the learner's; that phone's setting still stops all movement). */
+export function withSfeer<P extends Pick<Progress, 'calm'>>(p: P, s: Sfeer): P {
+  return { ...p, calm: s === 'calm' ? 'on' : 'off' };
 }

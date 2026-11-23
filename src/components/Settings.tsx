@@ -115,8 +115,8 @@ const TextA = ({ size }: { size: TextSize }) => <span className={`text-size-a te
 
 const TEXT_KEYS = { normal: 'textNormal', large: 'textLarge', xl: 'textXl' } as const;
 const THEME_KEYS = { auto: 'themeAuto', light: 'themeSand', haven: 'themeHarbour', werkjas: 'themeWorkwear', dark: 'themeDark' } as const;
-const SFEER_KEYS = { calm: 'sfeerCalm', standard: 'sfeerStandard', game: 'sfeerGame' } as const;
-const SFEER_NL = { calm: 'Kalm', standard: 'Standaard', game: 'Spel' } as const;
+const SFEER_KEYS = { calm: 'sfeerCalm', game: 'sfeerGame' } as const;
+const SFEER_NL = { calm: 'Kalm', game: 'Spel' } as const;
 /** "Rustig scherm": a line that settles (a wave that becomes still). */
 const CalmIcon = ({ size = 24, still }: { size?: number; still?: boolean }) => (
   <svg className="icon" viewBox="0 0 24 24" width={size} height={size} aria-hidden focusable="false">

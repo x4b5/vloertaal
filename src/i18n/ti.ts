@@ -293,7 +293,7 @@ const lang: HelpLanguageSource = {
     settingOn: 'ክፉት',
     settingOff: 'ዕጹው',
     sectorGroupMake: 'ምስራሕን ምጽዓንን',
-    sectorGroupCare: 'ክንክንን ኣገልግሎትን',
+    sectorGroupCare: "ክንክንን ቈልዑን", // nieuw, nalezen
     sectorGroupShop: 'ድኳንን ቤት ብልዕን', // nieuw, nalezen
     sectorGroupBuild: 'ህንጻን ቴክኒክን', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'ድምጺ ሰበይቲ',
@@ -484,22 +484,20 @@ const lang: HelpLanguageSource = {
     speakFromMemory: 'ሕጂ ብልቢ፡ ብሆላንድኛ እንታይ ነይሩ?', // nieuw, nalezen
     keptNofM: { m: 'ቃላት ቅድሚ 2 ሰሙን ወይ ልዕሊኡ፡ ገና {n} ካብ {m} ትፈልጥ ኔርካ።', f: 'ቃላት ቅድሚ 2 ሰሙን ወይ ልዕሊኡ፡ ገና {n} ካብ {m} ትፈልጢ ኔርኪ።', x: 'ቃላት ቅድሚ 2 ሰሙን ወይ ልዕሊኡ፡ ገና {n} ካብ {m} ትፈልጡ ኔርኩም።' }, // nieuw, nalezen
     verbSecond: 'ግሲ ኣብ ቦታ 2 እዩ።', // nieuw, nalezen
-    calmScreen: 'ህዱእ ስክሪን', // nieuw, nalezen
-    calmAuto: { m: 'ከም ተሌፎንካ', f: 'ከም ተሌፎንኪ', x: 'ከም ተሌፎንኩም' }, // nieuw, nalezen
-    calmHint: 'ክፉት: ዝንቀሳቐስ የለን፡ ድሕሪ ትምህርቲ ናይ ተኸታታሊ መዓልትታት ጽምብል የለን፡ መዓልትታትን ቃላትን ኣብ ቀንዲ ስክሪን ኣይርአዩን።', // nieuw, nalezen
-    playMode: 'ናይ ጸወታ ኣገባብ', // nieuw, nalezen
-    playHint: 'ክፉት: ንነፍሲ ወከፍ ቅኑዕ መልሲ ነጥቢ፡ ብዙሓት ብተኸታታሊ ቅኑዓት እንተኾይኖም ዝያዳ ነጥቢ። ዝያዳ ድምጽን ምንቅስቓስን። ጌጋ ዋጋ የብሉን።', // nieuw, nalezen
     playPoints: 'ነጥቢ', // nieuw, nalezen
     playTotal: { m: 'ኩሉ ነጥብታትካ', f: 'ኩሉ ነጥብታትኪ', x: 'ኩሉ ነጥብታትኩም' }, // nieuw, nalezen
-    playAskTitle: { m: 'ብኸመይ ክትለማመድ ትደሊ?', f: 'ብኸመይ ክትለማመዲ ትደልዪ?', x: 'ብኸመይ ክትለማመዱ ትደልዩ?' }, // nieuw, nalezen
-    playAskCalm: 'ብህድኣት', // nieuw, nalezen
-    playAskFun: 'ምስ ጸወታ', // nieuw, nalezen
-    playAskHint: { m: 'ምስ ጸወታ: ነጥቢ፡ ድምጽን ምንቅስቓስን። ኣብ ምድላዋት ክትቅይሮ ትኽእል ኢኻ።', f: 'ምስ ጸወታ: ነጥቢ፡ ድምጽን ምንቅስቓስን። ኣብ ምድላዋት ክትቅይርዮ ትኽእሊ ኢኺ።', x: 'ምስ ጸወታ: ነጥቢ፡ ድምጽን ምንቅስቓስን። ኣብ ምድላዋት ክትቅይርዎ ትኽእሉ ኢኹም።' }, // nieuw, nalezen
     sfeer: 'ሃዋህው', // nieuw, nalezen
     sfeerCalm: 'ህዱእ', // nieuw, nalezen
-    sfeerStandard: 'ልሙድ', // nieuw, nalezen
     sfeerGame: 'ጸወታ', // nieuw, nalezen
-    sfeerHint: 'ህዱእ: ዝንቀሳቐስ የለን፡ ጽምብል የለን። ልሙድ: ኣፕ ከም ዘሎ። ጸወታ: ነጥቢ፡ ድምጽን ብዙሕ ምንቅስቓስን።', // nieuw, nalezen
+    sfeerHint: 'ህዱእ: ዝንቀሳቐስ የለን፡ ጽምብል የለን። ጸወታ: ነጥቢ፡ ድምጽን ብዙሕ ምንቅስቓስን።', // nieuw, nalezen
+    sectorGroupService: "ኣገልግሎትን ሓለዋን", // nieuw, nalezen
+    sectorGroupOutdoor: "ኣብ ደገ ምስራሕ", // nieuw, nalezen
+    sectorChildcare: "ክንክን ቈልዑ", // nieuw, nalezen
+    sectorWaste: "ጎሓፍን ሪሳይክሊንግን", // nieuw, nalezen
+    sectorFood: "ኢንዱስትሪ መግቢ", // nieuw, nalezen
+    sectorSecurity: "ሓለዋ", // nieuw, nalezen
+    sectorFacility: "ኣገልግሎታት ህንጻ", // nieuw, nalezen
+    sectorGreen: "ቀጠልያ ቦታታትን ጀርዲናትን", // nieuw, nalezen
     playLevel: 'ደረጃ', // nieuw, nalezen
     playLevel1: 'መጀመርታ', // nieuw, nalezen
     playLevel2: 'ምምሃር', // nieuw, nalezen

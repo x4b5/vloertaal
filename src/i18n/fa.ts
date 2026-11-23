@@ -483,22 +483,12 @@ const lang: HelpLanguageSource = {
     speakFromMemory: 'حالا از حفظ: به هلندی چه بود؟', // nieuw, nalezen
     keptNofM: 'واژه‌های دو هفته پیش یا قدیمی‌تر: هنوز {n} از {m} را بلد بودید.', // nieuw, nalezen
     verbSecond: 'فعل در جای دوم است.', // nieuw, nalezen
-    calmScreen: 'صفحهٔ آرام', // nieuw, nalezen
-    calmAuto: 'مثل گوشی شما', // nieuw, nalezen
-    calmHint: 'روشن: هیچ چیز حرکت نمی‌کند، بعد از درس جشنی برای روزهای پشت سر هم نیست، و روزها و کلمه‌ها در صفحهٔ اصلی نشان داده نمی‌شوند.', // nieuw, nalezen
-    playMode: 'حالت بازی', // nieuw, nalezen
-    playHint: 'روشن: برای هر جواب درست امتیاز، و اگر چند جواب پشت سر هم درست باشد امتیاز بیشتر. صدا و حرکت بیشتر. اشتباه چیزی از شما کم نمی‌کند.', // nieuw, nalezen
     playPoints: 'امتیاز', // nieuw, nalezen
     playTotal: 'همهٔ امتیازهای شما', // nieuw, nalezen
-    playAskTitle: 'چطور می‌خواهید تمرین کنید؟', // nieuw, nalezen
-    playAskCalm: 'آرام', // nieuw, nalezen
-    playAskFun: 'با بازی', // nieuw, nalezen
-    playAskHint: 'با بازی: امتیاز، صدا و حرکت. می‌توانید آن را در تنظیمات تغییر دهید.', // nieuw, nalezen
     sfeer: 'حال‌وهوا', // nieuw, nalezen
     sfeerCalm: 'آرام', // nieuw, nalezen
-    sfeerStandard: 'معمولی', // nieuw, nalezen
     sfeerGame: 'بازی', // nieuw, nalezen
-    sfeerHint: 'آرام: هیچ چیز حرکت نمی‌کند، جشنی نیست. معمولی: برنامه همان‌طور که هست. بازی: امتیاز، صدا و حرکت زیاد.', // nieuw, nalezen
+    sfeerHint: 'آرام: هیچ چیز حرکت نمی‌کند، جشنی نیست. بازی: امتیاز، صدا و حرکت زیاد.', // nieuw, nalezen
     sectorGroupService: "خدمات و نگهبانی", // nieuw, nalezen
     sectorGroupOutdoor: "کار در فضای باز", // nieuw, nalezen
     sectorChildcare: "مهدکودک", // nieuw, nalezen

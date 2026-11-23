@@ -175,7 +175,7 @@ const PENDING_RECORDING = new Set<string>([
   'Achter in het perk, bij de muur.',
   'Nee, wacht. Er komt een vrachtwagen.',
   'Dat weet ik niet. Vraag het aan de gemeente.',
-  'Een moment. Ik bel hem even.',
+  'Een moment. Ik bel haar even.',
   'In de garderobe, naast de lift.',
   'Voor Financiën, op de tweede verdieping.',
   'Om tien uur. Zorg dat alles klaarstaat.',

@@ -209,6 +209,55 @@ const t: CultureTranslation = {
     'c.oilchange.a.why': "ክንደይ ተሓቲቱ: እቲ ሊትሮ፡ ብኸመይ ከም ዝፍተሽ ድማ።", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.a.why': "ሓድሽ ክኸውን ኣለዎ ድዩ ተሓቲቱ: እወ፡ ምኽንያቱ ድማ።", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "እንታይ ክግበር ከም ዘለዎ ተሓቲቱ: ኣብቲ ትእዛዝ ስራሕ ምርኣይ።", // nieuw, nalezen // nagelezen AI 22 nov
+    // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
+    'c.mowing.a.why': "ክወስዶ ይፍቀድ ድዩ ተሓቲቱ: እወ፡ ቅድም እንታይ ከም ዝግበር ድማ።", // nieuw, nalezen
+    'c.pruning.a.why': "ኣየኖት ጨናፍር ተሓቲቱ: እቶም ዝነቐጹ ጥራይ።", // nieuw, nalezen
+    'c.hedge.a.why': "ክሳዕ ክንደይ ቁመት ተሓቲቱ: ክሳዕ እቲ ገመድ፡ ካብኡ ዝሓጸረ ኣይኮነን።", // nieuw, nalezen
+    'c.chainsaw.a.why': "ይፍቀድ ድዩ ተሓቲቱ: ገና ኣይኮነን፡ ቅድም እንታይ ከም ዝመጽእ ድማ።", // nieuw, nalezen
+    'c.weeding.a.why': "ዘይድለ ሳዕሪ ድዩ ተሓቲቱ: ኣይፋል፡ እንታይ ከም ዝግበረሉ ድማ።", // nieuw, nalezen
+    'c.planting.a.why': "ናበይ ከም ዝኸይድ ተሓቲቱ: ኣብቲ ቦታ ዕምባባ ዘሎ ቦታኡ።", // nieuw, nalezen
+    'c.roadside.a.why': "ክሰግር ይኽእል ድዩ ተሓቲቱ: ኣይፋል፡ ምጽባይ፡ ምኽንያቱ ድማ።", // nieuw, nalezen
+    'c.litter.a.why': "ነባሪ መዓስ ኢሉ ይሓትት: ኣይፍለጥን፡ መን ከም ዝፈልጥ ድማ።", // nieuw, nalezen
+    'c.reception.a.why': "በጻሒ ቆጸራ ኣለዎ: ሓንሳእ፡ ጻውዒት ይግበር።", // nieuw, nalezen
+    'c.visitors.a.why': "ጃኬት ናበይ ከም ዝኸይድ ተሓቲቱ: እቲ ቦታ፡ ኣበይ ከም ዘሎ ድማ።", // nieuw, nalezen
+    'c.mailroom.a.why': "ንመን ምዃኑ ተሓቲቱ: እቲ ክፍሊ፡ እቲ ደርቢ ድማ።", // nieuw, nalezen
+    'c.meetingroom.a.why': "ሰዓት ክንደይ ተሓቲቱ: እቲ ሰዓት፡ እንታይ ክግበር ከም ዘለዎ ድማ።", // nieuw, nalezen
+    'c.faults.a.why': "ስለምንታይ ዝሑል ምዃኑ ተሓቲቱ: እንታይ ከም ዝተበላሸወ፡ ሓገዝ መዓስ ከም ዝመጽእ ድማ።", // nieuw, nalezen
+    'c.repairs.a.why': "ቢፕ ይብል ድዩ ተሓቲቱ: እወ፡ ምኽንያቱ ድማ።", // nieuw, nalezen
+    'c.moving.a.why': "ናበይ ከም ዝኸይድ ተሓቲቱ: እቲ ክፍሊ፡ ኣበይ ከም ዝርአ ድማ።", // nieuw, nalezen
+    'c.closing.a.why': "ኣብ ውሽጢ ሰብ ኣሎ ድዩ ተሓቲቱ: ኣይፋል፡ ሕጂ እንታይ ከም ዝግበር ድማ።", // nieuw, nalezen
+    'c.patrol.a.why': "ገለ ነገር ተራእዩ ድዩ ተሓቲቱ: እወ፡ እንታይን ኣበይን።", // nieuw, nalezen
+    'c.access.a.why': "ብዘይ ካርድ ክኣቱ ተሓቲቱ: ይቕሬታ፡ ብዘይ ካርድ ኣይከኣልን።", // nieuw, nalezen
+    'c.cameras.a.why': "እንታይ ከም ዝርአ ተሓቲቱ: መን፡ ኣበይ፡ እንታይ ከም ዝግበር ድማ።", // nieuw, nalezen
+    'c.report.a.why': "ኣብ ጸብጻብ እንታይ ከም ዝኣቱ ተሓቲቱ: እንታይ፡ ኣበይን መዓስን።", // nieuw, nalezen
+    'c.evacuation.a.why': "ኩሉ ኣብ ደገ ድዩ ተሓቲቱ: ኣይፋል፡ ክንደይ ከም ዝጎድሉ።", // nieuw, nalezen
+    'c.firstaid.a.why': "AED ኣበይ ከም ዘሎ ተሓቲቱ: እቲ ቦታ፡ ኣብ ጎኑ እንታይ ከም ዘሎ ድማ።", // nieuw, nalezen
+    'c.shoplifting.a.why': "ቦርሳ ክፍተሽ ይፍቀድ ድዩ ተሓቲቱ: ኣይፋል፡ መን ከም ዝገብሮ ድማ።", // nieuw, nalezen
+    'c.aggression.a.why': "ስለምንታይ ዘይፍቀድ ተሓቲቱ: እቲ ምኽንያት፡ ብህድኣት ዝተባህለ።", // nieuw, nalezen
+    'c.hygienelock.a.why': "ብዛዕባ ሰዓት ኢድ ተሓቲቱ: ኣይፋል፡ እቲ ሕጊ ድማ።", // nieuw, nalezen
+    'c.allergens.a.why': "ብሓባር ክኸይድ ይኽእል ድዩ ተሓቲቱ: ኣይፋል፡ ምኽንያቱ ድማ።", // nieuw, nalezen
+    'c.coldroom.a.why': "ስለምንታይ ቢፕ ከም ዝብል ተሓቲቱ: እቲ ምኽንያት፡ እንታይ ከም ዝግበር ድማ።", // nieuw, nalezen
+    'c.foreignbody.a.why': "እንታይ ከም ዝግበር ተሓቲቱ: ንመን ክርአ ከም ዘለዎ።", // nieuw, nalezen
+    'c.cutting.a.why': "ክንደይ ተሓቲቱ: እቲ ክብደት፡ ኣበይ ከም ዝርአ ድማ።", // nieuw, nalezen
+    'c.labels.a.why': "ኣየናይ ዕለት ተሓቲቱ: መዓስ፡ ኣበይ ከም ዝርአ ድማ።", // nieuw, nalezen
+    'c.linecleaning.a.why': "ጽሩይ ድዩ ተሓቲቱ: ገና፡ እንታይ ከም ዝተረፈ ድማ።", // nieuw, nalezen
+    'c.haccp.a.why': "ስለምንታይ ተሓቲቱ: እቲ መግቢ ውሑስ ምዃኑ ንምፍላጥ።", // nieuw, nalezen
+    'c.binlorry.a.why': "ኣብ ድሕሪት ክጓዓዝ ይፍቀድ ድዩ ተሓቲቱ: ኣይፋል፡ ኣበይ ከም ዝጓዓዝ ድማ።", // nieuw, nalezen
+    'c.reversing.a.why': "ሓገዝ ተሓቲቱ: እወ፡ ኣበይ ደው ከም ዝበለ፡ እንታይ ከም ዝግበር ድማ።", // nieuw, nalezen
+    'c.wastesorting.a.why': "ናበይ ከም ዝኸይድ ተሓቲቱ: እቲ መጕሓፊ፡ ምኽንያቱ ድማ።", // nieuw, nalezen
+    'c.wastesafety.a.why': "ድሕሪ ምቑራጽ እንታይ ከም ዝግበር ተሓቲቱ: ምሕጻብ፡ ምንጋር ድማ።", // nieuw, nalezen
+    'c.yard.a.why': "ናበይ ከም ዝኸይድ ተሓቲቱ: እቲ ኮንተይነር፡ ኣበይ ከም ዘሎ ድማ።", // nieuw, nalezen
+    'c.hazardous.a.why': "ኣብ ውሽጢ እንታይ ከም ዘሎ ተሓቲቱ: ኣይፍለጥን፡ ስለዚ ኣብ ጎኒ ይቕመጥ።", // nieuw, nalezen
+    'c.baler.a.why': "ክርአ ይፍቀድ ድዩ ተሓቲቱ: ኣይፋል፡ ቅድም እንታይ ከም ዝመጽእ ድማ።", // nieuw, nalezen
+    'c.shovel.a.why': "ክሓልፍ ይፍቀድ ድዩ ተሓቲቱ: እቲ መራሒ ምስ ዝርኢ ጥራይ።", // nieuw, nalezen
+    'c.nappies.a.why': "መዓስ ተሓቲቱ: እቲ ሰዓት፡ ኣበይ ከም ዝተጻሕፈ ድማ።", // nieuw, nalezen
+    'c.mealtime.a.why': "ክወስድ ይፍቀደሉ ድዩ ተሓቲቱ: ኣይፋል፡ ምኽንያቱ፡ ኣበይ ከም ዝርአ ድማ።", // nieuw, nalezen
+    'c.naptime.a.why': "ደቂሳ ድያ ተሓቲቱ: እወ፡ ካብ መዓስ፡ ከም ብሓድሽ ከም እትፍተሽ ድማ።", // nieuw, nalezen
+    'c.playtime.a.why': "ቈልዓ ክጻወት ይፍቀድ ድዩ ተሓቲቱ: እወ፡ ኣበይ፡ ድሕሪኡ እንታይ ድማ።", // nieuw, nalezen
+    'c.pickup.a.why': "መን ከም ዝወስድ ተሓቲቱ: እቲ ሰብ፡ ኣብቲ ዝርዝር ከም ዘላ ድማ።", // nieuw, nalezen
+    'c.childsafety.a.why': "ወዲቓ ድያ ተሓቲቱ: እወ፡ እንታይ ከም ዘለዋ፡ መን ከም ዝድወለሉ ድማ።", // nieuw, nalezen
+    'c.sickchild.a.why': "ከመይ ኣሎ ተሓቲቱ: እንታይ ከም ዝርአ፡ እንታይ ከም ዝግበር ድማ።", // nieuw, nalezen
+    'c.grouprules.a.why': "በይኑ ምኻድ ይፍቀድ ድዩ ተሓቲቱ: እወ፡ ግን ቅድም ንብጻይ ስራሕ ምንጋር።", // nieuw, nalezen
   },
 };
 

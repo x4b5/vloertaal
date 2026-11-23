@@ -484,22 +484,12 @@ const lang: HelpLanguageSource = {
     speakFromMemory: 'Ahora de memoria: ¿cómo era en neerlandés?', // nieuw, nalezen
     keptNofM: 'Palabras de hace 2 semanas o más: todavía sabías {n} de {m}.', // nieuw, nalezen
     verbSecond: 'El verbo va en el lugar 2.', // nieuw, nalezen
-    calmScreen: 'Pantalla tranquila', // nieuw, nalezen
-    calmAuto: 'Como tu teléfono', // nieuw, nalezen
-    calmHint: 'Activado: nada se mueve, no hay celebración de tu racha después de una lección, y tu racha y tus palabras no aparecen en la pantalla de inicio.', // nieuw, nalezen
-    playMode: 'Modo juego', // nieuw, nalezen
-    playHint: 'Activado: puntos por cada respuesta correcta, más si aciertas varias seguidas. Más sonidos y movimiento. Un error no cuesta nada.', // nieuw, nalezen
     playPoints: 'Puntos', // nieuw, nalezen
     playTotal: 'Todos tus puntos', // nieuw, nalezen
-    playAskTitle: '¿Cómo quieres practicar?', // nieuw, nalezen
-    playAskCalm: 'Con calma', // nieuw, nalezen
-    playAskFun: 'Con juego', // nieuw, nalezen
-    playAskHint: 'Con juego: puntos, sonidos y movimiento. Puedes cambiarlo en Ajustes.', // nieuw, nalezen
     sfeer: 'Ambiente', // nieuw, nalezen
     sfeerCalm: 'Calma', // nieuw, nalezen
-    sfeerStandard: 'Estándar', // nieuw, nalezen
     sfeerGame: 'Juego', // nieuw, nalezen
-    sfeerHint: 'Calma: nada se mueve, sin celebraciones. Estándar: la app tal como es. Juego: puntos, sonidos y mucho movimiento.', // nieuw, nalezen
+    sfeerHint: 'Calma: nada se mueve, sin celebraciones. Juego: puntos, sonidos y mucho movimiento.', // nieuw, nalezen
     sectorGroupService: "Servicios y seguridad", // nieuw, nalezen
     sectorGroupOutdoor: "Trabajar al aire libre", // nieuw, nalezen
     sectorChildcare: "Cuidado infantil", // nieuw, nalezen
