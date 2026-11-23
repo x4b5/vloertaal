@@ -139,6 +139,31 @@ const t: CultureTranslation = {
     'kjn.u.kweek.2': "Je peux demander si une tomate est assez mûre.", // nieuw, nalezen
     'kjn.u.carservice.1': "Je peux dire que le voyant d’alerte est allumé.", // nieuw, nalezen
     'kjn.u.carservice.2': "Je peux demander combien d’huile il faut mettre.", // nieuw, nalezen
+    // The new sectors (23 November 2026).
+    'kjn.u.mowing.1': "Je peux dire que l’herbe est trop mouillée.", // nieuw, nalezen
+    'kjn.u.mowing.2': "Je peux demander quelles branches il faut couper.", // nieuw, nalezen
+    'kjn.u.planting.1': "Je peux dire qu’il y a des morceaux de verre.", // nieuw, nalezen
+    'kjn.u.planting.2': "Je peux demander si je peux traverser la route.", // nieuw, nalezen
+    'kjn.u.frontdesk.1': "Je peux saluer un visiteur et l’aider.", // nieuw, nalezen
+    'kjn.u.frontdesk.2': "Je peux demander pour qui est un colis.", // nieuw, nalezen
+    'kjn.u.maintenance.1': "Je peux signaler une panne.", // nieuw, nalezen
+    'kjn.u.maintenance.2': "Je peux demander où un bureau doit aller.", // nieuw, nalezen
+    'kjn.u.guarding.1': "Je peux demander à voir la pièce d’identité de quelqu’un.", // nieuw, nalezen
+    'kjn.u.guarding.2': "Je peux dire à la radio ce que je vois.", // nieuw, nalezen
+    'kjn.u.incidents.1': "Je peux appeler le 112 et dire ce qui se passe.", // nieuw, nalezen
+    'kjn.u.incidents.2': "Je peux parler calmement à un client en colère.", // nieuw, nalezen
+    'kjn.u.foodhygiene.1': "Je peux dire que la chambre froide est trop chaude.", // nieuw, nalezen
+    'kjn.u.foodhygiene.2': "Je peux demander s’il y a des fruits à coque dedans.", // nieuw, nalezen
+    'kjn.u.foodline.1': "Je peux dire que l’étiquette n’est pas bonne.", // nieuw, nalezen
+    'kjn.u.foodline.2': "Je peux demander combien il faut mettre dans un bac.", // nieuw, nalezen
+    'kjn.u.collection.1': "Je peux aider le chauffeur à reculer.", // nieuw, nalezen
+    'kjn.u.collection.2': "Je peux dire qu’une poubelle à roulettes est trop lourde.", // nieuw, nalezen
+    'kjn.u.recycling.1': "Je peux dire à un visiteur où vont ses déchets.", // nieuw, nalezen
+    'kjn.u.recycling.2': "Je peux dire que la presse est bloquée.", // nieuw, nalezen
+    'kjn.u.toddlers.1': "Je peux dire que je vais changer un enfant.", // nieuw, nalezen
+    'kjn.u.toddlers.2': "Je peux demander si un enfant dort déjà.", // nieuw, nalezen
+    'kjn.u.daycare.1': "Je peux dire à un parent comment s’est passée la journée.", // nieuw, nalezen
+    'kjn.u.daycare.2': "Je peux demander qui vient chercher un enfant.", // nieuw, nalezen
   },
 };
 
