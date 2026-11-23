@@ -292,7 +292,7 @@ const lang: HelpLanguageSource = {
     settingOn: 'روشن',
     settingOff: 'خاموش',
     sectorGroupMake: 'ساخت و انتقال',
-    sectorGroupCare: 'مراقبت و خدمات',
+    sectorGroupCare: "مراقبت و اطفال", // nieuw, nalezen
     sectorGroupShop: 'دکان و رستورانت', // nieuw, nalezen
     sectorGroupBuild: 'ساختمان و فنی', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'صدای زن',
@@ -499,6 +499,14 @@ const lang: HelpLanguageSource = {
     sfeerStandard: 'عادی', // nieuw, nalezen
     sfeerGame: 'بازی', // nieuw, nalezen
     sfeerHint: 'آرام: هیچ چیز حرکت نمی‌کند، جشنی نیست. عادی: اپ همان‌طور که هست. بازی: امتیاز، صدا و حرکت زیاد.', // nieuw, nalezen
+    sectorGroupService: "خدمات و امنیت", // nieuw, nalezen
+    sectorGroupOutdoor: "کار در بیرون", // nieuw, nalezen
+    sectorChildcare: "کودکستان", // nieuw, nalezen
+    sectorWaste: "کثافات و بازیافت", // nieuw, nalezen
+    sectorFood: "صنعت مواد خوراکی", // nieuw, nalezen
+    sectorSecurity: "امنیت", // nieuw, nalezen
+    sectorFacility: "خدمات ساختمان", // nieuw, nalezen
+    sectorGreen: "سبزه‌زارها و باغ‌ها", // nieuw, nalezen
     playLevel: 'سطح', // nieuw, nalezen
     playLevel1: 'تازه‌کار', // nieuw, nalezen
     playLevel2: 'شاگرد', // nieuw, nalezen
