@@ -1664,8 +1664,10 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
    A part (src/pictures/kit.tsx Move) is drawn where it ends, and the keyframes only say where it
    comes from, so its base style is the still picture: with "less motion" or "Rustig scherm"
    (animation: none !important, below) that is all there is. It starts just after the word's
-   sound, plays once (a tap on the card's speaker plays it again: a fresh picture), never loops
-   and no step is shorter than 0.4 s: nothing flashes (WCAG 2.3.1). Turns are about a point in the
+   sound and plays three times, a picture in two steps twice (the owner, 23 November 2026: once was
+   too short to see what a thing is for), always under 5 s in all (WCAG 2.2.2), with the still
+   picture held a moment at the end of each round; a tap on the card's speaker plays it again (a
+   fresh picture). No step is shorter than 0.4 s: nothing flashes (WCAG 2.3.1). Turns are about a point in the
    picture (a knee, a clock's centre: transform-origin in its units, transform-box view-box);
    growth is from the part's own left edge (fill-box). The second round (the owner's "go on", 5
    November 2026) adds a fall (drop: the timing of tip), a second step after the first (then: it
@@ -1674,22 +1676,45 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .word-pic .mv-turn, .word-pic .mv-tip { transform-box: view-box; }
 .word-pic .mv-grow { transform-box: fill-box; transform-origin: 0 50%; }
 .word-pic .mv-sag { transform-box: fill-box; transform-origin: 50% 100%; }
-.intro-card .word-pic .mv-from { animation: mv-slide 1.2s cubic-bezier(0.3, 0.6, 0.35, 1) 0.4s 1 backwards; }
-.intro-card .word-pic .mv-slow { animation: mv-slide 2s cubic-bezier(0.45, 0.2, 0.55, 0.8) 0.4s 1 backwards; }
-.intro-card .word-pic .mv-fast { animation: mv-slide 0.5s cubic-bezier(0.2, 0.7, 0.3, 1) 0.4s 1 backwards; }
-.intro-card .word-pic .mv-drop { animation: mv-slide 0.7s cubic-bezier(0.55, 0, 0.7, 0.6) 0.8s 1 backwards; }
-.intro-card .word-pic .mv-then { animation: mv-slide 1.2s cubic-bezier(0.3, 0.6, 0.35, 1) 1.8s 1 backwards; }
-.intro-card .word-pic .mv-steps { animation: mv-slide 1.8s steps(3, jump-none) 0.4s 1 backwards; }
-.intro-card .word-pic .mv-turn { animation: mv-turn 1.4s ease-in-out 0.4s 1 backwards; }
-.intro-card .word-pic .mv-tip { animation: mv-turn 0.7s cubic-bezier(0.55, 0, 0.7, 0.6) 0.8s 1 backwards; }
-.intro-card .word-pic .mv-grow { animation: mv-grow 1.6s cubic-bezier(0.25, 0.6, 0.3, 1) 0.4s 1 backwards; }
-.intro-card .word-pic .mv-sag { animation: mv-sag 2s cubic-bezier(0.45, 0.2, 0.55, 0.8) 0.4s 1 backwards; }
-.intro-card .word-pic .mv-show { animation: mv-show 0.5s ease-out 1.6s 1 backwards; }
-@keyframes mv-slide { from { transform: translate(var(--mv-dx, 0px), var(--mv-dy, 0px)); } }
-@keyframes mv-turn { from { transform: rotate(var(--mv-turn, 0deg)); } }
-@keyframes mv-grow { from { transform: scaleX(var(--mv-grow, 0.1)); } }
-@keyframes mv-sag { from { transform: scaleY(var(--mv-sag, 1.2)); } }
-@keyframes mv-show { from { opacity: 0; } }
+.intro-card .word-pic .mv-from { animation: mvA-slide 1.5s cubic-bezier(0.3, 0.6, 0.35, 1) 0.4s 3 backwards; }
+.intro-card .word-pic .mv-slow { animation: mvA-slide 1.5s cubic-bezier(0.45, 0.2, 0.55, 0.8) 0.4s 3 backwards; }
+.intro-card .word-pic .mv-fast { animation: mvA-fast 1.5s cubic-bezier(0.2, 0.7, 0.3, 1) 0.4s 3 backwards; }
+.intro-card .word-pic .mv-steps { animation: mvA-steps 1.5s steps(3, jump-none) 0.4s 3 backwards; }
+.intro-card .word-pic .mv-turn { animation: mvA-turn 1.5s ease-in-out 0.4s 3 backwards; }
+.intro-card .word-pic .mv-grow { animation: mvA-grow 1.5s cubic-bezier(0.25, 0.6, 0.3, 1) 0.4s 3 backwards; }
+.intro-card .word-pic .mv-sag { animation: mvA-sag 1.5s cubic-bezier(0.45, 0.2, 0.55, 0.8) 0.4s 3 backwards; }
+/* A picture in two steps (a second step, a fall, a tip or something that appears after the first):
+   one round of 2.2 s holds both, twice (4.8 s with the start). */
+.intro-card .word-pic:has(.mv-then, .mv-drop, .mv-tip, .mv-show) :is(.mv-from, .mv-slow) { animation: mvB-slide 2.2s cubic-bezier(0.3, 0.6, 0.35, 1) 0.4s 2 backwards; }
+.intro-card .word-pic:has(.mv-then, .mv-drop, .mv-tip, .mv-show) .mv-steps { animation: mvB-steps 2.2s steps(3, jump-none) 0.4s 2 backwards; }
+.intro-card .word-pic:has(.mv-then, .mv-drop, .mv-tip, .mv-show) .mv-fast { animation: mvB-fast 2.2s cubic-bezier(0.2, 0.7, 0.3, 1) 0.4s 2 backwards; }
+.intro-card .word-pic:has(.mv-then, .mv-drop, .mv-tip, .mv-show) .mv-turn { animation: mvB-turn 2.2s ease-in-out 0.4s 2 backwards; }
+.intro-card .word-pic:has(.mv-then, .mv-drop, .mv-tip, .mv-show) .mv-grow { animation: mvB-grow 2.2s cubic-bezier(0.25, 0.6, 0.3, 1) 0.4s 2 backwards; }
+.intro-card .word-pic:has(.mv-then, .mv-drop, .mv-tip, .mv-show) .mv-sag { animation: mvB-sag 2.2s cubic-bezier(0.45, 0.2, 0.55, 0.8) 0.4s 2 backwards; }
+.intro-card .word-pic .mv-then { animation: mvB-then 2.2s cubic-bezier(0.3, 0.6, 0.35, 1) 0.4s 2 backwards; }
+.intro-card .word-pic .mv-drop { animation: mvB-late 2.2s cubic-bezier(0.55, 0, 0.7, 0.6) 0.4s 2 backwards; }
+.intro-card .word-pic .mv-tip { animation: mvB-late-turn 2.2s cubic-bezier(0.55, 0, 0.7, 0.6) 0.4s 2 backwards; }
+.intro-card .word-pic .mv-show { animation: mvB-show 2.2s ease-out 0.4s 2 backwards; }
+/* One round: the part comes from its start (0%), arrives, and the still picture holds for the rest of
+   the round, so the eye sees where it ends; then it plays again. The last stop of every round is the
+   still picture itself (no transform), the picture's own base style: with "less motion" or Kalm
+   (animation: none) that is all there is. */
+@keyframes mvA-slide { 0% { transform: translate(var(--mv-dx, 0px), var(--mv-dy, 0px)); } 70%, 100% { transform: none; } }
+@keyframes mvA-steps { 0% { transform: translate(var(--mv-dx, 0px), var(--mv-dy, 0px)); } 85%, 100% { transform: none; } }
+@keyframes mvA-fast { 0% { transform: translate(var(--mv-dx, 0px), var(--mv-dy, 0px)); } 35%, 100% { transform: none; } }
+@keyframes mvA-turn { 0% { transform: rotate(var(--mv-turn, 0deg)); } 70%, 100% { transform: none; } }
+@keyframes mvA-grow { 0% { transform: scaleX(var(--mv-grow, 0.1)); } 70%, 100% { transform: none; } }
+@keyframes mvA-sag { 0% { transform: scaleY(var(--mv-sag, 1.2)); } 70%, 100% { transform: none; } }
+@keyframes mvB-slide { 0% { transform: translate(var(--mv-dx, 0px), var(--mv-dy, 0px)); } 42%, 100% { transform: none; } }
+@keyframes mvB-steps { 0% { transform: translate(var(--mv-dx, 0px), var(--mv-dy, 0px)); } 60%, 100% { transform: none; } }
+@keyframes mvB-fast { 0% { transform: translate(var(--mv-dx, 0px), var(--mv-dy, 0px)); } 22%, 100% { transform: none; } }
+@keyframes mvB-turn { 0% { transform: rotate(var(--mv-turn, 0deg)); } 42%, 100% { transform: none; } }
+@keyframes mvB-grow { 0% { transform: scaleX(var(--mv-grow, 0.1)); } 42%, 100% { transform: none; } }
+@keyframes mvB-sag { 0% { transform: scaleY(var(--mv-sag, 1.2)); } 42%, 100% { transform: none; } }
+@keyframes mvB-then { 0%, 42% { transform: translate(var(--mv-dx, 0px), var(--mv-dy, 0px)); } 82%, 100% { transform: none; } }
+@keyframes mvB-late { 0%, 30% { transform: translate(var(--mv-dx, 0px), var(--mv-dy, 0px)); } 62%, 100% { transform: none; } }
+@keyframes mvB-late-turn { 0%, 30% { transform: rotate(var(--mv-turn, 0deg)); } 62%, 100% { transform: none; } }
+@keyframes mvB-show { 0%, 54% { opacity: 0; } 74%, 100% { opacity: 1; } }
 .word-emoji { display: inline-flex; align-items: center; justify-content: center; }
 
 /* Dev page /?shot=pictures */

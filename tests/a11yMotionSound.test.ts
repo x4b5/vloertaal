@@ -83,10 +83,10 @@ describe('moving word pictures stand still with less motion and "Rustig scherm"'
     expect(css).toMatch(/:root\[data-calm\] \*, :root\[data-calm\] \*::before, :root\[data-calm\] \*::after \{\s*animation: none !important;/);
   });
 
-  it('switched off, a picture is its still self: the keyframes only say where a part comes from', () => {
+  it('switched off, a picture is its still self: every round ends on the still picture (no transform, full opacity)', () => {
     for (const m of mv) {
       const name = /animation\s*:\s*([\w-]+)/.exec(m[2])![1];
-      expect(keyframes.get(name)?.trim(), name).toMatch(/^from\s*\{[^{}]*\}$/);
+      expect(keyframes.get(name)?.trim(), name).toMatch(/^0%[^{}]*\{[^{}]*\}\s*[\d%,\s]*100%\s*\{\s*(transform: none|opacity: 1);?\s*\}$/);
     }
   });
 });
