@@ -279,6 +279,33 @@ const t: CultureTranslation = {
     'c.phases.a.why': "Ți se spune că munca se oprește: bine, și ceri altă muncă.", // nieuw, nalezen
     'c.deductions.a.why': "Ți se spune de o reținere: întrebi dacă e permisă și verifici.", // nieuw, nalezen
     'c.agencyhome.a.why': "Ți se spune să pleci curând: e puțin timp, și ceri întâi un sfat.", // nieuw, nalezen
+    // The basis units at four lessons (23 November 2026).
+    'c.roster.a.why': "Ți se spune că programul s-a schimbat: spui bine și întrebi ce zi.", // nieuw, nalezen
+    'c.breaks.a.why': "Te întreabă de pauza de prânz: ora și cât durează.", // nieuw, nalezen
+    'c.wound.a.why': "Cineva e pe punctul să leșine: îl lași să stea întins și aduci ajutor.", // nieuw, nalezen
+    'c.callhelp.a.why': "Te întreabă dacă răspunde: nu, nu reacționează.", // nieuw, nalezen
+    'c.vacancy.a.why': "Te întreabă de ce suni: pentru postul liber, și mai e valabil?", // nieuw, nalezen
+    'c.result.a.why': "Ți se spune nu: răspunzi calm și întrebi de ce.", // nieuw, nalezen
+    'c.residence.a.why': "Ți se spune că permisul expiră în curând: ceri imediat unul nou.", // nieuw, nalezen
+    'c.newhome.a.why': "Te întreabă unde locuiești: o locuință nouă și noua adresă.", // nieuw, nalezen
+    'c.payparts.a.why': "Ți se cere numărul de angajat: unde e pe fluturașul de salariu.", // nieuw, nalezen
+    'c.latepay.a.why': "Ți se spune că banii vin mai târziu: vrei asta pe hârtie.", // nieuw, nalezen
+    'c.holiday.a.why': "Ți se cere să pleci în mai: preferi iulie și spui de ce.", // nieuw, nalezen
+    'c.special.a.why': "Te întreabă de concediul de naștere: da, și când.", // nieuw, nalezen
+    'c.unwell.a.why': "Te întreabă dacă ești bine: nu, și poți merge acasă?", // nieuw, nalezen
+    'c.injury.a.why': "Ți se cere o declarație: da, și o copie pentru tine.", // nieuw, nalezen
+    'c.debt.a.why': "Ți se spune să rămâi până plătești datoria: nu e voie, ceri ajutor.", // nieuw, nalezen
+    'c.inspection.a.why': "Ți se cere să vorbești: da, dar nu unde aude șeful.", // nieuw, nalezen
+    'c.carpool.a.why': "Te întreabă cine conduce: tu, și când îi iei.", // nieuw, nalezen
+    'c.train.a.why': "Te întreabă de ce ai întârziat: trenul, și ai trimis un mesaj.", // nieuw, nalezen
+    'c.checklist.a.why': "Te întreabă dacă ai uitat ceva: încă o privire pe listă.", // nieuw, nalezen
+    'c.leavesite.a.why': "Te întreabă dacă închizi tu: da, totul oprit și ușa încuiată.", // nieuw, nalezen
+    'c.stagedays.a.why': "Te întreabă de ce ai lipsit: ți-a fost rău și ai sunat la amândouă.", // nieuw, nalezen
+    'c.stageend.a.why': "Te întreabă de planuri: întâi diploma, apoi munca.", // nieuw, nalezen
+    'c.neighbours.a.why': "O vecină nouă te salută: te bucuri să o cunoști și îți spui numele.", // nieuw, nalezen
+    'c.join.a.why': "Te întreabă dacă vii: da, și vrei să vorbești cu profesorul.", // nieuw, nalezen
+    'c.workphotos.a.why': "Ți se cere o poză pentru internet: un nu politicos.", // nieuw, nalezen
+    'c.device.a.why': "Te întreabă de o aplicație nouă: întâi întrebi la departamentul IT.", // nieuw, nalezen
   },
 };
 

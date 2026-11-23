@@ -422,6 +422,39 @@ const t: CultureTranslation = {
     'c.whereis.o2': "Sigues buscando: volver a preguntar da vergüenza.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.o3': "Empiezas a trabajar con tu propia ropa.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.w': "Preguntar cuesta diez segundos. Si buscas por tu cuenta, puedes llegar tarde. Los compañeros saben que en un sitio nuevo es difícil encontrar el camino.", // nieuw, nalezen // nagelezen AI 22 nov
+    // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): the tips of l.roster, l.breaks, l.wound and l.callhelp.
+    'c.wound': "¿Una quemadura? Enfríala con agua", // nieuw, nalezen
+    'c.wound.b': "Un corte pequeño: aprieta encima con un paño limpio o una venda, y avisa a la persona de primeros auxilios. Una quemadura: enfríala enseguida con agua tibia del grifo, como mínimo 10 minutos. ¿Algo en el ojo? Acláralo con agua, o en la ducha lavaojos. ¿Es grave? Llama al 112. Pregunta el primer día dónde están el botiquín y la ducha lavaojos.", // nieuw, nalezen
+    'c.wound.p': "Me he quemado. ¿Dónde hay un grifo?", // nieuw, nalezen
+    'c.wound.s': "Un compañero se quema la mano con una máquina caliente. ¿Qué haces?", // nieuw, nalezen
+    'c.wound.o1': "La enfrías con agua tibia del grifo.", // nieuw, nalezen
+    'c.wound.o2': "Le pones enseguida mantequilla o una crema.", // nieuw, nalezen
+    'c.wound.o3': "Pones hielo directamente sobre la piel, y esperas.", // nieuw, nalezen
+    'c.wound.w': "El agua saca el calor de la piel, así la quemadura es menos profunda. El hielo, la mantequilla y la crema pueden empeorarla.", // nieuw, nalezen
+    'c.callhelp': "Llamar al 112: primero di dónde", // nieuw, nalezen
+    'c.callhelp.b': "Llama al 112 cuando una vida está en peligro, o cuando cada minuto cuenta. Primero di dónde estás: la calle, el número y la ciudad. Luego di qué ha pasado. No cuelgues y contesta a las preguntas. Pide a un compañero que espere a la ambulancia en la entrada. ¿No sabes la dirección de tu trabajo? Búscala hoy.", // nieuw, nalezen
+    'c.callhelp.p': "Llamo al 112. ¿Puedes esperar tú a la ambulancia?", // nieuw, nalezen
+    'c.callhelp.s': "Llamas al 112. La operadora te hace muchas preguntas, pero tú quieres ayudar a tu compañero. ¿Qué haces?", // nieuw, nalezen
+    'c.callhelp.o1': "No cuelgas, y contestas.", // nieuw, nalezen
+    'c.callhelp.o2': "Cuelgas, y vas con tu compañero.", // nieuw, nalezen
+    'c.callhelp.o3': "Dices “vengan rápido”, y cuelgas.", // nieuw, nalezen
+    'c.callhelp.w': "La operadora manda ayuda mientras hablas, y te dice qué hacer. Si cuelgas demasiado pronto, la ayuda puede ir al sitio equivocado.", // nieuw, nalezen
+    'c.roster': "Mira tu horario todos los días", // nieuw, nalezen
+    'c.roster.b': "El horario puede cambiar, también con poco aviso. Míralo todos los días, en la app o en el tablón. ¿Ves un cambio? Comprueba que puedes ir. ¿Un día no puedes trabajar? Dilo pronto, no el mismo día. ¿Quieres cambiar un turno? Pregunta primero a tu encargado: muchas empresas tienen una norma para eso. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.roster.p': "El sábado no puedo. ¿Puedo cambiar?", // nieuw, nalezen
+    'c.roster.s': "Tu horario ha cambiado. Ahora tienes que trabajar el sábado, pero no puedes. ¿Qué haces?", // nieuw, nalezen
+    'c.roster.o1': "Se lo dices hoy a tu encargado, y pides cambiar.", // nieuw, nalezen
+    'c.roster.o2': "No dices nada, y el sábado te quedas en casa.", // nieuw, nalezen
+    'c.roster.o3': "Pides a un compañero que vaya, y no se lo dices a nadie.", // nieuw, nalezen
+    'c.roster.w': "Si lo dices pronto, tu encargado puede buscar a otra persona. Faltar sin decir nada se considera muy grave.", // nieuw, nalezen
+    'c.breaks': "Apunta tus horas", // nieuw, nalezen
+    'c.breaks.b': "Apunta cada día cuándo empiezas, cuándo terminas y cuánto dura tu pausa. Tu propia lista te ayuda cuando tu sueldo no está bien. ¿Tienes que irte antes, por ejemplo al médico? Pregunta a tu encargado a tiempo. ¿Has trabajado más de lo previsto? Apúntalo también. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.breaks.p': "Mañana tengo que ir al médico. ¿Me puedo ir antes?", // nieuw, nalezen
+    'c.breaks.s': "Mañana tienes que ir al médico a las tres. Tu turno termina a las cinco. ¿Qué haces?", // nieuw, nalezen
+    'c.breaks.o1': "Preguntas hoy a tu encargado si te puedes ir antes.", // nieuw, nalezen
+    'c.breaks.o2': "Te vas a las tres, y lo explicas al día siguiente.", // nieuw, nalezen
+    'c.breaks.o3': "No vas al médico, y terminas tu turno.", // nieuw, nalezen
+    'c.breaks.w': "Si preguntas a tiempo, tu encargado puede organizar el trabajo. Irte sin preguntar se ve como poco serio.", // nieuw, nalezen
   },
 };
 

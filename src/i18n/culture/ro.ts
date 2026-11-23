@@ -425,6 +425,39 @@ const t: CultureTranslation = {
     'c.whereis.o2': "Cauți mai departe: e jenant să întrebi iar.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.o3': "Începi munca în hainele tale.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.w': { m: "Să întrebi durează zece secunde. Dacă cauți singur, poți întârzia. Colegii știu că e greu să te descurci într-un loc nou.", f: "Să întrebi durează zece secunde. Dacă cauți singură, poți întârzia. Colegii știu că e greu să te descurci într-un loc nou.", x: "Să întrebi durează zece secunde. Dacă cauți pe cont propriu, poți întârzia. Colegii știu că e greu să te descurci într-un loc nou." }, // nieuw, nalezen // nagelezen AI 22 nov
+    // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): the tips of l.roster, l.breaks, l.wound and l.callhelp.
+    'c.wound': "O arsură? Răcește-o cu apă", // nieuw, nalezen
+    'c.wound.b': "O tăietură mică: apasă pe ea cu o cârpă curată sau cu un bandaj și spune-i persoanei de prim ajutor din firmă. O arsură: răcește-o imediat cu apă călduță de la robinet, cel puțin 10 minute. Ai ceva în ochi? Clătește-l cu apă sau la dușul pentru ochi. E grav? Sună la 112. Întreabă în prima zi unde sunt trusa de prim ajutor și dușul pentru ochi.", // nieuw, nalezen
+    'c.wound.p': "M-am ars. Unde e un robinet?", // nieuw, nalezen
+    'c.wound.s': "Un coleg se arde la mână de la o mașină fierbinte. Ce faci?", // nieuw, nalezen
+    'c.wound.o1': "Răcești arsura cu apă călduță de la robinet.", // nieuw, nalezen
+    'c.wound.o2': "Pui imediat unt sau o cremă pe ea.", // nieuw, nalezen
+    'c.wound.o3': "Pui gheață direct pe piele și aștepți.", // nieuw, nalezen
+    'c.wound.w': "Apa scoate căldura din piele, așa că arsura e mai puțin adâncă. Gheața, untul și crema o pot agrava.", // nieuw, nalezen
+    'c.callhelp': "Suni la 112: spune întâi unde", // nieuw, nalezen
+    'c.callhelp.b': "Sună la 112 când o viață e în pericol sau când contează fiecare minut. Spune întâi unde ești: strada, numărul și orașul. Apoi spune ce s-a întâmplat. Rămâi la telefon și răspunde la întrebări. Roagă un coleg să aștepte ambulanța la intrare. Nu știi adresa locului de muncă? Caut-o azi.", // nieuw, nalezen
+    'c.callhelp.p': "Sun la 112. Poți să aștepți tu ambulanța?", // nieuw, nalezen
+    'c.callhelp.s': "Suni la 112. Operatorul pune multe întrebări, dar tu vrei să-ți ajuți colegul. Ce faci?", // nieuw, nalezen
+    'c.callhelp.o1': "Rămâi la telefon și răspunzi.", // nieuw, nalezen
+    'c.callhelp.o2': "Închizi și te duci la coleg.", // nieuw, nalezen
+    'c.callhelp.o3': "Spui „veniți repede” și închizi.", // nieuw, nalezen
+    'c.callhelp.w': "Operatorul trimite ajutor în timp ce vorbești și îți spune ce să faci. Dacă închizi prea devreme, ajutorul poate ajunge în locul greșit.", // nieuw, nalezen
+    'c.roster': "Uită-te zilnic la programul de lucru", // nieuw, nalezen
+    'c.roster.b': "Programul se poate schimba, chiar și în ultima clipă. Uită-te la el în fiecare zi, în aplicație sau pe panou. Vezi o schimbare? Verifică dacă poți veni. Nu poți lucra într-o zi? Spune din timp, nu chiar în ziua respectivă. Vrei să schimbi o tură? Întreabă-l întâi pe șef: multe firme au o regulă pentru asta. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.roster.p': "Sâmbătă nu pot. Pot să fac schimb?", // nieuw, nalezen
+    'c.roster.s': "Programul tău s-a schimbat. Acum trebuie să lucrezi sâmbătă, dar nu poți. Ce faci?", // nieuw, nalezen
+    'c.roster.o1': "Îi spui azi șefului și ceri să faci schimb.", // nieuw, nalezen
+    'c.roster.o2': "Nu spui nimic și stai acasă sâmbătă.", // nieuw, nalezen
+    'c.roster.o3': "Rogi un coleg să meargă în locul tău și nu spui nimănui.", // nieuw, nalezen
+    'c.roster.w': "Când spui din timp, șeful poate găsi pe altcineva. Să lipsești fără un cuvânt e considerat foarte grav.", // nieuw, nalezen
+    'c.breaks': "Notează-ți orele", // nieuw, nalezen
+    'c.breaks.b': "Notează în fiecare zi când începi, când termini și cât durează pauza. Propria ta listă te ajută când salariul nu e corect. Trebuie să pleci mai devreme, de exemplu la doctor? Întreabă-l pe șef din timp. Ai lucrat mai mult decât era planificat? Notează și asta. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.breaks.p': "Mâine trebuie să merg la doctor. Pot pleca mai devreme?", // nieuw, nalezen
+    'c.breaks.s': "Mâine trebuie să mergi la doctor la ora trei. Tura ta se termină la cinci. Ce faci?", // nieuw, nalezen
+    'c.breaks.o1': "Îl întrebi azi pe șef dacă poți pleca mai devreme.", // nieuw, nalezen
+    'c.breaks.o2': "Pleci la trei și explici a doua zi.", // nieuw, nalezen
+    'c.breaks.o3': "Renunți la doctor și îți termini tura.", // nieuw, nalezen
+    'c.breaks.w': "Când întrebi din timp, șeful poate planifica munca. Să pleci fără să întrebi e considerat lipsă de seriozitate.", // nieuw, nalezen
   },
 };
 
