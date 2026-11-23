@@ -132,3 +132,16 @@ describe('tilesMatchLine: do the tiles of a built sentence follow the line that 
     expect(tilesMatchLine(['Ik', 'werk', 'hier'], 'Ik werk - hier')).toBe(false);
   });
 });
+
+/** A sentence built in another right order (the owner, 23 November 2026: some lines did not light). */
+describe('the line of the order built', () => {
+  it('is the sentence, or the alt whose words are the tiles; then its tiles light one for one', async () => {
+    const { orderLine } = await import('../src/lib/answers');
+    const s = { nl: 'Vandaag ben ik ziek.', alt: ['Ik ben vandaag ziek.'] };
+    expect(orderLine(s, ['Vandaag', 'ben', 'ik', 'ziek'])).toBe('Vandaag ben ik ziek.');
+    expect(orderLine(s, ['ik', 'ben', 'vandaag', 'ziek'])).toBe('Ik ben vandaag ziek.');
+    expect(tilesMatchLine(['Ik', 'ben', 'vandaag', 'ziek'], orderLine(s, ['Ik', 'ben', 'vandaag', 'ziek']))).toBe(true);
+    // Not one of its orders: the sentence itself.
+    expect(orderLine(s, ['ziek', 'ik'])).toBe('Vandaag ben ik ziek.');
+  });
+});

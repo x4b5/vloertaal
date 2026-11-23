@@ -85,8 +85,11 @@ describe('a recorded clip that hangs', () => {
     await vi.advanceTimersByTimeAsync(200);
     expect(clips[0].paused).toBe(true);
     expect(synth.spoken.map((u) => u.text)).toEqual([CLIP]);
-    // The phone's end ends the line.
+    // The phone's end ends the line; an end that comes long before the line can be over (some phone
+    // voices report it at once) ends it when it could be, so the word light is not put out at once.
     synth.spoken[0].onend?.();
+    expect(speaking).toEqual([CLIP]);
+    await vi.advanceTimersByTimeAsync(3000);
     expect(speaking).toEqual([]);
   });
 

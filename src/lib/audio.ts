@@ -1,3 +1,4 @@
+import { guessMs } from './wordLight';
 import { BRAM_HELLO, BRAM_VOICE, DEVICE, type VoiceRef } from './voices';
 import { minTake, sayAs } from './sayAs';
 import { sentences } from './dutch';
@@ -704,8 +705,17 @@ function speakDevice(text: string, slow: boolean, lang: 'nl' | 'en', voiceURI: s
   u.rate = Math.max(0.1, deviceRateFor(pace, rulesTrack) * speed);
   // cancel() ends the previous utterance asynchronously; only the latest one reports its end.
   const turn = ++speechTurn;
+  // Some phone voices report the end almost at once while the line still sounds (seen with the new
+  // lessons, which have no recording yet: the word light went out at once). An end long before the
+  // line can be over counts from when it could be: the light goes on until then. A stop (stopAll,
+  // another line) still ends it at once.
+  const started = Date.now();
+  const soonest = (guessMs(text, slow) / Math.max(0.5, speed)) * 0.6;
   u.onend = () => {
-    if (turn === speechTurn) emitSpeech(text, false, slow);
+    if (turn !== speechTurn) return;
+    const left = soonest - (Date.now() - started);
+    if (left > 0) setTimeout(() => { if (turn === speechTurn) emitSpeech(text, false, slow); }, left);
+    else emitSpeech(text, false, slow);
   };
   u.onerror = (e?: { error?: string }) => {
     if (turn !== speechTurn) return;

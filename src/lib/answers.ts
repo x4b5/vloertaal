@@ -84,6 +84,19 @@ export function sentenceOrders(sentence: { nl: string; alt?: readonly string[] }
 }
 
 /**
+ * The line of the order a sentence was built in: the sentence itself, or the `alt` whose words are
+ * these tiles (as written, with its capital and its full stop), so what is said after building is
+ * what was built, and its words light up on the tiles (src/lib/wordLight.ts tilesMatchLine).
+ */
+export function orderLine(sentence: { nl: string; alt?: readonly string[] }, tiles: readonly string[]): string {
+  const same = (line: string) => {
+    const t = tokenize(line);
+    return t.length === tiles.length && t.every((w, i) => w.toLowerCase() === tiles[i].toLowerCase());
+  };
+  return [sentence.nl, ...(sentence.alt ?? [])].find(same) ?? sentence.nl;
+}
+
+/**
  * Building word by word: is `word` right as the next tile after `placed`, and in which order
  * (an index of sentenceOrders) does the sentence then go on? The order already followed wins;
  * else the first one that starts with these words. -1: wrong here in every order.
