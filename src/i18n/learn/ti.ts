@@ -258,6 +258,27 @@ const t: CultureTranslation = {
     'c.childsafety.a.why': "ወዲቓ ድያ ተሓቲቱ: እወ፡ እንታይ ከም ዘለዋ፡ መን ከም ዝድወለሉ ድማ።", // nieuw, nalezen
     'c.sickchild.a.why': "ከመይ ኣሎ ተሓቲቱ: እንታይ ከም ዝርአ፡ እንታይ ከም ዝግበር ድማ።", // nieuw, nalezen
     'c.grouprules.a.why': "በይኑ ምኻድ ይፍቀድ ድዩ ተሓቲቱ: እወ፡ ግን ቅድም ንብጻይ ስራሕ ምንጋር።", // nieuw, nalezen
+    // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
+    'c.sanitary.a.why': "ተወዲኡ ድዩ ተሓቲቱ: ገና፡ ስለምንታይ ድማ።", // nieuw, nalezen
+    'c.hotelroom.a.why': "ክንደይ ተሪፉ ተሓቲቱ: እቲ ቁጽሪ፡ መዓስ ከም ዝውዳእ ድማ።", // nieuw, nalezen
+    'c.dosing.a.why': "ዝያዳ ክጥቀም ተባሂሉ: ኣይፋልን፡ ብዙሕ ዝሓሸ ኣይኮነን፡ እንታይ ከም ዝጥቀም ድማ።", // nieuw, nalezen
+    'c.officenight.a.why': "በይኑ ድዩ ዝሰርሕ ተሓቲቱ: እወ፡ መልእኽቲ ከም ዝሰድድ ድማ።", // nieuw, nalezen
+    'c.knives.a.why': "ክቖርጽ ተሓቲቱ: እወ ሸፍ፡ ብኸመይ ዝብል ሕቶ ድማ።", // nieuw, nalezen
+    'c.rawcooked.a.why': "ብዘይ ግሉተን ድዩ ተሓቲቱ: ርግጸኛ ኣይኮነን፡ ስለዚ ነቲ ዝርዝር ይርኢ።", // nieuw, nalezen
+    'c.pass.a.why': "መግቢ ኣበይ ኣሎ ተሓቲቱ: ኣብ ፓስ፡ ሕጂ ድማ የምጽኦ።", // nieuw, nalezen
+    'c.bill.a.why': "በበይኖም ክኸፍሉ ተሓቲቱ: እወ፡ ማሽን ካርድ ድማ የምጽእ።", // nieuw, nalezen
+    'c.washing.a.why': "ተገልጋሊ ኣይፋልን ይብል: ጽቡቕ፡ ካልእ ነገር ድማ የቕርብ።", // nieuw, nalezen
+    'c.observing.a.why': "ፍሉይ ነገር ኣሎ ድዩ ተሓቲቱ: እወ፡ እንታይ ምዃኑ ብልክዕ ድማ።", // nieuw, nalezen
+    'c.homecare.a.why': "መን ኢዩ ተሓቲቱ: ሰላምታ፡ መን ምዃኑ፡ ክኣቱ ይኽእል ዶ ድማ።", // nieuw, nalezen
+    'c.liftaids.a.why': "በይኑ ክገብሮ ተሓቲቱ: እወ፡ ብመሸርተቲ ኣንሶላ፡ ከምጽኦ ድማ።", // nieuw, nalezen
+    'c.returns.a.why': "ክመልሶ ተሓቲቱ: እወ፡ ብዛዕባ ቅብሊት ሕቶ ድማ።", // nieuw, nalezen
+    'c.facing.a.why': "ወዲኡ ድዩ ተሓቲቱ: ዳርጋ፡ እንታይ ከም ዝተረፈ ድማ።", // nieuw, nalezen
+    'c.shrink.a.why': "ቦርሳ ክርአ ተሓቲቱ: እወ፡ ቅብሊት ድማ የርኢ።", // nieuw, nalezen
+    'c.shopclose.a.why': "ክኣቱ ተሓቲቱ: ይቕሬታ፡ ተዓጽዩ፡ መዓስ ከም ዝኽፈት ድማ።", // nieuw, nalezen
+    'c.hirer.a.why': "ኣብ ሓድሽ ቦታ ክጅምር ተሓቲቱ: እወ፡ ብዛዕባ ሰዓት ሕቶ ድማ።", // nieuw, nalezen
+    'c.phases.a.why': "ስራሕ ከም ዝውዳእ ተነጊሩ: ሕራይ፡ ካልእ ስራሕ ድማ ይሓትት።", // nieuw, nalezen
+    'c.deductions.a.why': "ብዛዕባ ቁርጸት ተነጊሩ: ይፍቀድ ድዩ ኢሉ ይሓትት፡ የረጋግጽ ድማ።", // nieuw, nalezen
+    'c.agencyhome.a.why': "ቀልጢፉ ክወጽእ ተነጊሩ: እዚ ሓጺር እዩ፡ ቅድም ድማ ምኽሪ ይደሊ።", // nieuw, nalezen
   },
 };
 

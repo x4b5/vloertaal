@@ -166,6 +166,17 @@ const t: CultureTranslation = {
     'kjn.u.toddlers.2': "ሓደ ቈልዓ ደቂሱ ድዩ ኢለ ክሓትት እኽእል እየ።", // nieuw, nalezen
     'kjn.u.daycare.1': "ንወላዲ እታ መዓልቲ ብኸመይ ከም ዝሓለፈት ክነግሮ እኽእል እየ።", // nieuw, nalezen
     'kjn.u.daycare.2': "ሓደ ቈልዓ መን ክወስዶ ይመጽእ ከም ዘሎ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    // Five new units (23 November 2026).
+    'kjn.u.uitzend.1': "ኣብ ኣየናይ ደረጃ ከም ዘለኹ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.uitzend.2': "ካብ ደሞዘይ ዝቑረጽ ገንዘብ ንምንታይ ምዃኑ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.housekeeping.1': "ሽቓቕ ከም ዝተዓጽወ ክነግር እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.housekeeping.2': "ኣብ ባልዲ ክንደይ ፍርያት ከም ዝኣቱ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.cooking.1': "ንሸፍ ሓደ ነገር ብኸመይ ከም ዝቖርጾ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.cooking.2': "ንጋሻ በበይኑ ክኸፍል ይደሊ እንተ ኾይኑ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.carework.1': "ንተገልጋሊ እንታይ ክኽደን ከም ዝደሊ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.carework.2': "ንነርስ ዝረኣኹዎ ክነግር እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.shopfloor.1': "ንዓሚል ቅብሊት ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.shopfloor.2': "እቲ ድኳን ቀልጢፉ ከም ዝዕጾ ክነግር እኽእል እየ።", // nieuw, nalezen
   },
 };
 

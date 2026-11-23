@@ -164,6 +164,17 @@ const t: CultureTranslation = {
     'kjn.u.toddlers.2': "Ich kann fragen, ob ein Kind schon schläft.", // nieuw, nalezen
     'kjn.u.daycare.1': "Ich kann einem Elternteil erzählen, wie der Tag war.", // nieuw, nalezen
     'kjn.u.daycare.2': "Ich kann fragen, wer ein Kind abholt.", // nieuw, nalezen
+    // Five new units (23 November 2026).
+    'kjn.u.uitzend.1': "Ich kann fragen, in welcher Phase ich bin.", // nieuw, nalezen
+    'kjn.u.uitzend.2': "Ich kann fragen, wofür ein Abzug von meinem Lohn ist.", // nieuw, nalezen
+    'kjn.u.housekeeping.1': "Ich kann sagen, dass eine Toilette verstopft ist.", // nieuw, nalezen
+    'kjn.u.housekeeping.2': "Ich kann fragen, wie viel Mittel in den Eimer muss.", // nieuw, nalezen
+    'kjn.u.cooking.1': "Ich kann den Koch fragen, wie ich etwas schneiden soll.", // nieuw, nalezen
+    'kjn.u.cooking.2': "Ich kann einen Gast fragen, ob er getrennt zahlen möchte.", // nieuw, nalezen
+    'kjn.u.carework.1': "Ich kann einen Klienten fragen, was er anziehen möchte.", // nieuw, nalezen
+    'kjn.u.carework.2': "Ich kann der Pflegefachkraft sagen, was ich gesehen habe.", // nieuw, nalezen
+    'kjn.u.shopfloor.1': "Ich kann einen Kunden nach dem Kassenbon fragen.", // nieuw, nalezen
+    'kjn.u.shopfloor.2': "Ich kann sagen, dass das Geschäft bald schließt.", // nieuw, nalezen
   },
 };
 

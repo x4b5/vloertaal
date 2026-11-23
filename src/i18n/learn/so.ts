@@ -253,6 +253,27 @@ const t: CultureTranslation = {
     'c.childsafety.a.why': "Waxaa la weydiiyay inay dhacday: haa, waxa ay leedahay, iyo cidda aad wacayso.", // nieuw, nalezen
     'c.sickchild.a.why': "Waxaa la weydiiyay sida uu yahay: waxa aad aragto, iyo waxa aad samaynayso.", // nieuw, nalezen
     'c.grouprules.a.why': "Waxaa la weydiiyay in keligaa la bixi karo: haa, laakiin marka hore u sheeg saaxiib shaqo.", // nieuw, nalezen
+    // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
+    'c.sanitary.a.why': "Waxaa la weydiiyay in la dhammeeyay: weli maya, iyo sababta.", // nieuw, nalezen
+    'c.hotelroom.a.why': "Waxaa la weydiiyay inta harsan: tirada, iyo goorta aad dhammaynayso.", // nieuw, nalezen
+    'c.dosing.a.why': "Waxaa la yiri wax badan isticmaal: maya, badan ma fiicna, iyo waxa aad isticmaasho.", // nieuw, nalezen
+    'c.officenight.a.why': "Waxaa la weydiiyay inaad keligaa shaqaynayso: haa, oo fariin ayaad diraysaa.", // nieuw, nalezen
+    'c.knives.a.why': "Waxaa la weydiistay inaad wax jarto: haa shef, iyo su'aal ku saabsan sida.", // nieuw, nalezen
+    'c.rawcooked.a.why': "Waxaa la weydiiyay inay gluten la'aan tahay: lama hubo, sidaas darteed liiska ayaad eegaysaa.", // nieuw, nalezen
+    'c.pass.a.why': "Waxaa la weydiiyay meesha cuntadu taal: miiska cuntada, oo hadda ayaad keenaysaa.", // nieuw, nalezen
+    'c.bill.a.why': "Waxaa la weydiiyay in gooni loo bixin karo: haa, oo mashiinka kaarka ayaad keenaysaa.", // nieuw, nalezen
+    'c.washing.a.why': "Macmiilku wuxuu yiri maya: waa hagaag, oo wax kale ayaad u bandhigaysaa.", // nieuw, nalezen
+    'c.observing.a.why': "Waxaa la weydiiyay in wax gaar ah jiraan: haa, iyo waxa saxda ah.", // nieuw, nalezen
+    'c.homecare.a.why': "Waxaa la weydiiyay cidda joogta: salaan, cidda aad tahay, iyo ma soo geli karaa.", // nieuw, nalezen
+    'c.liftaids.a.why': "Waxaa la weydiiyay in keligaa la sameeyo: haa, go'a simbiriirixa, oo waad keenaysaa.", // nieuw, nalezen
+    'c.returns.a.why': "Waxaa la weydiiyay in la soo celin karo: haa, iyo su'aal ku saabsan rasiidhka.", // nieuw, nalezen
+    'c.facing.a.why': "Waxaa la weydiiyay inaad dhammaysay: ku dhowaad, iyo waxa weli haray.", // nieuw, nalezen
+    'c.shrink.a.why': "Waxaa la weydiiyay in boorsadaada la eegi karo: haa, oo rasiidhka ayaad tusaysaa.", // nieuw, nalezen
+    'c.shopclose.a.why': "Waxaa la weydiiyay in la soo geli karo: waan ka xumahay, waa xiran yahay, iyo goorta mar kale la furayo.", // nieuw, nalezen
+    'c.hirer.a.why': "Waxaa la weydiiyay inaad meel cusub ka bilowdo: haa, iyo su'aal ku saabsan waqtiga.", // nieuw, nalezen
+    'c.phases.a.why': "Waxaa la sheegay in shaqadu joogsanayso: hagaag, oo shaqo kale ayaad weydiinaysaa.", // nieuw, nalezen
+    'c.deductions.a.why': "Waxaa lagu sheegay jarid: waxaad weydiinaysaa in la oggol yahay, oo waad hubinaysaa.", // nieuw, nalezen
+    'c.agencyhome.a.why': "Waxaa la yiri dhowaan ka bax: taasi waa gaaban tahay, oo marka hore talo ayaad weydiinaysaa.", // nieuw, nalezen
   },
 };
 export default t;

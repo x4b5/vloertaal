@@ -6,21 +6,14 @@ import { workUnits } from './work';
  * its own on the site (src/lib/tipPages.ts), and the translation tests leave its ids out. Remove a
  * lesson here once its translations are in. Empty from 21 November 2026 (the fifteen lessons of 20 and 21 November were translated) until
  * the sixteen lessons of Groen and Facilitair and the thirty-two of Beveiliging, Voedingsindustrie,
- * Afval en recycling and Kinderopvang (23 November 2026; translated the same day), and again from
- * the twenty lessons of the five units below (23 November 2026).
+ * Afval en recycling and Kinderopvang (23 November 2026; translated the same day), and the twenty
+ * lessons of the second units of Schoonmaak, Horeca, Zorg and Winkel and "Werken via een uitzendbureau"
+ * (23 November 2026; translated the same day).
  */
-export const TRANSLATION_PENDING_LESSONS: readonly string[] = [
-  // The second own units of Schoonmaak, Horeca, Zorg and Winkel, and the basis unit "Werken via een
-  // uitzendbureau" (23 November 2026): translations to follow.
-  'sanitary', 'hotelroom', 'dosing', 'officenight',
-  'knives', 'rawcooked', 'pass', 'bill',
-  'washing', 'observing', 'homecare', 'liftaids',
-  'returns', 'facing', 'shrink', 'shopclose',
-  'hirer', 'phases', 'deductions', 'agencyhome',
-];
+export const TRANSLATION_PENDING_LESSONS: readonly string[] = [];
 
 /** Units whose title waits for its translations too. */
-const PENDING_UNITS: readonly string[] = ['u.housekeeping', 'u.cooking', 'u.carework', 'u.shopfloor', 'u.uitzend'];
+const PENDING_UNITS: readonly string[] = [];
 
 const pendingIds = new Set<string>(PENDING_UNITS);
 for (const l of workUnits.flatMap((u) => u.lessons)) {

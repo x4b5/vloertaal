@@ -163,6 +163,17 @@ const t: CultureTranslation = {
     'kjn.u.toddlers.2': "Waan weydiin karaa in ilmo seexday.", // nieuw, nalezen
     'kjn.u.daycare.1': "Waan u sheegi karaa waalid sida maalintu u dhacday.", // nieuw, nalezen
     'kjn.u.daycare.2': "Waan weydiin karaa cidda imanaysa inay ilmo qaaddo.", // nieuw, nalezen
+    // Five new units (23 November 2026).
+    'kjn.u.uitzend.1': "Waan weydiin karaa heerka aan ku jiro.", // nieuw, nalezen
+    'kjn.u.uitzend.2': "Waan weydiin karaa waxa jarid mushaharkayga laga jaray u tahay.", // nieuw, nalezen
+    'kjn.u.housekeeping.1': "Waan sheegi karaa in musqul xiran tahay.", // nieuw, nalezen
+    'kjn.u.housekeeping.2': "Waan weydiin karaa inta alaab ah ee baaldiga lagu shubo.", // nieuw, nalezen
+    'kjn.u.cooking.1': "Waan weydiin karaa shefka sida aan wax u jaro.", // nieuw, nalezen
+    'kjn.u.cooking.2': "Waan weydiin karaa marti inay rabto inay gooni u bixiso.", // nieuw, nalezen
+    'kjn.u.carework.1': "Waan weydiin karaa macmiil waxa uu rabo inuu xirto.", // nieuw, nalezen
+    'kjn.u.carework.2': "Waan u sheegi karaa kalkaaliyaha caafimaadka waxa aan arkay.", // nieuw, nalezen
+    'kjn.u.shopfloor.1': "Waan weydiin karaa macmiil rasiidhka.", // nieuw, nalezen
+    'kjn.u.shopfloor.2': "Waan sheegi karaa in dukaanku dhowaan xiranayo.", // nieuw, nalezen
   },
 };
 export default t;

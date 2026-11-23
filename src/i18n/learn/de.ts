@@ -257,6 +257,27 @@ const t: CultureTranslation = {
     'c.childsafety.a.why': "Gefragt, ob sie hingefallen ist: Ja, was sie hat, und wen du anrufst.", // nieuw, nalezen
     'c.sickchild.a.why': "Gefragt, wie es ihm geht: was du siehst, und was du tust.", // nieuw, nalezen
     'c.grouprules.a.why': "Gefragt, ob man allein gehen darf: Ja, aber zuerst einem Kollegen Bescheid sagen.", // nieuw, nalezen
+    // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
+    'c.sanitary.a.why': "Gefragt, ob sie fertig sind: noch nicht, und warum.", // nieuw, nalezen
+    'c.hotelroom.a.why': "Gefragt, wie viele noch übrig sind: die Zahl, und wann du fertig bist.", // nieuw, nalezen
+    'c.dosing.a.why': "Gesagt, mehr zu nehmen: nein, mehr ist nicht besser, und was du nimmst.", // nieuw, nalezen
+    'c.officenight.a.why': "Gefragt, ob du allein arbeitest: ja, und du schickst eine Nachricht.", // nieuw, nalezen
+    'c.knives.a.why': "Gebeten zu schneiden: ja, Chef, und eine Frage, wie.", // nieuw, nalezen
+    'c.rawcooked.a.why': "Gefragt, ob es glutenfrei ist: nicht sicher, also schaust du auf die Liste.", // nieuw, nalezen
+    'c.pass.a.why': "Gefragt, wo das Essen ist: auf dem Pass, und du bringst es jetzt.", // nieuw, nalezen
+    'c.bill.a.why': "Gefragt, ob man getrennt zahlen kann: ja, und du holst das Kartenterminal.", // nieuw, nalezen
+    'c.washing.a.why': "Der Klient sagt nein: Das ist in Ordnung, und du bietest etwas anderes an.", // nieuw, nalezen
+    'c.observing.a.why': "Gefragt, ob es etwas Besonderes gibt: ja, und genau was.", // nieuw, nalezen
+    'c.homecare.a.why': "Gefragt, wer da ist: ein Gruß, wer du bist, und darf ich hereinkommen.", // nieuw, nalezen
+    'c.liftaids.a.why': "Gefragt, ob man es allein macht: ja, mit dem Gleittuch, und du holst es.", // nieuw, nalezen
+    'c.returns.a.why': "Gefragt, ob man es zurückbringen kann: ja, und eine Frage nach dem Kassenbon.", // nieuw, nalezen
+    'c.facing.a.why': "Gefragt, ob du fertig bist: fast, und was noch fehlt.", // nieuw, nalezen
+    'c.shrink.a.why': "Gefragt, ob man in deine Tasche schauen darf: ja, und du zeigst den Kassenbon.", // nieuw, nalezen
+    'c.shopclose.a.why': "Gefragt, ob man hereinkommen darf: Tut mir leid, geschlossen, und wann wieder geöffnet ist.", // nieuw, nalezen
+    'c.hirer.a.why': "Gefragt, ob du woanders neu anfängst: ja, und eine Frage nach der Uhrzeit.", // nieuw, nalezen
+    'c.phases.a.why': "Gesagt, dass der Einsatz endet: okay, und du fragst nach anderer Arbeit.", // nieuw, nalezen
+    'c.deductions.a.why': "Von einem Abzug gehört: Du fragst, ob er erlaubt ist, und prüfst es.", // nieuw, nalezen
+    'c.agencyhome.a.why': "Gesagt, bald auszuziehen: Das ist kurz, und du holst dir zuerst Rat.", // nieuw, nalezen
   },
 };
 
