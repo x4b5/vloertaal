@@ -3,14 +3,20 @@ import { PAL } from './kit';
 
 /**
  * A TEMPORARY word picture (23 November 2026): a tinted rounded square with the word's emoji in
- * it, for the new sectors Groen and Facilitair until their words are drawn. It breaks two rules of
+ * it, for the new sectors Groen and Facilitair (and, the same day, Beveiliging, Voedingsindustrie,
+ * Afval en recycling and Kinderopvang) until their words are drawn. It breaks two rules of
  * docs/tekenstijl.md on purpose ("no text in pictures" and "only SVG, no emoji"), so a picture
- * choice can still be answered meanwhile. Illustrators replace each file in ./groen and
- * ./facilitair with a real drawing; when the last one is gone, this file goes too.
+ * choice can still be answered meanwhile. Illustrators replace each file in ./groen,
+ * ./facilitair, ./beveiliging, ./voeding, ./afval and ./kinderopvang with a real drawing; when the last one is gone, this file goes too.
  */
 const TINT = {
   groen: [PAL.lime, PAL.leafShade],
   facilitair: [PAL.ice, PAL.blueShade],
+  // Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
+  beveiliging: [PAL.mist, PAL.navy],
+  voeding: [PAL.yellowShine, PAL.yellowShade],
+  afval: [PAL.paperShade, PAL.greenShade],
+  kinderopvang: [PAL.redLight, PAL.purple],
 } as const;
 
 export const placeholder = (emoji: string, kind: keyof typeof TINT) => (): JSX.Element => (

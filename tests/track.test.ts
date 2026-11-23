@@ -68,7 +68,8 @@ const LATE_OWN = ['u.tech', 'u.garage'];
 /** "Assemblage en montage" (21 November 2026): the third own unit of Productie, after those. */
 /** The second own units of Tuinbouw and Garage (22 November 2026), after those. */
 /** The own units of the new sectors Groen and Facilitair (23 November 2026), after those. */
-const NEWEST_SECTOR_UNITS = ['u.delivery', 'u.afbouw', 'u.ruwbouw', 'u.machines', 'u.install', 'u.montage', 'u.kweek', 'u.carservice', 'u.mowing', 'u.planting', 'u.frontdesk', 'u.maintenance'];
+/** The own units of Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (the same day), after those. */
+const NEWEST_SECTOR_UNITS = ['u.delivery', 'u.afbouw', 'u.ruwbouw', 'u.machines', 'u.install', 'u.montage', 'u.kweek', 'u.carservice', 'u.mowing', 'u.planting', 'u.frontdesk', 'u.maintenance', 'u.guarding', 'u.incidents', 'u.foodhygiene', 'u.foodline', 'u.collection', 'u.recycling', 'u.toddlers', 'u.daycare'];
 const expectedOrder = (own: string | string[] | null) => {
   const main = BASIS.flatMap((id) => (id === '<own>' ? own ?? 'u.warehouse' : id));
   const rest = SECTOR_UNITS.filter((id) => !main.includes(id));
@@ -96,6 +97,10 @@ const TAAL_ORDER: Record<string, string[]> = {
   retail: expectedOrder('u.shop'),
   green: expectedOrder(['u.mowing', 'u.planting']),
   facility: expectedOrder(['u.frontdesk', 'u.maintenance']),
+  security: expectedOrder(['u.guarding', 'u.incidents']),
+  food: expectedOrder(['u.foodhygiene', 'u.foodline']),
+  waste: expectedOrder(['u.collection', 'u.recycling']),
+  childcare: expectedOrder(['u.toddlers', 'u.daycare']),
 };
 
 /** The 3 choices after lesson 1.1, as before the tracks. */
@@ -114,6 +119,10 @@ const TAAL_CHOICES: Record<string, string[]> = {
   retail: ['u.time', 'u.firstday', 'u.shop'],
   green: ['u.safety', 'u.firstday', 'u.mowing'],
   facility: ['u.help', 'u.firstday', 'u.frontdesk'],
+  security: ['u.safety', 'u.firstday', 'u.guarding'],
+  food: ['u.safety', 'u.firstday', 'u.foodhygiene'],
+  waste: ['u.safety', 'u.firstday', 'u.collection'],
+  childcare: ['u.teamwork', 'u.firstday', 'u.toddlers'],
 };
 
 describe("the Dutch course ('taal') is exactly as before", () => {

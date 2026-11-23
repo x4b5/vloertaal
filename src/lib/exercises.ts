@@ -974,9 +974,11 @@ export function buildRuleLesson(lesson: Lesson, opts: { seed?: number; review?: 
 // front 26 and buildAll 27 since "Elektra, leidingen en metaal" (the same day); front 27 and
 // buildAll 28 since "Assemblage en montage" (the same day); front 29 and buildAll 30 since the
 // second units of Tuinbouw and Garage (22 November 2026), two topics more; front 33 and buildAll 34
-// since the four units of the new sectors Groen and Facilitair (23 November 2026). The early steps (4, 7, 10) count topics done,
+// since the four units of the new sectors Groen and Facilitair (23 November 2026); front 41 and
+// buildAll 42 since the eight units of Beveiliging, Voedingsindustrie, Afval en recycling and
+// Kinderopvang (the same day). The early steps (4, 7, 10) count topics done,
 // so they stay: a learner has still had that many topics before each step.
-export const PROGRESSION = { pickDutch: 4, type: 4, chatHint: 4, audioBuild: 7, reverseChat: 10, front: 33, buildAll: 34 } as const;
+export const PROGRESSION = { pickDutch: 4, type: 4, chatHint: 4, audioBuild: 7, reverseChat: 10, front: 41, buildAll: 42 } as const;
 
 /** A line of a lesson that can be built: its sentences and the lines of its chats. */
 function linesOf(lesson: Lesson): Sentence[] {

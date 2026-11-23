@@ -270,4 +270,52 @@ export const workSkeleton: SkeletonUnit[] = [
       { id: "l.moving", title: "Moving a workplace" },
       { id: "l.closing", title: "Opening and closing the building" },
   ] },
+  { id: "u.guarding", title: "Patrols and access", titleNl: "Ronde en toegang", emoji: "🛡️", color: "#2c3e66", lessons: [
+      { id: "l.patrol", title: "The round" },
+      { id: "l.access", title: "Access control" },
+      { id: "l.cameras", title: "Cameras and the control room" },
+      { id: "l.report", title: "The radio and the report" },
+  ] },
+  { id: "u.incidents", title: "Emergencies and the shop", titleNl: "Noodgevallen en de winkel", emoji: "🚨", color: "#8c2f39", lessons: [
+      { id: "l.evacuation", title: "Fire and evacuation" },
+      { id: "l.firstaid", title: "First aid and 112" },
+      { id: "l.shoplifting", title: "Shop theft" },
+      { id: "l.aggression", title: "Difficult people" },
+  ] },
+  { id: "u.foodhygiene", title: "Hygiene and the cold", titleNl: "Hygiëne en kou", emoji: "🧼", color: "#2f7f8a", lessons: [
+      { id: "l.hygienelock", title: "The hygiene lock" },
+      { id: "l.allergens", title: "Allergens" },
+      { id: "l.coldroom", title: "The cold room and the freezer" },
+      { id: "l.foreignbody", title: "Glass, metal and plastic in the food" },
+  ] },
+  { id: "u.foodline", title: "The production line", titleNl: "De productielijn", emoji: "🥩", color: "#a0522d", lessons: [
+      { id: "l.cutting", title: "Cutting and weighing" },
+      { id: "l.labels", title: "Packing and labels" },
+      { id: "l.linecleaning", title: "Cleaning the line" },
+      { id: "l.haccp", title: "Checking and writing down (HACCP)" },
+  ] },
+  { id: "u.collection", title: "Collecting waste", titleNl: "Afval ophalen", emoji: "🚛", color: "#4d6b3c", lessons: [
+      { id: "l.binlorry", title: "The bin lorry" },
+      { id: "l.reversing", title: "Reversing safely" },
+      { id: "l.wastesorting", title: "Sorting waste" },
+      { id: "l.wastesafety", title: "Sharp things and lifting" },
+  ] },
+  { id: "u.recycling", title: "The recycling yard", titleNl: "De milieustraat", emoji: "♻️", color: "#3b7d5c", lessons: [
+      { id: "l.yard", title: "At the recycling yard" },
+      { id: "l.hazardous", title: "Chemical waste" },
+      { id: "l.baler", title: "The baler" },
+      { id: "l.shovel", title: "The wheel loader on the yard" },
+  ] },
+  { id: "u.toddlers", title: "The children", titleNl: "De kinderen", emoji: "🧸", color: "#c0628a", lessons: [
+      { id: "l.nappies", title: "Changing nappies" },
+      { id: "l.mealtime", title: "Eating and drinking" },
+      { id: "l.naptime", title: "Sleeping" },
+      { id: "l.playtime", title: "Playing" },
+  ] },
+  { id: "u.daycare", title: "Parents, safety and the group", titleNl: "Ouders, veiligheid en de groep", emoji: "👪", color: "#7a4f9a", lessons: [
+      { id: "l.pickup", title: "Bringing and picking up" },
+      { id: "l.childsafety", title: "Safety in the group" },
+      { id: "l.sickchild", title: "A sick child and allergies" },
+      { id: "l.grouprules", title: "The group and the rules" },
+  ] },
 ];

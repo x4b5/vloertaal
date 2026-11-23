@@ -4,7 +4,7 @@ import { ui, said } from '../i18n';
 import type { HelpLanguage } from '../i18n/types';
 import { Bi } from './Bi';
 import {
-  CareIcon, CarIcon, CartIcon, CheckIcon, ChevronIcon, ConveyorIcon, CupIcon, DeskBellIcon, ForkliftIcon, HelmetIcon, QuestionIcon, SproutIcon, SprayIcon, TreeIcon, WrenchIcon,
+  BinIcon, CareIcon, CarIcon, CartIcon, CheckIcon, ChevronIcon, ConveyorIcon, CupIcon, DeskBellIcon, ForkliftIcon, HelmetIcon, LoafIcon, QuestionIcon, RattleIcon, ShieldIcon, SproutIcon, SprayIcon, TreeIcon, WrenchIcon,
 } from './Icons';
 import { WordPicture } from '../pictures';
 import { ChoiceCards, QuestionHead, type ChoiceOption } from './Choice';
@@ -26,6 +26,10 @@ const ICONS: Record<SectorId | 'none', typeof ForkliftIcon> = {
   retail: CartIcon,
   green: TreeIcon,
   facility: DeskBellIcon,
+  security: ShieldIcon,
+  food: LoafIcon,
+  waste: BinIcon,
+  childcare: RattleIcon,
   none: QuestionIcon,
 };
 
@@ -53,6 +57,13 @@ export const SECTOR_PICTURES: Record<SectorId, string> = {
   // until it is drawn) and the drawn reception desk of an earlier lesson.
   green: 'w.grasmaaier',
   facility: 'w.receptie',
+  // Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026):
+  // placeholders until drawn (the radio, the hair net of an earlier lesson, the wheelie bin and the
+  // cuddly toy).
+  security: 'w.portofoon',
+  food: 'w.haarnetje',
+  waste: 'w.kliko',
+  childcare: 'w.knuffel',
 };
 
 const sectorPicture = (id: SectorId, size: number) => <WordPicture id={SECTOR_PICTURES[id]} emoji="" size={size} />;
@@ -66,7 +77,7 @@ const back = { group: null as SectorGroupId | null, at: 0, picked: false };
 const BACK_MS = 2000;
 
 /**
- * Step 1: one list of one kind of row (the list exception of max 3): the five kinds of work,
+ * Step 1: one list of one kind of row (the list exception of max 3): the six kinds of work,
  * each shown by its sectors' pictures and leading on (›, mirrored right to left), and "Weet ik
  * nog niet", which is the choice 'none' at once. The row of the current choice is marked.
  */

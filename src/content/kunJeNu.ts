@@ -336,6 +336,46 @@ export const KUN_TAAL: KunOnderwerp[] = [
     ['Ik kan een storing melden.', 'A1', 'spreken', 'I can report a fault.'],
     ['Ik kan vragen waar een bureau naartoe moet.', 'A1', 'gesprekken', 'I can ask where a desk must go.'],
   ]),
+  // Ronde en toegang (23 November 2026, the new sector Beveiliging): two lines.
+  onderwerp('u.guarding', 'Ronde en toegang', [
+    ['Ik kan vragen of ik iemands legitimatie mag zien.', 'A1', 'gesprekken', 'I can ask to see someone’s ID.'],
+    ['Ik kan via de portofoon zeggen wat ik zie.', 'A1', 'spreken', 'I can say on the radio what I see.'],
+  ]),
+  // Noodgevallen en de winkel (23 November 2026): two lines.
+  onderwerp('u.incidents', 'Noodgevallen en de winkel', [
+    ['Ik kan 112 bellen en zeggen wat er is.', 'A1', 'spreken', 'I can call 112 and say what is wrong.'],
+    ['Ik kan een boze klant rustig toespreken.', 'A1', 'gesprekken', 'I can speak calmly to an angry customer.'],
+  ]),
+  // Hygiëne en kou (23 November 2026, the new sector Voedingsindustrie): two lines.
+  onderwerp('u.foodhygiene', 'Hygiëne en kou', [
+    ['Ik kan zeggen dat de koelcel te warm is.', 'A1', 'spreken', 'I can say that the cold room is too warm.'],
+    ['Ik kan vragen of er noten in zitten.', 'A1', 'gesprekken', 'I can ask if there are nuts in it.'],
+  ]),
+  // De productielijn (23 November 2026): two lines.
+  onderwerp('u.foodline', 'De productielijn', [
+    ['Ik kan zeggen dat het etiket niet klopt.', 'A1', 'spreken', 'I can say that the label is not right.'],
+    ['Ik kan vragen hoeveel er in een bakje moet.', 'A1', 'gesprekken', 'I can ask how much must go in a tub.'],
+  ]),
+  // Afval ophalen (23 November 2026, the new sector Afval en recycling): two lines.
+  onderwerp('u.collection', 'Afval ophalen', [
+    ['Ik kan de chauffeur helpen met achteruitrijden.', 'A1', 'gesprekken', 'I can help the driver reverse.'],
+    ['Ik kan zeggen dat een kliko te zwaar is.', 'A1', 'spreken', 'I can say that a wheelie bin is too heavy.'],
+  ]),
+  // De milieustraat (23 November 2026): two lines.
+  onderwerp('u.recycling', 'De milieustraat', [
+    ['Ik kan een bezoeker zeggen waar zijn afval heen moet.', 'A1', 'gesprekken', 'I can tell a visitor where their waste goes.'],
+    ['Ik kan zeggen dat de pers vastzit.', 'A1', 'spreken', 'I can say that the press is stuck.'],
+  ]),
+  // De kinderen (23 November 2026, the new sector Kinderopvang): two lines.
+  onderwerp('u.toddlers', 'De kinderen', [
+    ['Ik kan zeggen dat ik een kind ga verschonen.', 'A1', 'spreken', 'I can say that I am going to change a child.'],
+    ['Ik kan vragen of een kind al slaapt.', 'A1', 'gesprekken', 'I can ask if a child is asleep yet.'],
+  ]),
+  // Ouders, veiligheid en de groep (23 November 2026): two lines.
+  onderwerp('u.daycare', 'Ouders, veiligheid en de groep', [
+    ['Ik kan een ouder vertellen hoe de dag ging.', 'A1', 'gesprekken', 'I can tell a parent how the day went.'],
+    ['Ik kan vragen wie een kind komt ophalen.', 'A1', 'gesprekken', 'I can ask who is coming to pick up a child.'],
+  ]),
 ];
 
 /** Spoor Werkregels (alleen Nederlands): per onderwerp, in de volgorde van de thema's. */

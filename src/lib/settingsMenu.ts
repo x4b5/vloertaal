@@ -10,7 +10,7 @@ export type SettingsPage =
   | 'route'
   /** "Naar Werkregels?": what changes, before the switch from the language course (review, 9 November 2026). */
   | 'switch'
-  | 'language' | 'gender' | 'sector' | 'sector-build' | 'sector-make' | 'sector-care' | 'sector-shop' | 'sector-outdoor' | 'region' | 'country' | 'english' | 'certificates'
+  | 'language' | 'gender' | 'sector' | 'sector-build' | 'sector-make' | 'sector-care' | 'sector-shop' | 'sector-outdoor' | 'sector-service' | 'region' | 'country' | 'english' | 'certificates'
   | 'sound' | 'voice' | 'tempo' | 'speaking' | 'writing' | 'text' | 'theme'
   /** "Sfeer" (src/lib/play.ts): Kalm ("Rustig scherm", src/lib/calm.ts), Standaard or Spel (the game
    *  mode), from Lessen, under Weergave. One setting since 23 November 2026 (the owner's choice). */
@@ -47,6 +47,7 @@ export const SETTINGS_PARENT: Record<SettingsPage, SettingsPage | null> = {
   'sector-care': 'sector',
   'sector-shop': 'sector',
   'sector-outdoor': 'sector',
+  'sector-service': 'sector',
   region: 'me',
   country: 'me',
   english: 'me',

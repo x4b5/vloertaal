@@ -19,7 +19,8 @@ export const UPDATES: Update[] = [
   {
     date: '2026-11-23',
     items: [
-      'Twee nieuwe sectoren: Groen (maaien, snoeien, planten, onkruid en werken langs de weg) en Facilitair (receptie, post, vergaderzalen, storingen en verhuizen). Elk met twee onderwerpen van vier lessen, en bij elke les een tip van "Zo werkt het hier". Groen staat bij "Buiten werken", Facilitair bij "Zorg en service". De vertalingen, de stemmen en de tekeningen volgen.',
+      'Vier nieuwe sectoren: Beveiliging (de ronde, toegang, camera’s, het rapport, brand, EHBO en winkeldiefstal), Voedingsindustrie (hygiëne, allergenen, de koelcel, snijden, etiketten en HACCP), Afval en recycling (de vuilniswagen, achteruitrijden, sorteren, de milieustraat en de balenpers) en Kinderopvang (verschonen, eten, slapen, spelen, ouders, veiligheid en de groep). Elk met twee onderwerpen van vier lessen, en bij elke les een tip van "Zo werkt het hier". De keuze van je sector heeft nu zes groepen: Groen en Tuinbouw staan bij "Buiten werken", Facilitair bij het nieuwe "Service en veiligheid", en "Zorg en service" heet nu "Zorg en kinderen". De vertalingen, de stemmen en de tekeningen volgen.',
+      'Twee nieuwe sectoren: Groen (maaien, snoeien, planten, onkruid en werken langs de weg) en Facilitair (receptie, post, vergaderzalen, storingen en verhuizen). Elk met twee onderwerpen van vier lessen, en bij elke les een tip van "Zo werkt het hier". De vertalingen, de stemmen en de tekeningen volgen.',
     ],
   },
   {

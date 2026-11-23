@@ -2794,10 +2794,530 @@ const groenFacilitairTips = [
   ),
 ];
 
+// ---- Beveiliging (u.guarding, u.incidents), Voedingsindustrie (u.foodhygiene, u.foodline), Afval en
+// recycling (u.collection, u.recycling) and Kinderopvang (u.toddlers, u.daycare) ----
+// The owner's request, 23 November 2026: one tip per lesson of the own units of the four new
+// sectors (./work.ts guardingUnit … daycareUnit). None of them states a right, a law or an
+// amount: they are about doing the work safely (NONE), or about rules that differ per company
+// (HOUSE_LINE). Safety facts are kept general (no numbers, no names of laws), and none names a
+// Dutch body, so they hold in Belgium too (src/content/taalBe/inventory.ts).
+
+const vierSectorenTips = [
+  // What a guard checks on a round differs per site: HOUSE_LINE.
+  tipFor(
+    'patrol',
+    '🔦',
+    'Look and report, do not play the hero',
+    'On your round you look: are doors and windows closed, is the fence whole, is there anyone who should not be there? Write down what you see, with the time. Do you see something strange, like a broken window or a person at night? Do not go in alone. Call the control room or the police on the radio or the phone, and wait at a safe place. Your own safety comes first.',
+    ['Ik zie iemand bij het hek.', 'I see someone by the fence.'],
+    'At night you see a door that is broken open. You hear noise inside. What do you do?',
+    [
+      'Stay outside, and call for help.',
+      'Go in quickly, and look.',
+      'Shout inside that you are coming.',
+    ],
+    'A thief inside can be dangerous. The police know what to do; your job is to see and report.',
+    HOUSE_LINE,
+  ),
+  // Who may go in, and how, differs per building: HOUSE_LINE.
+  tipFor(
+    'access',
+    '💳',
+    'No pass, no entry',
+    'At the gate or the desk you check who comes in. Everyone needs a pass, or must be on the list. Be friendly, also when someone is angry or in a hurry. Do not make exceptions because someone says he is the boss: check it. Never lend your own pass to anyone, and never let someone walk in behind you. A pass that is lost must be reported at once.',
+    ['Mag ik uw pas zien?', 'May I see your card?'],
+    'A man in a suit says: "I am the new director. I have no pass yet." What do you do?',
+    [
+      'Check it, before you let him in.',
+      'Let him in: he looks important.',
+      'Give him your own pass.',
+    ],
+    'Anyone can say he is the director. A quick check keeps the building safe, and a real director will understand.',
+    HOUSE_LINE,
+  ),
+  // Who may watch the cameras, and how long footage is kept, is set by the company and the law: HOUSE_LINE.
+  tipFor(
+    'cameras',
+    '📹',
+    'Camera footage is private',
+    'Cameras film people: staff, visitors and people walking by. What you see on the screens is private. Only watch for your work, and never film the screen with your phone. Never send footage to friends or put it online. Is there an incident? Write down the camera and the time, and tell your supervisor. Only your company decides who gets the footage, for example the police.',
+    ['Dat mag ik niet laten zien.', 'I am not allowed to show that.'],
+    'A colleague asks you to send him a funny clip from the cameras. What do you do?',
+    [
+      'Say no: the footage is private.',
+      'Send it, only to him.',
+      'Film the screen with your phone.',
+    ],
+    'The people on the footage did not agree to be shared. Sending it can cost you your job.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'report',
+    '📻',
+    'Write it down at once',
+    'Write a report straight after an incident, while you still remember it well. Write what you saw and heard yourself: what happened, where, at what time, and who was there. Write facts, not what you think. On the radio, speak short and clear, and wait until the other person has finished. Say who you are and where you are. A good report helps the police, your company and you.',
+    ['Ik schrijf het meteen op.', 'I will write it down right away.'],
+    'After a busy night you are very tired. There was one small incident. What do you do?',
+    [
+      'Write the report before you go home.',
+      'Write it tomorrow, after a good sleep.',
+      'Skip it: it was only small.',
+    ],
+    'Tomorrow you forget details. A report without a time or a place helps nobody.',
+    NONE,
+  ),
+  // What a guard does when the alarm goes differs per building (the evacuation plan): HOUSE_LINE.
+  tipFor(
+    'evacuation',
+    '🚒',
+    'Fire: alarm first, then out',
+    'Do you see fire or smoke? Press the fire alarm button, or call 112. Then help people out by the escape routes, never by the lift. Close doors behind you, but do not lock them. Fight a fire only when it is small and you have learned how. Go to the assembly point, and count who is there. Meet the fire brigade at the entrance, and tell them what you know.',
+    ['Iedereen naar buiten, naar de verzamelplaats.', 'Everyone outside, to the assembly point.'],
+    'The fire alarm goes. A man wants to take the lift. What do you do?',
+    [
+      'Send him to the stairs.',
+      'Let him: the lift is faster.',
+      'Go with him in the lift.',
+    ],
+    'In a fire, the lift can stop or fill with smoke. The stairs are the safe way out.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'firstaid',
+    '🫀',
+    'Call 112, start CPR, get the AED',
+    'Someone falls down and does not react? Call 112 at once, or let someone else call. Check if the person breathes normally. If not: start CPR, and let someone get the AED. The AED speaks and tells you what to do; you cannot do it wrong. Keep going until the ambulance takes over. Do you have a first aid course? Tell your colleagues, so they know who to call.',
+    ['Bel 112 en haal de AED.', 'Call 112 and get the AED.'],
+    'A man falls in the hall. He does not move and does not breathe. What do you do?',
+    [
+      'Call 112, and start CPR.',
+      'Wait to see if he wakes up.',
+      'Lift him, and put him on a chair.',
+    ],
+    'When the heart stops, every minute counts. CPR and an AED can save a life before the ambulance comes.',
+    NONE,
+  ),
+  // Whether a guard may hold a thief, and how, differs per shop and per security company:
+  // HOUSE_LINE. The tip names no law; "never search" and "little force" hold everywhere.
+  tipFor(
+    'shoplifting',
+    '🚥',
+    'Shop theft: watch, report, no rough force',
+    'Did you see someone steal? Stay calm, and call the police at once. Some shops let a guard hold a thief until the police come; others say: only watch, report and remember what the person looks like. Never hit or kick, and never hold someone by the neck. Never search a person, their pockets or their bag: that is for the police. Write down what you saw, and keep the camera footage.',
+    ['Wilt u even met mij meekomen?', 'Would you come with me, please?'],
+    'You saw a woman put a bottle in her bag. She walks out. What do you do?',
+    [
+      'Stop her calmly, and call the police.',
+      'Search her bag at the door, quickly.',
+      'Push her hard to the ground.',
+    ],
+    'Searching a person is for the police, and rough force can hurt someone and get you into trouble.',
+    HOUSE_LINE,
+  ),
+  // How a company handles aggression differs: HOUSE_LINE.
+  tipFor(
+    'aggression',
+    '😡',
+    'Stay calm, keep your distance',
+    'An angry person calms down faster when you stay calm. Speak slowly and quietly, and call the person "u". Keep an arm’s length or more between you, and keep a way out behind you. Do not touch the person and do not shout back. Does it get dangerous? Step back, and call a colleague or the police. Write it down afterwards. After a bad incident, talk about it with someone.',
+    ['Rustig. Ik wil u helpen.', 'Calm down. I want to help you.'],
+    'A man shouts at you and comes very close. What do you do?',
+    [
+      'Step back, and speak calmly.',
+      'Shout back, louder than him.',
+      'Push him away from you.',
+    ],
+    'Calm words and space take the heat out. Shouting or pushing makes it worse.',
+    HOUSE_LINE,
+  ),
+  // The hygiene rules differ per factory: HOUSE_LINE.
+  tipFor(
+    'hygienelock',
+    '🧔',
+    'Clean in, every time',
+    'In a food factory, you are the biggest danger for the food: germs come from your hands, hair and clothes. So go through the hygiene lock every time you go in, also after a break or the toilet. Hair net on, beard net if you have a beard, clean work clothes, all jewellery off. Wash your hands with soap, dry them and disinfect them. Are you ill, with diarrhoea or vomiting? Tell your supervisor before you start.',
+    ['Ik heb diarree. Mag ik vandaag werken?', 'I have diarrhoea. May I work today?'],
+    'You come back from the toilet. Your colleague says: "Skip the lock, we are busy." What do you do?',
+    [
+      'Go through the lock anyway.',
+      'Skip it, just this once.',
+      'Only put on new gloves.',
+    ],
+    'Germs from the toilet can make many customers ill. A few minutes in the lock prevent that.',
+    HOUSE_LINE,
+  ),
+  // How allergens are kept apart differs per factory: HOUSE_LINE.
+  tipFor(
+    'allergens',
+    '🌰',
+    'A trace is enough',
+    'For some people, a tiny bit of nuts, peanut, milk, egg, gluten or sesame can be life-threatening. That is why the label must say exactly what is in a product. Keep allergens apart: their own tubs, tools and colours. After a product with an allergen, the line is cleaned before the next product. Never swap an ingredient, also not when it looks the same. Do you doubt? Ask.',
+    ['Zitten hier noten in?', 'Are there nuts in this?'],
+    'The almonds are finished. A colleague says: "Use hazelnuts, nobody will notice." What do you do?',
+    [
+      'Say no, and tell your supervisor.',
+      'Use them: nuts are nuts.',
+      'Use them, and change nothing on the label.',
+    ],
+    'The label must say what is inside. A wrong nut can make someone with an allergy very ill.',
+    HOUSE_LINE,
+  ),
+  // How long you may stay in the freezer, and the breaks, differ per company: HOUSE_LINE.
+  tipFor(
+    'coldroom',
+    '🧥',
+    'Cold work: dress warm, keep it cold',
+    'Food must stay cold all the way: from the lorry to the cold room to the shop. So put cold products away at once, and keep the doors of the cold room and the freezer closed. Check the temperature and write it down. In the freezer, wear your thermal clothes, gloves and a hat, and take a warm break in time. Make sure you can always open the door from the inside.',
+    ['Het is hier te warm. De koeling doet het niet.', 'It is too warm here. The cooling does not work.'],
+    'The thermometer of the cold room shows a much higher number than normal. What do you do?',
+    [
+      'Tell your supervisor at once.',
+      'Wait: it will cool down again.',
+      'Write the normal number on the list.',
+    ],
+    'Too warm means germs grow. Your supervisor decides if the food is still safe.',
+    HOUSE_LINE,
+  ),
+  // What happens with the line and the products differs per factory: HOUSE_LINE.
+  tipFor(
+    'foreignbody',
+    '🧲',
+    'Something in the food? Stop and report',
+    'Glass, metal, plastic, a plaster or a hair must never end up in food. Does the metal detector beep, or do you find something strange? Put the product aside, and tell the shift leader. Did glass break? Stop the line near it: the shift leader decides what must be thrown away. Use only blue plasters, so they are easy to see. Never take glass, pens or loose things onto the work floor.',
+    ['Ik heb iets gevonden in het product.', 'I found something in the product.'],
+    'A glass lamp breaks above the line. The products roll on. What do you do?',
+    [
+      'Stop the line, and call the shift leader.',
+      'Pick out the glass you can see.',
+      'Go on: the detector finds glass.',
+    ],
+    'A metal detector does not find glass. Small pieces you cannot see can hurt a customer badly.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'cutting',
+    '🍖',
+    'Sharp knife, safe hand',
+    'A sharp knife is safer than a blunt one: you need less force, so it slips less. Always wear your cut-resistant glove on the other hand. Cut away from your body. Put a knife down flat on the board, never in a sink or under meat. Do not try to catch a falling knife: step back. Carry a knife with the point down, close to your leg. Even a small cut must be covered and reported.',
+    ['Mijn mes is bot.', 'My knife is blunt.'],
+    'Your knife slips out of your hand and falls. What do you do?',
+    [
+      'Step back, and let it fall.',
+      'Catch it quickly.',
+      'Stop it with your foot.',
+    ],
+    'A falling knife cuts deep when you grab it. On the floor it can do no harm.',
+    NONE,
+  ),
+  // How labels are checked differs per factory: HOUSE_LINE.
+  tipFor(
+    'labels',
+    '🖨',
+    'A wrong label is dangerous',
+    'The label tells the customer what is inside, how much it weighs and until when it is good. A wrong date or a wrong label can make people ill, for example when an allergen is missing. So check the first labels of every new run: the product, the date and the batch number. Is something wrong? Stop, and tell your supervisor. Products with a wrong label are put aside, never sold.',
+    ['Het etiket klopt niet.', 'The label is not right.'],
+    'You see that the date on the labels is one week too late. What do you do?',
+    [
+      'Stop packing, and tell your supervisor.',
+      'Go on: one week does not matter.',
+      'Change the date with a pen.',
+    ],
+    'A wrong date can let people eat food that is no longer safe. Better to stop now than to call it back later.',
+    HOUSE_LINE,
+  ),
+  // How a machine is made safe before cleaning differs per machine: HOUSE_LINE.
+  tipFor(
+    'linecleaning',
+    '💦',
+    'Power off before you clean',
+    'Never clean a machine that is running. Turn it off, and make sure nobody can start it again: follow the steps of your company. Wear the right gloves, glasses and boots: cleaning products can burn your skin and eyes. Never mix products. First take away the leftovers, then foam, scrub and rinse. Do not spray water on electric boxes or plugs.',
+    ['Is de machine uit?', 'Is the machine off?'],
+    'Some meat is stuck in the belt. The machine is still running. What do you do?',
+    [
+      'Turn it off first, then take it out.',
+      'Pull it out quickly with your hand.',
+      'Push it out with a knife.',
+    ],
+    'A running belt can pull in your hand in a second. Turning it off takes only a moment.',
+    HOUSE_LINE,
+  ),
+  // The plan and its lists differ per factory: HOUSE_LINE.
+  tipFor(
+    'haccp',
+    '📉',
+    'HACCP: check, write, report',
+    'Every food company works with a food safety plan (HACCP). It says at which steps you must check something, like the temperature of the cold room or the core temperature of cooked meat. You check, you write it down, and you sign. Write what you really measured, also when it is wrong. A wrong number is not your fault, but hiding it is dangerous.',
+    ['De temperatuur is te hoog.', 'The temperature is too high.'],
+    'You forgot to measure at ten. Your colleague says: "Just write down a good number." What do you do?',
+    [
+      'Measure now, and write the real time.',
+      'Write a good number for ten o’clock.',
+      'Leave the line empty.',
+    ],
+    'The list must show what really happened. A made-up number hides a problem that can make people ill.',
+    HOUSE_LINE,
+  ),
+  // Whether riding on the back step is allowed, and how, differs per company: HOUSE_LINE.
+  tipFor(
+    'binlorry',
+    '🦺',
+    'Be seen, and ride inside',
+    'Wear your high-visibility clothes on every round. Get in and out on the side of the pavement, never on the side of the traffic. Ride in the cab, not on the back of the lorry: only when your company clearly allows it, and never when it reverses or goes fast. Keep away from the bin lift while it moves. Is a bin too heavy, or does something stick out of it? Leave it, and report it.',
+    ['Deze kliko is te zwaar.', 'This wheelie bin is too heavy.'],
+    'The next street is very close. The driver says: "Stand on the back step." What do you do?',
+    [
+      'Get in the cab anyway.',
+      'Stand on the step: it is close.',
+      'Walk behind the lorry.',
+    ],
+    'Falling off a moving lorry is one of the biggest dangers of this work. In the cab you are safe.',
+    HOUSE_LINE,
+  ),
+  // Whether a banksman guides every reversing manoeuvre differs per company: HOUSE_LINE.
+  tipFor(
+    'reversing',
+    '🔙',
+    'Never behind a reversing lorry',
+    'Many accidents with waste lorries happen when they drive backwards. The driver cannot see right behind the lorry: the blind spot. So never stand or walk behind a lorry that may reverse. Guide the driver from the side, where you can see each other in the mirror. Lost eye contact? The driver stops. Agree on clear signs before you start.',
+    ['Stop! Ik zie je niet meer.', 'Stop! I cannot see you any more.'],
+    'The lorry reverses. You walk behind it to get a bag. What do you do?',
+    [
+      'Wait until the lorry stands still.',
+      'Walk fast: it is only a second.',
+      'Wave to the driver, and go.',
+    ],
+    'A driver cannot see you behind the lorry. One second is enough for an accident.',
+    HOUSE_LINE,
+  ),
+  // Which waste goes where differs per town: HOUSE_LINE.
+  tipFor(
+    'wastesorting',
+    '🥫',
+    'Good sorting saves work',
+    'Sorted waste can be used again: paper becomes paper, glass becomes glass. But one wrong thing can spoil a whole load. So look in the bin before you empty it. Does something not belong there, like a bag of general waste in the paper? Leave it, or follow the rules of your company. Which waste goes where differs per town: learn the rules of your area.',
+    ['Dit hoort hier niet in.', 'This does not belong in here.'],
+    'A paper bin is full of black rubbish bags. What do you do?',
+    [
+      'Leave it, and report it.',
+      'Empty it into the paper.',
+      'Take the bags out by hand.',
+    ],
+    'Rubbish in the paper spoils the whole load. Bags can also hold sharp or dirty things.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'wastesafety',
+    '🩸',
+    'Never squeeze a bag',
+    'A rubbish bag can hold glass, knives or needles. So never press a bag against your body, never squeeze it, and never carry it on your leg: hold it at the top, away from you. Wear your gloves. Lift with your knees bent and your back straight, and push a bin, do not carry it. Did something prick or cut you? Wash the wound well with water, and tell your supervisor the same day.',
+    ['Ik heb me geprikt.', 'I pricked myself.'],
+    'A bag tears. You see a needle in it. What do you do?',
+    [
+      'Do not touch it, and report it.',
+      'Pick it up with your gloves on.',
+      'Push it back in the bag.',
+    ],
+    'Gloves do not stop a needle. A needle can carry a disease.',
+    NONE,
+  ),
+  // The rules of the yard (who may help, what is accepted) differ per town: HOUSE_LINE.
+  tipFor(
+    'yard',
+    '🛋',
+    'Help, but keep the yard safe',
+    'At the recycling yard you tell visitors where their waste goes, and you check that it is sorted well. Be friendly: many people come only a few times a year and do not know the rules. Keep children and visitors away from machines and from the edge of high containers. Lift heavy things together, or let the visitor carry their own. Does someone bring something you do not know? Ask before it goes in.',
+    ['Dit gaat in container vier.', 'This goes in container four.'],
+    'A man wants to throw a full bag in the wood container. What do you do?',
+    [
+      'Ask what is in the bag.',
+      'Let him: it is his waste.',
+      'Throw it in for him.',
+    ],
+    'One wrong thing can spoil a full container. A friendly question keeps the waste clean.',
+    HOUSE_LINE,
+  ),
+  // What is accepted, and how, differs per yard: HOUSE_LINE.
+  tipFor(
+    'hazardous',
+    '☠',
+    'Unknown? Do not open, do not smell',
+    'Chemical waste, like paint, oil, cleaning products, batteries and spray cans, can burn, poison or explode. Look for the hazard symbols. Wear gloves and safety glasses. Never open a bottle to smell what is inside, and never mix products. Keep a leaking bottle upright, and put it in a tray. Asbestos may only come in when it is packed well: never break it, and do not take it out of the packing.',
+    ['Wat zit hierin?', 'What is in here?'],
+    'A woman brings a bottle without a label. It smells strong. What do you do?',
+    [
+      'Put it apart, and tell your supervisor.',
+      'Open it, and smell what it is.',
+      'Pour it into the paint drum.',
+    ],
+    'Unknown products can react with others. Your supervisor knows where it can go safely.',
+    HOUSE_LINE,
+  ),
+  // Who may use the baler, and how it is made safe, differs per company: HOUSE_LINE.
+  tipFor(
+    'baler',
+    '⬇',
+    'Never reach into the baler',
+    'A baler presses with a huge force. Only use it when you have learned how. Never put a hand, an arm or a foot into the loading opening, also not when the machine looks still. Does it jam? Press the emergency stop, switch it off and make sure nobody can switch it on: follow the steps of your company. Only then look. Never climb into a baler or a container.',
+    ['De pers zit vast.', 'The press is stuck.'],
+    'A piece of cardboard is stuck in the opening. The machine stands still. What do you do?',
+    [
+      'Switch it off fully, then take it out.',
+      'Pull it out quickly with your hand.',
+      'Push it in with your foot.',
+    ],
+    'A machine that stands still can start again. Without the power off, your hand is in danger.',
+    HOUSE_LINE,
+  ),
+  // The traffic rules of the yard differ per yard: HOUSE_LINE.
+  tipFor(
+    'shovel',
+    '🟠',
+    'Stay out of the loader’s way',
+    'A wheel loader is big, and its driver sees little around it, especially behind it. So stay on the walkways, and wear your high-visibility clothes. Never walk behind a moving machine. Want to pass? Wait until the driver has seen you and gives a sign. The flashing light means: this machine is working. Keep visitors far away from it.',
+    ['Heb je me gezien?', 'Did you see me?'],
+    'You must walk past a working wheel loader. The driver looks the other way. What do you do?',
+    [
+      'Wait until he sees you.',
+      'Walk past quickly.',
+      'Walk behind the machine.',
+    ],
+    'A driver who has not seen you cannot stop for you.',
+    HOUSE_LINE,
+  ),
+  // How nappies are changed (gloves, the list) differs per day care: HOUSE_LINE.
+  tipFor(
+    'nappies',
+    '🧷',
+    'One hand on the child',
+    'Get everything ready before you put a child on the changing table: a clean nappy, wipes and clothes. Then keep one hand on the child at all times. Never walk away, also not for a second. Wash your hands after every change, and clean the table. Write down when you changed the nappy, so the parents know. Do you see a rash or a wound? Write it down, and tell a colleague.',
+    ['Ik verschoon hem even.', 'I am just changing him.'],
+    'You are changing a baby. You forgot the wipes; they are across the room. What do you do?',
+    [
+      'Take the baby with you.',
+      'Get them quickly: it is close.',
+      'Leave the baby, and call out.',
+    ],
+    'A baby can roll off a changing table in one second. Never leave a child alone up there.',
+    HOUSE_LINE,
+  ),
+  // What children may eat is agreed with the parents: HOUSE_LINE.
+  tipFor(
+    'mealtime',
+    '🍼',
+    'Check the list before you give food',
+    'Before you give a child food or drink, check the list: some children have an allergy, others may not eat certain food for their health or their faith. Wash your hands and the children’s hands before eating. Let children sit down while they eat and drink, never walk or run. Cut food small for small children, like grapes in pieces. Never give a child something from home of another child.',
+    ['Mag hij dit eten?', 'May he eat this?'],
+    'A child cries for a biscuit. You do not know this child well. What do you do?',
+    [
+      'Check the list first.',
+      'Give it: it is only a biscuit.',
+      'Give half a biscuit.',
+    ],
+    'A biscuit can hold nuts, milk or egg. For a child with an allergy, that can be very dangerous.',
+    HOUSE_LINE,
+  ),
+  // How often sleeping children are checked differs per day care: HOUSE_LINE.
+  tipFor(
+    'naptime',
+    '💤',
+    'Babies sleep on their back',
+    'A baby sleeps safest on its back, in a sleeping bag, in its own cot. No pillow, no loose blanket and no big toys in the cot. Keep the room cool and fresh. Check sleeping children often: look and listen, also when the baby monitor is on. Does a parent ask you to let their baby sleep in another way? Tell your supervisor first.',
+    ['Ik ga even kijken in de slaapkamer.', 'I will go and look in the bedroom.'],
+    'A baby has fallen asleep on its tummy in the cot. What do you do?',
+    [
+      'Gently turn it onto its back.',
+      'Let it sleep: it is asleep now.',
+      'Put a pillow next to it.',
+    ],
+    'On its back, a baby can breathe freely. A pillow can cover its face.',
+    HOUSE_LINE,
+  ),
+  // The rules for outside play differ per day care: HOUSE_LINE.
+  tipFor(
+    'playtime',
+    '🛝',
+    'Play safe: look, count, check',
+    'Children learn by playing, so let them try things. But always keep them in sight, also outside. Count the children when you go out and when you come back in. Check the playground first: is the gate closed, is there glass or rubbish? Toys with small parts are not for children under three: they can choke on them. Clean toys that go in the mouth often.',
+    ['Is iedereen er?', 'Is everyone here?'],
+    'You come back in from the playground. You count one child too few. What do you do?',
+    [
+      'Tell a colleague, and search at once.',
+      'Wait: the child will come in by itself.',
+      'Count again tomorrow.',
+    ],
+    'A child alone outside can get hurt or walk away. Every minute counts.',
+    HOUSE_LINE,
+  ),
+  // Who may pick up a child, and how parents let you know, is set per day care: HOUSE_LINE.
+  tipFor(
+    'pickup',
+    '👪',
+    'Only to people on the list',
+    'Give a child only to a parent, or to someone the parents have told you about. Do you not know the person? Ask who they are, look at their ID, and check with the parents or your supervisor. At pick-up, tell the parent how the day went: eating, sleeping, playing, and anything special. Write important things in the notebook or the app. Speak about other children only with their own parents.',
+    ['Wie bent u? Ik bel even de ouders.', 'Who are you? I will call the parents.'],
+    'A man you do not know comes to pick up Sem. He is not on the list. What do you do?',
+    [
+      'Call the parents before Sem goes.',
+      'Let Sem go: he knows the name.',
+      'Ask Sem if he knows him.',
+    ],
+    'You are responsible for the child until a person the parents chose takes over.',
+    HOUSE_LINE,
+  ),
+  // The safety checks and the house rules differ per day care: HOUSE_LINE.
+  tipFor(
+    'childsafety',
+    '🖐',
+    'Look around with a child’s eyes',
+    'Small children put everything in their mouth and climb on everything. So keep the stair gate closed, put cleaning products and medicines out of reach, and keep hot drinks away from children. Check the room every day. Does a child get hurt? Give first aid, comfort the child, tell the parents, and write it down. Is it serious? Call 112.',
+    ['Het traphekje staat open.', 'The stair gate is open.'],
+    'You put your hot coffee on a low table. A toddler walks to it. What do you do?',
+    [
+      'Put the coffee up high at once.',
+      'Tell the toddler not to touch it.',
+      'Drink it quickly.',
+    ],
+    'Hot coffee can burn a small child badly. Out of reach is the only safe place.',
+    HOUSE_LINE,
+  ),
+  // When a sick child must go home, and who may give medicine, is set per day care: HOUSE_LINE.
+  tipFor(
+    'sickchild',
+    '🤮',
+    'A sick child: tell, do not guess',
+    'Watch how the children are. Is a child hot, very tired, vomiting, or does it have a rash? Take its temperature, tell your colleague, and call the parents. Give a medicine only with written permission of the parents, and write down what you gave and when. Know which children have an allergy, and where their medicine is. A child with a strong allergic reaction: give the adrenaline pen if you have learned it, and call 112.',
+    ['Uw kind is ziek. Kunt u hem komen halen?', 'Your child is ill. Can you come and pick him up?'],
+    'A mother says: "Give him a fever drink at two." There is no form. What do you do?',
+    [
+      'Ask her to sign the form first.',
+      'Give it: the mother asked.',
+      'Give half, to be safe.',
+    ],
+    'Without written permission you may not give medicine. The form protects the child and you.',
+    HOUSE_LINE,
+  ),
+  // The four-eyes rule and the reporting of worries are set per day care: HOUSE_LINE.
+  tipFor(
+    'grouprules',
+    '👁',
+    'Never alone out of sight',
+    'In child care, another adult must always be able to see or hear you when you are with the children. That protects the children and you. Every child has a mentor: one worker who follows that child closely and talks with the parents. Are you worried about a child at home, for example bruises or fear? Do not ask the child too much: tell your supervisor, who knows the steps.',
+    ['Ik maak me zorgen over dit kind.', 'I am worried about this child.'],
+    'You see bruises on a child again. The child is quiet. What do you do?',
+    [
+      'Tell your supervisor the same day.',
+      'Ask the child many questions.',
+      'Call the parents and ask why.',
+    ],
+    'Your supervisor knows the steps for worries about a child. Many questions can scare the child.',
+    HOUSE_LINE,
+  ),
+];
+
 const lessonOrder = [doUnit, toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit, dataUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips, ...installTips, ...montageTips, ...kweekServiceTips, ...groenFacilitairTips].sort(
+export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips, ...installTips, ...montageTips, ...kweekServiceTips, ...groenFacilitairTips, ...vierSectorenTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

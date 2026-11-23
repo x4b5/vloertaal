@@ -55,6 +55,10 @@ import groupAutoservice from './groupAutoservice';
 import groupKweek from './groupKweek';
 import groupGroen from './groupGroen';
 import groupFacilitair from './groupFacilitair';
+import groupBeveiliging from './groupBeveiliging';
+import groupVoeding from './groupVoeding';
+import groupAfval from './groupAfval';
+import groupKinderopvang from './groupKinderopvang';
 import group53 from './group53';
 import group54 from './group54';
 import group55 from './group55';
@@ -142,6 +146,12 @@ const words: Record<string, () => JSX.Element> = {
   // (./placeholder.tsx) until they are drawn.
   ...groupGroen,
   ...groupFacilitair,
+  // Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang: 4 × 48 words of 23 November
+  // 2026, PLACEHOLDERS for now (./placeholder.tsx) until they are drawn.
+  ...groupBeveiliging,
+  ...groupVoeding,
+  ...groupAfval,
+  ...groupKinderopvang,
   // "Tegels, stuc en verf" (u.afbouw, 20 November 2026): l.tiletools, l.tiling and l.plaster.
   ...group53,
   ...group54,

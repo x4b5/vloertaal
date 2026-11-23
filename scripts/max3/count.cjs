@@ -200,6 +200,7 @@ function defineStates(LANG) {
   add('onb:sector-care', shot('sector&group=care'), null, { expect: '.chrome-back' });
   add('onb:sector-shop', shot('sector&group=shop'), null, { expect: '.chrome-back' });
   add('onb:sector-outdoor', shot('sector&group=outdoor'), null, { expect: '.chrome-back' });
+  add('onb:sector-service', shot('sector&group=service'), null, { expect: '.chrome-back' });
   // "In welk land werk je?" right after the sector: two cards (the back arrow in the first run).
   add('onb:country', shot('country'), null, { expect: '.country-screen .chrome-back' });
   add('onb:country-old', shot('country&old=1'), null, { expect: '.country-screen' });
@@ -564,7 +565,7 @@ function defineStates(LANG) {
   // The next lessons of 20 November 2026 (l.paint and l.prep of u.afbouw, the six of "Metselen,
   // hout en vastmaken", the shapes of Rekenen) and "Machines en gereedschap" (u.machines, 21
   // November 2026) "Elektra, leidingen en metaal" (u.install) and "Assemblage en montage" (u.montage, the same day): every step, the same way (seed 1).
-  for (const lesson of ['paint', 'prep', 'brick', 'wall', 'wood', 'square', 'screw', 'fix', 'shapes', 'angles', 'size', 'atmachine', 'inspect', 'packing', 'upkeep', 'wiring', 'testing', 'pipes', 'metalwork', 'assembly', 'fastening', 'handling', 'finalcheck', 'sowing', 'sorting', 'greenhouse', 'pests', 'tyres', 'oilchange', 'brakes', 'diagnosis', 'mowing', 'pruning', 'hedge', 'chainsaw', 'weeding', 'planting', 'roadside', 'litter', 'reception', 'visitors', 'mailroom', 'meetingroom', 'faults', 'repairs', 'moving', 'closing']) {
+  for (const lesson of ['paint', 'prep', 'brick', 'wall', 'wood', 'square', 'screw', 'fix', 'shapes', 'angles', 'size', 'atmachine', 'inspect', 'packing', 'upkeep', 'wiring', 'testing', 'pipes', 'metalwork', 'assembly', 'fastening', 'handling', 'finalcheck', 'sowing', 'sorting', 'greenhouse', 'pests', 'tyres', 'oilchange', 'brakes', 'diagnosis', 'mowing', 'pruning', 'hedge', 'chainsaw', 'weeding', 'planting', 'roadside', 'litter', 'reception', 'visitors', 'mailroom', 'meetingroom', 'faults', 'repairs', 'moving', 'closing', 'patrol', 'access', 'cameras', 'report', 'evacuation', 'firstaid', 'shoplifting', 'aggression', 'hygienelock', 'allergens', 'coldroom', 'foreignbody', 'cutting', 'labels', 'linecleaning', 'haccp', 'binlorry', 'reversing', 'wastesorting', 'wastesafety', 'yard', 'hazardous', 'baler', 'shovel', 'nappies', 'mealtime', 'naptime', 'playtime', 'pickup', 'childsafety', 'sickchild', 'grouprules']) {
     for (let at = 0; at < 21; at++) add(`lesson:${lesson}-${at}`, shot(`lesson&lesson=l.${lesson}&at=${at}`));
   }
   // "Je goed voelen op het werk" (l.feelwell, seed 1, 5 November 2026): an abstract word ("de
@@ -743,7 +744,7 @@ function defineStates(LANG) {
   // with the back arrow (the "look only" way out).
   for (const pg of ['me', 'lessons', 'phone', 'language', 'sector', 'certificates']) add(`settings:${pg}`, shot(`settings&page=${pg}`), null, { list: true, expect: '.chrome-back' });
   add('settings:phone-preview', shot('settings&page=phone&access=preview'), null, { list: true });
-  for (const pg of ['gender', 'sector-build', 'sector-make', 'sector-care', 'sector-shop', 'sector-outdoor', 'english', 'sound', 'voice', 'tempo', 'speaking', 'writing', 'text', 'theme', 'offline', 'reminder', 'backup', 'counting', 'reset']) add(`settings:${pg}`, shot(`settings&page=${pg}`), null, { list: pg === 'theme', expect: '.chrome-back' });
+  for (const pg of ['gender', 'sector-build', 'sector-make', 'sector-care', 'sector-shop', 'sector-outdoor', 'sector-service', 'english', 'sound', 'voice', 'tempo', 'speaking', 'writing', 'text', 'theme', 'offline', 'reminder', 'backup', 'counting', 'reset']) add(`settings:${pg}`, shot(`settings&page=${pg}`), null, { list: pg === 'theme', expect: '.chrome-back' });
   add('settings:writing-ar', shot('settings&page=writing', 'ar'));
   add('settings:install', shot('settings&page=install&install=prompt'));
   add('settings:unlock', shot('settings&page=unlock&access=preview'));

@@ -326,6 +326,41 @@ export const DeskBellIcon = (p: IconProps) => (
   </Svg>
 );
 
+/** A shield with a check mark: security guards (Beveiliging, 23 November 2026). */
+export const ShieldIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M12 3l7 2.8V11c0 4.6-3 8.3-7 10-4-1.7-7-5.4-7-10V5.8z" {...stroke} strokeWidth={2} />
+    <path d="M8.8 12l2.2 2.2 4.2-4.4" {...stroke} strokeWidth={2} />
+  </Svg>
+);
+
+/** A loaf of bread with three cuts: the food industry (Voedingsindustrie, 23 November 2026). */
+export const LoafIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M4 18.5V11a4.5 4.5 0 0 1 3-4.3C8.3 5.5 10 5 12 5s3.7.5 5 1.7a4.5 4.5 0 0 1 3 4.3v7.5z" {...stroke} strokeWidth={2} />
+    <path d="M8.5 10l1.5 2M11.5 9.5l1.5 2M14.5 10l1.5 2" {...stroke} strokeWidth={2} />
+  </Svg>
+);
+
+/** A wheelie bin with its lid and wheel: waste and recycling (Afval en recycling, 23 November 2026). */
+export const BinIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <path d="M4 7h16M10 4.5h4" {...stroke} strokeWidth={2} />
+    <path d="M5.5 7l1.2 11.5h10.6L18.5 7" {...stroke} strokeWidth={2} />
+    <path d="M10 10.5v5M14 10.5v5" {...stroke} strokeWidth={2} />
+    <circle cx="8" cy="20.5" r="1.3" {...stroke} strokeWidth={2} />
+  </Svg>
+);
+
+/** A baby's rattle: childcare (Kinderopvang, 23 November 2026). */
+export const RattleIcon = (p: IconProps) => (
+  <Svg {...p}>
+    <circle cx="9" cy="9" r="5" {...stroke} strokeWidth={2} />
+    <path d="M12.6 12.6l6.4 6.4M17.5 20.5l3-3" {...stroke} strokeWidth={2} />
+    <path d="M7 9h4" {...stroke} strokeWidth={2} />
+  </Svg>
+);
+
 /** A question mark in a circle: "not sure yet". */
 export const QuestionIcon = (p: IconProps) => (
   <Svg {...p}>

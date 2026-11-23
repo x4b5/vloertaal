@@ -13,7 +13,7 @@ import { withRegion } from './regio';
  */
 export type SectorId =
   | 'logistics' | 'construction' | 'production' | 'care' | 'hospitality' | 'cleaning' | 'horticulture'
-  | 'technical' | 'garage' | 'retail' | 'green' | 'facility';
+  | 'technical' | 'garage' | 'retail' | 'green' | 'facility' | 'security' | 'food' | 'waste' | 'childcare';
 
 /** What is stored: a sector, or 'none' for "not sure yet" (= the whole course as one path). */
 export type SectorChoice = SectorId | 'none';
@@ -88,6 +88,20 @@ export const sectors: Sector[] = [
     rules: { units: [], focus: ['r.veilig', 'r.tijd'] } },
   { id: 'facility', nl: 'Facilitair', key: 'sectorFacility', units: ['u.frontdesk', 'u.maintenance'], focus: ['u.help', 'u.safety'],
     rules: { units: [], focus: ['r.veilig', 'r.samen'] } },
+  // Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (the owner's request of
+  // 23 November 2026), each with two own units. Security, food and waste: danger, machines and
+  // traffic (Safety) and shifts, nights and early rounds (Time). Childcare: working together in a
+  // group and with parents (Samenwerken) and sick children (Health), as Zorg. None has a work-rules
+  // unit of its own yet (a rules unit names one sector: r.factory is Productie's, r.care Zorg's), so
+  // the rules track gives the basis units only. Appended, so every existing sector keeps its path.
+  { id: 'security', nl: 'Beveiliging', key: 'sectorSecurity', units: ['u.guarding', 'u.incidents'], focus: ['u.safety', 'u.time'],
+    rules: { units: [], focus: ['r.veilig', 'r.tijd'] } },
+  { id: 'food', nl: 'Voedingsindustrie', key: 'sectorFood', units: ['u.foodhygiene', 'u.foodline'], focus: ['u.safety', 'u.time'],
+    rules: { units: [], focus: ['r.veilig', 'r.tijd'] } },
+  { id: 'waste', nl: 'Afval en recycling', key: 'sectorWaste', units: ['u.collection', 'u.recycling'], focus: ['u.safety', 'u.time'],
+    rules: { units: [], focus: ['r.veilig', 'r.tijd'] } },
+  { id: 'childcare', nl: 'Kinderopvang', key: 'sectorChildcare', units: ['u.toddlers', 'u.daycare'], focus: ['u.teamwork', 'u.health'],
+    rules: { units: [], focus: ['r.samen', 'r.ziek'] } },
 ];
 
 /** A sector's own units and focus units in one track. */
@@ -206,7 +220,7 @@ export const FOCUS_FOLLOW_UP: Readonly<Record<string, string>> = { 'u.safety': '
  * and "Weet ik nog niet", the list exception of max 3), then the three sectors of the group picked.
  * "Weet ik nog niet" is a row of its own on the first step: it gives the choice 'none'.
  */
-export type SectorGroupId = 'build' | 'make' | 'care' | 'shop' | 'outdoor';
+export type SectorGroupId = 'build' | 'make' | 'outdoor' | 'care' | 'service' | 'shop';
 
 export interface SectorGroup {
   id: SectorGroupId;
@@ -217,14 +231,17 @@ export interface SectorGroup {
 
 export const sectorGroups: SectorGroup[] = [
   { id: 'build', nl: 'Bouw en techniek', key: 'sectorGroupBuild', sectors: ['construction', 'technical', 'garage'] },
-  { id: 'make', nl: 'Maken en verplaatsen', key: 'sectorGroupMake', sectors: ['production', 'logistics', 'horticulture'] },
+  // The six groups of 23 November 2026 (the owner's choice, at most 3 sectors in a group): Voedingsindustrie
+  // joins "Maken en verplaatsen"; Tuinbouw moves to "Buiten werken" with Groen and Afval en recycling
+  // (a learner keeps their sector: only its place on the choice screen changes, since what is stored is
+  // the sector, never the group); "Zorg en service" became "Zorg en kinderen" (care and childcare, the
+  // same key); cleaning, facility services and security form the new group "Service en veiligheid".
+  { id: 'make', nl: 'Maken en verplaatsen', key: 'sectorGroupMake', sectors: ['production', 'food', 'logistics'] },
+  { id: 'outdoor', nl: 'Buiten werken', key: 'sectorGroupOutdoor', sectors: ['green', 'horticulture', 'waste'] },
+  { id: 'care', nl: 'Zorg en kinderen', key: 'sectorGroupCare', sectors: ['care', 'childcare'] },
+  { id: 'service', nl: 'Service en veiligheid', key: 'sectorGroupService', sectors: ['cleaning', 'facility', 'security'] },
   // At most 3 cards in a group (max-3): with Winkel (31 October 2026) Horeca went to a group of its own with it.
-  // Facilitair joins it (23 November 2026): care, cleaning and facility services, three at most.
-  { id: 'care', nl: 'Zorg en service', key: 'sectorGroupCare', sectors: ['care', 'cleaning', 'facility'] },
   { id: 'shop', nl: 'Winkel en horeca', key: 'sectorGroupShop', sectors: ['retail', 'hospitality'] },
-  // "Buiten werken" (the owner's choice, 23 November 2026): Groen, in a group of its own, last
-  // before "Weet ik nog niet".
-  { id: 'outdoor', nl: 'Buiten werken', key: 'sectorGroupOutdoor', sectors: ['green'] },
 ];
 
 export const isSectorGroupId = (v: unknown): v is SectorGroupId => sectorGroups.some((g) => g.id === v);
