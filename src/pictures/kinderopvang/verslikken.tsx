@@ -34,7 +34,7 @@ export default {
         <Motion x={70} y={70} dir={20} spread={70} n={3} len={9} gap={18} color={PAL.line} />
         {/* The adult's hand, patting the back */}
         <Move kind="fast" dx={-22}>
-          <Hand pose="open" x={14} y={84} rotate={60} scale={0.62} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} />
+          <Hand pose="open" x={22} y={96} rotate={64} scale={0.62} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} />
         </Move>
       </g>
     );

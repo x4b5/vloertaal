@@ -12,7 +12,7 @@ const top = (x: number, y: number) => (
 
 export default {
   // "de steekproef": the spot check (you test a few products) — a blue crate full of the same packs in a
-  // row; a hand (Jada's) lifts one single pack up out of it to check it.
+  // row; a hand (Jada's) grips one single pack from above and lifts it up out of it to check it.
   // On the intro card the hand lifts the pack up out of the crate. Once and slowly (one is taken out).
   'w.steekproef': () => (
     <g strokeLinejoin="round">
@@ -26,11 +26,11 @@ export default {
       <rect x="12" y="74" width="96" height="3" rx="1.5" fill={PAL.blueLight} />
       {/* The one pack, lifted out by the hand */}
       <Move kind="from" dy={30} once>
-        <Hand pose="hold" x={60} y={66} scale={0.9} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} />
-        <rect x="46" y="32" width="26" height="22" rx="2" fill={PAL.white} />
-        <rect x="46" y="32" width="26" height="7" rx="2" fill={PAL.red} />
-        <rect x="65" y="32" width="7" height="22" rx="2" fill={PAL.paperShade} />
-        <path d="M50 45H62M50 49H58" stroke={PAL.line} strokeWidth="1.8" strokeLinecap="round" />
+        <rect x="45" y="36" width="30" height="26" rx="2" fill={PAL.white} />
+        <rect x="45" y="36" width="30" height="8" rx="2" fill={PAL.red} />
+        <rect x="68" y="36" width="7" height="26" rx="2" fill={PAL.paperShade} />
+        <path d="M49 51H63M49 56H59" stroke={PAL.line} strokeWidth="1.8" strokeLinecap="round" />
+        <Hand pose="hold" x={60} y={8} rotate={180} scale={0.8} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} />
       </Move>
     </g>
   ),

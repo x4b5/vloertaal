@@ -37,6 +37,9 @@ export default {
         </Shade>
         <ellipse cx="80" cy="78" rx="20" ry="5" fill={PAL.skyShade} />
         <ellipse cx="80" cy="79" rx="16" ry="3" fill={PAL.lime} opacity=".7" />
+        {/* Its arm to the rim of the bucket */}
+        <path d="M54 70L62 80" stroke={PAL.red} strokeWidth="7" />
+        <circle cx="63" cy="81" r="4.2" fill={s} />
         <Shine d="M66 84L68 98" width={2.6} opacity={0.6} />
       </g>
     );
