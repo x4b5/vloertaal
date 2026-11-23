@@ -292,7 +292,7 @@ const lang: HelpLanguageSource = {
     settingOn: 'Activado',
     settingOff: 'Desactivado',
     sectorGroupMake: 'Producir y mover',
-    sectorGroupCare: 'Cuidados y servicios',
+    sectorGroupCare: "Cuidados y niños", // nieuw, nalezen
     sectorGroupShop: 'Comercio y hostelería', // nieuw, nalezen
     sectorGroupBuild: 'Construcción y técnica', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'Voz de mujer',
@@ -500,6 +500,14 @@ const lang: HelpLanguageSource = {
     sfeerStandard: 'Estándar', // nieuw, nalezen
     sfeerGame: 'Juego', // nieuw, nalezen
     sfeerHint: 'Calma: nada se mueve, sin celebraciones. Estándar: la app tal como es. Juego: puntos, sonidos y mucho movimiento.', // nieuw, nalezen
+    sectorGroupService: "Servicios y seguridad", // nieuw, nalezen
+    sectorGroupOutdoor: "Trabajar al aire libre", // nieuw, nalezen
+    sectorChildcare: "Cuidado infantil", // nieuw, nalezen
+    sectorWaste: "Residuos y reciclaje", // nieuw, nalezen
+    sectorFood: "Industria alimentaria", // nieuw, nalezen
+    sectorSecurity: "Seguridad", // nieuw, nalezen
+    sectorFacility: "Servicios generales", // nieuw, nalezen
+    sectorGreen: "Jardinería y zonas verdes", // nieuw, nalezen
     playLevel: 'Nivel', // nieuw, nalezen
     playLevel1: 'Principiante', // nieuw, nalezen
     playLevel2: 'Aprendiz', // nieuw, nalezen

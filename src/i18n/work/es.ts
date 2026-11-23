@@ -2978,6 +2978,979 @@ const t: CultureTranslation = {
     'c.diagnosis.o2': "Cambias el neumático enseguida.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.o3': "No dices nada: no es tu trabajo.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.w': "El cliente decide lo que se hace y se paga. Pero tiene que saber que el neumático es peligroso.", // nieuw, nalezen // nagelezen AI 22 nov
+    // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang, two units each (23 November 2026).
+    'u.mowing': "Segar y podar", // nieuw, nalezen
+    'l.mowing': "Cortar el césped", // nieuw, nalezen
+    'w.gras': "la hierba, el césped", // nieuw, nalezen
+    'w.maaien': "segar (cortar la hierba)", // nieuw, nalezen
+    'w.grasmaaier': "el cortacésped", // nieuw, nalezen
+    'w.zitmaaier': "el tractor cortacésped (un cortacésped en el que vas sentado)", // nieuw, nalezen
+    'w.bosmaaier': "la desbrozadora (un cortacésped en un palo largo)", // nieuw, nalezen
+    'w.gelaatsscherm': "la pantalla facial", // nieuw, nalezen
+    's.mowing.1': "Primero corta la hierba a lo largo del borde.", // nieuw, nalezen
+    's.mowing.2': "La hierba está demasiado mojada. Cortamos mañana.", // nieuw, nalezen
+    's.mowing.3': "Ponte la pantalla facial.", // nieuw, nalezen
+    'c.mowing.q': "¿Puedo coger el tractor cortacésped?", // nieuw, nalezen
+    'c.mowing.a': "Sí, pero primero quita las piedras.", // nieuw, nalezen
+    'c.mowing': "Las piedras vuelan lejos", // nieuw, nalezen
+    'c.mowing.b': "Un cortacésped o una desbrozadora puede lanzar una piedra muy lejos y muy fuerte. Por eso primero recorre el césped a pie, y quita piedras, cristales y ramas. Ponte la pantalla facial o gafas de seguridad, protección auditiva y zapatos de seguridad. Mantén a las demás personas muy lejos. ¿Alguien se acerca? Para la máquina. Nunca metas la mano debajo de un cortacésped mientras el motor está en marcha: apágalo, y espera hasta que la cuchilla esté parada. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.mowing.p': "¿Puede mantenerse a distancia, por favor?", // nieuw, nalezen
+    'c.mowing.s': "Usas la desbrozadora. Un hombre con un perro viene hacia ti. ¿Qué haces?", // nieuw, nalezen
+    'c.mowing.o1': "Paras la máquina hasta que ha pasado.", // nieuw, nalezen
+    'c.mowing.o2': "Sigues: él te ve.", // nieuw, nalezen
+    'c.mowing.o3': "Te das la vuelta, y sigues.", // nieuw, nalezen
+    'c.mowing.w': "Una piedra de una desbrozadora puede herir gravemente a alguien, también desde lejos.", // nieuw, nalezen
+    'l.pruning': "Podar", // nieuw, nalezen
+    'w.snoeien': "podar (cortar ramas de una planta)", // nieuw, nalezen
+    'w.snoeischaar': "las tijeras de podar", // nieuw, nalezen
+    'w.tak': "la rama", // nieuw, nalezen
+    'w.struik': "el arbusto", // nieuw, nalezen
+    'w.boom': "el árbol", // nieuw, nalezen
+    'w.snoeizaag': "la sierra de podar", // nieuw, nalezen
+    's.pruning.1': "Poda los arbustos a lo largo del camino.", // nieuw, nalezen
+    's.pruning.2': "Esta rama está muerta. Córtala con la sierra.", // nieuw, nalezen
+    's.pruning.3': "Pon las ramas en un montón.", // nieuw, nalezen
+    'c.pruning.q': "¿Qué ramas hay que quitar?", // nieuw, nalezen
+    'c.pruning.a': "Solo las ramas muertas.", // nieuw, nalezen
+    'c.pruning': "Un corte limpio se cura mejor", // nieuw, nalezen
+    'c.pruning.b': "Poda con tijeras afiladas y limpias. Un corte limpio se cura rápido; una rama desgarrada se enferma. Corta justo encima de una yema o de una rama lateral, y no dejes un trozo largo. Primero quita las ramas muertas y rotas. Mantén la otra mano lejos de las cuchillas. Ponte guantes: algunas plantas tienen espinas, o te ponen la piel roja. Limpia las tijeras después del trabajo.", // nieuw, nalezen
+    'c.pruning.p': "¿Dónde tengo que cortar?", // nieuw, nalezen
+    'c.pruning.s': "Tus tijeras de podar están desafiladas. Desgarran las ramas. ¿Qué haces?", // nieuw, nalezen
+    'c.pruning.o1': "Pides unas tijeras afiladas.", // nieuw, nalezen
+    'c.pruning.o2': "Tiras más fuerte de la rama.", // nieuw, nalezen
+    'c.pruning.o3': "Sigues: es solo un arbusto.", // nieuw, nalezen
+    'c.pruning.w': "Unas tijeras desafiladas desgarran la rama. La planta se enferma, y tú trabajas más.", // nieuw, nalezen
+    'l.hedge': "Recortar el seto", // nieuw, nalezen
+    'w.heg': "el seto", // nieuw, nalezen
+    'w.heggenschaar': "el cortasetos (una máquina que corta un seto)", // nieuw, nalezen
+    'w.kruiwagen': "la carretilla", // nieuw, nalezen
+    'w.hark': "el rastrillo", // nieuw, nalezen
+    'w.snoeiafval': "los restos de poda (ramas y hojas cortadas)", // nieuw, nalezen
+    'w.zeil': "la lona (una lámina grande de plástico)", // nieuw, nalezen
+    's.hedge.1': "Pon la lona debajo del seto.", // nieuw, nalezen
+    's.hedge.2': "Corta el seto bien recto.", // nieuw, nalezen
+    's.hedge.3': "Llévate los restos de poda con la carretilla.", // nieuw, nalezen
+    'c.hedge.q': "¿A qué altura tiene que quedar el seto?", // nieuw, nalezen
+    'c.hedge.a': "Hasta la línea. No más bajo.", // nieuw, nalezen
+    'c.hedge': "Primero busca nidos", // nieuw, nalezen
+    'c.hedge.b': "En primavera y en verano, los pájaros hacen nidos en los setos y los arbustos. Los nidos que usan los pájaros están protegidos. Por eso mira dentro del seto antes de cortar. ¿Ves un nido con huevos o con pájaros pequeños? No cortes ahí, y díselo a tu encargado. Sujeta el cortasetos con las dos manos. Ponte firme en el suelo o en una buena escalera, nunca en una silla ni en un cubo. Mantén el cable detrás de ti.", // nieuw, nalezen
+    'c.hedge.p': "Aquí hay un nido.", // nieuw, nalezen
+    'c.hedge.s': "Recortas un seto en mayo. Ves un nido con pájaros pequeños. ¿Qué haces?", // nieuw, nalezen
+    'c.hedge.o1': "Paras ahí, y se lo dices a tu encargado.", // nieuw, nalezen
+    'c.hedge.o2': "Cortas alrededor con cuidado.", // nieuw, nalezen
+    'c.hedge.o3': "Quitas el nido, y sigues.", // nieuw, nalezen
+    'c.hedge.w': "Los nidos que usan los pájaros están protegidos. Tu encargado decide qué pasa con esta parte del seto.", // nieuw, nalezen
+    'l.chainsaw': "La motosierra y el soplador de hojas", // nieuw, nalezen
+    'w.kettingzaag': "la motosierra", // nieuw, nalezen
+    'w.stam': "el tronco (de un árbol)", // nieuw, nalezen
+    'w.zaagbroek': "el pantalón anticorte (detiene la cadena)", // nieuw, nalezen
+    'w.bladblazer': "el soplador de hojas", // nieuw, nalezen
+    'w.bladeren': "las hojas", // nieuw, nalezen
+    'w.jerrycan': "el bidón (un recipiente para combustible)", // nieuw, nalezen
+    's.chainsaw.1': "Ponte el pantalón anticorte.", // nieuw, nalezen
+    's.chainsaw.2': "Sopla las hojas a un montón.", // nieuw, nalezen
+    's.chainsaw.3': "Echa combustible solo cuando el motor esté frío.", // nieuw, nalezen
+    'c.chainsaw.q': "¿Puedo trabajar con la motosierra?", // nieuw, nalezen
+    'c.chainsaw.a': "Todavía no. Primero haces un curso.", // nieuw, nalezen
+    'c.chainsaw': "La motosierra, solo con formación", // nieuw, nalezen
+    'c.chainsaw.b': "La motosierra es una de las herramientas más peligrosas en el trabajo de jardinería. Trabaja con ella solo cuando has hecho un curso, y tu encargado dice que puedes. Ponte siempre el pantalón anticorte, un casco con pantalla facial y protección auditiva, guantes y botas de seguridad. Nunca trabajes con una motosierra sin compañía. Sujétala con las dos manos, y nunca cortes por encima de los hombros. Con un soplador de hojas: nunca soples hacia personas, coches o ventanas abiertas. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.chainsaw.p': "Todavía no he hecho un curso para esto.", // nieuw, nalezen
+    'c.chainsaw.s': "Un compañero dice: “Coge la motosierra, es fácil.” Nunca has hecho un curso. ¿Qué haces?", // nieuw, nalezen
+    'c.chainsaw.o1': "Dices que todavía no has hecho un curso.", // nieuw, nalezen
+    'c.chainsaw.o2': "La pruebas con cuidado, solo una vez.", // nieuw, nalezen
+    'c.chainsaw.o3': "La coges, y primero ves un vídeo.", // nieuw, nalezen
+    'c.chainsaw.w': "Una motosierra te puede cortar la pierna en un segundo. Sin formación no sabes cómo puede rebotar.", // nieuw, nalezen
+    'u.planting': "Plantar, malas hierbas y la calle", // nieuw, nalezen
+    'l.weeding': "Quitar malas hierbas", // nieuw, nalezen
+    'w.onkruid': "las malas hierbas (plantas que hay que quitar)", // nieuw, nalezen
+    'w.wieden': "escardar (arrancar las malas hierbas)", // nieuw, nalezen
+    'w.schoffel': "la azada", // nieuw, nalezen
+    'w.perk': "el parterre (un trozo de tierra con flores)", // nieuw, nalezen
+    'w.onkruidbrander': "el quemador de malas hierbas (las mata con calor)", // nieuw, nalezen
+    'w.wortel': "la raíz (de una planta)", // nieuw, nalezen
+    's.weeding.1': "Arranca las malas hierbas, con la raíz.", // nieuw, nalezen
+    's.weeding.2': "Pasa la azada por el parterre de la entrada.", // nieuw, nalezen
+    's.weeding.3': "Cuidado: el quemador de malas hierbas está caliente.", // nieuw, nalezen
+    'c.weeding.q': "¿Esto es una mala hierba?", // nieuw, nalezen
+    'c.weeding.a': "No, es una planta. Déjala.", // nieuw, nalezen
+    'c.weeding': "Malas hierbas: hay que sacar la raíz", // nieuw, nalezen
+    'c.weeding.b': "Una mala hierba vuelve a crecer cuando la raíz se queda en la tierra. Por eso arráncala con la raíz, o pasa la azada justo debajo de la tierra. Trabaja cuando la tierra está un poco mojada: así la raíz sale fácil. No uses sprays contra las malas hierbas, a no ser que hayas aprendido cómo y tu encargado lo diga. Un quemador de malas hierbas está muy caliente: mantenlo lejos de la hierba seca, las hojas, los setos, los coches y los contenedores. Nunca lo dejes en el suelo mientras está encendido. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.weeding.p': "¿Esto es una mala hierba o una planta?", // nieuw, nalezen
+    'c.weeding.s': "Usas el quemador de malas hierbas. Al lado del camino hay un seto seco. ¿Qué haces?", // nieuw, nalezen
+    'c.weeding.o1': "Ahí arrancas las malas hierbas a mano.", // nieuw, nalezen
+    'c.weeding.o2': "Quemas rápido, y sigues andando.", // nieuw, nalezen
+    'c.weeding.o3': "Quemas, y miras atrás una vez.", // nieuw, nalezen
+    'c.weeding.w': "Un seto seco se prende fuego rápido. Un fuego cerca de casas o coches es muy peligroso.", // nieuw, nalezen
+    'l.planting': "Plantar", // nieuw, nalezen
+    'w.planten': "plantar", // nieuw, nalezen
+    'w.schep': "la pala", // nieuw, nalezen
+    'w.plantgat': "el hoyo de plantación", // nieuw, nalezen
+    'w.kluit': "el cepellón (la tierra alrededor de las raíces)", // nieuw, nalezen
+    'w.compost': "el compost", // nieuw, nalezen
+    'w.boompaal': "el tutor (un palo que sujeta un árbol joven)", // nieuw, nalezen
+    's.planting.1': "Cava un hoyo de plantación para el árbol.", // nieuw, nalezen
+    's.planting.2': "Pon el árbol recto, al lado del tutor.", // nieuw, nalezen
+    's.planting.3': "Dales mucha agua a las plantas nuevas.", // nieuw, nalezen
+    'c.planting.q': "¿Dónde va esta planta?", // nieuw, nalezen
+    'c.planting.a': "Al fondo del parterre, junto a la pared.", // nieuw, nalezen
+    'c.planting': "Bajo tierra: cables y tuberías", // nieuw, nalezen
+    'c.planting.b': "Debajo del césped y de la acera muchas veces hay cables y tuberías: de luz, gas, agua e internet. Por eso cava con cuidado. ¿Ves una cinta de color o una placa de plástico en la tierra, o das con algo duro? Deja de cavar, y díselo a tu encargado. Nunca sigas cavando a la fuerza. Levanta un árbol pesado o un cepellón grande con otra persona, con las rodillas dobladas. Riega una planta nueva el mismo día. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.planting.p': "Estoy dando con algo duro.", // nieuw, nalezen
+    'c.planting.s': "Cavas un hoyo de plantación. Tu pala da con una cinta de plástico roja. ¿Qué haces?", // nieuw, nalezen
+    'c.planting.o1': "Dejas de cavar, y se lo dices a tu encargado.", // nieuw, nalezen
+    'c.planting.o2': "Sigues cavando con cuidado, al lado de la cinta.", // nieuw, nalezen
+    'c.planting.o3': "Sacas la cinta, y sigues.", // nieuw, nalezen
+    'c.planting.w': "Una cinta en la tierra avisa de que hay un cable o una tubería debajo. Una tubería de gas o un cable eléctrico es muy peligroso.", // nieuw, nalezen
+    'l.roadside': "Trabajar junto a la carretera", // nieuw, nalezen
+    'w.pion': "el cono", // nieuw, nalezen
+    'w.verkeer': "el tráfico", // nieuw, nalezen
+    'w.stoep': "la acera (el camino al lado de la calle)", // nieuw, nalezen
+    'w.fietser': "el ciclista", // nieuw, nalezen
+    'w.pijlwagen': "el remolque de flecha (un remolque con una flecha grande que avisa a los conductores)", // nieuw, nalezen
+    'w.berm': "el margen de la carretera (la hierba al lado de la carretera)", // nieuw, nalezen
+    's.roadside.1': "Ponte el chaleco. Trabajamos junto a la carretera.", // nieuw, nalezen
+    's.roadside.2': "Pon los conos detrás de la furgoneta.", // nieuw, nalezen
+    's.roadside.3': "Cuidado con los ciclistas.", // nieuw, nalezen
+    'c.roadside.q': "¿Puedo cruzar ahora?", // nieuw, nalezen
+    'c.roadside.a': "No, espera. Viene un camión.", // nieuw, nalezen
+    'c.roadside': "Junto a la carretera: que te vean, y quédate detrás de los conos", // nieuw, nalezen
+    'c.roadside.b': "Trabajar junto a la carretera es peligroso: los conductores miran el móvil, o van demasiado rápido. Por eso ponte siempre el chaleco de alta visibilidad, también para un trabajo corto. Pon los conos y las señales antes de empezar, y quítalos al final. Aparca la furgoneta como escudo entre tú y el tráfico. Quédate detrás de los conos. Nunca des un paso atrás sin mirar, y trabaja de cara al tráfico cuando puedas. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.roadside.p': "Primero pongo los conos.", // nieuw, nalezen
+    'c.roadside.s': "Tienes que cortar un arbusto pequeño junto a la carretera. Tardas cinco minutos. ¿Qué haces?", // nieuw, nalezen
+    'c.roadside.o1': "Te pones el chaleco, y pones los conos.", // nieuw, nalezen
+    'c.roadside.o2': "Lo haces rápido, sin los conos.", // nieuw, nalezen
+    'c.roadside.o3': "Pides a un compañero que vigile los coches.", // nieuw, nalezen
+    'c.roadside.w': "Un accidente pasa en solo un segundo. Cinco minutos sin conos son cinco minutos sin protección.", // nieuw, nalezen
+    'l.litter': "La basura y el barrio", // nieuw, nalezen
+    'w.zwerfafval': "la basura tirada (basura en la calle)", // nieuw, nalezen
+    'w.grijper': "la pinza recogedora (un palo que agarra la basura)", // nieuw, nalezen
+    'w.vuilniszak': "la bolsa de basura", // nieuw, nalezen
+    'w.scherven': "los cristales rotos (trozos afilados)", // nieuw, nalezen
+    'w.aanhanger': "el remolque", // nieuw, nalezen
+    'w.bewoner': "el vecino, la vecina (alguien que vive aquí)", // nieuw, nalezen
+    's.litter.1': "Recoge la basura con la pinza recogedora.", // nieuw, nalezen
+    's.litter.2': "Cuidado, aquí hay cristales rotos.", // nieuw, nalezen
+    's.litter.3': "Pon las bolsas de basura junto al remolque.", // nieuw, nalezen
+    'c.litter.q': "¿Cuándo van a podar este árbol?", // nieuw, nalezen
+    'c.litter.a': "No lo sé. Pregunte en el ayuntamiento.", // nieuw, nalezen
+    'c.litter': "Nunca toques una aguja", // nieuw, nalezen
+    'c.litter.b': "En los parques y los arbustos a veces encuentras una aguja de una jeringuilla. Nunca la cojas con la mano, tampoco con guantes. Usa la pinza recogedora, y mete la aguja en una caja dura o en una botella con tapa, nunca en una bolsa de basura. Díselo a tu encargado. ¿Te has pinchado con una aguja? Lava la herida con mucha agua, y llama a un médico enseguida. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.litter.p': "Aquí hay una aguja.", // nieuw, nalezen
+    'c.litter.s': "Ves una aguja en la hierba, al lado de un banco. ¿Qué haces?", // nieuw, nalezen
+    'c.litter.o1': "La recoges con la pinza recogedora.", // nieuw, nalezen
+    'c.litter.o2': "La recoges con los guantes puestos.", // nieuw, nalezen
+    'c.litter.o3': "La metes en la bolsa de basura.", // nieuw, nalezen
+    'c.litter.w': "Una aguja puede transmitir una enfermedad. Los guantes no paran una aguja, y una caja dura protege a los demás.", // nieuw, nalezen
+    'u.frontdesk': "Recepción, correo y reuniones", // nieuw, nalezen
+    'l.reception': "En la recepción", // nieuw, nalezen
+    'w.balie': "el mostrador de recepción", // nieuw, nalezen
+    'w.bezoeker': "el visitante, la visitante", // nieuw, nalezen
+    'w.intercom': "el interfono (hablas con alguien que está en la puerta)", // nieuw, nalezen
+    'w.doorverbinden': "pasar una llamada (de teléfono)", // nieuw, nalezen
+    'w.toestel': "la extensión (un número de teléfono dentro del edificio)", // nieuw, nalezen
+    'w.wachtruimte': "la sala de espera", // nieuw, nalezen
+    's.reception.1': "Buenos días, ¿le puedo ayudar?", // nieuw, nalezen
+    's.reception.2': "Le paso la llamada.", // nieuw, nalezen
+    's.reception.3': "Siéntese en la sala de espera, por favor.", // nieuw, nalezen
+    'c.reception.q': "Tengo una cita con la señora Jansen.", // nieuw, nalezen
+    'c.reception.a': "Un momento. La llamo.", // nieuw, nalezen
+    'c.reception': "Eres la primera cara que ven", // nieuw, nalezen
+    'c.reception.b': "En la recepción eres la primera persona que ve un visitante. Levanta la vista, sonríe y saluda, también cuando estás hablando por teléfono. Habla de usted a los visitantes (en neerlandés: “u”). Contesta el teléfono con el nombre de la empresa y tu propio nombre. ¿No sabes la respuesta? Dilo, y busca a alguien que la sepa. Nunca des nombres, números de teléfono ni salas del personal a personas que no conoces.", // nieuw, nalezen
+    'c.reception.p': "Buenos días, ¿en qué le puedo ayudar?", // nieuw, nalezen
+    'c.reception.s': "Estás al teléfono. Un visitante llega al mostrador y espera. ¿Qué haces?", // nieuw, nalezen
+    'c.reception.o1': "Levantas la vista, y le muestras que vas enseguida.", // nieuw, nalezen
+    'c.reception.o2': "Terminas la llamada, sin levantar la vista.", // nieuw, nalezen
+    'c.reception.o3': "Cuelgas el teléfono enseguida.", // nieuw, nalezen
+    'c.reception.w': "Un visitante que se siente visto espera tranquilo. Un visitante que no se siente visto se siente mal recibido.", // nieuw, nalezen
+    'l.visitors': "Recibir visitas", // nieuw, nalezen
+    'w.bezoekerspasje': "la tarjeta de visitante", // nieuw, nalezen
+    'w.lift': "el ascensor", // nieuw, nalezen
+    'w.garderobe': "el guardarropa (donde cuelgas el abrigo)", // nieuw, nalezen
+    'w.parkeerplaats': "la plaza de aparcamiento", // nieuw, nalezen
+    'w.hal': "el vestíbulo (la sala grande de la entrada)", // nieuw, nalezen
+    'w.begeleiden': "acompañar (ir con alguien a un sitio)", // nieuw, nalezen
+    's.visitors.1': "¿Puede escribir su nombre aquí?", // nieuw, nalezen
+    's.visitors.2': "Aquí tiene su tarjeta de visitante.", // nieuw, nalezen
+    's.visitors.3': "Le acompaño al ascensor.", // nieuw, nalezen
+    'c.visitors.q': "¿Dónde puedo dejar el abrigo?", // nieuw, nalezen
+    'c.visitors.a': "En el guardarropa, al lado del ascensor.", // nieuw, nalezen
+    'c.visitors': "Cada visitante se registra", // nieuw, nalezen
+    'c.visitors.b': "Cada visitante escribe su nombre en la lista, o se registra en la pantalla, y recibe una tarjeta de visitante. Así sabes quién está en el edificio. Esto es importante cuando hay un incendio: todo el mundo tiene que salir, y alguien revisa la lista. Al final de la visita, el visitante devuelve la tarjeta. No dejes entrar detrás de ti a personas que no conoces: pregunta con amabilidad a quién vienen a ver. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.visitors.p': "¿A quién viene a ver?", // nieuw, nalezen
+    'c.visitors.s': "Un hombre entra detrás de un compañero. No tiene tarjeta. ¿Qué haces?", // nieuw, nalezen
+    'c.visitors.o1': "Le preguntas con amabilidad a quién viene a ver.", // nieuw, nalezen
+    'c.visitors.o2': "Le dejas pasar: ha entrado con el personal.", // nieuw, nalezen
+    'c.visitors.o3': "Llamas a la policía enseguida.", // nieuw, nalezen
+    'c.visitors.w': "En una emergencia, tienes que saber quién está dentro. Y no todo el que entra tiene un motivo para estar ahí.", // nieuw, nalezen
+    'l.mailroom': "Correo y paquetes", // nieuw, nalezen
+    'w.postkamer': "la sala de correo", // nieuw, nalezen
+    'w.koerier': "el mensajero (alguien que trae paquetes)", // nieuw, nalezen
+    'w.postvak': "el casillero (una caja para el correo, una por persona)", // nieuw, nalezen
+    'w.envelop': "el sobre", // nieuw, nalezen
+    'w.afdeling': "el departamento", // nieuw, nalezen
+    'w.postkar': "el carro del correo", // nieuw, nalezen
+    's.mailroom.1': "El mensajero trae un paquete.", // nieuw, nalezen
+    's.mailroom.2': "Pon las cartas en el casillero correcto.", // nieuw, nalezen
+    's.mailroom.3': "Este paquete está dañado.", // nieuw, nalezen
+    'c.mailroom.q': "¿Para quién es este paquete?", // nieuw, nalezen
+    'c.mailroom.a': "Para Finanzas, en la segunda planta.", // nieuw, nalezen
+    'c.mailroom': "El correo es privado", // nieuw, nalezen
+    'c.mailroom.b': "El correo y los paquetes son privados. Nunca abras una carta ni un paquete de otra persona. Revisa el nombre y el departamento en cada envío, y ponlo en el casillero correcto. Cuando un mensajero trae un paquete, míralo antes de firmar: ¿está dañado? Apúntalo. ¿Un paquete es raro: huele, pierde líquido, o no tiene remitente? No lo abras, y díselo a tu encargado. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.mailroom.p': "La caja está mojada y rota.", // nieuw, nalezen
+    'c.mailroom.s': "Un mensajero trae un paquete. Una esquina está mojada y rota. ¿Qué haces?", // nieuw, nalezen
+    'c.mailroom.o1': "Apuntas el daño antes de firmar.", // nieuw, nalezen
+    'c.mailroom.o2': "Firmas, y no se lo dices a nadie.", // nieuw, nalezen
+    'c.mailroom.o3': "Lo abres, para ver si está todo.", // nieuw, nalezen
+    'c.mailroom.w': "Después de firmar, parece que el paquete estaba bien. Entonces nadie paga el daño.", // nieuw, nalezen
+    'l.meetingroom': "Preparar una sala de reuniones", // nieuw, nalezen
+    'w.vergaderzaal': "la sala de reuniones", // nieuw, nalezen
+    'w.beamer': "el proyector", // nieuw, nalezen
+    'w.whiteboard': "la pizarra blanca", // nieuw, nalezen
+    'w.thermoskan': "el termo (mantiene el café caliente)", // nieuw, nalezen
+    'w.kopje': "la taza", // nieuw, nalezen
+    'w.koffieautomaat': "la máquina de café", // nieuw, nalezen
+    's.meetingroom.1': "Pon diez sillas alrededor de la mesa.", // nieuw, nalezen
+    's.meetingroom.2': "Prepara café y té.", // nieuw, nalezen
+    's.meetingroom.3': "El proyector no funciona.", // nieuw, nalezen
+    'c.meetingroom.q': "¿A qué hora empieza la reunión?", // nieuw, nalezen
+    'c.meetingroom.a': "A las diez. Asegúrate de que todo está listo.", // nieuw, nalezen
+    'c.meetingroom': "Todo listo antes del primer invitado", // nieuw, nalezen
+    'c.meetingroom.b': "Una sala de reuniones tiene que estar lista antes de que entre la primera persona. Revisa las sillas, la mesa, el proyector y los cables. Pon café, té y agua, con tazas y leche. Lleva las bebidas calientes con cuidado, y nunca por encima de las personas. Después de la reunión, limpia la mesa y llévate todo. Lo que oyes en una sala de reuniones, te lo guardas para ti.", // nieuw, nalezen
+    'c.meetingroom.p': "La sala está lista.", // nieuw, nalezen
+    'c.meetingroom.s': "La reunión empieza en cinco minutos. El proyector no funciona. ¿Qué haces?", // nieuw, nalezen
+    'c.meetingroom.o1': "Se lo dices enseguida a quien organiza la reunión.", // nieuw, nalezen
+    'c.meetingroom.o2': "Esperas: quizá nadie lo necesita.", // nieuw, nalezen
+    'c.meetingroom.o3': "Dejas una nota en la mesa.", // nieuw, nalezen
+    'c.meetingroom.w': "Cinco minutos todavía es tiempo para arreglarlo o buscar otra sala. Más tarde, todos esperan.", // nieuw, nalezen
+    'u.maintenance': "Averías, reparaciones y mudanzas", // nieuw, nalezen
+    'l.faults': "Avisar de una avería", // nieuw, nalezen
+    'w.melding': "el aviso (dices que algo está mal)", // nieuw, nalezen
+    'w.lekkage': "la fuga de agua (sale agua)", // nieuw, nalezen
+    'w.verwarming': "la calefacción", // nieuw, nalezen
+    'w.airco': "el aire acondicionado", // nieuw, nalezen
+    'w.afvoer': "el desagüe", // nieuw, nalezen
+    'w.verstopt': "atascado (no pasa nada)", // nieuw, nalezen
+    's.faults.1': "Aviso de la avería.", // nieuw, nalezen
+    's.faults.2': "Hay una fuga de agua en la cocina.", // nieuw, nalezen
+    's.faults.3': "El desagüe del váter está atascado.", // nieuw, nalezen
+    'c.faults.q': "¿Por qué hace tanto frío aquí?", // nieuw, nalezen
+    'c.faults.a': "La calefacción está rota. El técnico viene mañana.", // nieuw, nalezen
+    'c.faults': { m: "Avisa, no lo arregles tú solo", f: "Avisa, no lo arregles tú sola", x: "Avisa, no lo arregles sin ayuda" }, // nieuw, nalezen
+    'c.faults.b': "¿Ves algo roto, como una fuga de agua, una lámpara que no funciona o una puerta que no cierra? Avisa, también cuando es pequeño: en el sistema o a tu encargado. Di dónde está, qué ves y desde cuándo. No hagas tú reparaciones de electricidad, gas ni calefacción. ¿Huele a gas? No uses un interruptor ni un teléfono cerca, abre las ventanas, saca a la gente, y pide ayuda desde fuera. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.faults.p': "Quiero avisar de una avería.", // nieuw, nalezen
+    'c.faults.s': "Cae agua del techo en el pasillo. ¿Qué haces?", // nieuw, nalezen
+    'c.faults.o1': "Avisas, y pones un cubo debajo.", // nieuw, nalezen
+    'c.faults.o2': "Esperas: quizá se para.", // nieuw, nalezen
+    'c.faults.o3': "Abres el techo para mirar.", // nieuw, nalezen
+    'c.faults.w': "Una fuga pequeña puede causar un daño grande. Un cubo mantiene el suelo seco, para que nadie resbale.", // nieuw, nalezen
+    'l.repairs': "Reparaciones pequeñas", // nieuw, nalezen
+    'w.vervangen': "cambiar (poner uno nuevo)", // nieuw, nalezen
+    'w.deurklink': "la manilla de la puerta", // nieuw, nalezen
+    'w.scharnier': "la bisagra", // nieuw, nalezen
+    'w.gereedschapskist': "la caja de herramientas", // nieuw, nalezen
+    'w.rookmelder': "el detector de humo", // nieuw, nalezen
+    'w.batterij': "la pila", // nieuw, nalezen
+    's.repairs.1': "Cambia la lámpara del pasillo.", // nieuw, nalezen
+    's.repairs.2': "La manilla de la puerta está suelta.", // nieuw, nalezen
+    's.repairs.3': "Coge la escalera de tijera, no una silla.", // nieuw, nalezen
+    'c.repairs.q': "¿Está pitando el detector de humo?", // nieuw, nalezen
+    'c.repairs.a': "Sí, la pila está casi gastada.", // nieuw, nalezen
+    'c.repairs': "Una escalera de tijera, nunca una silla", // nieuw, nalezen
+    'c.repairs.b': "Para una lámpara o una balda alta, usa una escalera de tijera, nunca una silla, una mesa o una caja. Ponla en un suelo plano, ábrela del todo, y no te subas al último peldaño. Apaga la luz antes de cambiar una lámpara, y deja que una lámpara vieja se enfríe. Haz solo las reparaciones que has aprendido. Cuando termines, vuelve a poner las herramientas en la caja, para que nadie tropiece con ellas. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.repairs.p': "Voy a buscar la escalera de tijera.", // nieuw, nalezen
+    'c.repairs.s': "Una lámpara de la oficina está rota. La escalera de tijera está en otra planta. ¿Qué haces?", // nieuw, nalezen
+    'c.repairs.o1': "Vas a buscar la escalera de tijera.", // nieuw, nalezen
+    'c.repairs.o2': "Te subes a una silla de oficina.", // nieuw, nalezen
+    'c.repairs.o3': "Te subes al escritorio.", // nieuw, nalezen
+    'c.repairs.w': "Una silla puede rodar o volcarse. Una caída desde una silla te puede hacer mucho daño.", // nieuw, nalezen
+    'l.moving': "Mudar un puesto de trabajo", // nieuw, nalezen
+    'w.verhuisdoos': "la caja de mudanza", // nieuw, nalezen
+    'w.bureau': "el escritorio", // nieuw, nalezen
+    'w.bureaustoel': "la silla de oficina", // nieuw, nalezen
+    'w.werkplek': "el puesto de trabajo (la mesa donde trabaja alguien)", // nieuw, nalezen
+    'w.kamernummer': "el número de sala", // nieuw, nalezen
+    'w.plattegrond': "el plano (un mapa del edificio)", // nieuw, nalezen
+    's.moving.1': "Escribe el número de sala en cada caja.", // nieuw, nalezen
+    's.moving.2': "Pon las cajas en la carretilla de mano.", // nieuw, nalezen
+    's.moving.3': "Vacía el puesto de trabajo.", // nieuw, nalezen
+    'c.moving.q': "¿Adónde tiene que ir este escritorio?", // nieuw, nalezen
+    'c.moving.a': "A la sala doce. Mira el plano.", // nieuw, nalezen
+    'c.moving': "Mudanzas: levanta bien, etiqueta todo", // nieuw, nalezen
+    'c.moving.b': "Una mudanza es un trabajo pesado. No llenes demasiado una caja: los libros y las carpetas pesan mucho. Levanta con las rodillas dobladas y la espalda recta, cerca del cuerpo. Usa la carretilla de mano para varias cajas, y levanta un escritorio con otra persona. Escribe el número de sala nuevo en cada caja, silla y ordenador. Primero desenchufa los cables. Nunca pongas cajas en un pasillo ni delante de una salida de emergencia.", // nieuw, nalezen
+    'c.moving.p': "¿Me ayudas a levantar esto?", // nieuw, nalezen
+    'c.moving.s': "Tienes que mover un escritorio pesado. Tu compañero está en la pausa. ¿Qué haces?", // nieuw, nalezen
+    'c.moving.o1': "Esperas ayuda, y lo levantáis entre los dos.", // nieuw, nalezen
+    'c.moving.o2': "Lo arrastras por tu cuenta.", // nieuw, nalezen
+    'c.moving.o3': { m: "Lo levantas tú solo, con mucho cuidado.", f: "Lo levantas tú sola, con mucho cuidado.", x: "Lo levantas sin ayuda, con mucho cuidado." }, // nieuw, nalezen
+    'c.moving.w': "Un escritorio pesado te puede dañar la espalda cuando lo levantas sin ayuda. Entre dos es fácil y seguro.", // nieuw, nalezen
+    'l.closing': "Abrir y cerrar el edificio", // nieuw, nalezen
+    'w.sleutelbos': "el manojo de llaves", // nieuw, nalezen
+    'w.afsluiten': "cerrar con llave", // nieuw, nalezen
+    'w.ronde': "la ronda (pasar por todas las salas)", // nieuw, nalezen
+    'w.raam': "la ventana", // nieuw, nalezen
+    'w.alarmcode': "el código de la alarma", // nieuw, nalezen
+    'w.nachtslot': "el cerrojo de seguridad (la cerradura extra para la noche)", // nieuw, nalezen
+    's.closing.1': "Hago la última ronda por el edificio.", // nieuw, nalezen
+    's.closing.2': "¿Están cerradas todas las ventanas?", // nieuw, nalezen
+    's.closing.3': "Echa el cerrojo de seguridad de la puerta.", // nieuw, nalezen
+    'c.closing.q': "¿Queda alguien dentro?", // nieuw, nalezen
+    'c.closing.a': "No, se han ido todos. Voy a cerrar.", // nieuw, nalezen
+    'c.closing': "El código de la alarma es secreto", // nieuw, nalezen
+    'c.closing.b': "Al final del día haces la última ronda. Comprueba que no queda nadie dentro, que las ventanas están cerradas y las luces apagadas. Las salidas de emergencia se quedan libres. Lleva las llaves contigo, nunca en un cajón. El código de la alarma es secreto: nunca se lo des a nadie, tampoco por teléfono. ¿Salta la alarma? Sigue los pasos de tu empresa. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.closing.p': "No doy el código de la alarma.", // nieuw, nalezen
+    'c.closing.s': "Alguien llama: “Soy de la empresa de alarmas. ¿Cuál es su código?” ¿Qué haces?", // nieuw, nalezen
+    'c.closing.o1': "Dices que no, y se lo dices a tu encargado.", // nieuw, nalezen
+    'c.closing.o2': "Das el código: suena amable.", // nieuw, nalezen
+    'c.closing.o3': "Das solo la mitad del código.", // nieuw, nalezen
+    'c.closing.w': "Una empresa de alarmas de verdad no te pide el código por teléfono. Un ladrón, quizá sí.", // nieuw, nalezen
+    'u.guarding': "Rondas y control de acceso", // nieuw, nalezen
+    'l.patrol': "La ronda", // nieuw, nalezen
+    'w.surveilleren': "patrullar (dar vueltas y vigilar)", // nieuw, nalezen
+    'w.zaklamp': "la linterna", // nieuw, nalezen
+    'w.terrein': "el recinto (el terreno alrededor de un edificio)", // nieuw, nalezen
+    'w.hek': "la valla, la verja", // nieuw, nalezen
+    'w.inbraak': "el robo (alguien entra para robar)", // nieuw, nalezen
+    'w.openstaan': "estar abierto (una puerta o ventana que debería estar cerrada)", // nieuw, nalezen
+    's.patrol.1': "Hago una ronda cada dos horas.", // nieuw, nalezen
+    's.patrol.2': "La verja detrás de la nave está abierta.", // nieuw, nalezen
+    's.patrol.3': "Llévate la linterna.", // nieuw, nalezen
+    'c.patrol.q': "¿Has visto algo durante tu ronda?", // nieuw, nalezen
+    'c.patrol.a': "Sí. Había una ventana abierta junto a la puerta de atrás.", // nieuw, nalezen
+    'c.patrol': { m: "Mira y avisa, no te hagas el héroe", f: "Mira y avisa, no te hagas la heroína", x: "Mira y avisa, no corras riesgos" }, // nieuw, nalezen
+    'c.patrol.b': "En tu ronda miras: ¿están cerradas las puertas y las ventanas, está entera la valla, hay alguien que no debería estar ahí? Apunta lo que ves, con la hora. ¿Ves algo raro, como una ventana rota o una persona de noche? No entres sin compañía. Llama a la central o a la policía por la radio o por teléfono, y espera en un sitio seguro. Tu propia seguridad va primero. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.patrol.p': "Veo a alguien junto a la valla.", // nieuw, nalezen
+    'c.patrol.s': "De noche ves una puerta forzada. Oyes ruido dentro. ¿Qué haces?", // nieuw, nalezen
+    'c.patrol.o1': "Te quedas fuera, y pides ayuda.", // nieuw, nalezen
+    'c.patrol.o2': "Entras rápido, y miras.", // nieuw, nalezen
+    'c.patrol.o3': "Gritas hacia dentro que vas a entrar.", // nieuw, nalezen
+    'c.patrol.w': "Un ladrón dentro puede ser peligroso. La policía sabe qué hacer; tu trabajo es ver y avisar.", // nieuw, nalezen
+    'l.access': "El control de acceso", // nieuw, nalezen
+    'w.slagboom': "la barrera (una barra sobre la carretera que sube)", // nieuw, nalezen
+    'w.toegangspas': "la tarjeta de acceso (una tarjeta que abre la puerta)", // nieuw, nalezen
+    'w.legitimatie': "la identificación (un pasaporte o un documento de identidad)", // nieuw, nalezen
+    'w.draaihek': "el torniquete (una puerta que gira, para una persona cada vez)", // nieuw, nalezen
+    'w.kenteken': "la matrícula (las letras y los números de un coche)", // nieuw, nalezen
+    'w.toegang': "el acceso (puedes entrar)", // nieuw, nalezen
+    's.access.1': "¿Puedo ver su identificación?", // nieuw, nalezen
+    's.access.2': "Su tarjeta no funciona. Voy a hacer una llamada.", // nieuw, nalezen
+    's.access.3': "Abro la barrera.", // nieuw, nalezen
+    'c.access.q': "¿Puedo entrar? Me he olvidado la tarjeta.", // nieuw, nalezen
+    'c.access.a': "Lo siento, sin tarjeta no puede entrar.", // nieuw, nalezen
+    'c.access': "Sin tarjeta, no se entra", // nieuw, nalezen
+    'c.access.b': "En la entrada o en el mostrador controlas quién entra. Todo el mundo necesita una tarjeta, o tiene que estar en la lista. Sé amable, también cuando alguien está enfadado o tiene prisa. No hagas excepciones porque alguien dice que es el jefe: compruébalo. Nunca prestes tu propia tarjeta a nadie, y nunca dejes que alguien entre detrás de ti. Si se pierde una tarjeta, hay que avisar enseguida. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.access.p': "¿Puedo ver su tarjeta?", // nieuw, nalezen
+    'c.access.s': "Un hombre de traje dice: “Soy el nuevo director. Todavía no tengo tarjeta.” ¿Qué haces?", // nieuw, nalezen
+    'c.access.o1': "Lo compruebas, antes de dejarle entrar.", // nieuw, nalezen
+    'c.access.o2': "Le dejas entrar: parece importante.", // nieuw, nalezen
+    'c.access.o3': "Le das tu propia tarjeta.", // nieuw, nalezen
+    'c.access.w': "Cualquiera puede decir que es el director. Una comprobación rápida mantiene seguro el edificio, y un director de verdad lo entenderá.", // nieuw, nalezen
+    'l.cameras': "Las cámaras y la central", // nieuw, nalezen
+    'w.meldkamer': "la central (donde se miran las cámaras y se atienden las llamadas)", // nieuw, nalezen
+    'w.beeldscherm': "el monitor, la pantalla", // nieuw, nalezen
+    'w.camerabeelden': "las imágenes de las cámaras (lo que ha grabado la cámara)", // nieuw, nalezen
+    'w.inzoomen': "hacer zoom (acercar la imagen)", // nieuw, nalezen
+    'w.bewegingsmelder': "el detector de movimiento (ve cuando algo se mueve)", // nieuw, nalezen
+    'w.verdachte': "el sospechoso, la sospechosa", // nieuw, nalezen
+    's.cameras.1': "En la cámara tres veo a alguien junto a la valla.", // nieuw, nalezen
+    's.cameras.2': "Hago zoom.", // nieuw, nalezen
+    's.cameras.3': "La central llama a la policía.", // nieuw, nalezen
+    'c.cameras.q': "¿Qué ves en la pantalla?", // nieuw, nalezen
+    'c.cameras.a': "Un hombre junto a la valla. Envío a un compañero.", // nieuw, nalezen
+    'c.cameras': "Las imágenes de las cámaras son privadas", // nieuw, nalezen
+    'c.cameras.b': "Las cámaras graban a personas: al personal, a los visitantes y a la gente que pasa. Lo que ves en las pantallas es privado. Mira solo para tu trabajo, y nunca grabes la pantalla con tu móvil. Nunca envíes imágenes a amigos ni las subas a internet. ¿Hay un incidente? Apunta la cámara y la hora, y díselo a tu encargado. Solo tu empresa decide quién recibe las imágenes, por ejemplo la policía. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.cameras.p': "No puedo enseñar eso.", // nieuw, nalezen
+    'c.cameras.s': "Un compañero te pide que le envíes un vídeo gracioso de las cámaras. ¿Qué haces?", // nieuw, nalezen
+    'c.cameras.o1': "Dices que no: las imágenes son privadas.", // nieuw, nalezen
+    'c.cameras.o2': "Se lo envías, solo a él.", // nieuw, nalezen
+    'c.cameras.o3': "Grabas la pantalla con tu móvil.", // nieuw, nalezen
+    'c.cameras.w': "Las personas de las imágenes no han dado permiso para compartirlas. Enviarlas te puede costar el trabajo.", // nieuw, nalezen
+    'l.report': "La radio y el informe", // nieuw, nalezen
+    'w.portofoon': "el walkie-talkie, la radio", // nieuw, nalezen
+    'w.rapport': "el informe (lo que ha pasado, por escrito)", // nieuw, nalezen
+    'w.incident': "el incidente (algo que ha salido mal)", // nieuw, nalezen
+    'w.tijdstip': "la hora (cuándo pasó algo)", // nieuw, nalezen
+    'w.logboek': "el libro de registro (un libro o una app donde lo apuntas todo)", // nieuw, nalezen
+    'w.oproepen': "llamar (por la radio)", // nieuw, nalezen
+    's.report.1': "Escribo un informe del incidente.", // nieuw, nalezen
+    's.report.2': "¿Qué hora era exactamente?", // nieuw, nalezen
+    's.report.3': "No te oigo bien. Repítelo.", // nieuw, nalezen
+    'c.report.q': "¿Qué hay que poner en el informe?", // nieuw, nalezen
+    'c.report.a': "Qué ha pasado, dónde y a qué hora.", // nieuw, nalezen
+    'c.report': "Escríbelo enseguida", // nieuw, nalezen
+    'c.report.b': "Escribe un informe justo después de un incidente, mientras todavía lo recuerdas bien. Escribe lo que has visto y oído tú: qué ha pasado, dónde, a qué hora, y quién estaba allí. Escribe hechos, no lo que piensas. Por la radio, habla corto y claro, y espera hasta que la otra persona haya terminado. Di quién eres y dónde estás. Un buen informe ayuda a la policía, a tu empresa y a ti.", // nieuw, nalezen
+    'c.report.p': "Lo apunto enseguida.", // nieuw, nalezen
+    'c.report.s': { m: "Después de una noche movida estás muy cansado. Hubo un incidente pequeño. ¿Qué haces?", f: "Después de una noche movida estás muy cansada. Hubo un incidente pequeño. ¿Qué haces?", x: "Después de una noche movida tienes mucho sueño. Hubo un incidente pequeño. ¿Qué haces?" }, // nieuw, nalezen
+    'c.report.o1': "Escribes el informe antes de irte a casa.", // nieuw, nalezen
+    'c.report.o2': "Lo escribes mañana, después de dormir bien.", // nieuw, nalezen
+    'c.report.o3': "No lo escribes: era pequeño.", // nieuw, nalezen
+    'c.report.w': "Mañana olvidas detalles. Un informe sin hora o sin lugar no ayuda a nadie.", // nieuw, nalezen
+    'u.incidents': "Emergencias y la tienda", // nieuw, nalezen
+    'l.evacuation': "Incendio y evacuación", // nieuw, nalezen
+    'w.brandmelder': "el pulsador de alarma de incendio (una caja roja que aprietas cuando hay fuego)", // nieuw, nalezen
+    'w.brandweer': "los bomberos", // nieuw, nalezen
+    'w.branddeur': "la puerta cortafuegos (para el fuego y el humo)", // nieuw, nalezen
+    'w.brandmeldcentrale': "la central de alarma de incendios (muestra dónde está la alarma)", // nieuw, nalezen
+    'w.ontruimingsplan': "el plan de evacuación (quién hace qué cuando todos tienen que salir)", // nieuw, nalezen
+    'w.sirene': "la sirena", // nieuw, nalezen
+    's.evacuation.1': "Hay una alarma de incendio en la nave dos.", // nieuw, nalezen
+    's.evacuation.2': "Mantén cerradas las puertas cortafuegos.", // nieuw, nalezen
+    's.evacuation.3': "Espero a los bomberos en la entrada.", // nieuw, nalezen
+    'c.evacuation.q': "¿Están todos fuera?", // nieuw, nalezen
+    'c.evacuation.a': "No, todavía faltan dos personas de la lista.", // nieuw, nalezen
+    'c.evacuation': "Fuego: primero la alarma, luego fuera", // nieuw, nalezen
+    'c.evacuation.b': "¿Ves fuego o humo? Aprieta el pulsador de alarma de incendio, o llama al 112. Luego ayuda a la gente a salir por las vías de evacuación, nunca por el ascensor. Cierra las puertas detrás de ti, pero no con llave. Apaga un fuego solo cuando es pequeño y has aprendido cómo. Ve al punto de reunión, y cuenta quién está. Recibe a los bomberos en la entrada, y cuéntales lo que sabes. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.evacuation.p': "Todo el mundo fuera, al punto de reunión.", // nieuw, nalezen
+    'c.evacuation.s': "Suena la alarma de incendio. Un hombre quiere coger el ascensor. ¿Qué haces?", // nieuw, nalezen
+    'c.evacuation.o1': "Le mandas a las escaleras.", // nieuw, nalezen
+    'c.evacuation.o2': "Le dejas: el ascensor es más rápido.", // nieuw, nalezen
+    'c.evacuation.o3': "Vas con él en el ascensor.", // nieuw, nalezen
+    'c.evacuation.w': "En un incendio, el ascensor se puede parar o llenar de humo. Las escaleras son la salida segura.", // nieuw, nalezen
+    'l.firstaid': "Primeros auxilios y el 112", // nieuw, nalezen
+    'w.ehbo': "los primeros auxilios", // nieuw, nalezen
+    'w.aed': "el DEA, el desfibrilador (una máquina que ayuda a un corazón que se ha parado)", // nieuw, nalezen
+    'w.reanimeren': "hacer la RCP (apretar el pecho para salvar una vida)", // nieuw, nalezen
+    'w.bewusteloos': "inconsciente (la persona no se despierta)", // nieuw, nalezen
+    'w.ademen': "respirar", // nieuw, nalezen
+    'w.alarmnummer': "el número de emergencias (112)", // nieuw, nalezen
+    's.firstaid.1': "Llama al 112. Pide una ambulancia.", // nieuw, nalezen
+    's.firstaid.2': "Trae el DEA de la recepción.", // nieuw, nalezen
+    's.firstaid.3': "No respira. Voy a hacer la RCP.", // nieuw, nalezen
+    'c.firstaid.q': "¿Dónde está el DEA?", // nieuw, nalezen
+    'c.firstaid.a': "En la entrada, al lado del ascensor.", // nieuw, nalezen
+    'c.firstaid': "Llama al 112, empieza la RCP, trae el DEA", // nieuw, nalezen
+    'c.firstaid.b': "¿Alguien se cae y no reacciona? Llama al 112 enseguida, o haz que otra persona llame. Mira si la persona respira normal. Si no: empieza la RCP, y haz que alguien traiga el DEA. El DEA habla y te dice qué hacer; no lo puedes hacer mal. Sigue hasta que la ambulancia se haga cargo. ¿Tienes un curso de primeros auxilios? Díselo a tus compañeros, para que sepan a quién llamar.", // nieuw, nalezen
+    'c.firstaid.p': "Llama al 112 y trae el DEA.", // nieuw, nalezen
+    'c.firstaid.s': "Un hombre se cae en el vestíbulo. No se mueve y no respira. ¿Qué haces?", // nieuw, nalezen
+    'c.firstaid.o1': "Llamas al 112, y empiezas la RCP.", // nieuw, nalezen
+    'c.firstaid.o2': "Esperas a ver si se despierta.", // nieuw, nalezen
+    'c.firstaid.o3': "Le levantas, y le sientas en una silla.", // nieuw, nalezen
+    'c.firstaid.w': "Cuando el corazón se para, cada minuto cuenta. La RCP y un DEA pueden salvar una vida antes de que llegue la ambulancia.", // nieuw, nalezen
+    'l.shoplifting': "Robos en la tienda", // nieuw, nalezen
+    'w.winkeldiefstal': "el hurto en tiendas", // nieuw, nalezen
+    'w.heterdaad': "en flagrante (lo ves pasar)", // nieuw, nalezen
+    'w.aanhouden': "retener a alguien (hasta que llega la policía)", // nieuw, nalezen
+    'w.detectiepoortje': "el arco antirrobo (pita en la puerta)", // nieuw, nalezen
+    'w.alarmlabel': "la etiqueta antirrobo (hace pitar el arco)", // nieuw, nalezen
+    'w.verstoppen': "esconder", // nieuw, nalezen
+    's.shoplifting.1': "El arco pita en la salida.", // nieuw, nalezen
+    's.shoplifting.2': "Lo he visto pasar.", // nieuw, nalezen
+    's.shoplifting.3': "Le retengo hasta que llegue la policía.", // nieuw, nalezen
+    'c.shoplifting.q': "¿Puedo registrar su bolsa?", // nieuw, nalezen
+    'c.shoplifting.a': "No. Eso lo hace la policía.", // nieuw, nalezen
+    'c.shoplifting': "Robos: mira, avisa, nada de fuerza bruta", // nieuw, nalezen
+    'c.shoplifting.b': "¿Has visto a alguien robar? Mantén la calma, y llama a la policía enseguida. Algunas tiendas dejan que un vigilante retenga a un ladrón hasta que llega la policía; otras dicen: solo mira, avisa y recuerda cómo es la persona. Nunca pegues ni des patadas, y nunca agarres a nadie por el cuello. Nunca registres a una persona, sus bolsillos ni su bolsa: eso es para la policía. Apunta lo que has visto, y guarda las imágenes de las cámaras. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.shoplifting.p': "¿Me acompaña, por favor?", // nieuw, nalezen
+    'c.shoplifting.s': "Has visto a una mujer meter una botella en su bolso. Sale de la tienda. ¿Qué haces?", // nieuw, nalezen
+    'c.shoplifting.o1': "La paras con calma, y llamas a la policía.", // nieuw, nalezen
+    'c.shoplifting.o2': "Registras su bolso en la puerta, rápido.", // nieuw, nalezen
+    'c.shoplifting.o3': "La tiras al suelo con fuerza.", // nieuw, nalezen
+    'c.shoplifting.w': "Registrar a una persona es para la policía, y la fuerza bruta puede hacer daño a alguien y meterte en problemas.", // nieuw, nalezen
+    'l.aggression': "Personas difíciles", // nieuw, nalezen
+    'w.agressie': "la agresividad (una conducta enfadada y violenta)", // nieuw, nalezen
+    'w.schelden': "insultar a alguien", // nieuw, nalezen
+    'w.kalmeren': "calmarse", // nieuw, nalezen
+    'w.afstand': "la distancia", // nieuw, nalezen
+    'w.huisverbod': "la prohibición de entrada (ya no puedes entrar aquí)", // nieuw, nalezen
+    'w.bodycam': "la cámara corporal (una cámara pequeña en tu uniforme)", // nieuw, nalezen
+    's.aggression.1': "Cálmese, señor. Quiero ayudarle.", // nieuw, nalezen
+    's.aggression.2': "Mantén la distancia y la calma.", // nieuw, nalezen
+    's.aggression.3': "Tiene prohibida la entrada. Tiene que irse ahora.", // nieuw, nalezen
+    'c.aggression.q': "¿Por qué no puedo entrar?", // nieuw, nalezen
+    'c.aggression.a': "Tiene prohibida la entrada aquí.", // nieuw, nalezen
+    'c.aggression': "Mantén la calma y la distancia", // nieuw, nalezen
+    'c.aggression.b': "Una persona enfadada se calma antes cuando tú mantienes la calma. Habla despacio y bajo, y habla de usted a la persona (en neerlandés: “u”). Deja un brazo de distancia o más entre vosotros, y ten una salida detrás de ti. No toques a la persona y no le grites. ¿Se pone peligroso? Da un paso atrás, y llama a un compañero o a la policía. Después, apúntalo. Después de un incidente grave, habla de ello con alguien. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.aggression.p': "Cálmese. Quiero ayudarle.", // nieuw, nalezen
+    'c.aggression.s': "Un hombre te grita y se acerca mucho. ¿Qué haces?", // nieuw, nalezen
+    'c.aggression.o1': "Das un paso atrás, y hablas con calma.", // nieuw, nalezen
+    'c.aggression.o2': "Le gritas, más fuerte que él.", // nieuw, nalezen
+    'c.aggression.o3': "Le empujas lejos de ti.", // nieuw, nalezen
+    'c.aggression.w': "Las palabras tranquilas y el espacio bajan la tensión. Gritar o empujar lo empeora.", // nieuw, nalezen
+    'u.foodhygiene': "Higiene y frío", // nieuw, nalezen
+    'l.hygienelock': "La esclusa de higiene", // nieuw, nalezen
+    'w.hygienesluis': "la esclusa de higiene (la sala donde te limpias antes de entrar)", // nieuw, nalezen
+    'w.baardnetje': "el cubrebarbas (una redecilla para la barba)", // nieuw, nalezen
+    'w.laarzenwasser': "el lavabotas (cepillos que limpian tus botas)", // nieuw, nalezen
+    'w.desinfecteren': "desinfectar (matar los gérmenes)", // nieuw, nalezen
+    'w.werkjas': "la bata de trabajo", // nieuw, nalezen
+    'w.bacterie': "el germen, la bacteria", // nieuw, nalezen
+    's.hygienelock.1': "Lávate las manos y desinféctalas.", // nieuw, nalezen
+    's.hygienelock.2': "Ponte la redecilla para el pelo y el cubrebarbas.", // nieuw, nalezen
+    's.hygienelock.3': "Pasa por el lavabotas.", // nieuw, nalezen
+    'c.hygienelock.q': "¿Puedo dejarme el reloj puesto?", // nieuw, nalezen
+    'c.hygienelock.a': "No, hay que quitarse todas las joyas.", // nieuw, nalezen
+    'c.hygienelock': { m: "Entra limpio, cada vez", f: "Entra limpia, cada vez", x: "Higiene al entrar, cada vez" }, // nieuw, nalezen
+    'c.hygienelock.b': "En una fábrica de alimentos, tú eres el mayor peligro para la comida: los gérmenes vienen de tus manos, tu pelo y tu ropa. Por eso pasa por la esclusa de higiene cada vez que entras, también después de una pausa o de ir al váter. Redecilla puesta, cubrebarbas si tienes barba, ropa de trabajo limpia, todas las joyas fuera. Lávate las manos con jabón, sécalas y desinféctalas. ¿Te encuentras mal, con diarrea o vómitos? Díselo a tu encargado antes de empezar. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.hygienelock.p': "Tengo diarrea. ¿Puedo trabajar hoy?", // nieuw, nalezen
+    'c.hygienelock.s': "Vuelves del váter. Tu compañero dice: “Sáltate la esclusa, hay mucho trabajo.” ¿Qué haces?", // nieuw, nalezen
+    'c.hygienelock.o1': "Pasas por la esclusa de todas formas.", // nieuw, nalezen
+    'c.hygienelock.o2': "Te la saltas, solo esta vez.", // nieuw, nalezen
+    'c.hygienelock.o3': "Solo te pones guantes nuevos.", // nieuw, nalezen
+    'c.hygienelock.w': "Los gérmenes del váter pueden enfermar a muchos clientes. Unos minutos en la esclusa lo evitan.", // nieuw, nalezen
+    'l.allergens': "Alérgenos", // nieuw, nalezen
+    'w.allergeen': "el alérgeno (un alimento que pone muy enfermas a algunas personas)", // nieuw, nalezen
+    'w.noten': "los frutos secos", // nieuw, nalezen
+    'w.pinda': "el cacahuete", // nieuw, nalezen
+    'w.gluten': "el gluten (en el trigo, o sea en el pan y los pasteles)", // nieuw, nalezen
+    'w.sesam': "el sésamo (semillas pequeñas, por ejemplo en el pan)", // nieuw, nalezen
+    'w.kruisbesmetting': "la contaminación cruzada (algo entra en la comida donde no debe estar)", // nieuw, nalezen
+    's.allergens.1': "Este producto lleva frutos secos.", // nieuw, nalezen
+    's.allergens.2': "Mira en la etiqueta qué alérgenos lleva.", // nieuw, nalezen
+    's.allergens.3': "Después de los cacahuetes, limpia todo bien.", // nieuw, nalezen
+    'c.allergens.q': "¿Esta tarrina puede ir con las otras?", // nieuw, nalezen
+    'c.allergens.a': "No, lleva frutos secos.", // nieuw, nalezen
+    'c.allergens': "Basta con una traza", // nieuw, nalezen
+    'c.allergens.b': "Para algunas personas, una cantidad muy pequeña de frutos secos, cacahuete, leche, huevo, gluten o sésamo puede poner su vida en peligro. Por eso la etiqueta tiene que decir exactamente qué lleva un producto. Mantén los alérgenos aparte: sus propias tarrinas, herramientas y colores. Después de un producto con un alérgeno, se limpia la línea antes del producto siguiente. Nunca cambies un ingrediente por otro, tampoco cuando parece igual. ¿Tienes dudas? Pregunta. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.allergens.p': "¿Esto lleva frutos secos?", // nieuw, nalezen
+    'c.allergens.s': "Se han acabado las almendras. Un compañero dice: “Usa avellanas, nadie se va a dar cuenta.” ¿Qué haces?", // nieuw, nalezen
+    'c.allergens.o1': "Dices que no, y se lo dices a tu encargado.", // nieuw, nalezen
+    'c.allergens.o2': "Las usas: frutos secos son frutos secos.", // nieuw, nalezen
+    'c.allergens.o3': "Las usas, y no cambias nada en la etiqueta.", // nieuw, nalezen
+    'c.allergens.w': "La etiqueta tiene que decir lo que lleva. Un fruto seco equivocado puede poner muy enferma a una persona con alergia.", // nieuw, nalezen
+    'l.coldroom': "La cámara frigorífica y el congelador", // nieuw, nalezen
+    'w.temperatuur': "la temperatura", // nieuw, nalezen
+    'w.graden': "los grados (°C)", // nieuw, nalezen
+    'w.bevroren': "congelado", // nieuw, nalezen
+    'w.ontdooien': "descongelar", // nieuw, nalezen
+    'w.koelketen': "la cadena de frío (la comida se queda fría todo el camino)", // nieuw, nalezen
+    'w.thermokleding': "la ropa térmica (ropa de abrigo para el frío)", // nieuw, nalezen
+    's.coldroom.1': "En la cámara de congelación hace dieciocho grados bajo cero.", // nieuw, nalezen
+    's.coldroom.2': "Pon la carne en la cámara frigorífica enseguida.", // nieuw, nalezen
+    's.coldroom.3': "Apunta la temperatura en la lista.", // nieuw, nalezen
+    'c.coldroom.q': "¿Por qué pita la cámara frigorífica?", // nieuw, nalezen
+    'c.coldroom.a': "La puerta está abierta. Ciérrala rápido.", // nieuw, nalezen
+    'c.coldroom': "Trabajo en frío: abrígate, y mantén el frío", // nieuw, nalezen
+    'c.coldroom.b': "La comida tiene que estar fría todo el camino: del camión a la cámara frigorífica y a la tienda. Por eso guarda los productos fríos enseguida, y mantén cerradas las puertas de la cámara frigorífica y del congelador. Revisa la temperatura y apúntala. En el congelador, ponte la ropa térmica, guantes y un gorro, y haz a tiempo una pausa en un sitio caliente. Asegúrate de que siempre puedes abrir la puerta desde dentro. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.coldroom.p': "Aquí hace demasiado calor. La refrigeración no funciona.", // nieuw, nalezen
+    'c.coldroom.s': "El termómetro de la cámara frigorífica marca un número mucho más alto de lo normal. ¿Qué haces?", // nieuw, nalezen
+    'c.coldroom.o1': "Se lo dices enseguida a tu encargado.", // nieuw, nalezen
+    'c.coldroom.o2': "Esperas: ya se enfriará otra vez.", // nieuw, nalezen
+    'c.coldroom.o3': "Apuntas el número normal en la lista.", // nieuw, nalezen
+    'c.coldroom.w': "Demasiado calor significa que crecen gérmenes. Tu encargado decide si la comida todavía es segura.", // nieuw, nalezen
+    'l.foreignbody': "Vidrio, metal y plástico en la comida", // nieuw, nalezen
+    'w.metaaldetector': "el detector de metales", // nieuw, nalezen
+    'w.glasbreuk': "la rotura de vidrio (vidrio que se ha roto)", // nieuw, nalezen
+    'w.splinter': "la astilla (un trozo pequeño y afilado)", // nieuw, nalezen
+    'w.vreemdvoorwerp': "el cuerpo extraño (algo en la comida que no debe estar ahí)", // nieuw, nalezen
+    'w.vervuild': "contaminado (ha entrado algo sucio)", // nieuw, nalezen
+    'w.ploegleider': "el jefe de turno", // nieuw, nalezen
+    's.foreignbody.1': "El detector de metales pita. Para la línea.", // nieuw, nalezen
+    's.foreignbody.2': "Se ha roto un vidrio en la línea dos.", // nieuw, nalezen
+    's.foreignbody.3': "Pon el producto en el contenedor de rechazos.", // nieuw, nalezen
+    'c.foreignbody.q': "¿Qué hago con este trozo de plástico?", // nieuw, nalezen
+    'c.foreignbody.a': "Enséñaselo al jefe de turno.", // nieuw, nalezen
+    'c.foreignbody': "¿Algo en la comida? Para y avisa", // nieuw, nalezen
+    'c.foreignbody.b': "El vidrio, el metal, el plástico, una tirita o un pelo nunca pueden acabar en la comida. ¿Pita el detector de metales, o encuentras algo raro? Pon el producto aparte, y díselo al jefe de turno. ¿Se ha roto un vidrio? Para la línea cerca de ahí: el jefe de turno decide qué hay que tirar. Usa solo tiritas azules, para que se vean fácil. Nunca lleves vidrio, bolígrafos ni cosas sueltas a la zona de trabajo. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.foreignbody.p': "He encontrado algo en el producto.", // nieuw, nalezen
+    'c.foreignbody.s': "Se rompe una lámpara de vidrio encima de la línea. Los productos siguen pasando. ¿Qué haces?", // nieuw, nalezen
+    'c.foreignbody.o1': "Paras la línea, y llamas al jefe de turno.", // nieuw, nalezen
+    'c.foreignbody.o2': "Quitas el vidrio que ves.", // nieuw, nalezen
+    'c.foreignbody.o3': "Sigues: el detector encuentra el vidrio.", // nieuw, nalezen
+    'c.foreignbody.w': "Un detector de metales no encuentra el vidrio. Los trozos pequeños que no ves pueden hacer mucho daño a un cliente.", // nieuw, nalezen
+    'u.foodline': "La línea de producción", // nieuw, nalezen
+    'l.cutting': "Cortar y pesar", // nieuw, nalezen
+    'w.uitbenen': "deshuesar (sacar los huesos de la carne)", // nieuw, nalezen
+    'w.fileren': "filetear (cortar pescado o carne en trozos planos)", // nieuw, nalezen
+    'w.portie': "la porción", // nieuw, nalezen
+    'w.wegen': "pesar", // nieuw, nalezen
+    'w.gewicht': "el peso", // nieuw, nalezen
+    'w.snijplank': "la tabla de cortar", // nieuw, nalezen
+    's.cutting.1': "Pesa cada porción.", // nieuw, nalezen
+    's.cutting.2': "El peso es demasiado bajo.", // nieuw, nalezen
+    's.cutting.3': "Afila el cuchillo antes de empezar.", // nieuw, nalezen
+    'c.cutting.q': "¿Cuánto tiene que ir en una tarrina?", // nieuw, nalezen
+    'c.cutting.a': "Quinientos gramos. Mira la báscula.", // nieuw, nalezen
+    'c.cutting': "Cuchillo afilado, mano segura", // nieuw, nalezen
+    'c.cutting.b': "Un cuchillo afilado es más seguro que uno sin filo: necesitas menos fuerza, así que resbala menos. Ponte siempre el guante anticorte en la otra mano. Corta hacia fuera, lejos de tu cuerpo. Deja el cuchillo plano sobre la tabla, nunca en un fregadero ni debajo de la carne. No intentes coger un cuchillo que se cae: da un paso atrás. Lleva el cuchillo con la punta hacia abajo, cerca de la pierna. Hasta un corte pequeño hay que taparlo y avisarlo.", // nieuw, nalezen
+    'c.cutting.p': "Mi cuchillo está desafilado.", // nieuw, nalezen
+    'c.cutting.s': "El cuchillo se te escapa de la mano y se cae. ¿Qué haces?", // nieuw, nalezen
+    'c.cutting.o1': "Das un paso atrás, y lo dejas caer.", // nieuw, nalezen
+    'c.cutting.o2': "Lo coges rápido.", // nieuw, nalezen
+    'c.cutting.o3': "Lo paras con el pie.", // nieuw, nalezen
+    'c.cutting.w': "Un cuchillo que cae corta hondo cuando lo agarras. En el suelo no puede hacer daño.", // nieuw, nalezen
+    'l.labels': "Envasar y etiquetas", // nieuw, nalezen
+    'w.etiketteren': "etiquetar (poner etiquetas)", // nieuw, nalezen
+    'w.lotnummer': "el número de lote (un número para un lote de productos)", // nieuw, nalezen
+    'w.vacuum': "envasado al vacío (sin nada de aire)", // nieuw, nalezen
+    'w.schaal': "la bandeja (un plato plano para comida)", // nieuw, nalezen
+    'w.printer': "la impresora", // nieuw, nalezen
+    'w.omdoos': "la caja exterior (la caja grande alrededor de los paquetes pequeños)", // nieuw, nalezen
+    's.labels.1': "Comprueba que la fecha de la etiqueta está bien.", // nieuw, nalezen
+    's.labels.2': "Este paquete no está al vacío. Envásalo otra vez.", // nieuw, nalezen
+    's.labels.3': "Apunta el número de lote en la lista.", // nieuw, nalezen
+    'c.labels.q': "¿Qué fecha hay que poner?", // nieuw, nalezen
+    'c.labels.a': "Dentro de diez días. Mira la lista.", // nieuw, nalezen
+    'c.labels': "Una etiqueta equivocada es peligrosa", // nieuw, nalezen
+    'c.labels.b': "La etiqueta le dice al cliente qué lleva, cuánto pesa y hasta cuándo está bueno. Una fecha o una etiqueta equivocada puede enfermar a la gente, por ejemplo cuando falta un alérgeno. Por eso revisa las primeras etiquetas de cada tanda nueva: el producto, la fecha y el número de lote. ¿Hay algo mal? Para, y díselo a tu encargado. Los productos con una etiqueta equivocada se ponen aparte, nunca se venden. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.labels.p': "La etiqueta no está bien.", // nieuw, nalezen
+    'c.labels.s': "Ves que la fecha de las etiquetas es una semana demasiado tarde. ¿Qué haces?", // nieuw, nalezen
+    'c.labels.o1': "Dejas de envasar, y se lo dices a tu encargado.", // nieuw, nalezen
+    'c.labels.o2': "Sigues: una semana no importa.", // nieuw, nalezen
+    'c.labels.o3': "Cambias la fecha con un bolígrafo.", // nieuw, nalezen
+    'c.labels.w': "Con una fecha equivocada, la gente puede comer comida que ya no es segura. Mejor parar ahora que retirarla después.", // nieuw, nalezen
+    'l.linecleaning': "Limpiar la línea", // nieuw, nalezen
+    'w.schuim': "la espuma", // nieuw, nalezen
+    'w.hogedrukspuit': "la hidrolimpiadora (echa agua a mucha presión)", // nieuw, nalezen
+    'w.naspoelen': "aclarar (lavar con agua limpia)", // nieuw, nalezen
+    'w.demonteren': "desmontar", // nieuw, nalezen
+    'w.borstel': "el cepillo", // nieuw, nalezen
+    'w.restjes': "los restos (trocitos de comida)", // nieuw, nalezen
+    's.linecleaning.1': "Primero apaga la máquina.", // nieuw, nalezen
+    's.linecleaning.2': "Echa la espuma sobre la cinta.", // nieuw, nalezen
+    's.linecleaning.3': "Luego aclara todo con agua limpia.", // nieuw, nalezen
+    'c.linecleaning.q': "¿Ya está limpia la cinta?", // nieuw, nalezen
+    'c.linecleaning.a': "Todavía no. Todavía tengo que aclararla.", // nieuw, nalezen
+    'c.linecleaning': "Apaga antes de limpiar", // nieuw, nalezen
+    'c.linecleaning.b': "Nunca limpies una máquina que está en marcha. Apágala, y asegúrate de que nadie la puede volver a poner en marcha: sigue los pasos de tu empresa. Ponte los guantes, las gafas y las botas adecuados: los productos de limpieza te pueden quemar la piel y los ojos. Nunca mezcles productos. Primero quita los restos, luego echa espuma, frota y aclara. No eches agua sobre cajas eléctricas ni enchufes. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.linecleaning.p': "¿Está apagada la máquina?", // nieuw, nalezen
+    'c.linecleaning.s': "Hay carne atascada en la cinta. La máquina todavía está en marcha. ¿Qué haces?", // nieuw, nalezen
+    'c.linecleaning.o1': "Primero la apagas, luego la sacas.", // nieuw, nalezen
+    'c.linecleaning.o2': "La sacas rápido con la mano.", // nieuw, nalezen
+    'c.linecleaning.o3': "La sacas empujando con un cuchillo.", // nieuw, nalezen
+    'c.linecleaning.w': "Una cinta en marcha te puede atrapar la mano en un segundo. Apagarla cuesta solo un momento.", // nieuw, nalezen
+    'l.haccp': "Revisar y apuntar (HACCP)", // nieuw, nalezen
+    'w.controlepunt': "el punto de control (un paso donde tienes que revisar algo)", // nieuw, nalezen
+    'w.kerntemperatuur': "la temperatura interna (la temperatura dentro de la comida)", // nieuw, nalezen
+    'w.prikthermometer': "el termómetro de pincho (lo clavas en la comida)", // nieuw, nalezen
+    'w.afwijking': "la desviación (algo no está como debería)", // nieuw, nalezen
+    'w.steekproef': "el control por muestreo (pruebas unos cuantos productos)", // nieuw, nalezen
+    'w.kwaliteitsdienst': "el departamento de calidad (QA)", // nieuw, nalezen
+    's.haccp.1': "Mide la temperatura interna con el termómetro de pincho.", // nieuw, nalezen
+    's.haccp.2': "Apúntalo todo en la lista.", // nieuw, nalezen
+    's.haccp.3': "¿Hay algo mal? Avísalo enseguida.", // nieuw, nalezen
+    'c.haccp.q': "¿Por qué tengo que apuntarlo todo?", // nieuw, nalezen
+    'c.haccp.a': "Así sabemos que la comida es segura.", // nieuw, nalezen
+    'c.haccp': "HACCP: revisa, apunta, avisa", // nieuw, nalezen
+    'c.haccp.b': "Toda empresa de alimentos trabaja con un plan de seguridad alimentaria (HACCP). Dice en qué pasos tienes que revisar algo, como la temperatura de la cámara frigorífica o la temperatura interna de la carne cocinada. Tú revisas, lo apuntas y firmas. Apunta lo que has medido de verdad, también cuando está mal. Un número malo no es culpa tuya, pero esconderlo es peligroso. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.haccp.p': "La temperatura está demasiado alta.", // nieuw, nalezen
+    'c.haccp.s': "Se te ha olvidado medir a las diez. Tu compañero dice: “Apunta un número bueno y ya está.” ¿Qué haces?", // nieuw, nalezen
+    'c.haccp.o1': "Mides ahora, y apuntas la hora real.", // nieuw, nalezen
+    'c.haccp.o2': "Apuntas un número bueno para las diez.", // nieuw, nalezen
+    'c.haccp.o3': "Dejas la casilla vacía.", // nieuw, nalezen
+    'c.haccp.w': "La lista tiene que mostrar lo que pasó de verdad. Un número inventado esconde un problema que puede enfermar a la gente.", // nieuw, nalezen
+    'u.collection': "Recoger la basura", // nieuw, nalezen
+    'l.binlorry': "El camión de la basura", // nieuw, nalezen
+    'w.vuilniswagen': "el camión de la basura", // nieuw, nalezen
+    'w.kliko': "el contenedor con ruedas (un cubo de basura con ruedas)", // nieuw, nalezen
+    'w.kieplift': "el elevador de contenedores (levanta el contenedor y lo vacía)", // nieuw, nalezen
+    'w.treeplank': "el estribo trasero (un escalón en la parte de atrás del camión)", // nieuw, nalezen
+    'w.bijplaatsing': "la basura de más (bolsas dejadas al lado del contenedor)", // nieuw, nalezen
+    'w.ophaaldag': "el día de recogida", // nieuw, nalezen
+    's.binlorry.1': "Pon el contenedor con ruedas en el elevador.", // nieuw, nalezen
+    's.binlorry.2': "Hay bolsas al lado del contenedor.", // nieuw, nalezen
+    's.binlorry.3': "El contenedor con ruedas pesa demasiado. Déjalo.", // nieuw, nalezen
+    'c.binlorry.q': "¿Puedo ir en la parte de atrás?", // nieuw, nalezen
+    'c.binlorry.a': "No, tú te subes a la cabina.", // nieuw, nalezen
+    'c.binlorry': "Que te vean, y viaja dentro", // nieuw, nalezen
+    'c.binlorry.b': "Ponte la ropa de alta visibilidad en cada ronda. Sube y baja por el lado de la acera, nunca por el lado del tráfico. Viaja en la cabina, no detrás en el camión: eso solo cuando tu empresa lo permite claramente, y nunca cuando va marcha atrás o rápido. Aléjate del elevador mientras se mueve. ¿Un contenedor pesa demasiado, o sale algo de él? Déjalo, y avísalo. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.binlorry.p': "Este contenedor con ruedas pesa demasiado.", // nieuw, nalezen
+    'c.binlorry.s': "La calle siguiente está muy cerca. El conductor dice: “Súbete al estribo de atrás.” ¿Qué haces?", // nieuw, nalezen
+    'c.binlorry.o1': "Te subes a la cabina de todas formas.", // nieuw, nalezen
+    'c.binlorry.o2': "Te subes al estribo: está cerca.", // nieuw, nalezen
+    'c.binlorry.o3': "Vas andando detrás del camión.", // nieuw, nalezen
+    'c.binlorry.w': "Caerse de un camión en marcha es uno de los mayores peligros de este trabajo. En la cabina no corres peligro.", // nieuw, nalezen
+    'l.reversing': "Marcha atrás con seguridad", // nieuw, nalezen
+    'w.achteruitrijden': "dar marcha atrás (conducir hacia atrás)", // nieuw, nalezen
+    'w.dodehoek': "el ángulo muerto (donde el conductor no te ve)", // nieuw, nalezen
+    'w.aanwijzer': "el señalista (la persona que guía al conductor)", // nieuw, nalezen
+    'w.oogcontact': "el contacto visual", // nieuw, nalezen
+    'w.piepen': "pitar", // nieuw, nalezen
+    'w.cabine': "la cabina (donde se sienta el conductor)", // nieuw, nalezen
+    's.reversing.1': "Nunca te pongas detrás del camión.", // nieuw, nalezen
+    's.reversing.2': "No te veo en el espejo.", // nieuw, nalezen
+    's.reversing.3': "Busca el contacto visual con el conductor.", // nieuw, nalezen
+    'c.reversing.q': "¿Me ayudas a dar marcha atrás?", // nieuw, nalezen
+    'c.reversing.a': "Sí, estoy a la izquierda. Mira por el espejo.", // nieuw, nalezen
+    'c.reversing': "Nunca detrás de un camión que da marcha atrás", // nieuw, nalezen
+    'c.reversing.b': "Muchos accidentes con camiones de basura pasan cuando van marcha atrás. El conductor no ve justo detrás del camión: es el ángulo muerto. Por eso nunca te pongas ni camines detrás de un camión que puede dar marcha atrás. Guía al conductor desde el lado, donde os podéis ver en el espejo. ¿Se pierde el contacto visual? El conductor para. Acordad señales claras antes de empezar. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.reversing.p': "¡Para! Ya no te veo.", // nieuw, nalezen
+    'c.reversing.s': "El camión da marcha atrás. Vas por detrás de él para coger una bolsa. ¿Qué haces?", // nieuw, nalezen
+    'c.reversing.o1': "Esperas hasta que el camión está parado.", // nieuw, nalezen
+    'c.reversing.o2': "Pasas rápido: es solo un segundo.", // nieuw, nalezen
+    'c.reversing.o3': "Saludas al conductor con la mano, y pasas.", // nieuw, nalezen
+    'c.reversing.w': "Un conductor no te puede ver detrás del camión. Un segundo basta para un accidente.", // nieuw, nalezen
+    'l.wastesorting': "Separar la basura", // nieuw, nalezen
+    'w.papier': "el papel", // nieuw, nalezen
+    'w.plastic': "el plástico", // nieuw, nalezen
+    'w.gft': "los residuos orgánicos (fruta, verdura y plantas)", // nieuw, nalezen
+    'w.restafval': "la basura de resto (lo que no se puede separar)", // nieuw, nalezen
+    'w.karton': "el cartón", // nieuw, nalezen
+    'w.blik': "la lata", // nieuw, nalezen
+    's.wastesorting.1': "El vidrio va al contenedor de vidrio.", // nieuw, nalezen
+    's.wastesorting.2': "Esto va con la basura de resto.", // nieuw, nalezen
+    's.wastesorting.3': "Dobla el cartón para que quede plano.", // nieuw, nalezen
+    'c.wastesorting.q': "¿Dónde va una caja de pizza?", // nieuw, nalezen
+    'c.wastesorting.a': "Con la basura de resto. Tiene grasa.", // nieuw, nalezen
+    'c.wastesorting': "Separar bien ahorra trabajo", // nieuw, nalezen
+    'c.wastesorting.b': "La basura separada se puede volver a usar: el papel se convierte en papel, el vidrio en vidrio. Pero una sola cosa equivocada puede estropear toda una carga. Por eso mira en el contenedor antes de vaciarlo. ¿Hay algo que no va ahí, como una bolsa de basura de resto en el papel? Déjalo, o sigue las normas de tu empresa. Qué basura va dónde cambia de un municipio a otro: aprende las normas de tu zona. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.wastesorting.p': "Esto no va aquí.", // nieuw, nalezen
+    'c.wastesorting.s': "Un contenedor de papel está lleno de bolsas de basura negras. ¿Qué haces?", // nieuw, nalezen
+    'c.wastesorting.o1': "Lo dejas, y lo avisas.", // nieuw, nalezen
+    'c.wastesorting.o2': "Lo vacías con el papel.", // nieuw, nalezen
+    'c.wastesorting.o3': "Sacas las bolsas con la mano.", // nieuw, nalezen
+    'c.wastesorting.w': "La basura en el papel estropea toda la carga. Las bolsas también pueden llevar cosas afiladas o sucias.", // nieuw, nalezen
+    'l.wastesafety': "Cosas afiladas y levantar peso", // nieuw, nalezen
+    'w.snijwond': "el corte (una herida de algo afilado)", // nieuw, nalezen
+    'w.prikken': "pinchar (una punta afilada entra en tu piel)", // nieuw, nalezen
+    'w.naald': "la aguja", // nieuw, nalezen
+    'w.scherp': "afilado", // nieuw, nalezen
+    'w.rugpijn': "el dolor de espalda", // nieuw, nalezen
+    'w.tetanusprik': "la vacuna del tétanos (una inyección contra una enfermedad por suciedad en una herida)", // nieuw, nalezen
+    's.wastesafety.1': "Nunca cojas una bolsa por abajo.", // nieuw, nalezen
+    's.wastesafety.2': "Cuidado, hay vidrio en esta bolsa.", // nieuw, nalezen
+    's.wastesafety.3': "Me he pinchado con una aguja.", // nieuw, nalezen
+    'c.wastesafety.q': "Me he cortado. ¿Qué tengo que hacer?", // nieuw, nalezen
+    'c.wastesafety.a': "Lava bien la herida. Y dímelo.", // nieuw, nalezen
+    'c.wastesafety': "Nunca aprietes una bolsa", // nieuw, nalezen
+    'c.wastesafety.b': "Una bolsa de basura puede llevar vidrio, cuchillos o agujas. Por eso nunca aprietes una bolsa contra tu cuerpo, nunca la estrujes, y nunca la lleves apoyada en la pierna: cógela por arriba, lejos de ti. Ponte los guantes. Levanta con las rodillas dobladas y la espalda recta, y empuja un contenedor, no lo cargues. ¿Algo te ha pinchado o cortado? Lava bien la herida con agua, y díselo a tu encargado el mismo día.", // nieuw, nalezen
+    'c.wastesafety.p': "Me he pinchado.", // nieuw, nalezen
+    'c.wastesafety.s': "Una bolsa se rompe. Ves una aguja dentro. ¿Qué haces?", // nieuw, nalezen
+    'c.wastesafety.o1': "No la tocas, y lo avisas.", // nieuw, nalezen
+    'c.wastesafety.o2': "La recoges con los guantes puestos.", // nieuw, nalezen
+    'c.wastesafety.o3': "La vuelves a meter en la bolsa.", // nieuw, nalezen
+    'c.wastesafety.w': "Los guantes no paran una aguja. Una aguja puede transmitir una enfermedad.", // nieuw, nalezen
+    'u.recycling': "El punto limpio", // nieuw, nalezen
+    'l.yard': "En el punto limpio", // nieuw, nalezen
+    'w.milieustraat': "el punto limpio (donde la gente lleva basura grande o especial)", // nieuw, nalezen
+    'w.grofvuil': "los voluminosos (cosas grandes, como un sofá)", // nieuw, nalezen
+    'w.puin': "los escombros (piedras y ladrillos rotos)", // nieuw, nalezen
+    'w.matras': "el colchón", // nieuw, nalezen
+    'w.weegbrug': "la báscula de camiones (una báscula para coches y camiones)", // nieuw, nalezen
+    'w.afvalpas': "la tarjeta de residuos (los vecinos la enseñan en la entrada)", // nieuw, nalezen
+    's.yard.1': "Los escombros van al contenedor cuatro.", // nieuw, nalezen
+    's.yard.2': "¿Puedo ver su tarjeta de residuos?", // nieuw, nalezen
+    's.yard.3': "Primero pase con el coche por la báscula.", // nieuw, nalezen
+    'c.yard.q': "¿Dónde va este colchón?", // nieuw, nalezen
+    'c.yard.a': "En el contenedor de voluminosos, al fondo.", // nieuw, nalezen
+    'c.yard': "Ayuda, pero mantén seguro el punto limpio", // nieuw, nalezen
+    'c.yard.b': "En el punto limpio les dices a los visitantes dónde va su basura, y compruebas que está bien separada. Sé amable: mucha gente viene solo unas pocas veces al año y no conoce las normas. Mantén a los niños y a los visitantes lejos de las máquinas y del borde de los contenedores altos. Levanta las cosas pesadas con otra persona, o deja que el visitante cargue lo suyo. ¿Alguien trae algo que no conoces? Pregunta antes de que entre. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.yard.p': "Esto va al contenedor cuatro.", // nieuw, nalezen
+    'c.yard.s': "Un hombre quiere tirar una bolsa llena al contenedor de madera. ¿Qué haces?", // nieuw, nalezen
+    'c.yard.o1': "Le preguntas qué hay en la bolsa.", // nieuw, nalezen
+    'c.yard.o2': "Le dejas: es su basura.", // nieuw, nalezen
+    'c.yard.o3': "La tiras tú por él.", // nieuw, nalezen
+    'c.yard.w': "Una sola cosa equivocada puede estropear un contenedor lleno. Una pregunta amable mantiene limpia la basura.", // nieuw, nalezen
+    'l.hazardous': "Residuos químicos", // nieuw, nalezen
+    'w.chemischafval': "los residuos químicos (basura peligrosa, como pintura y aceite)", // nieuw, nalezen
+    'w.spuitbus': "el aerosol, el spray", // nieuw, nalezen
+    'w.asbest': "el amianto (un material peligroso en edificios viejos)", // nieuw, nalezen
+    'w.lekken': "perder líquido, gotear", // nieuw, nalezen
+    'w.gevarensymbool': "el símbolo de peligro (un dibujo que avisa de un peligro)", // nieuw, nalezen
+    'w.vat': "el bidón, el barril", // nieuw, nalezen
+    's.hazardous.1': "Pon la pintura con los residuos químicos.", // nieuw, nalezen
+    's.hazardous.2': "Esta botella pierde líquido. Cógela con guantes.", // nieuw, nalezen
+    's.hazardous.3': "El amianto tiene que estar bien envuelto.", // nieuw, nalezen
+    'c.hazardous.q': "¿Qué hay en esta botella?", // nieuw, nalezen
+    'c.hazardous.a': "No lo sé. Ponla aparte.", // nieuw, nalezen
+    'c.hazardous': "¿No sabes qué es? No lo abras, no lo huelas", // nieuw, nalezen
+    'c.hazardous.b': "Los residuos químicos, como pintura, aceite, productos de limpieza, pilas y aerosoles, pueden quemar, envenenar o explotar. Busca los símbolos de peligro. Ponte guantes y gafas de seguridad. Nunca abras una botella para oler lo que hay dentro, y nunca mezcles productos. Mantén de pie una botella que pierde líquido, y ponla en una bandeja. El amianto solo puede entrar cuando está bien envuelto: nunca lo rompas, y no lo saques del envoltorio. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.hazardous.p': "¿Qué hay aquí dentro?", // nieuw, nalezen
+    'c.hazardous.s': "Una mujer trae una botella sin etiqueta. Huele fuerte. ¿Qué haces?", // nieuw, nalezen
+    'c.hazardous.o1': "La pones aparte, y se lo dices a tu encargado.", // nieuw, nalezen
+    'c.hazardous.o2': "La abres, y hueles qué es.", // nieuw, nalezen
+    'c.hazardous.o3': "La echas en el bidón de pintura.", // nieuw, nalezen
+    'c.hazardous.w': "Los productos desconocidos pueden reaccionar con otros. Tu encargado sabe dónde puede ir sin peligro.", // nieuw, nalezen
+    'l.baler': "La prensa embaladora", // nieuw, nalezen
+    'w.balenpers': "la prensa embaladora (una máquina que prensa la basura en bloques)", // nieuw, nalezen
+    'w.baal': "la bala (un bloque prensado de papel o plástico)", // nieuw, nalezen
+    'w.persen': "prensar", // nieuw, nalezen
+    'w.vastlopen': "atascarse", // nieuw, nalezen
+    'w.binddraad': "el alambre para atar", // nieuw, nalezen
+    'w.vulopening': "la boca de carga (por donde entra la basura)", // nieuw, nalezen
+    's.baler.1': "La prensa está atascada. Aprieta la parada de emergencia.", // nieuw, nalezen
+    's.baler.2': "Nunca metas la mano en la prensa.", // nieuw, nalezen
+    's.baler.3': "Ata bien la bala.", // nieuw, nalezen
+    'c.baler.q': "La prensa se atasca. ¿Puedo echar un vistazo?", // nieuw, nalezen
+    'c.baler.a': "No. Primero se quita la corriente.", // nieuw, nalezen
+    'c.baler': "Nunca metas la mano en la prensa", // nieuw, nalezen
+    'c.baler.b': "Una prensa embaladora aprieta con una fuerza enorme. Úsala solo cuando has aprendido cómo. Nunca metas una mano, un brazo o un pie en la boca de carga, tampoco cuando la máquina parece parada. ¿Se atasca? Aprieta la parada de emergencia, apágala y asegúrate de que nadie la puede encender: sigue los pasos de tu empresa. Solo entonces miras. Nunca te metas dentro de una prensa ni de un contenedor. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.baler.p': "La prensa está atascada.", // nieuw, nalezen
+    'c.baler.s': "Un trozo de cartón está atascado en la boca de carga. La máquina está parada. ¿Qué haces?", // nieuw, nalezen
+    'c.baler.o1': "La apagas del todo, y luego lo sacas.", // nieuw, nalezen
+    'c.baler.o2': "Lo sacas rápido con la mano.", // nieuw, nalezen
+    'c.baler.o3': "Lo empujas hacia dentro con el pie.", // nieuw, nalezen
+    'c.baler.w': "Una máquina parada se puede volver a poner en marcha. Sin quitar la corriente, tu mano está en peligro.", // nieuw, nalezen
+    'l.shovel': "La pala cargadora en el punto limpio", // nieuw, nalezen
+    'w.shovel': "la pala cargadora (una máquina grande con una pala delante)", // nieuw, nalezen
+    'w.zwaailamp': "la luz giratoria (una luz naranja encima de una máquina)", // nieuw, nalezen
+    'w.bunker': "el compartimento (un espacio grande de hormigón para un tipo de basura)", // nieuw, nalezen
+    'w.looppad': "el pasillo peatonal (un camino solo para personas)", // nieuw, nalezen
+    'w.toeteren': "tocar el claxon", // nieuw, nalezen
+    'w.opscheppen': "recoger con la pala", // nieuw, nalezen
+    's.shovel.1': "Quédate en el pasillo peatonal.", // nieuw, nalezen
+    's.shovel.2': "La pala cargadora va marcha atrás. ¡Cuidado!", // nieuw, nalezen
+    's.shovel.3': "La luz giratoria está encendida. La máquina se está moviendo.", // nieuw, nalezen
+    'c.shovel.q': "¿Puedo pasar al lado de la pala cargadora?", // nieuw, nalezen
+    'c.shovel.a': "Solo si el conductor te ve.", // nieuw, nalezen
+    'c.shovel': "No te pongas en el camino de la pala cargadora", // nieuw, nalezen
+    'c.shovel.b': "Una pala cargadora es grande, y su conductor ve poco a su alrededor, sobre todo detrás. Por eso quédate en los pasillos peatonales, y ponte la ropa de alta visibilidad. Nunca camines detrás de una máquina que se mueve. ¿Quieres pasar? Espera hasta que el conductor te ha visto y te hace una señal. La luz giratoria significa: esta máquina está trabajando. Mantén a los visitantes muy lejos de ella. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.shovel.p': "¿Me has visto?", // nieuw, nalezen
+    'c.shovel.s': "Tienes que pasar al lado de una pala cargadora que está trabajando. El conductor mira hacia otro lado. ¿Qué haces?", // nieuw, nalezen
+    'c.shovel.o1': "Esperas hasta que te ve.", // nieuw, nalezen
+    'c.shovel.o2': "Pasas rápido.", // nieuw, nalezen
+    'c.shovel.o3': "Pasas por detrás de la máquina.", // nieuw, nalezen
+    'c.shovel.w': "Un conductor que no te ha visto no puede parar por ti.", // nieuw, nalezen
+    'u.toddlers': "Los niños", // nieuw, nalezen
+    'l.nappies': "Cambiar pañales", // nieuw, nalezen
+    'w.luier': "el pañal", // nieuw, nalezen
+    'w.verschonen': "cambiar (un pañal)", // nieuw, nalezen
+    'w.commode': "el cambiador", // nieuw, nalezen
+    'w.billendoekje': "la toallita húmeda", // nieuw, nalezen
+    'w.potje': "el orinal", // nieuw, nalezen
+    'w.zindelijk': "que ya no necesita pañal (el niño puede usar el váter)", // nieuw, nalezen
+    's.nappies.1': "Voy a cambiar a Sem.", // nieuw, nalezen
+    's.nappies.2': "Lávate las manos después de cambiar un pañal.", // nieuw, nalezen
+    's.nappies.3': "Nunca dejes a un niño solo en el cambiador.", // nieuw, nalezen
+    'c.nappies.q': "¿Cuándo cambiaste a Noor?", // nieuw, nalezen
+    'c.nappies.a': "A las diez. Está en la app.", // nieuw, nalezen
+    'c.nappies': "Una mano sobre el niño", // nieuw, nalezen
+    'c.nappies.b': "Prepáralo todo antes de poner a un niño en el cambiador: un pañal limpio, toallitas y ropa. Luego mantén siempre una mano sobre el niño. Nunca te alejes, tampoco un segundo. Lávate las manos después de cada cambio, y limpia el cambiador. Apunta cuándo has cambiado el pañal, para que lo sepan los padres. ¿Ves una irritación o una herida? Apúntalo, y díselo a un compañero. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.nappies.p': "Ahora le estoy cambiando.", // nieuw, nalezen
+    'c.nappies.s': "Estás cambiando a un bebé. Se te han olvidado las toallitas; están al otro lado de la sala. ¿Qué haces?", // nieuw, nalezen
+    'c.nappies.o1': "Te llevas al bebé contigo.", // nieuw, nalezen
+    'c.nappies.o2': "Vas a por ellas rápido: está cerca.", // nieuw, nalezen
+    'c.nappies.o3': "Dejas al bebé, y pides ayuda en voz alta.", // nieuw, nalezen
+    'c.nappies.w': "Un bebé se puede caer de un cambiador en un segundo. Nunca dejes a un niño solo ahí arriba.", // nieuw, nalezen
+    'l.mealtime': "Comer y beber", // nieuw, nalezen
+    'w.fles': "el biberón", // nieuw, nalezen
+    'w.slabbetje': "el babero", // nieuw, nalezen
+    'w.beker': "la taza (con asa)", // nieuw, nalezen
+    'w.kinderstoel': "la trona", // nieuw, nalezen
+    'w.fruithap': "el puré de fruta", // nieuw, nalezen
+    'w.boertje': "el eructo", // nieuw, nalezen
+    's.mealtime.1': "Lávate las manos antes de comer.", // nieuw, nalezen
+    's.mealtime.2': "Dale el biberón a Lisa a las doce.", // nieuw, nalezen
+    's.mealtime.3': "Todos sentados a la mesa.", // nieuw, nalezen
+    'c.mealtime.q': "¿Puede Daan comer una galleta?", // nieuw, nalezen
+    'c.mealtime.a': "No, tiene una alergia. Mira la lista.", // nieuw, nalezen
+    'c.mealtime': "Mira la lista antes de dar comida", // nieuw, nalezen
+    'c.mealtime.b': "Antes de darle comida o bebida a un niño, mira la lista: algunos niños tienen una alergia, otros no pueden comer ciertas cosas por su salud o por su religión. Lávate las manos y lava las manos de los niños antes de comer. Haz que los niños estén sentados mientras comen y beben; nunca andando ni corriendo. Corta la comida en trozos pequeños para los niños pequeños, por ejemplo las uvas. Nunca le des a un niño algo de casa de otro niño. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.mealtime.p': "¿Puede comer esto?", // nieuw, nalezen
+    'c.mealtime.s': "Un niño llora porque quiere una galleta. No conoces bien a este niño. ¿Qué haces?", // nieuw, nalezen
+    'c.mealtime.o1': "Primero miras la lista.", // nieuw, nalezen
+    'c.mealtime.o2': "Se la das: es solo una galleta.", // nieuw, nalezen
+    'c.mealtime.o3': "Le das media galleta.", // nieuw, nalezen
+    'c.mealtime.w': "Una galleta puede llevar frutos secos, leche o huevo. Para un niño con alergia, eso puede ser muy peligroso.", // nieuw, nalezen
+    'l.naptime': "Dormir", // nieuw, nalezen
+    'w.bedje': "la cuna (una cama pequeña para un bebé)", // nieuw, nalezen
+    'w.slaapkamer': "el dormitorio", // nieuw, nalezen
+    'w.knuffel': "el peluche", // nieuw, nalezen
+    'w.speen': "el chupete", // nieuw, nalezen
+    'w.babyfoon': "el vigilabebés", // nieuw, nalezen
+    'w.slaapzak': "el saco de dormir para bebé", // nieuw, nalezen
+    's.naptime.1': "Acuesta al bebé boca arriba.", // nieuw, nalezen
+    's.naptime.2': "Miro a menudo en el dormitorio.", // nieuw, nalezen
+    's.naptime.3': "Aquí tienes tu peluche. Que duermas bien.", // nieuw, nalezen
+    'c.naptime.q': "¿Ya está dormida Mila?", // nieuw, nalezen
+    'c.naptime.a': "Sí, desde la una. Ahora vuelvo a mirar.", // nieuw, nalezen
+    'c.naptime': "Los bebés duermen boca arriba", // nieuw, nalezen
+    'c.naptime.b': "Un bebé duerme más seguro boca arriba, en un saco de dormir, en su propia cuna. Nada de almohada, ni mantas sueltas, ni juguetes grandes en la cuna. Mantén el cuarto fresco y ventilado. Mira a menudo a los niños que duermen: mira y escucha, también cuando el vigilabebés está encendido. ¿Un padre o una madre te pide que su bebé duerma de otra forma? Primero díselo a tu encargado. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.naptime.p': "Voy a mirar en el dormitorio.", // nieuw, nalezen
+    'c.naptime.s': "Un bebé se ha dormido boca abajo en la cuna. ¿Qué haces?", // nieuw, nalezen
+    'c.naptime.o1': "Le das la vuelta con cuidado, boca arriba.", // nieuw, nalezen
+    'c.naptime.o2': "Le dejas dormir: ahora está dormido.", // nieuw, nalezen
+    'c.naptime.o3': "Le pones una almohada al lado.", // nieuw, nalezen
+    'c.naptime.w': "Boca arriba, un bebé puede respirar libremente. Una almohada le puede tapar la cara.", // nieuw, nalezen
+    'l.playtime': "Jugar", // nieuw, nalezen
+    'w.spelen': "jugar", // nieuw, nalezen
+    'w.speelgoed': "los juguetes", // nieuw, nalezen
+    'w.zandbak': "el arenero", // nieuw, nalezen
+    'w.glijbaan': "el tobogán", // nieuw, nalezen
+    'w.puzzel': "el puzle", // nieuw, nalezen
+    'w.buitenspelen': "jugar fuera", // nieuw, nalezen
+    's.playtime.1': "Vamos a jugar fuera. ¡Abrigos puestos!", // nieuw, nalezen
+    's.playtime.2': "Recoge los juguetes.", // nieuw, nalezen
+    's.playtime.3': "Un niño cada vez en el tobogán.", // nieuw, nalezen
+    'c.playtime.q': "¿Puedo jugar con el puzle?", // nieuw, nalezen
+    'c.playtime.a': "Sí, en la mesa. Luego lo recoges.", // nieuw, nalezen
+    'c.playtime': "Juego seguro: mira, cuenta, revisa", // nieuw, nalezen
+    'c.playtime.b': "Los niños aprenden jugando, así que déjales probar cosas. Pero tenlos siempre a la vista, también fuera. Cuenta a los niños cuando salís y cuando volvéis a entrar. Primero revisa el patio: ¿está cerrada la puerta, hay cristales o basura? Los juguetes con piezas pequeñas no son para niños menores de tres años: se pueden atragantar con ellas. Limpia a menudo los juguetes que se meten en la boca. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.playtime.p': "¿Estamos todos?", // nieuw, nalezen
+    'c.playtime.s': "Vuelves a entrar del patio. Cuentas un niño de menos. ¿Qué haces?", // nieuw, nalezen
+    'c.playtime.o1': "Se lo dices a un compañero, y buscas enseguida.", // nieuw, nalezen
+    'c.playtime.o2': "Esperas: el niño ya entrará solo.", // nieuw, nalezen
+    'c.playtime.o3': "Vuelves a contar mañana.", // nieuw, nalezen
+    'c.playtime.w': "Un niño solo fuera se puede hacer daño o irse. Cada minuto cuenta.", // nieuw, nalezen
+    'u.daycare': "Padres, seguridad y el grupo", // nieuw, nalezen
+    'l.pickup': "Traer y recoger", // nieuw, nalezen
+    'w.ouder': "el padre, la madre", // nieuw, nalezen
+    'w.afscheid': "la despedida", // nieuw, nalezen
+    'w.oppas': "el canguro, la canguro (alguien que cuida niños)", // nieuw, nalezen
+    'w.schriftje': "el cuaderno (para notas entre los padres y el personal)", // nieuw, nalezen
+    'w.ouderapp': "la app para padres (para fotos y mensajes a los padres)", // nieuw, nalezen
+    'w.wennen': "adaptarse (acostumbrarse a un sitio nuevo)", // nieuw, nalezen
+    's.pickup.1': "Lo apunto en el cuaderno.", // nieuw, nalezen
+    's.pickup.2': "Dile adiós a papá.", // nieuw, nalezen
+    's.pickup.3': "Pongo una foto en la app para padres.", // nieuw, nalezen
+    'c.pickup.q': "¿Quién viene hoy a recoger a Sem?", // nieuw, nalezen
+    'c.pickup.a': "Su abuela. Está en la lista.", // nieuw, nalezen
+    'c.pickup': "Solo a personas de la lista", // nieuw, nalezen
+    'c.pickup.b': "Entrega a un niño solo a su padre o a su madre, o a alguien de quien te han hablado los padres. ¿No conoces a la persona? Pregunta quién es, mira su identificación, y compruébalo con los padres o con tu encargado. Al recoger, cuéntale al padre o a la madre cómo ha ido el día: comer, dormir, jugar, y cualquier cosa especial. Apunta las cosas importantes en el cuaderno o en la app. Habla de otros niños solo con sus propios padres. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.pickup.p': "¿Quién es usted? Voy a llamar a los padres.", // nieuw, nalezen
+    'c.pickup.s': "Un hombre que no conoces viene a recoger a Sem. No está en la lista. ¿Qué haces?", // nieuw, nalezen
+    'c.pickup.o1': "Llamas a los padres antes de que Sem se vaya.", // nieuw, nalezen
+    'c.pickup.o2': "Dejas ir a Sem: él sabe el nombre.", // nieuw, nalezen
+    'c.pickup.o3': "Le preguntas a Sem si le conoce.", // nieuw, nalezen
+    'c.pickup.w': "Eres responsable del niño hasta que se hace cargo una persona que han elegido los padres.", // nieuw, nalezen
+    'l.childsafety': "Seguridad en el grupo", // nieuw, nalezen
+    'w.traphekje': "la barrera de escalera", // nieuw, nalezen
+    'w.vingerstrip': "el protector de dedos (en una puerta, para que no se atrapen los dedos)", // nieuw, nalezen
+    'w.verslikken': "atragantarse (la comida se va por mal sitio)", // nieuw, nalezen
+    'w.bult': "el chichón (en la cabeza)", // nieuw, nalezen
+    'w.schaafwond': "el rasguño (la piel está raspada)", // nieuw, nalezen
+    'w.toezicht': "la vigilancia (miras a los niños)", // nieuw, nalezen
+    's.childsafety.1': "Cierra siempre la barrera de la escalera.", // nieuw, nalezen
+    's.childsafety.2': "Le pongo un poco de hielo en el chichón.", // nieuw, nalezen
+    's.childsafety.3': "Sem se está atragantando. Le ayudo.", // nieuw, nalezen
+    'c.childsafety.q': "¿Se ha caído Bo?", // nieuw, nalezen
+    'c.childsafety.a': "Sí, tiene un chichón. Llamo a su madre.", // nieuw, nalezen
+    'c.childsafety': "Mira a tu alrededor con ojos de niño", // nieuw, nalezen
+    'c.childsafety.b': "Los niños pequeños se lo meten todo en la boca y se suben a todo. Por eso mantén cerrada la barrera de la escalera, pon los productos de limpieza y las medicinas fuera de su alcance, y mantén las bebidas calientes lejos de los niños. Revisa la sala cada día. ¿Un niño se hace daño? Dale primeros auxilios, consuélale, díselo a los padres, y apúntalo. ¿Es grave? Llama al 112. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.childsafety.p': "La barrera de la escalera está abierta.", // nieuw, nalezen
+    'c.childsafety.s': "Pones tu café caliente en una mesa baja. Un niño pequeño va hacia allí. ¿Qué haces?", // nieuw, nalezen
+    'c.childsafety.o1': "Pones el café en alto enseguida.", // nieuw, nalezen
+    'c.childsafety.o2': "Le dices al niño que no lo toque.", // nieuw, nalezen
+    'c.childsafety.o3': "Te lo bebes rápido.", // nieuw, nalezen
+    'c.childsafety.w': "Un café caliente puede quemar mucho a un niño pequeño. Fuera de su alcance es el único sitio seguro.", // nieuw, nalezen
+    'l.sickchild': "Un niño enfermo y las alergias", // nieuw, nalezen
+    'w.huiduitslag': "la erupción (manchas rojas en la piel)", // nieuw, nalezen
+    'w.diarree': "la diarrea", // nieuw, nalezen
+    'w.overgeven': "vomitar", // nieuw, nalezen
+    'w.allergielijst': "la lista de alergias", // nieuw, nalezen
+    'w.adrenalinepen': "la pluma de adrenalina (una pluma con medicina para una alergia fuerte)", // nieuw, nalezen
+    'w.temperaturen': "tomar la temperatura", // nieuw, nalezen
+    's.sickchild.1': "Sem tiene fiebre. Llamo a su padre.", // nieuw, nalezen
+    's.sickchild.2': "Mira la lista de alergias antes de comer.", // nieuw, nalezen
+    's.sickchild.3': "Nunca des una medicina sin permiso.", // nieuw, nalezen
+    'c.sickchild.q': "¿Cómo está Jip?", // nieuw, nalezen
+    'c.sickchild.a': "Está muy caliente. Le voy a tomar la temperatura.", // nieuw, nalezen
+    'c.sickchild': "Un niño enfermo: avisa, no adivines", // nieuw, nalezen
+    'c.sickchild.b': "Fíjate en cómo están los niños. ¿Un niño está caliente, muy cansado, vomita, o tiene una erupción? Tómale la temperatura, díselo a tu compañero, y llama a los padres. Da una medicina solo con permiso por escrito de los padres, y apunta qué has dado y cuándo. Debes saber qué niños tienen una alergia, y dónde está su medicina. Un niño con una reacción alérgica fuerte: ponle la pluma de adrenalina si has aprendido a hacerlo, y llama al 112. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.sickchild.p': "Su hijo está enfermo. ¿Puede venir a recogerlo?", // nieuw, nalezen
+    'c.sickchild.s': "Una madre dice: “Dale un jarabe para la fiebre a las dos.” No hay formulario. ¿Qué haces?", // nieuw, nalezen
+    'c.sickchild.o1': "Le pides que primero firme el formulario.", // nieuw, nalezen
+    'c.sickchild.o2': "Se lo das: la madre te lo ha pedido.", // nieuw, nalezen
+    'c.sickchild.o3': "Le das la mitad, por si acaso.", // nieuw, nalezen
+    'c.sickchild.w': "Sin permiso por escrito no puedes dar medicinas. El formulario protege al niño y a ti.", // nieuw, nalezen
+    'l.grouprules': "El grupo y las normas", // nieuw, nalezen
+    'w.pedagogischmedewerker': "el educador infantil, la educadora infantil", // nieuw, nalezen
+    'w.mentor': "el mentor, la mentora (la persona del equipo que sigue de cerca a un niño)", // nieuw, nalezen
+    'w.vierogenprincipe': "la regla de los cuatro ojos (otro adulto siempre te puede ver u oír)", // nieuw, nalezen
+    'w.observeren': "observar (mirar con atención, y apuntarlo)", // nieuw, nalezen
+    'w.peuter': "el niño pequeño (un niño de dos o tres años)", // nieuw, nalezen
+    'w.groep': "el grupo (los niños que están juntos cada día)", // nieuw, nalezen
+    's.grouprules.1': { m: "Soy el mentor de Lisa.", f: "Soy la mentora de Lisa.", x: "Soy mentor/a de Lisa." }, // nieuw, nalezen
+    's.grouprules.2': "Un compañero siempre nos puede ver u oír.", // nieuw, nalezen
+    's.grouprules.3': "Me preocupa Daan.", // nieuw, nalezen
+    'c.grouprules.q': { m: "¿Puedo salir solo con el grupo?", f: "¿Puedo salir sola con el grupo?", x: "¿Puedo salir con el grupo sin nadie más?" }, // nieuw, nalezen
+    'c.grouprules.a': "Sí, pero primero díselo a un compañero.", // nieuw, nalezen
+    'c.grouprules': "Nunca a solas y sin que te vean", // nieuw, nalezen
+    'c.grouprules.b': "En una guardería, otro adulto siempre te tiene que poder ver u oír cuando estás con los niños. Eso protege a los niños y a ti. Cada niño tiene un mentor: una persona del equipo que sigue de cerca a ese niño y habla con los padres. ¿Te preocupa cómo está un niño en casa, por ejemplo por moratones o por miedo? No le hagas demasiadas preguntas al niño: díselo a tu encargado, que conoce los pasos. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.grouprules.p': "Me preocupa este niño.", // nieuw, nalezen
+    'c.grouprules.s': "Otra vez ves moratones en un niño. El niño está callado. ¿Qué haces?", // nieuw, nalezen
+    'c.grouprules.o1': "Se lo dices a tu encargado el mismo día.", // nieuw, nalezen
+    'c.grouprules.o2': "Le haces muchas preguntas al niño.", // nieuw, nalezen
+    'c.grouprules.o3': "Llamas a los padres y les preguntas por qué.", // nieuw, nalezen
+    'c.grouprules.w': "Tu encargado conoce los pasos cuando te preocupa un niño. Muchas preguntas pueden asustar al niño.", // nieuw, nalezen
   },
 };
 
