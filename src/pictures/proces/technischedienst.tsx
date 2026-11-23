@@ -38,10 +38,10 @@ export default {
       <path d="M43 52H77M43 65H77M43 78H77" stroke={PAL.line} strokeWidth="2" />
       <circle cx="60" cy="22" r="13" fill={PAL.blueShade} />
       <circle cx="60" cy="20" r="13" fill={PAL.blue} />
-      <g transform="rotate(-45 60 20)">
-        <rect x="57.5" y="12" width="5" height="16" rx="2" fill={PAL.white} />
-        <path d="M55 14A5.5 5.5 0 1 1 65 14L62.5 12V9H57.5V12Z" fill={PAL.white} />
-        <path d="M56 26A5 5 0 1 0 64 26L62 28H58Z" fill={PAL.white} />
+      <g transform="rotate(40 60 20)">
+        <rect x="57.6" y="14" width="4.8" height="17" rx="2" fill={PAL.white} />
+        <circle cx="60" cy="12" r="6.4" fill={PAL.white} />
+        <rect x="57.6" y="4" width="4.8" height="8.6" rx="1" fill={PAL.blue} />
       </g>
       {/* The two technicians */}
       {tech(22, 'amina')}

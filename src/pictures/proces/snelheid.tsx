@@ -19,7 +19,8 @@ export default {
     <g strokeLinejoin="round" strokeLinecap="round">
       <Ground cx={60} cy={105} rx={50} ry={3.5} />
       {/* The machine panel with its depth edge */}
-      <path d="M26 22H96L102 17V65L96 70Z" fill={PAL.slateDark} />
+      <path d="M22 22L28 17H102L96 22Z" fill={PAL.steel} />
+      <path d="M96 22L102 17V65L96 70Z" fill={PAL.slateDark} />
       <rect x="22" y="22" width="74" height="48" rx="6" fill={PAL.slate} />
       <Shine d="M28 28H58" width={2.6} opacity={0.4} />
       {/* The half-round dial: a white face, the scale, the needle */}

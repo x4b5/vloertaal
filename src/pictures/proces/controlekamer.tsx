@@ -19,24 +19,24 @@ export default {
     <g strokeLinejoin="round" strokeLinecap="round">
       <Ground cx={60} cy={105} rx={50} ry={4} />
       {/* The screens: left (a graph), right (bars), middle (the plant: two tanks and a pipe) */}
-      {monitor(8, 22, 36, 30, (
-        <path d="M15 44L22 38L28 41L35 31L39 34" fill="none" stroke={PAL.leaf} strokeWidth="2.6" />
+      {monitor(8, 18, 36, 30, (
+        <path d="M15 40L22 34L28 37L35 27L39 30" fill="none" stroke={PAL.leaf} strokeWidth="2.6" />
       ))}
-      {monitor(76, 22, 36, 30, (
+      {monitor(76, 18, 36, 30, (
         <g>
-          <rect x="83" y="36" width="5" height="11" rx="1" fill={PAL.ice} />
-          <rect x="91" y="31" width="5" height="16" rx="1" fill={PAL.orangeLight} />
-          <rect x="99" y="39" width="5" height="8" rx="1" fill={PAL.leaf} />
+          <rect x="83" y="32" width="5" height="11" rx="1" fill={PAL.ice} />
+          <rect x="91" y="27" width="5" height="16" rx="1" fill={PAL.orangeLight} />
+          <rect x="99" y="35" width="5" height="8" rx="1" fill={PAL.leaf} />
         </g>
       ))}
-      {monitor(38, 14, 44, 38, (
+      {monitor(38, 8, 44, 40, (
         <g>
-          <path d="M51 34H69" stroke={PAL.sky} strokeWidth="3" />
-          <rect x="44" y="22" width="11" height="22" rx="3" fill={PAL.ice} />
-          <rect x="44" y="33" width="11" height="11" rx="2" fill={PAL.sky} />
-          <rect x="65" y="25" width="11" height="19" rx="3" fill={PAL.ice} />
-          <rect x="65" y="36" width="11" height="8" rx="2" fill={PAL.sky} />
-          <circle cx="60" cy="34" r="2.6" fill={PAL.leaf} />
+          <path d="M51 26H69" stroke={PAL.sky} strokeWidth="3" />
+          <rect x="44" y="14" width="11" height="22" rx="3" fill={PAL.ice} />
+          <rect x="44" y="25" width="11" height="11" rx="2" fill={PAL.sky} />
+          <rect x="65" y="17" width="11" height="19" rx="3" fill={PAL.ice} />
+          <rect x="65" y="28" width="11" height="8" rx="2" fill={PAL.sky} />
+          <circle cx="60" cy="26" r="2.6" fill={PAL.leaf} />
         </g>
       ))}
       {/* The long desk: top, front edge, legs */}

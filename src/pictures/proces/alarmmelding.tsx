@@ -24,7 +24,7 @@ export default {
       <path d="M56 42H79M56 50H74" stroke={PAL.white} strokeWidth="3.4" />
       <Shine d="M14 32Q14 26 20 26" width={2.6} opacity={0.5} />
       {/* The alarm sounds */}
-      <Motion x={100} y={20} dir={-45} spread={70} n={3} len={8} gap={5} color={PAL.red} width={3.4} />
+      <Motion x={97} y={23} dir={-45} spread={80} n={3} len={10} gap={6} color={PAL.red} width={3.6} />
     </g>
   ),
 } as Record<string, () => JSX.Element>;

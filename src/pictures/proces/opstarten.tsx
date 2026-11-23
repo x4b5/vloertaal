@@ -14,19 +14,20 @@ export default {
   // lines show it starting to turn. On the intro card the finger comes to the button, then the motion lines
   // appear (once: the line is started).
   'w.opstarten': () => {
-    const [wx, wy] = wrist(44, 66, -36, 0.82);
+    const [wx, wy] = wrist(52, 76, -36, 0.82);
     return (
       <g strokeLinejoin="round" strokeLinecap="round">
         <Ground cx={46} cy={105} rx={40} ry={3.5} />
         {/* The machine roll on its stand, top right */}
         <rect x="86" y="40" width="6" height="22" fill={PAL.steel} />
-        <Shade color={PAL.slateDark} opacity={0.5} at={[104, 30, 7, 18]}>
-          <circle cx="89" cy="30" r="15" fill={PAL.slate} />
+        <Shade color={PAL.slateDark} opacity={0.6} at={[106, 30, 8, 20]}>
+          <circle cx="89" cy="30" r="16" fill={PAL.slate} />
         </Shade>
+        <path d="M89 30L89 16" stroke={PAL.steel} strokeWidth="3" />
         <circle cx="89" cy="30" r="5" fill={PAL.mist} />
-        <Move kind="show">
-          <path d="M70 22A21 21 0 0 1 82 10M108 38A21 21 0 0 1 96 50" fill="none" stroke={PAL.leaf} strokeWidth="4" />
-          <path d="M82 10l-1 7.5M96 50l1-7.5" stroke={PAL.leaf} strokeWidth="4" />
+        <Move kind="show" once>
+          <path d="M68 26A21 21 0 0 1 84 9.5M110 34A21 21 0 0 1 94 50.5" fill="none" stroke={PAL.leaf} strokeWidth="4.4" />
+          <path d="M84 9.5l-7 -1.5M84 9.5l-3 6.5M94 50.5l7 1.5M94 50.5l3 -6.5" stroke={PAL.leaf} strokeWidth="4.4" />
         </Move>
         {/* The control box: side, front */}
         <path d="M74 50L82 44V98L74 104Z" fill={PAL.slate} />
@@ -39,7 +40,7 @@ export default {
         <path d="M39.5 60.5L51 67L39.5 73.5Z" fill={PAL.white} stroke={PAL.white} strokeWidth="2.5" />
         <path d="M26 94H62" stroke={PAL.mist} strokeWidth="3" />
         {/* The hand pressing it */}
-        <Move kind="from" dx={20} dy={24}>
+        <Move kind="from" dx={20} dy={24} once>
           <Hand pose="point" x={wx} y={wy} rotate={-36} scale={0.82} skin={SKIN.amina} sleeve={[PAL.blue, PAL.blueShade]} />
         </Move>
       </g>

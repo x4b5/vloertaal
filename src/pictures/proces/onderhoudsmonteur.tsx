@@ -3,8 +3,8 @@ import { CastHead } from '../../components/Characters';
 import { Ground, PAL, SKIN, Shade, Shine } from '../kit';
 
 export default {
-  // "de onderhoudsmonteur": the maintenance technician — Jada in blue overalls at a grey machine, a big
-  // spanner raised in her hand and a red padlock hanging from her belt (to lock the machine off before she
+  // "de onderhoudsmonteur": the maintenance technician — Jada in blue overalls at a grey machine, her
+  // spanner on the machine's gear and a red padlock hanging from her belt (to lock the machine off before she
   // works on it).
   'w.onderhoudsmonteur': () => {
     const [s] = SKIN.jada;
@@ -25,21 +25,21 @@ export default {
         <path d="M46 78L47 101" stroke={PAL.blueShade} strokeWidth="9.5" />
         <ellipse cx="31" cy="102.5" rx="6.5" ry="3.3" fill={PAL.slateDark} />
         <ellipse cx="49" cy="102.5" rx="6.5" ry="3.3" fill={PAL.slateDark} />
-        {/* The arm with the spanner, raised to the machine */}
-        <path d="M50 56L60 44" stroke={PAL.blueShade} strokeWidth="8" />
-        <g transform="rotate(-50 62 42)">
-          <rect x="60" y="20" width="6" height="26" rx="2.5" fill={PAL.steel} />
-          <path d="M57 22A8 8 0 1 1 69 22L66 19.5V14H60V19.5Z" fill={PAL.mist} />
-        </g>
-        <circle cx="61" cy="43" r="4.4" fill={s} />
+        {/* The spanner on the machine's gear, and the arm that holds it */}
+        <rect x="60" y="57" width="22" height="6" rx="2.5" fill={PAL.mist} />
+        <path d="M80 54.5A8 8 0 1 1 80 65.5L82.5 63H90V57H82.5Z" fill={PAL.paper} />
+        <Shine d="M64 58.6H76" width={1.6} opacity={0.9} />
+        <path d="M48 58L61 60" stroke={PAL.blueShade} strokeWidth="8" />
+        <circle cx="63" cy="60" r="4.6" fill={s} />
         {/* Her body, the belt with the padlock */}
         <Shade color={PAL.blueShade} opacity={1} at={[56, 64, 7, 24]}>
           <rect x="27" y="48" width="26" height="35" rx="9" fill={PAL.blue} />
         </Shade>
         <path d="M27 75H53" stroke={PAL.slate} strokeWidth="3.4" strokeLinecap="butt" />
-        <path d="M32 80V77Q32 73.5 35.5 73.5Q39 73.5 39 77V80" fill="none" stroke={PAL.steel} strokeWidth="2.4" />
-        <rect x="30" y="79" width="11" height="10" rx="2" fill={PAL.red} />
-        <circle cx="35.5" cy="84" r="1.5" fill={PAL.redShade} />
+        <path d="M31 80V76.5Q31 72 36 72Q41 72 41 76.5V80" fill="none" stroke={PAL.steel} strokeWidth="2.8" />
+        <rect x="28.5" y="79" width="15" height="13" rx="2.5" fill={PAL.red} />
+        <rect x="38" y="79" width="5.5" height="13" rx="2" fill={PAL.redShade} />
+        <circle cx="35" cy="85" r="1.8" fill={PAL.redShade} />
         <Shine d="M30 54V66" width={2.4} opacity={0.4} />
         <g transform="translate(40 50) scale(0.42) translate(-60 -96)">
           <CastHead who="jada" expr="neutral" gaze={[0, 0]} bold />

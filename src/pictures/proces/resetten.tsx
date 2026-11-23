@@ -13,7 +13,7 @@ export default {
   // gone) and the green one lit, and a big blue reset button with a white circular arrow; a finger presses
   // it. On the intro card the finger comes to the button, then the green lamp goes on (once).
   'w.resetten': () => {
-    const [wx, wy] = wrist(50, 76, -30, 0.8);
+    const [wx, wy] = wrist(58, 84, -30, 0.8);
     return (
       <g strokeLinejoin="round" strokeLinecap="round">
         <Ground cx={56} cy={105} rx={44} ry={3.5} />
@@ -36,7 +36,7 @@ export default {
         <path d="M57.5 71A8.5 8.5 0 1 0 58 79" fill="none" stroke={PAL.white} strokeWidth="3.4" />
         <path d="M53.5 69.5L59 69L59.5 63.5" fill="none" stroke={PAL.white} strokeWidth="3.4" />
         {/* The finger pressing it */}
-        <Move kind="from" dx={22} dy={20}>
+        <Move kind="from" dx={22} dy={20} once>
           <Hand pose="point" x={wx} y={wy} rotate={-30} scale={0.8} skin={SKIN.jada} sleeve={[PAL.orange, PAL.orangeShade]} />
         </Move>
       </g>
