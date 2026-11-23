@@ -292,3 +292,89 @@ Deze punten zijn opgeschreven uit kennis van de wet, maar niet in deze ronde nag
 4. Les 1.4: is de proefdag-uitleg ("echt meewerken geeft vaak recht op loon") verantwoord als algemene regel?
 5. Les 9.1: is de zin over kledingregels en een hoofddoek juridisch houdbaar?
 6. Ontbreekt er een loket dat voor jongeren belangrijk is (bijvoorbeeld een meldpunt stagediscriminatie bij SBB of de school, of het Jongerenloket van de gemeente)?
+
+---
+
+## 7. Zes nieuwe sectoren (23 november 2026)
+
+*Bij [`werkregels-curriculum.md`](werkregels-curriculum.md), deel 9: de sectorunits `r.groen`,
+`r.facilitair`, `r.beveiliging`, `r.voeding`, `r.afval` en `r.kinderopvang`
+(`src/content/regels/units/sector2.ts`) en hun Belgische versies
+(`src/content/regels/be/units/sector-<naam>.ts`). Opgeschreven uit kennis van de regels; de
+overheidssites zijn in deze ronde **niet geopend**. Alles hieronder is dus nog "niet geverifieerd".
+De precieze bron staat bij elke `// ⚖️ check:` in de code.*
+
+### Nederland
+
+| Les | Bewering (⚖️) | Bron om te checken |
+|---|---|---|
+| G.1 | Beschermende spullen krijg je gratis. | Arbobesluit art. 8.2 en 8.3 |
+| G.1 | Kettingzaag alleen met een cursus; niet alleen werken; zaagbroek, helm met scherm. | Arbobesluit art. 7.3 en 7.5; Arbocatalogus Hoveniers en Groenvoorzieners |
+| G.1 | Langs de weg: hesje en pionnen, ook voor kort werk. | CROW 96a/96b; Arbobesluit art. 8.1 |
+| G.2 | Graven met een machine: eerst een KLIC-melding. | Wion art. 2 (graafmelding bij het Kadaster) |
+| G.2 | Een nest in gebruik is beschermd. | Omgevingswet; Bal hoofdstuk 11 (vroeger Wnb art. 3.1) — **artikel nakijken** |
+| G.2 | Na een prik snel naar een dokter; soms binnen een paar uur medicijnen. | RIVM, LCI-richtlijn "Accidenteel bloedcontact" (PEP) |
+| F.1 | Telefoonnummers, adressen en roosters van collega's zijn privé. | AVG art. 5 en 6 |
+| F.1 | Bij een ontruiming moet bekend zijn wie er binnen is. | Arbowet art. 15 (bhv); aanmelden is een huisregel |
+| F.2 | Niet zelf aan stroom, gas of verwarming. | Arbobesluit art. 3.5; NEN 3140; erkend installateur voor gas |
+| F.2 | Een trap, nooit een stoel; niet op de bovenste tree. | Arbobesluit art. 7.23 en 7.23a |
+| F.2 | Gaslucht: geen schakelaar, ramen open, mensen weg, buiten bellen. | Netbeheer Nederland, "Gaslucht" (0800-9009; niet in de les) |
+| BV.1 | Een beveiliger heeft een diploma en een beveiligerspas nodig; de pas na screening. | Wpbr art. 7; Regeling particuliere beveiligingsorganisaties en recherchebureaus |
+| BV.1 | De pas draag je en toon je op vraag. | Wpbr art. 7 lid 2; de Regeling — **artikel nakijken** |
+| BV.2 | Iedereen mag bij heterdaad aanhouden, en draagt meteen over aan de politie. | Sv art. 53 ("onverwijld overleveren"); het nieuwe Wetboek van Strafvordering — **datum nakijken** |
+| BV.2 | Fouilleren mag alleen de politie; tassencontrole bij evenementen met toestemming. | Sv art. 56; de Regeling Wpbr |
+| BV.2 | Niet meer kracht dan nodig; geen nekklem. | Sv art. 53; Sr art. 41; geweldsinstructie Regeling Wpbr — **nekklem voor beveiligers nakijken** |
+| BV.2 | De werkgever zorgt voor opvang na agressie en geweld. | Arbobesluit art. 2.15 |
+| V.1 | Hygiëne: schone kleding, haar bedekt, handen wassen. | Verordening (EG) 852/2004, bijlage II, hfst. VIII lid 1; hygiënecode |
+| V.1 | Diarree, overgeven of een besmette wond: melden voor je begint. | Verordening (EG) 852/2004, bijlage II, hfst. VIII lid 2 |
+| V.2 | Het etiket noemt de allergenen. | Verordening (EU) 1169/2011, art. 9 en 21, bijlage II (14 allergenen) |
+| V.2 | Elk levensmiddelenbedrijf werkt met HACCP, met registraties. | Verordening (EG) 852/2004, art. 5 |
+| V.2 | Gekoeld bewaren; te warm meteen melden. | Verordening 852/2004 art. 4; Warenwetbesluit Hygiëne van levensmiddelen (7 graden: niet in de les) |
+| A.1 | Kleding met reflectie; niemand achter een wagen die achteruitrijdt. | Arbobesluit art. 7.17a en 7.17b en 8.1; Arbocatalogus Afvalbranche |
+| A.1 | Treeplank alleen als het bedrijf het toestaat, nooit achteruit of hard. | NEN-EN 1501-1; Arbocatalogus; RVV 1990 — **artikel nakijken** |
+| A.1 | Een te zware container laat je staan. | Arbobesluit art. 5.2 en 5.3 |
+| A.2 | Verf, olie, accu's en spuitbussen zijn gevaarlijk afval. | Wet milieubeheer art. 1.1 en 10.37; LAP |
+| A.2 | Een pers alleen na opleiding; noodstop, stroom eraf, slot erop. | Arbobesluit art. 7.5, 7.10 en 7.13; NEN-EN 16252 |
+| A.2 | Asbest is gevaarlijk als het breekt; alleen goed ingepakt naar de milieustraat. | Arbobesluit art. 4.37 e.v.; regels van de gemeente |
+| K.1 | VOG verplicht in de kinderopvang. | Wet kinderopvang art. 1.50 lid 2 |
+| K.1 | Inschrijven en koppelen in het personenregister vóór je begint; ook stagiairs en uitzendkrachten. | Wet kinderopvang art. 1.48d en 1.50 |
+| K.1 | Vierogenprincipe (dagopvang). | Besluit kwaliteit kinderopvang art. 7 — **niet in de bso: nakijken** |
+| K.2 | Medicijnen alleen met schriftelijke toestemming van de ouders. | Beleid veiligheid en gezondheid (Besluit kwaliteit kinderopvang art. 4); de medicijnverklaring van de branche — **geen letterlijke wettekst** |
+| K.2 | De opvang heeft een meldcode met vaste stappen. | Wet verplichte meldcode huiselijk geweld en kindermishandeling; Wet kinderopvang art. 1.51a en 1.51b |
+
+### België
+
+| Les | Bewering (⚖️) | Bron om te checken |
+|---|---|---|
+| G.1 | PBM gratis; kettingzaag alleen na opleiding. | Codex welzijn op het werk, boek IX titel 2 en boek IV titel 2 |
+| G.1 | Signalisatie en fluohesje langs de weg. | MB 7 mei 1999 signalisatie van werken; Codex boek IX |
+| G.2 | Graven met een machine: eerst een KLIP-aanvraag. | KLIP-decreet 14 maart 2008 — **twijfel: vrijstelling voor kleine handwerken** |
+| G.2 | Nesten in gebruik zijn beschermd. | Soortenbesluit 15 mei 2009, art. 10 |
+| G.2 | Een prik op het werk is een arbeidsongeval; snel naar een dokter. | Arbeidsongevallenwet 10 april 1971; Hoge Gezondheidsraad (PEP) |
+| F.1 | Gegevens van collega's zijn privé. | GDPR art. 5 en 6; wet 30 juli 2018 |
+| F.2 | Stroom: alleen wie bevoegd is (BA4/BA5); trap, geen stoel. | AREI; Codex boek III titel 2; Codex boek IV titel 5 (KB 31 augustus 2005) |
+| F.2 | Gasgeur: geen schakelaar, mensen weg, buiten bellen. | Fluvius, "Gasgeur" |
+| BV.1 | Bewakingsagent: opleiding, veiligheidsonderzoek, identificatiekaart, zichtbaar dragen. | Wet private en bijzondere veiligheid 2 oktober 2017 — **artikelen nakijken** |
+| BV.2 | Vasthouden bij heterdaad, meteen de politie verwittigen. | Wet voorlopige hechtenis 20 juli 1990, art. 1, 3° |
+| BV.2 | Niet fouilleren; oppervlakkige controle van kledij of tas alleen in bepaalde gevallen, met toestemming. | Wet private veiligheid 2017 — **twijfel: welke gevallen** |
+| BV.2 | Psychologische ondersteuning na geweld door derden. | Wet welzijn 4 augustus 1996, art. 32quater en 32quinquies |
+| V.1–V.2 | Hygiëne, melden bij ziekte, allergenen, autocontrole. | Verordening 852/2004 en 1169/2011; KB 13 juli 2014; KB 14 november 2003 autocontrole — **vraag: medisch attest voor wie met voeding werkt?** |
+| A.1 | Fluokledij; niemand achter een achteruitrijdende wagen. | Codex boek IX titel 2 en boek IV titel 2 |
+| A.1 | Treeplank. | EN 1501-1; Wegcode — **twijfel: de Belgische regel voor laders** |
+| A.2 | Klein gevaarlijk afval apart; asbest alleen verpakt. | VLAREMA; OVAM; Codex boek VI titel 3 |
+| A.2 | Pers: opleiding; vergrendelen bij onderhoud. | Codex boek IV titel 2 |
+| K.1 | Uittreksel uit het strafregister voor werk met kinderen, vóór de start; aanvragen bij de gemeente. | Besluit Vlaamse Regering 22 november 2013; Sv art. 596, tweede lid — **twijfel: stagiairs** |
+| K.1 | Open werken (vier ogen) is geen wet in Vlaanderen. | Opgroeien — **twijfel: of een besluit het vraagt** |
+| K.2 | Medicijnen alleen met een voorschrift van een arts of apotheker en een vraag van de ouders. | Opgroeien, gezondheid in de kinderopvang — **twijfel: koortswerende middelen** |
+| K.2 | Een procedure bij vermoedens van kindermishandeling. | Besluit Vlaamse Regering 22 november 2013; Vertrouwenscentrum Kindermishandeling |
+
+### Vragen aan de deskundige
+
+1. BV.2: mag een beveiliger in Nederland handboeien gebruiken bij een aanhouding, en hoort dat in de
+   les? Nu staat er alleen "niet meer kracht dan nodig".
+2. A.1: is meerijden op de treeplank in Nederland en België toegestaan, en onder welke voorwaarden?
+   De les zegt: alleen als je bedrijf het toestaat.
+3. K.1: geldt het vierogenprincipe ook voor de buitenschoolse opvang? De les noemt de babygroep.
+4. K.2 (België): mag de opvang een koortswerend middel geven zonder voorschrift, met een briefje van
+   de ouders?
+5. V.1 (België): moet het medisch attest voor wie met voeding werkt in de les?

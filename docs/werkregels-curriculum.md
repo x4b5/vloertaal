@@ -2434,6 +2434,10 @@ Tempo en stukloon). Die staat uitgewerkt in [`entree-aanvulling.md`](entree-aanv
 de garage (`r.werkplaats`, les M.1 en M.2). Die staan in deel 7, net als hoe ze in de
 sectorkeuze kwamen.*
 
+*En op 23 november 2026: de zes nieuwe sectoren groen (`r.groen`), facilitair (`r.facilitair`),
+beveiliging (`r.beveiliging`), voedingsindustrie (`r.voeding`), afval en recycling (`r.afval`) en
+kinderopvang (`r.kinderopvang`), elk 2 lessen. Die staan in deel 9.*
+
 ## Sector bouw · Veilig op de bouw
 
 *In deze unit: VCA, je beschermende spullen (PBM), de toolboxmeeting en eerst even kijken.*
@@ -4169,3 +4173,732 @@ Wetten).
 
 **Onthoud:** Wonen via het bureau? Check het keurmerk en je loonstrook. *(België: Iets van je loon
 af? Vraag waarom, en kijk op je loonbrief.)*
+
+---
+
+## 9. Zes nieuwe sectoren (23 november 2026)
+
+*Twaalf korte lessen: 2 per sector, voor de zes sectoren die op 23 november 2026 in "Waar werk je?"
+kwamen (`src/content/sectors.ts`). Zelfde vorm en taalniveau als deel 6 en 7. De Nederlandse units
+staan in `src/content/regels/units/sector2.ts`, de Belgische in
+`src/content/regels/be/units/sector-<naam>.ts`. Alleen Werkregels: Nederlands op A2, zonder
+vertalingen en zonder opnames. Elk feit uit wet, besluit of richtlijn heeft in de code een
+`// ⚖️ check:` met de bron; de nakijklijst staat in [`werkregels-bronnen.md`](werkregels-bronnen.md),
+§7. De bronnen zijn opgeschreven uit kennis van de regels; overheidssites zijn in deze ronde niet
+geopend. Een deskundige moet ze nakijken.*
+
+| Sector | Unit | Lessen | Taal-tweeling |
+|---|---|---|---|
+| Groen | `r.groen` Werken in het groen | G.1 Machines en de weg · G.2 Kabels, nesten en naalden | `u.mowing`, `u.planting` |
+| Facilitair | `r.facilitair` Werken in de facilitaire dienst | F.1 Bezoek, post en privacy · F.2 Storingen, trappen en gas | `u.frontdesk`, `u.maintenance` |
+| Beveiliging | `r.beveiliging` Werken in de beveiliging | BV.1 Je pas en je ronde · BV.2 Diefstal, geweld en je verslag | `u.guarding`, `u.incidents` |
+| Voedingsindustrie | `r.voeding` Werken in de voedingsindustrie | V.1 De hygiënesluis en ziek zijn · V.2 Allergenen en de HACCP-lijst | `u.foodhygiene`, `u.foodline` |
+| Afval en recycling | `r.afval` Werken in afval en recycling | A.1 Op de wagen: zien en gezien worden · A.2 De milieustraat en de pers | `u.collection`, `u.recycling` |
+| Kinderopvang | `r.kinderopvang` Werken in de kinderopvang | K.1 Eerst het register, en vier ogen · K.2 Medicijnen, een ziek kind en zorgen | `u.toddlers`, `u.daycare` |
+
+Lesletters: BV, want B is al van de bouw; A en K waren nog vrij.
+
+**Telling van deze 12 lessen.** "Wat is het beste?": A 6, B 7, C 7 (20 vragen; het beste antwoord is
+3 keer het langste). "Waar of niet waar?": 5 waar, 9 niet waar. "Wie vraag je het?": 7. Elke
+regelkaart is `geschreven` (met de adviesregel, geen 'abuse': de werkgever is hier niet het
+probleem). Geen sleutelregel (`key`): een sectorunit heeft er geen. Geen kaartje.
+
+**Keuzes.**
+
+- *Wat is de geschreven regel?* Per les één regel met een bron: beschermende spullen gratis en de
+  kettingzaag alleen met opleiding (Arbobesluit), de KLIC-melding en beschermde nesten (Wion,
+  Omgevingswet), privacy (AVG), werk aan stroom en gas en de trap (Arbobesluit), de beveiligerspas
+  (Wpbr), aanhouden en fouilleren (Sv art. 53 en 56), hygiëne en melden bij ziekte (Verordening
+  852/2004), allergenen (Verordening 1169/2011), achteruitrijden en de pers (Arbobesluit), het
+  personenregister, de VOG en het vierogenprincipe (Wet kinderopvang, Besluit kwaliteit
+  kinderopvang), medicijnen en de meldcode.
+- *De ongeschreven regels* staan in de vragen: eerst nakijken bij een "directeur" zonder pas, een
+  verslag meteen schrijven, een blauwe pleister, een te zware container laten staan, een kind niet
+  uitvragen.
+- *Geen getallen* in de tekst waar de bron twijfelt (geen temperatuur, geen tijd voor PEP na een
+  prik, geen telefoonnummers). Het verschil staat in woorden.
+- *Overlap met de tips* (`src/content/workTips.ts`, 23 november 2026): bewust. De tips zeggen hoe
+  je het werk doet (in het spoor Taal, met vertaling); deze lessen zeggen wat de regel is en wie je
+  vraagt, in eenvoudig Nederlands.
+
+**België.** Elke unit heeft een Belgische versie met dezelfde lessen en dezelfde vragen, waar het
+kan. Wat anders is:
+
+- *Groen:* KLIP in plaats van KLIC (KLIP-decreet); nesten: het Soortenbesluit; kegels en een
+  fluohesje (signalisatie van werken); een prik is een arbeidsongeval.
+- *Facilitair:* GDPR en de Belgische privacywet; het AREI (BA4/BA5) voor stroom; onthaal,
+  bezoekersbadge, gsm.
+- *Beveiliging:* bewakingsagent met een identificatiekaart (wet private veiligheid van 2 oktober
+  2017); vasthouden bij heterdaad (wet voorlopige hechtenis, art. 1, 3°); hulp na geweld van de
+  werkgever (Wet welzijn). Een oppervlakkige controle van kledij of tas mag soms, met toestemming:
+  twijfel, nakijken.
+- *Voedingsindustrie:* het FAVV en autocontrole; werkkledij, ploegbaas, ontsmetten. Vraag aan de
+  deskundige: moet het medisch attest voor wie met voeding werkt erbij?
+- *Afval en recycling:* recyclagepark, klein gevaarlijk afval (VLAREMA, OVAM), ophaler, fluokledij;
+  de regel voor de treeplank is een twijfel.
+- *Kinderopvang:* het grootste verschil. Geen personenregister en geen VOG, maar een uittreksel uit
+  het strafregister voor werk met kinderen. Het vierogenprincipe is in Vlaanderen geen wet: de les
+  zegt "werk open" (waar). Medicijnen alleen met een voorschrift en een briefje van de ouders
+  (Opgroeien); zorgen: de vaste stappen van de opvang.
+
+**Nog te doen (fase 2, na de vijf Taal-units).** De units in de cursus zetten
+(`src/content/regels/index.ts` `sectorRulesUnits`, `be/index.ts`), `rules.units` in `sectors.ts`,
+de tweelingen in `trackTwins.ts`, de thema's, "Wat kun je nu?", de iconen, zegHet en de
+adviesregel (nu nog in `sector2.ts`: `SECTOR2_ZEG_HET`, `SECTOR2_ADVICE`, `SECTOR2_KUN`) en de tests.
+
+
+## Sector groen · Werken in het groen
+
+*`r.groen` in `src/content/regels/units/sector2.ts`; België: `src/content/regels/be/units/sector-groen.ts`. In de sectorkeuze: Buiten werken › Groen. Taal: `u.mowing`, `u.planting`.*
+
+### Les G.1 · Machines en de weg
+
+**Leerdoel:** je werkt veilig met de bosmaaier. Langs de weg draag je altijd je hesje.
+
+**Scène** · *Beeld: Malik met een bosmaaier in een park. Op het fietspad komt een vrouw met een kinderwagen aan.*
+
+> Malik werkt bij de groendienst van een gemeente. Hij maait het gras langs een fietspad. Met de bosmaaier gaat het snel. Er komt een vrouw met een kinderwagen aan.
+
+**Regelkaart** · ⛑️ *Maaien of zagen? Draag je beschermende spullen, en houd mensen op afstand.* (geschreven)
+
+- Een bosmaaier kan stenen ver en hard wegschieten.
+- Draag een gelaatsscherm of bril, gehoorbescherming en veiligheidsschoenen.
+- Je werkgever geeft deze spullen gratis.
+- Komt er iemand dichtbij? Stop dan de machine.
+- Met een kettingzaag werk je alleen als je een cursus hebt gehad.
+
+**Vraag 1 · Wat is het beste?** De vrouw met de kinderwagen komt dichtbij. Wat kan Malik het beste doen?
+
+- **A.** Hij maait door, maar een beetje langzamer.
+  → *Dat snap ik. Maar een steen kan toch ver vliegen.*
+- **B.** Hij stopt de machine tot de vrouw voorbij is.
+  → *Goed. Zo raakt er niemand gewond.*
+- **C.** Hij draait zich om, en maait de andere kant op.
+  → *Goed bedoeld. Maar stenen vliegen alle kanten op.*
+
+**Goed antwoord: B.**
+**Waarom:** Een steen uit de bosmaaier kan iemand ernstig verwonden. Komt er iemand dichtbij? Stop de machine. Loop het gras eerst na. Haal stenen, glas en takken weg. Houd andere mensen ver weg.
+
+**Vraag 2 · Waar of niet waar?** "Zonder cursus mag je even met de kettingzaag werken, als een collega kijkt."
+
+**Antwoord: niet waar.**
+**Waarom:** Een kettingzaag is heel gevaarlijk. Werk er alleen mee als je een cursus hebt gehad. En als je leidinggevende zegt dat het mag. Draag een zaagbroek, een helm met scherm en handschoenen. Werk nooit alleen met een kettingzaag.
+
+**Vraag 3 · Wat is het beste?** Malik moet één struik snoeien langs de weg. Het is maar 5 minuten werk. Wat kan Malik het beste doen?
+
+- **A.** Hij doet het snel zonder pionnen. Het is maar 5 minuten.
+  → *Dat snap ik. Maar een ongeluk gebeurt in 1 seconde.*
+- **B.** Hij vraagt een collega om naar de auto’s te kijken.
+  → *Goed bedoeld. Maar zonder pionnen zien auto’s jullie niet op tijd.*
+- **C.** Hij zet eerst pionnen neer, en doet zijn hesje aan.
+  → *Goed. Zo zien de auto’s hem op tijd.*
+
+**Goed antwoord: C.**
+**Waarom:** Werk langs de weg is gevaarlijk. Draag je hesje en zet de pionnen neer, ook voor kort werk. Blijf achter de pionnen. Zet de bus tussen jou en het verkeer, als dat kan.
+
+**Vraag 4 · Wie vraag je het?** Je moet met de kettingzaag werken. Je hebt nog geen cursus gehad. Tegen wie zeg je het? *Een collega · De Arbeidsinspectie · **Je leidinggevende**.*
+**Waarom:** Je leidinggevende zegt wie met de kettingzaag mag werken. Daar hoort een cursus bij. Vraag ook wie de cursus betaalt.
+
+**Zo zeg je het:** "Ik heb nog geen cursus voor de kettingzaag. Kan ik iets anders doen?" *(Een collega zegt: "Pak de kettingzaag maar." Je hebt nog geen cursus.)*
+
+*Fout in "Wat zeg je?":* "Oké, ik probeer het wel. Hoe moeilijk kan het zijn?" → *Zonder cursus is een kettingzaag te gevaarlijk.* · "Ik weet niet hoe dat ding werkt. Doe jij het maar." → *Dat klinkt onaardig. Vraag liever om ander werk.*
+
+**Onthoud:** Maaien of zagen? Draag je beschermende spullen, en houd mensen op afstand.
+
+**Wie kan je helpen:** je leidinggevende · een collega · de Arbeidsinspectie.
+
+---
+
+### Les G.2 · Kabels, nesten en naalden
+
+**Leerdoel:** je stopt als je een kabel of een nest vindt. Een naald pak je nooit met je hand.
+
+**Scène** · *Beeld: Fatima in een tuin met een schop. In het gat ligt een rood plastic lint. De klant staat ernaast.*
+
+> Fatima werkt bij een hoveniersbedrijf. Ze graaft een gat voor een nieuwe boom. Haar schop raakt een rood lint in de grond. De klant zegt: "Graaf maar door, dat is niks."
+
+**Regelkaart** · 🚫 *Een lint in de grond, een nest of een naald? Stop, en meld het.* (geschreven)
+
+- In de grond liggen kabels en leidingen voor stroom, gas en water.
+- Zie je een lint, of raak je iets hards? Stop met graven, en meld het.
+- Graaf je met een machine? Dan moet er eerst een KLIC-melding zijn.
+- Een nest waar vogels in zitten, mag je niet weghalen.
+- Een naald pak je nooit met je hand.
+
+**Vraag 1 · Wat is het beste?** Fatima ziet het rode lint. Wat kan Fatima het beste doen?
+
+- **A.** Ze stopt, en belt haar leidinggevende.
+  → *Goed. Een gasleiding of stroomkabel raken is heel gevaarlijk.*
+- **B.** Ze graaft voorzichtig verder, naast het lint.
+  → *Dat snap ik. Maar onder het lint ligt een kabel of leiding.*
+- **C.** Ze doet wat de klant zegt. Het is zijn tuin.
+  → *De klant weet niet wat er onder de grond ligt.*
+
+**Goed antwoord: A.**
+**Waarom:** Een lint in de grond waarschuwt: hieronder ligt een kabel of leiding. Stop met graven, en meld het. Een gasleiding of stroomkabel raken is heel gevaarlijk. Graaf nooit met kracht door.
+
+**Vraag 2 · Waar of niet waar?** "In het voorjaar mag je een heg met een vogelnest erin gewoon knippen."
+
+**Antwoord: niet waar.**
+**Waarom:** Een nest waar vogels in broeden of jongen hebben, is beschermd. Knip daar niet. Kijk in het voorjaar en de zomer eerst in de heg. Zie je een nest? Zeg het tegen je leidinggevende.
+
+**Vraag 3 · Wat is het beste?** Fatima ziet een naald in het gras, bij een bankje. Wat kan Fatima het beste doen?
+
+- **A.** Ze pakt hem op met haar handschoenen aan, en gooit hem weg.
+  → *Een naald gaat door een handschoen heen.*
+- **B.** Ze gebruikt de grijper en een harde bak.
+  → *Goed. Zo raakt niemand de naald.*
+- **C.** Ze laat hem liggen. Iemand anders ruimt hem wel op.
+  → *Dan kan een kind of een hond zich prikken.*
+
+**Goed antwoord: B.**
+**Waarom:** Een naald kan een ziekte overbrengen. Pak hem nooit met je hand, ook niet met handschoenen. Doe hem in een harde bak met een deksel, nooit in een vuilniszak. Zeg het tegen je leidinggevende.
+
+**Vraag 4 · Wie vraag je het?** Je hebt je geprikt aan een naald in het park. Wie bel je meteen? *Een collega · **De huisarts** · De gemeente.*
+**Waarom:** Na een prik moet je snel naar een dokter. Soms heb je binnen een paar uur medicijnen nodig. Spoel de wond eerst met veel water. Zeg het daarna ook tegen je leidinggevende. Avond of weekend? Bel de huisartsenpost.
+
+**Zo zeg je het:** "Ik heb een lint in de grond geraakt. Ik ben gestopt met graven." *(Je schop raakt een lint in de grond. Je belt je leidinggevende.)*
+
+*Fout in "Wat zeg je?":* "Ik raakte iets in de grond. Ik graaf nog even verder." → *Onder een lint ligt een kabel of leiding. Stop eerst.* · "Er zat iets raars in de grond, maar het is niks." → *Dan weet je leidinggevende niet dat het gevaarlijk kan zijn.*
+
+**Onthoud:** Een lint in de grond, een nest of een naald? Stop, en meld het.
+
+**Wie kan je helpen:** je leidinggevende · de huisarts.
+
+---
+
+## Sector facilitaire dienst · Werken in de facilitaire dienst
+
+*`r.facilitair` in `src/content/regels/units/sector2.ts`; België: `src/content/regels/be/units/sector-facilitair.ts`. In de sectorkeuze: Service en veiligheid › Facilitair. Taal: `u.frontdesk`, `u.maintenance`.*
+
+### Les F.1 · Bezoek, post en privacy
+
+**Leerdoel:** je ontvangt bezoek vriendelijk. Je geeft geen gegevens van collega’s aan vreemden.
+
+**Scène** · *Beeld: Nadia achter de balie van een groot kantoor, met de telefoon aan haar oor. Op de balie ligt een bezoekerslijst.*
+
+> Nadia werkt bij de receptie van een groot kantoor. De telefoon gaat. Een man zegt: "Ik ben een oude vriend van Henk." "Mag ik zijn mobiele nummer?"
+
+**Regelkaart** · 🪪 *Elke bezoeker meldt zich. Gegevens van collega's geef je niet zomaar.* (geschreven)
+
+- Elke bezoeker schrijft zijn naam op, en krijgt een bezoekerspas.
+- Zo weet je wie er binnen is. Dat is belangrijk bij brand.
+- Telefoonnummers, adressen en roosters van collega's zijn privé.
+- Post en pakjes voor een ander maak je nooit open.
+
+**Vraag 1 · Wat is het beste?** De man wil het mobiele nummer van Henk. Wat kan Nadia het beste doen?
+
+- **A.** Ze geeft het nummer. Het is een vriend van Henk.
+  → *Dat snap ik. Maar ze weet niet of dat waar is.*
+- **B.** Ze schrijft zijn naam en nummer op voor Henk.
+  → *Goed. Dan beslist Henk zelf of hij terugbelt.*
+- **C.** Ze zegt niets, en hangt meteen op.
+  → *Dat is onvriendelijk. Ze kan hem ook netjes helpen.*
+
+**Goed antwoord: B.**
+**Waarom:** Het nummer van een collega is privé. Geef het niet aan iemand die je niet kent. Vraag de naam en het nummer van de beller. Dan kan je collega zelf terugbellen.
+
+**Vraag 2 · Waar of niet waar?** "Elke bezoeker meldt zich, ook als hij je collega goed kent."
+
+**Antwoord: waar.**
+**Waarom:** Elke bezoeker meldt zich. Bij brand moet je weten wie er binnen is. Laat ook niemand achter je mee naar binnen lopen die je niet kent. Vraag vriendelijk bij wie hij moet zijn.
+
+**Vraag 3 · Wat is het beste?** Een koerier brengt een pakket. Eén hoek is nat en kapot. Wat kan Nadia het beste doen?
+
+- **A.** Ze tekent snel. De koerier heeft haast.
+  → *Dat snap ik. Maar dan lijkt het of het pakket goed was.*
+- **B.** Ze maakt het pakket open om te kijken.
+  → *Post voor een ander maak je niet open.*
+- **C.** Ze schrijft op dat het kapot is, en tekent dan.
+  → *Goed. Zo weet iedereen dat het al kapot was.*
+
+**Goed antwoord: C.**
+**Waarom:** Kijk naar een pakket voor je tekent. Is het kapot? Schrijf het op. Ruikt een pakket raar, of lekt het? Maak het niet open, en zeg het tegen je leidinggevende.
+
+**Zo zeg je het:** "Dat nummer mag ik niet geven. Zal ik vragen of ze u terugbelt?" *(Iemand belt en vraagt het nummer van een collega.)*
+
+*Fout in "Wat zeg je?":* "Natuurlijk, ik zoek het nummer even voor u op." → *Het nummer van een collega is privé. Geef het niet.* · "Dat gaat u helemaal niets aan. Ik hang nu op, hoor." → *Dat klinkt boos. Bied liever aan dat ze terugbelt.*
+
+**Onthoud:** Elke bezoeker meldt zich. Gegevens van collega's geef je niet zomaar.
+
+**Wie kan je helpen:** je leidinggevende · een collega.
+
+---
+
+### Les F.2 · Storingen, trappen en gas
+
+**Leerdoel:** je meldt storingen en lekken meteen. Je werkt op hoogte met een trap.
+
+**Scène** · *Beeld: Jayden in de gang van een school, onder een kapotte lamp. Naast hem staat een bureaustoel op wieltjes.*
+
+> Jayden werkt bij de facilitaire dienst van een school. In de gang is een lamp kapot. De trap staat op een andere verdieping. Naast de lamp staat een bureaustoel.
+
+**Regelkaart** · 🛠️ *Iets kapot? Meld het. Repareer alleen wat je geleerd hebt.* (geschreven)
+
+- Zie je een lek, een kapotte lamp of een deur die niet sluit? Meld het.
+- Werk niet zelf aan stroom, gas of verwarming. Dat doet een vakman.
+- Voor een hoge plank of lamp gebruik je een trap, nooit een stoel.
+- Ruik je gas? Gebruik geen schakelaar. Haal iedereen weg, en bel buiten om hulp.
+
+**Vraag 1 · Wat is het beste?** Jayden wil de lamp snel vervangen. Wat kan Jayden het beste doen?
+
+- **A.** Hij gaat op de bureaustoel staan. Het is maar even.
+  → *Dat snap ik. Maar een bureaustoel kan wegrollen.*
+- **B.** Hij haalt eerst de trap.
+  → *Goed. Op een trap sta je stevig.*
+- **C.** Hij vraagt een collega om de stoel vast te houden.
+  → *Goed bedoeld. Maar ook dan kan de stoel draaien.*
+
+**Goed antwoord: B.**
+**Waarom:** Een stoel kan wegrollen of omvallen. Gebruik voor werk op hoogte altijd een trap. Zet de trap op een vlakke vloer, helemaal open. Ga niet op de bovenste tree staan. Doe eerst het licht uit.
+
+**Vraag 2 · Waar of niet waar?** "Een kleine lekkage meld je meteen, ook als het nog niet erg is."
+
+**Antwoord: waar.**
+**Waarom:** Een klein lek kan grote schade worden. Meld het meteen, ook als het klein is. Zeg waar het is, wat je ziet en sinds wanneer. Druppelt het? Zet er een emmer onder.
+
+**Vraag 3 · Waar of niet waar?** "Ruik je gas in het gebouw? Dan doe je eerst het licht aan om te kijken."
+
+**Antwoord: niet waar.**
+**Waarom:** Een vonk van een schakelaar kan gas laten ontploffen. Gebruik daar geen schakelaar en geen telefoon. Zet ramen en deuren open. Haal iedereen naar buiten. Bel buiten om hulp.
+
+**Vraag 4 · Wie vraag je het?** Een stopcontact in de kantine geeft vonken. Tegen wie zeg je het? ***Je leidinggevende** · Een collega · De gemeente.*
+**Waarom:** Een kapot stopcontact is gevaarlijk. Je leidinggevende laat het maken door iemand die dat mag. Plak er een briefje op: niet gebruiken. Repareer het niet zelf.
+
+**Zo zeg je het:** "In de gang druppelt water uit het plafond. Ik heb er een emmer onder gezet." *(Je ziet water uit het plafond druppelen in de gang.)*
+
+*Fout in "Wat zeg je?":* "Er is iets met het plafond. Iemand moet maar eens kijken." → *Dat is vaag. Zeg waar het is en wat je ziet.* · "In de gang druppelt water. Ik ga het plafond zelf openmaken." → *Repareer niet zelf. Meld het, en zet een emmer neer.*
+
+**Onthoud:** Iets kapot? Meld het. Repareer alleen wat je geleerd hebt.
+
+**Wie kan je helpen:** je leidinggevende · een collega.
+
+---
+
+## Sector beveiliging · Werken in de beveiliging
+
+*`r.beveiliging` in `src/content/regels/units/sector2.ts`; België: `src/content/regels/be/units/sector-beveiliging.ts`. In de sectorkeuze: Service en veiligheid › Beveiliging. Taal: `u.guarding`, `u.incidents`.*
+
+### Les BV.1 · Je pas en je ronde
+
+**Leerdoel:** je werkt alleen met een geldige beveiligerspas. Op je ronde kijk je, en je meldt.
+
+**Scène** · *Beeld: Kevin in uniform met een zaklamp bij een loods op een bedrijventerrein, in het donker. Een deur staat open.*
+
+> Kevin werkt sinds een week als beveiliger. Hij loopt 's nachts een ronde over een bedrijventerrein. Bij een loods staat een deur open. Binnen hoort hij geluid.
+
+**Regelkaart** · 🪪 *Zie je inbraak of gevaar op je ronde? Ga niet alleen naar binnen. Meld het.* (geschreven)
+
+- Als beveiliger heb je een diploma en een beveiligerspas nodig.
+- Die pas heb je altijd bij je. Je laat hem zien als iemand erom vraagt.
+- Op je ronde kijk je, je schrijft op en je meldt.
+- Zie je inbraak of gevaar? Bel de meldkamer of de politie.
+
+**Vraag 1 · Wat is het beste?** Kevin hoort geluid in de loods. Wat kan Kevin het beste doen?
+
+- **A.** Hij gaat naar binnen en roept: "Beveiliging!"
+  → *Dat snap ik. Maar binnen kan iemand gevaarlijk zijn.*
+- **B.** Hij doet de deur dicht, en loopt zijn ronde verder.
+  → *Dan weet niemand wat er aan de hand is.*
+- **C.** Hij belt de meldkamer, en wacht op een veilige plek.
+  → *Goed. Zo blijft hij veilig, en komt er hulp.*
+
+**Goed antwoord: C.**
+**Waarom:** Je eigen veiligheid gaat voor. Je taak is kijken en melden, niet zelf de held spelen. Bel de meldkamer of de politie. Wacht op een veilige plek tot er hulp is. Schrijf op wat je zag, en hoe laat.
+
+**Vraag 2 · Waar of niet waar?** "Je mag al als beveiliger werken, ook als je pas nog niet klaar is."
+
+**Antwoord: niet waar.**
+**Waarom:** Zonder geldige beveiligerspas mag je niet als beveiliger werken. De pas krijg je na een controle door de politie. Vraag je werkgever hoe ver je aanvraag is.
+
+**Vraag 3 · Wat is het beste?** Een man zegt: "Ik ben de nieuwe directeur. Ik heb nog geen pas." Wat kan Kevin het beste doen?
+
+- **A.** Hij zegt vriendelijk dat hij het even nakijkt.
+  → *Goed. Een echte directeur begrijpt dat.*
+- **B.** Hij laat hem binnen. Een directeur wil je niet boos maken.
+  → *Dat snap ik. Maar iedereen kan zeggen dat hij directeur is.*
+- **C.** Hij stuurt hem weg. Zonder pas komt niemand binnen.
+  → *Dat is streng. Eerst nakijken is beter.*
+
+**Goed antwoord: A.**
+**Waarom:** Iedereen kan zeggen dat hij de baas is. Kijk het na, ook als iemand haast heeft. Volg de regels van het gebouw. Bel bijvoorbeeld de afdeling waar hij heen moet.
+
+**Zo zeg je het:** "Ik ben op ronde. Bij loods 3 staat een deur open. Ik hoor binnen geluid." *(Op je ronde zie je een deur open staan. Je belt de meldkamer.)*
+
+*Fout in "Wat zeg je?":* "Er is iets bij een loods. Ik ga zelf even naar binnen." → *Ga niet alleen naar binnen. Meld het, en wacht.* · "Ik hoor iets, maar het is vast niks. Ik loop verder." → *Dan komt er geen hulp. Zeg waar je bent en wat je hoort.*
+
+**Onthoud:** Zie je inbraak of gevaar op je ronde? Ga niet alleen naar binnen. Meld het.
+
+**Wie kan je helpen:** je leidinggevende · de politie.
+
+---
+
+### Les BV.2 · Diefstal, geweld en je verslag
+
+**Leerdoel:** je weet wat je wel en niet mag bij diefstal. Na een incident schrijf je meteen een verslag.
+
+**Scène** · *Beeld: Esra in uniform in een supermarkt, bij de uitgang. Een vrouw met een grote tas loopt langs de kassa’s.*
+
+> Esra werkt als beveiliger in een supermarkt. Ze ziet een vrouw een fles in haar tas doen. De vrouw loopt zonder te betalen naar de uitgang. Een klant roept: "Kijk in haar tas!"
+
+**Regelkaart** · 👮 *Zie je diefstal? Bel de politie. Fouilleer niemand, en gebruik geen grof geweld.* (geschreven)
+
+- Zie je iemand stelen? Dan mag je hem vasthouden tot de politie er is.
+- Bel meteen de politie. Je werkgever kan ook zeggen: alleen kijken en melden.
+- Iemands zakken of tas doorzoeken heet fouilleren. Dat doet alleen de politie.
+- Gebruik niet meer kracht dan nodig. Nooit slaan, en nooit iemand bij de nek pakken.
+
+**Vraag 1 · Wat is het beste?** Esra houdt de vrouw bij de uitgang staande. Wat kan Esra het beste doen?
+
+- **A.** Ze pakt de tas, en kijkt of de fles erin zit.
+  → *Dat snap ik. Maar in een tas kijken mag alleen de politie.*
+- **B.** Ze vraagt de vrouw mee te komen, en belt de politie.
+  → *Goed. De politie neemt het dan over.*
+- **C.** Ze duwt de vrouw tegen de muur, zodat ze niet wegloopt.
+  → *Zo kan de vrouw gewond raken. Dat is te veel geweld.*
+
+**Goed antwoord: B.**
+**Waarom:** Doorzoeken mag alleen de politie. Bel de politie, en houd het rustig. Volg de regels van je werkgever. Sommige winkels willen dat je alleen kijkt en meldt. Gebruik nooit meer kracht dan nodig.
+
+**Vraag 2 · Waar of niet waar?** "Een beveiliger mag de zakken van een dief doorzoeken."
+
+**Antwoord: niet waar.**
+**Waarom:** Zakken of een tas doorzoeken heet fouilleren. Dat mag alleen de politie. Bij een evenement kijken beveiligers soms in tassen. Dat mag alleen als de bezoeker het goed vindt.
+
+**Vraag 3 · Waar of niet waar?** "Een verslag van een incident schrijf je het best meteen, niet de volgende dag."
+
+**Antwoord: waar.**
+**Waarom:** Meteen weet je nog precies wat je zag en hoorde. Morgen vergeet je dingen. Schrijf feiten op: wat, waar, hoe laat en wie. Niet wat je denkt. Een goed verslag helpt de politie, je bedrijf en jou.
+
+**Vraag 4 · Wie vraag je het?** Na een incident met een boze man slaap je slecht. Tegen wie zeg je het? *De politie · **Je leidinggevende** · De gemeente.*
+**Waarom:** Je werkgever moet zorgen voor opvang na agressie of geweld. Zeg het tegen je leidinggevende. Je kunt ook naar de bedrijfsarts. Slecht slapen na een incident gebeurt vaak. Praat erover.
+
+**Zo zeg je het:** "Ik heb bij de uitgang iemand aangehouden voor diefstal. Kunnen jullie komen?" *(Je houdt een vrouw staande die iets heeft gestolen. Je belt de politie.)*
+
+*Fout in "Wat zeg je?":* "Ik heb hier een dief. Ik heb haar tas al helemaal doorzocht." → *Een tas doorzoeken mag alleen de politie.* · "Er is iets gebeurd in de winkel. Komen jullie misschien een keer?" → *Dat is vaag. Zeg wat er is, en waar.*
+
+**Onthoud:** Zie je diefstal? Bel de politie. Fouilleer niemand, en gebruik geen grof geweld.
+
+**Wie kan je helpen:** je leidinggevende · de politie · de bedrijfsarts.
+
+---
+
+## Sector voedingsindustrie · Werken in de voedingsindustrie
+
+*`r.voeding` in `src/content/regels/units/sector2.ts`; België: `src/content/regels/be/units/sector-voeding.ts`. In de sectorkeuze: Maken en verplaatsen › Voedingsindustrie. Taal: `u.foodhygiene`, `u.foodline`.*
+
+### Les V.1 · De hygiënesluis en ziek zijn
+
+**Leerdoel:** je gaat elke keer door de hygiënesluis. Ziek of een wond? Je meldt het voor je begint.
+
+**Scène** · *Beeld: Ewa met haarnet en witte werkkleding in de gang naar de hygiënesluis van een saladefabriek.*
+
+> Ewa werkt in een fabriek die salades maakt. Ze komt terug van de wc. Het is druk aan de lijn. Een collega zegt: "Sla de sluis maar over. We hebben haast."
+
+**Regelkaart** · 🧼 *Door de sluis, elke keer. Ziek of een wond? Meld het voor je begint.* (geschreven)
+
+- Bacteriën op je handen, haar en kleding kunnen in het eten komen.
+- Ga dus elke keer door de hygiënesluis, ook na je pauze of de wc.
+- Haarnet op, schone werkkleding aan, geen sieraden. Was en desinfecteer je handen.
+- Diarree, overgeven of een wond aan je hand? Meld het voor je begint.
+
+**Vraag 1 · Wat is het beste?** Ewa wil terug naar de lijn. Wat kan Ewa het beste doen?
+
+- **A.** Ze gaat toch door de sluis.
+  → *Goed. Die paar minuten beschermen veel klanten.*
+- **B.** Ze desinfecteert alleen haar handen bij de lijn.
+  → *Dat snap ik. Maar wassen en schone kleding horen er ook bij.*
+- **C.** Ze doet wat haar collega zegt. Het is maar één keer.
+  → *Eén keer is genoeg om bacteriën in het eten te brengen.*
+
+**Goed antwoord: A.**
+**Waarom:** Bacteriën van de wc kunnen veel klanten ziek maken. Ga dus elke keer door de sluis. Ook na je pauze. Was je handen met zeep, droog ze en desinfecteer ze.
+
+**Vraag 2 · Waar of niet waar?** "Heb je diarree, maar voel je je goed genoeg? Dan kun je gewoon aan de lijn werken."
+
+**Antwoord: niet waar.**
+**Waarom:** Met diarree of overgeven kun je bacteriën in het eten brengen. Meld het voor je begint. Je leidinggevende kijkt wat kan. Misschien doe je even ander werk. Melden is normaal.
+
+**Vraag 3 · Wat is het beste?** Ewa heeft een sneetje in haar vinger. Wat kan Ewa het beste doen?
+
+- **A.** Ze doet er een gewone pleister op, en een handschoen erover.
+  → *Goed bedoeld. Maar een gewone pleister zie je niet in het eten.*
+- **B.** Ze zegt niets. Het is maar een klein sneetje.
+  → *Ook een klein wondje kan bacteriën in het eten brengen.*
+- **C.** Ze meldt het, en vraagt een blauwe pleister.
+  → *Goed. Een blauwe pleister zie je meteen.*
+
+**Goed antwoord: C.**
+**Waarom:** Een wond kan bacteriën in het eten brengen. Meld het, en gebruik een blauwe pleister. Een blauwe pleister valt op in het eten. Vaak zit er metaal in. Dan vindt de detector hem.
+
+**Zo zeg je het:** "Ik heb een sneetje in mijn vinger. Mag ik een blauwe pleister?" *(Je hebt een klein sneetje in je vinger. Je dienst begint zo.)*
+
+*Fout in "Wat zeg je?":* "Ik heb een sneetje, maar het is niks. Ik begin gewoon." → *Een wond kan bacteriën in het eten brengen. Meld het.* · "Mijn vinger bloedt. Ik doe er wel een handschoen over." → *Vraag een blauwe pleister. Die zie je in het eten.*
+
+**Onthoud:** Door de sluis, elke keer. Ziek of een wond? Meld het voor je begint.
+
+**Wie kan je helpen:** je leidinggevende · de bedrijfsarts.
+
+---
+
+### Les V.2 · Allergenen en de HACCP-lijst
+
+**Leerdoel:** je houdt allergenen apart. Je schrijft op wat je echt meet.
+
+**Scène** · *Beeld: Mohammed in een koekjesfabriek, bij een lege bak met het etiket "amandel". Een collega houdt een zak hazelnoten vast.*
+
+> Mohammed werkt in een koekjesfabriek. De amandelen zijn op. Een collega zegt: "Neem hazelnoten. Niemand merkt het." Op het etiket van de koekjes staat: amandel.
+
+**Regelkaart** · 📋 *Wissel nooit een ingrediënt. Schrijf op wat je echt meet.* (geschreven)
+
+- Voor sommige mensen is een klein beetje noten, melk of ei al gevaarlijk.
+- Op het etiket moet staan welke allergenen erin zitten.
+- Wissel dus nooit een ingrediënt, ook niet als het erop lijkt.
+- Elk bedrijf met eten heeft een HACCP-plan. Daarin staat wat je meet en opschrijft.
+- Schrijf op wat je echt meet, ook als het fout is.
+
+**Vraag 1 · Wat is het beste?** De amandelen zijn op. Wat kan Mohammed het beste doen?
+
+- **A.** Hij gebruikt de hazelnoten. Noten zijn noten.
+  → *Dat snap ik. Maar dan klopt het etiket niet meer.*
+- **B.** Hij stopt, en vraagt de ploegleider wat hij moet doen.
+  → *Goed. De ploegleider beslist wat er gebeurt.*
+- **C.** Hij doet half hazelnoten, half amandelen.
+  → *Ook dan klopt het etiket niet.*
+
+**Goed antwoord: B.**
+**Waarom:** Het etiket moet zeggen wat erin zit. Een andere noot kan iemand met een allergie ziek maken. Wissel nooit een ingrediënt, ook niet als het erop lijkt. Twijfel je? Vraag het.
+
+**Vraag 2 · Waar of niet waar?** "Na een product met noten maak je de lijn schoon, voor het volgende product."
+
+**Antwoord: waar.**
+**Waarom:** Zo komen er geen noten in het volgende product. Ook een klein beetje kan gevaarlijk zijn. Allergenen hebben vaak eigen bakken, eigen gereedschap en eigen kleuren.
+
+**Vraag 3 · Wat is het beste?** De thermometer van de koelcel is veel hoger dan normaal. Wat kan Mohammed het beste doen?
+
+- **A.** Hij schrijft het echte getal op, en meldt het meteen.
+  → *Goed. De leidinggevende beslist of het eten nog goed is.*
+- **B.** Hij schrijft het normale getal op. Het is vast de thermometer.
+  → *Dat snap ik. Maar dan weet niemand dat er iets mis kan zijn.*
+- **C.** Hij doet de deur goed dicht, en meet over een uur opnieuw.
+  → *Goed bedoeld. Maar in dat uur kan het eten slecht worden.*
+
+**Goed antwoord: A.**
+**Waarom:** Te warm betekent: bacteriën groeien. Schrijf het echte getal op, en meld het meteen. Je leidinggevende beslist of het eten nog veilig is. Een slecht getal is niet jouw schuld. Een verzonnen getal is gevaarlijk.
+
+**Zo zeg je het:** "Dan klopt het etiket niet meer. Ik vraag het even aan de ploegleider." *(De amandelen zijn op. Een collega wil hazelnoten gebruiken.)*
+
+*Fout in "Wat zeg je?":* "Oké, hazelnoten dan. Het verschil proeft toch niemand." → *Dan klopt het etiket niet. Dat is gevaarlijk bij een allergie.* · "Ik weet het niet. Doe maar wat jij wilt, hoor." → *Dan beslist niemand. Vraag het de ploegleider.*
+
+**Onthoud:** Wissel nooit een ingrediënt. Schrijf op wat je echt meet.
+
+**Wie kan je helpen:** je leidinggevende · een collega.
+
+---
+
+## Sector afval en recycling · Werken in afval en recycling
+
+*`r.afval` in `src/content/regels/units/sector2.ts`; België: `src/content/regels/be/units/sector-afval.ts`. In de sectorkeuze: Buiten werken › Afval en recycling. Taal: `u.collection`, `u.recycling`.*
+
+### Les A.1 · Op de wagen: zien en gezien worden
+
+**Leerdoel:** je draagt altijd je kleding met reflectie. Je loopt nooit achter een wagen die achteruitrijdt.
+
+**Scène** · *Beeld: Piotr in oranje kleding met reflectie, naast een vuilniswagen in een smalle straat. Achter de wagen ligt een vuilniszak.*
+
+> Piotr werkt op een vuilniswagen. Ze halen containers op in een smalle straat. De wagen moet een stukje achteruit. Achter de wagen ligt nog een vuilniszak.
+
+**Regelkaart** · 👷 *Loop nooit achter een wagen die achteruitrijdt. Zorg dat de chauffeur je ziet.* (geschreven)
+
+- Draag op elke ronde je kleding met reflectie.
+- Stap in en uit aan de kant van de stoep.
+- Vlak achter de wagen ziet de chauffeur je niet. Dat heet de dode hoek.
+- Rijdt de wagen achteruit? Sta aan de zijkant, waar de chauffeur je in de spiegel ziet.
+
+**Vraag 1 · Wat is het beste?** De wagen rijdt achteruit. Piotr wil de zak pakken. Wat kan Piotr het beste doen?
+
+- **A.** Hij wacht aan de zijkant tot de wagen stilstaat.
+  → *Goed. Daar ziet de chauffeur hem in de spiegel.*
+- **B.** Hij loopt snel achter de wagen langs. Het is maar even.
+  → *Dat snap ik. Maar de chauffeur ziet hem daar niet.*
+- **C.** Hij roept naar de chauffeur dat hij erachter loopt.
+  → *Goed bedoeld. Maar de chauffeur hoort hem misschien niet.*
+
+**Goed antwoord: A.**
+**Waarom:** Achter de wagen ziet de chauffeur je niet. Eén seconde is genoeg voor een ongeluk. Begeleid de chauffeur vanaf de zijkant. Daar zien jullie elkaar in de spiegel. Zie je elkaar niet meer? Dan stopt de chauffeur.
+
+**Vraag 2 · Waar of niet waar?** "Naar de volgende straat mag je altijd op de treeplank meerijden."
+
+**Antwoord: niet waar.**
+**Waarom:** Van een rijdende wagen vallen is een groot gevaar. Rijd mee in de cabine. Op de treeplank alleen als je bedrijf het echt toestaat. Nooit als de wagen achteruitrijdt of hard rijdt.
+
+**Vraag 3 · Wat is het beste?** Een container is veel te zwaar. Er steekt een plank uit. Wat kan Piotr het beste doen?
+
+- **A.** Hij trekt de plank eruit, en gooit hem in de wagen.
+  → *Goed bedoeld. Maar onder de plank kan iets scherps zitten.*
+- **B.** Hij tilt de container samen met de chauffeur op de lift.
+  → *Dat snap ik. Maar te zwaar is gevaarlijk bij het kiepen.*
+- **C.** Hij laat de container staan, en meldt het.
+  → *Goed. Zo raakt niemand gewond.*
+
+**Goed antwoord: C.**
+**Waarom:** Een te zware of te volle container is gevaarlijk. Laat hem staan, en meld het. Duw een container, en til hem niet. Blijf uit de buurt van de lift als die beweegt.
+
+**Zo zeg je het:** "Ik sta links. Zie je me in de spiegel?" *(De wagen moet achteruit. Je staat aan de zijkant.)*
+
+*Fout in "Wat zeg je?":* "Rij maar, ik loop wel even achterlangs." → *Achter de wagen ziet de chauffeur je niet.* · "Ik sta ergens. Rij maar gewoon achteruit." → *Dat is vaag. Zeg waar je staat, en vraag of hij je ziet.*
+
+**Onthoud:** Loop nooit achter een wagen die achteruitrijdt. Zorg dat de chauffeur je ziet.
+
+**Wie kan je helpen:** je leidinggevende · een collega · de Arbeidsinspectie.
+
+---
+
+### Les A.2 · De milieustraat en de pers
+
+**Leerdoel:** je gaat veilig om met onbekend afval. Je grijpt nooit in een pers.
+
+**Scène** · *Beeld: Sanne op een milieustraat bij de bak voor chemisch afval. Een vrouw houdt een fles zonder etiket omhoog.*
+
+> Sanne werkt op de milieustraat van de gemeente. Een vrouw brengt een fles zonder etiket. De fles ruikt sterk. "Gooi hem maar bij de rest," zegt de vrouw.
+
+**Regelkaart** · ⚙️ *Onbekend afval? Niet openmaken, niet ruiken. Grijp nooit in een pers.* (geschreven)
+
+- Verf, olie, accu's en spuitbussen zijn gevaarlijk afval. Ze kunnen branden of vergiftigen.
+- Een fles zonder etiket maak je nooit open. Ruik er niet aan.
+- Een pers drukt met heel veel kracht. Werk ermee als je het geleerd hebt.
+- Zit er iets vast? Eerst de noodstop, de stroom eraf en een slot erop.
+
+**Vraag 1 · Wat is het beste?** Wat kan Sanne het beste doen met de fles?
+
+- **A.** Ze maakt hem even open om te ruiken wat het is.
+  → *Dat snap ik. Maar de damp kan giftig zijn.*
+- **B.** Ze zet hem rechtop apart, en vraagt het na.
+  → *Goed. Haar leidinggevende weet waar het veilig kan.*
+- **C.** Ze zet hem bij de verf. Dat lijkt er het meest op.
+  → *Onbekende stoffen kunnen met andere stoffen reageren.*
+
+**Goed antwoord: B.**
+**Waarom:** Onbekend afval kan branden, ontploffen of giftig zijn. Maak het niet open, en meng het niet. Draag handschoenen en een veiligheidsbril. Let op de gevarensymbolen.
+
+**Vraag 2 · Waar of niet waar?** "Een pers die stilstaat, is veilig om in te grijpen."
+
+**Antwoord: niet waar.**
+**Waarom:** Een pers die stilstaat, kan weer starten. Eerst de noodstop, de stroom eraf en een slot erop. Volg de stappen van je bedrijf. Klim nooit in een pers of een container.
+
+**Vraag 3 · Wie vraag je het?** Een bezoeker brengt kapotte golfplaten. Je denkt dat er asbest in zit. Wie vraag je het? *Een collega · De politie · **Je leidinggevende**.*
+**Waarom:** Asbest is gevaarlijk als het breekt. Je leidinggevende weet of het mag, en hoe. Breek het niet, en haal het niet uit de verpakking. Asbest komt alleen goed ingepakt binnen.
+
+**Zo zeg je het:** "Ik weet niet wat erin zit. Ik zet hem apart en vraag het even." *(Een bezoeker brengt een fles zonder etiket.)*
+
+*Fout in "Wat zeg je?":* "Ik weet niet wat het is. Ik ruik er even aan." → *De damp kan giftig zijn. Zet hem apart.* · "Geen idee wat dit is. Ik gooi het gewoon bij de verf." → *Onbekend afval kan reageren met ander afval. Vraag het na.*
+
+**Onthoud:** Onbekend afval? Niet openmaken, niet ruiken. Grijp nooit in een pers.
+
+**Wie kan je helpen:** je leidinggevende · een collega.
+
+---
+
+## Sector kinderopvang · Werken in de kinderopvang
+
+*`r.kinderopvang` in `src/content/regels/units/sector2.ts`; België: `src/content/regels/be/units/sector-kinderopvang.ts`. In de sectorkeuze: Zorg en kinderen › Kinderopvang. Taal: `u.toddlers`, `u.daycare`.*
+
+### Les K.1 · Eerst het register, en vier ogen
+
+**Leerdoel:** je werkt pas met kinderen als je in het personenregister staat. Je werkt nooit helemaal alleen.
+
+**Scène** · *Beeld: Nadia met haar telefoon bij de deur van een kinderdagverblijf. Door het raam zie je peuters spelen.*
+
+> Nadia gaat via een uitzendbureau in een kinderdagverblijf werken. Ze heeft haar VOG al aangevraagd. De leidinggevende zegt: "Kom morgen maar alvast meedraaien." Nadia staat nog niet in het personenregister.
+
+**Regelkaart** · 🧒 *Eerst een VOG en het register. Er kijkt of luistert altijd iemand mee.* (geschreven)
+
+- In de kinderopvang heb je een VOG nodig: een bewijs van goed gedrag.
+- Je moet ook in het personenregister kinderopvang staan, voor je begint.
+- Dat geldt ook voor stagiairs en uitzendkrachten.
+- Een andere volwassene kan je altijd zien of horen. Dat heet het vierogenprincipe.
+
+**Vraag 1 · Wat is het beste?** Nadia staat nog niet in het register. Wat kan Nadia het beste doen?
+
+- **A.** Ze gaat morgen gewoon. Het is maar meedraaien.
+  → *Dat snap ik. Maar ook meedraaien mag pas na de inschrijving.*
+- **B.** Ze gaat, maar blijft uit de buurt van de kinderen.
+  → *Goed bedoeld. Maar in een kinderdagverblijf zijn overal kinderen.*
+- **C.** Ze zegt dat ze eerst ingeschreven moet zijn.
+  → *Goed. Zonder inschrijving mag ze niet met de kinderen werken.*
+
+**Goed antwoord: C.**
+**Waarom:** Je mag pas met kinderen werken als je in het personenregister staat. De opvang moet je in dat register ook aan zich koppelen. Vraag of dat gebeurd is.
+
+**Vraag 2 · Waar of niet waar?** "Op de babygroep moet een andere volwassene je altijd kunnen zien of horen."
+
+**Antwoord: waar.**
+**Waarom:** Een andere volwassene moet je altijd kunnen zien of horen. Dat beschermt de kinderen, en jou. Dat heet het vierogenprincipe. Bijvoorbeeld met ramen, een camera of een collega die binnenloopt.
+
+**Vraag 3 · Wie vraag je het?** Je werkt via een uitzendbureau. Je wilt weten of je al in het register staat. Wie vraag je het? ***Het uitzendbureau** · De politie · De gemeente.*
+**Waarom:** Je uitzendbureau en de opvang regelen je inschrijving. Vraag het voor je begint. Werk je niet via een bureau? Vraag het dan je leidinggevende.
+
+**Zo zeg je het:** "Ik sta nog niet in het personenregister. Kan ik beginnen als dat klaar is?" *(Je leidinggevende vraagt of je morgen al kunt komen.)*
+
+*Fout in "Wat zeg je?":* "Prima, ik kom morgen. Dat register komt later wel." → *Zonder inschrijving mag je niet met de kinderen werken.* · "Ik weet niet of het mag. Zoek het zelf maar uit." → *Dat klinkt onaardig. Zeg wat er nog nodig is.*
+
+**Onthoud:** Eerst een VOG en het register. Er kijkt of luistert altijd iemand mee.
+
+**Wie kan je helpen:** je leidinggevende · het uitzendbureau · een collega.
+
+---
+
+### Les K.2 · Medicijnen, een ziek kind en zorgen
+
+**Leerdoel:** je geeft alleen een medicijn met toestemming op papier. Bij zorgen volg je de meldcode.
+
+**Scène** · *Beeld: Esra bij de deur van de peutergroep. Een moeder geeft haar een flesje koortsdrank. Een jongetje houdt haar hand vast.*
+
+> Esra werkt op de peutergroep van een kinderdagverblijf. Een moeder brengt haar zoon Sem. "Hij had wat koorts. Geef hem om 2 uur een drankje," zegt ze. Er is geen formulier.
+
+**Regelkaart** · 💊 *Medicijnen alleen met toestemming op papier. Zorgen over een kind? Volg de meldcode.* (geschreven)
+
+- Een medicijn geef je alleen met toestemming van de ouders, op papier.
+- Schrijf op wat je gaf, en hoe laat.
+- Zie je blauwe plekken of angst bij een kind? Schrijf op wat je ziet.
+- De opvang heeft een meldcode met vaste stappen. Je leidinggevende kent ze.
+
+**Vraag 1 · Wat is het beste?** De moeder wil snel weg. Wat kan Esra het beste doen?
+
+- **A.** Ze vraagt de moeder om eerst het formulier te tekenen.
+  → *Goed. Zo is het duidelijk, voor Sem en voor Esra.*
+- **B.** Ze schrijft het zelf op een briefje, en geeft het drankje om 2 uur.
+  → *Goed bedoeld. Maar zonder handtekening van de moeder mag het niet.*
+- **C.** Ze zegt dat de opvang nooit medicijnen geeft.
+  → *Dat klopt meestal niet. Met toestemming op papier mag het vaak wel.*
+
+**Goed antwoord: A.**
+**Waarom:** Zonder toestemming op papier geef je geen medicijn. Dat beschermt het kind en jou. Schrijf op wat je gaf, en hoe laat. Vraag ook hoe het met de koorts is.
+
+**Vraag 2 · Waar of niet waar?** "Zie je blauwe plekken? Dan vraag je het kind precies wat er gebeurd is."
+
+**Antwoord: niet waar.**
+**Waarom:** Veel vragen kunnen een kind bang maken. Schrijf op wat je ziet, en zeg het tegen je leidinggevende. De opvang heeft een meldcode met vaste stappen. Daarin staat wat er moet gebeuren.
+
+**Vraag 3 · Wat is het beste?** Na het eten is Sem heel warm en moe. Wat kan Esra het beste doen?
+
+- **A.** Ze geeft hem een paracetamol uit haar eigen tas.
+  → *Zonder toestemming van de ouders geef je geen medicijn.*
+- **B.** Ze legt hem in bed. Slapen helpt vaak.
+  → *Goed bedoeld. Maar eerst moet ze weten of hij koorts heeft.*
+- **C.** Ze meet zijn temperatuur, en belt de ouders.
+  → *Goed. De ouders weten dan hoe het met Sem gaat.*
+
+**Goed antwoord: C.**
+**Waarom:** Is een kind ziek? Meet de temperatuur, zeg het tegen een collega en bel de ouders. Wanneer een kind naar huis moet, staat in de regels van de opvang.
+
+**Vraag 4 · Wie vraag je het?** Je maakt je zorgen over een kind. Je weet niet wat je moet doen. Wie vraag je het? *Een collega · **Je leidinggevende** · De politie.*
+**Waarom:** Bij zorgen over een kind volg je de meldcode. Je leidinggevende kent de stappen. Schrijf op wat je ziet en hoort, met de datum. Niet wat je denkt.
+
+**Zo zeg je het:** "Dat kan, maar wilt u eerst dit formulier invullen en tekenen?" *(Een moeder vraagt of je haar kind een medicijn geeft.)*
+
+*Fout in "Wat zeg je?":* "Geen probleem, ik geef het hem straks wel. Doei!" → *Zonder toestemming op papier geef je geen medicijn.* · "Nee, medicijnen geven doen wij hier nooit. Sorry." → *Met een formulier mag het meestal wel. Vraag dat eerst.*
+
+**Onthoud:** Medicijnen alleen met toestemming op papier. Zorgen over een kind? Volg de meldcode.
+
+**Wie kan je helpen:** je leidinggevende · een collega.

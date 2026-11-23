@@ -173,7 +173,7 @@ export const be: BeUnit = {
   zegHet: {
     'r.be.l.kinderopvang.1.mo1': [
       { text: 'Prima, ik kom morgen al. Dat uittreksel komt later wel.', feedback: 'Zonder uittreksel mag je niet met de kinderen werken.' },
-      { text: 'Ik weet niet of het mag. Zoek het zelf maar uit.', feedback: 'Dat klinkt onvriendelijk. Zeg wat er nog nodig is.' },
+      { text: 'Ik weet echt niet of dat mag. Zoek het zelf maar even uit.', feedback: 'Dat klinkt onvriendelijk. Zeg wat er nog nodig is.' },
     ],
     'r.be.l.kinderopvang.2.mo1': [
       { text: 'Geen probleem, ik geef het hem straks wel. Daag!', feedback: 'Zonder voorschrift en briefje geef je geen medicijn.' },

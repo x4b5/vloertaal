@@ -287,3 +287,43 @@ Het is anders gegaan: `BE_TODO` is leeg en het spoor staat sinds 31 oktober 2026
 deskundige kijkt de ⚖️ na (daarna gaat de bètaregel weg), en de Belgische kant van de
 websitepagina's (`/werkregels`, de professionalspagina). Die statische pagina's gaan nu nog alleen
 over Nederland.
+
+---
+
+## 6. Zes nieuwe sectoren (23 november 2026)
+
+De zes sectorunits van [`werkregels-curriculum.md`](werkregels-curriculum.md), deel 9, hebben meteen
+hun Belgische versie, zoals de andere sectorunits: één bestand per unit, `be/units/sector-<naam>.ts`.
+
+| Nederland | België | Bestand |
+|---|---|---|
+| `r.groen` | `r.be.groen` | `be/units/sector-groen.ts` |
+| `r.facilitair` | `r.be.facilitair` | `be/units/sector-facilitair.ts` |
+| `r.beveiliging` | `r.be.beveiliging` | `be/units/sector-beveiliging.ts` |
+| `r.voeding` | `r.be.voeding` | `be/units/sector-voeding.ts` |
+| `r.afval` | `r.be.afval` | `be/units/sector-afval.ts` |
+| `r.kinderopvang` | `r.be.kinderopvang` | `be/units/sector-kinderopvang.ts` |
+
+Elk bestand heeft `unit`, `zegHet` en `advice` (alle regels 'advice'); geen eigen `kun`: de
+Nederlandse zinnen van "Wat kun je nu?" passen ook in België. Dezelfde lessen, dezelfde stappen en
+dezelfde id's (met `r.be.`). De `why` staat in één stuk, zonder `whyMore`, zoals in de andere
+Belgische units. Geen Nederlandse plekken: geen Arbeidsinspectie, uitzendbureau of bedrijfsarts,
+maar `tsw`, `interimkantoor`, `arbeidsarts`, `ziekenfonds` en `vdab`.
+
+**Wat anders is.** Kort, de bronnen staan in de code en in `werkregels-bronnen.md` §7:
+
+- groen: KLIP (niet KLIC), het Soortenbesluit, kegels en signalisatie, een prik is een
+  arbeidsongeval;
+- facilitair: GDPR, het AREI (BA4/BA5), onthaal, badge, gsm, refter;
+- beveiliging: bewakingsagent en identificatiekaart (wet private veiligheid 2017), vasthouden bij
+  heterdaad (wet voorlopige hechtenis), hulp na geweld (Wet welzijn);
+- voedingsindustrie: het FAVV en autocontrole, werkkledij, ploegbaas, ontsmetten;
+- afval en recycling: recyclagepark, klein gevaarlijk afval (VLAREMA), ophaler, fluokledij;
+- kinderopvang: een uittreksel uit het strafregister (geen VOG, geen personenregister), "werk open"
+  (het vierogenprincipe is in Vlaanderen geen wet), medicijnen alleen met een voorschrift en een
+  briefje van de ouders (Opgroeien), de vaste stappen van de opvang bij zorgen.
+
+**Inbouwen (fase 2).** `be/index.ts` importeert de zes bestanden en zet ze in `BY_NL`, in hetzelfde
+commit als de Nederlandse units in `sectorRulesUnits` komen. `BE_TODO` hoeft niet te veranderen: de
+units zijn er meteen in beide landen. De test leest de bestanden als `sector-<naam>.ts`, omdat de
+units sectorunits zijn.
