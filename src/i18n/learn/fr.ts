@@ -310,6 +310,11 @@ const t: CultureTranslation = {
     'c.firefight.a.why': "On annonce un feu : il est petit, alors on va chercher l’extincteur.", // nieuw, nalezen
     'c.permitwork.a.why': "On demande qui reste dehors : moi, et quelle est ma tâche.", // nieuw, nalezen
     'c.vog.a.why': "On demande la VOG : pas encore, et ce qu’on attend.", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'c.plantround.a.why': "On demande pourquoi il y a une alarme : ce qui est trop haut, et où.", // nieuw, nalezen
+    'c.plantfault.a.why': "On demande si on peut démarrer : non, il y a encore un cadenas dessus.", // nieuw, nalezen
+    'c.shiftwork.a.why': "On demande ce qui s’est passé : la panne, et où c’est noté.", // nieuw, nalezen
+    'c.heatdust.a.why': "On demande pour le téléphone : non, à cause du danger ici.", // nieuw, nalezen
   },
 };
 

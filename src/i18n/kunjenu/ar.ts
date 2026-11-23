@@ -180,6 +180,9 @@ const t: CultureTranslation = {
     // "Veiligheid op het werk" and the VOG (23 November 2026).
     'kjn.u.safework.1': "أستطيع أن أتعرّف على بعض الكلمات عن لافتات السلامة والحريق.", // nieuw, nalezen
     'kjn.u.safework.2': "أستطيع أن أسأل هل المادة سامّة.", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'kjn.u.process.1': "أستطيع أن أقول إن الضغط مرتفع جداً.", // nieuw, nalezen
+    'kjn.u.process.2': "أستطيع أن أحكي عند التسليم ما الذي حدث.", // nieuw, nalezen
   },
 };
 
