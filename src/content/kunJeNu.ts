@@ -111,7 +111,7 @@ export const KUN_TAAL: KunOnderwerp[] = [
   // Werken via een uitzendbureau (23 November 2026): two lines.
   onderwerp('u.uitzend', 'Werken via een uitzendbureau', [
     ['Ik kan vragen in welke fase ik zit.', 'A1', 'gesprekken', 'I can ask which phase I am in.'],
-    ['Ik kan vragen wat een inhouding op mijn loonstrook is.', 'A2', 'gesprekken', 'I can ask what a deduction on my payslip is.'],
+    ['Ik kan vragen waarvoor een inhouding op mijn loon is.', 'A2', 'gesprekken', 'I can ask what a deduction from my pay is for.'],
   ]),
   onderwerp('u.grow', 'Diploma’s en verder komen', [
     ['Ik kan vertellen welke diploma’s en certificaten ik heb.', 'A2', 'spreken', 'I can say which diplomas and certificates I have.'],

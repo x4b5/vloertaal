@@ -22,7 +22,7 @@ describe('sectors', () => {
     expect(main[6].id).toBe('u.build');
     expect(main.filter((u) => u.id === 'u.build')).toHaveLength(1);
     expect(main.some((u) => u.id === 'u.warehouse')).toBe(false);
-    expect(other.map((u) => u.id).sort()).toEqual(['u.care', 'u.carservice', 'u.clean', 'u.collection', 'u.daycare', 'u.delivery', 'u.factory', 'u.foodhygiene', 'u.foodline', 'u.frontdesk', 'u.garage', 'u.guarding', 'u.horeca', 'u.incidents', 'u.install', 'u.kas', 'u.kweek', 'u.machines', 'u.maintenance', 'u.montage', 'u.mowing', 'u.planting', 'u.recycling', 'u.shop', 'u.tech', 'u.toddlers', 'u.warehouse']);
+    expect(other.map((u) => u.id).sort()).toEqual(['u.care', 'u.carework', 'u.carservice', 'u.clean', 'u.collection', 'u.cooking', 'u.daycare', 'u.delivery', 'u.factory', 'u.foodhygiene', 'u.foodline', 'u.frontdesk', 'u.garage', 'u.guarding', 'u.horeca', 'u.housekeeping', 'u.incidents', 'u.install', 'u.kas', 'u.kweek', 'u.machines', 'u.maintenance', 'u.montage', 'u.mowing', 'u.planting', 'u.recycling', 'u.shop', 'u.shopfloor', 'u.tech', 'u.toddlers', 'u.warehouse']);
     expect(main.length + other.length).toBe(units.length);
     // The basis units keep their course order around it.
     const basis = main.filter((u) => !unitSector(u.id));

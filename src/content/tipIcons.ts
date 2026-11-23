@@ -127,8 +127,8 @@ export const tipIcons: Readonly<Record<string, string>> = {
   '🤮': 'w.overgeven',
   '👁': 'w.vierogenprincipe',
   // The five units of 23 November 2026 (Schoonmaak, Horeca, Zorg, Winkel, uitzendwerk): each tip shows
-  // a word of its own lesson (placeholder drawings for now); the bill and the home-care key keep the
-  // drawings of 💶 and 🗝 above.
+  // a word of its own lesson (placeholder drawings for now); the bill (💶, the work-rules table: cash)
+  // and home care (🗝, the bunch of keys above) keep the drawings those emoji already have.
   '🚽': 'w.toiletpot',
   '🛌': 'w.opmaken',
   '🥄': 'w.maatbeker',

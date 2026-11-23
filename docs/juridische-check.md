@@ -2,7 +2,7 @@
 
 *Verzoek om een inhoudelijke check. Stand van de teksten: 15 oktober 2026 (de tips c.accident en c.agency: 17 oktober 2026; c.notyet en c.gear: 18 oktober 2026, bijgewerkt na een NT2-review; c.permit, c.kids, c.jobends, c.harvest, c.greensafe, c.workshop, c.power en c.carjob: 4 november 2026, toen ze in dit document kwamen; c.road: 5 november 2026).*
 
-*Verzoek om een inhoudelijke check. Stand van de teksten: 15 oktober 2026 (de tips c.accident en c.agency: 17 oktober 2026; c.notyet en c.gear: 18 oktober 2026, bijgewerkt na een NT2-review; c.permit, c.kids, c.jobends, c.harvest, c.greensafe, c.workshop, c.power en c.carjob: 4 november 2026, toen ze in dit document kwamen; c.backtowork: 5 november 2026).*
+*Verzoek om een inhoudelijke check. Stand van de teksten: 15 oktober 2026 (de tips c.accident en c.agency: 17 oktober 2026; c.notyet en c.gear: 18 oktober 2026, bijgewerkt na een NT2-review; c.permit, c.kids, c.jobends, c.harvest, c.greensafe, c.workshop, c.power en c.carjob: 4 november 2026, toen ze in dit document kwamen; c.backtowork: 5 november 2026; c.hirer, c.phases, c.deductions en c.agencyhome: 23 november 2026).*
 
 **Terugsturen naar:** ____________________________ (naam en e-mail van de eigenaar van Vloertaal)
 
@@ -111,8 +111,8 @@ Bijna elke tip eindigt met een van deze drie vaste slotregels:
 
 | Slotregel (Engels, letterlijk) | Bij welke tips | Waarom deze |
 |---|---|---|
-| *General information. For your situation: ask your employer, the union or the Juridisch Loket.* | c.accident, c.agency, c.aiplan, c.bsn, c.carjob, c.contract, c.diploma, c.extra, c.findwork, c.greensafe, c.health, c.illness, c.insurance, c.jobends, c.kids, c.leave, c.letters, c.payslip, c.permit, c.power, c.sick, c.site, c.transit, c.workshop, c.ww | rechten en regels uit de wet |
-| *General information. For your situation: ask the union, the Juridisch Loket or FairWork.* | c.gethelp, c.harvest, c.housing, c.newjob, c.rights, c.road, c.warning | de werkgever of het bureau kan zelf het probleem zijn, dus we sturen niet terug naar de werkgever |
+| *General information. For your situation: ask your employer, the union or the Juridisch Loket.* | c.accident, c.agency, c.hirer, c.phases, c.aiplan, c.bsn, c.carjob, c.contract, c.diploma, c.extra, c.findwork, c.greensafe, c.health, c.illness, c.insurance, c.jobends, c.kids, c.leave, c.letters, c.payslip, c.permit, c.power, c.sick, c.site, c.transit, c.workshop, c.ww | rechten en regels uit de wet |
+| *General information. For your situation: ask the union, the Juridisch Loket or FairWork.* | c.agencyhome, c.deductions, c.gethelp, c.harvest, c.housing, c.newjob, c.rights, c.road, c.warning | de werkgever of het bureau kan zelf het probleem zijn, dus we sturen niet terug naar de werkgever |
 | *Rules differ per company: ask your supervisor what the rules are where you work.* | c.callin, c.clock, c.hygiene, c.line, c.privacy, c.smoking | huisregels |
 | (geen slotregel) | c.bike, c.boundaries, c.certs, c.doctor, c.gear, c.gossip, c.interview, c.notyet, c.respect, c.unsafe | gedragstips; sommige noemen zelf een loket |
 
@@ -1991,6 +1991,182 @@ Met de slotregel; de Belgische cursus wisselt die zelf (be.closing.advice). De t
 1. Is „If you quit yourself, you can lose your benefit (uitkering)” zo kort juist en niet te zwaar (NL: verwijtbare werkloosheid; BE: vrijwillig ontslag)? „uitkering” is hier de WW / werkloosheidsuitkering; een bijstandsuitkering kan ook gevolgen hebben (een maatregel van de gemeente): moet dat erbij, of is „your benefit” ruim genoeg?
 2. „often there is a notice period”: juist voor vaste én tijdelijke contracten, en voor uitzendwerk (uitzendbeding, fase A)?
 3. „Leave now and do not come back” is het foute antwoord: is het verstandig om ergens te noemen dat wegblijven zonder bericht ook tot ontslag op staande voet kan leiden, of is dat te zwaar voor deze les?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### Werken via een uitzendbureau (nieuw, 23 november 2026)
+
+*Een nieuwe basisunit voor iedereen, direct na „Werk en contract”: de meeste leerlingen werken via een uitzendbureau. Vier tips over rechten: c.hirer, c.phases, c.deductions en c.agencyhome. Elke bewering staat ook met een ⚖️-noot en bron in `src/content/workTips.ts`. De tips noemen bewust geen getallen (weken, percentages, bedragen). De Wet meer zekerheid flexwerkers (gelijkwaardige beloning per 2027, kortere fase A per 2028) en het geplande einde van de huurinhouding op het minimumloon (per 1 juli 2028) staan in `UPCOMING_LAW` (`src/content/updates.ts`), met c.phases en c.deductions. In België is uitzendwerk anders geregeld: de unit is daar voorlopig „alleen Nederland” (inventaris C, nog geen Belgische versie). De vier tips van de sectorunits van dezelfde dag (Schoonmaak, Horeca, Zorg, Winkel) noemen geen recht: huisregels; alleen c.rawcooked noemt een regel voor het bedrijf (allergeneninformatie aan gasten, Verordening (EU) 1169/2011 art. 9 en 44), met een ⚖️-noot in de code.*
+
+---
+
+### c.hirer — Two companies: who does what? (nieuw, 23 november 2026)
+
+*Unit „Werken via een uitzendbureau”, les „The agency and the hirer” (`l.hirer`)*
+
+**Samenvatting (NL):** Werk je via een uitzendbureau, dan doe je het werk bij een ander bedrijf: de inlener. Het uitzendbureau is je werkgever: contract, loon, loonstrook en vrije dagen komen van het bureau. De inlener zegt wat je op de werkvloer doet en moet je werk veilig houden, net als voor zijn eigen mensen. Ziekmelden zoals het bureau zegt, vaak bij het bureau én bij de inlener. Bewaar naam en nummer van je contactpersoon bij het bureau.
+
+**Tekst (Engels, wordt vertaald):**
+
+> You work through an agency (uitzendbureau), but you do the work at another company: the hirer (inlener). The agency is your employer: your contract, your pay, your payslip and your days off come from the agency. The hirer tells you what to do on the work floor, and must keep your work safe, just like for its own workers. Report sick the way your agency says: often to the agency and to the hirer. Keep the name and phone number of your contact person at the agency in your phone.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Grondslag (onze lezing):** Het uitzendbureau is de werkgever: BW 7:690 (de uitzendovereenkomst). De inlener moet het werk veilig houden: Arbowet art. 1 lid 1 (als werkgever geldt ook wie een ander onder zijn gezag arbeid laat verrichten, dus de inlener) en art. 3; BW 7:658 lid 4 (de inlener is aansprakelijk voor schade bij een arbeidsongeval); Waadi art. 11 (de inlener geeft het bureau de vereiste beroepskwalificaties en de risico’s van de functie door). Ziekmelden: geen wet, de regels van het bureau en de uitzend-cao; daarom „often” en „the way your agency says”.
+
+**Zeg het zo (Nederlands):** „Wie is mijn contactpersoon bij het uitzendbureau?” — *Who is my contact person at the agency?*
+
+**Situatie in de les:** At the hirer you must work with a machine. Nobody showed you how. What do you do?  
+**Goede antwoord:** Ask the hirer to show you first.  
+**Uitleg na het antwoord (`c.hirer.w`):** The hirer must show you how to work safely, the same as its own workers. Asking for it is your right.
+
+**Uitleg bij het gesprekje (`c.hirer.a.why`):** „Kun je morgen bij een nieuwe inlener beginnen?” → „Ja. Hoe laat moet ik er zijn?”: Asked to start somewhere new: yes, and a question about the time.
+
+**⚠ Getallen en termijnen:** geen getallen of termijnen in de tip.
+
+**Onze eigen vraag hierbij:**
+- „The agency is your employer” geldt bij uitzending (BW 7:690). Moet er „usually” bij, zoals we ook bij c.agency vragen, vanwege payrolling en detachering?
+- „must keep your work safe, just like for its own workers”: is dit een juiste samenvatting van Arbowet art. 1 en BW 7:658 lid 4 voor een A2-lezer?
+- Klopt de goede keuze (eerst uitleg vragen aan de inlener) als eerste stap, of moet de uitzendkracht (ook) het bureau bellen?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.phases — Phases A, B and C (nieuw, 23 november 2026)
+
+*Unit „Werken via een uitzendbureau”, les „Your contract and the phases” (`l.phases`)*
+
+**Samenvatting (NL):** De meeste uitzendkrachten vallen onder een cao voor uitzendkrachten, met fasen. In fase A kan je werk meestal stoppen als de inlener je niet meer nodig heeft (uitzendbeding). In fase B krijg je contracten voor bepaalde tijd. In fase C een vast contract bij het uitzendbureau. Hoe lang elke fase duurt, staat in je cao. Vraag het bureau in welke fase je zit, en bewaar al je contracten.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Most agency workers work under a cao for agency workers (uitzend-cao). It has phases. In phase A, your work can usually stop when the hirer no longer needs you (uitzendbeding). In phase B, you get contracts for a fixed time. In phase C, you get a permanent contract with the agency. How long each phase lasts is in your cao. Ask the agency which phase you are in, and keep all your contracts.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Grondslag (onze lezing):** De cao: Cao voor Uitzendkrachten (ABU/NBBU), het fasensysteem (fase A, B en C). Het uitzendbeding: BW 7:691 lid 2 (van rechtswege de eerste 26 weken, bij cao langer); „usually” omdat een contract zonder uitzendbeding mogelijk is. Fase B en C: de cao, met BW 7:691 lid 1 en 7:668a voor de keten. „Most agency workers” omdat er bureaus met een eigen cao zijn (zie de vraag bij c.agency). Het aantal weken per fase staat er bewust niet in: de Wet meer zekerheid flexwerkers (Stb. 2026, 205) maakt fase A korter per 1 januari 2028 (secundaire bronnen; de tip staat daarom in `UPCOMING_LAW` in `src/content/updates.ts`).
+
+**Zeg het zo (Nederlands):** „Hoe lang duurt fase A voor mij?” — *How long does phase A last for me?*
+
+**Situatie in de les:** You worked a long time for the same agency. You still get short contracts. What do you do?  
+**Goede antwoord:** Ask the agency which phase you are in.  
+**Uitleg na het antwoord (`c.phases.w`):** After enough time, the cao gives you more security. The agency can tell you where you are, and the union can check it with you.
+
+**Uitleg bij het gesprekje (`c.phases.a.why`):** „Je opdracht stopt vrijdag.” → „Oké. Heeft u ander werk voor mij?”: Told the job stops: okay, and you ask for other work.
+
+**⚠ Getallen en termijnen:** geen getallen in de tip. Bewust weggelaten: het aantal weken of contracten per fase (verandert per 2028) en de 26 weken van BW 7:691 lid 2.
+
+**Onze eigen vraag hierbij:**
+- Is „Most agency workers work under a cao for agency workers (uitzend-cao). It has phases.” juist voor 2026 (ABU- en NBBU-cao; sinds 2026 één cao voor uitzendkrachten?), en hebben de bureaus met een eigen cao ook fasen A, B en C?
+- „In phase A, your work can usually stop when the hirer no longer needs you (uitzendbeding)”: juist en niet te kort door de bocht (het uitzendbeding moet schriftelijk zijn overeengekomen)?
+- „In phase C, you get a permanent contract with the agency”: klopt dit voor elke uitzendkracht die fase C bereikt?
+- Moeten we nu al zeggen dat de fasen per 1 januari 2028 veranderen, of pas als het zover is?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.deductions — What may come off your pay? (nieuw, 23 november 2026)
+
+*Unit „Werken via een uitzendbureau”, les „Pay and deductions” (`l.deductions`)*
+
+**Samenvatting (NL):** Je hebt recht op minstens hetzelfde loon als werknemers van de inlener die hetzelfde werk doen. Een inhouding moet op je loonstrook staan. Belasting en premies gaan er volgens de wet af. Daarnaast mag het bureau van het minimumloon maar twee kosten inhouden: huur voor je huisvesting en de premie van je zorgverzekering, en alleen als je daar schriftelijk mee instemde. Andere kosten (vervoer, werkkleding, boetes, geld voor het vinden van werk) mogen niet van het minimumloon af. Snap je een inhouding niet? Vraag het bureau om schriftelijke uitleg.
+
+**Tekst (Engels, wordt vertaald):**
+
+> You have a right to at least the same pay as workers of the hirer who do the same work. Money that is taken off your pay (inhouding) must be on your payslip. Tax and premiums come off by law. Apart from those, the agency may only take off two costs from the minimum wage: rent for your housing and the premium for health insurance, and only if you agreed to it in writing. Other costs, like transport, work clothes, fines or a fee for finding you a job, may not come off the minimum wage. Do not understand a deduction? Ask the agency to explain it in writing.
+>
+> *General information. For your situation: ask the union, the Juridisch Loket or FairWork.*
+
+**Grondslag (onze lezing):** Gelijk loon: Waadi art. 8 lid 1 (minstens het loon en de vergoedingen van werknemers in een gelijke of gelijkwaardige functie bij de inlener) en de inlenersbeloning in de uitzend-cao; dezelfde zin als c.agency. Vanaf 1 januari 2027 gelijkwaardige arbeidsvoorwaarden (Wet meer zekerheid flexwerkers; secundaire bronnen). Inhouding op de loonstrook: BW 7:626 lid 2. Belasting en premies: de wettelijke inhoudingen (WML art. 13 lid 1). Alleen huur en zorgverzekering van het minimumloon, met schriftelijke toestemming: WML art. 13 en het besluit over inhoudingen en verrekeningen op het minimumloon, sinds 1 januari 2017 (Wet aanpak schijnconstructies): huur hooguit 25% van het minimumloon en alleen voor huisvesting die aan de kwaliteitseisen voldoet, zorgverzekering hooguit de premie zelf (beide getallen staan bewust niet in de tip). Geen geld voor het vinden van werk: Waadi art. 9 lid 1. Beschermende werkkleding is gratis: Arbowet art. 8 en Arbobesluit art. 8.1. Gepland: geen huur meer van het minimumloon per 1 juli 2028 (Kamerbrief SZW 10 september 2026; `UPCOMING_LAW` in `src/content/updates.ts`).
+
+**Zeg het zo (Nederlands):** „Waarvoor is deze inhouding?” — *What is this deduction for?*
+
+**Situatie in de les:** The agency takes money off your pay for the bus to work. You earn the minimum wage. What do you do?  
+**Goede antwoord:** Ask about it: this is not allowed.  
+**Uitleg na het antwoord (`c.deductions.w`):** From the minimum wage, only rent and health insurance may come off, and only with your written yes. The union or the Juridisch Loket can help you.
+
+**Uitleg bij het gesprekje (`c.deductions.a.why`):** „We houden de kosten van de bus in op je loon.” → „Mag dat? Dat vraag ik eerst na.”: Told about a deduction: you ask if it is allowed, and check.
+
+**⚠ Getallen en termijnen:** geen getallen in de tip. Bewust weggelaten: de grens van 25% voor huur en het bedrag van de premie.
+
+**Onze eigen vraag hierbij:**
+- „From the minimum wage, the agency may only take off two costs … rent … and the premium for health insurance, and only if you agreed to it in writing”: juist en volledig voor 2026? Moeten we zeggen dat de huisvesting aan kwaliteitseisen moet voldoen (bijvoorbeeld een SNF-keurmerk)?
+- „Other costs, like transport, work clothes, fines or a fee for finding you a job, may not come off the minimum wage”: juist? Boven het minimumloon mag meer, met afspraken: is de tip zo niet misleidend voor wie meer verdient dan het minimumloon?
+- „Tax and premiums come off by law”: is dit genoeg, of moeten pensioenpremie (StiPP) en loonbeslag ook genoemd worden?
+- De situatie gaat over kosten voor de bus van het minimumloon. Is het goede antwoord „this is not allowed” zo stellig houdbaar?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.agencyhome — Your home, and where to get help (nieuw, 23 november 2026)
+
+*Unit „Werken via een uitzendbureau”, les „Housing and help” (`l.agencyhome`)*
+
+**Samenvatting (NL):** Regelt het bureau je huisvesting? Dan krijg je een eigen, schriftelijk huurcontract, los van je arbeidscontract. Bewaar een kopie: er staat in wat je betaalt, en hoe en wanneer de huur eindigt. Stopt je werk, dan stopt je woning niet altijd op dezelfde dag: vraag advies voordat je vertrekt. Onveilige of overvolle huisvesting, bedreiging, of te weinig loon? Zoek hulp: de vakbond, het Juridisch Loket (gratis juridisch advies), FairWork, of de Nederlandse Arbeidsinspectie, waar je ook anoniem kunt melden.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Does the agency arrange your housing? Then you get a rental contract of your own, in writing, apart from your work contract. Keep a copy. It says what you pay, and how and when the rental ends. Your work stops? Your home does not always stop on the same day: ask for advice before you leave. Unsafe or very full housing, threats, or pay that is too low? Get help: the union, the Juridisch Loket (free legal advice), FairWork, or the Nederlandse Arbeidsinspectie, where you can also report anonymously.
+>
+> *General information. For your situation: ask the union, the Juridisch Loket or FairWork.*
+
+**Grondslag (onze lezing):** Eigen schriftelijk huurcontract, los van het arbeidscontract: Wet goed verhuurderschap (in werking 1 juli 2023), de extra regels voor verhuur aan arbeidsmigranten (artikel nog nakijken); ook de uitzend-cao en de SNF-norm; dezelfde regel als c.housing. Wat erin staat en de opzegging: Wet goed verhuurderschap (schriftelijke informatie over huur, servicekosten en regels); BW 7:271 (opzegging van huur). „Not always on the same day”: het huurcontract staat los van het werk; „not always” omdat kort verblijf (logies) eerder kan eindigen. Hulp: Juridisch Loket 0800-8020, gratis (juridischloket.nl); Nederlandse Arbeidsinspectie, melden kan anoniem (nlarbeidsinspectie.nl/melden); FairWork (fairwork.nu); dezelfde plekken als c.gethelp en de slotregel.
+
+**Zeg het zo (Nederlands):** „Mag ik een kopie van mijn huurcontract?” — *May I have a copy of my rental contract?*
+
+**Situatie in de les:** Your work stops. The housing manager says you must leave the house today. What do you do?  
+**Goede antwoord:** Ask the union or Juridisch Loket first.  
+**Uitleg na het antwoord (`c.agencyhome.w`):** Your rental contract has its own rules, apart from your work. Advice helps you know when you really must leave.
+
+**Uitleg bij het gesprekje (`c.agencyhome.a.why`):** „Je moet vrijdag uit de woning.” → „Dat is heel kort. Ik vraag eerst advies.”: Told to leave soon: that is short, and you get advice first.
+
+**⚠ Getallen en termijnen:** geen getallen of termijnen in de tip.
+
+**Onze eigen vraag hierbij:**
+- Klopt „a rental contract of your own, in writing, apart from your work contract” als regel die voor elke uitzendkracht met huisvesting via het bureau geldt (Wet goed verhuurderschap, cao)? Welk artikel is het precies?
+- „Your home does not always stop on the same day”: is dit juist en voorzichtig genoeg, ook voor kort verblijf (logies) en voor huisvesting die bij het werk hoort?
+- Zijn de vier loketten de juiste voor deze doelgroep, en in deze volgorde? Hoort de gemeente (meldpunt huisvesting) erbij, zoals in c.housing?
 
 **Oordeel deskundige:**
 

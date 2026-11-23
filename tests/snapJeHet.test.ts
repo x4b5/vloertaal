@@ -152,8 +152,10 @@ describe('the sentence', () => {
     // 41 of 46 (5 November 2026). 23 November 2026: about 69%, with the 48 sentences of Groen and
     // Facilitair not recorded (or translated) yet; 0.65 until they are.
     // With the 96 sentences of Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang
-    // (the same day, not recorded or translated yet) about 63%: 0.6 until they are.
-    expect(asked / days).toBeGreaterThan(0.6);
+    // (the same day, not recorded or translated yet) about 63%: 0.6 until they are. With the 60
+    // sentences of the five units of the same day (Schoonmaak, Horeca, Zorg, Winkel, uitzendwerk; not
+    // recorded or translated yet) about 58%: 0.55 until they are.
+    expect(asked / days).toBeGreaterThan(0.55);
     // Nothing recorded: no "Snap je het?" (never a guess at a silent speaker).
     const day = dayWhere(true);
     const cards = cardsAfter(FIRST, day);

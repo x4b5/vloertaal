@@ -3184,7 +3184,7 @@ const careworkUnit = unit('carework', 'Personal care and home care', 'Verzorgen 
       ['Meneer heeft vandaag weinig gedronken.', 'The gentleman drank little today.'],
       ['Ik schrijf het in het zorgdossier.', 'I am writing it in the care file.'],
     ],
-    [['Is er iets bijzonders met mevrouw De Vries?', 'Is there anything special about Mrs De Vries?'], ['Ja. Ze heeft vandaag bijna niet geplast.', 'Yes. She has hardly peed today.']],
+    [['Is er iets bijzonders met mevrouw Jansen?', 'Is there anything special about Mrs Jansen?'], ['Ja. Ze heeft vandaag bijna niet geplast.', 'Yes. She has hardly peed today.']],
   ),
   lesson(
     'homecare',

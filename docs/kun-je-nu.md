@@ -55,7 +55,7 @@ De zinnen van Taal hebben een vertaling in de 13 hulptalen voor de thema's Start
 |  | Ik kan vragen of mijn contract tijdelijk of vast is. | op weg naar A2 · spreken |
 |  | Ik kan zeggen wanneer ik wel en niet kan werken. | op weg naar A2 · gesprekken |
 | Werken via een uitzendbureau | Ik kan vragen in welke fase ik zit. | A1 · gesprekken |
-|  | Ik kan vragen wat een inhouding op mijn loonstrook is. | op weg naar A2 · gesprekken |
+|  | Ik kan vragen waarvoor een inhouding op mijn loon is. | op weg naar A2 · gesprekken |
 | Diploma’s en verder komen | Ik kan vertellen welke diploma’s en certificaten ik heb. | op weg naar A2 · spreken |
 |  | Ik kan zeggen waar ik goed in ben. | op weg naar A2 · gesprekken |
 | Werk kwijt | Ik kan zeggen dat mijn contract stopt. | op weg naar A2 · spreken |

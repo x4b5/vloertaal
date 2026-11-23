@@ -9,6 +9,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.safety",
   "u.emergency",
   "u.care",
+  "u.carework",
   "u.data",
   "u.time",
   "u.sounds",
@@ -17,6 +18,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.feedback",
   "u.apply",
   "u.contract",
+  "u.uitzend",
   "u.papers",
   "u.pay",
   "u.house",
@@ -67,6 +69,9 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.recycling",
   "u.toddlers",
   "u.daycare",
+  "u.housekeeping",
+  "u.cooking",
+  "u.shopfloor",
 ]
 `;
 
@@ -88,6 +93,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.feedback",
   "u.apply",
   "u.contract",
+  "u.uitzend",
   "u.papers",
   "u.pay",
   "u.house",
@@ -137,6 +143,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.foodline",
   "u.collection",
   "u.recycling",
+  "u.housekeeping",
+  "u.cooking",
+  "u.carework",
+  "u.shopfloor",
 ]
 `;
 
@@ -149,6 +159,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.safety",
   "u.emergency",
   "u.clean",
+  "u.housekeeping",
   "u.data",
   "u.time",
   "u.sounds",
@@ -157,6 +168,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.feedback",
   "u.apply",
   "u.contract",
+  "u.uitzend",
   "u.papers",
   "u.pay",
   "u.house",
@@ -207,6 +219,9 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.recycling",
   "u.toddlers",
   "u.daycare",
+  "u.cooking",
+  "u.carework",
+  "u.shopfloor",
 ]
 `;
 
@@ -229,6 +244,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.feedback",
   "u.apply",
   "u.contract",
+  "u.uitzend",
   "u.papers",
   "u.pay",
   "u.house",
@@ -277,6 +293,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.recycling",
   "u.toddlers",
   "u.daycare",
+  "u.housekeeping",
+  "u.cooking",
+  "u.carework",
+  "u.shopfloor",
 ]
 `;
 
@@ -298,6 +318,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.feedback",
   "u.apply",
   "u.contract",
+  "u.uitzend",
   "u.papers",
   "u.pay",
   "u.house",
@@ -347,6 +368,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.recycling",
   "u.toddlers",
   "u.daycare",
+  "u.housekeeping",
+  "u.cooking",
+  "u.carework",
+  "u.shopfloor",
 ]
 `;
 
@@ -368,6 +393,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.feedback",
   "u.apply",
   "u.contract",
+  "u.uitzend",
   "u.papers",
   "u.pay",
   "u.house",
@@ -417,6 +443,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.recycling",
   "u.toddlers",
   "u.daycare",
+  "u.housekeeping",
+  "u.cooking",
+  "u.carework",
+  "u.shopfloor",
 ]
 `;
 
@@ -438,6 +468,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.feedback",
   "u.apply",
   "u.contract",
+  "u.uitzend",
   "u.papers",
   "u.pay",
   "u.house",
@@ -487,6 +518,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.recycling",
   "u.toddlers",
   "u.daycare",
+  "u.housekeeping",
+  "u.cooking",
+  "u.carework",
+  "u.shopfloor",
 ]
 `;
 
@@ -508,6 +543,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.feedback",
   "u.apply",
   "u.contract",
+  "u.uitzend",
   "u.papers",
   "u.pay",
   "u.house",
@@ -557,6 +593,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.recycling",
   "u.toddlers",
   "u.daycare",
+  "u.housekeeping",
+  "u.cooking",
+  "u.carework",
+  "u.shopfloor",
 ]
 `;
 
@@ -578,6 +618,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.feedback",
   "u.apply",
   "u.contract",
+  "u.uitzend",
   "u.papers",
   "u.pay",
   "u.house",
@@ -627,6 +668,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.recycling",
   "u.toddlers",
   "u.daycare",
+  "u.housekeeping",
+  "u.cooking",
+  "u.carework",
+  "u.shopfloor",
 ]
 `;
 
@@ -639,6 +684,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.safety",
   "u.emergency",
   "u.horeca",
+  "u.cooking",
   "u.data",
   "u.time",
   "u.sounds",
@@ -647,6 +693,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.feedback",
   "u.apply",
   "u.contract",
+  "u.uitzend",
   "u.papers",
   "u.pay",
   "u.house",
@@ -697,6 +744,9 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.recycling",
   "u.toddlers",
   "u.daycare",
+  "u.housekeeping",
+  "u.carework",
+  "u.shopfloor",
 ]
 `;
 
@@ -718,6 +768,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.feedback",
   "u.apply",
   "u.contract",
+  "u.uitzend",
   "u.papers",
   "u.pay",
   "u.house",
@@ -767,6 +818,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.recycling",
   "u.toddlers",
   "u.daycare",
+  "u.housekeeping",
+  "u.cooking",
+  "u.carework",
+  "u.shopfloor",
 ]
 `;
 
@@ -787,6 +842,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.feedback",
   "u.apply",
   "u.contract",
+  "u.uitzend",
   "u.papers",
   "u.pay",
   "u.house",
@@ -837,6 +893,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.recycling",
   "u.toddlers",
   "u.daycare",
+  "u.housekeeping",
+  "u.cooking",
+  "u.carework",
+  "u.shopfloor",
 ]
 `;
 
@@ -859,6 +919,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.feedback",
   "u.apply",
   "u.contract",
+  "u.uitzend",
   "u.papers",
   "u.pay",
   "u.house",
@@ -907,6 +968,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.recycling",
   "u.toddlers",
   "u.daycare",
+  "u.housekeeping",
+  "u.cooking",
+  "u.carework",
+  "u.shopfloor",
 ]
 `;
 
@@ -919,6 +984,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.safety",
   "u.emergency",
   "u.shop",
+  "u.shopfloor",
   "u.data",
   "u.time",
   "u.sounds",
@@ -927,6 +993,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.feedback",
   "u.apply",
   "u.contract",
+  "u.uitzend",
   "u.papers",
   "u.pay",
   "u.house",
@@ -977,6 +1044,9 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.recycling",
   "u.toddlers",
   "u.daycare",
+  "u.housekeeping",
+  "u.cooking",
+  "u.carework",
 ]
 `;
 
@@ -998,6 +1068,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.feedback",
   "u.apply",
   "u.contract",
+  "u.uitzend",
   "u.papers",
   "u.pay",
   "u.house",
@@ -1047,6 +1118,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.recycling",
   "u.toddlers",
   "u.daycare",
+  "u.housekeeping",
+  "u.cooking",
+  "u.carework",
+  "u.shopfloor",
 ]
 `;
 
@@ -1068,6 +1143,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.feedback",
   "u.apply",
   "u.contract",
+  "u.uitzend",
   "u.papers",
   "u.pay",
   "u.house",
@@ -1117,6 +1193,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.recycling",
   "u.toddlers",
   "u.daycare",
+  "u.housekeeping",
+  "u.cooking",
+  "u.carework",
+  "u.shopfloor",
 ]
 `;
 
@@ -1137,6 +1217,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.feedback",
   "u.apply",
   "u.contract",
+  "u.uitzend",
   "u.papers",
   "u.pay",
   "u.house",
@@ -1187,6 +1268,10 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.recycling",
   "u.toddlers",
   "u.daycare",
+  "u.housekeeping",
+  "u.cooking",
+  "u.carework",
+  "u.shopfloor",
 ]
 `;
 
@@ -1208,6 +1293,7 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.feedback",
   "u.apply",
   "u.contract",
+  "u.uitzend",
   "u.papers",
   "u.pay",
   "u.house",
@@ -1257,5 +1343,9 @@ exports[`the Dutch course ('taal') is exactly as before > snapshots routeOrder f
   "u.foodline",
   "u.toddlers",
   "u.daycare",
+  "u.housekeeping",
+  "u.cooking",
+  "u.carework",
+  "u.shopfloor",
 ]
 `;

@@ -104,8 +104,9 @@ describe('access', () => {
       // two (21 November 2026); 22 since Techniek has two, 23 since Productie has three (the same day);
       // 25 since Tuinbouw and Garage have two (22 November 2026); 29 with the four units of Groen and
       // Facilitair (23 November 2026); 37 with the eight units of Beveiliging, Voedingsindustrie, Afval
-      // en recycling and Kinderopvang (the same day).
-      expect(sampleLessons('taal').length).toBeLessThan(38);
+      // en recycling and Kinderopvang (the same day); 41 with the second units of Schoonmaak, Horeca,
+      // Zorg and Winkel (the same day).
+      expect(sampleLessons('taal').length).toBeLessThan(42);
     });
 
     it('locks the rest, whatever the progress says; the daily review stays open', () => {
