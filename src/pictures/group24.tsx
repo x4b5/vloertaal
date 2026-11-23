@@ -727,9 +727,11 @@ export default {
   ),
 
   // "het busje": the van — a small van seen from the side
+  // Moves: the van drives in from the left and stops where it is drawn (once).
   'w.busje': () => (
     <g>
       <Ground cx={60} cy={104} rx={50} ry={4} />
+      <Move kind="from" dx={-40} once>
       <Shade color={PAL.skyShade} opacity={1} at={[60, 106, 70, 20]}>
         <path d="M10 92V38Q10 30 18 30H76Q82 30 86 36L100 58Q110 60 110 70V92Z" fill={PAL.sky} />
       </Shade>
@@ -749,6 +751,7 @@ export default {
       <circle cx="32" cy="92" r="4.6" fill={PAL.steel} />
       <circle cx="88" cy="92" r="11" fill={PAL.slateDark} />
       <circle cx="88" cy="92" r="4.6" fill={PAL.steel} />
+      </Move>
     </g>
   ),
 
@@ -891,11 +894,13 @@ export default {
   ),
 
   // "de plukkar": the picking trolley — a trolley with crates, rolling on the heating pipes
+  // Moves: the trolley rolls in along the pipes from the left and stops where it is drawn (once).
   'w.plukkar': () => (
     <g>
       {/* The pipe rails */}
       <path d="M6 100H114" stroke={PAL.mist} strokeWidth="6" strokeLinecap="round" />
       <path d="M6 102H114" stroke={PAL.steel} strokeWidth="2" strokeLinecap="round" />
+      <Move kind="from" dx={-36} once>
       {/* Handle */}
       <path d="M22 84V30H12" fill="none" stroke={PAL.slate} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
       {/* Crates on the platform */}
@@ -913,6 +918,7 @@ export default {
       <rect x="16" y="86" width="94" height="4" rx="2" fill={PAL.slateDark} />
       {[30, 54, 78, 98].map((x) => <circle key={x} cx={x} cy={94} r="5.4" fill={PAL.slateDark} />)}
       {[30, 54, 78, 98].map((x) => <circle key={x} cx={x} cy={94} r="2" fill={PAL.steel} />)}
+      </Move>
     </g>
   ),
 

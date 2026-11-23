@@ -315,9 +315,11 @@ export default {
 
   // "de vrachtwagen": the truck — a long grey trailer with a blue stripe behind a red cab, on
   // three wheels (not the white van of "de bestelbus").
+  // On the intro card: the lorry drives in from the left and stops (once, slowly).
   'w.vrachtwagen': () => (
     <g>
       <Ground cx={60} cy={104} rx={54} ry={4} />
+      <Move kind="slow" dx={-44} once>
       <rect x="8" y="82" width="104" height="7" rx="2" fill={PAL.slate} />
       {/* Trailer */}
       <Shade color={PAL.steel} opacity={0.5} at={[40, 92, 50, 16]}>
@@ -336,6 +338,7 @@ export default {
       <Wheel cx={22} cy={92} />
       <Wheel cx={44} cy={92} />
       <Wheel cx={95} cy={92} />
+      </Move>
     </g>
   ),
 

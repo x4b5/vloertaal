@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { PAL, Shine } from '../kit';
+import { Move, PAL, Shine } from '../kit';
 
 /** The foam: [cx, cy, r] bubbles, back ones first. */
 const BUBBLES: [number, number, number][] = [
@@ -10,6 +10,7 @@ const BUBBLES: [number, number, number][] = [
 export default {
   // "het schuim": the foam — a big heap of thick white cleaning foam on a steel work table, round
   // bubbles with a grey shade below and a few loose bubbles floating up.
+  // On the intro card the loose bubbles float up off the heap (three rounds).
   'w.schuim': () => (
     <g strokeLinejoin="round">
       {/* The steel table top and its front edge */}
@@ -22,12 +23,14 @@ export default {
       {BUBBLES.slice(0, 7).map(([x, y, r]) => <circle key={`h${x}${y}`} cx={x - r * 0.4} cy={y - r * 0.4} r={r * 0.22} fill={PAL.ice} opacity=".7" />)}
       <path d="M86 84Q90 82 94 84" stroke={PAL.paperShade} strokeWidth="2" strokeLinecap="round" />
       {/* Loose bubbles floating up */}
-      <circle cx="92" cy="22" r="5" fill={PAL.paperShade} />
-      <circle cx="91" cy="21" r="5" fill={PAL.white} />
-      <circle cx="104" cy="32" r="3.5" fill={PAL.paperShade} />
-      <circle cx="103" cy="31" r="3.5" fill={PAL.white} />
-      <circle cx="26" cy="28" r="4" fill={PAL.paperShade} />
-      <circle cx="25" cy="27" r="4" fill={PAL.white} />
+      <Move kind="slow" dy={24}>
+        <circle cx="92" cy="22" r="5" fill={PAL.paperShade} />
+        <circle cx="91" cy="21" r="5" fill={PAL.white} />
+        <circle cx="104" cy="32" r="3.5" fill={PAL.paperShade} />
+        <circle cx="103" cy="31" r="3.5" fill={PAL.white} />
+        <circle cx="26" cy="28" r="4" fill={PAL.paperShade} />
+        <circle cx="25" cy="27" r="4" fill={PAL.white} />
+      </Move>
       <Shine d="M54 30Q58 25 64 24" width={3} opacity={0.9} color={PAL.ice} />
     </g>
   ),

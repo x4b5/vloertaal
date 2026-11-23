@@ -1,10 +1,11 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from '../kit';
+import { Ground, Move, PAL, Shade, Shine } from '../kit';
 
 export default {
   // "de kerntemperatuur": the core temperature (the temperature inside the food) — a piece of cooked
   // meat cut through: a brown crust round pink meat, and right in its middle the core, marked as a red
   // target; the steel probe of a thermometer reaches in from above to exactly that core.
+  // On the intro card: the probe is pushed in along its length down to the core. Once.
   'w.kerntemperatuur': () => (
     <g strokeLinejoin="round">
       <Ground cx={60} cy={102} rx={48} ry={4} />
@@ -19,8 +20,10 @@ export default {
       <circle cx="60" cy="73" r="4.2" fill={PAL.red} />
       <Shine d="M20 62Q26 48 40 44" width={3} opacity={0.5} />
       {/* The thermometer's probe, its tip at the core, and its dark handle */}
+      <Move kind="from" dx={11} dy={-26} once>
       <path d="M61 70L80 24" stroke={PAL.mist} strokeWidth="4" strokeLinecap="round" />
       <path d="M80 24L85 12" stroke={PAL.slateDark} strokeWidth="10" strokeLinecap="round" />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

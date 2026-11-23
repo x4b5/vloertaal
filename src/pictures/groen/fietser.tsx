@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, SKIN } from '../kit';
+import { Ground, Move, PAL, SKIN } from '../kit';
 
 /** A bike wheel: black tyre, thin spokes, steel hub. */
 const wheel = (cx: number, cy: number, r: number) => (
@@ -13,13 +13,15 @@ const wheel = (cx: number, cy: number, r: number) => (
 export default {
   // "de fietser": the cyclist — a person riding a city bike to the right, seen from the side: blue jacket,
   // navy trousers, one foot down on the pedal, hands on the handlebar.
+  // Moves: she rides in from the left and stops where she is drawn, the wheels turning (once).
   'w.fietser': () => {
     const [s, sh] = SKIN.amina;
     return (
       <g strokeLinejoin="round" strokeLinecap="round">
         <Ground cx={60} cy={106} rx={50} ry={4} />
-        {wheel(29, 86, 18)}
-        {wheel(91, 86, 18)}
+        <Move kind="from" dx={-40} once>
+        <Move kind="turn" turn={-135} at={[29, 86]}>{wheel(29, 86, 18)}</Move>
+        <Move kind="turn" turn={-135} at={[91, 86]}>{wheel(91, 86, 18)}</Move>
         {/* The far leg, behind the frame */}
         <path d="M50 54L64 70L60 92" fill="none" stroke={PAL.navyShade} strokeWidth="8" />
         {/* The frame */}
@@ -39,6 +41,7 @@ export default {
         <circle cx="68" cy="15" r="9" fill={s} />
         <circle cx="71" cy="17" r="5.4" fill={sh} opacity=".45" />
         <path d="M59.5 14A9 9 0 0 1 76 10.5Q68 10 62 17Z" fill={PAL.ink} />
+        </Move>
       </g>
     );
   },

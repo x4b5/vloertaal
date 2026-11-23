@@ -282,17 +282,20 @@ export default {
 
   // "de meter": the metre — a yellow tape measure: the round case on the left, the tape pulled
   // out straight to the right (chunky black ticks, a steel hook at its end).
+  // On the intro card: the tape is pulled out of its case (once: it is pulled out).
   'w.meter': () => {
     const ticks = Array.from({ length: 10 }, (_, i) => `M${54 + i * 5} 70V${i % 2 === 0 ? 80 : 76}`).join('');
     return (
       <g>
         <Ground cx={60} cy={104} rx={48} ry={4} />
-        {/* the tape */}
-        <rect x="44" y="72" width="64" height="17" rx="1.5" fill={PAL.yellowShade} />
-        <rect x="44" y="68" width="64" height="17" rx="1.5" fill={PAL.yellow} />
-        <path d={ticks} stroke={PAL.ink} strokeWidth="2.2" strokeLinecap="round" />
-        {/* the hook at its end */}
-        <rect x="104" y="64" width="6" height="24" rx="1.5" fill={PAL.steel} />
+        <Move kind="grow" grow={0.3} once>
+          {/* the tape */}
+          <rect x="44" y="72" width="64" height="17" rx="1.5" fill={PAL.yellowShade} />
+          <rect x="44" y="68" width="64" height="17" rx="1.5" fill={PAL.yellow} />
+          <path d={ticks} stroke={PAL.ink} strokeWidth="2.2" strokeLinecap="round" />
+          {/* the hook at its end */}
+          <rect x="104" y="64" width="6" height="24" rx="1.5" fill={PAL.steel} />
+        </Move>
         {/* the case */}
         <Shade color={PAL.yellowShade} opacity={1} at={[62, 66, 10, 40]}>
           <path d="M12 50Q12 34 28 34H40Q56 34 56 50V88Q56 100 44 100H24Q12 100 12 88Z" fill={PAL.yellow} />

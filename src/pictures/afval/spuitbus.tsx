@@ -1,13 +1,15 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from '../kit';
+import { Ground, Move, PAL, Shade, Shine } from '../kit';
 
 export default {
   // "de spuitbus": the spray can — a tall purple aerosol can with a steel dome and a white nozzle cap on top, a
   // light band round it; a small cloud of spray dots in front of the nozzle shows what it is.
+  // On the intro card: the spray puffs out of the nozzle to the left, three rounds.
   'w.spuitbus': () => (
     <g strokeLinejoin="round" strokeLinecap="round">
       <Ground cx={66} cy={104} rx={28} ry={4.5} />
       {/* The spray */}
+      <Move kind="from" dx={22} dy={4}>
       <g fill={PAL.purpleLight}>
         <circle cx="34" cy="22" r="3.4" />
         <circle cx="26" cy="30" r="2.8" />
@@ -16,6 +18,7 @@ export default {
         <circle cx="16" cy="26" r="2.2" opacity=".7" />
         <circle cx="28" cy="12" r="2" opacity=".7" />
       </g>
+      </Move>
       {/* The nozzle and the dome */}
       <rect x="56" y="14" width="18" height="14" rx="3" fill={PAL.paper} />
       <rect x="68" y="14" width="6" height="14" rx="2" fill={PAL.paperShade} />

@@ -219,6 +219,7 @@ export default {
   ),
 
   // "roken": to smoke — a lit cigarette (orange filter, glowing tip) with curling smoke
+  // On the intro card the smoke rises from the glowing tip (three rounds: smoke keeps rising).
   'w.roken': () => (
     <g>
       <g transform="rotate(-18 60 78)">
@@ -236,9 +237,11 @@ export default {
         <path d="M96 71H100Q104 71 104 75V84Q104 88 100 88H96Z" fill={PAL.red} />
         <path d="M98 74H101V85H98Z" fill={PAL.orangeLight} />
       </g>
-      {/* Smoke */}
-      <path d="M100 56Q90 46 100 36Q110 26 100 16" fill="none" stroke={PAL.steel} strokeWidth="6" strokeLinecap="round" opacity=".75" />
-      <path d="M84 50Q78 42 84 34" fill="none" stroke={PAL.steel} strokeWidth="4.5" strokeLinecap="round" opacity=".55" />
+      <Move kind="sag" grow={0.3}>
+        {/* Smoke */}
+        <path d="M100 56Q90 46 100 36Q110 26 100 16" fill="none" stroke={PAL.steel} strokeWidth="6" strokeLinecap="round" opacity=".75" />
+        <path d="M84 50Q78 42 84 34" fill="none" stroke={PAL.steel} strokeWidth="4.5" strokeLinecap="round" opacity=".55" />
+      </Move>
     </g>
   ),
 
@@ -305,11 +308,14 @@ export default {
   ),
 
   // "de koffie": coffee — a coffee jug pouring a brown stream into a cup on a saucer
+  // On the intro card the coffee streams from the jug into the cup (three rounds: a liquid flows).
   'w.koffie': () => (
     <g>
       <Ground cx={70} cy={107} rx={34} ry={4} />
-      {/* Stream */}
-      <path d="M48 40Q62 44 66 70" fill="none" stroke={PAL.brown} strokeWidth="5" strokeLinecap="round" />
+      <Move kind="grow" grow={0.1}>
+        {/* Stream */}
+        <path d="M48 40Q62 44 66 70" fill="none" stroke={PAL.brown} strokeWidth="5" strokeLinecap="round" />
+      </Move>
       {/* Jug, tilted */}
       <g transform="rotate(-38 30 34)">
         <path d="M14 20H46L44 52Q44 56 40 56H20Q16 56 16 52Z" fill={PAL.ice} opacity=".6" />
@@ -332,11 +338,14 @@ export default {
   ),
 
   // "het weer": the weather — sun, a cloud and rain together (what is it like outside?)
+  // On the intro card the rain falls from the cloud (three rounds: it keeps raining).
   'w.weer': () => (
     <g>
       <Sun cx={40} cy={40} r={20} />
-      {/* Rain */}
-      <path d="M50 88L46 98M66 88L62 98M82 88L78 98" stroke={PAL.sky} strokeWidth="5" strokeLinecap="round" />
+      <Move kind="from" dy={-20}>
+        {/* Rain */}
+        <path d="M50 88L46 98M66 88L62 98M82 88L78 98" stroke={PAL.sky} strokeWidth="5" strokeLinecap="round" />
+      </Move>
       {/* Cloud */}
       <g>
         <path d="M38 84Q24 84 24 72Q24 60 38 60Q40 44 58 44Q74 44 78 56Q96 54 98 70Q98 84 84 84Z" fill={PAL.paperShade} transform="translate(0 3.5)" />
@@ -428,29 +437,32 @@ export default {
 
   // "de politie": the police — a Dutch police car: white, with blue and red-orange stripes and
   // a blue light on the roof
+  // On the intro card the police car drives in from the left and stops. Once and slowly (it drives in and stops: it happens once).
   'w.politie': () => (
     <g>
       <Ground cx={60} cy={102} rx={50} ry={4.5} />
-      {/* Light bar and flashes */}
-      <Motion x={56} y={30} dir={-90} spread={120} n={5} len={8} gap={14} color={PAL.sky} width={3.6} />
-      <rect x="46" y="28" width="22" height="8" rx="3" fill={PAL.blue} />
-      <rect x="57" y="28" width="11" height="8" rx="3" fill={PAL.blueShade} />
-      {/* Body */}
-      <path d="M30 40Q34 34 42 34H76Q84 34 90 42L98 56H108Q112 56 112 62V86Q112 92 106 92H14Q8 92 8 86V64Q8 58 14 58H22Z" fill={PAL.mist} transform="translate(0 3)" />
-      <Shade color={PAL.paperShade} opacity={1} at={[118, 80, 20, 30]}>
-        <path d="M30 40Q34 34 42 34H76Q84 34 90 42L98 56H108Q112 56 112 62V86Q112 92 106 92H14Q8 92 8 86V64Q8 58 14 58H22Z" fill={PAL.white} />
-      </Shade>
-      {/* Windows */}
-      <path d="M33 56L38 43Q40 40 44 40H56V56Z" fill={PAL.slate} />
-      <path d="M62 40H74Q80 40 84 45L92 56H62Z" fill={PAL.slate} />
-      <path d="M40 46L44 42" stroke={PAL.steel} strokeWidth="2.4" strokeLinecap="round" />
-      {/* Stripes */}
-      <path d="M8 66H112V76H8Z" fill={PAL.blue} />
-      <path d="M8 76H112V81H8Z" fill={PAL.red} />
-      {/* Bumper lamp */}
-      <rect x="104" y="60" width="7" height="5" rx="2" fill={PAL.yellowLight} />
-      <Wheel cx={32} cy={92} r={12} />
-      <Wheel cx={88} cy={92} r={12} />
+      <Move kind="from" dx={-40} once>
+        {/* Light bar and flashes */}
+        <Motion x={56} y={30} dir={-90} spread={120} n={5} len={8} gap={14} color={PAL.sky} width={3.6} />
+        <rect x="46" y="28" width="22" height="8" rx="3" fill={PAL.blue} />
+        <rect x="57" y="28" width="11" height="8" rx="3" fill={PAL.blueShade} />
+        {/* Body */}
+        <path d="M30 40Q34 34 42 34H76Q84 34 90 42L98 56H108Q112 56 112 62V86Q112 92 106 92H14Q8 92 8 86V64Q8 58 14 58H22Z" fill={PAL.mist} transform="translate(0 3)" />
+        <Shade color={PAL.paperShade} opacity={1} at={[118, 80, 20, 30]}>
+          <path d="M30 40Q34 34 42 34H76Q84 34 90 42L98 56H108Q112 56 112 62V86Q112 92 106 92H14Q8 92 8 86V64Q8 58 14 58H22Z" fill={PAL.white} />
+        </Shade>
+        {/* Windows */}
+        <path d="M33 56L38 43Q40 40 44 40H56V56Z" fill={PAL.slate} />
+        <path d="M62 40H74Q80 40 84 45L92 56H62Z" fill={PAL.slate} />
+        <path d="M40 46L44 42" stroke={PAL.steel} strokeWidth="2.4" strokeLinecap="round" />
+        {/* Stripes */}
+        <path d="M8 66H112V76H8Z" fill={PAL.blue} />
+        <path d="M8 76H112V81H8Z" fill={PAL.red} />
+        {/* Bumper lamp */}
+        <rect x="104" y="60" width="7" height="5" rx="2" fill={PAL.yellowLight} />
+        <Wheel cx={32} cy={92} r={12} />
+        <Wheel cx={88} cy={92} r={12} />
+      </Move>
     </g>
   ),
 
@@ -606,31 +618,34 @@ export default {
 
   // "de ambulance": the ambulance — a Dutch yellow ambulance with the blue-and-yellow check
   // band, a blue light on the roof and the blue star of life
+  // On the intro card the ambulance drives in from the left and stops. Once and slowly (it drives in and stops: it happens once).
   'w.ambulance': () => (
     <g>
       <Ground cx={60} cy={102} rx={50} ry={4.5} />
-      <Motion x={36} y={28} dir={-90} spread={120} n={5} len={8} gap={12} color={PAL.sky} width={3.6} />
-      <rect x="28" y="24" width="18" height="8" rx="3" fill={PAL.blue} />
-      {/* Body: box at the back (left), cab at the front (right) */}
-      <path d="M14 30H78Q82 30 82 34V46H96Q100 46 103 50L110 62Q112 65 112 69V86Q112 92 106 92H14Q8 92 8 86V36Q8 30 14 30Z" fill={PAL.yellowShade} transform="translate(0 3)" />
-      <Shade color={PAL.yellowShade} opacity={1} at={[120, 80, 18, 34]}>
-        <path d="M14 30H78Q82 30 82 34V46H96Q100 46 103 50L110 62Q112 65 112 69V86Q112 92 106 92H14Q8 92 8 86V36Q8 30 14 30Z" fill={PAL.yellow} />
-      </Shade>
-      {/* Cab window */}
-      <path d="M86 52H96Q99 52 101 55L106 64H86Z" fill={PAL.slate} />
-      {/* Check band */}
-      {Array.from({ length: 13 }, (_, i) => (
-        <rect key={i} x={8 + i * 8} y={i % 2 ? 72 : 66} width="8" height="6" fill={PAL.blue} />
-      ))}
-      {Array.from({ length: 13 }, (_, i) => (
-        <rect key={`b${i}`} x={8 + i * 8} y={i % 2 ? 66 : 72} width="8" height="6" fill={PAL.yellowLight} />
-      ))}
-      {/* Star of life */}
-      <circle cx="40" cy="48" r="13" fill={PAL.white} />
-      <StarOfLife cx={40} cy={48} r={10} />
-      <Shine d="M13 44V38Q13 35 16 35" width={3} opacity={0.6} color={PAL.yellowShine} />
-      <Wheel cx={30} cy={92} r={12} />
-      <Wheel cx={90} cy={92} r={12} />
+      <Move kind="from" dx={-40} once>
+        <Motion x={36} y={28} dir={-90} spread={120} n={5} len={8} gap={12} color={PAL.sky} width={3.6} />
+        <rect x="28" y="24" width="18" height="8" rx="3" fill={PAL.blue} />
+        {/* Body: box at the back (left), cab at the front (right) */}
+        <path d="M14 30H78Q82 30 82 34V46H96Q100 46 103 50L110 62Q112 65 112 69V86Q112 92 106 92H14Q8 92 8 86V36Q8 30 14 30Z" fill={PAL.yellowShade} transform="translate(0 3)" />
+        <Shade color={PAL.yellowShade} opacity={1} at={[120, 80, 18, 34]}>
+          <path d="M14 30H78Q82 30 82 34V46H96Q100 46 103 50L110 62Q112 65 112 69V86Q112 92 106 92H14Q8 92 8 86V36Q8 30 14 30Z" fill={PAL.yellow} />
+        </Shade>
+        {/* Cab window */}
+        <path d="M86 52H96Q99 52 101 55L106 64H86Z" fill={PAL.slate} />
+        {/* Check band */}
+        {Array.from({ length: 13 }, (_, i) => (
+          <rect key={i} x={8 + i * 8} y={i % 2 ? 72 : 66} width="8" height="6" fill={PAL.blue} />
+        ))}
+        {Array.from({ length: 13 }, (_, i) => (
+          <rect key={`b${i}`} x={8 + i * 8} y={i % 2 ? 66 : 72} width="8" height="6" fill={PAL.yellowLight} />
+        ))}
+        {/* Star of life */}
+        <circle cx="40" cy="48" r="13" fill={PAL.white} />
+        <StarOfLife cx={40} cy={48} r={10} />
+        <Shine d="M13 44V38Q13 35 16 35" width={3} opacity={0.6} color={PAL.yellowShine} />
+        <Wheel cx={30} cy={92} r={12} />
+        <Wheel cx={90} cy={92} r={12} />
+      </Move>
     </g>
   ),
 
@@ -655,6 +670,7 @@ export default {
   ),
 
   // "de post": the mail — the orange street post box with letters going into its slot
+  // On the intro card the letters come down to the slot. Once and slowly (they are posted: it happens once).
   'w.post': () => (
     <g>
       <Ground cx={52} cy={106} rx={30} ry={4} />
@@ -670,9 +686,11 @@ export default {
       <rect x="40" y="66" width="28" height="14" rx="3" fill={PAL.orangeLight} />
       <path d="M44 73H64" stroke={PAL.orangeShade} strokeWidth="2.4" strokeLinecap="round" />
       <Shine d="M27 50V60" width={3} opacity={0.5} />
-      {/* Letters */}
-      <Envelope x={46} y={30} w={34} h={22} rot={-28} />
-      <Envelope x={78} y={14} w={30} h={20} rot={-16} />
+      <Move kind="from" dx={24} dy={-26} once>
+        {/* Letters */}
+        <Envelope x={46} y={30} w={34} h={22} rot={-28} />
+        <Envelope x={78} y={14} w={30} h={20} rot={-16} />
+      </Move>
     </g>
   ),
 

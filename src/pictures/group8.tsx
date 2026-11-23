@@ -382,19 +382,22 @@ const pictures: Record<string, () => JSX.Element> = {
   ),
 
   // "de damp": the fumes — green-grey vapour curls up from a bucket; Amina holds her nose shut
+  // On the intro card the fumes rise from the bucket (three rounds: fumes keep rising).
   'w.damp': () => (
     <g>
       <Ground cx={38} cy={106} rx={24} ry={4} />
       <Bucket x={38} y={104} s={1} />
-      <g fill="none" stroke={PAL.lime} strokeWidth="6" strokeLinecap="round" opacity=".95">
-        <path d="M28 52Q20 44 28 36T28 18" />
-        <path d="M40 52Q48 42 40 32T42 12" />
-        <path d="M50 54Q58 48 54 40" />
-      </g>
-      <g fill="none" stroke={PAL.leafShade} strokeWidth="2" strokeLinecap="round" opacity=".6">
-        <path d="M30 50Q24 44 30 37" />
-        <path d="M42 50Q48 42 42 34" />
-      </g>
+      <Move kind="sag" grow={0.3}>
+        <g fill="none" stroke={PAL.lime} strokeWidth="6" strokeLinecap="round" opacity=".95">
+          <path d="M28 52Q20 44 28 36T28 18" />
+          <path d="M40 52Q48 42 40 32T42 12" />
+          <path d="M50 54Q58 48 54 40" />
+        </g>
+        <g fill="none" stroke={PAL.leafShade} strokeWidth="2" strokeLinecap="round" opacity=".6">
+          <path d="M30 50Q24 44 30 37" />
+          <path d="M42 50Q48 42 42 34" />
+        </g>
+      </Move>
       <Bust who="amina" x={88} y={124} scale={0.5} expr="disappointed" squint />
       <Hand pose="fist" x={84} y={104} rotate={20} scale={0.52} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
     </g>
@@ -509,6 +512,7 @@ const pictures: Record<string, () => JSX.Element> = {
   },
 
   // "de rookplek": the smoking area — an outdoor bench next to a standing ashtray with a smoking cigarette
+  // On the intro card the smoke rises from the cigarette (three rounds: smoke keeps rising).
   'w.rookplek': () => (
     <g>
       <Ground cx={56} cy={105} rx={48} ry={4.5} />
@@ -526,8 +530,10 @@ const pictures: Record<string, () => JSX.Element> = {
       {/* Cigarette and smoke */}
       <rect x="76" y="44" width="20" height="5" rx="2.5" fill={PAL.white} transform="rotate(-14 86 46)" />
       <rect x="76" y="46" width="6" height="5" rx="2" fill={PAL.clay} transform="rotate(-14 86 46)" />
-      <circle cx="96" cy="43" r="2.4" fill={PAL.red} />
-      <path d="M98 38Q92 30 100 24T98 10" fill="none" stroke={PAL.mist} strokeWidth="4.5" strokeLinecap="round" />
+      <Move kind="sag" grow={0.3}>
+        <circle cx="96" cy="43" r="2.4" fill={PAL.red} />
+        <path d="M98 38Q92 30 100 24T98 10" fill="none" stroke={PAL.mist} strokeWidth="4.5" strokeLinecap="round" />
+      </Move>
     </g>
   ),
 
@@ -554,6 +560,7 @@ const pictures: Record<string, () => JSX.Element> = {
   ),
 
   // "de e-sigaret": the vape — a pod device with a purple liquid window, breathing out a little cloud
+  // On the intro card the vapour cloud puffs out from the mouthpiece (three rounds: vapour keeps coming).
   'w.esigaret': () => (
     <g>
       <Ground cx={52} cy={106} rx={20} ry={3.5} />
@@ -567,14 +574,16 @@ const pictures: Record<string, () => JSX.Element> = {
         <circle cx="49" cy="86" r="3" fill={PAL.ice} />
         <Shine d="M40 54V84" opacity={0.35} />
       </g>
-      {/* Vapour cloud */}
-      <g fill={PAL.mist}>
-        <circle cx="66" cy="28" r="6" />
-        <circle cx="76" cy="20" r="9" />
-        <circle cx="90" cy="18" r="10" />
-        <circle cx="86" cy="30" r="7" />
-      </g>
-      <circle cx="86" cy="13" r="4" fill={PAL.white} opacity=".7" />
+      <Move kind="grow" grow={0.3}>
+        {/* Vapour cloud */}
+        <g fill={PAL.mist}>
+          <circle cx="66" cy="28" r="6" />
+          <circle cx="76" cy="20" r="9" />
+          <circle cx="90" cy="18" r="10" />
+          <circle cx="86" cy="30" r="7" />
+        </g>
+        <circle cx="86" cy="13" r="4" fill={PAL.white} opacity=".7" />
+      </Move>
     </g>
   ),
 

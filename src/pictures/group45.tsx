@@ -148,9 +148,19 @@ export default {
   ),
 
   // "de zeep": the soap — a purple bar of soap on a dish, soap bubbles above it.
+  // On the intro card the bubbles rise up from behind the bar of soap (three rounds).
   'w.zeep': () => (
     <g>
       <Ground cx={60} cy={104} rx={46} ry={4} />
+      <Move kind="from" dy={26}>
+        <g fill="#e3f5ff" stroke={PAL.sky} strokeWidth="2.2">
+          <circle cx="42" cy="36" r="9" />
+          <circle cx="62" cy="22" r="7" />
+          <circle cx="78" cy="38" r="10" />
+          <circle cx="94" cy="20" r="5" />
+          <circle cx="24" cy="22" r="4.5" />
+        </g>
+      </Move>
       <ellipse cx="60" cy="94" rx="48" ry="9" fill={PAL.steel} />
       <ellipse cx="60" cy="91" rx="48" ry="9" fill={PAL.mist} />
       <rect x="20" y="58" width="80" height="34" rx="15" fill={PAL.purpleShade} />
@@ -159,13 +169,6 @@ export default {
       </Shade>
       <rect x="38" y="62" width="44" height="14" rx="7" fill="none" stroke={PAL.purple} strokeWidth="2.4" />
       <Shine d="M30 66Q31 59 40 58" width={3.5} opacity={0.7} />
-      <g fill="#e3f5ff" stroke={PAL.sky} strokeWidth="2.2">
-        <circle cx="42" cy="36" r="9" />
-        <circle cx="62" cy="22" r="7" />
-        <circle cx="78" cy="38" r="10" />
-        <circle cx="94" cy="20" r="5" />
-        <circle cx="24" cy="22" r="4.5" />
-      </g>
     </g>
   ),
 

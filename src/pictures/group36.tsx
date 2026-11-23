@@ -107,27 +107,30 @@ export default {
 
   // "de bestelbus": the delivery van — a white van side on, with an orange stripe, the cab in
   // front and no windows in the back
+  // On the intro card the van drives in from the left and stops. Once and slowly (it drives in and stops: it happens once).
   'w.bestelbus': () => (
     <g>
       <Ground cx={60} cy={104} rx={52} ry={4} />
-      <Shade color={PAL.paperShade} opacity={1} at={[60, 104, 72, 22]}>
-        <path d="M8 92V34Q8 26 16 26H78V92Z" fill={PAL.paper} />
-      </Shade>
-      <Shade color={PAL.mist} opacity={1} at={[112, 80, 16, 30]}>
-        <path d="M76 92V38Q76 34 80 34H92Q97 34 100 39L109 58Q112 61 112 68V92Z" fill={PAL.paper} />
-      </Shade>
-      {/* Cab window and the seam between cab and the back */}
-      <path d="M83 41H93L102 58H83Z" fill={TINT} stroke={TINT} strokeWidth="2" strokeLinejoin="round" />
-      <path d="M78 30V90" stroke={PAL.paperShade} strokeWidth="2.4" />
-      <path d="M44 30V90" stroke={PAL.paperShade} strokeWidth="1.8" />
-      {/* Orange stripe, bumper and light */}
-      <rect x="8" y="64" width="104" height="9" fill={PAL.orange} />
-      <rect x="8" y="70" width="104" height="3" fill={PAL.orangeShade} />
-      <rect x="104" y="78" width="8" height="6" rx="2" fill={PAL.yellow} />
-      <rect x="86" y="62" width="9" height="3" rx="1.5" fill={PAL.steel} />
-      <Shine d="M14 34Q15 31 19 31" opacity={0.9} width={3} />
-      <Wheel cx={30} cy={92} />
-      <Wheel cx={92} cy={92} />
+      <Move kind="from" dx={-40} once>
+        <Shade color={PAL.paperShade} opacity={1} at={[60, 104, 72, 22]}>
+          <path d="M8 92V34Q8 26 16 26H78V92Z" fill={PAL.paper} />
+        </Shade>
+        <Shade color={PAL.mist} opacity={1} at={[112, 80, 16, 30]}>
+          <path d="M76 92V38Q76 34 80 34H92Q97 34 100 39L109 58Q112 61 112 68V92Z" fill={PAL.paper} />
+        </Shade>
+        {/* Cab window and the seam between cab and the back */}
+        <path d="M83 41H93L102 58H83Z" fill={TINT} stroke={TINT} strokeWidth="2" strokeLinejoin="round" />
+        <path d="M78 30V90" stroke={PAL.paperShade} strokeWidth="2.4" />
+        <path d="M44 30V90" stroke={PAL.paperShade} strokeWidth="1.8" />
+        {/* Orange stripe, bumper and light */}
+        <rect x="8" y="64" width="104" height="9" fill={PAL.orange} />
+        <rect x="8" y="70" width="104" height="3" fill={PAL.orangeShade} />
+        <rect x="104" y="78" width="8" height="6" rx="2" fill={PAL.yellow} />
+        <rect x="86" y="62" width="9" height="3" rx="1.5" fill={PAL.steel} />
+        <Shine d="M14 34Q15 31 19 31" opacity={0.9} width={3} />
+        <Wheel cx={30} cy={92} />
+        <Wheel cx={92} cy={92} />
+      </Move>
     </g>
   ),
 

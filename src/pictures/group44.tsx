@@ -211,10 +211,13 @@ export default {
   ),
 
   // "heet": hot — a dark pot with red heat waves above it and a yellow warning triangle on it
+  // On the intro card the heat waves rise out of the pot, three rounds.
   'w.heet': () => (
     <g>
       <Ground cx={60} cy={104} rx={44} ry={5} />
-      <path d="M38 48Q30 40 38 31Q46 22 38 13M60 48Q52 40 60 31Q68 22 60 13M82 48Q74 40 82 31Q90 22 82 13" fill="none" stroke={PAL.red} strokeWidth="6.4" strokeLinecap="round" />
+      <Move kind="from" dy={22}>
+        <path d="M38 48Q30 40 38 31Q46 22 38 13M60 48Q52 40 60 31Q68 22 60 13M82 48Q74 40 82 31Q90 22 82 13" fill="none" stroke={PAL.red} strokeWidth="6.4" strokeLinecap="round" />
+      </Move>
       <rect x="10" y="68" width="18" height="8" rx="4" fill={PAL.slateDark} />
       <rect x="92" y="68" width="18" height="8" rx="4" fill={PAL.slateDark} />
       <Shade color={PAL.slateDark} opacity={0.9} at={[98, 82, 16, 30]}>

@@ -417,12 +417,15 @@ export default {
   ),
 
   // "de oproepkracht": the on-call worker — Bram gets a call: come to work (the day on the calendar).
+  // On the intro card the phone in his hand rocks: it buzzes (three rounds).
   'w.oproepkracht': () => (
     <g>
       <Bust who="bram" x={36} y={122} scale={0.64} expr="pleased" />
-      <g transform="rotate(14 62 72)">
-        <Phone x={54} y={54} w={16} h={30} />
-      </g>
+      <Move kind="turn" turn={-25} at={[59, 84]}>
+        <g transform="rotate(14 62 72)">
+          <Phone x={54} y={54} w={16} h={30} />
+        </g>
+      </Move>
       <Hand pose="hold" x={64} y={112} rotate={-8} scale={0.5} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} />
       <Bubble x={60} y={6} w={52} h={54} tail="left">
         <Calendar x={70} y={17} w={32} h={38} mark={6} />
@@ -431,13 +434,16 @@ export default {
   ),
 
   // "de gemeente": the town hall — a stately building with a clock tower and the Dutch flag.
+  // On the intro card the wind blows the flag out from the pole (three rounds).
   'w.gemeente': () => (
     <g>
       <Ground cx={60} cy={106} rx={50} ry={4} />
       <path d="M60 22V6" stroke={PAL.steel} strokeWidth="2.4" strokeLinecap="round" />
-      <rect x="60" y="6" width="20" height="4.5" fill={PAL.red} />
-      <rect x="60" y="10.5" width="20" height="4.5" fill={PAL.white} />
-      <rect x="60" y="15" width="20" height="4.5" fill={PAL.blue} />
+      <Move kind="grow" grow={0.4}>
+        <rect x="60" y="6" width="20" height="4.5" fill={PAL.red} />
+        <rect x="60" y="10.5" width="20" height="4.5" fill={PAL.white} />
+        <rect x="60" y="15" width="20" height="4.5" fill={PAL.blue} />
+      </Move>
       <path d="M46 36L60 22L74 36Z" fill={PAL.clayShade} stroke={PAL.clayShade} strokeWidth="3" strokeLinejoin="round" />
       <Shade color={PAL.cardShade} opacity={1} at={[76, 50, 6, 20]}>
         <rect x="48" y="34" width="24" height="30" fill={PAL.card} />

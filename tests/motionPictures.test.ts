@@ -97,6 +97,15 @@ const MOTION_ROUND4 = [
   'w.kieplift', 'w.lekken', 'w.opscheppen', 'w.persen', 'w.piepen', 'w.prikken', 'w.tetanusprik', 'w.toeteren', 'w.vastlopen', 'w.vulopening',
   'w.weegbrug', 'w.zwaailamp', 'w.adrenalinepen', 'w.afscheid', 'w.babyfoon', 'w.billendoekje', 'w.boertje', 'w.buitenspelen', 'w.observeren', 'w.puzzel',
   'w.spelen', 'w.temperaturen', 'w.traphekje', 'w.verschonen', 'w.verslikken', 'w.wennen',
+  // Round 5 (the owner, 23 November 2026: "de bus die je dan toch ziet rijden"): vehicles drive in once,
+  // animals move, smoke, steam and rain keep going.
+  'w.busje', 'w.plukkar', 'w.brandweer', 'w.fietser', 'w.rook', 'w.pauze', 'w.vrachtwagen', 'w.alseentrein', 'w.elektrischeauto', 'w.postkar',
+  'w.luis', 'w.pijpenstelen', 'w.rust', 'w.dankjewel', 'w.examen', 'w.bericht', 'w.meter', 'w.hitte', 'w.lawaai', 'w.band',
+  'w.olie', 'w.brand', 'w.heet', 'w.kopje', 'w.sirene', 'w.vuilniswagen', 'w.pijlwagen', 'w.zitmaaier', 'w.bladeren', 'w.roken',
+  'w.koffie', 'w.weer', 'w.politie', 'w.ambulance', 'w.post', 'w.rookplek', 'w.esigaret', 'w.damp', 'w.storing', 'w.bestelbus',
+  'w.kar', 'w.rollator', 'w.shovel', 'w.rups', 'w.fiets', 'w.bus', 'w.trein', 'w.eten', 'w.schoonmaakmiddel', 'w.zeep',
+  'w.thermoskan', 'w.schuim', 'w.gemeente', 'w.oproepkracht', 'w.vervuild', 'w.regenpak', 'w.asbest', 'w.spuitbus', 'w.controlepunt', 'w.aanhanger',
+  'w.kruiwagen', 'w.sluipwesp', 'w.kerntemperatuur',
 ];
 const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2, ...MOTION_ROUND3, ...MOTION_FUNCTION, ...MOTION_ROUND4];
 /** Abstract words whose picture is a moving one only (`picture: 'motion'`): [word, its lesson]. */

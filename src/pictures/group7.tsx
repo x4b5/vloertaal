@@ -444,16 +444,19 @@ export default {
 
   // "de storing": the breakdown — the same machine stopped: grey (off), a red flashing light, a
   // grey gear, smoke, and a big yellow warning sign in front
+  // On the intro card the smoke rises from the broken machine (three rounds: smoke keeps rising).
   'w.storing': () => (
     <g>
       <Machine fault />
-      {/* Smoke */}
-      <g fill={PAL.mist}>
-        <circle cx="30" cy="24" r="9" />
-        <circle cx="42" cy="18" r="10" />
-        <circle cx="52" cy="26" r="8" />
-      </g>
-      <circle cx="26" cy="22" r="3" fill={PAL.white} opacity=".6" />
+      <Move kind="sag" grow={0.3}>
+        {/* Smoke */}
+        <g fill={PAL.mist}>
+          <circle cx="30" cy="24" r="9" />
+          <circle cx="42" cy="18" r="10" />
+          <circle cx="52" cy="26" r="8" />
+        </g>
+        <circle cx="26" cy="22" r="3" fill={PAL.white} opacity=".6" />
+      </Move>
       {/* Warning sign, big, in front of the machine */}
       <path d="M50 52L76 98H24Z" fill={PAL.yellowShade} stroke={PAL.yellowShade} strokeWidth="9" strokeLinejoin="round" transform="translate(0 3)" />
       <path d="M50 52L76 98H24Z" fill={PAL.yellow} stroke={PAL.yellow} strokeWidth="9" strokeLinejoin="round" />

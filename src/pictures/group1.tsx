@@ -78,13 +78,17 @@ export default {
   ),
 
   // "dank je wel": Bram hands Jada a hot coffee; she takes it with a big smile and a hand on her heart.
+  // On the intro card: the steam rises from the coffee (three rounds: it keeps steaming; it comes up
+  // from behind the cup).
   'w.dankjewel': () => (
     <g>
       <Bust who="jada" x={40} y={118} scale={0.66} expr="joy" squint />
       {/* Jada's hand on her heart */}
       <Hand pose="open" x={34} y={124} rotate={28} scale={0.46} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} />
       {/* The coffee, held out by Bram's hand */}
-      <path d="M80 44Q76 38 80 32Q84 26 80 20M92 44Q88 38 92 32Q96 26 92 22" fill="none" stroke={PAL.mist} strokeWidth="3.6" strokeLinecap="round" />
+      <Move kind="slow" dy={22}>
+        <path d="M80 44Q76 38 80 32Q84 26 80 20M92 44Q88 38 92 32Q96 26 92 22" fill="none" stroke={PAL.mist} strokeWidth="3.6" strokeLinecap="round" />
+      </Move>
       <path d="M74 62Q66 62 66 70Q66 78 74 78" fill="none" stroke={PAL.skyShade} strokeWidth="5" strokeLinecap="round" />
       <Shade color={PAL.skyShade} opacity={1} at={[102, 70, 9, 30]}>
         <path d="M72 50H100L97 88Q96 92 92 92H80Q76 92 75 88Z" fill={PAL.sky} />

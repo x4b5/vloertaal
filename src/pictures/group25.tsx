@@ -211,6 +211,7 @@ export default {
   ),
 
   // "de hitte": the heat — a hot sun over a thermometer that is red to the top
+  // On the intro card the heat waves rise from the ground, three rounds.
   'w.hitte': () => (
     <g>
       {/* The sun */}
@@ -233,10 +234,12 @@ export default {
       <circle cx="88" cy="90" r="10" fill={PAL.red} />
       <path d="M78 40H84M78 52H84M78 64H84" stroke={PAL.line} strokeWidth="2" strokeLinecap="round" />
       {/* Heat waves */}
-      <g fill="none" stroke={PAL.orange} strokeWidth="4" strokeLinecap="round" opacity=".8">
-        <path d="M18 92Q23 86 28 92T38 92T48 92" />
-        <path d="M24 104Q29 98 34 104T44 104T54 104" />
-      </g>
+      <Move kind="from" dy={22}>
+        <g fill="none" stroke={PAL.orange} strokeWidth="4" strokeLinecap="round" opacity=".8">
+          <path d="M18 92Q23 86 28 92T38 92T48 92" />
+          <path d="M24 104Q29 98 34 104T44 104T54 104" />
+        </g>
+      </Move>
     </g>
   ),
 
@@ -445,17 +448,21 @@ export default {
   ),
 
   // "het lawaai": the noise — a loudspeaker blasting big red sound waves
+  // On the intro card the sound waves go out of the speaker, three rounds.
   'w.lawaai': () => (
     <g>
+      {/* The sound waves (behind the speaker, so they come out of it) */}
+      <Move kind="from" dx={-22}>
+        <g fill="none" stroke={PAL.red} strokeLinecap="round">
+          <path d="M68 44Q76 60 68 76" strokeWidth="7" />
+          <path d="M80 34Q94 60 80 86" strokeWidth="7" />
+          <path d="M92 24Q112 60 92 96" strokeWidth="7" />
+        </g>
+      </Move>
       <Shade color={PAL.slateDark} opacity={1} at={[60, 60, 6, 40]}>
         <path d="M12 46Q12 42 16 42H32L56 20V100L32 78H16Q12 78 12 74Z" fill={PAL.slate} />
       </Shade>
       <rect x="16" y="48" width="12" height="24" rx="3" fill={PAL.slateDark} />
-      <g fill="none" stroke={PAL.red} strokeLinecap="round">
-        <path d="M68 44Q76 60 68 76" strokeWidth="7" />
-        <path d="M80 34Q94 60 80 86" strokeWidth="7" />
-        <path d="M92 24Q112 60 92 96" strokeWidth="7" />
-      </g>
       <Motion x={60} y={18} dir={-60} spread={30} n={2} len={6} gap={4} color={PAL.red} width={3} />
     </g>
   ),
@@ -500,15 +507,21 @@ export default {
    * ------------------------------------------------------------------------------------- */
 
   // "de band": the tyre — a car tyre on its rim, with tread around the edge
+  // On the intro card the tyre rolls in from the left and stops: once, slowly.
   'w.band': () => (
     <g>
       <Ground cy={104} rx={30} />
-      <Tyre x={60} y={58} r={44} />
-      <Shine d="M28 40Q34 26 46 20" opacity={0.35} width={4} />
+      <Move kind="slow" dx={-40} once>
+        <Move kind="turn" turn={-52} at={[60, 58]}>
+          <Tyre x={60} y={58} r={44} />
+        </Move>
+        <Shine d="M28 40Q34 26 46 20" opacity={0.35} width={4} />
+      </Move>
     </g>
   ),
 
   // "de olie": the oil — a red oil can with a long spout; a golden drop of oil comes out
+  // On the intro card the drop comes out of the spout and drips down, three rounds (two, as a drop).
   'w.olie': () => (
     <g>
       <Ground cy={104} rx={34} />
@@ -524,8 +537,10 @@ export default {
       <path d="M44 81H68" stroke={PAL.yellowShade} strokeWidth="3" strokeLinecap="round" />
       <Shine d="M28 72Q28 66 33 64" opacity={0.6} />
       {/* The drop */}
-      <path d="M102 34Q109 46 109 51A7 7 0 0 1 95 51Q95 46 102 34Z" fill={PAL.yellowShade} />
-      <path d="M99 49Q99 46 101 44" stroke={PAL.yellowShine} strokeWidth="2" strokeLinecap="round" fill="none" />
+      <Move kind="drop" dy={-22}>
+        <path d="M102 34Q109 46 109 51A7 7 0 0 1 95 51Q95 46 102 34Z" fill={PAL.yellowShade} />
+        <path d="M99 49Q99 46 101 44" stroke={PAL.yellowShine} strokeWidth="2" strokeLinecap="round" fill="none" />
+      </Move>
     </g>
   ),
 

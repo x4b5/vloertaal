@@ -350,18 +350,24 @@ export default {
 
   // "de elektrische auto": the electric car — a sky-blue car on a yellow cable to a charging post,
   // and a big lightning bolt above it.
+  // On the intro card: the car drives in from the left and stops at the post, then the plug is in
+  // (once, slowly: it arrives to charge).
   'w.elektrischeauto': () => (
     <g>
       <Ground cx={58} cy={104} rx={50} ry={4} />
       {/* Charging post */}
       <rect x="98" y="52" width="12" height="52" rx="3.500" fill={PAL.slate} />
       <rect x="101" y="57" width="6" height="8" rx="2" fill={PAL.lime} />
-      <g transform="translate(52 93) scale(0.94)">
-        <Car body={PAL.sky} shade={PAL.skyShade} />
-      </g>
+      <Move kind="slow" dx={-44} once>
+        <g transform="translate(52 93) scale(0.94)">
+          <Car body={PAL.sky} shade={PAL.skyShade} />
+        </g>
+      </Move>
       {/* Cable and plug */}
-      <path d="M100 68C100 98 87 100 87 84" fill="none" stroke={PAL.yellow} strokeWidth="4.5" strokeLinecap="round" />
-      <rect x="82.500" y="74" width="9" height="10" rx="2.500" fill={PAL.slateDark} />
+      <Move kind="show">
+        <path d="M100 68C100 98 87 100 87 84" fill="none" stroke={PAL.yellow} strokeWidth="4.5" strokeLinecap="round" />
+        <rect x="82.500" y="74" width="9" height="10" rx="2.500" fill={PAL.slateDark} />
+      </Move>
       <Bolt x={50} y={30} s={40} />
     </g>
   ),

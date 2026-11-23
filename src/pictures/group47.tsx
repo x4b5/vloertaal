@@ -264,6 +264,7 @@ export default {
   ),
 
   // "het regenpak": the rain suit — a yellow jacket with a hood over yellow trousers, drops around
+  // On the intro card: the rain drops fall past the suit, three rounds (it keeps raining).
   'w.regenpak': () => (
     <g>
       <Shade color={PAL.yellowShade} opacity={1} at={[98, 60, 28, 60]}>
@@ -277,10 +278,12 @@ export default {
       <ellipse cx="60" cy="22" rx="9" ry="8" fill={PAL.orangeShade} />
       <path d="M60 32V64" stroke={PAL.yellowShade} strokeWidth="2.6" strokeLinecap="round" />
       <path d="M46 44H54M66 44H74" stroke={PAL.yellowShade} strokeWidth="2.6" strokeLinecap="round" />
-      <Drop x={20} y={24} s={0.8} />
-      <Drop x={98} y={22} s={0.8} />
-      <Drop x={104} y={88} s={0.8} />
-      <Drop x={18} y={92} s={0.8} />
+      <Move kind="from" dy={-22}>
+        <Drop x={20} y={24} s={0.8} />
+        <Drop x={98} y={22} s={0.8} />
+        <Drop x={104} y={88} s={0.8} />
+        <Drop x={18} y={92} s={0.8} />
+      </Move>
     </g>
   ),
 

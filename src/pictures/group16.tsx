@@ -83,9 +83,11 @@ export default {
 
   // "als een trein": like a train (going very well) — a cheerful red steam engine on the
   // rails, puffs of smoke trailing back.
+  // On the intro card: the train drives in from the left along the rail and stops (once, slowly).
   'w.alseentrein': () => (
     <g>
       <rect x="10" y="100" width="100" height="5" rx="2.5" fill={PAL.slate} />
+      <Move kind="slow" dx={-44} once>
       {/* Smoke */}
       <g fill={PAL.mist}>
         <circle cx="76" cy="22" r="8" />
@@ -121,6 +123,7 @@ export default {
       ))}
       <path d="M33 90L88 93" stroke={PAL.steel} strokeWidth="3.4" strokeLinecap="round" />
       <Shine d="M50 58Q47 64 48 72" width={3} opacity={0.5} />
+      </Move>
     </g>
   ),
 
@@ -287,8 +290,18 @@ export default {
 
   // "het regent pijpenstelen": it rains pipe stems (it rains very hard) — a grey cloud
   // dropping straight sticks.
+  // On the intro card: the rain falls out of the cloud (three rounds: it keeps raining). The drops are
+  // drawn under the cloud, so they come out from behind it.
   'w.pijpenstelen': () => (
     <g>
+      <Move kind="from" dy={-26}>
+        {[[30, 62, 24], [46, 74, 26], [62, 60, 26], [78, 76, 24], [94, 62, 24], [38, 92, 14], [70, 94, 13]].map(([x, y, h]) => (
+          <g key={`${x}-${y}`}>
+            <rect x={x - 3} y={y} width="6" height={h} rx="3" fill={PAL.card} />
+            <rect x={x} y={y} width="3" height={h} rx="1.5" fill={PAL.cardDark} />
+          </g>
+        ))}
+      </Move>
       <g>
         <circle cx="40" cy="34" r="16" fill={PAL.steel} />
         <circle cx="62" cy="26" r="19" fill={PAL.steel} />
@@ -297,12 +310,6 @@ export default {
         <rect x="26" y="46" width="70" height="8" rx="4" fill={PAL.slate} />
       </g>
       <Shine d="M30 32Q32 24 40 21" width={3.5} opacity={0.45} />
-      {[[30, 62, 24], [46, 74, 26], [62, 60, 26], [78, 76, 24], [94, 62, 24], [38, 92, 14], [70, 94, 13]].map(([x, y, h]) => (
-        <g key={`${x}-${y}`}>
-          <rect x={x - 3} y={y} width="6" height={h} rx="3" fill={PAL.card} />
-          <rect x={x} y={y} width="3" height={h} rx="1.5" fill={PAL.cardDark} />
-        </g>
-      ))}
     </g>
   ),
 

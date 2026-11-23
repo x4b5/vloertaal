@@ -263,12 +263,15 @@ export default {
 
   // "het bericht": the message — a phone in the hand with one new chat message on the screen
   // and a red "new" dot (not a paper letter).
+  // On the intro card: the new message comes up into the chat (once: it arrives).
   'w.bericht': () => (
     <g>
       <Phone x={32} y={10} w={56} h={92}>
-        <Bubble x={40} y={22} w={40} h={30} tail="left" fill={PAL.white} depth={PAL.mist}>
-          <path d="M47 32H73M47 42H64" stroke={PAL.line} strokeWidth="3.2" strokeLinecap="round" />
-        </Bubble>
+        <Move kind="from" dy={30} once>
+          <Bubble x={40} y={22} w={40} h={30} tail="left" fill={PAL.white} depth={PAL.mist}>
+            <path d="M47 32H73M47 42H64" stroke={PAL.line} strokeWidth="3.2" strokeLinecap="round" />
+          </Bubble>
+        </Move>
       </Phone>
       <circle cx={85} cy={15} r={9} fill={PAL.redShade} />
       <circle cx={85} cy={13.5} r={9} fill={PAL.red} />
@@ -370,6 +373,7 @@ export default {
   ),
 
   // "het examen": the exam — Amina at a desk with a test paper, a stopwatch running.
+  // On the intro card: the stopwatch's hand runs on (three rounds: the time keeps running).
   'w.examen': () => (
     <g>
       <Bust who="amina" x={46} y={100} scale={0.58} expr="thinking" />
@@ -400,7 +404,9 @@ export default {
       <circle cx={94} cy={32} r={18} fill={PAL.red} />
       <circle cx={94} cy={32} r={13} fill={PAL.white} />
       <path d="M94 32L94 19A13 13 0 0 1 106.3 36.2Z" fill={PAL.redLight} />
-      <path d="M94 32L104 26" stroke={PAL.ink} strokeWidth="3" strokeLinecap="round" />
+      <Move kind="turn" turn={-60} at={[94, 32]}>
+        <path d="M94 32L104 26" stroke={PAL.ink} strokeWidth="3" strokeLinecap="round" />
+      </Move>
       <circle cx={94} cy={32} r="2.4" fill={PAL.ink} />
     </g>
   ),
@@ -707,17 +713,21 @@ export default {
   },
 
   // "de rust": the rest (break) — Jada leans back with her eyes calmly closed and a hot cup of coffee.
+  // On the intro card: the steam rises from the coffee (three rounds: it keeps steaming). The steam is
+  // drawn under the mug, so it comes up from behind it.
   'w.rust': () => (
     <g>
       <g transform="rotate(-7 50 122)">
         <Bust who="jada" x={50} y={122} scale={0.72} emotion="rest" tilt={-6} bold />
       </g>
+      <Move kind="slow" dy={22}>
+        <path d="M80 72Q76 66 80 60Q84 54 80 48M90 70Q86 64 90 58Q94 52 90 46" fill="none" stroke={PAL.mist} strokeWidth="3.4" strokeLinecap="round" />
+      </Move>
       {/* Mug */}
       <path d="M96 84A8 8 0 0 1 96 100" fill="none" stroke={PAL.paperShade} strokeWidth="4.5" strokeLinecap="round" />
       <rect x={74} y={78} width={24} height={28} rx="5" fill={PAL.white} />
       <rect x={90} y={78} width={8} height={28} rx="4" fill={PAL.paperShade} />
       <ellipse cx={86} cy={80} rx={11} ry={3} fill={PAL.brown} />
-      <path d="M80 72Q76 66 80 60Q84 54 80 48M90 70Q86 64 90 58Q94 52 90 46" fill="none" stroke={PAL.mist} strokeWidth="3.4" strokeLinecap="round" />
       <Hand pose="hold" x={84} y={124} scale={0.8} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} />
     </g>
   ),

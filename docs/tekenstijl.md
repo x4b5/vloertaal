@@ -267,6 +267,21 @@ rustig omhoog laten gaan." Herhalen past bij het gebruik van een ding, niet bij 
 - Bij twijfel: vertelt de tekening een verhaaltje met een eind (voor → na), dan één keer; laat ze een
   ding aan het werk zien, dan drie keer.
 
+### Ronde 5: wat van nature beweegt (23 november 2026)
+
+De eigenaar: "Van mij mogen meer afbeeldingen beweging krijgen. Bijvoorbeeld de bus die je dan toch
+ziet rijden." Wat in het echt beweegt, mag dat nu ook op de woordkaart:
+
+- **Voertuigen** (bus, trein, vrachtwagen, auto, fiets, ambulance, kar …) rijden **één keer** rustig
+  binnen en stoppen waar ze getekend staan; de schaduw en de weg blijven staan.
+- **Dieren** lopen, kruipen of vliegen naar hun plek: één keer.
+- **Rook, stoom, damp, regen en druppels** gaan steeds door: drie rondes. Ze komen van achter het ding
+  vandaan (de stilstaande tekening verandert niet).
+- **Wind** (een vlag) en wat **draait** of **uitzendt** (een wiel, geluidsgolven): drie rondes.
+
+Stil blijven: personen, gebouwen en plaatsen, documenten en borden, gevoelens en tijd, en alles wat
+zou knipperen. 63 tekeningen bewegen sinds deze ronde (MOTION_ROUND4 in tests/motionPictures.test.ts).
+
 ## Template
 
 ```tsx
