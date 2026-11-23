@@ -311,6 +311,11 @@ const t: CultureTranslation = {
     'c.firefight.a.why': "Yangın olduğu söyleniyor: küçük, bu yüzden söndürücüyü getiriyorsun.", // nieuw, nalezen
     'c.permitwork.a.why': "Dışarıda kimin kalacağı soruluyor: sen, bir de görevin.", // nieuw, nalezen
     'c.vog.a.why': "VOG’un soruluyor: henüz yok, bir de ne beklediğin.", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'c.plantround.a.why': "Alarm soruluyor: ne çok yüksek, bir de nerede.", // nieuw, nalezen
+    'c.plantfault.a.why': "Çalıştırılabilir mi diye soruluyor: hayır, üzerinde hâlâ bir kilit var.", // nieuw, nalezen
+    'c.shiftwork.a.why': "Ne olduğu soruluyor: arıza, bir de nereye yazıldığı.", // nieuw, nalezen
+    'c.heatdust.a.why': "Telefon soruluyor: hayır, buradaki tehlike yüzünden.", // nieuw, nalezen
   },
 };
 

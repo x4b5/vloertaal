@@ -311,6 +311,11 @@ const t: CultureTranslation = {
     'c.firefight.a.why': "گفته شد که آتش است: کوچک است، پس کپسول را می‌آورد.", // nieuw, nalezen
     'c.permitwork.a.why': "پرسیده شد که کی بیرون می‌ماند: خودش، و وظیفه‌اش.", // nieuw, nalezen
     'c.vog.a.why': "دربارهٔ VOG او پرسیده شد: هنوز نی، و منتظر چه است.", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'c.plantround.a.why': "دربارهٔ آلارم پرسیده شد: چه چیز خیلی بلند است، و کجا.", // nieuw, nalezen
+    'c.plantfault.a.why': "پرسیده شد که آیا اجازه دارد روشن کند: نی، هنوز یک قفل بالای آن است.", // nieuw, nalezen
+    'c.shiftwork.a.why': "پرسیده شد که چه شد: خرابی، و اینکه کجا نوشته شده.", // nieuw, nalezen
+    'c.heatdust.a.why': "دربارهٔ تیلفون پرسیده شد: نی، به خاطر خطر اینجا.", // nieuw, nalezen
   },
 };
 

@@ -311,6 +311,11 @@ const t: CultureTranslation = {
     'c.firefight.a.why': "گفته‌اند آتش گرفته: کوچک است، پس کپسول را می‌آوری.", // nieuw, nalezen
     'c.permitwork.a.why': "پرسیده‌اند چه کسی بیرون می‌ماند: تو، و وظیفه‌ات.", // nieuw, nalezen
     'c.vog.a.why': "دربارهٔ VOG تو پرسیده‌اند: هنوز نه، و منتظر چه هستی.", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'c.plantround.a.why': "دربارهٔ هشدار پرسیده‌اند: چه چیزی خیلی بالاست، و کجا.", // nieuw, nalezen
+    'c.plantfault.a.why': "پرسیده‌اند می‌شود راه انداخت یا نه: نه، هنوز یک قفل رویش است.", // nieuw, nalezen
+    'c.shiftwork.a.why': "پرسیده‌اند چه اتفاقی افتاده: خرابی، و اینکه کجا نوشته شده.", // nieuw, nalezen
+    'c.heatdust.a.why': "دربارهٔ گوشی پرسیده‌اند: نه، به‌خاطر خطری که اینجا هست.", // nieuw, nalezen
   },
 };
 

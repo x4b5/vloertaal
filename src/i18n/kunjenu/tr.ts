@@ -178,6 +178,9 @@ const t: CultureTranslation = {
     // "Veiligheid op het werk" and the VOG (23 November 2026).
     'kjn.u.safework.1': "Güvenlik işaretleri ve yangınla ilgili bazı kelimeleri tanıyabilirim.", // nieuw, nalezen
     'kjn.u.safework.2': "Bir ürünün zehirli olup olmadığını sorabilirim.", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'kjn.u.process.1': "Basıncın çok yüksek olduğunu söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.process.2': "Devir teslimde ne olduğunu anlatabilirim.", // nieuw, nalezen
   },
 };
 
