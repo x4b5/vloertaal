@@ -207,6 +207,55 @@ const t: CultureTranslation = {
     'c.oilchange.a.why': "Perguntam quanto: os litros, e como verificar.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.a.why': "Perguntam se tem de ser novo: sim, e porquê.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "Perguntam o que é preciso fazer: ver na ordem de trabalho.", // nieuw, nalezen // nagelezen AI 22 nov
+    // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
+    'c.mowing.a.why': "Perguntam se se pode levar: sim, e o que fazer primeiro.", // nieuw, nalezen
+    'c.pruning.a.why': "Perguntam que ramos: só os secos.", // nieuw, nalezen
+    'c.hedge.a.why': "Perguntam a que altura: até à linha, não mais baixo.", // nieuw, nalezen
+    'c.chainsaw.a.why': "Perguntam se se pode: ainda não, e o que vem primeiro.", // nieuw, nalezen
+    'c.weeding.a.why': "Perguntam se é erva daninha: não, e o que fazer com ela.", // nieuw, nalezen
+    'c.planting.a.why': "Perguntam onde vai: o sítio no canteiro.", // nieuw, nalezen
+    'c.roadside.a.why': "Perguntam se se pode atravessar: não, esperar, e porquê.", // nieuw, nalezen
+    'c.litter.a.why': "Um morador pergunta quando: não se sabe, e quem sabe.", // nieuw, nalezen
+    'c.reception.a.why': "Um visitante tem uma reunião marcada: um momento, e um telefonema.", // nieuw, nalezen
+    'c.visitors.a.why': "Perguntam onde fica o casaco: o sítio, e onde é.", // nieuw, nalezen
+    'c.mailroom.a.why': "Perguntam para quem é: o departamento, e o piso.", // nieuw, nalezen
+    'c.meetingroom.a.why': "Perguntam a que horas: a hora, e o que tem de ser feito.", // nieuw, nalezen
+    'c.faults.a.why': "Perguntam porque está frio: o que está avariado, e quando vem ajuda.", // nieuw, nalezen
+    'c.repairs.a.why': "Perguntam se apita: sim, e porquê.", // nieuw, nalezen
+    'c.moving.a.why': "Perguntam para onde vai: a sala, e onde ver.", // nieuw, nalezen
+    'c.closing.a.why': "Perguntam se está alguém lá dentro: não, e o que se faz agora.", // nieuw, nalezen
+    'c.patrol.a.why': "Perguntam se se viu alguma coisa: sim, o quê, e onde.", // nieuw, nalezen
+    'c.access.a.why': "Pedem para entrar sem cartão: desculpe, sem cartão não.", // nieuw, nalezen
+    'c.cameras.a.why': "Perguntam o que se vê: quem, onde, e o que se faz.", // nieuw, nalezen
+    'c.report.a.why': "Perguntam o que vai no relatório: o quê, onde e quando.", // nieuw, nalezen
+    'c.evacuation.a.why': "Perguntam se já saíram todos: não, e quantos faltam.", // nieuw, nalezen
+    'c.firstaid.a.why': "Perguntam onde está o desfibrilhador: o sítio, e o que está ao lado.", // nieuw, nalezen
+    'c.shoplifting.a.why': "Perguntam se se pode revistar uma mala: não, e quem faz isso.", // nieuw, nalezen
+    'c.aggression.a.why': "Perguntam porque não: a razão, dita com calma.", // nieuw, nalezen
+    'c.hygienelock.a.why': "Perguntam por um relógio: não, e a regra por trás.", // nieuw, nalezen
+    'c.allergens.a.why': "Perguntam se pode ir junto: não, e porquê.", // nieuw, nalezen
+    'c.coldroom.a.why': "Perguntam porque apita: a causa, e o que fazer.", // nieuw, nalezen
+    'c.foreignbody.a.why': "Perguntam o que fazer: a quem mostrar.", // nieuw, nalezen
+    'c.cutting.a.why': "Perguntam quanto: o peso, e onde ver.", // nieuw, nalezen
+    'c.labels.a.why': "Perguntam que data: quando, e onde ver.", // nieuw, nalezen
+    'c.linecleaning.a.why': "Perguntam se está limpo: ainda não, e o que falta.", // nieuw, nalezen
+    'c.haccp.a.why': "Perguntam porquê: para saber que a comida é segura.", // nieuw, nalezen
+    'c.binlorry.a.why': "Perguntam se se pode ir atrás, pendurado: não, e onde ir.", // nieuw, nalezen
+    'c.reversing.a.why': "Pedem ajuda: sim, onde se fica, e o que se faz.", // nieuw, nalezen
+    'c.wastesorting.a.why': "Perguntam para onde vai: o contentor, e porquê.", // nieuw, nalezen
+    'c.wastesafety.a.why': "Perguntam o que fazer depois de um corte: lavar, e avisar.", // nieuw, nalezen
+    'c.yard.a.why': "Perguntam para onde vai: o contentor, e onde está.", // nieuw, nalezen
+    'c.hazardous.a.why': "Perguntam o que tem dentro: não se sabe, por isso fica de lado.", // nieuw, nalezen
+    'c.baler.a.why': "Perguntam se se pode ver: não, e o que vem primeiro.", // nieuw, nalezen
+    'c.shovel.a.why': "Perguntam se se pode passar: só quando o condutor vê.", // nieuw, nalezen
+    'c.nappies.a.why': "Perguntam quando: a hora, e onde está escrita.", // nieuw, nalezen
+    'c.mealtime.a.why': "Perguntam se ele pode comer: não, porquê, e onde ver.", // nieuw, nalezen
+    'c.naptime.a.why': "Perguntam se ela dorme: sim, desde quando, e que se vai ver.", // nieuw, nalezen
+    'c.playtime.a.why': "Perguntam se uma criança pode brincar: sim, onde, e o que depois.", // nieuw, nalezen
+    'c.pickup.a.why': "Perguntam quem vem buscar: a pessoa, e que ela está na lista.", // nieuw, nalezen
+    'c.childsafety.a.why': "Perguntam se ela caiu: sim, o que tem, e a quem se liga.", // nieuw, nalezen
+    'c.sickchild.a.why': "Perguntam como ele está: o que se vê, e o que se faz.", // nieuw, nalezen
+    'c.grouprules.a.why': "Perguntam se se pode ir sem outro adulto: sim, mas avisar primeiro um colega.", // nieuw, nalezen
   },
 };
 

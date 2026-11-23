@@ -139,6 +139,31 @@ const t: CultureTranslation = {
     'kjn.u.kweek.2': "Consigo perguntar se um tomate está maduro que chegue.", // nieuw, nalezen
     'kjn.u.carservice.1': "Consigo dizer que a luz de aviso está acesa.", // nieuw, nalezen
     'kjn.u.carservice.2': "Consigo perguntar quanto óleo tem de levar.", // nieuw, nalezen
+    // The new sectors (23 November 2026).
+    'kjn.u.mowing.1': "Consigo dizer que a relva está molhada demais.", // nieuw, nalezen
+    'kjn.u.mowing.2': "Consigo perguntar que ramos têm de sair.", // nieuw, nalezen
+    'kjn.u.planting.1': "Consigo dizer que há vidros partidos.", // nieuw, nalezen
+    'kjn.u.planting.2': "Consigo perguntar se posso atravessar a estrada.", // nieuw, nalezen
+    'kjn.u.frontdesk.1': "Consigo cumprimentar e ajudar um visitante.", // nieuw, nalezen
+    'kjn.u.frontdesk.2': "Consigo perguntar para quem é uma encomenda.", // nieuw, nalezen
+    'kjn.u.maintenance.1': "Consigo comunicar uma avaria.", // nieuw, nalezen
+    'kjn.u.maintenance.2': "Consigo perguntar para onde tem de ir uma secretária.", // nieuw, nalezen
+    'kjn.u.guarding.1': "Consigo pedir para ver a identificação de alguém.", // nieuw, nalezen
+    'kjn.u.guarding.2': "Consigo dizer pelo rádio o que vejo.", // nieuw, nalezen
+    'kjn.u.incidents.1': "Consigo ligar para o 112 e dizer o que se passa.", // nieuw, nalezen
+    'kjn.u.incidents.2': "Consigo falar com calma com um cliente zangado.", // nieuw, nalezen
+    'kjn.u.foodhygiene.1': "Consigo dizer que a câmara frigorífica está quente demais.", // nieuw, nalezen
+    'kjn.u.foodhygiene.2': "Consigo perguntar se isto tem frutos secos.", // nieuw, nalezen
+    'kjn.u.foodline.1': "Consigo dizer que a etiqueta não está certa.", // nieuw, nalezen
+    'kjn.u.foodline.2': "Consigo perguntar quanto tem de ir numa caixinha.", // nieuw, nalezen
+    'kjn.u.collection.1': "Consigo ajudar o motorista a fazer marcha-atrás.", // nieuw, nalezen
+    'kjn.u.collection.2': "Consigo dizer que um contentor de lixo está pesado demais.", // nieuw, nalezen
+    'kjn.u.recycling.1': "Consigo dizer a um visitante para onde vai o lixo dele.", // nieuw, nalezen
+    'kjn.u.recycling.2': "Consigo dizer que a prensa está presa.", // nieuw, nalezen
+    'kjn.u.toddlers.1': "Consigo dizer que vou mudar a fralda a uma criança.", // nieuw, nalezen
+    'kjn.u.toddlers.2': "Consigo perguntar se uma criança já está a dormir.", // nieuw, nalezen
+    'kjn.u.daycare.1': "Consigo contar a um pai ou a uma mãe como correu o dia.", // nieuw, nalezen
+    'kjn.u.daycare.2': "Consigo perguntar quem vem buscar uma criança.", // nieuw, nalezen
   },
 };
 
