@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { PAL, Shine } from '../kit';
+import { Move, PAL, Shine } from '../kit';
 
 /** The foam: [cx, cy, r] bubbles, back ones first. */
 const BUBBLES: [number, number, number][] = [

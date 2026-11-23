@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from '../kit';
+import { Ground, Move, PAL, Shade, Shine } from '../kit';
 
 export default {
   // "vervuild": contaminated (something dirty got in) — a steel mixing bowl of white dough, with dark

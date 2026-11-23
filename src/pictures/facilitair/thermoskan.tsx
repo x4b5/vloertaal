@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from '../kit';
+import { Ground, Move, PAL, Shade, Shine } from '../kit';
 
 export default {
   // "de thermoskan": the thermos jug — a tall, slim steel pump jug: a black pump top with a red push
