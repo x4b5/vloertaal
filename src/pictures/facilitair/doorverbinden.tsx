@@ -10,7 +10,7 @@ export default {
   'w.doorverbinden': () => (
     <g strokeLinejoin="round">
       {/* Henk with the handset at his ear */}
-      <Bust who="henk" x={84} y={124} scale={0.56} expr="pleased" bold />
+      <Bust who="henk" x={82} y={124} scale={0.62} expr="pleased" bold />
       <path d="M100 58Q108 58 108 66V82Q108 90 100 90" fill="none" stroke={PAL.slate} strokeWidth="7" strokeLinecap="round" />
       <rect x="96" y="52" width="10" height="12" rx="4" fill={PAL.slate} />
       <rect x="96" y="84" width="10" height="12" rx="4" fill={PAL.slate} />
@@ -33,7 +33,7 @@ export default {
       <Shine d="M15 70H26" width={2.4} opacity={0.5} />
       {/* The call goes through */}
       <Move kind="grow" grow={0.15} once>
-        <CurveArrow from={[22, 54]} to={[70, 32]} bend={22} color={PAL.sky} width={8} head={14} />
+        <CurveArrow from={[26, 60]} to={[90, 36]} bend={24} color={PAL.sky} width={8} head={14} />
       </Move>
     </g>
   ),
