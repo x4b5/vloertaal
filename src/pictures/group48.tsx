@@ -203,12 +203,13 @@ export default {
   ),
 
   // "de rook": the smoke — grey clouds that rise from a glowing lump and grow bigger on the way up.
+  // Moves: the clouds rise from the lump (three rounds: it keeps going). The lump is drawn after
+  // the smoke, so it hides the clouds at the start; the still picture is the same.
   'w.rook': () => (
     <g>
       <Ground cx={60} cy={106} rx={24} ry={3.5} />
-      <ellipse cx="60" cy="101" rx="17" ry="6" fill={PAL.slateDark} />
-      <ellipse cx="56" cy="99" rx="8" ry="3" fill={PAL.orange} />
       <circle cx="58" cy="87" r="7" fill={PAL.steel} />
+      <Move kind="slow" dy={24}>
       <circle cx="50" cy="73" r="10" fill={PAL.steel} />
       <circle cx="63" cy="70" r="9" fill={PAL.steel} />
       <Shade color={PAL.steel} opacity={1} at={[76, 62, 40, 16]}>
@@ -220,6 +221,9 @@ export default {
         </g>
       </Shade>
       <Shine d="M49 26Q54 18 63 17" color={PAL.paper} width={4} opacity={0.7} />
+      </Move>
+      <ellipse cx="60" cy="101" rx="17" ry="6" fill={PAL.slateDark} />
+      <ellipse cx="56" cy="99" rx="8" ry="3" fill={PAL.orange} />
     </g>
   ),
 

@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from '../kit';
+import { Ground, Move, PAL, Shade, Shine } from '../kit';
 
 /** A wheel of the lorry: black tyre, steel hub. */
 const wheel = (cx: number, cy: number, r = 10) => (
@@ -13,9 +13,11 @@ export default {
   // "de vuilniswagen": the bin lorry, the garbage truck — seen from the side, facing left: a light grey cab
   // with an orange beacon on its roof, a big round green body (the compactor) with a yellow stripe, and the
   // dark slanted loading hopper at the back; three wheels (not the red cab and grey box of "de vrachtwagen").
+  // On the intro card the lorry drives in from the right and stops: once, slowly.
   'w.vuilniswagen': () => (
     <g strokeLinejoin="round">
       <Ground cx={60} cy={103} rx={54} ry={4} />
+      <Move kind="slow" dx={40} once>
       {/* The chassis */}
       <rect x="12" y="78" width="98" height="9" rx="2" fill={PAL.slate} />
       {/* The rounded compactor body */}
@@ -42,6 +44,7 @@ export default {
       {wheel(24, 92)}
       {wheel(74, 92)}
       {wheel(94, 92)}
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

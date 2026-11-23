@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shine, r1 } from '../kit';
+import { Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view: one unit of depth goes this far right and up. */
 const DX = 0.6;
@@ -8,6 +8,7 @@ const DY = -0.8;
 export default {
   // "de aanhanger": the trailer — an open box trailer with grey steel sides on one wheel, a drawbar with a
   // coupling to the left, red lights at the back, and a load of green branches sticking out of it.
+  // On the intro card: the trailer rolls in from the right, drawbar first, and stops. Once, slowly.
   'w.aanhanger': () => {
     const d = 22;
     const ox = r1(d * DX);
@@ -15,6 +16,7 @@ export default {
     return (
       <g strokeLinejoin="round">
         <Ground cx={60} cy={104} rx={52} ry={4} />
+        <Move kind="slow" dx={44} once>
         {/* The drawbar, the coupling and the small jockey wheel */}
         <path d="M24 82L6 90" stroke={PAL.slate} strokeWidth="5" strokeLinecap="round" />
         <circle cx="8" cy="89" r="4.4" fill={PAL.slateDark} />
@@ -41,6 +43,7 @@ export default {
         <path d="M46 86A14 14 0 0 1 74 86Z" fill={PAL.slate} />
         <circle cx="60" cy="92" r="11" fill={PAL.ink} />
         <circle cx="60" cy="92" r="4.4" fill={PAL.steel} />
+        </Move>
       </g>
     );
   },

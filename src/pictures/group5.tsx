@@ -110,12 +110,15 @@ export default {
   },
 
   // "de pauze": the break — a hot mug of coffee, the hard hat put down beside it.
+  // Moves: the steam rises out of the coffee (three rounds: it keeps going).
   'w.pauze': () => (
     <g>
       <Ground cx={58} cy={104} rx={44} ry={5} />
       <HardHat x={30} y={94} s={0.3} />
-      {/* Steam */}
-      <path d="M58 40Q52 32 58 24Q64 16 58 8M74 40Q68 32 74 24Q80 16 74 10" fill="none" stroke={PAL.mist} strokeWidth="4.5" strokeLinecap="round" />
+      {/* Steam: drawn before the mug, so the mug hides it as it rises out of the coffee */}
+      <Move kind="slow" dy={22}>
+        <path d="M58 40Q52 32 58 24Q64 16 58 8M74 40Q68 32 74 24Q80 16 74 10" fill="none" stroke={PAL.mist} strokeWidth="4.5" strokeLinecap="round" />
+      </Move>
       {/* Handle */}
       <path d="M90 58Q106 58 106 72Q106 86 88 88" fill="none" stroke={PAL.paperShade} strokeWidth="8" strokeLinecap="round" />
       <Shade color={PAL.paperShade} opacity={1} at={[96, 76, 12, 40]}>

@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL } from '../kit';
+import { Ground, Move, PAL } from '../kit';
 
 /** A big leaf from its stalk at (x, y), `len` long, pointing `deg` degrees (0 = right): blade, midrib, side veins and stalk. */
 const leaf = (x: number, y: number, len: number, deg: number, c: string, rib: string) => (
@@ -13,15 +13,24 @@ const leaf = (x: number, y: number, len: number, deg: number, c: string, rib: st
 export default {
   // "de bladeren": the leaves — a heap of big fallen autumn leaves on the ground, in orange, yellow,
   // red-brown and a last green one, each with its midrib, veins and stalk.
+  // On the intro card the last two leaves drift down onto the heap: once, slowly.
   'w.bladeren': () => (
     <g strokeLinejoin="round" strokeLinecap="round">
       <Ground cx={60} cy={102} rx={50} ry={5} />
       {leaf(22, 90, 34, -30, PAL.clay, PAL.clayShade)}
       {leaf(96, 92, 34, -150, PAL.yellow, PAL.yellowShade)}
-      {leaf(48, 70, 36, -80, PAL.leaf, PAL.leafShade)}
+      <Move kind="slow" dx={-24} dy={-52} once>
+        <Move kind="turn" turn={40} at={[48, 70]}>
+          {leaf(48, 70, 36, -80, PAL.leaf, PAL.leafShade)}
+        </Move>
+      </Move>
       {leaf(36, 100, 38, -10, PAL.orange, PAL.orangeShade)}
       {leaf(86, 100, 36, -160, PAL.red, PAL.redShade)}
-      {leaf(62, 96, 38, -70, PAL.yellow, PAL.yellowShade)}
+      <Move kind="slow" dx={20} dy={-60}>
+        <Move kind="turn" turn={-35} at={[62, 96]}>
+          {leaf(62, 96, 38, -70, PAL.yellow, PAL.yellowShade)}
+        </Move>
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

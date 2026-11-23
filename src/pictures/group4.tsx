@@ -161,27 +161,30 @@ export default {
   ),
 
   // "de kar": the cart — a flat warehouse trolley with a handle, two boxes on it
+  // On the intro card the cart rolls in from the right (pushed by its handle) and stops. Once and slowly (it rolls in and stops: it happens once).
   'w.kar': () => (
     <g>
       <Ground cx={58} cy={104} rx={46} ry={4.5} />
-      {/* Handle */}
-      <path d="M92 84V36Q92 28 100 28" fill="none" stroke={PAL.slate} strokeWidth="6" strokeLinecap="round" />
-      <path d="M98 28H104" stroke={PAL.orange} strokeWidth="7" strokeLinecap="round" />
-      {/* Boxes */}
-      <Box x={18} y={48} w={36} h={32} depth={9} />
-      <Box x={58} y={60} w={24} h={20} depth={7} tape={false} />
-      {/* Platform */}
-      <rect x="12" y="80" width="86" height="10" rx="3" fill={PAL.blue} />
-      <rect x="12" y="86" width="86" height="4" rx="2" fill={PAL.blueShade} />
-      <path d="M16 82.5H94" stroke={PAL.blueLight} strokeWidth="2" strokeLinecap="round" />
-      {/* Caster wheels */}
-      {[26, 84].map((wx) => (
-        <g key={wx}>
-          <rect x={wx - 3} y="89" width="6" height="6" fill={PAL.slate} />
-          <circle cx={wx} cy="97" r="7" fill={PAL.slateDark} />
-          <circle cx={wx} cy="97" r="2.6" fill={PAL.mist} />
-        </g>
-      ))}
+      <Move kind="from" dx={36} once>
+        {/* Handle */}
+        <path d="M92 84V36Q92 28 100 28" fill="none" stroke={PAL.slate} strokeWidth="6" strokeLinecap="round" />
+        <path d="M98 28H104" stroke={PAL.orange} strokeWidth="7" strokeLinecap="round" />
+        {/* Boxes */}
+        <Box x={18} y={48} w={36} h={32} depth={9} />
+        <Box x={58} y={60} w={24} h={20} depth={7} tape={false} />
+        {/* Platform */}
+        <rect x="12" y="80" width="86" height="10" rx="3" fill={PAL.blue} />
+        <rect x="12" y="86" width="86" height="4" rx="2" fill={PAL.blueShade} />
+        <path d="M16 82.5H94" stroke={PAL.blueLight} strokeWidth="2" strokeLinecap="round" />
+        {/* Caster wheels */}
+        {[26, 84].map((wx) => (
+          <g key={wx}>
+            <rect x={wx - 3} y="89" width="6" height="6" fill={PAL.slate} />
+            <circle cx={wx} cy="97" r="7" fill={PAL.slateDark} />
+            <circle cx={wx} cy="97" r="2.6" fill={PAL.mist} />
+          </g>
+        ))}
+      </Move>
     </g>
   ),
 

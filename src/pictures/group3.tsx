@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Box, ExclaimMark, Ground, Hand, Motion, PAL, SKIN, Shade, Shine, Tick } from './kit';
+import { Box, ExclaimMark, Ground, Hand, Motion, Move, PAL, SKIN, Shade, Shine, Tick } from './kit';
 import { Bust } from './bust';
 
 /** Word pictures, group 3 (keyed by word id). See docs/tekenstijl.md and ./kit.tsx. */
@@ -234,10 +234,13 @@ export default {
   ),
 
   // "de brand": the fire — big flames coming out of a cardboard box
+  // On the intro card the flames flare up out of the box, three rounds.
   'w.brand': () => (
     <g>
       <Ground cx={58} cy={104} rx={40} ry={5} />
-      <Flame cx={58} base={74} h={64} />
+      <Move kind="sag" grow={0.5}>
+        <Flame cx={58} base={74} h={64} />
+      </Move>
       <Box x={24} y={68} w={56} h={34} depth={14} tape={false} />
     </g>
   ),

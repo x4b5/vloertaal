@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { PAL, Shade, Shine } from '../kit';
+import { Move, PAL, Shade, Shine } from '../kit';
 
 /** Legs and antennae of the aphids. */
 const LEG = PAL.slate;
@@ -42,6 +42,7 @@ const aphid = (big: boolean) => (
 export default {
   // "de luis": the aphid — a big friendly lime-green aphid (round body, six legs, two antennae, two
   // little back tubes) sitting on a big dark-green leaf, with two small aphids nearby.
+  // On the intro card: the big aphid walks down the leaf to its place, head first (once, slowly).
   'w.luis': () => (
     <g strokeLinejoin="round">
       {/* The leaf, from its stalk at the bottom left to its tip at the top right */}
@@ -54,7 +55,9 @@ export default {
       <g transform="translate(84 32) rotate(-30) scale(0.34)">{aphid(false)}</g>
       <g transform="translate(88 70) rotate(-60) scale(0.3)">{aphid(false)}</g>
       {/* The big aphid */}
-      <g transform="translate(54 60) rotate(-30) scale(1.08)">{aphid(true)}</g>
+      <Move kind="slow" dx={28} dy={-16} once>
+        <g transform="translate(54 60) rotate(-30) scale(1.08)">{aphid(true)}</g>
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

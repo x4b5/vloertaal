@@ -344,9 +344,11 @@ export default {
   ),
 
   // "de telefoon": the phone — a plain smartphone, screen on, nothing on it.
+  // On the intro card the phone buzzes: it rocks on its bottom edge, three rounds (no flash).
   'w.telefoon': () => (
     <g>
       <Ground cy={108} rx={30} ry={4} />
+      <Move kind="turn" turn={25} at={[61, 106]}>
       <rect x={92} y={30} width={4} height={14} rx="2" fill={PAL.slateDark} />
       <rect x={92} y={50} width={4} height={20} rx="2" fill={PAL.slateDark} />
       <Phone x={30} y={8} w={62} h={98} screen={PAL.sky}>
@@ -354,6 +356,7 @@ export default {
         <path d="M34 72L88 34V48L34 86Z" fill={PAL.white} opacity=".1" />
         <rect x={51} y={96} width={20} height="3" rx="1.5" fill={PAL.white} opacity=".6" />
       </Phone>
+      </Move>
     </g>
   ),
 

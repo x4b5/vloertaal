@@ -1,12 +1,14 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from '../kit';
+import { Ground, Move, PAL, Shade, Shine } from '../kit';
 
 export default {
   // "de kruiwagen": the wheelbarrow — a green tub seen a little from above (its dark inside showing),
   // one black wheel at the front left, two long dark handles going back up to the right, and a leg.
+  // On the intro card: the wheelbarrow rolls in from the right, wheel first, and stops. Once, slowly.
   'w.kruiwagen': () => (
     <g strokeLinejoin="round" strokeLinecap="round">
       <Ground cx={62} cy={104} rx={46} ry={4} />
+      <Move kind="slow" dx={40} once>
       {/* The frame: from the wheel back under the tub to the handles, and the leg */}
       <path d="M26 90L110 62" stroke={PAL.slate} strokeWidth="5" />
       <path d="M78 76L84 102M74 76L68 102" stroke={PAL.slate} strokeWidth="4.5" />
@@ -21,6 +23,7 @@ export default {
       {/* The wheel */}
       <circle cx="26" cy="90" r="13" fill={PAL.slateDark} />
       <circle cx="26" cy="90" r="5" fill={PAL.steel} />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

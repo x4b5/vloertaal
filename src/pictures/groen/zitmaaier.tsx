@@ -1,16 +1,17 @@
 import type { JSX } from 'react';
-import { Ground, PAL, SKIN, Shade, Shine } from '../kit';
+import { Ground, Move, PAL, SKIN, Shade, Shine } from '../kit';
 
 export default {
   // "de zitmaaier": the ride-on mower — a small green tractor-like mower from the side, a worker in a
   // hi-vis shirt sitting on its yellow seat with the hands on the steering wheel, the grey cutting deck
   // under its belly, a big wheel at the back and a small one at the front.
-  // Still: a vehicle as a noun ("maaien" in the same lesson is the one that moves).
+  // On the intro card the mower drives in from the left and stops: once, slowly (a vehicle drives, 23 November 2026).
   'w.zitmaaier': () => {
     const [s, sh] = SKIN.amina;
     return (
       <g strokeLinejoin="round" strokeLinecap="round">
         <Ground cx={60} cy={105} rx={48} ry={4} />
+        <Move kind="slow" dx={-40} once>
         {/* The cutting deck under the belly */}
         <rect x="40" y="88" width="52" height="11" rx="4" fill={PAL.steel} />
         <rect x="40" y="94" width="52" height="5" rx="2.5" fill={PAL.slate} opacity=".5" />
@@ -42,6 +43,7 @@ export default {
         <circle cx="98" cy="96" r="9" fill={PAL.slateDark} />
         <circle cx="98" cy="96" r="3.6" fill={PAL.yellow} />
         <Shine d="M24 74Q26 71 34 71" width={3} opacity={0.5} />
+        </Move>
       </g>
     );
   },

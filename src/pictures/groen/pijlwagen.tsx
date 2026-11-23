@@ -1,13 +1,15 @@
 import type { JSX } from 'react';
-import { Ground, PAL, Shade, Shine } from '../kit';
+import { Ground, Move, PAL, Shade, Shine } from '../kit';
 
 export default {
   // "de pijlwagen": the arrow trailer (a trailer with a big arrow that warns drivers) — a yellow road trailer
   // on one wheel, red-and-white stripes at the back, and on a post a big black board with a lit yellow arrow
   // pointing down to the left and four amber lamps in its corners.
+  // On the intro card the trailer rolls in from the right (towed by its drawbar) and stops: once, slowly.
   'w.pijlwagen': () => (
     <g strokeLinejoin="round">
       <Ground cx={60} cy={104} rx={50} ry={4} />
+      <Move kind="slow" dx={40} once>
       {/* The drawbar and its coupling */}
       <path d="M30 88L10 96" stroke={PAL.slate} strokeWidth="5" strokeLinecap="round" />
       <circle cx="10" cy="96" r="4" fill={PAL.slateDark} />
@@ -32,6 +34,7 @@ export default {
         <circle key={`${x}${y}`} cx={x} cy={y} r="4" fill={PAL.orange} />
       ))}
       <Shine d="M30 82H52" color={PAL.yellowShine} width={2.6} opacity={0.8} />
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

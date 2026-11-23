@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Box, Ground, PAL, Shine } from '../kit';
+import { Box, Ground, Move, PAL, Shine } from '../kit';
 
 /** An envelope standing up in the tray, seen from its long side. */
 const env = (x: number, y: number, rot: number, fill: string, key: string) => (
@@ -12,9 +12,11 @@ const env = (x: number, y: number, rot: number, fill: string, key: string) => (
 export default {
   // "de postkar": the post trolley — a blue trolley on four wheels with a push handle on the right: a
   // deep tray on top full of envelopes standing up, a parcel on the bottom shelf.
+  // On the intro card: the trolley rolls in from the right, handle first behind it, and stops (once, slowly).
   'w.postkar': () => (
     <g strokeLinejoin="round">
       <Ground cx={58} cy={105} rx={50} ry={4} />
+      <Move kind="slow" dx={40} once>
       {/* The push handle */}
       <path d="M94 88V30Q94 24 100 24H106" fill="none" stroke={PAL.slate} strokeWidth="5" strokeLinecap="round" />
       {/* The frame posts */}
@@ -39,6 +41,7 @@ export default {
           <circle cx={x} cy="101" r="1.8" fill={PAL.steel} />
         </g>
       ))}
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;

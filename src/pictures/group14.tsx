@@ -129,11 +129,13 @@ const CARDIGAN = (color: string, shade: string): ReactNode => (
 export default {
   // "de fiets": the bike — a Dutch city bike seen from the side: upright handlebar, step-through
   // frame, chain guard, mudguards and a rack on the back
+  // On the intro card the bike rides in from the left and stops, its wheels turning (once, slowly).
   'w.fiets': () => (
     <g>
       <Ground cx={60} cy={104} rx={50} ry={4} />
-      <Wheel cx={29} cy={80} r={21} />
-      <Wheel cx={91} cy={80} r={21} />
+      <Move kind="slow" dx={-40} once>
+      <Move kind="turn" turn={-120} at={[29, 80]}><Wheel cx={29} cy={80} r={21} /></Move>
+      <Move kind="turn" turn={-120} at={[91, 80]}><Wheel cx={91} cy={80} r={21} /></Move>
       {/* Mudguards */}
       <path d="M8 76A21 21 0 0 1 44 64M76 64A21 21 0 0 1 112 76" fill="none" stroke={PAL.blueShade} strokeWidth="3.4" strokeLinecap="round" />
       {/* Rack */}
@@ -155,6 +157,7 @@ export default {
       <rect x="86" y="46" width="9" height="7" rx="2.4" fill={PAL.slate} />
       <circle cx="95" cy="49.5" r="2.6" fill={PAL.yellow} />
       <Shine d="M54 75Q60 62 72 56" width={2} opacity={0.5} />
+      </Move>
     </g>
   ),
 
@@ -204,9 +207,11 @@ export default {
   ),
 
   // "de bus": the bus — a city bus from the side, big front window, doors, route number on top
+  // On the intro card the bus drives in from the right and stops (once, slowly).
   'w.bus': () => (
     <g>
       <Ground cx={60} cy={104} rx={52} ry={4} />
+      <Move kind="slow" dx={44} once>
       <rect x="30" y="20" width="58" height="10" rx="4" fill={PAL.mist} />
       <rect x="8" y="27" width="104" height="66" rx="11" fill={PAL.redShade} transform="translate(0 2)" />
       <Shade color={PAL.redShade} opacity={1} at={[60, 98, 70, 14]}>
@@ -234,14 +239,17 @@ export default {
       <circle cx="90" cy="94" r="10" fill={PAL.ink} />
       <circle cx="30" cy="94" r="4" fill={PAL.steel} />
       <circle cx="90" cy="94" r="4" fill={PAL.steel} />
+      </Move>
     </g>
   ),
 
   // "de trein": the train — a yellow Dutch train on the rails, with its pantograph on the overhead wire
+  // On the intro card the train drives in from the right under the wire and stops (once, slowly).
   'w.trein': () => (
     <g>
       {/* Overhead wire and pantograph */}
       <path d="M8 13H112" stroke={PAL.steel} strokeWidth="1.8" strokeLinecap="round" />
+      <Move kind="slow" dx={44} once>
       <path d="M64 31L76 22L66 14M58 14H74" fill="none" stroke={PAL.slate} strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
       {/* Body */}
       <path d="M12 86L16 52Q20 33 40 31H110V86Z" fill={PAL.yellowShade} transform="translate(0 2)" />
@@ -266,6 +274,7 @@ export default {
       <circle cx="40" cy="94" r="5" fill={PAL.slateDark} />
       <circle cx="86" cy="94" r="5" fill={PAL.slateDark} />
       <circle cx="98" cy="94" r="5" fill={PAL.slateDark} />
+      </Move>
       <path d="M14 104V100M30 104V100M46 104V100M62 104V100M78 104V100M94 104V100M110 104V100" stroke={PAL.wood} strokeWidth="5" strokeLinecap="round" />
       <path d="M6 99.5H114" stroke={PAL.steel} strokeWidth="3.4" strokeLinecap="round" />
     </g>
@@ -541,10 +550,13 @@ export default {
 
   // "het eten": the food — a hot plate of food: potatoes, vegetables and meat, steaming, with a
   // fork and knife
+  // On the intro card the steam rises up from behind the plate (three rounds).
   'w.eten': () => (
     <g>
       <Ground cx={60} cy={96} rx={50} ry={6} />
-      <path d="M44 34Q38 26 44 18M60 32Q54 24 60 14M76 34Q70 26 76 18" fill="none" stroke={PAL.mist} strokeWidth="3.6" strokeLinecap="round" />
+      <Move kind="from" dy={22}>
+        <path d="M44 34Q38 26 44 18M60 32Q54 24 60 14M76 34Q70 26 76 18" fill="none" stroke={PAL.mist} strokeWidth="3.6" strokeLinecap="round" />
+      </Move>
       <ellipse cx="60" cy="74" rx="46" ry="22" fill={PAL.steel} />
       <ellipse cx="60" cy="70" rx="46" ry="22" fill={PAL.white} />
       <ellipse cx="60" cy="71" rx="34" ry="15" fill={PAL.paperShade} />
@@ -660,15 +672,18 @@ export default {
   ),
 
   // "het schoonmaakmiddel": the cleaning product — a spray bottle of cleaner, spraying, with sparkles
+  // On the intro card the spray comes out of the nozzle (three rounds).
   'w.schoonmaakmiddel': () => (
     <g>
       <Ground cx={56} cy={106} rx={28} ry={4} />
       {/* Spray */}
-      <circle cx="96" cy="24" r="2.6" fill={PAL.sky} />
-      <circle cx="104" cy="31" r="2.6" fill={PAL.sky} />
-      <circle cx="102" cy="17" r="2.2" fill={PAL.sky} />
-      <circle cx="110" cy="23" r="2.2" fill={PAL.sky} />
-      <circle cx="96" cy="35" r="2" fill={PAL.sky} />
+      <Move kind="from" dx={-22}>
+        <circle cx="96" cy="24" r="2.6" fill={PAL.sky} />
+        <circle cx="104" cy="31" r="2.6" fill={PAL.sky} />
+        <circle cx="102" cy="17" r="2.2" fill={PAL.sky} />
+        <circle cx="110" cy="23" r="2.2" fill={PAL.sky} />
+        <circle cx="96" cy="35" r="2" fill={PAL.sky} />
+      </Move>
       {/* Trigger head */}
       <path d="M58 30Q54 42 60 50" fill="none" stroke={PAL.blueShade} strokeWidth="6" strokeLinecap="round" />
       <path d="M40 32Q40 18 54 18H82Q88 18 88 24V30H74L72 38H44Z" fill={PAL.blue} />

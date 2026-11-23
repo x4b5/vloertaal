@@ -234,22 +234,25 @@ export default {
   ),
 
   // "de rollator": the walking frame with wheels — a red frame, two small wheels, a seat, a basket, hand grips.
+  // On the intro card the walking frame rolls in from the left and stops. Once and slowly (it rolls in and stops: it happens once).
   'w.rollator': () => (
     <g>
       <Ground cx={60} cy={107} rx={44} ry={4} />
-      {/* Basket in front, under the seat */}
-      <path d="M64 60H98L93 82H69Z" fill={PAL.mist} stroke={PAL.mist} strokeWidth="2" strokeLinejoin="round" />
-      <path d="M73 62L75 82M81 62V82M90 62L87 82M66 71H96" stroke={PAL.steel} strokeWidth="1.8" strokeLinecap="round" />
-      {/* Frame: two legs, and the post up to the hand grip */}
-      <path d="M60 56L30 94M58 56L90 94" stroke={PAL.redShade} strokeWidth="8" strokeLinecap="round" />
-      <path d="M68 58L40 18" stroke={PAL.red} strokeWidth="8" strokeLinecap="round" />
-      <path d="M20 26Q28 34 38 27" fill="none" stroke={PAL.steel} strokeWidth="3" strokeLinecap="round" />
-      <path d="M42 17H20" stroke={PAL.slate} strokeWidth="9" strokeLinecap="round" />
-      {/* Seat */}
-      <rect x="42" y="52" width="50" height="10" rx="4.5" fill={PAL.slate} />
-      <path d="M47 55H86" stroke={PAL.steel} strokeWidth="2.2" strokeLinecap="round" />
-      <Castor cx={30} cy={94} r={12} />
-      <Castor cx={90} cy={94} r={12} />
+      <Move kind="from" dx={-32} once>
+        {/* Basket in front, under the seat */}
+        <path d="M64 60H98L93 82H69Z" fill={PAL.mist} stroke={PAL.mist} strokeWidth="2" strokeLinejoin="round" />
+        <path d="M73 62L75 82M81 62V82M90 62L87 82M66 71H96" stroke={PAL.steel} strokeWidth="1.8" strokeLinecap="round" />
+        {/* Frame: two legs, and the post up to the hand grip */}
+        <path d="M60 56L30 94M58 56L90 94" stroke={PAL.redShade} strokeWidth="8" strokeLinecap="round" />
+        <path d="M68 58L40 18" stroke={PAL.red} strokeWidth="8" strokeLinecap="round" />
+        <path d="M20 26Q28 34 38 27" fill="none" stroke={PAL.steel} strokeWidth="3" strokeLinecap="round" />
+        <path d="M42 17H20" stroke={PAL.slate} strokeWidth="9" strokeLinecap="round" />
+        {/* Seat */}
+        <rect x="42" y="52" width="50" height="10" rx="4.5" fill={PAL.slate} />
+        <path d="M47 55H86" stroke={PAL.steel} strokeWidth="2.2" strokeLinecap="round" />
+        <Castor cx={30} cy={94} r={12} />
+        <Castor cx={90} cy={94} r={12} />
+      </Move>
     </g>
   ),
 

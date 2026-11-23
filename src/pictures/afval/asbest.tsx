@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Ground, PAL } from '../kit';
+import { Ground, Move, PAL } from '../kit';
 
 /** The front edge of the corrugated sheet: waves from x0 to x1 at y, `n` waves. */
 const wave = (x0: number, x1: number, y: number, n: number, a: number) => {
@@ -16,6 +16,7 @@ export default {
   // "het asbest": the asbestos (a dangerous material in old buildings) — a broken piece of a grey
   // corrugated roof sheet (the old asbestos-cement "golfplaat"), its broken corner giving off a cloud
   // of grey dust (the danger: the dust that comes off when it breaks).
+  // On the intro card: the dust rises from the broken corner, three rounds (it keeps coming off).
   'w.asbest': () => (
     <g strokeLinejoin="round" strokeLinecap="round">
       <Ground cx={58} cy={102} rx={48} ry={4.5} />
@@ -35,6 +36,7 @@ export default {
       <path d={`${wave(10, 86, 92, 6, 4.5)}V98${wave(86, 10, 98, 6, -4.5).replace(/^M[^Q]*/, '')}Z`} fill={PAL.steel} />
       <path d={wave(10, 86, 92, 6, 4.5)} fill="none" stroke={PAL.mist} strokeWidth="2" />
       {/* The dust from the broken corner */}
+      <Move kind="slow" dx={-8} dy={22}>
       <g fill={PAL.line}>
         <circle cx="102" cy="34" r="7" opacity=".85" />
         <circle cx="90" cy="24" r="5.4" opacity=".7" />
@@ -42,6 +44,7 @@ export default {
         <circle cx="80" cy="14" r="3.4" opacity=".5" />
         <circle cx="92" cy="9" r="2.6" opacity=".45" />
       </g>
+      </Move>
     </g>
   ),
 } as Record<string, () => JSX.Element>;
