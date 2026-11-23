@@ -66,6 +66,19 @@ export const TRACK_TWINS: readonly (readonly [taal: string, regels: string])[] =
   ['u.carservice', 'r.werkplaats'],
   ['u.shop', 'r.winkel'],
   ['u.shopfloor', 'r.winkel'],
+  // The six sectors of 23 November 2026: each pair of own units with the sector's rules unit.
+  ['u.mowing', 'r.groen'],
+  ['u.planting', 'r.groen'],
+  ['u.frontdesk', 'r.facilitair'],
+  ['u.maintenance', 'r.facilitair'],
+  ['u.guarding', 'r.beveiliging'],
+  ['u.incidents', 'r.beveiliging'],
+  ['u.foodhygiene', 'r.voeding'],
+  ['u.foodline', 'r.voeding'],
+  ['u.collection', 'r.afval'],
+  ['u.recycling', 'r.afval'],
+  ['u.toddlers', 'r.kinderopvang'],
+  ['u.daycare', 'r.kinderopvang'],
 ];
 
 /**

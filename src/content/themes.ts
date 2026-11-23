@@ -93,7 +93,8 @@ export const THEME_UNITS: Record<ThemeId, Record<Track, string[]>> = {
     // Voedingsindustrie, Afval en recycling and Kinderopvang (the same day).
     // The second own units of Schoonmaak, Horeca, Zorg and Winkel (23 November 2026).
     taal: ['u.warehouse', 'u.build', 'u.factory', 'u.care', 'u.horeca', 'u.clean', 'u.kas', 'u.tech', 'u.garage', 'u.shop', 'u.delivery', 'u.afbouw', 'u.ruwbouw', 'u.machines', 'u.install', 'u.montage', 'u.kweek', 'u.carservice', 'u.mowing', 'u.planting', 'u.frontdesk', 'u.maintenance', 'u.guarding', 'u.incidents', 'u.foodhygiene', 'u.foodline', 'u.collection', 'u.recycling', 'u.toddlers', 'u.daycare', 'u.housekeeping', 'u.cooking', 'u.carework', 'u.shopfloor'],
-    regels: ['r.warehouse', 'r.build', 'r.factory', 'r.care', 'r.horeca', 'r.clean', 'r.kas', 'r.techniek', 'r.werkplaats', 'r.winkel'],
+    // The rules units of the six sectors of 23 November 2026 (curriculum, deel 9).
+    regels: ['r.warehouse', 'r.build', 'r.factory', 'r.care', 'r.horeca', 'r.clean', 'r.kas', 'r.techniek', 'r.werkplaats', 'r.winkel', 'r.groen', 'r.facilitair', 'r.beveiliging', 'r.voeding', 'r.afval', 'r.kinderopvang'],
   },
 };
 

@@ -35,6 +35,12 @@ import { be as clean } from './units/sector-clean';
 import { be as kas } from './units/sector-kas';
 import { be as techniek } from './units/sector-techniek';
 import { be as werkplaats } from './units/sector-werkplaats';
+import { be as groen } from './units/sector-groen';
+import { be as facilitair } from './units/sector-facilitair';
+import { be as beveiliging } from './units/sector-beveiliging';
+import { be as voeding } from './units/sector-voeding';
+import { be as afval } from './units/sector-afval';
+import { be as kinderopvang } from './units/sector-kinderopvang';
 
 /**
  * The Belgian work rules (Vlaanderen), docs/werkregels-belgie.md. Every Dutch unit has a file in
@@ -52,6 +58,9 @@ const BY_NL: Record<string, BeUnit | undefined> = {
   'r.duurzaam': duurzaam, 'r.schrijven': schrijven, 'r.loopbaan': loopbaan,
   'r.warehouse': warehouse, 'r.build': build, 'r.factory': factory, 'r.care': care, 'r.horeca': horeca,
   'r.clean': clean, 'r.kas': kas, 'r.techniek': techniek, 'r.werkplaats': werkplaats,
+  // The six sectors of 23 November 2026 (docs/werkregels-belgie.md, §6): Belgian from the start.
+  'r.groen': groen, 'r.facilitair': facilitair, 'r.beveiliging': beveiliging, 'r.voeding': voeding,
+  'r.afval': afval, 'r.kinderopvang': kinderopvang,
 };
 
 /**

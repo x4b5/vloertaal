@@ -19,6 +19,7 @@ import { duurzaamUnit } from './units/duurzaam';
 import { schrijvenUnit } from './units/schrijven';
 import { loopbaanUnit } from './units/loopbaan';
 import { buildUnit, careUnit, cleanUnit, factoryUnit, horecaUnit, kasUnit, techniekUnit, warehouseUnit, werkplaatsUnit } from './units/sector';
+import { afvalUnit, beveiligingUnit, facilitairUnit, groenUnit, kinderopvangUnit, voedingUnit } from './units/sector2';
 
 /**
  * The Werkregels track (docs/werkregels-curriculum.md), in path order: zoeken → beginnen →
@@ -56,6 +57,11 @@ export const rulesUnits: RuleUnit[] = [
  * Short sector units (curriculum, deel 6): 2 lessons each, in the order of src/content/sectors.ts.
  * Techniek and the garage (curriculum, deel 7) come after: their sector cards came later (in the
  * group "Bouw en techniek", src/content/sectors.ts). The winkel last: a basis unit until it got a
- * sector card (31 October 2026, group "Winkel en horeca"); it has 3 lessons.
+ * sector card (31 October 2026, group "Winkel en horeca"); it has 3 lessons. The six sectors of 23
+ * November 2026 (curriculum, deel 9: groen, facilitair, beveiliging, voeding, afval, kinderopvang;
+ * ./units/sector2.ts) after it, in the order of src/content/sectors.ts.
  */
-export const sectorRulesUnits: RuleUnit[] = [warehouseUnit, buildUnit, factoryUnit, careUnit, horecaUnit, cleanUnit, kasUnit, techniekUnit, werkplaatsUnit, winkelUnit];
+export const sectorRulesUnits: RuleUnit[] = [
+  warehouseUnit, buildUnit, factoryUnit, careUnit, horecaUnit, cleanUnit, kasUnit, techniekUnit, werkplaatsUnit, winkelUnit,
+  groenUnit, facilitairUnit, beveiligingUnit, voedingUnit, afvalUnit, kinderopvangUnit,
+];

@@ -84,27 +84,26 @@ export const sectors: Sector[] = [
   // Groen (green-space work: hoveniers, groenvoorziening, the plantsoenendienst) and Facilitair
   // (reception, post, meeting rooms, faults, moving; cleaning stays Schoonmaak), the owner's
   // request of 23 November 2026, each with two own units. Machines, the road and lifting (Safety);
-  // the work day outside and in the building (Time, Asking for help). Neither has a work-rules
-  // unit of its own yet: r.kas and r.clean belong to Tuinbouw and Schoonmaak (a rules unit names one
-  // sector), so the rules track gives the basis units only. Appended, so every existing sector keeps its path.
+  // the work day outside and in the building (Time, Asking for help). Their work-rules units
+  // r.groen and r.facilitair (curriculum, deel 9) came the same day. Appended, so every existing sector keeps its path.
   { id: 'green', nl: 'Groen', key: 'sectorGreen', units: ['u.mowing', 'u.planting'], focus: ['u.safety', 'u.time'],
-    rules: { units: [], focus: ['r.veilig', 'r.tijd'] } },
+    rules: { units: ['r.groen'], focus: ['r.veilig', 'r.tijd'] } },
   { id: 'facility', nl: 'Facilitair', key: 'sectorFacility', units: ['u.frontdesk', 'u.maintenance'], focus: ['u.help', 'u.safety'],
-    rules: { units: [], focus: ['r.veilig', 'r.samen'] } },
+    rules: { units: ['r.facilitair'], focus: ['r.veilig', 'r.samen'] } },
   // Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (the owner's request of
   // 23 November 2026), each with two own units. Security, food and waste: danger, machines and
   // traffic (Safety) and shifts, nights and early rounds (Time). Childcare: working together in a
-  // group and with parents (Samenwerken) and sick children (Health), as Zorg. None has a work-rules
-  // unit of its own yet (a rules unit names one sector: r.factory is Productie's, r.care Zorg's), so
-  // the rules track gives the basis units only. Appended, so every existing sector keeps its path.
+  // group and with parents (Samenwerken) and sick children (Health), as Zorg. Their work-rules units
+  // r.beveiliging, r.voeding, r.afval and r.kinderopvang (curriculum, deel 9) came the same day.
+  // Appended, so every existing sector keeps its path.
   { id: 'security', nl: 'Beveiliging', key: 'sectorSecurity', units: ['u.guarding', 'u.incidents'], focus: ['u.safety', 'u.time'],
-    rules: { units: [], focus: ['r.veilig', 'r.tijd'] } },
+    rules: { units: ['r.beveiliging'], focus: ['r.veilig', 'r.tijd'] } },
   { id: 'food', nl: 'Voedingsindustrie', key: 'sectorFood', units: ['u.foodhygiene', 'u.foodline'], focus: ['u.safety', 'u.time'],
-    rules: { units: [], focus: ['r.veilig', 'r.tijd'] } },
+    rules: { units: ['r.voeding'], focus: ['r.veilig', 'r.tijd'] } },
   { id: 'waste', nl: 'Afval en recycling', key: 'sectorWaste', units: ['u.collection', 'u.recycling'], focus: ['u.safety', 'u.time'],
-    rules: { units: [], focus: ['r.veilig', 'r.tijd'] } },
+    rules: { units: ['r.afval'], focus: ['r.veilig', 'r.tijd'] } },
   { id: 'childcare', nl: 'Kinderopvang', key: 'sectorChildcare', units: ['u.toddlers', 'u.daycare'], focus: ['u.teamwork', 'u.health'],
-    rules: { units: [], focus: ['r.samen', 'r.ziek'] } },
+    rules: { units: ['r.kinderopvang'], focus: ['r.samen', 'r.ziek'] } },
 ];
 
 /** A sector's own units and focus units in one track. */

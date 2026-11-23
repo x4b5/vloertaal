@@ -27,11 +27,12 @@ export default {
       ))}
       {/* The cheese block, pushed down along the face */}
       <Move kind="from" dy={-30}>
-        <path d="M44 58H66L72 52V72L66 78H44Z" fill={PAL.yellowShade} />
-        <path d="M44 58L50 52H72L66 58Z" fill={PAL.yellowLight} />
-        <rect x="42" y="58" width="24" height="20" rx="1.5" fill={PAL.yellow} />
-        <circle cx="50" cy="65" r="2.6" fill={PAL.yellowShade} />
-        <circle cx="59" cy="72" r="2" fill={PAL.yellowShade} />
+        <path d="M68 52L76 45V71L68 78Z" fill={PAL.yellowShade} />
+        <path d="M40 52L48 45H76L68 52Z" fill={PAL.yellowLight} />
+        <rect x="40" y="52" width="28" height="26" rx="1.5" fill={PAL.yellow} />
+        <circle cx="48" cy="61" r="3" fill={PAL.yellowShade} />
+        <circle cx="60" cy="70" r="2.4" fill={PAL.yellowShade} />
+        <circle cx="62" cy="58" r="1.8" fill={PAL.yellowShade} />
       </Move>
     </g>
   ),

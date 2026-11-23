@@ -25,12 +25,10 @@ export default {
       <path d="M8 78H94V86H8Z" fill={PAL.cardShade} />
       <path d="M94 78L112 58V66L94 86Z" fill={PAL.cardDark} />
       <Shine d="M18 75L30 62" width={2.6} opacity={0.4} />
-      {/* The cubes: back row, front row, two on top */}
-      {[34, 50, 66, 82].map((x, i) => cube(x, 54, 14, `b${i}`))}
-      {[26, 42, 58, 74].map((x, i) => cube(x, 64, 14, `f${i}`))}
-      {[38, 56].map((x, i) => cube(x, 44, 14, `t${i}`))}
-      {cube(64, 34, 14, 'top')}
-      <Shine d="M30 66H36" width={2.2} opacity={0.6} />
+      {/* The cubes, a little apart: back row, front row, two on top */}
+      {[40, 58, 76].map((x, i) => cube(x, 52, 13, `b${i}`))}
+      {[26, 44, 62, 80].map((x, i) => cube(x, 64, 13, `f${i}`))}
+      {[50, 68].map((x, i) => cube(x, 38, 13, `t${i}`))}
     </g>
   ),
 } as Record<string, () => JSX.Element>;
