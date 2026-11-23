@@ -8,14 +8,36 @@ import { workUnits } from './work';
  * the sixteen lessons of Groen and Facilitair and the thirty-two of Beveiliging, Voedingsindustrie,
  * Afval en recycling and Kinderopvang (23 November 2026; translated the same day), and the twenty
  * lessons of the second units of Schoonmaak, Horeca, Zorg and Winkel and "Werken via een uitzendbureau"
- * (23 November 2026; translated the same day).
+ * (23 November 2026; translated the same day). Again from the twenty-six lessons of the basis units at four
+ * lessons (23 November 2026, below).
  */
-export const TRANSLATION_PENDING_LESSONS: readonly string[] = [];
+export const TRANSLATION_PENDING_LESSONS: readonly string[] = [
+  // The basis units at four lessons (23 November 2026): two new lessons each in Tijd en rooster, Als
+  // het misgaat (both in curriculum.ts), Solliciteren, Wonen en papieren, Loon, Verlof, Ziekte,
+  // Uitbuiting herkennen, Naar je werk, Je werk afronden, Stage lopen, Meedoen in Nederland and Online
+  // op je werk (work.ts basisFour). Translations to follow.
+  'roster', 'breaks', 'wound', 'callhelp',
+  'vacancy', 'result', 'residence', 'newhome', 'payparts', 'latepay', 'holiday', 'special',
+  'unwell', 'injury', 'debt', 'inspection', 'carpool', 'train', 'checklist', 'leavesite',
+  'stagedays', 'stageend', 'neighbours', 'join', 'workphotos', 'device',
+];
+
+/**
+ * The words of the pending lessons of curriculum.ts ("Tijd en rooster", "Als het misgaat"): the
+ * words of work.ts are found by their lesson below, but this file cannot load curriculum.ts (it loads
+ * this one), so they are listed here.
+ */
+const PENDING_CURRICULUM_WORDS: readonly string[] = [
+  'w.weekrooster', 'w.roosterapp', 'w.beschikbaar', 'w.wijziging', 'w.invallen', 'w.vrijedag',
+  'w.lunchpauze', 'w.rusttijd', 'w.werkdag', 'w.urenlijst', 'w.eerderweg', 'w.achterelkaar',
+  'w.wond', 'w.verband', 'w.koelen', 'w.snee', 'w.flauwvallen', 'w.oogdouche',
+  'w.hulpdiensten', 'w.straatnaam', 'w.huisnummer', 'w.aanspreekbaar', 'w.opwachten', 'w.aandelijn',
+];
 
 /** Units whose title waits for its translations too. */
 const PENDING_UNITS: readonly string[] = [];
 
-const pendingIds = new Set<string>(PENDING_UNITS);
+const pendingIds = new Set<string>([...PENDING_UNITS, ...PENDING_CURRICULUM_WORDS]);
 for (const l of workUnits.flatMap((u) => u.lessons)) {
   if (!TRANSLATION_PENDING_LESSONS.includes(l.id.slice(2))) continue;
   pendingIds.add(l.id);
@@ -26,6 +48,9 @@ for (const l of workUnits.flatMap((u) => u.lessons)) {
 const OWN_ID = TRANSLATION_PENDING_LESSONS.length ? new RegExp(`^[lsc]\\.(${TRANSLATION_PENDING_LESSONS.join('|')})(\\.|$)`) : null;
 
 /** Is the translation of this content id (a unit, lesson, word, sentence, chat line, tip text, or a
- *  "Kun je nu" line of a pending unit: "kjn.u.ruwbouw.1") still to come? */
-export const translationPending = (id: string): boolean =>
-  pendingIds.has(id) || (OWN_ID?.test(id) ?? false) || PENDING_UNITS.some((u) => id.startsWith(`kjn.${u}.`));
+ *  "Kun je nu" line of a pending unit: "kjn.u.ruwbouw.1") still to come? The Belgian twin of a pending
+ *  id ("be.l.neighbours", "be.c.join.b": src/content/taalBe) waits with it. */
+export const translationPending = (id: string): boolean => {
+  const nl = id.startsWith('be.') ? id.slice(3) : id;
+  return pendingIds.has(nl) || (OWN_ID?.test(nl) ?? false) || PENDING_UNITS.some((u) => nl.startsWith(`kjn.${u}.`));
+};

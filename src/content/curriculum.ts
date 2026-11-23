@@ -362,6 +362,57 @@ export const units: Unit[] = [
           },
         ],
       },
+      // "Als het misgaat" at four lessons (23 November 2026, the owner's request: the basis units to
+      // four lessons). Small wounds and burns, and calling 112. Already words of other lessons, used
+      // here in a sentence or the chat only: "de brandwond" (l.weld), "drukken" (l.onoff), "de
+      // ambulance" (l.doctor), "de ingang" (l.arrive) and "reageren" (l.texting). No BHV’er (Belgium has none, see l.alarm): the
+      // lessons and their tips are the same in both countries.
+      {
+        id: 'l.wound',
+        title: 'Small wounds and burns',
+        words: [
+          { id: 'w.wond', nl: 'de wond', en: 'the wound', emoji: '❤️‍🩹' },
+          { id: 'w.verband', nl: 'het verband', en: 'the bandage', emoji: '🧻' },
+          { id: 'w.koelen', nl: 'koelen', en: 'to cool (with cold water)', emoji: '🚿' },
+          { id: 'w.snee', nl: 'de snee', en: 'the cut (a small wound from a knife or something sharp)', emoji: '✂️' },
+          { id: 'w.flauwvallen', nl: 'flauwvallen', en: 'to faint', emoji: '😵' },
+          { id: 'w.oogdouche', nl: 'de oogdouche', en: 'the eye wash (water to rinse your eyes)', emoji: '💧' },
+        ],
+        sentences: [
+          { id: 's.wound.1', nl: 'Koel de brandwond met water.', en: 'Cool the burn with water.' },
+          { id: 's.wound.2', nl: 'Het is een kleine snee. Druk op de wond.', en: 'It is a small cut. Press on the wound.' },
+          { id: 's.wound.3', nl: 'Waar is de oogdouche?', en: 'Where is the eye wash?' },
+        ],
+        dialogues: [
+          {
+            prompt: { id: 'c.wound.q', nl: 'Mijn collega valt bijna flauw.', en: 'My colleague is about to faint.' },
+            reply: { id: 'c.wound.a', nl: 'Laat hem even liggen. Ik haal hulp.', en: 'Let him lie down for a moment. I will get help.' },
+          },
+        ],
+      },
+      {
+        id: 'l.callhelp',
+        title: 'Calling 112',
+        words: [
+          { id: 'w.hulpdiensten', nl: 'de hulpdiensten', en: 'the emergency services (ambulance, fire brigade, police)', emoji: '🚑', picture: false },
+          { id: 'w.straatnaam', nl: 'de straatnaam', en: 'the street name', emoji: '🪧' },
+          { id: 'w.huisnummer', nl: 'het huisnummer', en: 'the house number', emoji: '🏡' },
+          { id: 'w.aanspreekbaar', nl: 'aanspreekbaar', en: 'responsive (the person reacts when you talk to them)', emoji: '👂', picture: false },
+          { id: 'w.opwachten', nl: 'opwachten', en: 'to wait for and meet (someone at the door)', emoji: '🧍' },
+          { id: 'w.aandelijn', nl: 'aan de lijn blijven', en: 'to stay on the line (you do not hang up)', emoji: '☎️' },
+        ],
+        sentences: [
+          { id: 's.callhelp.1', nl: 'Ik bel 112. Ik heb een ambulance nodig.', en: 'I am calling 112. I need an ambulance.' },
+          { id: 's.callhelp.2', nl: 'Wat is de straatnaam en het huisnummer?', en: 'What is the street name and the house number?' },
+          { id: 's.callhelp.3', nl: 'Ik wacht de ambulance op bij de ingang.', en: 'I will wait for the ambulance at the entrance.' },
+        ],
+        dialogues: [
+          {
+            prompt: { id: 'c.callhelp.q', nl: 'Is hij aanspreekbaar?', en: 'Does he respond when you talk to him?' },
+            reply: { id: 'c.callhelp.a', nl: 'Nee. Hij reageert niet.', en: 'No. He does not respond.' },
+          },
+        ],
+      },
     ],
   },
   {
@@ -522,6 +573,57 @@ export const units: Unit[] = [
           {
             prompt: { id: 'c.sick.q', nl: 'Ben je ziek?', en: 'Are you sick?' },
             reply: { id: 'c.sick.a', nl: 'Ja, ik blijf vandaag thuis.', en: 'Yes, I am staying home today.' },
+          },
+        ],
+      },
+      // "Tijd en rooster" at four lessons (23 November 2026, the owner's request: the basis units to
+      // four lessons). The roster and its changes, and hours and breaks. Already words of other
+      // lessons, used here in a sentence or the chat only: "het rooster" (l.clock), "ruilen"
+      // (l.texting), "zaterdag" (l.agree) and "de dokter" (l.sick). The break rules of the law are in
+      // c.health (unit Regels en rechten): the tip here is about writing down your hours.
+      {
+        id: 'l.roster',
+        title: 'Your roster',
+        words: [
+          { id: 'w.weekrooster', nl: 'het weekrooster', en: 'the weekly roster (who works when this week)', emoji: '📅' },
+          { id: 'w.roosterapp', nl: 'de rooster-app', en: 'the roster app (your shifts on your phone)', emoji: '📲' },
+          { id: 'w.beschikbaar', nl: 'beschikbaar', en: 'available (you can work then)', emoji: '🙆', picture: false },
+          { id: 'w.wijziging', nl: 'de wijziging', en: 'the change', emoji: '🔀', picture: false },
+          { id: 'w.invallen', nl: 'invallen', en: 'to fill in (work for someone who is away)', emoji: '🔄' },
+          { id: 'w.vrijedag', nl: 'de vrije dag', en: 'the day off', emoji: '🛋️' },
+        ],
+        sentences: [
+          { id: 's.roster.1', nl: 'Het nieuwe rooster staat in de app.', en: 'The new roster is in the app.' },
+          { id: 's.roster.2', nl: 'Ben je zaterdag beschikbaar?', en: 'Are you available on Saturday?' },
+          { id: 's.roster.3', nl: 'Kun je morgen voor Sara invallen?', en: 'Can you fill in for Sara tomorrow?' },
+        ],
+        dialogues: [
+          {
+            prompt: { id: 'c.roster.q', nl: 'Er is een wijziging in je rooster.', en: 'There is a change in your roster.' },
+            reply: { id: 'c.roster.a', nl: 'Oké. Welke dag moet ik werken?', en: 'OK. Which day must I work?' },
+          },
+        ],
+      },
+      {
+        id: 'l.breaks',
+        title: 'Hours and breaks',
+        words: [
+          { id: 'w.lunchpauze', nl: 'de lunchpauze', en: 'the lunch break', emoji: '🥪' },
+          { id: 'w.rusttijd', nl: 'de rusttijd', en: 'the rest time (time off between two shifts)', emoji: '🛌', picture: false },
+          { id: 'w.werkdag', nl: 'de werkdag', en: 'the working day', emoji: '🌇', picture: false },
+          { id: 'w.urenlijst', nl: 'de urenlijst', en: 'the list of hours (where you write the hours you worked)', emoji: '📝' },
+          { id: 'w.eerderweg', nl: 'eerder weg', en: 'to leave early', emoji: '🏃' },
+          { id: 'w.achterelkaar', nl: 'achter elkaar', en: 'in a row (one after the other)', emoji: '⛓️', picture: false },
+        ],
+        sentences: [
+          { id: 's.breaks.1', nl: 'Ik schrijf mijn uren op de urenlijst.', en: 'I write my hours on the list of hours.' },
+          { id: 's.breaks.2', nl: 'Mag ik vandaag een uur eerder weg?', en: 'May I leave an hour early today?' },
+          { id: 's.breaks.3', nl: 'Ik heb zes dagen achter elkaar gewerkt.', en: 'I have worked six days in a row.' },
+        ],
+        dialogues: [
+          {
+            prompt: { id: 'c.breaks.q', nl: 'Wanneer is je lunchpauze?', en: 'When is your lunch break?' },
+            reply: { id: 'c.breaks.a', nl: 'Om twaalf uur, een half uur.', en: 'At twelve o’clock, half an hour.' },
           },
         ],
       },

@@ -3698,10 +3698,459 @@ const vijfUnitsTips = [
   ),
 ];
 
+/**
+ * The tips of the basis units at four lessons (23 November 2026, src/content/work.ts basisFour): one
+ * per new lesson. Rights (Loon, Verlof, Ziekte, Uitbuiting, and the residence papers): ADVICE_LINE
+ * where the law gives the rule, ABUSE_LINE where the employer or agency may be the problem; each
+ * claim has a ⚖️ note and the tip a section in docs/juridische-check.md. No amounts. The other tips
+ * are about how it goes at work (HOUSE_LINE) or social norms (NONE).
+ */
+const basisFourTips: CultureTip[] = [
+  // Solliciteren. No right or amount: "never pay money to get a job" is advice (the rule for agencies,
+  // Waadi art. 9, is in c.findwork).
+  tipFor(
+    'vacancy',
+    '📰',
+    'Call, or send a short message',
+    'Read the ad well: the hours, the place, and what you must have, like a driving licence or a certificate. You do not need to have everything: if you have most of it, try anyway. Call or write a short message: say your name, which job, and why you want it. Never pay money to get a job, and never send your login codes for an ad.',
+    ['Ik heb geen diploma, maar wel veel ervaring.', 'I have no diploma, but I do have a lot of experience.'],
+    'An ad asks for 3 years of experience. You have 2 years. What do you do?',
+    [
+      'Apply anyway, and say what you can do.',
+      'Do not apply: you have too little.',
+      'Write 3 years: nobody checks it.',
+    ],
+    'An ad often asks for more than the job really needs. Being honest about what you can do works better than lying.',
+    NONE,
+  ),
+  tipFor(
+    'result',
+    '🥳',
+    'A no is not the end',
+    'Heard nothing after a week? You may call back and ask politely. Got a no? Ask what you can do better next time: many employers tell you. Then try again: most people get a few no’s first. Got a yes? Ask when you start, and ask for your contract before you begin. Invited for a trial day? Ask before how long it is, and if it is paid.',
+    ['Wat kan ik de volgende keer beter doen?', 'What can I do better next time?'],
+    'After a job interview, you get a no by e-mail. What do you do?',
+    [
+      'Ask politely what you can do better.',
+      'Write back that they made a mistake.',
+      'Stop applying: it does not work.',
+    ],
+    'Feedback helps you in your next interview. A polite question also leaves a good picture of you.',
+    NONE,
+  ),
+  // Wonen en papieren: residence papers (rights: ADVICE_LINE).
+  // ⚖️ check: From the EU: you may live and work here with a valid passport or ID card, without a
+  // permit ⚖️ (Vreemdelingenwet 2000 art. 8 onder e and Vreemdelingenbesluit 2000 art. 8.7 ff.: free
+  // movement of EU citizens, Richtlijn 2004/38/EG; no work permit, Wav art. 3 lid 1 onder a; since 2014
+  // no IND sticker or registration for EU citizens; ind.nl "EU-burger". The tip says "the EU": EEA and
+  // Switzerland are left out on purpose. Registering at the gemeente is in c.bsn).
+  // ⚖️ check: From outside the EU: you need a valid residence permit; on the card it says if you may
+  // work ⚖️ (Vreemdelingenwet 2000 art. 8; Wav art. 2 and 3; the card says "arbeid vrij toegestaan,
+  // TWV niet vereist" or "arbeid toegestaan ..." or "TWV vereist"; ind.nl "aantekening arbeidsmarkt").
+  // ⚖️ check: Apply for a new permit at the IND in time, months before the date ⚖️ (ind.nl: apply
+  // for an extension in time, the IND sends a letter about 3 months before the end date; no number in
+  // the tip; an application in time keeps the right to work while it is decided, Vreemdelingenbesluit
+  // art. 3.80 and Wav; "months before" is advice).
+  tipFor(
+    'residence',
+    '📇',
+    'Your papers: check the date',
+    'From the EU? Then you may live and work here with a valid passport or ID card: you do not need a permit. From outside the EU? Then you need a valid residence permit. On the card it says if you may work. Check the expiry date of your papers. Apply for a new permit at the IND in time: months before the date, not in the last week. Keep a copy of every letter.',
+    ['Mijn vergunning verloopt bijna. Wat moet ik doen?', 'My permit expires soon. What must I do?'],
+    'Your residence permit expires in two months. You are very busy at work. What do you do?',
+    [
+      'Apply for a new one now.',
+      'Wait until the last week.',
+      'Do nothing: work comes first.',
+    ],
+    'Without a valid permit, you may not be allowed to work. A new permit takes time, so you start early.',
+    ADVICE_LINE,
+  ),
+  // Moving house: what to do, the same in Belgium (no number of days: c.bsn has the Dutch term).
+  tipFor(
+    'newhome',
+    '📪',
+    'New address? Tell everyone',
+    'Moving? Tell the gemeente your new address quickly: you must do that. Also tell your employer, your bank, your insurance and your doctor. Put your name on the letterbox, or letters do not reach you. On moving day, write down the meter readings and take photos of them. Then you only pay for what you used.',
+    ['Ik ben verhuisd. Dit is mijn nieuwe adres.', 'I have moved. This is my new address.'],
+    'You moved two weeks ago. Your letters still go to your old address. What do you do?',
+    [
+      'Give your new address to the gemeente now.',
+      'Wait: the post will find you.',
+      'Ask your old neighbour to keep your letters.',
+    ],
+    'Important letters, like fines or tax letters, have dates. When they go to the wrong address, you can miss them.',
+    NONE,
+  ),
+  // Loon: the parts of the payslip (ADVICE_LINE).
+  // ⚖️ check: The payslip shows the period, the gross pay, the hours and extra pay, what comes off
+  // (tax and premiums) and the net pay ⚖️ (BW 7:626 lid 1 and 2: a written statement with the gross
+  // amount, the parts of the pay, the amounts taken off, the net amount, the period, the minimum wage
+  // that applies and the agreed hours; the staff number is not in the law, so "your name, your staff
+  // number" is what payslips usually show).
+  // ⚖️ check: In many jobs, you and your employer both pay for your pension; you see your part on the
+  // payslip ⚖️ (no general duty for an employer to offer a pension; a mandatory sector pension fund,
+  // Wet verplichte deelneming in een bedrijfstakpensioenfonds 2000, covers most workers; the share of
+  // the worker differs per fund: "in many jobs"; Pensioenwet art. 38: a yearly pension statement (UPO)).
+  // ⚖️ check: You usually keep your pension when you change jobs ⚖️ (Pensioenwet: built-up rights stay
+  // with the fund (premievrije aanspraak) or go with you (waardeoverdracht, art. 70-71); very small
+  // pensions can end (art. 66-67): "usually").
+  tipFor(
+    'payparts',
+    '🧮',
+    'Read every line',
+    'Your payslip has many lines and short words. At the top: your name, your staff number and the period. Then your gross pay, your hours and any extra pay. Then what comes off: tax and premiums. In many jobs, you and your employer both pay for your pension: you see your part on your payslip. At the bottom: your net pay. Do not understand a line? Ask your employer to explain it. Keep all your payslips.',
+    ['Wat betekent deze regel op mijn loonstrook?', 'What does this line on my payslip mean?'],
+    'On your payslip, money goes to "pensioen". You do not know why. What do you do?',
+    [
+      'Ask your employer to explain it.',
+      'Ask to stop it, to get more money now.',
+      'Ignore it: you will not stay that long.',
+    ],
+    'Pension money is saved for you, for later. You usually keep it when you change jobs. Asking helps you know what is yours.',
+    ADVICE_LINE,
+  ),
+  // Late, missing or cash pay (ABUSE_LINE: the employer may be the problem).
+  // ⚖️ check: Your pay must come on the day in your contract or cao ⚖️ (BW 7:623: the pay is due at the
+  // agreed times, at the end of the period it is for; BW 7:625: a legal increase (wettelijke verhoging)
+  // when it is late; the tip names no increase and no number).
+  // ⚖️ check: Pay in cash without a payslip is often off the books: your hours are not registered, and
+  // later it is hard to prove your work or get a benefit ⚖️ (the employer must give a payslip, BW 7:626;
+  // and report the pay to the Belastingdienst (loonaangifte, Wet op de loonbelasting 1964 art. 28), on
+  // which UWV bases the insured pay for a WW or ZW benefit (polisadministratie); a worker off the books
+  // keeps the rights of an employment contract (BW 7:610), but must prove the work: "hard to prove";
+  // cash pay itself is not forbidden, so "often off the books").
+  tipFor(
+    'latepay',
+    '💵',
+    'Late or cash pay? Act in time',
+    'Your pay must come on the day in your contract or cao. Is it late, or is money missing? Ask about it in writing, for example in an e-mail. Keep your bank statements and your own list of hours. Paid in cash, without a payslip? Then it is often off the books (zwart): your hours are not registered, and later it is hard to prove your work or to get a benefit. Ask for a payslip.',
+    ['Mijn loon is nog niet binnen. Wanneer komt het?', 'My pay has not come in yet. When will it come?'],
+    'Your boss says: "From now on I pay you in cash. No payslip, that is easier." What do you do?',
+    [
+      'Say no, and ask for a payslip.',
+      'Say yes: cash is more money.',
+      'Say yes, but only this month.',
+    ],
+    'Without a payslip, your work is not on paper. Then you can lose rights, for example to a benefit when you lose your job.',
+    ABUSE_LINE,
+  ),
+  // Verlof: planning your holiday (ADVICE_LINE).
+  // ⚖️ check: Your legal days off expire 6 months after the end of the year, unless you could not take
+  // them ⚖️ (BW 7:640a: the statutory days (wettelijke vakantiedagen) lapse six months after the last
+  // day of the calendar year in which they were built up, unless the worker could reasonably not take
+  // them; since 1 January 2012).
+  // ⚖️ check: Extra days from your cao or contract stay valid longer, usually 5 years ⚖️ (BW 7:642: the
+  // extra days (bovenwettelijke dagen) lapse after five years; a cao may say otherwise: "usually").
+  // ⚖️ check: Does your job end? Then you get money for the days you did not take ⚖️ (BW 7:641 lid 1:
+  // the remaining days are paid out at the end of the employment; the eindafrekening, c.jobends).
+  // ⚖️ check: The balance is often on the payslip or in the app (no law: practice).
+  tipFor(
+    'holiday',
+    '☀️',
+    'Your days off: use them in time',
+    'Check how many days off you still have: often it is on your payslip or in the app. Plan your holiday early, and ask in writing. Your legal days off expire 6 months after the end of the year, unless you could not take them. Extra days from your cao or contract stay valid longer, usually 5 years. Does your job end? Then you get money for the days you did not take.',
+    ['Ik wil mijn vakantiedagen dit jaar nog opnemen.', 'I want to take my days off this year.'],
+    'It is November. You still have 12 days off from this year. Your supervisor says nothing about it. What do you do?',
+    [
+      'Ask when you can take them.',
+      'Do nothing: they stay forever.',
+      'Forget them: they are gone now.',
+    ],
+    'Days off are for rest, and they can expire. When you ask in time, you can still plan them.',
+    ADVICE_LINE,
+  ),
+  // Special days off (ADVICE_LINE).
+  // ⚖️ check: The partner gets 1 week of birth leave with pay, in the first 4 weeks after the birth ⚖️
+  // (Wet arbeid en zorg art. 4:2: geboorteverlof of once the weekly working hours, with full pay, within
+  // four weeks after the birth; the extra birth leave of up to five weeks with a UWV benefit, art. 4:2a,
+  // is left out of the tip on purpose).
+  // ⚖️ check: The cao often gives special leave (bijzonder verlof) for your wedding or a funeral in your
+  // family ⚖️ (no general law: cao's and company rules; the short leave of Wet arbeid en zorg art. 4:1
+  // (kort verzuimverlof) covers "very special personal circumstances", such as a death in the family:
+  // the tip only says "often", and the why says to ask).
+  // ⚖️ check: Public holidays: no law says you are free; your contract or cao says if you are free or get
+  // extra pay ⚖️ (there is no legal right to a day off on a public holiday in the Netherlands; the
+  // Algemene termijnenwet is about deadlines, not work; cao's often give it: rijksoverheid.nl
+  // "feestdagen").
+  tipFor(
+    'special',
+    '💒',
+    'A wedding, a funeral, a baby',
+    'Is your baby born, and are you the partner? Then you get 1 week of birth leave with pay, in the first 4 weeks. Your cao often gives special leave (bijzonder verlof) for your wedding, or for a funeral in your family. Public holidays, like Christmas: no law says you are free. Your contract or cao says if you are free, or if you get extra pay. Ask for your days off in time.',
+    ['Mijn vrouw krijgt een baby. Hoe vraag ik geboorteverlof aan?', 'My wife is having a baby. How do I ask for birth leave?'],
+    'Your father has died abroad. You want to go to the funeral. What do you do?',
+    [
+      'Tell your employer, and ask what leave you can get.',
+      'Just go, and tell them when you are back.',
+      'Do not go: you have no days off left.',
+    ],
+    'Your employer understands that this is very important. Many cao’s give special leave, and you can also use your days off.',
+    ADVICE_LINE,
+  ),
+  // Ziekte: unwell at work or on holiday (ADVICE_LINE).
+  // ⚖️ check: Sick at work: tell your supervisor before you go home; that is your sick report (no law:
+  // the company's rules for reporting sick, the same as c.sick).
+  // ⚖️ check: Sick during your holiday: report it the same way, also from abroad; then the sick days
+  // usually do not count as days off ⚖️ (BW 7:637 lid 1: days of illness during a holiday do not count
+  // as holiday, unless agreed in writing for the extra days only, lid 2: "usually"; the report follows
+  // the company's rules (verzuimreglement)).
+  // ⚖️ check: You may need a note from a doctor there ⚖️ (no general duty; the employer may ask for
+  // proof of the illness abroad under the verzuimreglement: "may").
+  tipFor(
+    'unwell',
+    '🤧',
+    'Sick at work, or on holiday',
+    'Do you feel sick at work? Tell your supervisor before you go home: that is your sick report. Do not just leave. Did you get sick during your holiday? Report it to your employer the same way as at home, also from abroad. Then the sick days usually do not count as days off. You may need a note from a doctor there.',
+    ['Ik ben ziek geworden op vakantie.', 'I got sick on holiday.'],
+    'You are on holiday in your home country. You get the flu and stay in bed for 5 days. What do you do?',
+    [
+      'Report it to your employer right away.',
+      'Nothing: you are on holiday anyway.',
+      'Tell your employer when you are back.',
+    ],
+    'When you report it in time, the sick days usually do not count as days off. Then you can still use those days later.',
+    ADVICE_LINE,
+  ),
+  // Hurt by your work (ADVICE_LINE).
+  // ⚖️ check: Ask for a copy of the accident report (no law gives the worker a copy; the Arbowet art. 9
+  // lid 2 asks the employer to keep a list of accidents: the tip says "ask").
+  // ⚖️ check: Hurt because the work was not safe? Then your employer usually must pay for your damage;
+  // you do not have to prove that it was their fault: the employer must show they did enough for your
+  // safety ⚖️ (BW 7:658 lid 1 and 2: the employer is liable for damage at work unless it shows it met its
+  // duty of care, or that the damage came largely from the worker's own intent or deliberate
+  // recklessness; the worker shows the damage came in the course of the work: "usually").
+  // ⚖️ check: Ask for advice before you sign anything (advice; a statement of own fault can count later,
+  // which is why the why sends the learner to the union or the Juridisch Loket).
+  tipFor(
+    'injury',
+    '🚧',
+    'Hurt at work: write it down',
+    'Were you hurt at work? Write down what happened, when and where, and who saw it. Take photos, and keep all papers from the doctor. Ask for a copy of the accident report. Were you hurt because the work was not safe? Then your employer usually must pay for your damage. You do not have to prove that it was their fault: the employer must show they did enough for your safety. Ask for advice before you sign anything.',
+    ['Mag ik een kopie van het rapport?', 'May I have a copy of the report?'],
+    'You hurt your hand at a machine without a guard. Later, your boss asks you to sign a paper: "It was my own fault." What do you do?',
+    [
+      'Do not sign it. Ask for advice first.',
+      'Sign it, so there are no problems.',
+      'Sign it, but keep a photo of it.',
+    ],
+    'What you sign can count later, for example when you ask for compensation. First get advice from the union or the Juridisch Loket.',
+    ADVICE_LINE,
+  ),
+  // Uitbuiting herkennen: a debt that keeps you stuck (ABUSE_LINE).
+  // ⚖️ check: In the Netherlands, an agency may not ask you money for finding you a job ⚖️ (Waadi art. 9
+  // lid 1: no fee from the worker for placing or for the work; the same as c.findwork).
+  // ⚖️ check: A debt that keeps growing, and having to stay until it is paid, is a sign of exploitation
+  // ⚖️ (debt bondage is an indicator of labour exploitation and human trafficking: Sr art. 273f;
+  // nlarbeidsinspectie.nl "signalen van arbeidsuitbuiting"; CoMensha indicators).
+  // ⚖️ check: A debt never means that you must keep working: you may stop ⚖️ (no forced work: Grondwet
+  // art. 19 and EVRM art. 4; the worker may end the contract with the notice of BW 7:672; a real debt
+  // stays a debt, to be paid apart from the work: the tip says "you may stop", not "you need not pay").
+  tipFor(
+    'debt',
+    '🪙',
+    'A debt that never ends',
+    'In the Netherlands, an agency may not ask you money for finding you a job. Did you have to borrow money for the trip or for the job, and does the debt keep growing? Must you stay until it is paid? That is a sign of exploitation. A debt never means that you must keep working: you may stop. Keep every paper and message about the debt.',
+    ['Hoeveel moet ik nog betalen? Ik wil het op papier.', 'How much do I still have to pay? I want it on paper.'],
+    'The agency paid your bus ticket. Now it takes money off your pay every week, and the debt does not get smaller. What do you do?',
+    [
+      'Ask for a list on paper, and get help.',
+      'Work more hours to pay it faster.',
+      'Say nothing: the agency helped you.',
+    ],
+    'A debt that does not get smaller keeps you stuck. With the list, the union or FairWork can check if it is fair.',
+    ABUSE_LINE,
+  ),
+  // The inspection and other help (ABUSE_LINE).
+  // ⚖️ check: The Nederlandse Arbeidsinspectie checks if work is safe and fair: pay, hours, exploitation;
+  // inspectors may come to your work and talk to workers ⚖️ (Arbowet, Arbeidstijdenwet, Wml, Waadi and
+  // Wav: the inspection's supervision; Awb art. 5:15 and 5:16: entry and the right to ask information;
+  // nlarbeidsinspectie.nl "wat doet de inspectie").
+  // ⚖️ check: They do not tell your boss who reported something ⚖️ (nlarbeidsinspectie.nl/melden: a
+  // report is treated confidentially and can be made anonymously; the same as c.gethelp).
+  // ⚖️ check: Ask for an interpreter if you need one (advice: the inspection works with interpreters in
+  // talks with workers, nlarbeidsinspectie.nl; "ask" keeps it a question).
+  // ⚖️ check: FairWork helps victims of exploitation for free, also people without valid papers ⚖️
+  // (fairwork.nu: free and confidential help for (undocumented) migrant workers; the same name as in
+  // ABUSE_LINE).
+  tipFor(
+    'inspection',
+    '🕵️',
+    'The inspection is there for you',
+    'The Nederlandse Arbeidsinspectie checks if work is safe and fair: pay, hours and exploitation. Inspectors may come to your work and talk to the workers. You may tell them the truth: they do not tell your boss who reported something. Need help in your own language? Ask for an interpreter. FairWork helps victims of exploitation for free, also people without valid papers.',
+    ['Ik wil iets vertellen, maar zonder mijn baas erbij.', 'I want to tell something, but without my boss there.'],
+    'An inspector asks about your hours. Your boss told you to say 8 hours. You work 12. What do you do?',
+    [
+      'Tell the inspector the truth.',
+      'Say 8 hours, as your boss said.',
+      'Say nothing, and walk away.',
+    ],
+    'The inspector can only help when they know the truth. What you say helps you, and your colleagues too.',
+    ABUSE_LINE,
+  ),
+  // Naar je werk. No right or amount: the seat belt is the rule everywhere (in the Netherlands RVV 1990
+  // art. 59, in Belgium the Wegcode art. 35); the costs of the work van are in c.deductions.
+  tipFor(
+    'carpool',
+    '🪢',
+    'In the car: belt on, and agree on the costs',
+    'Everyone in the car wears a seat belt, also in the back. The driver needs a valid driving licence, and should not drink alcohol before driving. Too many people in the van, or does the driver drive dangerously? Say it, and do not get in. Carpool with colleagues? Agree first how you share the fuel costs. In the work van of the agency? Ask what it costs you, and get it on paper.',
+    ['Er zijn te veel mensen in de bus. Ik stap niet in.', 'There are too many people in the van. I am not getting in.'],
+    'The work van has 9 seats. This morning 11 people want to get in. What do you do?',
+    [
+      'Do not get in, and call your supervisor.',
+      'Sit on the floor in the back.',
+      'Squeeze in: it is only 20 minutes.',
+    ],
+    'Without a seat and a belt, a small accident can be very serious. Your employer or agency can find another way.',
+    NONE,
+  ),
+  tipFor(
+    'train',
+    '🚉',
+    'Train late? Send a message at once',
+    'Check the journey planner before you leave: trains and buses can be late or cancelled. Is your train late? Send your supervisor a message right away, with the time you will arrive. On days with a storm or works on the line, take an earlier train. After a long delay, you can often get money back: look on the website of the train company.',
+    ['Mijn trein heeft vertraging. Ik ben er om negen uur.', 'My train is delayed. I will be there at nine.'],
+    'Your train is cancelled. The next one goes in 30 minutes. Your shift starts in 40 minutes. What do you do?',
+    [
+      'Send a message now that you will be late.',
+      'Wait, and explain it when you get there.',
+      'Go home: it is not your fault.',
+    ],
+    'Your supervisor can plan better when they know early. A delay is not your fault, but telling it is your job.',
+    NONE,
+  ),
+  // Je werk afronden: how the work is done (HOUSE_LINE).
+  tipFor(
+    'checklist',
+    '📋',
+    'Check it yourself first',
+    'Before you say "klaar", check your own work. Use the checklist if there is one, and tick off each step. Look at your work as if you are the customer. Is something not good? Do it again now: that is quicker than later. Not sure? Ask a colleague to look.',
+    ['Ik ben klaar. Wil je het even nakijken?', 'I am done. Will you check it for a moment?'],
+    'You are done. On the checklist, one step is not ticked off. You think you did it. What do you do?',
+    [
+      'Check that step again, then tick it off.',
+      'Tick it off: you probably did it.',
+      'Leave it open: nobody reads the list.',
+    ],
+    'A checklist only helps when it is true. One more look takes a minute. A mistake can take hours.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'leavesite',
+    '🧹',
+    'Leave it as you want to find it',
+    'At the end of your work, leave your place clean and safe. Put tools and materials back, and sweep the floor. Switch off the machines and lights you used. Are you the last one? Check the windows and doors, and lock up the way your company says.',
+    ['Ik ben de laatste. Moet ik de deur op slot doen?', 'I am the last one. Must I lock the door?'],
+    'You are the last one at work. You do not know how to set the alarm. What do you do?',
+    [
+      'Call your supervisor and ask.',
+      'Leave without the alarm: it is late.',
+      'Try buttons until it beeps.',
+    ],
+    'A building without the alarm is not safe. Your supervisor would rather get a call than find a problem tomorrow.',
+    HOUSE_LINE,
+  ),
+  // Stage lopen: how a placement goes; no right or amount ("not always given" says only that there
+  // is no allowance everywhere). The rules differ per school, as in c.placement.
+  tipFor(
+    'stagedays',
+    '🏢',
+    'A student, and a colleague',
+    'At your placement you are there to learn, but you work like a colleague: on time, with the house rules, and you call when you are sick. You may ask a lot of questions: that is why you are there. Your work should help you learn, not only cleaning or carrying all day. Is that not so? Talk to your placement coach at school. A placement allowance is not always given: ask about it before you start. Rules differ per school: ask your placement coach.',
+    ['Ik wil dit ook leren. Mag ik meekijken?', 'I want to learn this too. May I watch?'],
+    'At your placement you only clean the canteen, every day, for three weeks. What do you do?',
+    [
+      'Talk about it with your placement coach.',
+      'Do it and say nothing: you are a student.',
+      'Stay home until they give you other work.',
+    ],
+    'A placement is for learning your profession. Your coach can talk with the company about better tasks.',
+    NONE,
+  ),
+  tipFor(
+    'stageend',
+    '💐',
+    'End well, and ask for a reference',
+    'In the final talk you hear what went well and what can be better. Ask for examples, and write them down for your next job. Did it go well? Ask if you may give their name as a reference. On your last day, thank your colleagues: many people here bring something small to eat, like cake or sweets. Rules differ per school: ask your placement coach.',
+    ['Mag ik u als referentie opgeven?', 'May I give your name as a reference?'],
+    'It is the last day of your placement. What do you do?',
+    [
+      'Thank your colleagues, and say goodbye.',
+      'Leave quietly, without saying anything.',
+      'Ask the company for a present.',
+    ],
+    'A good goodbye leaves a good picture. Maybe you want to work there later, or you need them as a reference.',
+    NONE,
+  ),
+  // Meedoen in Nederland: social norms (NONE).
+  tipFor(
+    'neighbours',
+    '📚',
+    'Say hello to your neighbours',
+    'New in a street? Say hello to your neighbours and tell them your name. That makes problems easier to solve later. Work nights, or do you live with many people? Keep it quiet late in the evening and at night. Put your rubbish out on the right day. In the library and the community centre you can often practise Dutch, sometimes for free.',
+    ['Hallo, ik ben Ali. Ik woon hiernaast.', 'Hello, I am Ali. I live next door.'],
+    'You live with five colleagues. A neighbour says it is often noisy at night. What do you do?',
+    [
+      'Say sorry, and agree to keep it quiet.',
+      'Say that you all work and need to relax.',
+      'Say nothing, and close the door.',
+    ],
+    'A good talk early stops bigger problems. Neighbours who know you are often friendlier and more helpful.',
+    NONE,
+  ),
+  tipFor(
+    'join',
+    '⚽',
+    'Join in: you learn Dutch faster',
+    'Outside work, you learn Dutch fastest by doing things with people: sports, a club, or volunteer work. Your child at school? Go to the parents’ evening, also if your Dutch is not perfect: the teacher wants to meet you. You may ask for slow Dutch, or use a translation app. Volunteer work also looks good on your CV.',
+    ['Wilt u wat langzamer praten?', 'Would you speak a bit slower?'],
+    'You are invited to the parents’ evening. Your Dutch is not good yet. What do you do?',
+    [
+      'Go, and use simple Dutch or an app.',
+      'Do not go: the teacher will not understand you.',
+      'Send a short message that you are busy.',
+    ],
+    'The teacher wants to talk about your child, not about your Dutch. Coming shows that you care.',
+    NONE,
+  ),
+  // Online op je werk: company rules (HOUSE_LINE).
+  tipFor(
+    'workphotos',
+    '📟',
+    'Ask first, then post',
+    'A photo at work can show more than you think: a customer, a client, a screen or a paper with names. Do not post photos of work online without permission from your employer, and never photos of people without their yes. Customer details stay at work: do not send them to your own phone or e-mail. Sent something by mistake? Tell your supervisor right away.',
+    ['Ik vraag eerst toestemming.', 'I will ask for permission first.'],
+    'A colleague puts a funny photo of a customer in the team app. What do you do?',
+    [
+      'Say that it is not okay, and do not share it.',
+      'Share it: it is only in the team app.',
+      'Like it, but do not share it.',
+    ],
+    'The customer did not say yes to this photo. Photos in an app can go anywhere, fast. Saying it kindly protects the customer and your colleague.',
+    HOUSE_LINE,
+  ),
+  tipFor(
+    'device',
+    '💾',
+    'Updates yes, strange sticks no',
+    'Install the updates on your phone and computer: they close holes that hackers use. Found a USB stick? Do not put it in your computer: give it to the IT department. On a work phone or computer, only install apps that your work allows. On public wifi, do not log in to your bank or your work. Lock your phone with a code.',
+    ['Ik heb een usb-stick gevonden. Wat moet ik ermee doen?', 'I found a USB stick. What should I do with it?'],
+    'You find a USB stick in the car park. It says "Salaris". What do you do?',
+    [
+      'Give it to the IT department.',
+      'Put it in your computer to see whose it is.',
+      'Take it home and look at it there.',
+    ],
+    'A stick can have a virus on it, also when it looks interesting. The IT department can check it safely.',
+    HOUSE_LINE,
+  ),
+];
+
 const lessonOrder = [doUnit, toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit, dataUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips, ...installTips, ...montageTips, ...kweekServiceTips, ...groenFacilitairTips, ...vierSectorenTips, ...vijfUnitsTips].sort(
+export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips, ...installTips, ...montageTips, ...kweekServiceTips, ...groenFacilitairTips, ...vierSectorenTips, ...vijfUnitsTips, ...basisFourTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

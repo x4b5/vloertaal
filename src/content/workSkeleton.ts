@@ -31,6 +31,8 @@ export const workSkeleton: SkeletonUnit[] = [
   { id: "u.apply", title: "Applying for a job", titleNl: "Solliciteren", emoji: "📨", color: "#4a6fa5", lessons: [
       { id: "l.cv", title: "Your CV and letter" },
       { id: "l.interview", title: "The job interview" },
+      { id: "l.vacancy", title: "Reading a vacancy" },
+      { id: "l.result", title: "After the interview" },
   ] },
   { id: "u.contract", title: "Work and contracts", titleNl: "Werk en contract", emoji: "📝", color: "#2f6db5", lessons: [
       { id: "l.findwork", title: "Finding work" },
@@ -47,10 +49,14 @@ export const workSkeleton: SkeletonUnit[] = [
   { id: "u.papers", title: "Housing and papers", titleNl: "Wonen en papieren", emoji: "🪪", color: "#a35a2a", lessons: [
       { id: "l.bsn", title: "Your BSN and papers" },
       { id: "l.housing", title: "Housing" },
+      { id: "l.residence", title: "Your residence papers" },
+      { id: "l.newhome", title: "Moving house" },
   ] },
   { id: "u.pay", title: "Pay", titleNl: "Loon", emoji: "💶", color: "#2c7a7b", lessons: [
       { id: "l.payslip", title: "Your payslip" },
       { id: "l.extra", title: "Extra money" },
+      { id: "l.payparts", title: "What is on your payslip" },
+      { id: "l.latepay", title: "Late, missing or cash pay" },
   ] },
   { id: "u.house", title: "House rules", titleNl: "Huisregels", emoji: "🏠", color: "#8a6d1f", lessons: [
       { id: "l.phone", title: "Your phone at work" },
@@ -77,14 +83,20 @@ export const workSkeleton: SkeletonUnit[] = [
   { id: "u.leave", title: "Leave", titleNl: "Verlof", emoji: "🌴", color: "#b5487a", lessons: [
       { id: "l.leave", title: "Days off" },
       { id: "l.kids", title: "Children and work" },
+      { id: "l.holiday", title: "Planning your holiday" },
+      { id: "l.special", title: "Special days off" },
   ] },
   { id: "u.sick", title: "Illness", titleNl: "Ziekte", emoji: "🩹", color: "#2f7f6f", lessons: [
       { id: "l.illness", title: "Sick at home" },
       { id: "l.backtowork", title: "Back to work after illness" },
+      { id: "l.unwell", title: "Feeling unwell" },
+      { id: "l.injury", title: "Hurt by your work" },
   ] },
   { id: "u.exploit", title: "Know your rights: exploitation", titleNl: "Uitbuiting herkennen", emoji: "🛑", color: "#9b2c2c", lessons: [
       { id: "l.warning", title: "Warning signs" },
       { id: "l.gethelp", title: "Getting help" },
+      { id: "l.debt", title: "A debt to the boss or the agency" },
+      { id: "l.inspection", title: "The inspection and other help" },
   ] },
   { id: "u.contact", title: "Calling and texting work", titleNl: "Bellen en appen met je werk", emoji: "📞", color: "#3b6e8f", lessons: [
       { id: "l.callin", title: "Calling in" },
@@ -112,6 +124,8 @@ export const workSkeleton: SkeletonUnit[] = [
   { id: "u.travel", title: "Getting to work", titleNl: "Naar je werk", emoji: "🚲", color: "#2e7d32", lessons: [
       { id: "l.bike", title: "By bike" },
       { id: "l.transit", title: "Public transport and travel costs" },
+      { id: "l.carpool", title: "Carpool and the work van" },
+      { id: "l.train", title: "Train, delays and being late" },
   ] },
   { id: "u.lost", title: "Losing your job", titleNl: "Werk kwijt", emoji: "🧭", color: "#555b6e", lessons: [
       { id: "l.ww", title: "Unemployment benefit" },
@@ -176,6 +190,8 @@ export const workSkeleton: SkeletonUnit[] = [
   { id: "u.finish", title: "Finishing your work", titleNl: "Je werk afronden", emoji: "🏁", color: "#8a5a44", lessons: [
       { id: "l.workorder", title: "The work order" },
       { id: "l.handover", title: "Done, or not yet?" },
+      { id: "l.checklist", title: "Check before you finish" },
+      { id: "l.leavesite", title: "Leaving your workplace" },
   ] },
   { id: "u.tech", title: "In the workshop", titleNl: "In de werkplaats", emoji: "🔩", color: "#52606d", lessons: [
       { id: "l.workshop", title: "Workshop tools" },
@@ -192,14 +208,20 @@ export const workSkeleton: SkeletonUnit[] = [
   { id: "u.stage", title: "Your work placement", titleNl: "Stage lopen", emoji: "🎒", color: "#7b4fa0", lessons: [
       { id: "l.placement", title: "Your placement" },
       { id: "l.review", title: "Feedback on your placement" },
+      { id: "l.stagedays", title: "Every day at your placement" },
+      { id: "l.stageend", title: "The end of your placement" },
   ] },
   { id: "u.society", title: "Taking part in the Netherlands", titleNl: "Meedoen in Nederland", emoji: "🏛️", color: "#2b5c8a", lessons: [
       { id: "l.council", title: "The municipality and voting" },
       { id: "l.police", title: "Police and your rights" },
+      { id: "l.neighbours", title: "Your neighbourhood" },
+      { id: "l.join", title: "School, sports and volunteering" },
   ] },
   { id: "u.online", title: "Online at work", titleNl: "Online op je werk", emoji: "💻", color: "#3d5a80", lessons: [
       { id: "l.login", title: "Logging in" },
       { id: "l.phish", title: "Fake e-mails" },
+      { id: "l.workphotos", title: "Photos and data" },
+      { id: "l.device", title: "A safe phone and computer" },
   ] },
   { id: "u.delivery", title: "Transport and delivery", titleNl: "Vervoer en bezorging", emoji: "🚚", color: "#9a3412", lessons: [
       { id: "l.parcel", title: "Delivering parcels" },

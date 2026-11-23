@@ -117,6 +117,15 @@ const SEAMS: [whole: string, at: number | number[]][] = [
   ['kassamedewerker', [5, 9]],
   ['bedrijfsregels', 8],
   ['contactpersoon', 7],
+  // The basis units at four lessons (23 November 2026).
+  ['sollicitatiebrief', 12],
+  ['personeelsnummer', 10],
+  ['verblijfsvergunning', 9],
+  ['schadevergoeding', 6],
+  ['vrijwilligerswerk', 13],
+  ['bedrijfsongeval', 8],
+  ['stagevergoeding', 5],
+  ['geboorteverlof', 8],
 ];
 
 export const SHY = '\u00ad';

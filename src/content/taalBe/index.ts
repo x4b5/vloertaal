@@ -75,6 +75,18 @@ export const BE_TAAL_TODO: readonly string[] = [
   'u.uitzend',
 ];
 
+/**
+ * Lessons that stay Dutch in a unit whose Belgian file is written: their items or tip are about the
+ * Netherlands (B or C in ./inventory.ts), and their Belgian version is not written yet. Until it is,
+ * such a lesson and its tip say "Dit gaat over Nederland. In België is het anders.", as a whole unit
+ * of BE_TAAL_TODO does. The rights lessons of the basis units at four lessons (23 November 2026):
+ * their Belgian rules (verlof, ziekte, loon, uitbuiting, verblijf) still need Belgian sources and an
+ * expert check, like the rest of the Belgian rights texts (docs/taal-belgie.md).
+ */
+export const BE_LESSON_TODO: readonly string[] = [
+  'l.payparts', 'l.holiday', 'l.special', 'l.unwell', 'l.injury', 'l.debt', 'l.inspection', 'l.residence',
+];
+
 /** Every Belgian file written so far. */
 export const beTaalFiles: BeTaal[] = Object.values(BY_NL).filter((b): b is BeTaal => b !== undefined);
 
@@ -160,7 +172,7 @@ export function lessonNlOnly(lessonId: string): boolean {
   if (learnerCountry() !== 'be' || isTaalBeId(lessonId)) return false;
   const inv = lessonInventory.get(lessonId);
   const unit = unitOfLessonId.get(lessonId);
-  return Boolean(inv && unit && (inv.items !== 'A' || (inv.tip !== 'A' && inv.tip !== '-')) && stillDutch(unit));
+  return Boolean(inv && unit && (inv.items !== 'A' || (inv.tip !== 'A' && inv.tip !== '-')) && (stillDutch(unit) || BE_LESSON_TODO.includes(lessonId)));
 }
 
 /** Does a Dutch tip get that line (its lesson's tip is B or C, and it plays in its Dutch version)? */
@@ -168,7 +180,7 @@ export function tipNlOnly(tip: Pick<CultureTip, 'id' | 'lessonId'>): boolean {
   if (learnerCountry() !== 'be' || isTaalBeId(tip.id)) return false;
   const inv = lessonInventory.get(tip.lessonId);
   const unit = unitOfLessonId.get(tip.lessonId);
-  return Boolean(inv && unit && inv.tip !== 'A' && inv.tip !== '-' && stillDutch(unit));
+  return Boolean(inv && unit && inv.tip !== 'A' && inv.tip !== '-' && (stillDutch(unit) || BE_LESSON_TODO.includes(tip.lessonId)));
 }
 
 /** Does a Dutch unit get that line (a C unit: the whole topic is about the Netherlands)? */

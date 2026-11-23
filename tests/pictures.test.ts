@@ -102,7 +102,12 @@ describe('abstract words (no picture)', { timeout: 40000 }, () => {
     // picture only (it also means to quit). The other seventeen words are drawn (group52).
     for (const id of ['w.nu', 'w.dan', 'w.altijd', 'w.genoeg', 'w.meer', 'w.alles', 'w.stoppen']) expect(abstract).toContain(id);
     for (const id of ['w.zetten', 'w.leggen', 'w.brengen', 'w.geven', 'w.vasthouden', 'w.loslaten', 'w.aanzetten', 'w.opendoen', 'w.dichtdoen', 'w.drukken', 'w.draaien', 'w.duwen', 'w.trekken', 'w.vullen', 'w.leegmaken', 'w.schoonmaken', 'w.vol']) expect(abstract).not.toContain(id);
-    expect(abstract.length).toBe(264);
+    // 337 with the basis units at four lessons (23 November 2026): 73 of the 156 words of their 26 new
+    // lessons have no picture (function words, feelings, rules and amounts); the other 83 have a
+    // placeholder until they are drawn (src/pictures/basis).
+    for (const id of ['w.saldo', 'w.geboorteverlof', 'w.mensenhandel', 'w.update']) expect(abstract).toContain(id);
+    for (const id of ['w.wond', 'w.pensioen', 'w.gordel', 'w.usbstick']) expect(abstract).not.toContain(id);
+    expect(abstract.length).toBe(337);
     // Of the 191 (5 November 2026, the owner's trial of moving pictures, tests/motionPictures.test.ts):
     // 178 with no picture at all, 11 memory pictures ('hook') and 2 moving pictures ('motion':
     // "ontruimen" and "bijna", which were abstract). The 2 still never stand in a picture choice.
@@ -115,7 +120,8 @@ describe('abstract words (no picture)', { timeout: 40000 }, () => {
     // The sector lessons of 14 November 2026: 7 more, 222. "Hulp vragen" at four lessons: 6 more
     // with no picture (228) and 2 more memory pictures (moeilijk, makkelijk: 15). "Instructies":
     // 6 more with no picture (234) and 1 more memory picture (stoppen: 16).
-    expect(allWords.filter((w) => w.picture === false)).toHaveLength(234);
+    // The basis units at four lessons (23 November 2026): 73 more with no picture (307).
+    expect(allWords.filter((w) => w.picture === false)).toHaveLength(307);
     expect(allWords.filter((w) => w.picture === 'hook')).toHaveLength(16);
     expect(allWords.filter((w) => w.picture === 'motion').map((w) => w.id).sort()).toEqual([
       'w.automatisch', 'w.bijna', 'w.daarna', 'w.doorgeven', 'w.eerst', 'w.kiezen', 'w.ontruimen', 'w.ruilen',

@@ -4598,6 +4598,469 @@ const deliveryUnit = unit('delivery', 'Transport and delivery', 'Vervoer en bezo
   ),
 ]);
 
+// ---- The basis units at four lessons (23 November 2026) ----
+// The owner's request ("Ga door met de basisonderwerpen naar 4 lessen"): eleven basis units of this
+// file had two lessons; each gets two more, at the end of the unit (before its mixed review, which
+// picks the new words by itself). "Tijd en rooster" and "Als het misgaat" are in curriculum.ts.
+// Words that are already words of other lessons come in a sentence or the chat only: "de loonstrook"
+// is avoided in the lines (a Belgian learner says "de loonbrief"). The tips are in workTips.ts; the
+// rights in them have a ⚖️ note there and a section in docs/juridische-check.md. Translations follow
+// (src/content/translationPending.ts), and so do the drawings (placeholders in src/pictures/basis).
+
+const basisFour: Record<string, Lesson[]> = {
+  // Solliciteren: the vacancy, and after the interview. "de vacature" (l.findwork), "het
+  // diploma" (l.diploma) and "de ervaring" (l.cv) come in a sentence or the tip only.
+  'u.apply': [
+    lesson(
+      'vacancy',
+      'Reading a vacancy',
+      [
+        ['advertentie', 'de advertentie', 'the ad (a text that offers a job or a thing)', '📰'],
+        ['eis', 'de eis', 'the requirement (what you must have or can do)', '📌', false],
+        ['parttime', 'parttime', 'part-time (fewer hours a week)', '🌗', false],
+        ['fulltime', 'fulltime', 'full-time (a whole working week)', '🌕', false],
+        ['sollicitatiebrief', 'de sollicitatiebrief', 'the application letter', '💌'],
+        ['contactpersoon', 'de contactpersoon', 'the contact person (the person you can call or write to)', '📇', false],
+      ],
+      [
+        ['Ik zag uw advertentie op internet.', 'I saw your ad on the internet.'],
+        ['Is de baan parttime of fulltime?', 'Is the job part-time or full-time?'],
+        ['Wat zijn de eisen?', 'What are the requirements?'],
+      ],
+      [['Waarom belt u?', 'Why are you calling?'], ['Ik bel over uw vacature. Is die nog open?', 'I am calling about your vacancy. Is it still open?']],
+    ),
+    lesson(
+      'result',
+      'After the interview',
+      [
+        ['aangenomen', 'aangenomen', 'hired (you got the job)', '🥳'],
+        ['afwijzing', 'de afwijzing', 'the rejection (you did not get the job)', '🙁', false],
+        ['aanbod', 'het aanbod', 'the offer (they offer you the job)', '🤲', false],
+        ['proefdag', 'de proefdag', 'the trial day (one day of work, to try)', '🧪'],
+        ['nabellen', 'nabellen', 'to call back (to ask how it is going)', '📞'],
+        ['teleurgesteld', 'teleurgesteld', 'disappointed', '😞'],
+      ],
+      [
+        ['U bent aangenomen!', 'You are hired!'],
+        ['Ik heb een afwijzing gekregen.', 'I got a rejection.'],
+        ['Is de proefdag betaald?', 'Is the trial day paid?'],
+      ],
+      [['Helaas, we kiezen voor iemand anders.', 'Unfortunately, we are choosing someone else.'], ['Jammer. Mag ik vragen waarom?', 'Too bad. May I ask why?']],
+    ),
+  ],
+  // Wonen en papieren: residence papers, and moving house. "verlopen" (l.holiday), "verhuizen"
+  // (l.jobends), "het adres" (l.bsn), "doorgeven" (l.privacy) and "het paspoort" (l.warning) come in
+  // a sentence or the chat only.
+  'u.papers': [
+    lesson(
+      'residence',
+      'Your residence papers',
+      [
+        ['verblijfsvergunning', 'de verblijfsvergunning', 'the residence permit', '📇'],
+        ['pasfoto', 'de pasfoto', 'the passport photo', '🖼️'],
+        ['vingerafdruk', 'de vingerafdruk', 'the fingerprint', '👆'],
+        ['geldig', 'geldig', 'valid (still good to use)', '✔️', false],
+        ['verloopdatum', 'de verloopdatum', 'the expiry date (the last day it is valid)', '📆', false],
+        ['volgnummer', 'het volgnummer', 'the queue number (the ticket with your turn)', '🎟️'],
+      ],
+      [
+        ['Mijn verblijfsvergunning is nog een jaar geldig.', 'My residence permit is valid for one more year.'],
+        ['Wat is de verloopdatum van je paspoort?', 'What is the expiry date of your passport?'],
+        ['Ik heb een afspraak bij de gemeente.', 'I have an appointment at the town hall.'],
+      ],
+      [['Uw verblijfsvergunning is bijna verlopen.', 'Your residence permit has almost expired.'], ['Dan vraag ik meteen een nieuwe aan.', 'Then I will apply for a new one right away.']],
+    ),
+    lesson(
+      'newhome',
+      'Moving house',
+      [
+        ['brievenbus', 'de brievenbus', 'the letterbox', '📪'],
+        ['meterstand', 'de meterstand', 'the meter reading (the numbers on the meter for gas, power or water)', '⏲️'],
+        ['naambordje', 'het naambordje', 'the name sign (your name at the door)', '🏷️'],
+        ['woning', 'de woning', 'the home (a house or a flat)', '🏠'],
+        ['doorsturen', 'doorsturen', 'to forward (send on to a new address)', '➡️', false],
+        ['verhuisdag', 'de verhuisdag', 'the moving day', '🛻'],
+      ],
+      [
+        ['Ik verhuis volgende week.', 'I am moving next week.'],
+        ['Mijn naam staat niet op de brievenbus.', 'My name is not on the letterbox.'],
+        ['Ik geef mijn nieuwe adres door.', 'I am passing on my new address.'],
+      ],
+      [['Waar woon je nu?', 'Where do you live now?'], ['In een nieuwe woning. Hier is mijn nieuwe adres.', 'In a new home. Here is my new address.']],
+    ),
+  ],
+  // Loon: the parts of the payslip, and late, missing or cash pay. "de loonstrook" (l.payslip),
+  // "het loon" (l.payslip), "de schuld" (l.warning) and "de bankrekening" (l.extra) come in a
+  // sentence, the chat or the tip only.
+  'u.pay': [
+    lesson(
+      'payparts',
+      'What is on your payslip',
+      [
+        ['pensioen', 'het pensioen', 'the pension (money for when you are old)', '👵'],
+        ['periode', 'de periode', 'the period (the weeks or the month of this pay)', '🗓️', false],
+        ['bedrag', 'het bedrag', 'the amount (of money)', '🔢', false],
+        ['totaal', 'het totaal', 'the total', '🧮', false],
+        ['afkorting', 'de afkorting', 'the abbreviation (a short form of a word)', '🔤', false],
+        ['personeelsnummer', 'het personeelsnummer', 'the staff number (your number at the company)', '#️⃣', false],
+      ],
+      [
+        ['Wat betekent deze afkorting?', 'What does this abbreviation mean?'],
+        ['Dit bedrag gaat naar mijn pensioen.', 'This amount goes to my pension.'],
+        ['Over welke periode is dit loon?', 'Which period is this pay for?'],
+      ],
+      [['Wat is je personeelsnummer?', 'What is your staff number?'], ['Dat staat bovenaan, naast mijn naam.', 'It is at the top, next to my name.']],
+    ),
+    lesson(
+      'latepay',
+      'Late, missing or cash pay',
+      [
+        ['zwartwerken', 'zwart werken', 'to work off the books (no contract, no tax, no rights on paper)', '🕶️', false],
+        ['voorschot', 'het voorschot', 'the advance (part of your pay before payday)', '💵'],
+        ['nabetaling', 'de nabetaling', 'the back pay (money you get later, to correct your pay)', '🔙', false],
+        ['tekort', 'het tekort', 'the shortfall (money that is missing)', '🕳️', false],
+        ['betaaldag', 'de betaaldag', 'the payday', '🗓️'],
+        ['bankafschrift', 'het bankafschrift', 'the bank statement (a list of the money in and out)', '📄'],
+      ],
+      [
+        ['Mijn loon is te laat.', 'My pay is late.'],
+        ['Ik werk niet zwart.', 'I do not work off the books.'],
+        ['Kan ik een voorschot krijgen?', 'Can I get an advance?'],
+      ],
+      [['Je krijgt het tekort volgende maand.', 'You will get the missing money next month.'], ['Kan ik dat op papier krijgen?', 'Can I get that on paper?']],
+    ),
+  ],
+  // Verlof: planning your holiday, and special days off. "de vakantiedagen" and "het verlof"
+  // (l.leave) and "het formulier" (l.details) come in a sentence or the chat only.
+  'u.leave': [
+    lesson(
+      'holiday',
+      'Planning your holiday',
+      [
+        ['saldo', 'het saldo', 'the balance (how many days you still have)', '⚖️', false],
+        ['goedkeuren', 'goedkeuren', 'to approve (to say yes to it)', '✅', false],
+        ['verlopen', 'verlopen', 'to expire (it is no longer valid)', '⌛', false],
+        ['zomervakantie', 'de zomervakantie', 'the summer holiday', '☀️'],
+        ['drukte', 'de drukte', 'the busy time (a lot of work)', '🐝', false],
+        ['aanvraag', 'de aanvraag', 'the request (you ask for something, often on a form)', '🗒️', false],
+      ],
+      [
+        ['Hoeveel vakantiedagen heb ik nog?', 'How many days off do I still have?'],
+        ['Mijn verlof is goedgekeurd.', 'My leave is approved.'],
+        ['Ik vul het formulier in.', 'I am filling in the form.'],
+      ],
+      [['In de zomer is het druk. Kun je in mei op vakantie?', 'In summer it is busy. Can you go on holiday in May?'], ['Liever in juli. Dan is mijn familie thuis.', 'I would rather go in July. Then my family is at home.']],
+    ),
+    lesson(
+      'special',
+      'Special days off',
+      [
+        ['bruiloft', 'de bruiloft', 'the wedding', '💒'],
+        ['begrafenis', 'de begrafenis', 'the funeral', '🕯️'],
+        ['geboorteverlof', 'het geboorteverlof', 'the birth leave (for the partner, when a baby is born)', '👶', false],
+        ['bijzonderverlof', 'het bijzonder verlof', 'the special leave (for example for a wedding or a funeral)', '📅', false],
+        ['kerstdagen', 'de kerstdagen', 'Christmas (the two Christmas days)', '🎄'],
+        ['vrijvragen', 'vrij vragen', 'to ask for a day off', '🙋', false],
+      ],
+      [
+        ['Mijn broer gaat trouwen. Kan ik vrij vragen?', 'My brother is getting married. Can I ask for a day off?'],
+        ['Mijn oom is overleden. De begrafenis is vrijdag.', 'My uncle has died. The funeral is on Friday.'],
+        ['Moet ik werken met de kerstdagen?', 'Do I have to work at Christmas?'],
+      ],
+      [['Gefeliciteerd met je baby! Neem je geboorteverlof?', 'Congratulations on your baby! Are you taking birth leave?'], ['Ja, de eerste week ben ik thuis.', 'Yes, the first week I am at home.']],
+    ),
+  ],
+  // Ziekte: unwell at work or on holiday, and hurt by your work. "ziek" and "de dokter" (l.sick),
+  // "naar huis" (in the chat), "het rapport" (l.report) and "de foto" (l.phone) come in a sentence,
+  // the chat or the tip only.
+  'u.sick': [
+    lesson(
+      'unwell',
+      'Feeling unwell',
+      [
+        ['hoofdpijn', 'de hoofdpijn', 'the headache', '😣'],
+        ['griep', 'de griep', 'the flu', '🤧'],
+        ['verkouden', 'verkouden', 'having a cold', '😷'],
+        ['nietlekker', 'niet lekker', 'not well (you feel a bit sick)', '😕', false],
+        ['naarhuis', 'naar huis gaan', 'to go home', '🚶‍♀️'],
+        ['uitzieken', 'uitzieken', 'to stay home until you are well', '🛏️', false],
+      ],
+      [
+        ['Ik voel me niet lekker.', 'I do not feel well.'],
+        ['Ik heb hoofdpijn en ik ben verkouden.', 'I have a headache and I have a cold.'],
+        ['Ik ga naar huis. Ik ben ziek.', 'I am going home. I am sick.'],
+      ],
+      [['Je ziet bleek. Gaat het?', 'You look pale. Are you okay?'], ['Nee, ik voel me niet lekker. Mag ik naar huis?', 'No, I do not feel well. May I go home?']],
+    ),
+    lesson(
+      'injury',
+      'Hurt by your work',
+      [
+        ['bedrijfsongeval', 'het bedrijfsongeval', 'the accident at work', '🚧'],
+        ['verzekering', 'de verzekering', 'the insurance', '☂️', false],
+        ['schadevergoeding', 'de schadevergoeding', 'the compensation (money for the damage)', '💷', false],
+        ['oorzaak', 'de oorzaak', 'the cause (why it happened)', '❓', false],
+        ['letsel', 'het letsel', 'the injury (harm to your body)', '🦴', false],
+        ['verklaring', 'de verklaring', 'the statement (what you write or say about what happened)', '🖊️', false],
+      ],
+      [
+        ['Ik heb een bedrijfsongeval gehad.', 'I have had an accident at work.'],
+        ['Wat was de oorzaak?', 'What was the cause?'],
+        ['Mijn collega heeft het gezien.', 'My colleague saw it.'],
+      ],
+      [['Wil je hier je verklaring opschrijven?', 'Will you write down your statement here?'], ['Ja. Mag ik een kopie?', 'Yes. May I have a copy?']],
+    ),
+  ],
+  // Uitbuiting herkennen: a debt that keeps you stuck, and the inspection. "de schuld" and "het
+  // paspoort" (l.warning) and "betalen" (l.extra) come in a sentence or the chat only.
+  'u.exploit': [
+    lesson(
+      'debt',
+      'A debt to the boss or the agency',
+      [
+        ['lening', 'de lening', 'the loan', '🪙', false],
+        ['lenen', 'lenen', 'to borrow, to lend', '🤝', false],
+        ['vastzitten', 'vastzitten', 'to be stuck (you cannot leave)', '🪤', false],
+        ['tussenpersoon', 'de tussenpersoon', 'the middleman (someone who arranges work for money)', '🕴️'],
+        ['rente', 'de rente', 'the interest (extra money you pay on a loan)', '📈', false],
+        ['belofte', 'de belofte', 'the promise', '🤞', false],
+      ],
+      [
+        ['Ik moest betalen voor deze baan.', 'I had to pay for this job.'],
+        ['Mijn schuld wordt elke maand hoger.', 'My debt gets higher every month.'],
+        ['De tussenpersoon heeft mijn paspoort.', 'The middleman has my passport.'],
+      ],
+      [['Je mag pas weg als je schuld betaald is.', 'You may only leave when your debt is paid.'], ['Dat mag niet. Ik vraag hulp.', 'That is not allowed. I am asking for help.']],
+    ),
+    lesson(
+      'inspection',
+      'The inspection and other help',
+      [
+        ['inspectie', 'de inspectie', 'the inspection (people who check if work is fair and safe)', '🕵️'],
+        ['controle', 'de controle', 'the check', '☑️', false],
+        ['slachtoffer', 'het slachtoffer', 'the victim', '🧎', false],
+        ['mensenhandel', 'de mensenhandel', 'human trafficking (people are used and sold for work or sex)', '⛓️', false],
+        ['vertrouwen', 'vertrouwen', 'to trust', '🫱', false],
+        ['tolk', 'de tolk', 'the interpreter', '🗣️'],
+      ],
+      [
+        ['Morgen komt de inspectie.', 'Tomorrow the inspection is coming.'],
+        ['Mag ik een tolk?', 'May I have an interpreter?'],
+        ['Ik vertrouw deze man niet.', 'I do not trust this man.'],
+      ],
+      [['Wil je met de inspectie praten?', 'Do you want to talk to the inspection?'], ['Ja, maar mijn baas mag het niet horen.', 'Yes, but my boss may not hear it.']],
+    ),
+  ],
+  // Naar je werk: carpool and the work van, and the train. "het rijbewijs" (l.carjob), "de
+  // vertraging" (l.delay), "het bericht" (l.texting) and "ophalen" (l.kids) come in a sentence,
+  // the chat or the tip only.
+  'u.travel': [
+    lesson(
+      'carpool',
+      'Carpool and the work van',
+      [
+        ['carpoolen', 'carpoolen', 'to carpool (drive to work together in one car)', '🚙'],
+        ['meerijden', 'meerijden', 'to ride along (in someone else’s car)', '🚘'],
+        ['gordel', 'de gordel', 'the seat belt', '🪢'],
+        ['instappen', 'instappen', 'to get in (a car, a bus or a train)', '⤴️'],
+        ['uitstappen', 'uitstappen', 'to get out (of a car, a bus or a train)', '⤵️'],
+        ['bijrijder', 'de bijrijder', 'the passenger (next to the driver)', '🧑‍✈️', false],
+      ],
+      [
+        ['Mag ik met jou meerijden?', 'May I ride along with you?'],
+        ['Doe je gordel om.', 'Put on your seat belt.'],
+        ['Ik stap uit bij het station.', 'I get out at the station.'],
+      ],
+      [['Wie rijdt er morgen?', 'Who is driving tomorrow?'], ['Ik rij. Om zes uur haal ik je op.', 'I am driving. At six I will pick you up.']],
+    ),
+    lesson(
+      'train',
+      'Train, delays and being late',
+      [
+        ['station', 'het station', 'the station', '🚉'],
+        ['perron', 'het perron', 'the platform (where you get on the train)', '🛤️'],
+        ['overstappen', 'overstappen', 'to change (to another train or bus)', '🔁'],
+        ['uitvallen', 'uitvallen', 'to be cancelled (the train does not go)', '🚫', false],
+        ['kaartje', 'het kaartje', 'the ticket', '🎫'],
+        ['reisplanner', 'de reisplanner', 'the journey planner (an app that shows trains and buses)', '🗺️', false],
+      ],
+      [
+        ['Mijn trein valt uit.', 'My train is cancelled.'],
+        ['Ik moet één keer overstappen.', 'I have to change once.'],
+        ['Van welk perron gaat de trein?', 'From which platform does the train leave?'],
+      ],
+      [['Waarom ben je zo laat?', 'Why are you so late?'], ['Mijn trein viel uit. Ik heb je een bericht gestuurd.', 'My train was cancelled. I sent you a message.']],
+    ),
+  ],
+  // Je werk afronden: your own check, and leaving your workplace. "nakijken" and "op slot"
+  // (l.handover), "netjes" (l.givefeedback), "het licht" (l.bike) and "dichtdoen" (l.onoff) come in a
+  // sentence or the chat only.
+  'u.finish': [
+    lesson(
+      'checklist',
+      'Check before you finish',
+      [
+        ['checklist', 'de checklist', 'the checklist (a list of things to check)', '📋'],
+        ['afvinken', 'afvinken', 'to tick off (put a tick behind a task)', '✔️'],
+        ['overdoen', 'overdoen', 'to do again', '🔂', false],
+        ['compleet', 'compleet', 'complete (nothing is missing)', '🧩', false],
+        ['vergeten', 'vergeten', 'to forget', '🤦', false],
+        ['resultaat', 'het resultaat', 'the result', '🏆', false],
+      ],
+      [
+        ['Ik vink alles af op de checklist.', 'I tick off everything on the checklist.'],
+        ['Is de bestelling compleet?', 'Is the order complete?'],
+        ['Dit moet ik overdoen.', 'I have to do this again.'],
+      ],
+      [['Ben je niets vergeten?', 'Have you not forgotten anything?'], ['Ik kijk nog één keer op de checklist.', 'I will look at the checklist one more time.']],
+    ),
+    lesson(
+      'leavesite',
+      'Leaving your workplace',
+      [
+        ['terugzetten', 'terugzetten', 'to put back (in its place)', '🔙'],
+        ['vegen', 'vegen', 'to sweep', '🧹'],
+        ['vloer', 'de vloer', 'the floor', '🟫'],
+        ['uitdoen', 'uitdoen', 'to switch off (the light, a machine)', '💡'],
+        ['alslaatste', 'als laatste', 'as the last one', '🔚', false],
+        ['achterlaten', 'achterlaten', 'to leave behind (how you leave your place)', '🧳', false],
+      ],
+      [
+        ['Ik laat mijn plek netjes achter.', 'I leave my place tidy.'],
+        ['Wie gaat er als laatste weg?', 'Who leaves last?'],
+        ['Doe het licht uit en de deur dicht.', 'Switch off the light and close the door.'],
+      ],
+      [['Ga jij als laatste weg vandaag?', 'Are you the last one to leave today?'], ['Ja. Ik doe alles uit en de deur op slot.', 'Yes. I switch everything off and lock the door.']],
+    ),
+  ],
+  // Stage lopen: every day at your placement, and its end. "de stage" and "de school"
+  // (l.placement), "ziek" (l.sick), "halen" (l.certs) and "het diploma" (l.diploma) come in a
+  // sentence, the chat or the tip only.
+  'u.stage': [
+    lesson(
+      'stagedays',
+      'Every day at your placement',
+      [
+        ['stageplek', 'de stageplek', 'the placement (the company where you do your placement)', '🏢'],
+        ['afwezig', 'afwezig', 'absent (not there)', '🚷', false],
+        ['aanwezig', 'aanwezig', 'present (there)', '🙌', false],
+        ['stagevergoeding', 'de stagevergoeding', 'the placement allowance (money you may get at your placement)', '💴', false],
+        ['begeleiding', 'de begeleiding', 'the guidance (help from your guide)', '🧑‍🏫', false],
+        ['leerling', 'de leerling', 'the student (at school)', '✏️'],
+      ],
+      [
+        ['Ik ben morgen afwezig. Ik ben ziek.', 'I am absent tomorrow. I am sick.'],
+        ['Krijg ik een stagevergoeding?', 'Do I get a placement allowance?'],
+        ['Op mijn stageplek werk ik vier dagen.', 'At my placement I work four days.'],
+      ],
+      [['Waarom was je gisteren afwezig?', 'Why were you absent yesterday?'], ['Ik was ziek. Ik heb de school en het bedrijf gebeld.', 'I was sick. I called the school and the company.']],
+    ),
+    lesson(
+      'stageend',
+      'The end of your placement',
+      [
+        ['eindgesprek', 'het eindgesprek', 'the final talk (at the end of your placement)', '🗨️'],
+        ['geslaagd', 'geslaagd', 'passed (you did it well enough)', '🏅'],
+        ['gezakt', 'gezakt', 'failed (not good enough this time)', '📉', false],
+        ['herkansing', 'de herkansing', 'the resit (a new chance)', '🎲', false],
+        ['bedanken', 'bedanken', 'to thank', '💐'],
+        ['trakteren', 'trakteren', 'to treat (bring something nice to eat for everyone)', '🍰'],
+      ],
+      [
+        ['Morgen heb ik mijn eindgesprek.', 'Tomorrow I have my final talk.'],
+        ['Ik ben geslaagd voor mijn stage.', 'I passed my placement.'],
+        ['Ik wil iedereen bedanken.', 'I want to thank everyone.'],
+      ],
+      [['Je laatste dag! Wat ga je nu doen?', 'Your last day! What are you going to do now?'], ['Eerst mijn diploma halen. Dan zoek ik werk.', 'First get my diploma. Then I will look for work.']],
+    ),
+  ],
+  // Meedoen in Nederland: your neighbourhood, and school, sports and volunteering. "praten"
+  // (l.speakup), "de bibliotheek" (l.keeplearning) and "de school" (l.placement) come in a sentence,
+  // the chat or the tip only.
+  'u.society': [
+    lesson(
+      'neighbours',
+      'Your neighbourhood',
+      [
+        ['buurt', 'de buurt', 'the neighbourhood', '🏙️'],
+        ['buurthuis', 'het buurthuis', 'the community centre (a house for activities in your neighbourhood)', '🏬'],
+        ['straat', 'de straat', 'the street', '🏘️'],
+        ['kennismaken', 'kennismaken', 'to get to know (meet someone for the first time)', '🤗', false],
+        ['overlast', 'de overlast', 'the nuisance (noise or trouble for others)', '🔊', false],
+        ['buurvrouw', 'de buurvrouw', 'the neighbour (a woman)', '👩'],
+      ],
+      [
+        ['Ik woon sinds kort in deze straat.', 'I have lived in this street for a short time.'],
+        ['In de bibliotheek oefen ik Nederlands.', 'In the library I practise Dutch.'],
+        ['Sorry voor de overlast.', 'Sorry for the nuisance.'],
+      ],
+      [['Hallo, ik ben je nieuwe buurvrouw.', 'Hello, I am your new neighbour.'], ['Leuk om kennis te maken! Ik ben Ali.', 'Nice to meet you! I am Ali.']],
+    ),
+    lesson(
+      'join',
+      'School, sports and volunteering',
+      [
+        ['vrijwilliger', 'de vrijwilliger', 'the volunteer (someone who helps without pay)', '🙋‍♂️'],
+        ['vrijwilligerswerk', 'het vrijwilligerswerk', 'the volunteer work', '🫶', false],
+        ['sportclub', 'de sportclub', 'the sports club', '⚽'],
+        ['ouderavond', 'de ouderavond', 'the parents’ evening (at school)', '👪'],
+        ['leraar', 'de leraar', 'the teacher', '👨‍🏫'],
+        ['basisschool', 'de basisschool', 'the primary school', '🖍️'],
+      ],
+      [
+        ['Mijn zoon gaat naar de basisschool.', 'My son goes to primary school.'],
+        ['Ik speel voetbal bij een sportclub.', 'I play football at a sports club.'],
+        ['Op zaterdag doe ik vrijwilligerswerk.', 'On Saturday I do volunteer work.'],
+      ],
+      [['Kom je naar de ouderavond?', 'Are you coming to the parents’ evening?'], ['Ja. Ik wil graag met de leraar praten.', 'Yes. I would like to talk to the teacher.']],
+    ),
+  ],
+  // Online op je werk: photos and data, and a safe phone and computer. "de foto" (l.phone), "de
+  // privacy" and "de toestemming" (l.privacy), "de camera" (l.translate), "de app" (l.texting) and "de
+  // ICT-afdeling" (l.phish) come in a sentence, the chat or the tip only.
+  'u.online': [
+    lesson(
+      'workphotos',
+      'Photos and data',
+      [
+        ['gezicht', 'het gezicht', 'the face', '🧑'],
+        ['klantgegevens', 'de klantgegevens', 'the customer details (name, address, phone of a customer)', '🗃️', false],
+        ['onlinezetten', 'online zetten', 'to post online', '🌐', false],
+        ['wissen', 'wissen', 'to delete', '❎', false],
+        ['werktelefoon', 'de werktelefoon', 'the work phone', '📟'],
+        ['bestand', 'het bestand', 'the file (on a computer)', '🗄️', false],
+      ],
+      [
+        ['Ik zet geen foto’s van het werk online.', 'I do not post photos of work online.'],
+        ['Ik wis de foto meteen.', 'I delete the photo right away.'],
+        ['Zijn gezicht staat op de foto.', 'His face is in the photo.'],
+      ],
+      [['Mag ik een foto van je maken? Voor internet.', 'May I take a photo of you? For the internet.'], ['Nee, liever niet. Ik wil niet online.', 'No, I would rather not. I do not want to be online.']],
+    ),
+    lesson(
+      'device',
+      'A safe phone and computer',
+      [
+        ['update', 'de update', 'the update (a new version of an app or a program)', '⬆️', false],
+        ['virus', 'het virus', 'the virus (a program that harms your computer)', '👾'],
+        ['wifi', 'de wifi', 'the wifi', '📶'],
+        ['usbstick', 'de usb-stick', 'the USB stick', '💾'],
+        ['installeren', 'installeren', 'to install', '⬇️', false],
+        ['openbaar', 'openbaar', 'public (for everyone)', '🌍', false],
+      ],
+      [
+        ['Ik installeer de update vanavond.', 'I am installing the update tonight.'],
+        ['Deze usb-stick lag op de grond.', 'This USB stick was lying on the floor.'],
+        ['Is deze wifi veilig?', 'Is this wifi safe?'],
+      ],
+      [['Mag ik deze app op de werktelefoon zetten?', 'May I put this app on the work phone?'], ['Vraag het eerst aan de ICT-afdeling.', 'Ask the IT department first.']],
+    ),
+  ],
+};
+
+/** A unit with its two lessons of 23 November 2026 at the end (basisFour above), or the unit itself. */
+const withFour = (u: Unit): Unit => (basisFour[u.id] ? { ...u, lessons: [...u.lessons, ...basisFour[u.id]] } : u);
+
 // ---- Course order of everything in this file ----
 
 const byId = (id: string) => coreUnits.find((u) => u.id === id)!;
@@ -4676,7 +5139,8 @@ export const workUnits: Unit[] = [
   cookingUnit,
   careworkUnit,
   shopfloorUnit,
-];
+  // The basis units at four lessons (23 November 2026): their two new lessons at the end (basisFour above).
+].map(withFour);
 
 
 /** This file's address (saved with the app for offline use, src/content/lessonTexts.ts). */

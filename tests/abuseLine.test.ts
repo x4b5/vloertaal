@@ -13,7 +13,9 @@ import { translationPending } from '../src/content/translationPending';
 // c.road: called self-employed, but the company decides your hours and route (u.delivery, 5 November 2026).
 // c.deductions and c.agencyhome: costs taken off the minimum wage, and housing through the agency
 // ("Werken via een uitzendbureau", 23 November 2026).
-const ABUSE_TIPS = ['c.warning', 'c.gethelp', 'c.housing', 'c.rights', 'c.newjob', 'c.harvest', 'c.road', 'c.deductions', 'c.agencyhome'];
+// c.latepay, c.debt and c.inspection: cash pay off the books, a debt that keeps you stuck, and the
+// inspection (the basis units at four lessons, 23 November 2026).
+const ABUSE_TIPS = ['c.warning', 'c.gethelp', 'c.housing', 'c.rights', 'c.newjob', 'c.harvest', 'c.road', 'c.deductions', 'c.agencyhome', 'c.latepay', 'c.debt', 'c.inspection'];
 const tip = (id: string) => cultureTips.find((t) => t.id === id)!;
 /** "employer" in each help language (the old closing line named it). */
 const EMPLOYER: Record<string, RegExp> = {
