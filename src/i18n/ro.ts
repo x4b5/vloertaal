@@ -292,7 +292,7 @@ const lang: HelpLanguageSource = {
     settingOn: 'Pornit',
     settingOff: 'Oprit',
     sectorGroupMake: 'Producție și transport',
-    sectorGroupCare: 'Îngrijire și servicii',
+    sectorGroupCare: "Îngrijire și copii", // nieuw, nalezen
     sectorGroupShop: 'Magazine și restaurante', // nieuw, nalezen
     sectorGroupBuild: 'Construcții și tehnică', // nieuw (30 okt 2026), nalezen
     voiceWoman: 'Voce de femeie',
@@ -500,6 +500,14 @@ const lang: HelpLanguageSource = {
     sfeerStandard: 'Standard', // nieuw, nalezen
     sfeerGame: 'Joc', // nieuw, nalezen
     sfeerHint: 'Liniște: nimic nu se mișcă, fără sărbători. Standard: aplicația așa cum este. Joc: puncte, sunete și multă mișcare.', // nieuw, nalezen
+    sectorGroupService: "Servicii și pază", // nieuw, nalezen
+    sectorGroupOutdoor: "Munca în aer liber", // nieuw, nalezen
+    sectorChildcare: "Creșă și grădiniță", // nieuw, nalezen
+    sectorWaste: "Deșeuri și reciclare", // nieuw, nalezen
+    sectorFood: "Industria alimentară", // nieuw, nalezen
+    sectorSecurity: "Pază și securitate", // nieuw, nalezen
+    sectorFacility: "Servicii pentru clădiri", // nieuw, nalezen
+    sectorGreen: "Spații verzi și grădini", // nieuw, nalezen
     playLevel: 'Nivel', // nieuw, nalezen
     playLevel1: 'Început', // nieuw, nalezen
     playLevel2: 'Învățare', // nieuw, nalezen

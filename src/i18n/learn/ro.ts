@@ -209,6 +209,55 @@ const t: CultureTranslation = {
     'c.oilchange.a.why': "Întrebarea e cât: litrii, și cum se verifică.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.a.why': "Întrebarea e dacă trebuie unul nou: da, și de ce.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "Întrebarea e ce trebuie făcut: uită-te pe fișa de lucru.", // nieuw, nalezen // nagelezen AI 22 nov
+    // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
+    'c.mowing.a.why': "Se întreabă dacă ai voie să-l iei: da, și ce faci întâi.", // nieuw, nalezen
+    'c.pruning.a.why': "Se întreabă ce crengi: doar cele uscate.", // nieuw, nalezen
+    'c.hedge.a.why': "Se întreabă cât de înalt: până la sfoară, nu mai jos.", // nieuw, nalezen
+    'c.chainsaw.a.why': "Se întreabă dacă ai voie: încă nu, și ce vine întâi.", // nieuw, nalezen
+    'c.weeding.a.why': "Se întreabă dacă e buruiană: nu, și ce faci cu ea.", // nieuw, nalezen
+    'c.planting.a.why': "Se întreabă unde se pune: locul din stratul de flori.", // nieuw, nalezen
+    'c.roadside.a.why': "Se întreabă dacă poți traversa: nu, așteaptă, și de ce.", // nieuw, nalezen
+    'c.litter.a.why': "Un locuitor întreabă când: nu știi, dar spui cine știe.", // nieuw, nalezen
+    'c.reception.a.why': "Un vizitator are o programare: un moment, suni tu.", // nieuw, nalezen
+    'c.visitors.a.why': "Se întreabă unde se lasă haina: locul, și unde e.", // nieuw, nalezen
+    'c.mailroom.a.why': "Se întreabă pentru cine e: departamentul și etajul.", // nieuw, nalezen
+    'c.meetingroom.a.why': "Se întreabă la ce oră: ora, și ce trebuie făcut.", // nieuw, nalezen
+    'c.faults.a.why': "Se întreabă de ce e frig: ce e stricat și când vine ajutorul.", // nieuw, nalezen
+    'c.repairs.a.why': "Se întreabă dacă piuie: da, și de ce.", // nieuw, nalezen
+    'c.moving.a.why': "Se întreabă unde trebuie dus: camera, și unde să te uiți.", // nieuw, nalezen
+    'c.closing.a.why': "Se întreabă dacă mai e cineva înăuntru: nu, și ce faci acum.", // nieuw, nalezen
+    'c.patrol.a.why': "Se întreabă dacă ai văzut ceva: da, ce și unde.", // nieuw, nalezen
+    'c.access.a.why': "Cineva vrea să intre fără card: îmi pare rău, nu fără card.", // nieuw, nalezen
+    'c.cameras.a.why': "Se întreabă ce vezi: cine, unde și ce faci.", // nieuw, nalezen
+    'c.report.a.why': "Se întreabă ce intră în raport: ce, unde și când.", // nieuw, nalezen
+    'c.evacuation.a.why': "Se întreabă dacă sunt toți afară: nu, și câți lipsesc.", // nieuw, nalezen
+    'c.firstaid.a.why': "Se întreabă unde e defibrilatorul: locul, și ce e lângă el.", // nieuw, nalezen
+    'c.shoplifting.a.why': "Se întreabă dacă ai voie să cauți într-o geantă: nu, și cine face asta.", // nieuw, nalezen
+    'c.aggression.a.why': "Se întreabă de ce nu: motivul, spus calm.", // nieuw, nalezen
+    'c.hygienelock.a.why': "Se întreabă de ceas: nu, și regula din spatele lui.", // nieuw, nalezen
+    'c.allergens.a.why': "Se întreabă dacă pot sta împreună: nu, și de ce.", // nieuw, nalezen
+    'c.coldroom.a.why': "Se întreabă de ce piuie: cauza, și ce e de făcut.", // nieuw, nalezen
+    'c.foreignbody.a.why': "Se întreabă ce e de făcut: cui să-i arăți.", // nieuw, nalezen
+    'c.cutting.a.why': "Se întreabă cât: greutatea, și unde să te uiți.", // nieuw, nalezen
+    'c.labels.a.why': "Se întreabă ce dată: când, și unde să te uiți.", // nieuw, nalezen
+    'c.linecleaning.a.why': "Se întreabă dacă e curat: încă nu, și ce a mai rămas.", // nieuw, nalezen
+    'c.haccp.a.why': "Se întreabă de ce: ca să știm că mâncarea e sigură.", // nieuw, nalezen
+    'c.binlorry.a.why': "Se întreabă dacă poți merge pe spate: nu, și unde mergi.", // nieuw, nalezen
+    'c.reversing.a.why': "Ți se cere ajutorul: da, unde stai și ce trebuie făcut.", // nieuw, nalezen
+    'c.wastesorting.a.why': "Se întreabă unde se pune: unde merge, și de ce.", // nieuw, nalezen
+    'c.wastesafety.a.why': "Se întreabă ce faci după o tăietură: speli rana și spui.", // nieuw, nalezen
+    'c.yard.a.why': "Se întreabă unde se pune: containerul, și unde e.", // nieuw, nalezen
+    'c.hazardous.a.why': "Se întreabă ce e înăuntru: nu știi, deci o pui deoparte.", // nieuw, nalezen
+    'c.baler.a.why': "Se întreabă dacă te poți uita: nu, și ce vine întâi.", // nieuw, nalezen
+    'c.shovel.a.why': "Se întreabă dacă poți trece: doar când te vede șoferul.", // nieuw, nalezen
+    'c.nappies.a.why': "Se întreabă când: ora, și unde scrie.", // nieuw, nalezen
+    'c.mealtime.a.why': "Se întreabă dacă are voie: nu, de ce, și unde să te uiți.", // nieuw, nalezen
+    'c.naptime.a.why': "Se întreabă dacă doarme: da, de când, și că verifici.", // nieuw, nalezen
+    'c.playtime.a.why': "Un copil întreabă dacă se poate juca: da, unde, și ce urmează.", // nieuw, nalezen
+    'c.pickup.a.why': "Se întreabă cine îl ia: persoana, și că e pe listă.", // nieuw, nalezen
+    'c.childsafety.a.why': "Se întreabă dacă a căzut: da, ce are, și pe cine suni.", // nieuw, nalezen
+    'c.sickchild.a.why': "Se întreabă ce face: ce vezi, și ce faci.", // nieuw, nalezen
+    'c.grouprules.a.why': "Se întreabă dacă ai voie să ieși fără un coleg: da, dar întâi îi spui unui coleg.", // nieuw, nalezen
   },
 };
 
