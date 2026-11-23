@@ -312,6 +312,11 @@ const t: CultureTranslation = {
     'c.firefight.a.why': "Wiadomość o pożarze: jest mały, więc bierzesz gaśnicę.", // nieuw, nalezen
     'c.permitwork.a.why': "Pytanie, kto zostaje na zewnątrz: ty i twoje zadanie.", // nieuw, nalezen
     'c.vog.a.why': "Pytanie o twój VOG: jeszcze nie, i na co czekasz.", // nieuw, nalezen
+    // "Operator in de procesindustrie" (23 November 2026).
+    'c.plantround.a.why': "Pytanie o alarm: co jest za wysokie i gdzie.", // nieuw, nalezen
+    'c.plantfault.a.why': "Pytanie, czy wolno uruchomić: nie, kłódka jest jeszcze założona.", // nieuw, nalezen
+    'c.shiftwork.a.why': "Pytanie, co się stało: awaria i gdzie to jest zapisane.", // nieuw, nalezen
+    'c.heatdust.a.why': "Pytanie o telefon: nie, z powodu zagrożenia w tym miejscu.", // nieuw, nalezen
   },
 };
 
