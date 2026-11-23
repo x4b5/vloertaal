@@ -306,6 +306,12 @@ const t: CultureTranslation = {
     'c.join.a.why': "السؤال عن الحضور: نعم، ورغبة في الكلام مع المعلّم.", // nieuw, nalezen
     'c.workphotos.a.why': "طلب صورة للإنترنت: رفض مهذّب.", // nieuw, nalezen
     'c.device.a.why': "السؤال عن تطبيق جديد: سؤال قسم تقنية المعلومات أولاً.", // nieuw, nalezen
+    // "Veiligheid op het werk" and the VOG (23 November 2026).
+    'c.safetysigns.a.why': "السؤال عن معنى لافتة: انتباه، ونوع اللافتة.", // nieuw, nalezen
+    'c.substances.a.why': "السؤال هل هي سامّة: لا تخمين، بل بحث عن الجواب.", // nieuw, nalezen
+    'c.firefight.a.why': "خبر عن حريق: إنه صغير، لذلك إحضار الطفاية.", // nieuw, nalezen
+    'c.permitwork.a.why': "السؤال عمّن يبقى في الخارج: أنا، والمهمّة.", // nieuw, nalezen
+    'c.vog.a.why': "السؤال عن VOG: ليس بعد، وما الذي يُنتظر.", // nieuw, nalezen
   },
 };
 
