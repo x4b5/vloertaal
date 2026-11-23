@@ -138,6 +138,31 @@ const t: CultureTranslation = {
     'kjn.u.kweek.2': "Waan weydiin karaa in yaanyo si ku filan u bislaatay.", // nieuw, nalezen
     'kjn.u.carservice.1': "Waan sheegi karaa in nalka digniintu shidan yahay.", // nieuw, nalezen
     'kjn.u.carservice.2': "Waan weydiin karaa immisa saliid ah oo la gelinayo.", // nieuw, nalezen
+    // The new sectors (23 November 2026).
+    'kjn.u.mowing.1': "Waan sheegi karaa in cawsku aad u qoyan yahay.", // nieuw, nalezen
+    'kjn.u.mowing.2': "Waan weydiin karaa laamaha la jarayo.", // nieuw, nalezen
+    'kjn.u.planting.1': "Waan sheegi karaa in dhalo jabtay ay taal.", // nieuw, nalezen
+    'kjn.u.planting.2': "Waan weydiin karaa inaan waddada tallaabi karo.", // nieuw, nalezen
+    'kjn.u.frontdesk.1': "Waan salaami karaa oo caawin karaa booqde.", // nieuw, nalezen
+    'kjn.u.frontdesk.2': "Waan weydiin karaa cidda baakad iska leh.", // nieuw, nalezen
+    'kjn.u.maintenance.1': "Waan sheegi karaa cillad.", // nieuw, nalezen
+    'kjn.u.maintenance.2': "Waan weydiin karaa meesha miis aadayo.", // nieuw, nalezen
+    'kjn.u.guarding.1': "Waan weydiisan karaa inaan arko aqoonsiga qof.", // nieuw, nalezen
+    'kjn.u.guarding.2': "Waan ku sheegi karaa raadiyaha waxa aan arko.", // nieuw, nalezen
+    'kjn.u.incidents.1': "Waan wici karaa 112 oo sheegi karaa waxa khaldan.", // nieuw, nalezen
+    'kjn.u.incidents.2': "Waan si deggan ula hadli karaa macmiil xanaaqsan.", // nieuw, nalezen
+    'kjn.u.foodhygiene.1': "Waan sheegi karaa in qolka qabow aad u kulul yahay.", // nieuw, nalezen
+    'kjn.u.foodhygiene.2': "Waan weydiin karaa in loos ku jiro.", // nieuw, nalezen
+    'kjn.u.foodline.1': "Waan sheegi karaa in calaamaddu aanay sax ahayn.", // nieuw, nalezen
+    'kjn.u.foodline.2': "Waan weydiin karaa immisa ayaa weel galaya.", // nieuw, nalezen
+    'kjn.u.collection.1': "Waan caawin karaa darawalka inuu dib u wado.", // nieuw, nalezen
+    'kjn.u.collection.2': "Waan sheegi karaa in weel qashin aad u culus yahay.", // nieuw, nalezen
+    'kjn.u.recycling.1': "Waan u sheegi karaa booqde meesha qashinkiisu galayo.", // nieuw, nalezen
+    'kjn.u.recycling.2': "Waan sheegi karaa in mashiinka cadaadisku xannibmay.", // nieuw, nalezen
+    'kjn.u.toddlers.1': "Waan sheegi karaa inaan ilmo beddelayo.", // nieuw, nalezen
+    'kjn.u.toddlers.2': "Waan weydiin karaa in ilmo seexday.", // nieuw, nalezen
+    'kjn.u.daycare.1': "Waan u sheegi karaa waalid sida maalintu u dhacday.", // nieuw, nalezen
+    'kjn.u.daycare.2': "Waan weydiin karaa cidda imanaysa inay ilmo qaaddo.", // nieuw, nalezen
   },
 };
 export default t;

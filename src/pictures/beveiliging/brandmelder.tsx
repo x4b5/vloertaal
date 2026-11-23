@@ -21,7 +21,7 @@ export default {
       <circle cx="54" cy="50" r="4" fill={PAL.slate} />
       {/* The finger */}
       <Move kind="from" dx={24} dy={24} once>
-        <Hand pose="point" x={84} y={108} rotate={-38} scale={0.86} skin={SKIN.bram} sleeve={[PAL.blue, PAL.blueShade]} />
+        <Hand pose="point" x={82} y={89} rotate={-38} scale={0.86} skin={SKIN.bram} sleeve={[PAL.blue, PAL.blueShade]} />
       </Move>
     </g>
   ),

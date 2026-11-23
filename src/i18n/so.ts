@@ -292,7 +292,7 @@ const lang: HelpLanguageSource = {
     settingOn: "Shidan", // nieuw, nalezen
     settingOff: "Dansan", // nieuw, nalezen
     sectorGroupMake: "Samaynta iyo gaadiidka", // nieuw, nalezen
-    sectorGroupCare: "Daryeelka iyo adeegga", // nieuw, nalezen
+    sectorGroupCare: "Daryeelka iyo carruurta", // nieuw, nalezen
     sectorGroupShop: "Dukaanka iyo martigelinta", // nieuw, nalezen
     sectorGroupBuild: "Dhismaha iyo farsamada", // nieuw, nalezen
     voiceWoman: "Cod naageed", // nieuw, nalezen
@@ -500,6 +500,14 @@ const lang: HelpLanguageSource = {
     sfeerStandard: "Caadi", // nieuw, nalezen
     sfeerGame: "Ciyaar", // nieuw, nalezen
     sfeerHint: "Deggan: waxba ma dhaqaaqaan, dabaaldeg ma jiro. Caadi: app-ka sidiisa. Ciyaar: dhibco, cod iyo dhaqdhaqaaq badan.", // nieuw, nalezen
+    sectorGroupService: "Adeegga iyo ammaanka", // nieuw, nalezen
+    sectorGroupOutdoor: "Ka shaqaynta bannaanka", // nieuw, nalezen
+    sectorChildcare: "Xannaanada carruurta", // nieuw, nalezen
+    sectorWaste: "Qashinka iyo dib-u-warshadaynta", // nieuw, nalezen
+    sectorFood: "Warshadaha cuntada", // nieuw, nalezen
+    sectorSecurity: "Ammaanka iyo ilaalinta", // nieuw, nalezen
+    sectorFacility: "Adeegyada dhismaha", // nieuw, nalezen
+    sectorGreen: "Beeraha iyo meelaha cagaaran", // nieuw, nalezen
     playLevel: "Heer", // nieuw, nalezen
     playLevel1: "Bilow", // nieuw, nalezen
     playLevel2: "Barte", // nieuw, nalezen

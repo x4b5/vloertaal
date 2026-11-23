@@ -9,10 +9,10 @@ export default {
   // On the intro card the syringe comes to her arm, once.
   'w.tetanusprik': () => (
     <g strokeLinejoin="round" strokeLinecap="round">
-      <Bust who="jada" x={50} y={114} scale={0.8} expr="neutral" />
+      <Bust who="jada" x={46} y={114} scale={0.8} expr="neutral" />
       {/* The syringe, its needle at her shoulder */}
       <Move kind="from" dx={24} dy={-8} once>
-        <g transform="rotate(-24 74 90)">
+        <g transform="translate(-6 2) rotate(-24 74 90)">
           <path d="M74 90H90" stroke={PAL.steel} strokeWidth="2.4" />
           <rect x="88" y="86" width="6" height="8" rx="1.6" fill={PAL.slate} />
           <rect x="92" y="82" width="26" height="16" rx="3" fill={PAL.ice} />
