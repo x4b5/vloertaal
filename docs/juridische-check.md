@@ -2558,6 +2558,122 @@ ______________________________________________________________
 
 ---
 
+### Veiligheid op het werk en de VOG (nieuw, 23 november 2026)
+
+*Op verzoek van de eigenaar: een nieuw basisonderwerp „Veiligheid op het werk” (`u.safework`, vier lessen: veiligheidsborden, gevaarlijke stoffen, brand, en de werkvergunning, de besloten ruimte en hijsen) en de VOG (een vijfde les „Your past: the VOG”, `l.vog`, in „Werken via een uitzendbureau”, en een vierde zin in een les van Zorg, Kinderopvang en Beveiliging). De app belooft niet dat je met deze lessen VCA haalt of je op het examen voorbereidt: de tip c.safetysigns legt uit wat VCA is en zegt dat je hier een aantal woorden leert die je bij veilig werken en bij VCA tegenkomt. Twee tips gaan over rechten en hebben hieronder een eigen sectie: c.safetysigns (wat VCA is, wie betaalt) en c.vog. De drie andere tips (c.substances, c.firefight, c.permitwork) gaan over veilig werken en sluiten met de huisregelregel („ask your supervisor”); hun feiten staan met bron in dit overzicht. Elke bewering staat ook met een ⚖️-noot in `src/content/workTips.ts` of `src/content/work.ts`.*
+
+**Feiten in de andere tips en zinnen (graag ook nakijken):**
+- De kleur en vorm van de veiligheidsborden (verbod: rode cirkel met streep; gebod: blauwe cirkel; waarschuwing: gele driehoek; redding: groene rechthoek; brandmiddelen: rood vierkant): Arbobesluit art. 8.1 en bijlage XVIII; EU-richtlijn 92/58/EEG, bijlage II; NEN-EN-ISO 7010. In België hetzelfde (codex boek III titel 6).
+- De rode ruit met een zwart symbool op het etiket (c.substances): CLP-verordening (EG) nr. 1272/2008, art. 17 en 19, bijlage V. Etiket en veiligheidsinformatieblad zeggen hoe je veilig werkt: CLP art. 17 en 22, REACH art. 31 en bijlage II, Arbobesluit art. 4.2 en 4.3. Niet in een drinkfles, niet eten, drinken of roken, handen wassen: Arbobesluit art. 4.4 en 4.7 en het veiligheidsblad.
+- De branddriehoek; nooit water op brandende olie of op elektrische apparaten; de blusser zegt waarvoor hij is; schuim en poeder voor veel branden, CO2 voor elektrische branden; alleen een klein brandje zelf blussen (c.firefight): brandweer.nl („Vlam in de pan”, „Brandblusser”), NEN-EN 3-7 (het etiket met de brandklassen), NEN-EN 2; BHV: Arbowet art. 15.
+- De werkvergunning voor gevaarlijk werk, de gasmeting en de mangatwacht bij een besloten ruimte, niet zonder bescherming naar binnen om te redden, één signaalgever bij hijsen en nooit onder een hangende last (c.permitwork): VCA-checklist (werkvergunningensysteem, ssvv.nl); Arbobesluit art. 3.5g en 4.1 (besloten ruimten), art. 7.20 en 7.23d (hijsen) en de handseinen van bijlage IX bij richtlijn 92/58/EEG; nlarbeidsinspectie.nl („Besloten ruimten”).
+- „In de zorg vragen ze bijna altijd een VOG.” (`s.homecare.4`): Wkkgz art. 4 lid 1 onder c (een VOG voor een nieuwe zorgverlener met cliëntcontact; „bijna altijd” omdat er uitzonderingen zijn).
+- „Ik heb een VOG en ik sta in het personenregister.” (`s.grouprules.4`): Wet kinderopvang art. 1.48d en 1.50 lid 2; hetzelfde als de Werkregels-les r.l.kinderopvang.1.
+- „Ik krijg mijn beveiligerspas na de screening.” (`s.access.4`): Wpbr art. 7 (toestemming van de korpschef na screening door de politie); hetzelfde als r.l.beveiliging.1.
+- België: geen VOG maar een uittreksel uit het strafregister (Wetboek van strafvordering art. 595 en 596; model 2 voor werk met kinderen); in de bewaking de identificatiekaart (wet van 2 oktober 2017, vigilis.be). De drie zinnen hebben een Belgische versie (`src/content/taalBe/units/carework.ts`, `daycare.ts`, `guarding.ts`); de VOG-les is in België „alleen Nederland”.
+
+**Onze eigen vraag hierbij:**
+- Klopt de kleur en vorm van het reddingsbord („groene rechthoek”) en het brandbord („rood vierkant”) als eenvoudige regel, ook al zijn beide soms rechthoekig of vierkant?
+- Is „CO2 is good for electrical fires” een juiste eenvoudige samenvatting?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.safetysigns — What is VCA? (nieuw, 23 november 2026)
+
+*Unit „Veiligheid op het werk”, les „Safety signs” (`l.safetysigns`)*
+
+**Samenvatting (NL):** VCA is een veiligheidscertificaat waar veel bedrijven om vragen, ook via een uitzendbureau. De meeste werknemers doen B-VCA (VCA Basis); een leidinggevende VOL-VCA. Je doet een cursus en een examen met meerkeuzevragen bij een erkend examencentrum, vaak ook in andere talen, zoals Engels of Pools (vraag het examencentrum). Het diploma is 10 jaar geldig. Vaak betaalt de werkgever of het uitzendbureau: vraag het voor je zelf betaalt. Een uitzendbureau mag niet zomaar kosten van je loon afhalen. In deze lessen leer je een aantal woorden die je bij veilig werken en bij VCA tegenkomt; voor VCA doe je een cursus en een examen.
+
+**Tekst (Engels, wordt vertaald):**
+
+> VCA is a safety certificate. Many companies, also through an agency, ask for it, for example in construction and industry. Most workers do B-VCA (VCA Basis); a supervisor does VOL-VCA. For VCA you do a course and an exam with multiple-choice questions at a recognised exam centre. You can often do the exam in several languages, for example English or Polish: ask the exam centre. The diploma is valid for 10 years. Often the employer or the agency pays: ask before you pay yourself. An agency may not take just any cost off your pay (see the topic about agency work). In these lessons you learn some words that you meet in safe work and in VCA. For VCA you do a course and an exam.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Grondslag (onze lezing):** VCA (VGM Checklist Aannemers) en de diploma’s B-VCA („Basisveiligheid VCA”) en VOL-VCA („Veiligheid voor Operationeel Leidinggevenden”) beheert de Stichting Samenwerken voor Veiligheid (SSVV, ssvv.nl / vca.nl); geen wet: bedrijven met een VCA-certificaat vragen het van hun mensen, ook van uitzendkrachten. Examen met meerkeuzevragen, alleen bij door de SSVV erkende examencentra; in meer talen dan het Nederlands (de lijst verschilt per centrum en verandert: daarom „ask the exam centre”). Diploma 10 jaar geldig (SSVV). Wie betaalt: geen wet, praktijk („often”). Kosten van je loon: WML art. 13 (van het minimumloon mogen alleen huur en de zorgpremie af, zie c.deductions); BW 7:611a (geen studiekostenbeding voor scholing die de wet of de cao verplicht stelt). België: BeSaCC-VCA (besacc-vca.be), dezelfde diploma’s en geldigheid; inhoudingen: Loonbeschermingswet art. 23.
+
+**Zeg het zo (Nederlands):** „Wie betaalt de VCA-cursus?” — *Who pays for the VCA course?*
+
+**Situatie in de les:** An agency says: "You need VCA. You pay the course, or we take it off your pay." What do you do?  
+**Goede antwoord:** Ask who pays, and get it in writing.  
+**Uitleg na het antwoord (`c.safetysigns.w`):** Often the employer or the agency pays for VCA. If you must pay something, you want to know it before, on paper.
+
+**Uitleg bij het gesprekje (`c.safetysigns.a.why`):** „Wat betekent dit gele bord?” → „Pas op, gevaar. Het is een waarschuwingsbord.”: Asked what a sign means: watch out, and which sign it is.
+
+**⚠ Getallen en termijnen:** 10 jaar (geldigheid van het diploma).
+
+**Onze eigen vraag hierbij:**
+- Kunnen B-VCA-examens in november 2026 nog in het Engels en het Pools worden gedaan?
+- Klopt „valid for 10 years” voor B-VCA en VOL-VCA, ook in België?
+- Is „An agency may not take just any cost off your pay” juist en niet te stellig, ook als de uitzendkracht meer dan het minimumloon verdient en schriftelijk instemde?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.vog — The VOG: a check of your past (nieuw, 23 november 2026)
+
+*Unit „Werken via een uitzendbureau”, les „Your past: the VOG” (`l.vog`)*
+
+**Samenvatting (NL):** Voor sommige banen vraagt het uitzendbureau of de werkgever een VOG (Verklaring Omtrent het Gedrag): een papier van de overheid dat zegt dat je verleden geen probleem is voor dit werk. In de zorg, de kinderopvang en de beveiliging is hij bijna altijd nodig. Meestal start de werkgever de aanvraag online; je krijgt een e-mail van Justis en maakt de aanvraag af met DigiD en betaalt. Vraag eerst wie betaalt: vaak betaalt de werkgever hem terug. Voor vrijwilligers die met kinderen of kwetsbare mensen werken is hij vaak gratis. Heb je iets op je naam staan? Dat betekent niet altijd geen VOG: Justis kijkt naar wat voor dit werk telt. Twijfel je? Vraag het Juridisch Loket.
+
+**Tekst (Engels, wordt vertaald):**
+
+> For some jobs, the agency or the employer asks for a VOG (Verklaring Omtrent het Gedrag). It is a paper from the government: it says that your past is no problem for this job. In care, child care and security work you almost always need one. Usually the employer starts the request online. You get an e-mail from Justis, and you finish it with DigiD and pay. Ask first who pays: often the employer pays it back. For volunteers who work with children or vulnerable people it is often free. Do you have a record? That does not always mean no VOG: Justis looks at what matters for this job. Not sure? Ask the Juridisch Loket.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Grondslag (onze lezing):** De VOG: Wet justitiële en strafvorderlijke gegevens (Wjsg) art. 28 e.v., afgegeven namens de Minister van Justitie en Veiligheid door Justis (justis.nl). Justis kijkt naar het risico voor de samenleving bij het doel van de aanvraag (Wjsg art. 35; Beleidsregels VOG-NP-RP, het screeningsprofiel van de functie). Zorg: Wkkgz art. 4 lid 1 onder c. Kinderopvang: Wet kinderopvang art. 1.50 lid 2, met het personenregister kinderopvang (art. 1.48d). Beveiliging: Wpbr art. 7, de beveiligerspas na screening door de politie. Aanvraag: „VOG online” op justis.nl (de organisatie zet de aanvraag klaar, de aanvrager krijgt een e-mail met een link, logt in met DigiD en betaalt; zonder DigiD op papier bij de gemeente). Wie betaalt: geen wet; sommige cao’s regelen het (bijvoorbeeld de cao Kinderopvang). Gratis: de regeling Gratis VOG voor vrijwilligers die met minderjarigen of mensen met een verstandelijke beperking werken (justis.nl, rijksoverheid.nl). Geen bedrag in de tip. Juridisch Loket: juridischloket.nl, gratis.
+
+**Zeg het zo (Nederlands):** „Moet ik de VOG zelf betalen?” — *Must I pay for the VOG myself?*
+
+**Situatie in de les:** Your new job in a care home asks for a VOG. Years ago, you had a problem with the police. What do you do?  
+**Goede antwoord:** Apply, and ask the Juridisch Loket if you are worried.  
+**Uitleg na het antwoord (`c.vog.w`):** Justis only looks at what matters for the job. Many people with something in their past still get a VOG. Advice helps if you are not sure.
+
+**Uitleg bij het gesprekje (`c.vog.a.why`):** „Heb je al een VOG?” → „Nee. Ik wacht nog op de mail van Justis.”: Asked about your VOG: not yet, and what you are waiting for.
+
+**⚠ Getallen en termijnen:** geen getallen of termijnen in de tip.
+
+**Onze eigen vraag hierbij:**
+- Komt de e-mail met de link in november 2026 nog van Justis, en betaalt de aanvrager in die stap (of soms de organisatie)?
+- Is „For volunteers who work with children or vulnerable people it is often free” een juiste samenvatting van de regeling Gratis VOG?
+- Is „Many people with something in their past still get a VOG” verantwoord, of te geruststellend?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+
 ## Werkregels: gewijzigde beweringen (17 oktober 2026)
 
 De track **Werkregels** is voor mensen die al Nederlands spreken. De teksten staan alleen in het

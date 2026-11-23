@@ -107,7 +107,11 @@ describe('abstract words (no picture)', { timeout: 40000 }, () => {
     // placeholder until they are drawn (src/pictures/basis).
     for (const id of ['w.saldo', 'w.geboorteverlof', 'w.mensenhandel', 'w.update']) expect(abstract).toContain(id);
     for (const id of ['w.wond', 'w.pensioen', 'w.gordel', 'w.usbstick']) expect(abstract).not.toContain(id);
-    expect(abstract.length).toBe(337);
+    // 343 with "Veiligheid op het werk" and the VOG lesson (23 November 2026): 6 of their 30 new words
+    // have no picture (pictogram, zuurstof; strafblad, screening, personenregister, verleden).
+    for (const id of ['w.pictogram', 'w.zuurstof', 'w.strafblad', 'w.verleden']) expect(abstract).toContain(id);
+    for (const id of ['w.verbodsbord', 'w.blusdeken', 'w.vog', 'w.beveiligerspas']) expect(abstract).not.toContain(id);
+    expect(abstract.length).toBe(343);
     // Of the 191 (5 November 2026, the owner's trial of moving pictures, tests/motionPictures.test.ts):
     // 178 with no picture at all, 11 memory pictures ('hook') and 2 moving pictures ('motion':
     // "ontruimen" and "bijna", which were abstract). The 2 still never stand in a picture choice.
@@ -121,7 +125,8 @@ describe('abstract words (no picture)', { timeout: 40000 }, () => {
     // with no picture (228) and 2 more memory pictures (moeilijk, makkelijk: 15). "Instructies":
     // 6 more with no picture (234) and 1 more memory picture (stoppen: 16).
     // The basis units at four lessons (23 November 2026): 73 more with no picture (307).
-    expect(allWords.filter((w) => w.picture === false)).toHaveLength(307);
+    // "Veiligheid op het werk" and the VOG lesson (23 November 2026): 6 more with no picture (313).
+    expect(allWords.filter((w) => w.picture === false)).toHaveLength(313);
     expect(allWords.filter((w) => w.picture === 'hook')).toHaveLength(16);
     expect(allWords.filter((w) => w.picture === 'motion').map((w) => w.id).sort()).toEqual([
       'w.automatisch', 'w.bijna', 'w.daarna', 'w.doorgeven', 'w.eerst', 'w.kiezen', 'w.ontruimen', 'w.ruilen',

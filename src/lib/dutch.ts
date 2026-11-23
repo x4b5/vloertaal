@@ -126,6 +126,10 @@ const SEAMS: [whole: string, at: number | number[]][] = [
   ['bedrijfsongeval', 8],
   ['stagevergoeding', 5],
   ['geboorteverlof', 8],
+  // Veiligheid op het werk and the VOG lesson (23 November 2026).
+  ['waarschuwingsbord', 13],
+  ['personenregister', 8],
+  ['beveiligerspas', 11],
 ];
 
 export const SHY = '\u00ad';
