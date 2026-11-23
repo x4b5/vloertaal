@@ -495,6 +495,25 @@ const lang: HelpLanguageSource = {
     playAskCalm: 'Com calma', // nieuw, nalezen
     playAskFun: 'Com jogo', // nieuw, nalezen
     playAskHint: 'Com jogo: pontos, sons e movimento. Podes mudar isto nas Definições.', // nieuw, nalezen
+    sfeer: 'Ambiente', // nieuw, nalezen
+    sfeerCalm: 'Calma', // nieuw, nalezen
+    sfeerStandard: 'Padrão', // nieuw, nalezen
+    sfeerGame: 'Jogo', // nieuw, nalezen
+    sfeerHint: 'Calma: nada se mexe, sem festas. Padrão: a app como é. Jogo: pontos, sons e muito movimento.', // nieuw, nalezen
+    playLevel: 'Nível', // nieuw, nalezen
+    playLevel1: 'Principiante', // nieuw, nalezen
+    playLevel2: 'Aprendiz', // nieuw, nalezen
+    playLevel3: 'Colega', // nieuw, nalezen
+    playLevel4: 'Profissional', // nieuw, nalezen
+    playLevel5: 'Com experiência', // nieuw, nalezen
+    playLevel6: 'Especialista', // nieuw, nalezen
+    playLevelUp: 'Novo nível:', // nieuw, nalezen
+    playPerfect: 'Sem erros:', // nieuw, nalezen
+    playDayGoal: 'Objetivo de hoje', // nieuw, nalezen
+    playDayGoalDone: 'Objetivo de hoje cumprido!', // nieuw, nalezen
+    playNewTool: 'Novo na tua caixa de ferramentas:', // nieuw, nalezen
+    playToolbox: 'A minha caixa de ferramentas', // nieuw, nalezen
+    playToolboxEmpty: 'Acaba uma lição com jogo. Assim recebes a tua primeira ferramenta.', // nieuw, nalezen
     infoMore: 'Mais explicação', // nieuw, nalezen
     tipsAbout: 'Sobre estas dicas', // nieuw, nalezen
     tipsNotChecked: 'Um especialista ainda não verificou esta explicação.', // nieuw, nalezen

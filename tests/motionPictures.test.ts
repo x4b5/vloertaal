@@ -14,8 +14,9 @@ import { loadPictures } from '../src/pictures';
  *    moving part (src/pictures/kit.tsx Move: a <g class="mv-…">);
  *  - only a rule under .intro-card animates it: in a choice, on the path, on the pocket cards and
  *    in the lists the same picture stands still;
- *  - the keyframes say only where a part comes from, so its base style is the still picture;
- *  - short and calm: it plays once (at most twice), no step shorter than 0.4 s, no loop;
+ *  - the keyframes start where a part comes from and end on the still picture (its base style);
+ *  - long enough to see, still calm (the owner, 23 November 2026: once was too short): three rounds
+ *    (a picture in two steps two), under 5 s in all (WCAG 2.2.2), no step shorter than 0.4 s, no loop;
  *  - abstract words such as "ontruimen" and "bijna" have a moving picture only ('motion'): on
  *    the intro card, never in a picture choice or a match.
  * Less motion and "Rustig scherm" stop it: tests/a11yMotionSound.test.ts.
@@ -103,6 +104,18 @@ function rules(src: string): { sel: string; body: string }[] {
   return out;
 }
 const all = rules(css);
+/** A selector list split at its top-level commas (not those inside :has() or :is()). */
+function splitSel(sel: string): string[] {
+  const out: string[] = [];
+  let depth = 0;
+  let cur = '';
+  for (const ch of sel) {
+    if (ch === '(') depth++;
+    if (ch === ')') depth--;
+    if (ch === ',' && depth === 0) { out.push(cur.trim()); cur = ''; } else cur += ch;
+  }
+  return [...out, cur.trim()];
+}
 const mvRules = all.filter((r) => /\.mv-/.test(r.sel));
 const keyframes = (name: string) => {
   const at = css.indexOf(`@keyframes ${name} `);
@@ -174,7 +187,9 @@ describe('moving word pictures: the motion (styles.css)', () => {
 
   it('only a rule under .intro-card moves a picture', () => {
     expect(animating.length).toBeGreaterThanOrEqual(7);
-    for (const r of animating) for (const sel of r.sel.split(',')) expect(sel.trim(), sel).toMatch(/^\.intro-card \.word-pic \.mv-[\w-]+$/);
+    // (A picture in two steps: its rounds are longer, chosen with :has() on the picture.)
+    const sels = animating.flatMap((r) => splitSel(r.sel));
+    for (const sel of sels) expect(sel, sel).toMatch(/^\.intro-card \.word-pic(:has\([^()]*\))? (\.mv-[\w-]+|:is\([^()]*\))$/);
     // The other .mv- rules only say where a part turns or grows from.
     for (const r of mvRules.filter((x) => !animating.includes(x))) {
       const props = [...r.body.matchAll(/([\w-]+)\s*:/g)].map((m) => m[1]);
@@ -188,29 +203,39 @@ describe('moving word pictures: the motion (styles.css)', () => {
     }
   });
 
-  it('plays once (at most twice), never loops, and no step is shorter than 0.4 s', () => {
+  it('plays three rounds at most (two in two steps), under 5 s in all, never loops, no step under 0.4 s', () => {
     for (const r of animating) {
       const decl = /animation\s*:\s*([^;]+)/.exec(r.body)![1];
       expect(decl, r.sel).not.toMatch(/infinite|!important/);
-      const times = [...decl.matchAll(/(\d*\.?\d+)(m?s)\b/g)].map((m) => Number(m[1]) * (m[2] === 's' ? 1000 : 1));
-      expect(times[0], `${r.sel}: duration`).toBeGreaterThanOrEqual(400);
-      expect(times[0], `${r.sel}: duration`).toBeLessThanOrEqual(2000);
+      const times = [...decl.replace(/\([^)]*\)/g, '').matchAll(/(\d*\.?\d+)(m?s)\b/g)].map((m) => Number(m[1]) * (m[2] === 's' ? 1000 : 1));
+      const [duration, delay] = times;
       // The count: a bare number outside the timing function's brackets.
       const count = decl.replace(/\([^)]*\)/g, '').split(/\s+/).filter((t) => /^\d*\.?\d+$/.test(t)).map(Number);
       expect(count.length, r.sel).toBe(1);
-      expect(count[0], r.sel).toBeLessThanOrEqual(2);
+      expect(count[0], r.sel).toBeLessThanOrEqual(3);
+      expect(delay + duration * count[0], `${r.sel}: all rounds`).toBeLessThanOrEqual(5000);
       expect(/animation-iteration-count/.test(r.body), r.sel).toBe(false);
-      // Ends on the still picture (no fill "forwards" that would hold the first frame's opposite).
+      // The moving part of a round (from its last held start to its first still stop) is 0.4 s or
+      // more; a count in three stops holds each stop 0.4 s or more.
+      const name = /animation\s*:\s*([\w-]+)/.exec(r.body)![1];
+      const stops = [...keyframes(name)!.matchAll(/([\d%,\s]+)\{/g)].map((m) => m[1].split(',').map((x) => parseFloat(x)));
+      const move = (stops[1][0] - Math.max(...stops[0])) / 100 * duration;
+      expect(move / (/steps\(3/.test(decl) ? 3 : 1), `${r.sel}: one step`).toBeGreaterThanOrEqual(400);
+      // Ends on the still picture (no fill "forwards" that would hold a frame other than the last).
       expect(decl, r.sel).toMatch(/\bbackwards\b/);
     }
   });
 
-  it('the keyframes say only where a part comes from: its base style is the still picture', () => {
+  it('each round starts where a part comes from and ends on the still picture: its base style', () => {
     const names = new Set(animating.map((r) => /animation\s*:\s*([\w-]+)/.exec(r.body)![1]));
     for (const name of names) {
       const body = keyframes(name);
       expect(body, name).toBeDefined();
-      expect(body!.trim(), name).toMatch(/^from\s*\{[^{}]*\}$/);
+      const stops = [...body!.matchAll(/([\d%,\s]+)\{([^{}]*)\}/g)];
+      expect(stops.length, name).toBe(2);
+      expect(stops[0][1].trim(), name).toMatch(/^0%/);
+      expect(stops[1][1], name).toMatch(/100%\s*$/);
+      expect(stops[1][2].trim(), name).toMatch(/^(transform: none|opacity: 1);?$/);
       // Only a slide, a turn, a growth or a fade.
       const props = [...body!.matchAll(/([\w-]+)\s*:/g)].map((m) => m[1]);
       for (const p of props) expect(['transform', 'opacity'], `${name}: ${p}`).toContain(p);

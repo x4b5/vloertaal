@@ -76,3 +76,125 @@ export function playAskDue(p: Pick<Progress, 'playAsked' | 'calm'>, lessonsDone:
 export function addPoints<P extends Pick<Progress, 'playPoints'>>(p: P, points: number): P {
   return points > 0 ? { ...p, playPoints: (p.playPoints ?? 0) + points } : p;
 }
+
+/* ---- More game (the owner: "nog iets meer gamification", 23 November 2026) ---- */
+
+/** A lesson without a mistake in the game mode: a bonus on top of its points. */
+export const PERFECT_BONUS = 50;
+
+/** The day's goal: this many points in one day (the bar on the home fills to it). */
+export const DAY_GOAL = 100;
+
+/**
+ * The levels, by all points earned: a working life from starter to expert. Past the last one,
+ * every LEVEL_AFTER points is one more "Expert" star (Expert 2, 3 ...).
+ */
+export const LEVELS = [
+  { at: 0, nl: 'Starter', key: 'playLevel1' },
+  { at: 150, nl: 'Leerling', key: 'playLevel2' },
+  { at: 400, nl: 'Collega', key: 'playLevel3' },
+  { at: 800, nl: 'Vakkracht', key: 'playLevel4' },
+  { at: 1400, nl: 'Ervaren', key: 'playLevel5' },
+  { at: 2200, nl: 'Expert', key: 'playLevel6' },
+] as const;
+export const LEVEL_AFTER = 1000;
+
+export interface Level {
+  /** 1-based number of the level (past the last named one it keeps counting). */
+  n: number;
+  /** The named level (the last one for every Expert star). */
+  name: (typeof LEVELS)[number];
+  /** Expert stars past the last named level: 0 before it, 1 at it, 2 after LEVEL_AFTER more ... */
+  stars: number;
+  /** Points of this level's start and of the next one. */
+  from: number;
+  to: number;
+}
+
+export function levelOf(points: number): Level {
+  const last = LEVELS[LEVELS.length - 1];
+  if (points >= last.at) {
+    const extra = Math.floor((points - last.at) / LEVEL_AFTER);
+    const from = last.at + extra * LEVEL_AFTER;
+    return { n: LEVELS.length + extra, name: last, stars: extra + 1, from, to: from + LEVEL_AFTER };
+  }
+  const i = LEVELS.findIndex((l, k) => points >= l.at && points < LEVELS[k + 1].at);
+  return { n: i + 1, name: LEVELS[i], stars: 0, from: LEVELS[i].at, to: LEVELS[i + 1].at };
+}
+
+/** How far into the level, 0..1. */
+export const levelShare = (points: number): number => {
+  const l = levelOf(points);
+  return Math.min(1, (points - l.from) / (l.to - l.from));
+};
+
+/** Today's points (a day of another date counts as 0). */
+export function dayPoints(p: Pick<Progress, 'playDay'>, today: string): number {
+  return p.playDay?.day === today ? p.playDay.points : 0;
+}
+
+/**
+ * The toolbox: every lesson finished in the game mode puts the next tool in it, in this order
+ * (word pictures that are already drawn and translated: the name is the word's own gloss).
+ */
+export const TOOLS = [
+  'w.hamer', 'w.rolmaat', 'w.waterpas', 'w.schroevendraaier', 'w.handschaaf', 'w.handzaag', 'w.accuboor', 'w.duimstok',
+  'w.troffel', 'w.kwast', 'w.houtbeitel', 'w.afbreekmes', 'w.nijptang', 'w.waterpomptang', 'w.steeksleutel',
+  'w.momentsleutel', 'w.ijzerzaag', 'w.lijmkam', 'w.schuifmaat', 'w.spanningzoeker', 'w.striptang', 'w.bankschroef',
+  'w.gieter', 'w.tomatenschaar', 'w.krik', 'w.bandenspanningsmeter', 'w.trechter', 'w.takel', 'w.steekwagen', 'w.heftruck',
+] as const;
+
+/** The tools in the box after `lessons` lessons finished in the game mode. */
+export const toolsFor = (lessons: number): readonly string[] => TOOLS.slice(0, Math.min(lessons, TOOLS.length));
+
+/** What a finished lesson in the game mode brings: the moments its result shows. */
+export interface PlayOutcome {
+  /** The lesson's points, the perfect bonus included. */
+  points: number;
+  perfect: boolean;
+  /** A new level was reached (its level), or none. */
+  levelUp?: Level;
+  /** The day's goal was reached with this lesson. */
+  dayGoal: boolean;
+  /** The tool this lesson put in the box, or none (the box is full). */
+  tool?: string;
+  /** All points now. */
+  all: number;
+}
+
+/** A lesson finished in the game mode: its points (with the bonus), the day, the box; and what to show. */
+export function finishPlayLesson<P extends Pick<Progress, 'playPoints' | 'playDay' | 'playLessons'>>(
+  p: P, lessonPoints: number, perfect: boolean, today: string,
+): { next: P; outcome: PlayOutcome } {
+  const points = lessonPoints + (perfect ? PERFECT_BONUS : 0);
+  const before = p.playPoints ?? 0;
+  const all = before + points;
+  const dayBefore = dayPoints(p, today);
+  const lessons = (p.playLessons ?? 0) + 1;
+  const tool = lessons <= TOOLS.length ? TOOLS[lessons - 1] : undefined;
+  const lb = levelOf(before);
+  const la = levelOf(all);
+  return {
+    next: { ...p, playPoints: all, playDay: { day: today, points: dayBefore + points }, playLessons: lessons },
+    outcome: { points, perfect, all, dayGoal: dayBefore < DAY_GOAL && dayBefore + points >= DAY_GOAL, tool, ...(la.n > lb.n ? { levelUp: la } : {}) },
+  };
+}
+
+/* ---- "Sfeer" (the owner, 23 November 2026): calm screen and game mode as one setting ---- */
+
+/** The three moods: Kalm ("Rustig scherm" on), Standaard (the app as it is; as the phone asks), Spel. */
+export type Sfeer = 'calm' | 'standard' | 'game';
+export const SFEER: Sfeer[] = ['calm', 'standard', 'game'];
+
+/** The learner's mood, from the two stored choices (calm and play stay as they were saved). */
+export function sfeerOf(p: Pick<Progress, 'play' | 'calm'>): Sfeer {
+  if (p.play === true && p.calm !== 'on') return 'game';
+  return p.calm === 'on' ? 'calm' : 'standard';
+}
+
+/** The progress with a mood chosen: Kalm = calm on; Standaard = calm as the phone, no game; Spel = the game. */
+export function withSfeer<P extends Pick<Progress, 'play' | 'calm' | 'playAsked'>>(p: P, s: Sfeer): P {
+  if (s === 'game') return withPlay(p, true);
+  const { play: _off, ...rest } = p;
+  return { ...rest, calm: s === 'calm' ? 'on' : 'auto', playAsked: true } as P;
+}

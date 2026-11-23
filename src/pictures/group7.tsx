@@ -200,9 +200,9 @@ export default {
         <rect x="8" y="37.5" width="26" height="10" rx="3" />
       </clipPath>
       <g clipPath={`url(#${clip})`}>
-        {/* Two extra grooves past the bit's end (under the chuck at rest) fill the bit while they run */}
-        <Move kind="slow" dx={-14}>
-          <path d="M13 39.5L16 45.5M20 39.5L23 45.5M27 39.5L30 45.5M34 39.5L37 45.5M41 39.5L44 45.5" stroke={PAL.slate} strokeWidth="1.8" strokeLinecap="round" />
+        {/* Four extra grooves past the bit's end (under the chuck at rest) fill the bit while they run */}
+        <Move kind="slow" dx={-28}>
+          <path d="M13 39.5L16 45.5M20 39.5L23 45.5M27 39.5L30 45.5M34 39.5L37 45.5M41 39.5L44 45.5M48 39.5L51 45.5M55 39.5L58 45.5M62 39.5L65 45.5" stroke={PAL.slate} strokeWidth="1.8" strokeLinecap="round" />
         </Move>
       </g>
       {/* Chuck */}

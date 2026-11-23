@@ -42,7 +42,7 @@ export default {
       {block(24, 72, 46, 6, 14, PAL.slate, PAL.line, PAL.slateDark)}
       {/* The quill, the chuck and the bit pointing down at the table (drawn before the head: on the
           intro card they come down out of it) */}
-      <Move kind="from" dy={-9}>
+      <Move kind="from" dy={-20}>
         <rect x="41" y="50" width="12" height="6" fill={PAL.steel} />
         <path d="M39.5 56H54.5L51.5 63H42.5Z" fill={PAL.slate} />
         <path d="M45.4 63H48.6V67.5L47 70.5L45.4 67.5Z" fill={PAL.slateDark} />

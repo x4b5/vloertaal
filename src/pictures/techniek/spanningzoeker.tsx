@@ -8,7 +8,7 @@ export default {
     <g>
       <Ground cx={60} cy={104} rx={40} ry={4} />
       {/* On the intro card the tip comes forward (to the contact), then the lamp lights up */}
-      <Move kind="from" dx={-6} dy={5}>
+      <Move kind="from" dx={-16} dy={12}>
       <g transform="translate(58 63) rotate(-38) scale(1.1)">
         {/* The steel shaft and the flat blade: lit top half, darker bottom half */}
         <rect x="16" y="-3.2" width="31" height="6.4" rx="1.5" fill={PAL.steel} />

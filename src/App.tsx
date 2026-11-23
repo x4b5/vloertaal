@@ -9,7 +9,7 @@ import { loadLessonTexts, useLessonTextsLoaded } from './content/lessonTexts';
 import type { UiCode } from './i18n/types';
 import { isPlayable, learnedItems, rulesTwinHere } from './content/courses';
 import { dutchUi, trackOfId } from './lib/track';
-import { setDeviceRate, setPreferredVoice, setQuietAudio, setTempo } from './lib/audio';
+import { playSounds, setDeviceRate, setPreferredVoice, setQuietAudio, setTempo } from './lib/audio';
 import { tempoOf } from './lib/tempo';
 import { lessonPace, paceAfterLesson, reviewSoon, setFaster } from './lib/pace';
 import { lessonMinutes } from './lib/lessonTime';
@@ -70,7 +70,8 @@ import { recoverFromLoadError, screenChanged, setReloadWhen } from './lib/appUpd
 import { clearSave } from './lib/resume';
 import { applyTextSize } from './lib/textSize';
 import { applyCalm, calmOn } from './lib/calm';
-import { addPoints, applyPlay, playAskDue, playOn, withCalm, withPlay } from './lib/play';
+import { applyPlay, finishPlayLesson, playAskDue, playOn, withPlay, withSfeer, type PlayOutcome } from './lib/play';
+import { PlayStrip } from './components/PlayStrip';
 import { PlayAskCard } from './components/PlayAskCard';
 import { applyEnglish, englishLangFor } from './lib/english';
 import { SocialMap, SocialMapLink } from './components/SocialMap';
@@ -95,7 +96,7 @@ export type View =
   /** after: the screens that follow this result, in order (src/lib/afterLesson.ts). A screen opened
    *  on the way (samen, phrasebook, certificate, pocket, colleague) carries what is left in `after`. */
   /** phrases: the first lesson's result, once: a row to the emergency phrases. */
-  | { name: 'result'; points?: number; allPoints?: number; right: number; total: number; newWords: number; words: number; remember?: string; after: AfterStep[]; repeated?: number; stronger?: number; kept?: { right: number; of: number }; waiting?: number; next?: string; nextMinutes?: number; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean; askFaster?: boolean; feel?: FeelAt; easier?: boolean; samen?: string; workTry?: WorkTryLine }
+  | { name: 'result'; play?: PlayOutcome; right: number; total: number; newWords: number; words: number; remember?: string; after: AfterStep[]; repeated?: number; stronger?: number; kept?: { right: number; of: number }; waiting?: number; next?: string; nextMinutes?: number; skipped?: number; kind?: 'lesson' | 'daily' | 'review'; phrases?: boolean; askFaster?: boolean; feel?: FeelAt; easier?: boolean; samen?: string; workTry?: WorkTryLine }
   /** "Oefen samen" (src/components/Samen.tsx): a lesson's chats, two people on one phone, from its
    *  result; after: the certificate or the streak milestone still follows. */
   | { name: 'samen'; lessonId: string; after?: AfterStep[] }
@@ -923,8 +924,10 @@ export default function App() {
         const feel = question === 'feel' ? due.feel : undefined;
         if (feel) markFeelAsked(feel);
         // "Spelmodus": the lesson's points join all the points (shown on the result).
-        const scored = points !== undefined ? addPoints(next, points) : next;
-        setProgress(scored);
+        // A lesson without a mistake earns a bonus; the day's goal, the level and the toolbox move on.
+        const played = points !== undefined ? finishPlayLesson(next, points, total > 0 && right === total, today) : undefined;
+        setProgress(played?.next ?? next);
+        if (played && (played.outcome.levelUp || played.outcome.dayGoal)) playSounds.levelUp();
         keepDue.current = Boolean(access) && !keepOffered();
         // The unit this lesson finished (its last open lesson): a certificate, shown after the result.
         const unitDone = daily ? undefined : unitJustDone(progress.completed, next.completed, view.lessonId, progress.certs);
@@ -957,7 +960,7 @@ export default function App() {
         // not "+0 new words", under a review title.
         const reviewing = daily || view.review || isMixLesson(found.lesson) || Boolean(found.lesson.repeat);
         replace({
-          name: 'result', right, total, newWords: words - before, words, ...(points !== undefined ? { points, allPoints: scored.playPoints ?? 0 } : {}), after: afterLessonSteps({ cert: unitDone?.id, streakUp }),
+          name: 'result', right, total, newWords: words - before, words, ...(played ? { play: played.outcome } : {}), after: afterLessonSteps({ cert: unitDone?.id, streakUp }),
           kind: daily ? 'daily' : reviewing ? 'review' : 'lesson',
           repeated: daily ? wordResultCount(results) || (found.lesson.steps?.length ?? found.lesson.words.length) : reviewing ? wordResultCount(results) || found.lesson.words.length : undefined,
           stronger: daily ? strongerCount(cards, next.cards) : undefined,
@@ -1038,8 +1041,7 @@ export default function App() {
           onFeel={view.feel ? (face) => countFeel(view.feel!, face) : undefined}
           onSamen={view.samen ? () => replace({ name: 'samen', lessonId: view.samen!, after: view.after }) : undefined}
           workTry={view.workTry}
-          points={view.points}
-          allPoints={view.allPoints}
+          play={view.play}
         />
       );
     case 'streak':
@@ -1167,8 +1169,7 @@ export default function App() {
             onRegion={setRegion}
             onCountry={setCountry}
             onTheme={(theme) => setProgress((p) => ({ ...p, theme }))}
-            onCalm={(calm) => setProgress((p) => withCalm(p, calm))}
-            onPlay={(on) => setProgress((p) => withPlay(p, on))}
+            onSfeer={(sfeer) => setProgress((p) => withSfeer(p, sfeer))}
             onTextSize={(textSize) => setProgress((p) => ({ ...p, textSize }))}
             onVoice={(voice) => setProgress((p) => ({ ...p, voice }))}
             onQuiet={setQuiet}
@@ -1393,6 +1394,7 @@ export default function App() {
             lang={lang}
             quiet={Boolean(progress.quiet)}
           />
+          {playOn(progress) && <PlayStrip progress={progress} today={dayKey(new Date())} lang={lang} />}
           <Route
             progress={progress}
             lang={lang}

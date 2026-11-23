@@ -105,3 +105,58 @@ Regels:
 - "Minder beweging" op de telefoon stopt alle beweging, ook in de spelmodus; de punten en geluiden
   blijven dan. Niets flitst of knippert, en niets herhaalt zich.
 
+### Meer spel (23 november 2026)
+
+De eigenaar vroeg om "nog iets meer gamification" in de spelmodus:
+
+- **Niveaus** op al je punten: Starter (0), Leerling (150), Collega (400), Vakkracht (800), Ervaren
+  (1400), Expert (2200); daarna elke 1000 punten een Expert-ster erbij. Het beginscherm toont je
+  niveau en een balk naar het volgende.
+- **Doel van vandaag**: 100 punten op een dag, met een groene balk op het beginscherm.
+- **Geen fouten**: een les zonder fout geeft 50 punten extra.
+- **Mijn gereedschapskist** (Instellingen › Taal en ik): elke les die je met spel afmaakt, legt een
+  gereedschap in je kist, 30 in totaal, in een vaste volgorde. Het zijn woorden die al een tekening
+  en een vertaling hebben (de hamer, de rolmaat, de waterpas ...), dus de kist leert ook woorden.
+- **De uitslag** toont tot vier momenten: geen fouten (+50), een nieuw niveau, het doel van vandaag
+  gehaald, en het nieuwe gereedschap met zijn tekening. Bij een nieuw niveau of het dagdoel klinkt na
+  de gewone fanfare een tweede, hogere.
+
+Niets om op te tikken erbij: de balken en de momenten zijn alleen om te kijken (max. 3 per scherm).
+
+### Sfeer en juice (23 november 2026)
+
+**Sfeer** is nu één instelling (Instellingen › Lessen › Sfeer) met drie keuzes, in plaats van "Rustig
+scherm" en "Spelmodus" apart (`sfeerOf`, `withSfeer` in `src/lib/play.ts`):
+
+- **Kalm**: wat "Rustig scherm: aan" was. Niets beweegt, geen feestjes.
+- **Standaard**: de app zoals hij is; staat de telefoon op "minder beweging", dan beweegt er ook niets.
+- **Spel**: de spelmodus.
+
+De opgeslagen velden blijven `calm` en `play`, dus oude voortgang leest gewoon door. De kaart na de
+eerste les heeft nu "Met spel" en "Standaard".
+
+**Juice** in Spel (de eigenaar: "meer game feel, meer juice, squash and stretch"):
+
+- Een goed antwoord deint als pudding (squash and stretch). Een fout antwoord wiebelt.
+- Het stempel slaat neer en veert terug. "Verder" stuitert erin.
+- De teller wordt geplet en rekt uit; "+10" rekt mee omhoog. Acht sterretjes schieten uit de teller.
+- De voortgangsbalk schiet iets door en veert terug.
+- Tegels van een zin landen met een plof. Een ingedrukte knop wordt plat en veert terug.
+- Op de uitslag vallen de titel en de kaarten naar binnen en landen. De punten slaan neer en de
+  momenten springen op.
+- De telefoon trilt kort bij een goed antwoord, iets langer bij 3, 5 en 8 op rij, en dubbel bij een
+  fout (waar de telefoon dat kan).
+
+Alles speelt één keer, en alles staat stil bij Kalm en bij "minder beweging" op de telefoon.
+
+### Bram en Jada springen, en een hit stop (23 november 2026)
+
+- **Springen**: bij een goed antwoord blijft de collega naast de vraag in kleur en springt. Eerst
+  door de knieën (squash), dan uitgerekt omhoog, dan plat landen en uitveren. De schaduw krimpt in de
+  lucht. Vanaf 5 op rij springt hij of zij hoger, kantelt even en maakt een tweede sprongetje. Bij een
+  fout zakt de figuur kort in en komt weer overeind.
+- **Hit stop**: bij een goed antwoord houdt alles in de les 110 ms zijn eerste beeld vast (de kaart iets
+  groter, de collega door de knieën, het stempel nog niet neer). Daarna komt alles tegelijk los. Zo
+  landt de klap met gewicht (`HIT_STOP_MS`, `src/components/LessonPlayer.tsx`). De oefening die nog
+  wegschuift na een snel antwoord bevriest niet mee.
+

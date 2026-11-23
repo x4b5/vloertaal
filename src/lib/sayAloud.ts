@@ -107,16 +107,18 @@ export function followSayAloud(text: string, mode: SayMode, on: SayEvents, env: 
 }
 
 /**
- * How long until the CSS animations inside `el` (a moving word picture) are over: 0 when nothing
- * moves (a still picture, less motion, "Rustig scherm"), or on an old phone without
- * Element.getAnimations (the dots then simply start at once).
+ * How long until the first round of the CSS animations inside `el` (a moving word picture) is
+ * over: 0 when nothing moves (a still picture, less motion, Kalm), or on an old phone without
+ * Element.getAnimations (the dots then simply start at once). Only the first round: the picture
+ * plays its movement two or three times (styles.css), and the learner need not wait for all.
  */
 export function stillInMs(el: Element | null | undefined): number {
   if (!el || typeof el.getAnimations !== 'function') return 0;
   let left = 0;
   for (const a of el.getAnimations({ subtree: true })) {
     if (a.playState === 'finished') continue;
-    const end = Number(a.effect?.getComputedTiming().endTime ?? 0);
+    const t = a.effect?.getComputedTiming();
+    const end = Number(t?.delay ?? 0) + Number(t?.duration ?? 0);
     const now = Number(a.currentTime ?? 0);
     if (Number.isFinite(end) && Number.isFinite(now)) left = Math.max(left, end - now);
   }

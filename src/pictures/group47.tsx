@@ -176,14 +176,14 @@ export default {
       <Motion x={98} y={62} dir={0} spread={50} n={3} len={7} gap={4} />
       {/* Scissors: two halves crossing at the pivot */}
       <g transform="translate(52 62)">
-        <Move kind="turn" turn={18} at={[0, 0]}>
+        <Move kind="turn" turn={25} at={[0, 0]}>
         <g transform="rotate(14) scale(1 -1)">
           <path d="M-4 0L-24 12" stroke={PAL.redShade} strokeWidth="7.5" strokeLinecap="round" />
           <circle cx="-31" cy="16" r="10" fill="none" stroke={PAL.redShade} strokeWidth="7.5" />
           <path d="M-8 -6L40 -3L47 1L-8 7Z" fill={PAL.steel} strokeLinejoin="round" stroke={PAL.steel} strokeWidth="2" />
         </g>
         </Move>
-        <Move kind="turn" turn={-18} at={[0, 0]}>
+        <Move kind="turn" turn={-25} at={[0, 0]}>
         <g transform="rotate(-14)">
           <path d="M-4 0L-24 12" stroke={PAL.red} strokeWidth="7.5" strokeLinecap="round" />
           <circle cx="-31" cy="16" r="10" fill="none" stroke={PAL.red} strokeWidth="7.5" />

@@ -61,6 +61,10 @@ export interface Progress {
   playAsked?: true;
   /** All points earned in the game mode (src/lib/play.ts), shown on a lesson's result. */
   playPoints?: number;
+  /** Today's points in the game mode, for the day's goal (src/lib/play.ts DAY_GOAL). */
+  playDay?: { day: string; points: number };
+  /** Lessons finished in the game mode: each put a tool in the toolbox (src/lib/play.ts TOOLS). */
+  playLessons?: number;
   /** "Tempo" in Settings (src/lib/tempo.ts): 'calm' ("Rustig") or 'normal' ("Normaal"). Missing in
    *  older saves = calm, the pace from before. */
   tempo?: Tempo;
@@ -302,6 +306,11 @@ const FIELDS: { [K in keyof Progress]-?: Check<Progress[K]> } = {
   play: (v) => (v === true ? true : undefined),
   playAsked: (v) => (v === true ? true : undefined),
   playPoints: count,
+  playDay: (v) => {
+    const o = v as { day?: unknown; points?: unknown } | null;
+    return o && typeof o === 'object' && typeof o.day === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(o.day) && isCount(o.points) ? { day: o.day, points: Math.floor(o.points as number) } : undefined;
+  },
+  playLessons: count,
   // "Tempo" came later: a missing one is calm (the old pace).
   tempo: (v) => (isTempo(v) ? v : undefined),
   // A help language this app does not know: see progressFrom.

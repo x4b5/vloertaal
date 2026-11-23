@@ -26,8 +26,8 @@ import { installLocal, listenOn, localStatus, setListenOn, type LocalStatus } fr
 import { tempoOf, TEMPOS, type Tempo } from '../lib/tempo';
 import { fasterOn } from '../lib/pace';
 import { TEXT_SIZES, type TextSize } from '../lib/textSize';
-import { CALM_CHOICES, type CalmChoice } from '../lib/calm';
-import { playOn } from '../lib/play';
+import { playOn, SFEER, sfeerOf, TOOLS, toolsFor, type Sfeer } from '../lib/play';
+import { Toolbox } from './Toolbox';
 import { FlameIcon } from './StreakArt';
 import { Character } from './Characters';
 import { VOICE_SAMPLE } from '../lib/voices';
@@ -115,7 +115,8 @@ const TextA = ({ size }: { size: TextSize }) => <span className={`text-size-a te
 
 const TEXT_KEYS = { normal: 'textNormal', large: 'textLarge', xl: 'textXl' } as const;
 const THEME_KEYS = { auto: 'themeAuto', light: 'themeSand', haven: 'themeHarbour', werkjas: 'themeWorkwear', dark: 'themeDark' } as const;
-const CALM_KEYS = { auto: 'calmAuto', on: 'settingOn', off: 'settingOff' } as const;
+const SFEER_KEYS = { calm: 'sfeerCalm', standard: 'sfeerStandard', game: 'sfeerGame' } as const;
+const SFEER_NL = { calm: 'Kalm', standard: 'Standaard', game: 'Spel' } as const;
 /** "Rustig scherm": a line that settles (a wave that becomes still). */
 const CalmIcon = ({ size = 24, still }: { size?: number; still?: boolean }) => (
   <svg className="icon" viewBox="0 0 24 24" width={size} height={size} aria-hidden focusable="false">
@@ -170,8 +171,7 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
   writing: { nl: 'Schrijven', key: 'settingWriting', icon: <PencilIcon size={24} /> },
   text: { nl: 'Tekstgrootte', key: 'textSize', icon: <TextA size="normal" /> },
   theme: { nl: 'Weergave', key: 'theme', icon: <AutoThemeIcon size={24} /> },
-  calm: { nl: 'Rustig scherm', key: 'calmScreen', icon: <CalmIcon size={24} /> },
-  play: { nl: 'Spelmodus', key: 'playMode', icon: <PlayIcon size={24} /> },
+  sfeer: { nl: 'Sfeer', key: 'sfeer', icon: <PlayIcon size={24} on={false} /> },
   // An arrow into the phone's tray: lessons downloaded (the crate is the backup's file).
   offline: { nl: 'Lessen op deze telefoon', key: 'settingKeepLessons', icon: <DownloadIcon size={24} /> },
   reminder: { nl: 'Herinner mij elke dag', key: 'remindTitle', icon: <CalendarIcon size={24} /> },
@@ -184,6 +184,7 @@ const ROWS: Record<SettingsPage, { nl: string; key: Parameters<typeof ui>[0]; ic
   toets: { nl: 'Wat ken je al?', key: 'toetsTitle', icon: <BarsIcon size={24} /> },
   kaart: { nl: 'Laat zien hoe het gaat', key: 'coachCard', icon: <CardIcon size={24} /> },
   gelukt: { nl: 'Gelukt op het werk', key: 'geluktTitle', icon: <BubblesIcon size={24} /> },
+  toolbox: { nl: 'Mijn gereedschapskist', key: 'playToolbox', icon: <CrateIcon size={24} /> },
   listen: { nl: 'Laat de telefoon luisteren (proef)', key: 'listenTrial', icon: <MicIcon size={24} /> },
 };
 
@@ -209,7 +210,7 @@ function Head({ page, lang, onBack }: { page: SettingsPage | null; lang?: HelpLa
 }
 
 export function Settings({
-  progress, lang, page, onPage, onReturn, onLang, onGender, onSector, onRegion, onCountry, onTheme, onTextSize, onCalm, onPlay, onVoice, onQuiet, onTempo, onReset,
+  progress, lang, page, onPage, onReturn, onLang, onGender, onSector, onRegion, onCountry, onTheme, onTextSize, onSfeer, onVoice, onQuiet, onTempo, onReset,
   onRestore, access = 'full', onAccess, onCertificate, onFaster,
 }: {
   progress: Progress;
@@ -229,10 +230,8 @@ export function Settings({
   onCountry?: (country: Country) => void;
   onTheme: (theme: ThemeChoice) => void;
   onTextSize: (size: TextSize) => void;
-  /** "Rustig scherm": auto (as the phone), on or off (src/lib/calm.ts). */
-  onCalm?: (calm: CalmChoice) => void;
-  /** "Spelmodus" on or off (src/lib/play.ts). */
-  onPlay?: (on: boolean) => void;
+  /** "Sfeer": Kalm, Standaard or Spel (src/lib/play.ts). */
+  onSfeer?: (s: Sfeer) => void;
   onVoice: (voice: string | null) => void;
   /** "Without sound" on (true) or off. */
   onQuiet: (quiet: boolean) => void;
@@ -344,6 +343,7 @@ export function Settings({
     // Only when the regions are offered (src/content/regio regionsOn) and the app can store one.
     region: regionsOn() && Boolean(onRegion),
     gelukt: Boolean(progress.gelukt?.length),
+    toolbox: playOn(progress) || Boolean(progress.playLessons),
   };
   const writing = nonLatinHelp(lang) && !wantsWriting() ? 'pick' : writingInput(lang);
   const voice = voiceChoiceOf(progress.voice, recorded);
@@ -370,6 +370,7 @@ export function Settings({
       case 'english': return <Value text={say(wantsEnglish() ? 'settingOn' : 'settingOff')} />;
       case 'certificates': return <span className="set-row-value">{earnedCertificates(progress).length}</span>;
       case 'gelukt': return <span className="set-row-value">{progress.gelukt?.length ?? 0}</span>;
+      case 'toolbox': return <span className="set-row-value" dir="ltr">{toolsFor(progress.playLessons ?? 0).length} / {TOOLS.length}</span>;
       case 'sound': return <Value text={say(progress.quiet ? 'withoutSound' : 'soundOn')} />;
       case 'tempo': return <Value text={say(TEMPO_KEYS[tempoChoiceOf(progress)])} />;
       case 'voice': return voice ? <Value text={say(voice === 'f' ? 'voiceWoman' : voice === 'm' ? 'voiceMan' : 'voiceAuto')} /> : null;
@@ -378,8 +379,7 @@ export function Settings({
       case 'writing': return <Value text={say(writing === 'pick' ? 'writingPick' : writing === 'tiles' ? 'letterTiles' : 'useKeyboard')} />;
       case 'text': return <Value text={say(TEXT_KEYS[progress.textSize ?? 'normal'])} />;
       case 'theme': return <Value text={say(THEME_KEYS[progress.theme])} />;
-      case 'calm': return <Value text={say(CALM_KEYS[progress.calm ?? 'auto'])} />;
-      case 'play': return <Value text={say(playOn(progress) ? 'settingOn' : 'settingOff')} />;
+      case 'sfeer': return <Value text={say(SFEER_KEYS[sfeerOf(progress)])} />;
       case 'offline': return <Value text={say(offlineAuto() ? 'settingOn' : 'settingOff')} />;
       case 'reminder': {
         const t = reminderTime();
@@ -553,6 +553,8 @@ export function Settings({
         return <><CertificatesCard progress={progress} lang={lang} onOpen={onCertificate} /><ToetsLine progress={progress} lang={lang} /></>;
       case 'gelukt':
         return <GeluktList entries={progress.gelukt ?? []} lang={lang} />;
+      case 'toolbox':
+        return <Toolbox lessons={progress.playLessons ?? 0} lang={lang} />;
       case 'sound':
         return (
           <>
@@ -684,31 +686,19 @@ export function Settings({
             options={colourOptions(lang)}
           />
         );
-      case 'calm':
+      case 'sfeer':
+        // Kalm, Standaard, Spel (src/lib/play.ts withSfeer). Stays on this page: the example above
+        // shows the choice at once (Back leads on).
         return (
           <>
             <CalmPreview />
             <ChoiceCards
-              label={said(ui('calmScreen', lang))}
-              current={progress.calm ?? 'auto'}
-              // Stays on this page: the example above shows the choice at once (Back leads on).
-              onPick={(c) => onCalm?.(c)}
-              options={CALM_CHOICES.map((c) => ({ id: c, text: say(CALM_KEYS[c]), picture: c === 'auto' ? <PhoneIcon size={26} /> : <CalmIcon size={26} still={c === 'on'} /> }))}
+              label={said(ui('sfeer', lang))}
+              current={sfeerOf(progress)}
+              onPick={(c) => onSfeer?.(c)}
+              options={SFEER.map((c) => ({ id: c, nl: SFEER_NL[c], text: say(SFEER_KEYS[c]), picture: c === 'game' ? <PlayIcon size={26} /> : <CalmIcon size={26} still={c === 'calm'} /> }))}
             />
-            <p className="max3-hint"><Bi text={say('calmHint')} /></p>
-          </>
-        );
-      case 'play':
-        // Two cards, as "Rustig scherm"; on switches the calm screen off (src/lib/play.ts withPlay).
-        return (
-          <>
-            <ChoiceCards
-              label={said(ui('playMode', lang))}
-              current={playOn(progress) ? 'on' : 'off'}
-              onPick={(c) => { onPlay?.(c === 'on'); answered(); }}
-              options={(['on', 'off'] as const).map((c) => ({ id: c, text: say(c === 'on' ? 'settingOn' : 'settingOff'), picture: c === 'on' ? <PlayIcon size={26} /> : <CalmIcon size={26} still /> }))}
-            />
-            <p className="max3-hint"><Bi text={say('playHint')} /></p>
+            <p className="max3-hint"><Bi text={say('sfeerHint')} /></p>
           </>
         );
       case 'offline':

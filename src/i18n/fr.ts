@@ -495,6 +495,25 @@ const lang: HelpLanguageSource = {
     playAskCalm: 'Calme', // nieuw, nalezen
     playAskFun: 'Avec un jeu', // nieuw, nalezen
     playAskHint: 'Avec un jeu : des points, des sons et du mouvement. Tu peux changer ça dans les Réglages.', // nieuw, nalezen
+    sfeer: 'Ambiance', // nieuw, nalezen
+    sfeerCalm: 'Calme', // nieuw, nalezen
+    sfeerStandard: 'Standard', // nieuw, nalezen
+    sfeerGame: 'Jeu', // nieuw, nalezen
+    sfeerHint: 'Calme : rien ne bouge, pas de fête. Standard : l’appli telle qu’elle est. Jeu : des points, des sons et beaucoup de mouvement.', // nieuw, nalezen
+    playLevel: 'Niveau', // nieuw, nalezen
+    playLevel1: 'Novice', // nieuw, nalezen
+    playLevel2: 'Élève', // nieuw, nalezen
+    playLevel3: 'Collègue', // nieuw, nalezen
+    playLevel4: 'Pro', // nieuw, nalezen
+    playLevel5: 'Avec de l’expérience', // nieuw, nalezen
+    playLevel6: 'Spécialiste', // nieuw, nalezen
+    playLevelUp: 'Nouveau niveau :', // nieuw, nalezen
+    playPerfect: 'Aucune erreur :', // nieuw, nalezen
+    playDayGoal: 'Objectif du jour', // nieuw, nalezen
+    playDayGoalDone: 'Objectif du jour atteint !', // nieuw, nalezen
+    playNewTool: 'Nouveau dans ta caisse à outils :', // nieuw, nalezen
+    playToolbox: 'Ma caisse à outils', // nieuw, nalezen
+    playToolboxEmpty: 'Termine une leçon avec le jeu. Alors tu reçois ton premier outil.', // nieuw, nalezen
     infoMore: 'Plus d’explications', // nieuw, nalezen
     tipsAbout: 'À propos de ces conseils', // nieuw, nalezen
     tipsNotChecked: 'Un expert n’a pas encore vérifié cette explication.', // nieuw, nalezen

@@ -279,7 +279,7 @@ export default {
   'w.lek': () => (
     <g>
       <Ground cx={56} cy={106} rx={46} ry={4.5} />
-      <Move kind="sag" grow={1.12}>
+      <Move kind="sag" grow={1.25}>
         {/* Tyre: round on top, squashed and bulging wide at the bottom */}
         <path d="M14 60A40 40 0 0 1 94 60C96 76 104 92 102 98Q100 105 92 105H16Q8 105 6 98C4 92 12 76 14 60Z" fill={PAL.slate} />
         <path d="M84 30A40 40 0 0 1 94 60C96 76 104 92 102 98Q100 105 92 105H84Z" fill="#000" opacity=".2" />
@@ -288,7 +288,7 @@ export default {
         <rect x="101" y="49" width="4.5" height="13" rx="2" fill={PAL.steel} transform="rotate(-10 103 56)" />
       </Move>
       {/* Side wall and rim, sitting low */}
-      <Move kind="slow" dy={-9}>
+      <Move kind="slow" dy={-12}>
         <ellipse cx="54" cy="66" rx="29" ry="28" fill={PAL.slateDark} />
         <circle cx="54" cy="66" r="21" fill={PAL.mist} />
         <path d="M54 66V48M54 66L71 60M54 66L64 81M54 66L44 81M54 66L37 60" stroke={PAL.steel} strokeWidth="5" strokeLinecap="round" />

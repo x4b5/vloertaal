@@ -203,7 +203,7 @@ export default {
         <path d="M70 28L80 32V70L70 66Z" fill={PAL.wood} />
         <circle cx="77.5" cy="50" r="1.6" fill={PAL.yellow} />
       </Move>
-      <Move kind="from" dx={-14}>
+      <Move kind="from" dx={-20}>
         <Arrow from={[52, 47]} to={[88, 47]} color={PAL.green} width={7} head={11} />
       </Move>
     </g>

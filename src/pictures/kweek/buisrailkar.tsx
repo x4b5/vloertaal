@@ -53,7 +53,7 @@ export default {
       <path d="M34 70L74 50M34 50L74 70" stroke={PAL.steel} strokeWidth="4.5" strokeLinecap="round" />
       <circle cx="54" cy="60" r="3" fill={PAL.slate} />
       </Move>
-      <Move kind="slow" dy={14}>
+      <Move kind="slow" dy={20}>
       {/* The guard rail on the platform */}
       <path d="M30 44V20H86V44M58 44V20" fill="none" stroke={PAL.yellowShade} strokeWidth="4.5" strokeLinecap="round" />
       <path d="M30 32H86" stroke={PAL.yellowShade} strokeWidth="3.5" strokeLinecap="round" />

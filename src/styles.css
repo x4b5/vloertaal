@@ -1664,8 +1664,10 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
    A part (src/pictures/kit.tsx Move) is drawn where it ends, and the keyframes only say where it
    comes from, so its base style is the still picture: with "less motion" or "Rustig scherm"
    (animation: none !important, below) that is all there is. It starts just after the word's
-   sound, plays once (a tap on the card's speaker plays it again: a fresh picture), never loops
-   and no step is shorter than 0.4 s: nothing flashes (WCAG 2.3.1). Turns are about a point in the
+   sound and plays three times, a picture in two steps twice (the owner, 23 November 2026: once was
+   too short to see what a thing is for), always under 5 s in all (WCAG 2.2.2), with the still
+   picture held a moment at the end of each round; a tap on the card's speaker plays it again (a
+   fresh picture). No step is shorter than 0.4 s: nothing flashes (WCAG 2.3.1). Turns are about a point in the
    picture (a knee, a clock's centre: transform-origin in its units, transform-box view-box);
    growth is from the part's own left edge (fill-box). The second round (the owner's "go on", 5
    November 2026) adds a fall (drop: the timing of tip), a second step after the first (then: it
@@ -1674,22 +1676,45 @@ h1[tabindex="-1"]:focus, .onboarding-title[tabindex="-1"]:focus, .cert-name-head
 .word-pic .mv-turn, .word-pic .mv-tip { transform-box: view-box; }
 .word-pic .mv-grow { transform-box: fill-box; transform-origin: 0 50%; }
 .word-pic .mv-sag { transform-box: fill-box; transform-origin: 50% 100%; }
-.intro-card .word-pic .mv-from { animation: mv-slide 1.2s cubic-bezier(0.3, 0.6, 0.35, 1) 0.4s 1 backwards; }
-.intro-card .word-pic .mv-slow { animation: mv-slide 2s cubic-bezier(0.45, 0.2, 0.55, 0.8) 0.4s 1 backwards; }
-.intro-card .word-pic .mv-fast { animation: mv-slide 0.5s cubic-bezier(0.2, 0.7, 0.3, 1) 0.4s 1 backwards; }
-.intro-card .word-pic .mv-drop { animation: mv-slide 0.7s cubic-bezier(0.55, 0, 0.7, 0.6) 0.8s 1 backwards; }
-.intro-card .word-pic .mv-then { animation: mv-slide 1.2s cubic-bezier(0.3, 0.6, 0.35, 1) 1.8s 1 backwards; }
-.intro-card .word-pic .mv-steps { animation: mv-slide 1.8s steps(3, jump-none) 0.4s 1 backwards; }
-.intro-card .word-pic .mv-turn { animation: mv-turn 1.4s ease-in-out 0.4s 1 backwards; }
-.intro-card .word-pic .mv-tip { animation: mv-turn 0.7s cubic-bezier(0.55, 0, 0.7, 0.6) 0.8s 1 backwards; }
-.intro-card .word-pic .mv-grow { animation: mv-grow 1.6s cubic-bezier(0.25, 0.6, 0.3, 1) 0.4s 1 backwards; }
-.intro-card .word-pic .mv-sag { animation: mv-sag 2s cubic-bezier(0.45, 0.2, 0.55, 0.8) 0.4s 1 backwards; }
-.intro-card .word-pic .mv-show { animation: mv-show 0.5s ease-out 1.6s 1 backwards; }
-@keyframes mv-slide { from { transform: translate(var(--mv-dx, 0px), var(--mv-dy, 0px)); } }
-@keyframes mv-turn { from { transform: rotate(var(--mv-turn, 0deg)); } }
-@keyframes mv-grow { from { transform: scaleX(var(--mv-grow, 0.1)); } }
-@keyframes mv-sag { from { transform: scaleY(var(--mv-sag, 1.2)); } }
-@keyframes mv-show { from { opacity: 0; } }
+.intro-card .word-pic .mv-from { animation: mvA-slide 1.5s cubic-bezier(0.3, 0.6, 0.35, 1) 0.4s 3 backwards; }
+.intro-card .word-pic .mv-slow { animation: mvA-slide 1.5s cubic-bezier(0.45, 0.2, 0.55, 0.8) 0.4s 3 backwards; }
+.intro-card .word-pic .mv-fast { animation: mvA-fast 1.5s cubic-bezier(0.2, 0.7, 0.3, 1) 0.4s 3 backwards; }
+.intro-card .word-pic .mv-steps { animation: mvA-steps 1.5s steps(3, jump-none) 0.4s 3 backwards; }
+.intro-card .word-pic .mv-turn { animation: mvA-turn 1.5s ease-in-out 0.4s 3 backwards; }
+.intro-card .word-pic .mv-grow { animation: mvA-grow 1.5s cubic-bezier(0.25, 0.6, 0.3, 1) 0.4s 3 backwards; }
+.intro-card .word-pic .mv-sag { animation: mvA-sag 1.5s cubic-bezier(0.45, 0.2, 0.55, 0.8) 0.4s 3 backwards; }
+/* A picture in two steps (a second step, a fall, a tip or something that appears after the first):
+   one round of 2.2 s holds both, twice (4.8 s with the start). */
+.intro-card .word-pic:has(.mv-then, .mv-drop, .mv-tip, .mv-show) :is(.mv-from, .mv-slow) { animation: mvB-slide 2.2s cubic-bezier(0.3, 0.6, 0.35, 1) 0.4s 2 backwards; }
+.intro-card .word-pic:has(.mv-then, .mv-drop, .mv-tip, .mv-show) .mv-steps { animation: mvB-steps 2.2s steps(3, jump-none) 0.4s 2 backwards; }
+.intro-card .word-pic:has(.mv-then, .mv-drop, .mv-tip, .mv-show) .mv-fast { animation: mvB-fast 2.2s cubic-bezier(0.2, 0.7, 0.3, 1) 0.4s 2 backwards; }
+.intro-card .word-pic:has(.mv-then, .mv-drop, .mv-tip, .mv-show) .mv-turn { animation: mvB-turn 2.2s ease-in-out 0.4s 2 backwards; }
+.intro-card .word-pic:has(.mv-then, .mv-drop, .mv-tip, .mv-show) .mv-grow { animation: mvB-grow 2.2s cubic-bezier(0.25, 0.6, 0.3, 1) 0.4s 2 backwards; }
+.intro-card .word-pic:has(.mv-then, .mv-drop, .mv-tip, .mv-show) .mv-sag { animation: mvB-sag 2.2s cubic-bezier(0.45, 0.2, 0.55, 0.8) 0.4s 2 backwards; }
+.intro-card .word-pic .mv-then { animation: mvB-then 2.2s cubic-bezier(0.3, 0.6, 0.35, 1) 0.4s 2 backwards; }
+.intro-card .word-pic .mv-drop { animation: mvB-late 2.2s cubic-bezier(0.55, 0, 0.7, 0.6) 0.4s 2 backwards; }
+.intro-card .word-pic .mv-tip { animation: mvB-late-turn 2.2s cubic-bezier(0.55, 0, 0.7, 0.6) 0.4s 2 backwards; }
+.intro-card .word-pic .mv-show { animation: mvB-show 2.2s ease-out 0.4s 2 backwards; }
+/* One round: the part comes from its start (0%), arrives, and the still picture holds for the rest of
+   the round, so the eye sees where it ends; then it plays again. The last stop of every round is the
+   still picture itself (no transform), the picture's own base style: with "less motion" or Kalm
+   (animation: none) that is all there is. */
+@keyframes mvA-slide { 0% { transform: translate(var(--mv-dx, 0px), var(--mv-dy, 0px)); } 70%, 100% { transform: none; } }
+@keyframes mvA-steps { 0% { transform: translate(var(--mv-dx, 0px), var(--mv-dy, 0px)); } 85%, 100% { transform: none; } }
+@keyframes mvA-fast { 0% { transform: translate(var(--mv-dx, 0px), var(--mv-dy, 0px)); } 35%, 100% { transform: none; } }
+@keyframes mvA-turn { 0% { transform: rotate(var(--mv-turn, 0deg)); } 70%, 100% { transform: none; } }
+@keyframes mvA-grow { 0% { transform: scaleX(var(--mv-grow, 0.1)); } 70%, 100% { transform: none; } }
+@keyframes mvA-sag { 0% { transform: scaleY(var(--mv-sag, 1.2)); } 70%, 100% { transform: none; } }
+@keyframes mvB-slide { 0% { transform: translate(var(--mv-dx, 0px), var(--mv-dy, 0px)); } 42%, 100% { transform: none; } }
+@keyframes mvB-steps { 0% { transform: translate(var(--mv-dx, 0px), var(--mv-dy, 0px)); } 60%, 100% { transform: none; } }
+@keyframes mvB-fast { 0% { transform: translate(var(--mv-dx, 0px), var(--mv-dy, 0px)); } 22%, 100% { transform: none; } }
+@keyframes mvB-turn { 0% { transform: rotate(var(--mv-turn, 0deg)); } 42%, 100% { transform: none; } }
+@keyframes mvB-grow { 0% { transform: scaleX(var(--mv-grow, 0.1)); } 42%, 100% { transform: none; } }
+@keyframes mvB-sag { 0% { transform: scaleY(var(--mv-sag, 1.2)); } 42%, 100% { transform: none; } }
+@keyframes mvB-then { 0%, 42% { transform: translate(var(--mv-dx, 0px), var(--mv-dy, 0px)); } 82%, 100% { transform: none; } }
+@keyframes mvB-late { 0%, 30% { transform: translate(var(--mv-dx, 0px), var(--mv-dy, 0px)); } 62%, 100% { transform: none; } }
+@keyframes mvB-late-turn { 0%, 30% { transform: rotate(var(--mv-turn, 0deg)); } 62%, 100% { transform: none; } }
+@keyframes mvB-show { 0%, 54% { opacity: 0; } 74%, 100% { opacity: 1; } }
 .word-emoji { display: inline-flex; align-items: center; justify-content: center; }
 
 /* Dev page /?shot=pictures */
@@ -5605,11 +5630,16 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
   opacity: 0; pointer-events: none;
   animation: play-gain 1s ease-out 1 both;
 }
-@keyframes play-pop { from { transform: scale(1.45); } }
+@keyframes play-pop {
+  0% { transform: scale(0.6, 1.5); }
+  40% { transform: scale(1.35, 0.75); }
+  70% { transform: scale(0.92, 1.08); }
+}
 @keyframes play-gain {
-  0% { opacity: 0; transform: translateY(14px) scale(0.8); }
-  25% { opacity: 1; transform: translateY(2px) scale(1.15); }
-  100% { opacity: 0; transform: translateY(-10px) scale(1); }
+  0% { opacity: 0; transform: translateY(16px) scale(1.3, 0.6); }
+  20% { opacity: 1; transform: translateY(2px) scale(0.8, 1.35); }
+  45% { transform: translateY(-4px) scale(1.12, 0.92); }
+  100% { opacity: 0; transform: translateY(-14px) scale(1); }
 }
 /* Springy buttons: a press squeezes a little and springs back. */
 :root[data-play] .btn, :root[data-play] .choice, :root[data-play] .tile-with-say {
@@ -5634,3 +5664,162 @@ a.rh-card:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; 
   80% { opacity: 1; }
   100% { opacity: 0; transform: translateY(240px) rotate(var(--turn, 180deg)); }
 }
+
+/* "Spelmodus", more game (23 November 2026): the level and today's goal on the home, the moments
+   on the result, and the toolbox. The bars fill by transform (no movement with less motion: the
+   global rules stop transitions of transform). */
+.play-strip {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px;
+  width: 100%; max-width: 560px; margin: 4px auto 0; padding: 10px 14px;
+  border: 2px solid var(--edge); border-radius: 14px; background: var(--card, #fffdf8);
+}
+.level-bar-wrap { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.level-name { font-weight: 700; font-size: 0.92rem; color: var(--ink); }
+.level-name .bi-help { --help-size: 0.9em; }
+.level-bar { display: block; height: 10px; border-radius: 999px; background: var(--tag-bg, #eadfca); overflow: hidden; }
+.level-bar-fill { display: block; height: 100%; border-radius: inherit; background: var(--yellow); transform-origin: 0 50%; transition: transform 0.6s var(--ease-out, ease-out); }
+[dir="rtl"] .level-bar-fill { transform-origin: 100% 50%; }
+.day-goal .level-bar-fill { background: var(--green); }
+.day-goal-done .level-name { color: var(--right-ink, #1f6b3a); }
+.play-result-all { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.play-result-all .level-bar-wrap { width: min(260px, 80%); }
+.play-moments { list-style: none; margin: 8px 0 0; padding: 0; width: 100%; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.play-moment {
+  display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center;
+  padding: 6px 12px; border-radius: 999px; background: var(--green-bg, #e3f0e6); font-weight: 700;
+  animation: play-moment-in 0.45s cubic-bezier(0.3, 1.6, 0.5, 1) 1.6s both;
+}
+.play-moment-big { background: var(--yellow); }
+.play-moment-tool { border-radius: 14px; background: var(--tag-bg, #eadfca); }
+.play-moment:nth-child(2) { animation-delay: 1.9s; }
+.play-moment:nth-child(3) { animation-delay: 2.2s; }
+.play-moment:nth-child(4) { animation-delay: 2.5s; }
+@keyframes play-moment-in {
+  0% { opacity: 0; transform: scale(0.4, 1.4); }
+  50% { opacity: 1; transform: scale(1.15, 0.85); }
+  75% { transform: scale(0.95, 1.05); }
+}
+.tool-name { display: inline-flex; flex-direction: column; align-items: center; line-height: 1.2; }
+.tool-name b { font-size: 1.05rem; overflow-wrap: anywhere; hyphens: auto; }
+.toolbox-tool { min-width: 0; }
+.tool-gloss { font-weight: 500; color: var(--muted); font-size: 0.9rem; }
+.toolbox { width: 100%; max-width: 560px; margin: 0 auto; }
+.toolbox-count { text-align: center; font-weight: 800; font-size: 1.3rem; margin: 0 0 8px; }
+.toolbox-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 10px; }
+.toolbox-tool { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 4px; border: 2px solid var(--edge); border-radius: 12px; background: var(--card, #fffdf8); text-align: center; }
+.toolbox-empty { border-style: dashed; background: transparent; min-height: 96px; justify-content: center; }
+.toolbox-slot { font-size: 1.6rem; font-weight: 800; color: var(--muted); opacity: 0.5; }
+
+/* ---- "Spelmodus": juice (the owner: "meer game feel, meer juice, squash and stretch", 23 November
+   2026). Every answer lands with weight: what was right squashes and stretches like jelly, what
+   was wrong wobbles, the stamp slams down, Continue bounces in, stars burst from the counter, the
+   bar overshoots; on the result the cards drop and land. All of it only with data-play, and all of
+   it stops with the phone's "less motion" (the rule at the top) and with Kalm. Each plays once. */
+@keyframes sq-jelly {
+  0% { transform: scale(1.04, 1.04); }
+  20% { transform: scale(1.05, 0.84); }
+  42% { transform: scale(0.97, 1.12); }
+  62% { transform: scale(1.02, 0.95); }
+  80% { transform: scale(0.995, 1.02); }
+  100% { transform: scale(1, 1); }
+}
+@keyframes sq-land {
+  0% { opacity: 0; transform: translateY(-26px) scale(0.88, 1.14); }
+  55% { opacity: 1; transform: translateY(0) scale(1.1, 0.88); }
+  75% { transform: translateY(0) scale(0.97, 1.04); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes sq-slam {
+  0% { opacity: 0; transform: scale(2.1); }
+  55% { opacity: 1; transform: scale(0.82, 1.12); }
+  75% { transform: scale(1.1, 0.92); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes sq-wobble {
+  0%, 100% { transform: none; }
+  18% { transform: translateX(-8px) rotate(-1.6deg); }
+  36% { transform: translateX(7px) rotate(1.3deg); }
+  54% { transform: translateX(-5px) rotate(-0.8deg); }
+  72% { transform: translateX(3px); }
+}
+@keyframes sq-press { 50% { transform: scale(1.08, 0.86); } }
+:root[data-play] .play-hit :is(.choice.right:not(.reveal), .match.match-hit, .answer-line) { animation: sq-jelly 0.6s cubic-bezier(0.3, 0.7, 0.4, 1) 1 both; }
+:root[data-play] .play-miss :is(.choice.wrong, .answer-line) { animation: sq-wobble 0.45s ease-out 1 both; }
+:root[data-play] .play-hit .stamp:not(.stamp-wrong) { animation: sq-slam 0.42s cubic-bezier(0.3, 0.7, 0.4, 1) 0.06s 1 both; }
+:root[data-play] .play-miss .stamp-wrong { animation: sq-land 0.4s ease-out 0.06s 1 both; }
+:root[data-play] :is(.play-hit, .play-miss) .player-foot .btn-go { animation: sq-jelly 0.5s cubic-bezier(0.3, 0.7, 0.4, 1) 0.12s 1 both; }
+:root[data-play] .play-hit .play-score { animation: sq-jelly 0.5s cubic-bezier(0.3, 0.7, 0.4, 1) 1 both; }
+:root[data-play] .answer-line .tile-placed { animation: sq-land 0.32s cubic-bezier(0.3, 0.7, 0.4, 1) 1 both; }
+:root[data-play] .lbar-fill { transition: transform 0.5s cubic-bezier(0.3, 1.6, 0.5, 1); }
+/* A press squashes (the hold), the release springs back (the transition above). */
+:root[data-play] :is(.btn, .choice, .tile-with-say, .match):active { transform: scale(1.05, 0.9); }
+/* The stars from the counter: eight, out and gone in 0.6 s. */
+.play-burst { position: absolute; left: 50%; top: 50%; width: 0; height: 0; pointer-events: none; }
+.play-burst i {
+  position: absolute; left: -4px; top: -4px; width: 8px; height: 8px; border-radius: 2px;
+  background: var(--yellow); border: 1.5px solid var(--edge-strong, #2a2118);
+  opacity: 0; animation: play-burst 0.6s cubic-bezier(0.2, 0.7, 0.4, 1) 1 both;
+}
+@keyframes play-burst {
+  0% { opacity: 1; transform: rotate(var(--a)) translateX(6px) scale(1.2, 0.7); }
+  60% { opacity: 1; }
+  100% { opacity: 0; transform: rotate(var(--a)) translateX(42px) rotate(90deg) scale(0.4); }
+}
+/* The result: the cards drop and land one after the other, the title squashes in. */
+:root[data-play] .result-title { animation: sq-land 0.55s cubic-bezier(0.3, 0.7, 0.4, 1) 0.15s 1 both; }
+:root[data-play] .result-stats .stat-card { animation: sq-land 0.55s cubic-bezier(0.3, 0.7, 0.4, 1) 0.35s 1 both; }
+:root[data-play] .result-stats .stat-card + .stat-card { animation-delay: 0.5s; }
+:root[data-play] .play-result-n { display: inline-block; animation: sq-slam 0.5s cubic-bezier(0.3, 0.7, 0.4, 1) 1.25s 1 both; }
+
+/* ---- "Spelmodus": Bram and Jada jump (23 November 2026) ----
+   With a right answer the colleague beside the question stays in colour and jumps: a crouch
+   (squash, held during the hit stop: the anticipation), up stretched, a landing squash, a settle.
+   The shadow shrinks while they are in the air. From 5 in a row (ch-big) higher, with a second
+   hop. A wrong answer: a short slump, down and back. The figure squashes from its feet
+   (.ch-fig: transform-origin at the feet). Once; nothing with less motion or Kalm. */
+:root[data-play] .player.play-hit :is(.speaker-char, .chat-char, .rule-q-char) { filter: none; opacity: 1; }
+:root[data-play] :is(.speaker-char, .chat-char) svg.ch { overflow: visible; }
+:root[data-play] .play-hit :is(.speaker-char, .chat-char) .ch-fig { animation: ch-jump 0.7s cubic-bezier(0.3, 0.6, 0.4, 1) 1 both; }
+:root[data-play] .play-hit :is(.speaker-char, .chat-char) .ch-big .ch-fig { animation: ch-jump-big 1s cubic-bezier(0.3, 0.6, 0.4, 1) 1 both; }
+:root[data-play] .play-hit :is(.speaker-char, .chat-char) .ch-shadow { animation: ch-jump-shadow 0.7s cubic-bezier(0.3, 0.6, 0.4, 1) 1 both; }
+:root[data-play] .play-hit :is(.speaker-char, .chat-char) .ch-big .ch-shadow { animation: ch-jump-shadow-big 1s cubic-bezier(0.3, 0.6, 0.4, 1) 1 both; }
+:root[data-play] .play-miss :is(.speaker-char, .chat-char) .ch-fig { animation: ch-slump 0.55s ease-out 1 both; }
+@keyframes ch-jump {
+  0% { transform: translateY(0) scale(1.12, 0.84); }
+  28% { transform: translateY(-30px) scale(0.9, 1.14); }
+  50% { transform: translateY(-36px) scale(1, 1); }
+  72% { transform: translateY(0) scale(1.16, 0.82); }
+  86% { transform: translateY(0) scale(0.96, 1.05); }
+  100% { transform: none; }
+}
+@keyframes ch-jump-big {
+  0% { transform: translateY(0) scale(1.14, 0.82); }
+  20% { transform: translateY(-46px) scale(0.88, 1.16); }
+  36% { transform: translateY(-54px) scale(1, 1) rotate(-6deg); }
+  52% { transform: translateY(0) scale(1.18, 0.8); }
+  64% { transform: translateY(-16px) scale(0.94, 1.08); }
+  78% { transform: translateY(0) scale(1.08, 0.92); }
+  90% { transform: translateY(0) scale(0.98, 1.02); }
+  100% { transform: none; }
+}
+@keyframes ch-jump-shadow {
+  0% { transform: scale(1.15, 1); }
+  28%, 50% { transform: scale(0.55); opacity: 0.08; }
+  72% { transform: scale(1.2, 1); }
+  100% { transform: none; }
+}
+@keyframes ch-jump-shadow-big {
+  0% { transform: scale(1.15, 1); }
+  20%, 36% { transform: scale(0.45); opacity: 0.06; }
+  52% { transform: scale(1.25, 1); }
+  64% { transform: scale(0.8); }
+  78% { transform: scale(1.1, 1); }
+  100% { transform: none; }
+}
+@keyframes ch-slump {
+  0% { transform: none; }
+  35% { transform: translateY(4px) scale(1.06, 0.9); }
+  65% { transform: translateY(0) scale(0.98, 1.02); }
+  100% { transform: none; }
+}
+

@@ -1,5 +1,5 @@
 import { ShowHow } from './ShowHow';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { goKnown, markGoKnown } from '../lib/goKnown';
 import { stillMotion } from '../lib/calm';
 import { BeNote } from './BeNote';
@@ -344,6 +344,21 @@ export function WhyLine({ why, lang, rtl }: { why: Bilingual; lang?: HelpLanguag
  * The lesson. "Start again" for a lesson stopped halfway is on the home (it clears the saved
  * place before the lesson opens); the pause sheet is always Keep going / sound / Stop.
  */
+/** "Spelmodus": the hit stop, how long everything holds still on a right answer before the juice plays. */
+export const HIT_STOP_MS = 110;
+
+/** "Spelmodus": the angles of the stars that burst from the points counter. */
+const BURST = [0, 45, 90, 135, 180, 225, 270, 315];
+
+/** "Spelmodus": a short buzz of the phone with an answer (where the phone can; never in the calm screen). */
+function buzz(pattern: number | number[]): void {
+  try {
+    if (typeof navigator !== 'undefined' && 'vibrate' in navigator) navigator.vibrate(pattern);
+  } catch {
+    // No vibration: the screen and the sound say it.
+  }
+}
+
 export function LessonPlayer(props: PlayerProps) {
   return <LessonRun {...props} />;
 }
@@ -468,6 +483,28 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   const [play] = useState(playing);
   const points = useRef(0);
   const [gain, setGain] = useState<{ n: number; k: number } | null>(null);
+  /** The lesson's root, for the hit stop. */
+  const playerRef = useRef<HTMLDivElement>(null);
+  /**
+   * The hit stop: on a right answer in the game mode everything in the lesson holds its first frame
+   * for HIT_STOP_MS (the impact: the card a little bigger, Bram crouched, the stamp not down yet),
+   * then lets go, so the hit lands with weight. Before the first paint (layout effect), so the
+   * frozen frame is what shows. Nothing moves with less motion or Kalm anyway.
+   */
+  const hitKey = play && checked && answer?.correct ? `${index}` : '';
+  useLayoutEffect(() => {
+    if (!hitKey) return;
+    const el = playerRef.current;
+    // (Not the exercise before, still sliding out after a quick answer: only this moment holds.)
+    const ghost = ghostRef.current;
+    const held = (el?.getAnimations?.({ subtree: true }) ?? []).filter((a) => {
+      const target = (a.effect as KeyframeEffect | null)?.target;
+      return a.playState === 'running' && !(ghost && target instanceof Node && ghost.contains(target));
+    });
+    held.forEach((a) => a.pause());
+    const t = window.setTimeout(() => held.forEach((a) => { try { a.play(); } catch { /* gone with the exercise */ } }), HIT_STOP_MS);
+    return () => { window.clearTimeout(t); held.forEach((a) => { try { if (a.playState === 'paused') a.play(); } catch { /* gone */ } }); };
+  }, [hitKey]);
   /** Misses in a row: the character's "oops" plays on the first one only. */
   const [misses, setMisses] = useState(resumed ? saved!.misses : 0);
   /** The main button turns into the outcome-coloured Continue 120 ms after Check. */
@@ -817,11 +854,13 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
         const n = isGraded(ex) ? pointsFor(newRun, true, answer.almost) : 0;
         if (n) { points.current += n; setGain((g) => ({ n, k: (g?.k ?? 0) + 1 })); }
         playSounds.correct(newRun);
+        buzz(stamp ? [18, 50, 28] : 14);
         if (stamp) later(300, () => playSounds.combo());
       } else sounds.correct();
       if (stamp) later(300, () => { setRunLabel(stamp); setSweep((k) => k + 1); });
     } else {
       sounds.wrong();
+      if (play) buzz([30, 40, 30]);
       // A mistake comes back once at the end of the lesson; no endless loops.
       // It comes back in a new form: other order, other wrong options (lib/exercises.ts forRetry).
       // ("Snap je het?" does not: its sentence is shown and said right away, comesBack.)
@@ -1168,7 +1207,7 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
   return (
     // A right-to-left help language mirrors the whole player (header, cards, feedback); the Dutch
     // and English in it keep their own direction (lang="nl" / lang="en" isolates, styles.css).
-    <div className={`player ${rtl ? 'player-rtl' : ''} ${answered ? 'is-answered' : ''}`} dir={rtl ? 'rtl' : 'ltr'}>
+    <div ref={playerRef} className={`player ${rtl ? 'player-rtl' : ''} ${answered ? 'is-answered' : ''} ${play && checked && answer ? (answer.correct ? 'play-hit' : 'play-miss') : ''}`} dir={rtl ? 'rtl' : 'ltr'}>
       <header className="player-top" inert={askQuit}>
         {/* The only control up here: ✕ opens the pause sheet (keep going, without sound, stop). */}
         <button ref={closeRef} type="button" className="icon-btn lesson-close" onClick={() => setAskQuit(true)} aria-label={said(ui('quitLesson', lang))} lang={saidLang(ui('quitLesson', lang))} aria-haspopup="dialog"><CloseIcon size={28} /></button>
@@ -1203,6 +1242,12 @@ function LessonRun({ lesson, review, lang, onQuit, onFinish, exercises, repeats,
             <span className="play-star" aria-hidden>★</span>
             <span key={gain?.k ?? 0} className="play-score-n">{points.current}</span>
             {gain && <span key={`g${gain.k}`} className="play-gain" aria-hidden>+{gain.n}</span>}
+            {/* A burst of stars from the counter with every gain (CSS only; none with less motion). */}
+            {gain && (
+              <span key={`b${gain.k}`} className="play-burst" aria-hidden>
+                {BURST.map((a) => <i key={a} style={{ '--a': `${a}deg` } as React.CSSProperties} />)}
+              </span>
+            )}
           </span>
         )}
         {/* The screen's heading for screen readers (one h1 per screen, as elsewhere); the visible

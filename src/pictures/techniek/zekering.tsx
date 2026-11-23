@@ -26,7 +26,7 @@ export default {
       </Move>
       {/* The lever slot and the lever, down */}
       <rect x="37" y="56" width="18" height="24" rx="2.5" fill={PAL.slateDark} />
-      <Move kind="drop" dy={-12}>
+      <Move kind="drop" dy={-16}>
         <rect x="40" y="66" width="12" height="20" rx="3" fill={PAL.slate} />
         <rect x="40" y="66" width="5" height="20" rx="2.5" fill={PAL.steel} opacity="0.55" />
       </Move>

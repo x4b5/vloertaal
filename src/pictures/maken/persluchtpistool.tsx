@@ -1,4 +1,4 @@
-import type { JSX } from 'react';
+import { useId, type JSX } from 'react';
 import { Ground, Move, PAL, Shine, r1 } from '../kit';
 
 /** The depth axis of the slanted view (as in group55): one unit of depth goes this far right and up. */
@@ -69,6 +69,7 @@ export default {
   'w.persluchtpistool': () => {
     const c = coil();
     const g = (a: P, b: P) => `M${a[0]} ${a[1]}L${b[0]} ${b[1]}`;
+    const id = `pl-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
     return (
       <g strokeLinejoin="round">
         <Ground cx={60} cy={104} rx={48} ry={4} />
@@ -98,10 +99,16 @@ export default {
         </g>
         {/* The front halves of the hose loops */}
         <path d={c.front} fill="none" stroke={PAL.green} strokeWidth="3.6" strokeLinecap="round" />
-        {/* The air going from the nozzle to the plate */}
-        <Move kind="fast" dx={8} dy={-6}>
+        {/* The air going from the nozzle to the plate (Move: it streams out of the nozzle tip; clipped
+            at the tip, so it never shows over the nozzle) */}
+        <clipPath id={id}>
+          <rect x={NOZ - 200} y="-100" width="200" height="200" transform={`translate(${T[0]} ${T[1]}) rotate(${ANGLE})`} />
+        </clipPath>
+        <g clipPath={`url(#${id})`}>
+        <Move kind="fast" dx={16} dy={-11}>
           <path d={air()} stroke={PAL.sky} strokeWidth="2.6" strokeLinecap="round" />
         </Move>
+        </g>
         {/* (The dust starts on the plate and is blown up off its end.) */}
         <Move kind="from" dx={14} dy={12}>
         {/* The puff of dust lifting off the plate's left end, and chips flying off */}

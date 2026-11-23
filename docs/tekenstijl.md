@@ -206,7 +206,7 @@ the hoist lifts the load, the needle swings to its value. This widens the first 
 meaning is a movement") for tools and machines; the list of "things" above stays still where a movement
 would only decorate (a helmet, a forklift standing there).
 
-All other limits stay: only on the intro card, once, short, at most two steps, ending on the still
+All other limits stay: only on the intro card, short (since 23 November 2026: three rounds, under 5 s), at most two steps, ending on the still
 picture (which does not change), CSS only, nothing moves with "less motion" or "Rustig scherm". In
 doubt, not: a tool whose function a movement does not make clearer stays still.
 
@@ -235,6 +235,21 @@ All other limits are as before: only on the intro card, once, at most two steps,
 picture, CSS only, nothing with "less motion" or "Rustig scherm". All 725 still pictures were looked at
 in six groups; 165 move since this round (and "zagen" itself). The list is MOTION_ROUND4 in tests/motionPictures.test.ts,
 and a line above each picture says what moves.
+
+### Lang genoeg om te zien (23 november 2026)
+
+De eigenaar: "de beweging is erg minimaal, waardoor de gebruiker niet lang genoeg de functie van het
+object kan zien". Daarom twee dingen:
+
+- **Drie rondes**: elke beweging speelt drie keer (een tekening in twee stappen twee keer). Aan het eind
+  van elke ronde staat de tekening even stil, zodat het oog ziet waar het deel eindigt. Samen blijft het
+  onder de 5 seconden (WCAG 2.2.2: langer zou een pauzeknop vragen). Een ronde is 1,5 s (twee stappen:
+  2,2 s). Een tik op de luidspreker speelt het opnieuw. "Zeg het hardop" wacht alleen op de eerste
+  ronde.
+- **Groot genoeg**: een schuif is minstens 20 eenheden, een draai minstens 25 graden, een groei begint
+  bij 0,5 of minder. De te kleine bewegingen van de eerdere rondes zijn groter gemaakt.
+
+Kalm en "minder beweging" zetten nog steeds alles stil; de tekening is dan haar stilstaande zelf.
 
 ## Template
 

@@ -89,7 +89,7 @@ export default {
         <Shine d={`M${iso(T.u + 6, T.v + T.d - 5, tz).join(' ')}L${iso(T.u + 16, T.v + 5, tz).join(' ')}`} width={2.2} opacity={0.9} />
         {/* Heat waves from the hot plate down to the tray */}
         {/* (The head comes down onto the tray, its heat with it.) */}
-        <Move kind="from" dy={-14}>
+        <Move kind="from" dy={-20}>
           <path d={heat.join('')} fill="none" stroke={PAL.red} strokeWidth="2.8" strokeLinecap="round" />
           {/* The red-hot plate and the blue head */}
           <Block u={H.u + 2} v={H.v + 2} z={H.z - H.plate} w={H.w - 4} d={H.d - 4} h={H.plate} top={PAL.red} front={PAL.red} side={PAL.redShade} />

@@ -1,5 +1,6 @@
 import { tipForLesson } from '../content/culture';
 import { applyCalm } from '../lib/calm';
+import { withSfeer } from '../lib/play';
 import { workTryLine } from '../lib/workTry';
 import { lessonMinutes } from '../lib/lessonTime';
 import { ColleagueCard } from '../components/ColleagueCard';
@@ -715,7 +716,7 @@ function SettingsShot({ progress: start, access }: { progress: Progress; access:
       onRegion={(region) => set({ region })}
       onTheme={(theme) => set({ theme })}
       onTextSize={pickSize}
-      onCalm={(calm) => { set({ calm }); applyCalm(calm); }}
+      onSfeer={(sfeer) => { const next = withSfeer({ calm: undefined, play: undefined, playAsked: undefined }, sfeer); set({ calm: next.calm, play: next.play }); applyCalm(next.calm); }}
       onVoice={(voice) => set({ voice })}
       onQuiet={(quiet) => set({ quiet })}
       onTempo={(tempo) => set({ tempo })}

@@ -27,7 +27,7 @@ export function PlayAskCard({ lang, onPick }: { lang?: HelpLanguage; onPick: (on
           <NlPair nlFirst nl="Met spel" nlClass="notice-btn-nl" text={ui('playAskFun', lang)} />
         </button>
         <button type="button" className="btn notice-more play-ask-calm" onClick={() => onPick(false)}>
-          <NlPair nlFirst nl="Rustig" nlClass="notice-btn-nl" text={ui('playAskCalm', lang)} />
+          <NlPair nlFirst nl="Standaard" nlClass="notice-btn-nl" text={ui('sfeerStandard', lang)} />
         </button>
       </div>
     </section>

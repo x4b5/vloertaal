@@ -7,8 +7,8 @@ export default {
   'w.gieter': () => (
     <g strokeLinejoin="round">
       <Ground cx={50} cy={104} rx={36} ry={4} />
-      {/* The can tips forward into the pour (Move), then the drops fall from the rose */}
-      <Move kind="turn" turn={-16} at={[43, 104]}>
+      {/* The can tips forward on its back heel into the pour (Move), then the drops fall from the rose */}
+      <Move kind="turn" turn={-21} at={[16, 104]}>
       {/* The long spout, from the bottom of the body up to the rose */}
       <path d="M60 88L88 46" stroke={PAL.greenShade} strokeWidth="7" strokeLinecap="round" />
       <path d="M59 84L84 47" stroke={PAL.green} strokeWidth="3" strokeLinecap="round" />

@@ -242,7 +242,7 @@ export default {
           <polyline points={pts(circle.slice(0, 4).reverse())} fill="none" stroke={PAL.slate} strokeWidth="3.6" strokeLinecap="round" strokeLinejoin="round" />
         </Move>
         {/* The compasses turn round the needle point, the pencil drawing the arc */}
-        <Move kind="turn" turn={-12} at={c}>
+        <Move kind="turn" turn={-20} at={c}>
           {/* The needle leg */}
           <Extrude p={bar(hinge, needle, 13)} {...STEEL} d={legD} />
           <path d={`M${needle[0]} ${needle[1] - 2}L${pts([c])}`} stroke={PAL.slateDark} strokeWidth="3" strokeLinecap="round" />

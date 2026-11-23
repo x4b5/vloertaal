@@ -34,8 +34,8 @@ export default {
       <circle cx={HX} cy={HY} r="5" fill={PAL.slateDark} />
       {/* The oil running out and dripping onto a puddle */}
       <path d={`M${HX} ${HY + 3}V${HY + 16}`} stroke={PAL.yellowShade} strokeWidth="3.4" />
-      {/* On the intro card the drop falls from the end of the stream */}
-      <Move kind="drop" dy={-12}>
+      {/* On the intro card the drop comes out of the hole and falls down the stream */}
+      <Move kind="drop" dy={-24}>
         <path d={`M${HX} 66Q${HX + 5} 72 ${HX + 5} 75A5 5 0 0 1 ${HX - 5} 75Q${HX - 5} 72 ${HX} 66Z`} fill={PAL.yellowShade} />
       </Move>
       <ellipse cx={HX} cy="100" rx="16" ry="3.6" fill={PAL.yellowShade} />

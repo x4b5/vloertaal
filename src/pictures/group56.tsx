@@ -135,7 +135,7 @@ export default {
       {/* The back half of the stirring arrow, behind the slat */}
       <path d="M33 74A25 7.5 0 0 1 83 74" fill="none" stroke={PAL.orange} strokeWidth="4.6" strokeLinecap="round" />
       {/* The slat with its paint: on the intro card its dipped end swings through the paint, as the arrow goes */}
-      <Move kind="turn" turn={-14} at={[66, 12]}>
+      <Move kind="turn" turn={-25} at={[66, 12]}>
         {/* The slat: its top end, its thickness on the right, then its face */}
         <polygon points="62.7,12.3 77.3,15.7 81.3,12.7 66.7,9.3" fill={LIGHT_WOOD} />
         <polygon points="77.3,15.7 81.3,12.7 63.3,90.7 59.3,93.7" fill={PAL.cardDark} />

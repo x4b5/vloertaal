@@ -12,10 +12,9 @@ export type SettingsPage =
   | 'switch'
   | 'language' | 'gender' | 'sector' | 'sector-build' | 'sector-make' | 'sector-care' | 'sector-shop' | 'region' | 'country' | 'english' | 'certificates'
   | 'sound' | 'voice' | 'tempo' | 'speaking' | 'writing' | 'text' | 'theme'
-  /** "Rustig scherm" (src/lib/calm.ts), from Lessen, under Weergave. */
-  | 'calm'
-  /** "Spelmodus" (src/lib/play.ts), from Lessen, under "Rustig scherm". */
-  | 'play'
+  /** "Sfeer" (src/lib/play.ts): Kalm ("Rustig scherm", src/lib/calm.ts), Standaard or Spel (the game
+   *  mode), from Lessen, under Weergave. One setting since 23 November 2026 (the owner's choice). */
+  | 'sfeer'
   | 'offline' | 'reminder' | 'reminder-time' | 'install' | 'backup' | 'counting' | 'reset' | 'unlock'
   /** "Wat ken je al?": a screen of its own (App, src/components/Toets.tsx ToetsPage), from Lessen. */
   | 'toets'
@@ -27,7 +26,10 @@ export type SettingsPage =
   | 'gelukt'
   /** "Laat de telefoon luisteren (proef)", under "Spreken oefenen": only on a phone that can
    *  recognise Dutch on the device (src/lib/listen.ts). */
-  | 'listen';
+  | 'listen'
+  /** "Mijn gereedschapskist" (src/lib/play.ts TOOLS): the tools earned in the game mode, from Taal
+   *  en ik, under "Gelukt op het werk". Only in the game mode or with a tool in the box. */
+  | 'toolbox';
   // "Sneller leren" is the third choice of Tempo since 2 November 2026 (no row of its own).
 
 /** The page each page is opened from (null: the Settings menu itself). */
@@ -55,8 +57,7 @@ export const SETTINGS_PARENT: Record<SettingsPage, SettingsPage | null> = {
   writing: 'lessons',
   text: 'lessons',
   theme: 'lessons',
-  calm: 'lessons',
-  play: 'lessons',
+  sfeer: 'lessons',
   offline: 'phone',
   reminder: 'phone',
   // With a reminder in the calendar, its page offers another time (this page) or Stop.
@@ -70,6 +71,7 @@ export const SETTINGS_PARENT: Record<SettingsPage, SettingsPage | null> = {
   kaart: 'me',
   gelukt: 'me',
   listen: 'lessons',
+  toolbox: 'me',
 };
 
 /** How many steps below the Settings menu a page is (0 = the menu). */
@@ -110,13 +112,15 @@ export interface SettingsContext {
   /** Sentences said at work are kept (Progress.gelukt): "Gelukt op het werk" is offered. Missing
    *  = none (the row is left out: an empty list would only say what has not happened yet). */
   gelukt?: boolean;
+  /** The game mode is on, or a tool is in the box: "Mijn gereedschapskist" is offered. */
+  toolbox?: boolean;
 }
 
 /** The rows of a list, in order. */
 export function settingsRows(list: SettingsList, ctx: SettingsContext): SettingsPage[] {
   const rows: (SettingsPage | false)[] =
-    list === 'me' ? [ctx.routes === true && 'route', (!ctx.rules || ctx.routes !== true) && 'language', !ctx.rules && ctx.gender && 'gender', 'sector', ctx.region === true && 'region', 'country', !ctx.rules && ctx.helpLang && 'english', 'certificates', ctx.gelukt === true && 'gelukt', 'kaart']
-    : list === 'lessons' ? ['sound', (!ctx.rules || ctx.recorded !== false) && 'voice', !ctx.rules && 'tempo', !ctx.rules && 'speaking', !ctx.rules && ctx.listen === true && 'listen', !ctx.rules && 'writing', 'text', 'theme', 'calm', 'play', !ctx.rules && 'toets']
+    list === 'me' ? [ctx.routes === true && 'route', (!ctx.rules || ctx.routes !== true) && 'language', !ctx.rules && ctx.gender && 'gender', 'sector', ctx.region === true && 'region', 'country', !ctx.rules && ctx.helpLang && 'english', 'certificates', ctx.gelukt === true && 'gelukt', ctx.toolbox === true && 'toolbox', 'kaart']
+    : list === 'lessons' ? ['sound', (!ctx.rules || ctx.recorded !== false) && 'voice', !ctx.rules && 'tempo', !ctx.rules && 'speaking', !ctx.rules && ctx.listen === true && 'listen', !ctx.rules && 'writing', 'text', 'theme', 'sfeer', !ctx.rules && 'toets']
     : [ctx.preview && 'unlock', ctx.offline && 'offline', 'reminder', ctx.install && 'install', 'backup', 'counting', 'reset'];
   return rows.filter((r): r is SettingsPage => Boolean(r));
 }

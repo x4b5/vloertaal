@@ -13,11 +13,12 @@ import { taalBeActive, tipNlOnly } from '../content/taalBe';
 import { rightsTipNotes, tipBody } from '../lib/tipText';
 import { BeNote } from './BeNote';
 import { regionTips } from '../content/regio';
-import { findLesson } from '../content/curriculum';
+import { allWords, findLesson } from '../content/curriculum';
 import { DAILY_MAX, showKept, type DailyCard } from '../lib/spaced';
 import { Flag } from './Flag';
 import { fillCount, fillN, getHelpLanguage, gloss, langMeta, languageMark, languageMeta, metaLanguage, NL_MORE, ui, uiCount, withoutN, type Bilingual, said, saidLang, langTag } from '../i18n';
 import type { HelpLanguage, LangCode, UiCode, UiKey } from '../i18n/types';
+import { levelOf, PERFECT_BONUS, type PlayOutcome } from '../lib/play';
 import { helpRowsFor, helpShow, type HelpRow } from '../content/regels/help';
 import { learnerCountry } from '../content/country';
 import { dutchUi, rulesTrackOn } from '../lib/track';
@@ -908,10 +909,10 @@ const FEEL_FACES: readonly [Face, string, 'feelBad' | 'feelOk' | 'feelGood'][] =
 /** From this many words still due after a review, the result says they come in the next days. */
 export const REVIEW_WAITING_MIN = 3;
 
-export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, kept, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases, remember, onSamen, onFaster, onFeel, feltShot, easier = false, workTry, points, allPoints }: {
-  /** "Spelmodus" (src/lib/play.ts): this lesson's points and all points so far; with them, confetti. */
-  points?: number;
-  allPoints?: number;
+export function Result({ right, total, newWords, words, lang, onDone, repeated, stronger, kept, waiting = 0, next, skipped = 0, kind = 'lesson', onPhrases, remember, onSamen, onFaster, onFeel, feltShot, easier = false, workTry, play }: {
+  /** "Spelmodus" (src/lib/play.ts): the lesson's points, all points, and its moments (a perfect
+   *  lesson, a new level, the day's goal, a new tool in the box); with them, confetti. */
+  play?: PlayOutcome;
   /** "Wat vind je van Vloertaal?" (src/lib/feel.ts), after the 3rd and 15th lesson: three faces
    *  above Continue, a list of one kind (Continue stays: not answering is always possible). A tap
    *  counts the face and says thank you. */
@@ -1011,7 +1012,7 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
           {/* Bram (the one with the thumb up) says one calm line. */}
           <BramSays text={ui(resultLineFor(kind, right, total), lang)} tail="down" />
           <LessonCelebration />
-          {points !== undefined && <Confetti />}
+          {play && <Confetti />}
           {/* No KLAAR stamp beside the heading any more: the heading and the celebration say it;
               stamps stay for rarer moments (a week in a row, a certificate). The owner's choice,
               2 November 2026. */}
@@ -1040,16 +1041,8 @@ export function Result({ right, total, newWords, words, lang, onDone, repeated, 
             done={repeated !== undefined || shownNew === newWords}
           />
         </div>
-        {/* "Spelmodus": the lesson's points, big, and all points so far (src/lib/play.ts). */}
-        {points !== undefined && (
-          <p className="result-line play-result" dir={rtl ? 'rtl' : undefined}>
-            <span className="play-result-n" dir="ltr"><span className="play-star" aria-hidden>★</span>+{points}</span>
-            <span className="play-result-label"><Bi text={ui('playPoints', lang)} /></span>
-            {allPoints !== undefined && (
-              <span className="play-result-all"><Bi text={ui('playTotal', lang)} /> <span dir="ltr">{allPoints}</span></span>
-            )}
-          </p>
-        )}
+        {/* "Spelmodus": the lesson's points, big, all points so far, and the lesson's moments. */}
+        {play && <PlayResult play={play} lang={lang} />}
         {/* The rules track: the one line to remember from this lesson (plain Dutch, as the rule card). */}
         {remember && (
           <div className="result-remember" lang="nl">
@@ -1293,5 +1286,47 @@ export function Confetti() {
         <span key={i} className="confetti-bit" style={{ left: `${c.x}%`, animationDelay: `${c.delay}s`, background: c.colour, '--turn': `${c.turn}deg` } as React.CSSProperties} />
       ))}
     </div>
+  );
+}
+
+/**
+ * "Spelmodus" on the result (src/lib/play.ts): the lesson's points, all points and the level's bar,
+ * and up to three moments, each a chip: no mistakes (+50), a new level, the day's goal, and the
+ * tool this lesson put in the toolbox (its picture and name, the word's own gloss). Nothing to tap.
+ */
+function PlayResult({ play, lang }: { play: PlayOutcome; lang?: HelpLanguage }) {
+  const rtl = lang?.dir === 'rtl';
+  const level = levelOf(play.all);
+  return (
+    <div className="result-line play-result" dir={rtl ? 'rtl' : undefined}>
+      <span className="play-result-n" dir="ltr"><span className="play-star" aria-hidden>★</span>+{play.points}</span>
+      <span className="play-result-label"><Bi text={ui('playPoints', lang)} /></span>
+      <span className="play-result-all">
+        <Bi text={ui('playTotal', lang)} /> <span dir="ltr">{play.all}</span>
+      </span>
+      <ul className="play-moments">
+        {play.perfect && <li className="play-moment"><span aria-hidden>✔</span> <Bi text={ui('playPerfect', lang)} /> <span dir="ltr">+{PERFECT_BONUS}</span></li>}
+        {play.levelUp && <li className="play-moment play-moment-big"><span aria-hidden>▲</span> <Bi text={ui('playLevelUp', lang)} /> <b><Bi text={ui(level.name.key, lang)} />{level.stars > 1 ? ` ${level.stars}` : ''}</b></li>}
+        {play.dayGoal && <li className="play-moment"><span aria-hidden>☀</span> <Bi text={ui('playDayGoalDone', lang)} /></li>}
+        {play.tool && (
+          <li className="play-moment play-moment-tool">
+            <WordPicture id={play.tool} emoji={allWords.find((w) => w.id === play.tool)?.emoji ?? '🧰'} size={44} />
+            <span><Bi text={ui('playNewTool', lang)} /> <ToolName id={play.tool} lang={lang} /></span>
+          </li>
+        )}
+      </ul>
+    </div>
+  );
+}
+
+/** A tool's name: the word in Dutch, big, with its gloss in the help language under it. */
+export function ToolName({ id, lang }: { id: string; lang?: HelpLanguage }) {
+  const w = allWords.find((x) => x.id === id);
+  if (!w) return null;
+  return (
+    <span className="tool-name">
+      <b lang="nl">{w.nl}</b>
+      <Bi className="tool-gloss" text={gloss(id, w.en, lang)} />
+    </span>
   );
 }

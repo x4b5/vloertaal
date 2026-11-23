@@ -305,7 +305,7 @@ export default {
     <g>
       <Ground cx={62} cy={106} rx={48} ry={4} />
       {/* On the intro card the front of the car comes up off the ground, on its rear wheel */}
-      <Move kind="turn" turn={-14} at={[80, 93.5]}>
+      <Move kind="turn" turn={-25} at={[80, 93.5]}>
         <g transform="translate(80 93.500) rotate(24) scale(1.05) translate(-26 0)">
           <Car body={PAL.navy} shade={PAL.navyShade} />
         </g>

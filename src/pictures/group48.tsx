@@ -233,16 +233,17 @@ export default {
         <path d="M54 34H78L96 54V60H36V54Z" fill={PAL.steel} stroke={PAL.steel} strokeWidth="2" strokeLinejoin="round" />
       </Shade>
       <rect x="33" y="55" width="66" height="7" rx="3" fill={PAL.slate} />
-      {/* The workbench, the work and its smoke */}
-      <rect x="10" y="96" width="100" height="10" rx="3" fill={PAL.wood} />
-      <path d="M14 98.5H106" stroke={PAL.card} strokeWidth="2" strokeLinecap="round" />
-      <rect x="56" y="89" width="30" height="7" rx="1.5" fill={PAL.steel} />
-      {/* On the intro card the smoke rises from the work up to the hood */}
-      <Move kind="slow" dy={14}>
+      {/* The smoke of the work: on the intro card it rises out of the work up to the hood (it is
+          drawn first, so the bench and the work hide it at the start) */}
+      <Move kind="slow" dy={18}>
         <circle cx="72" cy="83" r="5" fill={PAL.line} />
         <circle cx="76" cy="73" r="6.5" fill={PAL.line} />
         <circle cx="68" cy="68" r="5.5" fill={PAL.line} />
       </Move>
+      {/* The workbench and the work */}
+      <rect x="10" y="96" width="100" height="10" rx="3" fill={PAL.wood} />
+      <path d="M14 98.5H106" stroke={PAL.card} strokeWidth="2" strokeLinecap="round" />
+      <rect x="56" y="89" width="30" height="7" rx="1.5" fill={PAL.steel} />
       <CurveArrow from={[26, 90]} to={[50, 66]} bend={-9} color={PAL.sky} width={7} head={12} />
     </g>
   ),
