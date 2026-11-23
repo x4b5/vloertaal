@@ -12,6 +12,7 @@ const COVER =
 export default {
   // "de stoelhoes": the seat cover — a dark car seat seen from the side, with a white see-through plastic
   // cover pulled over it (grey edge and folds), and the edge of the steering wheel on the left.
+  // On the intro card: the plastic cover slides down over the seat, once and slowly (it is put on: it happens once).
   'w.stoelhoes': () => (
     <g strokeLinejoin="round">
       <Ground cx={60} cy={104} rx={40} ry={4} />
@@ -29,7 +30,7 @@ export default {
       <path d={CUSHION} fill={PAL.slateDark} />
       {/* The plastic cover: its grey edge, the white see-through sheet, a few folds (on the intro
           card it slides down over the seat) */}
-      <Move kind="from" dy={-26}>
+      <Move kind="from" dy={-26} once>
         <path d={COVER} fill="none" stroke={PAL.mist} strokeWidth="3.4" />
         <path d={COVER} fill={PAL.white} opacity=".45" />
         <path d="M40 66L46 82M60 66L58 82M84 34L80 64M90 14L88 22" stroke={PAL.mist} strokeWidth="1.8" strokeLinecap="round" />

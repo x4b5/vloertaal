@@ -198,11 +198,12 @@ export default {
 
   // "het licht": the bike light — a lamp on the front of a bike, shining a beam ahead
   // On the intro card: the lamp switches on, its beam and rays appear.
+  // Once and slowly (a lamp goes on: it happens once).
   'w.licht': () => (
     <g>
       <Ground cx={38} cy={106} rx={26} ry={4} />
       {/* Beam */}
-      <Move kind="show">
+      <Move kind="show" once>
         <path d="M58 40L112 14V80Z" fill={PAL.yellowLight} opacity=".55" />
         <path d="M58 40L112 30V58Z" fill={PAL.yellowShine} opacity=".9" />
       </Move>
@@ -228,10 +229,11 @@ export default {
   // "inchecken": to check in — a hand holds the card against the yellow reader pole (arrow in),
   // the reader beeps green. On the intro card (docs/tekenstijl.md "Beweging") the hand brings the
   // card to the reader, and the tick comes when it gets there.
+  // Once and slowly (checking in: it happens once).
   'w.inchecken': () => (
     <g>
       <CardPole x={86} y={60} />
-      <Move kind="from" dx={-26}>
+      <Move kind="from" dx={-26} once>
         <Hand pose="hold" x={34} y={36} rotate={90} scale={0.84} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} />
         <BankCard x={56} y={26} w={28} rot={0} />
       </Move>
@@ -244,10 +246,11 @@ export default {
 
   // "uitchecken": to check out — the hand takes the card away from the reader again (arrow out).
   // On the intro card the same slide as "inchecken", but it starts at the reader and goes away.
+  // Once and slowly (checking out: it happens once).
   'w.uitchecken': () => (
     <g>
       <CardPole x={34} y={60} />
-      <Move kind="from" dx={-28}>
+      <Move kind="from" dx={-28} once>
         <Hand pose="hold" x={110} y={36} rotate={-90} scale={0.84} skin={SKIN.henk} sleeve={[PAL.navy, PAL.navyShade]} mirror />
         <BankCard x={64} y={26} w={28} rot={0} />
       </Move>
@@ -663,6 +666,7 @@ export default {
 
   // "afruimen": to clear the table — the used plates go from the table onto a tray. On the intro
   // card (docs/tekenstijl.md "Beweging", the last round, 5 November 2026) the top plate goes up from the table onto the stack on the tray.
+  // Once and slowly (it is put away: it happens once).
   'w.afruimen': () => (
     <g>
       {/* Tray, held on a flat hand, with a stack of used plates */}
@@ -670,7 +674,7 @@ export default {
       <rect x="52" y="46" width="58" height="7" rx="3.5" fill={PAL.cardDark} />
       <Plate cx={81} cy={42} rx={22} />
       <Plate cx={81} cy={36} rx={22} />
-      <Move kind="from" dx={-47} dy={50}>
+      <Move kind="from" dx={-47} dy={50} once>
         <Plate cx={81} cy={30} rx={22} food />
       </Move>
       {/* Table with one plate left */}

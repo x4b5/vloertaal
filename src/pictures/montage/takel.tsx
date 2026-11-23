@@ -36,6 +36,7 @@ const chain = (x: number, y0: number, y1: number) => {
 export default {
   // "de takel": the hoist — a yellow electric chain hoist hanging from a steel beam, its chain going
   // down to a steel hook, and a small dark push-button pendant with an up and a down arrow.
+  // Once and slowly: a load is lifted once (the owner's sunrise rule; lifting it three times looks odd).
   'w.takel': () => {
     const id = `tk-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
     return (
@@ -63,7 +64,7 @@ export default {
         <rect x="40" y="63" width="30" height="60" />
       </clipPath>
       <g clipPath={`url(#${id})`}>
-        <Move kind="from" dy={18}>{chain(55, 37, 61)}</Move>
+        <Move kind="from" dy={18} once>{chain(55, 37, 61)}</Move>
       </g>
       <Move kind="from" dy={18}>
         {chain(55, 61, 82)}

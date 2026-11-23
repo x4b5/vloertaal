@@ -269,6 +269,7 @@ export default {
   ),
 
   // "de kraan": the crane — a yellow tower crane: lattice mast, long jib, counterweight, hook
+  // Once and slowly: a load is lifted once (the owner's sunrise rule; lifting it three times looks odd).
   'w.kraan': () => (
     <g>
       <Ground cx={74} cy={105} rx={22} ry={3.5} />
@@ -279,7 +280,7 @@ export default {
       <path d="M30 32V58" stroke={PAL.slate} strokeWidth="2.4" />
       {/* On the intro card the hook is hoisted up: a copy of the cable, its top hidden behind the
           jib, comes up with it, so the cable never breaks (docs/tekenstijl.md "Beweging") */}
-      <Move kind="from" dy={34}>
+      <Move kind="from" dy={34} once>
         <path d="M30 28V58" stroke={PAL.slate} strokeWidth="2.4" />
         <Hook x={30} y={58} s={0.7} />
       </Move>

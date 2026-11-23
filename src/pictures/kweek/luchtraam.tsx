@@ -8,6 +8,7 @@ const GLASS_SHADE = '#6cc6ef';
 export default {
   // "het luchtraam": the roof vent — a slanting section of greenhouse glass roof (light blue panes in a
   // grey frame) under the ridge, one pane hinged at the ridge and lifted open, warm air curving out.
+  // On the intro card: the vent pane lifts open from flat, then the warm air comes out, once and slowly (a window opens: it happens once).
   'w.luchtraam': () => (
     <g strokeLinejoin="round">
       {/* The back slope of the roof, behind the ridge */}
@@ -19,7 +20,7 @@ export default {
       {/* It opens with the pane (Move): grows down from the ridge (flipped about y 63, so the sag's
           bottom edge is the ridge) */}
       <g transform="matrix(1 0 0 -1 0 126)">
-        <Move kind="sag" grow={0.1}>
+        <Move kind="sag" grow={0.1} once>
           <g transform="matrix(1 0 0 -1 0 126)">
             <path d="M33 52H57L52 74H28Z" fill={PAL.slate} />
           </g>

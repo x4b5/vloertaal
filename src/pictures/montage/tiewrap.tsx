@@ -13,6 +13,7 @@ export default {
   // On the intro card: the tail is pulled out of the head, up to the top right (pulling it tight).
   // "de tie-wrap": the cable tie — a black cable tie pulled tight round a bundle of three wires (green, blue, red) with
   // copper ends; its square head sits on top and the ridged tail sticks up to the top right.
+  // Once and slowly (it is pulled tight: it happens once).
   'w.tiewrap': () => (
     <g strokeLinejoin="round">
       <Ground cx={60} cy={102} rx={46} ry={4} />
@@ -27,7 +28,7 @@ export default {
       ))}
       <Shine d="M30 53.4Q46 51 58 50.8" width={2.6} opacity={0.6} />
       {/* The tail: the ridged strip running up to the top right from the head */}
-      <Move kind="from" dx={-14} dy={11}>
+      <Move kind="from" dx={-14} dy={11} once>
       <path d="M66 42L98 16" stroke={PAL.slateDark} strokeWidth="9" strokeLinecap="round" />
       <path d="M72.4 38.6l-3.4 -4.2M78.4 33.8l-3.4 -4.2M84.4 28.9l-3.4 -4.2M90.4 24l-3.4 -4.2M96.4 19.2l-3.4 -4.2" stroke={PAL.steel} strokeWidth="1.5" strokeLinecap="round" />
       </Move>

@@ -109,10 +109,11 @@ export default {
 
   // "zetten": to put (something that stands) — a blue bucket, held by its handle, is lowered onto
   // a table: it stands. On the intro card the hand lowers the bucket onto the table.
+  // Once and slowly (it is put down: it happens once).
   'w.zetten': () => (
     <g>
       <Table />
-      <Move kind="from" dy={-26}>
+      <Move kind="from" dy={-26} once>
         <Hand pose="hold" x={50} y={2} rotate={180} scale={0.92} skin={SKIN.bram} sleeve={ORANGE} />
         <path d="M30 56Q30 21 50 21Q70 21 70 56" fill="none" stroke={PAL.steel} strokeWidth="4" strokeLinecap="round" />
         <Shade color={PAL.skyShade} opacity={1} at={[78, 74, 12, 30]}>
@@ -127,10 +128,11 @@ export default {
 
   // "leggen": to lay (something that lies flat) — a purple book lying on the table, a flat hand
   // on it: low and wide, where "zetten" is tall. On the intro card the hand lays the book down.
+  // Once and slowly (it is put down: it happens once).
   'w.leggen': () => (
     <g>
       <Table />
-      <Move kind="from" dy={-28}>
+      <Move kind="from" dy={-28} once>
         <rect x="20" y="78" width="66" height="16" rx="3" fill={PAL.purple} />
         <rect x="24" y="82" width="62" height="8" fill={PAL.paper} />
         <path d="M26 86H84" stroke={PAL.line} strokeWidth="1.4" strokeLinecap="round" />
@@ -143,9 +145,10 @@ export default {
 
   // "brengen": to bring, to take — Jada carries a box; an arrow to the spot where it must go.
   // On the intro card she comes in from the left with the box.
+  // Once and slowly (it is brought: it happens once).
   'w.brengen': () => (
     <g>
-      <Move kind="from" dx={-26}>
+      <Move kind="from" dx={-26} once>
         <Bust who="jada" x={38} y={128} scale={0.74} bold />
         <Box x={18} y={96} w={40} h={26} depth={9} />
         <circle cx="19" cy="108" r="6" fill={SKIN.jada[0]} />
@@ -159,10 +162,11 @@ export default {
 
   // "geven": to give — a yellow roll of tape on an open palm, held out to a second open hand.
   // On the intro card the hand with the tape reaches out to the other hand.
+  // Once and slowly (it is handed over: it happens once).
   'w.geven': () => (
     <g>
       <Hand pose="open" x={112} y={92} rotate={-90} scale={0.84} skin={SKIN.amina} sleeve={GREEN} mirror />
-      <Move kind="from" dx={-22}>
+      <Move kind="from" dx={-22} once>
         <Hand pose="open" x={8} y={74} rotate={90} scale={0.9} skin={SKIN.bram} sleeve={BLUE} />
         <Shade color={PAL.yellowShade} opacity={1} at={[50, 46, 8, 20]}>
           <circle cx="38" cy="46" r="15" fill={PAL.yellow} />
@@ -186,9 +190,10 @@ export default {
 
   // "loslaten": to let go — the same box: the hands are open and away from it, the box drops.
   // On the intro card the box falls from between the open hands, then the fall lines.
+  // Once and slowly (something falls: it happens once).
   'w.loslaten': () => (
     <g>
-      <Move kind="drop" dy={-34}>
+      <Move kind="drop" dy={-34} once>
         <g transform="rotate(9 58 84)">
           <Box x={38} y={64} w={40} h={38} depth={11} />
         </g>
@@ -207,12 +212,13 @@ export default {
 
   // "aanzetten": to switch on — a finger on a wall switch; the lamp is on. On the intro card the
   // finger comes to the switch, then the grey lamp lights up (one fade).
+  // Once and slowly (a lamp goes on: it happens once).
   'w.aanzetten': () => (
     <g>
       <path d="M36 4V16" stroke={PAL.slate} strokeWidth="4" strokeLinecap="round" />
       <rect x="27" y="14" width="18" height="12" rx="3" fill={PAL.slate} />
       <circle cx="36" cy="44" r="21" fill={PAL.mist} />
-      <Move kind="show">
+      <Move kind="show" once>
         <Shade color={PAL.yellowShade} opacity={0.8} at={[56, 46, 10, 26]}>
           <circle cx="36" cy="44" r="21" fill={PAL.yellow} />
         </Shade>
@@ -232,11 +238,12 @@ export default {
   // "opendoen": to open — the green door is swung wide open, the bright doorway is free; a hand
   // on the handle, the arrow goes away from the post. On the intro card the door swings open
   // from shut (the door is mirrored about its hinge, so the hinge is the left edge that grows).
+  // Once and slowly (a door opens: it happens once).
   'w.opendoen': () => (
     <g>
       <Doorway />
       <g transform="translate(100 0) scale(-1 1)">
-        <Move kind="grow" grow={-1.25}>
+        <Move kind="grow" grow={-1.25} once>
           <g transform="translate(100 0) scale(-1 1)">
             <path d="M50 40L20 30V114L50 106Z" fill={PAL.green} stroke={PAL.green} strokeWidth="2" strokeLinejoin="round" />
             <path d="M26 32L20 30V114L26 112.400Z" fill={PAL.greenShade} />
@@ -252,10 +259,11 @@ export default {
   // "dichtdoen": to close — the same door, nearly shut: only a strip of the doorway is left; a
   // flat hand pushes it, the arrow goes to the post. On the intro card the door swings shut from
   // wide open (it grows from its hinge, the left edge, out of a mirrored open door).
+  // Once and slowly (a door closes: it happens once).
   'w.dichtdoen': () => (
     <g>
       <Doorway />
-      <Move kind="grow" grow={-0.8}>
+      <Move kind="grow" grow={-0.8} once>
         <path d="M50 40L88 36V110L50 106Z" fill={PAL.green} stroke={PAL.green} strokeWidth="2" strokeLinejoin="round" />
         <path d="M80 36.800L88 36V110L80 109.200Z" fill={PAL.greenShade} />
         <rect x="68" y="66" width="12" height="6" rx="3" fill={PAL.yellow} />
@@ -308,9 +316,10 @@ export default {
 
   // "stoppen": to stop — an arrow that ends at a red bar; behind it a raised hand: no further.
   // A memory picture (`picture: 'hook'`). On the intro card the arrow comes fast and stops at the bar.
+  // Once and slowly (it stops: it happens once).
   'w.stoppen': () => (
     <g>
-      <Move kind="fast" dx={-30}>
+      <Move kind="fast" dx={-30} once>
         <Arrow from={[10, 56]} to={[48, 56]} color={PAL.sky} width={10} head={15} />
       </Move>
       <rect x="56" y="22" width="12" height="76" rx="6" fill={PAL.redShade} />
@@ -374,9 +383,10 @@ export default {
 
   // "leegmaken": to empty — a green bin held upside down; the rubbish falls out. On the intro
   // card the hand tips the bin over, then the rubbish is out of it (one fade).
+  // Once and slowly (a bin empties: it happens once).
   'w.leegmaken': () => (
     <g>
-      <Move kind="turn" turn={-80} at={[52, 44]}>
+      <Move kind="turn" turn={-80} at={[52, 44]} once>
       <g transform="translate(52 44) rotate(140)">
         <Shade color={PAL.greenShade} opacity={1} at={[-22, 0, 12, 40]}>
           <path d="M-26 -30H26L20 30H-20Z" fill={PAL.green} stroke={PAL.green} strokeWidth="3" strokeLinejoin="round" />

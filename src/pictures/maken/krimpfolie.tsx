@@ -79,6 +79,7 @@ export default {
   // "de krimpfolie": the shrink wrap — a pack of six green bottles held together by clear film,
   // pulled tight over the caps and down between the necks, with white shine streaks; a hi-vis
   // orange heat gun at the top right blows orange heat waves at it.
+  // On the intro card: the film shrinks tight round the bottles, once and slowly (a change of state: it happens once).
   'w.krimpfolie': () => {
     const bx = FRONT_X + BACK_DX;
     const by = FRONT_Y + BACK_DY;
@@ -89,7 +90,7 @@ export default {
       <g>
         <Ground cx={52} cy={104} rx={44} ry={4} />
         {/* The film behind: the back row's sleeve and the open end on the right */}
-        <Move kind="sag" grow={1.4}>
+        <Move kind="sag" grow={1.4} once>
           <path d={rowFilm(bx, by)} fill={FILM} />
         </Move>
         <polygon

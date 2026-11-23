@@ -263,13 +263,14 @@ const pictures: Record<string, () => JSX.Element> = {
   // "glad": slippery — a worker slips on a wet floor, next to the yellow wet-floor sign. On the
   // intro card (docs/tekenstijl.md "Beweging") he walks onto the wet patch upright, then his front
   // foot shoots forward and he tips back into this pose.
+  // Once and slowly (someone slips and falls: it happens once).
   'w.glad': () => (
     <g>
       <ellipse cx="46" cy="104" rx="38" ry="6" fill={PAL.ice} />
       <path d="M22 102Q30 100 40 101" stroke={PAL.white} strokeWidth="2.4" strokeLinecap="round" opacity=".9" />
       <WetSign x={96} y={104} s={0.5} />
       {/* The slipping figure: legs fly forward, arms up */}
-      <Move kind="tip" turn={20} at={[46, 100]}>
+      <Move kind="tip" turn={20} at={[46, 100]} once>
         <Move kind="tip" turn={36} at={[40, 74]}>
           <path d="M40 74L60 82L72 74" stroke={PAL.navy} strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" fill="none" />
           <rect x="70" y="66" width="12" height="9" rx="4" fill={PAL.slateDark} transform="rotate(-30 76 70)" />
@@ -343,11 +344,12 @@ const pictures: Record<string, () => JSX.Element> = {
   // cross). On the intro card (docs/tekenstijl.md "Beweging", second round, 5 November 2026) the
   // two bottles tip over the bucket, and then the streams and the cross come: two products
   // together, no. No cloud rising from the bucket: it would look like "de damp" of the same lesson.
+  // Once and slowly (something spills together: it happens once).
   'w.mengen': () => (
     <g>
       <Ground cx={60} cy={106} rx={26} ry={4} />
       {/* Streams meeting in the bucket */}
-      <Move kind="show">
+      <Move kind="show" once>
         <path d="M34 44Q50 50 56 72" fill="none" stroke={PAL.sky} strokeWidth="5" strokeLinecap="round" />
         <path d="M86 44Q70 50 64 72" fill="none" stroke={PAL.leaf} strokeWidth="5" strokeLinecap="round" />
       </Move>

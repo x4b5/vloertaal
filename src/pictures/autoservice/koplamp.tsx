@@ -4,11 +4,12 @@ import { Ground, Move, PAL, Shade, Shine } from '../kit';
 export default {
   // "de koplamp": the headlight — the front half of a blue car, side on and facing right, with a big bright
   // headlight on its nose shining a fan of yellow light beams forward.
+  // On the intro card: the headlight switches on, its beams appear, once and slowly (a lamp goes on: it happens once).
   'w.koplamp': () => (
     <g strokeLinejoin="round">
       <Ground cx={48} cy={104} rx={40} ry={4.5} />
       {/* The light: a pale fan and three bold beams (on the intro card it comes on: one fade) */}
-      <Move kind="show">
+      <Move kind="show" once>
         <path d="M72 60L112 42V94L72 72Z" fill={PAL.yellowShine} opacity=".9" />
         <path d="M84 58L108 50M86 66H110M84 74L108 82" stroke={PAL.yellow} strokeWidth="4.5" strokeLinecap="round" />
       </Move>

@@ -377,11 +377,12 @@ export default {
 
   // "de pompwagen": the pallet truck — long low steel forks under a pallet with a box, an orange
   // pump on a big wheel and a long handle to pull it by.
+  // Once and slowly: a load is lifted once (the owner's sunrise rule; lifting it three times looks odd).
   'w.pompwagen': () => (
     <g>
       <Ground cx={62} cy={106} rx={50} ry={4} />
       {/* On the intro card the forks lift the pallet a little off the floor */}
-      <Move kind="from" dy={9}>
+      <Move kind="from" dy={9} once>
         <Box x={52} y={42} w={40} h={36} depth={12} />
         <PalletFront x={42} y={78} w={66} />
         {/* Forks */}

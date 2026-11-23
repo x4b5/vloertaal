@@ -203,6 +203,7 @@ export default {
   ),
 
   // "de tillift": the hoist — a wheeled base, a blue mast and boom, a purple sling hanging from the bar.
+  // Once and slowly: a load is lifted once (the owner's sunrise rule; lifting it three times looks odd).
   'w.tillift': () => (
     <g>
       <Ground cx={58} cy={107} rx={46} ry={4} />
@@ -216,7 +217,7 @@ export default {
       <path d="M32 94V30" fill="none" stroke={PAL.sky} strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" />
       <path d="M36 92V36" stroke={PAL.skyShade} strokeWidth="3" strokeLinecap="round" />
       {/* On the intro card the boom slowly lifts the sling up from low, around the top of the mast */}
-      <Move kind="turn" turn={14} at={[32, 30]}>
+      <Move kind="turn" turn={14} at={[32, 30]} once>
       <path d="M32 30L84 18" fill="none" stroke={PAL.sky} strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" />
       <Shine d="M36 26L74 17" width={2.6} opacity={0.55} />
       {/* Hanger bar and sling: they turn back as much around the boom's end, so they hang straight down */}

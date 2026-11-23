@@ -100,6 +100,7 @@ export default {
 
   // "de korting": the discount — a green tag with a percent sign (a slash and two rings), and an
   // arrow going down: you pay less. On the intro card the arrow goes down.
+  // Once and slowly (the price goes down: it happens once).
   'w.korting': () => (
     <g>
       <path d="M44 28Q36 12 46 10Q54 9 52 20" fill="none" stroke={PAL.slate} strokeWidth="3" strokeLinecap="round" />
@@ -114,7 +115,7 @@ export default {
         <circle cx="32" cy="56" r="6.5" fill="none" stroke={PAL.white} strokeWidth="5" />
         <circle cx="56" cy="84" r="6.5" fill="none" stroke={PAL.white} strokeWidth="5" />
       </g>
-      <Move kind="from" dy={-24}>
+      <Move kind="from" dy={-24} once>
         <Arrow from={[94, 30]} to={[94, 100]} color={PAL.sky} width={10} head={16} />
       </Move>
     </g>
@@ -178,6 +179,7 @@ export default {
 
   // "bestellen": to order — a finger taps the button on a phone that shows a box; an arrow goes
   // to the box that will come. On the intro card the finger taps, then the box comes out along the arrow.
+  // Once and slowly (it is sent: it happens once).
   'w.bestellen': () => (
     <g>
       <rect x="10" y="12" width="52" height="94" rx="8" fill={PAL.slateDark} />
@@ -190,7 +192,7 @@ export default {
       <path d="M30 73.5L34.5 78L42 69.5" fill="none" stroke={PAL.white} strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" />
       {/* The box that comes */}
       <Arrow from={[68, 40]} to={[82, 40]} color={PAL.sky} width={6} head={9} />
-      <Move kind="then" dx={-20}>
+      <Move kind="then" dx={-20} once>
         <Box x={84} y={32} w={18} h={18} depth={6} />
       </Move>
       <Move kind="from" dx={10} dy={18}>
@@ -260,6 +262,7 @@ export default {
 
   // "stelen": to steal — a hand takes a tin off a shop shelf; a red cross: this is not allowed.
   // On the intro card the hand reaches in to the tin, then the cross.
+  // Once and slowly (one tin is taken: it happens once).
   'w.stelen': () => (
     <g>
       <rect x="10" y="30" width="64" height="62" rx="3" fill={PAL.mist} />
@@ -267,7 +270,7 @@ export default {
       <Tin x={34} y={56} w={16} h={24} color={PAL.blue} shade={PAL.blueShade} />
       <ShelfBoard x={8} y={80} w={68} strips={3} />
       <Tin x={64} y={50} w={17} h={25} />
-      <Move kind="from" dx={20} dy={20}>
+      <Move kind="from" dx={20} dy={20} once>
         <Hand pose="hold" x={86} y={98} rotate={-38} scale={0.82} skin={SKIN.henk} sleeve={[COAT, COAT_SHADE]} />
       </Move>
       <Move kind="show">
@@ -294,11 +297,12 @@ export default {
 
   // "geld terug": money back — a banknote on an open hand, under an arrow that turns round and comes back.
   // On the intro card the banknote comes back down onto the open hand.
+  // Once and slowly (it is handed back: it happens once).
   'w.geldterug': () => (
     <g>
       <Hand pose="open" x={40} y={122} scale={1.3} skin={SKIN.bram} sleeve={[PAL.blue, PAL.blueShade]} />
       {/* The banknote, on the palm */}
-      <Move kind="from" dx={36} dy={-44}>
+      <Move kind="from" dx={36} dy={-44} once>
       <g transform="rotate(-8 42 100)">
         <rect x="16" y="90" width="52" height="26" rx="3" fill={PAL.greenShade} />
         <rect x="16" y="87" width="52" height="26" rx="3" fill={PAL.green} />

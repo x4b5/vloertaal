@@ -303,11 +303,12 @@ export default {
 
   // "de krik": the jack — a yellow scissor jack lifts the front of a navy car: the car tilts,
   // its front wheel is off the ground, an arrow points up.
+  // Once and slowly: a load is lifted once (the owner's sunrise rule; lifting it three times looks odd).
   'w.krik': () => (
     <g>
       <Ground cx={62} cy={106} rx={48} ry={4} />
       {/* On the intro card the front of the car comes up off the ground, on its rear wheel */}
-      <Move kind="turn" turn={-25} at={[80, 93.5]}>
+      <Move kind="turn" turn={-25} at={[80, 93.5]} once>
         <g transform="translate(80 93.500) rotate(24) scale(1.05) translate(-26 0)">
           <Car body={PAL.navy} shade={PAL.navyShade} />
         </g>

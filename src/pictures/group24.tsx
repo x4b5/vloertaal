@@ -467,11 +467,12 @@ export default {
   // "ophalen": to pick up (go and get someone) — a parent and a child walk home hand in hand. On
   // the intro card (docs/tekenstijl.md "Beweging", second round, 5 November 2026) Jada walks in
   // from the left to the child at the daycare and takes its hand: she goes and gets it.
+  // Once and slowly (someone arrives: it happens once).
   'w.ophalen': () => (
     <g>
       <Ground cx={56} cy={106} rx={48} ry={4} />
       <House x={88} y={104} w={22} />
-      <Move kind="from" dx={-40}>
+      <Move kind="from" dx={-40} once>
         {/* The parent (Jada): legs mid-step, body, her hand down to the child's */}
         <path d="M38 78L32 103M46 78L52 103" stroke={TROUSERS} strokeWidth="8.5" strokeLinecap="round" />
         <ellipse cx="30" cy="104" rx="6" ry="3.2" fill={PAL.slateDark} />
@@ -712,13 +713,14 @@ export default {
 
   // "verhuizen": to move (to another home) — a moving box travels from the old house to the new
   // one. On the intro card (docs/tekenstijl.md "Beweging", the last round, 5 November 2026) the box comes out from the old house on its way.
+  // Once and slowly (moving house: it happens once).
   'w.verhuizen': () => (
     <g>
       <Ground cx={60} cy={106} rx={52} ry={4} />
       <House x={10} y={104} w={30} wall={PAL.mist} roof={PAL.steel} roofShade={PAL.slate} />
       <House x={80} y={104} w={30} />
       <CurveArrow from={[28, 44]} to={[94, 44]} bend={18} color={PAL.sky} width={7} head={12} />
-      <Move kind="from" dx={-30}>
+      <Move kind="from" dx={-30} once>
         <Box x={44} y={76} w={26} h={24} depth={8} />
       </Move>
     </g>
@@ -919,11 +921,12 @@ export default {
   // side, squats with her knees bent and her back straight, and her hand reaches the low plant. On
   // the intro card (docs/tekenstijl.md "Beweging") she goes down from standing: the figure of
   // "tillen" (group4) the other way round, each joint bending from straight (Bend).
+  // Once and slowly (going down: it happens once).
   'w.bukken': () => (
     <g>
       <Ground cx={64} cy={105} rx={40} ry={3.5} />
       <Plant x={90} y={104} h={22} />
-      <Move kind="show">
+      <Move kind="show" once>
         <Arrow from={[18, 30]} to={[18, 62]} color={PAL.sky} width={5} head={9} />
       </Move>
       {/* Ankle → shin → knee → thigh → hip → back → neck and head; and the arm */}

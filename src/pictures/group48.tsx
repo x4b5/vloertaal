@@ -117,13 +117,14 @@ export default {
 
   // "passen": to fit — a yellow block goes down into the slot of a grey block: the same width;
   // an arrow down and a tick. On the intro card the block goes down into the slot, then the tick.
+  // Once and slowly (it fits in: it happens once).
   'w.passen': () => (
     <g>
       <Ground cx={60} cy={104} rx={46} ry={4} />
       <Shade color={PAL.slate} opacity={0.5} at={[106, 80, 22, 40]}>
         <path d="M16 62H42V88H78V62H104V102H16Z" fill={PAL.steel} stroke={PAL.steel} strokeWidth="3" strokeLinejoin="round" />
       </Shade>
-      <Move kind="from" dy={-26}>
+      <Move kind="from" dy={-26} once>
         <Shade color={PAL.yellowShade} opacity={1} at={[82, 62, 12, 40]}>
           <rect x="44" y="40" width="32" height="40" rx="3" fill={PAL.yellow} />
         </Shade>

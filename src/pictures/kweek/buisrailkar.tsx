@@ -39,6 +39,7 @@ const wheel = (cx: number, cy: number, dark: boolean) => (
 export default {
   // "de buisrailkar": the pipe-rail trolley — a low yellow trolley with a scissor lift and a guard rail
   // on its platform, its small wheels riding on two parallel white heating pipes on the floor.
+  // Once and slowly: a load is lifted once (the owner's sunrise rule; lifting it three times looks odd).
   'w.buisrailkar': () => (
     <g strokeLinejoin="round">
       <Ground cx={60} cy={104} rx={50} ry={4} />
@@ -49,7 +50,7 @@ export default {
       {/* The chassis */}
       {block(24, 72, 60, 10, 13, PAL.slate, PAL.steel, PAL.slateDark)}
       {/* The scissor lift: two crossed steel arms. It unfolds and the platform rises (Move) */}
-      <Move kind="sag" grow={0.3}>
+      <Move kind="sag" grow={0.3} once>
       <path d="M34 70L74 50M34 50L74 70" stroke={PAL.steel} strokeWidth="4.5" strokeLinecap="round" />
       <circle cx="54" cy="60" r="3" fill={PAL.slate} />
       </Move>

@@ -86,9 +86,10 @@ export default {
   // "samen": together — the team puts their hands in, one on top of the other: four sleeves
   // in the cast's colours, from both sides
   // On the intro card: the four hands come in from both sides onto the stack.
+  // Once and slowly (the hands come together: it happens once).
   'w.samen': () => {
     const hand = (y: number, fromLeft: boolean, skin: [string, string], sleeve: [string, string]) => (
-      <Move kind="from" dx={fromLeft ? -26 : 26}>
+      <Move kind="from" dx={fromLeft ? -26 : 26} once>
       <g transform={fromLeft ? undefined : 'translate(120 0) scale(-1 1)'}>
         <rect x="-4" y={y - 9} width="36" height="18" rx="6" fill={sleeve[0]} />
         <rect x="26" y={y - 9.5} width="9" height="19" rx="4.5" fill={sleeve[1]} />
