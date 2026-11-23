@@ -230,12 +230,13 @@ export default {
 
   // "het beton": concrete — a concrete mixer truck (striped drum) pouring grey concrete onto a heap.
   // On the intro card the heap of concrete grows up under the chute.
+  // On the intro card it plays once and slowly (it happens once: the heap grows).
   'w.beton': () => (
     <g>
       <Ground cx={56} cy={104} rx={50} ry={4} />
       {/* Grey concrete stream and heap */}
       <path d="M98 66Q104 70 104 80V96" stroke={PAL.line} strokeWidth="6" strokeLinecap="round" fill="none" />
-      <Move kind="sag" grow={0.3}>
+      <Move kind="sag" grow={0.3} once>
         <path d="M88 104Q90 92 102 90Q114 92 116 104Z" fill={PAL.line} />
         <path d="M104 92Q112 94 114 102H106Z" fill={PAL.steel} />
       </Move>
@@ -346,6 +347,7 @@ export default {
   // lines above him, his shadow on the floor below. On the intro card (docs/tekenstijl.md
   // "Beweging", second round, 5 November 2026) he drops in from above, still nearly upright, and
   // tips over backwards as he falls (drop and tip: one fall, speeding up); then the lines come.
+  // On the intro card it plays once and slowly (it happens once: one fall).
   'w.vallen': () => {
     const vest = PAL.orange;
     const leg = '#2d4f78';
@@ -353,7 +355,7 @@ export default {
     return (
       <g>
         <Ground cx={58} cy={106} rx={30} ry={4} />
-        <Move kind="show">
+        <Move kind="show" once>
           <path d="M44 12V22M58 8V20M72 10V22" stroke={PAL.line} strokeWidth="3.4" strokeLinecap="round" opacity=".75" />
         </Move>
         <Move kind="drop" dy={-44}>
@@ -460,6 +462,7 @@ export default {
 
   // "de noodstop": the emergency stop — a big red mushroom button on a yellow box.
   // On the intro card the red cap is pushed down into place.
+  // On the intro card it plays once and slowly (it happens once: the button is pushed in once).
   'w.noodstop': () => (
     <g strokeLinejoin="round">
       <Ground cx={60} cy={105} rx={44} ry={4.5} />
@@ -471,7 +474,7 @@ export default {
       <path d="M26 69H80" stroke={PAL.yellowShine} strokeWidth="2.4" strokeLinecap="round" opacity=".9" />
       {/* Collar and stem */}
       <ellipse cx="60" cy="60" rx="22" ry="6" fill={PAL.slate} />
-      <Move kind="fast" dy={-15}>
+      <Move kind="fast" dy={-15} once>
         <rect x="49" y="44" width="22" height="16" fill={PAL.redShade} />
         {/* Mushroom cap */}
         <Shade color={PAL.redShade} opacity={1} at={[96, 36, 16, 24]}>
@@ -560,10 +563,11 @@ export default {
 
   // "weigeren": to refuse — Jada holds up a flat hand: no, I won't do that dangerous job.
   // On the intro card her flat hand comes up.
+  // On the intro card it plays once and slowly (it happens once: one refusal).
   'w.weigeren': () => (
     <g>
       <Bust who="jada" x={44} y={124} scale={0.7} expr="disappointed" />
-      <Move kind="from" dy={26}>
+      <Move kind="from" dy={26} once>
         <Hand pose="open" x={88} y={112} rotate={6} scale={0.86} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} mirror />
       </Move>
       {/* The danger she refuses */}

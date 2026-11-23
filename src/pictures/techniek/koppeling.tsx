@@ -40,10 +40,11 @@ export default {
   // nuts (lit top face, dark bottom face and right end), joining two thick copper pipe ends that come
   // in from left and right; the left pipe's open end shows. On the intro card the two pipe ends slide
   // in from both sides into the nuts.
+  // On the intro card it plays once and slowly (it happens once: the pipes are joined).
   'w.koppeling': () => (
     <g>
       <Ground cx={60} cy={98} rx={50} ry={5} />
-      <Move kind="from" dx={-16}>
+      <Move kind="from" dx={-16} once>
         {pipe(12, 30)}
         {/* The left pipe's open end, facing the viewer */}
         <ellipse cx={12} cy={CY} rx={5.5} ry={PR} fill={CU.light} />

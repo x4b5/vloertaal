@@ -16,6 +16,7 @@ const oy = D * DY;
 export default {
   // "de ontsmettingsmat": the disinfection mat — a wet blue mat in a shallow grey tray on the floor in
   // front of an open doorway, with a green rubber boot stepping onto it and small splashes.
+  // On the intro card it plays once and slowly (it happens once: one step onto the mat).
   'w.ontsmettingsmat': () => (
     <g strokeLinejoin="round">
       <Ground cx={58} cy={104} rx={50} ry={4} />
@@ -30,7 +31,7 @@ export default {
       <path d={`M${X + 4} ${Y - 2}H${X + W - 3}L${X + W + ox - 4} ${Y + oy + 2}H${X + ox + 3}Z`} fill={PAL.sky} />
       {/* The wet shine on the liquid, and ripples round the sole */}
       <path d="M22 92L34 82M84 84L96 74" stroke={PAL.ice} strokeWidth="2.8" strokeLinecap="round" />
-      <Move kind="show">
+      <Move kind="show" once>
         <ellipse cx="60" cy="84" rx="27" ry="5.5" fill="none" stroke={PAL.ice} strokeWidth="1.8" />
       </Move>
       {/* The boot: shaft, foot and the dark sole on the mat */}

@@ -97,13 +97,14 @@ export default {
   // (a moon), Jada the day (a sun); swap arrows between them. On the intro card the two cards
   // change places: one over the top, the other underneath (each turns half a circle around the
   // middle and stays upright).
+  // On the intro card it plays once and slowly (it happens once: one swap).
   'w.ruilen': () => (
     <g>
       <Shoulders x={30} y={30} color={PAL.orange} shade={PAL.orangeShade} />
       <Head who="bram" x={30} y={30} s={0.32} />
       <Shoulders x={90} y={30} color={PAL.sky} shade={PAL.skyShade} />
       <Head who="jada" x={90} y={30} s={0.32} />
-      <Move kind="show">
+      <Move kind="show" once>
         <CurveArrow from={[46, 98]} to={[74, 98]} bend={-8} color={PAL.sky} width={4.6} head={8} />
         <CurveArrow from={[74, 64]} to={[48, 64]} bend={-8} color={PAL.sky} width={4.6} head={8} />
       </Move>
@@ -119,6 +120,7 @@ export default {
   // "versturen": to send — a laptop, and the e-mail (an envelope) flying away from its screen to
   // the top right, motion lines behind it. On the intro card the envelope leaves the screen.
   // Standing still it would be close to "de mail" (an envelope on a laptop) of the same lesson.
+  // On the intro card it plays once and slowly (it happens once: the mail is sent).
   'w.versturen': () => (
     <g>
       <Ground cy={104} rx={48} ry={4} />
@@ -127,7 +129,7 @@ export default {
       <path d="M26 54H64M26 63H72M26 72H54" stroke={PAL.mist} strokeWidth="4" strokeLinecap="round" />
       <path d="M6 94H94L88 106Q87 108 84 108H16Q13 108 12 106Z" fill={PAL.mist} />
       <path d="M6 94H94L92.6 98H7.4Z" fill={PAL.steel} />
-      <Move kind="show">
+      <Move kind="show" once>
         <Motion x={76} y={34} dir={-140} spread={50} n={3} len={8} gap={4} color={PAL.line} width={3} />
       </Move>
       <Move kind="from" dx={-38} dy={40}>
@@ -142,6 +144,7 @@ export default {
 
   // "doorgeven": to pass on (information) — Jada hands a note to Henk, who takes it: what she
   // knows goes on to him. On the intro card the note goes from her hand to his.
+  // On the intro card it plays once and slowly (it happens once: the note is handed on).
   'w.doorgeven': () => (
     <g>
       <Ground cy={108} rx={50} ry={3.5} />
@@ -153,7 +156,7 @@ export default {
       <path d="M38 80Q46 88 52 84" fill="none" stroke={PAL.sky} strokeWidth="7" strokeLinecap="round" />
       <circle cx="54" cy="83" r="4.4" fill={SKIN.jada[0]} />
       <path d="M82 80Q74 88 70 84" fill="none" stroke={PAL.navy} strokeWidth="7" strokeLinecap="round" />
-      <Move kind="from" dx={-22} dy={2}>
+      <Move kind="from" dx={-22} dy={2} once>
         <g transform="rotate(8 70 76)">
           <rect x="60" y="64" width="20" height="24" rx="2.5" fill={PAL.paperShade} />
           <rect x="60" y="62" width="20" height="24" rx="2.5" fill={PAL.white} />
@@ -166,11 +169,12 @@ export default {
 
   // "automatisch": automatic, by itself — a sliding door has opened with nobody near it; the
   // sensor over it is lit. On the intro card the two glass panels slide apart on their own.
+  // On the intro card it plays once and slowly (it happens once: the door opens).
   'w.automatisch': () => (
     <g>
       <rect x="28" y="30" width="64" height="76" fill={PAL.paperShade} />
       <Ground cx={60} cy={106} rx={50} ry={3.5} />
-      <Move kind="from" dx={24}>
+      <Move kind="from" dx={24} once>
         <rect x="8" y="30" width="32" height="76" rx="2" fill={PAL.slate} />
         <rect x="11" y="33" width="26" height="70" rx="1.5" fill={PAL.ice} />
         <path d="M30 40L20 58" stroke={PAL.white} strokeWidth="3" strokeLinecap="round" opacity=".6" />
@@ -197,6 +201,7 @@ export default {
   // cross on a red row) and is now right (a tick), the pen beside it. On the intro card the pen
   // comes to the wrong row, and the cross becomes a tick. Standing still it would look like "de
   // fout" (a list with a cross) of the same lesson.
+  // On the intro card it plays once and slowly (it happens once: the mistake is put right).
   'w.verbeteren': () => (
     <g>
       <Sheet x={14} y={10} w={80} h={98} />
@@ -205,7 +210,7 @@ export default {
       <rect x={18} y={46} width={72} height={26} rx="5" fill="#ffe1db" />
       <path d="M46 59H80" stroke={PAL.redLight} strokeWidth="4" strokeLinecap="round" />
       <Cross x={30} y={59} r={11} />
-      <Move kind="show">
+      <Move kind="show" once>
         <rect x={18} y={46} width={72} height={26} rx="5" fill="#dcf2ff" />
         <path d="M46 59H80" stroke={PAL.ice} strokeWidth="4" strokeLinecap="round" />
         <Tick x={30} y={59} r={11} />
@@ -221,6 +226,7 @@ export default {
   // "eerst": first — a list of two jobs; the hand points at the top one, and it gets its tick
   // (the bottom one is still open). On the intro card the hand comes to the top row, then the
   // tick comes. ("daarna" is the same list one step on.)
+  // On the intro card it plays once and slowly (it happens once: a step with an end, the tick).
   'w.eerst': () => (
     <g>
       <Sheet x={10} y={14} w={84} h={90} />
@@ -229,7 +235,7 @@ export default {
       <path d="M44 37H76" stroke={PAL.cardShade} strokeWidth="4" strokeLinecap="round" />
       <CheckBox x={28} y={80} />
       <path d="M44 80H70" stroke={PAL.mist} strokeWidth="4" strokeLinecap="round" />
-      <Move kind="show">
+      <Move kind="show" once>
         <Tick x={28} y={37} r={10} />
       </Move>
       <Move kind="from" dx={30}>
@@ -241,6 +247,7 @@ export default {
   // "daarna": after that — the same list as "eerst": the top job already has its tick, the hand
   // has moved on to the bottom one, and it gets its tick. On the intro card the hand goes down
   // from the top row to the bottom one, then the tick comes.
+  // On the intro card it plays once and slowly (it happens once: a step with an end, the tick).
   'w.daarna': () => (
     <g>
       <Sheet x={10} y={14} w={84} h={90} />
@@ -249,7 +256,7 @@ export default {
       <path d="M44 37H76" stroke={PAL.mist} strokeWidth="4" strokeLinecap="round" />
       <CheckBox x={28} y={80} />
       <path d="M44 80H70" stroke={PAL.cardShade} strokeWidth="4" strokeLinecap="round" />
-      <Move kind="show">
+      <Move kind="show" once>
         <Tick x={28} y={80} r={10} />
       </Move>
       <Move kind="from" dy={-43}>
@@ -260,6 +267,7 @@ export default {
 
   // "voordoen": to show how (by doing it first) — Henk and Jada each have a stack of two boxes.
   // On the intro card Henk puts his top box on first; then Jada puts hers on the same way.
+  // On the intro card it plays once and slowly (it happens once: a little story: first him, then her).
   'w.voordoen': () => (
     <g>
       <Ground cx={60} cy={106} rx={54} ry={3.5} />
@@ -268,7 +276,7 @@ export default {
       <Shoulders x={90} y={26} color={PAL.sky} shade={PAL.skyShade} />
       <Head who="jada" x={90} y={26} s={0.32} expr="thinking" />
       <Box x={14} y={84} w={26} h={20} depth={8} />
-      <Move kind="from" dy={-22}>
+      <Move kind="from" dy={-22} once>
         <Box x={14} y={64} w={26} h={20} depth={8} />
       </Move>
       <Box x={74} y={84} w={26} h={20} depth={8} />
@@ -281,6 +289,7 @@ export default {
   // "verlengen": to extend (make longer) — a row of weeks with the contract as a bar over them;
   // a dashed line where it used to end, the bar now goes on past it. On the intro card the bar
   // grows from the old end to the new one.
+  // On the intro card it plays once and slowly (it happens once: the bar grows to its new end).
   'w.verlengen': () => (
     <g>
       <rect x="8" y="38" width="104" height="52" rx="8" fill={PAL.paperShade} transform="translate(0 4)" />
@@ -290,7 +299,7 @@ export default {
         <rect key={i} x={15 + i * 16} y="43" width="10" height="4" rx="2" fill={PAL.white} opacity=".7" />
       ))}
       <path d="M28 52V90M44 52V90M60 52V90M76 52V90M92 52V90" stroke={PAL.paperShade} strokeWidth="1.6" />
-      <Move kind="grow" grow={0.62}>
+      <Move kind="grow" grow={0.62} once>
         <rect x="13" y="62" width="94" height="16" rx="6" fill={PAL.sky} />
         <rect x="13" y="71" width="94" height="7" rx="3.5" fill={PAL.skyShade} opacity=".6" />
       </Move>
@@ -306,6 +315,7 @@ export default {
   // finger is at the middle one, which has a ring and a tick. On the intro card (the last round, 5
   // November 2026) the finger goes along from the first card and stops at the middle one, then
   // the ring and the tick come: of the three, this one.
+  // On the intro card it plays once and slowly (it happens once: one thing is chosen).
   'w.kiezen': () => (
     <g>
       {[22, 60, 98].map((x) => (
@@ -320,7 +330,7 @@ export default {
       <circle cx="60" cy="52" r="10" fill={PAL.red} />
       <path d="M55 43Q60 46 65 43M60 42V45" stroke={PAL.green} strokeWidth="3" strokeLinecap="round" fill="none" />
       <Box x={88} y={46} w={16} h={14} depth={5} />
-      <Move kind="show">
+      <Move kind="show" once>
         <rect x="42" y="26" width="36" height="48" rx="7" fill="none" stroke={PAL.sky} strokeWidth="4" />
         <Tick x={74} y={28} r={9} />
       </Move>
@@ -332,11 +342,12 @@ export default {
 
   // "tellen": to count — three boxes in a row, a finger over the last one. On the intro card the
   // finger taps the boxes one by one, left to right: one, two, three (it stops at each).
+  // On the intro card it plays once and slowly (it happens once: it counts to three and stops).
   'w.tellen': () => (
     <g>
       <Ground cx={60} cy={104} rx={54} ry={3.5} />
       {[8, 44, 80].map((x) => <Box key={x} x={x} y={74} w={26} h={28} depth={8} />)}
-      <Move kind="steps" dx={-72}>
+      <Move kind="steps" dx={-72} once>
         <Hand pose="point" x={97} y={24} rotate={180} scale={0.66} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} />
       </Move>
     </g>

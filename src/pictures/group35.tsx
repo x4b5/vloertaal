@@ -158,6 +158,7 @@ export default {
   // (`picture: 'motion'`, docs/tekenstijl.md "Beweging"): on the intro card they walk from the
   // doorway to the flag. Standing still it would look like "de nooduitgang" or "de
   // verzamelplaats" of the same lesson, so it is only on the intro card.
+  // On the intro card it plays once and slowly (it happens once: they leave the building).
   'w.ontruimen': () => (
     <g>
       <Ground cx={64} cy={106} rx={54} ry={3.5} />
@@ -173,7 +174,7 @@ export default {
       <rect x="92" y="28" width="4" height="78" rx="2" fill={PAL.steel} />
       <path d="M96 30H110L104 38L110 46H96Z" fill={PAL.green} />
       <path d="M96 41H108L110 46H96Z" fill={PAL.greenShade} opacity=".7" />
-      <Move kind="show">
+      <Move kind="show" once>
         <Motion x={56} y={84} dir={180} spread={24} n={2} len={8} gap={4} color={PAL.line} width={3} />
       </Move>
       <Move kind="from" dx={-46}>

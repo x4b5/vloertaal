@@ -404,6 +404,7 @@ export default {
 
   // "de folie": the wrap — a stack of boxes on a pallet under thin shiny blue film; the roll
   // stands next to it, the film still on the stack.
+  // On the intro card it plays once and slowly (it happens once: the stack gets wrapped).
   'w.folie': () => (
     <g>
       <Ground cx={58} cy={106} rx={52} ry={4} />
@@ -413,7 +414,7 @@ export default {
       <FlatBox x={19} y={44} w={28} h={24} />
       <FlatBox x={49} y={46} w={30} h={22} />
       {/* On the intro card the film winds up the stack from the pallet */}
-      <Move kind="sag" grow={0.2}>
+      <Move kind="sag" grow={0.2} once>
         {/* The film from the stack to the roll */}
         <path d="M84 46L96 58V98L84 88Z" fill={PAL.ice} opacity=".75" />
         {/* The film round the stack */}
@@ -521,6 +522,7 @@ export default {
   // "tanken": to fill up — a green fuel nozzle in the filler of the white van, its hose hanging
   // down; a golden drop falls ("de benzine" is the whole pump).
   // On the intro card: the nozzle with its hose goes into the filler, then the drop.
+  // On the intro card it plays once and slowly (it happens once: the tank fills).
   'w.tanken': () => (
     <g>
       {/* The side of the van */}
@@ -533,7 +535,7 @@ export default {
       <rect x="18" y="30" width="11" height="34" rx="3.500" fill={PAL.steel} />
       <circle cx="48" cy="47" r="17" fill={PAL.slate} />
       <circle cx="48" cy="47" r="10.500" fill={PAL.slateDark} />
-      <Move kind="show">
+      <Move kind="show" once>
         <Drop x={44} y={66} s={15} />
       </Move>
       {/* Hose, spout and nozzle */}
@@ -551,6 +553,7 @@ export default {
   // "opladen": to charge — a battery, two of its three bars full, a lightning bolt on it, on a
   // cable with a plug ("de elektrische auto" is a car at a charging post).
   // On the intro card: the two green bars fill up from the left, under the bolt.
+  // On the intro card it plays once and slowly (it happens once: the battery fills).
   'w.opladen': () => (
     <g>
       <rect x="96" y="38" width="9" height="22" rx="3.500" fill={PAL.steel} />
@@ -558,7 +561,7 @@ export default {
         <rect x="12" y="22" width="86" height="54" rx="10" fill={PAL.slate} />
       </Shade>
       <rect x="19" y="29" width="72" height="40" rx="5" fill={PAL.paper} />
-      <Move kind="grow" grow={0.3}>
+      <Move kind="grow" grow={0.3} once>
         <rect x="23" y="33" width="19" height="32" rx="3" fill={PAL.leaf} />
         <rect x="45.500" y="33" width="19" height="32" rx="3" fill={PAL.leaf} />
       </Move>
@@ -574,6 +577,7 @@ export default {
   // "parkeren": to park — seen from above: the white van stands between the white lines of a
   // parking bay, an arrow shows the way in; a grey car stands in the bay next to it.
   // On the intro card: the van drives up from below into the bay.
+  // On the intro card it plays once and slowly (it happens once: the van parks).
   'w.parkeren': () => (
     <g>
       <rect x="10" y="12" width="100" height="96" rx="8" fill={PAL.slate} />
@@ -582,7 +586,7 @@ export default {
       <rect x="16" y="24" width="18" height="46" rx="6" fill={PAL.steel} />
       <rect x="19" y="32" width="12" height="8" rx="2.500" fill={PAL.slateDark} opacity=".6" />
       {/* The van, nose to the top */}
-      <Move kind="from" dy={30}>
+      <Move kind="from" dy={30} once>
       <rect x="44" y="30" width="5" height="6" rx="2" fill={PAL.mist} />
       <rect x="71" y="30" width="5" height="6" rx="2" fill={PAL.mist} />
       <Shade color={PAL.mist} opacity={1} at={[76, 50, 8, 40]}>
@@ -686,10 +690,11 @@ export default {
   // "het retour": the return — a parcel with its label under an arrow that sets off and turns
   // back to where it came from.
   // On the intro card: the parcel comes back from the right, the way the arrow turns.
+  // On the intro card it plays once and slowly (it happens once: the parcel is sent back).
   'w.retour': () => (
     <g>
       <Ground cx={58} cy={106} rx={42} ry={4.5} />
-      <Move kind="from" dx={28}>
+      <Move kind="from" dx={28} once>
         <Box x={20} y={66} w={58} h={38} depth={16} label />
       </Move>
       <path d="M46 46H88Q104 46 104 31Q104 16 88 16H44" fill="none" stroke={PAL.sky} strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" />

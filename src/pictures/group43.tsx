@@ -291,11 +291,12 @@ export default {
 
   // "gaan zitten": to sit down — the figure is down on the seat of the same chair; an orange arrow down.
   // On the intro card the figure comes down onto the seat.
+  // On the intro card it plays once and slowly (it happens once: sitting down).
   'w.gaanzitten': () => (
     <g>
       <Ground cx={52} cy={107} rx={40} ry={4} />
       <Chair />
-      <Move kind="from" dy={-18}>
+      <Move kind="from" dy={-18} once>
         <Figure head={[42, 26]} shoulder={[40, 44]} hip={[40, 64]} knee={[66, 66]} foot={[68, 102]} hand={[58, 58]} />
       </Move>
       <Arrow from={[100, 22]} to={[100, 92]} color={PAL.orange} width={9} head={14} />

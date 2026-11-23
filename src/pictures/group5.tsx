@@ -131,6 +131,7 @@ export default {
 
   // "beginnen": to start — a finger presses the big green start button on a machine.
   // On the intro card the finger comes to the button, then the green lines appear (it starts).
+  // On the intro card it plays once and slowly (it happens once: it starts).
   'w.beginnen': () => (
     <g>
       <rect x="12" y="14" width="70" height="66" rx="10" fill={PAL.slateDark} transform="translate(0 4)" />
@@ -139,7 +140,7 @@ export default {
       <circle cx="44" cy="47" r="23" fill={PAL.ok} />
       <path d="M37 35L57 47L37 59Z" fill={PAL.white} stroke={PAL.white} strokeWidth="4" strokeLinejoin="round" />
       <Shine d="M27 41A18 18 0 0 1 36 30" opacity={0.5} />
-      <Move kind="show">
+      <Move kind="show" once>
         <Motion x={44} y={47} dir={-90} spread={100} n={3} len={7} gap={30} color={PAL.ok} width={3.6} />
       </Move>
       <Move kind="from" dx={18} dy={18}>
@@ -165,9 +166,10 @@ export default {
   // Jada), so "op tijd" and "te laat" are one scene with another time. On the intro card
   // (docs/tekenstijl.md "Beweging") the hands run on from 8:00 while Bram comes in, and the wedge
   // and the "!" come when they stop.
+  // On the intro card it plays once and slowly (it happens once: time passes and he arrives).
   'w.telaat': () => (
     <g>
-      <Move kind="from" dx={-34}>
+      <Move kind="from" dx={-34} once>
         <Bust who="bram" x={36} y={118} scale={0.56} expr="disappointed" />
       </Move>
       <Clock
@@ -204,9 +206,10 @@ export default {
 
   // "bellen": to call — a phone in the hand, ringing, with the green call button on screen.
   // On the intro card the hand brings the phone up, then the ringing lines appear (once, no blinking).
+  // On the intro card it plays once and slowly (it happens once: one call).
   'w.bellen': () => (
     <g>
-      <Move kind="from" dy={22}>
+      <Move kind="from" dy={22} once>
       <rect x="40" y="14" width="40" height="76" rx="8" fill={PAL.slateDark} transform="translate(2 3)" />
       <rect x="40" y="14" width="40" height="76" rx="8" fill={PAL.slate} />
       <rect x="44.5" y="22" width="31" height="58" rx="4" fill="#e3f5ff" />
@@ -275,10 +278,11 @@ export default {
   // "beter": better — Bram feels well again: big smile, a green arrow going up. On the intro card
   // (docs/tekenstijl.md "Beweging", the last round, 5 November 2026) the arrow rises (from his low, sick days up to well again), then the
   // sparkles come.
+  // On the intro card it plays once and slowly (it happens once: he gets better).
   'w.beter': () => (
     <g>
       <Bust who="bram" x={46} y={118} scale={0.72} expr="joy" />
-      <Move kind="sag" grow={0.25}>
+      <Move kind="sag" grow={0.25} once>
         <CurveArrow from={[84, 92]} to={[100, 22]} bend={10} color={PAL.ok} width={8} head={13} />
       </Move>
       <Move kind="show">

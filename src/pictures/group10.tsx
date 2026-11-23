@@ -357,9 +357,10 @@ export default {
 
   // "solliciteren": to apply — Amina's hand hands over her CV, Henk's hand reaches for it.
   // On the intro card her hand brings the CV up from below, towards Henk.
+  // On the intro card it plays once and slowly (it happens once: the CV is handed over).
   'w.solliciteren': () => (
     <g>
-      <Move kind="from" dx={-16} dy={26}>
+      <Move kind="from" dx={-16} dy={26} once>
         <Hand pose="hold" x={34} y={120} rotate={14} scale={0.66} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
         <CvSheet x={20} y={32} w={44} h={58} who="amina" rot={-8} id="g10-sol-cv" />
         <rect x="31" y="84" width="9" height="18" rx="4.5" fill={SKIN.amina[0]} transform="rotate(24 35 93)" />
@@ -461,6 +462,7 @@ export default {
 
   // "inschrijven": to register — filling in a form at the counter, pen in hand.
   // On the intro card the hand with the pen comes down the form from the rows above.
+  // On the intro card it plays once and slowly (it happens once: you sign up once).
   'w.inschrijven': () => (
     <g>
       <Paper x={22} y={10} w={62} h={74}>
@@ -477,7 +479,7 @@ export default {
       <rect x="4" y="86" width="112" height="24" rx="3" fill={PAL.wood} />
       <rect x="4" y="80" width="112" height="9" rx="3" fill={PAL.card} />
       <rect x="4" y="80" width="112" height="3" rx="1.5" fill="#f0c48a" />
-      <Move kind="from" dx={-6} dy={-24}>
+      <Move kind="from" dx={-6} dy={-24} once>
         <Pen x={62} y={58} angle={58} len={40} />
         <Hand pose="hold" x={86} y={112} rotate={-28} scale={0.62} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} />
       </Move>
@@ -564,10 +566,11 @@ export default {
   // "afpakken": to take away — a hand snatches the passport from an open hand. Warning sign. On
   // the intro card (docs/tekenstijl.md "Beweging", the last round, 5 November 2026) the passport goes from her open hand away to his, at an
   // even pace (one slide, nothing rough): away from someone, which "pakken" (to take) does not say.
+  // On the intro card it plays once and slowly (it happens once: it is taken away).
   'w.afpakken': () => (
     <g>
       <Hand pose="open" x={30} y={118} rotate={32} scale={0.72} skin={SKIN.amina} sleeve={[PAL.purple, PAL.purpleShade]} />
-      <Move kind="from" dx={-30} dy={24}>
+      <Move kind="from" dx={-30} dy={24} once>
         <Passport cx={78} cy={52} s={0.48} rot={12} />
         <Hand pose="hold" x={116} y={58} rotate={-80} scale={0.72} skin={SKIN.henk} sleeve={[PAL.slate, PAL.slateDark]} />
       </Move>

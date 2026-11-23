@@ -216,10 +216,11 @@ export default {
 
   // "aanwijzen": to point at — a hand with its finger out, a dotted line to the box in a ring:
   // "that one". On the intro card the hand comes in and points, then the ring.
+  // On the intro card it plays once and slowly (it happens once: one thing is pointed out).
   'w.aanwijzen': () => (
     <g>
       <Ground cx={86} cy={98} rx={24} ry={4} />
-      <Move kind="show">
+      <Move kind="show" once>
         <circle cx="84" cy="74" r="29" fill="none" stroke={PAL.sky} strokeWidth="4" strokeDasharray="1 9" strokeLinecap="round" />
       </Move>
       <Box x={68} y={62} w={28} h={28} depth={9} />

@@ -192,6 +192,7 @@ export default {
   // "inloggen": a laptop showing your account (an avatar) and a green arrow going in at a door.
   // On the intro card (docs/tekenstijl.md "Beweging", second round, 5 November 2026) the door
   // swings open and the arrow goes in: the account goes in.
+  // On the intro card it plays once and slowly (it happens once: logging in).
   'w.inloggen': () => (
     <g>
       <Laptop />
@@ -199,7 +200,7 @@ export default {
       <Avatar x={40} y={47} />
       {/* The door, open, with the arrow going in */}
       <rect x="70" y="28" width="22" height="38" rx="2" fill={PAL.slateDark} />
-      <Move kind="grow" grow={0.2}>
+      <Move kind="grow" grow={0.2} once>
         <path d="M70 28L80 32V70L70 66Z" fill={PAL.wood} />
         <circle cx="77.5" cy="50" r="1.6" fill={PAL.yellow} />
       </Move>
@@ -214,12 +215,13 @@ export default {
   // (`picture: 'motion'`, docs/tekenstijl.md "Beweging", 5 November 2026): on the intro card the
   // avatar and the arrow come out of the door. Standing still it would be one more laptop next to
   // "het scherm" and "vergrendelen" of the same lesson, so it is only on the intro card.
+  // On the intro card it plays once and slowly (it happens once: logging out).
   'w.uitloggen': () => (
     <g>
       <Laptop />
       {/* The doorway; the account comes out of it, behind the open door */}
       <rect x="70" y="28" width="22" height="38" rx="2" fill={PAL.slateDark} />
-      <Move kind="from" dx={34}>
+      <Move kind="from" dx={34} once>
         <Arrow from={[64, 47]} to={[46, 47]} color={PAL.red} width={7} head={11} />
         <Avatar x={34} y={47} />
       </Move>
@@ -257,13 +259,14 @@ export default {
 
   // "opslaan": a document dropping into a blue tray (saved)
   // On the intro card: the paper goes down into the tray.
+  // On the intro card it plays once and slowly (it happens once: it is saved once).
   'w.opslaan': () => (
     <g>
       <Ground cy={106} rx={40} />
       {/* The tray: back wall, the paper going in, then the front */}
       <path d="M18 70H102L96 104H24Z" fill={PAL.blueShade} />
       <g transform="rotate(-4 60 40)">
-        <Move kind="from" dy={-26}>
+        <Move kind="from" dy={-26} once>
           <Paper x={38} y={20} w={40} h={52} lines={5} />
         </Move>
       </g>
@@ -310,13 +313,14 @@ export default {
 
   // "ophangen": a finger presses the red hang-up button
   // On the intro card: the finger comes in from the bottom right to the red hang-up button.
+  // On the intro card it plays once and slowly (it happens once: the call is ended).
   'w.ophangen': () => (
     <g>
       <circle cx="54" cy="52" r="38" fill={PAL.redShade} />
       <circle cx="54" cy="48" r="38" fill={PAL.red} />
       <Handset x={54} y={50} k={1.15} />
       <Shine d="M24 36Q30 20 46 15" opacity={0.45} />
-      <Move kind="from" dx={20} dy={22}>
+      <Move kind="from" dx={20} dy={22} once>
         <Hand pose="point" x={96} y={116} rotate={-28} scale={0.8} skin={SKIN.bram} sleeve={[PAL.orange, PAL.orangeShade]} />
       </Move>
     </g>
