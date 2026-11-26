@@ -182,6 +182,12 @@ const t: CultureTranslation = {
     // "Operator in de procesindustrie" (23 November 2026).
     'kjn.u.process.1': "Я можу сказати, що тиск занадто високий.", // nieuw, nalezen
     'kjn.u.process.2': "Я можу розповісти на передачі зміни, що сталося.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'kjn.u.firstday.3': "Я можу попросити когось показати ще раз.", // nieuw, nalezen
+    'kjn.u.rights.3': "Я можу сказати, що до мене ставляться інакше.", // nieuw, nalezen
+    'kjn.u.money.3': "Я можу попросити про розстрочку.", // nieuw, nalezen
+    'kjn.u.warehouse.3': "Я можу сказати, що без навчання не керую річтраком.", // nieuw, nalezen
+    'kjn.u.process.3': "Я можу запитати, скільки сировини треба засипати.", // nieuw, nalezen
   },
 };
 

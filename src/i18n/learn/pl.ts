@@ -317,6 +317,15 @@ const t: CultureTranslation = {
     'c.plantfault.a.why': "Pytanie, czy wolno uruchomić: nie, kłódka jest jeszcze założona.", // nieuw, nalezen
     'c.shiftwork.a.why': "Pytanie, co się stało: awaria i gdzie to jest zapisane.", // nieuw, nalezen
     'c.heatdust.a.why': "Pytanie o telefon: nie, z powodu zagrożenia w tym miejscu.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.debthelp.a.why': "Informacja, że rachunek nie jest zapłacony: tak, i prośba o plan spłaty.", // nieuw, nalezen
+    'c.taxes.a.why': "Informacja o niebieskiej kopercie: podziękowanie i otwarcie jej od razu.", // nieuw, nalezen
+    'c.discrimination.a.why': "Pytanie, czy wszystko w porządku: nie, i zgłoszenie tego.", // nieuw, nalezen
+    'c.union.a.why': "Pytanie, dlaczego należysz do związku: stają w twojej obronie.", // nieuw, nalezen
+    'c.kiln.a.why': "Pytanie o zbieranie odłamków ręką: nie, zmiotką i szufelką.", // nieuw, nalezen
+    'c.mixlab.a.why': "Pytanie, czy partia jest zatwierdzona: jeszcze nie, laboratorium ją bada.", // nieuw, nalezen
+    'c.firstweeks.a.why': "Pytanie o oprowadzanie: prawie wszystko i jedno pytanie.", // nieuw, nalezen
+    'c.orderpick.a.why': "Prośba o jazdę wózkiem wysokiego składowania: nie, brak szkolenia.", // nieuw, nalezen
   },
 };
 

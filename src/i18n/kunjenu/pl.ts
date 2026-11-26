@@ -183,6 +183,12 @@ const t: CultureTranslation = {
     // "Operator in de procesindustrie" (23 November 2026).
     'kjn.u.process.1': "Umiem powiedzieć, że ciśnienie jest za wysokie.", // nieuw, nalezen
     'kjn.u.process.2': "Umiem przy przekazaniu zmiany opowiedzieć, co się stało.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'kjn.u.firstday.3': "Umiem poprosić, żeby ktoś pokazał mi coś jeszcze raz.", // nieuw, nalezen
+    'kjn.u.rights.3': "Umiem powiedzieć, że traktują mnie inaczej.", // nieuw, nalezen
+    'kjn.u.money.3': "Umiem poprosić o plan spłaty.", // nieuw, nalezen
+    'kjn.u.warehouse.3': "Umiem powiedzieć, że bez szkolenia nie jeżdżę wózkiem wysokiego składowania.", // nieuw, nalezen
+    'kjn.u.process.3': "Umiem zapytać, ile surowca ma wejść.", // nieuw, nalezen
   },
 };
 

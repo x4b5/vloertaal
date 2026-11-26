@@ -4984,6 +4984,127 @@ const t: CultureTranslation = {
     'c.heatdust.o2': "Zdmuchnij to: tak jest szybciej.", // nieuw, nalezen
     'c.heatdust.o3': "Zostaw to następnej zmianie.", // nieuw, nalezen
     'c.heatdust.w': "Dmuchanie podrywa pył do góry, w powietrze i do twoich płuc. Mokra ściereczka albo odkurzacz nie pozwala pyłowi się unieść.", // nieuw, nalezen
+    // eight new lessons (debts, taxes, discrimination, the union, kiln, mixing lab, first weeks, order picking) (26 November 2026).
+    'l.discrimination': "Dyskryminacja i zastraszanie", // nieuw, nalezen
+    'w.andersbehandelen': "traktować inaczej (gorzej niż innych)", // nieuw, nalezen
+    'w.afkomst': "pochodzenie (kraj albo grupa, z której pochodzisz ty albo twoja rodzina)", // nieuw, nalezen
+    'w.geloof': "religia, wiara", // nieuw, nalezen
+    'w.uitschelden': "wyzywać (mówić komuś brzydkie słowa)", // nieuw, nalezen
+    'w.bedreigen': "grozić (mówić, że zrobisz komuś krzywdę)", // nieuw, nalezen
+    'w.geweld': "przemoc", // nieuw, nalezen
+    's.discrimination.1': "Traktują mnie inaczej z powodu mojej wiary.", // nieuw, nalezen
+    's.discrimination.2': "On mi grozi. Nie czuję się bezpiecznie.", // nieuw, nalezen
+    's.discrimination.3': "Mogę powiedzieć nie, także mojemu szefowi.", // nieuw, nalezen
+    'c.discrimination.q': "Wszystko w porządku? Ciągle cię wyzywają.", // nieuw, nalezen
+    'c.discrimination.a': "Nie, nie jest w porządku. Zgłoszę to.", // nieuw, nalezen
+    'l.union': "Związek zawodowy i rada pracowników", // nieuw, nalezen
+    'w.lidworden': "wstąpić, zostać członkiem", // nieuw, nalezen
+    'w.contributie': "składka członkowska (płacisz ją co miesiąc)", // nieuw, nalezen
+    'w.opkomenvoor': "stawać w obronie (bronić czyichś interesów)", // nieuw, nalezen
+    'w.onderhandelen': "negocjować (rozmawiać, aż obie strony się zgodzą)", // nieuw, nalezen
+    'w.loonsverhoging': "podwyżka", // nieuw, nalezen
+    'w.ondernemingsraad': "rada pracowników (OR: koledzy wybrani do rozmów z dyrektorem)", // nieuw, nalezen
+    's.union.1': "Wstępuję do związku zawodowego.", // nieuw, nalezen
+    's.union.2': "Związek zawodowy negocjuje w sprawie układu zbiorowego (cao).", // nieuw, nalezen
+    's.union.3': "Kto jest w radzie pracowników?", // nieuw, nalezen
+    'c.union.q': "Dlaczego należysz do związku zawodowego?", // nieuw, nalezen
+    'c.union.a': "Stają w mojej obronie, kiedy jest problem.", // nieuw, nalezen
+    'l.debthelp': "Długi i pomoc", // nieuw, nalezen
+    'w.herinnering': "przypomnienie (list: rachunek nie jest jeszcze zapłacony)", // nieuw, nalezen
+    'w.aanmaning': "ostateczne wezwanie do zapłaty (zapłać przed określoną datą, bo mogą dojść dodatkowe koszty)", // nieuw, nalezen
+    'w.betalingsregeling': "plan spłaty (spłacasz dług małymi częściami)", // nieuw, nalezen
+    'w.deurwaarder': "komornik (urzędnik, który ściąga dług, często po decyzji sędziego)", // nieuw, nalezen
+    'w.schuldhulp': "pomoc dla zadłużonych (darmowa pomoc z długami, od gminy)", // nieuw, nalezen
+    'w.achterstand': "zaległość (pieniądze, które trzeba było już zapłacić)", // nieuw, nalezen
+    's.debthelp.1': { m: "Dostałem ostateczne wezwanie do zapłaty.", f: "Dostałam ostateczne wezwanie do zapłaty.", x: "Przyszło do mnie ostateczne wezwanie do zapłaty." }, // nieuw, nalezen
+    's.debthelp.2': "Czy mogę zapłacić w ratach?", // nieuw, nalezen
+    's.debthelp.3': "Chcę dostać pomoc z moimi długami.", // nieuw, nalezen
+    'c.debthelp.q': { m: "Nie zapłacił pan jeszcze rachunku.", f: "Nie zapłaciła pani jeszcze rachunku.", x: "Rachunek nie jest jeszcze zapłacony." }, // nieuw, nalezen
+    'c.debthelp.a': "Zgadza się. Czy mogę dostać plan spłaty?", // nieuw, nalezen
+    'l.taxes': "Podatki i dopłaty", // nieuw, nalezen
+    'w.jaaropgave': "roczne zestawienie (dokument od pracodawcy z twoim wynagrodzeniem za cały rok)", // nieuw, nalezen
+    'w.blauweenvelop': "niebieska koperta (przychodzą w niej listy od Belastingdienst)", // nieuw, nalezen
+    'w.teruggave': "zwrot (pieniądze z podatku, które dostajesz z powrotem)", // nieuw, nalezen
+    'w.uitstel': "odroczenie (możesz to zrobić później)", // nieuw, nalezen
+    'w.huurtoeslag': "dopłata do czynszu (pieniądze od państwa, które pomagają zapłacić czynsz)", // nieuw, nalezen
+    'w.belastingtelefoon': "darmowa infolinia Belastingdienst", // nieuw, nalezen
+    's.taxes.1': "Potrzebuję rocznego zestawienia do zeznania podatkowego.", // nieuw, nalezen
+    's.taxes.2': "Teraz zarabiam więcej. Zgłaszam to od razu.", // nieuw, nalezen
+    's.taxes.3': "Dostaję zwrot pieniędzy od Belastingdienst.", // nieuw, nalezen
+    'c.taxes.q': "Jest dla ciebie niebieska koperta.", // nieuw, nalezen
+    'c.taxes.a': "Dziękuję. Od razu ją otworzę.", // nieuw, nalezen
+    'l.kiln': "Piec, szkło i ceramika", // nieuw, nalezen
+    'w.pers': "prasa (maszyna, która prasuje glinę albo proszek w kształt)", // nieuw, nalezen
+    'w.glazuur': "szkliwo (błyszcząca, szklista warstwa na płytce albo kubku)", // nieuw, nalezen
+    'w.tunneloven': "piec tunelowy (długi piec; produkty powoli przez niego przejeżdżają)", // nieuw, nalezen
+    'w.scherf': "odłamek (ostry kawałek potłuczonego szkła albo płytki)", // nieuw, nalezen
+    'w.gloeiend': "rozżarzony (tak gorący, że świeci na czerwono)", // nieuw, nalezen
+    'w.armbeschermer': "rękaw ochronny (chroni rękę przed przecięciem)", // nieuw, nalezen
+    's.kiln.1': "Płytki powoli przejeżdżają przez piec tunelowy.", // nieuw, nalezen
+    's.kiln.2': "Na tej płytce jest pęknięcie. To jest brak.", // nieuw, nalezen
+    's.kiln.3': "Przy szkle noś rękawy ochronne.", // nieuw, nalezen
+    'c.kiln.q': "Czy mogę zbierać odłamki ręką?", // nieuw, nalezen
+    'c.kiln.a': "Nie. Użyj zmiotki i szufelki.", // nieuw, nalezen
+    'l.mixlab': "Hala mieszania i laboratorium", // nieuw, nalezen
+    'w.batch': "partia (jedna ilość, robiona naraz według jednej receptury)", // nieuw, nalezen
+    'w.afwegen': "odważać (ważyć dokładnie tyle, ile podaje receptura)", // nieuw, nalezen
+    'w.mengvat': "zbiornik do mieszania (duży zbiornik z mieszadłem w środku)", // nieuw, nalezen
+    'w.labjas': "fartuch laboratoryjny", // nieuw, nalezen
+    'w.laboratorium': "laboratorium (lab: tu sprawdza się produkt)", // nieuw, nalezen
+    'w.grondstof': "surowiec (to, z czego robi się produkt)", // nieuw, nalezen
+    's.mixlab.1': "Dokładnie odważ surowce.", // nieuw, nalezen
+    's.mixlab.2': "Biorę próbkę dla laboratorium.", // nieuw, nalezen
+    's.mixlab.3': "Jaka to partia? Spójrz na etykietę.", // nieuw, nalezen
+    'c.mixlab.q': "Czy partia jest zatwierdzona?", // nieuw, nalezen
+    'c.mixlab.a': "Jeszcze nie. Laboratorium bada próbkę.", // nieuw, nalezen
+    'c.discrimination': "Niesprawiedliwe traktowanie? To nie twoja wina", // nieuw, nalezen
+    'c.discrimination.b': "Dyskryminacja jest wtedy, gdy ktoś traktuje cię inaczej albo gorzej z powodu tego, kim jesteś: z powodu pochodzenia, koloru skóry, religii, płci, wieku, niepełnosprawności albo tego, kogo kochasz. Zastraszanie (intimidatie) to na przykład niechciany dotyk, seksualne uwagi, groźby albo wyzywanie cię. Jedno i drugie jest w pracy zabronione i to nigdy nie jest twoja wina. Możesz powiedzieć nie, także swojemu szefowi. Zapisz, co się stało, kiedy i kto to widział. Porozmawiaj z przełożonym albo z osobą zaufania (vertrouwenspersoon), jeśli jest taka w twojej firmie. Poza pracą za darmo pomaga punkt antydyskryminacyjny w twojej gminie (discriminatie.nl). College voor de Rechten van de Mens może wydać ocenę, także za darmo. Przemoc albo groźba? Idź na policję. W niebezpieczeństwie dzwoń pod 112. To ogólne informacje. W twojej sytuacji zapytaj związek zawodowy, Juridisch Loket albo FairWork.", // nieuw, nalezen
+    'c.discrimination.p': "Chcę coś zgłosić. Czy mogę porozmawiać z panem/panią w zaufaniu?", // nieuw, nalezen
+    'c.discrimination.s': "Kolega często cię wyzywa z powodu tego, skąd pochodzisz. Inni się śmieją. Co robisz?", // nieuw, nalezen
+    'c.discrimination.o1': "Zapisz to i powiedz komuś, komu ufasz.", // nieuw, nalezen
+    'c.discrimination.o2': "Nic nie mów: to część pracy.", // nieuw, nalezen
+    'c.discrimination.o3': "Odejdź z pracy i nikomu nie mów dlaczego.", // nieuw, nalezen
+    'c.discrimination.w': "Wyzywanie z powodu pochodzenia to dyskryminacja i jest zabronione. Kiedy to zapiszesz i o tym porozmawiasz, ktoś może pomóc ci to zatrzymać.", // nieuw, nalezen
+    'c.union': "Razem jesteście silniejsi", // nieuw, nalezen
+    'c.union.b': "Związek zawodowy (vakbond), na przykład FNV albo CNV, broni interesów pracowników. Zawiera z pracodawcami umowy o płacy i pracy: układ zbiorowy (cao). Wiele układów zbiorowych obowiązuje wszystkich w danej branży, także gdy nie należysz do związku. Członkowie płacą co miesiąc składkę (contributie) i dostają porady i pomoc, na przykład przy problemie z wynagrodzeniem albo zwolnieniem. Wstąp na czas: często związek pomaga tylko przy problemie, który zaczął się po twoim wstąpieniu. Wstąpienie to twój własny wybór i pracodawca nie może cię za to ukarać. Firma, która ma 50 albo więcej pracowników, musi mieć radę pracowników (ondernemingsraad, OR): kolegów wybranych przez pracowników. OR rozmawia z dyrektorem na przykład o godzinach pracy i bezpieczeństwie. Mniejsza firma może mieć przedstawicielstwo pracowników (personeelsvertegenwoordiging). Masz pytania? Zapytaj kolegę z OR. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.", // nieuw, nalezen
+    'c.union.p': "Mam pytanie o nowe grafiki. Czy OR może coś z tym zrobić?", // nieuw, nalezen
+    'c.union.s': "Twoja firma planuje dużo więcej zmian wieczornych. Wielu kolegów jest niezadowolonych. Co możesz zrobić?", // nieuw, nalezen
+    'c.union.o1': "Zapytaj o to kolegę z OR.", // nieuw, nalezen
+    'c.union.o2': "Przestań przychodzić wieczorem.", // nieuw, nalezen
+    'c.union.o3': "Nic nie mów: nic się nie zmieni.", // nieuw, nalezen
+    'c.union.w': "OR ma wpływ na zasady dotyczące godzin pracy. Może o nich rozmawiać z dyrektorem, w imieniu wszystkich pracowników razem.", // nieuw, nalezen
+    'c.debthelp': "Otwieraj każdy list i wcześnie proś o pomoc", // nieuw, nalezen
+    'c.debthelp.b': "Nie udało ci się zapłacić rachunku na czas? Wtedy najpierw dostajesz przypomnienie (herinnering), a potem ostateczne wezwanie do zapłaty (aanmaning). Zanim firma może doliczyć ci za to dodatkowe koszty, musi dać ci 14 dni na zapłatę. Dlatego otwieraj każdy list, także gdy się go boisz. Nie możesz zapłacić wszystkiego naraz? Zadzwoń albo napisz i poproś o plan spłaty (betalingsregeling). Deurwaarder (komornik) to urzędnik, który ściąga długi, często po decyzji sędziego. Może na przykład zabrać część twojego wynagrodzenia, ale zawsze musi zostawić ci tyle, żeby starczyło na życie. Masz długi? Proś o pomoc wcześnie, kiedy są jeszcze małe. Gemeente daje darmową pomoc dla zadłużonych (schuldhulp). Na geldfit.nl możesz zrobić darmowy test i znaleźć pomoc w pobliżu. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.", // nieuw, nalezen
+    'c.debthelp.p': "Nie mogę zapłacić wszystkiego naraz. Czy mogę płacić w ratach?", // nieuw, nalezen
+    'c.debthelp.s': "Dostajesz ostateczne wezwanie do zapłaty rachunku za telefon. W tym miesiącu nie masz pieniędzy. Co robisz?", // nieuw, nalezen
+    'c.debthelp.o1': "Zadzwoń do firmy i poproś o plan spłaty.", // nieuw, nalezen
+    'c.debthelp.o2': "Odłóż list i czekaj.", // nieuw, nalezen
+    'c.debthelp.o3': "Szybko pożycz pieniądze przez „kup teraz, zapłać później”.", // nieuw, nalezen
+    'c.debthelp.w': "Kiedy powiesz o tym na czas, firma często może zgodzić się na małe raty. List, który odłożysz, nie znika: koszty tylko rosną.", // nieuw, nalezen
+    'c.taxes': "Twoje zeznanie podatkowe i twoje dopłaty", // nieuw, nalezen
+    'c.taxes.b': "Zeznanie podatkowe (aangifte) za poprzedni rok trzeba złożyć przed 1 maja. Przyszedł do ciebie list, w którym proszą cię o to? Wtedy musisz je złożyć. Czasem dostajesz zwrot pieniędzy. Potrzebujesz rocznego zestawienia (jaaropgave) od pracodawcy. Nie masz czasu? Możesz poprosić o więcej czasu (uitstel). Dopłaty (toeslagen), takie jak zorgtoeslag i huurtoeslag, to zaliczka: zależą od tego, ile zarobisz w tym roku. Zarabiasz więcej albo zmienia się coś innego? Od razu zgłoś to w Mijn toeslagen. Jeśli tego nie zrobisz, później możesz musieć oddać dużo pieniędzy. Musisz oddać pieniądze? Możesz poprosić o plan spłaty. Darmowa pomoc: BelastingTelefoon, biuro Belastingdienst (najpierw umów wizytę) albo biblioteka. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.", // nieuw, nalezen
+    'c.taxes.p': "Mój dochód się zmienił. Jak mam to zgłosić?", // nieuw, nalezen
+    'c.taxes.s': "Dostajesz nową pracę i co miesiąc zarabiasz więcej. Dostajesz huurtoeslag. Co robisz?", // nieuw, nalezen
+    'c.taxes.o1': "Zgłoś nowy dochód w Mijn toeslagen.", // nieuw, nalezen
+    'c.taxes.o2': "Czekaj, aż Belastingdienst zapyta.", // nieuw, nalezen
+    'c.taxes.o3': "Przestań płacić czynsz.", // nieuw, nalezen
+    'c.taxes.w': "Twoja dopłata zależy od tego, ile zarabiasz. Kiedy zgłosisz zmianę na czas, dostajesz właściwą kwotę i później nie musisz oddawać dużo pieniędzy.", // nieuw, nalezen
+    'c.kiln': "Ostre, gorące i ciężkie", // nieuw, nalezen
+    'c.kiln.b': "W zakładzie, który robi płytki albo szkło, produkty są prasowane w kształt, dostają szkliwo i powoli przejeżdżają przez długi piec. Po piecu muszą ostygnąć: nie dotykaj ich, kiedy są gorące, albo noś rękawice odporne na gorąco. Szkło i potłuczone płytki są bardzo ostre. Noś rękawice odporne na przecięcie, rękawy ochronne i okulary ochronne. Nigdy nie łap spadającej szklanej płyty: cofnij się. Zbieraj odłamki zmiotką i szufelką, nigdy rękami, i wyrzucaj je do właściwego pojemnika. Szkliwo i pył mogą zawierać szkodliwe substancje: myj ręce, zanim coś zjesz albo wypijesz. Przy prasie nigdy nie sięgaj do środka, kiedy pracuje. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.kiln.p': "Uwaga, odłamki! Przyniosę zmiotkę i szufelkę.", // nieuw, nalezen
+    'c.kiln.s': "Szklana płyta wysuwa się ze stojaka i zaczyna spadać. Co robisz?", // nieuw, nalezen
+    'c.kiln.o1': "Cofnij się i pozwól jej spaść.", // nieuw, nalezen
+    'c.kiln.o2': "Złap ją rękami.", // nieuw, nalezen
+    'c.kiln.o3': "Zatrzymaj ją nogą.", // nieuw, nalezen
+    'c.kiln.w': "Spadająca płyta może przeciąć bardzo głęboko, także przez rękawice. Potłuczona płyta kosztuje tylko pieniądze.", // nieuw, nalezen
+    'c.mixlab': "Trzymaj się dokładnie receptury", // nieuw, nalezen
+    'c.mixlab.b': "W hali mieszania robisz partię według receptury: jakie surowce, ile i w jakiej kolejności. Wszystko dokładnie odważ i zapisz, co dodajesz, razem z numerem partii. Masz wątpliwości? Pytaj, nie zgaduj. Zanim użyjesz beczki albo worka, przeczytaj etykietę: co jest w środku, numer partii i znaki zagrożenia. Nigdy nie wkładaj do beczki ani do worka niczego, co tam nie należy. Do próbki użyj czystej łopatki i czystego pojemnika i od razu przyklej na nim etykietę. Proszek i opary mogą być szkodliwe: używaj wyciągu i noś to, co jest potrzebne, na przykład fartuch laboratoryjny, gogle, rękawice albo maskę. Przy produkcji żywności nosisz też siateczkę na włosy i często myjesz ręce. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.mixlab.p': "Nie wiem tego na pewno. Ile ma tego wejść?", // nieuw, nalezen
+    'c.mixlab.s': "W recepturze jest 25 kilo. Przez pomyłkę wsypujesz 26 kilo i wszystko jest już w zbiorniku do mieszania. Co robisz?", // nieuw, nalezen
+    'c.mixlab.o1': "Powiedz kierownikowi zmiany i zapisz to.", // nieuw, nalezen
+    'c.mixlab.o2': "Nic nie mów: jeden kilogram to niewiele.", // nieuw, nalezen
+    'c.mixlab.o3': "Wyjmij trochę ręką.", // nieuw, nalezen
+    'c.mixlab.w': "Jedna zła ilość może zepsuć całą partię. Kiedy kierownik zmiany wie o tym na czas, laboratorium może to sprawdzić, zanim partia pójdzie dalej.", // nieuw, nalezen
   },
 };
 
