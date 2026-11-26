@@ -315,6 +315,15 @@ const t: CultureTranslation = {
     'c.plantfault.a.why': "On demande si on peut démarrer : non, il y a encore un cadenas dessus.", // nieuw, nalezen
     'c.shiftwork.a.why': "On demande ce qui s’est passé : la panne, et où c’est noté.", // nieuw, nalezen
     'c.heatdust.a.why': "On demande pour le téléphone : non, à cause du danger ici.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.debthelp.a.why': "On dit que la facture n’est pas payée : oui, et on demande un plan de paiement.", // nieuw, nalezen
+    'c.taxes.a.why': "On dit qu’il y a une enveloppe bleue : merci, et on l’ouvre tout de suite.", // nieuw, nalezen
+    'c.discrimination.a.why': "On demande si ça va : non, et on va le signaler.", // nieuw, nalezen
+    'c.union.a.why': "On demande pourquoi on est membre : le syndicat nous défend.", // nieuw, nalezen
+    'c.kiln.a.why': "On demande pour ramasser les éclats à la main : non, avec la balayette et la pelle.", // nieuw, nalezen
+    'c.mixlab.a.why': "On demande si le lot est approuvé : pas encore, le labo le teste.", // nieuw, nalezen
+    'c.firstweeks.a.why': "On demande pour la visite : presque tout, et une question.", // nieuw, nalezen
+    'c.orderpick.a.why': "On demande de conduire le chariot à mât rétractable : non, pas de formation pour ça.", // nieuw, nalezen
   },
 };
 

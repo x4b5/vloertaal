@@ -317,6 +317,15 @@ const t: CultureTranslation = {
     'c.plantfault.a.why': "السؤال هل يمكن التشغيل: لا، ما زال عليه قفل.", // nieuw, nalezen
     'c.shiftwork.a.why': "السؤال عمّا حدث: العطل، وأين هو مكتوب.", // nieuw, nalezen
     'c.heatdust.a.why': "السؤال عن الهاتف: لا، بسبب الخطر هنا.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.debthelp.a.why': "خبر أن الفاتورة لم تُدفع: نعم، وطلب خطة تقسيط.", // nieuw, nalezen
+    'c.taxes.a.why': "خبر عن ظرف أزرق: شكر، وفتحه فوراً.", // nieuw, nalezen
+    'c.discrimination.a.why': "السؤال عن الحال: لا، وسيتمّ التبليغ.", // nieuw, nalezen
+    'c.union.a.why': "السؤال عن سبب العضوية: النقابة تدافع عن العضو.", // nieuw, nalezen
+    'c.kiln.a.why': "السؤال عن التقاط الشظايا باليد: لا، بالفرشاة والمجرفة الصغيرة.", // nieuw, nalezen
+    'c.mixlab.a.why': "السؤال هل تمّت الموافقة على الدفعة: ليس بعد، المختبر يفحصها.", // nieuw, nalezen
+    'c.firstweeks.a.why': "السؤال عن الجولة التعريفية: تقريباً كل شيء، وسؤال واحد.", // nieuw, nalezen
+    'c.orderpick.a.why': "طلب قيادة رافعة reachtruck: لا، لا تدريب عليها.", // nieuw, nalezen
   },
 };
 

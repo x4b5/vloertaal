@@ -844,6 +844,31 @@ const lang: HelpLanguageSource = {
     's.breaks.3': "J’ai travaillé six jours de suite.", // nieuw, nalezen
     'c.breaks.q': "Ta pause déjeuner, c’est quand ?", // nieuw, nalezen
     'c.breaks.a': "À midi, une demi-heure.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'l.firstweeks': "Tes premières semaines", // nieuw, nalezen
+    'w.rondleiding': "la visite (quelqu’un te fait visiter le bâtiment)", // nieuw, nalezen
+    'w.begeleider': "l’accompagnateur, l’accompagnatrice (le collègue qui t’aide pendant tes premières semaines)", // nieuw, nalezen
+    'w.notitieboekje': "le petit carnet", // nieuw, nalezen
+    'w.meelopen': "suivre un collègue (et regarder comment il travaille)", // nieuw, nalezen
+    'w.onthouden': "retenir, se souvenir", // nieuw, nalezen
+    'w.zelfstandig': "seul, en autonomie (sans aide)", // nieuw, nalezen
+    's.firstweeks.1': "Tu peux me le montrer encore une fois ?", // nieuw, nalezen
+    's.firstweeks.2': "Aujourd’hui, je suis Sara pour voir comment elle travaille.", // nieuw, nalezen
+    's.firstweeks.3': "Je le note dans mon carnet.", // nieuw, nalezen
+    'c.firstweeks.q': "Tu te souviens de tout ce que tu as vu pendant la visite ?", // nieuw, nalezen
+    'c.firstweeks.a': "Presque tout. Elle était où, la cantine, déjà ?", // nieuw, nalezen
+    'l.orderpick': "La préparation de commandes et le chariot à mât rétractable", // nieuw, nalezen
+    'w.orderpicker': "le préparateur de commandes (la personne qui rassemble les commandes ; aussi le petit chariot sur lequel tu es debout pour prendre en hauteur)", // nieuw, nalezen
+    'w.reachtruck': "le chariot à mât rétractable (un chariot élévateur pour les rayonnages très hauts ; ses fourches avancent)", // nieuw, nalezen
+    'w.picklijst': "la liste de prélèvement (la liste des articles que tu dois prendre)", // nieuw, nalezen
+    'w.scannen': "scanner", // nieuw, nalezen
+    'w.voetganger': "le piéton (une personne à pied)", // nieuw, nalezen
+    'w.opwarmen': "se réchauffer (dans un endroit chaud, après avoir travaillé dans le froid)", // nieuw, nalezen
+    's.orderpick.1': "Je scanne chaque article de la liste de prélèvement.", // nieuw, nalezen
+    's.orderpick.2': "Les piétons marchent sur le passage piéton.", // nieuw, nalezen
+    's.orderpick.3': "Dans la chambre de congélation, je porte des vêtements thermiques.", // nieuw, nalezen
+    'c.orderpick.q': "Tu peux conduire le chariot à mât rétractable un moment ?", // nieuw, nalezen
+    'c.orderpick.a': "Non, je n’ai pas le droit. Je n’ai pas de formation pour ça.", // nieuw, nalezen
   },
 };
 

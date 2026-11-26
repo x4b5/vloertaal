@@ -183,6 +183,12 @@ const t: CultureTranslation = {
     // "Operator in de procesindustrie" (23 November 2026).
     'kjn.u.process.1': "أستطيع أن أقول إن الضغط مرتفع جداً.", // nieuw, nalezen
     'kjn.u.process.2': "أستطيع أن أحكي عند التسليم ما الذي حدث.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'kjn.u.firstday.3': "أستطيع أن أطلب من شخص أن يريني الشيء مرة أخرى.", // nieuw, nalezen
+    'kjn.u.rights.3': "أستطيع أن أقول إنني أُعامَل بشكل مختلف.", // nieuw, nalezen
+    'kjn.u.money.3': "أستطيع أن أطلب خطة تقسيط.", // nieuw, nalezen
+    'kjn.u.warehouse.3': "أستطيع أن أقول إنني لا أقود رافعة reachtruck بدون تدريب.", // nieuw, nalezen
+    'kjn.u.process.3': "أستطيع أن أسأل كم يجب أن نضع من مادة خام.", // nieuw, nalezen
   },
 };
 
