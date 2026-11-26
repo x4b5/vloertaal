@@ -317,6 +317,15 @@ const t: CultureTranslation = {
     'c.plantfault.a.why': "Întrebarea e dacă linia poate porni: nu, încă e un lacăt pe ea.", // nieuw, nalezen
     'c.shiftwork.a.why': "Te întreabă ce s-a întâmplat: defecțiunea și unde e scrisă.", // nieuw, nalezen
     'c.heatdust.a.why': "Întrebarea e despre telefon: nu, din cauza pericolului de aici.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.debthelp.a.why': "Ți se spune că factura nu e plătită: da, și ceri un plan de rate.", // nieuw, nalezen
+    'c.taxes.a.why': "Ți se spune că e un plic albastru: mulțumești și îl deschizi imediat.", // nieuw, nalezen
+    'c.discrimination.a.why': "Te întreabă dacă ești bine: nu, și o să raportezi.", // nieuw, nalezen
+    'c.union.a.why': "Te întreabă de ce ești în sindicat: te apără.", // nieuw, nalezen
+    'c.kiln.a.why': "Întrebarea e dacă cioburile se pot strânge cu mâna: nu, cu mătura mică și fărașul.", // nieuw, nalezen
+    'c.mixlab.a.why': "Întrebarea e dacă șarja e aprobată: încă nu, laboratorul o testează.", // nieuw, nalezen
+    'c.firstweeks.a.why': "Te întreabă de tur: aproape tot, și o întrebare.", // nieuw, nalezen
+    'c.orderpick.a.why': "Ți se cere să conduci stivuitorul retractabil: nu, fără instruire pentru asta.", // nieuw, nalezen
   },
 };
 

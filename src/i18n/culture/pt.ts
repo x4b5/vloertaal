@@ -455,6 +455,23 @@ const t: CultureTranslation = {
     'c.breaks.o2': "Sais às três, e explicas no dia seguinte.", // nieuw, nalezen
     'c.breaks.o3': "Não vais ao médico, e acabas o teu turno.", // nieuw, nalezen
     'c.breaks.w': "Se perguntares a tempo, o teu chefe pode planear o trabalho. Sair sem perguntar é visto como pouco sério.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.firstweeks': "Perguntar outra vez é normal", // nieuw, nalezen
+    'c.firstweeks.b': "Nas tuas primeiras semanas, ninguém espera que saibas tudo. Muitas vezes fazes uma visita guiada (rondleiding) e tens um colega que te acompanha. Primeiro observa, depois faz tu enquanto o teu colega observa. Esqueceste-te de alguma coisa? Pergunta outra vez: \"Wil je het nog een keer laten zien?\" É melhor do que adivinhar. Escreve as palavras novas e os passos num pequeno caderno. Alguns contratos começam com um período experimental (proeftijd): nesse tempo, tu ou o teu empregador podem acabar o contrato depressa. Pergunta se o teu contrato tem um. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.firstweeks.p': "Esqueci-me. Podes mostrar outra vez?", // nieuw, nalezen
+    'c.firstweeks.s': "Ontem o teu colega mostrou-te como ligar a máquina. Hoje não te lembras do terceiro passo. O que fazes?", // nieuw, nalezen
+    'c.firstweeks.o1': "Pedes ao teu colega para mostrar outra vez.", // nieuw, nalezen
+    'c.firstweeks.o2': "Adivinhas, e experimentas.", // nieuw, nalezen
+    'c.firstweeks.o3': "Esperas até outra pessoa a ligar.", // nieuw, nalezen
+    'c.firstweeks.w': "Perguntar outra vez é normal nas primeiras semanas. Adivinhar numa máquina pode ser perigoso, e custa mais tempo.", // nieuw, nalezen
+    'c.orderpick': "Anda pelo caminho para peões", // nieuw, nalezen
+    'c.orderpick.b': "Num armazém grande, preparas encomendas com uma lista de picking e um leitor: passas cada artigo no leitor, para os produtos certos irem para o cliente certo. Muitos preparadores de encomendas conduzem um pequeno veículo que os levanta, ou um empilhador retrátil para as estantes altas. Só conduzas um quando tiveres tido a formação para isso, muitas vezes com um certificado. Anda pelos caminhos para peões, e fica longe dos empilhadores em movimento: o condutor nem sempre te consegue ver. Na câmara frigorífica ou na câmara de congelação, usa a roupa quente, as luvas e o gorro que recebes do trabalho. Faz as tuas pausas para aquecer, e avisa alguém quando entras. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.orderpick.p': "Vou aquecer-me um bocado na cantina.", // nieuw, nalezen
+    'c.orderpick.s': "Tens de ir para o outro corredor. O caminho para peões dá a volta; a direito é mais rápido, entre os empilhadores. O que fazes?", // nieuw, nalezen
+    'c.orderpick.o1': "Vais pelo caminho para peões, mesmo que seja mais longo.", // nieuw, nalezen
+    'c.orderpick.o2': "Atravessas a correr entre os empilhadores.", // nieuw, nalezen
+    'c.orderpick.o3': "Atravessas a pé, e acenas aos condutores.", // nieuw, nalezen
+    'c.orderpick.w': "O condutor de um empilhador muitas vezes não te consegue ver, por exemplo atrás de uma carga alta. No caminho para peões, as pessoas são esperadas e estão seguras.", // nieuw, nalezen
   },
 };
 

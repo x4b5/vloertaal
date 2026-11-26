@@ -844,6 +844,31 @@ const lang: HelpLanguageSource = {
     's.breaks.3': "He trabajado seis días seguidos.", // nieuw, nalezen
     'c.breaks.q': "¿Cuándo es tu pausa para comer?", // nieuw, nalezen
     'c.breaks.a': "A las doce, media hora.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'l.firstweeks': "Tus primeras semanas", // nieuw, nalezen
+    'w.rondleiding': "la visita guiada (alguien te enseña el edificio)", // nieuw, nalezen
+    'w.begeleider': "el tutor, la tutora (el compañero que te ayuda en tus primeras semanas)", // nieuw, nalezen
+    'w.notitieboekje': "la libreta", // nieuw, nalezen
+    'w.meelopen': "acompañar a un compañero (y mirar cómo trabaja)", // nieuw, nalezen
+    'w.onthouden': "recordar, acordarse", // nieuw, nalezen
+    'w.zelfstandig': "por tu cuenta (sin ayuda)", // nieuw, nalezen
+    's.firstweeks.1': "¿Me lo enseñas otra vez?", // nieuw, nalezen
+    's.firstweeks.2': "Hoy acompaño a Sara.", // nieuw, nalezen
+    's.firstweeks.3': "Lo apunto en mi libreta.", // nieuw, nalezen
+    'c.firstweeks.q': "¿Te acuerdas de todo de la visita guiada?", // nieuw, nalezen
+    'c.firstweeks.a': "De casi todo. ¿Dónde estaba el comedor?", // nieuw, nalezen
+    'l.orderpick': "Preparar pedidos y la carretilla retráctil", // nieuw, nalezen
+    'w.orderpicker': "el preparador de pedidos (el trabajador que recoge los pedidos; también la pequeña máquina en la que vas de pie para coger cosas en alto)", // nieuw, nalezen
+    'w.reachtruck': "la carretilla retráctil (una carretilla elevadora para estanterías muy altas; sus horquillas se mueven hacia delante)", // nieuw, nalezen
+    'w.picklijst': "la lista de picking (la lista de artículos que tienes que recoger)", // nieuw, nalezen
+    'w.scannen': "escanear", // nieuw, nalezen
+    'w.voetganger': "el peatón (una persona a pie)", // nieuw, nalezen
+    'w.opwarmen': "calentarse (en un sitio caliente, después de trabajar en el frío)", // nieuw, nalezen
+    's.orderpick.1': "Escaneo cada artículo de la lista de picking.", // nieuw, nalezen
+    's.orderpick.2': "Los peatones van por el pasillo peatonal.", // nieuw, nalezen
+    's.orderpick.3': "En la cámara de congelación llevo ropa térmica.", // nieuw, nalezen
+    'c.orderpick.q': "¿Puedes llevar un momento la carretilla retráctil?", // nieuw, nalezen
+    'c.orderpick.a': "No, no me está permitido. No tengo formación para eso.", // nieuw, nalezen
   },
 };
 

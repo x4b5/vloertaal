@@ -455,6 +455,23 @@ const t: CultureTranslation = {
     'c.breaks.o2': "Te vas a las tres, y lo explicas al día siguiente.", // nieuw, nalezen
     'c.breaks.o3': "No vas al médico, y terminas tu turno.", // nieuw, nalezen
     'c.breaks.w': "Si preguntas a tiempo, tu encargado puede organizar el trabajo. Irte sin preguntar se ve como poco serio.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.firstweeks': "Volver a preguntar es normal", // nieuw, nalezen
+    'c.firstweeks.b': "En tus primeras semanas, nadie espera que lo sepas todo. Muchas veces te hacen una visita guiada (rondleiding) y tienes un compañero que te guía. Primero mira, y luego hazlo tú mientras tu compañero mira. ¿Se te ha olvidado algo? Vuelve a preguntar: “Wil je het nog een keer laten zien?” Es mejor que adivinar. Apunta las palabras nuevas y los pasos en una libreta pequeña. Algunos contratos empiezan con un periodo de prueba (proeftijd): durante ese tiempo, tú o tu empresa podéis terminar el trabajo rápidamente. Pregunta si tu contrato tiene uno. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.firstweeks.p': "Se me ha olvidado. ¿Me lo enseñas otra vez?", // nieuw, nalezen
+    'c.firstweeks.s': "Ayer tu compañero te enseñó cómo arrancar la máquina. Hoy no te acuerdas del tercer paso. ¿Qué haces?", // nieuw, nalezen
+    'c.firstweeks.o1': "Le pides a tu compañero que te lo enseñe otra vez.", // nieuw, nalezen
+    'c.firstweeks.o2': "Adivinas, y lo pruebas.", // nieuw, nalezen
+    'c.firstweeks.o3': "Esperas a que otra persona la arranque.", // nieuw, nalezen
+    'c.firstweeks.w': "Volver a preguntar es normal en las primeras semanas. Adivinar con una máquina puede ser peligroso, y cuesta más tiempo.", // nieuw, nalezen
+    'c.orderpick': "Camina por el pasillo peatonal", // nieuw, nalezen
+    'c.orderpick.b': "En un almacén grande preparas pedidos con una lista de picking y un escáner: escaneas cada artículo, para que los productos correctos lleguen al cliente correcto. Muchos preparadores de pedidos conducen una pequeña máquina que los eleva, o una carretilla retráctil para las estanterías altas. Conduce una solo cuando hayas recibido la formación para ello, muchas veces con un certificado. Camina por los pasillos peatonales, y mantente lejos de las carretillas en marcha: el conductor no siempre te puede ver. En la cámara frigorífica o en la cámara de congelación, lleva la ropa de abrigo, los guantes y el gorro que te dan en el trabajo. Haz tus pausas para calentarte, y avisa a alguien cuando entres. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen
+    'c.orderpick.p': "Voy un momento al comedor a calentarme.", // nieuw, nalezen
+    'c.orderpick.s': "Tienes que ir al otro pasillo. El pasillo peatonal da la vuelta; cruzar recto entre las carretillas es más rápido. ¿Qué haces?", // nieuw, nalezen
+    'c.orderpick.o1': "Vas por el pasillo peatonal, aunque sea más largo.", // nieuw, nalezen
+    'c.orderpick.o2': "Cruzas corriendo entre las carretillas.", // nieuw, nalezen
+    'c.orderpick.o3': "Cruzas andando, y saludas a los conductores con la mano.", // nieuw, nalezen
+    'c.orderpick.w': "Muchas veces el conductor de una carretilla no te puede ver, por ejemplo detrás de una carga alta. En el pasillo peatonal se cuenta con las personas, y están seguras.", // nieuw, nalezen
   },
 };
 
