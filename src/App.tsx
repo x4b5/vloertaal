@@ -256,6 +256,9 @@ export default function App() {
   const typedCode = useRef('');
   /** A coach link to a topic outside the preview: the home offers its unlock (this visit). */
   const [lockedLink, setLockedLink] = useState<string | null>(null);
+  // A lesson link's lesson (?les=, the word posters), waiting to open until the home is there
+  // (after the first run, the history first steps back to its first entry).
+  const [linkLesson, setLinkLesson] = useState<string | null>(null);
   /** "Bewaar je voortgang" on the home (src/lib/backupNudge.ts) was tapped: draw the home again. */
   const [, setNudgeTick] = useState(0);
   // Opened from the home screen: quietly ask the browser to keep the storage (and remember its answer).
@@ -725,7 +728,7 @@ export default function App() {
       setFocusUnit(null);
       forgetLinkedUnit();
       if (!unitDone(unit, progress.completed)) setProgress((p) => (p.currentUnit === unit.id ? p : { ...p, ...pickBlock(unit.id, p.completed) }));
-      if (viewRef.current.name === 'home') go({ name: 'lesson', lessonId: linkedLesson, review: false });
+      setLinkLesson(linkedLesson);
       return;
     }
     // A finished topic (to practise again): its topic page.
@@ -738,6 +741,14 @@ export default function App() {
     setProgress((p) => (p.currentUnit === focusUnit ? p : { ...p, ...pickBlock(focusUnit, p.completed) }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [focusUnit, access, step]);
+  // The linked lesson opens once the home is there and the first run's history has stepped back
+  // (leaving): opened before that, the step back would put the home over it again.
+  useEffect(() => {
+    if (!linkLesson || leaving.current || view.name !== 'home') return;
+    setLinkLesson(null);
+    go({ name: 'lesson', lessonId: linkLesson, review: false });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [linkLesson, view]);
   // The coach's locked topic is offered on the home until a lesson starts.
   useEffect(() => { if (view.name === 'lesson') setLockedLink(null); }, [view.name]);
 
