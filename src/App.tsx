@@ -47,7 +47,7 @@ import { accessFromIntro, higherAccess, type Access, lessonAllowed, loadAccess, 
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { type AfterStep, afterLessonSteps, nextAfter } from './lib/afterLesson';
 import { HOME_CARDS, RESULT_QUESTIONS, firstDue, rowFits } from './lib/momentOrder';
-import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
+import { forgetLinkedLesson, forgetLinkedUnit, takeLinkedLesson, takeLinkedUnit } from './lib/unitLink';
 import { countFeel, feelDue, type FeelAt, markFeelAsked } from './lib/feel';
 import { rulesTwinOf, trackTwin } from './content/trackTwins';
 import { oneAppOn } from './lib/oneApp';
@@ -83,7 +83,7 @@ import { forgetFirstVoices } from './lib/firstVoice';
 import { Samen } from './components/Samen';
 import { CheckResult } from './components/Check';
 import { checkExercises, checkLesson, checkOffered, checkPassed, recordCheck, undoCheck } from './lib/instapCheck';
-import type { Exercise } from './lib/exercises';
+import { isUnlocked, type Exercise } from './lib/exercises';
 import { hasSamen, samenDialogues } from './lib/samen';
 import { KlankOverview, KlankPage } from './components/KlankScreens';
 
@@ -700,6 +700,10 @@ export default function App() {
     const own = trackTwin(focusUnit, me.track);
     if (own && own !== focusUnit) { setFocusUnit(own); return; }
     linkHandled.current = true;
+    // A lesson link (?les=paint, the word posters): the lesson is taken here, once, and opened
+    // below when its topic is this learner's and allowed (src/lib/unitLink.ts).
+    const linkedLesson = takeLinkedLesson();
+    forgetLinkedLesson();
     const unit = findUnit(focusUnit);
     // A topic this app or this track does not have (the other track's topic without a twin): the
     // home stays on the learner's own block.
@@ -714,6 +718,14 @@ export default function App() {
       setFocusUnit(null);
       forgetLinkedUnit();
       setLockedLink(unit.id);
+      return;
+    }
+    // The poster's lesson: straight into it (the topic becomes the home's block for afterwards).
+    if (linkedLesson && unit.lessons.some((l) => l.id === linkedLesson) && isUnlocked(linkedLesson, progress.completed, access)) {
+      setFocusUnit(null);
+      forgetLinkedUnit();
+      if (!unitDone(unit, progress.completed)) setProgress((p) => (p.currentUnit === unit.id ? p : { ...p, ...pickBlock(unit.id, p.completed) }));
+      if (viewRef.current.name === 'home') go({ name: 'lesson', lessonId: linkedLesson, review: false });
       return;
     }
     // A finished topic (to practise again): its topic page.

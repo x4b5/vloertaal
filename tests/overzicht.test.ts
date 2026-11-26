@@ -71,6 +71,8 @@ describe('what the phone remembers', () => {
         "KEYS.greeted": "vloertaal:greeted",
         "KEYS.keepOffered": "vloertaal.keepOffered",
         "KEYS.learnWriting": "vloertaal:learn-writing",
+        "KEYS.linkOpened": "vloertaal:link-opened",
+        "KEYS.linkedLesson": "vloertaal:linked-lesson",
         "KEYS.linkedUnit": "vloertaal.linkedUnit",
         "KEYS.listen": "vloertaal:listen",
         "KEYS.noVoiceNoted": "vloertaal:no-voice-noted",

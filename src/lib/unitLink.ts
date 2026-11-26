@@ -60,18 +60,86 @@ export function forgetLinkedUnit(): void {
 }
 
 /**
+ * Lesson links: "?les=<slug>" (e.g. ?les=paint) opens one lesson of the Dutch course, for the word
+ * posters on a work-learning spot (26 November 2026: the poster "Schilderen" opens the painting
+ * lesson, not the tiles that come first in its topic). The link leads to the lesson's topic like a
+ * unit link does, and a lesson opened by a link stays open on this phone (isUnlocked), so the
+ * learner can come back to it; the topic's other lessons keep their order.
+ */
+const LESSON_SLUG = /^[a-z]+$/;
+
+const unitOfLinkedLesson = (lessonId: string) => units.find((u) => u.lessons.some((l) => l.id === lessonId));
+
+/** The lesson a link asks for (its id, e.g. 'l.paint'), or null. */
+export function lessonFromSearch(search: string): string | null {
+  const slug = new URLSearchParams(search).get('les');
+  if (!slug) return null;
+  const s = slug.trim().toLowerCase();
+  if (!LESSON_SLUG.test(s)) return null;
+  const id = `l.${s}`;
+  return unitOfLinkedLesson(id) ? id : null;
+}
+
+function readOpened(): readonly string[] {
+  try {
+    const list: unknown = JSON.parse(localStorage.getItem(KEYS.linkOpened) ?? '[]');
+    return Array.isArray(list) ? list.filter((x): x is string => typeof x === 'string') : [];
+  } catch {
+    return [];
+  }
+}
+
+/** Was this lesson opened by a link on this phone (so it is open, whatever came before it)? */
+export function linkOpened(lessonId: string): boolean {
+  return readOpened().includes(lessonId);
+}
+
+function rememberLinkedLesson(id: string): void {
+  try {
+    localStorage.setItem(KEYS.linkedLesson, id);
+    const opened = readOpened();
+    if (!opened.includes(id)) localStorage.setItem(KEYS.linkOpened, JSON.stringify([...opened, id]));
+  } catch {
+    // Blocked storage: the link lasts until the page is closed.
+  }
+}
+
+/** The linked lesson kept until the app has opened it, or null. */
+export function takeLinkedLesson(): string | null {
+  try {
+    const id = localStorage.getItem(KEYS.linkedLesson);
+    return id && unitOfLinkedLesson(id) ? id : null;
+  } catch {
+    return null;
+  }
+}
+
+/** The app has opened the linked lesson (or could not): forget it. It stays open (linkOpened). */
+export function forgetLinkedLesson(): void {
+  try {
+    localStorage.removeItem(KEYS.linkedLesson);
+  } catch {
+    // Blocked storage: nothing was kept.
+  }
+}
+
+/**
  * Reads the link once and takes it out of the address, so a shared screen does not repeat it. The
  * unit is kept in storage until the path has shown it: a reload during the first run (language,
  * password, sector) still lands on it. Without a link in the address: the kept one, if any.
+ * A lesson link (?les=) leads to its lesson's unit, and keeps the lesson for the app to open.
  */
 export function takeLinkedUnit(): string | null {
-  const id = unitFromSearch(location.search);
-  if (location.search.includes('unit=')) {
+  const lesson = lessonFromSearch(location.search);
+  const id = lesson ? unitOfLinkedLesson(lesson)?.id ?? null : unitFromSearch(location.search);
+  if (location.search.includes('unit=') || location.search.includes('les=')) {
     const params = new URLSearchParams(location.search);
     params.delete('unit');
+    params.delete('les');
     const rest = params.toString();
     history.replaceState(history.state, '', `${location.pathname}${rest ? `?${rest}` : ''}${location.hash}`);
   }
+  if (lesson) rememberLinkedLesson(lesson);
   if (id) {
     rememberLinkedUnit(id);
     return id;

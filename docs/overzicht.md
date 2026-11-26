@@ -10,7 +10,7 @@ Vijf lijsten, in gewone taal:
 2. [Wie krijgt wat](#2-wie-krijgt-wat): 3 soorten leerlingen
 3. [Wat de app uit zichzelf laat zien](#3-wat-de-app-uit-zichzelf-laat-zien): 18 momenten
 4. [Alle schermen](#4-alle-schermen): 33 schermen
-5. [Wat de telefoon onthoudt](#5-wat-de-telefoon-onthoudt): 47 plekken
+5. [Wat de telefoon onthoudt](#5-wat-de-telefoon-onthoudt): 49 plekken
 
 ## 1. Wat staat aan en uit
 
@@ -207,7 +207,7 @@ Niet in deze lijst, want altijd aanwezig: de zin van Bram, de herhaling van vand
 
 Alles blijft op de telefoon. Er gaat niets naar een server.
 
-**In de reservekopie zit alleen de voortgang** (`vloertaal:v1`). De andere 46 plekken gaan niet mee naar een nieuwe telefoon.
+**In de reservekopie zit alleen de voortgang** (`vloertaal:v1`). De andere 48 plekken gaan niet mee naar een nieuwe telefoon.
 
 ### De voortgang (1)
 
@@ -250,12 +250,14 @@ Alles blijft op de telefoon. Er gaat niets naar een server.
 | De uitleg bij de knop Melden is getoond. | blijft staan | `vloertaal:report-hint` | `src/lib/report.ts` |
 | Wanneer de browser voor het laatst is gevraagd de voortgang te bewaren. | blijft staan | `vloertaal:persist-asked` | `src/lib/install.ts` |
 
-### Techniek (11)
+### Techniek (13)
 
 | Wat de telefoon onthoudt | Hoe lang | Sleutel | Waar |
 | --- | --- | --- | --- |
 | Een les die halverwege is gestopt, om verder te gaan (hooguit twee dagen). | blijft staan | `vloertaal:resume` | `src/lib/resume.ts` |
 | Het onderwerp uit een link van de begeleider, tot het lespad het heeft getoond. | blijft staan | `vloertaal.linkedUnit` | `src/lib/unitLink.ts` |
+| De les uit een link (de woordposters, ?les=), tot de app die heeft geopend. | blijft staan | `vloertaal:linked-lesson` | `src/lib/unitLink.ts` |
+| Lessen die via een link zijn geopend: die blijven open, ook als de lessen ervoor nog niet gedaan zijn. | blijft staan | `vloertaal:link-opened` | `src/lib/unitLink.ts` |
 | De lijst van onderwerpen die op de telefoon staan. | blijft staan | `vloertaal:offline` | `src/lib/offline.ts` |
 | Het antwoord van de browser op de vraag om de voortgang te bewaren. | blijft staan | `vloertaal:persist` | `src/lib/install.ts` |
 | Het nummer van de afspraak in de agenda. | blijft staan | `vloertaal:reminder-uid` | `src/lib/reminder.ts` |

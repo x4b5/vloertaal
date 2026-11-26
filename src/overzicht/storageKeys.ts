@@ -82,6 +82,8 @@ const KEY_LINES: Record<KeyName, Line> = {
   persistAsked: { store: 'telefoon', kind: 'gezien', file: 'src/lib/install.ts', wat: 'Wanneer de browser voor het laatst is gevraagd de voortgang te bewaren.' },
   resume: { store: 'telefoon', kind: 'techniek', file: 'src/lib/resume.ts', wat: 'Een les die halverwege is gestopt, om verder te gaan (hooguit twee dagen).' },
   linkedUnit: { store: 'telefoon', kind: 'techniek', file: 'src/lib/unitLink.ts', wat: 'Het onderwerp uit een link van de begeleider, tot het lespad het heeft getoond.' },
+  linkedLesson: { store: 'telefoon', kind: 'techniek', file: 'src/lib/unitLink.ts', wat: 'De les uit een link (de woordposters, ?les=), tot de app die heeft geopend.' },
+  linkOpened: { store: 'telefoon', kind: 'techniek', file: 'src/lib/unitLink.ts', wat: 'Lessen die via een link zijn geopend: die blijven open, ook als de lessen ervoor nog niet gedaan zijn.' },
   offline: { store: 'telefoon', kind: 'techniek', file: 'src/lib/offline.ts', wat: 'De lijst van onderwerpen die op de telefoon staan.' },
   persist: { store: 'telefoon', kind: 'techniek', file: 'src/lib/install.ts', wat: 'Het antwoord van de browser op de vraag om de voortgang te bewaren.' },
   reminderUid: { store: 'telefoon', kind: 'techniek', file: 'src/lib/reminder.ts', wat: 'Het nummer van de afspraak in de agenda.' },
