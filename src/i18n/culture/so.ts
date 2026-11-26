@@ -456,6 +456,23 @@ const t: CultureTranslation = {
     'c.breaks.o2': "Ka bax saddexda, oo sharax maalinta xigta.", // nieuw, nalezen
     'c.breaks.o3': "Dhakhtarka iska dhaaf, oo dhammee wareeggaaga shaqada.", // nieuw, nalezen
     'c.breaks.w': "Inaad waqtiga ku weydiiso waxay u oggolaanaysaa madaxaaga inuu shaqada qorsheeyo. Bixid adigoon weydiin waxaa loo arkaa qof aan la isku hallayn karin.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.firstweeks': "Mar kale weydii: taasi waa caadi", // nieuw, nalezen
+    'c.firstweeks.b': "Toddobaadyadaada ugu horreeya, cidna kama filayso inaad wax walba ogaato. Badanaa waxaa lagu siiyaa wareeg tusid ah (rondleiding) iyo saaxiib shaqo oo ku hagaya. Marka hore daawo, kadib adigu samee inta saaxiibkaa shaqadu ku daawanayo. Wax ma illowday? Mar kale weydii: “Wil je het nog een keer laten zien?” Taasi way ka fiican tahay qiyaasid. Erayada iyo tallaabooyinka cusub ku qor buug yar oo xusuus-qor ah. Qandaraasyada qaar waxay ku bilaabmaan muddo tijaabo (proeftijd): markaas adiga ama loo-shaqeeyahaaguba si dhakhso ah ayaad u joojin kartaan shaqada. Weydii in qandaraaskaagu mid leeyahay. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.firstweeks.p': "Waan illaabay. Mar kale ma i tusi kartaa?", // nieuw, nalezen
+    'c.firstweeks.s': "Shalay saaxiibkaa shaqadu wuxuu ku tusay sida mashiinka loo shido. Maanta ma xasuusatid tallaabada saddexaad. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.firstweeks.o1': "Ka codso saaxiibkaa shaqada inuu mar kale ku tuso.", // nieuw, nalezen
+    'c.firstweeks.o2': "Qiyaas, oo isku day.", // nieuw, nalezen
+    'c.firstweeks.o3': "Sug ilaa qof kale uu shido.", // nieuw, nalezen
+    'c.firstweeks.w': "Mar kale weydiintu waa caadi toddobaadyada ugu horreeya. Qiyaas mashiin lagu sameeyo khatar ayay noqon kartaa, waqti badanna way qaadataa.", // nieuw, nalezen
+    'c.orderpick': "Ku soco jidka lugta", // nieuw, nalezen
+    'c.orderpick.b': "Bakhaar weyn, dalabaadka waxaad ku ururisaa liiska ururinta iyo iskaanar: shay kasta waad iskaan gareysaa, si alaabta saxda ah ay u gaarto macmiilka saxda ah. Dad badan oo dalabaad ururiya waxay waddaan gaari yar oo kor u qaada, ama reachtruck khaanadaha dhaadheer. Mid kaxee oo keliya marka aad heshay tababarkiisa, badanaa shahaado leh. Ku soco jidadka lugta, oo ka fogow gaadiidka socda: darawalku had iyo jeer kuma arki karo. Qolka qabow ama qaboojiyaha barafka, xiro dharka diirran, galoofyada iyo koofiyadda aad ka hesho shaqada. Qaado nasashadaada diirsashada, oo qof u sheeg marka aad gelayso. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.orderpick.p': "Waxaan aadayaa makhaayadda shaqada si aan wax yar u diirsado.", // nieuw, nalezen
+    'c.orderpick.s': "Waa inaad aaddaa jidka kale ee khaanadaha. Jidka lugtu wuu wareegaa; toos u gooshiddu way ka dhakhso badan tahay, gaadiidka dhexdooda. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.orderpick.o1': "Qaado jidka lugta, xitaa haddii uu ka dheer yahay.", // nieuw, nalezen
+    'c.orderpick.o2': "Si dhakhso ah ugu orod gaadiidka dhexdooda.", // nieuw, nalezen
+    'c.orderpick.o3': "Ka gudub, oo gacanta u ruxruxo darawallada.", // nieuw, nalezen
+    'c.orderpick.w': "Darawalku badanaa kuma arki karo, tusaale ahaan rar dheer gadaashiis. Jidka lugta, dadka waa la filayaa waana ammaan.", // nieuw, nalezen
   },
 };
 export default t;

@@ -183,6 +183,12 @@ const t: CultureTranslation = {
     // "Operator in de procesindustrie" (23 November 2026).
     'kjn.u.process.1': "እቲ ጸቕጢ ካብ ዓቐኑ ንላዕሊ ምዃኑ ክብል እኽእል እየ።", // nieuw, nalezen
     'kjn.u.process.2': "ኣብ ምርኽኻብ እንታይ ከም ዘጋጠመ ክነግር እኽእል እየ።", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'kjn.u.firstday.3': "ሓደ ሰብ ደጊሙ ከርእየኒ ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.rights.3': "ብዝተፈለየ መንገዲ ከም ዝተሓዝ ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.money.3': "ውጥን ክፍሊት ክሓትት እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.warehouse.3': "ብዘይ ስልጠና ሪች ትራክ ከም ዘይዝውር ክብል እኽእል እየ።", // nieuw, nalezen
+    'kjn.u.process.3': "ካብ ሓደ ጥረ ነገር ክንደይ ክኣቱ ከም ዘለዎ ክሓትት እኽእል እየ።", // nieuw, nalezen
   },
 };
 

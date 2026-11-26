@@ -180,6 +180,12 @@ const t: CultureTranslation = {
     // "Operator in de procesindustrie" (23 November 2026).
     'kjn.u.process.1': "Waan sheegi karaa in cadaadisku xad-dhaafay.", // nieuw, nalezen
     'kjn.u.process.2': "Wareejinta waan ka sheegi karaa wixii dhacay.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'kjn.u.firstday.3': "Waan ka codsan karaa qof inuu mar kale i tuso.", // nieuw, nalezen
+    'kjn.u.rights.3': "Waan sheegi karaa in si ka duwan la iila dhaqmo.", // nieuw, nalezen
+    'kjn.u.money.3': "Waan weydiisan karaa qorshe lacag-bixineed.", // nieuw, nalezen
+    'kjn.u.warehouse.3': "Waan sheegi karaa inaanan reachtruck kaxayn tababar la'aan.", // nieuw, nalezen
+    'kjn.u.process.3': "Waan weydiin karaa inta alaab ceeriin ah ee la gelinayo.", // nieuw, nalezen
   },
 };
 export default t;

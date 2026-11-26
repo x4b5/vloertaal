@@ -4982,6 +4982,127 @@ const t: CultureTranslation = {
     'c.heatdust.o2': "Blas es weg: Das geht schneller.", // nieuw, nalezen
     'c.heatdust.o3': "Lass es für die nächste Schicht.", // nieuw, nalezen
     'c.heatdust.w': "Beim Blasen fliegt der Staub hoch, in die Luft und in deine Lunge. Ein nasses Tuch oder ein Staubsauger hält den Staub unten.", // nieuw, nalezen
+    // eight new lessons (debts, taxes, discrimination, the union, kiln, mixing lab, first weeks, order picking) (26 November 2026).
+    'l.discrimination': "Diskriminierung und Einschüchterung", // nieuw, nalezen
+    'w.andersbehandelen': "anders behandeln (schlechter als andere)", // nieuw, nalezen
+    'w.afkomst': "die Herkunft (das Land oder die Gruppe, aus der du oder deine Familie kommen)", // nieuw, nalezen
+    'w.geloof': "die Religion, der Glaube", // nieuw, nalezen
+    'w.uitschelden': "beschimpfen (hässliche Wörter zu jemandem sagen)", // nieuw, nalezen
+    'w.bedreigen': "bedrohen (sagen, dass du jemandem wehtun wirst)", // nieuw, nalezen
+    'w.geweld': "die Gewalt", // nieuw, nalezen
+    's.discrimination.1': "Ich werde wegen meiner Religion anders behandelt.", // nieuw, nalezen
+    's.discrimination.2': "Er bedroht mich. Ich fühle mich nicht sicher.", // nieuw, nalezen
+    's.discrimination.3': "Ich darf Nein sagen, auch zu meinem Chef.", // nieuw, nalezen
+    'c.discrimination.q': "Geht es dir gut? Sie beschimpfen dich ständig.", // nieuw, nalezen
+    'c.discrimination.a': "Nein, es geht mir nicht gut. Ich melde es.", // nieuw, nalezen
+    'l.union': "Die Gewerkschaft und der Betriebsrat", // nieuw, nalezen
+    'w.lidworden': "beitreten, Mitglied werden", // nieuw, nalezen
+    'w.contributie': "der Mitgliedsbeitrag (du zahlst ihn jeden Monat)", // nieuw, nalezen
+    'w.opkomenvoor': "sich einsetzen für (die Interessen von jemandem verteidigen)", // nieuw, nalezen
+    'w.onderhandelen': "verhandeln (reden, bis beide Seiten einverstanden sind)", // nieuw, nalezen
+    'w.loonsverhoging': "die Lohnerhöhung", // nieuw, nalezen
+    'w.ondernemingsraad': "der Betriebsrat (der OR: gewählte Kollegen, die mit dem Direktor sprechen)", // nieuw, nalezen
+    's.union.1': "Ich werde Mitglied der Gewerkschaft.", // nieuw, nalezen
+    's.union.2': "Die Gewerkschaft verhandelt über den Tarifvertrag (cao).", // nieuw, nalezen
+    's.union.3': "Wer ist im Betriebsrat?", // nieuw, nalezen
+    'c.union.q': "Warum bist du Mitglied der Gewerkschaft?", // nieuw, nalezen
+    'c.union.a': "Sie setzen sich für mich ein, wenn es ein Problem gibt.", // nieuw, nalezen
+    'l.debthelp': "Schulden und Hilfe", // nieuw, nalezen
+    'w.herinnering': "die Zahlungserinnerung (ein Brief: Du hast noch nicht bezahlt)", // nieuw, nalezen
+    'w.aanmaning': "die Mahnung (zahl vor einem Datum, sonst können Extrakosten kommen)", // nieuw, nalezen
+    'w.betalingsregeling': "die Ratenzahlung (du zahlst eine Schuld in kleinen Teilen)", // nieuw, nalezen
+    'w.deurwaarder': "der Gerichtsvollzieher (ein Beamter, der eine Schuld eintreibt, oft nachdem ein Richter entschieden hat)", // nieuw, nalezen
+    'w.schuldhulp': "die Schuldnerberatung (kostenlose Hilfe bei deinen Schulden, von der Gemeinde)", // nieuw, nalezen
+    'w.achterstand': "der Zahlungsrückstand (Geld, das du schon hättest zahlen müssen)", // nieuw, nalezen
+    's.debthelp.1': "Ich habe eine Mahnung bekommen.", // nieuw, nalezen
+    's.debthelp.2': "Kann ich in Raten zahlen?", // nieuw, nalezen
+    's.debthelp.3': "Ich möchte Hilfe bei meinen Schulden.", // nieuw, nalezen
+    'c.debthelp.q': "Sie haben die Rechnung noch nicht bezahlt.", // nieuw, nalezen
+    'c.debthelp.a': "Das stimmt. Kann ich eine Ratenzahlung bekommen?", // nieuw, nalezen
+    'l.taxes': "Steuern und Zuschüsse", // nieuw, nalezen
+    'w.jaaropgave': "die Jahreslohnbescheinigung (ein Papier von deinem Arbeitgeber mit deinem Lohn vom ganzen Jahr)", // nieuw, nalezen
+    'w.blauweenvelop': "der blaue Umschlag (darin kommen Briefe vom Belastingdienst)", // nieuw, nalezen
+    'w.teruggave': "die Rückzahlung (Steuergeld, das du zurückbekommst)", // nieuw, nalezen
+    'w.uitstel': "der Aufschub (du darfst es später machen)", // nieuw, nalezen
+    'w.huurtoeslag': "der Mietzuschuss (Geld vom Staat, das dir hilft, die Miete zu zahlen)", // nieuw, nalezen
+    'w.belastingtelefoon': "die kostenlose Telefonnummer vom Belastingdienst", // nieuw, nalezen
+    's.taxes.1': "Ich brauche meine Jahreslohnbescheinigung für die Steuererklärung.", // nieuw, nalezen
+    's.taxes.2': "Ich verdiene jetzt mehr. Das melde ich sofort.", // nieuw, nalezen
+    's.taxes.3': "Ich bekomme Geld vom Belastingdienst zurück.", // nieuw, nalezen
+    'c.taxes.q': "Hier liegt ein blauer Umschlag für dich.", // nieuw, nalezen
+    'c.taxes.a': "Danke. Ich mache ihn sofort auf.", // nieuw, nalezen
+    'l.kiln': "Brennofen, Glas und Keramik", // nieuw, nalezen
+    'w.pers': "die Presse (eine Maschine, die Ton oder Pulver in eine Form presst)", // nieuw, nalezen
+    'w.glazuur': "die Glasur (eine glänzende, glasartige Schicht auf einer Fliese oder einer Tasse)", // nieuw, nalezen
+    'w.tunneloven': "der Tunnelofen (ein langer Ofen; die Produkte fahren langsam hindurch)", // nieuw, nalezen
+    'w.scherf': "die Scherbe (ein scharfes Stück von kaputtem Glas oder einer kaputten Fliese)", // nieuw, nalezen
+    'w.gloeiend': "glühend heiß (so heiß, dass es rot leuchtet)", // nieuw, nalezen
+    'w.armbeschermer': "der Armschutz (ein Ärmel, der deinen Arm vor Schnitten schützt)", // nieuw, nalezen
+    's.kiln.1': "Die Fliesen fahren langsam durch den Tunnelofen.", // nieuw, nalezen
+    's.kiln.2': "In dieser Fliese ist ein Riss. Das ist Ausschuss.", // nieuw, nalezen
+    's.kiln.3': "Trag deinen Armschutz beim Glas.", // nieuw, nalezen
+    'c.kiln.q': "Darf ich die Scherben mit der Hand aufheben?", // nieuw, nalezen
+    'c.kiln.a': "Nein. Nimm Handfeger und Kehrblech.", // nieuw, nalezen
+    'l.mixlab': "Die Mischhalle und das Labor", // nieuw, nalezen
+    'w.batch': "die Charge (eine Menge, die auf einmal nach einem Rezept hergestellt wird)", // nieuw, nalezen
+    'w.afwegen': "abwiegen (genau so viel wiegen, wie das Rezept sagt)", // nieuw, nalezen
+    'w.mengvat': "der Mischbehälter (ein großer Behälter mit einem Rührwerk darin)", // nieuw, nalezen
+    'w.labjas': "der Laborkittel", // nieuw, nalezen
+    'w.laboratorium': "das Laboratorium (das Labor: Hier wird das Produkt getestet)", // nieuw, nalezen
+    'w.grondstof': "der Rohstoff (woraus du das Produkt machst)", // nieuw, nalezen
+    's.mixlab.1': "Wieg die Rohstoffe genau ab.", // nieuw, nalezen
+    's.mixlab.2': "Ich nehme eine Probe für das Labor.", // nieuw, nalezen
+    's.mixlab.3': "Welche Charge ist das? Schau auf das Etikett.", // nieuw, nalezen
+    'c.mixlab.q': "Ist die Charge freigegeben?", // nieuw, nalezen
+    'c.mixlab.a': "Noch nicht. Das Labor testet die Probe.", // nieuw, nalezen
+    'c.discrimination': "Unfair behandelt? Es ist nicht deine Schuld", // nieuw, nalezen
+    'c.discrimination.b': "Diskriminierung bedeutet, dass du anders oder schlechter behandelt wirst, weil du bist, wer du bist: wegen deiner Herkunft, Hautfarbe, Religion, deines Geschlechts, Alters, einer Behinderung oder wen du liebst. Zu Einschüchterung gehören zum Beispiel unerwünschte Berührungen, sexuelle Bemerkungen, Drohungen oder Beschimpfungen. Beides ist bei der Arbeit nicht erlaubt, und es ist nie deine Schuld. Du darfst Nein sagen, auch zu deinem Chef. Schreib auf, was passiert ist, wann, und wer es gesehen hat. Sprich mit deinem Vorgesetzten oder mit der Vertrauensperson (vertrouwenspersoon), wenn deine Firma eine hat. Außerhalb deiner Arbeit hilft die Antidiskriminierungsstelle in deinem Ort kostenlos (discriminatie.nl). Das College voor de Rechten van de Mens kann ein Urteil geben, auch kostenlos. Gewalt oder eine Drohung? Geh zur Polizei. In Gefahr: Ruf 112 an. Allgemeine Informationen. Für deine Situation: Frag die Gewerkschaft, das Juridisch Loket oder FairWork.", // nieuw, nalezen
+    'c.discrimination.p': "Ich möchte etwas melden. Kann ich vertraulich mit Ihnen sprechen?", // nieuw, nalezen
+    'c.discrimination.s': "Ein Kollege beschimpft dich oft wegen deiner Herkunft. Andere lachen. Was machst du?", // nieuw, nalezen
+    'c.discrimination.o1': "Schreib es auf, und erzähl es jemandem, dem du vertraust.", // nieuw, nalezen
+    'c.discrimination.o2': "Sag nichts: Das gehört zur Arbeit.", // nieuw, nalezen
+    'c.discrimination.o3': "Kündige, und sag niemandem, warum.", // nieuw, nalezen
+    'c.discrimination.w': "Beschimpfungen wegen deiner Herkunft sind Diskriminierung, und das ist nicht erlaubt. Wenn du es aufschreibst und darüber sprichst, kann dir jemand helfen, dass es aufhört.", // nieuw, nalezen
+    'c.union': "Zusammen seid ihr stärker", // nieuw, nalezen
+    'c.union.b': "Eine Gewerkschaft (vakbond), zum Beispiel FNV oder CNV, setzt sich für Arbeitnehmer ein. Sie macht mit Arbeitgebern Vereinbarungen über Lohn und Arbeit: den Tarifvertrag (cao). Viele Tarifverträge gelten für alle in einer Branche, auch wenn du kein Mitglied bist. Mitglieder zahlen jeden Monat einen Beitrag (contributie) und bekommen Beratung und Hilfe, zum Beispiel bei einem Problem mit dem Lohn oder einer Kündigung. Tritt rechtzeitig bei: Oft hilft die Gewerkschaft nur bei einem Problem, das nach deinem Beitritt anfängt. Ob du beitrittst, entscheidest du selbst, und dein Arbeitgeber darf dich dafür nicht bestrafen. Eine Firma mit 50 oder mehr Arbeitnehmern muss einen Betriebsrat haben (ondernemingsraad, OR): Kollegen, die von den Arbeitnehmern gewählt werden. Der OR spricht mit dem Direktor zum Beispiel über Arbeitszeiten und Sicherheit. Eine kleinere Firma kann eine Personalvertretung haben (personeelsvertegenwoordiging). Fragen? Frag einen Kollegen im OR. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
+    'c.union.p': "Ich habe eine Frage zu den neuen Dienstplänen. Kann der OR etwas damit machen?", // nieuw, nalezen
+    'c.union.s': "Deine Firma plant viel mehr Spätschichten. Viele Kollegen sind unzufrieden. Was kannst du tun?", // nieuw, nalezen
+    'c.union.o1': "Frag einen Kollegen im OR danach.", // nieuw, nalezen
+    'c.union.o2': "Komm abends nicht mehr.", // nieuw, nalezen
+    'c.union.o3': "Sag nichts: Es kann sich nichts ändern.", // nieuw, nalezen
+    'c.union.w': "Der OR redet bei Regeln über Arbeitszeiten mit. Er kann mit dem Direktor darüber sprechen, für alle Arbeitnehmer zusammen.", // nieuw, nalezen
+    'c.debthelp': "Mach jeden Brief auf, und hol dir früh Hilfe", // nieuw, nalezen
+    'c.debthelp.b': "Hast du eine Rechnung nicht rechtzeitig bezahlt? Dann bekommst du zuerst eine Zahlungserinnerung (herinnering) und später eine Mahnung (aanmaning). Bevor eine Firma dir dafür Extrakosten berechnen darf, muss sie dir 14 Tage Zeit zum Zahlen geben. Mach also jeden Brief auf, auch wenn du Angst davor hast. Kannst du nicht alles auf einmal zahlen? Ruf an oder schreib, und bitte um eine Ratenzahlung (betalingsregeling). Ein deurwaarder (Gerichtsvollzieher) ist ein Beamter, der Schulden eintreibt, oft nachdem ein Richter entschieden hat. Er kann zum Beispiel einen Teil deines Lohns nehmen, aber er muss dir immer genug zum Leben lassen. Schulden? Hol dir früh Hilfe, wenn sie noch klein sind. Die gemeente gibt kostenlose Schuldnerberatung (schuldhulp). Auf geldfit.nl kannst du einen kostenlosen Test machen und Hilfe in deiner Nähe finden. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
+    'c.debthelp.p': "Ich kann nicht alles auf einmal bezahlen. Kann ich in Raten zahlen?", // nieuw, nalezen
+    'c.debthelp.s': "Du bekommst eine Mahnung für deine Handyrechnung. Diesen Monat hast du das Geld nicht. Was machst du?", // nieuw, nalezen
+    'c.debthelp.o1': "Ruf die Firma an, und bitte um eine Ratenzahlung.", // nieuw, nalezen
+    'c.debthelp.o2': "Leg den Brief weg, und warte.", // nieuw, nalezen
+    'c.debthelp.o3': "Leih schnell Geld mit „jetzt kaufen, später zahlen“.", // nieuw, nalezen
+    'c.debthelp.w': "Wenn du es rechtzeitig sagst, kann die Firma oft kleine Zahlungen mit dir vereinbaren. Ein Brief, den du weglegst, geht nicht weg: Die Kosten werden nur höher.", // nieuw, nalezen
+    'c.taxes': "Deine Steuererklärung und deine Zuschüsse", // nieuw, nalezen
+    'c.taxes.b': "Die Steuererklärung (aangifte) für das letzte Jahr muss vor dem 1.Mai gemacht sein. Hast du einen Brief bekommen, in dem du darum gebeten wirst? Dann musst du sie machen. Manchmal bekommst du Geld zurück. Du brauchst die Jahreslohnbescheinigung (jaaropgave) von deinem Arbeitgeber. Keine Zeit? Du kannst um mehr Zeit bitten (uitstel). Zuschüsse (toeslagen) wie zorgtoeslag und huurtoeslag sind ein Vorschuss: Sie hängen davon ab, was du dieses Jahr verdienen wirst. Verdienst du mehr, oder ändert sich etwas anderes? Melde es sofort in Mijn toeslagen. Wenn du das nicht machst, musst du später vielleicht viel zurückzahlen. Musst du zurückzahlen? Du kannst um eine Ratenzahlung bitten. Kostenlose Hilfe: die BelastingTelefoon, ein Büro vom Belastingdienst (mach zuerst einen Termin) oder die Bibliothek. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
+    'c.taxes.p': "Mein Einkommen hat sich geändert. Wie melde ich das?", // nieuw, nalezen
+    'c.taxes.s': "Du bekommst einen neuen Job und verdienst jeden Monat mehr. Du bekommst huurtoeslag. Was machst du?", // nieuw, nalezen
+    'c.taxes.o1': "Melde dein neues Einkommen in Mijn toeslagen.", // nieuw, nalezen
+    'c.taxes.o2': "Warte, bis der Belastingdienst fragt.", // nieuw, nalezen
+    'c.taxes.o3': "Hör auf, deine Miete zu zahlen.", // nieuw, nalezen
+    'c.taxes.w': "Dein Zuschuss hängt davon ab, was du verdienst. Wenn du die Änderung rechtzeitig meldest, bekommst du den richtigen Betrag, und du musst später nicht viel zurückzahlen.", // nieuw, nalezen
+    'c.kiln': "Scharf, heiß und schwer", // nieuw, nalezen
+    'c.kiln.b': "In einer Fliesen- oder Glasfabrik werden die Produkte in eine Form gepresst, bekommen eine Glasur und fahren langsam durch einen langen Ofen. Nach dem Ofen müssen sie abkühlen: Fass sie nicht an, solange sie heiß sind, oder trag hitzebeständige Handschuhe. Glas und kaputte Fliesen sind sehr scharf. Trag schnittfeste Handschuhe, Armschutz und eine Schutzbrille. Fang nie eine fallende Glasplatte auf: Geh zurück. Heb Scherben mit Handfeger und Kehrblech auf, nie mit den Händen, und wirf sie in den richtigen Behälter. Glasur und Staub können schädliche Stoffe enthalten: Wasch dir die Hände, bevor du isst oder trinkst. Greif an der Presse nie hinein, solange sie läuft. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.kiln.p': "Vorsicht, Scherben! Ich hole Handfeger und Kehrblech.", // nieuw, nalezen
+    'c.kiln.s': "Eine Glasplatte rutscht aus dem Gestell und fängt an zu fallen. Was machst du?", // nieuw, nalezen
+    'c.kiln.o1': "Geh zurück, und lass sie fallen.", // nieuw, nalezen
+    'c.kiln.o2': "Fang sie mit den Händen auf.", // nieuw, nalezen
+    'c.kiln.o3': "Halte sie mit deinem Bein auf.", // nieuw, nalezen
+    'c.kiln.w': "Eine fallende Platte kann sehr tief schneiden, auch durch Handschuhe. Eine kaputte Platte kostet nur Geld.", // nieuw, nalezen
+    'c.mixlab': "Halte dich genau an das Rezept", // nieuw, nalezen
+    'c.mixlab.b': "In einer Mischhalle machst du eine Charge nach einem Rezept: welche Rohstoffe, wie viel und in welcher Reihenfolge. Wieg alles genau ab, und schreib auf, was du hinzugefügt hast, mit der Chargennummer. Nicht sicher? Frag, rate nicht. Bevor du ein Fass oder einen Sack benutzt, lies das Etikett: was darin ist, die Chargennummer und die Gefahrenzeichen. Tu nie etwas in ein Fass oder einen Sack, das nicht hineingehört. Nimm für eine Probe eine saubere Schaufel und einen sauberen Becher, und kleb sofort ein Etikett darauf. Pulver und Dampf können schädlich sein: Benutz die Absaugung, und trag, was nötig ist, wie einen Laborkittel, eine Schutzbrille, Handschuhe oder eine Maske. Bei Lebensmitteln trägst du auch ein Haarnetz und wäschst dir oft die Hände. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.mixlab.p': "Ich bin nicht sicher. Wie viel muss hinein?", // nieuw, nalezen
+    'c.mixlab.s': "Im Rezept stehen 25 Kilo. Aus Versehen gibst du 26 Kilo hinein, und es ist schon im Mischbehälter. Was machst du?", // nieuw, nalezen
+    'c.mixlab.o1': "Sag es deinem Schichtleiter, und schreib es auf.", // nieuw, nalezen
+    'c.mixlab.o2': "Sag nichts: Ein Kilo ist nicht viel.", // nieuw, nalezen
+    'c.mixlab.o3': "Nimm etwas mit der Hand heraus.", // nieuw, nalezen
+    'c.mixlab.w': "Eine falsche Menge kann die ganze Charge verderben. Wenn der Schichtleiter es rechtzeitig weiß, kann das Labor es prüfen, bevor die Charge weitergeht.", // nieuw, nalezen
   },
 };
 

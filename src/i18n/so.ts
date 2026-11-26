@@ -844,6 +844,31 @@ const lang: HelpLanguageSource = {
     's.breaks.3': "Lix maalmood oo isku xigta ayaan shaqeeyay.", // nieuw, nalezen
     'c.breaks.q': "Goorma ayay tahay nasashadaada qadada?", // nieuw, nalezen
     'c.breaks.a': "Saacadda laba iyo tobanka, nus saac.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'l.firstweeks': "Toddobaadyadaada ugu horreeya", // nieuw, nalezen
+    'w.rondleiding': "wareegga tusidda (qof ayaa ku tusa dhismaha oo dhan)", // nieuw, nalezen
+    'w.begeleider': "hagaha (saaxiibka shaqo ee kaa caawiya toddobaadyadaada ugu horreeya)", // nieuw, nalezen
+    'w.notitieboekje': "buugga yar ee xusuus-qorka", // nieuw, nalezen
+    'w.meelopen': "la socod (inaad raacdo saaxiib shaqo oo aad daawato sida uu u shaqeeyo)", // nieuw, nalezen
+    'w.onthouden': "xasuusasho", // nieuw, nalezen
+    'w.zelfstandig': "kaligaa (caawimaad la'aan)", // nieuw, nalezen
+    's.firstweeks.1': "Mar kale ma i tusi kartaa?", // nieuw, nalezen
+    's.firstweeks.2': "Maanta waxaan la socdaa Sara.", // nieuw, nalezen
+    's.firstweeks.3': "Waxaan ku qorayaa buuggayga xusuus-qorka.", // nieuw, nalezen
+    'c.firstweeks.q': "Ma xasuusataa wax walba oo wareegga tusidda ah?", // nieuw, nalezen
+    'c.firstweeks.a': "Ku dhowaad wax walba. Makhaayadda shaqadu xaggee bay ahayd mar kale?", // nieuw, nalezen
+    'l.orderpick': "Ururinta dalabaadka iyo reachtruck-ga", // nieuw, nalezen
+    'w.orderpicker': "ururiyaha dalabaadka (shaqaalaha ururiya dalabaadka; sidoo kale gaariga yar ee aad dul istaagto si aad wax uga soo qaadato meel sare)", // nieuw, nalezen
+    'w.reachtruck': "reachtruck-ga (forklift loogu talagalay khaanadaha aad u dhaadheer; fargeetadiisu hore ayay u fidaan)", // nieuw, nalezen
+    'w.picklijst': "liiska ururinta (liiska alaabta ay tahay inaad ururiso)", // nieuw, nalezen
+    'w.scannen': "iskaan gareyn", // nieuw, nalezen
+    'w.voetganger': "qofka lugaynaya (qof cagaha ku socda)", // nieuw, nalezen
+    'w.opwarmen': "diirsasho (meel diirran, kadib shaqo qabow)", // nieuw, nalezen
+    's.orderpick.1': "Shay kasta oo liiska ururinta ku jira waan iskaan gareeyaa.", // nieuw, nalezen
+    's.orderpick.2': "Dadka lugaynaya waxay ku socdaan jidka lugta.", // nieuw, nalezen
+    's.orderpick.3': "Qaboojiyaha barafka waxaan ku xirtaa dharka qabowga.", // nieuw, nalezen
+    'c.orderpick.q': "Wax yar ma kaxayn kartaa reachtruck-ga?", // nieuw, nalezen
+    'c.orderpick.a': "Maya, layguma oggola. Tababar uma lihi.", // nieuw, nalezen
   },
 };
 

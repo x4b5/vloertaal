@@ -4982,6 +4982,127 @@ const t: CultureTranslation = {
     'c.heatdust.o2': "Afuuf: way ka dhakhso badan tahay.", // nieuw, nalezen
     'c.heatdust.o3': "U daa shiftiga xiga.", // nieuw, nalezen
     'c.heatdust.w': "Afuufiddu waxay boodhka kor u kicisaa, hawada iyo sambabadaada. Maro qoyan ama mashiinka boodhka nuuga ayaa boodhka hoos u haya.", // nieuw, nalezen
+    // eight new lessons (debts, taxes, discrimination, the union, kiln, mixing lab, first weeks, order picking) (26 November 2026).
+    'l.discrimination': "Takoorid iyo cabsi-gelin", // nieuw, nalezen
+    'w.andersbehandelen': "si ka duwan ula dhaqmid (ka xun sida dadka kale loola dhaqmo)", // nieuw, nalezen
+    'w.afkomst': "asalka (dalka ama kooxda adiga ama qoyskaagu ka timaaddeen)", // nieuw, nalezen
+    'w.geloof': "diinta, iimaanka", // nieuw, nalezen
+    'w.uitschelden': "caayid (erayo xun oo qof loo sheego)", // nieuw, nalezen
+    'w.bedreigen': "u hanjabid (inaad tiraahdo qof waad dhaawici doontaa)", // nieuw, nalezen
+    'w.geweld': "rabshadda", // nieuw, nalezen
+    's.discrimination.1': "Si ka duwan ayaa la iila dhaqmaa diintayda darteed.", // nieuw, nalezen
+    's.discrimination.2': "Wuu ii hanjabayaa. Ammaan ma dareemayo.", // nieuw, nalezen
+    's.discrimination.3': "Waa la ii oggol yahay inaan maya dhaho, xitaa madaxayga.", // nieuw, nalezen
+    'c.discrimination.q': "Ma fiican tahay? Had iyo jeer way ku caayaan.", // nieuw, nalezen
+    'c.discrimination.a': "Maya, ma fiicni. Waan soo sheegayaa.", // nieuw, nalezen
+    'l.union': "Ururka shaqaalaha iyo golaha shaqaalaha", // nieuw, nalezen
+    'w.lidworden': "ku biirid, xubin noqosho", // nieuw, nalezen
+    'w.contributie': "lacagta xubinnimada (bil kasta ayaad bixisaa)", // nieuw, nalezen
+    'w.opkomenvoor': "u doodid (difaacid danaha qof)", // nieuw, nalezen
+    'w.onderhandelen': "gorgortamid (ka wada hadlid ilaa labada dhinac ay ku heshiiyaan)", // nieuw, nalezen
+    'w.loonsverhoging': "kordhinta mushaharka", // nieuw, nalezen
+    'w.ondernemingsraad': "golaha shaqaalaha (OR-ka: saaxiibo shaqo oo la doortay si ay ula hadlaan agaasimaha)", // nieuw, nalezen
+    's.union.1': "Waxaan ku biirayaa ururka shaqaalaha.", // nieuw, nalezen
+    's.union.2': "Ururka shaqaaluhu wuxuu ka gorgortamaa heshiiska wadajirka ah (cao).", // nieuw, nalezen
+    's.union.3': "Yaa ku jira golaha shaqaalaha?", // nieuw, nalezen
+    'c.union.q': "Maxaad xubin uga tahay ururka shaqaalaha?", // nieuw, nalezen
+    'c.union.a': "Way ii doodaan marka dhibaato jirto.", // nieuw, nalezen
+    'l.debthelp': "Deymaha iyo caawimaadda", // nieuw, nalezen
+    'w.herinnering': "xasuusinta (warqad: weli ma aadan bixin)", // nieuw, nalezen
+    'w.aanmaning': "xasuusinta kama dambaysta ah (bixi ka hor taariikh, haddii kale kharash dheeraad ah ayaa iman kara)", // nieuw, nalezen
+    'w.betalingsregeling': "qorshaha lacag-bixinta (deyn ayaad ku bixisaa qaybo yaryar)", // nieuw, nalezen
+    'w.deurwaarder': "deyn-ururiyaha sharciga (sarkaal deyn ururiya, badanaa kadib marka garsoore go'aamiyo)", // nieuw, nalezen
+    'w.schuldhulp': "caawimaadda deynta (caawimaad bilaash ah oo deymahaaga ah, oo ka timaadda dowladda hoose)", // nieuw, nalezen
+    'w.achterstand': "lacagta dib u dhacday (lacag ay ahayd inaad horay u bixiso)", // nieuw, nalezen
+    's.debthelp.1': "Waxaa ii timid xasuusin kama dambays ah.", // nieuw, nalezen
+    's.debthelp.2': "Ma ku bixin karaa qaybo?", // nieuw, nalezen
+    's.debthelp.3': "Waxaan rabaa caawimaad deymahayga ah.", // nieuw, nalezen
+    'c.debthelp.q': "Weli ma aadan bixin biilka.", // nieuw, nalezen
+    'c.debthelp.a': "Waa sax. Ma heli karaa qorshe lacag-bixineed?", // nieuw, nalezen
+    'l.taxes': "Canshuurta iyo kaalmooyinka lacageed", // nieuw, nalezen
+    'w.jaaropgave': "warbixinta sannadlaha ah (warqad ka timaadda loo-shaqeeyahaaga oo leh mushaharkaaga sannadka oo dhan)", // nieuw, nalezen
+    'w.blauweenvelop': "baqshadda buluugga ah (warqadaha Belastingdienst ayaa ku yimaada)", // nieuw, nalezen
+    'w.teruggave': "lacag-celinta (lacag canshuur ah oo laguu soo celiyo)", // nieuw, nalezen
+    'w.uitstel': "waqtiga dheeraadka ah (goor dambe ayaad samayn kartaa)", // nieuw, nalezen
+    'w.huurtoeslag': "kaalmada kirada (lacag ka timaadda dowladda si ay kuu caawiso inaad kirada bixiso)", // nieuw, nalezen
+    'w.belastingtelefoon': "khadka taleefanka bilaashka ah ee Belastingdienst", // nieuw, nalezen
+    's.taxes.1': "Waxaan u baahanahay warbixintayda sannadlaha ah si aan u sameeyo warbixinta canshuurta.", // nieuw, nalezen
+    's.taxes.2': "Hadda wax badan ayaan kasbadaa. Isla markiiba waan sheegayaa.", // nieuw, nalezen
+    's.taxes.3': "Belastingdienst ayaa lacag ii soo celinaysa.", // nieuw, nalezen
+    'c.taxes.q': "Baqshad buluug ah ayaa kuu taal.", // nieuw, nalezen
+    'c.taxes.a': "Mahadsanid. Isla markiiba waan furayaa.", // nieuw, nalezen
+    'l.kiln': "Foornada, quraaradda iyo alaabta dhoobada", // nieuw, nalezen
+    'w.pers': "mashiinka riixa (mashiin dhoobo ama budo u riixa qaab)", // nieuw, nalezen
+    'w.glazuur': "dahaarka dhalaalka (lakab dhalaalaya oo quraarad u eg, oo saaran jaajuur ama koob)", // nieuw, nalezen
+    'w.tunneloven': "foornada tunnelka (foorno dheer; alaabtu si tartiib ah ayay dhexdeeda u marto)", // nieuw, nalezen
+    'w.scherf': "jajabka (gabal af leh oo ka mid ah quraarad ama jaajuur jabay)", // nieuw, nalezen
+    'w.gloeiend': "kulul oo dab-casaan ah (aad u kulul oo casaan u iftiimaya)", // nieuw, nalezen
+    'w.armbeschermer': "ilaaliyaha cududda (gacmo dheer oo cududdaada ka ilaaliya goynta)", // nieuw, nalezen
+    's.kiln.1': "Jaajuurku si tartiib ah ayuu u maraa foornada tunnelka.", // nieuw, nalezen
+    's.kiln.2': "Jaajuurkan dillaac ayaa ku jira. Waa alaab la diiday.", // nieuw, nalezen
+    's.kiln.3': "Xiro ilaaliyayaasha cududda marka aad quraaradda agteeda joogto.", // nieuw, nalezen
+    'c.kiln.q': "Ma gacantayda ku soo qaadan karaa jajabka?", // nieuw, nalezen
+    'c.kiln.a': "Maya. Isticmaal xaaqin iyo majarafad.", // nieuw, nalezen
+    'l.mixlab': "Hoolka isku-darka iyo shaybaarka", // nieuw, nalezen
+    'w.batch': "dufcadda (hal tiro oo hal mar la sameeyo, hal qaacido)", // nieuw, nalezen
+    'w.afwegen': "miisaamid (inaad miisaanto inta saxda ah ee qaacidadu sheegto)", // nieuw, nalezen
+    'w.mengvat': "fuustada isku-darka (fuusto weyn oo isku-dare ku jiro)", // nieuw, nalezen
+    'w.labjas': "jaakadda shaybaarka", // nieuw, nalezen
+    'w.laboratorium': "shaybaarka (lab-ka: halkan ayaa alaabta lagu tijaabiyaa)", // nieuw, nalezen
+    'w.grondstof': "alaabta ceeriin (waxa aad alaabta ka samayso)", // nieuw, nalezen
+    's.mixlab.1': "Si sax ah u miisaan alaabta ceeriin.", // nieuw, nalezen
+    's.mixlab.2': "Waxaan qaadanayaa muunad loogu talagalay shaybaarka.", // nieuw, nalezen
+    's.mixlab.3': "Waa dufcaddee tan? Eeg calaamadda.", // nieuw, nalezen
+    'c.mixlab.q': "Dufcadda ma la oggolaaday?", // nieuw, nalezen
+    'c.mixlab.a': "Weli maya. Shaybaarka ayaa tijaabinaya muunadda.", // nieuw, nalezen
+    'c.discrimination': "Si aan cadaalad ahayn laguula dhaqmay? Ma aha qaladkaaga", // nieuw, nalezen
+    'c.discrimination.b': "Takooridu waa marka si ka duwan ama ka xun laguula dhaqmo cidda aad tahay darteed: asalkaaga, midabka maqaarkaaga, diintaada, jinsigaaga, da'daada, naafonimo ama cidda aad jeceshahay. Cabsi-gelintu waa, tusaale ahaan, taabasho aan la rabin, hadallo galmo, hanjabaad ama caayid. Labaduba shaqada laguma oggola, weligeedna ma aha qaladkaaga. Waa laguu oggol yahay inaad maya dhahdo, xitaa madaxaaga. Qor waxa dhacay, goorta, iyo cidda aragtay. La hadal madaxaaga, ama lataliyaha sirta ilaaliya (vertrouwenspersoon) haddii shirkaddaadu leedahay. Shaqadaada dibaddeeda, xafiiska ka-hortagga takoorka ee magaaladaada ayaa bilaash kuu caawiya (discriminatie.nl). College voor de Rechten van de Mens ayaa go'aan bixin kara, sidoo kale bilaash. Rabshad ama hanjabaad? Tag booliska. Haddii aad khatar ku jirto: wac 112. Macluumaad guud. Xaaladdaada gaarka ah: weydii ururka shaqaalaha, Juridisch Loket ama FairWork.", // nieuw, nalezen
+    'c.discrimination.p': "Waxaan rabaa inaan wax soo sheego. Ma kula hadli karaa si qarsoodi ah?", // nieuw, nalezen
+    'c.discrimination.s': "Saaxiib shaqo ayaa marar badan ku caaya meesha aad ka timid darteed. Kuwa kale way qoslaan. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.discrimination.o1': "Qor, oo u sheeg qof aad aaminsan tahay.", // nieuw, nalezen
+    'c.discrimination.o2': "Waxba ha odhan: waa qayb ka mid ah shaqada.", // nieuw, nalezen
+    'c.discrimination.o3': "Shaqada ka tag, oo cidna ha u sheegin sababta.", // nieuw, nalezen
+    'c.discrimination.w': "Caayidda asalkaaga darteed waa takoorid, lamana oggola. Marka aad qorto oo aad ka hadasho, qof ayaa kaa caawin kara inay joogsato.", // nieuw, nalezen
+    'c.union': "Wadajir ayaad ku xoog badan tihiin", // nieuw, nalezen
+    'c.union.b': "Ururka shaqaalaha (vakbond), tusaale ahaan FNV ama CNV, wuxuu u doodaa shaqaalaha. Wuxuu heshiisyo kula galaa loo-shaqeeyayaasha oo ku saabsan mushaharka iyo shaqada: heshiiska wadajirka ah (cao). Heshiisyo badan oo cao ah waxay khuseeyaan qof kasta oo ka shaqeeya hal qayb-shaqo, xitaa haddii aadan xubin ahayn. Xubnuhu bil kasta waxay bixiyaan lacag xubinnimo (contributie), waxayna helaan talo iyo caawimaad, tusaale ahaan dhibaato ku saabsan mushaharka ama shaqo ka eryid. Waqtiga ku biir: badanaa ururku wuxuu kaa caawiyaa oo keliya dhibaato bilaabata kadib marka aad ku biirto. Ku biiristu waa doorashadaada, loo-shaqeeyahaagana looma oggola inuu taas kugu ciqaabo. Shirkad leh 50 shaqaale ama ka badan waa inay yeelataa golaha shaqaalaha (ondernemingsraad, OR): saaxiibo shaqo oo ay shaqaaluhu doorteen. OR-ku wuxuu agaasimaha kala hadlaa, tusaale ahaan, saacadaha shaqada iyo badbaadada. Shirkad ka yar waxay yeelan kartaa wakiillo shaqaale (personeelsvertegenwoordiging). Su'aalo ma qabtaa? Weydii saaxiib shaqo oo ku jira OR-ka. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama Juridisch Loket.", // nieuw, nalezen
+    'c.union.p': "Su'aal ayaan ka qabaa jadwalada cusub. OR-ku ma wax ka qaban karaa?", // nieuw, nalezen
+    'c.union.s': "Shirkaddaadu waxay qorsheynaysaa wareegyo fiidkii ah oo aad u badan. Saaxiibo shaqo oo badan kuma faraxsana. Maxaad samayn kartaa?", // nieuw, nalezen
+    'c.union.o1': "Arrinta weydii saaxiib shaqo oo ku jira OR-ka.", // nieuw, nalezen
+    'c.union.o2': "Jooji inaad fiidkii timaaddo.", // nieuw, nalezen
+    'c.union.o3': "Waxba ha odhan: waxba isma beddeli karaan.", // nieuw, nalezen
+    'c.union.w': "OR-ku cod ayuu ku leeyahay xeerarka saacadaha shaqada. Wuxuu kala hadli karaa agaasimaha, dhammaan shaqaalaha oo wadajir ah.", // nieuw, nalezen
+    'c.debthelp': "Fur warqad kasta, oo goor hore caawimaad weydiiso", // nieuw, nalezen
+    'c.debthelp.b': "Biil miyaadan waqtigiisa bixin? Markaas marka hore waxaa kuu imanaya xasuusin (herinnering), kadibna xasuusin kama dambays ah (aanmaning). Ka hor inta aysan shirkadi kaa qaadin kharash dheeraad ah arrintan darteed, waa inay ku siisaa 14 maalmood oo aad ku bixiso. Sidaas darteed fur warqad kasta, xitaa marka aad ka baqayso. Ma awoodid inaad mar keliya wada bixiso? Wac ama qor, oo weydiiso qorshe lacag-bixineed (betalingsregeling). Deurwaarder (deyn-ururiye sharci ah) waa sarkaal deymaha ururiya, badanaa kadib marka garsoore go'aamiyo. Tusaale ahaan wuxuu qaadan karaa qayb ka mid ah mushaharkaaga, laakiin had iyo jeer waa inuu kuu daayaa lacag kugu filan nolosha. Deymo ma qabtaa? Goor hore caawimaad weydiiso, marka ay weli yar yihiin. Gemeente-du waxay bixisaa caawimaad deyn oo bilaash ah (schuldhulp). Bogga geldfit.nl waxaad ku samayn kartaa tijaabo bilaash ah, waxaadna ka heli kartaa caawimaad kuu dhow. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama Juridisch Loket.", // nieuw, nalezen
+    'c.debthelp.p': "Ma awoodo inaan wax walba mar keliya bixiyo. Ma ku bixin karaa qaybo?", // nieuw, nalezen
+    'c.debthelp.s': "Waxaa kuu timid xasuusin kama dambays ah oo ku saabsan biilka taleefankaaga. Bishan lacagta ma haysid. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.debthelp.o1': "Wac shirkadda, oo weydiiso qorshe lacag-bixineed.", // nieuw, nalezen
+    'c.debthelp.o2': "Warqadda meel dhig, oo sug.", // nieuw, nalezen
+    'c.debthelp.o3': "Si dhakhso ah lacag u amaaho adigoo isticmaalaya “hadda iibso, hadhow bixi”.", // nieuw, nalezen
+    'c.debthelp.w': "Marka aad waqtigeeda sheegto, shirkaddu badanaa way kula heshiin kartaa lacag-bixin yaryar. Warqad aad meel dhigto ma baaba'do: kharashaadku way sii kordhaan oo keliya.", // nieuw, nalezen
+    'c.taxes': "Warbixinta canshuurtaada iyo kaalmooyinkaaga lacageed", // nieuw, nalezen
+    'c.taxes.b': "Warbixinta canshuurta (aangifte) ee sannadkii hore waa in la sameeyaa kahor 1 May. Ma kuu timid warqad kaa codsanaysa inaad samayso? Markaas waa waajib inaad samayso. Mararka qaar lacag ayaa laguu soo celiyaa. Waxaad u baahan tahay warbixinta sannadlaha ah (jaaropgave) ee loo-shaqeeyahaaga. Waqti ma haysid? Waxaad codsan kartaa waqti dheeraad ah (uitstel). Kaalmooyinka lacageed (toeslagen), sida zorgtoeslag iyo huurtoeslag, waa horudhac: waxay ku xiran yihiin waxa aad sannadkan kasban doonto. Ma kasbanaysaa wax badan, mise wax kale ayaa isbeddelay? Isla markiiba ku sheeg Mijn toeslagen. Haddii aadan samayn, goor dambe waxaa laga yaabaa inaad dib u bixiso lacag badan. Ma waajib baa inaad dib u bixiso? Waxaad codsan kartaa qorshe lacag-bixineed. Caawimaad bilaash ah: BelastingTelefoon, xafiis Belastingdienst (marka hore ballan qabso) ama maktabadda. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama Juridisch Loket.", // nieuw, nalezen
+    'c.taxes.p': "Dakhligaygu wuu isbeddelay. Sidee u sheegaa?", // nieuw, nalezen
+    'c.taxes.s': "Waxaad heshay shaqo cusub, bil kastana wax badan ayaad kasbataa. Waxaad heshaa huurtoeslag. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.taxes.o1': "Dakhligaaga cusub ku sheeg Mijn toeslagen.", // nieuw, nalezen
+    'c.taxes.o2': "Sug ilaa Belastingdienst ay ku weydiiso.", // nieuw, nalezen
+    'c.taxes.o3': "Jooji bixinta kiradaada.", // nieuw, nalezen
+    'c.taxes.w': "Kaalmadaada lacageed waxay ku salaysan tahay waxa aad kasbato. Marka aad isbeddelka waqtigiisa sheegto, waxaad heshaa lacagta saxda ah, mana ahaan doonto inaad goor dambe dib u bixiso lacag badan.", // nieuw, nalezen
+    'c.kiln': "Af leh, kulul oo culus", // nieuw, nalezen
+    'c.kiln.b': "Warshadda jaajuurka ama quraaradda, alaabta waxaa lagu riixaa qaab, waxaa la mariyaa dahaarka dhalaalka, kadibna si tartiib ah ayay u martaa foorno dheer. Foornada kadib waa inay qaboobaan: ha taaban inta ay kulul yihiin, ama xiro galoofyo kulaylka u adkaysta. Quraaradda iyo jaajuurka jaban aad bay af u leeyihiin. Xiro galoofyo goynta u adkaysta, ilaaliyayaasha cududda iyo muraayadaha badbaadada. Weligaa ha qaban loox quraarad ah oo dhacaya: dib u gurso. Jajabka ku soo qaad xaaqin iyo majarafad, weligaa gacmahaaga ha ku qaadin, oo ku rid weelka saxda ah. Dahaarka dhalaalka iyo boodhku waxaa ku jiri kara walxo waxyeello leh: gacmahaaga dhaq ka hor intaadan wax cunin ama cabbin. Mashiinka riixa, weligaa gacanta ha gelin inta uu shaqaynayo. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.kiln.p': "Iska jir, jajab! Waxaan keenayaa xaaqin iyo majarafad.", // nieuw, nalezen
+    'c.kiln.s': "Loox quraarad ah ayaa ka siibtay khaanadda oo bilaabay inuu dhaco. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.kiln.o1': "Dib u gurso, oo u daa inuu dhaco.", // nieuw, nalezen
+    'c.kiln.o2': "Gacmahaaga ku qabo.", // nieuw, nalezen
+    'c.kiln.o3': "Lugtaada ku joogi.", // nieuw, nalezen
+    'c.kiln.w': "Loox dhacaya aad buu u goyn karaa, xitaa galoofyada dhexdooda. Loox jabay lacag oo keliya ayuu kharash ku yahay.", // nieuw, nalezen
+    'c.mixlab': "Si sax ah u raac qaacidada", // nieuw, nalezen
+    'c.mixlab.b': "Hoolka isku-darka, dufcad ayaad ku samaysaa qaacido: alaabta ceeriin ee la isticmaalayo, inta le'eg, iyo kala horreynta. Wax walba si sax ah u miisaan, oo qor waxa aad ku dartay, iyo lambarka dufcadda. Ma hubtid? Weydii, ha qiyaasin. Ka hor intaadan isticmaalin fuusto ama kiish, akhri calaamadda: waxa ku jira, lambarka dufcadda iyo calaamadaha khatarta. Weligaa fuusto ama kiish ha ku ridin wax aan ku habboonayn. Muunad, isticmaal qaado nadiif ah iyo weel nadiif ah, oo isla markiiba calaamad ku dheji. Budada iyo uumigu waxyeello ayay yeelan karaan: isticmaal nuugaha, oo xiro waxa loo baahan yahay, sida jaakadda shaybaarka, muraayadaha badbaadada, galoofyo ama maaskaro. Shaqada cuntada, sidoo kale waxaad xirataa shabagga timaha, oo gacmahaaga marar badan ayaad dhaqdaa. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.mixlab.p': "Ma hubo. Immisa ayaa la gelinayaa?", // nieuw, nalezen
+    'c.mixlab.s': "Qaacidadu waxay leedahay 25 kiilo. Qalad ahaan waxaad gelisay 26 kiilo, wayna ku jirtaa fuustada isku-darka. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.mixlab.o1': "U sheeg hoggaamiyaha wareegga shaqada, oo qor.", // nieuw, nalezen
+    'c.mixlab.o2': "Waxba ha odhan: hal kiilo ma badna.", // nieuw, nalezen
+    'c.mixlab.o3': "Gacanta ku soo saar wax yar.", // nieuw, nalezen
+    'c.mixlab.w': "Hal qiyaas oo khaldan ayaa dufcadda oo dhan kharribi karta. Marka hoggaamiyaha wareegga shaqadu waqtigiisa ogaado, shaybaarku wuu hubin karaa ka hor inta dufcaddu aysan sii socon.", // nieuw, nalezen
   },
 };
 

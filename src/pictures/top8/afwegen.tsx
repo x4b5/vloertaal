@@ -31,14 +31,17 @@ export default {
       </Shade>
       <rect x="36" y="58" width="40" height="5" rx="2.5" fill={PAL.blueLight} />
       <Shine d="M44 68V86" width={2.8} opacity={0.5} />
-      {/* The hand and scoop, pouring */}
-      <Move kind="turn" turn={28} at={[26, 38]}>
-        <path d="M47 42V58" stroke={PAL.paperShade} strokeWidth="7" />
-        <path d="M47 42V58" stroke={PAL.white} strokeWidth="3.4" />
-        <path d="M24 37H38" stroke={PAL.slate} strokeWidth="5" />
-        <path d="M34 30L52 33Q55 40 51 45L36 45Z" fill={PAL.steel} />
-        <path d="M36 45L51 45Q53 43 53 40L38 38Z" fill={PAL.mist} />
-        <Hand pose="fist" x={8} y={37} rotate={90} scale={0.5} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+      {/* The powder falling from the scoop into the bucket */}
+      <path d="M49 52V60" stroke={PAL.paperShade} strokeWidth="7" />
+      <path d="M49 52V60" stroke={PAL.white} strokeWidth="3.4" />
+      {/* The hand and scoop, tipped to pour */}
+      <Move kind="turn" turn={-32} at={[26, 38]}>
+        <g transform="rotate(22 26 38)">
+          <path d="M26 37H38" stroke={PAL.slate} strokeWidth="5" />
+          <path d="M34 30L52 33Q55 40 51 45L36 45Z" fill={PAL.steel} />
+          <path d="M36 45L51 45Q53 43 53 40L38 38Z" fill={PAL.mist} />
+          <Hand pose="fist" x={6} y={37} rotate={90} scale={0.6} skin={SKIN.amina} sleeve={[PAL.green, PAL.greenShade]} />
+        </g>
       </Move>
     </g>
   ),

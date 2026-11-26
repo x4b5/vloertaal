@@ -30,10 +30,10 @@ export default {
         <path d="M107 46L100 41V62L107 72Z" fill={PAL.blueShade} />
         <Arrow from={[90, 92]} to={[83, 64]} color={PAL.sky} width={6} head={10} />
         {/* Amina, pointing along the hall, and Bram looking there */}
-        {looking(id, 'bram', 52, 126, 0.5, [1, -0.6])}
-        {looking(id, 'amina', 24, 124, 0.52, [1, -0.6])}
-        <path d="M34 98L50 76" stroke={PAL.green} strokeWidth="8" />
-        <Hand pose="point" x={51} y={78} rotate={38} scale={0.44} skin={SKIN.amina} />
+        {looking(id, 'bram', 22, 124, 0.5, [1, -0.6])}
+        {looking(id, 'amina', 50, 126, 0.52, [1, -0.4])}
+        <path d="M62 102L74 82" stroke={PAL.green} strokeWidth="8" />
+        <Hand pose="point" x={75} y={84} rotate={34} scale={0.44} skin={SKIN.amina} />
       </g>
     );
   },

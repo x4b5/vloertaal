@@ -181,6 +181,12 @@ const t: CultureTranslation = {
     // "Operator in de procesindustrie" (23 November 2026).
     'kjn.u.process.1': "Ich kann sagen, dass der Druck zu hoch ist.", // nieuw, nalezen
     'kjn.u.process.2': "Ich kann bei der Übergabe erzählen, was passiert ist.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'kjn.u.firstday.3': "Ich kann jemanden bitten, es mir noch einmal zu zeigen.", // nieuw, nalezen
+    'kjn.u.rights.3': "Ich kann sagen, dass ich anders behandelt werde.", // nieuw, nalezen
+    'kjn.u.money.3': "Ich kann um eine Ratenzahlung bitten.", // nieuw, nalezen
+    'kjn.u.warehouse.3': "Ich kann sagen, dass ich ohne Schulung keinen Schubmaststapler fahre.", // nieuw, nalezen
+    'kjn.u.process.3': "Ich kann fragen, wie viel von einem Rohstoff hinein muss.", // nieuw, nalezen
   },
 };
 
