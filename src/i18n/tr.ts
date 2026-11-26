@@ -844,6 +844,31 @@ const lang: HelpLanguageSource = {
     's.breaks.3': "Art arda altı gün çalıştım.", // nieuw, nalezen
     'c.breaks.q': "Öğle molan ne zaman?", // nieuw, nalezen
     'c.breaks.a': "Saat on ikide, yarım saat.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'l.firstweeks': "İlk haftaların", // nieuw, nalezen
+    'w.rondleiding': "tanıtım turu (biri sana binayı gezdirir)", // nieuw, nalezen
+    'w.begeleider': "rehber (ilk haftalarında sana yardım eden iş arkadaşı)", // nieuw, nalezen
+    'w.notitieboekje': "not defteri", // nieuw, nalezen
+    'w.meelopen': "bir iş arkadaşına eşlik etmek (ve nasıl çalıştığını izlemek)", // nieuw, nalezen
+    'w.onthouden': "hatırlamak, aklında tutmak", // nieuw, nalezen
+    'w.zelfstandig': "tek başına (yardım almadan)", // nieuw, nalezen
+    's.firstweeks.1': "Bir kez daha gösterir misin?", // nieuw, nalezen
+    's.firstweeks.2': "Bugün Sara’ya eşlik ediyorum.", // nieuw, nalezen
+    's.firstweeks.3': "Bunu not defterime yazıyorum.", // nieuw, nalezen
+    'c.firstweeks.q': "Turdan her şeyi hatırlıyor musun?", // nieuw, nalezen
+    'c.firstweeks.a': "Neredeyse her şeyi. Yemekhane neredeydi?", // nieuw, nalezen
+    'l.orderpick': "Sipariş toplama ve reach truck", // nieuw, nalezen
+    'w.orderpicker': "sipariş toplayıcı (siparişleri toplayan çalışan; ayrıca yüksekten ürün almak için üzerinde durduğun küçük araç)", // nieuw, nalezen
+    'w.reachtruck': "reach truck (çok yüksek raflar için bir forklift; çatalları öne doğru uzanır)", // nieuw, nalezen
+    'w.picklijst': "toplama listesi (toplaman gereken ürünlerin listesi)", // nieuw, nalezen
+    'w.scannen': "okutmak, taramak", // nieuw, nalezen
+    'w.voetganger': "yaya (yürüyen kişi)", // nieuw, nalezen
+    'w.opwarmen': "ısınmak (soğukta çalıştıktan sonra sıcak bir yerde)", // nieuw, nalezen
+    's.orderpick.1': "Toplama listesindeki her ürünü okutuyorum.", // nieuw, nalezen
+    's.orderpick.2': "Yayalar yaya yolunda yürür.", // nieuw, nalezen
+    's.orderpick.3': "Dondurucu odada termal kıyafet giyiyorum.", // nieuw, nalezen
+    'c.orderpick.q': "Biraz reach truck’ı kullanabilir misin?", // nieuw, nalezen
+    'c.orderpick.a': "Hayır, buna iznim yok. Bunun için eğitimim yok.", // nieuw, nalezen
   },
 };
 

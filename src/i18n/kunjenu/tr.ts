@@ -181,6 +181,12 @@ const t: CultureTranslation = {
     // "Operator in de procesindustrie" (23 November 2026).
     'kjn.u.process.1': "Basıncın çok yüksek olduğunu söyleyebilirim.", // nieuw, nalezen
     'kjn.u.process.2': "Devir teslimde ne olduğunu anlatabilirim.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'kjn.u.firstday.3': "Birinden bunu tekrar göstermesini isteyebilirim.", // nieuw, nalezen
+    'kjn.u.rights.3': "Bana farklı davranıldığını söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.money.3': "Bir ödeme planı isteyebilirim.", // nieuw, nalezen
+    'kjn.u.warehouse.3': "Eğitim almadan reach truck kullanmadığımı söyleyebilirim.", // nieuw, nalezen
+    'kjn.u.process.3': "Bir hammaddeden ne kadar girmesi gerektiğini sorabilirim.", // nieuw, nalezen
   },
 };
 

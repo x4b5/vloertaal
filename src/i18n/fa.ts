@@ -841,6 +841,31 @@ const lang: HelpLanguageSource = {
     's.breaks.3': "شش روز پشت سر هم کار کرده‌ام.", // nieuw, nalezen
     'c.breaks.q': "استراحت ناهارت کی است؟", // nieuw, nalezen
     'c.breaks.a': "ساعت دوازده، نیم ساعت.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'l.firstweeks': "هفته‌های اولت", // nieuw, nalezen
+    'w.rondleiding': "بازدید آشنایی (کسی ساختمان را به تو نشان می‌دهد)", // nieuw, nalezen
+    'w.begeleider': "راهنما (همکاری که در هفته‌های اول کمکت می‌کند)", // nieuw, nalezen
+    'w.notitieboekje': "دفترچهٔ یادداشت", // nieuw, nalezen
+    'w.meelopen': "همراه یک همکار رفتن (و دیدن اینکه چطور کار می‌کند)", // nieuw, nalezen
+    'w.onthouden': "به خاطر سپردن", // nieuw, nalezen
+    'w.zelfstandig': "مستقل (بدون کمک)", // nieuw, nalezen
+    's.firstweeks.1': "می‌شود یک بار دیگر نشانم بدهی؟", // nieuw, nalezen
+    's.firstweeks.2': "امروز همراه سارا می‌روم.", // nieuw, nalezen
+    's.firstweeks.3': "آن را در دفترچهٔ یادداشتم می‌نویسم.", // nieuw, nalezen
+    'c.firstweeks.q': "همه چیزِ بازدید آشنایی یادت هست؟", // nieuw, nalezen
+    'c.firstweeks.a': "تقریباً همه چیز. غذاخوری کجا بود؟", // nieuw, nalezen
+    'l.orderpick': "جمع‌آوری سفارش و ریچ‌تراک", // nieuw, nalezen
+    'w.orderpicker': "جمع‌کنندهٔ سفارش (کارگری که سفارش‌ها را جمع می‌کند؛ همچنین وسیلهٔ کوچکی که رویش می‌ایستی تا از بالا کالا برداری)", // nieuw, nalezen
+    'w.reachtruck': "ریچ‌تراک (لیفتراکی برای قفسه‌های خیلی بلند؛ شاخک‌هایش جلو می‌روند)", // nieuw, nalezen
+    'w.picklijst': "فهرست برداشت (فهرست کالاهایی که باید جمع کنی)", // nieuw, nalezen
+    'w.scannen': "اسکن کردن", // nieuw, nalezen
+    'w.voetganger': "عابر پیاده (کسی که پیاده است)", // nieuw, nalezen
+    'w.opwarmen': "گرم شدن (در یک جای گرم، بعد از کار در سرما)", // nieuw, nalezen
+    's.orderpick.1': "هر کالای فهرست برداشت را اسکن می‌کنم.", // nieuw, nalezen
+    's.orderpick.2': "عابران پیاده روی مسیر عابر راه می‌روند.", // nieuw, nalezen
+    's.orderpick.3': "در اتاق انجماد لباس گرم می‌پوشم.", // nieuw, nalezen
+    'c.orderpick.q': "می‌توانی یک لحظه با ریچ‌تراک کار کنی؟", // nieuw, nalezen
+    'c.orderpick.a': "نه، اجازه ندارم. برایش آموزش ندیده‌ام.", // nieuw, nalezen
   },
 };
 

@@ -182,6 +182,12 @@ const t: CultureTranslation = {
     // "Operator in de procesindustrie" (23 November 2026).
     'kjn.u.process.1': "می‌توانم بگویم که فشار خیلی بالاست.", // nieuw, nalezen
     'kjn.u.process.2': "می‌توانم موقع تحویل شیفت تعریف کنم که چه اتفاقی افتاده.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'kjn.u.firstday.3': "می‌توانم از کسی بخواهم دوباره نشانم بدهد.", // nieuw, nalezen
+    'kjn.u.rights.3': "می‌توانم بگویم که با من رفتار متفاوتی می‌شود.", // nieuw, nalezen
+    'kjn.u.money.3': "می‌توانم قسط‌بندی بخواهم.", // nieuw, nalezen
+    'kjn.u.warehouse.3': "می‌توانم بگویم که بدون آموزش با ریچ‌تراک کار نمی‌کنم.", // nieuw, nalezen
+    'kjn.u.process.3': "می‌توانم بپرسم چقدر از یک مادهٔ اولیه باید داخلش برود.", // nieuw, nalezen
   },
 };
 
