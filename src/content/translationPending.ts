@@ -12,20 +12,36 @@ import { workUnits } from './work';
  * lessons (23 November 2026; translated the same day). And the four lessons of "Veiligheid op het
  * werk" and the VOG lesson of "Werken via een uitzendbureau" (23 November 2026; translated the same day).
  * And the four lessons of "Operator in de procesindustrie" (23 November 2026; translated the same day).
+ * Again from the eight new lessons of 26 November 2026 (below).
  */
-export const TRANSLATION_PENDING_LESSONS: readonly string[] = [];
+export const TRANSLATION_PENDING_LESSONS: readonly string[] = [
+  // The eight new lessons of 26 November 2026, in existing units: debts and tax (Geld en post),
+  // discrimination and the union (Regels en rechten), the kiln and the mixing hall (Operator in de
+  // procesindustrie; all three in work.ts topEight), the first weeks (Eerste werkdag) and order
+  // picking (In het magazijn; both in curriculum.ts). Translations to follow.
+  'debthelp', 'taxes', 'discrimination', 'union', 'kiln', 'mixlab', 'firstweeks', 'orderpick',
+];
 
 /**
  * The words of the pending lessons of curriculum.ts ("Tijd en rooster", "Als het misgaat"): the
  * words of work.ts are found by their lesson below, but this file cannot load curriculum.ts (it loads
  * this one), so they are listed here.
  */
-const PENDING_CURRICULUM_WORDS: readonly string[] = [];
+const PENDING_CURRICULUM_WORDS: readonly string[] = [
+  'w.rondleiding', 'w.begeleider', 'w.notitieboekje', 'w.meelopen', 'w.onthouden', 'w.zelfstandig',
+  'w.orderpicker', 'w.reachtruck', 'w.picklijst', 'w.scannen', 'w.voetganger', 'w.opwarmen',
+];
+
+/**
+ * "Kun je nu" lines of units that are translated, added with pending lessons (src/content/kunJeNu.ts):
+ * the third line of five units, for the eight new lessons of 26 November 2026.
+ */
+const PENDING_KJN: readonly string[] = ['kjn.u.firstday.3', 'kjn.u.rights.3', 'kjn.u.money.3', 'kjn.u.warehouse.3', 'kjn.u.process.3'];
 
 /** Units whose title waits for its translations too. */
 const PENDING_UNITS: readonly string[] = [];
 
-const pendingIds = new Set<string>([...PENDING_UNITS, ...PENDING_CURRICULUM_WORDS]);
+const pendingIds = new Set<string>([...PENDING_UNITS, ...PENDING_CURRICULUM_WORDS, ...PENDING_KJN]);
 for (const l of workUnits.flatMap((u) => u.lessons)) {
   if (!TRANSLATION_PENDING_LESSONS.includes(l.id.slice(2))) continue;
   pendingIds.add(l.id);

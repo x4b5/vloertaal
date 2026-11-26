@@ -4422,10 +4422,218 @@ const processTips: CultureTip[] = [
   ),
 ];
 
+/**
+ * The tips of the eight new lessons of 26 November 2026 that are in ./work.ts (topEight): debts and
+ * tax and allowances (Geld en post), discrimination and the union (Regels en rechten), and the kiln
+ * and the mixing hall (Operator in de procesindustrie). The four rights tips close with ADVICE_LINE
+ * (c.discrimination: ABUSE_LINE, the employer or a boss may be the problem) and each have a section
+ * in docs/juridische-check.md; the two plant tips are about working safely (HOUSE_LINE), with their
+ * facts in the section "Acht nieuwe lessen" there. No amounts. The four rights tips are about the
+ * Netherlands (BE_LESSON_TODO in src/content/taalBe).
+ */
+const topEightTips: CultureTip[] = [
+  // ⚖️ check: First a reminder (herinnering), then a final reminder (aanmaning) ⚖️ (no law that names
+  // them: the usual steps; for a consumer the creditor must send one reminder with 14 days to pay
+  // before collection costs may be charged: BW 6:96 lid 6, the "14-dagenbrief"; rijksoverheid.nl
+  // "Wanneer mag een schuldeiser een incassobureau inschakelen?").
+  // ⚖️ check: Ask for a payment plan (betalingsregeling) ⚖️ (no right to one: you can ask; many
+  // creditors offer one; rijksoverheid.nl "schulden"; "ask" on purpose).
+  // ⚖️ check: A deurwaarder collects debts, often after a judge has decided; he can take part of your
+  // pay, but must always leave you enough to live on ⚖️ (Gerechtsdeurwaarderswet art. 2; executoriale
+  // titel: a vonnis, or a dwangbevel of the Belastingdienst or the CJIB without a judge, hence
+  // "often"; loonbeslag Rv art. 718 e.v.; beslagvrije voet Rv art. 475b-475e, Wet vereenvoudiging
+  // beslagvrije voet, since 1 January 2021; rijksoverheid.nl "beslagvrije voet").
+  // ⚖️ check: The gemeente gives free debt help ⚖️ (Wet gemeentelijke schuldhulpverlening art. 2: every
+  // gemeente offers schuldhulpverlening to its residents; free of charge in practice;
+  // rijksoverheid.nl "schuldhulpverlening"). Geldfit: a free test and help near you (geldfit.nl; the
+  // same row as h.geldfit in src/content/regels/help.ts).
+  tipFor(
+    'debthelp',
+    '📮',
+    'Open every letter, and ask for help early',
+    'Did you not pay a bill in time? Then you first get a reminder (herinnering), and later a final reminder (aanmaning). Before a company may charge you extra costs for this, it must give you 14 days to pay. So open every letter, also when you are afraid of it. Cannot pay all at once? Call or write, and ask for a payment plan (betalingsregeling). A deurwaarder (bailiff) is an official who collects debts, often after a judge has decided. He can, for example, take part of your pay, but he must always leave you enough to live on. Debts? Ask for help early, when they are still small. The gemeente gives free debt help (schuldhulp). On geldfit.nl you can do a free test and find help near you.',
+    ['Ik kan niet alles in één keer betalen. Kan ik in delen betalen?', 'I cannot pay everything at once. Can I pay in parts?'],
+    'You get a final reminder for your phone bill. You do not have the money this month. What do you do?',
+    [
+      'Call the company, and ask for a payment plan.',
+      'Put the letter away, and wait.',
+      'Borrow money quickly with buy now, pay later.',
+    ],
+    'When you say it in time, the company can often agree on small payments. A letter you put away does not go away: the costs only grow.',
+    ADVICE_LINE,
+  ),
+  // ⚖️ check: The tax return (aangifte inkomstenbelasting) for last year: before 1 May; you can ask for
+  // more time (uitstel) ⚖️ (AWR art. 8 en 9 (the term is set by the inspector; check); belastingdienst.nl "Aangifte doen": "voor 1 mei";
+  // uitstel aanvragen, belastingdienst.nl; the same date as c.letters and c.letters.a).
+  // ⚖️ check: A letter that asks you to do the tax return: then you must ⚖️ (AWR art. 8 lid 1: wie
+  // wordt uitgenodigd, is verplicht aangifte te doen). Sometimes you get money back ⚖️ (teruggave:
+  // belastingdienst.nl; also without an invitation you may file, for example for a refund).
+  // ⚖️ check: The jaaropgave from your employer ⚖️ (the employer gives it every year: Wet op de loonbelasting
+  // 1964 and the Uitvoeringsregeling loonbelasting 2011 (check the article); belastingdienst.nl "jaaropgaaf"; in the
+  // vooraf ingevulde aangifte the data are often already there).
+  // ⚖️ check: Toeslagen are an advance on what you will earn this year; pass on changes right away in
+  // Mijn toeslagen; else you may have to pay back ⚖️ (Awir art. 16 (voorschot), art. 25 (wijzigingen
+  // doorgeven, binnen 4 weken; no number in the tip), art. 26 (terugvordering); belastingdienst.nl
+  // "Ik krijg een voorschotbeschikking", "Waarom moet ik toeslag terugbetalen?", "Wijzigingen
+  // doorgeven" via Mijn toeslagen or the app Toeslagen; toeslagen still exist in 2026:
+  // belastingdienst.nl "Wat verandert er in 2026 voor uw toeslagen?").
+  // ⚖️ check: Must you pay back? You can ask for a payment plan ⚖️ (Awir art. 28 / Invorderingswet;
+  // Handvest voor toeslagontvangers 2026: a standard payment plan, and a personal one when that
+  // leaves too little to live on; belastingdienst.nl "Betalingsregeling toeslagen").
+  // ⚖️ check: Free help: the BelastingTelefoon, a Belastingdienst office by appointment, the library
+  // ⚖️ (belastingdienst.nl/hulp "Ik heb hulp nodig bij mijn belastingaangifte": free, by phone or at
+  // a place near you, after an appointment through the BelastingTelefoon; rijksoverheid.nl "Kan ik
+  // hulp krijgen om online mijn belastingen en toeslagen te regelen?": many libraries help, often at
+  // a walk-in hour (Informatiepunt Digitale Overheid)).
+  tipFor(
+    'taxes',
+    '📩',
+    'Your tax return and your allowances',
+    'The tax return (aangifte) for last year must be done before 1 May. Did you get a letter that asks you to do it? Then you must. Sometimes you get money back. You need the annual statement (jaaropgave) from your employer. No time? You can ask for more time (uitstel). Allowances (toeslagen), like zorgtoeslag and huurtoeslag, are an advance: they depend on what you will earn this year. Do you earn more, or does something else change? Pass it on right away in Mijn toeslagen. If you do not, you may have to pay a lot back later. Must you pay back? You can ask for a payment plan. Free help: the BelastingTelefoon, a Belastingdienst office (make an appointment first) or the library.',
+    ['Mijn inkomen is veranderd. Hoe geef ik dat door?', 'My income has changed. How do I pass that on?'],
+    'You get a new job and earn more each month. You get huurtoeslag. What do you do?',
+    [
+      'Pass on your new income in Mijn toeslagen.',
+      'Wait until the Belastingdienst asks.',
+      'Stop paying your rent.',
+    ],
+    'Your allowance is based on what you earn. When you pass on the change in time, you get the right amount, and you do not have to pay a lot back later.',
+    ADVICE_LINE,
+  ),
+  // ⚖️ check: Discrimination: being treated differently or worse because of who you are: origin, skin
+  // colour, religion, gender, age, a disability or who you love ⚖️ (Grondwet art. 1; Algemene wet
+  // gelijke behandeling art. 1 en 5 (godsdienst, levensovertuiging, ras, geslacht, nationaliteit,
+  // seksuele gerichtheid, ...); Wet gelijke behandeling op grond van leeftijd bij de arbeid; Wet
+  // gelijke behandeling op grond van handicap of chronische ziekte; mensenrechten.nl).
+  // ⚖️ check: Intimidation, for example unwanted touching, sexual remarks, threats or calling names; not
+  // allowed at work ⚖️ (Arbowet art. 1 lid 3 onder e en art. 3 lid 2: psychosociale arbeidsbelasting,
+  // ongewenste omgangsvormen (seksuele intimidatie, agressie en geweld, pesten, discriminatie); AWGB
+  // art. 1a (seksuele intimidatie); nlarbeidsinspectie.nl "Ongewenst gedrag").
+  // ⚖️ check: The vertrouwenspersoon, if your company has one ⚖️ (not compulsory in November 2026: the
+  // initiatiefwet 35592 "verplichtstelling vertrouwenspersoon" passed the Tweede Kamer on 23 May 2023
+  // and is still before the Eerste Kamer (eerstekamer.nl/wetsvoorstel/35592); the same "if your
+  // company has one" as c.respect and c.boundaries).
+  // ⚖️ check: The anti-discrimination service in your town helps for free (discriminatie.nl) ⚖️ (Wet
+  // gemeentelijke antidiscriminatievoorzieningen art. 1 en 2: every gemeente gives access to one;
+  // the same row as h.discriminatie in src/content/regels/help.ts).
+  // ⚖️ check: The College voor de Rechten van de Mens can give a judgement, for free ⚖️ (Wet College
+  // voor de rechten van de mens art. 10 en 13; mensenrechten.nl "Oordeel aanvragen": free, no lawyer
+  // needed; the judgement is not binding, the tip says only "a judgement").
+  // ⚖️ check: Violence or a threat: the police; in danger 112 ⚖️ (Sr art. 285 (bedreiging) and 300
+  // (mishandeling); politie.nl "aangifte doen"; 112 for danger now).
+  // ⚖️ check: You may say no, also to your boss ⚖️ (advice; no instruction to accept unwanted behaviour
+  // can be lawful: BW 7:611 goed werkgeverschap, Arbowet art. 3 lid 2; "may say no" is about
+  // unwanted behaviour, as the tip says).
+  tipFor(
+    'discrimination',
+    '📣',
+    'Treated unfairly? It is not your fault',
+    'Discrimination is when you are treated differently or worse because of who you are: your origin, skin colour, religion, gender, age, a disability or who you love. Intimidation is, for example, unwanted touching, sexual remarks, threats or calling you names. Both are not allowed at work, and it is never your fault. You may say no, also to your boss. Write down what happened, when, and who saw it. Talk to your supervisor, or to the vertrouwenspersoon if your company has one. Outside your work, the anti-discrimination service in your town helps for free (discriminatie.nl). The College voor de Rechten van de Mens can give a judgement, also for free. Violence or a threat? Go to the police. In danger: call 112.',
+    ['Ik wil iets melden. Kan ik in vertrouwen met u praten?', 'I want to report something. Can I talk to you in confidence?'],
+    'A colleague often calls you names because of where you come from. Others laugh. What do you do?',
+    [
+      'Write it down, and tell someone you trust.',
+      'Say nothing: it is part of the job.',
+      'Quit, and tell nobody why.',
+    ],
+    'Calling names because of your origin is discrimination, and it is not allowed. When you write it down and talk about it, someone can help you make it stop.',
+    ABUSE_LINE,
+  ),
+  // ⚖️ check: A union (for example FNV or CNV) makes the cao with employers ⚖️ (Wet op de cao art. 1;
+  // fnv.nl, cnv.nl; the same names as h.vakbond).
+  // ⚖️ check: Many cao's count for everyone in a sector, also when you are not a member ⚖️ (Wet AVV:
+  // algemeen verbindend verklaring by the minister; and an employer bound by a cao usually applies
+  // it to all workers (Wet op de cao art. 14); rijksoverheid.nl "cao"; "many" on purpose).
+  // ⚖️ check: Members pay a fee (contributie) and get advice and help; often only with a problem that
+  // starts after you join ⚖️ (no law: the statutes of the unions; fnv.nl "juridische hulp": help with
+  // a problem that arose after the start of your membership; "often" on purpose).
+  // ⚖️ check: Joining is your choice; your employer may not punish you for it ⚖️ (freedom of
+  // association: Grondwet art. 8, EVRM art. 11, ESH art. 5, ILO-verdragen 87 en 98; opzegverbod
+  // wegens lidmaatschap van een vakvereniging: BW 7:670 lid 5).
+  // ⚖️ check: A company with 50 or more workers must have a works council (OR), chosen by the workers
+  // ⚖️ (WOR art. 2 lid 1 (50 or more persons), art. 6 en 9 (elections)); it talks with the director
+  // about, for example, working hours and safety ⚖️ (WOR art. 24, 27 lid 1 onder b (arbeids- en
+  // rusttijden) en onder d (arbo)); a smaller company can have a personeelsvertegenwoordiging ⚖️
+  // (WOR art. 35b en 35c: 10 to 50 workers, voluntary, or compulsory when most workers ask for it;
+  // "can" on purpose).
+  tipFor(
+    'union',
+    '🗳️',
+    'Together you stand stronger',
+    'A union (vakbond), for example FNV or CNV, stands up for workers. It makes agreements with employers about pay and work: the cao. Many cao’s count for everyone in a sector, also when you are not a member. Members pay a fee (contributie) every month, and get advice and help, for example with a problem about pay or dismissal. Join in time: often the union only helps with a problem that starts after you join. Joining is your own choice, and your employer may not punish you for it. A company with 50 or more workers must have a works council (ondernemingsraad, OR): colleagues chosen by the workers. The OR talks with the director about, for example, working hours and safety. A smaller company can have a staff council (personeelsvertegenwoordiging). Questions? Ask a colleague in the OR.',
+    ['Ik heb een vraag over de nieuwe roosters. Kan de OR daar iets mee?', 'I have a question about the new rosters. Can the OR do something with it?'],
+    'Your company plans many more evening shifts. Many colleagues are unhappy. What can you do?',
+    [
+      'Ask a colleague in the OR about it.',
+      'Stop coming in the evening.',
+      'Say nothing: nothing can change.',
+    ],
+    'The OR has a say in rules about working hours. It can talk about them with the director, for all the workers together.',
+    ADVICE_LINE,
+  ),
+  // How the press, the kiln and the sorting are done differs per plant: HOUSE_LINE.
+  // ⚖️ check: Products from the kiln must cool down; do not touch them hot, or wear heat-resistant gloves
+  // ⚖️ (Arbobesluit hoofdstuk 7 (hot parts) and 8.1 (PBM); the RI&E, Arbowet art. 5).
+  // ⚖️ check: Glass and broken tiles are sharp: cut-resistant gloves, arm guards and safety glasses ⚖️
+  // (Arbobesluit art. 8.1 en 8.2: PBM where the risk cannot be removed otherwise, given by the
+  // employer; the Arbocatalogus of the glass and ceramics branches; which PBM: per plant).
+  // ⚖️ check: Never catch a falling plate: step back ⚖️ (no law: the usual safety instruction in glass
+  // handling, in the arbocatalogus of the glass branch and the company's work instructions; check).
+  // ⚖️ check: Shards with a brush and dustpan, in the right bin ⚖️ (advice: the RI&E and the company's
+  // waste rules).
+  // ⚖️ check: Glaze and dust can hold harmful substances: wash your hands before you eat ⚖️ (glazes can
+  // hold lead or other metals and quartz; Arbobesluit art. 4.2 and the hygiene measures of the RI&E (no eating
+  // where you work with dangerous substances; check the article); arboportaal.nl "Gevaarlijke stoffen"; the quartz dust itself is
+  // in c.heatdust).
+  // ⚖️ check: At the press, never reach in while it runs ⚖️ (Arbobesluit art. 7.7 en 7.10, as c.plantfault).
+  tipFor(
+    'kiln',
+    '🦾',
+    'Sharp, hot and heavy',
+    'In a tile or glass plant, the products are pressed into a shape, get a glaze, and go slowly through a long kiln. After the kiln they must cool down: do not touch them while they are hot, or wear heat-resistant gloves. Glass and broken tiles are very sharp. Wear cut-resistant gloves, arm guards and safety glasses. Never catch a falling glass plate: step back. Pick up shards with a brush and dustpan, never with your hands, and put them in the right bin. Glaze and dust can hold harmful substances: wash your hands before you eat or drink. At the press, never reach in while it runs.',
+    ['Pas op, scherven! Ik haal stoffer en blik.', 'Watch out, shards! I will get a brush and dustpan.'],
+    'A glass plate slips out of the rack and starts to fall. What do you do?',
+    [
+      'Step back, and let it fall.',
+      'Catch it with your hands.',
+      'Stop it with your leg.',
+    ],
+    'A falling plate can cut very deep, also through gloves. A broken plate only costs money.',
+    HOUSE_LINE,
+  ),
+  // The recipe, the batch numbers and the PBM differ per plant: HOUSE_LINE.
+  // ⚖️ check: Weigh exactly, write down what you added with the batch number; not sure: ask ⚖️ (no law
+  // as such: the quality system of the plant (GMP, ISO 9001) and, in food, traceability: Verordening
+  // (EG) 178/2002 art. 18 and HACCP (Verordening (EG) 852/2004 art. 5); "ask, do not guess" is advice).
+  // ⚖️ check: Read the label of a drum or a bag: what is in it, the batch number and the danger signs ⚖️
+  // (CLP: Verordening (EG) 1272/2008 art. 17 en 18 (the label with the hazard pictograms); Arbobesluit
+  // art. 4.2a; the same pictograms as c.substances).
+  // ⚖️ check: Never put something in a drum or a bag that does not belong in it ⚖️ (advice: mixing
+  // substances can react (c.cleansafe, c.substances); the RI&E).
+  // ⚖️ check: Powder and vapour can be harmful: extraction, and the PBM that is needed ⚖️ (Arbobesluit
+  // art. 4.2 en 4.4 (first at the source, a mask last) and 8.1; in food also hygiene: Verordening (EG)
+  // 852/2004 bijlage II hoofdstuk VIII (personal hygiene, protective clothing)).
+  tipFor(
+    'mixlab',
+    '🥼',
+    'Follow the recipe exactly',
+    'In a mixing hall you make a batch by a recipe: which raw materials, how much, and in which order. Weigh everything exactly, and write down what you added, with the batch number. Not sure? Ask, do not guess. Before you use a drum or a bag, read the label: what is in it, the batch number and the danger signs. Never put something in a drum or a bag that does not belong in it. For a sample, use a clean scoop and a clean pot, and put a label on it at once. Powder and vapour can be harmful: use the extraction, and wear what is needed, like a lab coat, goggles, gloves or a mask. In food you also wear a hairnet and wash your hands often.',
+    ['Ik weet het niet zeker. Hoeveel moet erin?', 'I am not sure. How much must go in?'],
+    'The recipe says 25 kilo. By mistake you put in 26 kilo, and it is already in the mixing tank. What do you do?',
+    [
+      'Tell your shift leader, and write it down.',
+      'Say nothing: one kilo is not much.',
+      'Take some out by hand.',
+    ],
+    'One wrong amount can spoil the whole batch. When the shift leader knows it in time, the lab can check it before the batch goes on.',
+    HOUSE_LINE,
+  ),
+];
+
 const lessonOrder = [doUnit, toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit, dataUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips, ...installTips, ...montageTips, ...kweekServiceTips, ...groenFacilitairTips, ...vierSectorenTips, ...vijfUnitsTips, ...basisFourTips, ...safeworkTips, ...processTips].sort(
+export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips, ...installTips, ...montageTips, ...kweekServiceTips, ...groenFacilitairTips, ...vierSectorenTips, ...vijfUnitsTips, ...basisFourTips, ...safeworkTips, ...processTips, ...topEightTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

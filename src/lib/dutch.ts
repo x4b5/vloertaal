@@ -126,6 +126,12 @@ const SEAMS: [whole: string, at: number | number[]][] = [
   ['bedrijfsongeval', 8],
   ['stagevergoeding', 5],
   ['geboorteverlof', 8],
+  // The eight new lessons of 26 November 2026.
+  ['ondernemingsraad', 12],
+  ['loonsverhoging', 5],
+  ['betalingsregeling', 9],
+  ['belastingtelefoon', 9],
+  ['armbeschermers', 3],
   // Veiligheid op het werk and the VOG lesson (23 November 2026).
   ['waarschuwingsbord', 13],
   ['personenregister', 8],

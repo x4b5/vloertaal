@@ -2748,6 +2748,212 @@ ______________________________________________________________
 
 ---
 
+### Acht nieuwe lessen (nieuw, 26 november 2026)
+
+*Op verzoek van de eigenaar acht nieuwe lessen in bestaande onderwerpen. Vier tips gaan over rechten en hebben hieronder een eigen sectie: c.debthelp en c.taxes (Geld en post), c.discrimination en c.union (Regels en rechten). Ze gaan over Nederland: in België zijn deze lessen voorlopig „alleen Nederland” (`BE_LESSON_TODO` in `src/content/taalBe/index.ts`). De vier andere tips gaan over hoe het werk gaat en sluiten met de huisregelregel („ask your supervisor”): c.kiln en c.mixlab (Operator in de procesindustrie), c.firstweeks (Eerste werkdag) en c.orderpick (In het magazijn); hun feiten staan hieronder met bron. Elke bewering staat ook met een ⚖️-noot in `src/content/workTips.ts` of `src/content/cultureTipsBase.ts`. Geen bedragen.*
+
+**Feiten in de andere tips en zinnen (graag ook nakijken):**
+- Na de oven moeten de producten afkoelen; niet heet aanraken, of hittebestendige handschoenen (c.kiln): Arbobesluit hoofdstuk 7 (hete delen) en art. 8.1 (pbm); de RI&E (Arbowet art. 5).
+- Glas en gebroken tegels zijn scherp: snijbestendige handschoenen, armbeschermers en een veiligheidsbril (c.kiln, `s.kiln.3`): Arbobesluit art. 8.1 en 8.2 (pbm waar het risico niet anders weg kan, door de werkgever verstrekt); de arbocatalogus van de glas- en keramiekbranche; welke pbm: per bedrijf.
+- Nooit een vallende glasplaat opvangen: stap achteruit (c.kiln, de situatie): geen wet; de gebruikelijke veiligheidsinstructie bij glasbewerking (arbocatalogus van de glasbranche, werkinstructies; nakijken).
+- Scherven met stoffer en blik, nooit met de hand, in de juiste bak (c.kiln, `c.kiln.a`): advies, de RI&E en de afvalregels van het bedrijf.
+- Glazuur en stof kunnen schadelijke stoffen bevatten: handen wassen voor je eet of drinkt (c.kiln): glazuren kunnen lood of andere metalen en kwarts bevatten; Arbobesluit art. 4.2 en de hygiënemaatregelen uit de RI&E (artikel nakijken); arboportaal.nl „Gevaarlijke stoffen”; kwartsstof zelf staat in c.heatdust.
+- Bij de pers nooit erin grijpen als hij draait (c.kiln): Arbobesluit art. 7.7 en 7.10, zoals c.plantfault.
+- Precies afwegen, opschrijven wat erin ging met het batchnummer; niet zeker: vragen (c.mixlab, `s.mixlab.1`): het kwaliteitssysteem van het bedrijf (GMP, ISO 9001); in voeding traceerbaarheid: Verordening (EG) 178/2002 art. 18 en HACCP (Verordening (EG) 852/2004 art. 5).
+- Het etiket van een vat of zak lezen: wat erin zit, het batchnummer en de gevarensymbolen (c.mixlab, `s.mixlab.3`): CLP, Verordening (EG) 1272/2008 art. 17 en 18; Arbobesluit art. 4.2a; dezelfde symbolen als c.substances.
+- Nooit iets in een vat of zak doen dat er niet in hoort (c.mixlab): advies; stoffen kunnen met elkaar reageren (c.cleansafe, c.substances).
+- Poeder en damp kunnen schadelijk zijn: afzuiging en de nodige pbm; in voeding ook een haarnetje en vaak handen wassen (c.mixlab): Arbobesluit art. 4.2 en 4.4 (eerst bij de bron, een masker als laatste) en art. 8.1; Verordening (EG) 852/2004 bijlage II hoofdstuk VIII (persoonlijke hygiëne).
+- „Sommige contracten beginnen met een proeftijd: dan kunnen jij of je werkgever de baan snel beëindigen” (c.firstweeks): Nederland: BW 7:652 (proeftijd alleen schriftelijk, niet bij een contract van zes maanden of korter, hoogstens één of twee maanden) en BW 7:676 (opzegging tijdens de proeftijd: direct); België: sinds 1 januari 2014 geen proeftijd meer voor de meeste contracten (wet eenheidsstatuut), wel nog bij een studentencontract en uitzendwerk (de eerste drie dagen); daarom „some contracts”, juist in beide landen. Geen duur in de tip. De tip sluit met de huisregelregel.
+- Een orderpicker, reachtruck of heftruck alleen besturen met een opleiding ervoor, vaak met een certificaat (c.orderpick, `c.orderpick.a`): Arbobesluit art. 7.32 lid 1 (mobiele arbeidsmiddelen met eigen aandrijving alleen door werknemers die daarvoor op passende wijze zijn opgeleid; artikel nakijken) en Arbowet art. 8 (voorlichting en onderricht); geen wet eist een certificaat: „often”, zoals c.certs „usually” zegt. In België hetzelfde (codex welzijn op het werk boek IV titel 2).
+- Op de looppaden lopen; de chauffeur ziet je niet altijd (c.orderpick, `s.orderpick.2`): Arbobesluit art. 3.15 en 3.16 (verkeersroutes, scheiding van voetgangers en voertuigen; artikelen nakijken); de RI&E; nlarbeidsinspectie.nl „Heftrucks en intern transport”.
+- In de koelcel of vriescel de warme kleding, handschoenen en muts van het werk (c.orderpick, `s.orderpick.3`): Arbobesluit art. 6.1 (thermische belasting) en art. 8.1 en 8.2 (pbm van de werkgever); hetzelfde als c.coldroom. Opwarmpauzes en zeggen dat je naar binnen gaat: advies en huisregel (sommige cao’s kennen opwarmpauzes; arboportaal.nl „Werken in de kou”); geen minuten in de tip.
+
+**Onze eigen vraag hierbij:**
+- Klopt Arbobesluit art. 7.32 als grond voor „alleen met een opleiding” voor de reachtruck en de orderpicker?
+- Is „Some contracts start with a trial period (proeftijd): then you or your employer can end the job quickly” juist en niet misleidend in beide landen?
+- Is „Never catch a falling glass plate: step back” een juiste algemene instructie?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.debthelp — Open every letter, and ask for help early (nieuw, 26 november 2026)
+
+*Unit „Geld en post”, les „Debts and help” (`l.debthelp`)*
+
+**Samenvatting (NL):** Niet op tijd betaald? Dan krijg je eerst een herinnering en later een aanmaning. Voordat een bedrijf je extra kosten mag rekenen, moet het je 14 dagen geven om te betalen. Maak dus elke brief open, ook als je er bang voor bent. Kun je niet alles in één keer betalen? Bel of schrijf en vraag om een betalingsregeling. Een deurwaarder is een ambtenaar die schulden int, vaak nadat een rechter heeft beslist. Hij kan bijvoorbeeld een deel van je loon nemen, maar moet je altijd genoeg laten om van te leven. Schulden? Vraag vroeg hulp, als ze nog klein zijn. De gemeente geeft gratis schuldhulp. Op geldfit.nl doe je een gratis test en vind je hulp in de buurt.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Did you not pay a bill in time? Then you first get a reminder (herinnering), and later a final reminder (aanmaning). Before a company may charge you extra costs for this, it must give you 14 days to pay. So open every letter, also when you are afraid of it. Cannot pay all at once? Call or write, and ask for a payment plan (betalingsregeling). A deurwaarder (bailiff) is an official who collects debts, often after a judge has decided. He can, for example, take part of your pay, but he must always leave you enough to live on. Debts? Ask for help early, when they are still small. The gemeente gives free debt help (schuldhulp). On geldfit.nl you can do a free test and find help near you.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Grondslag (onze lezing):** De 14-dagenbrief: voor een consument mag de schuldeiser pas buitengerechtelijke incassokosten rekenen na één aanmaning met een termijn van 14 dagen (BW 6:96 lid 6; Besluit vergoeding voor buitengerechtelijke incassokosten; rijksoverheid.nl „Wanneer mag een schuldeiser een incassobureau inschakelen?”; consumentenbond.nl „Incassokosten”). Herinnering en aanmaning: geen wettelijke namen, de gangbare stappen. Betalingsregeling: geen recht, wel vragen (rijksoverheid.nl „Schulden”). De deurwaarder: Gerechtsdeurwaarderswet art. 2; beslag op een executoriale titel (een vonnis, of een dwangbevel van bijvoorbeeld de Belastingdienst of het CJIB zonder rechter; daarom „often after a judge has decided”); loonbeslag Rv art. 718 e.v.; de beslagvrije voet Rv art. 475b–475e (Wet vereenvoudiging beslagvrije voet, sinds 1 januari 2021; rijksoverheid.nl „beslagvrije voet”). Gratis schuldhulp: Wet gemeentelijke schuldhulpverlening art. 2 (elke gemeente biedt schuldhulpverlening aan haar inwoners); rijksoverheid.nl „schuldhulpverlening”. Geldfit: geldfit.nl, gratis test en verwijzing (dezelfde rij als h.geldfit in de Hulp-lijst).
+
+**Zeg het zo (Nederlands):** „Ik kan niet alles in één keer betalen. Kan ik in delen betalen?” — *I cannot pay everything at once. Can I pay in parts?*
+
+**Situatie in de les:** You get a final reminder for your phone bill. You do not have the money this month. What do you do?  
+**Goede antwoord:** Call the company, and ask for a payment plan.  
+**Uitleg na het antwoord (`c.debthelp.w`):** When you say it in time, the company can often agree on small payments. A letter you put away does not go away: the costs only grow.
+
+**Uitleg bij het gesprekje (`c.debthelp.a.why`):** „U heeft de rekening nog niet betaald.” → „Dat klopt. Mag ik een betalingsregeling?”: Told the bill is not paid: yes, and you ask for a payment plan.
+
+**⚠ Getallen en termijnen:** „14 days” is de wettelijke termijn van de 14-dagenbrief (BW 6:96 lid 6). Geen bedragen.
+
+**Onze eigen vraag hierbij:**
+- Klopt „Before a company may charge you extra costs for this, it must give you 14 days to pay”, ook nu wettelijke rente wél eerder kan lopen? Moet er „collection costs” staan in plaats van „extra costs”?
+- Is „often after a judge has decided” een eerlijke, eenvoudige weergave (dwangbevel van overheidsschuldeisers zonder rechter)?
+- Is schuldhulp van de gemeente in alle gemeenten gratis voor de inwoner?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.taxes — Your tax return and your allowances (nieuw, 26 november 2026)
+
+*Unit „Geld en post”, les „Tax and allowances” (`l.taxes`)*
+
+**Samenvatting (NL):** De belastingaangifte over vorig jaar moet voor 1 mei. Kreeg je een brief die vraagt om aangifte te doen? Dan moet je. Soms krijg je geld terug. Je hebt de jaaropgave van je werkgever nodig. Geen tijd? Je kunt uitstel vragen. Toeslagen zoals zorgtoeslag en huurtoeslag zijn een voorschot: ze hangen af van wat je dit jaar verdient. Verdien je meer, of verandert er iets anders? Geef het meteen door in Mijn toeslagen. Anders moet je later misschien veel terugbetalen. Moet je terugbetalen? Je kunt om een betalingsregeling vragen. Gratis hulp: de BelastingTelefoon, een kantoor van de Belastingdienst (eerst een afspraak maken) of de bibliotheek.
+
+**Tekst (Engels, wordt vertaald):**
+
+> The tax return (aangifte) for last year must be done before 1 May. Did you get a letter that asks you to do it? Then you must. Sometimes you get money back. You need the annual statement (jaaropgave) from your employer. No time? You can ask for more time (uitstel). Allowances (toeslagen), like zorgtoeslag and huurtoeslag, are an advance: they depend on what you will earn this year. Do you earn more, or does something else change? Pass it on right away in Mijn toeslagen. If you do not, you may have to pay a lot back later. Must you pay back? You can ask for a payment plan. Free help: the BelastingTelefoon, a Belastingdienst office (make an appointment first) or the library.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Grondslag (onze lezing):** Aangifte inkomstenbelasting voor 1 mei en uitstel: belastingdienst.nl „Aangifte doen” en „Uitstel aanvragen” (AWR art. 8 en 9; de termijn stelt de inspecteur vast); dezelfde datum als c.letters. Wie een uitnodiging krijgt, moet aangifte doen: AWR art. 8 lid 1. Teruggave: belastingdienst.nl. Jaaropgave: de werkgever geeft die elk jaar (Wet op de loonbelasting 1964 en de Uitvoeringsregeling loonbelasting 2011; artikel nakijken). Toeslagen als voorschot: Awir art. 16; wijzigingen doorgeven: Awir art. 25 (binnen vier weken; geen getal in de tip), via Mijn toeslagen of de app Toeslagen; terugvordering: Awir art. 26; belastingdienst.nl „Ik krijg een voorschotbeschikking van toeslagen”, „Waarom moet ik toeslag terugbetalen?”. Toeslagen bestaan in 2026 nog (belastingdienst.nl „Wat verandert er in 2026 voor uw toeslagen?”). Betalingsregeling bij terugbetalen: Handvest voor toeslagontvangers 2026 (standaard regeling, en een persoonlijke regeling als je anders te weinig overhoudt). Gratis hulp: belastingdienst.nl/hulp „Ik heb hulp nodig bij mijn belastingaangifte” (gratis, telefonisch of op een locatie in de buurt, na een afspraak via de BelastingTelefoon); rijksoverheid.nl „Kan ik hulp krijgen om online mijn belastingen en toeslagen te regelen?” (veel bibliotheken helpen, vaak op een inloopspreekuur; Informatiepunt Digitale Overheid).
+
+**Zeg het zo (Nederlands):** „Mijn inkomen is veranderd. Hoe geef ik dat door?” — *My income has changed. How do I pass that on?*
+
+**Situatie in de les:** You get a new job and earn more each month. You get huurtoeslag. What do you do?  
+**Goede antwoord:** Pass on your new income in Mijn toeslagen.  
+**Uitleg na het antwoord (`c.taxes.w`):** Your allowance is based on what you earn. When you pass on the change in time, you get the right amount, and you do not have to pay a lot back later.
+
+**Uitleg bij het gesprekje (`c.taxes.a.why`):** „Er ligt een blauwe envelop voor je.” → „Dank je. Ik maak hem meteen open.”: Told there is a blue envelope: thanks, and you open it right away.
+
+**⚠ Getallen en termijnen:** „before 1 May” (de gewone aangiftetermijn; dezelfde als c.letters). Geen bedragen, geen drempels of grenzen.
+
+**Onze eigen vraag hierbij:**
+- Klopt „Did you get a letter that asks you to do it? Then you must” zonder meer (ook bij een uitnodiging via de Berichtenbox)?
+- Blijven zorgtoeslag en huurtoeslag in 2027 bestaan in deze vorm, of moet de tip „zorgtoeslag and huurtoeslag” dan herzien worden (hervorming toeslagen)?
+- Is „the library” als plek voor gratis hulp juist genoeg, of moet er „many libraries” staan?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.discrimination — Treated unfairly? It is not your fault (nieuw, 26 november 2026)
+
+*Unit „Regels en rechten”, les „Discrimination and intimidation” (`l.discrimination`)*
+
+**Samenvatting (NL):** Discriminatie is als je anders of slechter behandeld wordt om wie je bent: je afkomst, huidskleur, geloof, gender, leeftijd, een handicap of op wie je verliefd wordt. Intimidatie is bijvoorbeeld ongewenst aanraken, seksuele opmerkingen, bedreigingen of uitschelden. Beide mogen niet op het werk, en het is nooit jouw schuld. Je mag nee zeggen, ook tegen je baas. Schrijf op wat er gebeurde, wanneer en wie het zag. Praat met je leidinggevende of met de vertrouwenspersoon, als je bedrijf die heeft. Buiten je werk helpt de antidiscriminatievoorziening in je gemeente gratis (discriminatie.nl). Het College voor de Rechten van de Mens kan een oordeel geven, ook gratis. Geweld of een bedreiging? Ga naar de politie. In gevaar: bel 112.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Discrimination is when you are treated differently or worse because of who you are: your origin, skin colour, religion, gender, age, a disability or who you love. Intimidation is, for example, unwanted touching, sexual remarks, threats or calling you names. Both are not allowed at work, and it is never your fault. You may say no, also to your boss. Write down what happened, when, and who saw it. Talk to your supervisor, or to the vertrouwenspersoon if your company has one. Outside your work, the anti-discrimination service in your town helps for free (discriminatie.nl). The College voor de Rechten van de Mens can give a judgement, also for free. Violence or a threat? Go to the police. In danger: call 112.
+>
+> *General information. For your situation: ask the union, the Juridisch Loket or FairWork.*
+
+**Grondslag (onze lezing):** Gelijke behandeling: Grondwet art. 1; Algemene wet gelijke behandeling art. 1 en 5 (o.a. godsdienst, levensovertuiging, ras, geslacht, nationaliteit, seksuele gerichtheid); Wet gelijke behandeling op grond van leeftijd bij de arbeid; Wet gelijke behandeling op grond van handicap of chronische ziekte; mensenrechten.nl. Intimidatie en ongewenst gedrag: Arbowet art. 1 lid 3 onder e en art. 3 lid 2 (psychosociale arbeidsbelasting: seksuele intimidatie, agressie en geweld, pesten, discriminatie); AWGB art. 1a (seksuele intimidatie); nlarbeidsinspectie.nl „Ongewenst gedrag”. Vertrouwenspersoon: in november 2026 niet verplicht; het initiatiefvoorstel 35592 (verplichtstelling vertrouwenspersoon) is op 23 mei 2023 door de Tweede Kamer aangenomen en ligt nog bij de Eerste Kamer (eerstekamer.nl/wetsvoorstel/35592); daarom „if your company has one”, zoals c.respect en c.boundaries. Antidiscriminatievoorziening: Wet gemeentelijke antidiscriminatievoorzieningen art. 1 en 2 (elke gemeente); discriminatie.nl (dezelfde rij als h.discriminatie in de Hulp-lijst). College voor de Rechten van de Mens: Wet College voor de rechten van de mens art. 10 en 13; mensenrechten.nl „Oordeel aanvragen” (gratis, zonder advocaat; het oordeel is niet bindend, de tip zegt alleen „a judgement”). Politie: Sr art. 285 (bedreiging) en 300 (mishandeling); 112 bij gevaar. „You may say no, also to your boss”: advies, over ongewenst gedrag; geen werkgever mag dat opdragen (BW 7:611 goed werkgeverschap, Arbowet art. 3 lid 2).
+
+**Zeg het zo (Nederlands):** „Ik wil iets melden. Kan ik in vertrouwen met u praten?” — *I want to report something. Can I talk to you in confidence?*
+
+**Situatie in de les:** A colleague often calls you names because of where you come from. Others laugh. What do you do?  
+**Goede antwoord:** Write it down, and tell someone you trust.  
+**Uitleg na het antwoord (`c.discrimination.w`):** Calling names because of your origin is discrimination, and it is not allowed. When you write it down and talk about it, someone can help you make it stop.
+
+**Uitleg bij het gesprekje (`c.discrimination.a.why`):** „Gaat het? Ze schelden je steeds uit.” → „Nee, het gaat niet. Ik ga het melden.”: Asked if you are okay: no, and you will report it.
+
+**⚠ Getallen en termijnen:** geen getallen of termijnen in de tip (112 is het alarmnummer).
+
+**Onze eigen vraag hierbij:**
+- Is de lijst „origin, skin colour, religion, gender, age, a disability or who you love” een juiste, eenvoudige samenvatting van de gronden?
+- Is „The College voor de Rechten van de Mens can give a judgement, also for free” juist en niet misleidend (niet bindend)?
+- Is de slotregel met FairWork (de werkgever kan zelf het probleem zijn, zoals c.rights) hier passend, of beter de gewone adviesregel?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.union — Together you stand stronger (nieuw, 26 november 2026)
+
+*Unit „Regels en rechten”, les „The union and the works council” (`l.union`)*
+
+**Samenvatting (NL):** Een vakbond, bijvoorbeeld FNV of CNV, komt op voor werknemers. Hij maakt met werkgevers afspraken over loon en werk: de cao. Veel cao’s gelden voor iedereen in een sector, ook als je geen lid bent. Leden betalen elke maand contributie en krijgen advies en hulp, bijvoorbeeld bij een probleem over loon of ontslag. Word op tijd lid: vaak helpt de vakbond alleen bij een probleem dat begint nadat je lid werd. Lid worden is je eigen keuze, en je werkgever mag je er niet voor straffen. Een bedrijf met 50 of meer werknemers moet een ondernemingsraad (OR) hebben: collega’s die de werknemers kiezen. De OR praat met de directeur over bijvoorbeeld werktijden en veiligheid. Een kleiner bedrijf kan een personeelsvertegenwoordiging hebben. Vragen? Vraag het een collega in de OR.
+
+**Tekst (Engels, wordt vertaald):**
+
+> A union (vakbond), for example FNV or CNV, stands up for workers. It makes agreements with employers about pay and work: the cao. Many cao’s count for everyone in a sector, also when you are not a member. Members pay a fee (contributie) every month, and get advice and help, for example with a problem about pay or dismissal. Join in time: often the union only helps with a problem that starts after you join. Joining is your own choice, and your employer may not punish you for it. A company with 50 or more workers must have a works council (ondernemingsraad, OR): colleagues chosen by the workers. The OR talks with the director about, for example, working hours and safety. A smaller company can have a staff council (personeelsvertegenwoordiging). Questions? Ask a colleague in the OR.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Grondslag (onze lezing):** De cao: Wet op de collectieve arbeidsovereenkomst art. 1; algemeen verbindend verklaring: Wet AVV (dan geldt de cao voor iedereen in de sector); een gebonden werkgever past de cao meestal op alle werknemers toe (Wet op de cao art. 14); rijksoverheid.nl „cao”; daarom „many”. Contributie en hulp: de statuten van de bonden; fnv.nl „juridische hulp” (hulp bij een probleem dat is ontstaan na de start van je lidmaatschap); daarom „often”. Vrijheid van vereniging: Grondwet art. 8, EVRM art. 11, ESH art. 5, ILO-verdragen 87 en 98; opzegverbod wegens lidmaatschap van een vakvereniging: BW 7:670 lid 5. Ondernemingsraad: WOR art. 2 lid 1 (50 of meer personen), art. 6 en 9 (verkiezingen), art. 24 (overleg met de bestuurder), art. 27 lid 1 onder b (arbeids- en rusttijden) en onder d (arbo). Personeelsvertegenwoordiging: WOR art. 35b en 35c (10 tot 50 personen: vrijwillig, of verplicht als de meerderheid erom vraagt); daarom „can”. FNV en CNV: dezelfde namen als h.vakbond.
+
+**Zeg het zo (Nederlands):** „Ik heb een vraag over de nieuwe roosters. Kan de OR daar iets mee?” — *I have a question about the new rosters. Can the OR do something with it?*
+
+**Situatie in de les:** Your company plans many more evening shifts. Many colleagues are unhappy. What can you do?  
+**Goede antwoord:** Ask a colleague in the OR about it.  
+**Uitleg na het antwoord (`c.union.w`):** The OR has a say in rules about working hours. It can talk about them with the director, for all the workers together.
+
+**Uitleg bij het gesprekje (`c.union.a.why`):** „Waarom ben je lid van de vakbond?” → „Ze komen voor mij op als er een probleem is.”: Asked why you are a member: they stand up for you.
+
+**⚠ Getallen en termijnen:** „50 or more workers” (WOR art. 2). Geen bedragen (geen contributie).
+
+**Onze eigen vraag hierbij:**
+- Klopt „Many cao’s count for everyone in a sector, also when you are not a member” als eenvoudige weergave (AVV en art. 14 Wet cao)?
+- Is „often the union only helps with a problem that starts after you join” juist voor de grote bonden in 2026?
+- Tellen uitzendkrachten mee voor de 50 werknemers (WOR art. 1 lid 3: na 24 maanden bij de inlener)? De tip noemt dat bewust niet.
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
 ## Werkregels: gewijzigde beweringen (17 oktober 2026)
 
 De track **Werkregels** is voor mensen die al Nederlands spreken. De teksten staan alleen in het

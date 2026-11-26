@@ -275,6 +275,15 @@ const PENDING_RECORDING = new Set<string>([
   'Nee, wacht. Het slot van de monteur zit er nog op.',
   'Pomp drie viel uit. Het staat in het logboek.',
   'Nee. Hier is explosiegevaar.',
+  // The eight new lessons of 26 November 2026:
+  'Dat klopt. Mag ik een betalingsregeling?',
+  'Dank je. Ik maak hem meteen open.',
+  'Nee, het gaat niet. Ik ga het melden.',
+  'Ze komen voor mij op als er een probleem is.',
+  'Nee. Gebruik stoffer en blik.',
+  'Nog niet. Het lab test het monster.',
+  'Bijna alles. Waar was de kantine ook alweer?',
+  'Nee, dat mag ik niet. Ik heb er geen opleiding voor.',
 ]);
 
 

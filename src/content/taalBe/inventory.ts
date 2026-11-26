@@ -35,6 +35,10 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.hello': L('A', 'B', 'tip "Je of u": in Vlaanderen zeg je op het werk vaker "u" (en tussen collega’s soms "ge")'),
     'l.people': L('A', 'A'),
     'l.arrive': L('B', 'A', 'de kantine heet in Vlaanderen vaak de refter (zelfde plaatje)'),
+    // 26 November 2026: the first weeks. The tip says "some contracts start with a trial period":
+    // true in Belgium too (no proeftijd for most contracts since 2014, but still for a student
+    // contract and interim work).
+    'l.firstweeks': L('A', 'A', 'nakijken: de rondleiding, de begeleider, het notitieboekje ("het notaboekje"), meelopen'),
   } },
   'u.help': { kind: 'A', lessons: {
     'l.understand': L('A', 'A', 'de tip zegt "Supervisors here" (was "Dutch supervisors")'),
@@ -71,6 +75,9 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.directions': L('A', 'A'),
     'l.picking': L('A', 'A'),
     'l.loading': L('A', 'A', 'nakijken door een Vlaamse NT2-docent: in Vlaanderen zegt men vaak "de transpallet" (de pompwagen) en "de camion" (de vrachtwagen wordt begrepen)'),
+    // 26 November 2026: training for the reach truck, walkways and the cold: the same in Belgium
+    // (codex welzijn op het werk boek IV titel 2 en boek III).
+    'l.orderpick': L('A', 'A', 'nakijken: de reachtruck, de orderpicker, de picklijst, het looppad ("de looproute"), de thermokleding ("de koudekledij")'),
   } },
   'u.data': { kind: 'B', lessons: {
     'l.counting': L('A', 'A', 'getallen zijn in Vlaanderen dezelfde'),
@@ -174,6 +181,9 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.health': L('C', 'C', 'Arbowet, Arbeidsinspectie, pauze na 5,5 uur → Welzijnswet, Arbeidswet, pauze na 6 uur, Toezicht op de Sociale Wetten'),
     'l.rights': L('B', 'C', 'het Juridisch Loket → het justitiehuis; ontslag via UWV, vaststellingsovereenkomst, FNV, WW → opzegtermijn, C4, ABVV/ACV/ACLVB'),
     'l.mustmay': L('A', 'A', 'moeten, niet hoeven, mogen: dezelfde taal in Vlaanderen'),
+    // 26 November 2026: both tips name Dutch places and rules: NL-only for now (BE_LESSON_TODO).
+    'l.discrimination': L('A', 'C', 'discriminatie.nl, het College voor de Rechten van de Mens, de vertrouwenspersoon "if your company has one" → Unia, het Instituut voor de gelijkheid van vrouwen en mannen, de vertrouwenspersoon en de preventieadviseur psychosociale aspecten (verplicht); nog te schrijven (BE_LESSON_TODO)'),
+    'l.union': L('B', 'C', 'FNV en CNV → ACV, ABVV en ACLVB; de contributie → het lidgeld; de ondernemingsraad vanaf 50 werknemers → in België vanaf 100 (en het CPBW vanaf 50, de vakbondsafvaardiging); de personeelsvertegenwoordiging; de vakbond betaalt in België ook de werkloosheidsuitkering uit; nog te schrijven (BE_LESSON_TODO)'),
   } },
   // "Verlof en ziekte" became "Verlof" (u.leave) and "Ziekte" (u.sick) on 5 November 2026.
   'u.leave': { kind: 'B', lessons: {
@@ -222,6 +232,9 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.letters': L('C', 'C', 'Belastingdienst, aangifte voor 1 mei, toeslagen → FOD Financiën, MyMinfin, Groeipakket'),
     'l.scams': L('A', 'A'),
     'l.budget': L('A', 'A'),
+    // 26 November 2026: debts and tax are about Dutch rules and bodies: NL-only for now (BE_LESSON_TODO).
+    'l.debthelp': L('B', 'C', 'de deurwaarder → de gerechtsdeurwaarder; de 14-dagenbrief, schuldhulp bij de gemeente en Geldfit → de Belgische regels voor een aanmaning, schuldbemiddeling via het OCMW of een erkende schuldbemiddelaar, de collectieve schuldenregeling; nog te schrijven (BE_LESSON_TODO)'),
+    'l.taxes': L('C', 'C', 'de Belastingdienst, de blauwe envelop, de jaaropgave, de BelastingTelefoon, toeslagen (zorgtoeslag, huurtoeslag) → FOD Financiën, MyMinfin, de fiscale fiche (281.10), het voorstel van vereenvoudigde aangifte, de Vlaamse huurpremie en huurtoelage, het Groeipakket; nog te schrijven (BE_LESSON_TODO)'),
   } },
   'u.travel': { kind: 'B', lessons: {
     'l.bike': L('A', 'A'),
@@ -529,6 +542,9 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.plantfault': L('A', 'A', 'nakijken: de technische dienst ("de onderhoudsdienst"), de onderhoudsmonteur ("de onderhoudstechnieker"), stilzetten ("stilleggen")'),
     'l.shiftwork': L('A', 'A', 'nakijken: de ploeg, de ploegwissel, volcontinu ("volcontinu" of "continu"), de broodtrommel ("de brooddoos"), de aflosser'),
     'l.heatdust': L('A', 'A', 'nakijken: de smeltoven, de hittekleding ("de hittebeschermende kledij"), het kwartsstof ("het kwartsstof" of "het silicastof")'),
+    // 26 November 2026: the kiln and the mixing hall, how the work is done: the same in Belgium.
+    'l.kiln': L('A', 'A', 'nakijken: de tunneloven, het glazuur, de armbeschermer ("de armbescherming"), stoffer en blik ("borstel en blik")'),
+    'l.mixlab': L('A', 'A', 'nakijken: de batch ("de batch" of "de charge"), het mengvat ("de mengkuip"), de labjas ("de labojas"), het lab ("het labo")'),
   } },
 };
 

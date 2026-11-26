@@ -6,11 +6,11 @@ import { PAL } from './kit';
  * it, for the new sectors Groen and Facilitair (and, the same day, Beveiliging, Voedingsindustrie,
  * Afval en recycling and Kinderopvang; and the five units of Schoonmaak, Horeca, Zorg, Winkel and
  * uitzendwerk; and the new lessons of the basis units at four lessons, "Veiligheid op het werk" and
- * "Operator in de procesindustrie") until their words are drawn. It breaks two rules of
+ * "Operator in de procesindustrie"; and the eight new lessons of 26 November 2026) until their words are drawn. It breaks two rules of
  * docs/tekenstijl.md on purpose ("no text in pictures" and "only SVG, no emoji"), so a picture
  * choice can still be answered meanwhile. Illustrators replace each file in ./groen,
  * ./facilitair, ./beveiliging, ./voeding, ./afval, ./kinderopvang, ./schoonmaak2, ./horeca2, ./zorg2,
- * ./winkel2, ./uitzend, ./basis, ./veilig2 and ./proces with a real drawing; when the last one is gone, this file goes too.
+ * ./winkel2, ./uitzend, ./basis, ./veilig2, ./proces and ./top8 with a real drawing; when the last one is gone, this file goes too.
  */
 const TINT = {
   groen: [PAL.lime, PAL.leafShade],
@@ -33,6 +33,8 @@ const TINT = {
   veilig2: [PAL.yellowLight, PAL.redShade],
   // "Operator in de procesindustrie" (u.process, 23 November 2026).
   proces: [PAL.mist, PAL.slateDark],
+  // The eight new lessons of 26 November 2026 (src/pictures/groupTop8.tsx).
+  top8: [PAL.ice, PAL.purpleShade],
 } as const;
 
 export const placeholder = (emoji: string, kind: keyof typeof TINT) => (): JSX.Element => (

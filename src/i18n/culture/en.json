@@ -356,6 +356,22 @@
     "c.callhelp.o1": "Stay on the line and answer.",
     "c.callhelp.o2": "Hang up, and go to your colleague.",
     "c.callhelp.o3": "Say \"come quickly\", and hang up.",
-    "c.callhelp.w": "The operator sends help while you talk, and tells you what to do. When you hang up too early, help can go to the wrong place."
+    "c.callhelp.w": "The operator sends help while you talk, and tells you what to do. When you hang up too early, help can go to the wrong place.",
+    "c.firstweeks": "Ask again: that is normal",
+    "c.firstweeks.b": "In your first weeks, nobody expects you to know everything. You often get a tour (rondleiding) and a colleague who guides you. Watch first, then do it yourself while your colleague watches. Did you forget something? Ask again: \"Wil je het nog een keer laten zien?\" That is better than guessing. Write new words and steps down in a small notebook. Some contracts start with a trial period (proeftijd): then you or your employer can end the job quickly. Ask if your contract has one. Rules differ per company: ask your supervisor what the rules are where you work.",
+    "c.firstweeks.p": "I forgot it. Will you show it once more?",
+    "c.firstweeks.s": "Yesterday your colleague showed you how to start the machine. Today you do not remember the third step. What do you do?",
+    "c.firstweeks.o1": "Ask your colleague to show it once more.",
+    "c.firstweeks.o2": "Guess, and try it.",
+    "c.firstweeks.o3": "Wait until someone else starts it.",
+    "c.firstweeks.w": "Asking again is normal in the first weeks. A guess at a machine can be dangerous, and costs more time.",
+    "c.orderpick": "Walk on the walkway",
+    "c.orderpick.b": "In a big warehouse you pick orders with a pick list and a scanner: you scan every item, so the right products go to the right customer. Many order pickers drive a small truck that lifts them up, or a reach truck for the high racks. Drive one only when you have had the training for it, often with a certificate. Walk on the walkways, and keep away from driving trucks: the driver cannot always see you. In the cold store or the freezer, wear the warm clothes, gloves and hat you get from work. Take your warm-up breaks, and tell someone when you go in. Rules differ per company: ask your supervisor what the rules are where you work.",
+    "c.orderpick.p": "I am going to warm up in the canteen for a bit.",
+    "c.orderpick.s": "You must get to the other aisle. The walkway goes around; straight across is faster, between the trucks. What do you do?",
+    "c.orderpick.o1": "Take the walkway, also if it is longer.",
+    "c.orderpick.o2": "Run across quickly between the trucks.",
+    "c.orderpick.o3": "Walk across, and wave to the drivers.",
+    "c.orderpick.w": "A truck driver often cannot see you, for example behind a high load. On the walkway, people are expected and safe."
   }
 }

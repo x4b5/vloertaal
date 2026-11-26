@@ -57,6 +57,29 @@ export const baseTips: CultureTip[] = [
     ],
     why: { id: 'c.arrive.w', en: 'The intercom is there for visitors and new workers. When you say who you are, they can call the right person.' },
   }),
+  // "Inwerken" (l.firstweeks, 26 November 2026): how the first weeks go, set per company: the
+  // house-rules closing line (HOUSE_LINE, src/content/adviceLine.ts), written out.
+  // ⚖️ check: Some contracts start with a trial period; then you or your employer can end the job
+  // quickly ⚖️ (Netherlands: BW 7:652 (proeftijd only in writing, not in a contract of six months or
+  // less, at most one or two months) and 7:676 (opzegging tijdens de proeftijd: at once); Belgium: the
+  // proeftijd was abolished for most contracts on 1 January 2014 (Wet eenheidsstatuut), but a student
+  // contract and interim work still start with one (the first three days), so "some contracts" holds
+  // in both countries). No length in the tip.
+  tip({
+    id: 'c.firstweeks',
+    lessonId: 'l.firstweeks',
+    emoji: '📒',
+    title: 'Ask again: that is normal',
+    body: 'In your first weeks, nobody expects you to know everything. You often get a tour (rondleiding) and a colleague who guides you. Watch first, then do it yourself while your colleague watches. Did you forget something? Ask again: "Wil je het nog een keer laten zien?" That is better than guessing. Write new words and steps down in a small notebook. Some contracts start with a trial period (proeftijd): then you or your employer can end the job quickly. Ask if your contract has one. Rules differ per company: ask your supervisor what the rules are where you work.',
+    phrase: { id: 'c.firstweeks.p', nl: 'Ik ben het vergeten. Wil je het nog een keer laten zien?', en: 'I forgot it. Will you show it once more?' },
+    situation: { id: 'c.firstweeks.s', en: 'Yesterday your colleague showed you how to start the machine. Today you do not remember the third step. What do you do?' },
+    options: [
+      { id: 'c.firstweeks.o1', en: 'Ask your colleague to show it once more.', best: true },
+      { id: 'c.firstweeks.o2', en: 'Guess, and try it.', best: false },
+      { id: 'c.firstweeks.o3', en: 'Wait until someone else starts it.', best: false },
+    ],
+    why: { id: 'c.firstweeks.w', en: 'Asking again is normal in the first weeks. A guess at a machine can be dangerous, and costs more time.' },
+  }),
   tip({
     id: 'c.ask',
     lessonId: 'l.understand',
@@ -300,6 +323,35 @@ export const baseTips: CultureTip[] = [
       { id: 'c.loading.o3', en: 'Walk behind it and wave at the driver.', best: false },
     ],
     why: { id: 'c.loading.w', en: 'Behind a truck is a place the driver cannot see. Waiting costs one minute. An accident there is very serious.' },
+  }),
+  // "Orderpicken en de heftruck" (l.orderpick, 26 November 2026): working safely, set per company:
+  // the house-rules closing line, written out. The facts have a section in docs/juridische-check.md
+  // ("Acht nieuwe lessen"); the same in Belgium (Codex welzijn op het werk boek IV titel 2 en boek III).
+  // ⚖️ check: Drive an order picker, a reach truck or a forklift only with training for it, often with
+  // a certificate ⚖️ (Arbobesluit art. 7.32 lid 1 (mobiele arbeidsmiddelen met eigen aandrijving: only
+  // drivers who are properly trained; check the article) and Arbowet art. 8 (voorlichting en
+  // onderricht); no law asks for a certificate: "often", as c.certs says "usually").
+  // ⚖️ check: Walk on the walkways; the driver cannot always see you ⚖️ (Arbobesluit art. 3.15 en 3.16
+  // (verkeersroutes, the separation of people and vehicles; check the articles); the RI&E;
+  // nlarbeidsinspectie.nl "Heftrucks en interne transportmiddelen").
+  // ⚖️ check: In the cold store or the freezer: the warm clothes, gloves and a hat from work ⚖️
+  // (Arbobesluit art. 6.1 (thermische belasting) and 8.1 en 8.2 (PBM given by the employer); the same
+  // as c.coldroom). Warm-up breaks and telling someone when you go in: advice and house rules (some
+  // cao's have warm-up breaks; arboportaal.nl "Werken in de kou"); no number of minutes in the tip.
+  tip({
+    id: 'c.orderpick',
+    lessonId: 'l.orderpick',
+    emoji: '🚶',
+    title: 'Walk on the walkway',
+    body: 'In a big warehouse you pick orders with a pick list and a scanner: you scan every item, so the right products go to the right customer. Many order pickers drive a small truck that lifts them up, or a reach truck for the high racks. Drive one only when you have had the training for it, often with a certificate. Walk on the walkways, and keep away from driving trucks: the driver cannot always see you. In the cold store or the freezer, wear the warm clothes, gloves and hat you get from work. Take your warm-up breaks, and tell someone when you go in. Rules differ per company: ask your supervisor what the rules are where you work.',
+    phrase: { id: 'c.orderpick.p', nl: 'Ik ga even opwarmen in de kantine.', en: 'I am going to warm up in the canteen for a bit.' },
+    situation: { id: 'c.orderpick.s', en: 'You must get to the other aisle. The walkway goes around; straight across is faster, between the trucks. What do you do?' },
+    options: [
+      { id: 'c.orderpick.o1', en: 'Take the walkway, also if it is longer.', best: true },
+      { id: 'c.orderpick.o2', en: 'Run across quickly between the trucks.', best: false },
+      { id: 'c.orderpick.o3', en: 'Walk across, and wave to the drivers.', best: false },
+    ],
+    why: { id: 'c.orderpick.w', en: 'A truck driver often cannot see you, for example behind a high load. On the walkway, people are expected and safe.' },
   }),
   tip({
     id: 'c.time',

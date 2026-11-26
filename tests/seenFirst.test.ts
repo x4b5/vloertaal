@@ -56,7 +56,9 @@ describe('wrong options come from what the learner has seen', () => {
               // A retry needs a wrong reply not offered before, so in the first lessons it can reach
               // a little further: within 7 lessons (as in g4r4Mix).
               if (ex.kind === 'chat' && retry) expect(o.ahead, where).toBeLessThanOrEqual(7);
-              else if (ex.kind === 'chat' && FIRST_CHATS.has(lesson.id)) expect(o.ahead, where).toBeLessThanOrEqual(3);
+              // Within 4 since 26 November 2026: "Inwerken" (l.firstweeks) made "Eerste werkdag" one
+              // lesson longer, so the next unit's replies are one lesson further away (it was 3).
+              else if (ex.kind === 'chat' && FIRST_CHATS.has(lesson.id)) expect(o.ahead, where).toBeLessThanOrEqual(4);
               else expect(o.ahead, where).toBe(0);
             }
           }
@@ -82,11 +84,16 @@ describe('wrong options come from what the learner has seen', () => {
       const d = l.dialogues![0];
       return chatOptions(d, createRng(seed), 3, l).filter((o) => o.id !== d.reply.id).map((o) => o.nl).sort();
     };
+    const NEAREST = ['Bijna alles. Waar was de kantine ook alweer?', 'Nee, nog een keer graag.'];
     for (let seed = 1; seed <= 20; seed++) {
       // "Hoe heet je?": "Tot morgen!" (seen), then l.understand ("Ik ben nieuw." starts like the answer).
-      expect(wrong('l.people', seed)).toEqual(['Nee, nog een keer graag.', 'Tot morgen!']);
+      // Since 26 November 2026 the nearest one still to come is the reply of l.firstweeks (same unit)
+      // or, as before, of l.understand: one of the two (NEAREST).
+      expect(wrong('l.people', seed)).toContain('Tot morgen!');
+      expect(NEAREST).toContain(wrong('l.people', seed).find((x) => x !== 'Tot morgen!'));
       // "Goedemorgen, waar komt u voor?": "Tot morgen!" (seen; "Ik heet Sara." starts like the answer), then the next lesson's.
-      expect(wrong('l.arrive', seed)).toEqual(['Nee, nog een keer graag.', 'Tot morgen!']);
+      expect(wrong('l.arrive', seed)).toContain('Tot morgen!');
+      expect(NEAREST).toContain(wrong('l.arrive', seed).find((x) => x !== 'Tot morgen!'));
       // The very first chat: nothing seen yet, so the nearest lessons.
       expect(wrong('l.hello', seed)).toEqual(['Ik heet Sara.', 'Nee, nog een keer graag.']);
     }
