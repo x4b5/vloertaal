@@ -47,7 +47,7 @@ import { accessFromIntro, higherAccess, type Access, lessonAllowed, loadAccess, 
 import { blockAfterLesson, pickBlock, routeNextLesson } from './lib/route';
 import { type AfterStep, afterLessonSteps, nextAfter } from './lib/afterLesson';
 import { HOME_CARDS, RESULT_QUESTIONS, firstDue, rowFits } from './lib/momentOrder';
-import { forgetLinkedUnit, takeLinkedUnit } from './lib/unitLink';
+import { forgetLinkedLesson, forgetLinkedUnit, takeLinkedLesson, takeLinkedUnit } from './lib/unitLink';
 import { countFeel, feelDue, type FeelAt, markFeelAsked } from './lib/feel';
 import { rulesTwinOf, trackTwin } from './content/trackTwins';
 import { oneAppOn } from './lib/oneApp';
@@ -83,7 +83,7 @@ import { forgetFirstVoices } from './lib/firstVoice';
 import { Samen } from './components/Samen';
 import { CheckResult } from './components/Check';
 import { checkExercises, checkLesson, checkOffered, checkPassed, recordCheck, undoCheck } from './lib/instapCheck';
-import type { Exercise } from './lib/exercises';
+import { isUnlocked, type Exercise } from './lib/exercises';
 import { hasSamen, samenDialogues } from './lib/samen';
 import { KlankOverview, KlankPage } from './components/KlankScreens';
 
@@ -256,6 +256,9 @@ export default function App() {
   const typedCode = useRef('');
   /** A coach link to a topic outside the preview: the home offers its unlock (this visit). */
   const [lockedLink, setLockedLink] = useState<string | null>(null);
+  // A lesson link's lesson (?les=, the word posters), waiting to open until the home is there
+  // (after the first run, the history first steps back to its first entry).
+  const [linkLesson, setLinkLesson] = useState<string | null>(null);
   /** "Bewaar je voortgang" on the home (src/lib/backupNudge.ts) was tapped: draw the home again. */
   const [, setNudgeTick] = useState(0);
   // Opened from the home screen: quietly ask the browser to keep the storage (and remember its answer).
@@ -700,6 +703,10 @@ export default function App() {
     const own = trackTwin(focusUnit, me.track);
     if (own && own !== focusUnit) { setFocusUnit(own); return; }
     linkHandled.current = true;
+    // A lesson link (?les=paint, the word posters): the lesson is taken here, once, and opened
+    // below when its topic is this learner's and allowed (src/lib/unitLink.ts).
+    const linkedLesson = takeLinkedLesson();
+    forgetLinkedLesson();
     const unit = findUnit(focusUnit);
     // A topic this app or this track does not have (the other track's topic without a twin): the
     // home stays on the learner's own block.
@@ -716,6 +723,14 @@ export default function App() {
       setLockedLink(unit.id);
       return;
     }
+    // The poster's lesson: straight into it (the topic becomes the home's block for afterwards).
+    if (linkedLesson && unit.lessons.some((l) => l.id === linkedLesson) && isUnlocked(linkedLesson, progress.completed, access)) {
+      setFocusUnit(null);
+      forgetLinkedUnit();
+      if (!unitDone(unit, progress.completed)) setProgress((p) => (p.currentUnit === unit.id ? p : { ...p, ...pickBlock(unit.id, p.completed) }));
+      setLinkLesson(linkedLesson);
+      return;
+    }
     // A finished topic (to practise again): its topic page.
     if (unitDone(unit, progress.completed)) {
       setFocusUnit(null);
@@ -726,6 +741,14 @@ export default function App() {
     setProgress((p) => (p.currentUnit === focusUnit ? p : { ...p, ...pickBlock(focusUnit, p.completed) }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [focusUnit, access, step]);
+  // The linked lesson opens once the home is there and the first run's history has stepped back
+  // (leaving): opened before that, the step back would put the home over it again.
+  useEffect(() => {
+    if (!linkLesson || leaving.current || view.name !== 'home') return;
+    setLinkLesson(null);
+    go({ name: 'lesson', lessonId: linkLesson, review: false });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [linkLesson, view]);
   // The coach's locked topic is offered on the home until a lesson starts.
   useEffect(() => { if (view.name === 'lesson') setLockedLink(null); }, [view.name]);
 

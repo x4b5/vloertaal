@@ -1,5 +1,6 @@
 import { allCountriesTaalUnits, allDialogues, allLessons, allReplies, allWords, teachingLessons } from '../content/curriculum';
 import { demoOn } from './demo';
+import { linkOpened } from './unitLink';
 import { isMixLesson } from '../content/review';
 import { coursePlan, mainLessons, type SectorChoice } from '../content/sectors';
 import { courseUnits, unitOfLesson } from '../content/courses';
@@ -1407,10 +1408,11 @@ export function isUnlocked(lessonId: string, completed: Record<string, unknown>,
   if (demoOn()) return true;
   // Every unit can be entered at its first lesson (a coach can send a learner to one topic);
   // inside a unit the lessons open in order. (Either course: lesson ids never clash.)
+  // A lesson opened by a link (?les=, the word posters) stays open on this phone.
   const unit = unitOfLesson(lessonId);
   if (!unit) return false;
   const i = unit.lessons.findIndex((l) => l.id === lessonId);
-  return i === 0 || Boolean(completed[unit.lessons[i - 1].id]);
+  return i === 0 || Boolean(completed[unit.lessons[i - 1].id]) || linkOpened(lessonId);
 }
 
 /** The next lesson along the learner's own course (basis units plus their sector), the one the path highlights. */

@@ -47,6 +47,8 @@ export const KEYS = {
   // How the app works on this phone.
   resume: 'vloertaal:resume',
   linkedUnit: 'vloertaal.linkedUnit',
+  linkedLesson: 'vloertaal:linked-lesson',
+  linkOpened: 'vloertaal:link-opened',
   offline: 'vloertaal:offline',
   persist: 'vloertaal:persist',
   reminderUid: 'vloertaal:reminder-uid',
