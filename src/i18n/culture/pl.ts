@@ -458,6 +458,23 @@ const t: CultureTranslation = {
     'c.breaks.o2': "Wyjdź o trzeciej i wyjaśnij to następnego dnia.", // nieuw, nalezen
     'c.breaks.o3': "Odpuść lekarza i skończ zmianę.", // nieuw, nalezen
     'c.breaks.w': "Kiedy pytasz na czas, przełożony może zaplanować pracę. Wyjście bez pytania jest odbierane jako brak rzetelności.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.firstweeks': "Zapytaj jeszcze raz: to normalne", // nieuw, nalezen
+    'c.firstweeks.b': "W pierwszych tygodniach nikt nie oczekuje, że wszystko wiesz. Często ktoś oprowadza cię po firmie (rondleiding) i dostajesz kolegę, który się tobą opiekuje. Najpierw patrz, potem zrób to samodzielnie, a kolega patrzy. Nie pamiętasz czegoś? Zapytaj jeszcze raz: „Wil je het nog een keer laten zien?” To lepsze niż zgadywanie. Zapisuj nowe słowa i kroki w małym notesie. Niektóre umowy zaczynają się od okresu próbnego (proeftijd): wtedy ty albo pracodawca możecie szybko zakończyć pracę. Zapytaj, czy w twojej umowie jest okres próbny. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.firstweeks.p': { m: "Zapomniałem. Pokażesz mi to jeszcze raz?", f: "Zapomniałam. Pokażesz mi to jeszcze raz?", x: "Nie pamiętam tego. Pokażesz mi to jeszcze raz?" }, // nieuw, nalezen
+    'c.firstweeks.s': "Wczoraj kolega pokazał ci, jak uruchomić maszynę. Dziś nie pamiętasz trzeciego kroku. Co robisz?", // nieuw, nalezen
+    'c.firstweeks.o1': "Poproś kolegę, żeby pokazał to jeszcze raz.", // nieuw, nalezen
+    'c.firstweeks.o2': "Zgadnij i spróbuj.", // nieuw, nalezen
+    'c.firstweeks.o3': "Czekaj, aż ktoś inny ją uruchomi.", // nieuw, nalezen
+    'c.firstweeks.w': "W pierwszych tygodniach pytanie jeszcze raz jest normalne. Zgadywanie przy maszynie może być niebezpieczne i zabiera więcej czasu.", // nieuw, nalezen
+    'c.orderpick': "Chodź ścieżką dla pieszych", // nieuw, nalezen
+    'c.orderpick.b': "W dużym magazynie kompletujesz zamówienia z listą kompletacyjną i skanerem: skanujesz każdy artykuł, żeby właściwe produkty trafiły do właściwego klienta. Wielu kompletujących jeździ małym wózkiem, który podnosi ich do góry, albo wózkiem wysokiego składowania (reachtruck) do wysokich regałów. Prowadź taki wózek tylko wtedy, gdy masz za sobą szkolenie, często z certyfikatem. Chodź ścieżkami dla pieszych i trzymaj się z dala od jeżdżących wózków: kierowca nie zawsze cię widzi. W chłodni albo w mroźni noś ciepłe ubranie, rękawice i czapkę, które dostajesz w pracy. Rób przerwy na rozgrzanie i mów komuś, kiedy wchodzisz do środka. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.orderpick.p': "Idę na chwilę do stołówki się rozgrzać.", // nieuw, nalezen
+    'c.orderpick.s': "Musisz dostać się do innej alejki. Ścieżka dla pieszych prowadzi naokoło; na skróty, między wózkami, jest szybciej. Co robisz?", // nieuw, nalezen
+    'c.orderpick.o1': "Idź ścieżką dla pieszych, nawet jeśli jest dłuższa.", // nieuw, nalezen
+    'c.orderpick.o2': "Szybko przebiegnij między wózkami.", // nieuw, nalezen
+    'c.orderpick.o3': "Przejdź na skróty i pomachaj kierowcom.", // nieuw, nalezen
+    'c.orderpick.w': "Kierowca wózka często cię nie widzi, na przykład za wysokim ładunkiem. Na ścieżce dla pieszych kierowcy spodziewają się ludzi, a ludzie są tam bezpieczni.", // nieuw, nalezen
   },
 };
 

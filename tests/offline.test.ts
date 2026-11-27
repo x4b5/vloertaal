@@ -20,6 +20,16 @@ const PENDING_RECORDING = new Set<string>([
   'Bij wie moet ik me melden?',
   'Ik kan de kleedkamer niet vinden.',
   'Wie is mijn buddy vandaag?',
+  // "Inwerken" (l.firstweeks, 26 November 2026):
+  'de rondleiding',
+  'de begeleider',
+  'het notitieboekje',
+  'meelopen',
+  'onthouden',
+  'zelfstandig',
+  'Wil je het nog een keer laten zien?',
+  'Vandaag loop ik mee met Sara.',
+  'Ik schrijf het op in mijn notitieboekje.',
 ]);
 
 describe('the Dutch lines of a unit', () => {

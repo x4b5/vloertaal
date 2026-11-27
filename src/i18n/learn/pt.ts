@@ -315,6 +315,15 @@ const t: CultureTranslation = {
     'c.plantfault.a.why': "Perguntam se podem arrancar: não, ainda há um cadeado.", // nieuw, nalezen
     'c.shiftwork.a.why': "Perguntam-te o que aconteceu: a avaria, e onde está escrita.", // nieuw, nalezen
     'c.heatdust.a.why': "Perguntam pelo telemóvel: não, por causa do perigo aqui.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.debthelp.a.why': "Dizem-te que a conta não está paga: sim, e pedes um plano de pagamentos.", // nieuw, nalezen
+    'c.taxes.a.why': "Dizem-te que há um envelope azul: agradeces, e abres logo.", // nieuw, nalezen
+    'c.discrimination.a.why': "Perguntam-te se estás bem: não, e vais comunicar isso.", // nieuw, nalezen
+    'c.union.a.why': "Perguntam-te porque és membro: defendem-te.", // nieuw, nalezen
+    'c.kiln.a.why': "Perguntam se se pode apanhar os cacos com a mão: não, com a pá e a escova.", // nieuw, nalezen
+    'c.mixlab.a.why': "Perguntam se o lote está aprovado: ainda não, o laboratório está a testar.", // nieuw, nalezen
+    'c.firstweeks.a.why': "Perguntam-te pela visita guiada: quase tudo, e uma pergunta.", // nieuw, nalezen
+    'c.orderpick.a.why': "Pedem-te para conduzir o empilhador retrátil: não, sem formação para isso.", // nieuw, nalezen
   },
 };
 

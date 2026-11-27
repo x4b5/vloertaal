@@ -2400,3 +2400,36 @@ De vier lessen van "Operator in de procesindustrie" zijn met AI vertaald in alle
 - u.process omschreven; te hoog = xad-dhaafay; controlekamer qolka kontaroolka.
 ### de
 - titel "Operator" of "Anlagenfahrer"?; Leitwarte; anfahren (jargon).
+
+## Acht nieuwe lessen (26 november 2026)
+
+Schulden en hulp, belasting en toeslagen, discriminatie en intimidatie, de vakbond en de OR, oven/glas/keramiek, menghal en lab, de eerste weken en orderpicken: met AI vertaald in alle 14 hulptalen, elke regel met `// nieuw, nalezen`. Let vooral op de juridische termen (aanmaning, deurwaarder, betalingsregeling, ondernemingsraad) en de magazijntermen (reachtruck, orderpicker). Wat een moedertaalspreker het eerst moet nalezen:
+
+### fr
+- reachtruck = chariot à mât rétractable; aanmaning = dernier rappel; OR = conseil d'entreprise; glazuur = l'émail.
+### ar
+- reachtruck onvertaald; intimidatie = المضايقة; deurwaarder = المحضر القضائي; betalingsregeling = خطة التقسيط.
+### es
+- deurwaarder = agente judicial; OR = comité de empresa; melden = denunciar (te veel politie?).
+### pt
+- deurwaarder = agente de execução; OR = comissão de trabalhadores; c.union.s avonddiensten = turnos à noite (nacht?).
+### ro
+- somație de plată; executor judecătoresc; jaaropgave = adeverința anuală de venit?
+### pl
+- plan spłaty, ostateczne wezwanie do zapłaty, komornik; reachtruck = wózek wysokiego składowania.
+### uk
+- розстрочка; судовий виконавець; річтрак; OR = рада працівників.
+### bg
+- разсрочено плащане; съдебен изпълнител; ричтрак; intimidatie = тормоз и сплашване.
+### tr
+- OR = işletme konseyi (of çalışan konseyi?); icra memuru; son ihtar; ödeme planı.
+### fa
+- شورای کارکنان; مأمور اجرا; قسط‌بندی; recept = دستور ساخت.
+### prs
+- شورای کارمندان; afkeur = رد است, scherf = تکهٔ شکسته nalezen.
+### de
+- "vor dem 1.Mai" (zonder spatie, voor de zinssplitser); Schubmaststapler; Kommissionierer; Jahreslohnbescheinigung.
+### so
+- deurwaarder = deyn-ururiyaha sharciga; OR = golaha shaqaalaha; reachtruck onvertaald.
+### ti
+- ባይቶ ሰራሕተኛታት; ኣኻቢ ዕዳ ቤት ፍርዲ; stoffer en blik omschreven.

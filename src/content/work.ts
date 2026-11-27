@@ -5278,6 +5278,151 @@ const basisFour: Record<string, Lesson[]> = {
 /** A unit with its two lessons of 23 November 2026 at the end (basisFour above), or the unit itself. */
 const withFour = (u: Unit): Unit => (basisFour[u.id] ? { ...u, lessons: [...u.lessons, ...basisFour[u.id]] } : u);
 
+// ---- Eight new lessons in existing units (26 November 2026, the owner's choice) ----
+// Six of the eight are here: two each in "Geld en post" (u.money), "Regels en rechten" (u.rights)
+// and "Operator in de procesindustrie" (u.process); "Inwerken" (u.firstday) and "Orderpicken en de
+// heftruck" (u.warehouse) are in curriculum.ts. Each comes at the end of its unit, before the mixed
+// review (which picks the new words by itself). Words that are already words of other lessons come
+// in a sentence, the chat or the tip only. The tips are in workTips.ts; the rights and facts in
+// them have a ⚖️ note there and a section in docs/juridische-check.md. The four rights lessons are
+// about the Netherlands (BE_LESSON_TODO in src/content/taalBe). Translations follow
+// (src/content/translationPending.ts), and so do the drawings (placeholders in src/pictures/top8).
+
+const topEight: Record<string, Lesson[]> = {
+  // Geld en post: debts, and tax and allowances. "de brief", "de post", "de Belastingdienst", "de
+  // aangifte", "het inkomen" and "terugbetalen" (l.letters), "de zorgtoeslag" (l.insurance), "de
+  // toeslag" (l.extra), "de schuld" (l.warning), "de rekening" (l.service), "de gemeente" (l.bsn),
+  // "doorgeven" (l.privacy) and "het voorschot" (l.latepay) come in a sentence, the chat or the tip only.
+  'u.money': [
+    lesson(
+      'debthelp',
+      'Debts and help',
+      [
+        ['herinnering', 'de herinnering', 'the reminder (a letter: you have not paid yet)', '🔔'],
+        ['aanmaning', 'de aanmaning', 'the final reminder (pay before a date, or extra costs may come)', '📮'],
+        ['betalingsregeling', 'de betalingsregeling', 'the payment plan (you pay a debt in small parts)', '🗓️', false],
+        ['deurwaarder', 'de deurwaarder', 'the bailiff (an official who collects a debt, often after a judge has decided)', '🧑‍💼'],
+        ['schuldhulp', 'de schuldhulp', 'the debt help (free help with your debts, from the town council)', '🤝', false],
+        ['achterstand', 'de achterstand', 'the arrears (money you should have paid already)', '📉', false],
+      ],
+      [
+        ['Ik heb een aanmaning gekregen.', 'I got a final reminder.'],
+        ['Kan ik in delen betalen?', 'Can I pay in parts?'],
+        ['Ik wil hulp bij mijn schulden.', 'I want help with my debts.'],
+      ],
+      [['U heeft de rekening nog niet betaald.', 'You have not paid the bill yet.'], ['Dat klopt. Mag ik een betalingsregeling?', 'That is right. May I have a payment plan?']],
+    ),
+    lesson(
+      'taxes',
+      'Tax and allowances',
+      [
+        ['jaaropgave', 'de jaaropgave', 'the annual statement (a paper from your employer with your pay of the whole year)', '📄'],
+        ['blauweenvelop', 'de blauwe envelop', 'the blue envelope (letters from the Belastingdienst come in it)', '✉️'],
+        ['teruggave', 'de teruggave', 'the refund (tax money you get back)', '💰', false],
+        ['uitstel', 'het uitstel', 'the extra time (you may do it later)', '⏳', false],
+        ['huurtoeslag', 'de huurtoeslag', 'the rent benefit (money from the government to help you pay the rent)', '🏠', false],
+        ['belastingtelefoon', 'de BelastingTelefoon', 'the free phone line of the Belastingdienst', '☎️', false],
+      ],
+      [
+        ['Ik heb mijn jaaropgave nodig voor de aangifte.', 'I need my annual statement for the tax return.'],
+        ['Ik verdien nu meer. Dat geef ik meteen door.', 'I earn more now. I pass that on right away.'],
+        ['Ik krijg geld terug van de Belastingdienst.', 'I am getting money back from the Belastingdienst.'],
+      ],
+      [['Er ligt een blauwe envelop voor je.', 'There is a blue envelope for you.'], ['Dank je. Ik maak hem meteen open.', 'Thank you. I will open it right away.']],
+    ),
+  ],
+  // Regels en rechten: discrimination and intimidation, and the union and the works council. "de
+  // discriminatie", "de vakbond", "de klacht" and "het Juridisch Loket" (l.rights), "de cao" (l.contract),
+  // "de intimidatie", "aanraken" and "ongewenst" (l.boundaries), "de vertrouwenspersoon" and "nee
+  // zeggen" (l.respect), "melden" (l.gethelp), "veilig" (l.health) and "de verkiezing" (l.council)
+  // come in a sentence, the chat or the tip only.
+  'u.rights': [
+    lesson(
+      'discrimination',
+      'Discrimination and intimidation',
+      [
+        ['andersbehandelen', 'anders behandelen', 'to treat differently (worse than others)', '↔️', false],
+        ['afkomst', 'de afkomst', 'the origin (the country or the group you or your family come from)', '🌍', false],
+        ['geloof', 'het geloof', 'the religion, the faith', '🕊️', false],
+        ['uitschelden', 'uitschelden', 'to call someone names (to say ugly words to someone)', '🤬', false],
+        ['bedreigen', 'bedreigen', 'to threaten (to say you will hurt someone)', '⚠️', false],
+        ['geweld', 'het geweld', 'the violence', '🚨', false],
+      ],
+      [
+        ['Ik word anders behandeld vanwege mijn geloof.', 'I am treated differently because of my religion.'],
+        ['Hij bedreigt mij. Ik voel me niet veilig.', 'He is threatening me. I do not feel safe.'],
+        ['Ik mag nee zeggen, ook tegen mijn baas.', 'I may say no, also to my boss.'],
+      ],
+      [['Gaat het? Ze schelden je steeds uit.', 'Are you okay? They keep calling you names.'], ['Nee, het gaat niet. Ik ga het melden.', 'No, I am not okay. I am going to report it.']],
+    ),
+    lesson(
+      'union',
+      'The union and the works council',
+      [
+        ['lidworden', 'lid worden', 'to join, to become a member', '🙋', false],
+        ['contributie', 'de contributie', 'the membership fee (you pay it every month)', '💶', false],
+        ['opkomenvoor', 'opkomen voor', 'to stand up for (to defend someone’s interests)', '🛡️', false],
+        ['onderhandelen', 'onderhandelen', 'to negotiate (to talk until both sides agree)', '🤝', false],
+        ['loonsverhoging', 'de loonsverhoging', 'the pay rise', '📈', false],
+        ['ondernemingsraad', 'de ondernemingsraad', 'the works council (the OR: colleagues chosen to talk with the director)', '🗣️'],
+      ],
+      [
+        ['Ik word lid van de vakbond.', 'I am joining the union.'],
+        ['De vakbond onderhandelt over de cao.', 'The union negotiates about the cao.'],
+        ['Wie zit er in de ondernemingsraad?', 'Who is on the works council?'],
+      ],
+      [['Waarom ben je lid van de vakbond?', 'Why are you a member of the union?'], ['Ze komen voor mij op als er een probleem is.', 'They stand up for me when there is a problem.']],
+    ),
+  ],
+  // Operator in de procesindustrie: tile and glass plants, and the mixing hall and the lab. "de
+  // tegel" (l.tiling), "de barst" (l.finalcheck), "het glas" (l.dishes), "het stoffertje" (l.prep),
+  // "afkeuren" (l.quality), "de glasbreuk" (l.foreignbody), "afkoelen" (l.weld), "de handschoenen"
+  // (l.gear), "het recept" (l.doctor), "het monster" and "de weegschaal" (l.inspect), "mengen"
+  // (l.cleansafe), "het etiket" (l.quality), "het vat" (l.hazardous) and "goedkeuren" (l.holiday)
+  // come in a sentence, the chat or the tip only.
+  'u.process': [
+    lesson(
+      'kiln',
+      'Kiln, glass and ceramics',
+      [
+        ['pers', 'de pers', 'the press (a machine that presses clay or powder into a shape)', '🗜️'],
+        ['glazuur', 'het glazuur', 'the glaze (a shiny, glassy layer on a tile or a cup)', '✨'],
+        ['tunneloven', 'de tunneloven', 'the tunnel kiln (a long oven; the products ride slowly through it)', '🚇'],
+        ['scherf', 'de scherf', 'the shard (a sharp piece of broken glass or tile)', '🔺'],
+        ['gloeiend', 'gloeiend', 'glowing hot (so hot that it shines red)', '🟠'],
+        ['armbeschermer', 'de armbeschermer', 'the arm guard (a sleeve that protects your arm against cuts)', '🦾'],
+      ],
+      [
+        ['De tegels gaan langzaam door de tunneloven.', 'The tiles go slowly through the tunnel kiln.'],
+        ['Er zit een barst in deze tegel. Die is afkeur.', 'There is a crack in this tile. It is a reject.'],
+        ['Draag je armbeschermers bij het glas.', 'Wear your arm guards near the glass.'],
+      ],
+      [['Mag ik de scherven met mijn hand oprapen?', 'May I pick up the shards with my hand?'], ['Nee. Gebruik stoffer en blik.', 'No. Use a brush and dustpan.']],
+    ),
+    lesson(
+      'mixlab',
+      'The mixing hall and the lab',
+      [
+        ['batch', 'de batch', 'the batch (one amount that is made at once, by one recipe)', '🧪', false],
+        ['afwegen', 'afwegen', 'to weigh out (to weigh exactly as much as the recipe says)', '⚖️'],
+        ['mengvat', 'het mengvat', 'the mixing tank (a big tank with a mixer in it)', '🌀'],
+        ['labjas', 'de labjas', 'the lab coat', '🥼'],
+        ['laboratorium', 'het laboratorium', 'the laboratory (the lab: here they test the product)', '🔬'],
+        ['grondstof', 'de grondstof', 'the raw material (what you make the product from)', '🪣'],
+      ],
+      [
+        ['Weeg de grondstoffen precies af.', 'Weigh out the raw materials exactly.'],
+        ['Ik neem een monster voor het lab.', 'I am taking a sample for the lab.'],
+        ['Welke batch is dit? Kijk op het etiket.', 'Which batch is this? Look at the label.'],
+      ],
+      [['Is de batch goedgekeurd?', 'Has the batch been approved?'], ['Nog niet. Het lab test het monster.', 'Not yet. The lab is testing the sample.']],
+    ),
+  ],
+};
+
+/** A unit with its new lessons of 26 November 2026 at the end (topEight above), or the unit itself. */
+const withTopEight = (u: Unit): Unit => (topEight[u.id] ? { ...u, lessons: [...u.lessons, ...topEight[u.id]] } : u);
+
 // ---- Course order of everything in this file ----
 
 const byId = (id: string) => coreUnits.find((u) => u.id === id)!;
@@ -5361,7 +5506,8 @@ export const workUnits: Unit[] = [
   // Productie's fourth own unit (23 November 2026), at the very end (see "Operator in the process industry" above).
   processUnit,
   // The basis units at four lessons (23 November 2026): their two new lessons at the end (basisFour above).
-].map(withFour);
+  // The eight new lessons of 26 November 2026 (topEight above): at the end of their unit too.
+].map(withFour).map(withTopEight);
 
 
 /** This file's address (saved with the app for offline use, src/content/lessonTexts.ts). */

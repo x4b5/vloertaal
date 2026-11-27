@@ -316,6 +316,15 @@ const t: CultureTranslation = {
     'c.plantfault.a.why': "پرسیده‌اند می‌شود راه انداخت یا نه: نه، هنوز یک قفل رویش است.", // nieuw, nalezen
     'c.shiftwork.a.why': "پرسیده‌اند چه اتفاقی افتاده: خرابی، و اینکه کجا نوشته شده.", // nieuw, nalezen
     'c.heatdust.a.why': "دربارهٔ گوشی پرسیده‌اند: نه، به‌خاطر خطری که اینجا هست.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.debthelp.a.why': "گفته‌اند صورت‌حساب پرداخت نشده: بله، و قسط‌بندی می‌خواهی.", // nieuw, nalezen
+    'c.taxes.a.why': "گفته‌اند یک پاکت آبی آمده: ممنون، و فوراً بازش می‌کنی.", // nieuw, nalezen
+    'c.discrimination.a.why': "پرسیده‌اند حالت خوب است یا نه: نه، و گزارشش می‌دهی.", // nieuw, nalezen
+    'c.union.a.why': "پرسیده‌اند چرا عضوی: از تو دفاع می‌کنند.", // nieuw, nalezen
+    'c.kiln.a.why': "دربارهٔ جمع کردن خرده‌ها با دست پرسیده‌اند: نه، با جارو و خاک‌انداز.", // nieuw, nalezen
+    'c.mixlab.a.why': "پرسیده‌اند بچ تأیید شده یا نه: هنوز نه، آزمایشگاه دارد آزمایشش می‌کند.", // nieuw, nalezen
+    'c.firstweeks.a.why': "دربارهٔ بازدید آشنایی پرسیده‌اند: تقریباً همه چیز، و یک سؤال.", // nieuw, nalezen
+    'c.orderpick.a.why': "خواسته‌اند با ریچ‌تراک کار کنی: نه، برایش آموزش نداری.", // nieuw, nalezen
   },
 };
 

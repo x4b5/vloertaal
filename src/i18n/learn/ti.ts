@@ -317,6 +317,15 @@ const t: CultureTranslation = {
     'c.plantfault.a.why': "ክብገስ ይኽእል እንተ ኾይኑ ተሓቲቱ: ኣይፋል፡ ገና ቁልፊ ኣብኡ ኣሎ።", // nieuw, nalezen
     'c.shiftwork.a.why': "እንታይ ከም ዘጋጠመ ተሓቲቱ: እቲ ብልሽት፡ ኣበይ ከም ዝተጻሕፈ ድማ።", // nieuw, nalezen
     'c.heatdust.a.why': "ብዛዕባ ተሌፎን ተሓቲቱ: ኣይፋል፡ ብሰንኪ ኣብዚ ዘሎ ሓደጋ።", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.debthelp.a.why': "እቲ ሕሳብ ከም ዘይተኸፍለ ተነጊሩ: እወ፡ ውጥን ክፍሊት ድማ ይሕተት።", // nieuw, nalezen
+    'c.taxes.a.why': "ሰማያዊ ፖስታ ከም ዘሎ ተነጊሩ: የቐንየለይ፡ ብቕጽበት ድማ ምኽፋቱ።", // nieuw, nalezen
+    'c.discrimination.a.why': "ደሓን ምዃኑ ተሓቲቱ: ኣይፋል፡ ክሕበር ድማ እዩ።", // nieuw, nalezen
+    'c.union.a.why': "ስለምንታይ ኣባል ምዃኑ ተሓቲቱ: ይጣበቑ እዮም።", // nieuw, nalezen
+    'c.kiln.a.why': "ስባራት ብኢድ ምእካብ ተሓቲቱ: ኣይፋል፡ መጥረግን መእከቢ ጎሓፍን።", // nieuw, nalezen
+    'c.mixlab.a.why': "እቲ ባች ጸዲቑ እንተ ኾይኑ ተሓቲቱ: ገና፡ እቲ ላብ ይፍትኖ ኣሎ።", // nieuw, nalezen
+    'c.firstweeks.a.why': "ብዛዕባ ዙረት ምልላይ ተሓቲቱ: ዳርጋ ኩሉ፡ ሓደ ሕቶ ድማ።", // nieuw, nalezen
+    'c.orderpick.a.why': "ሪች ትራክ ክዝውር ተሓቲቱ: ኣይፋል፡ ስልጠና የለን።", // nieuw, nalezen
   },
 };
 

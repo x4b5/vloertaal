@@ -317,6 +317,15 @@ const t: CultureTranslation = {
     'c.plantfault.a.why': "Питають, чи можна запускати: ні, ще висить замок.", // nieuw, nalezen
     'c.shiftwork.a.why': "Питають, що сталося: несправність, і де це записано.", // nieuw, nalezen
     'c.heatdust.a.why': "Питають про телефон: ні, через небезпеку тут.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.debthelp.a.why': "Кажуть, що рахунок не сплачено: так, і прохання про розстрочку.", // nieuw, nalezen
+    'c.taxes.a.why': "Кажуть про синій конверт: подяка, і його відкриють одразу.", // nieuw, nalezen
+    'c.discrimination.a.why': "Питають, чи все гаразд: ні, і про це повідомлять.", // nieuw, nalezen
+    'c.union.a.why': "Питають, чому ти в профспілці: там заступаються за тебе.", // nieuw, nalezen
+    'c.kiln.a.why': "Питають, чи можна збирати уламки рукою: ні, щіткою й совком.", // nieuw, nalezen
+    'c.mixlab.a.why': "Питають, чи схвалили партію: ще ні, лабораторія її перевіряє.", // nieuw, nalezen
+    'c.firstweeks.a.why': "Питають про екскурсію: майже все, і одне питання.", // nieuw, nalezen
+    'c.orderpick.a.why': "Просять поїздити на річтраку: ні, немає навчання.", // nieuw, nalezen
   },
 };
 

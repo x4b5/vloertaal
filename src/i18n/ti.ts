@@ -842,6 +842,31 @@ const lang: HelpLanguageSource = {
     's.breaks.3': "ሽዱሽተ መዓልቲ ብተኸታታሊ ሰሪሐ።", // nieuw, nalezen
     'c.breaks.q': { m: "ዕረፍቲ ምሳሕካ መዓስ እዩ?", f: "ዕረፍቲ ምሳሕኪ መዓስ እዩ?", x: "ዕረፍቲ ምሳሕኩም መዓስ እዩ?" }, // nieuw, nalezen
     'c.breaks.a': "ሰዓት ዓሰርተው ክልተ፡ ፍርቂ ሰዓት።", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'l.firstweeks': { m: "ቀዳሞት ሰሙናትካ", f: "ቀዳሞት ሰሙናትኪ", x: "ቀዳሞት ሰሙናትኩም" }, // nieuw, nalezen
+    'w.rondleiding': { m: "ዙረት ምልላይ (ሓደ ሰብ ነቲ ህንጻ የዘውረካ)", f: "ዙረት ምልላይ (ሓደ ሰብ ነቲ ህንጻ የዘውረኪ)", x: "ዙረት ምልላይ (ሓደ ሰብ ነቲ ህንጻ የዘውረኩም)" }, // nieuw, nalezen
+    'w.begeleider': { m: "መራሒ (ኣብ ቀዳሞት ሰሙናትካ ዝሕግዘካ ብጻይ ስራሕ)", f: "መራሒ (ኣብ ቀዳሞት ሰሙናትኪ ዝሕግዘኪ ብጻይ ስራሕ)", x: "መራሒ (ኣብ ቀዳሞት ሰሙናትኩም ዝሕግዘኩም ብጻይ ስራሕ)" }, // nieuw, nalezen
+    'w.notitieboekje': "መጽሓፍ ማስታወሻ", // nieuw, nalezen
+    'w.meelopen': "ምስ ብጻይ ስራሕ ምኻድ (ከመይ ከም ዝሰርሕ ምዕዛብ)", // nieuw, nalezen
+    'w.onthouden': "ምዝካር", // nieuw, nalezen
+    'w.zelfstandig': { m: "ብነብስኻ (ብዘይ ሓገዝ)", f: "ብነብስኺ (ብዘይ ሓገዝ)", x: "ብነብስኹም (ብዘይ ሓገዝ)" }, // nieuw, nalezen
+    's.firstweeks.1': "ሓንሳብ ደጊምካ ከተርእየኒ ትኽእል ዶ?", // nieuw, nalezen
+    's.firstweeks.2': "ሎሚ ንሳራ እናሰዓብኩ እዕዘብ።", // nieuw, nalezen
+    's.firstweeks.3': "ኣብ መጽሓፍ ማስታወሻይ እጽሕፎ።", // nieuw, nalezen
+    'c.firstweeks.q': { m: "ካብቲ ዙረት ምልላይ ኩሉ ገና ትዝክሮ ዶ?", f: "ካብቲ ዙረት ምልላይ ኩሉ ገና ትዝክርዮ ዶ?", x: "ካብቲ ዙረት ምልላይ ኩሉ ገና ትዝክርዎ ዶ?" }, // nieuw, nalezen
+    'c.firstweeks.a': "ዳርጋ ኩሉ። ካንቲን ደኣ ኣበይ ነይሩ?", // nieuw, nalezen
+    'l.orderpick': "ምእካብ ትእዛዛትን ሪች ትራክን", // nieuw, nalezen
+    'w.orderpicker': "ኣካቢ ትእዛዝ (ትእዛዛት ዝእክብ ሰራሕተኛ፡ ከምኡ እውን ሰራሕተኛ ደው ኢሉ ካብ ላዕሊ ዝእክበላ ንእሽቶ መኪና)", // nieuw, nalezen
+    'w.reachtruck': "ሪች ትራክ (ንኣዝዮም ነዋሕቲ መደርደሪታት ዝኸውን ፎርክሊፍት፡ ፎርክታቱ ናብ ቅድሚት ይዝርግሑ)", // nieuw, nalezen
+    'w.picklijst': { m: "ዝርዝር ምእካብ (ክትእክቦም ዘለካ ኣቑሑ ዝርዝር)", f: "ዝርዝር ምእካብ (ክትእክብዮም ዘለኪ ኣቑሑ ዝርዝር)", x: "ዝርዝር ምእካብ (ክትእክብዎም ዘለኩም ኣቑሑ ዝርዝር)" }, // nieuw, nalezen
+    'w.scannen': "ስካን ምግባር", // nieuw, nalezen
+    'w.voetganger': "ብእግሪ ዝኸይድ ሰብ (ብእግሩ ዝጓዓዝ ሰብ)", // nieuw, nalezen
+    'w.opwarmen': "ምውዓይ (ድሕሪ ኣብ ቁሪ ምስራሕ፡ ኣብ ውዑይ ቦታ)", // nieuw, nalezen
+    's.orderpick.1': "ኣብ ዝርዝር ምእካብ ዘሎ ነፍሲ ወከፍ ኣቕሓ ስካን እገብሮ።", // nieuw, nalezen
+    's.orderpick.2': "ብእግሪ ዝኸዱ ሰባት ኣብ መንገዲ እግሪ ይጓዓዙ።", // nieuw, nalezen
+    's.orderpick.3': "ኣብ ክፍሊ ፍሪዘር ክዳን ቁሪ እኽደን።", // nieuw, nalezen
+    'c.orderpick.q': { m: "ንቑሩብ ብሪች ትራክ ክትዝውር ትኽእል ዶ?", f: "ንቑሩብ ብሪች ትራክ ክትዝውሪ ትኽእሊ ዶ?", x: "ንቑሩብ ብሪች ትራክ ክትዝውሩ ትኽእሉ ዶ?" }, // nieuw, nalezen
+    'c.orderpick.a': "ኣይፋል፡ ኣይፍቀደለይን እዩ። ስልጠና የብለይን።", // nieuw, nalezen
   },
 };
 

@@ -176,6 +176,15 @@ export const tipIcons: Readonly<Record<string, string>> = {
   '🎛': 'w.controlekamer',
   '⏯': 'w.opstarten',
   '🥵': 'w.hitte',
+  // The eight new lessons of 26 November 2026: each new tip shows a word of its own lesson
+  // (placeholders for now, src/pictures/top8); discrimination keeps the megaphone of "Discriminatie
+  // melden" (📣) and the union the ballot box of voting (🗳: the works council is elected).
+  '📮': 'w.aanmaning',
+  '📩': 'w.blauweenvelop',
+  '🦾': 'w.armbeschermer',
+  '🥼': 'w.labjas',
+  '📒': 'w.notitieboekje',
+  '🚶': 'w.voetganger',
   // The sector lessons of 14 November 2026: each tip shows a word of its own lesson.
   '📏': 'w.rolmaat',
   '🛏': 'w.bed',

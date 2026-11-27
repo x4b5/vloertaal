@@ -14,6 +14,7 @@ import { addDays, ASK_AGAIN_ID, askAgainLine, dailyLesson, dayNumber, isSnapDay,
 import { voiceFor } from '../src/lib/voices';
 import { hasName } from '../src/lib/workTry';
 import index from '../public/audio-el/voices.json';
+import { translationPending } from '../src/content/translationPending';
 
 /**
  * "Snap je het?" in today's review (the owner's request, 5 November 2026): a known sentence at the
@@ -167,7 +168,8 @@ describe('the sentence', () => {
     const day = dayWhere(true);
     for (let k = 0; k < 90; k += SNAP_EVERY) {
       const snap = snapLines(cardsAfter(all, addDays(day, k)), addDays(day, k))!;
-      for (const s of [...snap.lines, ...snap.others]) {
+      // Not yet the sentences whose translations follow in a later round (src/content/translationPending.ts).
+      for (const s of [...snap.lines, ...snap.others].filter((x) => !translationPending(x.id))) {
         for (const l of helpLanguages) expect(l.gloss[s.id], `${l.code} ${s.id}`).toBeTruthy();
       }
     }

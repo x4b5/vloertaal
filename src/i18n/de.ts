@@ -844,6 +844,31 @@ const lang: HelpLanguageSource = {
     's.breaks.3': "Ich habe sechs Tage hintereinander gearbeitet.", // nieuw, nalezen
     'c.breaks.q': "Wann ist deine Mittagspause?", // nieuw, nalezen
     'c.breaks.a': "Um zwölf Uhr, eine halbe Stunde.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'l.firstweeks': "Deine ersten Wochen", // nieuw, nalezen
+    'w.rondleiding': "der Rundgang (jemand zeigt dir das Gebäude)", // nieuw, nalezen
+    'w.begeleider': "der Betreuer (der Kollege, der dir in deinen ersten Wochen hilft)", // nieuw, nalezen
+    'w.notitieboekje': "das Notizbuch", // nieuw, nalezen
+    'w.meelopen': "mitlaufen (mit einem Kollegen mitgehen und schauen, wie er arbeitet)", // nieuw, nalezen
+    'w.onthouden': "sich merken", // nieuw, nalezen
+    'w.zelfstandig': "selbstständig (ohne Hilfe)", // nieuw, nalezen
+    's.firstweeks.1': "Zeigst du es mir noch einmal?", // nieuw, nalezen
+    's.firstweeks.2': "Heute laufe ich bei Sara mit.", // nieuw, nalezen
+    's.firstweeks.3': "Ich schreibe es in mein Notizbuch.", // nieuw, nalezen
+    'c.firstweeks.q': "Weißt du noch alles vom Rundgang?", // nieuw, nalezen
+    'c.firstweeks.a': "Fast alles. Wo war noch mal die Kantine?", // nieuw, nalezen
+    'l.orderpick': "Kommissionieren und der Schubmaststapler", // nieuw, nalezen
+    'w.orderpicker': "der Kommissionierer (der Arbeiter, der die Bestellungen zusammenstellt; auch das kleine Fahrzeug, auf dem du stehst, um hoch oben zu picken)", // nieuw, nalezen
+    'w.reachtruck': "der Schubmaststapler (ein Stapler für sehr hohe Regale; seine Gabeln fahren nach vorne)", // nieuw, nalezen
+    'w.picklijst': "die Pickliste (die Liste der Artikel, die du zusammenstellen musst)", // nieuw, nalezen
+    'w.scannen': "scannen", // nieuw, nalezen
+    'w.voetganger': "der Fußgänger (eine Person, die zu Fuß geht)", // nieuw, nalezen
+    'w.opwarmen': "sich aufwärmen (an einem warmen Ort, nach der Arbeit in der Kälte)", // nieuw, nalezen
+    's.orderpick.1': "Ich scanne jeden Artikel von der Pickliste.", // nieuw, nalezen
+    's.orderpick.2': "Fußgänger gehen auf dem Fußweg.", // nieuw, nalezen
+    's.orderpick.3': "Im Tiefkühlraum trage ich Kälteschutzkleidung.", // nieuw, nalezen
+    'c.orderpick.q': "Kannst du kurz mit dem Schubmaststapler fahren?", // nieuw, nalezen
+    'c.orderpick.a': "Nein, das darf ich nicht. Ich habe keine Schulung dafür.", // nieuw, nalezen
   },
 };
 

@@ -312,6 +312,15 @@ const t: CultureTranslation = {
     'c.plantfault.a.why': "Waxaa la weydiiyay in la shidi karo: maya, quful ayaa weli saaran.", // nieuw, nalezen
     'c.shiftwork.a.why': "Waxaa la weydiiyay waxa dhacay: cilladda, iyo meesha lagu qoray.", // nieuw, nalezen
     'c.heatdust.a.why': "Waxaa la weydiiyay taleefanka: maya, khatarta halkan jirta awgeed.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.debthelp.a.why': "Waxaa la sheegay in biilka aan la bixin: haa, oo qorshe lacag-bixineed ayaa la weydiistay.", // nieuw, nalezen
+    'c.taxes.a.why': "Waxaa la sheegay in baqshad buluug ah jirto: mahadsanid, oo isla markiiba waa la furayaa.", // nieuw, nalezen
+    'c.discrimination.a.why': "Waxaa la weydiiyay in wax walba fiican yihiin: maya, oo waa la soo sheegi doonaa.", // nieuw, nalezen
+    'c.union.a.why': "Waxaa la weydiiyay sababta xubinnimada: way u doodaan qofka.", // nieuw, nalezen
+    'c.kiln.a.why': "Waxaa la weydiiyay in jajabka gacanta lagu soo qaadi karo: maya, xaaqin iyo majarafad.", // nieuw, nalezen
+    'c.mixlab.a.why': "Waxaa la weydiiyay in dufcadda la oggolaaday: weli maya, shaybaarka ayaa tijaabinaya.", // nieuw, nalezen
+    'c.firstweeks.a.why': "Waxaa la weydiiyay wareegga tusidda: ku dhowaad wax walba, iyo hal su'aal.", // nieuw, nalezen
+    'c.orderpick.a.why': "Waxaa la weydiistay in reachtruck-ga la kaxeeyo: maya, tababar looma helin.", // nieuw, nalezen
   },
 };
 export default t;

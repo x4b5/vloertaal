@@ -844,6 +844,31 @@ const lang: HelpLanguageSource = {
     's.breaks.3': { m: "Я відпрацював шість днів поспіль.", f: "Я відпрацювала шість днів поспіль.", x: "У мене вже шість робочих днів поспіль." }, // nieuw, nalezen
     'c.breaks.q': "Коли в тебе обідня перерва?", // nieuw, nalezen
     'c.breaks.a': "О дванадцятій, пів години.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'l.firstweeks': "Твої перші тижні", // nieuw, nalezen
+    'w.rondleiding': "ознайомча екскурсія (хтось показує тобі будівлю)", // nieuw, nalezen
+    'w.begeleider': "наставник (колега, який допомагає тобі в перші тижні)", // nieuw, nalezen
+    'w.notitieboekje': "блокнот", // nieuw, nalezen
+    'w.meelopen': "ходити з колегою (і дивитися, як він працює)", // nieuw, nalezen
+    'w.onthouden': "запам’ятати", // nieuw, nalezen
+    'w.zelfstandig': "самостійно (без допомоги)", // nieuw, nalezen
+    's.firstweeks.1': "Покажеш це ще раз?", // nieuw, nalezen
+    's.firstweeks.2': "Сьогодні я ходжу разом із Сарою.", // nieuw, nalezen
+    's.firstweeks.3': "Я записую це у свій блокнот.", // nieuw, nalezen
+    'c.firstweeks.q': "Ти пам’ятаєш усе з екскурсії?", // nieuw, nalezen
+    'c.firstweeks.a': "Майже все. Де там була їдальня?", // nieuw, nalezen
+    'l.orderpick': "Комплектування замовлень і річтрак", // nieuw, nalezen
+    'w.orderpicker': "комплектувальник (працівник, який збирає замовлення; також невелика машина, на якій ти стоїш, щоб брати товар згори)", // nieuw, nalezen
+    'w.reachtruck': "річтрак (навантажувач для дуже високих стелажів; його вила висуваються вперед)", // nieuw, nalezen
+    'w.picklijst': "лист комплектації (список товарів, які ти мусиш зібрати)", // nieuw, nalezen
+    'w.scannen': "сканувати", // nieuw, nalezen
+    'w.voetganger': "пішохід (людина, що йде пішки)", // nieuw, nalezen
+    'w.opwarmen': "зігрітися (у теплому місці, після роботи на холоді)", // nieuw, nalezen
+    's.orderpick.1': "Я сканую кожен товар з листа комплектації.", // nieuw, nalezen
+    's.orderpick.2': "Пішоходи ходять пішохідною доріжкою.", // nieuw, nalezen
+    's.orderpick.3': "У морозильній камері я ношу термоодяг.", // nieuw, nalezen
+    'c.orderpick.q': "Можеш ненадовго сісти за кермо річтрака?", // nieuw, nalezen
+    'c.orderpick.a': "Ні, мені не можна. У мене немає навчання для цього.", // nieuw, nalezen
   },
 };
 

@@ -183,6 +183,12 @@ const t: CultureTranslation = {
     // "Operator in de procesindustrie" (23 November 2026).
     'kjn.u.process.1': "Pot să spun că presiunea e prea mare.", // nieuw, nalezen
     'kjn.u.process.2': "Pot să spun la predarea turei ce s-a întâmplat.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'kjn.u.firstday.3': "Pot să rog pe cineva să-mi mai arate o dată.", // nieuw, nalezen
+    'kjn.u.rights.3': "Pot să spun că mă tratează altfel.", // nieuw, nalezen
+    'kjn.u.money.3': "Pot să cer un plan de rate.", // nieuw, nalezen
+    'kjn.u.warehouse.3': "Pot să spun că nu conduc un stivuitor retractabil fără instruire.", // nieuw, nalezen
+    'kjn.u.process.3': "Pot să întreb cât trebuie să pun dintr-o materie primă.", // nieuw, nalezen
   },
 };
 

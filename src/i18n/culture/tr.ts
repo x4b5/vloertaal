@@ -456,6 +456,23 @@ const t: CultureTranslation = {
     'c.breaks.o2': "Üçte çıkar ve ertesi gün açıklarsın.", // nieuw, nalezen
     'c.breaks.o3': "Doktora gitmez ve vardiyanı bitirirsin.", // nieuw, nalezen
     'c.breaks.w': "Zamanında sormak, amirinin işi planlamasını sağlar. Sormadan çıkmak güvenilmezlik olarak görülür.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.firstweeks': "Tekrar sor: bu normal", // nieuw, nalezen
+    'c.firstweeks.b': "İlk haftalarında kimse senden her şeyi bilmeni beklemez. Çoğu zaman bir tanıtım turu (rondleiding) olur ve sana yol gösteren bir iş arkadaşın olur. Önce izle, sonra iş arkadaşın izlerken kendin yap. Bir şeyi mi unuttun? Tekrar sor: \"Wil je het nog een keer laten zien?\" Bu, tahmin etmekten daha iyidir. Yeni kelimeleri ve adımları küçük bir not defterine yaz. Bazı sözleşmeler bir deneme süresiyle (proeftijd) başlar: o sürede sen ya da işverenin işi hızla bitirebilir. Sözleşmende deneme süresi olup olmadığını sor. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.firstweeks.p': "Unuttum. Bir kez daha gösterir misin?", // nieuw, nalezen
+    'c.firstweeks.s': "Dün iş arkadaşın sana makineyi nasıl çalıştıracağını gösterdi. Bugün üçüncü adımı hatırlamıyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.firstweeks.o1': "İş arkadaşından bir kez daha göstermesini istersin.", // nieuw, nalezen
+    'c.firstweeks.o2': "Tahmin eder ve denersin.", // nieuw, nalezen
+    'c.firstweeks.o3': "Başka biri çalıştırana kadar beklersin.", // nieuw, nalezen
+    'c.firstweeks.w': "İlk haftalarda tekrar sormak normaldir. Bir makinede tahminle iş yapmak tehlikeli olabilir ve daha çok zaman alır.", // nieuw, nalezen
+    'c.orderpick': "Yaya yolunda yürü", // nieuw, nalezen
+    'c.orderpick.b': "Büyük bir depoda siparişleri bir toplama listesi ve bir barkod okuyucuyla toplarsın: her ürünü okutursun, böylece doğru ürünler doğru müşteriye gider. Birçok sipariş toplayıcı, onları yukarı kaldıran küçük bir araç ya da yüksek raflar için bir reach truck kullanır. Bunları ancak eğitimini aldıysan kullan, çoğu zaman bir sertifikayla. Yaya yollarında yürü ve hareket eden araçlardan uzak dur: sürücü seni her zaman göremez. Soğuk odada ya da dondurucuda, işten aldığın sıcak kıyafetleri, eldivenleri ve şapkayı giy. Isınma molalarını kullan ve içeri girdiğinde birine haber ver. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.orderpick.p': "Biraz yemekhanede ısınmaya gidiyorum.", // nieuw, nalezen
+    'c.orderpick.s': "Diğer koridora gitmen gerekiyor. Yaya yolu etrafından dolaşıyor; araçların arasından düz geçmek daha hızlı. Ne yaparsın?", // nieuw, nalezen
+    'c.orderpick.o1': "Daha uzun olsa da yaya yolunu kullanırsın.", // nieuw, nalezen
+    'c.orderpick.o2': "Araçların arasından hızla koşarak geçersin.", // nieuw, nalezen
+    'c.orderpick.o3': "Yürüyerek geçer ve sürücülere el sallarsın.", // nieuw, nalezen
+    'c.orderpick.w': "Bir araç sürücüsü seni çoğu zaman göremez, örneğin yüksek bir yükün arkasındayken. Yaya yolunda insanlar beklenir ve güvendedir.", // nieuw, nalezen
   },
 };
 

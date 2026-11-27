@@ -4983,6 +4983,127 @@ const t: CultureTranslation = {
     'c.heatdust.o2': "Îl sufli: e mai repede.", // nieuw, nalezen
     'c.heatdust.o3': "Îl lași pentru tura următoare.", // nieuw, nalezen
     'c.heatdust.w': "Suflatul ridică praful în aer și în plămânii tăi. O cârpă udă sau un aspirator ține praful jos.", // nieuw, nalezen
+    // eight new lessons (debts, taxes, discrimination, the union, kiln, mixing lab, first weeks, order picking) (26 November 2026).
+    'l.discrimination': "Discriminare și intimidare", // nieuw, nalezen
+    'w.andersbehandelen': "a trata altfel (mai rău decât pe alții)", // nieuw, nalezen
+    'w.afkomst': "originea (țara sau grupul din care vii tu sau familia ta)", // nieuw, nalezen
+    'w.geloof': "religia, credința", // nieuw, nalezen
+    'w.uitschelden': "a insulta, a jigni (a spune cuvinte urâte cuiva)", // nieuw, nalezen
+    'w.bedreigen': "a amenința (a spune că îi vei face rău cuiva)", // nieuw, nalezen
+    'w.geweld': "violența", // nieuw, nalezen
+    's.discrimination.1': "Mă tratează altfel din cauza religiei mele.", // nieuw, nalezen
+    's.discrimination.2': "Mă amenință. Nu mă simt în siguranță.", // nieuw, nalezen
+    's.discrimination.3': "Am voie să spun nu, și șefului meu.", // nieuw, nalezen
+    'c.discrimination.q': "Ești bine? Te tot insultă.", // nieuw, nalezen
+    'c.discrimination.a': "Nu, nu sunt bine. O să raportez asta.", // nieuw, nalezen
+    'l.union': "Sindicatul și consiliul de întreprindere", // nieuw, nalezen
+    'w.lidworden': "a te înscrie (a deveni membru)", // nieuw, nalezen
+    'w.contributie': "cotizația (o plătești în fiecare lună)", // nieuw, nalezen
+    'w.opkomenvoor': "a apăra (a apăra interesele cuiva)", // nieuw, nalezen
+    'w.onderhandelen': "a negocia (a vorbi până când ambele părți sunt de acord)", // nieuw, nalezen
+    'w.loonsverhoging': "mărirea de salariu", // nieuw, nalezen
+    'w.ondernemingsraad': "consiliul de întreprindere (OR: colegi aleși ca să vorbească cu directorul)", // nieuw, nalezen
+    's.union.1': "Mă înscriu în sindicat.", // nieuw, nalezen
+    's.union.2': "Sindicatul negociază cao-ul.", // nieuw, nalezen
+    's.union.3': "Cine face parte din consiliul de întreprindere?", // nieuw, nalezen
+    'c.union.q': { m: "De ce ești membru de sindicat?", f: "De ce ești membră de sindicat?", x: "De ce faci parte din sindicat?" }, // nieuw, nalezen
+    'c.union.a': "Mă apără când e o problemă.", // nieuw, nalezen
+    'l.debthelp': "Datorii și ajutor", // nieuw, nalezen
+    'w.herinnering': "reamintirea de plată (o scrisoare: încă nu ai plătit)", // nieuw, nalezen
+    'w.aanmaning': "somația de plată (plătește până la o dată, altfel pot veni costuri în plus)", // nieuw, nalezen
+    'w.betalingsregeling': "planul de rate (plătești o datorie în bucăți mici)", // nieuw, nalezen
+    'w.deurwaarder': "executorul judecătoresc (un funcționar care încasează o datorie, adesea după ce a hotărât un judecător)", // nieuw, nalezen
+    'w.schuldhulp': "ajutorul pentru datorii (ajutor gratuit cu datoriile tale, de la primărie)", // nieuw, nalezen
+    'w.achterstand': "restanța (bani pe care trebuia să-i fi plătit deja)", // nieuw, nalezen
+    's.debthelp.1': "Am primit o somație de plată.", // nieuw, nalezen
+    's.debthelp.2': "Pot să plătesc în rate?", // nieuw, nalezen
+    's.debthelp.3': "Vreau ajutor cu datoriile mele.", // nieuw, nalezen
+    'c.debthelp.q': "Nu ați plătit încă factura.", // nieuw, nalezen
+    'c.debthelp.a': "Așa e. Pot primi un plan de rate?", // nieuw, nalezen
+    'l.taxes': "Impozite și ajutoare", // nieuw, nalezen
+    'w.jaaropgave': "adeverința anuală de venit (o hârtie de la angajator cu salariul tău pe tot anul)", // nieuw, nalezen
+    'w.blauweenvelop': "plicul albastru (în el vin scrisorile de la Belastingdienst)", // nieuw, nalezen
+    'w.teruggave': "restituirea (bani din impozit pe care îi primești înapoi)", // nieuw, nalezen
+    'w.uitstel': "amânarea (ai voie să o faci mai târziu)", // nieuw, nalezen
+    'w.huurtoeslag': "ajutorul pentru chirie (bani de la stat care te ajută să plătești chiria)", // nieuw, nalezen
+    'w.belastingtelefoon': "linia telefonică gratuită a Belastingdienst", // nieuw, nalezen
+    's.taxes.1': "Am nevoie de adeverința anuală de venit pentru declarația de impozit.", // nieuw, nalezen
+    's.taxes.2': "Acum câștig mai mult. Anunț asta imediat.", // nieuw, nalezen
+    's.taxes.3': "Primesc bani înapoi de la Belastingdienst.", // nieuw, nalezen
+    'c.taxes.q': "E un plic albastru pentru tine.", // nieuw, nalezen
+    'c.taxes.a': "Mulțumesc. Îl deschid imediat.", // nieuw, nalezen
+    'l.kiln': "Cuptor, sticlă și ceramică", // nieuw, nalezen
+    'w.pers': "presa (o mașină care presează argilă sau pulbere într-o formă)", // nieuw, nalezen
+    'w.glazuur': "glazura (un strat lucios, ca de sticlă, pe o placă sau pe o cană)", // nieuw, nalezen
+    'w.tunneloven': "cuptorul tunel (un cuptor lung; produsele trec încet prin el)", // nieuw, nalezen
+    'w.scherf': "ciobul (o bucată ascuțită de sticlă sau de placă spartă)", // nieuw, nalezen
+    'w.gloeiend': "încins la roșu (atât de fierbinte că strălucește roșu)", // nieuw, nalezen
+    'w.armbeschermer': "protecția pentru braț (o mânecă ce îți apără brațul de tăieturi)", // nieuw, nalezen
+    's.kiln.1': "Plăcile trec încet prin cuptorul tunel.", // nieuw, nalezen
+    's.kiln.2': "Placa asta are o fisură. E rebut.", // nieuw, nalezen
+    's.kiln.3': "Poartă protecțiile pentru braț lângă sticlă.", // nieuw, nalezen
+    'c.kiln.q': "Am voie să strâng cioburile cu mâna?", // nieuw, nalezen
+    'c.kiln.a': "Nu. Folosește mătura mică și fărașul.", // nieuw, nalezen
+    'l.mixlab': "Hala de amestec și laboratorul", // nieuw, nalezen
+    'w.batch': "șarja (o cantitate făcută o singură dată, după o singură rețetă)", // nieuw, nalezen
+    'w.afwegen': "a cântări (a cântări exact cât spune rețeta)", // nieuw, nalezen
+    'w.mengvat': "rezervorul de amestec (un rezervor mare cu un mixer în el)", // nieuw, nalezen
+    'w.labjas': "halatul de laborator", // nieuw, nalezen
+    'w.laboratorium': "laboratorul (aici se testează produsul)", // nieuw, nalezen
+    'w.grondstof': "materia primă (din ea faci produsul)", // nieuw, nalezen
+    's.mixlab.1': "Cântărește exact materiile prime.", // nieuw, nalezen
+    's.mixlab.2': "Iau o probă pentru laborator.", // nieuw, nalezen
+    's.mixlab.3': "Ce șarjă e asta? Uită-te pe etichetă.", // nieuw, nalezen
+    'c.mixlab.q': "Șarja a fost aprobată?", // nieuw, nalezen
+    'c.mixlab.a': "Încă nu. Laboratorul testează proba.", // nieuw, nalezen
+    'c.discrimination': "Te tratează nedrept? Nu e vina ta", // nieuw, nalezen
+    'c.discrimination.b': "Discriminare înseamnă că te tratează altfel sau mai rău din cauza a ceea ce ești: originea ta, culoarea pielii, religia, genul, vârsta, un handicap sau persoana pe care o iubești. Intimidarea înseamnă, de exemplu, atingeri nedorite, remarci sexuale, amenințări sau insulte. Amândouă sunt interzise la muncă și nu e niciodată vina ta. Ai voie să spui nu, și șefului tău. Notează ce s-a întâmplat, când și cine a văzut. Vorbește cu supervizorul tău sau cu persoana de încredere (vertrouwenspersoon), dacă firma ta are una. În afara muncii, biroul antidiscriminare din orașul tău te ajută gratuit (discriminatie.nl). College voor de Rechten van de Mens poate da o hotărâre, tot gratuit. Violență sau o amenințare? Mergi la poliție. În pericol: sună la 112. Informații generale. Pentru situația ta: întreabă sindicatul, Juridisch Loket sau FairWork.", // nieuw, nalezen
+    'c.discrimination.p': "Vreau să raportez ceva. Pot să vorbesc confidențial cu dumneavoastră?", // nieuw, nalezen
+    'c.discrimination.s': "Un coleg te insultă des din cauza locului de unde vii. Ceilalți râd. Ce faci?", // nieuw, nalezen
+    'c.discrimination.o1': "Notezi totul și îi spui cuiva în care ai încredere.", // nieuw, nalezen
+    'c.discrimination.o2': "Nu spui nimic: face parte din muncă.", // nieuw, nalezen
+    'c.discrimination.o3': "Demisionezi și nu spui nimănui de ce.", // nieuw, nalezen
+    'c.discrimination.w': "Insultele din cauza originii sunt discriminare și sunt interzise. Când notezi și vorbești despre asta, cineva te poate ajuta să le oprești.", // nieuw, nalezen
+    'c.union': "Împreună, mai puternici", // nieuw, nalezen
+    'c.union.b': "Un sindicat (vakbond), de exemplu FNV sau CNV, apără lucrătorii. Face înțelegeri cu angajatorii despre salariu și muncă: cao-ul. Multe cao-uri sunt valabile pentru toată lumea dintr-un sector, chiar dacă nu faci parte din sindicat. Membrii plătesc o cotizație (contributie) în fiecare lună și primesc sfaturi și ajutor, de exemplu la o problemă cu salariul sau cu concedierea. Înscrie-te la timp: adesea sindicatul ajută doar la o problemă care începe după ce te-ai înscris. Înscrierea e alegerea ta, iar angajatorul nu are voie să te pedepsească pentru asta. O firmă cu 50 de lucrători sau mai mulți trebuie să aibă un consiliu de întreprindere (ondernemingsraad, OR): colegi aleși de lucrători. OR vorbește cu directorul, de exemplu, despre orele de lucru și despre siguranță. O firmă mai mică poate avea o reprezentanță a personalului (personeelsvertegenwoordiging). Ai întrebări? Întreabă un coleg din OR. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen
+    'c.union.p': "Am o întrebare despre noile programe de lucru. Poate OR să facă ceva în privința asta?", // nieuw, nalezen
+    'c.union.s': "Firma ta vrea mult mai multe ture de seară. Mulți colegi nu sunt mulțumiți. Ce poți face?", // nieuw, nalezen
+    'c.union.o1': "Întrebi un coleg din OR despre asta.", // nieuw, nalezen
+    'c.union.o2': "Nu mai vii seara.", // nieuw, nalezen
+    'c.union.o3': "Nu spui nimic: nu se poate schimba nimic.", // nieuw, nalezen
+    'c.union.w': "OR are un cuvânt de spus la regulile despre orele de lucru. Poate vorbi despre ele cu directorul, pentru toți lucrătorii împreună.", // nieuw, nalezen
+    'c.debthelp': "Deschide fiecare scrisoare și cere ajutor din timp", // nieuw, nalezen
+    'c.debthelp.b': "N-ai plătit o factură la timp? Atunci primești întâi o reamintire (herinnering), iar mai târziu o somație (aanmaning). Înainte ca o firmă să-ți poată cere costuri în plus pentru asta, trebuie să-ți dea 14 zile ca să plătești. Așa că deschide fiecare scrisoare, chiar dacă ți-e frică de ea. Nu poți plăti tot deodată? Sună sau scrie și cere un plan de rate (betalingsregeling). Un deurwaarder (executor judecătoresc) e un funcționar care încasează datorii, adesea după ce a hotărât un judecător. El poate, de exemplu, să-ți ia o parte din salariu, dar trebuie să-ți lase mereu destui bani ca să trăiești. Ai datorii? Cere ajutor din timp, cât sunt încă mici. Primăria (gemeente) dă ajutor gratuit pentru datorii (schuldhulp). Pe geldfit.nl poți face un test gratuit și poți găsi ajutor aproape de tine. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen
+    'c.debthelp.p': "Nu pot plăti tot deodată. Pot să plătesc în rate?", // nieuw, nalezen
+    'c.debthelp.s': "Primești o somație pentru factura de telefon. Luna asta nu ai banii. Ce faci?", // nieuw, nalezen
+    'c.debthelp.o1': "Suni la firmă și ceri un plan de rate.", // nieuw, nalezen
+    'c.debthelp.o2': "Pui scrisoarea deoparte și aștepți.", // nieuw, nalezen
+    'c.debthelp.o3': "Împrumuți repede bani cu „cumperi acum, plătești mai târziu”.", // nieuw, nalezen
+    'c.debthelp.w': "Când spui la timp, firma poate adesea să se înțeleagă cu tine pentru plăți mici. O scrisoare pusă deoparte nu dispare: costurile doar cresc.", // nieuw, nalezen
+    'c.taxes': "Declarația de impozit și ajutoarele tale", // nieuw, nalezen
+    'c.taxes.b': "Declarația de impozit (aangifte) pentru anul trecut trebuie făcută înainte de 1 mai. Ai primit o scrisoare în care ți se cere s-o faci? Atunci trebuie s-o faci. Uneori primești bani înapoi. Ai nevoie de adeverința anuală de venit (jaaropgave) de la angajator. N-ai timp? Poți cere amânare (uitstel). Ajutoarele (toeslagen), ca zorgtoeslag și huurtoeslag, sunt un avans: depind de cât vei câștiga anul acesta. Câștigi mai mult sau se schimbă altceva? Anunță imediat în Mijn toeslagen. Dacă nu o faci, s-ar putea să trebuiască să dai înapoi mulți bani mai târziu. Trebuie să dai bani înapoi? Poți cere un plan de rate. Ajutor gratuit: BelastingTelefoon, un birou Belastingdienst (fă-ți întâi o programare) sau biblioteca. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen
+    'c.taxes.p': "Venitul meu s-a schimbat. Cum anunț asta?", // nieuw, nalezen
+    'c.taxes.s': "Ai un loc de muncă nou și câștigi mai mult în fiecare lună. Primești huurtoeslag. Ce faci?", // nieuw, nalezen
+    'c.taxes.o1': "Îți anunți noul venit în Mijn toeslagen.", // nieuw, nalezen
+    'c.taxes.o2': "Aștepți până te întreabă Belastingdienst.", // nieuw, nalezen
+    'c.taxes.o3': "Nu mai plătești chiria.", // nieuw, nalezen
+    'c.taxes.w': "Ajutorul tău depinde de cât câștigi. Când anunți schimbarea la timp, primești suma corectă și nu trebuie să dai înapoi mulți bani mai târziu.", // nieuw, nalezen
+    'c.kiln': "Ascuțit, fierbinte și greu", // nieuw, nalezen
+    'c.kiln.b': "Într-o fabrică de plăci sau de sticlă, produsele sunt presate într-o formă, primesc glazură și trec încet printr-un cuptor lung. După cuptor trebuie să se răcească: nu le atinge cât sunt fierbinți sau poartă mănuși rezistente la căldură. Sticla și plăcile sparte sunt foarte ascuțite. Poartă mănuși antităiere, protecții pentru braț și ochelari de protecție. Nu prinde niciodată o placă de sticlă care cade: fă un pas înapoi. Strânge cioburile cu mătura mică și fărașul, niciodată cu mâinile, și pune-le în containerul potrivit. Glazura și praful pot conține substanțe dăunătoare: spală-te pe mâini înainte să mănânci sau să bei. La presă, nu băga niciodată mâna cât timp merge. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.kiln.p': "Atenție, cioburi! Aduc mătura mică și fărașul.", // nieuw, nalezen
+    'c.kiln.s': "O placă de sticlă alunecă din suport și începe să cadă. Ce faci?", // nieuw, nalezen
+    'c.kiln.o1': "Faci un pas înapoi și o lași să cadă.", // nieuw, nalezen
+    'c.kiln.o2': "O prinzi cu mâinile.", // nieuw, nalezen
+    'c.kiln.o3': "O oprești cu piciorul.", // nieuw, nalezen
+    'c.kiln.w': "O placă care cade poate tăia foarte adânc, chiar și prin mănuși. O placă spartă costă doar bani.", // nieuw, nalezen
+    'c.mixlab': "Urmează rețeta exact", // nieuw, nalezen
+    'c.mixlab.b': "Într-o hală de amestec faci o șarjă după o rețetă: ce materii prime, cât și în ce ordine. Cântărește totul exact și notează ce ai adăugat, cu numărul șarjei. Nu știi sigur? Întreabă, nu ghici. Înainte să folosești un butoi sau un sac, citește eticheta: ce e în el, numărul șarjei și simbolurile de pericol. Nu pune niciodată într-un butoi sau într-un sac ceva ce nu-și are locul acolo. Pentru o probă, folosește o lingură curată și un borcan curat și pune imediat o etichetă pe el. Praful și vaporii pot fi dăunători: folosește aspirația și poartă ce e nevoie, cum ar fi un halat de laborator, ochelari de protecție, mănuși sau o mască. În industria alimentară porți și o plasă de păr și te speli des pe mâini. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.mixlab.p': "Nu știu sigur. Cât trebuie să pun?", // nieuw, nalezen
+    'c.mixlab.s': "Rețeta spune 25 de kilograme. Din greșeală pui 26 de kilograme, iar ele sunt deja în rezervorul de amestec. Ce faci?", // nieuw, nalezen
+    'c.mixlab.o1': "Îi spui șefului de tură și notezi.", // nieuw, nalezen
+    'c.mixlab.o2': "Nu spui nimic: un kilogram nu e mult.", // nieuw, nalezen
+    'c.mixlab.o3': "Scoți puțin cu mâna.", // nieuw, nalezen
+    'c.mixlab.w': "O cantitate greșită poate strica toată șarja. Când șeful de tură află la timp, laboratorul poate verifica înainte ca șarja să meargă mai departe.", // nieuw, nalezen
   },
 };
 

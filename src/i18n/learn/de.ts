@@ -316,6 +316,15 @@ const t: CultureTranslation = {
     'c.plantfault.a.why': "Gefragt, ob man starten darf: nein, es ist noch ein Schloss dran.", // nieuw, nalezen
     'c.shiftwork.a.why': "Gefragt, was passiert ist: die Störung, und wo sie aufgeschrieben ist.", // nieuw, nalezen
     'c.heatdust.a.why': "Nach dem Handy gefragt: nein, wegen der Gefahr hier.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.debthelp.a.why': "Gesagt, dass die Rechnung nicht bezahlt ist: ja, und die Bitte um eine Ratenzahlung.", // nieuw, nalezen
+    'c.taxes.a.why': "Gesagt, dass ein blauer Umschlag da ist: danke, und sofort aufmachen.", // nieuw, nalezen
+    'c.discrimination.a.why': "Gefragt, ob es dir gut geht: nein, und du meldest es.", // nieuw, nalezen
+    'c.union.a.why': "Gefragt, warum du Mitglied bist: Sie setzen sich für dich ein.", // nieuw, nalezen
+    'c.kiln.a.why': "Nach Scherben mit der Hand gefragt: nein, Handfeger und Kehrblech.", // nieuw, nalezen
+    'c.mixlab.a.why': "Gefragt, ob die Charge freigegeben ist: noch nicht, das Labor testet sie.", // nieuw, nalezen
+    'c.firstweeks.a.why': "Nach dem Rundgang gefragt: fast alles, und eine Frage.", // nieuw, nalezen
+    'c.orderpick.a.why': "Gebeten, den Schubmaststapler zu fahren: nein, keine Schulung dafür.", // nieuw, nalezen
   },
 };
 

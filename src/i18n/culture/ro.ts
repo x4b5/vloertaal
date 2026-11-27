@@ -458,6 +458,23 @@ const t: CultureTranslation = {
     'c.breaks.o2': "Pleci la trei și explici a doua zi.", // nieuw, nalezen
     'c.breaks.o3': "Renunți la doctor și îți termini tura.", // nieuw, nalezen
     'c.breaks.w': "Când întrebi din timp, șeful poate planifica munca. Să pleci fără să întrebi e considerat lipsă de seriozitate.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.firstweeks': "Întreabă din nou: e normal", // nieuw, nalezen
+    'c.firstweeks.b': "În primele săptămâni, nimeni nu se așteaptă să știi totul. Adesea primești un tur prin firmă (rondleiding) și un coleg care te îndrumă. Întâi te uiți, apoi faci tu, în timp ce colegul se uită. Ai uitat ceva? Întreabă din nou: „Wil je het nog een keer laten zien?” E mai bine decât să ghicești. Notează cuvintele noi și pașii într-un carnețel. Unele contracte încep cu o perioadă de probă (proeftijd): atunci tu sau angajatorul puteți încheia repede contractul. Întreabă dacă contractul tău are una. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.firstweeks.p': "Am uitat. Îmi mai arăți o dată?", // nieuw, nalezen
+    'c.firstweeks.s': "Ieri colegul ți-a arătat cum pornești mașina. Azi nu-ți amintești al treilea pas. Ce faci?", // nieuw, nalezen
+    'c.firstweeks.o1': "Îl rogi pe coleg să-ți mai arate o dată.", // nieuw, nalezen
+    'c.firstweeks.o2': "Ghicești și încerci.", // nieuw, nalezen
+    'c.firstweeks.o3': "Aștepți până o pornește altcineva.", // nieuw, nalezen
+    'c.firstweeks.w': "E normal să întrebi din nou în primele săptămâni. Să ghicești la o mașină poate fi periculos și costă mai mult timp.", // nieuw, nalezen
+    'c.orderpick': "Mergi pe aleea pietonală", // nieuw, nalezen
+    'c.orderpick.b': "Într-un depozit mare pregătești comenzi cu o listă de picking și un scaner: scanezi fiecare articol, ca produsele potrivite să ajungă la clientul potrivit. Mulți lucrători care pregătesc comenzi conduc un utilaj mic care îi ridică sau un stivuitor retractabil pentru rafturile înalte. Conduce un astfel de utilaj doar după ce ai făcut instruirea pentru el, adesea cu un certificat. Mergi pe aleile pietonale și ține-te departe de utilajele în mișcare: șoferul nu te vede mereu. În camera frigorifică sau în camera de congelare, poartă hainele călduroase, mănușile și căciula pe care le primești de la muncă. Ia-ți pauzele de încălzire și spune cuiva când intri. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.orderpick.p': "Mă duc puțin la cantină să mă încălzesc.", // nieuw, nalezen
+    'c.orderpick.s': "Trebuie să ajungi pe celălalt culoar. Aleea pietonală face un ocol; drept, printre utilaje, e mai repede. Ce faci?", // nieuw, nalezen
+    'c.orderpick.o1': "Mergi pe aleea pietonală, chiar dacă e mai lungă.", // nieuw, nalezen
+    'c.orderpick.o2': "Treci în fugă printre utilaje.", // nieuw, nalezen
+    'c.orderpick.o3': "Treci pe jos și le faci semn șoferilor.", // nieuw, nalezen
+    'c.orderpick.w': "Adesea șoferul unui utilaj nu te poate vedea, de exemplu din spatele unei încărcături înalte. Pe aleea pietonală, oamenii sunt așteptați și sunt în siguranță.", // nieuw, nalezen
   },
 };
 

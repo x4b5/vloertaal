@@ -317,6 +317,15 @@ const t: CultureTranslation = {
     'c.plantfault.a.why': "Питат дали може да пуснеш: не, още има катинар.", // nieuw, nalezen
     'c.shiftwork.a.why': "Питат какво е станало: повредата и къде е записана.", // nieuw, nalezen
     'c.heatdust.a.why': "Питат за телефона: не, заради опасността тук.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.debthelp.a.why': "Казват, че сметката не е платена: да, и молба за разсрочено плащане.", // nieuw, nalezen
+    'c.taxes.a.why': "Казват, че има син плик: благодарност и веднага отваряне.", // nieuw, nalezen
+    'c.discrimination.a.why': "Питат дали си добре: не, и ще има сигнал за това.", // nieuw, nalezen
+    'c.union.a.why': "Питат защо членуваш: застъпват се за теб.", // nieuw, nalezen
+    'c.kiln.a.why': "Питат за събиране на парчета с ръка: не, с метличка и лопатка.", // nieuw, nalezen
+    'c.mixlab.a.why': "Питат дали партидата е одобрена: още не, лабораторията я изпитва.", // nieuw, nalezen
+    'c.firstweeks.a.why': "Питат за обиколката: почти всичко и един въпрос.", // nieuw, nalezen
+    'c.orderpick.a.why': "Молят да караш ричтрака: не, няма обучение.", // nieuw, nalezen
   },
 };
 

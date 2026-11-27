@@ -12,6 +12,7 @@ import { workUnits } from './work';
  * lessons (23 November 2026; translated the same day). And the four lessons of "Veiligheid op het
  * werk" and the VOG lesson of "Werken via een uitzendbureau" (23 November 2026; translated the same day).
  * And the four lessons of "Operator in de procesindustrie" (23 November 2026; translated the same day).
+ * And the eight new lessons of 26 November 2026 (translated the same day).
  */
 export const TRANSLATION_PENDING_LESSONS: readonly string[] = [];
 
@@ -22,10 +23,16 @@ export const TRANSLATION_PENDING_LESSONS: readonly string[] = [];
  */
 const PENDING_CURRICULUM_WORDS: readonly string[] = [];
 
+/**
+ * "Kun je nu" lines of units that are translated, added with pending lessons (src/content/kunJeNu.ts):
+ * the third line of five units, for the eight new lessons of 26 November 2026.
+ */
+const PENDING_KJN: readonly string[] = [];
+
 /** Units whose title waits for its translations too. */
 const PENDING_UNITS: readonly string[] = [];
 
-const pendingIds = new Set<string>([...PENDING_UNITS, ...PENDING_CURRICULUM_WORDS]);
+const pendingIds = new Set<string>([...PENDING_UNITS, ...PENDING_CURRICULUM_WORDS, ...PENDING_KJN]);
 for (const l of workUnits.flatMap((u) => u.lessons)) {
   if (!TRANSLATION_PENDING_LESSONS.includes(l.id.slice(2))) continue;
   pendingIds.add(l.id);

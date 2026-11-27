@@ -455,6 +455,23 @@ const t: CultureTranslation = {
     'c.breaks.o2': "Pars à trois heures, et explique-le le lendemain.", // nieuw, nalezen
     'c.breaks.o3': "Annule le médecin, et finis ton service.", // nieuw, nalezen
     'c.breaks.w': "Demander à temps permet à ton responsable d’organiser le travail. Partir sans demander, c’est vu comme pas fiable.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.firstweeks': "Redemander, c’est normal", // nieuw, nalezen
+    'c.firstweeks.b': "Pendant tes premières semaines, personne n’attend de toi que tu saches tout. Souvent, tu as une visite (rondleiding) et un collègue qui te guide. Regarde d’abord, puis fais-le toi-même pendant que ton collègue regarde. Tu as oublié quelque chose ? Redemande : “Wil je het nog een keer laten zien?” C’est mieux que de deviner. Note les nouveaux mots et les étapes dans un petit carnet. Certains contrats commencent par une période d’essai (proeftijd) : alors toi ou ton employeur pouvez arrêter le travail rapidement. Demande si ton contrat en a une. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.firstweeks.p': "Je l’ai oublié. Tu peux me le montrer encore une fois ?", // nieuw, nalezen
+    'c.firstweeks.s': "Hier, ton collègue t’a montré comment démarrer la machine. Aujourd’hui, tu ne te souviens plus de la troisième étape. Que fais-tu ?", // nieuw, nalezen
+    'c.firstweeks.o1': "Tu demandes à ton collègue de te la montrer encore une fois.", // nieuw, nalezen
+    'c.firstweeks.o2': "Tu devines, et tu essaies.", // nieuw, nalezen
+    'c.firstweeks.o3': "Tu attends que quelqu’un d’autre la démarre.", // nieuw, nalezen
+    'c.firstweeks.w': "Redemander, c’est normal pendant les premières semaines. Deviner sur une machine peut être dangereux, et fait perdre plus de temps.", // nieuw, nalezen
+    'c.orderpick': "Marche sur le passage piéton", // nieuw, nalezen
+    'c.orderpick.b': "Dans un grand entrepôt, tu prépares les commandes avec une liste de prélèvement et un scanner : tu scannes chaque article, pour que les bons produits aillent chez le bon client. Beaucoup de préparateurs de commandes conduisent un petit chariot qui les soulève, ou un chariot à mât rétractable (reachtruck) pour les rayonnages hauts. Conduis-en un seulement si tu as eu la formation pour ça, souvent avec un certificat. Marche sur les passages piétons, et reste loin des chariots qui roulent : le conducteur ne peut pas toujours te voir. Dans la chambre froide ou la chambre de congélation, porte les vêtements chauds, les gants et le bonnet que le travail te donne. Prends tes pauses pour te réchauffer, et dis à quelqu’un quand tu y entres. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.orderpick.p': "Je vais me réchauffer un peu à la cantine.", // nieuw, nalezen
+    'c.orderpick.s': "Tu dois aller dans l’autre allée. Le passage piéton fait le tour ; tout droit, entre les chariots, c’est plus rapide. Que fais-tu ?", // nieuw, nalezen
+    'c.orderpick.o1': "Tu prends le passage piéton, même s’il est plus long.", // nieuw, nalezen
+    'c.orderpick.o2': "Tu traverses vite en courant entre les chariots.", // nieuw, nalezen
+    'c.orderpick.o3': "Tu traverses à pied, et tu fais signe aux conducteurs.", // nieuw, nalezen
+    'c.orderpick.w': "Souvent, le conducteur d’un chariot ne peut pas te voir, par exemple derrière une charge haute. Sur le passage piéton, les gens sont attendus et en sécurité.", // nieuw, nalezen
   },
 };
 

@@ -181,6 +181,12 @@ const t: CultureTranslation = {
     // "Operator in de procesindustrie" (23 November 2026).
     'kjn.u.process.1': "Consigo dizer que a pressão está alta demais.", // nieuw, nalezen
     'kjn.u.process.2': "Consigo contar na passagem de turno o que aconteceu.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'kjn.u.firstday.3': "Consigo pedir a alguém para mostrar outra vez.", // nieuw, nalezen
+    'kjn.u.rights.3': "Consigo dizer que me tratam de forma diferente.", // nieuw, nalezen
+    'kjn.u.money.3': "Consigo pedir um plano de pagamentos.", // nieuw, nalezen
+    'kjn.u.warehouse.3': "Consigo dizer que não conduzo um empilhador retrátil sem formação.", // nieuw, nalezen
+    'kjn.u.process.3': "Consigo perguntar quanto é preciso pôr de uma matéria-prima.", // nieuw, nalezen
   },
 };
 

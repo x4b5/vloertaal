@@ -4983,6 +4983,127 @@ const t: CultureTranslation = {
     'c.heatdust.o2': "Üflersin: daha hızlı.", // nieuw, nalezen
     'c.heatdust.o3': "Sonraki vardiyaya bırakırsın.", // nieuw, nalezen
     'c.heatdust.w': "Üflemek tozu havalandırır, havaya ve akciğerlerine. Islak bir bez ya da elektrikli süpürge tozu aşağıda tutar.", // nieuw, nalezen
+    // eight new lessons (debts, taxes, discrimination, the union, kiln, mixing lab, first weeks, order picking) (26 November 2026).
+    'l.discrimination': "Ayrımcılık ve taciz", // nieuw, nalezen
+    'w.andersbehandelen': "farklı davranmak (başkalarından daha kötü)", // nieuw, nalezen
+    'w.afkomst': "köken (senin ya da ailenin geldiği ülke ya da grup)", // nieuw, nalezen
+    'w.geloof': "din, inanç", // nieuw, nalezen
+    'w.uitschelden': "hakaret etmek, sövmek (birine çirkin sözler söylemek)", // nieuw, nalezen
+    'w.bedreigen': "tehdit etmek (birine zarar vereceğini söylemek)", // nieuw, nalezen
+    'w.geweld': "şiddet", // nieuw, nalezen
+    's.discrimination.1': "Dinim yüzünden bana farklı davranılıyor.", // nieuw, nalezen
+    's.discrimination.2': "Beni tehdit ediyor. Kendimi güvende hissetmiyorum.", // nieuw, nalezen
+    's.discrimination.3': "Hayır diyebilirim, patronuma da.", // nieuw, nalezen
+    'c.discrimination.q': "İyi misin? Sana sürekli hakaret ediyorlar.", // nieuw, nalezen
+    'c.discrimination.a': "Hayır, iyi değilim. Bunu bildireceğim.", // nieuw, nalezen
+    'l.union': "Sendika ve işletme konseyi", // nieuw, nalezen
+    'w.lidworden': "üye olmak", // nieuw, nalezen
+    'w.contributie': "üyelik aidatı (her ay ödersin)", // nieuw, nalezen
+    'w.opkomenvoor': "savunmak, arkasında durmak (birinin çıkarlarını korumak)", // nieuw, nalezen
+    'w.onderhandelen': "müzakere etmek, pazarlık etmek (iki taraf anlaşana kadar konuşmak)", // nieuw, nalezen
+    'w.loonsverhoging': "maaş artışı, zam", // nieuw, nalezen
+    'w.ondernemingsraad': "işletme konseyi (OR: müdürle konuşmak için seçilen iş arkadaşları)", // nieuw, nalezen
+    's.union.1': "Sendikaya üye oluyorum.", // nieuw, nalezen
+    's.union.2': "Sendika cao hakkında müzakere ediyor.", // nieuw, nalezen
+    's.union.3': "İşletme konseyinde kimler var?", // nieuw, nalezen
+    'c.union.q': "Neden sendika üyesisin?", // nieuw, nalezen
+    'c.union.a': "Bir sorun olduğunda beni savunuyorlar.", // nieuw, nalezen
+    'l.debthelp': "Borçlar ve yardım", // nieuw, nalezen
+    'w.herinnering': "hatırlatma (bir mektup: henüz ödemedin)", // nieuw, nalezen
+    'w.aanmaning': "son ihtar (bir tarihten önce öde, yoksa ek masraflar gelebilir)", // nieuw, nalezen
+    'w.betalingsregeling': "ödeme planı (bir borcu küçük parçalar hâlinde ödersin)", // nieuw, nalezen
+    'w.deurwaarder': "icra memuru (borç tahsil eden bir görevli, çoğu zaman bir hâkim karar verdikten sonra)", // nieuw, nalezen
+    'w.schuldhulp': "borç yardımı (belediyeden borçların için ücretsiz yardım)", // nieuw, nalezen
+    'w.achterstand': "birikmiş borç (çoktan ödemiş olman gereken para)", // nieuw, nalezen
+    's.debthelp.1': "Son ihtar aldım.", // nieuw, nalezen
+    's.debthelp.2': "Taksitle ödeyebilir miyim?", // nieuw, nalezen
+    's.debthelp.3': "Borçlarım için yardım istiyorum.", // nieuw, nalezen
+    'c.debthelp.q': "Faturayı henüz ödemediniz.", // nieuw, nalezen
+    'c.debthelp.a': "Doğru. Ödeme planı yapabilir miyim?", // nieuw, nalezen
+    'l.taxes': "Vergi ve yardımlar", // nieuw, nalezen
+    'w.jaaropgave': "yıllık gelir belgesi (işvereninden, bütün yılın maaşının yazılı olduğu bir kâğıt)", // nieuw, nalezen
+    'w.blauweenvelop': "mavi zarf (Belastingdienst’ten gelen mektuplar bunun içinde gelir)", // nieuw, nalezen
+    'w.teruggave': "iade (geri aldığın vergi parası)", // nieuw, nalezen
+    'w.uitstel': "ek süre (bunu daha sonra yapabilirsin)", // nieuw, nalezen
+    'w.huurtoeslag': "kira yardımı (kiranı ödemene yardım etmek için devletten gelen para)", // nieuw, nalezen
+    'w.belastingtelefoon': "Belastingdienst’in ücretsiz telefon hattı", // nieuw, nalezen
+    's.taxes.1': "Vergi beyannamesi için yıllık gelir belgeme ihtiyacım var.", // nieuw, nalezen
+    's.taxes.2': "Artık daha çok kazanıyorum. Bunu hemen bildiriyorum.", // nieuw, nalezen
+    's.taxes.3': "Belastingdienst’ten para geri alıyorum.", // nieuw, nalezen
+    'c.taxes.q': "Senin için mavi bir zarf var.", // nieuw, nalezen
+    'c.taxes.a': "Teşekkürler. Hemen açıyorum.", // nieuw, nalezen
+    'l.kiln': "Fırın, cam ve seramik", // nieuw, nalezen
+    'w.pers': "pres (kili ya da tozu bir şekle bastıran makine)", // nieuw, nalezen
+    'w.glazuur': "sır (bir fayansın ya da fincanın üstündeki parlak, cam gibi katman)", // nieuw, nalezen
+    'w.tunneloven': "tünel fırın (uzun bir fırın; ürünler içinden yavaşça geçer)", // nieuw, nalezen
+    'w.scherf': "kırık parça (kırık cam ya da fayanstan keskin bir parça)", // nieuw, nalezen
+    'w.gloeiend': "kızgın, akkor (o kadar sıcak ki kırmızı parlar)", // nieuw, nalezen
+    'w.armbeschermer': "kol koruyucu (kolunu kesiklere karşı koruyan bir kılıf)", // nieuw, nalezen
+    's.kiln.1': "Fayanslar tünel fırından yavaşça geçiyor.", // nieuw, nalezen
+    's.kiln.2': "Bu fayansta bir çatlak var. Bu ıskarta.", // nieuw, nalezen
+    's.kiln.3': "Camın yanında kol koruyucularını tak.", // nieuw, nalezen
+    'c.kiln.q': "Kırık parçaları elimle toplayabilir miyim?", // nieuw, nalezen
+    'c.kiln.a': "Hayır. El süpürgesi ve faraş kullan.", // nieuw, nalezen
+    'l.mixlab': "Karıştırma salonu ve laboratuvar", // nieuw, nalezen
+    'w.batch': "parti (tek bir tarifle bir seferde yapılan miktar)", // nieuw, nalezen
+    'w.afwegen': "tartmak (tarif ne diyorsa tam o kadar tartmak)", // nieuw, nalezen
+    'w.mengvat': "karıştırma tankı (içinde karıştırıcı olan büyük bir tank)", // nieuw, nalezen
+    'w.labjas': "laboratuvar önlüğü", // nieuw, nalezen
+    'w.laboratorium': "laboratuvar (lab: burada ürünü test ederler)", // nieuw, nalezen
+    'w.grondstof': "hammadde (ürünü ondan yaptığın şey)", // nieuw, nalezen
+    's.mixlab.1': "Hammaddeleri tam olarak tart.", // nieuw, nalezen
+    's.mixlab.2': "Laboratuvar için numune alıyorum.", // nieuw, nalezen
+    's.mixlab.3': "Bu hangi parti? Etikete bak.", // nieuw, nalezen
+    'c.mixlab.q': "Parti onaylandı mı?", // nieuw, nalezen
+    'c.mixlab.a': "Henüz değil. Laboratuvar numuneyi test ediyor.", // nieuw, nalezen
+    'c.discrimination': "Haksız muamele mi? Bu senin suçun değil", // nieuw, nalezen
+    'c.discrimination.b': "Ayrımcılık, kim olduğun yüzünden sana farklı ya da daha kötü davranılmasıdır: kökenin, ten rengin, dinin, cinsiyetin, yaşın, bir engelin ya da kimi sevdiğin yüzünden. Taciz ise örneğin istenmeyen dokunma, cinsel sözler, tehditler ya da sana hakaret edilmesidir. İkisi de iş yerinde yasaktır ve bu asla senin suçun değildir. Hayır diyebilirsin, patronuna da. Ne olduğunu, ne zaman olduğunu ve kimin gördüğünü yaz. Amirinle konuş, ya da şirketinde varsa vertrouwenspersoon ile. İşinin dışında, şehrindeki ayrımcılıkla mücadele bürosu ücretsiz yardım eder (discriminatie.nl). College voor de Rechten van de Mens de ücretsiz olarak bir karar verebilir. Şiddet ya da tehdit mi? Polise git. Tehlikedeysen: 112’yi ara. Genel bilgi. Kendi durumun için sendikaya, Juridisch Loket’e veya FairWork’e sor.", // nieuw, nalezen
+    'c.discrimination.p': "Bir şey bildirmek istiyorum. Sizinle gizli olarak konuşabilir miyim?", // nieuw, nalezen
+    'c.discrimination.s': "Bir iş arkadaşın nereden geldiğin için sana sık sık hakaret ediyor. Diğerleri gülüyor. Ne yaparsın?", // nieuw, nalezen
+    'c.discrimination.o1': "Bunu yazar ve güvendiğin birine anlatırsın.", // nieuw, nalezen
+    'c.discrimination.o2': "Hiçbir şey söylemezsin: bu işin bir parçası.", // nieuw, nalezen
+    'c.discrimination.o3': "İşi bırakırsın ve nedenini kimseye söylemezsin.", // nieuw, nalezen
+    'c.discrimination.w': "Kökenin yüzünden hakaret etmek ayrımcılıktır ve buna izin yoktur. Bunu yazıp anlattığında, biri bunu durdurman için sana yardım edebilir.", // nieuw, nalezen
+    'c.union': "Birlikte daha güçlüsünüz", // nieuw, nalezen
+    'c.union.b': "Bir sendika (vakbond), örneğin FNV ya da CNV, çalışanları savunur. İşverenlerle maaş ve iş hakkında anlaşmalar yapar: cao. Birçok cao bir sektördeki herkes için geçerlidir, üye olmasan da. Üyeler her ay bir aidat (contributie) öder ve tavsiye ve yardım alır, örneğin maaşla ya da işten çıkarılmayla ilgili bir sorunda. Zamanında üye ol: sendika çoğu zaman sadece üye olduktan sonra başlayan bir sorunda yardım eder. Üye olmak senin kendi seçimindir ve işverenin bunun için seni cezalandırması yasaktır. 50 ya da daha fazla çalışanı olan bir şirketin bir işletme konseyi (ondernemingsraad, OR) olmak zorundadır: çalışanların seçtiği iş arkadaşları. OR müdürle örneğin çalışma saatleri ve güvenlik hakkında konuşur. Daha küçük bir şirketin bir personel temsilciliği (personeelsvertegenwoordiging) olabilir. Soruların mı var? OR’daki bir iş arkadaşına sor. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen
+    'c.union.p': "Yeni çalışma planlarıyla ilgili bir sorum var. OR bu konuda bir şey yapabilir mi?", // nieuw, nalezen
+    'c.union.s': "Şirketin çok daha fazla akşam vardiyası planlıyor. Birçok iş arkadaşın bundan memnun değil. Ne yapabilirsin?", // nieuw, nalezen
+    'c.union.o1': "Bunu OR’daki bir iş arkadaşına sorarsın.", // nieuw, nalezen
+    'c.union.o2': "Akşamları işe gelmeyi bırakırsın.", // nieuw, nalezen
+    'c.union.o3': "Hiçbir şey söylemezsin: hiçbir şey değişmez.", // nieuw, nalezen
+    'c.union.w': "OR’un çalışma saatleriyle ilgili kurallarda söz hakkı vardır. Bunları bütün çalışanlar adına, birlikte, müdürle konuşabilir.", // nieuw, nalezen
+    'c.debthelp': "Her mektubu aç ve erkenden yardım iste", // nieuw, nalezen
+    'c.debthelp.b': "Bir faturayı zamanında ödemedin mi? O zaman önce bir hatırlatma (herinnering), sonra bir son ihtar (aanmaning) alırsın. Bir şirket bunun için senden ek masraf almadan önce, ödemen için sana 14 gün vermek zorundadır. Bu yüzden her mektubu aç, ondan korksan bile. Hepsini bir kerede ödeyemiyor musun? Ara ya da yaz ve bir ödeme planı (betalingsregeling) iste. Deurwaarder (icra memuru), çoğu zaman bir hâkim karar verdikten sonra borçları tahsil eden bir görevlidir. Örneğin maaşının bir kısmını alabilir, ama sana her zaman geçinmeye yetecek kadar bırakmak zorundadır. Borçların mı var? Borçlar daha küçükken erkenden yardım iste. Gemeente ücretsiz borç yardımı (schuldhulp) verir. Ücretsiz bir test yapmak ve yakınında yardım bulmak için geldfit.nl’ye bakabilirsin. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen
+    'c.debthelp.p': "Hepsini bir kerede ödeyemiyorum. Taksitle ödeyebilir miyim?", // nieuw, nalezen
+    'c.debthelp.s': "Telefon faturan için bir son ihtar alıyorsun. Bu ay paran yok. Ne yaparsın?", // nieuw, nalezen
+    'c.debthelp.o1': "Şirketi arar ve bir ödeme planı istersin.", // nieuw, nalezen
+    'c.debthelp.o2': "Mektubu kaldırır ve beklersin.", // nieuw, nalezen
+    'c.debthelp.o3': "“Şimdi al, sonra öde” ile hızlıca borçlanırsın.", // nieuw, nalezen
+    'c.debthelp.w': "Zamanında söylediğinde şirket çoğu zaman küçük ödemelere razı olabilir. Kaldırdığın bir mektup ortadan kalkmaz: masraflar sadece artar.", // nieuw, nalezen
+    'c.taxes': "Vergi beyannamen ve yardımların", // nieuw, nalezen
+    'c.taxes.b': "Geçen yılın vergi beyannamesi (aangifte) 1 Mayıs’tan önce verilmelidir. Bunu yapmanı isteyen bir mektup mu aldın? O zaman yapmak zorundasın. Bazen para geri alırsın. İşvereninden yıllık gelir belgesine (jaaropgave) ihtiyacın var. Zamanın yok mu? Ek süre (uitstel) isteyebilirsin. Zorgtoeslag ve huurtoeslag gibi yardımlar (toeslagen) bir avanstır: bu yıl ne kazanacağına bağlıdır. Daha çok mu kazanıyorsun, ya da başka bir şey mi değişiyor? Bunu hemen Mijn toeslagen’de bildir. Bildirmezsen, sonra çok para geri ödemen gerekebilir. Geri ödemen mi gerekiyor? Bir ödeme planı isteyebilirsin. Ücretsiz yardım: BelastingTelefoon, bir Belastingdienst ofisi (önce randevu al) ya da kütüphane. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen
+    'c.taxes.p': "Gelirim değişti. Bunu nasıl bildiririm?", // nieuw, nalezen
+    'c.taxes.s': "Yeni bir iş buluyorsun ve her ay daha çok kazanıyorsun. Huurtoeslag alıyorsun. Ne yaparsın?", // nieuw, nalezen
+    'c.taxes.o1': "Yeni gelirini Mijn toeslagen’de bildirirsin.", // nieuw, nalezen
+    'c.taxes.o2': "Belastingdienst sorana kadar beklersin.", // nieuw, nalezen
+    'c.taxes.o3': "Kiranı ödemeyi bırakırsın.", // nieuw, nalezen
+    'c.taxes.w': "Yardımın ne kazandığına göre hesaplanır. Değişikliği zamanında bildirdiğinde doğru miktarı alırsın ve sonra çok para geri ödemek zorunda kalmazsın.", // nieuw, nalezen
+    'c.kiln': "Keskin, sıcak ve ağır", // nieuw, nalezen
+    'c.kiln.b': "Bir fayans ya da cam fabrikasında ürünler bir şekle preslenir, sır alır ve uzun bir fırından yavaşça geçer. Fırından sonra soğumaları gerekir: sıcakken onlara dokunma ya da ısıya dayanıklı eldiven giy. Cam ve kırık fayanslar çok keskindir. Kesilmeye dayanıklı eldiven, kol koruyucu ve koruyucu gözlük tak. Düşen bir cam levhayı asla tutmaya çalışma: geri çekil. Kırık parçaları el süpürgesi ve faraşla topla, asla elinle değil, ve doğru çöp kutusuna at. Sır ve toz zararlı maddeler içerebilir: yemeden ya da içmeden önce ellerini yıka. Preste, pres çalışırken asla içine uzanma. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.kiln.p': "Dikkat, kırık parçalar! El süpürgesi ve faraş getiriyorum.", // nieuw, nalezen
+    'c.kiln.s': "Bir cam levha raftan kayıyor ve düşmeye başlıyor. Ne yaparsın?", // nieuw, nalezen
+    'c.kiln.o1': "Geri çekilir ve düşmesine izin verirsin.", // nieuw, nalezen
+    'c.kiln.o2': "Ellerinle tutarsın.", // nieuw, nalezen
+    'c.kiln.o3': "Bacağınla durdurursun.", // nieuw, nalezen
+    'c.kiln.w': "Düşen bir levha, eldivenin içinden bile çok derin kesebilir. Kırık bir levha sadece paraya mal olur.", // nieuw, nalezen
+    'c.mixlab': "Tarife tam olarak uy", // nieuw, nalezen
+    'c.mixlab.b': "Bir karıştırma salonunda bir tarife göre bir parti yaparsın: hangi hammaddeler, ne kadar ve hangi sırayla. Her şeyi tam olarak tart ve ne eklediğini parti numarasıyla birlikte yaz. Emin değil misin? Sor, tahmin etme. Bir varil ya da çuval kullanmadan önce etiketi oku: içinde ne olduğu, parti numarası ve tehlike işaretleri. Bir varile ya da çuvala, içine ait olmayan bir şeyi asla koyma. Numune için temiz bir kepçe ve temiz bir kap kullan ve hemen üstüne etiket yapıştır. Toz ve buhar zararlı olabilir: emme sistemini kullan ve gerekeni giy, örneğin laboratuvar önlüğü, koruyucu gözlük, eldiven ya da maske. Gıda sektöründe ayrıca bone takarsın ve ellerini sık sık yıkarsın. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.mixlab.p': "Emin değilim. İçine ne kadar girmeli?", // nieuw, nalezen
+    'c.mixlab.s': "Tarifte 25 kilo yazıyor. Yanlışlıkla 26 kilo koyuyorsun ve bu zaten karıştırma tankında. Ne yaparsın?", // nieuw, nalezen
+    'c.mixlab.o1': "Vardiya şefine söyler ve bunu yazarsın.", // nieuw, nalezen
+    'c.mixlab.o2': "Hiçbir şey söylemezsin: bir kilo çok değil.", // nieuw, nalezen
+    'c.mixlab.o3': "Elinle biraz çıkarırsın.", // nieuw, nalezen
+    'c.mixlab.w': "Tek bir yanlış miktar bütün partiyi bozabilir. Vardiya şefi bunu zamanında öğrenirse, parti devam etmeden önce laboratuvar kontrol edebilir.", // nieuw, nalezen
   },
 };
 

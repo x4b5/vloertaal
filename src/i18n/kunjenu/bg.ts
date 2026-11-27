@@ -183,6 +183,12 @@ const t: CultureTranslation = {
     // "Operator in de procesindustrie" (23 November 2026).
     'kjn.u.process.1': "Мога да кажа, че налягането е твърде високо.", // nieuw, nalezen
     'kjn.u.process.2': "Мога да разкажа при предаването на смяната какво е станало.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'kjn.u.firstday.3': "Мога да помоля някого да ми покаже отново.", // nieuw, nalezen
+    'kjn.u.rights.3': "Мога да кажа, че се отнасят с мен различно.", // nieuw, nalezen
+    'kjn.u.money.3': "Мога да поискам разсрочено плащане.", // nieuw, nalezen
+    'kjn.u.warehouse.3': "Мога да кажа, че не карам ричтрак без обучение.", // nieuw, nalezen
+    'kjn.u.process.3': "Мога да попитам колко от една суровина трябва да се сложи.", // nieuw, nalezen
   },
 };
 

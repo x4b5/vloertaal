@@ -316,6 +316,15 @@ const t: CultureTranslation = {
     'c.plantfault.a.why': "پرسیده شد که آیا اجازه دارد روشن کند: نی، هنوز یک قفل بالای آن است.", // nieuw, nalezen
     'c.shiftwork.a.why': "پرسیده شد که چه شد: خرابی، و اینکه کجا نوشته شده.", // nieuw, nalezen
     'c.heatdust.a.why': "دربارهٔ تیلفون پرسیده شد: نی، به خاطر خطر اینجا.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.debthelp.a.why': "گفته شد که بل پرداخته نشده: بلی، و پرداخت قسطی می‌خواهد.", // nieuw, nalezen
+    'c.taxes.a.why': "گفته شد که یک پاکت آبی آمده: تشکر، و آن را فوراً باز می‌کند.", // nieuw, nalezen
+    'c.discrimination.a.why': "پرسیده شد که خوب است یا نی: نی، و آن را گزارش می‌دهد.", // nieuw, nalezen
+    'c.union.a.why': "پرسیده شد که چرا عضو است: از او دفاع می‌کنند.", // nieuw, nalezen
+    'c.kiln.a.why': "دربارهٔ جمع کردن تکه‌های شکسته با دست پرسیده شد: نی، با جاروی دستی و خاک‌انداز.", // nieuw, nalezen
+    'c.mixlab.a.why': "پرسیده شد که بچ تأیید شده یا نی: هنوز نی، لابراتوار آن را آزمایش می‌کند.", // nieuw, nalezen
+    'c.firstweeks.a.why': "دربارهٔ گشت معرفی پرسیده شد: تقریباً همه چیز، و یک سوال.", // nieuw, nalezen
+    'c.orderpick.a.why': "خواسته شد که با ریچ‌تراک کار کند: نی، برای آن آموزش ندارد.", // nieuw, nalezen
   },
 };
 

@@ -456,6 +456,23 @@ const t: CultureTranslation = {
     'c.breaks.o2': "Geh um drei, und erklär es am nächsten Tag.", // nieuw, nalezen
     'c.breaks.o3': "Lass den Arzt ausfallen, und mach deine Schicht fertig.", // nieuw, nalezen
     'c.breaks.w': "Wenn du rechtzeitig fragst, kann dein Vorgesetzter die Arbeit planen. Ohne zu fragen gehen gilt als unzuverlässig.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.firstweeks': "Noch einmal fragen: Das ist normal", // nieuw, nalezen
+    'c.firstweeks.b': "In deinen ersten Wochen erwartet niemand, dass du alles weißt. Oft bekommst du einen Rundgang (rondleiding) und einen Kollegen, der dich begleitet. Schau zuerst zu, dann mach es selbst, während dein Kollege zuschaut. Hast du etwas vergessen? Frag noch einmal: „Wil je het nog een keer laten zien?“ Das ist besser als raten. Schreib neue Wörter und Schritte in ein kleines Notizbuch. Manche Verträge beginnen mit einer Probezeit (proeftijd): Dann können du oder dein Arbeitgeber die Arbeit schnell beenden. Frag, ob dein Vertrag eine hat. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.firstweeks.p': "Ich habe es vergessen. Zeigst du es mir noch einmal?", // nieuw, nalezen
+    'c.firstweeks.s': "Gestern hat dir dein Kollege gezeigt, wie du die Maschine startest. Heute weißt du den dritten Schritt nicht mehr. Was machst du?", // nieuw, nalezen
+    'c.firstweeks.o1': "Bitte deinen Kollegen, es dir noch einmal zu zeigen.", // nieuw, nalezen
+    'c.firstweeks.o2': "Rate, und probier es.", // nieuw, nalezen
+    'c.firstweeks.o3': "Warte, bis jemand anders sie startet.", // nieuw, nalezen
+    'c.firstweeks.w': "Noch einmal fragen ist in den ersten Wochen normal. Raten an einer Maschine kann gefährlich sein und kostet mehr Zeit.", // nieuw, nalezen
+    'c.orderpick': "Geh auf dem Fußweg", // nieuw, nalezen
+    'c.orderpick.b': "In einem großen Lager stellst du Bestellungen mit einer Pickliste und einem Scanner zusammen: Du scannst jeden Artikel, damit die richtigen Produkte zum richtigen Kunden gehen. Viele Kommissionierer fahren ein kleines Fahrzeug, das sie hochhebt, oder einen Schubmaststapler für die hohen Regale. Fahr so ein Fahrzeug nur, wenn du die Schulung dafür hattest, oft mit einem Zertifikat. Geh auf den Fußwegen, und halte Abstand von fahrenden Fahrzeugen: Der Fahrer kann dich nicht immer sehen. Trag im Kühlraum oder im Tiefkühlraum die warme Kleidung, die Handschuhe und die Mütze, die du von der Arbeit bekommst. Mach deine Aufwärmpausen, und sag jemandem Bescheid, wenn du hineingehst. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.orderpick.p': "Ich wärme mich kurz in der Kantine auf.", // nieuw, nalezen
+    'c.orderpick.s': "Du musst zum anderen Gang. Der Fußweg geht außen herum; quer hinüber ist schneller, zwischen den Fahrzeugen. Was machst du?", // nieuw, nalezen
+    'c.orderpick.o1': "Nimm den Fußweg, auch wenn er länger ist.", // nieuw, nalezen
+    'c.orderpick.o2': "Lauf schnell zwischen den Fahrzeugen hinüber.", // nieuw, nalezen
+    'c.orderpick.o3': "Geh hinüber, und wink den Fahrern zu.", // nieuw, nalezen
+    'c.orderpick.w': "Ein Fahrer kann dich oft nicht sehen, zum Beispiel hinter einer hohen Ladung. Auf dem Fußweg werden Menschen erwartet und sind sicher.", // nieuw, nalezen
   },
 };
 

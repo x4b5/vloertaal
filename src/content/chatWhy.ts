@@ -297,6 +297,15 @@ const reasons: Record<string, string> = {
   'c.plantfault.a': 'Asked if you may start: no, a lock is still on it.',
   'c.shiftwork.a': 'Asked what happened: the fault, and where it is written.',
   'c.heatdust.a': 'Asked about the phone: no, because of the danger here.',
+  // The eight new lessons of 26 November 2026.
+  'c.debthelp.a': 'Told the bill is not paid: yes, and you ask for a payment plan.',
+  'c.taxes.a': 'Told there is a blue envelope: thanks, and you open it right away.',
+  'c.discrimination.a': 'Asked if you are okay: no, and you will report it.',
+  'c.union.a': 'Asked why you are a member: they stand up for you.',
+  'c.kiln.a': 'Asked about picking up shards by hand: no, a brush and dustpan.',
+  'c.mixlab.a': 'Asked if the batch is approved: not yet, the lab is testing it.',
+  'c.firstweeks.a': 'Asked about the tour: almost everything, and one question.',
+  'c.orderpick.a': 'Asked to drive the reach truck: no, no training for it.',
 };
 
 /** Why the right reply of a chat fits, with its translation id; undefined when there is none. */

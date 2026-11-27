@@ -99,6 +99,36 @@ export const units: Unit[] = [
           },
         ],
       },
+      // "Inwerken" (l.firstweeks, 26 November 2026, the owner's choice: eight new lessons in existing
+      // units). The first weeks: the tour, the colleague who guides you, asking to be shown again, and
+      // the trial period in plain words (the tip: "some contracts", which holds in Belgium too). Already
+      // words of other lessons, used here in a sentence, the chat or the tip only: "laten zien" and
+      // "opschrijven" (l.understood), "nog een keer" (l.understand), "de kantine" and "de buddy"
+      // (l.arrive), "voordoen" (l.notyet), "inwerken" and "nadoen" (l.newcolleague) and "de proeftijd"
+      // (l.contract). The tip is in cultureTipsBase.ts (c.firstweeks).
+      {
+        id: 'l.firstweeks',
+        title: 'Your first weeks',
+        words: [
+          { id: 'w.rondleiding', nl: 'de rondleiding', en: 'the tour (someone shows you around the building)', emoji: '🚶' },
+          { id: 'w.begeleider', nl: 'de begeleider', en: 'the guide (the colleague who helps you in your first weeks)', emoji: '🧑‍🏫' },
+          { id: 'w.notitieboekje', nl: 'het notitieboekje', en: 'the notebook', emoji: '📒' },
+          { id: 'w.meelopen', nl: 'meelopen', en: 'to go along with a colleague (and watch how they work)', emoji: '👣' },
+          { id: 'w.onthouden', nl: 'onthouden', en: 'to remember', emoji: '🧠', picture: false },
+          { id: 'w.zelfstandig', nl: 'zelfstandig', en: 'on your own (without help)', emoji: '🧍', picture: false },
+        ],
+        sentences: [
+          { id: 's.firstweeks.1', nl: 'Wil je het nog een keer laten zien?', en: 'Will you show it once more?' },
+          { id: 's.firstweeks.2', nl: 'Vandaag loop ik mee met Sara.', en: 'Today I am going along with Sara.', alt: ['Ik loop vandaag mee met Sara.'] },
+          { id: 's.firstweeks.3', nl: 'Ik schrijf het op in mijn notitieboekje.', en: 'I write it down in my notebook.' },
+        ],
+        dialogues: [
+          {
+            prompt: { id: 'c.firstweeks.q', nl: 'Weet je alles nog van de rondleiding?', en: 'Do you remember everything from the tour?' },
+            reply: { id: 'c.firstweeks.a', nl: 'Bijna alles. Waar was de kantine ook alweer?', en: 'Almost everything. Where was the canteen again?' },
+          },
+        ],
+      },
     ],
   },
   {
@@ -515,6 +545,37 @@ export const units: Unit[] = [
           {
             prompt: { id: 'c.loading.q', nl: 'Is deze pallet klaar?', en: 'Is this pallet ready?' },
             reply: { id: 'c.loading.a', nl: 'Nee, er moet nog folie om.', en: 'No, it still needs wrap around it.' },
+          },
+        ],
+      },
+      // "Orderpicken en de heftruck" (l.orderpick, 26 November 2026, the owner's choice: eight new
+      // lessons in existing units): the fifth lesson of the unit. The pick list and the scanner, the
+      // reach truck (only with training), walkways, and the cold store. Already words of other lessons,
+      // used here in a sentence, the chat or the tip only: "de pallet", "de scanner" and "de heftruck"
+      // (l.things), "het artikel" (l.picking), "het looppad" (l.shovel), "de thermokleding"
+      // (l.coldroom), "de vriescel" (l.food), "de koelcel" (l.kitchen), "het heftruckcertificaat"
+      // (l.certs) and "de opleiding" (l.cv). The tip is in cultureTipsBase.ts (c.orderpick); its facts
+      // have a ⚖️ note there and a section in docs/juridische-check.md.
+      {
+        id: 'l.orderpick',
+        title: 'Order picking and the reach truck',
+        words: [
+          { id: 'w.orderpicker', nl: 'de orderpicker', en: 'the order picker (the worker who collects the orders; also the small truck you stand on to pick up high)', emoji: '🙋' },
+          { id: 'w.reachtruck', nl: 'de reachtruck', en: 'the reach truck (a forklift for very high racks; its forks reach forward)', emoji: '🏗️' },
+          { id: 'w.picklijst', nl: 'de picklijst', en: 'the pick list (the list of items you must collect)', emoji: '📋' },
+          { id: 'w.scannen', nl: 'scannen', en: 'to scan', emoji: '📲' },
+          { id: 'w.voetganger', nl: 'de voetganger', en: 'the pedestrian (a person on foot)', emoji: '🚶' },
+          { id: 'w.opwarmen', nl: 'opwarmen', en: 'to warm up (in a warm place, after working in the cold)', emoji: '♨️' },
+        ],
+        sentences: [
+          { id: 's.orderpick.1', nl: 'Ik scan elk artikel van de picklijst.', en: 'I scan every item on the pick list.' },
+          { id: 's.orderpick.2', nl: 'Voetgangers lopen op het looppad.', en: 'Pedestrians walk on the walkway.' },
+          { id: 's.orderpick.3', nl: 'In de vriescel draag ik thermokleding.', en: 'In the freezer I wear thermal clothing.', alt: ['Ik draag thermokleding in de vriescel.'] },
+        ],
+        dialogues: [
+          {
+            prompt: { id: 'c.orderpick.q', nl: 'Kun jij even met de reachtruck rijden?', en: 'Can you drive the reach truck for a moment?' },
+            reply: { id: 'c.orderpick.a', nl: 'Nee, dat mag ik niet. Ik heb er geen opleiding voor.', en: 'No, I am not allowed to. I have no training for it.' },
           },
         ],
       },

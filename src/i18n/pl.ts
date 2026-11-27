@@ -844,6 +844,31 @@ const lang: HelpLanguageSource = {
     's.breaks.3': { m: "Przepracowałem sześć dni z rzędu.", f: "Przepracowałam sześć dni z rzędu.", x: "To już mój szósty dzień pracy z rzędu." }, // nieuw, nalezen
     'c.breaks.q': "Kiedy masz przerwę obiadową?", // nieuw, nalezen
     'c.breaks.a': "O dwunastej, pół godziny.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'l.firstweeks': "Twoje pierwsze tygodnie", // nieuw, nalezen
+    'w.rondleiding': "oprowadzanie (ktoś pokazuje ci budynek)", // nieuw, nalezen
+    'w.begeleider': "opiekun (kolega, który pomaga ci w pierwszych tygodniach)", // nieuw, nalezen
+    'w.notitieboekje': "notes", // nieuw, nalezen
+    'w.meelopen': "chodzić z kolegą (i patrzeć, jak pracuje)", // nieuw, nalezen
+    'w.onthouden': "zapamiętać", // nieuw, nalezen
+    'w.zelfstandig': "samodzielnie (bez pomocy)", // nieuw, nalezen
+    's.firstweeks.1': "Pokażesz mi to jeszcze raz?", // nieuw, nalezen
+    's.firstweeks.2': "Dziś chodzę razem z Sarą.", // nieuw, nalezen
+    's.firstweeks.3': "Zapisuję to w moim notesie.", // nieuw, nalezen
+    'c.firstweeks.q': "Pamiętasz wszystko z oprowadzania?", // nieuw, nalezen
+    'c.firstweeks.a': "Prawie wszystko. Gdzie była ta stołówka?", // nieuw, nalezen
+    'l.orderpick': "Kompletacja zamówień i wózek wysokiego składowania", // nieuw, nalezen
+    'w.orderpicker': "kompletujący zamówienia (pracownik, który zbiera zamówienia; także mały wózek, na którym stoisz, żeby zbierać towar z wysoka)", // nieuw, nalezen
+    'w.reachtruck': "wózek wysokiego składowania (wózek widłowy do bardzo wysokich regałów; jego widły wysuwają się do przodu)", // nieuw, nalezen
+    'w.picklijst': "lista kompletacyjna (lista artykułów, które musisz zebrać)", // nieuw, nalezen
+    'w.scannen': "skanować", // nieuw, nalezen
+    'w.voetganger': "pieszy (osoba, która idzie pieszo)", // nieuw, nalezen
+    'w.opwarmen': "rozgrzać się (w ciepłym miejscu, po pracy w zimnie)", // nieuw, nalezen
+    's.orderpick.1': "Skanuję każdy artykuł z listy kompletacyjnej.", // nieuw, nalezen
+    's.orderpick.2': "Piesi chodzą ścieżką dla pieszych.", // nieuw, nalezen
+    's.orderpick.3': "W mroźni noszę odzież termiczną.", // nieuw, nalezen
+    'c.orderpick.q': "Możesz na chwilę poprowadzić wózek wysokiego składowania?", // nieuw, nalezen
+    'c.orderpick.a': "Nie, nie wolno mi. Nie mam do tego szkolenia.", // nieuw, nalezen
   },
 };
 

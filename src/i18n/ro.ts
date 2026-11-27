@@ -841,6 +841,31 @@ const lang: HelpLanguageSource = {
     's.breaks.3': "Am lucrat șase zile la rând.", // nieuw, nalezen
     'c.breaks.q': "Când ai pauza de prânz?", // nieuw, nalezen
     'c.breaks.a': "La ora douăsprezece, o jumătate de oră.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'l.firstweeks': "Primele tale săptămâni", // nieuw, nalezen
+    'w.rondleiding': "turul (cineva îți arată clădirea)", // nieuw, nalezen
+    'w.begeleider': "îndrumătorul (colegul care te ajută în primele săptămâni)", // nieuw, nalezen
+    'w.notitieboekje': "carnețelul", // nieuw, nalezen
+    'w.meelopen': "a însoți un coleg (și a te uita cum lucrează)", // nieuw, nalezen
+    'w.onthouden': "a ține minte", // nieuw, nalezen
+    'w.zelfstandig': "independent (fără ajutor)", // nieuw, nalezen
+    's.firstweeks.1': "Îmi mai arăți o dată?", // nieuw, nalezen
+    's.firstweeks.2': "Azi o însoțesc pe Sara.", // nieuw, nalezen
+    's.firstweeks.3': "Notez asta în carnețelul meu.", // nieuw, nalezen
+    'c.firstweeks.q': "Îți amintești tot din tur?", // nieuw, nalezen
+    'c.firstweeks.a': "Aproape tot. Unde era cantina?", // nieuw, nalezen
+    'l.orderpick': "Pregătirea comenzilor și stivuitorul retractabil", // nieuw, nalezen
+    'w.orderpicker': "orderpickerul (lucrătorul care adună comenzile; și utilajul mic pe care stai în picioare ca să iei marfă de sus)", // nieuw, nalezen
+    'w.reachtruck': "stivuitorul retractabil (un stivuitor pentru rafturi foarte înalte; furcile lui se întind în față)", // nieuw, nalezen
+    'w.picklijst': "lista de picking (lista cu articolele pe care trebuie să le aduni)", // nieuw, nalezen
+    'w.scannen': "a scana", // nieuw, nalezen
+    'w.voetganger': "pietonul (o persoană care merge pe jos)", // nieuw, nalezen
+    'w.opwarmen': "a se încălzi (într-un loc cald, după ce ai lucrat în frig)", // nieuw, nalezen
+    's.orderpick.1': "Scanez fiecare articol de pe lista de picking.", // nieuw, nalezen
+    's.orderpick.2': "Pietonii merg pe aleea pietonală.", // nieuw, nalezen
+    's.orderpick.3': "În camera de congelare port haine termice.", // nieuw, nalezen
+    'c.orderpick.q': "Poți să conduci puțin stivuitorul retractabil?", // nieuw, nalezen
+    'c.orderpick.a': "Nu, n-am voie. N-am făcut instruirea pentru asta.", // nieuw, nalezen
   },
 };
 

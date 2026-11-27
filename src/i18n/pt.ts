@@ -844,6 +844,31 @@ const lang: HelpLanguageSource = {
     's.breaks.3': "Trabalhei seis dias seguidos.", // nieuw, nalezen
     'c.breaks.q': "Quando é a tua pausa para almoço?", // nieuw, nalezen
     'c.breaks.a': "Ao meio-dia, meia hora.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'l.firstweeks': "As tuas primeiras semanas", // nieuw, nalezen
+    'w.rondleiding': "a visita guiada (alguém mostra-te o edifício)", // nieuw, nalezen
+    'w.begeleider': "o tutor / a tutora (o colega que te ajuda nas tuas primeiras semanas)", // nieuw, nalezen
+    'w.notitieboekje': "o caderno de notas", // nieuw, nalezen
+    'w.meelopen': "acompanhar um colega (e ver como trabalha)", // nieuw, nalezen
+    'w.onthouden': "lembrar-se, memorizar", // nieuw, nalezen
+    'w.zelfstandig': "de forma autónoma (sem ajuda)", // nieuw, nalezen
+    's.firstweeks.1': "Podes mostrar outra vez?", // nieuw, nalezen
+    's.firstweeks.2': "Hoje acompanho a Sara.", // nieuw, nalezen
+    's.firstweeks.3': "Escrevo isto no meu caderno.", // nieuw, nalezen
+    'c.firstweeks.q': "Lembras-te de tudo da visita guiada?", // nieuw, nalezen
+    'c.firstweeks.a': "De quase tudo. Onde é que era a cantina?", // nieuw, nalezen
+    'l.orderpick': "Preparar encomendas e o empilhador retrátil", // nieuw, nalezen
+    'w.orderpicker': "o preparador de encomendas (o trabalhador que junta as encomendas; também o pequeno veículo em que vais de pé para tirar coisas no alto)", // nieuw, nalezen
+    'w.reachtruck': "o empilhador retrátil (um empilhador para estantes muito altas; os garfos avançam para a frente)", // nieuw, nalezen
+    'w.picklijst': "a lista de picking (a lista dos artigos que tens de juntar)", // nieuw, nalezen
+    'w.scannen': "passar no leitor (scanner)", // nieuw, nalezen
+    'w.voetganger': "o peão (uma pessoa a pé)", // nieuw, nalezen
+    'w.opwarmen': "aquecer-se (num sítio quente, depois de trabalhar no frio)", // nieuw, nalezen
+    's.orderpick.1': "Passo no leitor cada artigo da lista de picking.", // nieuw, nalezen
+    's.orderpick.2': "Os peões andam pelo caminho para peões.", // nieuw, nalezen
+    's.orderpick.3': "Na câmara de congelação uso roupa térmica.", // nieuw, nalezen
+    'c.orderpick.q': "Podes conduzir o empilhador retrátil um bocadinho?", // nieuw, nalezen
+    'c.orderpick.a': "Não, não posso. Não tenho formação para isso.", // nieuw, nalezen
   },
 };
 

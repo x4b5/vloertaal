@@ -316,6 +316,15 @@ const t: CultureTranslation = {
     'c.plantfault.a.why': "Çalıştırılabilir mi diye soruluyor: hayır, üzerinde hâlâ bir kilit var.", // nieuw, nalezen
     'c.shiftwork.a.why': "Ne olduğu soruluyor: arıza, bir de nereye yazıldığı.", // nieuw, nalezen
     'c.heatdust.a.why': "Telefon soruluyor: hayır, buradaki tehlike yüzünden.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.debthelp.a.why': "Faturanın ödenmediği söyleniyor: evet, bir de ödeme planı istiyorsun.", // nieuw, nalezen
+    'c.taxes.a.why': "Mavi bir zarf olduğu söyleniyor: teşekkürler, bir de hemen açıyorsun.", // nieuw, nalezen
+    'c.discrimination.a.why': "İyi olup olmadığın soruluyor: hayır, bir de bunu bildireceksin.", // nieuw, nalezen
+    'c.union.a.why': "Neden üye olduğun soruluyor: seni savunuyorlar.", // nieuw, nalezen
+    'c.kiln.a.why': "Kırık parçaları elle toplamak soruluyor: hayır, el süpürgesi ve faraş.", // nieuw, nalezen
+    'c.mixlab.a.why': "Partinin onaylanıp onaylanmadığı soruluyor: henüz değil, laboratuvar test ediyor.", // nieuw, nalezen
+    'c.firstweeks.a.why': "Tur soruluyor: neredeyse her şey, bir de bir soru.", // nieuw, nalezen
+    'c.orderpick.a.why': "Reach truck kullanman isteniyor: hayır, bunun için eğitim yok.", // nieuw, nalezen
   },
 };
 

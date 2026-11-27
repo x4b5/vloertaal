@@ -80,6 +80,8 @@ export const workSkeleton: SkeletonUnit[] = [
       { id: "l.health", title: "Safe and healthy work" },
       { id: "l.rights", title: "Your rights" },
       { id: "l.mustmay", title: "Must, or may you choose?" },
+      { id: "l.discrimination", title: "Discrimination and intimidation" },
+      { id: "l.union", title: "The union and the works council" },
   ] },
   { id: "u.leave", title: "Leave", titleNl: "Verlof", emoji: "🌴", color: "#b5487a", lessons: [
       { id: "l.leave", title: "Days off" },
@@ -121,6 +123,8 @@ export const workSkeleton: SkeletonUnit[] = [
       { id: "l.letters", title: "Official letters" },
       { id: "l.scams", title: "Watch out for scams" },
       { id: "l.budget", title: "Your money each month" },
+      { id: "l.debthelp", title: "Debts and help" },
+      { id: "l.taxes", title: "Tax and allowances" },
   ] },
   { id: "u.travel", title: "Getting to work", titleNl: "Naar je werk", emoji: "🚲", color: "#2e7d32", lessons: [
       { id: "l.bike", title: "By bike" },
@@ -382,5 +386,7 @@ export const workSkeleton: SkeletonUnit[] = [
       { id: "l.plantfault", title: "A fault" },
       { id: "l.shiftwork", title: "Shifts and nights" },
       { id: "l.heatdust", title: "Heat, steam and dust" },
+      { id: "l.kiln", title: "Kiln, glass and ceramics" },
+      { id: "l.mixlab", title: "The mixing hall and the lab" },
   ] },
 ];

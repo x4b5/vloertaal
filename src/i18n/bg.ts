@@ -841,6 +841,31 @@ const lang: HelpLanguageSource = {
     's.breaks.3': "Работих шест дни подред.", // nieuw, nalezen
     'c.breaks.q': "Кога ти е обедната почивка?", // nieuw, nalezen
     'c.breaks.a': "В дванадесет, половин час.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'l.firstweeks': "Първите ти седмици", // nieuw, nalezen
+    'w.rondleiding': "обиколката (някой те развежда из сградата)", // nieuw, nalezen
+    'w.begeleider': "наставникът (колегата, който ти помага през първите седмици)", // nieuw, nalezen
+    'w.notitieboekje': "тефтерчето", // nieuw, nalezen
+    'w.meelopen': "ходя с колега (и гледам как работи)", // nieuw, nalezen
+    'w.onthouden': "запомням", // nieuw, nalezen
+    'w.zelfstandig': "самостоятелно (без помощ)", // nieuw, nalezen
+    's.firstweeks.1': "Ще ми го покажеш ли още веднъж?", // nieuw, nalezen
+    's.firstweeks.2': "Днес ходя заедно със Сара.", // nieuw, nalezen
+    's.firstweeks.3': "Записвам го в тефтерчето си.", // nieuw, nalezen
+    'c.firstweeks.q': "Помниш ли всичко от обиколката?", // nieuw, nalezen
+    'c.firstweeks.a': "Почти всичко. Къде беше столът?", // nieuw, nalezen
+    'l.orderpick': "Комплектоване на поръчки и ричтракът", // nieuw, nalezen
+    'w.orderpicker': "комплектовчикът (работникът, който събира поръчките; също малката машина, на която стоиш, за да вземаш стоки отвисоко)", // nieuw, nalezen
+    'w.reachtruck': "ричтракът (мотокар за много високи стелажи; вилиците му се изнасят напред)", // nieuw, nalezen
+    'w.picklijst': "листът за комплектоване (списъкът с артикули, които трябва да събереш)", // nieuw, nalezen
+    'w.scannen': "сканирам", // nieuw, nalezen
+    'w.voetganger': "пешеходецът (човек, който ходи пеша)", // nieuw, nalezen
+    'w.opwarmen': "стоплям се (на топло място, след работа на студено)", // nieuw, nalezen
+    's.orderpick.1': "Сканирам всеки артикул от листа за комплектоване.", // nieuw, nalezen
+    's.orderpick.2': "Пешеходците ходят по пешеходната пътека.", // nieuw, nalezen
+    's.orderpick.3': "Във фризерната камера нося термо облекло.", // nieuw, nalezen
+    'c.orderpick.q': "Можеш ли да покараш малко ричтрака?", // nieuw, nalezen
+    'c.orderpick.a': "Не, нямам право. Нямам обучение за това.", // nieuw, nalezen
   },
 };
 

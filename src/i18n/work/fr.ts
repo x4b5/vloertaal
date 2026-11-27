@@ -4982,6 +4982,127 @@ const t: CultureTranslation = {
     'c.heatdust.o2': "Tu souffles : c’est plus rapide.", // nieuw, nalezen
     'c.heatdust.o3': "Tu laisses ça à l’équipe suivante.", // nieuw, nalezen
     'c.heatdust.w': "Souffler fait voler la poussière, dans l’air et dans tes poumons. Un chiffon humide ou un aspirateur garde la poussière au sol.", // nieuw, nalezen
+    // eight new lessons (debts, taxes, discrimination, the union, kiln, mixing lab, first weeks, order picking) (26 November 2026).
+    'l.discrimination': "Discrimination et intimidation", // nieuw, nalezen
+    'w.andersbehandelen': "traiter différemment (moins bien que les autres)", // nieuw, nalezen
+    'w.afkomst': "l’origine (le pays ou le groupe d’où viennent toi ou ta famille)", // nieuw, nalezen
+    'w.geloof': "la religion, la foi", // nieuw, nalezen
+    'w.uitschelden': "insulter (dire des mots méchants à quelqu’un)", // nieuw, nalezen
+    'w.bedreigen': "menacer (dire qu’on va faire du mal à quelqu’un)", // nieuw, nalezen
+    'w.geweld': "la violence", // nieuw, nalezen
+    's.discrimination.1': "On me traite différemment à cause de ma religion.", // nieuw, nalezen
+    's.discrimination.2': "Il me menace. Je ne me sens pas en sécurité.", // nieuw, nalezen
+    's.discrimination.3': "J’ai le droit de dire non, même à mon patron.", // nieuw, nalezen
+    'c.discrimination.q': "Ça va ? Ils t’insultent tout le temps.", // nieuw, nalezen
+    'c.discrimination.a': "Non, ça ne va pas. Je vais le signaler.", // nieuw, nalezen
+    'l.union': "Le syndicat et le conseil d’entreprise", // nieuw, nalezen
+    'w.lidworden': "devenir membre, adhérer", // nieuw, nalezen
+    'w.contributie': "la cotisation (tu la paies chaque mois)", // nieuw, nalezen
+    'w.opkomenvoor': "défendre (défendre les intérêts de quelqu’un)", // nieuw, nalezen
+    'w.onderhandelen': "négocier (parler jusqu’à ce que les deux côtés soient d’accord)", // nieuw, nalezen
+    'w.loonsverhoging': "l’augmentation de salaire", // nieuw, nalezen
+    'w.ondernemingsraad': "le conseil d’entreprise (l’OR : des collègues élus pour parler avec le directeur)", // nieuw, nalezen
+    's.union.1': "Je deviens membre du syndicat.", // nieuw, nalezen
+    's.union.2': "Le syndicat négocie la cao.", // nieuw, nalezen
+    's.union.3': "Qui fait partie du conseil d’entreprise ?", // nieuw, nalezen
+    'c.union.q': "Pourquoi tu es membre du syndicat ?", // nieuw, nalezen
+    'c.union.a': "Ils me défendent quand il y a un problème.", // nieuw, nalezen
+    'l.debthelp': "Les dettes et l’aide", // nieuw, nalezen
+    'w.herinnering': "le rappel (une lettre : tu n’as pas encore payé)", // nieuw, nalezen
+    'w.aanmaning': "le dernier rappel (paie avant une date, sinon il peut y avoir des frais en plus)", // nieuw, nalezen
+    'w.betalingsregeling': "le plan de paiement (tu paies une dette en petites parties)", // nieuw, nalezen
+    'w.deurwaarder': "l’huissier de justice (un officiel qui récupère une dette, souvent après la décision d’un juge)", // nieuw, nalezen
+    'w.schuldhulp': "l’aide aux dettes (une aide gratuite pour tes dettes, par la commune)", // nieuw, nalezen
+    'w.achterstand': "l’arriéré (l’argent que tu aurais déjà dû payer)", // nieuw, nalezen
+    's.debthelp.1': "J’ai reçu un dernier rappel.", // nieuw, nalezen
+    's.debthelp.2': "Je peux payer en plusieurs fois ?", // nieuw, nalezen
+    's.debthelp.3': "Je veux de l’aide pour mes dettes.", // nieuw, nalezen
+    'c.debthelp.q': "Vous n’avez pas encore payé la facture.", // nieuw, nalezen
+    'c.debthelp.a': "C’est vrai. Je peux avoir un plan de paiement ?", // nieuw, nalezen
+    'l.taxes': "Les impôts et les allocations", // nieuw, nalezen
+    'w.jaaropgave': "le relevé annuel (un papier de ton employeur avec ton salaire de toute l’année)", // nieuw, nalezen
+    'w.blauweenvelop': "l’enveloppe bleue (les lettres de la Belastingdienst arrivent dedans)", // nieuw, nalezen
+    'w.teruggave': "le remboursement (l’argent des impôts que tu récupères)", // nieuw, nalezen
+    'w.uitstel': "le délai (tu peux le faire plus tard)", // nieuw, nalezen
+    'w.huurtoeslag': "l’aide au loyer (de l’argent de l’État pour t’aider à payer le loyer)", // nieuw, nalezen
+    'w.belastingtelefoon': "la ligne téléphonique gratuite de la Belastingdienst", // nieuw, nalezen
+    's.taxes.1': "J’ai besoin de mon relevé annuel pour la déclaration d’impôts.", // nieuw, nalezen
+    's.taxes.2': "Je gagne plus maintenant. Je le signale tout de suite.", // nieuw, nalezen
+    's.taxes.3': "Je récupère de l’argent de la Belastingdienst.", // nieuw, nalezen
+    'c.taxes.q': "Il y a une enveloppe bleue pour toi.", // nieuw, nalezen
+    'c.taxes.a': "Merci. Je l’ouvre tout de suite.", // nieuw, nalezen
+    'l.kiln': "Four, verre et céramique", // nieuw, nalezen
+    'w.pers': "la presse (une machine qui presse l’argile ou la poudre dans une forme)", // nieuw, nalezen
+    'w.glazuur': "l’émail (une couche brillante, comme du verre, sur un carreau ou une tasse)", // nieuw, nalezen
+    'w.tunneloven': "le four tunnel (un long four ; les produits le traversent lentement)", // nieuw, nalezen
+    'w.scherf': "l’éclat (un morceau coupant de verre ou de carreau cassé)", // nieuw, nalezen
+    'w.gloeiend': "chauffé au rouge (tellement chaud qu’il brille en rouge)", // nieuw, nalezen
+    'w.armbeschermer': "la manchette de protection (une manche qui protège ton bras contre les coupures)", // nieuw, nalezen
+    's.kiln.1': "Les carreaux passent lentement dans le four tunnel.", // nieuw, nalezen
+    's.kiln.2': "Ce carreau a une fissure. Il part au rebut.", // nieuw, nalezen
+    's.kiln.3': "Porte tes manchettes de protection près du verre.", // nieuw, nalezen
+    'c.kiln.q': "Je peux ramasser les éclats avec la main ?", // nieuw, nalezen
+    'c.kiln.a': "Non. Utilise la balayette et la pelle.", // nieuw, nalezen
+    'l.mixlab': "La salle de mélange et le labo", // nieuw, nalezen
+    'w.batch': "le lot (une quantité faite en une fois, avec une seule recette)", // nieuw, nalezen
+    'w.afwegen': "peser (peser exactement la quantité que dit la recette)", // nieuw, nalezen
+    'w.mengvat': "la cuve de mélange (une grande cuve avec un mélangeur dedans)", // nieuw, nalezen
+    'w.labjas': "la blouse de labo", // nieuw, nalezen
+    'w.laboratorium': "le laboratoire (le labo : ici, on teste le produit)", // nieuw, nalezen
+    'w.grondstof': "la matière première (ce avec quoi on fait le produit)", // nieuw, nalezen
+    's.mixlab.1': "Pèse exactement les matières premières.", // nieuw, nalezen
+    's.mixlab.2': "Je prends un échantillon pour le labo.", // nieuw, nalezen
+    's.mixlab.3': "C’est quel lot ? Regarde l’étiquette.", // nieuw, nalezen
+    'c.mixlab.q': "Le lot est approuvé ?", // nieuw, nalezen
+    'c.mixlab.a': "Pas encore. Le labo teste l’échantillon.", // nieuw, nalezen
+    'c.discrimination': "On te traite injustement ? Ce n’est pas ta faute", // nieuw, nalezen
+    'c.discrimination.b': "La discrimination, c’est quand on te traite différemment ou moins bien à cause de qui tu es : ton origine, ta couleur de peau, ta religion, ton genre, ton âge, un handicap ou la personne que tu aimes. L’intimidation, c’est par exemple des contacts physiques non désirés, des remarques sexuelles, des menaces ou des insultes. Les deux sont interdites au travail, et ce n’est jamais ta faute. Tu as le droit de dire non, même à ton patron. Note ce qui s’est passé, quand, et qui l’a vu. Parles-en à ton responsable, ou à la personne de confiance (vertrouwenspersoon) si ton entreprise en a une. En dehors de ton travail, le service contre la discrimination de ta ville t’aide gratuitement (discriminatie.nl). Le College voor de Rechten van de Mens peut donner son jugement sur ton cas, gratuitement aussi. De la violence ou une menace ? Va à la police. En danger : appelle le 112. Informations générales. Pour ta situation : demande au syndicat, au Juridisch Loket ou à FairWork.", // nieuw, nalezen
+    'c.discrimination.p': "Je veux signaler quelque chose. Je peux vous parler en confidence ?", // nieuw, nalezen
+    'c.discrimination.s': "Un collègue t’insulte souvent à cause de ton origine. Les autres rient. Que fais-tu ?", // nieuw, nalezen
+    'c.discrimination.o1': "Tu le notes, et tu en parles à une personne de confiance.", // nieuw, nalezen
+    'c.discrimination.o2': "Tu ne dis rien : ça fait partie du travail.", // nieuw, nalezen
+    'c.discrimination.o3': "Tu démissionnes, et tu ne dis à personne pourquoi.", // nieuw, nalezen
+    'c.discrimination.w': "Insulter quelqu’un à cause de son origine, c’est de la discrimination, et c’est interdit. Si tu le notes et que tu en parles, quelqu’un peut t’aider à faire arrêter ça.", // nieuw, nalezen
+    'c.union': "Ensemble, on est plus forts", // nieuw, nalezen
+    'c.union.b': "Un syndicat (vakbond), par exemple la FNV ou la CNV, défend les travailleurs. Il fait des accords avec les employeurs sur le salaire et le travail : la cao. Beaucoup de cao s’appliquent à tout le monde dans un secteur, même quand tu n’es pas membre. Les membres paient une cotisation (contributie) chaque mois, et reçoivent des conseils et de l’aide, par exemple pour un problème de salaire ou de licenciement. Deviens membre à temps : souvent, le syndicat aide seulement pour un problème qui commence après ton adhésion. Devenir membre, c’est ton propre choix, et ton employeur n’a pas le droit de te punir pour ça. Une entreprise de 50 travailleurs ou plus doit avoir un conseil d’entreprise (ondernemingsraad, OR) : des collègues élus par les travailleurs. L’OR parle avec le directeur, par exemple, des horaires de travail et de la sécurité. Une entreprise plus petite peut avoir une représentation du personnel (personeelsvertegenwoordiging). Des questions ? Demande à un collègue de l’OR. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.", // nieuw, nalezen
+    'c.union.p': "J’ai une question sur les nouveaux plannings. L’OR peut faire quelque chose ?", // nieuw, nalezen
+    'c.union.s': "Ton entreprise prévoit beaucoup plus de services du soir. Beaucoup de collègues ne sont pas contents. Que peux-tu faire ?", // nieuw, nalezen
+    'c.union.o1': "Tu en parles à un collègue de l’OR.", // nieuw, nalezen
+    'c.union.o2': "Tu arrêtes de venir le soir.", // nieuw, nalezen
+    'c.union.o3': "Tu ne dis rien : rien ne peut changer.", // nieuw, nalezen
+    'c.union.w': "L’OR a son mot à dire sur les règles des horaires de travail. Il peut en parler avec le directeur, pour tous les travailleurs ensemble.", // nieuw, nalezen
+    'c.debthelp': "Ouvre chaque lettre, et demande de l’aide tôt", // nieuw, nalezen
+    'c.debthelp.b': "Tu n’as pas payé une facture à temps ? Alors tu reçois d’abord un rappel (herinnering), et plus tard un dernier rappel (aanmaning). Avant qu’une entreprise puisse te faire payer des frais en plus pour ça, elle doit te donner 14 jours pour payer. Alors ouvre chaque lettre, même quand elle te fait peur. Tu ne peux pas tout payer en une fois ? Appelle ou écris, et demande un plan de paiement (betalingsregeling). Un deurwaarder (huissier de justice) est un officiel qui récupère les dettes, souvent après la décision d’un juge. Il peut, par exemple, prendre une partie de ton salaire, mais il doit toujours te laisser assez pour vivre. Des dettes ? Demande de l’aide tôt, quand elles sont encore petites. La gemeente donne une aide gratuite pour les dettes (schuldhulp). Sur geldfit.nl, tu peux faire un test gratuit et trouver de l’aide près de chez toi. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.", // nieuw, nalezen
+    'c.debthelp.p': "Je ne peux pas tout payer en une fois. Je peux payer en plusieurs fois ?", // nieuw, nalezen
+    'c.debthelp.s': "Tu reçois un dernier rappel pour ta facture de téléphone. Tu n’as pas l’argent ce mois-ci. Que fais-tu ?", // nieuw, nalezen
+    'c.debthelp.o1': "Tu appelles l’entreprise, et tu demandes un plan de paiement.", // nieuw, nalezen
+    'c.debthelp.o2': "Tu ranges la lettre, et tu attends.", // nieuw, nalezen
+    'c.debthelp.o3': "Tu empruntes vite de l’argent avec “acheter maintenant, payer plus tard”.", // nieuw, nalezen
+    'c.debthelp.w': "Quand tu le dis à temps, l’entreprise peut souvent accepter de petits paiements. Une lettre rangée ne disparaît pas : les frais ne font qu’augmenter.", // nieuw, nalezen
+    'c.taxes': "Ta déclaration d’impôts et tes allocations", // nieuw, nalezen
+    'c.taxes.b': "La déclaration d’impôts (aangifte) pour l’année passée doit être faite avant le 1er mai. Tu as reçu une lettre qui te demande de la faire ? Alors tu dois la faire. Parfois, tu récupères de l’argent. Tu as besoin du relevé annuel (jaaropgave) de ton employeur. Pas le temps ? Tu peux demander plus de temps (uitstel). Les allocations (toeslagen), comme la zorgtoeslag et la huurtoeslag, sont une avance : elles dépendent de ce que tu vas gagner cette année. Tu gagnes plus, ou quelque chose d’autre change ? Signale-le tout de suite dans Mijn toeslagen. Sinon, tu risques de devoir rembourser une grosse somme plus tard. Tu dois rembourser ? Tu peux demander un plan de paiement. Aide gratuite : la BelastingTelefoon, un bureau de la Belastingdienst (prends d’abord rendez-vous) ou la bibliothèque. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.", // nieuw, nalezen
+    'c.taxes.p': "Mes revenus ont changé. Comment je le signale ?", // nieuw, nalezen
+    'c.taxes.s': "Tu as un nouveau travail et tu gagnes plus chaque mois. Tu reçois la huurtoeslag. Que fais-tu ?", // nieuw, nalezen
+    'c.taxes.o1': "Tu signales ton nouveau revenu dans Mijn toeslagen.", // nieuw, nalezen
+    'c.taxes.o2': "Tu attends que la Belastingdienst te le demande.", // nieuw, nalezen
+    'c.taxes.o3': "Tu arrêtes de payer ton loyer.", // nieuw, nalezen
+    'c.taxes.w': "Ton allocation dépend de ce que tu gagnes. Si tu signales le changement à temps, tu reçois le bon montant, et tu ne dois pas rembourser une grosse somme plus tard.", // nieuw, nalezen
+    'c.kiln': "Coupant, chaud et lourd", // nieuw, nalezen
+    'c.kiln.b': "Dans une usine de carreaux ou de verre, les produits sont pressés dans une forme, reçoivent un émail, et passent lentement dans un long four. Après le four, ils doivent refroidir : ne les touche pas quand ils sont chauds, ou porte des gants résistants à la chaleur. Le verre et les carreaux cassés coupent beaucoup. Porte des gants anti-coupure, des manchettes de protection et des lunettes de sécurité. N’essaie jamais de rattraper une plaque de verre qui tombe : recule. Ramasse les éclats avec la balayette et la pelle, jamais avec les mains, et mets-les dans la bonne poubelle. L’émail et la poussière peuvent contenir des substances nocives : lave-toi les mains avant de manger ou de boire. À la presse, ne mets jamais la main dedans pendant qu’elle tourne. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.kiln.p': "Attention, des éclats ! Je vais chercher la balayette et la pelle.", // nieuw, nalezen
+    'c.kiln.s': "Une plaque de verre glisse du support et commence à tomber. Que fais-tu ?", // nieuw, nalezen
+    'c.kiln.o1': "Tu recules, et tu la laisses tomber.", // nieuw, nalezen
+    'c.kiln.o2': "Tu la rattrapes avec les mains.", // nieuw, nalezen
+    'c.kiln.o3': "Tu l’arrêtes avec ta jambe.", // nieuw, nalezen
+    'c.kiln.w': "Une plaque qui tombe peut couper très profond, même à travers des gants. Une plaque cassée coûte seulement de l’argent.", // nieuw, nalezen
+    'c.mixlab': "Suis exactement la recette", // nieuw, nalezen
+    'c.mixlab.b': "Dans une salle de mélange, tu fais un lot avec une recette : quelles matières premières, combien, et dans quel ordre. Pèse tout exactement, et note ce que tu as ajouté, avec le numéro de lot. Un doute ? Demande, ne devine pas. Avant d’utiliser un fût ou un sac, lis l’étiquette : ce qu’il y a dedans, le numéro de lot et les pictogrammes de danger. Ne mets jamais dans un fût ou un sac quelque chose qui n’a rien à y faire. Pour un échantillon, utilise une cuillère propre et un pot propre, et mets tout de suite une étiquette dessus. La poudre et la vapeur peuvent être nocives : utilise l’aspiration, et porte ce qu’il faut, comme une blouse de labo, des lunettes, des gants ou un masque. Dans l’alimentaire, tu portes aussi une charlotte et tu te laves souvent les mains. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.mixlab.p': { m: "Je ne suis pas sûr. Il faut en mettre combien ?", f: "Je ne suis pas sûre. Il faut en mettre combien ?", x: "Je ne sais pas exactement. Il faut en mettre combien ?" }, // nieuw, nalezen
+    'c.mixlab.s': "La recette dit 25 kilos. Par erreur, tu mets 26 kilos, et c’est déjà dans la cuve de mélange. Que fais-tu ?", // nieuw, nalezen
+    'c.mixlab.o1': "Tu le dis à ton chef de poste, et tu le notes.", // nieuw, nalezen
+    'c.mixlab.o2': "Tu ne dis rien : un kilo, ce n’est pas beaucoup.", // nieuw, nalezen
+    'c.mixlab.o3': "Tu en retires un peu à la main.", // nieuw, nalezen
+    'c.mixlab.w': "Une seule mauvaise quantité peut gâcher tout le lot. Si le chef de poste le sait à temps, le labo peut vérifier avant que le lot continue.", // nieuw, nalezen
   },
 };
 

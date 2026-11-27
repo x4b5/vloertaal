@@ -315,6 +315,15 @@ const t: CultureTranslation = {
     'c.plantfault.a.why': "Preguntan si se puede arrancar: no, todavía hay un candado puesto.", // nieuw, nalezen
     'c.shiftwork.a.why': "Te preguntan qué pasó: la avería, y dónde está apuntada.", // nieuw, nalezen
     'c.heatdust.a.why': "Preguntan por el teléfono: no, por el peligro que hay aquí.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'c.debthelp.a.why': "Te dicen que la factura no está pagada: sí, y pides un plan de pagos.", // nieuw, nalezen
+    'c.taxes.a.why': "Te dicen que hay un sobre azul: gracias, y lo abres enseguida.", // nieuw, nalezen
+    'c.discrimination.a.why': "Te preguntan si estás bien: no, y lo vas a denunciar.", // nieuw, nalezen
+    'c.union.a.why': "Te preguntan por qué eres miembro: te defienden.", // nieuw, nalezen
+    'c.kiln.a.why': "Preguntan si se pueden recoger los trozos con la mano: no, con el cepillo y el recogedor.", // nieuw, nalezen
+    'c.mixlab.a.why': "Preguntan si el lote está aprobado: todavía no, el laboratorio lo está analizando.", // nieuw, nalezen
+    'c.firstweeks.a.why': "Te preguntan por la visita guiada: casi todo, y una pregunta.", // nieuw, nalezen
+    'c.orderpick.a.why': "Te piden llevar la carretilla retráctil: no, no tienes formación para eso.", // nieuw, nalezen
   },
 };
 

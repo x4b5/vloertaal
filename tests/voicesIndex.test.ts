@@ -48,7 +48,10 @@ describe('the short recorded-voice index', () => {
   it('is a fraction of the long one (each text once)', () => {
     const gz = (o: unknown) => gzipSync(JSON.stringify(o), { level: 9 }).length;
     expect(gz(packVoices(long))).toBeLessThan(gz(long) / 3);
-    expect(gz(packVoices(long))).toBeLessThan(30 * 1024);
+    // 30 -> 64 kB (26 November 2026): the recordings of #404 brought the index to 5015 texts, and the
+    // texts alone (said) are 47 kB gz; a voice's clips now go as runs (onlyRuns/withoutRuns), which
+    // took the index from 79 to 49 kB. The bound still stops a voice falling back to its full list.
+    expect(gz(packVoices(long))).toBeLessThan(64 * 1024);
   });
 
   it('keeps which clip plays where two clips of a voice say the same text', () => {

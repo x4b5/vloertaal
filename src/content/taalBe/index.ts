@@ -85,6 +85,9 @@ export const BE_TAAL_TODO: readonly string[] = [
  */
 export const BE_LESSON_TODO: readonly string[] = [
   'l.payparts', 'l.holiday', 'l.special', 'l.unwell', 'l.injury', 'l.debt', 'l.inspection', 'l.residence',
+  // The four rights lessons of 26 November 2026 (debts, tax and allowances, discrimination, the union
+  // and the works council): Dutch bodies and rules, a Belgian version with Belgian sources still to write.
+  'l.debthelp', 'l.taxes', 'l.discrimination', 'l.union',
 ];
 
 /** Every Belgian file written so far. */

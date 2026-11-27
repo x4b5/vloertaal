@@ -841,6 +841,31 @@ const lang: HelpLanguageSource = {
     's.breaks.3': "عملت ستة أيام متتالية.", // nieuw, nalezen
     'c.breaks.q': "متى استراحة غدائك؟", // nieuw, nalezen
     'c.breaks.a': "في الساعة الثانية عشرة، نصف ساعة.", // nieuw, nalezen
+    // eight new lessons (26 November 2026).
+    'l.firstweeks': "أسابيعك الأولى", // nieuw, nalezen
+    'w.rondleiding': "الجولة التعريفية (شخص يُري المبنى للعامل الجديد)", // nieuw, nalezen
+    'w.begeleider': "المرافق (الزميل الذي يساعد في الأسابيع الأولى)", // nieuw, nalezen
+    'w.notitieboekje': "الدفتر الصغير", // nieuw, nalezen
+    'w.meelopen': "يرافق زميلاً (ويشاهد كيف يعمل)", // nieuw, nalezen
+    'w.onthouden': "يتذكّر، يحفظ في ذاكرته", // nieuw, nalezen
+    'w.zelfstandig': "بشكل مستقلّ (بدون مساعدة)", // nieuw, nalezen
+    's.firstweeks.1': "هل يمكنك أن تريني إياه مرة أخرى؟", // nieuw, nalezen
+    's.firstweeks.2': "اليوم أرافق سارة في عملها.", // nieuw, nalezen
+    's.firstweeks.3': "أكتبه في دفتري الصغير.", // nieuw, nalezen
+    'c.firstweeks.q': { m: "هل تتذكّر كل شيء من الجولة التعريفية؟", f: "هل تتذكّرين كل شيء من الجولة التعريفية؟", x: "هل بقي كل شيء من الجولة التعريفية في الذاكرة؟" }, // nieuw, nalezen
+    'c.firstweeks.a': "تقريباً كل شيء. أين كان المقصف؟", // nieuw, nalezen
+    'l.orderpick': "جمع الطلبيات ورافعة reachtruck", // nieuw, nalezen
+    'w.orderpicker': "جامع الطلبيات (العامل الذي يجمع الطلبيات؛ وأيضاً العربة الصغيرة التي يقف عليها العامل للالتقاط من الأعلى)", // nieuw, nalezen
+    'w.reachtruck': "رافعة reachtruck (رافعة شوكية للرفوف العالية جداً؛ شوكتاها تمتدّان إلى الأمام)", // nieuw, nalezen
+    'w.picklijst': "قائمة الالتقاط (قائمة القطع التي يجب جمعها)", // nieuw, nalezen
+    'w.scannen': "يمسح ضوئياً (بجهاز المسح)", // nieuw, nalezen
+    'w.voetganger': "الماشي، المشاة (شخص يمشي على قدميه)", // nieuw, nalezen
+    'w.opwarmen': "يتدفّأ (في مكان دافئ، بعد العمل في البرد)", // nieuw, nalezen
+    's.orderpick.1': "أمسح كل قطعة من قائمة الالتقاط.", // nieuw, nalezen
+    's.orderpick.2': "المشاة يمشون على ممرّ المشاة.", // nieuw, nalezen
+    's.orderpick.3': "في غرفة التجميد ألبس ملابس حرارية.", // nieuw, nalezen
+    'c.orderpick.q': { m: "هل تستطيع أن تقود رافعة reachtruck قليلاً؟", f: "هل تستطيعين أن تقودي رافعة reachtruck قليلاً؟", x: "هل من الممكن قيادة رافعة reachtruck قليلاً؟" }, // nieuw, nalezen
+    'c.orderpick.a': "لا، هذا غير مسموح لي. ليس عندي تدريب عليها.", // nieuw, nalezen
   },
 };
 
