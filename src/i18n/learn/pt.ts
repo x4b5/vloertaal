@@ -324,6 +324,11 @@ const t: CultureTranslation = {
     'c.mixlab.a.why': "Perguntam se o lote está aprovado: ainda não, o laboratório está a testar.", // nieuw, nalezen
     'c.firstweeks.a.why': "Perguntam-te pela visita guiada: quase tudo, e uma pergunta.", // nieuw, nalezen
     'c.orderpick.a.why': "Pedem-te para conduzir o empilhador retrátil: não, sem formação para isso.", // nieuw, nalezen
+    // four new lessons (27 November 2026).
+    'd.appraisal.a.why': "Perguntam-te pelo teu objetivo: uma coisa clara que queres aprender.", // nieuw, nalezen
+    'c.forms.a.why': "Perguntam-te pelo formulário: quase, e onde assinar.", // nieuw, nalezen
+    'c.voicemail.a.why': "Pedem o teu nome e número: o teu nome, e um pedido para ligarem de volta.", // nieuw, nalezen
+    'c.dentist.a.why': "Perguntam-te pela última consulta: quando, e pedes uma consulta de controlo.", // nieuw, nalezen
   },
 };
 

@@ -5103,6 +5103,67 @@ const t: CultureTranslation = {
     'c.mixlab.o2': "Não dizes nada: um quilo não é muito.", // nieuw, nalezen
     'c.mixlab.o3': "Tiras um pouco com a mão.", // nieuw, nalezen
     'c.mixlab.w': "Uma quantidade errada pode estragar o lote todo. Quando o chefe de turno sabe a tempo, o laboratório pode verificar antes de o lote seguir.", // nieuw, nalezen
+    // four new lessons (performance review, forms, voicemail, the dentist) (27 November 2026).
+    'l.forms': "Preencher um formulário", // nieuw, nalezen
+    'w.invullen': "preencher (um formulário)", // nieuw, nalezen
+    'w.vakje': "a quadrícula (um quadrado pequeno num formulário)", // nieuw, nalezen
+    'w.aankruisen': "assinalar (pôr uma cruz numa quadrícula)", // nieuw, nalezen
+    'w.verplichtveld': "o campo obrigatório (tens de o preencher; muitas vezes tem um *)", // nieuw, nalezen
+    'w.postcode': "o código postal (um código curto da tua rua ou localidade, faz parte da tua morada)", // nieuw, nalezen
+    'w.hoofdletters': "as maiúsculas (A, B, C)", // nieuw, nalezen
+    's.forms.1': "Escreve o teu nome em maiúsculas.", // nieuw, nalezen
+    's.forms.2': "Assinala a quadrícula certa.", // nieuw, nalezen
+    's.forms.3': "Pode ajudar-me com este formulário?", // nieuw, nalezen
+    'c.forms.q': "Já preencheste o formulário?", // nieuw, nalezen
+    'c.forms.a': "Quase. Onde ponho a minha assinatura?", // nieuw, nalezen
+    'l.voicemail': "Correio de voz e ligar de volta", // nieuw, nalezen
+    'w.piep': "o bip (o som curto; depois dele dizes a tua mensagem)", // nieuw, nalezen
+    'w.beluisteren': "ouvir (uma mensagem)", // nieuw, nalezen
+    'w.boodschap': "a mensagem (o que dizes no correio de voz de alguém)", // nieuw, nalezen
+    'w.noemen': "dizer, indicar (o teu nome, o teu número)", // nieuw, nalezen
+    'w.zosnelmogelijk': "o mais depressa possível", // nieuw, nalezen
+    'w.opnieuw': "outra vez (mais uma vez)", // nieuw, nalezen
+    's.voicemail.1': "Fala o Ali Haddad. Estou a ligar por causa do meu horário.", // nieuw, nalezen
+    's.voicemail.2': "Ouço o meu correio de voz todos os dias.", // nieuw, nalezen
+    's.voicemail.3': "Volto a ligar mais tarde.", // nieuw, nalezen
+    'c.voicemail.q': "Deixe o seu nome e número depois do bip.", // nieuw, nalezen
+    'c.voicemail.a': "Fala o Ali. Pode ligar-me de volta o mais depressa possível?", // nieuw, nalezen
+    'l.dentist': "O dentista", // nieuw, nalezen
+    'w.tandarts': "o dentista", // nieuw, nalezen
+    'w.kiespijn': "a dor de dentes", // nieuw, nalezen
+    'w.gaatje': "a cárie (um buraquinho num dente)", // nieuw, nalezen
+    'w.vulling': "a obturação (o dentista fecha o buraco num dente)", // nieuw, nalezen
+    'w.gebit': "os dentes (todos os teus dentes juntos)", // nieuw, nalezen
+    'w.aanvullendeverzekering': "o seguro complementar (podes escolhê-lo além do seguro de saúde básico)", // nieuw, nalezen
+    's.dentist.1': "Tenho dor de dentes há dois dias.", // nieuw, nalezen
+    's.dentist.2': "Tenho uma cárie. Vou fazer uma obturação.", // nieuw, nalezen
+    's.dentist.3': "Quanto custa uma obturação?", // nieuw, nalezen
+    'c.dentist.q': "Quando foste ao dentista pela última vez?", // nieuw, nalezen
+    'c.dentist.a': "Há um ano. Queria marcar uma consulta de controlo.", // nieuw, nalezen
+    'c.forms': "Um formulário: escreve com clareza e protege o teu BSN", // nieuw, nalezen
+    'c.forms.b': "Um formulário pede muitas vezes o teu nome, a data de nascimento, a morada e o código postal. Escreve com clareza, muitas vezes em maiúsculas. Um campo com uma estrela (*) é obrigatório: tens de o preencher. Assinala a quadrícula certa. Não percebes uma pergunta? Pede ajuda antes de assinar. Nunca assines o que não percebes. O teu BSN: só algumas organizações o podem pedir, como o teu empregador, o município (gemeente), o Belastingdienst, a tua seguradora de saúde, o teu médico e o teu banco. Uma loja ou um clube desportivo não podem. Nunca dês o teu BSN a um desconhecido, nem numa app nem ao telefone. Não tens a certeza? Pergunta porque precisam dele. Muitas bibliotecas ajudam gratuitamente com formulários, muitas vezes num horário de atendimento sem marcação. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nieuw, nalezen
+    'c.forms.p': "O meu BSN é obrigatório aqui?", // nieuw, nalezen
+    'c.forms.s': "Inscreves-te num clube desportivo. O formulário pede o teu BSN. O que fazes?", // nieuw, nalezen
+    'c.forms.o1': "Deixas em branco, e perguntas porque precisam dele.", // nieuw, nalezen
+    'c.forms.o2': "Preenches: todos os formulários o podem pedir.", // nieuw, nalezen
+    'c.forms.o3': "Dás antes os teus dados de acesso ao DigiD.", // nieuw, nalezen
+    'c.forms.w': "Um clube desportivo não pode usar o teu BSN. Só algumas organizações podem, como o teu empregador, a gemeente e a tua seguradora de saúde. Quando perguntas porquê, proteges o teu número.", // nieuw, nalezen
+    'c.voicemail': "Uma mensagem: quem, porquê, o teu número", // nieuw, nalezen
+    'c.voicemail.b': "Ninguém atende? Deixa uma mensagem curta (boodschap) depois do bip (piep). Diz o teu nome, porque ligas e o teu número de telefone. Fala devagar, e diz o teu número duas vezes. Perdeste uma chamada? Primeiro ouve o teu correio de voz, e depois liga de volta o mais depressa possível. Não percebes uma mensagem? Ouve-a outra vez, ou pede a um colega que a ouça contigo. Configura o teu correio de voz, e ouve-o todos os dias. Vais avisar que estás doente? Em muitas empresas uma mensagem não chega: volta a ligar até falares com alguém. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
+    'c.voicemail.p': "Posso deixar uma mensagem?", // nieuw, nalezen
+    'c.voicemail.s': "Vais chegar tarde, e ligas à tua chefe. Ouves o correio de voz dela. O que dizes depois do bip?", // nieuw, nalezen
+    'c.voicemail.o1': "O teu nome, porque ligas e o teu número.", // nieuw, nalezen
+    'c.voicemail.o2': "Só \"Bel me terug\", e desligas.", // nieuw, nalezen
+    'c.voicemail.o3': "Nada: desligas, e esperas.", // nieuw, nalezen
+    'c.voicemail.w': "Com o teu nome, a razão e o teu número, a tua chefe sabe o que se passa, e pode ligar-te de volta logo.", // nieuw, nalezen
+    'c.dentist': "O dentista: uma consulta de controlo, e pergunta o preço", // nieuw, nalezen
+    'c.dentist.b': "Inscreve-te num dentista (tandarts) perto de casa, e vai a uma consulta de controlo (controle) com regularidade, muitas vezes uma vez por ano. Dor de dentes? Liga ao teu dentista e diz que te dói muito: assim muitas vezes tens uma consulta depressa. À noite ou ao fim de semana, liga para o teu próprio dentista: a mensagem do telefone diz-te que dentista atende nesse momento. Para os adultos, o seguro de saúde básico paga muito pouco no dentista: normalmente não paga a consulta de controlo nem uma obturação. Podes escolher um seguro complementar (aanvullende verzekering) para o dentista: vê o que ele paga. Para as crianças com menos de 18 anos, o seguro básico paga a maior parte dos cuidados dentários. Pergunta quanto custa um tratamento antes de ele começar. Para um tratamento grande, o dentista tem de te dar primeiro o preço por escrito. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nieuw, nalezen
+    'c.dentist.p': "Dói-me muito. Ainda posso ir hoje?", // nieuw, nalezen
+    'c.dentist.s': "É sábado à noite. Tens uma dor de dentes forte, e um analgésico não ajuda. O que fazes?", // nieuw, nalezen
+    'c.dentist.o1': "Ligas ao teu dentista: a mensagem diz quem atende agora.", // nieuw, nalezen
+    'c.dentist.o2': "Ligas para o 112: é uma emergência.", // nieuw, nalezen
+    'c.dentist.o3': "Esperas até segunda-feira, e tomas mais analgésicos.", // nieuw, nalezen
+    'c.dentist.w': "Fora do horário normal, um dentista de serviço ajuda com dores urgentes. O 112 é só para uma emergência, como perigo de vida.", // nieuw, nalezen
   },
 };
 

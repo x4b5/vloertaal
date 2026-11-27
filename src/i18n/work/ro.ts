@@ -5104,6 +5104,67 @@ const t: CultureTranslation = {
     'c.mixlab.o2': "Nu spui nimic: un kilogram nu e mult.", // nieuw, nalezen
     'c.mixlab.o3': "Scoți puțin cu mâna.", // nieuw, nalezen
     'c.mixlab.w': "O cantitate greșită poate strica toată șarja. Când șeful de tură află la timp, laboratorul poate verifica înainte ca șarja să meargă mai departe.", // nieuw, nalezen
+    // four new lessons (performance review, forms, voicemail, the dentist) (27 November 2026).
+    'l.forms': "Cum completezi un formular", // nieuw, nalezen
+    'w.invullen': "a completa (un formular)", // nieuw, nalezen
+    'w.vakje': "căsuța (un pătrățel pe un formular)", // nieuw, nalezen
+    'w.aankruisen': "a bifa (a pune un X într-o căsuță)", // nieuw, nalezen
+    'w.verplichtveld': "câmpul obligatoriu (trebuie să-l completezi; des e marcat cu *)", // nieuw, nalezen
+    'w.postcode': "codul poștal (un cod scurt pentru strada sau orașul tău, face parte din adresă)", // nieuw, nalezen
+    'w.hoofdletters': "literele mari, majusculele (A, B, C)", // nieuw, nalezen
+    's.forms.1': "Scrie-ți numele cu litere mari.", // nieuw, nalezen
+    's.forms.2': "Bifează căsuța potrivită.", // nieuw, nalezen
+    's.forms.3': "Mă puteți ajuta cu acest formular?", // nieuw, nalezen
+    'c.forms.q': "Ai completat deja formularul?", // nieuw, nalezen
+    'c.forms.a': "Aproape. Unde trebuie să semnez?", // nieuw, nalezen
+    'l.voicemail': "Mesageria vocală și cum suni înapoi", // nieuw, nalezen
+    'w.piep': "semnalul sonor, piuitul (sunetul scurt; după el îți spui mesajul)", // nieuw, nalezen
+    'w.beluisteren': "a asculta (un mesaj)", // nieuw, nalezen
+    'w.boodschap': "mesajul (ce spui în mesageria vocală a cuiva)", // nieuw, nalezen
+    'w.noemen': "a spune, a numi (numele tău, numărul tău)", // nieuw, nalezen
+    'w.zosnelmogelijk': "cât mai repede posibil", // nieuw, nalezen
+    'w.opnieuw': "din nou (încă o dată)", // nieuw, nalezen
+    's.voicemail.1': "Sunt Ali Haddad. Sun în legătură cu programul meu de lucru.", // nieuw, nalezen
+    's.voicemail.2': "Îmi ascult mesageria vocală în fiecare zi.", // nieuw, nalezen
+    's.voicemail.3': "Sun din nou mai târziu.", // nieuw, nalezen
+    'c.voicemail.q': "Lăsați numele și numărul după semnalul sonor.", // nieuw, nalezen
+    'c.voicemail.a': "Sunt Ali. Mă puteți suna înapoi cât mai repede posibil?", // nieuw, nalezen
+    'l.dentist': "Dentistul", // nieuw, nalezen
+    'w.tandarts': "dentistul", // nieuw, nalezen
+    'w.kiespijn': "durerea de dinți", // nieuw, nalezen
+    'w.gaatje': "caria (o găurică într-un dinte)", // nieuw, nalezen
+    'w.vulling': "plomba (dentistul închide gaura dintr-un dinte)", // nieuw, nalezen
+    'w.gebit': "dantura (toți dinții tăi la un loc)", // nieuw, nalezen
+    'w.aanvullendeverzekering': "asigurarea suplimentară (o poți alege pe lângă asigurarea de sănătate de bază)", // nieuw, nalezen
+    's.dentist.1': "Mă dor dinții de două zile.", // nieuw, nalezen
+    's.dentist.2': "Am o carie. Mi se pune o plombă.", // nieuw, nalezen
+    's.dentist.3': "Cât costă o plombă?", // nieuw, nalezen
+    'c.dentist.q': "Când ai fost ultima dată la dentist?", // nieuw, nalezen
+    'c.dentist.a': "Acum un an. Aș vrea un control.", // nieuw, nalezen
+    'c.forms': "Un formular: scrie clar și păzește-ți BSN-ul", // nieuw, nalezen
+    'c.forms.b': "Un formular îți cere des numele, data nașterii, adresa și codul poștal. Scrie clar, des cu litere mari. Un câmp cu steluță (*) e obligatoriu: trebuie să-l completezi. Bifează căsuța potrivită. Nu înțelegi o întrebare? Cere ajutor înainte să semnezi. Nu semna niciodată ce nu înțelegi. BSN-ul tău: doar unele organizații au voie să ți-l ceară, cum ar fi angajatorul, primăria (gemeente), Belastingdienst, asigurătorul de sănătate, medicul și banca. Un magazin sau un club de sport nu au voie. Nu da niciodată BSN-ul unui străin, nici într-o aplicație, nici la telefon. Nu știi sigur? Întreabă de ce au nevoie de el. Multe biblioteci ajută gratuit cu formulare, des la o oră de consultații fără programare. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen
+    'c.forms.p': "E obligatoriu BSN-ul meu aici?", // nieuw, nalezen
+    'c.forms.s': "Te înscrii la un club de sport. Formularul îți cere BSN-ul. Ce faci?", // nieuw, nalezen
+    'c.forms.o1': "Îl lași gol și întrebi de ce au nevoie de el.", // nieuw, nalezen
+    'c.forms.o2': "Îl completezi: orice formular are voie să-l ceară.", // nieuw, nalezen
+    'c.forms.o3': "Dai în schimb datele de conectare DigiD.", // nieuw, nalezen
+    'c.forms.w': "Un club de sport nu are voie să-ți folosească BSN-ul. Doar unele organizații au voie, cum ar fi angajatorul, primăria (gemeente) și asigurătorul de sănătate. Când întrebi de ce, îți protejezi numărul.", // nieuw, nalezen
+    'c.voicemail': "Un mesaj: cine, de ce, numărul tău", // nieuw, nalezen
+    'c.voicemail.b': "Nu răspunde nimeni? Lasă un mesaj scurt (boodschap) după semnalul sonor (piep). Spune-ți numele, de ce suni și numărul de telefon. Vorbește rar și spune numărul de două ori. Ai un apel pierdut? Întâi ascultă-ți mesageria vocală, apoi sună înapoi cât mai repede posibil. Nu înțelegi un mesaj? Ascultă-l din nou sau roagă un coleg să-l asculte cu tine. Configurează-ți mesageria vocală și ascult-o în fiecare zi. Anunți că te-ai îmbolnăvit? La multe firme un mesaj nu e suficient: sună din nou până vorbești cu cineva. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
+    'c.voicemail.p': "Pot să las un mesaj?", // nieuw, nalezen
+    'c.voicemail.s': "Vei întârzia și o suni pe șefa ta. Auzi mesageria ei vocală. Ce spui după semnalul sonor?", // nieuw, nalezen
+    'c.voicemail.o1': "Numele tău, de ce suni și numărul tău.", // nieuw, nalezen
+    'c.voicemail.o2': "Doar „Bel me terug” și închizi.", // nieuw, nalezen
+    'c.voicemail.o3': "Nimic: închizi și aștepți.", // nieuw, nalezen
+    'c.voicemail.w': "Cu numele tău, motivul și numărul tău, șefa știe ce se întâmplă și te poate suna înapoi imediat.", // nieuw, nalezen
+    'c.dentist': "Dentistul: un control și întreabă de preț", // nieuw, nalezen
+    'c.dentist.b': "Înscrie-te la un dentist (tandarts) aproape de casă și mergi regulat la control (controle), des o dată pe an. Te dor dinții? Sună-ți dentistul și spune că te doare foarte tare: atunci primești des repede o programare. Noaptea sau în weekend, sună-ți propriul dentist: mesajul de la telefon îți spune ce dentist ajută acum. Pentru adulți, asigurarea de sănătate de bază plătește foarte puțin la dentist: de obicei nici controlul, nici o plombă. Poți alege o asigurare suplimentară (aanvullende verzekering) pentru dentist: verifică ce plătește. Pentru copiii sub 18 ani, asigurarea de bază plătește majoritatea îngrijirilor dentare. Întreabă cât costă un tratament înainte să înceapă. Pentru un tratament mare, dentistul trebuie să-ți dea întâi prețul pe hârtie. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen
+    'c.dentist.p': "Mă doare foarte tare. Pot să vin chiar azi?", // nieuw, nalezen
+    'c.dentist.s': "E sâmbătă seara. Te dor dinții foarte tare și un calmant nu ajută. Ce faci?", // nieuw, nalezen
+    'c.dentist.o1': "Îți suni dentistul: mesajul spune cine ajută acum.", // nieuw, nalezen
+    'c.dentist.o2': "Suni la 112: e o urgență.", // nieuw, nalezen
+    'c.dentist.o3': "Aștepți până luni și iei mai multe calmante.", // nieuw, nalezen
+    'c.dentist.w': "În afara orelor de program, un dentist de gardă ajută cu durerea urgentă. 112 e doar pentru o urgență, cum ar fi pericol pentru viață.", // nieuw, nalezen
   },
 };
 

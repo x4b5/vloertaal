@@ -472,6 +472,27 @@ const t: CultureTranslation = {
     'c.orderpick.o2': "Atravessas a correr entre os empilhadores.", // nieuw, nalezen
     'c.orderpick.o3': "Atravessas a pé, e acenas aos condutores.", // nieuw, nalezen
     'c.orderpick.w': "O condutor de um empilhador muitas vezes não te consegue ver, por exemplo atrás de uma carga alta. No caminho para peões, as pessoas são esperadas e estão seguras.", // nieuw, nalezen
+    // four new lessons (27 November 2026).
+    'l.appraisal': "A conversa sobre o desempenho", // nieuw, nalezen
+    'w.functioneringsgesprek': "a conversa sobre o desempenho (uma conversa com o teu chefe sobre como corre o teu trabalho e o que queres aprender)", // nieuw, nalezen
+    'w.beoordelingsgesprek': "a conversa de avaliação (uma conversa em que o teu chefe dá uma avaliação do teu trabalho)", // nieuw, nalezen
+    'w.voorbereiden': "preparar (preparar-se para alguma coisa)", // nieuw, nalezen
+    'w.goedgaan': "correr bem", // nieuw, nalezen
+    'w.doel': "o objetivo (o que queres alcançar)", // nieuw, nalezen
+    'w.voorgezien': "assinar como \"visto\" (leste; não quer dizer que concordas)", // nieuw, nalezen
+    's.appraisal.1': "Preparo bem a conversa.", // nieuw, nalezen
+    's.appraisal.2': "Gostava de aprender uma coisa nova.", // nieuw, nalezen
+    's.appraisal.3': "Posso ler primeiro o relatório?", // nieuw, nalezen
+    'd.appraisal.q': "Qual é o teu objetivo para o próximo ano?", // nieuw, nalezen
+    'd.appraisal.a': "Gostava de tirar o certificado de empilhador.", // nieuw, nalezen
+    'c.appraisal': "A tua avaliação: prepara-a, lê-a", // nieuw, nalezen
+    'c.appraisal.b': "Muitas empresas têm, uma ou duas vezes por ano, uma conversa sobre o teu trabalho. Numa conversa sobre o desempenho (functioneringsgesprek) falam juntos: o que corre bem, o que pode ser melhor e o que queres aprender. Numa conversa de avaliação (beoordelingsgesprek) o teu chefe dá uma avaliação. Pode contar para o teu salário ou para um novo contrato. Prepara a conversa: escreve o que corre bem, o que é difícil e o que queres aprender. Podes pedir um curso ou uma formação. No fim fazem acordos (afspraken), muitas vezes num relatório curto. Lê-o bem antes de o assinares, e pede uma cópia. Não concordas? Assina \"voor gezien\" (visto), não \"voor akkoord\" (de acordo), e escreve a tua própria opinião. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nieuw, nalezen
+    'c.appraisal.p': "Assino como visto, não como de acordo.", // nieuw, nalezen
+    'c.appraisal.s': "Depois da tua conversa de avaliação, recebes o relatório para assinar. Achas que um ponto não é verdade. O que fazes?", // nieuw, nalezen
+    'c.appraisal.o1': "Assinas \"voor gezien\", e escreves a tua opinião.", // nieuw, nalezen
+    'c.appraisal.o2': "Assinas \"voor akkoord\" depressa, para ficar resolvido.", // nieuw, nalezen
+    'c.appraisal.o3': "Não dizes nada, e não assinas de todo.", // nieuw, nalezen
+    'c.appraisal.w': "\"Voor gezien\" quer dizer que leste, não que concordas. Quando o dizes e escreves a tua própria opinião, o teu chefe sabe o que pensas.", // nieuw, nalezen
   },
 };
 

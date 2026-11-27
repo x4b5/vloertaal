@@ -326,6 +326,11 @@ const t: CultureTranslation = {
     'c.mixlab.a.why': "Întrebarea e dacă șarja e aprobată: încă nu, laboratorul o testează.", // nieuw, nalezen
     'c.firstweeks.a.why': "Te întreabă de tur: aproape tot, și o întrebare.", // nieuw, nalezen
     'c.orderpick.a.why': "Ți se cere să conduci stivuitorul retractabil: nu, fără instruire pentru asta.", // nieuw, nalezen
+    // four new lessons (27 November 2026).
+    'd.appraisal.a.why': "Te întreabă de obiectiv: un lucru clar pe care vrei să-l înveți.", // nieuw, nalezen
+    'c.forms.a.why': "Te întreabă de formular: aproape, și unde semnezi.", // nieuw, nalezen
+    'c.voicemail.a.why': "Ți se cer numele și numărul: numele tău, și ceri să te sune înapoi.", // nieuw, nalezen
+    'c.dentist.a.why': "Te întreabă de ultima vizită: când, și ceri un control.", // nieuw, nalezen
   },
 };
 

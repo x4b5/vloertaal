@@ -472,6 +472,27 @@ const t: CultureTranslation = {
     'c.orderpick.o2': "Cruzas corriendo entre las carretillas.", // nieuw, nalezen
     'c.orderpick.o3': "Cruzas andando, y saludas a los conductores con la mano.", // nieuw, nalezen
     'c.orderpick.w': "Muchas veces el conductor de una carretilla no te puede ver, por ejemplo detrás de una carga alta. En el pasillo peatonal se cuenta con las personas, y están seguras.", // nieuw, nalezen
+    // four new lessons (27 November 2026).
+    'l.appraisal': "La entrevista de desempeño", // nieuw, nalezen
+    'w.functioneringsgesprek': "la entrevista de desempeño (una conversación con tu encargado sobre cómo va tu trabajo y qué quieres aprender)", // nieuw, nalezen
+    'w.beoordelingsgesprek': "la entrevista de evaluación (una conversación en la que tu encargado da una valoración de tu trabajo)", // nieuw, nalezen
+    'w.voorbereiden': "preparar (prepararse para algo)", // nieuw, nalezen
+    'w.goedgaan': "ir bien", // nieuw, nalezen
+    'w.doel': "el objetivo (lo que quieres conseguir)", // nieuw, nalezen
+    'w.voorgezien': "firmar como “visto” (lo has leído; no quiere decir que estés de acuerdo)", // nieuw, nalezen
+    's.appraisal.1': "Preparo bien la conversación.", // nieuw, nalezen
+    's.appraisal.2': "Me gustaría aprender algo nuevo.", // nieuw, nalezen
+    's.appraisal.3': "¿Puedo leer primero el informe?", // nieuw, nalezen
+    'd.appraisal.q': "¿Cuál es tu objetivo para el año que viene?", // nieuw, nalezen
+    'd.appraisal.a': "Me gustaría sacarme el certificado de carretilla elevadora.", // nieuw, nalezen
+    'c.appraisal': "Tu evaluación: prepárala, léela", // nieuw, nalezen
+    'c.appraisal.b': "Muchas empresas tienen una o dos veces al año una conversación sobre tu trabajo. En una entrevista de desempeño (functioneringsgesprek) habláis juntos: qué va bien, qué puede ir mejor y qué quieres aprender. En una entrevista de evaluación (beoordelingsgesprek) tu encargado da una valoración. Puede contar para tu sueldo o para un contrato nuevo. Prepara la conversación: apunta qué va bien, qué te cuesta y qué quieres aprender. Puedes pedir un curso o una formación. Al final hacéis acuerdos (afspraken), muchas veces en un informe corto. Léelo bien antes de firmarlo, y pide una copia. ¿No estás de acuerdo? Firma “voor gezien” (visto), no “voor akkoord” (de acuerdo), y escribe tu propia opinión. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.", // nieuw, nalezen
+    'c.appraisal.p': "Lo firmo como visto, no como de acuerdo.", // nieuw, nalezen
+    'c.appraisal.s': "Después de tu entrevista de evaluación recibes el informe para firmarlo. Crees que un punto no es verdad. ¿Qué haces?", // nieuw, nalezen
+    'c.appraisal.o1': "Firmas “voor gezien”, y escribes tu opinión.", // nieuw, nalezen
+    'c.appraisal.o2': "Firmas “voor akkoord” rápido, para terminar.", // nieuw, nalezen
+    'c.appraisal.o3': "No dices nada, y no firmas nada.", // nieuw, nalezen
+    'c.appraisal.w': "“Voor gezien” quiere decir que lo has leído, no que estás de acuerdo. Si lo dices y escribes tu propia opinión, tu encargado sabe lo que piensas.", // nieuw, nalezen
   },
 };
 

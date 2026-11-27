@@ -475,6 +475,27 @@ const t: CultureTranslation = {
     'c.orderpick.o2': "Treci în fugă printre utilaje.", // nieuw, nalezen
     'c.orderpick.o3': "Treci pe jos și le faci semn șoferilor.", // nieuw, nalezen
     'c.orderpick.w': "Adesea șoferul unui utilaj nu te poate vedea, de exemplu din spatele unei încărcături înalte. Pe aleea pietonală, oamenii sunt așteptați și sunt în siguranță.", // nieuw, nalezen
+    // four new lessons (27 November 2026).
+    'l.appraisal': "Discuția despre performanță", // nieuw, nalezen
+    'w.functioneringsgesprek': "discuția despre performanță (o discuție cu șeful despre cum merge munca ta și ce vrei să înveți)", // nieuw, nalezen
+    'w.beoordelingsgesprek': "discuția de evaluare (o discuție în care șeful dă o apreciere despre munca ta)", // nieuw, nalezen
+    'w.voorbereiden': "a pregăti (a te pregăti pentru ceva)", // nieuw, nalezen
+    'w.goedgaan': "a merge bine", // nieuw, nalezen
+    'w.doel': "obiectivul, scopul (ce vrei să atingi)", // nieuw, nalezen
+    'w.voorgezien': "a semna „văzut” (ai citit; nu înseamnă că ești de acord)", // nieuw, nalezen
+    's.appraisal.1': "Pregătesc bine discuția.", // nieuw, nalezen
+    's.appraisal.2': "Aș vrea să învăț ceva nou.", // nieuw, nalezen
+    's.appraisal.3': "Pot să citesc întâi raportul?", // nieuw, nalezen
+    'd.appraisal.q': "Care e obiectivul tău pentru anul viitor?", // nieuw, nalezen
+    'd.appraisal.a': "Aș vrea să-mi iau certificatul de motostivuitorist.", // nieuw, nalezen
+    'c.appraisal': "Evaluarea ta: pregătește-o, citește-o", // nieuw, nalezen
+    'c.appraisal.b': "Multe firme au o dată sau de două ori pe an o discuție despre munca ta. Într-o discuție despre performanță (functioneringsgesprek) vorbiți împreună: ce merge bine, ce poate fi mai bine și ce vrei să înveți. Într-o discuție de evaluare (beoordelingsgesprek) șeful dă o apreciere. Ea poate conta pentru salariu sau pentru un contract nou. Pregătește discuția: notează ce merge bine, ce e greu și ce vrei să înveți. Ai voie să ceri un curs sau o instruire. La final faceți înțelegeri (afspraken), des într-un raport scurt. Citește-l bine înainte să-l semnezi și cere o copie. Nu ești de acord? Semnează „voor gezien” (văzut), nu „voor akkoord” (de acord), și scrie-ți propria părere. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen
+    'c.appraisal.p': "Semnez „văzut”, nu „de acord”.", // nieuw, nalezen
+    'c.appraisal.s': "După discuția de evaluare primești raportul de semnat. Crezi că un punct din el nu e adevărat. Ce faci?", // nieuw, nalezen
+    'c.appraisal.o1': "Semnezi „voor gezien” și îți scrii părerea.", // nieuw, nalezen
+    'c.appraisal.o2': "Semnezi repede „voor akkoord”, ca să termini.", // nieuw, nalezen
+    'c.appraisal.o3': "Nu spui nimic și nu semnezi deloc.", // nieuw, nalezen
+    'c.appraisal.w': "„Voor gezien” înseamnă că ai citit, nu că ești de acord. Când spui asta și îți scrii propria părere, șeful știe ce crezi.", // nieuw, nalezen
   },
 };
 
