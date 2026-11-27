@@ -13,19 +13,19 @@ export default {
   'w.vakje': () => (
     <g strokeLinecap="round" strokeLinejoin="round">
       {/* The form: a depth edge, the sheet, a navy title bar */}
-      <rect x="10" y="18" width="88" height="86" rx="4" fill={PAL.paperShade} />
-      <rect x="10" y="14" width="88" height="86" rx="4" fill={PAL.white} />
-      <rect x="18" y="22" width="34" height="7" rx="2.5" fill={PAL.navy} />
+      <rect x="8" y="18" width="104" height="86" rx="4" fill={PAL.paperShade} />
+      <rect x="8" y="14" width="104" height="86" rx="4" fill={PAL.white} />
+      <rect x="16" y="22" width="34" height="7" rx="2.5" fill={PAL.navy} />
       {/* Row one: a label line and four boxes */}
-      <path d="M18 40H50" stroke={PAL.line} strokeWidth="2.6" />
-      {[18, 37, 56, 75].map((x) => box(x, 46, 15, `a${x}`))}
+      <path d="M16 40H50" stroke={PAL.line} strokeWidth="2.6" />
+      {[16, 38, 60, 82].map((x) => box(x, 46, 16, `a${x}`))}
       {/* Row two: a label line and four boxes, the third one picked out */}
-      <path d="M18 72H44" stroke={PAL.line} strokeWidth="2.6" />
-      {[18, 37, 75].map((x) => box(x, 78, 15, `b${x}`))}
-      <rect x="49" y="70" width="29" height="29" rx="7" fill="none" stroke={PAL.yellow} strokeWidth="6" />
-      <rect x="54.5" y="75.5" width="18" height="18" rx="2.4" fill={PAL.white} stroke={PAL.sky} strokeWidth="3.6" />
+      <path d="M16 72H44" stroke={PAL.line} strokeWidth="2.6" />
+      {[16, 38, 88].map((x) => box(x, 78, 16, `b${x}`))}
+      <rect x="57" y="69" width="30" height="30" rx="7" fill="none" stroke={PAL.yellow} strokeWidth="6" />
+      <rect x="63" y="75" width="18" height="18" rx="2.4" fill={PAL.white} stroke={PAL.sky} strokeWidth="3.6" />
       {/* Light on the ring's top left */}
-      <path d="M52 86V78Q52 73 57 73H64" fill="none" stroke={PAL.yellowShine} strokeWidth="2.4" opacity=".9" />
+      <path d="M60 85V77Q60 72 65 72H72" fill="none" stroke={PAL.yellowShine} strokeWidth="2.4" opacity=".9" />
     </g>
   ),
 } as Record<string, () => JSX.Element>;

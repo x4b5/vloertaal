@@ -325,6 +325,11 @@ const t: CultureTranslation = {
     'c.mixlab.a.why': "پرسیده‌اند بچ تأیید شده یا نه: هنوز نه، آزمایشگاه دارد آزمایشش می‌کند.", // nieuw, nalezen
     'c.firstweeks.a.why': "دربارهٔ بازدید آشنایی پرسیده‌اند: تقریباً همه چیز، و یک سؤال.", // nieuw, nalezen
     'c.orderpick.a.why': "خواسته‌اند با ریچ‌تراک کار کنی: نه، برایش آموزش نداری.", // nieuw, nalezen
+    // four new lessons (27 November 2026).
+    'd.appraisal.a.why': "دربارهٔ هدفت پرسیده‌اند: یک چیز روشن که می‌خواهی یاد بگیری.", // nieuw, nalezen
+    'c.forms.a.why': "دربارهٔ فرم پرسیده‌اند: تقریباً، و کجا امضا کنی.", // nieuw, nalezen
+    'c.voicemail.a.why': "اسم و شماره‌ات را خواسته‌اند: اسمت، و اینکه دوباره زنگ بزنند.", // nieuw, nalezen
+    'c.dentist.a.why': "دربارهٔ آخرین مراجعه‌ات پرسیده‌اند: کی، و یک معاینه می‌خواهی.", // nieuw, nalezen
   },
 };
 

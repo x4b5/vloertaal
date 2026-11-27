@@ -473,6 +473,27 @@ const t: CultureTranslation = {
     'c.orderpick.o2': "Araçların arasından hızla koşarak geçersin.", // nieuw, nalezen
     'c.orderpick.o3': "Yürüyerek geçer ve sürücülere el sallarsın.", // nieuw, nalezen
     'c.orderpick.w': "Bir araç sürücüsü seni çoğu zaman göremez, örneğin yüksek bir yükün arkasındayken. Yaya yolunda insanlar beklenir ve güvendedir.", // nieuw, nalezen
+    // four new lessons (27 November 2026).
+    'l.appraisal': "Performans görüşmesi", // nieuw, nalezen
+    'w.functioneringsgesprek': "performans görüşmesi (amirinle işinin nasıl gittiği ve ne öğrenmek istediğin hakkında bir konuşma)", // nieuw, nalezen
+    'w.beoordelingsgesprek': "değerlendirme görüşmesi (amirinin işin hakkında bir karar verdiği bir konuşma)", // nieuw, nalezen
+    'w.voorbereiden': "hazırlamak (bir şeye hazırlanmak)", // nieuw, nalezen
+    'w.goedgaan': "iyi gitmek", // nieuw, nalezen
+    'w.doel': "hedef (ulaşmak istediğin şey)", // nieuw, nalezen
+    'w.voorgezien': "“görüldü” diye imzalamak (okuduğunu gösterir; kabul ettiğin anlamına gelmez)", // nieuw, nalezen
+    's.appraisal.1': "Görüşmeye iyi hazırlanıyorum.", // nieuw, nalezen
+    's.appraisal.2': "Yeni bir şey öğrenmek istiyorum.", // nieuw, nalezen
+    's.appraisal.3': "Önce raporu okuyabilir miyim?", // nieuw, nalezen
+    'd.appraisal.q': "Gelecek yıl için hedefin ne?", // nieuw, nalezen
+    'd.appraisal.a': "Forklift sertifikamı almak istiyorum.", // nieuw, nalezen
+    'c.appraisal': "Görüşmen: hazırlan, oku", // nieuw, nalezen
+    'c.appraisal.b': "Birçok şirkette yılda bir ya da iki kez işin hakkında bir görüşme yapılır. Performans görüşmesinde (functioneringsgesprek) birlikte konuşursunuz: neyin iyi gittiği, neyin daha iyi olabileceği ve ne öğrenmek istediğin. Değerlendirme görüşmesinde (beoordelingsgesprek) amirin işin hakkında bir karar verir. Bu, maaşın ya da yeni bir sözleşme için önemli olabilir. Görüşmeye hazırlan: neyin iyi gittiğini, neyin zor olduğunu ve ne öğrenmek istediğini yaz. Bir kurs ya da eğitim isteyebilirsin. Sonunda anlaşmalar (afspraken) yaparsınız, çoğu zaman kısa bir raporda. İmzalamadan önce iyice oku ve bir kopya iste. Kabul etmiyor musun? “Voor akkoord” (kabul edildi) diye değil, “voor gezien” (görüldü) diye imzala ve kendi görüşünü yaz. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen
+    'c.appraisal.p': "Görüldü diye imzalıyorum, kabul edildi diye değil.", // nieuw, nalezen
+    'c.appraisal.s': "Değerlendirme görüşmenden sonra imzalaman için raporu alıyorsun. Sence içindeki bir nokta doğru değil. Ne yaparsın?", // nieuw, nalezen
+    'c.appraisal.o1': "“Voor gezien” diye imzalar ve görüşünü yazarsın.", // nieuw, nalezen
+    'c.appraisal.o2': "İş bitsin diye hızlıca “voor akkoord” diye imzalarsın.", // nieuw, nalezen
+    'c.appraisal.o3': "Hiçbir şey söylemez ve hiç imzalamazsın.", // nieuw, nalezen
+    'c.appraisal.w': "“Voor gezien”, okuduğun anlamına gelir, kabul ettiğin anlamına değil. Bunu söyleyip kendi görüşünü yazdığında amirin ne düşündüğünü bilir.", // nieuw, nalezen
   },
 };
 

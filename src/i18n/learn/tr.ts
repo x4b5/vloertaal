@@ -325,6 +325,11 @@ const t: CultureTranslation = {
     'c.mixlab.a.why': "Partinin onaylanıp onaylanmadığı soruluyor: henüz değil, laboratuvar test ediyor.", // nieuw, nalezen
     'c.firstweeks.a.why': "Tur soruluyor: neredeyse her şey, bir de bir soru.", // nieuw, nalezen
     'c.orderpick.a.why': "Reach truck kullanman isteniyor: hayır, bunun için eğitim yok.", // nieuw, nalezen
+    // four new lessons (27 November 2026).
+    'd.appraisal.a.why': "Hedefin soruluyor: öğrenmek istediğin açık bir şey.", // nieuw, nalezen
+    'c.forms.a.why': "Form soruluyor: neredeyse, bir de nereye imza atılacağı.", // nieuw, nalezen
+    'c.voicemail.a.why': "Adın ve numaran isteniyor: adın, bir de geri arama ricası.", // nieuw, nalezen
+    'c.dentist.a.why': "Son ziyaretin soruluyor: ne zaman, bir de bir kontrol istiyorsun.", // nieuw, nalezen
   },
 };
 

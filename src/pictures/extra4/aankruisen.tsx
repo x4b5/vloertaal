@@ -23,11 +23,11 @@ export default {
       ))}
       {/* The cross in the middle box */}
       <Move kind="show" once>
-        <path d="M23.5 51.5L34.5 62.5M34.5 51.5L23.5 62.5" stroke={PAL.blueShade} strokeWidth="5" />
+        <path d="M23 51L35 63M35 51L23 63" stroke={PAL.blueShade} strokeWidth="5.4" />
       </Move>
       {/* The pen, its tip at the end of the cross */}
-      <Move kind="from" dx={26} dy={-24} once>
-        <g transform="translate(35 63) rotate(-50)">
+      <Move kind="from" dx={24} dy={22} once>
+        <g transform="translate(36 64) rotate(36)">
           <path d="M0 0L10 -4.6V4.6Z" fill={PAL.mist} />
           <path d="M0 0L3.4 -1.6V1.6Z" fill={PAL.ink} />
           <rect x="10" y="-4.8" width="54" height="9.6" rx="2.2" fill={PAL.blue} />

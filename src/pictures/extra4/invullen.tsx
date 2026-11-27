@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import { Hand, Move, PAL, SKIN, Shine } from '../kit';
+import { Hand, Move, PAL, SKIN } from '../kit';
 
 const TINT = '#e3f5ff';
 
@@ -37,7 +37,7 @@ export default {
       </Move>
       <Move kind="from" dx={-26}>
         {/* The hand holding the pen, its tip on the end of the written line */}
-        <Hand pose="hold" x={86} y={95} rotate={-45} scale={0.62} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} />
+        <Hand pose="hold" x={90} y={100} rotate={-45} scale={0.74} skin={SKIN.jada} sleeve={['#ffc929', PAL.yellowShade]} />
         <g transform="translate(53 67) rotate(38.8)">
           <path d="M0 0L9 -4V4Z" fill={PAL.mist} />
           <path d="M0 0L3 -1.4V1.4Z" fill={PAL.ink} />
@@ -46,7 +46,6 @@ export default {
           <rect x="50" y="-4.6" width="9" height="9.2" rx="2.4" fill={PAL.slate} />
         </g>
       </Move>
-      <Shine d="M16 22V40" width={2.6} opacity={0.5} />
     </g>
   ),
 } as Record<string, () => JSX.Element>;

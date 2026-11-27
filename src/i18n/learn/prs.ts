@@ -325,6 +325,11 @@ const t: CultureTranslation = {
     'c.mixlab.a.why': "پرسیده شد که بچ تأیید شده یا نی: هنوز نی، لابراتوار آن را آزمایش می‌کند.", // nieuw, nalezen
     'c.firstweeks.a.why': "دربارهٔ گشت معرفی پرسیده شد: تقریباً همه چیز، و یک سوال.", // nieuw, nalezen
     'c.orderpick.a.why': "خواسته شد که با ریچ‌تراک کار کند: نی، برای آن آموزش ندارد.", // nieuw, nalezen
+    // four new lessons (27 November 2026).
+    'd.appraisal.a.why': "دربارهٔ هدف پرسیده شد: یک چیز واضح که می‌خواهد یاد بگیرد.", // nieuw, nalezen
+    'c.forms.a.why': "دربارهٔ فورم پرسیده شد: تقریباً، و اینکه کجا امضا کند.", // nieuw, nalezen
+    'c.voicemail.a.why': "نام و نمبر خواسته شد: نام، و خواهش دوباره زنگ زدن.", // nieuw, nalezen
+    'c.dentist.a.why': "دربارهٔ آخرین مراجعه پرسیده شد: چه وقت، و یک معاینه می‌خواهد.", // nieuw, nalezen
   },
 };
 

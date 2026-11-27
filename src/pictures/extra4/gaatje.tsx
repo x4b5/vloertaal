@@ -16,8 +16,8 @@ export default {
         <path d={TOOTH} fill={PAL.paper} />
       </Shade>
       {/* The hole: dark, with a darker inside and a light lip on its lower edge */}
-      <path d="M53 26Q54 20 61 20Q69 20 70 27Q70 35 61.5 35Q53 35 53 26Z" fill={PAL.brown} />
-      <path d="M56 26Q57 22.5 61.5 22.5Q66.5 22.5 67 27Q66 31 61.5 31Q56.5 31 56 26Z" fill={PAL.ink} />
+      <path d="M51 26Q52 18.5 61 18.5Q71 18.5 72 27Q72 37 61.5 37Q51 37 51 26Z" fill={PAL.brown} />
+      <path d="M54.5 26Q55.5 21.5 61.5 21.5Q68 21.5 68.5 27Q67.5 32 61.5 32Q55 32 54.5 26Z" fill={PAL.ink} />
       <Shine d="M34 44Q33 28 42 22" width={4} opacity={0.9} />
     </g>
   ),

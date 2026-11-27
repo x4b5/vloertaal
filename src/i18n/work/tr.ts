@@ -5104,6 +5104,67 @@ const t: CultureTranslation = {
     'c.mixlab.o2': "Hiçbir şey söylemezsin: bir kilo çok değil.", // nieuw, nalezen
     'c.mixlab.o3': "Elinle biraz çıkarırsın.", // nieuw, nalezen
     'c.mixlab.w': "Tek bir yanlış miktar bütün partiyi bozabilir. Vardiya şefi bunu zamanında öğrenirse, parti devam etmeden önce laboratuvar kontrol edebilir.", // nieuw, nalezen
+    // four new lessons (performance review, forms, voicemail, the dentist) (27 November 2026).
+    'l.forms': "Form doldurmak", // nieuw, nalezen
+    'w.invullen': "doldurmak (bir formu)", // nieuw, nalezen
+    'w.vakje': "kutucuk (bir formdaki küçük kare)", // nieuw, nalezen
+    'w.aankruisen': "işaretlemek (bir kutucuğa çarpı koymak)", // nieuw, nalezen
+    'w.verplichtveld': "zorunlu alan (doldurman gerekir; çoğu zaman * ile işaretlidir)", // nieuw, nalezen
+    'w.postcode': "posta kodu (sokağın ya da şehrin için kısa bir kod, adresinin bir parçası)", // nieuw, nalezen
+    'w.hoofdletters': "büyük harfler (A, B, C)", // nieuw, nalezen
+    's.forms.1': "Adını büyük harflerle yaz.", // nieuw, nalezen
+    's.forms.2': "Doğru kutucuğu işaretle.", // nieuw, nalezen
+    's.forms.3': "Bu formda bana yardım edebilir misiniz?", // nieuw, nalezen
+    'c.forms.q': "Formu doldurdun mu?", // nieuw, nalezen
+    'c.forms.a': "Neredeyse. İmzam nereye gelecek?", // nieuw, nalezen
+    'l.voicemail': "Sesli mesaj ve geri aramak", // nieuw, nalezen
+    'w.piep': "bip sesi (kısa ses; ondan sonra mesajını söylersin)", // nieuw, nalezen
+    'w.beluisteren': "dinlemek (bir mesajı)", // nieuw, nalezen
+    'w.boodschap': "mesaj (birinin sesli mesajına söylediğin şey)", // nieuw, nalezen
+    'w.noemen': "söylemek, belirtmek (adını, numaranı)", // nieuw, nalezen
+    'w.zosnelmogelijk': "mümkün olan en kısa sürede", // nieuw, nalezen
+    'w.opnieuw': "tekrar (bir kez daha)", // nieuw, nalezen
+    's.voicemail.1': "Ben Ali Haddad. Çalışma planım hakkında arıyorum.", // nieuw, nalezen
+    's.voicemail.2': "Sesli mesajlarımı her gün dinliyorum.", // nieuw, nalezen
+    's.voicemail.3': "Daha sonra tekrar ararım.", // nieuw, nalezen
+    'c.voicemail.q': "Bip sesinden sonra adınızı ve numaranızı bırakın.", // nieuw, nalezen
+    'c.voicemail.a': "Ben Ali. Beni mümkün olan en kısa sürede geri arar mısınız?", // nieuw, nalezen
+    'l.dentist': "Diş hekimi", // nieuw, nalezen
+    'w.tandarts': "diş hekimi", // nieuw, nalezen
+    'w.kiespijn': "diş ağrısı", // nieuw, nalezen
+    'w.gaatje': "çürük (dişte küçük bir delik)", // nieuw, nalezen
+    'w.vulling': "dolgu (diş hekimi dişteki deliği kapatır)", // nieuw, nalezen
+    'w.gebit': "dişler (bütün dişlerin birlikte)", // nieuw, nalezen
+    'w.aanvullendeverzekering': "ek sigorta (temel sağlık sigortasının üstüne seçebilirsin)", // nieuw, nalezen
+    's.dentist.1': "İki gündür diş ağrım var.", // nieuw, nalezen
+    's.dentist.2': "Dişimde bir çürük var. Dolgu yaptırıyorum.", // nieuw, nalezen
+    's.dentist.3': "Bir dolgu ne kadar tutar?", // nieuw, nalezen
+    'c.dentist.q': "En son ne zaman diş hekimine gittin?", // nieuw, nalezen
+    'c.dentist.a': "Bir yıl önce. Bir kontrol istiyorum.", // nieuw, nalezen
+    'c.forms': "Form: açık yaz ve BSN’ini koru", // nieuw, nalezen
+    'c.forms.b': "Bir form çoğu zaman adını, doğum tarihini, adresini ve posta kodunu sorar. Açık yaz, çoğu zaman büyük harflerle. Yıldızlı (*) bir alan zorunludur: onu doldurman gerekir. Doğru kutucuğu işaretle. Bir soruyu anlamıyor musun? İmzalamadan önce yardım iste. Anlamadığın bir şeyi asla imzalama. BSN’in: bunu sadece bazı kurumların istemesine izin vardır, örneğin işverenin, gemeente, Belastingdienst, sağlık sigortası şirketin, doktorun ve bankan. Bir mağazanın ya da spor kulübünün buna izni yoktur. BSN’ini asla bir yabancıya, bir uygulamada ya da telefonda verme. Emin değil misin? Neden ihtiyaç duyduklarını sor. Birçok kütüphane formlar için ücretsiz yardım eder, çoğu zaman randevusuz gidebildiğin bir saatte. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen
+    'c.forms.p': "BSN’im burada zorunlu mu?", // nieuw, nalezen
+    'c.forms.s': "Bir spor kulübüne kaydoluyorsun. Form BSN’ini istiyor. Ne yaparsın?", // nieuw, nalezen
+    'c.forms.o1': "Boş bırakırsın ve neden ihtiyaç duyduklarını sorarsın.", // nieuw, nalezen
+    'c.forms.o2': "Doldurursun: her form bunu isteyebilir.", // nieuw, nalezen
+    'c.forms.o3': "Onun yerine DigiD giriş bilgilerini verirsin.", // nieuw, nalezen
+    'c.forms.w': "Bir spor kulübünün BSN’ini kullanmasına izin yoktur. Sadece bazı kurumların izni vardır, örneğin işverenin, gemeente ve sağlık sigortası şirketin. Nedenini sorduğunda numaranı korursun.", // nieuw, nalezen
+    'c.voicemail': "Bir mesaj: kim, neden, numaran", // nieuw, nalezen
+    'c.voicemail.b': "Cevap yok mu? Bip sesinden (piep) sonra kısa bir mesaj (boodschap) bırak. Adını, neden aradığını ve telefon numaranı söyle. Yavaş konuş ve numaranı iki kez söyle. Bir aramayı mı kaçırdın? Önce sesli mesajını dinle, sonra mümkün olan en kısa sürede geri ara. Bir mesajı anlamıyor musun? Tekrar dinle ya da bir iş arkadaşından seninle birlikte dinlemesini iste. Sesli mesajını kur ve her gün dinle. Hastalık mı bildiriyorsun? Birçok şirkette bir mesaj yeterli değildir: biriyle konuşana kadar tekrar ara. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
+    'c.voicemail.p': "Bir mesaj bırakabilir miyim?", // nieuw, nalezen
+    'c.voicemail.s': "Geç kalacaksın ve amirini arıyorsun. Onun sesli mesajını duyuyorsun. Bip sesinden sonra ne söylersin?", // nieuw, nalezen
+    'c.voicemail.o1': "Adını, neden aradığını ve numaranı.", // nieuw, nalezen
+    'c.voicemail.o2': "Sadece “Bel me terug” der ve kapatırsın.", // nieuw, nalezen
+    'c.voicemail.o3': "Hiçbir şey: kapatır ve beklersin.", // nieuw, nalezen
+    'c.voicemail.w': "Adınla, sebeple ve numaranla amirin neler olduğunu bilir ve seni hemen geri arayabilir.", // nieuw, nalezen
+    'c.dentist': "Diş hekimi: kontrol ve önce fiyatı sor", // nieuw, nalezen
+    'c.dentist.b': "Evine yakın bir diş hekimine (tandarts) kaydol ve düzenli olarak kontrole (controle) git, çoğu zaman yılda bir kez. Diş ağrısı mı? Diş hekimini ara ve çok acıdığını söyle: o zaman çoğu zaman kısa sürede randevu alırsın. Gece ya da hafta sonu kendi diş hekimini ara: telefondaki mesaj sana şu an hangi diş hekiminin yardım ettiğini söyler. Yetişkinler için temel sağlık sigortası diş hekiminde çok az şey öder: genelde kontrolü ya da dolguyu ödemez. Diş hekimi için bir ek sigorta (aanvullende verzekering) seçebilirsin: neleri ödediğini kontrol et. 18 yaşından küçük çocuklar için temel sigorta diş bakımının çoğunu öder. Bir tedavinin ne kadar tuttuğunu tedavi başlamadan önce sor. Büyük bir tedavide diş hekimi sana önce fiyatı yazılı olarak vermek zorundadır. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen
+    'c.dentist.p': "Çok ağrım var. Bugün gelebilir miyim?", // nieuw, nalezen
+    'c.dentist.s': "Cumartesi akşamı. Çok kötü bir diş ağrın var ve ağrı kesici işe yaramıyor. Ne yaparsın?", // nieuw, nalezen
+    'c.dentist.o1': "Diş hekimini ararsın: mesaj şu an kimin yardım ettiğini söyler.", // nieuw, nalezen
+    'c.dentist.o2': "112’yi ararsın: bu acil bir durum.", // nieuw, nalezen
+    'c.dentist.o3': "Pazartesiye kadar bekler ve daha çok ağrı kesici alırsın.", // nieuw, nalezen
+    'c.dentist.w': "Mesai saatleri dışında nöbetçi bir diş hekimi acil ağrıya yardım eder. 112 sadece acil durumlar içindir, örneğin hayati tehlike.", // nieuw, nalezen
   },
 };
 
