@@ -83,6 +83,9 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.counting': L('A', 'A', 'getallen zijn in Vlaanderen dezelfde'),
     'l.details': L('B', 'B', 'de Belastingdienst → FOD Financiën; BSN → rijksregisternummer; payslip → loonbrief'),
     'l.dates': L('A', 'A'),
+    // 27 November 2026: the words, sentences and chat hold in Belgium too (no BSN in them); the tip
+    // names the BSN and who may ask for it: NL-only for now (BE_LESSON_TODO).
+    'l.forms': L('A', 'B', 'het BSN → het rijksregisternummer (wie het mag vragen: de Belgische regels, de Gegevensbeschermingsautoriteit); de Belastingdienst → FOD Financiën; het Informatiepunt Digitale Overheid → de bibliotheek, het digipunt; nakijken: het vakje ("het hokje"), aankruisen; nog te schrijven (BE_LESSON_TODO)'),
   } },
   'u.time': { kind: 'B', lessons: {
     'l.shift': L('A', 'A'),
@@ -117,6 +120,9 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.getfeedback': L('A', 'A', 'de tip zegt "At work here": feedback is goed bedoeld, ook in Vlaanderen, al klinkt die daar vaak voorzichtiger (zie Werkregels r.be.l.samen.1; nakijken door een Vlaamse NT2-docent)'),
     'l.givefeedback': L('A', 'A', 'dichtplakken, netjes en scheef zeg je in Vlaanderen ook (nakijken door een Vlaamse NT2-docent)'),
     'l.meeting': L('A', 'A', 'het werkoverleg kent men in Vlaanderen ook, vaker zegt men de (team)vergadering of het overleg (nakijken door een Vlaamse NT2-docent)'),
+    // 27 November 2026: the tip names no law, body or country (a copy of the report: the GDPR, in
+    // both countries) and ends on the closing line the Belgian course swaps by itself.
+    'l.appraisal': L('A', 'A', 'het beoordelingsgesprek heet in Vlaanderen vaak het evaluatiegesprek; "voor gezien tekenen" zegt men ook (of "voor ontvangst"); nakijken door een Vlaamse NT2-docent'),
   } },
   'u.apply': { kind: 'A', lessons: {
     'l.cv': L('A', 'A', 'de tip zegt "A CV here" (was "A Dutch CV")'),
@@ -214,6 +220,8 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.callin': L('A', 'A'),
     'l.texting': L('A', 'A'),
     'l.email': L('A', 'A', '"Groet" mag, "Groeten" is in Vlaanderen gewoner'),
+    // 27 November 2026: a voicemail and calling back, the same in Belgium.
+    'l.voicemail': L('A', 'A', 'nakijken: de piep ("de biep"), beluisteren, de boodschap ("het bericht")'),
   } },
   'u.grow': { kind: 'B', lessons: {
     'l.certs': L('A', 'A', 'VCA bestaat ook in België'),
@@ -227,6 +235,9 @@ export const TAAL_BE_INVENTORY: Record<string, BeUnitInventory> = {
     'l.body': L('A', 'A'),
     'l.healthy': L('A', 'A'),
     'l.feelwell': L('A', 'B', 'de tip: de bedrijfsarts → de arbeidsarts, ook de preventieadviseur psychosociale aspecten, 113 → 1813; de ploegendienst heet in Vlaanderen ook ploegenwerk (nakijken door een Vlaamse NT2-docent)'),
+    // 27 November 2026: the words hold in Belgium too (the dentist, a filling, an extra insurance at
+    // the ziekenfonds); the tip is about Dutch health insurance: NL-only for now (BE_LESSON_TODO).
+    'l.dentist': L('A', 'C', 'de basisverzekering en de aanvullende verzekering → het ziekenfonds (de mutualiteit): de tandarts wordt in België voor een deel terugbetaald, ook voor volwassenen (de jaarlijkse controle telt mee, remgeld), de geconventioneerde tandarts, de tandartsenwachtdienst van de regio (nakijken); nog te schrijven (BE_LESSON_TODO)'),
   } },
   'u.money': { kind: 'B', lessons: {
     'l.letters': L('C', 'C', 'Belastingdienst, aangifte voor 1 mei, toeslagen → FOD Financiën, MyMinfin, Groeipakket'),

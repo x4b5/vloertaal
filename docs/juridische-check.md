@@ -2954,6 +2954,156 @@ ______________________________________________________________
 
 ---
 
+### Vier nieuwe lessen (nieuw, 27 november 2026)
+
+*Op verzoek van de eigenaar vier nieuwe lessen in bestaande onderwerpen. Drie tips noemen rechten of feiten en hebben hieronder een eigen sectie: c.appraisal (Feedback en overleg: het functioneringsgesprek), c.forms (Getallen en gegevens: een formulier invullen, het BSN) en c.dentist (Gezondheid: de tandarts). c.appraisal noemt geen wet, instantie of land en geldt ook in België (de Belgische cursus wisselt de slotregel zelf); c.forms en c.dentist gaan over Nederland: in België zijn die lessen voorlopig „alleen Nederland” (`BE_LESSON_TODO` in `src/content/taalBe/index.ts`). De vierde tip, c.voicemail (Bellen en appen met je werk), gaat over hoe het werk gaat en sluit met de huisregelregel („ask your supervisor”); hij bevat geen wettelijke bewering. Elke bewering staat ook met een ⚖️-noot in `src/content/workTips.ts` of `src/content/cultureTipsBase.ts`. Geen bedragen. De bronnen konden bij het schrijven niet online worden nagekeken (geen netwerktoegang in de sessie): waar „nakijken” staat, graag de pagina openen.*
+
+**Feiten in de andere tip en de zinnen (graag ook nakijken):**
+- c.voicemail: „Calling in sick? At many companies a message is not enough: call again until you speak to someone” — geen wet; de ziekmeldregels staan in het verzuimprotocol van het bedrijf (zoals c.callin en c.sick); daarom „many companies” en de huisregelregel.
+- `s.dentist.3` „Wat kost een vulling?” en `d.appraisal.a` (een heftruckcertificaat halen): geen bewering.
+
+**Onze eigen vraag hierbij:**
+- Is het goed dat c.voicemail geen slotregel over rechten heeft, alleen de huisregelregel?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+
+### c.appraisal — Your review: prepare it, read it (nieuw, 27 november 2026)
+
+*Unit „Feedback en overleg”, les „The performance review” (`l.appraisal`)*
+
+**Samenvatting (NL):** Veel bedrijven hebben een of twee keer per jaar een gesprek over je werk. In een functioneringsgesprek praat je samen: wat gaat goed, wat kan beter en wat wil je leren. In een beoordelingsgesprek geeft je leidinggevende een oordeel; dat kan meetellen voor je loon of een nieuw contract. Bereid het gesprek voor: schrijf op wat goed gaat, wat moeilijk is en wat je wilt leren. Je mag om een cursus of training vragen. Aan het eind maak je afspraken, vaak in een kort verslag. Lees het goed voordat je tekent, en vraag een kopie. Ben je het er niet mee eens? Teken „voor gezien”, niet „voor akkoord”, en schrijf je eigen mening op.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Many companies have a talk about your work once or twice a year. In a performance review (functioneringsgesprek) you talk together: what goes well, what can be better, and what you want to learn. In an appraisal (beoordelingsgesprek) your supervisor gives a judgement. It can count for your pay or for a new contract. Prepare the talk: write down what goes well, what is hard, and what you want to learn. You may ask for a course or training. At the end you make agreements (afspraken), often in a short report. Read it well before you sign it, and ask for a copy. Do you not agree? Sign "voor gezien" (seen), not "voor akkoord" (agreed), and write down your own view.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Grondslag (onze lezing):** Geen wet verplicht een functionerings- of beoordelingsgesprek (in Nederland en in België niet); veel cao’s, personeelshandboeken en HR-regels kennen het; daarom „many”. Meetellen voor loon of contract: geen wet; veel cao’s koppelen de jaarlijkse periodiek aan de beoordeling, en een werkgever mag de beoordeling meewegen bij een nieuw contract; daarom „can” (juridischloket.nl „Beoordelingsgesprek”; nakijken). Om scholing vragen mag altijd; de plicht van de werkgever om noodzakelijke scholing mogelijk te maken (BW 7:611a) staat in c.diploma en wordt hier bewust niet herhaald. Een kopie van het verslag: het verslag is een persoonsgegeven in je personeelsdossier; recht op inzage en een kopie: AVG art. 15 lid 1 en 3, in beide landen (autoriteitpersoonsgegevens.nl „Recht op inzage”; gegevensbeschermingsautoriteit.be). „Voor gezien” tekenen en je eigen mening opschrijven: geen wet; het gangbare advies van de vakbonden en het Juridisch Loket (juridischloket.nl „Beoordelingsgesprek”, fnv.nl „Beoordeling”; nakijken); in Vlaanderen ook „voor gezien” of „voor ontvangst”.
+
+**Zeg het zo (Nederlands):** „Ik teken voor gezien, niet voor akkoord.” — *I sign it as seen, not as agreed.*
+
+**Situatie in de les:** After your appraisal you get the report to sign. One point in it is not true, you think. What do you do?  
+**Goede antwoord:** Sign "voor gezien", and write down your view.  
+**Uitleg na het antwoord (`c.appraisal.w`):** "Voor gezien" means that you have read it, not that you agree. When you say it and write down your own view, your supervisor knows what you think.
+
+**Uitleg bij het gesprekje (`d.appraisal.a.why`):** „Wat is jouw doel voor volgend jaar?” → „Ik wil graag mijn heftruckcertificaat halen.”: Asked about your goal: one clear thing you want to learn.
+
+**⚠ Getallen en termijnen:** Geen getallen behalve „once or twice a year” (gangbaar, geen regel). Geen bedragen.
+
+**Onze eigen vraag hierbij:**
+- Is „Sign "voor gezien" (seen), not "voor akkoord" (agreed)” juist en niet misleidend: heeft een handtekening „voor gezien” echt minder gevolgen?
+- Mag je altijd een kopie van het verslag vragen (AVG art. 15), ook van een functioneringsgesprek dat niet in het dossier komt?
+- Klopt het dat de tip zonder land in België ook juist is?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.forms — A form: write clearly, and guard your BSN (nieuw, 27 november 2026)
+
+*Unit „Getallen en gegevens”, les „Filling in a form” (`l.forms`)*
+
+**Samenvatting (NL):** Een formulier vraagt vaak je naam, geboortedatum, adres en postcode. Schrijf duidelijk, vaak in hoofdletters. Een veld met een sterretje (*) is verplicht. Kruis het goede vakje aan. Snap je een vraag niet? Vraag hulp voordat je tekent. Teken nooit iets wat je niet begrijpt. Je BSN mogen maar sommige organisaties vragen, zoals je werkgever, de gemeente, de Belastingdienst, je zorgverzekeraar, je dokter en je bank. Een winkel of een sportclub mag dat niet. Geef je BSN nooit aan een vreemde, in een app of aan de telefoon. Twijfel je? Vraag waarom ze het nodig hebben. Veel bibliotheken helpen gratis met formulieren, vaak op een inloopspreekuur.
+
+**Tekst (Engels, wordt vertaald):**
+
+> A form often asks for your name, date of birth, address and postcode. Write clearly, often in capital letters. A field with a star (*) is required: you must fill it in. Tick the right box. Do you not understand a question? Ask for help before you sign. Never sign what you do not understand. Your BSN: only some organisations may ask for it, like your employer, the gemeente, the Belastingdienst, your health insurer, your doctor and your bank. A shop or a sports club may not. Never give your BSN to a stranger, in an app or on the phone. Not sure? Ask why they need it. Many libraries help with forms for free, often at a walk-in hour.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Grondslag (onze lezing):** Het sterretje: geen wet, het gebruikelijke teken op formulieren en websites. Niet tekenen wat je niet begrijpt: advies; een handtekening bindt (BW 3:33 en 3:35); hetzelfde advies als c.findwork. Wie het BSN mag gebruiken: alleen wie een wet daarvoor heeft (UAVG art. 46; Wet algemene bepalingen burgerservicenummer art. 10 en 12); de werkgever: Wet op de loonbelasting 1964 art. 28; de gemeente: Wet BRP; zorgaanbieders en zorgverzekeraars: Wet gebruik burgerservicenummer in de zorg; banken: AWR art. 53 (renseignering) en de Wwft; rijksoverheid.nl „Wie mag mijn burgerservicenummer (BSN) gebruiken?” en autoriteitpersoonsgegevens.nl „Burgerservicenummer (BSN)” (een winkel, sportschool of sportclub mag het niet vragen; nakijken). Niet aan een vreemde geven, niet in een app of aan de telefoon, vragen waarom: advies tegen identiteitsfraude (rijksoverheid.nl „Identiteitsfraude”, Centraal Meldpunt Identiteitsfraude); hetzelfde als c.bsn. Hulp in de bibliotheek: Informatiepunt Digitale Overheid (digitaleoverheid.nl; rijksoverheid.nl „Kan ik hulp krijgen om online mijn belastingen en toeslagen te regelen?”); hetzelfde als c.taxes; daarom „many”.
+
+**Zeg het zo (Nederlands):** „Is mijn BSN hier verplicht?” — *Is my BSN required here?*
+
+**Situatie in de les:** You sign up at a sports club. The form asks for your BSN. What do you do?  
+**Goede antwoord:** Leave it empty, and ask why they need it.  
+**Uitleg na het antwoord (`c.forms.w`):** A sports club may not use your BSN. Only some organisations may, like your employer, the gemeente and your health insurer. When you ask why, you protect your number.
+
+**Uitleg bij het gesprekje (`c.forms.a.why`):** „Heb je het formulier al ingevuld?” → „Bijna. Waar moet mijn handtekening?”: Asked about the form: almost, and where to sign.
+
+**⚠ Getallen en termijnen:** Geen getallen, geen bedragen.
+
+**Onze eigen vraag hierbij:**
+- Is de rij „your employer, the gemeente, the Belastingdienst, your health insurer, your doctor and your bank” juist en niet te ruim (mag elke bank het BSN vragen)?
+- Klopt „A shop or a sports club may not” zonder uitzondering?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
+### c.dentist — The dentist: a check-up, and ask the price (nieuw, 27 november 2026)
+
+*Unit „Gezondheid”, les „The dentist” (`l.dentist`)*
+
+**Samenvatting (NL):** Schrijf je in bij een tandarts dicht bij huis, en ga regelmatig voor controle, vaak een keer per jaar. Kiespijn? Bel je tandarts en zeg dat het veel pijn doet: dan krijg je vaak snel een afspraak. ’s Nachts of in het weekend bel je je eigen tandarts: het bandje zegt welke tandarts nu helpt. Voor volwassenen betaalt de basisverzekering heel weinig bij de tandarts: meestal niet de controle of een vulling. Je kunt een aanvullende verzekering voor de tandarts kiezen: kijk wat die betaalt. Voor kinderen onder 18 betaalt de basisverzekering de meeste tandartszorg. Vraag wat een behandeling kost voordat die begint. Bij een grote behandeling moet de tandarts je eerst de prijs op papier geven.
+
+**Tekst (Engels, wordt vertaald):**
+
+> Register with a dentist (tandarts) near your home, and go for a check-up (controle) regularly, often once a year. Toothache? Call your dentist and say that it hurts a lot: then you often get an appointment soon. At night or in the weekend, call your own dentist: the phone message tells you which dentist helps now. For adults, the basic health insurance pays for very little at the dentist: usually not the check-up or a filling. You can choose an extra insurance (aanvullende verzekering) for the dentist: check what it pays. For children under 18, the basic insurance pays for most dental care. Ask what a treatment costs before it starts. For a big treatment, the dentist must give you the price on paper first.
+>
+> *General information. For your situation: ask your employer, the union or the Juridisch Loket.*
+
+**Grondslag (onze lezing):** Inschrijven en regelmatig controle: geen wet; advies van de KNMT (allesoverhetgebit.nl „Hoe vaak naar de tandarts?”: hoe vaak bepaal je met de tandarts; vaak een of twee keer per jaar); daarom „often”. Buiten kantoortijden: tandartsen regelen spoedzorg voor hun patiënten, vaak in een dienstrooster (dienstdoende tandarts) of een tandartsenpost; het antwoordapparaat noemt wie dienst heeft (KNMT, allesoverhetgebit.nl „Spoed”; Wkkgz; nakijken). Volwassenen: Zorgverzekeringswet en Besluit zorgverzekering art. 2.7: voor 18 jaar en ouder alleen kaakchirurgie, een volledige prothese (met eigen bijdrage) en tandheelkundige zorg in bijzondere gevallen; geen gewone controle of vulling; rijksoverheid.nl „Wordt mijn tandartsbezoek vergoed door de zorgverzekering?”; zorginstituutnederland.nl „Mondzorg”. Het basispakket 2026 heeft geen algemene mondzorg voor volwassenen (nakijken voor 2027). Aanvullende verzekering: vrijwillig, de verzekeraar bepaalt wat die betaalt (vaak een maximum per jaar) en mag voorwaarden stellen of weigeren; geen bedragen. Kinderen onder 18: Besluit zorgverzekering art. 2.7 lid 2 (mondzorg tot 18 jaar, behalve kronen, bruggen en implantaten en meestal orthodontie); geen eigen risico onder 18 (Zvw art. 19); daarom „most”. Prijs vooraf op papier: de NZa stelt maximumtarieven vast (Regeling mondzorg) en de tandarts moet vooraf een schriftelijke prijsopgave geven bij een behandeling boven een vast bedrag (nza.nl; het bedrag staat bewust niet in de tip; nakijken).
+
+**Zeg het zo (Nederlands):** „Ik heb veel pijn. Kan ik vandaag nog komen?” — *I am in a lot of pain. Can I still come today?*
+
+**Situatie in de les:** It is Saturday evening. You have bad toothache, and a painkiller does not help. What do you do?  
+**Goede antwoord:** Call your dentist: the message says who helps now.  
+**Uitleg na het antwoord (`c.dentist.w`):** Outside office hours, a dentist on duty helps with urgent pain. 112 is only for an emergency, like danger to life.
+
+**Uitleg bij het gesprekje (`c.dentist.a.why`):** „Wanneer was je voor het laatst bij de tandarts?” → „Een jaar geleden. Ik wil graag een controle.”: Asked about your last visit: when, and you ask for a check-up.
+
+**⚠ Getallen en termijnen:** „under 18” (Besluit zorgverzekering art. 2.7 lid 2). Geen bedragen (geen premie, geen eigen bijdrage, geen grens voor de prijsopgave).
+
+**Onze eigen vraag hierbij:**
+- Klopt „For adults, the basic health insurance pays for very little at the dentist: usually not the check-up or a filling” voor 2026, en blijft dat zo in 2027?
+- Is „the phone message tells you which dentist helps now” een eerlijke algemene weergave, ook bij praktijken zonder dienstregeling?
+- Klopt de regel van de NZa over de schriftelijke prijsopgave nog (bedrag en artikel)?
+
+**Oordeel deskundige:**
+
+- [ ] klopt
+- [ ] aanpassen: ______________________________________________
+
+Opmerkingen:
+
+______________________________________________________________
+
+______________________________________________________________
+
+---
+
 ## Werkregels: gewijzigde beweringen (17 oktober 2026)
 
 De track **Werkregels** is voor mensen die al Nederlands spreken. De teksten staan alleen in het

@@ -284,6 +284,11 @@ const PENDING_RECORDING = new Set<string>([
   'Nog niet. Het lab test het monster.',
   'Bijna alles. Waar was de kantine ook alweer?',
   'Nee, dat mag ik niet. Ik heb er geen opleiding voor.',
+  // The four new lessons of 27 November 2026:
+  'Bijna. Waar moet mijn handtekening?',
+  'Met Ali. Wilt u mij zo snel mogelijk terugbellen?',
+  'Ik wil graag mijn heftruckcertificaat halen.',
+  'Een jaar geleden. Ik wil graag een controle.',
 ]);
 
 

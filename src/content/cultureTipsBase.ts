@@ -650,4 +650,40 @@ export const baseTips: CultureTip[] = [
     ],
     why: { id: 'c.meeting.w', en: 'A question is a good contribution: maybe others did not understand it either. When you wait for your turn, everyone can hear it.' },
   }),
+  // "Het functioneringsgesprek" (l.appraisal, 27 November 2026, the owner's choice): the yearly talk
+  // and the appraisal, the report and signing it. It names a right (a copy of the report) and how to
+  // sign when you do not agree, so it closes with ADVICE_LINE, which the Belgian course swaps by
+  // itself; it names no law, body or country, so it holds in Belgium too (A in taalBe/inventory.ts).
+  // A section in docs/juridische-check.md.
+  // ⚖️ check: Many companies have a talk about your work once or twice a year ⚖️ (no law makes it
+  // compulsory, in the Netherlands or in Belgium; many cao's, HR rules and personnel handbooks have
+  // one; "many" on purpose).
+  // ⚖️ check: An appraisal can count for your pay or a new contract ⚖️ (no law: many cao's tie the
+  // yearly step on the pay scale (periodiek) to the appraisal, and an employer may weigh it when it
+  // decides on a new contract; "can" on purpose; juridischloket.nl "Beoordelingsgesprek", nakijken).
+  // ⚖️ check: You may ask for a course or training ⚖️ (asking is always allowed; the duty of the
+  // employer to make needed training possible, BW 7:611a in the Netherlands, is in c.diploma and is
+  // not repeated here, so the tip names no law).
+  // ⚖️ check: Ask for a copy of the report ⚖️ (the report is personal data in your personnel file: the
+  // right of access with a copy, AVG/GDPR art. 15 lid 1 en 3, the same in both countries;
+  // autoriteitpersoonsgegevens.nl "Recht op inzage"; gegevensbeschermingsautoriteit.be).
+  // ⚖️ check: Do you not agree? Sign "voor gezien", not "voor akkoord", and write down your own view ⚖️
+  // (no law: the usual advice of the unions and the Juridisch Loket: a signature "voor gezien" only
+  // says that you have read it; juridischloket.nl "Beoordelingsgesprek", fnv.nl "Beoordeling";
+  // nakijken; in Flanders also "voor gezien" or "voor ontvangst").
+  tip({
+    id: 'c.appraisal',
+    lessonId: 'l.appraisal',
+    emoji: '✍️',
+    title: 'Your review: prepare it, read it',
+    body: `Many companies have a talk about your work once or twice a year. In a performance review (functioneringsgesprek) you talk together: what goes well, what can be better, and what you want to learn. In an appraisal (beoordelingsgesprek) your supervisor gives a judgement. It can count for your pay or for a new contract. Prepare the talk: write down what goes well, what is hard, and what you want to learn. You may ask for a course or training. At the end you make agreements (afspraken), often in a short report. Read it well before you sign it, and ask for a copy. Do you not agree? Sign "voor gezien" (seen), not "voor akkoord" (agreed), and write down your own view. ${ADVICE_LINE}`,
+    phrase: { id: 'c.appraisal.p', nl: 'Ik teken voor gezien, niet voor akkoord.', en: 'I sign it as seen, not as agreed.' },
+    situation: { id: 'c.appraisal.s', en: 'After your appraisal you get the report to sign. One point in it is not true, you think. What do you do?' },
+    options: [
+      { id: 'c.appraisal.o1', en: 'Sign "voor gezien", and write down your view.', best: true },
+      { id: 'c.appraisal.o2', en: 'Sign "voor akkoord" quickly, so it is done.', best: false },
+      { id: 'c.appraisal.o3', en: 'Say nothing, and do not sign at all.', best: false },
+    ],
+    why: { id: 'c.appraisal.w', en: '"Voor gezien" means that you have read it, not that you agree. When you say it and write down your own view, your supervisor knows what you think.' },
+  }),
 ];

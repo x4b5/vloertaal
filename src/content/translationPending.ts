@@ -12,16 +12,27 @@ import { workUnits } from './work';
  * lessons (23 November 2026; translated the same day). And the four lessons of "Veiligheid op het
  * werk" and the VOG lesson of "Werken via een uitzendbureau" (23 November 2026; translated the same day).
  * And the four lessons of "Operator in de procesindustrie" (23 November 2026; translated the same day).
- * And the eight new lessons of 26 November 2026 (translated the same day).
+ * And the eight new lessons of 26 November 2026 (translated the same day). Again from the four new
+ * lessons of 27 November 2026 (below).
  */
-export const TRANSLATION_PENDING_LESSONS: readonly string[] = [];
+export const TRANSLATION_PENDING_LESSONS: readonly string[] = [
+  // The four new lessons of 27 November 2026, in existing units: the performance review (Feedback en
+  // overleg, cultureUnits.ts), filling in a form (Getallen en gegevens, work.ts dataUnit), the
+  // voicemail (Bellen en appen) and the dentist (Gezondheid; both in work.ts extraFour). Translations
+  // to follow.
+  'appraisal', 'forms', 'voicemail', 'dentist',
+];
 
 /**
  * The words of the pending lessons of curriculum.ts ("Tijd en rooster", "Als het misgaat"): the
  * words of work.ts are found by their lesson below, but this file cannot load curriculum.ts (it loads
- * this one), so they are listed here.
+ * this one), so they are listed here. The same for the units that are not in workUnits: cultureUnits.ts
+ * (l.appraisal) and dataUnit (l.forms), 27 November 2026.
  */
-const PENDING_CURRICULUM_WORDS: readonly string[] = [];
+const PENDING_CURRICULUM_WORDS: readonly string[] = [
+  'w.functioneringsgesprek', 'w.beoordelingsgesprek', 'w.voorbereiden', 'w.goedgaan', 'w.doel', 'w.voorgezien',
+  'w.invullen', 'w.vakje', 'w.aankruisen', 'w.verplichtveld', 'w.postcode', 'w.hoofdletters',
+];
 
 /**
  * "Kun je nu" lines of units that are translated, added with pending lessons (src/content/kunJeNu.ts):
@@ -39,8 +50,9 @@ for (const l of workUnits.flatMap((u) => u.lessons)) {
   for (const w of l.words) pendingIds.add(w.id);
 }
 
-/** Lesson ids ("l.paint"), and the ids of their sentences, chats and tip ("s.paint.1", "c.paint.q", "c.paint.b"). */
-const OWN_ID = TRANSLATION_PENDING_LESSONS.length ? new RegExp(`^[lsc]\\.(${TRANSLATION_PENDING_LESSONS.join('|')})(\\.|$)`) : null;
+/** Lesson ids ("l.paint"), and the ids of their sentences, chats and tip ("s.paint.1", "c.paint.q", "c.paint.b");
+ *  the chats of cultureUnits.ts start with "d." ("d.appraisal.q"). */
+const OWN_ID = TRANSLATION_PENDING_LESSONS.length ? new RegExp(`^[lscd]\\.(${TRANSLATION_PENDING_LESSONS.join('|')})(\\.|$)`) : null;
 
 /** Is the translation of this content id (a unit, lesson, word, sentence, chat line, tip text, or a
  *  "Kun je nu" line of a pending unit: "kjn.u.ruwbouw.1") still to come? The Belgian twin of a pending

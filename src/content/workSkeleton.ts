@@ -27,6 +27,7 @@ export const workSkeleton: SkeletonUnit[] = [
       { id: "l.counting", title: "Numbers" },
       { id: "l.details", title: "Your details" },
       { id: "l.dates", title: "Days and dates" },
+      { id: "l.forms", title: "Filling in a form" },
   ] },
   { id: "u.apply", title: "Applying for a job", titleNl: "Solliciteren", emoji: "📨", color: "#4a6fa5", lessons: [
       { id: "l.cv", title: "Your CV and letter" },
@@ -105,6 +106,7 @@ export const workSkeleton: SkeletonUnit[] = [
       { id: "l.callin", title: "Calling in" },
       { id: "l.texting", title: "Messages and the roster app" },
       { id: "l.email", title: "Writing to work" },
+      { id: "l.voicemail", title: "Voicemail and calling back" },
   ] },
   { id: "u.grow", title: "Diplomas and growing", titleNl: "Diploma’s en verder komen", emoji: "🎓", color: "#5b5ea6", lessons: [
       { id: "l.certs", title: "Certificates" },
@@ -118,6 +120,7 @@ export const workSkeleton: SkeletonUnit[] = [
       { id: "l.body", title: "Body and pain" },
       { id: "l.healthy", title: "Fit for work" },
       { id: "l.feelwell", title: "Feeling good at work" },
+      { id: "l.dentist", title: "The dentist" },
   ] },
   { id: "u.money", title: "Money and letters", titleNl: "Geld en post", emoji: "✉️", color: "#7a6a1e", lessons: [
       { id: "l.letters", title: "Official letters" },
