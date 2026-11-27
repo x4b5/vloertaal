@@ -326,6 +326,11 @@ const t: CultureTranslation = {
     'c.mixlab.a.why': "Питають, чи схвалили партію: ще ні, лабораторія її перевіряє.", // nieuw, nalezen
     'c.firstweeks.a.why': "Питають про екскурсію: майже все, і одне питання.", // nieuw, nalezen
     'c.orderpick.a.why': "Просять поїздити на річтраку: ні, немає навчання.", // nieuw, nalezen
+    // four new lessons (27 November 2026).
+    'd.appraisal.a.why': "Питають про мету: одна чітка річ, якої хочеш навчитися.", // nieuw, nalezen
+    'c.forms.a.why': "Питають про форму: майже, і де підписатися.", // nieuw, nalezen
+    'c.voicemail.a.why': "Просять імʼя й номер: імʼя і прохання передзвонити.", // nieuw, nalezen
+    'c.dentist.a.why': "Питають про останній візит: коли, і прохання про огляд.", // nieuw, nalezen
   },
 };
 

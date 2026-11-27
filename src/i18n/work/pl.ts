@@ -5105,6 +5105,67 @@ const t: CultureTranslation = {
     'c.mixlab.o2': "Nic nie mów: jeden kilogram to niewiele.", // nieuw, nalezen
     'c.mixlab.o3': "Wyjmij trochę ręką.", // nieuw, nalezen
     'c.mixlab.w': "Jedna zła ilość może zepsuć całą partię. Kiedy kierownik zmiany wie o tym na czas, laboratorium może to sprawdzić, zanim partia pójdzie dalej.", // nieuw, nalezen
+    // four new lessons (performance review, forms, voicemail, the dentist) (27 November 2026).
+    'l.forms': "Wypełnianie formularza", // nieuw, nalezen
+    'w.invullen': "wypełniać (formularz)", // nieuw, nalezen
+    'w.vakje': "kratka (mały kwadrat na formularzu)", // nieuw, nalezen
+    'w.aankruisen': "zaznaczyć krzyżykiem (postawić krzyżyk w kratce)", // nieuw, nalezen
+    'w.verplichtveld': "pole obowiązkowe (musisz je wypełnić; często jest oznaczone *)", // nieuw, nalezen
+    'w.postcode': "kod pocztowy (krótki kod twojej ulicy albo miejscowości, część adresu)", // nieuw, nalezen
+    'w.hoofdletters': "wielkie litery (A, B, C)", // nieuw, nalezen
+    's.forms.1': "Napisz swoje imię i nazwisko wielkimi literami.", // nieuw, nalezen
+    's.forms.2': "Zaznacz właściwą kratkę.", // nieuw, nalezen
+    's.forms.3': "Czy może mi pan/pani pomóc z tym formularzem?", // nieuw, nalezen
+    'c.forms.q': { m: "Wypełniłeś już formularz?", f: "Wypełniłaś już formularz?", x: "Formularz jest już wypełniony?" }, // nieuw, nalezen
+    'c.forms.a': "Prawie. Gdzie mam się podpisać?", // nieuw, nalezen
+    'l.voicemail': "Poczta głosowa i oddzwanianie", // nieuw, nalezen
+    'w.piep': "sygnał (krótki dźwięk; po nim nagrywasz swoją wiadomość)", // nieuw, nalezen
+    'w.beluisteren': "odsłuchać (wiadomość)", // nieuw, nalezen
+    'w.boodschap': "wiadomość (to, co mówisz na czyjąś pocztę głosową)", // nieuw, nalezen
+    'w.noemen': "podać, powiedzieć (swoje imię, swój numer)", // nieuw, nalezen
+    'w.zosnelmogelijk': "jak najszybciej", // nieuw, nalezen
+    'w.opnieuw': "jeszcze raz, ponownie", // nieuw, nalezen
+    's.voicemail.1': "Mówi Ali Haddad. Dzwonię w sprawie mojego grafiku.", // nieuw, nalezen
+    's.voicemail.2': "Codziennie odsłuchuję pocztę głosową.", // nieuw, nalezen
+    's.voicemail.3': "Zadzwonię później jeszcze raz.", // nieuw, nalezen
+    'c.voicemail.q': "Po sygnale proszę podać imię i numer telefonu.", // nieuw, nalezen
+    'c.voicemail.a': "Mówi Ali. Czy może pan/pani oddzwonić do mnie jak najszybciej?", // nieuw, nalezen
+    'l.dentist': "U dentysty", // nieuw, nalezen
+    'w.tandarts': "dentysta", // nieuw, nalezen
+    'w.kiespijn': "ból zęba", // nieuw, nalezen
+    'w.gaatje': "ubytek (mała dziura w zębie)", // nieuw, nalezen
+    'w.vulling': "plomba (dentysta zamyka nią dziurę w zębie)", // nieuw, nalezen
+    'w.gebit': "uzębienie (wszystkie twoje zęby razem)", // nieuw, nalezen
+    'w.aanvullendeverzekering': "ubezpieczenie dodatkowe (możesz je wybrać oprócz podstawowego ubezpieczenia zdrowotnego)", // nieuw, nalezen
+    's.dentist.1': "Od dwóch dni boli mnie ząb.", // nieuw, nalezen
+    's.dentist.2': "Mam ubytek. Dostanę plombę.", // nieuw, nalezen
+    's.dentist.3': "Ile kosztuje plomba?", // nieuw, nalezen
+    'c.dentist.q': { m: "Kiedy ostatnio byłeś u dentysty?", f: "Kiedy ostatnio byłaś u dentysty?", x: "Kiedy była twoja ostatnia wizyta u dentysty?" }, // nieuw, nalezen
+    'c.dentist.a': "Rok temu. Chcę umówić się na przegląd.", // nieuw, nalezen
+    'c.forms': "Formularz: pisz wyraźnie i chroń swój BSN", // nieuw, nalezen
+    'c.forms.b': "Formularz często pyta o imię i nazwisko, datę urodzenia, adres i kod pocztowy. Pisz wyraźnie, często wielkimi literami. Pole z gwiazdką (*) jest obowiązkowe: musisz je wypełnić. Zaznacz właściwą kratkę. Nie rozumiesz pytania? Poproś o pomoc, zanim podpiszesz. Nigdy nie podpisuj czegoś, czego nie rozumiesz. Twój BSN: mogą o niego pytać tylko niektóre instytucje, na przykład pracodawca, gemeente, Belastingdienst, ubezpieczyciel zdrowotny, twój lekarz i bank. Sklep albo klub sportowy nie może. Nigdy nie podawaj BSN nieznajomemu, w aplikacji ani przez telefon. Nie masz pewności? Zapytaj, do czego jest im potrzebny. Wiele bibliotek pomaga za darmo z formularzami, często w czasie dyżuru bez umawiania się. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.", // nieuw, nalezen
+    'c.forms.p': "Czy mój BSN jest tu obowiązkowy?", // nieuw, nalezen
+    'c.forms.s': "Zapisujesz się do klubu sportowego. W formularzu jest pytanie o twój BSN. Co robisz?", // nieuw, nalezen
+    'c.forms.o1': "Zostaw to pole puste i zapytaj, do czego go potrzebują.", // nieuw, nalezen
+    'c.forms.o2': "Wypełnij je: każdy formularz może o to pytać.", // nieuw, nalezen
+    'c.forms.o3': "Podaj zamiast tego swój login DigiD.", // nieuw, nalezen
+    'c.forms.w': "Klub sportowy nie może używać twojego BSN. Mogą to tylko niektóre instytucje, na przykład pracodawca, gemeente i ubezpieczyciel zdrowotny. Kiedy pytasz dlaczego, chronisz swój numer.", // nieuw, nalezen
+    'c.voicemail': "Wiadomość: kto, dlaczego, twój numer", // nieuw, nalezen
+    'c.voicemail.b': "Nikt nie odbiera? Zostaw krótką wiadomość (boodschap) po sygnale (piep). Powiedz swoje imię, dlaczego dzwonisz, i swój numer telefonu. Mów powoli i podaj numer dwa razy. Masz nieodebrane połączenie? Najpierw odsłuchaj pocztę głosową, potem oddzwoń jak najszybciej. Nie rozumiesz wiadomości? Odsłuchaj ją jeszcze raz albo poproś kolegę, żeby posłuchał razem z tobą. Ustaw pocztę głosową i odsłuchuj ją codziennie. Zgłaszasz chorobę? W wielu firmach wiadomość nie wystarczy: dzwoń jeszcze raz, aż z kimś porozmawiasz. Zasady są różne w każdej firmie: zapytaj przełożonego, jakie zasady obowiązują u ciebie w pracy.", // nieuw, nalezen
+    'c.voicemail.p': "Czy mogę zostawić wiadomość?", // nieuw, nalezen
+    'c.voicemail.s': "Spóźnisz się, więc dzwonisz do przełożonej. Słyszysz jej pocztę głosową. Co mówisz po sygnale?", // nieuw, nalezen
+    'c.voicemail.o1': "Swoje imię, dlaczego dzwonisz, i swój numer.", // nieuw, nalezen
+    'c.voicemail.o2': "Tylko „Bel me terug” i rozłącz się.", // nieuw, nalezen
+    'c.voicemail.o3': "Nic: rozłącz się i czekaj.", // nieuw, nalezen
+    'c.voicemail.w': "Kiedy podasz imię, powód i numer, przełożona wie, co się dzieje, i może od razu do ciebie oddzwonić.", // nieuw, nalezen
+    'c.dentist': "Dentysta: przegląd i pytanie o cenę", // nieuw, nalezen
+    'c.dentist.b': "Zapisz się do dentysty (tandarts) blisko domu i regularnie chodź na przegląd (controle), często raz w roku. Boli cię ząb? Zadzwoń do swojego dentysty i powiedz, że bardzo boli: wtedy często szybko dostajesz wizytę. W nocy albo w weekend dzwoń do swojego dentysty: z nagranej wiadomości dowiesz się, który dentysta pomaga teraz. Dorosłym podstawowe ubezpieczenie zdrowotne płaci za bardzo mało u dentysty: zwykle nie za przegląd ani za plombę. Możesz wybrać ubezpieczenie dodatkowe (aanvullende verzekering) na dentystę: sprawdź, za co płaci. Dzieciom poniżej 18 lat podstawowe ubezpieczenie płaci za większość leczenia zębów. Zapytaj, ile kosztuje leczenie, zanim się zacznie. Przy dużym leczeniu dentysta musi najpierw dać ci cenę na piśmie. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.", // nieuw, nalezen
+    'c.dentist.p': "Bardzo mnie boli. Czy mogę przyjść jeszcze dzisiaj?", // nieuw, nalezen
+    'c.dentist.s': "Jest sobota wieczorem. Bardzo boli cię ząb, a lek przeciwbólowy nie pomaga. Co robisz?", // nieuw, nalezen
+    'c.dentist.o1': "Zadzwoń do swojego dentysty: wiadomość mówi, kto pomaga teraz.", // nieuw, nalezen
+    'c.dentist.o2': "Zadzwoń pod 112: to nagły wypadek.", // nieuw, nalezen
+    'c.dentist.o3': "Czekaj do poniedziałku i bierz więcej leków przeciwbólowych.", // nieuw, nalezen
+    'c.dentist.w': "Poza godzinami pracy przy silnym bólu pomaga dyżurny dentysta. 112 jest tylko na nagłe wypadki, na przykład przy zagrożeniu życia.", // nieuw, nalezen
   },
 };
 

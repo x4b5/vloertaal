@@ -475,6 +475,27 @@ const t: CultureTranslation = {
     'c.orderpick.o2': "Szybko przebiegnij między wózkami.", // nieuw, nalezen
     'c.orderpick.o3': "Przejdź na skróty i pomachaj kierowcom.", // nieuw, nalezen
     'c.orderpick.w': "Kierowca wózka często cię nie widzi, na przykład za wysokim ładunkiem. Na ścieżce dla pieszych kierowcy spodziewają się ludzi, a ludzie są tam bezpieczni.", // nieuw, nalezen
+    // four new lessons (27 November 2026).
+    'l.appraisal': "Rozmowa okresowa", // nieuw, nalezen
+    'w.functioneringsgesprek': "rozmowa okresowa (rozmowa z przełożonym o tym, jak idzie ci praca i czego chcesz się nauczyć)", // nieuw, nalezen
+    'w.beoordelingsgesprek': "rozmowa oceniająca (rozmowa, w której przełożony ocenia twoją pracę)", // nieuw, nalezen
+    'w.voorbereiden': "przygotowywać (się) (szykować się do czegoś)", // nieuw, nalezen
+    'w.goedgaan': "iść dobrze, udawać się", // nieuw, nalezen
+    'w.doel': "cel (to, co chcesz osiągnąć)", // nieuw, nalezen
+    'w.voorgezien': "podpisać „do wiadomości” (tekst jest przeczytany; to nie znaczy, że się zgadzasz)", // nieuw, nalezen
+    's.appraisal.1': "Dobrze przygotowuję się do rozmowy.", // nieuw, nalezen
+    's.appraisal.2': "Chcę nauczyć się czegoś nowego.", // nieuw, nalezen
+    's.appraisal.3': "Czy mogę najpierw przeczytać sprawozdanie?", // nieuw, nalezen
+    'd.appraisal.q': "Jaki jest twój cel na przyszły rok?", // nieuw, nalezen
+    'd.appraisal.a': "Chcę zrobić uprawnienia na wózek widłowy.", // nieuw, nalezen
+    'c.appraisal': "Twoja rozmowa: przygotuj się, przeczytaj", // nieuw, nalezen
+    'c.appraisal.b': "Wiele firm raz albo dwa razy w roku robi rozmowę o twojej pracy. W rozmowie okresowej (functioneringsgesprek) rozmawiacie razem: co idzie dobrze, co może być lepsze i czego chcesz się nauczyć. W rozmowie oceniającej (beoordelingsgesprek) przełożony ocenia twoją pracę. To może mieć znaczenie dla twojej płacy albo nowej umowy. Przygotuj się do rozmowy: zapisz, co idzie dobrze, co jest trudne i czego chcesz się nauczyć. Możesz poprosić o kurs albo szkolenie. Na koniec robicie ustalenia (afspraken), często w krótkim sprawozdaniu. Przeczytaj je dokładnie, zanim je podpiszesz, i poproś o kopię. Nie zgadzasz się? Podpisz „voor gezien” (do wiadomości), a nie „voor akkoord” (na znak zgody), i zapisz swoje zdanie. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo Juridisch Loket.", // nieuw, nalezen
+    'c.appraisal.p': "Podpisuję do wiadomości, nie na znak zgody.", // nieuw, nalezen
+    'c.appraisal.s': "Po rozmowie oceniającej dostajesz sprawozdanie do podpisania. Twoim zdaniem jeden punkt w nim nie jest prawdziwy. Co robisz?", // nieuw, nalezen
+    'c.appraisal.o1': "Podpisz „voor gezien” i zapisz swoje zdanie.", // nieuw, nalezen
+    'c.appraisal.o2': "Szybko podpisz „voor akkoord”, żeby mieć to z głowy.", // nieuw, nalezen
+    'c.appraisal.o3': "Nic nie mów i w ogóle nie podpisuj.", // nieuw, nalezen
+    'c.appraisal.w': "„Voor gezien” znaczy, że tekst jest przeczytany, a nie, że się zgadzasz. Kiedy to powiesz i zapiszesz swoje zdanie, przełożony wie, co myślisz.", // nieuw, nalezen
   },
 };
 

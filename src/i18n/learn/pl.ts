@@ -326,6 +326,11 @@ const t: CultureTranslation = {
     'c.mixlab.a.why': "Pytanie, czy partia jest zatwierdzona: jeszcze nie, laboratorium ją bada.", // nieuw, nalezen
     'c.firstweeks.a.why': "Pytanie o oprowadzanie: prawie wszystko i jedno pytanie.", // nieuw, nalezen
     'c.orderpick.a.why': "Prośba o jazdę wózkiem wysokiego składowania: nie, brak szkolenia.", // nieuw, nalezen
+    // four new lessons (27 November 2026).
+    'd.appraisal.a.why': "Pytanie o cel: jedna jasna rzecz, której chcesz się nauczyć.", // nieuw, nalezen
+    'c.forms.a.why': "Pytanie o formularz: prawie, i gdzie się podpisać.", // nieuw, nalezen
+    'c.voicemail.a.why': "Prośba o imię i numer: imię i prośba o oddzwonienie.", // nieuw, nalezen
+    'c.dentist.a.why': "Pytanie o ostatnią wizytę: kiedy, i prośba o przegląd.", // nieuw, nalezen
   },
 };
 
