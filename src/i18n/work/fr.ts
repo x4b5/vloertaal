@@ -5103,6 +5103,67 @@ const t: CultureTranslation = {
     'c.mixlab.o2': "Tu ne dis rien : un kilo, ce n’est pas beaucoup.", // nieuw, nalezen
     'c.mixlab.o3': "Tu en retires un peu à la main.", // nieuw, nalezen
     'c.mixlab.w': "Une seule mauvaise quantité peut gâcher tout le lot. Si le chef de poste le sait à temps, le labo peut vérifier avant que le lot continue.", // nieuw, nalezen
+    // four new lessons (performance review, forms, voicemail, the dentist) (27 November 2026).
+    'l.forms': "Remplir un formulaire", // nieuw, nalezen
+    'w.invullen': "remplir (un formulaire)", // nieuw, nalezen
+    'w.vakje': "la case (un petit carré sur un formulaire)", // nieuw, nalezen
+    'w.aankruisen': "cocher (mettre une croix dans une case)", // nieuw, nalezen
+    'w.verplichtveld': "le champ obligatoire (tu dois le remplir ; souvent marqué d’un *)", // nieuw, nalezen
+    'w.postcode': "le code postal (un code court pour ta rue ou ta ville, une partie de ton adresse)", // nieuw, nalezen
+    'w.hoofdletters': "les majuscules (A, B, C)", // nieuw, nalezen
+    's.forms.1': "Écris ton nom en majuscules.", // nieuw, nalezen
+    's.forms.2': "Coche la bonne case.", // nieuw, nalezen
+    's.forms.3': "Vous pouvez m’aider avec ce formulaire ?", // nieuw, nalezen
+    'c.forms.q': "Tu as déjà rempli le formulaire ?", // nieuw, nalezen
+    'c.forms.a': "Presque. Où est-ce que je signe ?", // nieuw, nalezen
+    'l.voicemail': "La messagerie vocale et le rappel", // nieuw, nalezen
+    'w.piep': "le bip (le son court ; après, tu dis ton message)", // nieuw, nalezen
+    'w.beluisteren': "écouter (un message)", // nieuw, nalezen
+    'w.boodschap': "le message (ce que tu dis sur la messagerie vocale de quelqu’un)", // nieuw, nalezen
+    'w.noemen': "dire, donner (ton nom, ton numéro)", // nieuw, nalezen
+    'w.zosnelmogelijk': "le plus vite possible", // nieuw, nalezen
+    'w.opnieuw': "de nouveau (encore une fois)", // nieuw, nalezen
+    's.voicemail.1': "C’est Ali Haddad. J’appelle pour mon planning.", // nieuw, nalezen
+    's.voicemail.2': "J’écoute ma messagerie vocale tous les jours.", // nieuw, nalezen
+    's.voicemail.3': "Je rappelle plus tard.", // nieuw, nalezen
+    'c.voicemail.q': "Laissez votre nom et votre numéro après le bip.", // nieuw, nalezen
+    'c.voicemail.a': "C’est Ali. Vous pouvez me rappeler le plus vite possible ?", // nieuw, nalezen
+    'l.dentist': "Le dentiste", // nieuw, nalezen
+    'w.tandarts': "le dentiste", // nieuw, nalezen
+    'w.kiespijn': "le mal de dents", // nieuw, nalezen
+    'w.gaatje': "la carie (un petit trou dans une dent)", // nieuw, nalezen
+    'w.vulling': "le plombage (le dentiste ferme le trou dans une dent)", // nieuw, nalezen
+    'w.gebit': "les dents (toutes tes dents ensemble)", // nieuw, nalezen
+    'w.aanvullendeverzekering': "l’assurance complémentaire (tu peux la choisir en plus de l’assurance maladie de base)", // nieuw, nalezen
+    's.dentist.1': "J’ai mal aux dents depuis deux jours.", // nieuw, nalezen
+    's.dentist.2': "J’ai une carie. On va me faire un plombage.", // nieuw, nalezen
+    's.dentist.3': "Combien coûte un plombage ?", // nieuw, nalezen
+    'c.dentist.q': "La dernière fois que tu as vu le dentiste, c’était quand ?", // nieuw, nalezen
+    'c.dentist.a': "Il y a un an. Je voudrais un contrôle.", // nieuw, nalezen
+    'c.forms': "Un formulaire : écris clairement, et protège ton BSN", // nieuw, nalezen
+    'c.forms.b': "Un formulaire demande souvent ton nom, ta date de naissance, ton adresse et ton code postal. Écris clairement, souvent en majuscules. Un champ avec une étoile (*) est obligatoire : tu dois le remplir. Coche la bonne case. Tu ne comprends pas une question ? Demande de l’aide avant de signer. Ne signe jamais ce que tu ne comprends pas. Ton BSN : seules certaines organisations ont le droit de le demander, comme ton employeur, la gemeente, la Belastingdienst, ton assureur maladie, ton médecin et ta banque. Un magasin ou un club de sport n’en a pas le droit. Ne donne jamais ton BSN à un inconnu, dans une appli ou au téléphone. Tu as un doute ? Demande pourquoi ils en ont besoin. Beaucoup de bibliothèques aident gratuitement à remplir les formulaires, souvent pendant une permanence sans rendez-vous. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.", // nieuw, nalezen
+    'c.forms.p': "Mon BSN est obligatoire ici ?", // nieuw, nalezen
+    'c.forms.s': "Tu t’inscris dans un club de sport. Le formulaire demande ton BSN. Que fais-tu ?", // nieuw, nalezen
+    'c.forms.o1': "Tu laisses la case vide, et tu demandes pourquoi ils en ont besoin.", // nieuw, nalezen
+    'c.forms.o2': "Tu le remplis : tous les formulaires peuvent le demander.", // nieuw, nalezen
+    'c.forms.o3': "Tu donnes ton identifiant DigiD à la place.", // nieuw, nalezen
+    'c.forms.w': "Un club de sport n’a pas le droit d’utiliser ton BSN. Seules certaines organisations en ont le droit, comme ton employeur, la gemeente et ton assureur maladie. Quand tu demandes pourquoi, tu protèges ton numéro.", // nieuw, nalezen
+    'c.voicemail': "Un message : qui, pourquoi, ton numéro", // nieuw, nalezen
+    'c.voicemail.b': "Pas de réponse ? Laisse un court message (boodschap) après le bip (piep). Dis ton nom, pourquoi tu appelles, et ton numéro de téléphone. Parle lentement, et dis ton numéro deux fois. Tu as manqué un appel ? Écoute d’abord ta messagerie vocale, puis rappelle le plus vite possible. Tu ne comprends pas un message ? Écoute-le encore une fois, ou demande à un collègue de l’écouter avec toi. Configure ta messagerie vocale, et écoute-la tous les jours. Tu te déclares malade ? Dans beaucoup d’entreprises, un message ne suffit pas : rappelle jusqu’à ce que tu parles à quelqu’un. Les règles changent d’une entreprise à l’autre : demande à ton responsable quelles sont les règles là où tu travailles.", // nieuw, nalezen
+    'c.voicemail.p': "Je peux laisser un message ?", // nieuw, nalezen
+    'c.voicemail.s': "Tu vas être en retard, et tu appelles ta responsable. Tu tombes sur sa messagerie vocale. Que dis-tu après le bip ?", // nieuw, nalezen
+    'c.voicemail.o1': "Ton nom, pourquoi tu appelles, et ton numéro.", // nieuw, nalezen
+    'c.voicemail.o2': "Seulement “Bel me terug”, et tu raccroches.", // nieuw, nalezen
+    'c.voicemail.o3': "Rien : tu raccroches, et tu attends.", // nieuw, nalezen
+    'c.voicemail.w': "Avec ton nom, la raison et ton numéro, ta responsable sait ce qui se passe, et peut te rappeler tout de suite.", // nieuw, nalezen
+    'c.dentist': "Le dentiste : un contrôle, et demande le prix", // nieuw, nalezen
+    'c.dentist.b': "Inscris-toi chez un dentiste (tandarts) près de chez toi, et va régulièrement au contrôle (controle), souvent une fois par an. Mal aux dents ? Appelle ton dentiste et dis que ça fait très mal : alors, tu as souvent vite un rendez-vous. La nuit ou le week-end, appelle ton propre dentiste : le message téléphonique te dit quel dentiste aide maintenant. Pour les adultes, l’assurance maladie de base paie très peu chez le dentiste : en général, ni le contrôle ni un plombage. Tu peux choisir une assurance complémentaire (aanvullende verzekering) pour le dentiste : vérifie ce qu’elle paie. Pour les enfants de moins de 18 ans, l’assurance de base paie la plupart des soins dentaires. Demande ce que coûte un traitement avant qu’il commence. Pour un gros traitement, le dentiste doit d’abord te donner le prix sur papier. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.", // nieuw, nalezen
+    'c.dentist.p': "J’ai très mal. Je peux encore venir aujourd’hui ?", // nieuw, nalezen
+    'c.dentist.s': "C’est samedi soir. Tu as très mal aux dents, et un antidouleur n’aide pas. Que fais-tu ?", // nieuw, nalezen
+    'c.dentist.o1': "Tu appelles ton dentiste : le message dit qui aide maintenant.", // nieuw, nalezen
+    'c.dentist.o2': "Tu appelles le 112 : c’est une urgence.", // nieuw, nalezen
+    'c.dentist.o3': "Tu attends lundi, et tu prends plus d’antidouleurs.", // nieuw, nalezen
+    'c.dentist.w': "En dehors des heures de bureau, un dentiste de garde aide en cas de douleur urgente. Le 112, c’est seulement pour une urgence, comme un danger de mort.", // nieuw, nalezen
   },
 };
 

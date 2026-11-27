@@ -472,6 +472,27 @@ const t: CultureTranslation = {
     'c.orderpick.o2': "Tu traverses vite en courant entre les chariots.", // nieuw, nalezen
     'c.orderpick.o3': "Tu traverses à pied, et tu fais signe aux conducteurs.", // nieuw, nalezen
     'c.orderpick.w': "Souvent, le conducteur d’un chariot ne peut pas te voir, par exemple derrière une charge haute. Sur le passage piéton, les gens sont attendus et en sécurité.", // nieuw, nalezen
+    // four new lessons (27 November 2026).
+    'l.appraisal': "L’entretien annuel", // nieuw, nalezen
+    'w.functioneringsgesprek': "l’entretien annuel (une discussion avec ton responsable sur ton travail et sur ce que tu veux apprendre)", // nieuw, nalezen
+    'w.beoordelingsgesprek': "l’entretien d’évaluation (une discussion où ton responsable donne un jugement sur ton travail)", // nieuw, nalezen
+    'w.voorbereiden': "préparer (se préparer à quelque chose)", // nieuw, nalezen
+    'w.goedgaan': "bien se passer, aller bien", // nieuw, nalezen
+    'w.doel': "l’objectif (ce que tu veux atteindre)", // nieuw, nalezen
+    'w.voorgezien': "signer “pour prise de connaissance” (tu l’as lu ; ça ne veut pas dire que tu es d’accord)", // nieuw, nalezen
+    's.appraisal.1': "Je prépare bien l’entretien.", // nieuw, nalezen
+    's.appraisal.2': "Je voudrais apprendre quelque chose de nouveau.", // nieuw, nalezen
+    's.appraisal.3': "Je peux d’abord lire le rapport ?", // nieuw, nalezen
+    'd.appraisal.q': "Quel est ton objectif pour l’année prochaine ?", // nieuw, nalezen
+    'd.appraisal.a': "Je voudrais passer mon certificat de cariste.", // nieuw, nalezen
+    'c.appraisal': "Ton entretien : prépare-le, puis lis le rapport", // nieuw, nalezen
+    'c.appraisal.b': "Beaucoup d’entreprises ont une discussion sur ton travail une ou deux fois par an. Dans un entretien annuel (functioneringsgesprek), vous parlez ensemble : ce qui va bien, ce qui peut être mieux, et ce que tu veux apprendre. Dans un entretien d’évaluation (beoordelingsgesprek), ton responsable donne un jugement. Ça peut compter pour ton salaire ou pour un nouveau contrat. Prépare l’entretien : note ce qui va bien, ce qui est difficile, et ce que tu veux apprendre. Tu peux demander un cours ou une formation. À la fin, vous prenez des accords (afspraken), souvent dans un court rapport. Lis-le bien avant de le signer, et demande une copie. Tu n’es pas d’accord ? Signe “voor gezien” (pris connaissance), pas “voor akkoord” (d’accord), et note ton propre avis. Informations générales. Pour ta situation : demande à ton employeur, au syndicat ou au Juridisch Loket.", // nieuw, nalezen
+    'c.appraisal.p': "Je signe pour prise de connaissance, pas pour accord.", // nieuw, nalezen
+    'c.appraisal.s': "Après ton entretien d’évaluation, tu reçois le rapport à signer. À ton avis, un point dedans n’est pas vrai. Que fais-tu ?", // nieuw, nalezen
+    'c.appraisal.o1': "Tu signes “voor gezien”, et tu notes ton avis.", // nieuw, nalezen
+    'c.appraisal.o2': "Tu signes vite “voor akkoord”, comme ça c’est fini.", // nieuw, nalezen
+    'c.appraisal.o3': "Tu ne dis rien, et tu ne signes pas du tout.", // nieuw, nalezen
+    'c.appraisal.w': "“Voor gezien” veut dire que tu l’as lu, pas que tu es d’accord. Quand tu le dis et que tu notes ton propre avis, ton responsable sait ce que tu penses.", // nieuw, nalezen
   },
 };
 

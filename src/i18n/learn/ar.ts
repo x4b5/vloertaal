@@ -326,6 +326,11 @@ const t: CultureTranslation = {
     'c.mixlab.a.why': "السؤال هل تمّت الموافقة على الدفعة: ليس بعد، المختبر يفحصها.", // nieuw, nalezen
     'c.firstweeks.a.why': "السؤال عن الجولة التعريفية: تقريباً كل شيء، وسؤال واحد.", // nieuw, nalezen
     'c.orderpick.a.why': "طلب قيادة رافعة reachtruck: لا، لا تدريب عليها.", // nieuw, nalezen
+    // four new lessons (27 November 2026).
+    'd.appraisal.a.why': "السؤال عن الهدف: شيء واضح واحد يُراد تعلّمه.", // nieuw, nalezen
+    'c.forms.a.why': "السؤال عن الاستمارة: تقريباً، وأين التوقيع.", // nieuw, nalezen
+    'c.voicemail.a.why': "طلب الاسم والرقم: الاسم، وطلب معاودة الاتصال.", // nieuw, nalezen
+    'c.dentist.a.why': "السؤال عن آخر زيارة: متى، وطلب فحص دوري.", // nieuw, nalezen
   },
 };
 

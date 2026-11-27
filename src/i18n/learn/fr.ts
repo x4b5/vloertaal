@@ -324,6 +324,11 @@ const t: CultureTranslation = {
     'c.mixlab.a.why': "On demande si le lot est approuvé : pas encore, le labo le teste.", // nieuw, nalezen
     'c.firstweeks.a.why': "On demande pour la visite : presque tout, et une question.", // nieuw, nalezen
     'c.orderpick.a.why': "On demande de conduire le chariot à mât rétractable : non, pas de formation pour ça.", // nieuw, nalezen
+    // four new lessons (27 November 2026).
+    'd.appraisal.a.why': "On demande l’objectif : une chose claire qu’on veut apprendre.", // nieuw, nalezen
+    'c.forms.a.why': "On demande pour le formulaire : presque, et où signer.", // nieuw, nalezen
+    'c.voicemail.a.why': "On demande le nom et le numéro : le nom, et une demande de rappel.", // nieuw, nalezen
+    'c.dentist.a.why': "On demande la dernière visite : quand, et on demande un contrôle.", // nieuw, nalezen
   },
 };
 
