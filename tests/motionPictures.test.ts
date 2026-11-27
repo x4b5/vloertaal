@@ -122,6 +122,8 @@ const MOTION_ROUND4 = [
   'w.niveau', 'w.opstarten', 'w.stilzetten', 'w.resetten', 'w.ploegwissel', 'w.aflosser', 'w.drukmeter', 'w.snelheid', 'w.volcontinu', 'w.smeltoven', 'w.stoom', 'w.stoomleiding', 'w.kwartsstof',
   // Eight new lessons (26 November 2026).
   'w.afwegen', 'w.glazuur', 'w.gloeiend', 'w.meelopen', 'w.mengvat', 'w.opwarmen', 'w.orderpicker', 'w.pers', 'w.reachtruck', 'w.scannen', 'w.tunneloven',
+  // Four new lessons (27 November 2026).
+  'w.aankruisen', 'w.beluisteren', 'w.invullen', 'w.piep', 'w.voorbereiden', 'w.vulling',
 ];
 const MOVING = [...MOTION_TRIAL, ...MOTION_ROUND2, ...MOTION_ROUND3, ...MOTION_FUNCTION, ...MOTION_ROUND4];
 /** Abstract words whose picture is a moving one only (`picture: 'motion'`): [word, its lesson]. */

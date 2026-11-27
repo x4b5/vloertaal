@@ -1,17 +1,15 @@
 import type { JSX } from 'react';
 import { Bust } from '../bust';
-import { Calendar, Hand, Move, PAL, SKIN } from '../kit';
+import { Hand, Move, PAL, SKIN } from '../kit';
 
 export default {
   // "voorbereiden": to prepare (to get ready for something) — Amina at home at a small table writes a
-  // short list on a notepad (three points, lines only) the day before the talk: a small calendar
-  // with tomorrow ringed hangs beside her.
+  // short list on a notepad before the talk: three points, each a dot and a line (no text).
   // On the intro card her hand writes the third point of the list from left to right (three rounds:
   // writing).
   'w.voorbereiden': () => (
     <g strokeLinecap="round" strokeLinejoin="round">
       <Bust who="amina" x={30} y={112} scale={0.6} expr="thinking" bold />
-      <Calendar x={88} y={14} w={24} h={28} mark={6} />
       {/* The small table */}
       <rect x="20" y="98" width="7" height="12" rx="2" fill={PAL.cardDark} />
       <rect x="98" y="98" width="7" height="12" rx="2" fill={PAL.cardDark} />

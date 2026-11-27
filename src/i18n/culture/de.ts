@@ -473,6 +473,27 @@ const t: CultureTranslation = {
     'c.orderpick.o2': "Lauf schnell zwischen den Fahrzeugen hinüber.", // nieuw, nalezen
     'c.orderpick.o3': "Geh hinüber, und wink den Fahrern zu.", // nieuw, nalezen
     'c.orderpick.w': "Ein Fahrer kann dich oft nicht sehen, zum Beispiel hinter einer hohen Ladung. Auf dem Fußweg werden Menschen erwartet und sind sicher.", // nieuw, nalezen
+    // four new lessons (27 November 2026).
+    'l.appraisal': "Das Mitarbeitergespräch", // nieuw, nalezen
+    'w.functioneringsgesprek': "das Mitarbeitergespräch (ein Gespräch mit deinem Vorgesetzten darüber, wie deine Arbeit läuft und was du lernen willst)", // nieuw, nalezen
+    'w.beoordelingsgesprek': "das Beurteilungsgespräch (ein Gespräch, in dem dein Vorgesetzter deine Arbeit beurteilt)", // nieuw, nalezen
+    'w.voorbereiden': "vorbereiten (sich für etwas bereit machen)", // nieuw, nalezen
+    'w.goedgaan': "gut laufen, gut gehen", // nieuw, nalezen
+    'w.doel': "das Ziel (was du erreichen willst)", // nieuw, nalezen
+    'w.voorgezien': "„zur Kenntnis genommen“ unterschreiben (du hast es gelesen; es heißt nicht, dass du einverstanden bist)", // nieuw, nalezen
+    's.appraisal.1': "Ich bereite das Gespräch gut vor.", // nieuw, nalezen
+    's.appraisal.2': "Ich möchte gern etwas Neues lernen.", // nieuw, nalezen
+    's.appraisal.3': "Darf ich den Bericht zuerst lesen?", // nieuw, nalezen
+    'd.appraisal.q': "Was ist dein Ziel für nächstes Jahr?", // nieuw, nalezen
+    'd.appraisal.a': "Ich möchte gern meinen Staplerschein machen.", // nieuw, nalezen
+    'c.appraisal': "Dein Gespräch: vorbereiten, durchlesen", // nieuw, nalezen
+    'c.appraisal.b': "Viele Firmen führen ein- oder zweimal im Jahr ein Gespräch über deine Arbeit. In einem Mitarbeitergespräch (functioneringsgesprek) sprecht ihr miteinander: was gut läuft, was besser sein kann und was du lernen willst. In einem Beurteilungsgespräch (beoordelingsgesprek) beurteilt dein Vorgesetzter deine Arbeit. Das kann für deinen Lohn oder für einen neuen Vertrag zählen. Bereite das Gespräch vor: Schreib auf, was gut läuft, was schwer ist und was du lernen willst. Du darfst nach einem Kurs oder einer Schulung fragen. Am Ende macht ihr Vereinbarungen (afspraken), oft in einem kurzen Bericht. Lies ihn gut durch, bevor du unterschreibst, und bitte um eine Kopie. Bist du nicht einverstanden? Unterschreib „voor gezien“ (zur Kenntnis genommen), nicht „voor akkoord“ (einverstanden), und schreib deine eigene Sicht auf. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
+    'c.appraisal.p': "Ich unterschreibe zur Kenntnis, nicht als einverstanden.", // nieuw, nalezen
+    'c.appraisal.s': "Nach deinem Beurteilungsgespräch bekommst du den Bericht zum Unterschreiben. Ein Punkt darin stimmt deiner Meinung nach nicht. Was machst du?", // nieuw, nalezen
+    'c.appraisal.o1': "Unterschreib „voor gezien“, und schreib deine Sicht auf.", // nieuw, nalezen
+    'c.appraisal.o2': "Unterschreib schnell „voor akkoord“, damit es erledigt ist.", // nieuw, nalezen
+    'c.appraisal.o3': "Sag nichts, und unterschreib gar nicht.", // nieuw, nalezen
+    'c.appraisal.w': "„Voor gezien“ heißt, dass du es gelesen hast, nicht, dass du einverstanden bist. Wenn du das sagst und deine eigene Sicht aufschreibst, weiß dein Vorgesetzter, was du denkst.", // nieuw, nalezen
   },
 };
 

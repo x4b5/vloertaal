@@ -12,16 +12,10 @@ import { workUnits } from './work';
  * lessons (23 November 2026; translated the same day). And the four lessons of "Veiligheid op het
  * werk" and the VOG lesson of "Werken via een uitzendbureau" (23 November 2026; translated the same day).
  * And the four lessons of "Operator in de procesindustrie" (23 November 2026; translated the same day).
- * And the eight new lessons of 26 November 2026 (translated the same day). Again from the four new
- * lessons of 27 November 2026 (below).
+ * And the eight new lessons of 26 November 2026 (translated the same day). And the four new
+ * lessons of 27 November 2026 (translated the same day).
  */
-export const TRANSLATION_PENDING_LESSONS: readonly string[] = [
-  // The four new lessons of 27 November 2026, in existing units: the performance review (Feedback en
-  // overleg, cultureUnits.ts), filling in a form (Getallen en gegevens, work.ts dataUnit), the
-  // voicemail (Bellen en appen) and the dentist (Gezondheid; both in work.ts extraFour). Translations
-  // to follow.
-  'appraisal', 'forms', 'voicemail', 'dentist',
-];
+export const TRANSLATION_PENDING_LESSONS: readonly string[] = [];
 
 /**
  * The words of the pending lessons of curriculum.ts ("Tijd en rooster", "Als het misgaat"): the
@@ -29,10 +23,7 @@ export const TRANSLATION_PENDING_LESSONS: readonly string[] = [
  * this one), so they are listed here. The same for the units that are not in workUnits: cultureUnits.ts
  * (l.appraisal) and dataUnit (l.forms), 27 November 2026.
  */
-const PENDING_CURRICULUM_WORDS: readonly string[] = [
-  'w.functioneringsgesprek', 'w.beoordelingsgesprek', 'w.voorbereiden', 'w.goedgaan', 'w.doel', 'w.voorgezien',
-  'w.invullen', 'w.vakje', 'w.aankruisen', 'w.verplichtveld', 'w.postcode', 'w.hoofdletters',
-];
+const PENDING_CURRICULUM_WORDS: readonly string[] = [];
 
 /**
  * "Kun je nu" lines of units that are translated, added with pending lessons (src/content/kunJeNu.ts):

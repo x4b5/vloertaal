@@ -325,6 +325,11 @@ const t: CultureTranslation = {
     'c.mixlab.a.why': "Gefragt, ob die Charge freigegeben ist: noch nicht, das Labor testet sie.", // nieuw, nalezen
     'c.firstweeks.a.why': "Nach dem Rundgang gefragt: fast alles, und eine Frage.", // nieuw, nalezen
     'c.orderpick.a.why': "Gebeten, den Schubmaststapler zu fahren: nein, keine Schulung dafür.", // nieuw, nalezen
+    // four new lessons (27 November 2026).
+    'd.appraisal.a.why': "Nach dem Ziel gefragt: eine klare Sache, die man lernen will.", // nieuw, nalezen
+    'c.forms.a.why': "Nach dem Formular gefragt: fast fertig, und wo man unterschreibt.", // nieuw, nalezen
+    'c.voicemail.a.why': "Um Name und Nummer gebeten: der Name, und die Bitte um Rückruf.", // nieuw, nalezen
+    'c.dentist.a.why': "Nach dem letzten Besuch gefragt: wann, und die Bitte um eine Kontrolle.", // nieuw, nalezen
   },
 };
 

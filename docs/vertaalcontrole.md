@@ -2433,3 +2433,36 @@ Schulden en hulp, belasting en toeslagen, discriminatie en intimidatie, de vakbo
 - deurwaarder = deyn-ururiyaha sharciga; OR = golaha shaqaalaha; reachtruck onvertaald.
 ### ti
 - ባይቶ ሰራሕተኛታት; ኣኻቢ ዕዳ ቤት ፍርዲ; stoffer en blik omschreven.
+
+## Vier nieuwe lessen (27 november 2026)
+
+Het functioneringsgesprek, een formulier invullen, de voicemail en de tandarts: met AI vertaald in alle 14 hulptalen, elke regel met `// nieuw, nalezen`. Wat een moedertaalspreker het eerst moet nalezen:
+
+### ro
+- functioneringsgesprek = discuția despre performanță; piep = semnalul sonor.
+### es
+- entrevista de desempeño; gebit = la dentadura (kan als kunstgebit gelezen worden).
+### pt
+- conversa sobre o desempenho; vulling = a obturação; gebit = os dentes.
+### fr
+- entretien annuel / entretien d'évaluation; voor gezien = pour prise de connaissance.
+### ar
+- محادثة الأداء / محادثة التقييم; voor gezien = للاطّلاع; "never" in x-vormen als lijdende vorm: even sterk?
+### tr
+- performans görüşmesi / değerlendirme görüşmesi; voor gezien = görüldü.
+### fa
+- بیمهٔ تکمیلی; گفت‌وگو دربارهٔ عملکرد; voor gezien = دیده شد.
+### prs
+- داکتر دندان; tandarts van dienst = داکتر دندان نوکریوال (nieuw woord); gratis = مفت.
+### pl
+- rozmowa okresowa / rozmowa oceniająca; voor gezien = do wiadomości.
+### uk
+- для ознайомлення; стоматолог; карієс.
+### bg
+- за запознаване; "Do you not agree?" = Не си на същото мнение? (losser).
+### ti
+- ሓኪም ስኒ; ነቓዕ ስኒ; መምልኢ ስኒ; ተወሳኺ መድሕን (nieuwe termen).
+### so
+- wada-hadalka shaqada / qiimaynta; daloolka, buuxinta iligga nalezen.
+### de
+- gaatje = das Loch im Zahn; voor gezien = zur Kenntnis genommen.

@@ -473,6 +473,27 @@ const t: CultureTranslation = {
     'c.orderpick.o2': "Si dhakhso ah ugu orod gaadiidka dhexdooda.", // nieuw, nalezen
     'c.orderpick.o3': "Ka gudub, oo gacanta u ruxruxo darawallada.", // nieuw, nalezen
     'c.orderpick.w': "Darawalku badanaa kuma arki karo, tusaale ahaan rar dheer gadaashiis. Jidka lugta, dadka waa la filayaa waana ammaan.", // nieuw, nalezen
+    // four new lessons (27 November 2026).
+    'l.appraisal': "Wada-hadalka ku saabsan shaqadaada", // nieuw, nalezen
+    'w.functioneringsgesprek': "wada-hadalka shaqada (wada-hadal aad la yeelanayso madaxaaga oo ku saabsan sida shaqadaadu u socoto iyo waxa aad rabto inaad barato)", // nieuw, nalezen
+    'w.beoordelingsgesprek': "wada-hadalka qiimaynta (wada-hadal uu madaxaagu kaaga sheego qiimayntiisa shaqadaada)", // nieuw, nalezen
+    'w.voorbereiden': "isu diyaarin (inaad wax u diyaar garowdo)", // nieuw, nalezen
+    'w.goedgaan': "si fiican u socod", // nieuw, nalezen
+    'w.doel': "hadafka (waxa aad rabto inaad gaarto)", // nieuw, nalezen
+    'w.voorgezien': "saxiixa “waa la arkay” (waad akhrisay; macnaheedu ma aha inaad oggol tahay)", // nieuw, nalezen
+    's.appraisal.1': "Wada-hadalka si fiican ayaan isugu diyaariyaa.", // nieuw, nalezen
+    's.appraisal.2': "Waxaan jeclaan lahaa inaan barto wax cusub.", // nieuw, nalezen
+    's.appraisal.3': "Warbixinta marka hore ma akhrin karaa?", // nieuw, nalezen
+    'd.appraisal.q': "Waa maxay hadafkaaga sannadka soo socda?", // nieuw, nalezen
+    'd.appraisal.a': "Waxaan jeclaan lahaa inaan qaato shahaadada forklift-ka.", // nieuw, nalezen
+    'c.appraisal': "Wada-hadalkaaga: isu diyaari, akhri", // nieuw, nalezen
+    'c.appraisal.b': "Shirkado badan sannadkiiba hal ama laba jeer ayay yeeshaan wada-hadal ku saabsan shaqadaada. Wada-hadalka shaqada (functioneringsgesprek) waad wada hadlaysaan: waxa si fiican u socda, waxa ka sii fiicnaan kara, iyo waxa aad rabto inaad barato. Wada-hadalka qiimaynta (beoordelingsgesprek) madaxaagu wuxuu bixiyaa qiimayn. Waxay saamayn ku yeelan kartaa mushaharkaaga ama qandaraas cusub. Isu diyaari wada-hadalka: qor waxa si fiican u socda, waxa adag, iyo waxa aad rabto inaad barato. Waad codsan kartaa koorso ama tababar. Dhammaadka waxaad samaysaan heshiisyo (afspraken), inta badan warbixin gaaban. Si fiican u akhri ka hor intaadan saxiixin, oo codso nuqul. Ma oggolid? Saxiix “voor gezien” (waa la arkay), ma aha “voor akkoord” (waa la oggol yahay), oo qor aragtidaada. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama Juridisch Loket.", // nieuw, nalezen
+    'c.appraisal.p': "Waxaan u saxiixayaa sidii “waa la arkay”, ma aha “waa la oggol yahay”.", // nieuw, nalezen
+    'c.appraisal.s': "Wada-hadalka qiimaynta kadib waxaa lagu siiyaa warbixinta si aad u saxiixdo. Adiga ahaan, hal qodob oo ku jira run ma aha. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.appraisal.o1': "Saxiix “voor gezien”, oo qor aragtidaada.", // nieuw, nalezen
+    'c.appraisal.o2': "Si dhakhso ah u saxiix “voor akkoord”, si ay u dhammaato.", // nieuw, nalezen
+    'c.appraisal.o3': "Waxba ha oran, oo gabi ahaanba ha saxiixin.", // nieuw, nalezen
+    'c.appraisal.w': "“Voor gezien” macnaheedu waa inaad akhrisay, ma aha inaad oggol tahay. Marka aad sidaas dhahdo oo aad qorto aragtidaada, madaxaagu wuxuu ogaanayaa waxa aad u malaynayso.", // nieuw, nalezen
   },
 };
 export default t;

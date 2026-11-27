@@ -5103,6 +5103,67 @@ const t: CultureTranslation = {
     'c.mixlab.o2': "Sag nichts: Ein Kilo ist nicht viel.", // nieuw, nalezen
     'c.mixlab.o3': "Nimm etwas mit der Hand heraus.", // nieuw, nalezen
     'c.mixlab.w': "Eine falsche Menge kann die ganze Charge verderben. Wenn der Schichtleiter es rechtzeitig weiß, kann das Labor es prüfen, bevor die Charge weitergeht.", // nieuw, nalezen
+    // four new lessons (performance review, forms, voicemail, the dentist) (27 November 2026).
+    'l.forms': "Ein Formular ausfüllen", // nieuw, nalezen
+    'w.invullen': "ausfüllen (ein Formular)", // nieuw, nalezen
+    'w.vakje': "das Kästchen (ein kleines Viereck auf einem Formular)", // nieuw, nalezen
+    'w.aankruisen': "ankreuzen (ein Kreuz in ein Kästchen machen)", // nieuw, nalezen
+    'w.verplichtveld': "das Pflichtfeld (du musst es ausfüllen; oft mit einem * markiert)", // nieuw, nalezen
+    'w.postcode': "die Postleitzahl (ein kurzer Code für deine Straße oder deinen Ort, Teil deiner Adresse)", // nieuw, nalezen
+    'w.hoofdletters': "die Großbuchstaben (A, B, C)", // nieuw, nalezen
+    's.forms.1': "Schreib deinen Namen in Großbuchstaben.", // nieuw, nalezen
+    's.forms.2': "Kreuz das richtige Kästchen an.", // nieuw, nalezen
+    's.forms.3': "Können Sie mir bei diesem Formular helfen?", // nieuw, nalezen
+    'c.forms.q': "Hast du das Formular schon ausgefüllt?", // nieuw, nalezen
+    'c.forms.a': "Fast. Wo kommt meine Unterschrift hin?", // nieuw, nalezen
+    'l.voicemail': "Mailbox und zurückrufen", // nieuw, nalezen
+    'w.piep': "der Piepton (der kurze Ton; danach sprichst du deine Nachricht)", // nieuw, nalezen
+    'w.beluisteren': "abhören (eine Nachricht)", // nieuw, nalezen
+    'w.boodschap': "die Nachricht (was du auf die Mailbox von jemandem sprichst)", // nieuw, nalezen
+    'w.noemen': "nennen, sagen (deinen Namen, deine Nummer)", // nieuw, nalezen
+    'w.zosnelmogelijk': "so schnell wie möglich", // nieuw, nalezen
+    'w.opnieuw': "noch einmal (ein weiteres Mal)", // nieuw, nalezen
+    's.voicemail.1': "Hier ist Ali Haddad. Ich rufe wegen meines Dienstplans an.", // nieuw, nalezen
+    's.voicemail.2': "Ich höre meine Mailbox jeden Tag ab.", // nieuw, nalezen
+    's.voicemail.3': "Ich rufe später noch einmal an.", // nieuw, nalezen
+    'c.voicemail.q': "Sprechen Sie nach dem Piepton Ihren Namen und Ihre Nummer.", // nieuw, nalezen
+    'c.voicemail.a': "Hier ist Ali. Würden Sie mich so schnell wie möglich zurückrufen?", // nieuw, nalezen
+    'l.dentist': "Der Zahnarzt", // nieuw, nalezen
+    'w.tandarts': "der Zahnarzt / die Zahnärztin", // nieuw, nalezen
+    'w.kiespijn': "die Zahnschmerzen", // nieuw, nalezen
+    'w.gaatje': "das Loch im Zahn (Karies: ein kleines Loch in einem Zahn)", // nieuw, nalezen
+    'w.vulling': "die Füllung (der Zahnarzt schließt das Loch in einem Zahn)", // nieuw, nalezen
+    'w.gebit': "das Gebiss (alle deine Zähne zusammen)", // nieuw, nalezen
+    'w.aanvullendeverzekering': "die Zusatzversicherung (du kannst sie zusätzlich zur Grundversicherung für Gesundheit wählen)", // nieuw, nalezen
+    's.dentist.1': "Ich habe seit zwei Tagen Zahnschmerzen.", // nieuw, nalezen
+    's.dentist.2': "Ich habe ein Loch im Zahn. Ich bekomme eine Füllung.", // nieuw, nalezen
+    's.dentist.3': "Was kostet eine Füllung?", // nieuw, nalezen
+    'c.dentist.q': "Wann warst du zuletzt beim Zahnarzt?", // nieuw, nalezen
+    'c.dentist.a': "Vor einem Jahr. Ich möchte gern eine Kontrolle.", // nieuw, nalezen
+    'c.forms': "Ein Formular: deutlich schreiben, und pass auf deine BSN auf", // nieuw, nalezen
+    'c.forms.b': "Ein Formular fragt oft nach deinem Namen, Geburtsdatum, deiner Adresse und Postleitzahl. Schreib deutlich, oft in Großbuchstaben. Ein Feld mit einem Stern (*) ist ein Pflichtfeld: Du musst es ausfüllen. Kreuz das richtige Kästchen an. Verstehst du eine Frage nicht? Bitte um Hilfe, bevor du unterschreibst. Unterschreib nie etwas, das du nicht verstehst. Deine BSN: Nur manche Stellen dürfen danach fragen, zum Beispiel dein Arbeitgeber, die gemeente, der Belastingdienst, deine Krankenversicherung, dein Arzt und deine Bank. Ein Geschäft oder ein Sportverein darf das nicht. Gib deine BSN nie einem Fremden, in einer App oder am Telefon. Nicht sicher? Frag, warum sie sie brauchen. Viele Bibliotheken helfen kostenlos bei Formularen, oft in einer offenen Sprechstunde. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
+    'c.forms.p': "Ist meine BSN hier Pflicht?", // nieuw, nalezen
+    'c.forms.s': "Du meldest dich in einem Sportverein an. Das Formular fragt nach deiner BSN. Was machst du?", // nieuw, nalezen
+    'c.forms.o1': "Lass es leer, und frag, warum sie sie brauchen.", // nieuw, nalezen
+    'c.forms.o2': "Füll es aus: Jedes Formular darf danach fragen.", // nieuw, nalezen
+    'c.forms.o3': "Gib stattdessen deine DigiD-Zugangsdaten.", // nieuw, nalezen
+    'c.forms.w': "Ein Sportverein darf deine BSN nicht benutzen. Nur manche Stellen dürfen das, zum Beispiel dein Arbeitgeber, die gemeente und deine Krankenversicherung. Wenn du fragst, warum, schützt du deine Nummer.", // nieuw, nalezen
+    'c.voicemail': "Eine Nachricht: wer, warum, deine Nummer", // nieuw, nalezen
+    'c.voicemail.b': "Keine Antwort? Sprich nach dem Piepton (piep) eine kurze Nachricht (boodschap) auf. Sag deinen Namen, warum du anrufst, und deine Telefonnummer. Sprich langsam, und sag deine Nummer zweimal. Einen Anruf verpasst? Hör zuerst deine Mailbox ab, und ruf dann so schnell wie möglich zurück. Verstehst du eine Nachricht nicht? Hör sie noch einmal ab, oder bitte einen Kollegen, mit dir zuzuhören. Richte deine Mailbox ein, und hör sie jeden Tag ab. Du meldest dich krank? In vielen Firmen reicht eine Nachricht nicht: Ruf noch einmal an, bis du mit jemandem sprichst. Die Regeln sind in jeder Firma anders: Frag deinen Vorgesetzten, welche Regeln bei dir gelten.", // nieuw, nalezen
+    'c.voicemail.p': "Darf ich eine Nachricht hinterlassen?", // nieuw, nalezen
+    'c.voicemail.s': "Du kommst zu spät, und du rufst deine Vorgesetzte an. Du hörst ihre Mailbox. Was sagst du nach dem Piepton?", // nieuw, nalezen
+    'c.voicemail.o1': "Deinen Namen, warum du anrufst, und deine Nummer.", // nieuw, nalezen
+    'c.voicemail.o2': "Nur „Bel me terug“, und auflegen.", // nieuw, nalezen
+    'c.voicemail.o3': "Nichts: Du legst auf und wartest.", // nieuw, nalezen
+    'c.voicemail.w': "Mit deinem Namen, dem Grund und deiner Nummer weiß deine Vorgesetzte, was los ist, und kann dich sofort zurückrufen.", // nieuw, nalezen
+    'c.dentist': "Der Zahnarzt: eine Kontrolle, und frag nach dem Preis", // nieuw, nalezen
+    'c.dentist.b': "Melde dich bei einem Zahnarzt (tandarts) in der Nähe deiner Wohnung an, und geh regelmäßig zur Kontrolle (controle), oft einmal im Jahr. Zahnschmerzen? Ruf deinen Zahnarzt an und sag, dass es sehr weh tut: Dann bekommst du oft schnell einen Termin. Nachts oder am Wochenende ruf deinen eigenen Zahnarzt an: Die Ansage am Telefon sagt dir, welcher Zahnarzt jetzt hilft. Für Erwachsene zahlt die Grundversicherung für Gesundheit sehr wenig beim Zahnarzt: meistens nicht die Kontrolle oder eine Füllung. Du kannst eine Zusatzversicherung (aanvullende verzekering) für den Zahnarzt wählen: Prüfe, was sie bezahlt. Für Kinder unter 18 zahlt die Grundversicherung die meiste Zahnbehandlung. Frag, was eine Behandlung kostet, bevor sie anfängt. Bei einer großen Behandlung muss dir der Zahnarzt den Preis zuerst auf Papier geben. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen
+    'c.dentist.p': "Ich habe starke Schmerzen. Kann ich heute noch kommen?", // nieuw, nalezen
+    'c.dentist.s': "Es ist Samstagabend. Du hast starke Zahnschmerzen, und eine Schmerztablette hilft nicht. Was machst du?", // nieuw, nalezen
+    'c.dentist.o1': "Ruf deinen Zahnarzt an: Die Ansage sagt, wer jetzt hilft.", // nieuw, nalezen
+    'c.dentist.o2': "Ruf 112 an: Es ist ein Notfall.", // nieuw, nalezen
+    'c.dentist.o3': "Warte bis Montag, und nimm mehr Schmerztabletten.", // nieuw, nalezen
+    'c.dentist.w': "Außerhalb der Sprechzeiten hilft ein Zahnarzt im Notdienst bei dringenden Schmerzen. 112 ist nur für einen Notfall, zum Beispiel bei Lebensgefahr.", // nieuw, nalezen
   },
 };
 

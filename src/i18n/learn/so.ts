@@ -321,6 +321,11 @@ const t: CultureTranslation = {
     'c.mixlab.a.why': "Waxaa la weydiiyay in dufcadda la oggolaaday: weli maya, shaybaarka ayaa tijaabinaya.", // nieuw, nalezen
     'c.firstweeks.a.why': "Waxaa la weydiiyay wareegga tusidda: ku dhowaad wax walba, iyo hal su'aal.", // nieuw, nalezen
     'c.orderpick.a.why': "Waxaa la weydiistay in reachtruck-ga la kaxeeyo: maya, tababar looma helin.", // nieuw, nalezen
+    // four new lessons (27 November 2026).
+    'd.appraisal.a.why': "Waxaa la weydiiyay hadafka: hal shay oo cad oo la rabo in la barto.", // nieuw, nalezen
+    'c.forms.a.why': "Waxaa la weydiiyay foomka: ku dhowaad, iyo halka la saxiixayo.", // nieuw, nalezen
+    'c.voicemail.a.why': "Waxaa la weydiistay magaca iyo lambarka: magaca, iyo codsi dib loogu soo waco.", // nieuw, nalezen
+    'c.dentist.a.why': "Waxaa la weydiiyay booqashadii ugu dambeysay: goorta, iyo codsi baaritaan.", // nieuw, nalezen
   },
 };
 export default t;

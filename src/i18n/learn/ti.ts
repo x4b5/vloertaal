@@ -326,6 +326,11 @@ const t: CultureTranslation = {
     'c.mixlab.a.why': "እቲ ባች ጸዲቑ እንተ ኾይኑ ተሓቲቱ: ገና፡ እቲ ላብ ይፍትኖ ኣሎ።", // nieuw, nalezen
     'c.firstweeks.a.why': "ብዛዕባ ዙረት ምልላይ ተሓቲቱ: ዳርጋ ኩሉ፡ ሓደ ሕቶ ድማ።", // nieuw, nalezen
     'c.orderpick.a.why': "ሪች ትራክ ክዝውር ተሓቲቱ: ኣይፋል፡ ስልጠና የለን።", // nieuw, nalezen
+    // four new lessons (27 November 2026).
+    'd.appraisal.a.why': "ብዛዕባ ዕላማ ተሓቲቱ: ክመሃር ዝድለ ሓደ ንጹር ነገር።", // nieuw, nalezen
+    'c.forms.a.why': "ብዛዕባ እቲ ቅጥዒ ተሓቲቱ: ዳርጋ፡ ኣበይ ከም ዝፍረም ድማ።", // nieuw, nalezen
+    'c.voicemail.a.why': "ስምን ቁጽርን ተሓቲቱ: ስም፡ ተመሊሱ ክድወል ድማ ይሕተት።", // nieuw, nalezen
+    'c.dentist.a.why': "ብዛዕባ ናይ መወዳእታ ምብጻሕ ተሓቲቱ: መዓስ፡ ፍተሻ ድማ ይሕተት።", // nieuw, nalezen
   },
 };
 

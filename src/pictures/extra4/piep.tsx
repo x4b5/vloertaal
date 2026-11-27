@@ -18,7 +18,7 @@ export default {
       <Shine d="M24 30V44" width={2.6} opacity={0.5} />
       {/* The sound coming out */}
       <Move kind="fast" dx={-22} dy={22}>
-        <g transform="rotate(-45 74 30)">
+        <g transform="translate(-3 6) rotate(-45 74 30)">
           <path d="M80 22A11 11 0 0 1 80 38M88 16A19 19 0 0 1 88 44M96 10A27 27 0 0 1 96 50" fill="none" stroke={PAL.orange} strokeWidth="5" />
         </g>
       </Move>

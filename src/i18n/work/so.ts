@@ -5103,6 +5103,67 @@ const t: CultureTranslation = {
     'c.mixlab.o2': "Waxba ha odhan: hal kiilo ma badna.", // nieuw, nalezen
     'c.mixlab.o3': "Gacanta ku soo saar wax yar.", // nieuw, nalezen
     'c.mixlab.w': "Hal qiyaas oo khaldan ayaa dufcadda oo dhan kharribi karta. Marka hoggaamiyaha wareegga shaqadu waqtigiisa ogaado, shaybaarku wuu hubin karaa ka hor inta dufcaddu aysan sii socon.", // nieuw, nalezen
+    // four new lessons (performance review, forms, voicemail, the dentist) (27 November 2026).
+    'l.forms': "Buuxinta foom", // nieuw, nalezen
+    'w.invullen': "buuxin (foom)", // nieuw, nalezen
+    'w.vakje': "sanduuqa yar (afargees yar oo foomka ku yaal)", // nieuw, nalezen
+    'w.aankruisen': "calaamadin (inaad calaamad X ku samayso sanduuq yar)", // nieuw, nalezen
+    'w.verplichtveld': "goobta qasabka ah (waa inaad buuxisaa; inta badan waxaa lagu calaamadiyaa *)", // nieuw, nalezen
+    'w.postcode': "koodhka boostada (koodh gaaban oo waddadaada ama magaaladaada ah, qayb ka mid ah cinwaankaaga)", // nieuw, nalezen
+    'w.hoofdletters': "xarfaha waaweyn (A, B, C)", // nieuw, nalezen
+    's.forms.1': "Magacaaga ku qor xarfo waaweyn.", // nieuw, nalezen
+    's.forms.2': "Calaamadi sanduuqa saxda ah.", // nieuw, nalezen
+    's.forms.3': "Foomkan ma iga caawin kartaa?", // nieuw, nalezen
+    'c.forms.q': "Foomka ma buuxisay weli?", // nieuw, nalezen
+    'c.forms.a': "Ku dhowaad. Xaggee ayuu saxiixaygu galayaa?", // nieuw, nalezen
+    'l.voicemail': "Fariinta codka iyo dib u wacid", // nieuw, nalezen
+    'w.piep': "biibka (codka gaaban; kadib ayaad fariintaada sheegtaa)", // nieuw, nalezen
+    'w.beluisteren': "dhegeysi (fariin)", // nieuw, nalezen
+    'w.boodschap': "fariinta (waxa aad ku sheegto fariinta codka ee qof kale)", // nieuw, nalezen
+    'w.noemen': "sheegid, magacaabid (magacaaga, lambarkaaga)", // nieuw, nalezen
+    'w.zosnelmogelijk': "sida ugu dhakhsaha badan", // nieuw, nalezen
+    'w.opnieuw': "mar kale (hal mar oo kale)", // nieuw, nalezen
+    's.voicemail.1': "Waa Ali Haddad. Waxaan u soo wacayaa arrinta jadwalkayga.", // nieuw, nalezen
+    's.voicemail.2': "Maalin kasta waxaan dhegeystaa fariimaha codkayga.", // nieuw, nalezen
+    's.voicemail.3': "Goor dambe ayaan mar kale soo wici doonaa.", // nieuw, nalezen
+    'c.voicemail.q': "Biibka kadib, kaga tag magacaaga iyo lambarkaaga.", // nieuw, nalezen
+    'c.voicemail.a': "Waa Ali. Dib ma ii soo wici kartaa sida ugu dhakhsaha badan?", // nieuw, nalezen
+    'l.dentist': "Dhakhtarka ilkaha", // nieuw, nalezen
+    'w.tandarts': "dhakhtarka ilkaha", // nieuw, nalezen
+    'w.kiespijn': "ilig xanuunka", // nieuw, nalezen
+    'w.gaatje': "daloolka (dalool yar oo ilig ku jira)", // nieuw, nalezen
+    'w.vulling': "buuxinta iligga (dhakhtarku wuxuu xiraa daloolka iligga)", // nieuw, nalezen
+    'w.gebit': "ilkaha (dhammaan ilkahaaga oo wadajir ah)", // nieuw, nalezen
+    'w.aanvullendeverzekering': "caymiska dheeraadka ah (waad dooran kartaa, marka lagu daro caymiska caafimaadka aasaasiga ah)", // nieuw, nalezen
+    's.dentist.1': "Laba maalmood ayaan ilig xanuun qabaa.", // nieuw, nalezen
+    's.dentist.2': "Ilig dalool leh ayaan qabaa. Waxaa la ii samaynayaa buuxin.", // nieuw, nalezen
+    's.dentist.3': "Buuxintu immisa ayay ku kacdaa?", // nieuw, nalezen
+    'c.dentist.q': "Goorma ayaad ugu dambeysay dhakhtarka ilkaha?", // nieuw, nalezen
+    'c.dentist.a': "Sannad ka hor. Waxaan jeclaan lahaa baaritaan.", // nieuw, nalezen
+    'c.forms': "Foom: si cad u qor, oo BSN-kaaga ilaali", // nieuw, nalezen
+    'c.forms.b': "Foomku inta badan wuxuu weydiiyaa magacaaga, taariikhda dhalashada, cinwaanka iyo koodhka boostada. Si cad u qor, inta badan xarfo waaweyn. Goob leh xiddig (*) waa qasab: waa inaad buuxisaa. Calaamadi sanduuqa saxda ah. Su'aal ma fahmin? Caawimaad weydiiso ka hor intaadan saxiixin. Marnaba ha saxiixin wax aadan fahmin. BSN-kaaga: hay'ado gaar ah oo keliya ayaa weydiin kara, sida loo-shaqeeyahaaga, gemeente, Belastingdienst, shirkadda caymiska caafimaadkaaga, dhakhtarkaaga iyo bangigaaga. Dukaan ama naadi isboorti looma oggola. Marnaba BSN-kaaga ha siin qof aadan aqoon, app gudihiis ama taleefanka. Ma hubtid? Weydii sababta ay ugu baahan yihiin. Maktabado badan ayaa bilaash kaaga caawiya foomamka, inta badan saacad furan oo aan ballan lahayn. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama Juridisch Loket.", // nieuw, nalezen
+    'c.forms.p': "BSN-kaygu halkan ma qasab baa?", // nieuw, nalezen
+    'c.forms.s': "Waxaad iska diiwaangelinaysaa naadi isboorti. Foomku wuxuu weydiinayaa BSN-kaaga. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.forms.o1': "Bannaan u dhaaf, oo weydii sababta ay ugu baahan yihiin.", // nieuw, nalezen
+    'c.forms.o2': "Buuxi: foom kasta wuu weydiin karaa.", // nieuw, nalezen
+    'c.forms.o3': "Beddelkeeda sii gelitaankaaga DigiD.", // nieuw, nalezen
+    'c.forms.w': "Naadi isboorti looma oggola inuu isticmaalo BSN-kaaga. Hay'ado gaar ah oo keliya ayaa loo oggol yahay, sida loo-shaqeeyahaaga, gemeente iyo shirkadda caymiska caafimaadkaaga. Marka aad weydiiso sababta, waxaad ilaalinaysaa lambarkaaga.", // nieuw, nalezen
+    'c.voicemail': "Fariin: cidda, sababta, lambarkaaga", // nieuw, nalezen
+    'c.voicemail.b': "Jawaab ma jirto? Biibka (piep) kadib, kaga tag fariin gaaban (boodschap). Sheeg magacaaga, sababta aad u wacayso, iyo lambarka taleefankaaga. Si tartiib ah u hadal, oo lambarkaaga laba jeer sheeg. Wicitaan ma seegtay? Marka hore dhegeyso fariimaha codkaaga, kadibna dib u wac sida ugu dhakhsaha badan. Fariin ma fahmin? Mar kale dhegeyso, ama saaxiib shaqo ka codso inuu kula dhegeysto. Diyaari fariimaha codkaaga (voicemail), oo maalin kasta dhegeyso. Ma isu soo sheegaysaa inaad xanuunsan tahay? Shirkado badan fariin kuma filna: mar kale wac ilaa aad qof la hadasho. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen
+    'c.voicemail.p': "Fariin ma kaga tagi karaa?", // nieuw, nalezen
+    'c.voicemail.s': "Waad soo daahaysaa, oo waxaad wacaysaa madaxaaga. Waxaad maqlaysaa fariinta codkeeda. Maxaad dhahaysaa biibka kadib?", // nieuw, nalezen
+    'c.voicemail.o1': "Magacaaga, sababta aad u wacayso, iyo lambarkaaga.", // nieuw, nalezen
+    'c.voicemail.o2': "Kaliya “Bel me terug”, oo taleefanka dhig.", // nieuw, nalezen
+    'c.voicemail.o3': "Waxba: taleefanka ayaad dhigaysaa, oo waad sugaysaa.", // nieuw, nalezen
+    'c.voicemail.w': "Marka aad sheegto magacaaga, sababta iyo lambarkaaga, madaxaagu waxay ogaanaysaa waxa socda, waxayna isla markiiba dib kuu soo wici kartaa.", // nieuw, nalezen
+    'c.dentist': "Dhakhtarka ilkaha: baaritaan, oo weydii qiimaha", // nieuw, nalezen
+    'c.dentist.b': "Iska diiwaangeli dhakhtar ilkaha (tandarts) oo gurigaaga u dhow, oo si joogto ah u tag baaritaan (controle), inta badan sannadkiiba hal mar. Ilig xanuun? Wac dhakhtarkaaga ilkaha oo sheeg inuu aad kuu xanuunayo: markaas inta badan dhakhso ayaad ballan u helaysaa. Habeenkii ama dhammaadka toddobaadka, wac dhakhtarkaaga ilkaha: fariinta taleefanku waxay kuu sheegaysaa dhakhtarka ilkaha ee hadda caawinaya. Dadka waaweyn, caymiska caafimaadka aasaasiga ahi wax aad u yar ayuu ka bixiyaa dhakhtarka ilkaha: badanaa ma bixiyo baaritaanka ama buuxinta. Waxaad dooran kartaa caymis dheeraad ah (aanvullende verzekering) oo loogu talagalay dhakhtarka ilkaha: hubi waxa uu bixiyo. Carruurta ka yar 18 sano, caymiska aasaasiga ahi wuxuu bixiyaa inta badan daryeelka ilkaha. Weydii inta ay ku kacayso daawayntu ka hor inta aysan bilaabmin. Daawayn weyn, dhakhtarka ilkaha waa inuu marka hore qiimaha kuu siiyaa warqad ahaan. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama Juridisch Loket.", // nieuw, nalezen
+    'c.dentist.p': "Xanuun badan ayaan qabaa. Maanta weli ma iman karaa?", // nieuw, nalezen
+    'c.dentist.s': "Waa fiidkii Sabtida. Ilig xanuun daran ayaad qabtaa, oo kiniinka xanuun-baabi'iyaha ahi kuma caawinayo. Maxaad samaynaysaa?", // nieuw, nalezen
+    'c.dentist.o1': "Wac dhakhtarkaaga ilkaha: fariintu waxay sheegaysaa cidda hadda caawinaysa.", // nieuw, nalezen
+    'c.dentist.o2': "Wac 112: waa xaalad degdeg ah.", // nieuw, nalezen
+    'c.dentist.o3': "Sug ilaa Isniinta, oo qaado kiniino xanuun-baabi'iye oo badan.", // nieuw, nalezen
+    'c.dentist.w': "Saacadaha shaqada ka baxsan, dhakhtar ilkaha oo shaqo-wareeg ku jira ayaa caawiya xanuunka degdegga ah. 112 waa oo keliya xaalad degdeg ah, sida khatar nafeed.", // nieuw, nalezen
   },
 };
 
