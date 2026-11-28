@@ -7,7 +7,7 @@ const t: CultureTranslation = {
     'u.apply': 'التقديم على وظيفة',
     'l.cv': 'سيرتك الذاتية ورسالتك',
     'w.cv': 'السيرة الذاتية',
-    'w.motivatie': 'الدافع (سبب الرغبة في الوظيفة)', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'w.motivatie': 'الدافع (سبب الرغبة في الوظيفة)', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     'w.ervaring': 'الخبرة',
     'w.opleiding': 'التعليم، التدريب',
     'w.vaardigheden': 'المهارات',
@@ -181,7 +181,7 @@ const t: CultureTranslation = {
     'l.mistakes': 'الملاحظات والأخطاء',
     'w.fout': 'الخطأ',
     'w.compliment': 'المديح',
-    'w.feedback': "الملاحظات (ما يقوله شخص عن عملك)", // nieuw, nalezen
+    'w.feedback': "الملاحظات (ما يقوله شخص عن عملك)", // nieuw, nalezen // nagelezen AI 28 nov
     'w.uitleggen': 'يشرح',
     'w.leren': 'يتعلّم',
     'w.verbeteren': 'يحسّن، يصحّح',
@@ -189,7 +189,7 @@ const t: CultureTranslation = {
     's.mistakes.2': 'هل تستطيع أن تشرحه؟',
     's.mistakes.3': 'شكراً على المديح!',
     'c.mistakes.q': 'عمل رائع!',
-    'c.mistakes.a': 'شكراً، يسعدني أن أسمع ذلك.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.mistakes.a': 'شكراً، يسعدني أن أسمع ذلك.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     'l.respect': 'الاحترام للجميع',
     'w.respect': 'الاحترام',
     'w.gelijk': 'متساوٍ',
@@ -377,7 +377,7 @@ const t: CultureTranslation = {
     's.letters.3': 'دخلي تغيّر.',
     'c.letters.q': 'هل قدّمت تصريحك الضريبي؟',
     'c.letters.a': 'لا، سأقدّمه قبل 1 مايو.',
-    'l.scams': { m: 'احذر من الاحتيال', f: 'احذري من الاحتيال', x: 'الحذر من الاحتيال' }, // x: nieuw, nalezen
+    'l.scams': { m: 'احذر من الاحتيال', f: 'احذري من الاحتيال', x: 'الحذر من الاحتيال' }, // x: nieuw, nalezen // nagelezen AI 28 nov
     'w.pincode': 'الرقم السري (PIN)',
     'w.link': 'الرابط',
     'w.oplichter': 'المحتال',
@@ -409,8 +409,8 @@ const t: CultureTranslation = {
     'w.uitchecken': 'يسجّل الخروج (في المواصلات)',
     'w.bankpas': 'البطاقة البنكية',
     'w.reiskosten': 'بدل السفر',
-    's.transit.1': 'أمرّر بطاقتي البنكية عند الصعود.', // nieuw, nalezen (4 nov 2026)
-    's.transit.2': 'لا تنسَ أن تمرّر بطاقتك عند النزول.', // nieuw, nalezen (4 nov 2026)
+    's.transit.1': 'أمرّر بطاقتي البنكية عند الصعود.', // nieuw, nalezen (4 nov 2026) // nagelezen AI 28 nov
+    's.transit.2': 'لا تنسَ أن تمرّر بطاقتك عند النزول.', // nieuw, nalezen (4 nov 2026) // nagelezen AI 28 nov
     's.transit.3': 'أين موقف الحافلة؟',
     'c.transit.q': { m: 'هل تأتي بالقطار؟', f: 'هل تأتين بالقطار؟' },
     'c.transit.a': 'لا، بالحافلة. تتوقف عند الباب.',
@@ -491,7 +491,7 @@ const t: CultureTranslation = {
     'c.quality.a': 'الملصق مائل.',
     'u.care': 'في الرعاية',
     'l.client': 'المستفيد من الرعاية والعناية اليومية',
-    'w.client': 'المستفيد من الرعاية (الشخص الذي يتلقى الرعاية)', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'w.client': 'المستفيد من الرعاية (الشخص الذي يتلقى الرعاية)', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     'w.wassen': 'يغسل',
     'w.aankleden': 'يرتدي ملابسه، يساعد شخصاً على ارتداء ملابسه',
     'w.eten': 'الطعام',
@@ -928,7 +928,7 @@ const t: CultureTranslation = {
     'c.cleansafe.o3': { m: 'اخلطهما بسرعة واخرج من الغرفة.', f: 'اخلطيهما بسرعة واخرجي من الغرفة.' },
     'c.cleansafe.w': 'خلط المواد قد يصنع غازاً ساماً، حتى مع نافذة مفتوحة. مادة واحدة، مستعملة بشكل صحيح، تكفي.',
     'u.tools': 'أدوات ذكية',
-    'l.translate': { m: 'ترجم بهاتفك', f: 'ترجمي بهاتفك', x: 'الترجمة بالهاتف' }, // x: nieuw, nalezen
+    'l.translate': { m: 'ترجم بهاتفك', f: 'ترجمي بهاتفك', x: 'الترجمة بالهاتف' }, // x: nieuw, nalezen // nagelezen AI 28 nov
     'w.vertaalapp': 'تطبيق الترجمة',
     'w.vertalen': 'يترجم',
     'w.camera': 'الكاميرا',
@@ -940,7 +940,7 @@ const t: CultureTranslation = {
     's.translate.3': 'لو سمحت، هل يمكنك التحدث إلى هاتفي قليلاً؟',
     'c.translate.q': 'ماذا مكتوب في هذه الورقة؟',
     'c.translate.a': 'لحظة، سأترجمها.',
-    'l.understood': { m: 'أن تفهم وأن يفهمك الآخرون', f: 'أن تفهمي وأن يفهمك الآخرون', x: 'الفهم والتفاهم' }, // x: nieuw, nalezen
+    'l.understood': { m: 'أن تفهم وأن يفهمك الآخرون', f: 'أن تفهمي وأن يفهمك الآخرون', x: 'الفهم والتفاهم' }, // x: nieuw, nalezen // nagelezen AI 28 nov
     'w.herhalen': 'يكرّر',
     'w.opschrijven': 'يكتب (على ورقة)',
     'w.latenzien': 'يُري، يعرض',
@@ -1007,9 +1007,9 @@ const t: CultureTranslation = {
     'w.intimidatie': "التحرّش، الترهيب",
     'w.getuige': "الشاهد",
     'w.grapje': "النكتة، المزحة",
-    's.boundaries.1': "لا تلمسني.", // nieuw, nalezen ("Blijf van me af.", 4 nov 2026)
+    's.boundaries.1': "لا تلمسني.", // nieuw, nalezen ("Blijf van me af.", 4 nov 2026) // nagelezen AI 28 nov
     's.boundaries.2': "لا أجد هذا التعليق مضحكاً.",
-    's.boundaries.3': "أريد أن أبلّغ الشخص المؤتمن عن شيء.", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    's.boundaries.3': "أريد أن أبلّغ الشخص المؤتمن عن شيء.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     'c.boundaries.q': { m: 'لا تكبّر الموضوع، كانت مجرّد مزحة.', f: 'لا تكبّري الموضوع، كانت مجرّد مزحة.' },
     'c.boundaries.a': "ليست مزحة بالنسبة لي. أريدك أن تتوقّف.",
     'c.gossip': "النميمة ووسائل التواصل الاجتماعي",
@@ -1044,7 +1044,7 @@ const t: CultureTranslation = {
     'l.checkout': 'عند صندوق الدفع',
     'w.klant': 'الزبون',
     'w.kassa': 'صندوق الدفع',
-    'w.wisselgeld': 'الباقي (النقود التي تُعاد للزبون)', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'w.wisselgeld': 'الباقي (النقود التي تُعاد للزبون)', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     'w.bonnetje': 'الإيصال',
     'w.pinnen': 'يدفع بالبطاقة',
     'w.contant': 'نقداً',
@@ -1054,18 +1054,18 @@ const t: CultureTranslation = {
     'c.checkout.q': 'هل يمكنني الدفع بالبطاقة هنا؟',
     'c.checkout.a': 'نعم، طبعاً، ممكن.',
     'u.numbers': 'الوقت والمال والمقاييس',
-    'l.counting': 'الأعداد', // nieuw, nalezen
-    'w.dertien': 'ثلاثة عشر (13)', // nieuw, nalezen
-    'w.dertig': 'ثلاثون (30)', // nieuw, nalezen
-    'w.zeventien': 'سبعة عشر (17)', // nieuw, nalezen
-    'w.zeventig': 'سبعون (70)', // nieuw, nalezen
-    'w.zevenenveertig': 'سبعة وأربعون (47)', // nieuw, nalezen
-    'w.vierenzeventig': 'أربعة وسبعون (74)', // nieuw, nalezen
-    's.counting.1': 'عندي ثلاثة عشر صندوقاً، لا ثلاثون.', // nieuw, nalezen
-    's.counting.2': 'الموقع أربعة وسبعون فارغ.', // nieuw, nalezen
-    's.counting.3': 'هل يمكنك أن تقولها رقماً رقماً؟', // nieuw, nalezen
-    'c.counting.q': 'كم صندوقاً بقي؟', // nieuw, nalezen
-    'c.counting.a': 'سبعون. سبعة، صفر.', // nieuw, nalezen
+    'l.counting': 'الأعداد', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dertien': 'ثلاثة عشر (13)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dertig': 'ثلاثون (30)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zeventien': 'سبعة عشر (17)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zeventig': 'سبعون (70)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zevenenveertig': 'سبعة وأربعون (47)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vierenzeventig': 'أربعة وسبعون (74)', // nieuw, nalezen // nagelezen AI 28 nov
+    's.counting.1': 'عندي ثلاثة عشر صندوقاً، لا ثلاثون.', // nieuw, nalezen // nagelezen AI 28 nov
+    's.counting.2': 'الموقع أربعة وسبعون فارغ.', // nieuw, nalezen // nagelezen AI 28 nov
+    's.counting.3': 'هل يمكنك أن تقولها رقماً رقماً؟', // nieuw, nalezen // nagelezen AI 28 nov
+    'c.counting.q': 'كم صندوقاً بقي؟', // nieuw, nalezen // nagelezen AI 28 nov
+    'c.counting.a': 'سبعون. سبعة، صفر.', // nieuw, nalezen // nagelezen AI 28 nov
     'l.hours': 'الساعات والأوقات',
     'w.uur': 'الساعة (60 دقيقة)',
     'w.minuut': 'الدقيقة',
@@ -1376,204 +1376,204 @@ const t: CultureTranslation = {
     'c.jobends.o3': { m: "انتظر حتى تمرض، ورتّب الأمر عندها.", f: "انتظري حتى تمرضي، ورتّبي الأمر عندها." }, // nagelezen AI 22 nov
     'c.jobends.w': { m: "التأمين عن طريق الوكالة ينتهي غالباً عندما ينتهي عملك. عندما تسكن أو تعمل في هولندا، يجب عليك عادةً أن يكون عندك تأمين صحي. إذا رتّبته في الوقت المناسب، لا تبقى بدون تأمين.", f: "التأمين عن طريق الوكالة ينتهي غالباً عندما ينتهي عملكِ. عندما تسكنين أو تعملين في هولندا، يجب عليكِ عادةً أن يكون عندكِ تأمين صحي. إذا رتّبتِه في الوقت المناسب، لا تبقين بدون تأمين." }, // nagelezen AI 22 nov
     // Entree in the Taal track (30 October 2026): nieuw, nalezen.
-    'u.finish': "إنهاء العمل", // nieuw, nalezen
-    'l.workorder': "أمر العمل", // nieuw, nalezen
-    'w.werkbon': "أمر العمل (ورقة أو تطبيق فيه مهمتك)", // nieuw, nalezen
-    'w.lezen': "يقرأ", // nieuw, nalezen
-    'w.aantal': "العدد (كم واحداً)", // nieuw, nalezen
-    'w.materiaal': "المواد (ما يلزم للعمل)", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'w.klaarleggen': "يجهّز (يضع ما يحتاجه جاهزاً)", // nieuw, nalezen
-    'w.handtekening': "التوقيع", // nieuw, nalezen
-    's.workorder.1': "أقرأ أمر العمل أولاً.", // nieuw, nalezen
-    's.workorder.2': "هل هذا العدد صحيح؟", // nieuw, nalezen
-    's.workorder.3': "أجهّز المواد.", // nieuw, nalezen
-    'c.workorder.q': { m: "هل تعرف ما يجب أن تفعله؟", f: "هل تعرفين ما يجب أن تفعليه؟", x: "هل المطلوب منك واضح؟" }, // nieuw, nalezen
-    'c.workorder.a': "تقريباً. ما معنى هذه الكلمة في أمر العمل؟", // nieuw, nalezen
-    'l.handover': "انتهى أم ليس بعد؟", // nieuw, nalezen
-    'w.opruimen': "يرتّب، يعيد الأشياء إلى مكانها", // nieuw, nalezen
-    'w.nakijken': "يراجع (ينظر إلى العمل مرة أخرى)", // nieuw, nalezen
-    'w.afmelden': "يبلّغ بانتهاء العمل (يقول إن العمل انتهى ثم يغادر)", // nieuw, nalezen
-    'w.kapot': "معطّل، مكسور", // nieuw, nalezen
-    'w.opslot': "مقفل", // nieuw, nalezen
-    'w.bijzonderheid': "الباب", // nieuw, nalezen
-    's.handover.1': "أرتّب مكان عملي.", // nieuw, nalezen
-    's.handover.2': "هل يمكنك مراجعة عملي؟", // nieuw, nalezen
-    's.handover.3': "أبلّغ المشرف بأنني أنهيت العمل.", // nieuw, nalezen
-    'c.handover.q': "هل انتهى كل شيء؟", // nieuw, nalezen
-    'c.handover.a': "تقريباً. الغرفة رقم أربعة كانت مقفلة.", // nieuw, nalezen
-    'u.tech': "في الورشة", // nieuw, nalezen
-    'l.workshop': "أدوات الورشة", // nieuw, nalezen
-    'w.gereedschap': "الأدوات", // nieuw, nalezen
-    'w.zagen': "ينشر (يقطع بالمنشار)", // nieuw, nalezen
-    'w.slijpen': "يجلخ (ينعّم المعدن أو يقطعه بآلة)", // nieuw, nalezen
-    'w.vonk': "الشرارة", // nieuw, nalezen
-    'w.gehoorbescherming': "واقي السمع (للأذنين)", // nieuw, nalezen
-    'w.lawaai': "الضجيج (صوت عالٍ كثير)", // nieuw, nalezen
-    's.workshop.1': "أين الأدوات؟", // nieuw, nalezen
-    's.workshop.2': "ألبس واقي السمع عند الجلخ.", // nieuw, nalezen
-    's.workshop.3': "انتبهوا من الشرر!", // nieuw, nalezen
-    'c.workshop.q': { m: "لماذا تلبس نظارة؟", f: "لماذا تلبسين نظارة؟", x: "لماذا النظارة؟" }, // nieuw, nalezen
-    'c.workshop.a': "عند النشر قد تدخل قطع صغيرة في عيني.", // nieuw, nalezen
-    'l.power': "فصل الكهرباء أولاً", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'w.stroom': "الكهرباء، التيار", // nieuw, nalezen
-    'w.kabel': "الكابل", // nieuw, nalezen
-    'w.stekker': "القابس (الفيش)", // nieuw, nalezen
-    'w.onderspanning': "تحت الجهد (فيه كهرباء)", // nieuw, nalezen
-    'w.spanningsloos': "مفصول عن الكهرباء، آمن (لا كهرباء فيه)", // nieuw, nalezen
-    'w.elektricien': "الكهربائي", // nieuw, nalezen
-    's.power.1': "هل ما زالت هنا كهرباء؟", // nieuw, nalezen
-    's.power.2': "هذا الكابل معطّل.", // nieuw, nalezen
-    's.power.3': "أنتظر حتى تُفصل الكهرباء عنه.", // nieuw, nalezen
-    'c.power.q': { m: "هل يمكنك تغيير ذلك المصباح؟", f: "هل يمكنكِ تغيير ذلك المصباح؟", x: "هل يمكن تغيير ذلك المصباح؟" }, // nieuw, nalezen
-    'c.power.a': "هل فُصلت الكهرباء؟ إن لم تُفصل، أنتظر الكهربائي.", // nieuw, nalezen
-    'u.garage': "في ورشة السيارات", // nieuw, nalezen
-    'l.garage': "الإطارات والزيت والرافعة", // nieuw, nalezen
-    'w.band': "الإطار", // nieuw, nalezen
-    'w.olie': "الزيت", // nieuw, nalezen
-    'w.accu': "بطارية السيارة", // nieuw, nalezen
-    'w.monteur': "الميكانيكي", // nieuw, nalezen
-    'w.hefbrug': "رافعة السيارات (ترفع السيارة)", // nieuw, nalezen
-    'w.lek': "مثقوب، يسرّب (يخرج منه هواء أو ماء)", // nieuw, nalezen
-    's.garage.1': "الإطار مثقوب.", // nieuw, nalezen
-    's.garage.2': "أين الزيت الجديد؟", // nieuw, nalezen
-    's.garage.3': "السيارة على الرافعة.", // nieuw, nalezen
-    'c.garage.q': { m: "هل يمكنك تغيير إطارات هذه السيارة؟", f: "هل يمكنكِ تغيير إطارات هذه السيارة؟", x: "هل يمكن تغيير إطارات هذه السيارة؟" }, // nieuw, nalezen
-    'c.garage.a': "نعم. أين الإطارات الشتوية؟", // nieuw, nalezen
-    'l.carjob': "الزبون يقرّر", // nieuw, nalezen
-    'w.proefrit': "تجربة القيادة", // nieuw, nalezen
-    'w.rijbewijs': "رخصة القيادة", // nieuw, nalezen
-    'w.akkoord': "موافق، تمام (قول نعم لشيء)", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'w.kosten': "التكاليف (ما يجب دفعه)", // nieuw, nalezen
-    'w.repareren': "يصلح", // nieuw, nalezen
-    'w.onderdeel': "القطعة (من سيارة أو آلة)", // nieuw, nalezen
-    's.carjob.1': "هل الزبون موافق على التكاليف؟", // nieuw, nalezen
-    's.carjob.2': "هذه القطعة معطّلة.", // nieuw, nalezen
-    's.carjob.3': "هل يمكنني القيام بتجربة قيادة؟", // nieuw, nalezen
+    'u.finish': "إنهاء العمل", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.workorder': "أمر العمل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkbon': "أمر العمل (ورقة أو تطبيق فيه مهمتك)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lezen': "يقرأ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aantal': "العدد (كم واحداً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.materiaal': "المواد (ما يلزم للعمل)", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'w.klaarleggen': "يجهّز (يضع ما يحتاجه جاهزاً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handtekening': "التوقيع", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workorder.1': "أقرأ أمر العمل أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workorder.2': "هل هذا العدد صحيح؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workorder.3': "أجهّز المواد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workorder.q': { m: "هل تعرف ما يجب أن تفعله؟", f: "هل تعرفين ما يجب أن تفعليه؟", x: "هل المطلوب منك واضح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workorder.a': "تقريباً. ما معنى هذه الكلمة في أمر العمل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.handover': "انتهى أم ليس بعد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opruimen': "يرتّب، يعيد الأشياء إلى مكانها", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nakijken': "يراجع (ينظر إلى العمل مرة أخرى)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afmelden': "يبلّغ بانتهاء العمل (يقول إن العمل انتهى ثم يغادر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kapot': "معطّل، مكسور", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opslot': "مقفل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijzonderheid': "الباب", // nieuw, nalezen // nagelezen AI 28 nov
+    's.handover.1': "أرتّب مكان عملي.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.handover.2': "هل يمكنك مراجعة عملي؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.handover.3': "أبلّغ المشرف بأنني أنهيت العمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.handover.q': "هل انتهى كل شيء؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.handover.a': "تقريباً. الغرفة رقم أربعة كانت مقفلة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.tech': "في الورشة", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.workshop': "أدوات الورشة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gereedschap': "الأدوات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zagen': "ينشر (يقطع بالمنشار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.slijpen': "يجلخ (ينعّم المعدن أو يقطعه بآلة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vonk': "الشرارة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gehoorbescherming': "واقي السمع (للأذنين)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lawaai': "الضجيج (صوت عالٍ كثير)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workshop.1': "أين الأدوات؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workshop.2': "ألبس واقي السمع عند الجلخ.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workshop.3': "انتبهوا من الشرر!", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workshop.q': { m: "لماذا تلبس نظارة؟", f: "لماذا تلبسين نظارة؟", x: "لماذا النظارة؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workshop.a': "عند النشر قد تدخل قطع صغيرة في عيني.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.power': "فصل الكهرباء أولاً", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'w.stroom': "الكهرباء، التيار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kabel': "الكابل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stekker': "القابس (الفيش)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderspanning': "تحت الجهد (فيه كهرباء)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spanningsloos': "مفصول عن الكهرباء، آمن (لا كهرباء فيه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.elektricien': "الكهربائي", // nieuw, nalezen // nagelezen AI 28 nov
+    's.power.1': "هل ما زالت هنا كهرباء؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.power.2': "هذا الكابل معطّل.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.power.3': "أنتظر حتى تُفصل الكهرباء عنه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.power.q': { m: "هل يمكنك تغيير ذلك المصباح؟", f: "هل يمكنكِ تغيير ذلك المصباح؟", x: "هل يمكن تغيير ذلك المصباح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.power.a': "هل فُصلت الكهرباء؟ إن لم تُفصل، أنتظر الكهربائي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.garage': "في ورشة السيارات", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.garage': "الإطارات والزيت والرافعة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.band': "الإطار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.olie': "الزيت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.accu': "بطارية السيارة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.monteur': "الميكانيكي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hefbrug': "رافعة السيارات (ترفع السيارة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lek': "مثقوب، يسرّب (يخرج منه هواء أو ماء)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.garage.1': "الإطار مثقوب.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.garage.2': "أين الزيت الجديد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.garage.3': "السيارة على الرافعة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.garage.q': { m: "هل يمكنك تغيير إطارات هذه السيارة؟", f: "هل يمكنكِ تغيير إطارات هذه السيارة؟", x: "هل يمكن تغيير إطارات هذه السيارة؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.garage.a': "نعم. أين الإطارات الشتوية؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.carjob': "الزبون يقرّر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.proefrit': "تجربة القيادة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rijbewijs': "رخصة القيادة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.akkoord': "موافق، تمام (قول نعم لشيء)", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'w.kosten': "التكاليف (ما يجب دفعه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.repareren': "يصلح", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderdeel': "القطعة (من سيارة أو آلة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carjob.1': "هل الزبون موافق على التكاليف؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carjob.2': "هذه القطعة معطّلة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carjob.3': "هل يمكنني القيام بتجربة قيادة؟", // nieuw, nalezen // nagelezen AI 28 nov
     'c.carjob.q': { m: "الفرامل سيئة أيضاً. هل تصلحها الآن؟", f: "الفرامل سيئة أيضاً. هل تصلحينها الآن؟", x: "الفرامل سيئة أيضاً. هل يتمّ إصلاحها الآن؟" }, // nieuw, nalezen // nagelezen AI 31 okt
-    'c.carjob.a': "أسأل المسؤول أولاً. يجب أن يوافق الزبون.", // nieuw, nalezen
-    'u.stage': "التدريب العملي", // nieuw, nalezen
-    'l.placement': "تدريبك العملي", // nieuw, nalezen
-    'w.stage': "التدريب العملي (التعلّم في شركة)", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'w.praktijkopleider': "المدرّب في الشركة (يرشدك في الشركة)", // nieuw, nalezen
-    'w.stagebegeleider': "مشرف التدريب من المدرسة (يرشدك من جهة المدرسة)", // nieuw, nalezen
-    'w.pok': "عقد التدريب العملي (يوقّعه المتدرّب والمدرسة والشركة)", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'w.school': "المدرسة", // nieuw, nalezen
-    'w.leerbedrijf': "الشركة المعتمدة للتدريب (شركة يمكن للطلاب التعلم فيها)", // nieuw, nalezen
-    's.placement.1': "أقوم بتدريبي العملي في مستودع.", // nieuw, nalezen
-    's.placement.2': "من هو مدرّبي في الشركة؟", // nieuw, nalezen
-    's.placement.3': "لم أوقّع عقد التدريب بعد.", // nieuw, nalezen
-    'c.placement.q': { m: "متى تبدأ تدريبك العملي؟", f: "متى تبدئين تدريبك العملي؟", x: "متى يبدأ تدريبك العملي؟" }, // nieuw, nalezen
-    'c.placement.a': "يوم الاثنين. أولاً نوقّع عقد التدريب.", // nieuw, nalezen
-    'l.review': "ملاحظات على تدريبك", // nieuw, nalezen
-    'w.beoordeling': "التقييم (مدى جودة عملك)", // nieuw, nalezen
-    'w.leerdoel': "هدف التعلّم (ما يُراد تعلّمه)", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'w.voorbeeld': "المثال", // nieuw, nalezen
-    'w.portfolio': "ملف الإنجاز (ملف فيه أعمالك وإثباتاتها)", // nieuw, nalezen
-    'w.cijfer': "العلامة، الدرجة", // nieuw, nalezen
-    'w.verslag': "التقرير (نص عن عملك)", // nieuw, nalezen
-    's.review.1': "ماذا يمكنني أن أفعل بشكل أفضل؟", // nieuw, nalezen
-    's.review.2': "هل يمكنك أن تعطيني مثالاً؟", // nieuw, nalezen
-    's.review.3': "تقييمي في الأسبوع القادم.", // nieuw, nalezen
-    'c.review.q': { m: "يجب أن تعمل بسرعة أكبر.", f: "يجب أن تعملي بسرعة أكبر.", x: "المطلوب عمل أسرع." }, // nieuw, nalezen
-    'c.review.a': "حسناً. هل يمكنك أن تريني كيف أعمل بسرعة أكبر؟", // nieuw, nalezen
-    'u.society': "المشاركة في هولندا", // nieuw, nalezen
-    'l.council': "البلدية والتصويت", // nieuw, nalezen
-    'w.stemmen': "يصوّت", // nieuw, nalezen
-    'w.verkiezing': "الانتخابات", // nieuw, nalezen
-    'w.gemeenteraad': "المجلس البلدي (يقرّر في شؤون مدينتك)", // nieuw, nalezen
-    'w.parlement': "البرلمان (يضع القوانين)", // nieuw, nalezen
-    'w.stempas': "بطاقة التصويت (البطاقة اللازمة للتصويت)", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'w.burgemeester': "رئيس البلدية", // nieuw, nalezen
-    's.council.1': "هل يحق لي أن أصوّت؟", // nieuw, nalezen
-    's.council.2': "وصلتني بطاقة التصويت بالبريد.", // nieuw, nalezen
-    's.council.3': "المجلس البلدي يقرّر في شؤون حيّي.", // nieuw, nalezen
-    'c.council.q': { m: "هل ستذهب للتصويت يوم الأربعاء؟", f: "هل ستذهبين للتصويت يوم الأربعاء؟", x: "هل التصويت يوم الأربعاء في خطتك؟" }, // nieuw, nalezen
-    'c.council.a': "نعم. معي بطاقة التصويت ووثيقة الهوية.", // nieuw, nalezen
-    'l.police': "الشرطة وحقوقك", // nieuw, nalezen
-    'w.agent': "الشرطي", // nieuw, nalezen
-    'w.boete': "الغرامة (مال يُدفع عقوبةً)", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'w.bezwaar': "الاعتراض (إعلان عدم الموافقة كتابةً)", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'w.rechter': "القاضي", // nieuw, nalezen
-    'w.advocaat': "المحامي", // nieuw, nalezen
-    'w.wet': "القانون", // nieuw, nalezen
-    's.police.1': "حصلت على غرامة.", // nieuw, nalezen
-    's.police.2': "أريد أن أقدّم اعتراضاً.", // nieuw, nalezen
-    's.police.3': "أريد أن أتكلم مع محامٍ.", // nieuw, nalezen
-    'c.police.q': "هل يمكنني رؤية وثيقة هويتك؟", // nieuw, nalezen
-    'c.police.a': "نعم، تفضّل. ماذا يحدث؟", // nieuw, nalezen
-    'u.online': "على الإنترنت في العمل", // nieuw, nalezen
-    'l.login': "تسجيل الدخول", // nieuw, nalezen
-    'w.uitloggen': "يسجّل الخروج", // nieuw, nalezen
-    'w.account': "الحساب", // nieuw, nalezen
-    'w.scherm': "الشاشة", // nieuw, nalezen
-    'w.vergrendelen': "يقفل (الشاشة أو الهاتف)", // nieuw, nalezen
-    'w.gebruikersnaam': "اسم المستخدم", // nieuw, nalezen
-    'w.inlogcode': "رمز الدخول (رمز يصلك برسالة أو في تطبيق)", // nieuw, nalezen
-    's.login.1': "نسيت كلمة المرور.", // nieuw, nalezen
-    's.login.2': "أسجّل الخروج دائماً.", // nieuw, nalezen
-    's.login.3': "لا أعطي DigiD الخاص بي لأحد.", // nieuw, nalezen
-    'c.login.q': { m: "هل تستطيع تسجيل الدخول؟", f: "هل تستطيعين تسجيل الدخول؟", x: "هل ينجح تسجيل الدخول؟" }, // nieuw, nalezen
-    'c.login.a': "لا، كلمة المرور لا تعمل.", // nieuw, nalezen
-    'l.phish': "رسائل البريد المزيفة", // nieuw, nalezen
-    'w.afzender': "المرسِل", // nieuw, nalezen
-    'w.klikken': "ينقر", // nieuw, nalezen
-    'w.bijlage': "المرفق", // nieuw, nalezen
-    'w.verdacht': "مشبوه", // nieuw, nalezen
-    'w.ictafdeling': "قسم تقنية المعلومات (IT)", // nieuw, nalezen
-    'w.wijzigen': "يغيّر", // nieuw, nalezen
-    's.phish.1': "هذه الرسالة مشبوهة.", // nieuw, nalezen
-    's.phish.2': "لا أفتح المرفق.", // nieuw, nalezen
-    's.phish.3': "أغيّر كلمة المرور فوراً.", // nieuw, nalezen
-    'c.phish.q': { m: "هل نقرت على الرابط؟", f: "هل نقرتِ على الرابط؟", x: "هل تمّ النقر على الرابط؟" }, // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.phish.a': "نعم. سأتصل بقسم تقنية المعلومات.", // nieuw, nalezen
-    'l.mychoice': "ما أجيده", // nieuw, nalezen
-    'w.goedin': "جيد في (شيء ما)", // nieuw, nalezen
-    'w.kiezen': "يختار", // nieuw, nalezen
-    'w.beroep': "المهنة، نوع العمل", // nieuw, nalezen
-    'w.bijbaan': "العمل الجانبي (عمل صغير بجانب الدراسة)", // nieuw, nalezen
-    'w.nauwkeurig': "دقيق ومتأنٍّ", // nieuw, nalezen
-    'w.meeloopdag': "يوم المرافقة (يوم لمرافقة شخص في عمله)", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    's.mychoice.1': "أستطيع أن أعمل جيداً بيديّ.", // nieuw, nalezen
-    's.mychoice.2': "أحب العمل مع الناس.", // nieuw, nalezen
-    's.mychoice.3': "هل يمكنني أن أرافقكم يوماً لأرى العمل؟", // nieuw, nalezen
-    'c.mychoice.q': { m: "ما الذي تجيده؟", f: "ما الذي تجيدينه؟", x: "ما نقاط قوتك؟" }, // nieuw, nalezen
-    'c.mychoice.a': "أجيد رعاية الناس. في البيت أعتني بأمي.", // nieuw, nalezen
-    'l.nextstep': "بعد Entree", // nieuw, nalezen
-    'w.niveau2': "المستوى 2 (المستوى التالي في mbo)", // nieuw, nalezen
-    'w.startkwalificatie': "المؤهل الأساسي (شهادة mbo من المستوى 2 أو أعلى)", // nieuw, nalezen
-    'w.bbl': "bbl (العمل في شركة والذهاب إلى المدرسة يوماً في الأسبوع تقريباً)", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'w.doorstromen': "يواصل (إلى مستوى أعلى)", // nieuw, nalezen
-    'w.aanmelden': "يسجّل (في مدرسة أو دورة)", // nieuw, nalezen
+    'c.carjob.a': "أسأل المسؤول أولاً. يجب أن يوافق الزبون.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.stage': "التدريب العملي", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.placement': "تدريبك العملي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stage': "التدريب العملي (التعلّم في شركة)", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'w.praktijkopleider': "المدرّب في الشركة (يرشدك في الشركة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stagebegeleider': "مشرف التدريب من المدرسة (يرشدك من جهة المدرسة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pok': "عقد التدريب العملي (يوقّعه المتدرّب والمدرسة والشركة)", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'w.school': "المدرسة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.leerbedrijf': "الشركة المعتمدة للتدريب (شركة يمكن للطلاب التعلم فيها)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.placement.1': "أقوم بتدريبي العملي في مستودع.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.placement.2': "من هو مدرّبي في الشركة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.placement.3': "لم أوقّع عقد التدريب بعد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.placement.q': { m: "متى تبدأ تدريبك العملي؟", f: "متى تبدئين تدريبك العملي؟", x: "متى يبدأ تدريبك العملي؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.placement.a': "يوم الاثنين. أولاً نوقّع عقد التدريب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.review': "ملاحظات على تدريبك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beoordeling': "التقييم (مدى جودة عملك)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.leerdoel': "هدف التعلّم (ما يُراد تعلّمه)", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'w.voorbeeld': "المثال", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.portfolio': "ملف الإنجاز (ملف فيه أعمالك وإثباتاتها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.cijfer': "العلامة، الدرجة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verslag': "التقرير (نص عن عملك)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.review.1': "ماذا يمكنني أن أفعل بشكل أفضل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.review.2': "هل يمكنك أن تعطيني مثالاً؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.review.3': "تقييمي في الأسبوع القادم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.review.q': { m: "يجب أن تعمل بسرعة أكبر.", f: "يجب أن تعملي بسرعة أكبر.", x: "المطلوب عمل أسرع." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.review.a': "حسناً. هل يمكنك أن تريني كيف أعمل بسرعة أكبر؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.society': "المشاركة في هولندا", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.council': "البلدية والتصويت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stemmen': "يصوّت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verkiezing': "الانتخابات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gemeenteraad': "المجلس البلدي (يقرّر في شؤون مدينتك)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.parlement': "البرلمان (يضع القوانين)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stempas': "بطاقة التصويت (البطاقة اللازمة للتصويت)", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'w.burgemeester': "رئيس البلدية", // nieuw, nalezen // nagelezen AI 28 nov
+    's.council.1': "هل يحق لي أن أصوّت؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.council.2': "وصلتني بطاقة التصويت بالبريد.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.council.3': "المجلس البلدي يقرّر في شؤون حيّي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.council.q': { m: "هل ستذهب للتصويت يوم الأربعاء؟", f: "هل ستذهبين للتصويت يوم الأربعاء؟", x: "هل التصويت يوم الأربعاء في خطتك؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.council.a': "نعم. معي بطاقة التصويت ووثيقة الهوية.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.police': "الشرطة وحقوقك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.agent': "الشرطي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.boete': "الغرامة (مال يُدفع عقوبةً)", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'w.bezwaar': "الاعتراض (إعلان عدم الموافقة كتابةً)", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'w.rechter': "القاضي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.advocaat': "المحامي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wet': "القانون", // nieuw, nalezen // nagelezen AI 28 nov
+    's.police.1': "حصلت على غرامة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.police.2': "أريد أن أقدّم اعتراضاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.police.3': "أريد أن أتكلم مع محامٍ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.police.q': "هل يمكنني رؤية وثيقة هويتك؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.police.a': "نعم، تفضّل. ماذا يحدث؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.online': "على الإنترنت في العمل", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.login': "تسجيل الدخول", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitloggen': "يسجّل الخروج", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.account': "الحساب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scherm': "الشاشة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vergrendelen': "يقفل (الشاشة أو الهاتف)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gebruikersnaam': "اسم المستخدم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inlogcode': "رمز الدخول (رمز يصلك برسالة أو في تطبيق)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.login.1': "نسيت كلمة المرور.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.login.2': "أسجّل الخروج دائماً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.login.3': "لا أعطي DigiD الخاص بي لأحد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.login.q': { m: "هل تستطيع تسجيل الدخول؟", f: "هل تستطيعين تسجيل الدخول؟", x: "هل ينجح تسجيل الدخول؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.login.a': "لا، كلمة المرور لا تعمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.phish': "رسائل البريد المزيفة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afzender': "المرسِل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.klikken': "ينقر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijlage': "المرفق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verdacht': "مشبوه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ictafdeling': "قسم تقنية المعلومات (IT)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wijzigen': "يغيّر", // nieuw, nalezen // nagelezen AI 28 nov
+    's.phish.1': "هذه الرسالة مشبوهة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.phish.2': "لا أفتح المرفق.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.phish.3': "أغيّر كلمة المرور فوراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phish.q': { m: "هل نقرت على الرابط؟", f: "هل نقرتِ على الرابط؟", x: "هل تمّ النقر على الرابط؟" }, // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'c.phish.a': "نعم. سأتصل بقسم تقنية المعلومات.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.mychoice': "ما أجيده", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedin': "جيد في (شيء ما)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kiezen': "يختار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beroep': "المهنة، نوع العمل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijbaan': "العمل الجانبي (عمل صغير بجانب الدراسة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nauwkeurig': "دقيق ومتأنٍّ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meeloopdag': "يوم المرافقة (يوم لمرافقة شخص في عمله)", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    's.mychoice.1': "أستطيع أن أعمل جيداً بيديّ.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mychoice.2': "أحب العمل مع الناس.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mychoice.3': "هل يمكنني أن أرافقكم يوماً لأرى العمل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mychoice.q': { m: "ما الذي تجيده؟", f: "ما الذي تجيدينه؟", x: "ما نقاط قوتك؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mychoice.a': "أجيد رعاية الناس. في البيت أعتني بأمي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.nextstep': "بعد Entree", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.niveau2': "المستوى 2 (المستوى التالي في mbo)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.startkwalificatie': "المؤهل الأساسي (شهادة mbo من المستوى 2 أو أعلى)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bbl': "bbl (العمل في شركة والذهاب إلى المدرسة يوماً في الأسبوع تقريباً)", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'w.doorstromen': "يواصل (إلى مستوى أعلى)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanmelden': "يسجّل (في مدرسة أو دورة)", // nieuw, nalezen // nagelezen AI 28 nov
     'w.opendag': 'يوم الأبواب المفتوحة (يمكنك زيارة مدرسة)', // nieuw, nalezen // nagelezen AI ronde 3
-    's.nextstep.1': "بعد Entree أريد أن أنتقل إلى المستوى 2.", // nieuw, nalezen
-    's.nextstep.2': "أريد أن أعمل وأتعلم في الوقت نفسه.", // nieuw, nalezen
+    's.nextstep.1': "بعد Entree أريد أن أنتقل إلى المستوى 2.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.nextstep.2': "أريد أن أعمل وأتعلم في الوقت نفسه.", // nieuw, nalezen // nagelezen AI 28 nov
     's.nextstep.3': 'متى يوم الأبواب المفتوحة؟', // nieuw, nalezen // nagelezen AI ronde 3
-    'c.nextstep.q': { m: "ماذا ستفعل بعد Entree؟", f: "ماذا ستفعلين بعد Entree؟", x: "ما الخطة بعد Entree؟" }, // nieuw, nalezen
-    'c.nextstep.a': "أريد أن أدرس في bbl. هكذا أعمل وأتعلم.", // nieuw, nalezen
-    'l.email': "الكتابة إلى العمل", // nieuw, nalezen
-    'w.mail': "البريد الإلكتروني، الإيميل", // nieuw, nalezen
-    'w.onderwerp': "الموضوع (في الإيميل)", // nieuw, nalezen
-    'w.beste': "عزيزي، عزيزتي (في بداية رسالة أو إيميل)", // nieuw, nalezen
-    'w.beleefd': "مهذّب", // nieuw, nalezen
-    'w.nalezen': "يعيد القراءة (يراجع قبل الإرسال)", // nieuw, nalezen
-    'w.versturen': "يرسل", // nieuw, nalezen
-    's.email.1': "ماذا أكتب في خانة الموضوع؟", // nieuw, nalezen
-    's.email.2': "أقرأ إيميلي مرة أخرى.", // nieuw, nalezen
-    's.email.3': "سأرسل الإيميل غداً.", // nieuw, nalezen
-    'c.email.q': { m: "هل أرسلت الإيميل عن يوم إجازتك؟", f: "هل أرسلتِ الإيميل عن يوم إجازتك؟", x: "هل أُرسل الإيميل عن يوم إجازتك؟" }, // nieuw, nalezen
-    'c.email.a': "ليس بعد. سأقرؤه مرة أخرى أولاً.", // nieuw, nalezen
-    'l.budget': "مالك كل شهر", // nieuw, nalezen
-    'w.vastelasten': "المصاريف الثابتة (الإيجار، التأمين، الهاتف: كل شهر)", // nieuw, nalezen
-    'w.sparen': "يدّخر (المال)", // nieuw, nalezen
-    'w.abonnement': "الاشتراك (يُدفع ثمنه كل شهر)", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'w.achterafbetalen': "الدفع لاحقاً (الشراء الآن والدفع لاحقاً)", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'w.bedenktijd': "مهلة التراجع (وقت لتغيير الرأي)", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'w.garantie': "الضمان (يجب أن يعمل، وإلا يُصلَح لك)", // nieuw, nalezen
-    's.budget.1': "أدفع المصاريف الثابتة أولاً.", // nieuw, nalezen
-    's.budget.2': "أدّخر قليلاً كل شهر.", // nieuw, nalezen
-    's.budget.3': "سألغي هذا الاشتراك.", // nieuw, nalezen
-    'c.budget.q': { m: "اشترِ هذا الهاتف الآن وادفع لاحقاً!", f: "اشتري هذا الهاتف الآن وادفعي لاحقاً!", x: "هذا الهاتف: الشراء الآن والدفع لاحقاً!" }, // nieuw, nalezen
-    'c.budget.a': "لا، شكراً. الدفع لاحقاً دَين أيضاً.", // nieuw, nalezen
+    'c.nextstep.q': { m: "ماذا ستفعل بعد Entree؟", f: "ماذا ستفعلين بعد Entree؟", x: "ما الخطة بعد Entree؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nextstep.a': "أريد أن أدرس في bbl. هكذا أعمل وأتعلم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.email': "الكتابة إلى العمل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mail': "البريد الإلكتروني، الإيميل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderwerp': "الموضوع (في الإيميل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beste': "عزيزي، عزيزتي (في بداية رسالة أو إيميل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beleefd': "مهذّب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nalezen': "يعيد القراءة (يراجع قبل الإرسال)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.versturen': "يرسل", // nieuw, nalezen // nagelezen AI 28 nov
+    's.email.1': "ماذا أكتب في خانة الموضوع؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.email.2': "أقرأ إيميلي مرة أخرى.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.email.3': "سأرسل الإيميل غداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.email.q': { m: "هل أرسلت الإيميل عن يوم إجازتك؟", f: "هل أرسلتِ الإيميل عن يوم إجازتك؟", x: "هل أُرسل الإيميل عن يوم إجازتك؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.email.a': "ليس بعد. سأقرؤه مرة أخرى أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.budget': "مالك كل شهر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vastelasten': "المصاريف الثابتة (الإيجار، التأمين، الهاتف: كل شهر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sparen': "يدّخر (المال)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.abonnement': "الاشتراك (يُدفع ثمنه كل شهر)", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'w.achterafbetalen': "الدفع لاحقاً (الشراء الآن والدفع لاحقاً)", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'w.bedenktijd': "مهلة التراجع (وقت لتغيير الرأي)", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'w.garantie': "الضمان (يجب أن يعمل، وإلا يُصلَح لك)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.budget.1': "أدفع المصاريف الثابتة أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.budget.2': "أدّخر قليلاً كل شهر.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.budget.3': "سألغي هذا الاشتراك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.budget.q': { m: "اشترِ هذا الهاتف الآن وادفع لاحقاً!", f: "اشتري هذا الهاتف الآن وادفعي لاحقاً!", x: "هذا الهاتف: الشراء الآن والدفع لاحقاً!" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.budget.a': "لا، شكراً. الدفع لاحقاً دَين أيضاً.", // nieuw, nalezen // nagelezen AI 28 nov
     'l.healthy': "اللياقة للعمل", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'w.slapen': "ينام", // nieuw, nalezen // nagelezen AI 22 nov
     'w.ontbijt': "الفطور", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1724,43 +1724,43 @@ const t: CultureTranslation = {
     'c.healthy.w': "حبوب من زميل قد تكون مخدرات. قد تسبب المرض أو الأخطاء في العمل. النوم هو الطريقة الآمنة لمقاومة النعاس.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     // Vervoer en bezorging, Voedselverwerking, Je goed voelen, Weer aan het werk na ziekte (5 nov 2026)
     'u.sick': "المرض", // nieuw, nalezen // nagelezen AI 22 nov
-    'u.delivery': "النقل والتوصيل", // nieuw, nalezen
-    'l.food': "العمل مع الطعام", // nieuw, nalezen
-    'w.mes': "السكين", // nieuw, nalezen
-    'w.snijhandschoen': "القفاز المقاوم للقطع (قفاز يحمي من الجروح)", // nieuw, nalezen
-    'w.vriescel': "غرفة التجميد (غرفة باردة جداً)", // nieuw, nalezen
-    'w.sieraden': "المجوهرات (خاتم، ساعة، أقراط)", // nieuw, nalezen
-    'w.pleister': "اللاصقة الطبية (لجرح صغير)", // nieuw, nalezen
-    'w.vlees': "اللحم", // nieuw, nalezen
-    's.food.1': "أنزع مجوهراتي.", // nieuw, nalezen
-    's.food.2': "أين القفازات المقاومة للقطع؟", // nieuw, nalezen
-    's.food.3': "في غرفة التجميد ألبس معطفاً دافئاً.", // nieuw, nalezen
-    'c.food.q': "لماذا ننظّف خط الإنتاج الآن؟", // nieuw, nalezen
-    'c.food.a': "بعده يأتي منتج بدون مكسّرات.", // nieuw, nalezen
-    'l.parcel': "توصيل الطرود", // nieuw, nalezen
-    'w.pakket': "الطرد", // nieuw, nalezen
-    'w.bestelbus': "شاحنة التوصيل الصغيرة", // nieuw, nalezen
-    'w.bezorgen': "يوصّل (يحمل الشيء إلى الزبون)", // nieuw, nalezen
-    'w.inladen': "يحمّل (يضع الأشياء في الشاحنة)", // nieuw, nalezen
-    'w.aanbellen': "يرنّ جرس الباب", // nieuw, nalezen
-    'w.bewijs': "الدليل (شيء يُظهر ما حدث)", // nieuw, nalezen
-    's.parcel.1': "أمسح كل طرد بالماسح الضوئي.", // nieuw, nalezen
-    's.parcel.2': "الزبون ليس في البيت.", // nieuw, nalezen
-    's.parcel.3': "هل يمكنكم أن تستلموا طرداً للجيران؟", // nieuw, nalezen
-    'c.parcel.q': "هل هذا الطرد لي؟", // nieuw, nalezen
-    'c.parcel.a': "نعم. التوقيع هنا، من فضلك.", // nieuw, nalezen
-    'l.road': "بأمان وعدل على الطريق", // nieuw, nalezen
-    'w.rijden': "يقود (سيارة)", // nieuw, nalezen
-    'w.zwaar': "ثقيل", // nieuw, nalezen
-    'w.steekwagen': "عربة اليد (عربة صغيرة للصناديق الثقيلة)", // nieuw, nalezen
-    'w.route': "المسار (الطريق الذي تسلكه السيارة)", // nieuw, nalezen
-    'w.loondienst': "موظف بأجر (العمل لدى صاحب عمل مقابل أجر)", // nieuw, nalezen
-    'w.bepalen': "يقرّر (يقول كيف يجب أن يُعمل الشيء)", // nieuw, nalezen
-    's.road.1': "هذا الطرد ثقيل جداً. سأحضر عربة اليد.", // nieuw, nalezen
-    's.road.2': "الطريق زلِق. أقود ببطء.", // nieuw, nalezen
-    's.road.3': "من يقرّر مساري وأوقاتي؟", // nieuw, nalezen
-    'c.road.q': { m: "هل تستطيع أن تقوم بجولة أخرى اليوم؟", f: "هل تستطيعين أن تقومي بجولة أخرى اليوم؟", x: "هل يمكن القيام بجولة أخرى اليوم؟" }, // nieuw, nalezen
-    'c.road.a': "لا، عندها لن يبقى لي وقت لاستراحتي.", // nieuw, nalezen
+    'u.delivery': "النقل والتوصيل", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.food': "العمل مع الطعام", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mes': "السكين", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snijhandschoen': "القفاز المقاوم للقطع (قفاز يحمي من الجروح)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vriescel': "غرفة التجميد (غرفة باردة جداً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sieraden': "المجوهرات (خاتم، ساعة، أقراط)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pleister': "اللاصقة الطبية (لجرح صغير)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vlees': "اللحم", // nieuw, nalezen // nagelezen AI 28 nov
+    's.food.1': "أنزع مجوهراتي.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.food.2': "أين القفازات المقاومة للقطع؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.food.3': "في غرفة التجميد ألبس معطفاً دافئاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.food.q': "لماذا ننظّف خط الإنتاج الآن؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.food.a': "بعده يأتي منتج بدون مكسّرات.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.parcel': "توصيل الطرود", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pakket': "الطرد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bestelbus': "شاحنة التوصيل الصغيرة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bezorgen': "يوصّل (يحمل الشيء إلى الزبون)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inladen': "يحمّل (يضع الأشياء في الشاحنة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanbellen': "يرنّ جرس الباب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bewijs': "الدليل (شيء يُظهر ما حدث)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.parcel.1': "أمسح كل طرد بالماسح الضوئي.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.parcel.2': "الزبون ليس في البيت.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.parcel.3': "هل يمكنكم أن تستلموا طرداً للجيران؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.parcel.q': "هل هذا الطرد لي؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.parcel.a': "نعم. التوقيع هنا، من فضلك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.road': "بأمان وعدل على الطريق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rijden': "يقود (سيارة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zwaar': "ثقيل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.steekwagen': "عربة اليد (عربة صغيرة للصناديق الثقيلة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.route': "المسار (الطريق الذي تسلكه السيارة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.loondienst': "موظف بأجر (العمل لدى صاحب عمل مقابل أجر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bepalen': "يقرّر (يقول كيف يجب أن يُعمل الشيء)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.road.1': "هذا الطرد ثقيل جداً. سأحضر عربة اليد.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.road.2': "الطريق زلِق. أقود ببطء.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.road.3': "من يقرّر مساري وأوقاتي؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.road.q': { m: "هل تستطيع أن تقوم بجولة أخرى اليوم؟", f: "هل تستطيعين أن تقومي بجولة أخرى اليوم؟", x: "هل يمكن القيام بجولة أخرى اليوم؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.road.a': "لا، عندها لن يبقى لي وقت لاستراحتي.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.food': "أيدٍ نظيفة، طعام آمن", // nieuw, nalezen // nagelezen AI 22 nov
     'c.food.b': { m: "العمل مع الطعام له قواعد نظافة صارمة: شبكة الشعر، وملابس عمل نظيفة، وأيدٍ مغسولة، وبدون مجوهرات. هذه القواعد نفسها للجميع. هي لا تقول شيئاً عنك: هي تحافظ على سلامة الطعام لمن يأكله. مع السكين، البس دائماً قفازك المقاوم للقطع. في غرفة باردة أو غرفة تجميد، البس الملابس الدافئة التي تحصل عليها، وتدفّأ في استراحتك. هل أنت مريض، أو عندك جرح في يدك؟ أبلغ عن ذلك قبل أن تبدأ. عندها يمكن أن تحصل على لاصقة خاصة، أو عمل آخر لفترة. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "العمل مع الطعام له قواعد نظافة صارمة: شبكة الشعر، وملابس عمل نظيفة، وأيدٍ مغسولة، وبدون مجوهرات. هذه القواعد نفسها للجميع. هي لا تقول شيئاً عنكِ: هي تحافظ على سلامة الطعام لمن يأكله. مع السكين، البسي دائماً قفازك المقاوم للقطع. في غرفة باردة أو غرفة تجميد، البسي الملابس الدافئة التي تحصلين عليها، وتدفّئي في استراحتك. هل أنتِ مريضة، أو عندك جرح في يدك؟ أبلغي عن ذلك قبل أن تبدئي. عندها يمكن أن تحصلي على لاصقة خاصة، أو عمل آخر لفترة. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "العمل مع الطعام له قواعد نظافة صارمة: شبكة الشعر، وملابس عمل نظيفة، وأيدٍ مغسولة، وبدون مجوهرات. هذه القواعد نفسها للجميع. هي لا تقول شيئاً عن أحد: هي تحافظ على سلامة الطعام لمن يأكله. مع السكين، القفاز المقاوم للقطع ضروري دائماً. في غرفة باردة أو غرفة تجميد، تُلبس الملابس الدافئة التي يعطيها العمل، والتدفئة تكون في الاستراحة. مرض، أو جرح في اليد؟ الإبلاغ عن ذلك يكون قبل البدء. عندها يمكن الحصول على لاصقة خاصة، أو عمل آخر لفترة. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.food.p': "عندي جرح صغير في يدي. هل يمكنني أن آخذ لاصقة؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1826,18 +1826,18 @@ const t: CultureTranslation = {
     'c.backtowork.o3': { m: "اذهب إلى البيت بدون كلمة.", f: "اذهبي إلى البيت بدون كلمة.", x: "الذهاب إلى البيت بدون كلمة." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.backtowork.w': "المشرف يريد عودتك، وبصحة جيدة. عند القول بوضوح ما هو ممكن، يستطيع أن يخطّط العمل. العمل الكثير بسرعة كبيرة قد يسبّب المرض من جديد.", // nieuw, nalezen // nagelezen AI 22 nov
     // Sectoren, vier nieuwe lessen per sector (14 nov 2026)
-    'l.measure': "القياس", // nieuw, nalezen
-    'w.rolmaat': "شريط القياس (المتر)", // nieuw, nalezen
-    'w.waterpas': "ميزان الماء (يبيّن هل الشيء مستقيم)", // nieuw, nalezen
-    'w.meten': "يقيس", // nieuw, nalezen
-    'w.rechtlijn': "مستقيم (غير مائل)", // nieuw, nalezen
-    'w.plank': "اللوح الخشبي", // nieuw, nalezen
-    'w.schroef': "البرغي", // nieuw, nalezen
-    's.measure.1': "كم طول هذا اللوح؟", // nieuw, nalezen
-    's.measure.2': "الحائط ليس مستقيماً.", // nieuw, nalezen
-    's.measure.3': "أقيسه مرتين.", // nieuw, nalezen
-    'c.measure.q': "كم يجب أن يكون العرض؟", // nieuw, nalezen
-    'c.measure.a': "تسعون سنتيمتراً. أكتب ذلك.", // nieuw, nalezen
+    'l.measure': "القياس", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rolmaat': "شريط القياس (المتر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.waterpas': "ميزان الماء (يبيّن هل الشيء مستقيم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meten': "يقيس", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rechtlijn': "مستقيم (غير مائل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plank': "اللوح الخشبي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schroef': "البرغي", // nieuw, nalezen // nagelezen AI 28 nov
+    's.measure.1': "كم طول هذا اللوح؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.measure.2': "الحائط ليس مستقيماً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.measure.3': "أقيسه مرتين.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.measure.q': "كم يجب أن يكون العرض؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.measure.a': "تسعون سنتيمتراً. أكتب ذلك.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.measure': "القياس مرتين، والنشر مرة واحدة", // nieuw, nalezen // nagelezen AI 22 nov
     'c.measure.b': { m: "في موقع البناء تكون المقاسات غالباً بالمليمتر. لذلك «تسعمئة» قد تعني 90 سنتيمتراً. لست متأكداً؟ اسأل: «هل هذا بالمليمتر أم بالسنتيمتر؟». كرّر الرقم، واكتبه. قِس مرتين قبل أن تنشر أو تثقب: اللوح القصير يبقى قصيراً. هل أخطأت؟ قل ذلك فوراً. عندها يستطيع الفريق أن يصلح الخطأ، والتكلفة تكون أقل.", f: "في موقع البناء تكون المقاسات غالباً بالمليمتر. لذلك «تسعمئة» قد تعني 90 سنتيمتراً. لستِ متأكدة؟ اسألي: «هل هذا بالمليمتر أم بالسنتيمتر؟». كرّري الرقم، واكتبيه. قيسي مرتين قبل أن تنشري أو تثقبي: اللوح القصير يبقى قصيراً. هل أخطأتِ؟ قولي ذلك فوراً. عندها يستطيع الفريق أن يصلح الخطأ، والتكلفة تكون أقل.", x: "في موقع البناء تكون المقاسات غالباً بالمليمتر. لذلك «تسعمئة» قد تعني 90 سنتيمتراً. عند الشك؟ السؤال أفضل: «هل هذا بالمليمتر أم بالسنتيمتر؟». المهم تكرار الرقم، وكتابته. القياس مرتين يكون قبل النشر أو الثقب: اللوح القصير يبقى قصيراً. حدث خطأ؟ الإخبار به يكون فوراً. عندها يستطيع الفريق أن يصلح الخطأ، والتكلفة تكون أقل." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.measure.p': "هل هذا بالمليمتر أم بالسنتيمتر؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1846,18 +1846,18 @@ const t: CultureTranslation = {
     'c.measure.o2': "نشر اللوح حسب الرقم الذي ربما قيل.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.measure.o3': "الانتظار حتى يأتي الزميل لينظر بنفسه.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.measure.w': "المقاس الخاطئ يكلّف مواد ووقتاً. تكرار الرقم يأخذ ثانيتين، والجميع في موقع البناء يفعل ذلك.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.siteday': "موقع بناء مرتّب", // nieuw, nalezen
-    'w.bouwplaats': "موقع البناء", // nieuw, nalezen
-    'w.uitvoerder': "مسؤول الموقع (الرئيس في موقع البناء)", // nieuw, nalezen
-    'w.keet': "كابينة الموقع (للاستراحات والاجتماعات)", // nieuw, nalezen
-    'w.afval': "النفايات، القمامة", // nieuw, nalezen
-    'w.container': "الحاوية (صندوق كبير جداً للنفايات)", // nieuw, nalezen
-    'w.struikelen': "يتعثّر (يسقط بسبب شيء على الأرض)", // nieuw, nalezen
-    's.siteday.1': "النفايات توضع في الحاوية.", // nieuw, nalezen
-    's.siteday.2': "مسؤول الموقع في الكابينة.", // nieuw, nalezen
-    's.siteday.3': "انتبه، قد تتعثّر هنا.", // nieuw, nalezen
-    'c.siteday.q': "أين يجب أن يوضع هذا الخشب؟", // nieuw, nalezen
-    'c.siteday.a': "في الحاوية عند المدخل.", // nieuw, nalezen
+    'l.siteday': "موقع بناء مرتّب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bouwplaats': "موقع البناء", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitvoerder': "مسؤول الموقع (الرئيس في موقع البناء)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.keet': "كابينة الموقع (للاستراحات والاجتماعات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afval': "النفايات، القمامة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.container': "الحاوية (صندوق كبير جداً للنفايات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.struikelen': "يتعثّر (يسقط بسبب شيء على الأرض)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.siteday.1': "النفايات توضع في الحاوية.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.siteday.2': "مسؤول الموقع في الكابينة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.siteday.3': "انتبه، قد تتعثّر هنا.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.siteday.q': "أين يجب أن يوضع هذا الخشب؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.siteday.a': "في الحاوية عند المدخل.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.siteday': "الموقع المرتّب موقع آمن", // nieuw, nalezen // nagelezen AI 22 nov
     'c.siteday.b': { m: "في موقع البناء، الترتيب جزء من العمل، للجميع. الألواح والكابلات والنفايات المتروكة على الأرض تجعل الناس يتعثّرون ويسقطون. لذلك رتّب مكانك خلال اليوم، وليس في آخره فقط. النفايات تُفرز: الخشب والحجر والمعدن توضع غالباً في حاويات مختلفة. لست متأكداً أي حاوية؟ اسأل. هل ترى مسماراً بارزاً، أو حفرة بلا غطاء؟ أصلح ذلك إذا كان ممكناً بأمان، أو أخبر مسؤول الموقع (de uitvoerder). القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في موقع البناء، الترتيب جزء من العمل، للجميع. الألواح والكابلات والنفايات المتروكة على الأرض تجعل الناس يتعثّرون ويسقطون. لذلك رتّبي مكانك خلال اليوم، وليس في آخره فقط. النفايات تُفرز: الخشب والحجر والمعدن توضع غالباً في حاويات مختلفة. لستِ متأكدة أي حاوية؟ اسألي. هل ترين مسماراً بارزاً، أو حفرة بلا غطاء؟ أصلحي ذلك إذا كان ممكناً بأمان، أو أخبري مسؤول الموقع (de uitvoerder). القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في موقع البناء، الترتيب جزء من العمل، للجميع. الألواح والكابلات والنفايات المتروكة على الأرض تجعل الناس يتعثّرون ويسقطون. لذلك ترتيب مكان العمل يكون خلال اليوم، وليس في آخره فقط. النفايات تُفرز: الخشب والحجر والمعدن توضع غالباً في حاويات مختلفة. شك في أي حاوية؟ السؤال أفضل. مسمار بارز، أو حفرة بلا غطاء؟ الإصلاح جيد إذا كان ممكناً بأمان، أو إخبار مسؤول الموقع (de uitvoerder). القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.siteday.p': "سأرتّب هذا. حتى لا يتعثّر أحد.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1866,18 +1866,18 @@ const t: CultureTranslation = {
     'c.siteday.o2': "المشي فوقها: ليست ألواحك.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.siteday.o3': "الانتظار: شخص آخر سيرفعها.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.siteday.w': "الجميع يستعمل الممرات نفسها. من يرى خطراً يفعل شيئاً: هذا عادي في موقع البناء.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.shifts': "تسليم نوبتك", // nieuw, nalezen
-    'w.vroegedienst': "النوبة الصباحية", // nieuw, nalezen
-    'w.latedienst': "النوبة المسائية", // nieuw, nalezen
-    'w.nachtdienst': "النوبة الليلية", // nieuw, nalezen
-    'w.overdracht': "التسليم (إخبار النوبة التالية بما حدث)", // nieuw, nalezen
-    'w.aflossen': "يستلم النوبة من زميل (الشخص التالي يأتي، والأول يذهب)", // nieuw, nalezen
-    'w.teamleider': "قائد الفريق", // nieuw, nalezen
-    's.shifts.1': "عندي النوبة المسائية هذا الأسبوع.", // nieuw, nalezen
-    's.shifts.2': "من يستلم مكاني؟", // nieuw, nalezen
-    's.shifts.3': "الآلة رقم اثنين كان فيها عطل.", // nieuw, nalezen
-    'c.shifts.q': "هل حدث شيء في نوبتك؟", // nieuw, nalezen
-    'c.shifts.a': "نعم. خط الإنتاج توقّف نصف ساعة.", // nieuw, nalezen
+    'l.shifts': "تسليم نوبتك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vroegedienst': "النوبة الصباحية", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.latedienst': "النوبة المسائية", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nachtdienst': "النوبة الليلية", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.overdracht': "التسليم (إخبار النوبة التالية بما حدث)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aflossen': "يستلم النوبة من زميل (الشخص التالي يأتي، والأول يذهب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teamleider': "قائد الفريق", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shifts.1': "عندي النوبة المسائية هذا الأسبوع.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shifts.2': "من يستلم مكاني؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shifts.3': "الآلة رقم اثنين كان فيها عطل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shifts.q': "هل حدث شيء في نوبتك؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shifts.a': "نعم. خط الإنتاج توقّف نصف ساعة.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.shifts': "إخبار النوبة التالية", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shifts.b': { m: "المصنع يعمل غالباً ليلاً ونهاراً، بنوبات. في آخر نوبتك، يستلم زميل مكانك. لا تذهب هكذا: انتظر حتى يصل زميلك. قل بكلمات قليلة ما حدث: عطل، أو منتج فيه خطأ، أو شيء لم ينتهِ. شركات كثيرة عندها أيضاً قائمة أو شاشة لهذا. المشكلة التي لا تنقلها ترجع في النوبة التالية، وعندها لا أحد يعرف السبب. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "المصنع يعمل غالباً ليلاً ونهاراً، بنوبات. في آخر نوبتك، يستلم زميل مكانك. لا تذهبي هكذا: انتظري حتى يصل زميلك. قولي بكلمات قليلة ما حدث: عطل، أو منتج فيه خطأ، أو شيء لم ينتهِ. شركات كثيرة عندها أيضاً قائمة أو شاشة لهذا. المشكلة التي لا تنقلينها ترجع في النوبة التالية، وعندها لا أحد يعرف السبب. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "المصنع يعمل غالباً ليلاً ونهاراً، بنوبات. في آخر نوبتك، يستلم زميل مكانك. الذهاب هكذا غير صحيح: الانتظار يكون حتى يصل الزميل. المهم القول بكلمات قليلة ما حدث: عطل، أو منتج فيه خطأ، أو شيء لم ينتهِ. شركات كثيرة عندها أيضاً قائمة أو شاشة لهذا. المشكلة التي لا تُنقل ترجع في النوبة التالية، وعندها لا أحد يعرف السبب. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.shifts.p': "الآلة كان فيها عطل. الآن تعمل من جديد.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1886,18 +1886,18 @@ const t: CultureTranslation = {
     'c.shifts.o2': "الذهاب إلى البيت: النوبة انتهت.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shifts.o3': "إيقاف الآلة والذهاب.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shifts.w': "الآلة التي تعمل لا يجوز أن تبقى وحدها. عند الانتظار والإبلاغ، يستمر العمل بأمان، ويستطيع قائد الفريق أن يحلّ المشكلة.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.signals': { m: "قل ما تراه", f: "قولي ما ترينه", x: "الإخبار بما يُرى" }, // nieuw, nalezen
-    'w.duizelig': "يشعر بدوخة", // nieuw, nalezen
-    'w.misselijk': "يشعر بغثيان (يحسّ أنه سيتقيّأ)", // nieuw, nalezen
-    'w.benauwd': "يتنفّس بصعوبة", // nieuw, nalezen
-    'w.koorts': "الحمّى", // nieuw, nalezen
-    'w.verward': "مشوَّش (الشخص لا يعرف أين هو)", // nieuw, nalezen
-    'w.anders': "مختلف (ليس كالعادة)", // nieuw, nalezen
-    's.signals.1': "السيدة تشعر بدوخة.", // nieuw, nalezen
-    's.signals.2': "السيد لا يأكل اليوم.", // nieuw, nalezen
-    's.signals.3': "هل يمكنك المجيء لإلقاء نظرة؟", // nieuw, nalezen
-    'c.signals.q': "كيف حال السيد Jansen؟", // nieuw, nalezen
-    'c.signals.a': "هو مشوَّش. هذا مختلف عن أمس.", // nieuw, nalezen
+    'l.signals': { m: "قل ما تراه", f: "قولي ما ترينه", x: "الإخبار بما يُرى" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'w.duizelig': "يشعر بدوخة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.misselijk': "يشعر بغثيان (يحسّ أنه سيتقيّأ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.benauwd': "يتنفّس بصعوبة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koorts': "الحمّى", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verward': "مشوَّش (الشخص لا يعرف أين هو)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.anders': "مختلف (ليس كالعادة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.signals.1': "السيدة تشعر بدوخة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.signals.2': "السيد لا يأكل اليوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.signals.3': "هل يمكنك المجيء لإلقاء نظرة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.signals.q': "كيف حال السيد Jansen؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.signals.a': "هو مشوَّش. هذا مختلف عن أمس.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.signals': { m: "أنت ترى المستفيد من الرعاية كل يوم", f: "أنتِ ترين المستفيد من الرعاية كل يوم", x: "المستفيد من الرعاية أمامك كل يوم" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.signals.b': { m: "أنت غالباً أكثر من يرى المستفيد من الرعاية. لذلك تلاحظ أولاً عندما يتغيّر شيء: أكل أقل، ألم أكثر، تشوُّش، صعوبة في التنفّس. لا يلزم أن تعرف ما هو. قل ما تراه، وقل متى رأيته. أخبر الممرّضة في اليوم نفسه، واكتب ذلك إذا كانت هذه مهمتك. هل يبدو الأمر خطيراً؟ لا تنتظر: اتصل بالممرّضة فوراً. مرة زائدة أفضل من مرة ناقصة.", f: "أنت غالباً أكثر من يرى المستفيد من الرعاية. لذلك تلاحظين أولاً عندما يتغيّر شيء: أكل أقل، ألم أكثر، تشوُّش، صعوبة في التنفّس. لا يلزم أن تعرفي ما هو. قولي ما ترينه، وقولي متى رأيتِه. أخبري الممرّضة في اليوم نفسه، واكتبي ذلك إذا كانت هذه مهمتك. هل يبدو الأمر خطيراً؟ لا تنتظري: اتصلي بالممرّضة فوراً. مرة زائدة أفضل من مرة ناقصة.", x: "أنت غالباً أكثر من يرى المستفيد من الرعاية. لذلك تظهر لك التغيّرات أولاً: أكل أقل، ألم أكثر، تشوُّش، صعوبة في التنفّس. معرفة ما هو غير لازمة. المهم القول ما يُرى، ومتى شوهد. إخبار الممرّضة يكون في اليوم نفسه، مع الكتابة إذا كانت هذه مهمتك. هل يبدو الأمر خطيراً؟ لا انتظار: الاتصال بالممرّضة فوراً. مرة زائدة أفضل من مرة ناقصة." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.signals.p': "السيدة لا تأكل وتشعر بدوخة. هذا مختلف عن العادة.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1906,18 +1906,18 @@ const t: CultureTranslation = {
     'c.signals.o2': "الانتظار بضعة أيام: ربما يزول الأمر.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.signals.o3': "إعطاؤها حبة من الخزانة.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.signals.w': "تغيّر صغير قد يكون أول علامة على مرض. لست أنت من يقرّر ما هو: الممرّضة تقرّر. لكنها لا تستطيع أن تتصرّف إلا إذا أخبرتها.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.transfer': "مساعدة شخص على النهوض", // nieuw, nalezen
-    'w.tillift': "رافعة الأشخاص (آلة ترفع الشخص)", // nieuw, nalezen
-    'w.rollator': "المشّاية بعجلات", // nieuw, nalezen
-    'w.bed': "السرير", // nieuw, nalezen
-    'w.opstaan': "ينهض، يقف", // nieuw, nalezen
-    'w.gaanzitten': "يجلس", // nieuw, nalezen
-    'w.voorzichtig': "بحذر، برفق", // nieuw, nalezen
-    's.transfer.1': "سأساعدك على النهوض.", // nieuw, nalezen
-    's.transfer.2': "هل تريد أن تجلس قليلاً؟", // nieuw, nalezen
-    's.transfer.3': "أولاً سأحضر الرافعة.", // nieuw, nalezen
-    'c.transfer.q': { m: "هل تستطيع أن ترفع السيدة من السرير؟", f: "هل تستطيعين أن ترفعي السيدة من السرير؟", x: "هل يمكن رفع السيدة من السرير؟" }, // nieuw, nalezen
-    'c.transfer.a': "ليس وحدي. سأحضر الرافعة.", // nieuw, nalezen
+    'l.transfer': "مساعدة شخص على النهوض", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tillift': "رافعة الأشخاص (آلة ترفع الشخص)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rollator': "المشّاية بعجلات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bed': "السرير", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opstaan': "ينهض، يقف", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gaanzitten': "يجلس", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorzichtig': "بحذر، برفق", // nieuw, nalezen // nagelezen AI 28 nov
+    's.transfer.1': "سأساعدك على النهوض.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.transfer.2': "هل تريد أن تجلس قليلاً؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.transfer.3': "أولاً سأحضر الرافعة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.transfer.q': { m: "هل تستطيع أن ترفع السيدة من السرير؟", f: "هل تستطيعين أن ترفعي السيدة من السرير؟", x: "هل يمكن رفع السيدة من السرير؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.transfer.a': "ليس وحدي. سأحضر الرافعة.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.transfer': "أولاً الكلام، ثم المساعدة", // nieuw, nalezen // nagelezen AI 22 nov
     'c.transfer.b': { m: "قبل أن تلمس المستفيد من الرعاية، قل ما ستفعله: «Ik help u nu met opstaan». عندها لا يفزع المستفيد، ويستطيع أن يساعد. دع المستفيد يفعل ما يستطيع فعله بنفسه: هذا يبقيه قوياً. لا ترفع شخصاً وحدك. استعمل الوسائل الموجودة، مثل الرافعة، واعمل كما تعلّمت. لم تتعلّم ذلك بعد؟ اسأل أولاً. ظهرك يجب أن يتحمّل حياة عمل كاملة. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "قبل أن تلمسي المستفيد من الرعاية، قولي ما ستفعلينه: «Ik help u nu met opstaan». عندها لا يفزع المستفيد، ويستطيع أن يساعد. دعي المستفيد يفعل ما يستطيع فعله بنفسه: هذا يبقيه قوياً. لا ترفعي شخصاً وحدكِ. استعملي الوسائل الموجودة، مثل الرافعة، واعملي كما تعلّمتِ. لم تتعلّمي ذلك بعد؟ اسألي أولاً. ظهرك يجب أن يتحمّل حياة عمل كاملة. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "قبل لمس المستفيد من الرعاية، يُقال له ما سيحدث: «Ik help u nu met opstaan». عندها لا يفزع المستفيد، ويستطيع أن يساعد. الأفضل ترك المستفيد يفعل ما يستطيع فعله بنفسه: هذا يبقيه قوياً. رفع شخص بدون مساعدة ممنوع. المطلوب استعمال الوسائل الموجودة، مثل الرافعة، والعمل بالطريقة التي جاءت في التدريب. لا تدريب بعد؟ السؤال أولاً. ظهرك يجب أن يتحمّل حياة عمل كاملة. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.transfer.p': "سأساعدك الآن على النهوض. هل أنت جاهز؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1926,18 +1926,18 @@ const t: CultureTranslation = {
     'c.transfer.o2': "رفعها بدون مساعدة: ليست ثقيلة.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.transfer.o3': "تجربة الرافعة: لا يمكن أن تكون صعبة.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.transfer.w': "رفع شخص بطريقة خاطئة قد يؤذي المستفيد ويؤذي ظهرك. سؤال زميل يأخذ بضع دقائق. السقوط قد يأخذ شهوراً.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.dishes': "غسل الأواني", // nieuw, nalezen
-    'w.afwas': "غسل الأواني، الأواني المتّسخة", // nieuw, nalezen
-    'w.vaatwasser': "غسّالة الأواني", // nieuw, nalezen
-    'w.bord': "الصحن", // nieuw, nalezen
-    'w.glas': "الكأس، الزجاج", // nieuw, nalezen
-    'w.bestek': "أدوات المائدة (سكين وشوكة وملعقة)", // nieuw, nalezen
-    'w.afdrogen': "يجفّف (بقطعة قماش)", // nieuw, nalezen
-    's.dishes.1': "غسّالة الأواني انتهت.", // nieuw, nalezen
-    's.dishes.2': "انتبه، انكسرت كأس.", // nieuw, nalezen
-    's.dishes.3': "لم تبقَ أدوات مائدة نظيفة.", // nieuw, nalezen
-    'c.dishes.q': "هل بقيت كؤوس نظيفة؟", // nieuw, nalezen
-    'c.dishes.a': "نعم، سأحضرها فوراً.", // nieuw, nalezen
+    'l.dishes': "غسل الأواني", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afwas': "غسل الأواني، الأواني المتّسخة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vaatwasser': "غسّالة الأواني", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bord': "الصحن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.glas': "الكأس، الزجاج", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bestek': "أدوات المائدة (سكين وشوكة وملعقة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afdrogen': "يجفّف (بقطعة قماش)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dishes.1': "غسّالة الأواني انتهت.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dishes.2': "انتبه، انكسرت كأس.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dishes.3': "لم تبقَ أدوات مائدة نظيفة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dishes.q': "هل بقيت كؤوس نظيفة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dishes.a': "نعم، سأحضرها فوراً.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.dishes': "زجاج مكسور: الإخبار فوراً", // nieuw, nalezen // nagelezen AI 22 nov
     'c.dishes.b': { m: "في المطبخ ينكسر الزجاج. هذا عادي، ولا أحد يغضب من ذلك. لكن قل ذلك فوراً، بصوت عالٍ وواضح: «Glas!». لا تلتقط القطع بيديك العاريتين: استعمل فرشاة. هل سقط زجاج قرب الطعام، أو في الثلج؟ عندها يجب رمي ذلك الطعام أو ذلك الثلج، كله. قطعة زجاج صغيرة في وجبة خطيرة جداً على الضيف. الزجاج يوضع في صندوقه الخاص، لا في كيس يحمله أحد. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في المطبخ ينكسر الزجاج. هذا عادي، ولا أحد يغضب من ذلك. لكن قولي ذلك فوراً، بصوت عالٍ وواضح: «Glas!». لا تلتقطي القطع بيديك العاريتين: استعملي فرشاة. هل سقط زجاج قرب الطعام، أو في الثلج؟ عندها يجب رمي ذلك الطعام أو ذلك الثلج، كله. قطعة زجاج صغيرة في وجبة خطيرة جداً على الضيف. الزجاج يوضع في صندوقه الخاص، لا في كيس يحمله أحد. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في المطبخ ينكسر الزجاج. هذا عادي، ولا أحد يغضب من ذلك. لكن الإخبار يكون فوراً، بصوت عالٍ وواضح: «Glas!». القطع لا تُلتقط باليدين العاريتين: الفرشاة أفضل. هل سقط زجاج قرب الطعام، أو في الثلج؟ عندها يجب رمي ذلك الطعام أو ذلك الثلج، كله. قطعة زجاج صغيرة في وجبة خطيرة جداً على الضيف. الزجاج يوضع في صندوقه الخاص، لا في كيس يحمله أحد. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.dishes.p': "انتبهوا، زجاج! سأنظّفه فوراً.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1946,18 +1946,18 @@ const t: CultureTranslation = {
     'c.dishes.o2': "إخراج القطع الظاهرة.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.dishes.o3': "السكوت: الزحمة كبيرة الآن.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.dishes.w': "قطع الزجاج الصغيرة لا تُرى في الثلج. الثلج الجديد يكلّف قليلاً. ضيف في مشروبه زجاج قد يتأذّى كثيراً.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.rush': "وقت الزحمة", // nieuw, nalezen
-    'w.heet': "ساخن", // nieuw, nalezen
-    'w.chef': "الشيف (رئيس المطبخ)", // nieuw, nalezen
-    'w.terras': "التراس (طاولات في الخارج)", // nieuw, nalezen
-    'w.tafel': "الطاولة", // nieuw, nalezen
-    'w.dienblad': "الصينية", // nieuw, nalezen
-    'w.wachten': "ينتظر", // nieuw, nalezen
-    's.rush.1': "ساخن! أمرّ من خلفك.", // nieuw, nalezen
-    's.rush.2': "الطاولة رقم ستة تنتظر الطعام.", // nieuw, nalezen
-    's.rush.3': "آخذ هذا إلى التراس.", // nieuw, nalezen
-    'c.rush.q': { m: "هل تستطيع أن تهتم بالطاولة رقم أربعة؟", f: "هل تستطيعين أن تهتمي بالطاولة رقم أربعة؟", x: "هل يمكن الاهتمام بالطاولة رقم أربعة؟" }, // nieuw, nalezen
-    'c.rush.a': "نعم، شيف. آتي حالاً.", // nieuw, nalezen
+    'l.rush': "وقت الزحمة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.heet': "ساخن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.chef': "الشيف (رئيس المطبخ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.terras': "التراس (طاولات في الخارج)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tafel': "الطاولة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dienblad': "الصينية", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wachten': "ينتظر", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rush.1': "ساخن! أمرّ من خلفك.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rush.2': "الطاولة رقم ستة تنتظر الطعام.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rush.3': "آخذ هذا إلى التراس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rush.q': { m: "هل تستطيع أن تهتم بالطاولة رقم أربعة؟", f: "هل تستطيعين أن تهتمي بالطاولة رقم أربعة؟", x: "هل يمكن الاهتمام بالطاولة رقم أربعة؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rush.a': "نعم، شيف. آتي حالاً.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.rush': "كلمات قصيرة وقت الزحمة", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rush.b': { m: "وقت الزحمة، يتكلم الناس في المطبخ بكلمات قصيرة: «Heet!»، «Achter!»، «Tafel zes!». هذه ليست قلة أدب. هذا سريع وآمن: الكل يعرف أين المقالي الساخنة والسكاكين. نادِ «Heet!» أو «Achter!» أنت أيضاً عندما تمرّ من خلف أحد. هل سمعت طلباً؟ كرّره: «Ja, chef». عندها يعرف الشيف أنك سمعت. هل كلّمك أحد بجفاف وقت الزحمة؟ غالباً ينتهي ذلك بعد الخدمة. هل يبقى الأمر مزعجاً؟ عندها تكلّم عنه في وقت هادئ.", f: "وقت الزحمة، يتكلم الناس في المطبخ بكلمات قصيرة: «Heet!»، «Achter!»، «Tafel zes!». هذه ليست قلة أدب. هذا سريع وآمن: الكل يعرف أين المقالي الساخنة والسكاكين. نادي «Heet!» أو «Achter!» أنتِ أيضاً عندما تمرّين من خلف أحد. هل سمعتِ طلباً؟ كرّريه: «Ja, chef». عندها يعرف الشيف أنك سمعتِ. هل كلّمك أحد بجفاف وقت الزحمة؟ غالباً ينتهي ذلك بعد الخدمة. هل يبقى الأمر مزعجاً؟ عندها تكلّمي عنه في وقت هادئ.", x: "وقت الزحمة، يتكلم الناس في المطبخ بكلمات قصيرة: «Heet!»، «Achter!»، «Tafel zes!». هذه ليست قلة أدب. هذا سريع وآمن: الكل يعرف أين المقالي الساخنة والسكاكين. المناداة بكلمة «Heet!» أو «Achter!» مطلوبة منك أيضاً عند المرور من خلف أحد. طلب مسموع؟ تكراره مهم: «Ja, chef». عندها يعرف الشيف أن الطلب وصل. هل كلّمك أحد بجفاف وقت الزحمة؟ غالباً ينتهي ذلك بعد الخدمة. هل يبقى الأمر مزعجاً؟ عندها الكلام عنه يكون في وقت هادئ." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.rush.p': "خلفك! معي مقلاة ساخنة.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1966,18 +1966,18 @@ const t: CultureTranslation = {
     'c.rush.o2': "التوقّف، والقول له إنه قليل الأدب.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rush.o3': "تنفيذ الطلب، لكن بدون أي رد.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rush.w': "وقت الزحمة، الكلام القصير عادي وليس شخصياً. تكرار الطلب يبيّن أنك سمعته. هذا يبقي المطبخ سريعاً وآمناً.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.rounds': "جولتك", // nieuw, nalezen
-    'w.kantoor': "المكتب", // nieuw, nalezen
-    'w.verdieping': "الطابق (الطابق الأول أو الثاني في مبنى)", // nieuw, nalezen
-    'w.gang': "الممر", // nieuw, nalezen
-    'w.toiletpapier': "ورق المرحاض", // nieuw, nalezen
-    'w.zeep': "الصابون", // nieuw, nalezen
-    'w.bijvullen': "يعيد التعبئة، يملأ من جديد", // nieuw, nalezen
-    's.rounds.1': "أبدأ في الطابق الثاني.", // nieuw, nalezen
-    's.rounds.2': "ورق المرحاض انتهى.", // nieuw, nalezen
-    's.rounds.3': "أعيد تعبئة الصابون.", // nieuw, nalezen
-    'c.rounds.q': "هل نظّفت المكتب رقم ثلاثة؟", // nieuw, nalezen
-    'c.rounds.a': "لا، ما زال أحد يعمل هناك.", // nieuw, nalezen
+    'l.rounds': "جولتك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kantoor': "المكتب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verdieping': "الطابق (الطابق الأول أو الثاني في مبنى)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gang': "الممر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toiletpapier': "ورق المرحاض", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zeep': "الصابون", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijvullen': "يعيد التعبئة، يملأ من جديد", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rounds.1': "أبدأ في الطابق الثاني.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rounds.2': "ورق المرحاض انتهى.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rounds.3': "أعيد تعبئة الصابون.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rounds.q': "هل نظّفت المكتب رقم ثلاثة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rounds.a': "لا، ما زال أحد يعمل هناك.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.rounds': "التنظيف حيث يعمل الناس", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rounds.b': { m: "غالباً تنظّف والآخرون ما زالوا في العمل. سلّم عليهم، واسأل: «Mag ik hier even schoonmaken?». أغلب الناس يقولون نعم. هل أحد في اجتماع أو على الهاتف؟ عندها ارجع لاحقاً. لا تحرّك الأوراق على المكتب، ولا تقرأها: نظّف حولها. لجولتك وقت محدّد. هل الوقت قصير لعمل جيد؟ لا تترك غرفاً بصمت. أخبر مشرفك بما لم تستطع فعله، ولماذا.", f: "غالباً تنظّفين والآخرون ما زالوا في العمل. سلّمي عليهم، واسألي: «Mag ik hier even schoonmaken?». أغلب الناس يقولون نعم. هل أحد في اجتماع أو على الهاتف؟ عندها ارجعي لاحقاً. لا تحرّكي الأوراق على المكتب، ولا تقرئيها: نظّفي حولها. لجولتك وقت محدّد. هل الوقت قصير لعمل جيد؟ لا تتركي غرفاً بصمت. أخبري مشرفك بما لم تستطيعي فعله، ولماذا.", x: "غالباً يكون التنظيف والآخرون ما زالوا في العمل. المطلوب السلام عليهم، والسؤال: «Mag ik hier even schoonmaken?». أغلب الناس يقولون نعم. هل أحد في اجتماع أو على الهاتف؟ عندها الرجوع لاحقاً أفضل. الأوراق على المكتب لا تُحرَّك ولا تُقرأ: التنظيف يكون حولها. لجولتك وقت محدّد. هل الوقت قصير لعمل جيد؟ ترك غرف بصمت غير صحيح. المشرف يجب أن يعرف ما لم يُنجَز، ولماذا." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.rounds.p': "مساء الخير. هل يمكنني أن أنظّف هنا قليلاً؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1986,18 +1986,18 @@ const t: CultureTranslation = {
     'c.rounds.o2': "الذهاب إلى البيت، على أمل ألّا يرى أحد.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rounds.o3': "تنظيفهما بسرعة كبيرة، بدون الأرض.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rounds.w': "الزبون الذي يجد مكتباً متّسخاً يشتكي. المشرف الذي يعرف يستطيع أن يشرح، أو يعطيك وقتاً أكثر. الإخبار ليس فشلاً.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.colours': "الألوان وقطع القماش", // nieuw, nalezen
-    'w.doek': "قطعة القماش (للتنظيف)", // nieuw, nalezen
-    'w.spons': "الإسفنجة", // nieuw, nalezen
-    'w.rood': "أحمر", // nieuw, nalezen
-    'w.blauw': "أزرق", // nieuw, nalezen
-    'w.geel': "أصفر", // nieuw, nalezen
-    'w.groen': "أخضر", // nieuw, nalezen
-    's.colours.1': "قطعة القماش الحمراء للمرحاض.", // nieuw, nalezen
-    's.colours.2': "خذ قطعة قماش نظيفة.", // nieuw, nalezen
-    's.colours.3': "أي لون أستعمل هنا؟", // nieuw, nalezen
-    'c.colours.q': "هل يمكنني أن أستعمل هذه القطعة للمكتب؟", // nieuw, nalezen
-    'c.colours.a': "لا، الحمراء للمرحاض فقط.", // nieuw, nalezen
+    'l.colours': "الألوان وقطع القماش", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doek': "قطعة القماش (للتنظيف)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spons': "الإسفنجة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rood': "أحمر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.blauw': "أزرق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geel': "أصفر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.groen': "أخضر", // nieuw, nalezen // nagelezen AI 28 nov
+    's.colours.1': "قطعة القماش الحمراء للمرحاض.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.colours.2': "خذ قطعة قماش نظيفة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.colours.3': "أي لون أستعمل هنا؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.colours.q': "هل يمكنني أن أستعمل هذه القطعة للمكتب؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.colours.a': "لا، الحمراء للمرحاض فقط.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.colours': "لكل لون مكانه", // nieuw, nalezen // nagelezen AI 22 nov
     'c.colours.b': { m: "شركات تنظيف كثيرة تعمل بالألوان. كل لون من قطع القماش والإسفنج والدلاء لمكان واحد. غالباً الأحمر للمرحاض، والأزرق للمكاتب والطاولات. هكذا لا تصل أوساخ المرحاض إلى مكتب أو مطبخ. الألوان قد تختلف من شركة لأخرى، لذلك اسأل في يومك الأول. هل قطعة القماش متّسخة، أو سقطت على الأرض؟ خذ واحدة نظيفة. القطع المستعملة توضع في كيس الغسيل، لا على العربة من جديد. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "شركات تنظيف كثيرة تعمل بالألوان. كل لون من قطع القماش والإسفنج والدلاء لمكان واحد. غالباً الأحمر للمرحاض، والأزرق للمكاتب والطاولات. هكذا لا تصل أوساخ المرحاض إلى مكتب أو مطبخ. الألوان قد تختلف من شركة لأخرى، لذلك اسألي في يومك الأول. هل قطعة القماش متّسخة، أو سقطت على الأرض؟ خذي واحدة نظيفة. القطع المستعملة توضع في كيس الغسيل، لا على العربة من جديد. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "شركات تنظيف كثيرة تعمل بالألوان. كل لون من قطع القماش والإسفنج والدلاء لمكان واحد. غالباً الأحمر للمرحاض، والأزرق للمكاتب والطاولات. هكذا لا تصل أوساخ المرحاض إلى مكتب أو مطبخ. الألوان قد تختلف من شركة لأخرى، لذلك السؤال يكون في اليوم الأول. هل قطعة القماش متّسخة، أو سقطت على الأرض؟ تؤخذ واحدة نظيفة. القطع المستعملة توضع في كيس الغسيل، لا على العربة من جديد. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.colours.p': "أي لون للمرحاض هنا؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2006,18 +2006,18 @@ const t: CultureTranslation = {
     'c.colours.o2': "استعمال قطعة حمراء: النظيف نظيف.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.colours.o3': "استعمال قطعة زرقاء واحدة من جديد للمكاتب الثلاثة.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.colours.w': "نظام الألوان ينجح فقط عندما يتبعه الجميع دائماً. عندها لا أحد يتساءل أين كانت قطعة القماش.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.shophelp': "مساعدة زبون", // nieuw, nalezen
-    'w.aanbieding': "العرض (أرخص لوقت قصير)", // nieuw, nalezen
-    'w.korting': "الخصم (الدفع يكون أقل)", // nieuw, nalezen
-    'w.uitverkocht': "نفد، بيع كله", // nieuw, nalezen
-    'w.magazijn': "المخزن", // nieuw, nalezen
-    'w.tas': "الكيس، الحقيبة", // nieuw, nalezen
-    'w.bestellen': "يطلب (طلبية)", // nieuw, nalezen
-    's.shophelp.1': "للأسف، هذا نفد.", // nieuw, nalezen
-    's.shophelp.2': "هل تريد كيساً معه؟", // nieuw, nalezen
-    's.shophelp.3': "هذه القهوة عليها عرض.", // nieuw, nalezen
-    'c.shophelp.q': "هل بقي عندكم حليب؟", // nieuw, nalezen
-    'c.shophelp.a': "سأنظر لك في المخزن.", // nieuw, nalezen
+    'l.shophelp': "مساعدة زبون", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanbieding': "العرض (أرخص لوقت قصير)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.korting': "الخصم (الدفع يكون أقل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitverkocht': "نفد، بيع كله", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.magazijn': "المخزن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tas': "الكيس، الحقيبة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bestellen': "يطلب (طلبية)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shophelp.1': "للأسف، هذا نفد.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shophelp.2': "هل تريد كيساً معه؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shophelp.3': "هذه القهوة عليها عرض.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shophelp.q': "هل بقي عندكم حليب؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shophelp.a': "سأنظر لك في المخزن.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.shophelp': "«لا أعرف» ليست النهاية", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shophelp.b': { m: "زبون يسأل عن شيء وأنت لا تعرف الجواب. لا بأس: لا أحد يعرف كل شيء. لكن لا تقل فقط «nee» أو «weet ik niet»، ولا تبتعد. قل: «Ik vraag het even voor u»، وأحضر زميلاً. هل نفد منتج؟ قل متى يعود، أو أرِ الزبون شيئاً يشبهه. انظر إلى الزبون وسلّم عليه، حتى وأنت مشغول بملء الرفوف. لم تفهم السؤال؟ اطلب من الزبون أن يعيده، ببطء.", f: "زبون يسأل عن شيء وأنتِ لا تعرفين الجواب. لا بأس: لا أحد يعرف كل شيء. لكن لا تقولي فقط «nee» أو «weet ik niet»، ولا تبتعدي. قولي: «Ik vraag het even voor u»، وأحضري زميلاً. هل نفد منتج؟ قولي متى يعود، أو أري الزبون شيئاً يشبهه. انظري إلى الزبون وسلّمي عليه، حتى وأنتِ مشغولة بملء الرفوف. لم تفهمي السؤال؟ اطلبي من الزبون أن يعيده، ببطء.", x: "زبون يسأل عن شيء والجواب غير معروف لك. لا بأس: لا أحد يعرف كل شيء. لكن قول «nee» أو «weet ik niet» فقط لا يكفي، والابتعاد أيضاً لا. الأفضل قول: «Ik vraag het even voor u»، وإحضار زميل. هل نفد منتج؟ المهم القول متى يعود، أو عرض شيء يشبهه على الزبون. النظر إلى الزبون والسلام عليه مهمّان، حتى وقت ملء الرفوف. السؤال غير مفهوم؟ يمكن الطلب من الزبون أن يعيده، ببطء." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.shophelp.p': "لا أعرف ذلك. سأسأل لك.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2026,18 +2026,18 @@ const t: CultureTranslation = {
     'c.shophelp.o2': "قول «nee»، وإكمال العمل.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shophelp.o3': "الإشارة إلى مكان ما، حتى تذهب.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shophelp.w': "الزبون لا يزعجه أنك في أول أيام العمل أو ما زلت في تعلّم الهولندية. الزبون يزعجه ألّا يجد مساعدة. إحضار زميل خدمة جيدة.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.shoptrouble': "لحظات صعبة", // nieuw, nalezen
-    'w.bedrijfsleider': "مدير المتجر", // nieuw, nalezen
-    'w.beveiliger': "حارس الأمن", // nieuw, nalezen
-    'w.dief': "اللص", // nieuw, nalezen
-    'w.stelen': "يسرق", // nieuw, nalezen
-    'w.schreeuwen': "يصرخ", // nieuw, nalezen
-    'w.geldterug': "استرجاع المال", // nieuw, nalezen
-    's.shoptrouble.1': "سأحضر مدير المتجر.", // nieuw, nalezen
-    's.shoptrouble.2': "من فضلك، بدون صراخ.", // nieuw, nalezen
-    's.shoptrouble.3': "أظن أن أحداً يسرق شيئاً.", // nieuw, nalezen
-    'c.shoptrouble.q': "أريد استرجاع مالي الآن!", // nieuw, nalezen
-    'c.shoptrouble.a': "أفهم ذلك. سأحضر زميلي.", // nieuw, nalezen
+    'l.shoptrouble': "لحظات صعبة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedrijfsleider': "مدير المتجر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beveiliger': "حارس الأمن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dief': "اللص", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stelen': "يسرق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schreeuwen': "يصرخ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geldterug': "استرجاع المال", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shoptrouble.1': "سأحضر مدير المتجر.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shoptrouble.2': "من فضلك، بدون صراخ.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shoptrouble.3': "أظن أن أحداً يسرق شيئاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoptrouble.q': "أريد استرجاع مالي الآن!", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoptrouble.a': "أفهم ذلك. سأحضر زميلي.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.shoptrouble': "زبون غاضب أو لص: سلامتك أولاً", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shoptrouble.b': { m: "أحياناً يغضب زبون، أو ترى أحداً يسرق. سلامتك أولاً، دائماً. مع زبون غاضب: ابقَ هادئاً، لا تصرخ عليه، وأحضر مدير المتجر. لا يلزم أن تحلّ المشكلة وحدك. هل ترى لصاً؟ لا تركض خلفه، لا تمسكه، ولا تسدّ الباب. انظر جيداً إلى ما يحدث، وأخبر المدير أو حارس الأمن فوراً. الأشياء يمكن تعويضها. أنت لا يمكن تعويضك. هل خفت بعد ذلك؟ تكلّم عن ذلك مع مشرفك. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "أحياناً يغضب زبون، أو ترين أحداً يسرق. سلامتك أولاً، دائماً. مع زبون غاضب: ابقي هادئة، لا تصرخي عليه، وأحضري مدير المتجر. لا يلزم أن تحلّي المشكلة وحدكِ. هل ترين لصاً؟ لا تركضي خلفه، لا تمسكيه، ولا تسدّي الباب. انظري جيداً إلى ما يحدث، وأخبري المدير أو حارس الأمن فوراً. الأشياء يمكن تعويضها. أنت لا يمكن تعويضك. هل خفتِ بعد ذلك؟ تكلّمي عن ذلك مع مشرفك. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "أحياناً يغضب زبون، أو يسرق أحد أمامك. سلامتك أولاً، دائماً. مع زبون غاضب: الهدوء، بدون صراخ عليه، وإحضار مدير المتجر. حلّ المشكلة بدون مساعدة غير لازم. لص أمامك؟ لا ركض خلفه، لا إمساك به، ولا سدّ للباب. المهم النظر جيداً إلى ما يحدث، وإخبار المدير أو حارس الأمن فوراً. الأشياء يمكن تعويضها. أنت لا يمكن تعويضك. خوف بعد ذلك؟ الكلام عن ذلك مع المشرف يساعد. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.shoptrouble.p': "أرى شخصاً يضع شيئاً في حقيبته.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2046,18 +2046,18 @@ const t: CultureTranslation = {
     'c.shoptrouble.o2': "الركض خلفه وإمساك ذراعه.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shoptrouble.o3': "الوقوف أمام الباب.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shoptrouble.w': "اللص الذي يوقفه أحد قد يصير عنيفاً. المدير وحارس الأمن يعرفان ماذا يفعلان. لا يوجد منتج يستحق أن يتأذّى أحد من أجله.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.plantcare': "العناية بالنبتة", // nieuw, nalezen
-    'w.plantblad': "الورقة (ورقة النبتة)", // nieuw, nalezen
-    'w.stengel': "الساق (ساق النبتة)", // nieuw, nalezen
-    'w.bloem': "الزهرة", // nieuw, nalezen
-    'w.knippen': "يقصّ (بالمقص)", // nieuw, nalezen
-    'w.tomaat': "الطماطم", // nieuw, nalezen
-    'w.rijp': "ناضج (جاهز للقطف)", // nieuw, nalezen
-    's.plantcare.1': "حبة الطماطم هذه لم تنضج بعد.", // nieuw, nalezen
-    's.plantcare.2': "أقصّ الورقة.", // nieuw, nalezen
-    's.plantcare.3': "الساق مكسورة.", // nieuw, nalezen
-    'c.plantcare.q': "أي طماطم أقطف؟", // nieuw, nalezen
-    'c.plantcare.a': "الحمراء فقط. الخضراء لم تنضج بعد.", // nieuw, nalezen
+    'l.plantcare': "العناية بالنبتة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plantblad': "الورقة (ورقة النبتة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stengel': "الساق (ساق النبتة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bloem': "الزهرة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.knippen': "يقصّ (بالمقص)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tomaat': "الطماطم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rijp': "ناضج (جاهز للقطف)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantcare.1': "حبة الطماطم هذه لم تنضج بعد.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantcare.2': "أقصّ الورقة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantcare.3': "الساق مكسورة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantcare.q': "أي طماطم أقطف؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantcare.a': "الحمراء فقط. الخضراء لم تنضج بعد.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.plantcare': "أيدٍ نظيفة، نباتات سليمة", // nieuw, nalezen // nagelezen AI 22 nov
     'c.plantcare.b': { m: "النباتات أيضاً قد تمرض. الفيروس ينتقل من نبتة إلى نبتة على الأيدي والقفازات والسكاكين والملابس. في الدفيئة، نبتة مريضة واحدة قد تعني أن آلاف النباتات يجب أن تُرمى. لذلك توجد قواعد صارمة عند الباب: اغسل يديك، البس ملابس العمل التي تعطيها الشركة، وامشِ عبر حوض تعقيم الأحذية. دفيئات كثيرة لا تسمح بطماطم أو فلفل أو خيار من البيت في غدائك. هل ترى نبتة شكلها غريب؟ لا تلمسها. أخبر مشرفك في أي صف هي. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "النباتات أيضاً قد تمرض. الفيروس ينتقل من نبتة إلى نبتة على الأيدي والقفازات والسكاكين والملابس. في الدفيئة، نبتة مريضة واحدة قد تعني أن آلاف النباتات يجب أن تُرمى. لذلك توجد قواعد صارمة عند الباب: اغسلي يديك، البسي ملابس العمل التي تعطيها الشركة، وامشي عبر حوض تعقيم الأحذية. دفيئات كثيرة لا تسمح بطماطم أو فلفل أو خيار من البيت في غدائك. هل ترين نبتة شكلها غريب؟ لا تلمسيها. أخبري مشرفك في أي صف هي. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "النباتات أيضاً قد تمرض. الفيروس ينتقل من نبتة إلى نبتة على الأيدي والقفازات والسكاكين والملابس. في الدفيئة، نبتة مريضة واحدة قد تعني أن آلاف النباتات يجب أن تُرمى. لذلك توجد قواعد صارمة عند الباب: غسل اليدين، ولبس ملابس العمل التي تعطيها الشركة، والمشي عبر حوض تعقيم الأحذية. دفيئات كثيرة لا تسمح بطماطم أو فلفل أو خيار من البيت في غدائك. نبتة شكلها غريب؟ لمسها ممنوع. المشرف يجب أن يعرف في أي صف هي. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.plantcare.p': "توجد نبتة مريضة في الصف الثاني عشر.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2066,18 +2066,18 @@ const t: CultureTranslation = {
     'c.plantcare.o2': "قلعها وأخذها.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.plantcare.o3': "قصّ الأوراق التي عليها بقع.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.plantcare.w': "عند لمس نبتة مريضة، ينتقل الفيروس معك إلى النباتات التالية. مشرفك يعرف كيف تُزال بأمان.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.outdoors': "العمل في الخارج", // nieuw, nalezen
-    'w.land': "الحقل (حيث تنمو النباتات في الخارج)", // nieuw, nalezen
-    'w.regen': "المطر", // nieuw, nalezen
-    'w.zon': "الشمس", // nieuw, nalezen
-    'w.laarzen': "الجزمة (حذاء طويل)", // nieuw, nalezen
-    'w.regenpak': "بدلة المطر (سترة وسروال ضد المطر)", // nieuw, nalezen
-    'w.onweer': "العاصفة الرعدية", // nieuw, nalezen
-    's.outdoors.1': "إنها تمطر. ألبس بدلة المطر.", // nieuw, nalezen
-    's.outdoors.2': "جزمتي مبلّلة.", // nieuw, nalezen
-    's.outdoors.3': "الشمس قوية اليوم.", // nieuw, nalezen
-    'c.outdoors.q': "عاصفة رعدية قادمة. ماذا نفعل؟", // nieuw, nalezen
-    'c.outdoors.a': "نتوقّف وندخل.", // nieuw, nalezen
+    'l.outdoors': "العمل في الخارج", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.land': "الحقل (حيث تنمو النباتات في الخارج)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.regen': "المطر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zon': "الشمس", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.laarzen': "الجزمة (حذاء طويل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.regenpak': "بدلة المطر (سترة وسروال ضد المطر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onweer': "العاصفة الرعدية", // nieuw, nalezen // nagelezen AI 28 nov
+    's.outdoors.1': "إنها تمطر. ألبس بدلة المطر.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.outdoors.2': "جزمتي مبلّلة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.outdoors.3': "الشمس قوية اليوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.outdoors.q': "عاصفة رعدية قادمة. ماذا نفعل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.outdoors.a': "نتوقّف وندخل.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.outdoors': "شمس ومطر ورعد", // nieuw, nalezen // nagelezen AI 22 nov
     'c.outdoors.b': { m: "في الخارج تعمل في كل أنواع الطقس. في الشمس: غطِّ رأسك وجلدك، استعمل واقي الشمس، واشرب الماء كثيراً. في المطر: البس بدلة المطر والجزمة، والبس ملابس جافة في استراحتك. البلل والبرد يجعلانك مريضاً وبطيئاً. هل يوجد رعد؟ عندها توقّف وادخل، أو اجلس في سيارة أو فان. ليس تحت شجرة، وليس في حقل مفتوح. هل تحتاج ملابس مطر أو جزمة للعمل؟ اسأل صاحب العمل عنها قبل شرائها من مالك.", f: "في الخارج تعملين في كل أنواع الطقس. في الشمس: غطّي رأسك وجلدك، استعملي واقي الشمس، واشربي الماء كثيراً. في المطر: البسي بدلة المطر والجزمة، والبسي ملابس جافة في استراحتك. البلل والبرد يجعلانك مريضة وبطيئة. هل يوجد رعد؟ عندها توقّفي وادخلي، أو اجلسي في سيارة أو فان. ليس تحت شجرة، وليس في حقل مفتوح. هل تحتاجين ملابس مطر أو جزمة للعمل؟ اسألي صاحب العمل عنها قبل شرائها من مالك.", x: "في الخارج يكون العمل في كل أنواع الطقس. في الشمس: تغطية الرأس والجلد، واستعمال واقي الشمس، وشرب الماء كثيراً. في المطر: لبس بدلة المطر والجزمة، ولبس ملابس جافة في الاستراحة. البلل والبرد يسبّبان المرض والبطء. هل يوجد رعد؟ عندها التوقّف والدخول، أو الجلوس في سيارة أو فان. ليس تحت شجرة، وليس في حقل مفتوح. حاجة إلى ملابس مطر أو جزمة للعمل؟ السؤال عنها عند صاحب العمل يكون قبل شرائها من مالك." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.outdoors.p': "سيأتي رعد. هل ندخل؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2086,18 +2086,18 @@ const t: CultureTranslation = {
     'c.outdoors.o2': "إكمال الصف بسرعة أولاً.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.outdoors.o3': "الانتظار تحت الشجرة الكبيرة.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.outdoors.w': "البرق يضرب أعلى نقطة، وفي حقل مستوٍ هذه النقطة هي أنت. الصف يستطيع أن ينتظر ربع ساعة.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.drawing': "الرسم والمقاس", // nieuw, nalezen
-    'w.tekening': "الرسم الفني (يبيّن كيف يجب أن تكون القطعة)", // nieuw, nalezen
-    'w.maat': "المقاس", // nieuw, nalezen
-    'w.millimeter': "المليمتر", // nieuw, nalezen
-    'w.schuifmaat': "القدمة ذات الورنية (أداة تقيس بدقة كبيرة)", // nieuw, nalezen
-    'w.passen': "يناسب، يدخل في مكانه", // nieuw, nalezen
-    'w.bout': "المسمار الملولب (برغي غليظ مع صامولة)", // nieuw, nalezen
-    's.drawing.1': "ما المقاس في الرسم؟", // nieuw, nalezen
-    's.drawing.2': "هذه القطعة لا تدخل في مكانها.", // nieuw, nalezen
-    's.drawing.3': "هي أكبر بمليمترين.", // nieuw, nalezen
-    'c.drawing.q': "هل المسمار الملولب مناسب؟", // nieuw, nalezen
-    'c.drawing.a': "لا. سأقيسه مرة أخرى.", // nieuw, nalezen
+    'l.drawing': "الرسم والمقاس", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tekening': "الرسم الفني (يبيّن كيف يجب أن تكون القطعة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.maat': "المقاس", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.millimeter': "المليمتر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schuifmaat': "القدمة ذات الورنية (أداة تقيس بدقة كبيرة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.passen': "يناسب، يدخل في مكانه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bout': "المسمار الملولب (برغي غليظ مع صامولة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.drawing.1': "ما المقاس في الرسم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.drawing.2': "هذه القطعة لا تدخل في مكانها.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.drawing.3': "هي أكبر بمليمترين.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.drawing.q': "هل المسمار الملولب مناسب؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.drawing.a': "لا. سأقيسه مرة أخرى.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.drawing': "الرسم هو الذي يقرّر", // nieuw, nalezen // nagelezen AI 22 nov
     'c.drawing.b': { m: "في الورشة تصنع ما يقوله الرسم، لا ما يبدو صحيحاً تقريباً. المقاسات بالمليمتر، ومليمتر واحد قد يكون كثيراً. قطعة لا تدخل في مكانها؟ لا تستعمل القوة، ولا تكبّر الثقب «قليلاً فقط». قِس من جديد، وانظر إلى الرسم. لا تستطيع قراءة الرسم، أو ينقص مقاس؟ اسأل قبل أن تبدأ. السؤال يكلّف دقيقة. القطعة الخاطئة تكلّف مواد وساعات.", f: "في الورشة تصنعين ما يقوله الرسم، لا ما يبدو صحيحاً تقريباً. المقاسات بالمليمتر، ومليمتر واحد قد يكون كثيراً. قطعة لا تدخل في مكانها؟ لا تستعملي القوة، ولا تكبّري الثقب «قليلاً فقط». قيسي من جديد، وانظري إلى الرسم. لا تستطيعين قراءة الرسم، أو ينقص مقاس؟ اسألي قبل أن تبدئي. السؤال يكلّف دقيقة. القطعة الخاطئة تكلّف مواد وساعات.", x: "في الورشة يُصنع ما يقوله الرسم، لا ما يبدو صحيحاً تقريباً. المقاسات بالمليمتر، ومليمتر واحد قد يكون كثيراً. قطعة لا تدخل في مكانها؟ لا قوة، ولا تكبير للثقب «قليلاً فقط». المطلوب القياس من جديد، والنظر إلى الرسم. الرسم غير مقروء، أو ينقص مقاس؟ السؤال يكون قبل البدء. السؤال يكلّف دقيقة. القطعة الخاطئة تكلّف مواد وساعات." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.drawing.p': "لا أستطيع قراءة هذا المقاس. هل يمكنك إلقاء نظرة؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2106,18 +2106,18 @@ const t: CultureTranslation = {
     'c.drawing.o2': "إدخالها بضربات المطرقة.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.drawing.o3': "جلخ القليل منها، والسكوت.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.drawing.w': "القطعة التي تدخل بالقوة قد تنكسر لاحقاً، عند الزبون. عند الإبلاغ، يمكن إيجاد السبب.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.weld': "اللحام والعمل الساخن", // nieuw, nalezen
-    'w.lassen': "يلحم (يوصل المعدن بحرارة عالية)", // nieuw, nalezen
-    'w.laskap': "قناع اللحام", // nieuw, nalezen
-    'w.rook': "الدخان", // nieuw, nalezen
-    'w.afzuiging': "الشفط (يسحب الدخان)", // nieuw, nalezen
-    'w.afkoelen': "يبرد", // nieuw, nalezen
-    'w.brandwond': "الحرق (جرح من الحرارة)", // nieuw, nalezen
-    's.weld.1': "ألبس قناع اللحام.", // nieuw, nalezen
-    's.weld.2': "شغّل الشفط.", // nieuw, nalezen
-    's.weld.3': "انتبه، المعدن ما زال ساخناً.", // nieuw, nalezen
-    'c.weld.q': "هل يمكنني أن آخذ هذا الآن؟", // nieuw, nalezen
-    'c.weld.a': "لا، انتظر. يجب أن يبرد أولاً.", // nieuw, nalezen
+    'l.weld': "اللحام والعمل الساخن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lassen': "يلحم (يوصل المعدن بحرارة عالية)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.laskap': "قناع اللحام", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rook': "الدخان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afzuiging': "الشفط (يسحب الدخان)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afkoelen': "يبرد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brandwond': "الحرق (جرح من الحرارة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.weld.1': "ألبس قناع اللحام.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.weld.2': "شغّل الشفط.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.weld.3': "انتبه، المعدن ما زال ساخناً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weld.q': "هل يمكنني أن آخذ هذا الآن؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weld.a': "لا، انتظر. يجب أن يبرد أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.weld': "المعدن الساخن يبدو بارداً", // nieuw, nalezen // nagelezen AI 22 nov
     'c.weld.b': { m: "اللحام يعطي ضوءاً قوياً جداً. لا تنظر إليه بدون قناع اللحام، ولا حتى من بعيد: عيناك قد تحترقان، ولا تشعر بذلك إلا بعد ساعات. زميل يلحم قربك؟ انظر إلى جهة أخرى، أو قف خلف الحاجز. المعدن الذي لُحم أو جُلخ للتو يبدو عادياً، لكنه ساخن جداً. لا تأخذه بيدين عاريتين. دخان اللحام مضرّ برئتيك: شغّل الشفط. حرق؟ برّده بالماء فوراً، عشر دقائق على الأقل، وأبلغ عنه. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "اللحام يعطي ضوءاً قوياً جداً. لا تنظري إليه بدون قناع اللحام، ولا حتى من بعيد: عيناك قد تحترقان، ولا تشعرين بذلك إلا بعد ساعات. زميل يلحم قربك؟ انظري إلى جهة أخرى، أو قفي خلف الحاجز. المعدن الذي لُحم أو جُلخ للتو يبدو عادياً، لكنه ساخن جداً. لا تأخذيه بيدين عاريتين. دخان اللحام مضرّ برئتيك: شغّلي الشفط. حرق؟ برّديه بالماء فوراً، عشر دقائق على الأقل، وأبلغي عنه. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "اللحام يعطي ضوءاً قوياً جداً. النظر إليه بدون قناع اللحام ممنوع، ولا حتى من بعيد: العينان قد تحترقان، والشعور بذلك يأتي بعد ساعات فقط. زميل يلحم قربك؟ الأفضل النظر إلى جهة أخرى، أو الوقوف خلف الحاجز. المعدن الذي لُحم أو جُلخ للتو يبدو عادياً، لكنه ساخن جداً. لا يؤخذ بيدين عاريتين. دخان اللحام مضرّ بالرئتين: الشفط يجب أن يعمل. حرق؟ التبريد بالماء فوراً، عشر دقائق على الأقل، والإبلاغ عنه. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.weld.p': "هل برد هذا؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2126,18 +2126,18 @@ const t: CultureTranslation = {
     'c.weld.o2': "التفرّج قليلاً: يمكن التعلّم من ذلك.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.weld.o3': "إغماض العينين نصف إغماضة.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.weld.w': "ضوء اللحام يحرق عينيك، حتى من الجانب ومن بعيد. الألم يأتي لاحقاً فقط، وغالباً في الليل.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.carparts': "أجزاء السيارة", // nieuw, nalezen
-    'w.motor': "المحرّك", // nieuw, nalezen
-    'w.motorkap': "غطاء المحرّك (الكبّوت)", // nieuw, nalezen
-    'w.rem': "الفرامل", // nieuw, nalezen
-    'w.lamp': "المصباح، الضوء", // nieuw, nalezen
-    'w.ruitenwisser': "مسّاحة الزجاج", // nieuw, nalezen
-    'w.stoel': "المقعد، الكرسي", // nieuw, nalezen
-    's.carparts.1': "افتح غطاء المحرّك.", // nieuw, nalezen
-    's.carparts.2': "المصباح الأمامي الأيسر معطّل.", // nieuw, nalezen
-    's.carparts.3': "الفرامل تصدر صوتاً.", // nieuw, nalezen
-    'c.carparts.q': { m: "ماذا تسمع؟", f: "ماذا تسمعين؟", x: "ما الصوت المسموع؟" }, // nieuw, nalezen
-    'c.carparts.a': "المحرّك يصدر صوتاً غريباً.", // nieuw, nalezen
+    'l.carparts': "أجزاء السيارة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.motor': "المحرّك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.motorkap': "غطاء المحرّك (الكبّوت)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rem': "الفرامل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lamp': "المصباح، الضوء", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ruitenwisser': "مسّاحة الزجاج", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stoel': "المقعد، الكرسي", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carparts.1': "افتح غطاء المحرّك.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carparts.2': "المصباح الأمامي الأيسر معطّل.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carparts.3': "الفرامل تصدر صوتاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carparts.q': { m: "ماذا تسمع؟", f: "ماذا تسمعين؟", x: "ما الصوت المسموع؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carparts.a': "المحرّك يصدر صوتاً غريباً.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.carparts': "السيارة ملك الزبون", // nieuw, nalezen // nagelezen AI 22 nov
     'c.carparts.b': { m: "السيارة في ورشة السيارات ليست لك: هي للزبون. ضع غطاءً على المقعد وعلى المقود قبل أن تركب، واعمل في الداخل بيدين نظيفتين. اترك المقعد والمرايا والراديو كما كانت. هل اضطررت إلى تحريك المقعد؟ أرجعه. لا تلمس الأشياء الشخصية في السيارة. هل سبّبت خدشاً أو بقعة؟ أخبر مشرفك فوراً. الزبون الذي يكتشف ذلك في البيت لا يرجع.", f: "السيارة في ورشة السيارات ليست لك: هي للزبون. ضعي غطاءً على المقعد وعلى المقود قبل أن تركبي، واعملي في الداخل بيدين نظيفتين. اتركي المقعد والمرايا والراديو كما كانت. هل اضطررتِ إلى تحريك المقعد؟ أرجعيه. لا تلمسي الأشياء الشخصية في السيارة. هل سبّبتِ خدشاً أو بقعة؟ أخبري مشرفك فوراً. الزبون الذي يكتشف ذلك في البيت لا يرجع.", x: "السيارة في ورشة السيارات ليست لك: هي للزبون. غطاء على المقعد وعلى المقود قبل الركوب، والعمل في الداخل بيدين نظيفتين. المقعد والمرايا والراديو تبقى كما كانت. المقعد تحرّك من مكانه؟ يرجع إلى مكانه. الأشياء الشخصية في السيارة لا تُلمس. خدش أو بقعة بسبب العمل؟ إخبار المشرف يكون فوراً. الزبون الذي يكتشف ذلك في البيت لا يرجع." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.carparts.p': "سبّبت خدشاً. أعتذر عن ذلك.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2146,18 +2146,18 @@ const t: CultureTranslation = {
     'c.carparts.o2': "السكوت: إنه صغير جداً.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.carparts.o3': "فركه بقطعة قماش، على أمل أن يختفي.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.carparts.w': "كل إنسان يخطئ أحياناً. الورشة تستطيع أن تصلح الخدش، أو تخبر الزبون بصدق. الخدش المخفي يكلّف الورشة سمعتها.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.carsafe': "البنزين والغاز والكهرباء", // nieuw, nalezen
-    'w.krik': "الكريك (رافعة ترفع جانباً واحداً من السيارة)", // nieuw, nalezen
-    'w.benzine': "البنزين", // nieuw, nalezen
-    'w.elektrischeauto': "السيارة الكهربائية", // nieuw, nalezen
-    'w.oranje': "برتقالي", // nieuw, nalezen
-    'w.morsen': "يسكب (بالخطأ)", // nieuw, nalezen
-    'w.lap': "الخرقة (قطعة قماش للعمل المتّسخ)", // nieuw, nalezen
-    's.carsafe.1': "أشمّ رائحة بنزين.", // nieuw, nalezen
-    's.carsafe.2': "انسكب زيت. سأحضر خرقة.", // nieuw, nalezen
-    's.carsafe.3': "لا ألمس الكابلات البرتقالية.", // nieuw, nalezen
-    'c.carsafe.q': "هل يمكنني أن أعمل على هذه السيارة؟", // nieuw, nalezen
-    'c.carsafe.a': "ليس بعد. إنها سيارة كهربائية.", // nieuw, nalezen
+    'l.carsafe': "البنزين والغاز والكهرباء", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.krik': "الكريك (رافعة ترفع جانباً واحداً من السيارة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.benzine': "البنزين", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.elektrischeauto': "السيارة الكهربائية", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oranje': "برتقالي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.morsen': "يسكب (بالخطأ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lap': "الخرقة (قطعة قماش للعمل المتّسخ)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carsafe.1': "أشمّ رائحة بنزين.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carsafe.2': "انسكب زيت. سأحضر خرقة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carsafe.3': "لا ألمس الكابلات البرتقالية.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carsafe.q': "هل يمكنني أن أعمل على هذه السيارة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carsafe.a': "ليس بعد. إنها سيارة كهربائية.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.carsafe': "كابلات برتقالية ومحرّكات تعمل", // nieuw, nalezen // nagelezen AI 22 nov
     'c.carsafe.b': { m: "السيارة الكهربائية أو الهجينة فيها بطارية بجهد عالٍ جداً. كابلاتها برتقالية. لا تلمسها ولا تفكّها: ميكانيكي عنده تدريب خاص يجب أن يجعل السيارة آمنة أولاً. هل توجد لافتة أو قمع عند السيارة؟ عندها ابقَ بعيداً. المحرّك الذي يعمل في الداخل يصنع غازاً لا يُشمّ ولا يُرى، وقد يقتل. لذلك: ركّب خرطوم العادم، أو افتح الأبواب. هل تشمّ رائحة بنزين؟ لا شرر ولا تدخين. أخبر مشرفك فوراً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "السيارة الكهربائية أو الهجينة فيها بطارية بجهد عالٍ جداً. كابلاتها برتقالية. لا تلمسيها ولا تفكّيها: ميكانيكي عنده تدريب خاص يجب أن يجعل السيارة آمنة أولاً. هل توجد لافتة أو قمع عند السيارة؟ عندها ابقي بعيدة. المحرّك الذي يعمل في الداخل يصنع غازاً لا يُشمّ ولا يُرى، وقد يقتل. لذلك: ركّبي خرطوم العادم، أو افتحي الأبواب. هل تشمّين رائحة بنزين؟ لا شرر ولا تدخين. أخبري مشرفك فوراً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "السيارة الكهربائية أو الهجينة فيها بطارية بجهد عالٍ جداً. كابلاتها برتقالية. لمسها أو فكّها ممنوع: ميكانيكي عنده تدريب خاص يجب أن يجعل السيارة آمنة أولاً. هل توجد لافتة أو قمع عند السيارة؟ عندها البقاء بعيداً هو الصحيح. المحرّك الذي يعمل في الداخل يصنع غازاً لا يُشمّ ولا يُرى، وقد يقتل. لذلك: تركيب خرطوم العادم، أو فتح الأبواب. رائحة بنزين؟ لا شرر ولا تدخين. إخبار المشرف يكون فوراً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.carsafe.p': "هل أصبحت هذه السيارة آمنة للعمل؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2167,18 +2167,18 @@ const t: CultureTranslation = {
     'c.carsafe.o3': "دفعه إلى مكانه بقطعة قماش جافة.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.carsafe.w': "بطارية السيارة الكهربائية فيها كهرباء تكفي للقتل، حتى والسيارة مطفأة. فقط من عنده التدريب يجوز له أن يلمس هذه القطع.", // nieuw, nalezen // nagelezen AI 22 nov
     // Logistiek at four lessons per unit (14 November 2026).
-    'l.vancheck': "فحص شاحنة التوصيل الصغيرة", // nieuw, nalezen
-    'w.schade': "الضرر", // nieuw, nalezen
-    'w.deuk': "الانبعاج، الطعجة", // nieuw, nalezen
-    'w.spiegel': "المرآة", // nieuw, nalezen
-    'w.tanken': "يعبّئ الوقود (يضع الوقود في الشاحنة)", // nieuw, nalezen
-    'w.opladen': "يشحن (شاحنة كهربائية، هاتفاً)", // nieuw, nalezen
-    'w.parkeren': "يركن، يوقف السيارة", // nieuw, nalezen
-    's.vancheck.1': "يوجد انبعاج في الباب.", // nieuw, nalezen
-    's.vancheck.2': "هذا الضرر كان موجوداً من قبل.", // nieuw, nalezen
-    's.vancheck.3': "يجب أن أعبّئ الوقود أولاً.", // nieuw, nalezen
-    'c.vancheck.q': "هل كل شيء بخير في شاحنة التوصيل الصغيرة؟", // nieuw, nalezen
-    'c.vancheck.a': "لا، المرآة مكسورة.", // nieuw, nalezen
+    'l.vancheck': "فحص شاحنة التوصيل الصغيرة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schade': "الضرر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.deuk': "الانبعاج، الطعجة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spiegel': "المرآة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tanken': "يعبّئ الوقود (يضع الوقود في الشاحنة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opladen': "يشحن (شاحنة كهربائية، هاتفاً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.parkeren': "يركن، يوقف السيارة", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vancheck.1': "يوجد انبعاج في الباب.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vancheck.2': "هذا الضرر كان موجوداً من قبل.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vancheck.3': "يجب أن أعبّئ الوقود أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vancheck.q': "هل كل شيء بخير في شاحنة التوصيل الصغيرة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vancheck.a': "لا، المرآة مكسورة.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.vancheck': { m: "انظر قبل أن تقود", f: "انظري قبل أن تقودي", x: "النظر قبل القيادة" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.vancheck.b': { m: "امشِ حول الشاحنة قبل جولتك الأولى. هل ترى انبعاجاً أو خدشاً أو مرآة مكسورة؟ التقط صورة، وأبلغ عن ذلك قبل أن تنطلق. عندها يعرف الجميع أن الضرر كان موجوداً من قبل. هل حدث شيء خلال جولتك؟ أبلغ عنه في اليوم نفسه، حتى لو كان صغيراً. إخفاء الضرر يسبّب مشاكل أكبر لاحقاً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "امشي حول الشاحنة قبل جولتك الأولى. هل ترين انبعاجاً أو خدشاً أو مرآة مكسورة؟ التقطي صورة، وأبلغي عن ذلك قبل أن تنطلقي. عندها يعرف الجميع أن الضرر كان موجوداً من قبل. هل حدث شيء خلال جولتك؟ أبلغي عنه في اليوم نفسه، حتى لو كان صغيراً. إخفاء الضرر يسبّب مشاكل أكبر لاحقاً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "المشي حول الشاحنة يكون قبل الجولة الأولى. هل يظهر انبعاج أو خدش أو مرآة مكسورة؟ المطلوب التقاط صورة، والإبلاغ عن ذلك قبل الانطلاق. عندها يعرف الجميع أن الضرر كان موجوداً من قبل. هل حدث شيء خلال الجولة؟ الإبلاغ عنه يكون في اليوم نفسه، حتى لو كان صغيراً. إخفاء الضرر يسبّب مشاكل أكبر لاحقاً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.vancheck.p': "يوجد ضرر في شاحنة التوصيل الصغيرة. هذه صورة.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2187,18 +2187,18 @@ const t: CultureTranslation = {
     'c.vancheck.o2': "السكوت: الانبعاج ليس منك.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.vancheck.o3': "الانتظار لرؤية هل يسأل أحد عنه.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.vancheck.w': "عند الإبلاغ قبل القيادة، لا يستطيع أحد أن يظن أنه منك. الصورة مع الوقت واضحة للجميع.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.delay': "التأخير على الطريق", // nieuw, nalezen
-    'w.file': "زحمة السير", // nieuw, nalezen
-    'w.vertraging': "التأخير (الوصول بعد الوقت المخطَّط)", // nieuw, nalezen
-    'w.omleiding': "التحويلة (طريق آخر، لأن الطريق مغلق)", // nieuw, nalezen
-    'w.navigatie': "الملاحة (التطبيق الذي يُظهر الطريق)", // nieuw, nalezen
-    'w.planner': "المخطِّط (الشخص الذي يضع المسارات)", // nieuw, nalezen
-    'w.retour': "المرتجع (طرد يرجع)", // nieuw, nalezen
-    's.delay.1': "أنا في زحمة سير.", // nieuw, nalezen
-    's.delay.2': "عندي تأخير نصف ساعة.", // nieuw, nalezen
-    's.delay.3': "هذا الطرد يرجع.", // nieuw, nalezen
+    'l.delay': "التأخير على الطريق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.file': "زحمة السير", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vertraging': "التأخير (الوصول بعد الوقت المخطَّط)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.omleiding': "التحويلة (طريق آخر، لأن الطريق مغلق)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.navigatie': "الملاحة (التطبيق الذي يُظهر الطريق)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.planner': "المخطِّط (الشخص الذي يضع المسارات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.retour': "المرتجع (طرد يرجع)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.delay.1': "أنا في زحمة سير.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.delay.2': "عندي تأخير نصف ساعة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.delay.3': "هذا الطرد يرجع.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.delay.q': { m: "أين أنت الآن؟", f: "أين أنتِ الآن؟", x: "ما الموقع الحالي؟" }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.delay.a': "عند التحويلة. سأتأخر عشر دقائق.", // nieuw, nalezen
+    'c.delay.a': "عند التحويلة. سأتأخر عشر دقائق.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.delay': { m: "تأخّرت؟ قل ذلك في الوقت المناسب", f: "تأخّرتِ؟ قولي ذلك في الوقت المناسب", x: "تأخير؟ الإبلاغ في الوقت المناسب" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.delay.b': { m: "زحمة السير أو الطريق المغلق ليس ذنبك. لكن أخبر المخطِّط حالما تعرف أنك ستتأخر. عندها يستطيع المخطِّط أن يخبر الزبائن، أو يغيّر المسار. توقّف أولاً في مكان آمن: لا تتصل والهاتف في يدك وأنت تقود. ولا تقُد أسرع لتعوّض الوقت. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "زحمة السير أو الطريق المغلق ليس ذنبك. لكن أخبري المخطِّط حالما تعرفين أنك ستتأخرين. عندها يستطيع المخطِّط أن يخبر الزبائن، أو يغيّر المسار. توقّفي أولاً في مكان آمن: لا تتصلي والهاتف في يدك وأنتِ تقودين. ولا تقودي أسرع لتعوّضي الوقت. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "زحمة السير أو الطريق المغلق ليس ذنبك. لكن إخبار المخطِّط يكون حالما يُعرف أن هناك تأخيراً. عندها يستطيع المخطِّط أن يخبر الزبائن، أو يغيّر المسار. التوقف أولاً في مكان آمن: لا اتصال والهاتف في اليد أثناء القيادة. ولا قيادة أسرع لتعويض الوقت. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.delay.p': "أنا في زحمة سير. سأتأخر نصف ساعة.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2208,19 +2208,19 @@ const t: CultureTranslation = {
     'c.delay.o3': "السكوت: ربما لا ينتبه أحد.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.delay.w': "عندما يعرف المخطِّط ذلك مبكراً، يسمع الزبائن به ولا ينتظر أحد بلا فائدة. القيادة أسرع خطيرة، ولا توفّر وقتاً تقريباً.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Instructies", a new basis unit (u.do, 14 November 2026).
-    'u.do': "التعليمات", // nieuw, nalezen
-    'l.putdown': { m: "ضعه هناك", f: "ضعيه هناك", x: "يوضع هناك" }, // nieuw, nalezen
-    'w.zetten': "يضع (شيئاً يقف: صندوقاً، دلواً)", // nieuw, nalezen
-    'w.leggen': "يضع (شيئاً بشكل مسطّح، ممدوداً)", // nieuw, nalezen
-    'w.brengen': "يأخذ، يوصل (إلى مكان أو إلى شخص)", // nieuw, nalezen
-    'w.geven': "يعطي", // nieuw, nalezen
-    'w.vasthouden': "يمسك", // nieuw, nalezen
-    'w.loslaten': "يُفلت، يترك من يده", // nieuw, nalezen
-    's.putdown.1': "ضعه هناك.", // nieuw, nalezen
-    's.putdown.2': "خذ هذا إلى المقصف.", // nieuw, nalezen
-    's.putdown.3': "أمسك هذا لحظة.", // nieuw, nalezen
-    'c.putdown.q': { m: "هل يمكنك أن تمسك هذا لحظة؟", f: "هل يمكنك أن تمسكي هذا لحظة؟" }, // nieuw, nalezen
-    'c.putdown.a': "نعم. أين يجب أن أضعه؟", // nieuw, nalezen
+    'u.do': "التعليمات", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.putdown': { m: "ضعه هناك", f: "ضعيه هناك", x: "يوضع هناك" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zetten': "يضع (شيئاً يقف: صندوقاً، دلواً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.leggen': "يضع (شيئاً بشكل مسطّح، ممدوداً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brengen': "يأخذ، يوصل (إلى مكان أو إلى شخص)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geven': "يعطي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vasthouden': "يمسك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.loslaten': "يُفلت، يترك من يده", // nieuw, nalezen // nagelezen AI 28 nov
+    's.putdown.1': "ضعه هناك.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.putdown.2': "خذ هذا إلى المقصف.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.putdown.3': "أمسك هذا لحظة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.putdown.q': { m: "هل يمكنك أن تمسك هذا لحظة؟", f: "هل يمكنك أن تمسكي هذا لحظة؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.putdown.a': "نعم. أين يجب أن أضعه؟", // nieuw, nalezen // nagelezen AI 28 nov
     'c.putdown': { m: "قل إنك أمسكته", f: "قولي إنك أمسكتِه", x: "القول عند الإمساك به" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.putdown.b': { m: "هل تحمل شيئاً مع زميل، أو يناولك زميل شيئاً ثقيلاً؟ قل «Ik heb hem» عندما تمسكه جيداً. عندها يعرف زميلك أنه يستطيع أن يتركه بأمان. هل تريد أن تتركه أنت؟ اسأل أولاً: «Heb je hem?» وانتظر الجواب. هذا أمر عادي في كل مكان عمل. هكذا لا تسقط الأشياء على الأقدام والأيدي.", f: "هل تحملين شيئاً مع زميل، أو يناولك زميل شيئاً ثقيلاً؟ قولي «Ik heb hem» عندما تمسكينه جيداً. عندها يعرف زميلك أنه يستطيع أن يتركه بأمان. هل تريدين أن تتركيه أنتِ؟ اسألي أولاً: «Heb je hem?» وانتظري الجواب. هذا أمر عادي في كل مكان عمل. هكذا لا تسقط الأشياء على الأقدام والأيدي.", x: "حمل شيء مع زميل، أو زميل يناول شيئاً ثقيلاً؟ «Ik heb hem» تُقال عندما يكون الإمساك جيداً. عندها يعرف الزميل أنه يستطيع أن يتركه بأمان. الرغبة في تركه؟ السؤال أولاً: «Heb je hem?» ثم انتظار الجواب. هذا أمر عادي في كل مكان عمل. هكذا لا تسقط الأشياء على الأقدام والأيدي." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.putdown.p': "أمسكته. يمكنك أن تتركه.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2229,18 +2229,18 @@ const t: CultureTranslation = {
     'c.putdown.o2': "السكوت: هو سيرى ذلك.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.putdown.o3': "أخذه بسرعة، حتى لا ينتظر.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.putdown.w': "زميلك يتركه عندما يظن أنه صار في يدك. كلمة واحدة تعطيك الوقت للإمساك به جيداً.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.onoff': "تشغيل وإطفاء، فتح وإغلاق", // nieuw, nalezen
-    'w.aanzetten': "يشغّل", // nieuw, nalezen
-    'w.opendoen': "يفتح", // nieuw, nalezen
-    'w.dichtdoen': "يغلق", // nieuw, nalezen
-    'w.drukken': "يضغط (على زر)", // nieuw, nalezen
-    'w.draaien': "يدير، يلفّ", // nieuw, nalezen
-    'w.stoppen': "يتوقف", // nieuw, nalezen
-    's.onoff.1': "أغلق الباب.", // nieuw, nalezen
-    's.onoff.2': "اضغط على الزر.", // nieuw, nalezen
-    's.onoff.3': "توقَّفْ! أطفئه.", // nieuw, nalezen
-    'c.onoff.q': "هل الباب مغلق؟", // nieuw, nalezen
-    'c.onoff.a': "لا. سأغلقه الآن.", // nieuw, nalezen
+    'l.onoff': "تشغيل وإطفاء، فتح وإغلاق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanzetten': "يشغّل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opendoen': "يفتح", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dichtdoen': "يغلق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.drukken': "يضغط (على زر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.draaien': "يدير، يلفّ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stoppen': "يتوقف", // nieuw, nalezen // nagelezen AI 28 nov
+    's.onoff.1': "أغلق الباب.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.onoff.2': "اضغط على الزر.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.onoff.3': "توقَّفْ! أطفئه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.onoff.q': "هل الباب مغلق؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.onoff.a': "لا. سأغلقه الآن.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.onoff': "توقَّفْ تعني توقَّفْ", // nieuw, nalezen // nagelezen AI 22 nov
     'c.onoff.b': { m: "هل ينادي أحد «Stop!»؟ توقّف فوراً، حتى لو لم تعرف السبب. اسأل بعد ذلك. الكلمة القصيرة بصوت عالٍ ليست غضباً هنا: هكذا يحافظ الزملاء على سلامة بعضهم. هل ترى أنت شيئاً خطيراً؟ ناد «Stop!» أنت أيضاً، حتى لشخص يعمل هنا منذ سنوات. لا أحد يستغرب ذلك.", f: "هل ينادي أحد «Stop!»؟ توقّفي فوراً، حتى لو لم تعرفي السبب. اسألي بعد ذلك. الكلمة القصيرة بصوت عالٍ ليست غضباً هنا: هكذا يحافظ الزملاء على سلامة بعضهم. هل ترين أنتِ شيئاً خطيراً؟ نادي «Stop!» أنتِ أيضاً، حتى لشخص يعمل هنا منذ سنوات. لا أحد يستغرب ذلك.", x: "هل ينادي أحد «Stop!»؟ التوقف يكون فوراً، حتى بدون معرفة السبب. السؤال يأتي بعد ذلك. الكلمة القصيرة بصوت عالٍ ليست غضباً هنا: هكذا يحافظ الزملاء على سلامة بعضهم. شيء خطير أمام العين؟ «Stop!» تُنادى أيضاً، حتى لشخص يعمل هنا منذ سنوات. لا أحد يستغرب ذلك." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.onoff.p': "توقَّفْ! انتظر لحظة.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2249,18 +2249,18 @@ const t: CultureTranslation = {
     'c.onoff.o2': "المتابعة: لا تظهر أي مشكلة.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.onoff.o3': "السؤال أولاً عن سبب التوقف.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.onoff.w': "زميلك قد يرى شيئاً لا يظهر لك. التوقف أولاً، ثم الكلام: هذا يحفظ سلامة الجميع.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.fillempty': "الدفع والسحب والملء", // nieuw, nalezen
-    'w.duwen': "يدفع (إلى الأمام)", // nieuw, nalezen
-    'w.trekken': "يسحب", // nieuw, nalezen
-    'w.vullen': "يملأ", // nieuw, nalezen
-    'w.leegmaken': "يُفرغ", // nieuw, nalezen
-    'w.schoonmaken': "ينظّف", // nieuw, nalezen
-    'w.vol': "ممتلئ", // nieuw, nalezen
-    's.fillempty.1': "لا تدفع، بل اسحب.", // nieuw, nalezen
-    's.fillempty.2': "هذا ممتلئ. أفرغه.", // nieuw, nalezen
-    's.fillempty.3': "نظّف هذا من فضلك.", // nieuw, nalezen
-    'c.fillempty.q': "هل صار ممتلئاً؟", // nieuw, nalezen
-    'c.fillempty.a': "نعم. سأفرغه.", // nieuw, nalezen
+    'l.fillempty': "الدفع والسحب والملء", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.duwen': "يدفع (إلى الأمام)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.trekken': "يسحب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vullen': "يملأ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.leegmaken': "يُفرغ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schoonmaken': "ينظّف", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vol': "ممتلئ", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fillempty.1': "لا تدفع، بل اسحب.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fillempty.2': "هذا ممتلئ. أفرغه.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fillempty.3': "نظّف هذا من فضلك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.fillempty.q': "هل صار ممتلئاً؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.fillempty.a': "نعم. سأفرغه.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.fillempty': { m: "انتهيت؟ قل ذلك", f: "انتهيتِ؟ قولي ذلك", x: "انتهى العمل؟ الإبلاغ عن ذلك" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.fillempty.b': { m: "هل انتهيت من مهمة؟ قل ذلك: «Ik ben klaar.» واسأل ماذا يمكنك أن تفعل بعدها. الانتظار بصمت حتى يراك أحد قد يبدو كأنك لا تريد أن تعمل، حتى لو لم يكن ذلك صحيحاً. الزملاء الذين يسألون عن المهمة التالية يحصلون غالباً بعد مدة على عمل أمتع. هل تريد أن تتعلم شيئاً جديداً؟ اسأل عن ذلك أيضاً: «Mag ik dat ook leren?»", f: "هل انتهيتِ من مهمة؟ قولي ذلك: «Ik ben klaar.» واسألي ماذا يمكنك أن تفعلي بعدها. الانتظار بصمت حتى يراكِ أحد قد يبدو كأنك لا تريدين أن تعملي، حتى لو لم يكن ذلك صحيحاً. الزملاء الذين يسألون عن المهمة التالية يحصلون غالباً بعد مدة على عمل أمتع. هل تريدين أن تتعلمي شيئاً جديداً؟ اسألي عن ذلك أيضاً: «Mag ik dat ook leren?»", x: "انتهت المهمة؟ يُقال ذلك: «Ik ben klaar.» ثم السؤال عمّا يمكن فعله بعدها. الانتظار بصمت حتى ينتبه أحد قد يبدو كأنه عدم رغبة في العمل، حتى لو لم يكن ذلك صحيحاً. الزملاء الذين يسألون عن المهمة التالية يحصلون غالباً بعد مدة على عمل أمتع. رغبة في تعلّم شيء جديد؟ السؤال عن ذلك أيضاً: «Mag ik dat ook leren?»" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.fillempty.p': "انتهيت. ماذا يمكنني أن أفعل أيضاً؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2269,18 +2269,18 @@ const t: CultureTranslation = {
     'c.fillempty.o2': "الانتظار حتى يراك مشرفك.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fillempty.o3': "أخذ استراحة: عملك انتهى.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fillempty.w': "المشرف لا يستطيع أن يرى كل شيء. عند القول إن العمل انتهى، يستمر العمل، وتظهر الرغبة في عمل أكثر.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.order': "أولاً هذا، ثم ذاك", // nieuw, nalezen
-    'w.nu': "الآن", // nieuw, nalezen
-    'w.dan': "ثم، بعد ذلك", // nieuw, nalezen
-    'w.altijd': "دائماً", // nieuw, nalezen
-    'w.genoeg': "كافٍ، يكفي", // nieuw, nalezen
-    'w.meer': "أكثر", // nieuw, nalezen
-    'w.alles': "كل شيء", // nieuw, nalezen
-    's.order.1': "أولاً هذا، ثم ذاك.", // nieuw, nalezen
-    's.order.2': "هذا يكفي.", // nieuw, nalezen
-    's.order.3': "افعل هذا دائماً هكذا.", // nieuw, nalezen
-    'c.order.q': { m: "هل تستطيع أن تفعل هذا الآن؟", f: "هل تستطيعين أن تفعلي هذا الآن؟" }, // nieuw, nalezen
-    'c.order.a': "نعم. أولاً هذا، ثم ماذا؟", // nieuw, nalezen
+    'l.order': "أولاً هذا، ثم ذاك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nu': "الآن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dan': "ثم، بعد ذلك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.altijd': "دائماً", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.genoeg': "كافٍ، يكفي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meer': "أكثر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alles': "كل شيء", // nieuw, nalezen // nagelezen AI 28 nov
+    's.order.1': "أولاً هذا، ثم ذاك.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.order.2': "هذا يكفي.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.order.3': "افعل هذا دائماً هكذا.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.order.q': { m: "هل تستطيع أن تفعل هذا الآن؟", f: "هل تستطيعين أن تفعلي هذا الآن؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.order.a': "نعم. أولاً هذا، ثم ماذا؟", // nieuw, nalezen // nagelezen AI 28 nov
     'c.order': { m: "مهام كثيرة مرة واحدة؟ اسأل ماذا يأتي أولاً", f: "مهام كثيرة مرة واحدة؟ اسألي ماذا يأتي أولاً", x: "مهام كثيرة مرة واحدة؟ السؤال عمّا يأتي أولاً" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.order.b': { m: "أحياناً تحصل على ثلاث مهام في جملة واحدة. هذا صعب الحفظ، حتى على من يتكلم الهولندية جيداً. اسأل أيها يأتي أولاً: «Wat moet ik eerst doen?» يمكنك أيضاً أن تكتب المهام، أو تعدّها على أصابعك وتعيد قولها. هل نسيت واحدة؟ ارجع واسأل. هذا أفضل من التخمين.", f: "أحياناً تحصلين على ثلاث مهام في جملة واحدة. هذا صعب الحفظ، حتى على من يتكلم الهولندية جيداً. اسألي أيها يأتي أولاً: «Wat moet ik eerst doen?» يمكنك أيضاً أن تكتبي المهام، أو تعدّيها على أصابعك وتعيدي قولها. هل نسيتِ واحدة؟ ارجعي واسألي. هذا أفضل من التخمين.", x: "أحياناً تأتي ثلاث مهام في جملة واحدة. هذا صعب الحفظ، حتى على من يتكلم الهولندية جيداً. السؤال عن أيها يأتي أولاً يكون هكذا: «Wat moet ik eerst doen?» يمكن أيضاً كتابة المهام، أو عدّها على الأصابع وإعادة قولها. مهمة منسيّة؟ الرجوع والسؤال. هذا أفضل من التخمين." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.order.p': "هذا كثير. ماذا يجب أن أفعل أولاً؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2289,19 +2289,19 @@ const t: CultureTranslation = {
     'c.order.o2': "القيام بالأولى، على أمل تذكّر الباقي.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.order.o3': "عدم فعل شيء: الثلاث ليست كلها معروفة.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.order.w': "السؤال فوراً يأخذ عشر ثوانٍ. لاحقاً قد يكون مشرفك قد ذهب، وعندها يبقى الانتظار أو التخمين.", // nieuw, nalezen // nagelezen AI 22 nov
-    'u.afbouw': "البلاط والجص والطلاء", // nieuw, nalezen
-    'l.tiletools': "أدوات عامل البلاط", // nieuw, nalezen
-    'w.lijmkam': "المسطرين المسنّن (يفرد غراء البلاط في خطوط بارزة)", // nieuw, nalezen
-    'w.troffel': "المسطرين", // nieuw, nalezen
-    'w.tegelsnijder': "قاطعة البلاط", // nieuw, nalezen
-    'w.nijptang': "الكمّاشة (لقطع قطع صغيرة من البلاطة)", // nieuw, nalezen
-    'w.mixer': "الخلّاط (يحرّك الغراء أو الجص في الدلو)", // nieuw, nalezen
-    'w.duimstok': "المتر الخشبي القابل للطي", // nieuw, nalezen
-    's.tiletools.1': "أعطني المسطرين المسنّن لحظة.", // nieuw, nalezen
-    's.tiletools.2': "أقطع البلاطة بقاطعة البلاط.", // nieuw, nalezen
-    's.tiletools.3': "قِس أولاً بالمتر القابل للطي.", // nieuw, nalezen
-    'c.tiletools.q': "أين الخلّاط؟", // nieuw, nalezen
-    'c.tiletools.a': "عند الدلو، بجانب الباب.", // nieuw, nalezen
+    'u.afbouw': "البلاط والجص والطلاء", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.tiletools': "أدوات عامل البلاط", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lijmkam': "المسطرين المسنّن (يفرد غراء البلاط في خطوط بارزة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.troffel': "المسطرين", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tegelsnijder': "قاطعة البلاط", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nijptang': "الكمّاشة (لقطع قطع صغيرة من البلاطة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mixer': "الخلّاط (يحرّك الغراء أو الجص في الدلو)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.duimstok': "المتر الخشبي القابل للطي", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tiletools.1': "أعطني المسطرين المسنّن لحظة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tiletools.2': "أقطع البلاطة بقاطعة البلاط.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tiletools.3': "قِس أولاً بالمتر القابل للطي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.tiletools.q': "أين الخلّاط؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.tiletools.a': "عند الدلو، بجانب الباب.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.tiletools': { m: "نظّف أدواتك قبل أن يتصلّب الغراء", f: "نظّفي أدواتك قبل أن يتصلّب الغراء", x: "تنظيف الأدوات قبل أن يتصلّب الغراء" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiletools.b': { m: "غراء البلاط والجص يتصلّبان بسرعة، وعلى أدواتك أيضاً. لذلك نظّف المسطرين المسنّن والمسطرين والخلّاط في دلو ماء فوراً، وقبل استراحتك أيضاً. الغراء المتصلّب لا يزول، والمسطرين المسنّن الذي عليه غراء متصلّب يصنع خطوطاً سيئة. لا تسكب الماء الوسخ في المغسلة أو في المجرى: سينسدّ. اسأل أين يمكن أن يذهب الماء. الخلّاط: أمسكه بيديك الاثنتين، وشغّله ببطء. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "غراء البلاط والجص يتصلّبان بسرعة، وعلى أدواتك أيضاً. لذلك نظّفي المسطرين المسنّن والمسطرين والخلّاط في دلو ماء فوراً، وقبل استراحتك أيضاً. الغراء المتصلّب لا يزول، والمسطرين المسنّن الذي عليه غراء متصلّب يصنع خطوطاً سيئة. لا تسكبي الماء الوسخ في المغسلة أو في المجرى: سينسدّ. اسألي أين يمكن أن يذهب الماء. الخلّاط: أمسكيه بيديك الاثنتين، وشغّليه ببطء. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "غراء البلاط والجص يتصلّبان بسرعة، وعلى الأدوات أيضاً. لذلك تنظيف المسطرين المسنّن والمسطرين والخلّاط في دلو ماء يكون فوراً، وقبل الاستراحة أيضاً. الغراء المتصلّب لا يزول، والمسطرين المسنّن الذي عليه غراء متصلّب يصنع خطوطاً سيئة. الماء الوسخ لا يُسكب في المغسلة أو في المجرى: سينسدّ. من الأفضل السؤال أين يمكن أن يذهب الماء. الخلّاط: الإمساك به باليدين الاثنتين، وتشغيله ببطء. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiletools.p': "سأنظّف المسطرين المسنّن الآن.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2310,18 +2310,18 @@ const t: CultureTranslation = {
     'c.tiletools.o2': "تركه: التنظيف يكون بعد العمل.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiletools.o3': "وضعه في دلو الغراء.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiletools.w': "غراء البلاط يتصلّب في الاستراحة أيضاً. المسطرين المسنّن النظيف يصنع خطوطاً جيدة، والبلاط يلتصق جيداً. الغراء المتصلّب عليه يعني عملاً كثيراً، أو أداة جديدة.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.tiling': "البلاط والغراء والخط الأوسط", // nieuw, nalezen
-    'w.tegel': "البلاطة", // nieuw, nalezen
-    'w.tegellijm': "غراء البلاط", // nieuw, nalezen
-    'w.tegelkruisje': "فاصل البلاط (قطعة صغيرة على شكل علامة + بين البلاطات)", // nieuw, nalezen
-    'w.hartlijn': "الخط الأوسط (منه يبدأ تركيب البلاط)", // nieuw, nalezen
-    'w.tegelplaat': "لوح التدريب (لوح للتمرّن على تركيب البلاط)", // nieuw, nalezen
-    'w.potlood': "قلم الرصاص", // nieuw, nalezen
-    's.tiling.1': "غراء البلاط ما زال رطباً.", // nieuw, nalezen
-    's.tiling.2': "ضع فاصل بلاط بين البلاطات.", // nieuw, nalezen
-    's.tiling.3': "ارسم الخط الأوسط أولاً بقلم الرصاص.", // nieuw, nalezen
-    'c.tiling.q': "من أين أبدأ بالبلاط؟", // nieuw, nalezen
-    'c.tiling.a': "في الوسط، على الخط الأوسط.", // nieuw, nalezen
+    'l.tiling': "البلاط والغراء والخط الأوسط", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tegel': "البلاطة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tegellijm': "غراء البلاط", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tegelkruisje': "فاصل البلاط (قطعة صغيرة على شكل علامة + بين البلاطات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hartlijn': "الخط الأوسط (منه يبدأ تركيب البلاط)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tegelplaat': "لوح التدريب (لوح للتمرّن على تركيب البلاط)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.potlood': "قلم الرصاص", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tiling.1': "غراء البلاط ما زال رطباً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tiling.2': "ضع فاصل بلاط بين البلاطات.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tiling.3': "ارسم الخط الأوسط أولاً بقلم الرصاص.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.tiling.q': "من أين أبدأ بالبلاط؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.tiling.a': "في الوسط، على الخط الأوسط.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.tiling': { m: "ابدأ من الخط الأوسط، بقليل من الغراء", f: "ابدئي من الخط الأوسط، بقليل من الغراء", x: "البداية من الخط الأوسط، بقليل من الغراء" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiling.b': { m: "عامل البلاط لا يبدأ في زاوية. ترسم الخط الأوسط أولاً، بقلم الرصاص وميزان الماء، وتبدأ من هناك. عندها تكون البلاطات المقطوعة في الطرفين بالحجم نفسه. افرد من الغراء فقط ما تستطيع أن تغطيه بالبلاط في وقت قصير. الغراء الذي يبقى مدة طويلة تتكوّن عليه قشرة جافة، وعندها لا يلتصق البلاط جيداً. ضع فاصل بلاط عند كل تقاطع، حتى تكون كل المسافات بين البلاطات متساوية. افحص كثيراً بميزان الماء: البلاطة المائلة سهلة الإصلاح الآن، وصعبة الإصلاح غداً.", f: "عامل البلاط لا يبدأ في زاوية. ترسمين الخط الأوسط أولاً، بقلم الرصاص وميزان الماء، وتبدئين من هناك. عندها تكون البلاطات المقطوعة في الطرفين بالحجم نفسه. افردي من الغراء فقط ما تستطيعين أن تغطيه بالبلاط في وقت قصير. الغراء الذي يبقى مدة طويلة تتكوّن عليه قشرة جافة، وعندها لا يلتصق البلاط جيداً. ضعي فاصل بلاط عند كل تقاطع، حتى تكون كل المسافات بين البلاطات متساوية. افحصي كثيراً بميزان الماء: البلاطة المائلة سهلة الإصلاح الآن، وصعبة الإصلاح غداً.", x: "عامل البلاط لا يبدأ في زاوية. الخط الأوسط يُرسم أولاً، بقلم الرصاص وميزان الماء، والبداية تكون من هناك. عندها تكون البلاطات المقطوعة في الطرفين بالحجم نفسه. الغراء يُفرد فقط بقدر ما يمكن تغطيته بالبلاط في وقت قصير. الغراء الذي يبقى مدة طويلة تتكوّن عليه قشرة جافة، وعندها لا يلتصق البلاط جيداً. فاصل البلاط يوضع عند كل تقاطع، حتى تكون كل المسافات بين البلاطات متساوية. الفحص بميزان الماء يكون كثيراً: البلاطة المائلة سهلة الإصلاح الآن، وصعبة الإصلاح غداً." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiling.p': "لا أفرد غراءً كثيراً مرة واحدة.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2330,18 +2330,18 @@ const t: CultureTranslation = {
     'c.tiling.o2': "ضغط البلاط فيه رغم ذلك.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiling.o3': "ترطيبه بالإسفنجة، والمتابعة.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiling.w': "الغراء الذي عليه قشرة جافة لا يمسك البلاطة جيداً. لاحقاً قد تنفصل البلاطة، وعندها يجب إعادة العمل.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.plaster': "التجصيص", // nieuw, nalezen
-    'w.stucspaan': "مالج الجص (لوح فولاذي مسطّح لتنعيم الجص)", // nieuw, nalezen
-    'w.oplegspaan': "لوح الحمل (لوح مسطّح يُحمل عليه الجص)", // nieuw, nalezen
-    'w.spackmes': "سكين المعجون (سكين عريضة ومسطّحة)", // nieuw, nalezen
-    'w.rei': "القدّة (قضيب طويل مستقيم لتسوية الجص)", // nieuw, nalezen
-    'w.sponsspaan': "مالج الإسفنج", // nieuw, nalezen
-    'w.hoekprofiel': "الزاوية المعدنية (شريط معدني لزاوية مستقيمة)", // nieuw, nalezen
-    's.plaster.1': "ثبّت الزاوية المعدنية على زاوية الحائط أولاً.", // nieuw, nalezen
-    's.plaster.2': "اجعل الحائط ناعماً بمالج الجص.", // nieuw, nalezen
-    's.plaster.3': "اسحب القدّة على الحائط.", // nieuw, nalezen
-    'c.plaster.q': "هل جفّ الحائط؟", // nieuw, nalezen
-    'c.plaster.a': "لا، انتظر يوماً آخر.", // nieuw, nalezen
+    'l.plaster': "التجصيص", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stucspaan': "مالج الجص (لوح فولاذي مسطّح لتنعيم الجص)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oplegspaan': "لوح الحمل (لوح مسطّح يُحمل عليه الجص)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spackmes': "سكين المعجون (سكين عريضة ومسطّحة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rei': "القدّة (قضيب طويل مستقيم لتسوية الجص)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sponsspaan': "مالج الإسفنج", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hoekprofiel': "الزاوية المعدنية (شريط معدني لزاوية مستقيمة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plaster.1': "ثبّت الزاوية المعدنية على زاوية الحائط أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plaster.2': "اجعل الحائط ناعماً بمالج الجص.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plaster.3': "اسحب القدّة على الحائط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plaster.q': "هل جفّ الحائط؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plaster.a': "لا، انتظر يوماً آخر.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.plaster': "الجص يحتاج وقتاً ليجفّ", // nieuw, nalezen // nagelezen AI 22 nov
     'c.plaster.b': { m: "الجص الجديد يبقى رطباً مدة طويلة. الحائط الرطب أغمق من الحائط الجاف. الدهّان لا يستطيع أن يبدأ إلا عندما يجفّ الحائط في كل مكان، وقد يأخذ ذلك أياماً أو أسابيع. لا تجفّفه أسرع بمدفأة: عندها قد يتشقّق الجص. هل يريد أحد أن يدهن مبكراً جداً؟ قل إن الحائط لم يجفّ بعد. وقبل أن تبدأ، غطِّ الأرض والنوافذ والمقابس: الجص صعب الإزالة.", f: "الجص الجديد يبقى رطباً مدة طويلة. الحائط الرطب أغمق من الحائط الجاف. الدهّان لا يستطيع أن يبدأ إلا عندما يجفّ الحائط في كل مكان، وقد يأخذ ذلك أياماً أو أسابيع. لا تجفّفيه أسرع بمدفأة: عندها قد يتشقّق الجص. هل يريد أحد أن يدهن مبكراً جداً؟ قولي إن الحائط لم يجفّ بعد. وقبل أن تبدئي، غطّي الأرض والنوافذ والمقابس: الجص صعب الإزالة.", x: "الجص الجديد يبقى رطباً مدة طويلة. الحائط الرطب أغمق من الحائط الجاف. الدهّان لا يستطيع أن يبدأ إلا عندما يجفّ الحائط في كل مكان، وقد يأخذ ذلك أياماً أو أسابيع. التجفيف الأسرع بمدفأة ليس جيداً: عندها قد يتشقّق الجص. هل يريد أحد أن يدهن مبكراً جداً؟ المهم القول إن الحائط لم يجفّ بعد. وقبل البدء، تغطية الأرض والنوافذ والمقابس: الجص صعب الإزالة." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.plaster.p': "الحائط ما زال رطباً. لا يمكنك أن تدهن بعد.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2351,20 +2351,20 @@ const t: CultureTranslation = {
     'c.plaster.o3': "السكوت: الدهّان سيرى ذلك بنفسه.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.plaster.w': "البقع الداكنة تعني أن الجص ما زال رطباً. الطلاء على حائط رطب قد ينفصل، والمدفأة قد تسبّب شقوقاً. الانتظار يكلّف أقل من إعادة العمل.", // nieuw, nalezen // nagelezen AI 22 nov
     // l.paint and l.prep (u.afbouw), "Metselen, hout en vastmaken" (u.ruwbouw), three lessons of Rekenen (u.numbers) and "Machines en gereedschap" (u.machines), 20-21 November 2026.
-    'u.ruwbouw': "البناء بالطوب والخشب والتثبيت", // nieuw, nalezen
-    'u.machines': "الآلات والأدوات", // nieuw, nalezen
-    'l.shapes': "الأشكال", // nieuw, nalezen
-    'w.vierkant': "المربّع", // nieuw, nalezen
-    'w.rechthoek': "المستطيل", // nieuw, nalezen
-    'w.driehoek': "المثلّث", // nieuw, nalezen
-    'w.cirkel': "الدائرة", // nieuw, nalezen
-    'w.kubus': "المكعّب", // nieuw, nalezen
-    'w.balk': "متوازي المستطيلات، الكتلة (شكل صندوق طويل)", // nieuw, nalezen
-    's.shapes.1': "البلاطة مربّعة.", // nieuw, nalezen
-    's.shapes.2': "هذه الغرفة مستطيلة.", // nieuw, nalezen
-    's.shapes.3': "الطوبة لها شكل متوازي المستطيلات.", // nieuw, nalezen
-    'c.shapes.q': "هل هو مربّع؟", // nieuw, nalezen
-    'c.shapes.a': "لا، مستطيل. طوله أكبر من عرضه.", // nieuw, nalezen
+    'u.ruwbouw': "البناء بالطوب والخشب والتثبيت", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.machines': "الآلات والأدوات", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.shapes': "الأشكال", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vierkant': "المربّع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rechthoek': "المستطيل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.driehoek': "المثلّث", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.cirkel': "الدائرة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kubus': "المكعّب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.balk': "متوازي المستطيلات، الكتلة (شكل صندوق طويل)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shapes.1': "البلاطة مربّعة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shapes.2': "هذه الغرفة مستطيلة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shapes.3': "الطوبة لها شكل متوازي المستطيلات.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shapes.q': "هل هو مربّع؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shapes.a': "لا، مستطيل. طوله أكبر من عرضه.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.shapes': { m: "افحص المستطيل بخطّين من زاوية إلى زاوية", f: "افحصي المستطيل بخطّين من زاوية إلى زاوية", x: "فحص المستطيل بخطّين من زاوية إلى زاوية" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.shapes.b': { m: "الغرفة أو الأرضية أو الإطار غالباً مستطيل. لكن هل الزوايا قائمة فعلاً؟ هناك فحص سهل. قِس من زاوية إلى الزاوية المقابلة لها. ثم قِس بين الزاويتين الأخريين. هل الطولان متساويان؟ إذن الزوايا صحيحة. غير متساويين؟ إذن الشكل مائل قليلاً، والبلاط أو الأرضية لن يركب جيداً. أخبر مشرفك قبل أن تبدأ.", f: "الغرفة أو الأرضية أو الإطار غالباً مستطيل. لكن هل الزوايا قائمة فعلاً؟ هناك فحص سهل. قيسي من زاوية إلى الزاوية المقابلة لها. ثم قيسي بين الزاويتين الأخريين. هل الطولان متساويان؟ إذن الزوايا صحيحة. غير متساويين؟ إذن الشكل مائل قليلاً، والبلاط أو الأرضية لن يركب جيداً. أخبري مشرفك قبل أن تبدئي.", x: "الغرفة أو الأرضية أو الإطار غالباً مستطيل. لكن هل الزوايا قائمة فعلاً؟ هناك فحص سهل. القياس يكون من زاوية إلى الزاوية المقابلة لها. ثم بين الزاويتين الأخريين. هل الطولان متساويان؟ إذن الزوايا صحيحة. غير متساويين؟ إذن الشكل مائل قليلاً، والبلاط أو الأرضية لن يركب جيداً. من الأفضل إخبار المشرف قبل البدء." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.shapes.p': "هذان القياسان غير متساويين.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2373,18 +2373,18 @@ const t: CultureTranslation = {
     'c.shapes.o2': "البدء في زاوية، سيكون كل شيء بخير.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shapes.o3': "قياس جانب واحد فقط مرة أخرى.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shapes.w': "طولان مختلفان يعنيان أن الزوايا ليست قائمة. عندها لا يركب البلاط أو الألواح. من الأفضل معرفة ذلك قبل البدء.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.angles': "الزوايا والأشكال المستديرة", // nieuw, nalezen
-    'w.hoek': "الزاوية", // nieuw, nalezen
-    'w.graad': "الدرجة (°)", // nieuw, nalezen
-    'w.geodriehoek': "المثلّث مع المنقلة", // nieuw, nalezen
-    'w.boog': "القوس، المنحنى", // nieuw, nalezen
-    'w.cilinder': "الأسطوانة", // nieuw, nalezen
-    'w.parallellogram': "متوازي الأضلاع", // nieuw, nalezen
-    's.angles.1': "هذه الزاوية تسعون درجة.", // nieuw, nalezen
-    's.angles.2': "قِس الزاوية بالمثلّث والمنقلة.", // nieuw, nalezen
-    's.angles.3': "الأنبوب له شكل أسطوانة.", // nieuw, nalezen
-    'c.angles.q': "كم درجة هذه الزاوية؟", // nieuw, nalezen
-    'c.angles.a': "خمس وأربعون. نصف زاوية قائمة.", // nieuw, nalezen
+    'l.angles': "الزوايا والأشكال المستديرة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hoek': "الزاوية", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.graad': "الدرجة (°)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geodriehoek': "المثلّث مع المنقلة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.boog': "القوس، المنحنى", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.cilinder': "الأسطوانة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.parallellogram': "متوازي الأضلاع", // nieuw, nalezen // nagelezen AI 28 nov
+    's.angles.1': "هذه الزاوية تسعون درجة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.angles.2': "قِس الزاوية بالمثلّث والمنقلة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.angles.3': "الأنبوب له شكل أسطوانة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.angles.q': "كم درجة هذه الزاوية؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.angles.a': "خمس وأربعون. نصف زاوية قائمة.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.angles': { m: "افحص الزاوية الكبيرة بـ 3 و4 و5", f: "افحصي الزاوية الكبيرة بـ 3 و4 و5", x: "فحص الزاوية الكبيرة بـ 3 و4 و5" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.angles.b': { m: "في موقع البناء تفحص الزاوية القائمة كثيراً: حائط على أرضية، أو زاوية غرفة. الزاوية الصغيرة تفحصها بزاوية النجار أو بالمثلّث. للزاوية الكبيرة هناك حيلة قديمة. قِس 3 أمتار على جانب و4 أمتار على الجانب الآخر، وضع علامة عند الاثنين. هل المسافة من علامة إلى علامة 5 أمتار بالضبط؟ إذن الزاوية 90 درجة. الأصغر ينفع أيضاً: 30 و40 و50 سنتيمتراً.", f: "في موقع البناء تفحصين الزاوية القائمة كثيراً: حائط على أرضية، أو زاوية غرفة. الزاوية الصغيرة تفحصينها بزاوية النجار أو بالمثلّث. للزاوية الكبيرة هناك حيلة قديمة. قيسي 3 أمتار على جانب و4 أمتار على الجانب الآخر، وضعي علامة عند الاثنين. هل المسافة من علامة إلى علامة 5 أمتار بالضبط؟ إذن الزاوية 90 درجة. الأصغر ينفع أيضاً: 30 و40 و50 سنتيمتراً.", x: "في موقع البناء تُفحص الزاوية القائمة كثيراً: حائط على أرضية، أو زاوية غرفة. الزاوية الصغيرة تُفحص بزاوية النجار أو بالمثلّث. للزاوية الكبيرة هناك حيلة قديمة. قياس 3 أمتار على جانب و4 أمتار على الجانب الآخر، ووضع علامة عند الاثنين. هل المسافة من علامة إلى علامة 5 أمتار بالضبط؟ إذن الزاوية 90 درجة. الأصغر ينفع أيضاً: 30 و40 و50 سنتيمتراً." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.angles.p': "هذه الزاوية ليست قائمة.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2393,18 +2393,18 @@ const t: CultureTranslation = {
     'c.angles.o2': "النظر إليها من بعيد.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.angles.o3': "استخدام زاوية النجار الصغيرة رغم ذلك.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.angles.w': "بـ 3 و4 و5 يمكن فحص زاوية كبيرة بالضبط، بشريط قياس فقط. بالعين قد تبدو الزاوية صحيحة وهي خطأ.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.size': "الطول والمساحة والحجم", // nieuw, nalezen
-    'w.lengte': "الطول", // nieuw, nalezen
-    'w.breedte': "العرض", // nieuw, nalezen
-    'w.hoogte': "الارتفاع", // nieuw, nalezen
-    'w.oppervlakte': "المساحة (الطول ضرب العرض، بالمتر المربّع)", // nieuw, nalezen
-    'w.inhoud': "الحجم (الطول ضرب العرض ضرب الارتفاع)", // nieuw, nalezen
-    'w.centimeter': "السنتيمتر", // nieuw, nalezen
-    's.size.1': "المساحة هي الطول ضرب العرض.", // nieuw, nalezen
-    's.size.2': "الحجم هو الطول ضرب العرض ضرب الارتفاع.", // nieuw, nalezen
-    's.size.3': "عشرة مليمترات هي سنتيمتر واحد.", // nieuw, nalezen
-    'c.size.q': "كم متراً مربّعاً هذه الأرضية؟", // nieuw, nalezen
-    'c.size.a': "أربعة في خمسة أمتار، إذن عشرون متراً مربّعاً.", // nieuw, nalezen
+    'l.size': "الطول والمساحة والحجم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lengte': "الطول", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.breedte': "العرض", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hoogte': "الارتفاع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oppervlakte': "المساحة (الطول ضرب العرض، بالمتر المربّع)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inhoud': "الحجم (الطول ضرب العرض ضرب الارتفاع)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.centimeter': "السنتيمتر", // nieuw, nalezen // nagelezen AI 28 nov
+    's.size.1': "المساحة هي الطول ضرب العرض.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.size.2': "الحجم هو الطول ضرب العرض ضرب الارتفاع.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.size.3': "عشرة مليمترات هي سنتيمتر واحد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.size.q': "كم متراً مربّعاً هذه الأرضية؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.size.a': "أربعة في خمسة أمتار، إذن عشرون متراً مربّعاً.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.size': { m: "احسب ما تحتاجه، ثم أضف قليلاً", f: "احسبي ما تحتاجينه، ثم أضيفي قليلاً", x: "حساب ما يلزم، ثم إضافة القليل" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.size.b': { m: "كم بلاطة، كم طلاء، كم رملاً؟ تحسب ذلك بالمساحة أو بالحجم. المساحة: الطول ضرب العرض، بالمتر المربّع. الحجم: الطول ضرب العرض ضرب الارتفاع، بالمتر المكعّب. قِس كل شيء بالوحدة نفسها: كله بالمتر، أو كله بالسنتيمتر. اكتب القياسات، لا تحفظها في رأسك. ثم أضف قليلاً زيادة، للقطع المقطوعة وللأخطاء. لست متأكداً؟ اطلب من زميل أن يفحص حسابك.", f: "كم بلاطة، كم طلاء، كم رملاً؟ تحسبين ذلك بالمساحة أو بالحجم. المساحة: الطول ضرب العرض، بالمتر المربّع. الحجم: الطول ضرب العرض ضرب الارتفاع، بالمتر المكعّب. قيسي كل شيء بالوحدة نفسها: كله بالمتر، أو كله بالسنتيمتر. اكتبي القياسات، لا تحفظيها في رأسك. ثم أضيفي قليلاً زيادة، للقطع المقطوعة وللأخطاء. لستِ متأكدة؟ اطلبي من زميل أن يفحص حسابك.", x: "كم بلاطة، كم طلاء، كم رملاً؟ الحساب يكون بالمساحة أو بالحجم. المساحة: الطول ضرب العرض، بالمتر المربّع. الحجم: الطول ضرب العرض ضرب الارتفاع، بالمتر المكعّب. القياس كله بالوحدة نفسها: كله بالمتر، أو كله بالسنتيمتر. القياسات تُكتب، ولا تُحفظ في الرأس. ثم إضافة قليل من الزيادة، للقطع المقطوعة وللأخطاء. عدم التأكد؟ من الأفضل أن يفحص زميل الحساب." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.size.p': "أكتب القياسات.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2413,18 +2413,18 @@ const t: CultureTranslation = {
     'c.size.o2': "طلب المساحة بالضبط، ولا بلاطة زيادة.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.size.o3': "التخمين: الأرضية رأيتها.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.size.w': "بعض البلاط يُقطع دائماً، وبعضه ينكسر. مع قليل من الزيادة، لا حاجة للتوقف في منتصف العمل والطلب مرة أخرى.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.paint': "الطلاء", // nieuw, nalezen
-    'w.verf': "الطلاء", // nieuw, nalezen
-    'w.kwast': "فرشاة الطلاء (فرشاة عريضة)", // nieuw, nalezen
-    'w.penseel': "الفرشاة الصغيرة (للزوايا والحواف)", // nieuw, nalezen
-    'w.roerstok': "عصا التحريك", // nieuw, nalezen
-    'w.tape': "الشريط اللاصق الورقي (للتغطية)", // nieuw, nalezen
-    'w.strijkvaatje': "وعاء الطلاء الصغير (وعاء صغير يُمسك باليد أثناء الطلاء)", // nieuw, nalezen
-    's.paint.1': "حرّك الطلاء جيداً أولاً.", // nieuw, nalezen
-    's.paint.2': "غطِّ الحافة بالشريط اللاصق.", // nieuw, nalezen
-    's.paint.3': "ضع قليلاً من الطلاء في وعاء الطلاء الصغير.", // nieuw, nalezen
-    'c.paint.q': "أيّ فرشاة آخذ؟", // nieuw, nalezen
-    'c.paint.a': "العريضة للحائط، والفرشاة الصغيرة للزوايا.", // nieuw, nalezen
+    'l.paint': "الطلاء", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verf': "الطلاء", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kwast': "فرشاة الطلاء (فرشاة عريضة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.penseel': "الفرشاة الصغيرة (للزوايا والحواف)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.roerstok': "عصا التحريك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tape': "الشريط اللاصق الورقي (للتغطية)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.strijkvaatje': "وعاء الطلاء الصغير (وعاء صغير يُمسك باليد أثناء الطلاء)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.paint.1': "حرّك الطلاء جيداً أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.paint.2': "غطِّ الحافة بالشريط اللاصق.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.paint.3': "ضع قليلاً من الطلاء في وعاء الطلاء الصغير.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.paint.q': "أيّ فرشاة آخذ؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.paint.a': "العريضة للحائط، والفرشاة الصغيرة للزوايا.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.paint': { m: "حرّك جيداً، واطلِ من الأعلى إلى الأسفل", f: "حرّكي جيداً، واطلي من الأعلى إلى الأسفل", x: "التحريك جيداً، والطلاء من الأعلى إلى الأسفل" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.paint.b': { m: "الطلاء الذي بقي مدة بلا حركة يكون سميكاً في أسفل العلبة. لذلك حرّكه جيداً أولاً، بعصا التحريك، حتى يصير اللون نفسه في كل مكان. لا تطلِ من العلبة الكبيرة: ضع قليلاً من الطلاء في وعاء الطلاء الصغير، وأغلق العلبة مرة أخرى. هكذا يبقى الطلاء جيداً. اطلِ من الأعلى إلى الأسفل، حتى تسقط القطرات على طلاء رطب وتستطيع أن تزيلها بالفرشاة. استخدم الفرشاة العريضة للحائط والفرشاة الصغيرة للزوايا. في النهاية، نظّف الفرش فوراً.", f: "الطلاء الذي بقي مدة بلا حركة يكون سميكاً في أسفل العلبة. لذلك حرّكيه جيداً أولاً، بعصا التحريك، حتى يصير اللون نفسه في كل مكان. لا تطلي من العلبة الكبيرة: ضعي قليلاً من الطلاء في وعاء الطلاء الصغير، وأغلقي العلبة مرة أخرى. هكذا يبقى الطلاء جيداً. اطلي من الأعلى إلى الأسفل، حتى تسقط القطرات على طلاء رطب وتستطيعي أن تزيليها بالفرشاة. استخدمي الفرشاة العريضة للحائط والفرشاة الصغيرة للزوايا. في النهاية، نظّفي الفرش فوراً.", x: "الطلاء الذي بقي مدة بلا حركة يكون سميكاً في أسفل العلبة. لذلك التحريك جيداً أولاً، بعصا التحريك، حتى يصير اللون نفسه في كل مكان. الطلاء لا يكون من العلبة الكبيرة: قليل من الطلاء يوضع في وعاء الطلاء الصغير، والعلبة تُغلق مرة أخرى. هكذا يبقى الطلاء جيداً. الطلاء يكون من الأعلى إلى الأسفل، حتى تسقط القطرات على طلاء رطب ويمكن إزالتها بالفرشاة. الفرشاة العريضة للحائط والفرشاة الصغيرة للزوايا. في النهاية، تنظيف الفرش فوراً." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.paint.p': "أحرّك الطلاء جيداً أولاً.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2433,18 +2433,18 @@ const t: CultureTranslation = {
     'c.paint.o2': "الطلاء بالطلاء الرقيق الذي في الأعلى.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.paint.o3': "إضافة الماء حتى يصير رقيقاً في كل مكان.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.paint.w': "جزء من اللون يبقى في أسفل العلبة. بدون تحريك، تظهر على الحائط بقع وخطوط.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.prep': "التحضير للطلاء", // nieuw, nalezen
-    'w.plamuurmes': "سكين المعجون (لسدّ الثقوب)", // nieuw, nalezen
-    'w.schuurpapier': "ورق الصنفرة", // nieuw, nalezen
-    'w.verfkrabber': "مكشطة الطلاء", // nieuw, nalezen
-    'w.stoffertje': "الفرشاة الصغيرة (لكنس الغبار)", // nieuw, nalezen
-    'w.schuren': "يصنفر", // nieuw, nalezen
-    'w.afplakken': "يغطّي بالشريط اللاصق (يغطّي حافة بالشريط)", // nieuw, nalezen
-    's.prep.1': "اكشط الطلاء القديم أولاً.", // nieuw, nalezen
-    's.prep.2': "صنفر الخشب حتى يصير ناعماً.", // nieuw, nalezen
-    's.prep.3': "اكنس الغبار بالفرشاة الصغيرة.", // nieuw, nalezen
-    'c.prep.q': "هل يمكنني أن أطلي الآن؟", // nieuw, nalezen
-    'c.prep.a': "لا، أولاً الصنفرة وسدّ الثقب.", // nieuw, nalezen
+    'l.prep': "التحضير للطلاء", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plamuurmes': "سكين المعجون (لسدّ الثقوب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schuurpapier': "ورق الصنفرة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verfkrabber': "مكشطة الطلاء", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stoffertje': "الفرشاة الصغيرة (لكنس الغبار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schuren': "يصنفر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afplakken': "يغطّي بالشريط اللاصق (يغطّي حافة بالشريط)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.prep.1': "اكشط الطلاء القديم أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.prep.2': "صنفر الخشب حتى يصير ناعماً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.prep.3': "اكنس الغبار بالفرشاة الصغيرة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.prep.q': "هل يمكنني أن أطلي الآن؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.prep.a': "لا، أولاً الصنفرة وسدّ الثقب.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.prep': "الطلاء الجيد يبدأ قبل الطلاء", // nieuw, nalezen // nagelezen AI 22 nov
     'c.prep.b': { m: "الطلاء لا يلتصق جيداً على الوسخ أو الغبار أو الطلاء القديم المتقشّر. لذلك اكشط الطلاء المتقشّر أولاً بمكشطة الطلاء. سدّ الثقوب بالمعجون وسكين المعجون، واترك المعجون يجفّ. ثم صنفره حتى يصير ناعماً. بعد الصنفرة، اكنس الغبار بالفرشاة الصغيرة، ومن الحواف أيضاً. في الآخر، غطِّ بالشريط ما يجب أن يبقى نظيفاً، مثل النوافذ والمقابس. الصنفرة تصنع غباراً ناعماً: البس كمامة غبار، واسأل أيّ كمامة. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الطلاء لا يلتصق جيداً على الوسخ أو الغبار أو الطلاء القديم المتقشّر. لذلك اكشطي الطلاء المتقشّر أولاً بمكشطة الطلاء. سدّي الثقوب بالمعجون وسكين المعجون، واتركي المعجون يجفّ. ثم صنفريه حتى يصير ناعماً. بعد الصنفرة، اكنسي الغبار بالفرشاة الصغيرة، ومن الحواف أيضاً. في الآخر، غطّي بالشريط ما يجب أن يبقى نظيفاً، مثل النوافذ والمقابس. الصنفرة تصنع غباراً ناعماً: البسي كمامة غبار، واسألي أيّ كمامة. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الطلاء لا يلتصق جيداً على الوسخ أو الغبار أو الطلاء القديم المتقشّر. لذلك كشط الطلاء المتقشّر أولاً بمكشطة الطلاء. الثقوب تُسدّ بالمعجون وسكين المعجون، والمعجون يُترك حتى يجفّ. ثم الصنفرة حتى يصير ناعماً. بعد الصنفرة، كنس الغبار بالفرشاة الصغيرة، ومن الحواف أيضاً. في الآخر، تغطية ما يجب أن يبقى نظيفاً بالشريط، مثل النوافذ والمقابس. الصنفرة تصنع غباراً ناعماً: لبس كمامة غبار، والسؤال أيّ كمامة. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.prep.p': "أولاً الصنفرة، ثم الطلاء.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2453,18 +2453,18 @@ const t: CultureTranslation = {
     'c.prep.o2': "ترك الزميل يطلي: الطلاء يغطّي الغبار.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.prep.o3': "مسح الغبار باليد.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.prep.w': "الطلاء على الغبار لا يلتصق جيداً. لاحقاً يتقشّر، وعندها يجب إعادة كل العمل.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.brick': "البناء بالطوب", // nieuw, nalezen
-    'w.speciekuip': "حوض المونة", // nieuw, nalezen
-    'w.metseltroffel': "مسطرين البنّاء", // nieuw, nalezen
-    'w.baksteen': "الطوبة", // nieuw, nalezen
-    'w.cement': "الإسمنت", // nieuw, nalezen
-    'w.voegijzer': "حديدة الفواصل (لتنعيم الفواصل بين الطوب)", // nieuw, nalezen
-    'w.handveger': "فرشاة اليد", // nieuw, nalezen
-    's.brick.1': "ما زال هناك إسمنت في حوض المونة.", // nieuw, nalezen
-    's.brick.2': "اجعل الفاصل ناعماً بحديدة الفواصل.", // nieuw, nalezen
-    's.brick.3': "نظّف الحائط بفرشاة اليد.", // nieuw, nalezen
-    'c.brick.q': "كم طوبة بقيت عندك؟", // nieuw, nalezen
-    'c.brick.a': "منصة خشبية واحدة بعد. تكفي لليوم.", // nieuw, nalezen
+    'l.brick': "البناء بالطوب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.speciekuip': "حوض المونة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.metseltroffel': "مسطرين البنّاء", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.baksteen': "الطوبة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.cement': "الإسمنت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voegijzer': "حديدة الفواصل (لتنعيم الفواصل بين الطوب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handveger': "فرشاة اليد", // nieuw, nalezen // nagelezen AI 28 nov
+    's.brick.1': "ما زال هناك إسمنت في حوض المونة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.brick.2': "اجعل الفاصل ناعماً بحديدة الفواصل.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.brick.3': "نظّف الحائط بفرشاة اليد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.brick.q': "كم طوبة بقيت عندك؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.brick.a': "منصة خشبية واحدة بعد. تكفي لليوم.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.brick': { m: "حافظ على الحائط نظيفاً أثناء العمل", f: "حافظي على الحائط نظيفاً أثناء العمل", x: "الحفاظ على الحائط نظيفاً أثناء العمل" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.brick.b': { m: "المونة رطبة عندما تضع الطوب، وتتصلّب في ساعات قليلة. لذلك اعمل بنظافة. اكشط المونة التي تخرج من الفاصل بالمسطرين فوراً. نعّم الفواصل بحديدة الفواصل عندما تصير المونة متماسكة قليلاً، لا عندما تكون ما زالت رطبة. ثم نظّف الحائط بفرشاة اليد. المونة المتصلّبة على وجه الطوبة صعبة الإزالة جداً. في آخر اليوم، غطِّ أعلى الحائط، حتى لا يغسل المطر المونة.", f: "المونة رطبة عندما تضعين الطوب، وتتصلّب في ساعات قليلة. لذلك اعملي بنظافة. اكشطي المونة التي تخرج من الفاصل بالمسطرين فوراً. نعّمي الفواصل بحديدة الفواصل عندما تصير المونة متماسكة قليلاً، لا عندما تكون ما زالت رطبة. ثم نظّفي الحائط بفرشاة اليد. المونة المتصلّبة على وجه الطوبة صعبة الإزالة جداً. في آخر اليوم، غطّي أعلى الحائط، حتى لا يغسل المطر المونة.", x: "المونة رطبة عند وضع الطوب، وتتصلّب في ساعات قليلة. لذلك العمل بنظافة. المونة التي تخرج من الفاصل تُكشط بالمسطرين فوراً. الفواصل تُنعَّم بحديدة الفواصل عندما تصير المونة متماسكة قليلاً، لا عندما تكون ما زالت رطبة. ثم تنظيف الحائط بفرشاة اليد. المونة المتصلّبة على وجه الطوبة صعبة الإزالة جداً. في آخر اليوم، تغطية أعلى الحائط، حتى لا يغسل المطر المونة." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.brick.p': "أنعّم الفواصل.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2473,18 +2473,18 @@ const t: CultureTranslation = {
     'c.brick.o2': "تركها: التنظيف يكون الأسبوع القادم.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brick.o3': "غسل الحائط بماء كثير.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brick.w': "المونة الطرية تزول بسهولة بالفرشاة. المونة المتصلّبة تبقى على الطوبة، وعندها لا يبدو الحائط جيداً.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.wall': "حائط مستقيم", // nieuw, nalezen
-    'w.metseltouw': "خيط البنّاء (خيط لصفّ مستقيم)", // nieuw, nalezen
-    'w.klos': "ماسك الخيط (يمسك الخيط عند الزاوية)", // nieuw, nalezen
-    'w.lagenmaatlat': "مسطرة الصفوف (تبيّن ارتفاع كل صف)", // nieuw, nalezen
-    'w.profiel': "القائم الزاوي (عمود مستقيم في طرف الحائط)", // nieuw, nalezen
-    'w.kop': "رأس الطوبة (الطرف القصير من الطوبة)", // nieuw, nalezen
-    'w.strek': "جانب الطوبة (الجانب الطويل من الطوبة)", // nieuw, nalezen
-    's.wall.1': "شُدّ خيط البنّاء جيداً.", // nieuw, nalezen
-    's.wall.2': "القائم الزاوي يجب أن يقف مستقيماً.", // nieuw, nalezen
-    's.wall.3': "ضع الطوبة والجانب الطويل إلى الخارج.", // nieuw, nalezen
-    'c.wall.q': "كم يجب أن يكون ارتفاع هذا الصف؟", // nieuw, nalezen
-    'c.wall.a': "انظر إلى مسطرة الصفوف.", // nieuw, nalezen
+    'l.wall': "حائط مستقيم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.metseltouw': "خيط البنّاء (خيط لصفّ مستقيم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.klos': "ماسك الخيط (يمسك الخيط عند الزاوية)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lagenmaatlat': "مسطرة الصفوف (تبيّن ارتفاع كل صف)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.profiel': "القائم الزاوي (عمود مستقيم في طرف الحائط)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kop': "رأس الطوبة (الطرف القصير من الطوبة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.strek': "جانب الطوبة (الجانب الطويل من الطوبة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wall.1': "شُدّ خيط البنّاء جيداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wall.2': "القائم الزاوي يجب أن يقف مستقيماً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wall.3': "ضع الطوبة والجانب الطويل إلى الخارج.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wall.q': "كم يجب أن يكون ارتفاع هذا الصف؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wall.a': "انظر إلى مسطرة الصفوف.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.wall': "الخيط يُبقي الحائط مستقيماً", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wall.b': { m: "البنّاء لا يبني بالعين. أولاً تقف القوائم الزاوية مستقيمة في طرفي الحائط. بينها تشدّ خيط البنّاء جيداً، على ارتفاع الصف التالي. ضع كل طوبة على طول الخيط، لكن لا تدفع الخيط بعيداً. مسطرة الصفوف تبيّن كم يجب أن يكون ارتفاع كل صف. افحص كثيراً بميزان الماء. الطوبة المائلة سهلة الإصلاح والمونة رطبة، وصعبة الإصلاح جداً غداً.", f: "البنّاء لا يبني بالعين. أولاً تقف القوائم الزاوية مستقيمة في طرفي الحائط. بينها تشدّين خيط البنّاء جيداً، على ارتفاع الصف التالي. ضعي كل طوبة على طول الخيط، لكن لا تدفعي الخيط بعيداً. مسطرة الصفوف تبيّن كم يجب أن يكون ارتفاع كل صف. افحصي كثيراً بميزان الماء. الطوبة المائلة سهلة الإصلاح والمونة رطبة، وصعبة الإصلاح جداً غداً.", x: "البنّاء لا يبني بالعين. أولاً تقف القوائم الزاوية مستقيمة في طرفي الحائط. بينها يُشدّ خيط البنّاء جيداً، على ارتفاع الصف التالي. كل طوبة توضع على طول الخيط، لكن بدون دفع الخيط بعيداً. مسطرة الصفوف تبيّن كم يجب أن يكون ارتفاع كل صف. الفحص بميزان الماء يكون كثيراً. الطوبة المائلة سهلة الإصلاح والمونة رطبة، وصعبة الإصلاح جداً غداً." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.wall.p': "هل خيط البنّاء مشدود؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2493,18 +2493,18 @@ const t: CultureTranslation = {
     'c.wall.o2': "وضع الطوب تحته رغم ذلك.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wall.o3': "وضع الطوب بالعين.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wall.w': "الخيط المرتخي يتدلّى في الوسط، فيتدلّى الصف أيضاً. الخيط المشدود يعطي صفاً مستقيماً.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.wood': "العمل بالخشب", // nieuw, nalezen
-    'w.handzaag': "المنشار اليدوي", // nieuw, nalezen
-    'w.kapzaag': "منشار الظهر (منشار صغير بظهر صلب)", // nieuw, nalezen
-    'w.houtbeitel': "إزميل الخشب", // nieuw, nalezen
-    'w.handschaaf': "الفارة اليدوية (لتسوية الخشب)", // nieuw, nalezen
-    'w.timmermanshamer': "مطرقة النجّار", // nieuw, nalezen
-    'w.houtenhamer': "المطرقة الخشبية (مطرقة من خشب)", // nieuw, nalezen
-    's.wood.1': "انشر اللوح الخشبي على المقاس.", // nieuw, nalezen
-    's.wood.2': "سوِّ الحافة بالفارة حتى تصير ناعمة.", // nieuw, nalezen
-    's.wood.3': "اضرب الإزميل بالمطرقة الخشبية.", // nieuw, nalezen
-    'c.wood.q': "أيّ منشار أحتاج؟", // nieuw, nalezen
-    'c.wood.a': "منشار الظهر، لهذه القطعة الصغيرة.", // nieuw, nalezen
+    'l.wood': "العمل بالخشب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handzaag': "المنشار اليدوي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kapzaag': "منشار الظهر (منشار صغير بظهر صلب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.houtbeitel': "إزميل الخشب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handschaaf': "الفارة اليدوية (لتسوية الخشب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.timmermanshamer': "مطرقة النجّار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.houtenhamer': "المطرقة الخشبية (مطرقة من خشب)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wood.1': "انشر اللوح الخشبي على المقاس.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wood.2': "سوِّ الحافة بالفارة حتى تصير ناعمة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wood.3': "اضرب الإزميل بالمطرقة الخشبية.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wood.q': "أيّ منشار أحتاج؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wood.a': "منشار الظهر، لهذه القطعة الصغيرة.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.wood': "القطعة القصيرة جداً لا يمكن إصلاحها", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wood.b': { m: "الخشب المنشور قصيراً جداً لا يمكن أن يصير طويلاً مرة أخرى. لذلك قِس مرتين، وارسم الخط قبل أن تنشر. انشر بجانب الخط، من جهة القطعة التي لا تحتاجها. ثبّت الخشب: على طاولة العمل أو بملزمة، لا على ركبتك. اترك المنشار يقوم بالعمل، بحركات طويلة وهادئة. ادفع الإزميل بعيداً عن جسمك وعن يدك الأخرى. وأبقِ الإزميل والفارة حادّين: الأداة غير الحادّة تنزلق بسهولة أكبر.", f: "الخشب المنشور قصيراً جداً لا يمكن أن يصير طويلاً مرة أخرى. لذلك قيسي مرتين، وارسمي الخط قبل أن تنشري. انشري بجانب الخط، من جهة القطعة التي لا تحتاجينها. ثبّتي الخشب: على طاولة العمل أو بملزمة، لا على ركبتك. اتركي المنشار يقوم بالعمل، بحركات طويلة وهادئة. ادفعي الإزميل بعيداً عن جسمك وعن يدك الأخرى. وأبقي الإزميل والفارة حادّين: الأداة غير الحادّة تنزلق بسهولة أكبر.", x: "الخشب المنشور قصيراً جداً لا يمكن أن يصير طويلاً مرة أخرى. لذلك القياس مرتين، ورسم الخط قبل النشر. النشر يكون بجانب الخط، من جهة القطعة غير المطلوبة. الخشب يُثبَّت: على طاولة العمل أو بملزمة، لا على الركبة. المنشار يقوم بالعمل، بحركات طويلة وهادئة. الإزميل يُدفع بعيداً عن الجسم وعن اليد الأخرى. والإزميل والفارة يبقيان حادّين: الأداة غير الحادّة تنزلق بسهولة أكبر." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.wood.p': "أقيسه مرة أخرى.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2513,18 +2513,18 @@ const t: CultureTranslation = {
     'c.wood.o2': "النشر الآن: على الأغلب القياس صحيح.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wood.o3': "النشر بالعين، بدون خط.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wood.w': "القطعة الطويلة جداً يمكن نشرها مرة أخرى، والقصيرة جداً لا يمكن إصلاحها. القياس مرة أخرى يأخذ دقيقة؛ واللوح الجديد يأخذ أكثر بكثير.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.square': "التخطيط على الخشب", // nieuw, nalezen
-    'w.winkelhaak': "زاوية النجّار (تبيّن الزاوية القائمة)", // nieuw, nalezen
-    'w.verstekhaak': "زاوية الشطف (45 درجة)", // nieuw, nalezen
-    'w.zwaaihaak': "الزاوية المتحرّكة (الزاوية تُضبط باليد)", // nieuw, nalezen
-    'w.kruishout': "شنكار التخطيط (يرسم خطاً على طول الحافة)", // nieuw, nalezen
-    'w.passer': "الفرجار (لرسم دائرة)", // nieuw, nalezen
-    'w.aftekenen': "يخطّط (يرسم مكان القطع)", // nieuw, nalezen
-    's.square.1': "ارسم الخط بزاوية النجّار.", // nieuw, nalezen
-    's.square.2': "اضبط الزاوية المتحرّكة على الزاوية الصحيحة.", // nieuw, nalezen
-    's.square.3': "ارسم دائرة بالفرجار.", // nieuw, nalezen
-    'c.square.q': "هل الزاوية قائمة؟", // nieuw, nalezen
-    'c.square.a': "نعم، زاوية النجّار تركب بالضبط.", // nieuw, nalezen
+    'l.square': "التخطيط على الخشب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.winkelhaak': "زاوية النجّار (تبيّن الزاوية القائمة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verstekhaak': "زاوية الشطف (45 درجة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zwaaihaak': "الزاوية المتحرّكة (الزاوية تُضبط باليد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kruishout': "شنكار التخطيط (يرسم خطاً على طول الحافة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.passer': "الفرجار (لرسم دائرة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aftekenen': "يخطّط (يرسم مكان القطع)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.square.1': "ارسم الخط بزاوية النجّار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.square.2': "اضبط الزاوية المتحرّكة على الزاوية الصحيحة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.square.3': "ارسم دائرة بالفرجار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.square.q': "هل الزاوية قائمة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.square.a': "نعم، زاوية النجّار تركب بالضبط.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.square': { m: "خطّط من حافة مستقيمة واحدة", f: "خطّطي من حافة مستقيمة واحدة", x: "التخطيط من حافة مستقيمة واحدة" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.square.b': { m: "قبل أن تنشر أو تثقب، تخطّط المكان. استخدم قلم رصاص حادّاً: الخط السميك ليس دقيقاً. اختر حافة مستقيمة واحدة من الخشب، وقِس كل شيء من تلك الحافة. أمسك الجزء السميك من زاوية النجّار مضغوطاً عليها، وارسم الخط على طول الفولاذ. ارسم علامة × صغيرة على القطعة التي لن تستخدمها. ثم تنشر بجانب الخط، من جهة العلامة.", f: "قبل أن تنشري أو تثقبي، تخطّطين المكان. استخدمي قلم رصاص حادّاً: الخط السميك ليس دقيقاً. اختاري حافة مستقيمة واحدة من الخشب، وقيسي كل شيء من تلك الحافة. أمسكي الجزء السميك من زاوية النجّار مضغوطاً عليها، وارسمي الخط على طول الفولاذ. ارسمي علامة × صغيرة على القطعة التي لن تستخدميها. ثم تنشرين بجانب الخط، من جهة العلامة.", x: "قبل النشر أو الثقب، يُخطَّط المكان. قلم الرصاص يجب أن يكون حادّاً: الخط السميك ليس دقيقاً. اختيار حافة مستقيمة واحدة من الخشب، وقياس كل شيء من تلك الحافة. الجزء السميك من زاوية النجّار يُضغط عليها، والخط يُرسم على طول الفولاذ. علامة × صغيرة تُرسم على القطعة غير المستخدمة. ثم النشر بجانب الخط، من جهة العلامة." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.square.p': "أخطّطه أولاً.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2533,18 +2533,18 @@ const t: CultureTranslation = {
     'c.square.o2': "رسم الخط رغم ذلك، لا بأس.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.square.o3': "التعليم بالظفر.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.square.w': "الخط السميك عرضه بضعة مليمترات. عندها لا يُعرف أين يكون النشر، والقطعة لا تكون دقيقة.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.screw': "المثاقب والبراغي", // nieuw, nalezen
-    'w.accuboor': "المثقاب اللاسلكي (بالبطارية)", // nieuw, nalezen
-    'w.boormachine': "المثقاب الكهربائي (بسلك)", // nieuw, nalezen
-    'w.bitje': "رأس المفك (للمثقاب)", // nieuw, nalezen
-    'w.plug': "الدسّار (قطعة بلاستيك في الحائط للبرغي)", // nieuw, nalezen
-    'w.schroevendraaier': "المفك", // nieuw, nalezen
-    'w.spijker': "المسمار", // nieuw, nalezen
-    's.screw.1': "اثقب ثقباً وضع فيه دسّاراً.", // nieuw, nalezen
-    's.screw.2': "أيّ رأس مفك يناسب هذا البرغي؟", // nieuw, nalezen
-    's.screw.3': "دُقّ المسمار في الخشب.", // nieuw, nalezen
-    'c.screw.q': "أين المثقاب اللاسلكي؟", // nieuw, nalezen
-    'c.screw.a': "على الشاحن، بطاريته ممتلئة تقريباً.", // nieuw, nalezen
+    'l.screw': "المثاقب والبراغي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.accuboor': "المثقاب اللاسلكي (بالبطارية)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.boormachine': "المثقاب الكهربائي (بسلك)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bitje': "رأس المفك (للمثقاب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plug': "الدسّار (قطعة بلاستيك في الحائط للبرغي)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schroevendraaier': "المفك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spijker': "المسمار", // nieuw, nalezen // nagelezen AI 28 nov
+    's.screw.1': "اثقب ثقباً وضع فيه دسّاراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.screw.2': "أيّ رأس مفك يناسب هذا البرغي؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.screw.3': "دُقّ المسمار في الخشب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.screw.q': "أين المثقاب اللاسلكي؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.screw.a': "على الشاحن، بطاريته ممتلئة تقريباً.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.screw': { m: "انظر قبل أن تثقب", f: "انظري قبل أن تثقبي", x: "النظر قبل الثقب" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.screw.b': { m: "قبل أن تثقب في حائط، فكّر ماذا يوجد خلفه. الأنابيب والكابلات غالباً تمرّ مستقيمة إلى الأعلى أو الأسفل أو بالعرض من مقبس أو مفتاح كهرباء. اسأل أين هي، أو افحص بجهاز كشف. اختر لقمة ثقب بحجم الدسّار نفسه، واثقب الثقب أعمق قليلاً من الدسّار. استخدم رأس المفك الصحيح للبرغي: الرأس الخطأ ينزلق ويُتلف رأس البرغي. البس نظارة السلامة عندما تثقب.", f: "قبل أن تثقبي في حائط، فكّري ماذا يوجد خلفه. الأنابيب والكابلات غالباً تمرّ مستقيمة إلى الأعلى أو الأسفل أو بالعرض من مقبس أو مفتاح كهرباء. اسألي أين هي، أو افحصي بجهاز كشف. اختاري لقمة ثقب بحجم الدسّار نفسه، واثقبي الثقب أعمق قليلاً من الدسّار. استخدمي رأس المفك الصحيح للبرغي: الرأس الخطأ ينزلق ويُتلف رأس البرغي. البسي نظارة السلامة عندما تثقبين.", x: "قبل الثقب في حائط، من المهم التفكير ماذا يوجد خلفه. الأنابيب والكابلات غالباً تمرّ مستقيمة إلى الأعلى أو الأسفل أو بالعرض من مقبس أو مفتاح كهرباء. السؤال أين هي، أو الفحص بجهاز كشف. لقمة الثقب تكون بحجم الدسّار نفسه، والثقب أعمق قليلاً من الدسّار. رأس المفك يجب أن يناسب البرغي: الرأس الخطأ ينزلق ويُتلف رأس البرغي. لبس نظارة السلامة عند الثقب." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.screw.p': "هل يمكنني أن أثقب هنا؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2553,18 +2553,18 @@ const t: CultureTranslation = {
     'c.screw.o2': "الثقب: لا يوجد كابل أبداً.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.screw.o3': "الثقب ببطء، فيكون آمناً.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.screw.w': "الكابل غالباً يمرّ مستقيماً إلى الأعلى من المقبس. الثقب فيه خطير، والتصليح عمل كثير.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.fix': "تثبيت الأشياء", // nieuw, nalezen
-    'w.bevestigen': "يثبّت (يربط شيئاً بقوة بالحائط)", // nieuw, nalezen
-    'w.vastzetten': "يشدّ (يلفّ حتى يصير مشدوداً)", // nieuw, nalezen
-    'w.lijmen': "يلصق بالغراء", // nieuw, nalezen
-    'w.inbussleutel': "مفتاح ألن (مفتاح سداسي)", // nieuw, nalezen
-    'w.kruisschroevendraaier': "المفك الصليبي (رأس على شكل +)", // nieuw, nalezen
-    'w.platteschroevendraaier': "المفك المسطّح", // nieuw, nalezen
-    's.fix.1': "ثبّت الرفّ على الحائط.", // nieuw, nalezen
-    's.fix.2': "شُدّ المسمار الملولب بمفتاح ألن.", // nieuw, nalezen
-    's.fix.3': "خذ المفك المسطّح، لا الصليبي.", // nieuw, nalezen
-    'c.fix.q': "كيف أثبّت هذا الرفّ؟", // nieuw, nalezen
-    'c.fix.a': "بدسّارين وبرغيين.", // nieuw, nalezen
+    'l.fix': "تثبيت الأشياء", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bevestigen': "يثبّت (يربط شيئاً بقوة بالحائط)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vastzetten': "يشدّ (يلفّ حتى يصير مشدوداً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lijmen': "يلصق بالغراء", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inbussleutel': "مفتاح ألن (مفتاح سداسي)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kruisschroevendraaier': "المفك الصليبي (رأس على شكل +)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.platteschroevendraaier': "المفك المسطّح", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fix.1': "ثبّت الرفّ على الحائط.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fix.2': "شُدّ المسمار الملولب بمفتاح ألن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fix.3': "خذ المفك المسطّح، لا الصليبي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.fix.q': "كيف أثبّت هذا الرفّ؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.fix.a': "بدسّارين وبرغيين.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.fix': "مشدود، لكن ليس أكثر من اللازم", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fix.b': { m: "البرغي أو المسمار الملولب يجب أن يكون مشدوداً، لكن ليس أكثر من اللازم. إذا لففت بقوة كبيرة، ينكسر السنّ أو يتشقّق الخشب. لُفّ حتى لا يتحرّك أكثر، ثم توقّف. في المثقاب اللاسلكي، لُفّ أولاً الحلقة التي عليها أرقام إلى رقم منخفض. الرفّ على الحائط يحتاج دسّارات تناسب الحائط: الحجر يحتاج دسّارات غير التي يحتاجها حائط من ألواح رقيقة. الغراء يحتاج وقتاً: اضغط القطع معاً، وثبّتها بملزمة، وانتظر حتى يجفّ الغراء.", f: "البرغي أو المسمار الملولب يجب أن يكون مشدوداً، لكن ليس أكثر من اللازم. إذا لففتِ بقوة كبيرة، ينكسر السنّ أو يتشقّق الخشب. لُفّي حتى لا يتحرّك أكثر، ثم توقّفي. في المثقاب اللاسلكي، لُفّي أولاً الحلقة التي عليها أرقام إلى رقم منخفض. الرفّ على الحائط يحتاج دسّارات تناسب الحائط: الحجر يحتاج دسّارات غير التي يحتاجها حائط من ألواح رقيقة. الغراء يحتاج وقتاً: اضغطي القطع معاً، وثبّتيها بملزمة، وانتظري حتى يجفّ الغراء.", x: "البرغي أو المسمار الملولب يجب أن يكون مشدوداً، لكن ليس أكثر من اللازم. اللفّ بقوة كبيرة يكسر السنّ أو يشقّ الخشب. اللفّ يكون حتى لا يتحرّك أكثر، ثم التوقّف. في المثقاب اللاسلكي، الحلقة التي عليها أرقام تُلفّ أولاً إلى رقم منخفض. الرفّ على الحائط يحتاج دسّارات تناسب الحائط: الحجر يحتاج دسّارات غير التي يحتاجها حائط من ألواح رقيقة. الغراء يحتاج وقتاً: ضغط القطع معاً، وتثبيتها بملزمة، والانتظار حتى يجفّ الغراء." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.fix.p': "هل الرفّ مثبّت جيداً؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2573,18 +2573,18 @@ const t: CultureTranslation = {
     'c.fix.o2': "ترك الزميل يستخدمهما: الغراء سريع.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fix.o3': "إمساكهما باليدين دقيقة واحدة.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fix.w': "الغراء الرطب لا يمسك بعد. الاستخدام المبكّر جداً يجعل القطع تنفصل مرة أخرى. وعندها يجب البدء من جديد.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.atmachine': "عند الآلة", // nieuw, nalezen
-    'w.bedieningspaneel': "لوحة التحكّم (أزرار الآلة وشاشتها)", // nieuw, nalezen
-    'w.startknop': "زر التشغيل (أخضر)", // nieuw, nalezen
-    'w.hendel': "الذراع", // nieuw, nalezen
-    'w.afscherming': "الغطاء الواقي (غطاء فوق الأجزاء المتحرّكة)", // nieuw, nalezen
-    'w.sensor': "الحسّاس (يرى هل هناك شيء)", // nieuw, nalezen
-    'w.signaallamp': "ضوء الإشارة (أضواء ملوّنة فوق الآلة)", // nieuw, nalezen
-    's.atmachine.1': "اضغط زر التشغيل الأخضر.", // nieuw, nalezen
-    's.atmachine.2': "ضوء الإشارة أحمر. هناك عطل.", // nieuw, nalezen
-    's.atmachine.3': "لا تنزع الغطاء الواقي أبداً.", // nieuw, nalezen
-    'c.atmachine.q': "لماذا تتوقّف الآلة كل مرة؟", // nieuw, nalezen
-    'c.atmachine.a': "الحسّاس لا يرى الصندوق جيداً.", // nieuw, nalezen
+    'l.atmachine': "عند الآلة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedieningspaneel': "لوحة التحكّم (أزرار الآلة وشاشتها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.startknop': "زر التشغيل (أخضر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hendel': "الذراع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afscherming': "الغطاء الواقي (غطاء فوق الأجزاء المتحرّكة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sensor': "الحسّاس (يرى هل هناك شيء)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.signaallamp': "ضوء الإشارة (أضواء ملوّنة فوق الآلة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.atmachine.1': "اضغط زر التشغيل الأخضر.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.atmachine.2': "ضوء الإشارة أحمر. هناك عطل.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.atmachine.3': "لا تنزع الغطاء الواقي أبداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.atmachine.q': "لماذا تتوقّف الآلة كل مرة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.atmachine.a': "الحسّاس لا يرى الصندوق جيداً.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.atmachine': "الغطاء الواقي يبقى في مكانه", // nieuw, nalezen // nagelezen AI 22 nov
     'c.atmachine.b': { m: "الأجزاء المتحرّكة في الآلة يمكن أن تسحب يداً أو كُمّاً أو شعراً في أقل من ثانية. الغطاء الواقي موجود لهذا السبب. لا تنزعه أبداً، ولا تمدّ يدك خلفه أبداً والآلة تعمل. الغطاء الواقي أو الحسّاس لا يعمل؟ إذن الآلة ليست آمنة: أوقفها وأخبر قائد الفريق. شيء عالق؟ أوقف الآلة أولاً، وتأكّد أن لا أحد يستطيع تشغيلها وأنت تعمل. طريقة ذلك تختلف من شركة لأخرى: اطلب الشرح قبل أن تبدأ. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الأجزاء المتحرّكة في الآلة يمكن أن تسحب يداً أو كُمّاً أو شعراً في أقل من ثانية. الغطاء الواقي موجود لهذا السبب. لا تنزعيه أبداً، ولا تمدّي يدك خلفه أبداً والآلة تعمل. الغطاء الواقي أو الحسّاس لا يعمل؟ إذن الآلة ليست آمنة: أوقفيها وأخبري قائد الفريق. شيء عالق؟ أوقفي الآلة أولاً، وتأكّدي أن لا أحد يستطيع تشغيلها وأنتِ تعملين. طريقة ذلك تختلف من شركة لأخرى: اطلبي الشرح قبل أن تبدئي. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الأجزاء المتحرّكة في الآلة يمكن أن تسحب يداً أو كُمّاً أو شعراً في أقل من ثانية. الغطاء الواقي موجود لهذا السبب. لا يُنزع أبداً، ولا تُمدّ اليد خلفه أبداً والآلة تعمل. الغطاء الواقي أو الحسّاس لا يعمل؟ إذن الآلة ليست آمنة: إيقافها وإخبار قائد الفريق. شيء عالق؟ إيقاف الآلة أولاً، والتأكّد أن لا أحد يستطيع تشغيلها أثناء العمل. طريقة ذلك تختلف من شركة لأخرى: طلب الشرح قبل البدء. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.atmachine.p': "الغطاء الواقي مكسور.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2593,18 +2593,18 @@ const t: CultureTranslation = {
     'c.atmachine.o2': "مدّ اليد بسرعة وسحب الصندوق.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.atmachine.o3': "فتح الغطاء الواقي والآلة تعمل.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.atmachine.w': "الآلة التي تعمل يمكن أن تسحب اليد قبل أي ردّ فعل. إيقافها يأخذ لحظة؛ واليد المصابة تأخذ شهوراً.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.inspect': "القياس والفحص", // nieuw, nalezen
-    'w.weegschaal': "الميزان", // nieuw, nalezen
-    'w.meetklok': "ساعة القياس (تقيس فروقاً صغيرة جداً)", // nieuw, nalezen
-    'w.loep': "العدسة المكبّرة", // nieuw, nalezen
-    'w.monster': "العيّنة (منتج واحد يُؤخذ للفحص)", // nieuw, nalezen
-    'w.afkeurbak': "صندوق المرفوضات (للمنتجات غير الجيدة)", // nieuw, nalezen
-    'w.teller': "العدّاد (يعدّ المنتجات)", // nieuw, nalezen
-    's.inspect.1': "ضع المنتج على الميزان.", // nieuw, nalezen
-    's.inspect.2': "هذا المنتج متضرّر. يذهب إلى صندوق المرفوضات.", // nieuw, nalezen
-    's.inspect.3': "أنظر إلى الملصق بالعدسة المكبّرة.", // nieuw, nalezen
-    'c.inspect.q': "كم مرة آخذ عيّنة؟", // nieuw, nalezen
-    'c.inspect.a': "واحدة كل ساعة. اكتبها في القائمة.", // nieuw, nalezen
+    'l.inspect': "القياس والفحص", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.weegschaal': "الميزان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meetklok': "ساعة القياس (تقيس فروقاً صغيرة جداً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.loep': "العدسة المكبّرة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.monster': "العيّنة (منتج واحد يُؤخذ للفحص)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afkeurbak': "صندوق المرفوضات (للمنتجات غير الجيدة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teller': "العدّاد (يعدّ المنتجات)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.inspect.1': "ضع المنتج على الميزان.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.inspect.2': "هذا المنتج متضرّر. يذهب إلى صندوق المرفوضات.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.inspect.3': "أنظر إلى الملصق بالعدسة المكبّرة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspect.q': "كم مرة آخذ عيّنة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspect.a': "واحدة كل ساعة. اكتبها في القائمة.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.inspect': { m: "اكتب ما تفحصه", f: "اكتبي ما تفحصينه", x: "كتابة ما يُفحص" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.inspect.b': { m: "في المصنع تفحص المنتجات أثناء العمل: تزنها، أو تقيسها، أو تنظر إليها عن قرب. اكتب كل فحص في القائمة فوراً، مع الوقت. ليس لاحقاً، من الذاكرة. منتج واحد ليس صحيحاً؟ ضعه في صندوق المرفوضات وانظر جيداً إلى المنتجات التالية. منتجات أكثر خطأ؟ إذن هناك مشكلة في الآلة. أخبر قائد الفريق فوراً. المشكلة التي تُكتشف مبكراً توفّر منتجات كثيرة. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في المصنع تفحصين المنتجات أثناء العمل: تزنينها، أو تقيسينها، أو تنظرين إليها عن قرب. اكتبي كل فحص في القائمة فوراً، مع الوقت. ليس لاحقاً، من الذاكرة. منتج واحد ليس صحيحاً؟ ضعيه في صندوق المرفوضات وانظري جيداً إلى المنتجات التالية. منتجات أكثر خطأ؟ إذن هناك مشكلة في الآلة. أخبري قائد الفريق فوراً. المشكلة التي تُكتشف مبكراً توفّر منتجات كثيرة. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في المصنع تُفحص المنتجات أثناء العمل: بالوزن، أو بالقياس، أو بالنظر إليها عن قرب. كل فحص يُكتب في القائمة فوراً، مع الوقت. ليس لاحقاً، من الذاكرة. منتج واحد ليس صحيحاً؟ يوضع في صندوق المرفوضات، والنظر جيداً إلى المنتجات التالية. منتجات أكثر خطأ؟ إذن هناك مشكلة في الآلة. إخبار قائد الفريق فوراً. المشكلة التي تُكتشف مبكراً توفّر منتجات كثيرة. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.inspect.p': "هناك منتجات أكثر فيها خطأ.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2613,18 +2613,18 @@ const t: CultureTranslation = {
     'c.inspect.o2': "إعادتها إلى الخط.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.inspect.o3': "السكوت: هذا يحدث.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.inspect.w': "ثلاثة منتجات خطأ متتالية تدلّ على مشكلة في الآلة. كلما كان الإخبار أسرع، قلّت المنتجات التي تضيع.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.packing': "التغليف", // nieuw, nalezen
-    'w.verpakking': "التغليف، العبوة", // nieuw, nalezen
-    'w.krimpfolie': "غلاف الانكماش (بلاستيك رقيق يصير مشدوداً بالحرارة)", // nieuw, nalezen
-    'w.sealmachine': "آلة الإغلاق الحراري (تغلق العبوة بالحرارة)", // nieuw, nalezen
-    'w.vulmateriaal': "مواد الحشو (وسائد هوائية أو ورق في الصندوق)", // nieuw, nalezen
-    'w.afbreekmes': "القطّاعة (سكين بشفرة تُكسر قطعها)", // nieuw, nalezen
-    'w.tapepistool': "موزّع الشريط اللاصق (مسدس الشريط)", // nieuw, nalezen
-    's.packing.1': "ضع مواد الحشو في الصندوق.", // nieuw, nalezen
-    's.packing.2': "أغلق الصندوق بموزّع الشريط اللاصق.", // nieuw, nalezen
-    's.packing.3': "آلة الإغلاق الحراري ساخنة. انتبه!", // nieuw, nalezen
-    'c.packing.q': "كم منتجاً يدخل في الصندوق؟", // nieuw, nalezen
-    'c.packing.a': "اثنا عشر. هذا مكتوب في القائمة.", // nieuw, nalezen
+    'l.packing': "التغليف", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verpakking': "التغليف، العبوة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.krimpfolie': "غلاف الانكماش (بلاستيك رقيق يصير مشدوداً بالحرارة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sealmachine': "آلة الإغلاق الحراري (تغلق العبوة بالحرارة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vulmateriaal': "مواد الحشو (وسائد هوائية أو ورق في الصندوق)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afbreekmes': "القطّاعة (سكين بشفرة تُكسر قطعها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tapepistool': "موزّع الشريط اللاصق (مسدس الشريط)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.packing.1': "ضع مواد الحشو في الصندوق.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.packing.2': "أغلق الصندوق بموزّع الشريط اللاصق.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.packing.3': "آلة الإغلاق الحراري ساخنة. انتبه!", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.packing.q': "كم منتجاً يدخل في الصندوق؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.packing.a': "اثنا عشر. هذا مكتوب في القائمة.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.packing': { m: "اقطع بعيداً عن جسمك", f: "اقطعي بعيداً عن جسمك", x: "القطع بعيداً عن الجسم" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.packing.b': { m: "التغليف عمل سريع، والقطّاعة حادّة جداً. اقطع دائماً بعيداً عن جسمك وبعيداً عن يدك الأخرى. أدخل الشفرة بعد كل قطع، وأيضاً عندما تضع القطّاعة لحظة. اكسر القطعة غير الحادّة بحذر، وارمها في صندوق الشفرات القديمة، لا في سلة المهملات العادية. آلة الإغلاق الحراري ومسدس الهواء الساخن لغلاف الانكماش يصيران ساخنين جداً: لا تلمس الأجزاء الساخنة. وافحص كل صندوق: المنتج الصحيح، والعدد الصحيح، والملصق مستقيم. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "التغليف عمل سريع، والقطّاعة حادّة جداً. اقطعي دائماً بعيداً عن جسمك وبعيداً عن يدك الأخرى. أدخلي الشفرة بعد كل قطع، وأيضاً عندما تضعين القطّاعة لحظة. اكسري القطعة غير الحادّة بحذر، وارميها في صندوق الشفرات القديمة، لا في سلة المهملات العادية. آلة الإغلاق الحراري ومسدس الهواء الساخن لغلاف الانكماش يصيران ساخنين جداً: لا تلمسي الأجزاء الساخنة. وافحصي كل صندوق: المنتج الصحيح، والعدد الصحيح، والملصق مستقيم. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "التغليف عمل سريع، والقطّاعة حادّة جداً. القطع يكون دائماً بعيداً عن الجسم وبعيداً عن اليد الأخرى. الشفرة تُدخل بعد كل قطع، وأيضاً عند وضع القطّاعة لحظة. القطعة غير الحادّة تُكسر بحذر، وتُرمى في صندوق الشفرات القديمة، لا في سلة المهملات العادية. آلة الإغلاق الحراري ومسدس الهواء الساخن لغلاف الانكماش يصيران ساخنين جداً: الأجزاء الساخنة لا تُلمس. وفحص كل صندوق: المنتج الصحيح، والعدد الصحيح، والملصق مستقيم. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.packing.p': "أُدخل الشفرة أولاً.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2633,18 +2633,18 @@ const t: CultureTranslation = {
     'c.packing.o2': "تركها: ستلزم بعد قليل.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.packing.o3': "وضعها في الجيب هكذا.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.packing.w': "الشفرة المكشوفة على طاولة أو في جيب يمكن أن تجرح صاحبها أو زميلاً. إدخالها يأخذ ثانية واحدة.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.upkeep': "الصيانة", // nieuw, nalezen
-    'w.persluchtpistool': "مسدس الهواء المضغوط", // nieuw, nalezen
-    'w.steeksleutel': "المفتاح المفتوح", // nieuw, nalezen
-    'w.oliekannetje': "علبة التزييت", // nieuw, nalezen
-    'w.smeerpistool': "مسدس الشحم", // nieuw, nalezen
-    'w.lekbak': "صينية التنقيط (تجمع الزيت المتسرّب)", // nieuw, nalezen
-    'w.poetsdoek': "قطعة قماش التنظيف", // nieuw, nalezen
-    's.upkeep.1': "الزيت يتسرّب. ضع صينية التنقيط تحته.", // nieuw, nalezen
-    's.upkeep.2': "امسح الزيت بقطعة قماش التنظيف.", // nieuw, nalezen
-    's.upkeep.3': "لا توجّه مسدس الهواء المضغوط نحو أحد أبداً.", // nieuw, nalezen
-    'c.upkeep.q': "متى نشحّم الآلة؟", // nieuw, nalezen
-    'c.upkeep.a': "كل يوم اثنين، قبل النوبة الأولى.", // nieuw, nalezen
+    'l.upkeep': "الصيانة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.persluchtpistool': "مسدس الهواء المضغوط", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.steeksleutel': "المفتاح المفتوح", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oliekannetje': "علبة التزييت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.smeerpistool': "مسدس الشحم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lekbak': "صينية التنقيط (تجمع الزيت المتسرّب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.poetsdoek': "قطعة قماش التنظيف", // nieuw, nalezen // nagelezen AI 28 nov
+    's.upkeep.1': "الزيت يتسرّب. ضع صينية التنقيط تحته.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.upkeep.2': "امسح الزيت بقطعة قماش التنظيف.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.upkeep.3': "لا توجّه مسدس الهواء المضغوط نحو أحد أبداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.upkeep.q': "متى نشحّم الآلة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.upkeep.a': "كل يوم اثنين، قبل النوبة الأولى.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.upkeep': "الآلة النظيفة تُظهر مشاكلها", // nieuw, nalezen // nagelezen AI 22 nov
     'c.upkeep.b': { m: "الصيانة الصغيرة غالباً جزء من العمل: المسح والتزييت والتشحيم. افعلها فقط عندما تكون الآلة مطفأة، وعندما تكون قد تعلّمت كيف. الآلة النظيفة سهلة الفحص: ترى التسرّب أو القطعة المرتخية فوراً. الزيت على الأرض زلِق. ضع صينية التنقيط تحت التسرّب، وامسح الأرض، وأخبر قائد الفريق. ارمِ قطع القماش التي عليها زيت في السلة الخاصة. لا توجّه مسدس الهواء المضغوط نحو شخص أبداً، ولا تنظّف به ملابسك أو جلدك أبداً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الصيانة الصغيرة غالباً جزء من العمل: المسح والتزييت والتشحيم. افعليها فقط عندما تكون الآلة مطفأة، وعندما تكونين قد تعلّمت كيف. الآلة النظيفة سهلة الفحص: ترين التسرّب أو القطعة المرتخية فوراً. الزيت على الأرض زلِق. ضعي صينية التنقيط تحت التسرّب، وامسحي الأرض، وأخبري قائد الفريق. ارمي قطع القماش التي عليها زيت في السلة الخاصة. لا توجّهي مسدس الهواء المضغوط نحو شخص أبداً، ولا تنظّفي به ملابسك أو جلدك أبداً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الصيانة الصغيرة غالباً جزء من العمل: المسح والتزييت والتشحيم. هذا يكون فقط عندما تكون الآلة مطفأة، وبعد تعلّم الطريقة. الآلة النظيفة سهلة الفحص: التسرّب أو القطعة المرتخية يظهران فوراً. الزيت على الأرض زلِق. وضع صينية التنقيط تحت التسرّب، ومسح الأرض، وإخبار قائد الفريق. قطع القماش التي عليها زيت تُرمى في السلة الخاصة. مسدس الهواء المضغوط لا يُوجَّه نحو شخص أبداً، ولا تُنظَّف به الملابس أو الجلد أبداً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.upkeep.p': "الآلة يتسرّب منها زيت.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2654,19 +2654,19 @@ const t: CultureTranslation = {
     'c.upkeep.o3': "وضع بعض الورق عليها، والمتابعة.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.upkeep.w': "التسرّب يكبر، والزيت على الأرض يجعل الناس ينزلقون. إذا اكتُشف مبكراً، يكون التصليح صغيراً.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
-    'u.install': "الكهرباء والأنابيب والمعادن", // nieuw, nalezen
-    'l.wiring': "توصيل الأسلاك", // nieuw, nalezen
-    'w.draad': "السلك (سلك واحد داخل الكابل)", // nieuw, nalezen
-    'w.stopcontact': "المقبس (في الحائط)", // nieuw, nalezen
-    'w.schakelaar': "مفتاح الكهرباء (للضوء)", // nieuw, nalezen
-    'w.lasklem': "الموصّل ذو الذراع (يربط الأسلاك)", // nieuw, nalezen
-    'w.striptang': "كمّاشة تعرية الأسلاك", // nieuw, nalezen
-    'w.kabelgoot': "مجرى الكابلات (قناة للكابلات)", // nieuw, nalezen
-    's.wiring.1': "اقشر سنتيمتراً واحداً من السلك.", // nieuw, nalezen
-    's.wiring.2': "ثبّت الأسلاك في الموصّل ذي الذراع.", // nieuw, nalezen
-    's.wiring.3': "الكابلات تدخل في مجرى الكابلات.", // nieuw, nalezen
-    'c.wiring.q': "أيّ سلك يذهب إلى أين؟", // nieuw, nalezen
-    'c.wiring.a': "البنّي مع البنّي، والأزرق مع الأزرق.", // nieuw, nalezen
+    'u.install': "الكهرباء والأنابيب والمعادن", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.wiring': "توصيل الأسلاك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.draad': "السلك (سلك واحد داخل الكابل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stopcontact': "المقبس (في الحائط)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schakelaar': "مفتاح الكهرباء (للضوء)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lasklem': "الموصّل ذو الذراع (يربط الأسلاك)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.striptang': "كمّاشة تعرية الأسلاك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kabelgoot': "مجرى الكابلات (قناة للكابلات)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wiring.1': "اقشر سنتيمتراً واحداً من السلك.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wiring.2': "ثبّت الأسلاك في الموصّل ذي الذراع.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wiring.3': "الكابلات تدخل في مجرى الكابلات.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wiring.q': "أيّ سلك يذهب إلى أين؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wiring.a': "البنّي مع البنّي، والأزرق مع الأزرق.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.wiring': "الألوان تقول ماذا يفعل السلك", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wiring.b': { m: "في المبنى، للأسلاك ألوان ثابتة. البنّي (وأحياناً الأسود أو الرمادي) يجلب الكهرباء. الأزرق يرجع. الأخضر والأصفر هو السلك الأرضي: يحمي الناس، ولا يُستعمل أبداً لشيء آخر. وصّل كل لون باللون نفسه. اقشر فقط بقدر ما يدخل في الموصّل: لا يجوز أن يخرج نحاس عارٍ. أدخل السلك، ثم اسحبه بلطف لتتأكّد أنه ثابت. لست متأكداً أيّ سلك هو أيّ سلك؟ توقّف واسأل.", f: "في المبنى، للأسلاك ألوان ثابتة. البنّي (وأحياناً الأسود أو الرمادي) يجلب الكهرباء. الأزرق يرجع. الأخضر والأصفر هو السلك الأرضي: يحمي الناس، ولا يُستعمل أبداً لشيء آخر. وصّلي كل لون باللون نفسه. اقشري فقط بقدر ما يدخل في الموصّل: لا يجوز أن يخرج نحاس عارٍ. أدخلي السلك، ثم اسحبيه بلطف لتتأكّدي أنه ثابت. لستِ متأكدة أيّ سلك هو أيّ سلك؟ توقّفي واسألي.", x: "في المبنى، للأسلاك ألوان ثابتة. البنّي (وأحياناً الأسود أو الرمادي) يجلب الكهرباء. الأزرق يرجع. الأخضر والأصفر هو السلك الأرضي: يحمي الناس، ولا يُستعمل أبداً لشيء آخر. كل لون يُوصَل باللون نفسه. القشر يكون فقط بقدر ما يدخل في الموصّل: لا يجوز أن يخرج نحاس عارٍ. إدخال السلك، ثم سحبه بلطف للتأكّد أنه ثابت. غير واضح أيّ سلك هو أيّ سلك؟ التوقّف والسؤال." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.wiring.p': "أيّ لون هو السلك الأرضي؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2675,18 +2675,18 @@ const t: CultureTranslation = {
     'c.wiring.o2': "تركه: المصباح يعمل.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wiring.o3': "لفّ قطعة شريط لاصق حوله.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wiring.w': "النحاس العاري خارج الموصّل يمكن أن يلمس شيئاً. هذا قد يسبّب صدمة كهربائية أو تماساً كهربائياً، حتى بعد شهور.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.testing': "القياس والعمل بأمان", // nieuw, nalezen
-    'w.multimeter': "جهاز القياس المتعدّد (يقيس الكهرباء)", // nieuw, nalezen
-    'w.spanningzoeker': "مفك فحص الكهرباء (مفك فيه مصباح صغير)", // nieuw, nalezen
-    'w.meterkast': "لوحة الكهرباء", // nieuw, nalezen
-    'w.zekering': "القاطع الكهربائي (يفصل الكهرباء عندما يكون هناك خلل)", // nieuw, nalezen
-    'w.hangslot': "القفل المعلّق", // nieuw, nalezen
-    'w.aardedraad': "السلك الأرضي (أخضر وأصفر)", // nieuw, nalezen
-    's.testing.1': "القاطع الكهربائي فصل.", // nieuw, nalezen
-    's.testing.2': "ضع قفلاً على المفتاح.", // nieuw, nalezen
-    's.testing.3': "قِس أولاً بجهاز القياس المتعدّد.", // nieuw, nalezen
-    'c.testing.q': "هل يمكنني أن أفتح لوحة الكهرباء؟", // nieuw, nalezen
-    'c.testing.a': "لا، الكهربائي يفعل ذلك.", // nieuw, nalezen
+    'l.testing': "القياس والعمل بأمان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.multimeter': "جهاز القياس المتعدّد (يقيس الكهرباء)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spanningzoeker': "مفك فحص الكهرباء (مفك فيه مصباح صغير)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meterkast': "لوحة الكهرباء", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zekering': "القاطع الكهربائي (يفصل الكهرباء عندما يكون هناك خلل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hangslot': "القفل المعلّق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aardedraad': "السلك الأرضي (أخضر وأصفر)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.testing.1': "القاطع الكهربائي فصل.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.testing.2': "ضع قفلاً على المفتاح.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.testing.3': "قِس أولاً بجهاز القياس المتعدّد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.testing.q': "هل يمكنني أن أفتح لوحة الكهرباء؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.testing.a': "لا، الكهربائي يفعل ذلك.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.testing': "فصل، ثم قفل، ثم قياس", // nieuw, nalezen // nagelezen AI 22 nov
     'c.testing.b': { m: "قبل أن تعمل على الكهرباء، اتّبع ثلاث خطوات. افصل: القاطع الصحيح في لوحة الكهرباء، لا مفتاح الحائط فقط. اقفل: ضع قفلك أنت عليه واحتفظ بالمفتاح معك، حتى لا يستطيع أحد أن يشغّله من جديد. قِس: تأكّد بمفك فحص الكهرباء أو بجهاز القياس المتعدّد أن لا كهرباء فيه فعلاً. بعد ذلك فقط تبدأ. القاطع يفصل مرة بعد مرة؟ لا تستمرّ في تشغيله: أخبر مشرفك. لا تقم بعمل كهربائي إلا إذا قيل لك إنه مسموح لك. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "قبل أن تعملي على الكهرباء، اتّبعي ثلاث خطوات. افصلي: القاطع الصحيح في لوحة الكهرباء، لا مفتاح الحائط فقط. اقفلي: ضعي قفلك أنتِ عليه واحتفظي بالمفتاح معك، حتى لا يستطيع أحد أن يشغّله من جديد. قيسي: تأكّدي بمفك فحص الكهرباء أو بجهاز القياس المتعدّد أن لا كهرباء فيه فعلاً. بعد ذلك فقط تبدئين. القاطع يفصل مرة بعد مرة؟ لا تستمرّي في تشغيله: أخبري مشرفك. لا تقومي بعمل كهربائي إلا إذا قيل لكِ إنه مسموح لكِ. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "قبل العمل على الكهرباء، هناك ثلاث خطوات. الفصل: القاطع الصحيح في لوحة الكهرباء، لا مفتاح الحائط فقط. القفل: وضع قفل شخصي عليه والاحتفاظ بالمفتاح، حتى لا يستطيع أحد أن يشغّله من جديد. القياس: التأكّد بمفك فحص الكهرباء أو بجهاز القياس المتعدّد أن لا كهرباء فيه فعلاً. بعد ذلك فقط يبدأ العمل. القاطع يفصل مرة بعد مرة؟ لا استمرار في تشغيله: إخبار المشرف. العمل الكهربائي يكون فقط بعد الإذن به. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.testing.p': "لم تعد فيه كهرباء.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2695,18 +2695,18 @@ const t: CultureTranslation = {
     'c.testing.o2': "البدء: الزميل يعرف.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.testing.o3': "لمس السلك بسرعة للتأكّد.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.testing.w': "أحياناً يكون القاطع الخطأ هو المفصول، أو يشغّله أحد من جديد. القفل والقياس يبيّنان أن العمل آمن فعلاً.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.pipes': "الأنابيب والماء", // nieuw, nalezen
-    'w.buis': "الأنبوب", // nieuw, nalezen
-    'w.koppeling': "الوصلة (تربط أنبوبين)", // nieuw, nalezen
-    'w.pijpsnijder': "قاطع الأنابيب", // nieuw, nalezen
-    'w.waterpomptang': "كمّاشة السبّاك", // nieuw, nalezen
-    'w.afsluiter': "محبس الماء (يقطع الماء)", // nieuw, nalezen
-    'w.teflontape': "شريط التفلون (شريط أبيض لسنّ الأنبوب)", // nieuw, nalezen
-    's.pipes.1': "أغلق محبس الماء.", // nieuw, nalezen
-    's.pipes.2': "اقطع الأنبوب بقاطع الأنابيب.", // nieuw, nalezen
-    's.pipes.3': "لُفّ شريط التفلون حول السنّ.", // nieuw, nalezen
-    'c.pipes.q': "هل ما زالت الوصلة تسرّب؟", // nieuw, nalezen
-    'c.pipes.a': "قليلاً. سأشدّها أكثر قليلاً.", // nieuw, nalezen
+    'l.pipes': "الأنابيب والماء", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.buis': "الأنبوب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koppeling': "الوصلة (تربط أنبوبين)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pijpsnijder': "قاطع الأنابيب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.waterpomptang': "كمّاشة السبّاك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afsluiter': "محبس الماء (يقطع الماء)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teflontape': "شريط التفلون (شريط أبيض لسنّ الأنبوب)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pipes.1': "أغلق محبس الماء.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pipes.2': "اقطع الأنبوب بقاطع الأنابيب.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pipes.3': "لُفّ شريط التفلون حول السنّ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pipes.q': "هل ما زالت الوصلة تسرّب؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pipes.a': "قليلاً. سأشدّها أكثر قليلاً.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.pipes': "قطع الماء أولاً، ودلو جاهز", // nieuw, nalezen // nagelezen AI 22 nov
     'c.pipes.b': { m: "قبل أن تفتح أنبوب ماء، أغلق محبس الماء. ثم افتح حنفية في مكان أسفل، حتى يفرغ الأنبوب. ضع دلواً وقطعة قماش تحت المكان الذي تعمل فيه. اقطع أنبوب النحاس بقاطع الأنابيب، لا بالمنشار: يبقى الطرف مستديراً ونظيفاً. شُدّ الوصلة جيداً، لكن ليس بقوة زائدة. عندما تنتهي، افتح الماء ببطء وابحث عن قطرات. التسرّب الصغير الذي تتركه يصبح أضراراً بسبب الماء.", f: "قبل أن تفتحي أنبوب ماء، أغلقي محبس الماء. ثم افتحي حنفية في مكان أسفل، حتى يفرغ الأنبوب. ضعي دلواً وقطعة قماش تحت المكان الذي تعملين فيه. اقطعي أنبوب النحاس بقاطع الأنابيب، لا بالمنشار: يبقى الطرف مستديراً ونظيفاً. شُدّي الوصلة جيداً، لكن ليس بقوة زائدة. عندما تنتهين، افتحي الماء ببطء وابحثي عن قطرات. التسرّب الصغير الذي تتركينه يصبح أضراراً بسبب الماء.", x: "قبل فتح أنبوب ماء، يُغلق محبس الماء. ثم تُفتح حنفية في مكان أسفل، حتى يفرغ الأنبوب. دلو وقطعة قماش يوضعان تحت مكان العمل. أنبوب النحاس يُقطع بقاطع الأنابيب، لا بالمنشار: يبقى الطرف مستديراً ونظيفاً. الوصلة تُشدّ جيداً، لكن ليس بقوة زائدة. بعد الانتهاء، فتح الماء ببطء والبحث عن قطرات. التسرّب الصغير الذي يُترك يصبح أضراراً بسبب الماء." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.pipes.p': "هل الماء مقطوع؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2715,18 +2715,18 @@ const t: CultureTranslation = {
     'c.pipes.o2': "تركها: إنها قطرة واحدة فقط.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.pipes.o3': "وضع دلو تحتها والذهاب إلى البيت.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.pipes.w': "قطرة كل دقيقة تعني لترات كثيرة في الأسبوع. الماء يمكن أن يُتلف الأرضية أو السقف في الأسفل.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.metalwork': "العمل بالمعادن", // nieuw, nalezen
-    'w.bankschroef': "ملزمة المنضدة (تمسك القطعة بقوة على طاولة العمل)", // nieuw, nalezen
-    'w.vijl': "المبرد (لتنعيم المعدن باليد)", // nieuw, nalezen
-    'w.ijzerzaag': "منشار الحديد (منشار للمعدن)", // nieuw, nalezen
-    'w.kolomboormachine': "المثقاب العمودي (مثقاب كبير على حامل)", // nieuw, nalezen
-    'w.draadtap': "ذكر القلاووظ (يصنع سنّاً داخل ثقب)", // nieuw, nalezen
-    'w.braam': "الزائدة الحادّة (حافة حادّة بعد قطع المعدن)", // nieuw, nalezen
-    's.metalwork.1': "ثبّت المعدن في الملزمة.", // nieuw, nalezen
-    's.metalwork.2': "أزل الزائدة الحادّة بالمبرد.", // nieuw, nalezen
-    's.metalwork.3': "أبعد يديك عن المثقاب.", // nieuw, nalezen
-    'c.metalwork.q': "لماذا الحافة حادّة هكذا؟", // nieuw, nalezen
-    'c.metalwork.a': "ما زالت عليها زائدة حادّة.", // nieuw, nalezen
+    'l.metalwork': "العمل بالمعادن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bankschroef': "ملزمة المنضدة (تمسك القطعة بقوة على طاولة العمل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vijl': "المبرد (لتنعيم المعدن باليد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ijzerzaag': "منشار الحديد (منشار للمعدن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kolomboormachine': "المثقاب العمودي (مثقاب كبير على حامل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.draadtap': "ذكر القلاووظ (يصنع سنّاً داخل ثقب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.braam': "الزائدة الحادّة (حافة حادّة بعد قطع المعدن)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.metalwork.1': "ثبّت المعدن في الملزمة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.metalwork.2': "أزل الزائدة الحادّة بالمبرد.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.metalwork.3': "أبعد يديك عن المثقاب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.metalwork.q': "لماذا الحافة حادّة هكذا؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.metalwork.a': "ما زالت عليها زائدة حادّة.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.metalwork': { m: "ثبّت القطعة، ولا تمسكها أبداً", f: "ثبّتي القطعة، ولا تمسكيها أبداً", x: "تثبيت القطعة، لا إمساكها أبداً" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.metalwork.b': { m: "عند المثقاب العمودي، لا تمسك قطعة صغيرة بيدك أبداً. المثقاب يمكن أن يمسكها ويديرها بسرعة كبيرة جداً. ثبّتها في الملزمة. اربط الشعر الطويل إلى الخلف، ولا تلبس قفازات عند مثقاب يدور: يمكن أن يسحب القفاز إلى الداخل. البس نظارة السلامة. بعد النشر أو الثقب، يكون على المعدن زائدة حادّة: حافة حادّة. أزلها بالمبرد قبل أن تأخذ القطعة بيدك أو تعطيها لشخص آخر. أبعد رقائق المعدن بفرشاة، لا بيدك.", f: "عند المثقاب العمودي، لا تمسكي قطعة صغيرة بيدك أبداً. المثقاب يمكن أن يمسكها ويديرها بسرعة كبيرة جداً. ثبّتيها في الملزمة. اربطي الشعر الطويل إلى الخلف، ولا تلبسي قفازات عند مثقاب يدور: يمكن أن يسحب القفاز إلى الداخل. البسي نظارة السلامة. بعد النشر أو الثقب، يكون على المعدن زائدة حادّة: حافة حادّة. أزيليها بالمبرد قبل أن تأخذي القطعة بيدك أو تعطيها لشخص آخر. أبعدي رقائق المعدن بفرشاة، لا بيدك.", x: "عند المثقاب العمودي، القطعة الصغيرة لا تُمسك باليد أبداً. المثقاب يمكن أن يمسكها ويديرها بسرعة كبيرة جداً. تثبيتها في الملزمة. الشعر الطويل يُربط إلى الخلف، ولا قفازات عند مثقاب يدور: يمكن أن يسحب القفاز إلى الداخل. لبس نظارة السلامة. بعد النشر أو الثقب، يكون على المعدن زائدة حادّة: حافة حادّة. إزالتها بالمبرد قبل أخذ القطعة باليد أو إعطائها لشخص آخر. رقائق المعدن تُبعد بفرشاة، لا باليد." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.metalwork.p': "أثبّتها أولاً.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2736,19 +2736,19 @@ const t: CultureTranslation = {
     'c.metalwork.o3': "لبس قفازات وإمساكها.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.metalwork.w': "المثقاب يمكن أن يمسك قطعة صغيرة ويديرها. عندها تضرب اليد. في الملزمة تبقى ثابتة.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Assemblage en montage" (u.montage, 21 November 2026).
-    'u.montage': "التجميع والتركيب", // nieuw, nalezen
-    'l.assembly': "عند خط التجميع", // nieuw, nalezen
-    'w.werkinstructie': "تعليمات العمل (ورقة فيها الخطوات)", // nieuw, nalezen
-    'w.onderdelenbak': "صندوق القطع", // nieuw, nalezen
-    'w.mal': "القالب (يمسك القطعة في المكان الصحيح)", // nieuw, nalezen
-    'w.rolbaan': "الناقل ذو البكرات", // nieuw, nalezen
-    'w.montagetafel': "طاولة التجميع", // nieuw, nalezen
-    'w.voetpedaal': "دوّاسة القدم (مفتاح يُضغط بالقدم)", // nieuw, nalezen
-    's.assembly.1': { m: "اقرأ تعليمات العمل أولاً.", f: "اقرئي تعليمات العمل أولاً.", x: "قراءة تعليمات العمل أولاً." }, // nieuw, nalezen
-    's.assembly.2': "صندوق القطع شبه فارغ.", // nieuw, nalezen
-    's.assembly.3': { m: "ضع القطعة في القالب.", f: "ضعي القطعة في القالب.", x: "وضع القطعة في القالب." }, // nieuw, nalezen
-    'c.assembly.q': "أيّ خطوة الآن؟", // nieuw, nalezen
-    'c.assembly.a': { m: "الخطوة الرابعة. انظر في تعليمات العمل.", f: "الخطوة الرابعة. انظري في تعليمات العمل.", x: "الخطوة الرابعة. هي في تعليمات العمل." }, // nieuw, nalezen
+    'u.montage': "التجميع والتركيب", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.assembly': "عند خط التجميع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkinstructie': "تعليمات العمل (ورقة فيها الخطوات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderdelenbak': "صندوق القطع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mal': "القالب (يمسك القطعة في المكان الصحيح)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rolbaan': "الناقل ذو البكرات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.montagetafel': "طاولة التجميع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voetpedaal': "دوّاسة القدم (مفتاح يُضغط بالقدم)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.assembly.1': { m: "اقرأ تعليمات العمل أولاً.", f: "اقرئي تعليمات العمل أولاً.", x: "قراءة تعليمات العمل أولاً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.assembly.2': "صندوق القطع شبه فارغ.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.assembly.3': { m: "ضع القطعة في القالب.", f: "ضعي القطعة في القالب.", x: "وضع القطعة في القالب." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.assembly.q': "أيّ خطوة الآن؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.assembly.a': { m: "الخطوة الرابعة. انظر في تعليمات العمل.", f: "الخطوة الرابعة. انظري في تعليمات العمل.", x: "الخطوة الرابعة. هي في تعليمات العمل." }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.assembly': { m: "اتّبع الخطوات، بالترتيب نفسه", f: "اتّبعي الخطوات، بالترتيب نفسه", x: "اتّباع الخطوات، بالترتيب نفسه" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.assembly.b': { m: "في خط التجميع لكل خطوة مكانها وترتيبها. تعليمات العمل تبيّنها، غالباً مع صور. قم بالخطوات بالترتيب نفسه كل مرة، حتى عندما تظنّ أنك تعرف طريقة أسرع. ترتيب آخر يمكن أن يصنع منتجاً يبدو جيداً لكنه لا يعمل. صندوق القطع شبه فارغ؟ قل ذلك في الوقت المناسب، حتى لا يتوقّف الخط. ترى خطوة يمكن أن تكون أفضل؟ أخبر قائد الفريق: عندها يمكن أن تتغيّر للجميع.", f: "في خط التجميع لكل خطوة مكانها وترتيبها. تعليمات العمل تبيّنها، غالباً مع صور. قومي بالخطوات بالترتيب نفسه كل مرة، حتى عندما تظنّين أنك تعرفين طريقة أسرع. ترتيب آخر يمكن أن يصنع منتجاً يبدو جيداً لكنه لا يعمل. صندوق القطع شبه فارغ؟ قولي ذلك في الوقت المناسب، حتى لا يتوقّف الخط. ترين خطوة يمكن أن تكون أفضل؟ أخبري قائد الفريق: عندها يمكن أن تتغيّر للجميع.", x: "في خط التجميع لكل خطوة مكانها وترتيبها. تعليمات العمل تبيّنها، غالباً مع صور. الخطوات تُنفَّذ بالترتيب نفسه كل مرة، حتى مع الظنّ بوجود طريقة أسرع. ترتيب آخر يمكن أن يصنع منتجاً يبدو جيداً لكنه لا يعمل. صندوق القطع شبه فارغ؟ الإبلاغ عن ذلك في الوقت المناسب، حتى لا يتوقّف الخط. هناك خطوة يمكن أن تكون أفضل؟ إخبار قائد الفريق: عندها يمكن أن تتغيّر للجميع." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.assembly.p': "أحتاج قطعاً جديدة.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2757,18 +2757,18 @@ const t: CultureTranslation = {
     'c.assembly.o2': { m: "افعلها بطريقتك من الآن.", f: "افعليها بطريقتك من الآن.", x: "العمل بالطريقة الخاصة من الآن." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.assembly.o3': { m: "علّم زملاءك طريقتك.", f: "علّمي زملاءك طريقتك.", x: "تعليم الزملاء الطريقة الخاصة." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.assembly.w': "الترتيب يكون غالباً لسبب لا يُرى. إذا كانت الطريقة الجديدة أفضل، يمكن أن تتغيّر للجميع.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.fastening': "الشدّ والتثبيت", // nieuw, nalezen
-    'w.schroefmachine': "مفك البراغي الكهربائي (معلّق فوق الخط)", // nieuw, nalezen
-    'w.momentsleutel': "مفتاح العزم (يُصدر طقّة عندما يكون المسمار الملولب مشدوداً بما يكفي)", // nieuw, nalezen
-    'w.tiewrap': "رباط الكابلات", // nieuw, nalezen
-    'w.sluitring': "الحلقة المعدنية (الوردة)", // nieuw, nalezen
-    'w.klinknagel': "مسمار البرشام", // nieuw, nalezen
-    'w.popnageltang': "كمّاشة البرشام", // nieuw, nalezen
+    'l.fastening': "الشدّ والتثبيت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schroefmachine': "مفك البراغي الكهربائي (معلّق فوق الخط)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.momentsleutel': "مفتاح العزم (يُصدر طقّة عندما يكون المسمار الملولب مشدوداً بما يكفي)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tiewrap': "رباط الكابلات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sluitring': "الحلقة المعدنية (الوردة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.klinknagel': "مسمار البرشام", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.popnageltang': "كمّاشة البرشام", // nieuw, nalezen // nagelezen AI 28 nov
     's.fastening.1': { m: "شُدّ المسمار الملولب بمفتاح العزم.", f: "شُدّي المسمار الملولب بمفتاح العزم.", x: "يُشَدّ المسمار الملولب بمفتاح العزم." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    's.fastening.2': { m: "لا تنسَ الحلقة المعدنية.", f: "لا تنسي الحلقة المعدنية.", x: "يجب عدم نسيان الحلقة المعدنية." }, // nieuw, nalezen
-    's.fastening.3': { m: "اربط الكابلات معاً برباط الكابلات.", f: "اربطي الكابلات معاً برباط الكابلات.", x: "ربط الكابلات معاً برباط الكابلات." }, // nieuw, nalezen
-    'c.fastening.q': "كم يجب أن يكون هذا المسمار الملولب مشدوداً؟", // nieuw, nalezen
-    'c.fastening.a': "حتى يُصدر مفتاح العزم طقّة.", // nieuw, nalezen
+    's.fastening.2': { m: "لا تنسَ الحلقة المعدنية.", f: "لا تنسي الحلقة المعدنية.", x: "يجب عدم نسيان الحلقة المعدنية." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.fastening.3': { m: "اربط الكابلات معاً برباط الكابلات.", f: "اربطي الكابلات معاً برباط الكابلات.", x: "ربط الكابلات معاً برباط الكابلات." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.fastening.q': "كم يجب أن يكون هذا المسمار الملولب مشدوداً؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.fastening.a': "حتى يُصدر مفتاح العزم طقّة.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.fastening': "الطقّة تكفي", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fastening.b': { m: "مفتاح العزم يُصدر طقّة عندما يكون المسمار الملولب مشدوداً بما يكفي. توقّف عند الطقّة: لا تلفّ أكثر. الشدّ الزائد يمكن أن يكسر المسمار أو القطعة، والشدّ الناقص يمكن أن ينفكّ. مفك البراغي الكهربائي يعمل بالطريقة نفسها: يتوقّف وحده. ضع كل حلقة معدنية في مكانها: الحلقة الناقصة صعب أن تُرى لاحقاً. عُدّ مساميرك الملولبة. هل بقي واحد زائد، أو تحتاج واحداً آخر؟ إذن هناك خطأ: أخبر قائد الفريق.", f: "مفتاح العزم يُصدر طقّة عندما يكون المسمار الملولب مشدوداً بما يكفي. توقّفي عند الطقّة: لا تلفّي أكثر. الشدّ الزائد يمكن أن يكسر المسمار أو القطعة، والشدّ الناقص يمكن أن ينفكّ. مفك البراغي الكهربائي يعمل بالطريقة نفسها: يتوقّف وحده. ضعي كل حلقة معدنية في مكانها: الحلقة الناقصة صعب أن تُرى لاحقاً. عُدّي مساميرك الملولبة. هل بقي واحد زائد، أو تحتاجين واحداً آخر؟ إذن هناك خطأ: أخبري قائد الفريق.", x: "مفتاح العزم يُصدر طقّة عندما يكون المسمار الملولب مشدوداً بما يكفي. التوقّف عند الطقّة: بدون لفّ أكثر. الشدّ الزائد يمكن أن يكسر المسمار أو القطعة، والشدّ الناقص يمكن أن ينفكّ. مفك البراغي الكهربائي يعمل بالطريقة نفسها: يتوقّف وحده. وضع كل حلقة معدنية في مكانها: الحلقة الناقصة صعب أن تُرى لاحقاً. عدّ المسامير الملولبة. هل بقي واحد زائد، أو هناك حاجة إلى واحد آخر؟ إذن هناك خطأ: إخبار قائد الفريق." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.fastening.p': "بقي مسمار ملولب زائد.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2777,17 +2777,17 @@ const t: CultureTranslation = {
     'c.fastening.o2': { m: "لُفّه قليلاً أكثر باليد.", f: "لُفّيه قليلاً أكثر باليد.", x: "لفّه قليلاً أكثر باليد." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.fastening.o3': { m: "استخدم مفتاحاً أطول.", f: "استخدمي مفتاحاً أطول.", x: "استخدام مفتاح أطول." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.fastening.w': "الطقّة مضبوطة على القوة الصحيحة. إذا كان الإحساس غير صحيح، فقد يحتاج المفتاح إلى فحص. اللفّ أكثر يمكن أن يكسر المسمار الملولب.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.handling': "الرفع والنقل", // nieuw, nalezen
-    'w.takel': "الرافعة (ترفع القطع الثقيلة بسلسلة)", // nieuw, nalezen
-    'w.hijshaak': "خطّاف الرفع", // nieuw, nalezen
-    'w.tilhulp': "أداة مساعدة الرفع (تمسك القطعة بالشفط)", // nieuw, nalezen
-    'w.onderdelenkar': "عربة القطع", // nieuw, nalezen
-    'w.draaitafel': "الطاولة الدوّارة (تُدار القطعة، لا الجسم)", // nieuw, nalezen
-    'w.rolcontainer': "القفص المتحرّك (قفص عالٍ على عجلات)", // nieuw, nalezen
-    's.handling.1': { m: "لا ترفع هذا وحدك. استخدم الرافعة.", f: "لا ترفعي هذا وحدك. استخدمي الرافعة.", x: "هذا لا يُرفع بشخص واحد. يجب استخدام الرافعة." }, // nieuw, nalezen
-    's.handling.2': "هل خطّاف الرفع مغلق جيداً؟", // nieuw, nalezen
-    's.handling.3': { m: "ادفع عربة القطع، لا تسحبها.", f: "ادفعي عربة القطع، لا تسحبيها.", x: "عربة القطع تُدفع، لا تُسحب." }, // nieuw, nalezen
-    'c.handling.q': "هل يمكنني أن أقف تحت الرافعة؟", // nieuw, nalezen
+    'l.handling': "الرفع والنقل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.takel': "الرافعة (ترفع القطع الثقيلة بسلسلة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hijshaak': "خطّاف الرفع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tilhulp': "أداة مساعدة الرفع (تمسك القطعة بالشفط)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderdelenkar': "عربة القطع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.draaitafel': "الطاولة الدوّارة (تُدار القطعة، لا الجسم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rolcontainer': "القفص المتحرّك (قفص عالٍ على عجلات)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.handling.1': { m: "لا ترفع هذا وحدك. استخدم الرافعة.", f: "لا ترفعي هذا وحدك. استخدمي الرافعة.", x: "هذا لا يُرفع بشخص واحد. يجب استخدام الرافعة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.handling.2': "هل خطّاف الرفع مغلق جيداً؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.handling.3': { m: "ادفع عربة القطع، لا تسحبها.", f: "ادفعي عربة القطع، لا تسحبيها.", x: "عربة القطع تُدفع، لا تُسحب." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.handling.q': "هل يمكنني أن أقف تحت الرافعة؟", // nieuw, nalezen // nagelezen AI 28 nov
     'c.handling.a': "لا، الوقوف تحت حمولة معلّقة ممنوع دائماً.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.handling': { m: "دع الرافعة تقوم بالعمل الثقيل", f: "دعي الرافعة تقوم بالعمل الثقيل", x: "العمل الثقيل للرافعة" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.handling.b': { m: "القطع الثقيلة تُرفع بالرافعة أو بأداة مساعدة الرفع، لا بظهرك. افحص الخطّاف قبل أن ترفع: يجب أن يُغلق القفل. ارفع ببطء، وأبعد يديك وقدميك عن الحمولة. لا تقف ولا تمشِ أبداً تحت حمولة معلّقة. استخدم الطاولة الدوّارة لتدير القطعة: عندها لا تحتاج أن تلوي ظهرك. ادفع العربة أو القفص المتحرّك: ترى أين تذهب، وظهرك يتعب أقل. لا تستخدم الرافعة إلا بعد أن تتعلّم كيف. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "القطع الثقيلة تُرفع بالرافعة أو بأداة مساعدة الرفع، لا بظهرك. افحصي الخطّاف قبل أن ترفعي: يجب أن يُغلق القفل. ارفعي ببطء، وأبعدي يديك وقدميك عن الحمولة. لا تقفي ولا تمشي أبداً تحت حمولة معلّقة. استخدمي الطاولة الدوّارة لتديري القطعة: عندها لا تحتاجين أن تلوي ظهرك. ادفعي العربة أو القفص المتحرّك: ترين أين تذهبين، وظهرك يتعب أقل. لا تستخدمي الرافعة إلا بعد أن تتعلّمي كيف. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "القطع الثقيلة تُرفع بالرافعة أو بأداة مساعدة الرفع، لا بالظهر. فحص الخطّاف قبل الرفع: يجب أن يُغلق القفل. الرفع ببطء، وإبعاد اليدين والقدمين عن الحمولة. لا وقوف ولا مشي أبداً تحت حمولة معلّقة. استخدام الطاولة الدوّارة لإدارة القطعة: عندها لا حاجة إلى لوي الظهر. دفع العربة أو القفص المتحرّك: هكذا يُرى الطريق، والظهر يتعب أقل. استخدام الرافعة يكون فقط بعد تعلّم الطريقة. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
@@ -2797,18 +2797,18 @@ const t: CultureTranslation = {
     'c.handling.o2': { m: "ارفعها وحدك، بسرعة.", f: "ارفعيها وحدك، بسرعة.", x: "رفعها بشخص واحد، بسرعة." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.handling.o3': { m: "اسحبها على الأرض.", f: "اسحبيها على الأرض.", x: "سحبها على الأرض." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.handling.w': "القطعة الثقيلة يمكن أن تؤذي الظهر في ثانية واحدة. انتظار عشر دقائق أفضل من شهور من الألم.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.finalcheck': "الفحص النهائي", // nieuw, nalezen
-    'w.typeplaatje': "لوحة البيانات (لوحة معدنية صغيرة عليها النوع والرقم)", // nieuw, nalezen
-    'w.stempel': "الختم", // nieuw, nalezen
-    'w.testbank': "منصّة الاختبار", // nieuw, nalezen
-    'w.goedkeursticker': "ملصق الموافقة (ملصق أخضر: المنتج جيد)", // nieuw, nalezen
-    'w.kras': "الخدش", // nieuw, nalezen
-    'w.barst': "الشقّ", // nieuw, nalezen
-    's.finalcheck.1': "لوحة البيانات مائلة.", // nieuw, nalezen
-    's.finalcheck.2': "على هذا المنتج خدش.", // nieuw, nalezen
-    's.finalcheck.3': "بدون ملصق الموافقة لا يخرج.", // nieuw, nalezen
-    'c.finalcheck.q': "هل هذا المنتج جيد؟", // nieuw, nalezen
-    'c.finalcheck.a': "لا، فيه شقّ.", // nieuw, nalezen
+    'l.finalcheck': "الفحص النهائي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.typeplaatje': "لوحة البيانات (لوحة معدنية صغيرة عليها النوع والرقم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stempel': "الختم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.testbank': "منصّة الاختبار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedkeursticker': "ملصق الموافقة (ملصق أخضر: المنتج جيد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kras': "الخدش", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.barst': "الشقّ", // nieuw, nalezen // nagelezen AI 28 nov
+    's.finalcheck.1': "لوحة البيانات مائلة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.finalcheck.2': "على هذا المنتج خدش.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.finalcheck.3': "بدون ملصق الموافقة لا يخرج.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.finalcheck.q': "هل هذا المنتج جيد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.finalcheck.a': "لا، فيه شقّ.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.finalcheck': "فقط المنتجات الجيدة تأخذ الملصق", // nieuw, nalezen // nagelezen AI 22 nov
     'c.finalcheck.b': { m: "الفحص النهائي هو آخر فرصة لاكتشاف الخطأ قبل أن يكتشفه الزبون. افحص كل نقطة في القائمة، حتى عندما يكون العمل كثيراً. الخدش أو الشقّ الصغير يفوت بسهولة: انظر في ضوء جيد، ومن أكثر من جهة. لا تضع ملصق الموافقة أو الختم إلا عندما تكون كل النقاط جيدة. لست متأكداً؟ ضع المنتج جانباً واسأل. الخطأ الذي يُكتشف هنا يكلّف قليلاً، والخطأ عند الزبون يكلّف كثيراً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الفحص النهائي هو آخر فرصة لاكتشاف الخطأ قبل أن يكتشفه الزبون. افحصي كل نقطة في القائمة، حتى عندما يكون العمل كثيراً. الخدش أو الشقّ الصغير يفوت بسهولة: انظري في ضوء جيد، ومن أكثر من جهة. لا تضعي ملصق الموافقة أو الختم إلا عندما تكون كل النقاط جيدة. لستِ متأكدة؟ ضعي المنتج جانباً واسألي. الخطأ الذي يُكتشف هنا يكلّف قليلاً، والخطأ عند الزبون يكلّف كثيراً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الفحص النهائي هو آخر فرصة لاكتشاف الخطأ قبل أن يكتشفه الزبون. فحص كل نقطة في القائمة، حتى عندما يكون العمل كثيراً. الخدش أو الشقّ الصغير يفوت بسهولة: النظر في ضوء جيد، ومن أكثر من جهة. ملصق الموافقة أو الختم يوضع فقط عندما تكون كل النقاط جيدة. هناك شكّ؟ وضع المنتج جانباً والسؤال. الخطأ الذي يُكتشف هنا يكلّف قليلاً، والخطأ عند الزبون يكلّف كثيراً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.finalcheck.p': "هذا المنتج يوضع جانباً.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2818,19 +2818,19 @@ const t: CultureTranslation = {
     'c.finalcheck.o3': { m: "حرّك الملصق فوق الخدش.", f: "حرّكي الملصق فوق الخدش.", x: "تحريك الملصق فوق الخدش." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.finalcheck.w': "الخدش الصغير يمكن أن يكون علامة على مشكلة في الخط. إخفاؤه ينقل المشكلة إلى الزبون فقط.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
-    'u.kweek': "الزراعة والفرز والدفيئة", // nieuw, nalezen
-    'l.sowing': "البذر والعُقَل", // nieuw, nalezen
-    'w.zaad': "البذور", // nieuw, nalezen
-    'w.zaaibak': "صينية البذر", // nieuw, nalezen
-    'w.stek': "العُقلة (قطعة من نبتة تنمو لها جذور جديدة)", // nieuw, nalezen
-    'w.potgrond': "تربة الأصص", // nieuw, nalezen
-    'w.kweekpot': "أصيص الزراعة", // nieuw, nalezen
-    'w.gieter': "إبريق السقي", // nieuw, nalezen
-    's.sowing.1': "ضع بذرتين في كل خانة.", // nieuw, nalezen
-    's.sowing.2': "ضع العُقلة في تربة الأصص.", // nieuw, nalezen
-    's.sowing.3': "أعطِ النباتات الصغيرة قليلاً من الماء.", // nieuw, nalezen
-    'c.sowing.q': "إلى أي عمق يجب أن تدخل البذرة؟", // nieuw, nalezen
-    'c.sowing.a': "نصف سنتيمتر. ليس أعمق.", // nieuw, nalezen
+    'u.kweek': "الزراعة والفرز والدفيئة", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.sowing': "البذر والعُقَل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zaad': "البذور", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zaaibak': "صينية البذر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stek': "العُقلة (قطعة من نبتة تنمو لها جذور جديدة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.potgrond': "تربة الأصص", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kweekpot': "أصيص الزراعة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gieter': "إبريق السقي", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sowing.1': "ضع بذرتين في كل خانة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sowing.2': "ضع العُقلة في تربة الأصص.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sowing.3': "أعطِ النباتات الصغيرة قليلاً من الماء.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sowing.q': "إلى أي عمق يجب أن تدخل البذرة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sowing.a': "نصف سنتيمتر. ليس أعمق.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.sowing': "النباتات الصغيرة تحتاج يداً لطيفة", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sowing.b': { m: "النباتات الصغيرة ضعيفة. أمسك العُقلة أو الشتلة من ورقة، لا من الساق: الورقة تنمو من جديد، والساق المكسورة لا تنمو. اضغط التربة بلطف، لا بقوة. اسقِ ببطء، برذاذ ناعم، حتى لا تنجرف البذور. اعمل بيدين نظيفتين وصوانٍ نظيفة: النباتات الصغيرة تمرض بسهولة. اكتب التاريخ ونوع النبتة على كل صينية، حتى يعرف الجميع ما فيها.", f: "النباتات الصغيرة ضعيفة. أمسكي العُقلة أو الشتلة من ورقة، لا من الساق: الورقة تنمو من جديد، والساق المكسورة لا تنمو. اضغطي التربة بلطف، لا بقوة. اسقي ببطء، برذاذ ناعم، حتى لا تنجرف البذور. اعملي بيدين نظيفتين وصوانٍ نظيفة: النباتات الصغيرة تمرض بسهولة. اكتبي التاريخ ونوع النبتة على كل صينية، حتى يعرف الجميع ما فيها.", x: "النباتات الصغيرة ضعيفة. العُقلة أو الشتلة تُمسك من ورقة، لا من الساق: الورقة تنمو من جديد، والساق المكسورة لا تنمو. التربة تُضغط بلطف، لا بقوة. السقي يكون ببطء، برذاذ ناعم، حتى لا تنجرف البذور. العمل يكون بيدين نظيفتين وصوانٍ نظيفة: النباتات الصغيرة تمرض بسهولة. كتابة التاريخ ونوع النبتة على كل صينية، حتى يعرف الجميع ما فيها." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.sowing.p': "أمسكها من الورقة.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2839,18 +2839,18 @@ const t: CultureTranslation = {
     'c.sowing.o2': "سحبها من الساق.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sowing.o3': "عصرها لإخراجها مع التربة.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sowing.w': "الورقة تستطيع أن تنمو من جديد. الساق المكسورة لا تستطيع، وعندها تموت النبتة.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.sorting': "الفرز والتعبئة", // nieuw, nalezen
-    'w.tros': "العنقود (عنقود طماطم على ساق واحدة)", // nieuw, nalezen
-    'w.bakje': "العلبة الصغيرة (علبة صغيرة للفاكهة)", // nieuw, nalezen
-    'w.sorteermachine': "آلة الفرز", // nieuw, nalezen
-    'w.etiketpistool': "مسدس الملصقات", // nieuw, nalezen
-    'w.kleurenkaart': "بطاقة الألوان (تبيّن كم يجب أن تكون الثمرة ناضجة)", // nieuw, nalezen
-    'w.tomatenschaar': "مقصّ القطف", // nieuw, nalezen
-    's.sorting.1': "ضع العناقيد بحذر في الصندوق.", // nieuw, nalezen
-    's.sorting.2': "حبة الطماطم هذه ناضجة أكثر من اللازم. توضع جانباً.", // nieuw, nalezen
-    's.sorting.3': "انظر إلى بطاقة الألوان.", // nieuw, nalezen
-    'c.sorting.q': "هل حبة الطماطم هذه ناضجة بما يكفي؟", // nieuw, nalezen
-    'c.sorting.a': "لا، ما زالت خضراء جداً. اتركها على النبتة.", // nieuw, nalezen
+    'l.sorting': "الفرز والتعبئة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tros': "العنقود (عنقود طماطم على ساق واحدة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bakje': "العلبة الصغيرة (علبة صغيرة للفاكهة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sorteermachine': "آلة الفرز", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.etiketpistool': "مسدس الملصقات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kleurenkaart': "بطاقة الألوان (تبيّن كم يجب أن تكون الثمرة ناضجة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tomatenschaar': "مقصّ القطف", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sorting.1': "ضع العناقيد بحذر في الصندوق.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sorting.2': "حبة الطماطم هذه ناضجة أكثر من اللازم. توضع جانباً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sorting.3': "انظر إلى بطاقة الألوان.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sorting.q': "هل حبة الطماطم هذه ناضجة بما يكفي؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sorting.a': "لا، ما زالت خضراء جداً. اتركها على النبتة.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.sorting': "كل ثمرة مهمّة", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sorting.b': { m: "الفواكه والخضار تنكدم بسهولة. ضعها وضعاً، ولا تُسقطها ولا ترمها. اليوم لا ترى الكدمة، لكن غداً تصبح الثمرة طرية وبنية. انظر إلى بطاقة الألوان لتعرف أي لون يذهب إلى أين. ضع الثمرة المتضرّرة أو الفاسدة جانباً: ثمرة سيئة واحدة في العلبة يمكن أن تُفسد الباقي. حافظ على نظافة العلب والصناديق، ولا تضعها على الأرض أبداً.", f: "الفواكه والخضار تنكدم بسهولة. ضعيها وضعاً، ولا تُسقطيها ولا ترميها. اليوم لا ترين الكدمة، لكن غداً تصبح الثمرة طرية وبنية. انظري إلى بطاقة الألوان لتعرفي أي لون يذهب إلى أين. ضعي الثمرة المتضرّرة أو الفاسدة جانباً: ثمرة سيئة واحدة في العلبة يمكن أن تُفسد الباقي. حافظي على نظافة العلب والصناديق، ولا تضعيها على الأرض أبداً.", x: "الفواكه والخضار تنكدم بسهولة. توضع وضعاً، ولا تُسقط ولا تُرمى. اليوم لا تُرى الكدمة، لكن غداً تصبح الثمرة طرية وبنية. بطاقة الألوان تبيّن أي لون يذهب إلى أين. الثمرة المتضرّرة أو الفاسدة توضع جانباً: ثمرة سيئة واحدة في العلبة يمكن أن تُفسد الباقي. العلب والصناديق تبقى نظيفة، ولا توضع على الأرض أبداً." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.sorting.p': "هذه متضرّرة.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2859,18 +2859,18 @@ const t: CultureTranslation = {
     'c.sorting.o2': "إخفاؤها في أسفل العلبة.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sorting.o3': "تعبئتها رغم ذلك.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sorting.w': "حبة الطماطم الفاسدة تجعل الأخرى تفسد أسرع. الزبون يجدها، فترجع العلبة كلها.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.greenhouse': "الدفيئة ومناخها", // nieuw, nalezen
-    'w.buisrailkar': "عربة سكة الأنابيب (تسير على أنابيب التدفئة)", // nieuw, nalezen
-    'w.druppelaar': "المنقّط (يعطي الماء نقطة نقطة)", // nieuw, nalezen
-    'w.luchtraam': "فتحة التهوية (نافذة في السقف)", // nieuw, nalezen
-    'w.kasscherm': "ستارة الدفيئة (قماش تحت السقف)", // nieuw, nalezen
-    'w.ventilator': "المروحة", // nieuw, nalezen
-    'w.thermometer': "مقياس الحرارة", // nieuw, nalezen
-    's.greenhouse.1': "سِر بعربة سكة الأنابيب إلى آخر الصف.", // nieuw, nalezen
-    's.greenhouse.2': "المنقّط مفكوك.", // nieuw, nalezen
-    's.greenhouse.3': "الجو حار. فتحات التهوية تنفتح.", // nieuw, nalezen
-    'c.greenhouse.q': "لماذا الجو حار جداً في الدفيئة؟", // nieuw, nalezen
-    'c.greenhouse.a': "الستارة مغلقة، والفتحات أيضاً.", // nieuw, nalezen
+    'l.greenhouse': "الدفيئة ومناخها", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.buisrailkar': "عربة سكة الأنابيب (تسير على أنابيب التدفئة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.druppelaar': "المنقّط (يعطي الماء نقطة نقطة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.luchtraam': "فتحة التهوية (نافذة في السقف)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kasscherm': "ستارة الدفيئة (قماش تحت السقف)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ventilator': "المروحة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.thermometer': "مقياس الحرارة", // nieuw, nalezen // nagelezen AI 28 nov
+    's.greenhouse.1': "سِر بعربة سكة الأنابيب إلى آخر الصف.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.greenhouse.2': "المنقّط مفكوك.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.greenhouse.3': "الجو حار. فتحات التهوية تنفتح.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.greenhouse.q': "لماذا الجو حار جداً في الدفيئة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.greenhouse.a': "الستارة مغلقة، والفتحات أيضاً.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.greenhouse': { m: "اترك المناخ للكمبيوتر", f: "اتركي المناخ للكمبيوتر", x: "المناخ مهمّة الكمبيوتر" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.greenhouse.b': { m: "في الدفيئة يضبط الكمبيوتر المناخ: فتحات التهوية والستارة والتدفئة والماء. لا تفتح فتحة تهوية ولا تغيّر إعداداً بنفسك. هل ترى شيئاً غريباً، مثل منقّط يسرّب أو فتحة لا تنغلق؟ أخبر مشرفك. عربة سكة الأنابيب تسير على أنابيب التدفئة: لا تستعملها إلا بعد أن تتعلّم كيف. أبقِ قدميك على المنصّة، ولا تلمس الأنابيب أبداً: قد تكون ساخنة. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في الدفيئة يضبط الكمبيوتر المناخ: فتحات التهوية والستارة والتدفئة والماء. لا تفتحي فتحة تهوية ولا تغيّري إعداداً بنفسك. هل ترين شيئاً غريباً، مثل منقّط يسرّب أو فتحة لا تنغلق؟ أخبري مشرفك. عربة سكة الأنابيب تسير على أنابيب التدفئة: لا تستعمليها إلا بعد أن تتعلّمي كيف. أبقي قدميك على المنصّة، ولا تلمسي الأنابيب أبداً: قد تكون ساخنة. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في الدفيئة يضبط الكمبيوتر المناخ: فتحات التهوية والستارة والتدفئة والماء. فتح فتحة تهوية أو تغيير إعداد باليد ممنوع. شيء غريب، مثل منقّط يسرّب أو فتحة لا تنغلق؟ المشرف يجب أن يعرف. عربة سكة الأنابيب تسير على أنابيب التدفئة: استعمالها يكون فقط بعد تعلّم الطريقة. القدمان تبقيان على المنصّة، والأنابيب لا تُلمس أبداً: قد تكون ساخنة. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.greenhouse.p': "هذا المنقّط يسرّب.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2879,18 +2879,18 @@ const t: CultureTranslation = {
     'c.greenhouse.o2': "تركه: إنه ماء فقط.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.greenhouse.o3': "قطع الماء عن الصف كله.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.greenhouse.w': "المنقّط المفكوك يضيّع الماء، والنبتة تأخذ أقل من حاجتها، والأرض المبلّلة زلِقة.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.pests': "الآفات والعمل النظيف", // nieuw, nalezen
-    'w.luis': "المنّ (حشرة خضراء صغيرة على النباتات)", // nieuw, nalezen
-    'w.vangplaat': "اللوحة اللاصقة (بطاقة صفراء تصطاد الحشرات)", // nieuw, nalezen
-    'w.rups': "اليرقة", // nieuw, nalezen
-    'w.sluipwesp': "الدبور الطفيلي (دبور صغير يقتل الآفات)", // nieuw, nalezen
-    'w.schimmel': "العفن", // nieuw, nalezen
-    'w.ontsmettingsmat': "سجادة التعقيم (يُمشى عليها عند الباب)", // nieuw, nalezen
-    's.pests.1': "على هذه الورقة منّ.", // nieuw, nalezen
-    's.pests.2': "علّق اللوحة اللاصقة فوق النباتات.", // nieuw, nalezen
-    's.pests.3': "امشِ فوق سجادة التعقيم.", // nieuw, nalezen
-    'c.pests.q': "هل يمكنني أن أقتل هذا الدبور؟", // nieuw, nalezen
-    'c.pests.a': "لا، هذا دبور طفيلي. إنه يساعدنا.", // nieuw, nalezen
+    'l.pests': "الآفات والعمل النظيف", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.luis': "المنّ (حشرة خضراء صغيرة على النباتات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vangplaat': "اللوحة اللاصقة (بطاقة صفراء تصطاد الحشرات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rups': "اليرقة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sluipwesp': "الدبور الطفيلي (دبور صغير يقتل الآفات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schimmel': "العفن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ontsmettingsmat': "سجادة التعقيم (يُمشى عليها عند الباب)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pests.1': "على هذه الورقة منّ.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pests.2': "علّق اللوحة اللاصقة فوق النباتات.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pests.3': "امشِ فوق سجادة التعقيم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pests.q': "هل يمكنني أن أقتل هذا الدبور؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pests.a': "لا، هذا دبور طفيلي. إنه يساعدنا.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.pests': { m: "لا تنقل الأمراض من صف إلى صف", f: "لا تنقلي الأمراض من صف إلى صف", x: "الأمراض لا تُنقل من صف إلى صف" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.pests.b': { m: "المرض أو الآفة ينتشر بسرعة في الدفيئة. يمكن أن تنقله على يديك وملابسك وأدواتك. لذلك امشِ فوق سجادة التعقيم عند كل باب، واغسل يديك عندما تذهب إلى جزء آخر من الدفيئة. ابدأ عملك في الصفوف السليمة، وأنهِه في الصفوف المريضة. هل ترى حشرات أو بقعاً أو عفناً على نبتة؟ لا تلمسها، لكن أخبر مشرفك أين هي. بعض الحشرات في الدفيئة مساعِدة: اتركها في حالها. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "المرض أو الآفة ينتشر بسرعة في الدفيئة. يمكن أن تنقليه على يديك وملابسك وأدواتك. لذلك امشي فوق سجادة التعقيم عند كل باب، واغسلي يديك عندما تذهبين إلى جزء آخر من الدفيئة. ابدئي عملك في الصفوف السليمة، وأنهيه في الصفوف المريضة. هل ترين حشرات أو بقعاً أو عفناً على نبتة؟ لا تلمسيها، لكن أخبري مشرفك أين هي. بعض الحشرات في الدفيئة مساعِدة: اتركيها في حالها. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "المرض أو الآفة ينتشر بسرعة في الدفيئة. يمكن نقله على اليدين والملابس والأدوات. لذلك المشي فوق سجادة التعقيم عند كل باب، وغسل اليدين عند الذهاب إلى جزء آخر من الدفيئة. العمل يبدأ في الصفوف السليمة، وينتهي في الصفوف المريضة. حشرات أو بقع أو عفن على نبتة؟ لمسها ممنوع، لكن المشرف يجب أن يعرف أين هي. بعض الحشرات في الدفيئة مساعِدة: تُترك في حالها. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.pests.p': "هنا عفن.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2899,19 +2899,19 @@ const t: CultureTranslation = {
     'c.pests.o2': "قطف الأوراق السيئة والمتابعة.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.pests.o3': "السكوت: إنها بضع نباتات فقط.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.pests.w': "العفن ينتشر بسرعة. المشرف يعرف ما العمل، ومن أين يبدأ.", // nieuw, nalezen // nagelezen AI 22 nov
-    'u.carservice': "الإطارات والزيت والفرامل", // nieuw, nalezen
-    'l.tyres': "تغيير الإطارات", // nieuw, nalezen
-    'w.wielbout': "مسمار العجلة", // nieuw, nalezen
-    'w.slagmoersleutel': "مفتاح الصدم", // nieuw, nalezen
-    'w.bandenspanningsmeter': "مقياس ضغط الإطار", // nieuw, nalezen
-    'w.bandenprofiel': "نقشة الإطار (الأخاديد في الإطار)", // nieuw, nalezen
-    'w.velg': "جنط العجلة", // nieuw, nalezen
-    'w.bandenwisselaar': "آلة تغيير الإطارات (آلة لنزع الإطار عن الجنط)", // nieuw, nalezen
-    's.tyres.1': "شُدّ مسامير العجلة بشكل متقاطع.", // nieuw, nalezen
-    's.tyres.2': "نقشة الإطار منخفضة جداً.", // nieuw, nalezen
-    's.tyres.3': "قِس الضغط بمقياس ضغط الإطار.", // nieuw, nalezen
-    'c.tyres.q': "هل يجب نزع هذه الإطارات؟", // nieuw, nalezen
-    'c.tyres.a': "نعم، النقشة كادت تختفي.", // nieuw, nalezen
+    'u.carservice': "الإطارات والزيت والفرامل", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.tyres': "تغيير الإطارات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wielbout': "مسمار العجلة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.slagmoersleutel': "مفتاح الصدم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bandenspanningsmeter': "مقياس ضغط الإطار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bandenprofiel': "نقشة الإطار (الأخاديد في الإطار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.velg': "جنط العجلة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bandenwisselaar': "آلة تغيير الإطارات (آلة لنزع الإطار عن الجنط)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tyres.1': "شُدّ مسامير العجلة بشكل متقاطع.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tyres.2': "نقشة الإطار منخفضة جداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tyres.3': "قِس الضغط بمقياس ضغط الإطار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.tyres.q': "هل يجب نزع هذه الإطارات؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.tyres.a': "نعم، النقشة كادت تختفي.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.tyres': { m: "لُفّ باليد، وشُدّ بمفتاح العزم", f: "لُفّي باليد، وشُدّي بمفتاح العزم", x: "اللفّ باليد، والشدّ بمفتاح العزم" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.tyres.b': { m: "مفتاح الصدم سريع وقوي جداً. استعمله لفكّ مسامير العجلة، لا لشدّها بقوة. أولاً لُفّ المسامير باليد. ثم شُدّها بشكل متقاطع بمفتاح العزم، بالقوة المحدّدة لتلك السيارة. العجلة غير المشدودة جيداً يمكن أن تنفصل أثناء القيادة. افحص النقشة والضغط في كل إطار تأخذه بيديك. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "مفتاح الصدم سريع وقوي جداً. استعمليه لفكّ مسامير العجلة، لا لشدّها بقوة. أولاً لُفّي المسامير باليد. ثم شُدّيها بشكل متقاطع بمفتاح العزم، بالقوة المحدّدة لتلك السيارة. العجلة غير المشدودة جيداً يمكن أن تنفصل أثناء القيادة. افحصي النقشة والضغط في كل إطار تأخذينه بيديك. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "مفتاح الصدم سريع وقوي جداً. هو لفكّ مسامير العجلة، لا لشدّها بقوة. أولاً لفّ المسامير باليد. ثم شدّها بشكل متقاطع بمفتاح العزم، بالقوة المحدّدة لتلك السيارة. العجلة غير المشدودة جيداً يمكن أن تنفصل أثناء القيادة. فحص النقشة والضغط في كل إطار يمرّ في اليد. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.tyres.p': "ألفّها باليد أولاً.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2920,18 +2920,18 @@ const t: CultureTranslation = {
     'c.tyres.o2': "شدّها بقوة بمفتاح الصدم.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tyres.o3': "لفّها باليد، والاكتفاء بذلك.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tyres.w': "مفتاح الصدم يمكن أن يشدّ المسمار أكثر من اللازم أو أقل من اللازم. فقط مفتاح العزم يعطي القوة الصحيحة.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.oilchange': "تغيير الزيت", // nieuw, nalezen
-    'w.oliefilter': "فلتر الزيت", // nieuw, nalezen
-    'w.oliepeilstok': "عصا قياس الزيت (تبيّن كمية الزيت)", // nieuw, nalezen
-    'w.opvangbak': "حوض تجميع الزيت (يجمع الزيت القديم)", // nieuw, nalezen
-    'w.trechter': "القمع", // nieuw, nalezen
-    'w.aftapplug': "سدادة التصريف", // nieuw, nalezen
-    'w.olievat': "برميل الزيت", // nieuw, nalezen
-    's.oilchange.1': "ضع حوض تجميع الزيت تحت المحرّك.", // nieuw, nalezen
-    's.oilchange.2': "فُكّ سدادة التصريف.", // nieuw, nalezen
-    's.oilchange.3': "انظر إلى عصا قياس الزيت.", // nieuw, nalezen
-    'c.oilchange.q': "كم من الزيت يجب أن يدخل؟", // nieuw, nalezen
-    'c.oilchange.a': "أربعة لترات. ثم انظر إلى عصا القياس.", // nieuw, nalezen
+    'l.oilchange': "تغيير الزيت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oliefilter': "فلتر الزيت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oliepeilstok': "عصا قياس الزيت (تبيّن كمية الزيت)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opvangbak': "حوض تجميع الزيت (يجمع الزيت القديم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.trechter': "القمع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aftapplug': "سدادة التصريف", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.olievat': "برميل الزيت", // nieuw, nalezen // nagelezen AI 28 nov
+    's.oilchange.1': "ضع حوض تجميع الزيت تحت المحرّك.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.oilchange.2': "فُكّ سدادة التصريف.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.oilchange.3': "انظر إلى عصا قياس الزيت.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.oilchange.q': "كم من الزيت يجب أن يدخل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.oilchange.a': "أربعة لترات. ثم انظر إلى عصا القياس.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.oilchange': "الزيت القديم يذهب إلى البرميل، لا إلى البالوعة", // nieuw, nalezen // nagelezen AI 22 nov
     'c.oilchange.b': { m: "الزيت القديم مضرّ بالماء والتربة. قليل من الزيت يمكن أن يلوّث ماءً كثيراً. لذلك اجمع كل الزيت القديم في حوض التجميع، واسكبه في برميل الزيت القديم. لا تسكبه أبداً في بالوعة أو مغسلة. الفلاتر القديمة والخرق المزيّتة تذهب إلى سلّتها الخاصة. الزيت الساخن يمكن أن يحرق جلدك: اترك المحرّك يبرد قليلاً أولاً، والبس قفازات. نظّف الزيت المسكوب فوراً: الزيت على الأرض زلِق. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الزيت القديم مضرّ بالماء والتربة. قليل من الزيت يمكن أن يلوّث ماءً كثيراً. لذلك اجمعي كل الزيت القديم في حوض التجميع، واسكبيه في برميل الزيت القديم. لا تسكبيه أبداً في بالوعة أو مغسلة. الفلاتر القديمة والخرق المزيّتة تذهب إلى سلّتها الخاصة. الزيت الساخن يمكن أن يحرق جلدك: اتركي المحرّك يبرد قليلاً أولاً، والبسي قفازات. نظّفي الزيت المسكوب فوراً: الزيت على الأرض زلِق. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الزيت القديم مضرّ بالماء والتربة. قليل من الزيت يمكن أن يلوّث ماءً كثيراً. لذلك جمع كل الزيت القديم في حوض التجميع، وسكبه في برميل الزيت القديم. سكبه في بالوعة أو مغسلة ممنوع أبداً. الفلاتر القديمة والخرق المزيّتة تذهب إلى سلّتها الخاصة. الزيت الساخن يمكن أن يحرق الجلد: ترك المحرّك يبرد قليلاً أولاً، ولبس قفازات. الزيت المسكوب يُنظّف فوراً: الزيت على الأرض زلِق. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.oilchange.p': "أين يذهب الزيت القديم؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2940,18 +2940,18 @@ const t: CultureTranslation = {
     'c.oilchange.o2': "سكبه في البالوعة في الخارج.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.oilchange.o3': "تركه تحت السيارة لوقت لاحق.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.oilchange.w': "الزيت القديم في البالوعة يلوّث الماء. والحوض الممتلئ تحت السيارة يصطدم به أحد بقدمه فينقلب.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.brakes': "الفرامل والأضواء", // nieuw, nalezen
-    'w.remschijf': "قرص الفرامل", // nieuw, nalezen
-    'w.remblok': "فحمة الفرامل", // nieuw, nalezen
-    'w.koplamp': "المصباح الأمامي", // nieuw, nalezen
-    'w.remvloeistof': "سائل الفرامل", // nieuw, nalezen
-    'w.remklauw': "ملقط الفرامل (الكاليبر)", // nieuw, nalezen
-    'w.achterlamp': "المصباح الخلفي", // nieuw, nalezen
-    's.brakes.1': "فحمات الفرامل مستهلكة.", // nieuw, nalezen
-    's.brakes.2': "افحص سائل الفرامل.", // nieuw, nalezen
-    's.brakes.3': "المصباح الخلفي الأيسر لا يعمل.", // nieuw, nalezen
-    'c.brakes.q': "هل يجب تغيير قرص الفرامل أيضاً؟", // nieuw, nalezen
-    'c.brakes.a': "نعم، أصبح رقيقاً جداً.", // nieuw, nalezen
+    'l.brakes': "الفرامل والأضواء", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.remschijf': "قرص الفرامل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.remblok': "فحمة الفرامل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koplamp': "المصباح الأمامي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.remvloeistof': "سائل الفرامل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.remklauw': "ملقط الفرامل (الكاليبر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.achterlamp': "المصباح الخلفي", // nieuw, nalezen // nagelezen AI 28 nov
+    's.brakes.1': "فحمات الفرامل مستهلكة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.brakes.2': "افحص سائل الفرامل.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.brakes.3': "المصباح الخلفي الأيسر لا يعمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.brakes.q': "هل يجب تغيير قرص الفرامل أيضاً؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.brakes.a': "نعم، أصبح رقيقاً جداً.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.brakes': { m: "الفرامل: افحص مرتين", f: "الفرامل: افحصي مرتين", x: "الفرامل: الفحص مرتين" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.b': { m: "الفرامل تحافظ على حياة الناس. لذلك اعمل بهدوء، وافحص عملك مرتين. بعد تركيب فحمات أو أقراص جديدة، اضغط دوّاسة الفرامل بضع مرات قبل أن تتحرّك السيارة: الضغطة الأولى غالباً تنزل عميقاً أكثر من اللازم. سائل الفرامل مضرّ بجلدك وبالطلاء: البس قفازات، وامسح القطرات فوراً. لا تنفخ غبار الفرامل بالهواء المضغوط: نظّفه بمنظّف الفرامل وقطعة قماش. قبل أن تخرج السيارة، افحص كل الأضواء، وأيضاً أضواء الفرامل.", f: "الفرامل تحافظ على حياة الناس. لذلك اعملي بهدوء، وافحصي عملك مرتين. بعد تركيب فحمات أو أقراص جديدة، اضغطي دوّاسة الفرامل بضع مرات قبل أن تتحرّك السيارة: الضغطة الأولى غالباً تنزل عميقاً أكثر من اللازم. سائل الفرامل مضرّ بجلدك وبالطلاء: البسي قفازات، وامسحي القطرات فوراً. لا تنفخي غبار الفرامل بالهواء المضغوط: نظّفيه بمنظّف الفرامل وقطعة قماش. قبل أن تخرج السيارة، افحصي كل الأضواء، وأيضاً أضواء الفرامل.", x: "الفرامل تحافظ على حياة الناس. لذلك العمل يكون بهدوء، مع فحص العمل مرتين. بعد تركيب فحمات أو أقراص جديدة، الضغط على دوّاسة الفرامل بضع مرات قبل أن تتحرّك السيارة: الضغطة الأولى غالباً تنزل عميقاً أكثر من اللازم. سائل الفرامل مضرّ بالجلد وبالطلاء: لبس قفازات، ومسح القطرات فوراً. غبار الفرامل لا يُنفخ بالهواء المضغوط: يُنظّف بمنظّف الفرامل وقطعة قماش. قبل أن تخرج السيارة، فحص كل الأضواء، وأيضاً أضواء الفرامل." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.p': "أضغط دوّاسة الفرامل بضع مرات.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2960,18 +2960,18 @@ const t: CultureTranslation = {
     'c.brakes.o2': "قيادتها إلى الخارج فوراً.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.o3': "دفعها إلى الخارج بدون فحص.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.w': "بعد تركيب فحمات جديدة، يمكن أن تنزل الدوّاسة عميقاً أكثر من اللازم في المرة الأولى. عندها لا تتوقّف السيارة.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.diagnosis': "قراءة الأعطال وأمر العمل", // nieuw, nalezen
-    'w.diagnosecomputer': "جهاز التشخيص (يقرأ أعطال السيارة)", // nieuw, nalezen
-    'w.waarschuwingslampje': "ضوء التحذير (في لوحة العدّادات)", // nieuw, nalezen
-    'w.werkorder': "أمر العمل (ما يجب عمله في السيارة)", // nieuw, nalezen
-    'w.kentekenplaat': "لوحة الأرقام", // nieuw, nalezen
-    'w.autosleutel': "مفتاح السيارة", // nieuw, nalezen
-    'w.stoelhoes': "غطاء المقعد (يحافظ على نظافة المقعد)", // nieuw, nalezen
-    's.diagnosis.1': "وصّل جهاز التشخيص.", // nieuw, nalezen
-    's.diagnosis.2': "ضوء التحذير مضاء.", // nieuw, nalezen
-    's.diagnosis.3': "ضع غطاء مقعد على المقعد.", // nieuw, nalezen
-    'c.diagnosis.q': "ماذا يجب أن يُعمل في هذه السيارة؟", // nieuw, nalezen
-    'c.diagnosis.a': "انظر في أمر العمل.", // nieuw, nalezen
+    'l.diagnosis': "قراءة الأعطال وأمر العمل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.diagnosecomputer': "جهاز التشخيص (يقرأ أعطال السيارة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.waarschuwingslampje': "ضوء التحذير (في لوحة العدّادات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkorder': "أمر العمل (ما يجب عمله في السيارة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kentekenplaat': "لوحة الأرقام", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.autosleutel': "مفتاح السيارة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stoelhoes': "غطاء المقعد (يحافظ على نظافة المقعد)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.diagnosis.1': "وصّل جهاز التشخيص.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.diagnosis.2': "ضوء التحذير مضاء.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.diagnosis.3': "ضع غطاء مقعد على المقعد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.diagnosis.q': "ماذا يجب أن يُعمل في هذه السيارة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.diagnosis.a': "انظر في أمر العمل.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.diagnosis': { m: "عامل السيارة كأنها سيارتك", f: "عاملي السيارة كأنها سيارتك", x: "معاملة السيارة كأنها سيارة شخصية" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.b': { m: "الزبون يعطيك سيارته ومفتاحه. عامل الاثنين بعناية. ضع غطاءً على المقعد وسجادة على الأرضية قبل أن تركب. اعمل فقط ما في أمر العمل. هل تجد شيئاً آخر فيه عطل؟ اكتبه وأخبر مشرفك: الزبون هو الذي يقرّر. احفظ المفتاح في مكانه، مع بطاقته. لا تستعمل الراديو ولا الهاتف ولا الأشياء التي في السيارة. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الزبون يعطيكِ سيارته ومفتاحه. عاملي الاثنين بعناية. ضعي غطاءً على المقعد وسجادة على الأرضية قبل أن تركبي. اعملي فقط ما في أمر العمل. هل تجدين شيئاً آخر فيه عطل؟ اكتبيه وأخبري مشرفك: الزبون هو الذي يقرّر. احفظي المفتاح في مكانه، مع بطاقته. لا تستعملي الراديو ولا الهاتف ولا الأشياء التي في السيارة. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الزبون يسلّم سيارته ومفتاحه. الاثنان يُعاملان بعناية. غطاء على المقعد وسجادة على الأرضية قبل الركوب. العمل يكون فقط على ما في أمر العمل. عطل آخر في السيارة؟ كتابته وإخبار المشرف: الزبون هو الذي يقرّر. المفتاح يبقى في مكانه، مع بطاقته. الراديو والهاتف والأشياء التي في السيارة لا تُستعمل. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.p': "هذا ليس في أمر العمل.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2981,2191 +2981,2191 @@ const t: CultureTranslation = {
     'c.diagnosis.o3': "السكوت: ليس هذا من العمل المطلوب.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.w': "الزبون يقرّر ما يُعمل وما يُدفع. لكن يجب أن يعرف أن الإطار خطِر.", // nieuw, nalezen // nagelezen AI 22 nov
     // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang, two units each (23 November 2026).
-    'u.mowing': "جزّ العشب والتقليم", // nieuw, nalezen
-    'l.mowing': "جزّ العشب", // nieuw, nalezen
-    'w.gras': "العشب", // nieuw, nalezen
-    'w.maaien': "يجزّ (يقصّ العشب)", // nieuw, nalezen
-    'w.grasmaaier': "آلة جزّ العشب", // nieuw, nalezen
-    'w.zitmaaier': "جزّازة الركوب (جزّازة تجلس عليها)", // nieuw, nalezen
-    'w.bosmaaier': "جزّازة الأعشاب الكتفية (جزّازة على عصا طويلة)", // nieuw, nalezen
-    'w.gelaatsscherm': "واقي الوجه", // nieuw, nalezen
+    'u.mowing': "جزّ العشب والتقليم", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.mowing': "جزّ العشب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gras': "العشب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.maaien': "يجزّ (يقصّ العشب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.grasmaaier': "آلة جزّ العشب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zitmaaier': "جزّازة الركوب (جزّازة تجلس عليها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bosmaaier': "جزّازة الأعشاب الكتفية (جزّازة على عصا طويلة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gelaatsscherm': "واقي الوجه", // nieuw, nalezen // nagelezen AI 28 nov
     's.mowing.1': { m: "جُزّ العشب على الحافة أولاً.", f: "جُزّي العشب على الحافة أولاً.", x: "أولاً يُجَزّ العشب على الحافة." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    's.mowing.2': "العشب مبلّل جداً. سنجزّه غداً.", // nieuw, nalezen
-    's.mowing.3': { m: "ضع واقي الوجه.", f: "ضعي واقي الوجه.", x: "واقي الوجه يوضع على الوجه." }, // nieuw, nalezen
-    'c.mowing.q': "هل يمكنني أن آخذ جزّازة الركوب؟", // nieuw, nalezen
-    'c.mowing.a': { m: "نعم، لكن أزِل الحجارة أولاً.", f: "نعم، لكن أزيلي الحجارة أولاً.", x: "نعم، لكن إزالة الحجارة أولاً." }, // nieuw, nalezen
-    'c.mowing': "الحجارة تطير بعيداً", // nieuw, nalezen
+    's.mowing.2': "العشب مبلّل جداً. سنجزّه غداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mowing.3': { m: "ضع واقي الوجه.", f: "ضعي واقي الوجه.", x: "واقي الوجه يوضع على الوجه." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.q': "هل يمكنني أن آخذ جزّازة الركوب؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.a': { m: "نعم، لكن أزِل الحجارة أولاً.", f: "نعم، لكن أزيلي الحجارة أولاً.", x: "نعم، لكن إزالة الحجارة أولاً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing': "الحجارة تطير بعيداً", // nieuw, nalezen // nagelezen AI 28 nov
     'c.mowing.b': { m: "جزّازة العشب أو الجزّازة الكتفية يمكن أن ترمي حجراً بعيداً جداً وبقوة كبيرة. لذلك امشِ فوق العشب أولاً، وأزِل الحجارة والزجاج والأغصان. البس واقي الوجه أو نظارات السلامة، وواقي السمع وحذاء السلامة. أبعِد الناس الآخرين عنك كثيراً. هل يقترب أحد؟ أوقِف الآلة. لا تضع يدك أبداً تحت الجزّازة والمحرّك يعمل: أطفِئه، وانتظر حتى تقف الشفرة تماماً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "جزّازة العشب أو الجزّازة الكتفية يمكن أن ترمي حجراً بعيداً جداً وبقوة كبيرة. لذلك امشي فوق العشب أولاً، وأزيلي الحجارة والزجاج والأغصان. البسي واقي الوجه أو نظارات السلامة، وواقي السمع وحذاء السلامة. أبعدي الناس الآخرين عنك كثيراً. هل يقترب أحد؟ أوقفي الآلة. لا تضعي يدك أبداً تحت الجزّازة والمحرّك يعمل: أطفئيه، وانتظري حتى تقف الشفرة تماماً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "جزّازة العشب أو الجزّازة الكتفية يمكن أن ترمي حجراً بعيداً جداً وبقوة كبيرة. لذلك المشي فوق العشب أولاً، وإزالة الحجارة والزجاج والأغصان. لُبس واقي الوجه أو نظارات السلامة، وواقي السمع وحذاء السلامة. الناس الآخرون يبقون بعيدين كثيراً. هل يقترب أحد؟ إيقاف الآلة. اليد لا توضع أبداً تحت الجزّازة والمحرّك يعمل: إطفاؤه، والانتظار حتى تقف الشفرة تماماً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.mowing.p': "هل يمكنك أن تبتعد قليلاً، من فضلك؟", // nieuw, nalezen
-    'c.mowing.s': { m: "تعمل بالجزّازة الكتفية. رجل مع كلب يمشي نحوك. ماذا تفعل؟", f: "تعملين بالجزّازة الكتفية. رجل مع كلب يمشي نحوك. ماذا تفعلين؟", x: "العمل بالجزّازة الكتفية. رجل مع كلب يقترب. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.mowing.o1': "إيقاف الآلة حتى يمرّ.", // nieuw, nalezen
-    'c.mowing.o2': "المتابعة: هو يراك.", // nieuw, nalezen
-    'c.mowing.o3': "الالتفات بعيداً عنه، والمتابعة.", // nieuw, nalezen
-    'c.mowing.w': "الحجر من الجزّازة الكتفية يمكن أن يصيب شخصاً إصابة خطيرة، حتى من بعيد.", // nieuw, nalezen
-    'l.pruning': "التقليم", // nieuw, nalezen
-    'w.snoeien': "يقلّم (يقطع أغصاناً من نبتة)", // nieuw, nalezen
-    'w.snoeischaar': "مقصّ التقليم", // nieuw, nalezen
-    'w.tak': "الغصن", // nieuw, nalezen
-    'w.struik': "الشجيرة", // nieuw, nalezen
-    'w.boom': "الشجرة", // nieuw, nalezen
-    'w.snoeizaag': "منشار التقليم", // nieuw, nalezen
-    's.pruning.1': { m: "قلّم الشجيرات على طول الممرّ.", f: "قلّمي الشجيرات على طول الممرّ.", x: "تقليم الشجيرات على طول الممرّ." }, // nieuw, nalezen
-    's.pruning.2': { m: "هذا الغصن ميت. اقطعه بالمنشار.", f: "هذا الغصن ميت. اقطعيه بالمنشار.", x: "هذا الغصن ميت. يُقطع بالمنشار." }, // nieuw, nalezen
-    's.pruning.3': { m: "ضع الأغصان في كومة.", f: "ضعي الأغصان في كومة.", x: "الأغصان توضع في كومة." }, // nieuw, nalezen
-    'c.pruning.q': "أيّ أغصان يجب أن تُقطع؟", // nieuw, nalezen
-    'c.pruning.a': "الأغصان الميتة فقط.", // nieuw, nalezen
-    'c.pruning': "القطع النظيف يلتئم أفضل", // nieuw, nalezen
+    'c.mowing.p': "هل يمكنك أن تبتعد قليلاً، من فضلك؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.s': { m: "تعمل بالجزّازة الكتفية. رجل مع كلب يمشي نحوك. ماذا تفعل؟", f: "تعملين بالجزّازة الكتفية. رجل مع كلب يمشي نحوك. ماذا تفعلين؟", x: "العمل بالجزّازة الكتفية. رجل مع كلب يقترب. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.o1': "إيقاف الآلة حتى يمرّ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.o2': "المتابعة: هو يراك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.o3': "الالتفات بعيداً عنه، والمتابعة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.w': "الحجر من الجزّازة الكتفية يمكن أن يصيب شخصاً إصابة خطيرة، حتى من بعيد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.pruning': "التقليم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snoeien': "يقلّم (يقطع أغصاناً من نبتة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snoeischaar': "مقصّ التقليم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tak': "الغصن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.struik': "الشجيرة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.boom': "الشجرة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snoeizaag': "منشار التقليم", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pruning.1': { m: "قلّم الشجيرات على طول الممرّ.", f: "قلّمي الشجيرات على طول الممرّ.", x: "تقليم الشجيرات على طول الممرّ." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.pruning.2': { m: "هذا الغصن ميت. اقطعه بالمنشار.", f: "هذا الغصن ميت. اقطعيه بالمنشار.", x: "هذا الغصن ميت. يُقطع بالمنشار." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.pruning.3': { m: "ضع الأغصان في كومة.", f: "ضعي الأغصان في كومة.", x: "الأغصان توضع في كومة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.q': "أيّ أغصان يجب أن تُقطع؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.a': "الأغصان الميتة فقط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning': "القطع النظيف يلتئم أفضل", // nieuw, nalezen // nagelezen AI 28 nov
     'c.pruning.b': { m: "قلّم بمقصّ حادّ ونظيف. القطع النظيف يلتئم بسرعة؛ والغصن الممزّق يمرض. اقطع فوق برعم أو غصن جانبي مباشرة، ولا تترك قطعة طويلة. أزِل الأغصان الميتة والمكسورة أولاً. أبعِد يدك الأخرى عن الشفرات. البس القفازات: بعض النباتات لها أشواك، أو تجعل جلدك أحمر. نظّف المقصّ بعد العمل.", f: "قلّمي بمقصّ حادّ ونظيف. القطع النظيف يلتئم بسرعة؛ والغصن الممزّق يمرض. اقطعي فوق برعم أو غصن جانبي مباشرة، ولا تتركي قطعة طويلة. أزيلي الأغصان الميتة والمكسورة أولاً. أبعدي يدك الأخرى عن الشفرات. البسي القفازات: بعض النباتات لها أشواك، أو تجعل جلدك أحمر. نظّفي المقصّ بعد العمل.", x: "التقليم يكون بمقصّ حادّ ونظيف. القطع النظيف يلتئم بسرعة؛ والغصن الممزّق يمرض. القطع يكون فوق برعم أو غصن جانبي مباشرة، بدون ترك قطعة طويلة. إزالة الأغصان الميتة والمكسورة أولاً. اليد الأخرى تبقى بعيدة عن الشفرات. لُبس القفازات: بعض النباتات لها أشواك، أو تجعل الجلد أحمر. تنظيف المقصّ بعد العمل." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.pruning.p': "أين يجب أن أقطع؟", // nieuw, nalezen
-    'c.pruning.s': { m: "مقصّ التقليم عندك غير حادّ. إنه يمزّق الأغصان. ماذا تفعل؟", f: "مقصّ التقليم عندك غير حادّ. إنه يمزّق الأغصان. ماذا تفعلين؟", x: "مقصّ التقليم غير حادّ. إنه يمزّق الأغصان. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.pruning.o1': "طلب مقصّ حادّ.", // nieuw, nalezen
-    'c.pruning.o2': "سحب الغصن بقوة أكبر.", // nieuw, nalezen
-    'c.pruning.o3': "المتابعة: إنها مجرد شجيرة.", // nieuw, nalezen
-    'c.pruning.w': "المقصّ غير الحادّ يمزّق الغصن. النبتة تمرض، والعمل يصبح أصعب.", // nieuw, nalezen
-    'l.hedge': "تشذيب السياج النباتي", // nieuw, nalezen
-    'w.heg': "السياج النباتي", // nieuw, nalezen
-    'w.heggenschaar': "مقصّ السياج الكهربائي (آلة تقصّ السياج النباتي)", // nieuw, nalezen
-    'w.kruiwagen': "عربة اليد ذات العجلة الواحدة", // nieuw, nalezen
-    'w.hark': "المِشط الزراعي (المدمّة)", // nieuw, nalezen
-    'w.snoeiafval': "المخلّفات الخضراء (أغصان وأوراق مقطوعة)", // nieuw, nalezen
-    'w.zeil': "الغطاء البلاستيكي (قطعة بلاستيك كبيرة)", // nieuw, nalezen
-    's.hedge.1': { m: "ضع الغطاء البلاستيكي تحت السياج.", f: "ضعي الغطاء البلاستيكي تحت السياج.", x: "الغطاء البلاستيكي يوضع تحت السياج." }, // nieuw, nalezen
-    's.hedge.2': { m: "قصّ السياج بشكل مستقيم وجميل.", f: "قصّي السياج بشكل مستقيم وجميل.", x: "السياج يُقصّ بشكل مستقيم وجميل." }, // nieuw, nalezen
-    's.hedge.3': { m: "انقل المخلّفات الخضراء بعربة اليد.", f: "انقلي المخلّفات الخضراء بعربة اليد.", x: "المخلّفات الخضراء تُنقل بعربة اليد." }, // nieuw, nalezen
-    'c.hedge.q': "كم يجب أن يبقى ارتفاع السياج؟", // nieuw, nalezen
-    'c.hedge.a': "حتى الخطّ. ليس أقلّ.", // nieuw, nalezen
-    'c.hedge': { m: "ابحث عن الأعشاش أولاً", f: "ابحثي عن الأعشاش أولاً", x: "البحث عن الأعشاش أولاً" }, // nieuw, nalezen
+    'c.pruning.p': "أين يجب أن أقطع؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.s': { m: "مقصّ التقليم عندك غير حادّ. إنه يمزّق الأغصان. ماذا تفعل؟", f: "مقصّ التقليم عندك غير حادّ. إنه يمزّق الأغصان. ماذا تفعلين؟", x: "مقصّ التقليم غير حادّ. إنه يمزّق الأغصان. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.o1': "طلب مقصّ حادّ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.o2': "سحب الغصن بقوة أكبر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.o3': "المتابعة: إنها مجرد شجيرة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.w': "المقصّ غير الحادّ يمزّق الغصن. النبتة تمرض، والعمل يصبح أصعب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.hedge': "تشذيب السياج النباتي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.heg': "السياج النباتي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.heggenschaar': "مقصّ السياج الكهربائي (آلة تقصّ السياج النباتي)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kruiwagen': "عربة اليد ذات العجلة الواحدة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hark': "المِشط الزراعي (المدمّة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snoeiafval': "المخلّفات الخضراء (أغصان وأوراق مقطوعة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zeil': "الغطاء البلاستيكي (قطعة بلاستيك كبيرة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hedge.1': { m: "ضع الغطاء البلاستيكي تحت السياج.", f: "ضعي الغطاء البلاستيكي تحت السياج.", x: "الغطاء البلاستيكي يوضع تحت السياج." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.hedge.2': { m: "قصّ السياج بشكل مستقيم وجميل.", f: "قصّي السياج بشكل مستقيم وجميل.", x: "السياج يُقصّ بشكل مستقيم وجميل." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.hedge.3': { m: "انقل المخلّفات الخضراء بعربة اليد.", f: "انقلي المخلّفات الخضراء بعربة اليد.", x: "المخلّفات الخضراء تُنقل بعربة اليد." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.q': "كم يجب أن يبقى ارتفاع السياج؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.a': "حتى الخطّ. ليس أقلّ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge': { m: "ابحث عن الأعشاش أولاً", f: "ابحثي عن الأعشاش أولاً", x: "البحث عن الأعشاش أولاً" }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.hedge.b': { m: "في الربيع والصيف تبني الطيور أعشاشها في السياجات والشجيرات. الأعشاش التي تستعملها الطيور محمية. لذلك انظر داخل السياج قبل أن تقصّ. هل ترى عشّاً فيه بيض أو فراخ؟ لا تقصّ هناك، وأخبر مشرفك. امسك مقصّ السياج بيديك الاثنتين. قف بثبات على الأرض أو على سلّم جيد، وليس أبداً على كرسي أو دلو. أبقِ الكابل خلفك.", f: "في الربيع والصيف تبني الطيور أعشاشها في السياجات والشجيرات. الأعشاش التي تستعملها الطيور محمية. لذلك انظري داخل السياج قبل أن تقصّي. هل ترين عشّاً فيه بيض أو فراخ؟ لا تقصّي هناك، وأخبري مشرفك. امسكي مقصّ السياج بيديك الاثنتين. قفي بثبات على الأرض أو على سلّم جيد، وليس أبداً على كرسي أو دلو. أبقي الكابل خلفك.", x: "في الربيع والصيف تبني الطيور أعشاشها في السياجات والشجيرات. الأعشاش التي تستعملها الطيور محمية. لذلك النظر داخل السياج قبل القصّ. عشّ فيه بيض أو فراخ؟ لا قصّ هناك، والمشرف يجب أن يعرف. مقصّ السياج يُمسك باليدين الاثنتين. الوقوف يكون بثبات على الأرض أو على سلّم جيد، وليس أبداً على كرسي أو دلو. الكابل يبقى في الخلف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.hedge.p': "هنا عشّ.", // nieuw, nalezen
-    'c.hedge.s': { m: "تشذّب سياجاً في شهر مايو. ترى عشّاً فيه فراخ. ماذا تفعل؟", f: "تشذّبين سياجاً في شهر مايو. ترين عشّاً فيه فراخ. ماذا تفعلين؟", x: "تشذيب سياج في شهر مايو. في السياج عشّ فيه فراخ. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.hedge.o1': "التوقّف هناك، وإخبار المشرف.", // nieuw, nalezen
-    'c.hedge.o2': "القصّ حوله بحذر.", // nieuw, nalezen
-    'c.hedge.o3': "إخراج العشّ، والمتابعة.", // nieuw, nalezen
-    'c.hedge.w': "الأعشاش التي تستعملها الطيور محمية. المشرف يقرّر ماذا يحدث بهذا الجزء من السياج.", // nieuw, nalezen
-    'l.chainsaw': "المنشار الآلي ونافخ الأوراق", // nieuw, nalezen
-    'w.kettingzaag': "المنشار الآلي (منشار السلسلة)", // nieuw, nalezen
-    'w.stam': "الجذع (جذع الشجرة)", // nieuw, nalezen
-    'w.zaagbroek': "سروال المنشار (يوقف السلسلة)", // nieuw, nalezen
-    'w.bladblazer': "نافخ الأوراق", // nieuw, nalezen
-    'w.bladeren': "الأوراق (أوراق الشجر)", // nieuw, nalezen
-    'w.jerrycan': "الجالون (وعاء للوقود)", // nieuw, nalezen
+    'c.hedge.p': "هنا عشّ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.s': { m: "تشذّب سياجاً في شهر مايو. ترى عشّاً فيه فراخ. ماذا تفعل؟", f: "تشذّبين سياجاً في شهر مايو. ترين عشّاً فيه فراخ. ماذا تفعلين؟", x: "تشذيب سياج في شهر مايو. في السياج عشّ فيه فراخ. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.o1': "التوقّف هناك، وإخبار المشرف.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.o2': "القصّ حوله بحذر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.o3': "إخراج العشّ، والمتابعة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.w': "الأعشاش التي تستعملها الطيور محمية. المشرف يقرّر ماذا يحدث بهذا الجزء من السياج.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.chainsaw': "المنشار الآلي ونافخ الأوراق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kettingzaag': "المنشار الآلي (منشار السلسلة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stam': "الجذع (جذع الشجرة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zaagbroek': "سروال المنشار (يوقف السلسلة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bladblazer': "نافخ الأوراق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bladeren': "الأوراق (أوراق الشجر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.jerrycan': "الجالون (وعاء للوقود)", // nieuw, nalezen // nagelezen AI 28 nov
     's.chainsaw.1': { m: "البس سروال المنشار.", f: "البسي سروال المنشار.", x: "لُبس سروال المنشار." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    's.chainsaw.2': { m: "انفخ الأوراق إلى كومة.", f: "انفخي الأوراق إلى كومة.", x: "الأوراق تُنفخ إلى كومة." }, // nieuw, nalezen
-    's.chainsaw.3': { m: "املأ الوقود فقط عندما يكون المحرّك بارداً.", f: "املئي الوقود فقط عندما يكون المحرّك بارداً.", x: "ملء الوقود فقط عندما يكون المحرّك بارداً." }, // nieuw, nalezen
-    'c.chainsaw.q': "هل يُسمح لي أن أعمل بالمنشار الآلي؟", // nieuw, nalezen
-    'c.chainsaw.a': { m: "ليس بعد. أولاً تأخذ دورة.", f: "ليس بعد. أولاً تأخذين دورة.", x: "ليس بعد. أولاً دورة تدريبية." }, // nieuw, nalezen
-    'c.chainsaw': "المنشار الآلي فقط بعد التدريب", // nieuw, nalezen
+    's.chainsaw.2': { m: "انفخ الأوراق إلى كومة.", f: "انفخي الأوراق إلى كومة.", x: "الأوراق تُنفخ إلى كومة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.chainsaw.3': { m: "املأ الوقود فقط عندما يكون المحرّك بارداً.", f: "املئي الوقود فقط عندما يكون المحرّك بارداً.", x: "ملء الوقود فقط عندما يكون المحرّك بارداً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.q': "هل يُسمح لي أن أعمل بالمنشار الآلي؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.a': { m: "ليس بعد. أولاً تأخذ دورة.", f: "ليس بعد. أولاً تأخذين دورة.", x: "ليس بعد. أولاً دورة تدريبية." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw': "المنشار الآلي فقط بعد التدريب", // nieuw, nalezen // nagelezen AI 28 nov
     'c.chainsaw.b': { m: "المنشار الآلي من أخطر الأدوات في العمل بالحدائق. لا تعمل به إلا بعد أن تأخذ دورة، ويقول مشرفك إنه مسموح لك. البس دائماً سروال المنشار، وخوذة مع واقي الوجه وواقي السمع، والقفازات وحذاء السلامة. لا تعمل أبداً وحدك بالمنشار الآلي. امسكه بيديك الاثنتين، ولا تنشر أبداً فوق مستوى كتفيك. مع نافخ الأوراق: لا تنفخ أبداً باتجاه الناس أو السيارات أو النوافذ المفتوحة. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "المنشار الآلي من أخطر الأدوات في العمل بالحدائق. لا تعملي به إلا بعد أن تأخذي دورة، ويقول مشرفك إنه مسموح لك. البسي دائماً سروال المنشار، وخوذة مع واقي الوجه وواقي السمع، والقفازات وحذاء السلامة. لا تعملي أبداً وحدك بالمنشار الآلي. امسكيه بيديك الاثنتين، ولا تنشري أبداً فوق مستوى كتفيك. مع نافخ الأوراق: لا تنفخي أبداً باتجاه الناس أو السيارات أو النوافذ المفتوحة. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "المنشار الآلي من أخطر الأدوات في العمل بالحدائق. العمل به فقط بعد دورة تدريبية، وبعد إذن المشرف. لُبس سروال المنشار دائماً، وخوذة مع واقي الوجه وواقي السمع، والقفازات وحذاء السلامة. العمل بالمنشار الآلي ممنوع أبداً بشكل فردي. يُمسك باليدين الاثنتين، والنشر فوق مستوى الكتفين ممنوع أبداً. مع نافخ الأوراق: النفخ باتجاه الناس أو السيارات أو النوافذ المفتوحة ممنوع أبداً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.chainsaw.p': "لم آخذ دورة لهذا بعد.", // nieuw, nalezen
-    'c.chainsaw.s': { m: "زميل يقول: «خذ المنشار الآلي، إنه سهل». لم تأخذ أي دورة. ماذا تفعل؟", f: "زميل يقول: «خذي المنشار الآلي، إنه سهل». لم تأخذي أي دورة. ماذا تفعلين؟", x: "زميل يقول: «المنشار الآلي سهل». لم تكن هناك أي دورة تدريبية. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.chainsaw.o1': "القول إنه لم تكن هناك دورة بعد.", // nieuw, nalezen
-    'c.chainsaw.o2': "التجربة بحذر، مرة واحدة فقط.", // nieuw, nalezen
-    'c.chainsaw.o3': "أخذه، ومشاهدة فيديو أولاً.", // nieuw, nalezen
-    'c.chainsaw.w': "المنشار الآلي يمكن أن يقطع الساق في ثانية. بدون تدريب لا يعرف المرء كيف يمكن أن يرتدّ.", // nieuw, nalezen
-    'u.planting': "الزرع والأعشاب الضارّة والشارع", // nieuw, nalezen
-    'l.weeding': "إزالة الأعشاب الضارّة", // nieuw, nalezen
-    'w.onkruid': "الأعشاب الضارّة (نباتات يجب إزالتها)", // nieuw, nalezen
-    'w.wieden': "يزيل الأعشاب الضارّة (يقتلعها)", // nieuw, nalezen
-    'w.schoffel': "المِعزقة", // nieuw, nalezen
-    'w.perk': "حوض الزهور", // nieuw, nalezen
-    'w.onkruidbrander': "حارق الأعشاب (يقتل الأعشاب الضارّة بالحرارة)", // nieuw, nalezen
-    'w.wortel': "الجذر (جذر النبتة)", // nieuw, nalezen
-    's.weeding.1': { m: "اقتلع الأعشاب الضارّة مع جذورها.", f: "اقتلعي الأعشاب الضارّة مع جذورها.", x: "اقتلاع الأعشاب الضارّة مع جذورها." }, // nieuw, nalezen
-    's.weeding.2': { m: "اعزق حوض الزهور عند المدخل.", f: "اعزقي حوض الزهور عند المدخل.", x: "عزق حوض الزهور عند المدخل." }, // nieuw, nalezen
-    's.weeding.3': { m: "انتبه: حارق الأعشاب ساخن.", f: "انتبهي: حارق الأعشاب ساخن.", x: "انتباه: حارق الأعشاب ساخن." }, // nieuw, nalezen
-    'c.weeding.q': "هل هذه عشبة ضارّة؟", // nieuw, nalezen
-    'c.weeding.a': { m: "لا، هذه نبتة. اتركها.", f: "لا، هذه نبتة. اتركيها.", x: "لا، هذه نبتة. تبقى في مكانها." }, // nieuw, nalezen
-    'c.weeding': "الأعشاب الضارّة: الجذر يجب أن يزول", // nieuw, nalezen
-    'c.weeding.b': { m: "العشبة الضارّة تنمو من جديد عندما يبقى الجذر في الأرض. لذلك اقتلعها مع الجذر، أو اعزق تحت سطح التربة مباشرة. اعمل عندما تكون التربة مبلّلة قليلاً: عندها يخرج الجذر بسهولة. لا تستعمل رشّاشات ضدّ الأعشاب، إلا إذا تعلّمت ذلك وقال مشرفك ذلك. حارق الأعشاب ساخن جداً: أبعِده عن العشب اليابس والأوراق والسياجات والسيارات وصناديق النفايات. لا تضعه أبداً على الأرض وهو يشتعل. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "العشبة الضارّة تنمو من جديد عندما يبقى الجذر في الأرض. لذلك اقتلعيها مع الجذر، أو اعزقي تحت سطح التربة مباشرة. اعملي عندما تكون التربة مبلّلة قليلاً: عندها يخرج الجذر بسهولة. لا تستعملي رشّاشات ضدّ الأعشاب، إلا إذا تعلّمتِ ذلك وقال مشرفك ذلك. حارق الأعشاب ساخن جداً: أبعديه عن العشب اليابس والأوراق والسياجات والسيارات وصناديق النفايات. لا تضعيه أبداً على الأرض وهو يشتعل. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "العشبة الضارّة تنمو من جديد عندما يبقى الجذر في الأرض. لذلك اقتلاعها مع الجذر، أو العزق تحت سطح التربة مباشرة. العمل يكون عندما تكون التربة مبلّلة قليلاً: عندها يخرج الجذر بسهولة. لا رشّاشات ضدّ الأعشاب، إلا بعد تعلّم ذلك وبإذن المشرف. حارق الأعشاب ساخن جداً: يبقى بعيداً عن العشب اليابس والأوراق والسياجات والسيارات وصناديق النفايات. لا يوضع أبداً على الأرض وهو يشتعل. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.weeding.p': "هل هذه عشبة ضارّة أم نبتة؟", // nieuw, nalezen
-    'c.weeding.s': { m: "تستعمل حارق الأعشاب. بجانب الممرّ سياج يابس. ماذا تفعل؟", f: "تستعملين حارق الأعشاب. بجانب الممرّ سياج يابس. ماذا تفعلين؟", x: "العمل بحارق الأعشاب. بجانب الممرّ سياج يابس. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.weeding.o1': "اقتلاع الأعشاب هناك باليد.", // nieuw, nalezen
-    'c.weeding.o2': "الحرق بسرعة، والمتابعة.", // nieuw, nalezen
-    'c.weeding.o3': "الحرق، والنظر إلى الخلف مرة واحدة.", // nieuw, nalezen
-    'c.weeding.w': "السياج اليابس يشتعل بسرعة. الحريق قرب البيوت أو السيارات خطير جداً.", // nieuw, nalezen
-    'l.planting': "الزرع", // nieuw, nalezen
-    'w.planten': "يزرع", // nieuw, nalezen
-    'w.schep': "المجرفة، الرفش", // nieuw, nalezen
-    'w.plantgat': "حفرة الزرع", // nieuw, nalezen
-    'w.kluit': "كتلة الجذور (التربة حول الجذور)", // nieuw, nalezen
-    'w.compost': "السماد العضوي (الكومبوست)", // nieuw, nalezen
-    'w.boompaal': "دعامة الشجرة (عمود يسند شجرة صغيرة)", // nieuw, nalezen
-    's.planting.1': { m: "احفر حفرة زرع للشجرة.", f: "احفري حفرة زرع للشجرة.", x: "حفر حفرة زرع للشجرة." }, // nieuw, nalezen
-    's.planting.2': { m: "ضع الشجرة مستقيمة، بجانب الدعامة.", f: "ضعي الشجرة مستقيمة، بجانب الدعامة.", x: "الشجرة توضع مستقيمة، بجانب الدعامة." }, // nieuw, nalezen
-    's.planting.3': { m: "أعطِ النباتات الجديدة ماءً كثيراً.", f: "أعطي النباتات الجديدة ماءً كثيراً.", x: "النباتات الجديدة تحتاج ماءً كثيراً." }, // nieuw, nalezen
-    'c.planting.q': "أين توضع هذه النبتة؟", // nieuw, nalezen
-    'c.planting.a': "في خلف حوض الزهور، عند الحائط.", // nieuw, nalezen
-    'c.planting': "تحت الأرض: كابلات وأنابيب", // nieuw, nalezen
-    'c.planting.b': { m: "تحت العشب والرصيف توجد غالباً كابلات وأنابيب: للكهرباء والغاز والماء والإنترنت. لذلك احفر بحذر. هل ترى شريطاً ملوّناً أو لوحاً بلاستيكياً في الأرض، أو تصطدم بشيء صلب؟ توقّف عن الحفر، وأخبر مشرفك. لا تتابع الحفر بالقوة أبداً. ارفع الشجرة الثقيلة أو كتلة الجذور الكبيرة مع زميل، مع ثني الركبتين. أعطِ النبتة الجديدة ماءً في اليوم نفسه. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "تحت العشب والرصيف توجد غالباً كابلات وأنابيب: للكهرباء والغاز والماء والإنترنت. لذلك احفري بحذر. هل ترين شريطاً ملوّناً أو لوحاً بلاستيكياً في الأرض، أو تصطدمين بشيء صلب؟ توقّفي عن الحفر، وأخبري مشرفك. لا تتابعي الحفر بالقوة أبداً. ارفعي الشجرة الثقيلة أو كتلة الجذور الكبيرة مع زميل، مع ثني الركبتين. أعطي النبتة الجديدة ماءً في اليوم نفسه. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "تحت العشب والرصيف توجد غالباً كابلات وأنابيب: للكهرباء والغاز والماء والإنترنت. لذلك الحفر يكون بحذر. شريط ملوّن أو لوح بلاستيكي في الأرض، أو شيء صلب تحت المجرفة؟ التوقّف عن الحفر، وإخبار المشرف. متابعة الحفر بالقوة ممنوعة أبداً. الشجرة الثقيلة أو كتلة الجذور الكبيرة تُرفع بشخصين، مع ثني الركبتين. النبتة الجديدة تأخذ ماءً في اليوم نفسه. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.planting.p': "أصطدم بشيء صلب.", // nieuw, nalezen
-    'c.planting.s': { m: "تحفر حفرة زرع. المجرفة تصطدم بشريط بلاستيكي أحمر. ماذا تفعل؟", f: "تحفرين حفرة زرع. المجرفة تصطدم بشريط بلاستيكي أحمر. ماذا تفعلين؟", x: "حفر حفرة زرع. المجرفة تصطدم بشريط بلاستيكي أحمر. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.planting.o1': "التوقّف عن الحفر، وإخبار المشرف.", // nieuw, nalezen
-    'c.planting.o2': "متابعة الحفر بحذر، بجانب الشريط.", // nieuw, nalezen
-    'c.planting.o3': "سحب الشريط، والمتابعة.", // nieuw, nalezen
-    'c.planting.w': "الشريط في الأرض يحذّر أن تحته كابلاً أو أنبوباً. أنبوب الغاز أو كابل الكهرباء خطير جداً.", // nieuw, nalezen
-    'l.roadside': "العمل بجانب الطريق", // nieuw, nalezen
-    'w.pion': "مخروط المرور", // nieuw, nalezen
-    'w.verkeer': "حركة المرور", // nieuw, nalezen
-    'w.stoep': "الرصيف (الممرّ بجانب الطريق)", // nieuw, nalezen
-    'w.fietser': "راكب الدرّاجة", // nieuw, nalezen
-    'w.pijlwagen': "مقطورة السهم (مقطورة عليها سهم كبير يحذّر السائقين)", // nieuw, nalezen
-    'w.berm': "حافّة الطريق (العشب بجانب الطريق)", // nieuw, nalezen
+    'c.chainsaw.p': "لم آخذ دورة لهذا بعد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.s': { m: "زميل يقول: «خذ المنشار الآلي، إنه سهل». لم تأخذ أي دورة. ماذا تفعل؟", f: "زميل يقول: «خذي المنشار الآلي، إنه سهل». لم تأخذي أي دورة. ماذا تفعلين؟", x: "زميل يقول: «المنشار الآلي سهل». لم تكن هناك أي دورة تدريبية. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.o1': "القول إنه لم تكن هناك دورة بعد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.o2': "التجربة بحذر، مرة واحدة فقط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.o3': "أخذه، ومشاهدة فيديو أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.w': "المنشار الآلي يمكن أن يقطع الساق في ثانية. بدون تدريب لا يعرف المرء كيف يمكن أن يرتدّ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.planting': "الزرع والأعشاب الضارّة والشارع", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.weeding': "إزالة الأعشاب الضارّة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onkruid': "الأعشاب الضارّة (نباتات يجب إزالتها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wieden': "يزيل الأعشاب الضارّة (يقتلعها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schoffel': "المِعزقة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.perk': "حوض الزهور", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onkruidbrander': "حارق الأعشاب (يقتل الأعشاب الضارّة بالحرارة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wortel': "الجذر (جذر النبتة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.weeding.1': { m: "اقتلع الأعشاب الضارّة مع جذورها.", f: "اقتلعي الأعشاب الضارّة مع جذورها.", x: "اقتلاع الأعشاب الضارّة مع جذورها." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.weeding.2': { m: "اعزق حوض الزهور عند المدخل.", f: "اعزقي حوض الزهور عند المدخل.", x: "عزق حوض الزهور عند المدخل." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.weeding.3': { m: "انتبه: حارق الأعشاب ساخن.", f: "انتبهي: حارق الأعشاب ساخن.", x: "انتباه: حارق الأعشاب ساخن." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.q': "هل هذه عشبة ضارّة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.a': { m: "لا، هذه نبتة. اتركها.", f: "لا، هذه نبتة. اتركيها.", x: "لا، هذه نبتة. تبقى في مكانها." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding': "الأعشاب الضارّة: الجذر يجب أن يزول", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.b': { m: "العشبة الضارّة تنمو من جديد عندما يبقى الجذر في الأرض. لذلك اقتلعها مع الجذر، أو اعزق تحت سطح التربة مباشرة. اعمل عندما تكون التربة مبلّلة قليلاً: عندها يخرج الجذر بسهولة. لا تستعمل رشّاشات ضدّ الأعشاب، إلا إذا تعلّمت ذلك وقال مشرفك ذلك. حارق الأعشاب ساخن جداً: أبعِده عن العشب اليابس والأوراق والسياجات والسيارات وصناديق النفايات. لا تضعه أبداً على الأرض وهو يشتعل. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "العشبة الضارّة تنمو من جديد عندما يبقى الجذر في الأرض. لذلك اقتلعيها مع الجذر، أو اعزقي تحت سطح التربة مباشرة. اعملي عندما تكون التربة مبلّلة قليلاً: عندها يخرج الجذر بسهولة. لا تستعملي رشّاشات ضدّ الأعشاب، إلا إذا تعلّمتِ ذلك وقال مشرفك ذلك. حارق الأعشاب ساخن جداً: أبعديه عن العشب اليابس والأوراق والسياجات والسيارات وصناديق النفايات. لا تضعيه أبداً على الأرض وهو يشتعل. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "العشبة الضارّة تنمو من جديد عندما يبقى الجذر في الأرض. لذلك اقتلاعها مع الجذر، أو العزق تحت سطح التربة مباشرة. العمل يكون عندما تكون التربة مبلّلة قليلاً: عندها يخرج الجذر بسهولة. لا رشّاشات ضدّ الأعشاب، إلا بعد تعلّم ذلك وبإذن المشرف. حارق الأعشاب ساخن جداً: يبقى بعيداً عن العشب اليابس والأوراق والسياجات والسيارات وصناديق النفايات. لا يوضع أبداً على الأرض وهو يشتعل. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.p': "هل هذه عشبة ضارّة أم نبتة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.s': { m: "تستعمل حارق الأعشاب. بجانب الممرّ سياج يابس. ماذا تفعل؟", f: "تستعملين حارق الأعشاب. بجانب الممرّ سياج يابس. ماذا تفعلين؟", x: "العمل بحارق الأعشاب. بجانب الممرّ سياج يابس. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.o1': "اقتلاع الأعشاب هناك باليد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.o2': "الحرق بسرعة، والمتابعة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.o3': "الحرق، والنظر إلى الخلف مرة واحدة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.w': "السياج اليابس يشتعل بسرعة. الحريق قرب البيوت أو السيارات خطير جداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.planting': "الزرع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.planten': "يزرع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schep': "المجرفة، الرفش", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plantgat': "حفرة الزرع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kluit': "كتلة الجذور (التربة حول الجذور)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.compost': "السماد العضوي (الكومبوست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.boompaal': "دعامة الشجرة (عمود يسند شجرة صغيرة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.planting.1': { m: "احفر حفرة زرع للشجرة.", f: "احفري حفرة زرع للشجرة.", x: "حفر حفرة زرع للشجرة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.planting.2': { m: "ضع الشجرة مستقيمة، بجانب الدعامة.", f: "ضعي الشجرة مستقيمة، بجانب الدعامة.", x: "الشجرة توضع مستقيمة، بجانب الدعامة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.planting.3': { m: "أعطِ النباتات الجديدة ماءً كثيراً.", f: "أعطي النباتات الجديدة ماءً كثيراً.", x: "النباتات الجديدة تحتاج ماءً كثيراً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.q': "أين توضع هذه النبتة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.a': "في خلف حوض الزهور، عند الحائط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting': "تحت الأرض: كابلات وأنابيب", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.b': { m: "تحت العشب والرصيف توجد غالباً كابلات وأنابيب: للكهرباء والغاز والماء والإنترنت. لذلك احفر بحذر. هل ترى شريطاً ملوّناً أو لوحاً بلاستيكياً في الأرض، أو تصطدم بشيء صلب؟ توقّف عن الحفر، وأخبر مشرفك. لا تتابع الحفر بالقوة أبداً. ارفع الشجرة الثقيلة أو كتلة الجذور الكبيرة مع زميل، مع ثني الركبتين. أعطِ النبتة الجديدة ماءً في اليوم نفسه. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "تحت العشب والرصيف توجد غالباً كابلات وأنابيب: للكهرباء والغاز والماء والإنترنت. لذلك احفري بحذر. هل ترين شريطاً ملوّناً أو لوحاً بلاستيكياً في الأرض، أو تصطدمين بشيء صلب؟ توقّفي عن الحفر، وأخبري مشرفك. لا تتابعي الحفر بالقوة أبداً. ارفعي الشجرة الثقيلة أو كتلة الجذور الكبيرة مع زميل، مع ثني الركبتين. أعطي النبتة الجديدة ماءً في اليوم نفسه. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "تحت العشب والرصيف توجد غالباً كابلات وأنابيب: للكهرباء والغاز والماء والإنترنت. لذلك الحفر يكون بحذر. شريط ملوّن أو لوح بلاستيكي في الأرض، أو شيء صلب تحت المجرفة؟ التوقّف عن الحفر، وإخبار المشرف. متابعة الحفر بالقوة ممنوعة أبداً. الشجرة الثقيلة أو كتلة الجذور الكبيرة تُرفع بشخصين، مع ثني الركبتين. النبتة الجديدة تأخذ ماءً في اليوم نفسه. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.p': "أصطدم بشيء صلب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.s': { m: "تحفر حفرة زرع. المجرفة تصطدم بشريط بلاستيكي أحمر. ماذا تفعل؟", f: "تحفرين حفرة زرع. المجرفة تصطدم بشريط بلاستيكي أحمر. ماذا تفعلين؟", x: "حفر حفرة زرع. المجرفة تصطدم بشريط بلاستيكي أحمر. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.o1': "التوقّف عن الحفر، وإخبار المشرف.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.o2': "متابعة الحفر بحذر، بجانب الشريط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.o3': "سحب الشريط، والمتابعة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.w': "الشريط في الأرض يحذّر أن تحته كابلاً أو أنبوباً. أنبوب الغاز أو كابل الكهرباء خطير جداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.roadside': "العمل بجانب الطريق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pion': "مخروط المرور", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verkeer': "حركة المرور", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stoep': "الرصيف (الممرّ بجانب الطريق)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.fietser': "راكب الدرّاجة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pijlwagen': "مقطورة السهم (مقطورة عليها سهم كبير يحذّر السائقين)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.berm': "حافّة الطريق (العشب بجانب الطريق)", // nieuw, nalezen // nagelezen AI 28 nov
     's.roadside.1': { m: "البس سترتك. نحن نعمل بجانب الطريق.", f: "البسي سترتك. نحن نعمل بجانب الطريق.", x: "لُبس السترة. العمل بجانب الطريق." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    's.roadside.2': { m: "ضع المخاريط خلف الشاحنة الصغيرة.", f: "ضعي المخاريط خلف الشاحنة الصغيرة.", x: "المخاريط توضع خلف الشاحنة الصغيرة." }, // nieuw, nalezen
-    's.roadside.3': { m: "انتبه لراكبي الدرّاجات.", f: "انتبهي لراكبي الدرّاجات.", x: "الانتباه لراكبي الدرّاجات." }, // nieuw, nalezen
-    'c.roadside.q': "هل يمكنني أن أعبر الآن؟", // nieuw, nalezen
+    's.roadside.2': { m: "ضع المخاريط خلف الشاحنة الصغيرة.", f: "ضعي المخاريط خلف الشاحنة الصغيرة.", x: "المخاريط توضع خلف الشاحنة الصغيرة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.roadside.3': { m: "انتبه لراكبي الدرّاجات.", f: "انتبهي لراكبي الدرّاجات.", x: "الانتباه لراكبي الدرّاجات." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.q': "هل يمكنني أن أعبر الآن؟", // nieuw, nalezen // nagelezen AI 28 nov
     'c.roadside.a': { m: "لا، انتظر. شاحنة قادمة.", f: "لا، انتظري. شاحنة قادمة.", x: "لا، يجب الانتظار. شاحنة قادمة." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.roadside': { m: "بجانب الطريق: كن مرئياً، وابقَ خلف المخاريط", f: "بجانب الطريق: كوني مرئية، وابقي خلف المخاريط", x: "بجانب الطريق: الظهور بوضوح، والبقاء خلف المخاريط" }, // nieuw, nalezen
-    'c.roadside.b': { m: "العمل بجانب الطريق خطير: السائقون ينظرون إلى هواتفهم، أو يسرعون كثيراً. لذلك البس دائماً سترة السلامة العاكسة، حتى لعمل قصير. ضع المخاريط والإشارات قبل أن تبدأ، واجمعها في النهاية. أوقِف الشاحنة الصغيرة كحاجز بينك وبين حركة المرور. ابقَ خلف المخاريط. لا ترجع أبداً إلى الخلف دون أن تنظر، واعمل ووجهك نحو حركة المرور عندما تستطيع. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "العمل بجانب الطريق خطير: السائقون ينظرون إلى هواتفهم، أو يسرعون كثيراً. لذلك البسي دائماً سترة السلامة العاكسة، حتى لعمل قصير. ضعي المخاريط والإشارات قبل أن تبدئي، واجمعيها في النهاية. أوقفي الشاحنة الصغيرة كحاجز بينك وبين حركة المرور. ابقي خلف المخاريط. لا ترجعي أبداً إلى الخلف دون أن تنظري، واعملي ووجهك نحو حركة المرور عندما تستطيعين. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "العمل بجانب الطريق خطير: السائقون ينظرون إلى هواتفهم، أو يسرعون كثيراً. لذلك لبس سترة السلامة العاكسة دائماً، حتى لعمل قصير. وضع المخاريط والإشارات قبل البدء، وجمعها في النهاية. إيقاف الشاحنة الصغيرة كحاجز بين العامل وحركة المرور. البقاء خلف المخاريط. الرجوع إلى الخلف بدون نظر ممنوع أبداً، والعمل والوجه نحو حركة المرور عند الإمكان. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.roadside.p': "أولاً أضع المخاريط.", // nieuw, nalezen
-    'c.roadside.s': { m: "يجب أن تقصّ شجيرة صغيرة واحدة بجانب الطريق. هذا يأخذ خمس دقائق. ماذا تفعل؟", f: "يجب أن تقصّي شجيرة صغيرة واحدة بجانب الطريق. هذا يأخذ خمس دقائق. ماذا تفعلين؟", x: "المطلوب قصّ شجيرة صغيرة واحدة بجانب الطريق. هذا يأخذ خمس دقائق. ما التصرف الصحيح؟" }, // nieuw, nalezen
+    'c.roadside': { m: "بجانب الطريق: كن مرئياً، وابقَ خلف المخاريط", f: "بجانب الطريق: كوني مرئية، وابقي خلف المخاريط", x: "بجانب الطريق: الظهور بوضوح، والبقاء خلف المخاريط" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.b': { m: "العمل بجانب الطريق خطير: السائقون ينظرون إلى هواتفهم، أو يسرعون كثيراً. لذلك البس دائماً سترة السلامة العاكسة، حتى لعمل قصير. ضع المخاريط والإشارات قبل أن تبدأ، واجمعها في النهاية. أوقِف الشاحنة الصغيرة كحاجز بينك وبين حركة المرور. ابقَ خلف المخاريط. لا ترجع أبداً إلى الخلف دون أن تنظر، واعمل ووجهك نحو حركة المرور عندما تستطيع. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "العمل بجانب الطريق خطير: السائقون ينظرون إلى هواتفهم، أو يسرعون كثيراً. لذلك البسي دائماً سترة السلامة العاكسة، حتى لعمل قصير. ضعي المخاريط والإشارات قبل أن تبدئي، واجمعيها في النهاية. أوقفي الشاحنة الصغيرة كحاجز بينك وبين حركة المرور. ابقي خلف المخاريط. لا ترجعي أبداً إلى الخلف دون أن تنظري، واعملي ووجهك نحو حركة المرور عندما تستطيعين. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "العمل بجانب الطريق خطير: السائقون ينظرون إلى هواتفهم، أو يسرعون كثيراً. لذلك لبس سترة السلامة العاكسة دائماً، حتى لعمل قصير. وضع المخاريط والإشارات قبل البدء، وجمعها في النهاية. إيقاف الشاحنة الصغيرة كحاجز بين العامل وحركة المرور. البقاء خلف المخاريط. الرجوع إلى الخلف بدون نظر ممنوع أبداً، والعمل والوجه نحو حركة المرور عند الإمكان. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.p': "أولاً أضع المخاريط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.s': { m: "يجب أن تقصّ شجيرة صغيرة واحدة بجانب الطريق. هذا يأخذ خمس دقائق. ماذا تفعل؟", f: "يجب أن تقصّي شجيرة صغيرة واحدة بجانب الطريق. هذا يأخذ خمس دقائق. ماذا تفعلين؟", x: "المطلوب قصّ شجيرة صغيرة واحدة بجانب الطريق. هذا يأخذ خمس دقائق. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.roadside.o1': "لُبس السترة، ووضع المخاريط.", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.roadside.o2': "العمل بسرعة، بدون المخاريط.", // nieuw, nalezen
-    'c.roadside.o3': "الطلب من زميل أن يراقب السيارات.", // nieuw, nalezen
-    'c.roadside.w': "الحادث يأخذ ثانية واحدة فقط. خمس دقائق بدون مخاريط هي خمس دقائق بدون حماية.", // nieuw, nalezen
-    'l.litter': "النفايات في الشارع والحيّ", // nieuw, nalezen
-    'w.zwerfafval': "النفايات المرمية (قمامة في الشارع)", // nieuw, nalezen
-    'w.grijper': "ملقط القمامة (عصا تمسك القمامة)", // nieuw, nalezen
-    'w.vuilniszak': "كيس القمامة", // nieuw, nalezen
-    'w.scherven': "الزجاج المكسور (قطع حادّة)", // nieuw, nalezen
-    'w.aanhanger': "المقطورة", // nieuw, nalezen
-    'w.bewoner': "الساكن (شخص يسكن هنا)", // nieuw, nalezen
-    's.litter.1': { m: "التقط النفايات بملقط القمامة.", f: "التقطي النفايات بملقط القمامة.", x: "التقاط النفايات بملقط القمامة." }, // nieuw, nalezen
-    's.litter.2': { m: "انتبه، هنا زجاج مكسور.", f: "انتبهي، هنا زجاج مكسور.", x: "انتباه، هنا زجاج مكسور." }, // nieuw, nalezen
-    's.litter.3': { m: "ضع أكياس القمامة عند المقطورة.", f: "ضعي أكياس القمامة عند المقطورة.", x: "أكياس القمامة توضع عند المقطورة." }, // nieuw, nalezen
-    'c.litter.q': "متى ستُقلَّم هذه الشجرة؟", // nieuw, nalezen
-    'c.litter.a': "لا أعرف. اسأل البلدية.", // nieuw, nalezen
-    'c.litter': { m: "لا تلمس إبرة أبداً", f: "لا تلمسي إبرة أبداً", x: "لمس الإبرة ممنوع أبداً" }, // nieuw, nalezen
+    'c.roadside.o2': "العمل بسرعة، بدون المخاريط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.o3': "الطلب من زميل أن يراقب السيارات.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.w': "الحادث يأخذ ثانية واحدة فقط. خمس دقائق بدون مخاريط هي خمس دقائق بدون حماية.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.litter': "النفايات في الشارع والحيّ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zwerfafval': "النفايات المرمية (قمامة في الشارع)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.grijper': "ملقط القمامة (عصا تمسك القمامة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vuilniszak': "كيس القمامة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scherven': "الزجاج المكسور (قطع حادّة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanhanger': "المقطورة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bewoner': "الساكن (شخص يسكن هنا)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.litter.1': { m: "التقط النفايات بملقط القمامة.", f: "التقطي النفايات بملقط القمامة.", x: "التقاط النفايات بملقط القمامة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.litter.2': { m: "انتبه، هنا زجاج مكسور.", f: "انتبهي، هنا زجاج مكسور.", x: "انتباه، هنا زجاج مكسور." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.litter.3': { m: "ضع أكياس القمامة عند المقطورة.", f: "ضعي أكياس القمامة عند المقطورة.", x: "أكياس القمامة توضع عند المقطورة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.q': "متى ستُقلَّم هذه الشجرة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.a': "لا أعرف. اسأل البلدية.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter': { m: "لا تلمس إبرة أبداً", f: "لا تلمسي إبرة أبداً", x: "لمس الإبرة ممنوع أبداً" }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.litter.b': { m: "في الحدائق والشجيرات تجد أحياناً إبرة حقنة. لا تلتقطها أبداً بيدك، ولا حتى والقفازات في يديك. استعمل ملقط القمامة، وضع الإبرة في علبة صلبة أو قنينة لها غطاء، وليس أبداً في كيس قمامة. أخبر مشرفك. هل وخزتك إبرة؟ اغسل الجرح بماء كثير، واتصل بطبيب فوراً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في الحدائق والشجيرات تجد أحياناً إبرة حقنة. لا تلتقطيها أبداً بيدك، ولا حتى والقفازات في يديك. استعملي ملقط القمامة، وضعي الإبرة في علبة صلبة أو قنينة لها غطاء، وليس أبداً في كيس قمامة. أخبري مشرفك. هل وخزتكِ إبرة؟ اغسلي الجرح بماء كثير، واتصلي بطبيب فوراً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في الحدائق والشجيرات توجد أحياناً إبرة حقنة. التقاطها باليد ممنوع أبداً، حتى مع القفازات. استعمال ملقط القمامة، ووضع الإبرة في علبة صلبة أو قنينة لها غطاء، وليس أبداً في كيس قمامة. إخبار المشرف. وخزة من إبرة؟ غسل الجرح بماء كثير، والاتصال بطبيب فوراً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.litter.p': "هنا إبرة.", // nieuw, nalezen
-    'c.litter.s': { m: "ترى إبرة في العشب، بجانب مقعد. ماذا تفعل؟", f: "ترين إبرة في العشب، بجانب مقعد. ماذا تفعلين؟", x: "إبرة في العشب، بجانب مقعد. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.litter.o1': "التقاطها بملقط القمامة.", // nieuw, nalezen
-    'c.litter.o2': "التقاطها باليد مع القفازات.", // nieuw, nalezen
-    'c.litter.o3': "وضعها في كيس القمامة.", // nieuw, nalezen
-    'c.litter.w': "الإبرة يمكن أن تنقل مرضاً. القفازات لا توقف الإبرة، والعلبة الصلبة تحمي الآخرين.", // nieuw, nalezen
-    'u.frontdesk': "الاستقبال والبريد والاجتماعات", // nieuw, nalezen
-    'l.reception': "في مكتب الاستقبال", // nieuw, nalezen
-    'w.balie': "مكتب الاستقبال، الكاونتر", // nieuw, nalezen
-    'w.bezoeker': "الزائر", // nieuw, nalezen
-    'w.intercom': "الإنترفون (تتكلّم مع شخص عند الباب)", // nieuw, nalezen
-    'w.doorverbinden': "يحوّل (مكالمة هاتفية)", // nieuw, nalezen
-    'w.toestel': "الرقم الداخلي (رقم هاتف داخل المبنى)", // nieuw, nalezen
-    'w.wachtruimte': "غرفة الانتظار", // nieuw, nalezen
-    's.reception.1': "صباح الخير، هل يمكنني مساعدتك؟", // nieuw, nalezen
-    's.reception.2': "سأحوّلك.", // nieuw, nalezen
-    's.reception.3': "تفضّل بالجلوس في غرفة الانتظار من فضلك.", // nieuw, nalezen
-    'c.reception.q': "عندي موعد مع السيدة Jansen.", // nieuw, nalezen
-    'c.reception.a': "لحظة من فضلك. سأتصل بها.", // nieuw, nalezen
-    'c.reception': { m: "أنت أول وجه", f: "أنتِ أول وجه", x: "الاستقبال هو أول وجه" }, // nieuw, nalezen
-    'c.reception.b': { m: "في مكتب الاستقبال أنت أول شخص يقابله الزائر. ارفع نظرك، وابتسم وسلّم، حتى عندما تكون مشغولاً بالهاتف. خاطب الزوار بـ«u» (حضرتك، رسمي). أجب على الهاتف باسم الشركة واسمك أنت. لا تعرف الجواب؟ قل ذلك، وابحث عن شخص يعرف. لا تعطِ أبداً أسماء الموظفين أو أرقام هواتفهم أو غرفهم لأشخاص لا تعرفهم.", f: "في مكتب الاستقبال أنتِ أول شخص يقابله الزائر. ارفعي نظرك، وابتسمي وسلّمي، حتى عندما تكونين مشغولة بالهاتف. خاطبي الزوار بـ«u» (حضرتك، رسمي). أجيبي على الهاتف باسم الشركة واسمك أنت. لا تعرفين الجواب؟ قولي ذلك، وابحثي عن شخص يعرف. لا تعطي أبداً أسماء الموظفين أو أرقام هواتفهم أو غرفهم لأشخاص لا تعرفينهم.", x: "في مكتب الاستقبال، موظف الاستقبال هو أول شخص يقابله الزائر. رفع النظر والابتسام والتحية، حتى مع الانشغال بالهاتف. مخاطبة الزوار بـ«u» (حضرتك، رسمي). الردّ على الهاتف باسم الشركة والاسم الشخصي. الجواب غير معروف؟ قول ذلك، والبحث عن شخص يعرف. أسماء الموظفين أو أرقام هواتفهم أو غرفهم لا تُعطى أبداً لأشخاص غير معروفين." }, // nieuw, nalezen
-    'c.reception.p': "صباح الخير، كيف يمكنني مساعدتك؟", // nieuw, nalezen
-    'c.reception.s': { m: "أنت على الهاتف. زائر يأتي إلى المكتب وينتظر. ماذا تفعل؟", f: "أنتِ على الهاتف. زائر يأتي إلى المكتب وينتظر. ماذا تفعلين؟", x: "مكالمة هاتفية جارية. زائر يأتي إلى المكتب وينتظر. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.reception.o1': "رفع النظر، وإظهار القدوم قريباً.", // nieuw, nalezen
-    'c.reception.o2': "إنهاء المكالمة، بدون رفع النظر.", // nieuw, nalezen
-    'c.reception.o3': "إغلاق الهاتف فوراً.", // nieuw, nalezen
-    'c.reception.w': "الزائر الذي يُرى ينتظر بهدوء. الزائر الذي لا يُرى يشعر أنه غير مرحّب به.", // nieuw, nalezen
-    'l.visitors': "استقبال الزوار", // nieuw, nalezen
-    'w.bezoekerspasje': "بطاقة الزائر", // nieuw, nalezen
-    'w.lift': "المصعد", // nieuw, nalezen
-    'w.garderobe': "غرفة المعاطف (حيث تعلّق معطفك)", // nieuw, nalezen
-    'w.parkeerplaats': "مكان الوقوف (موقف السيارة)", // nieuw, nalezen
-    'w.hal': "البهو (الغرفة الكبيرة عند المدخل)", // nieuw, nalezen
-    'w.begeleiden': "يرافق (يمشي مع شخص إلى مكان)", // nieuw, nalezen
-    's.visitors.1': "هل يمكنك أن تكتب اسمك هنا؟", // nieuw, nalezen
-    's.visitors.2': "تفضّل بطاقة الزائر.", // nieuw, nalezen
-    's.visitors.3': "سأرافقك إلى المصعد.", // nieuw, nalezen
-    'c.visitors.q': "أين يمكنني أن أترك معطفي؟", // nieuw, nalezen
-    'c.visitors.a': "في غرفة المعاطف، بجانب المصعد.", // nieuw, nalezen
-    'c.visitors': "كل زائر يسجّل نفسه", // nieuw, nalezen
-    'c.visitors.b': { m: "كل زائر يكتب اسمه في القائمة، أو يسجّل على الشاشة، ويأخذ بطاقة زائر. عندها تعرف من في المبنى. هذا مهم عند الحريق: الجميع يجب أن يخرجوا، وشخص ما يفحص القائمة. في نهاية الزيارة يعيد الزائر البطاقة. لا تُدخل خلفك أشخاصاً لا تعرفهم: اسألهم بلطف عمّن جاؤوا من أجله. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "كل زائر يكتب اسمه في القائمة، أو يسجّل على الشاشة، ويأخذ بطاقة زائر. عندها تعرفين من في المبنى. هذا مهم عند الحريق: الجميع يجب أن يخرجوا، وشخص ما يفحص القائمة. في نهاية الزيارة يعيد الزائر البطاقة. لا تُدخلي خلفك أشخاصاً لا تعرفينهم: اسأليهم بلطف عمّن جاؤوا من أجله. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "كل زائر يكتب اسمه في القائمة، أو يسجّل على الشاشة، ويأخذ بطاقة زائر. عندها يكون معروفاً من في المبنى. هذا مهم عند الحريق: الجميع يجب أن يخرجوا، وشخص ما يفحص القائمة. في نهاية الزيارة يعيد الزائر البطاقة. أشخاص غير معروفين لا يدخلون خلف أحد: السؤال بلطف عمّن جاؤوا من أجله. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.visitors.p': "لمن جئت؟", // nieuw, nalezen
-    'c.visitors.s': { m: "رجل يدخل خلف زميل. ليس معه بطاقة. ماذا تفعل؟", f: "رجل يدخل خلف زميل. ليس معه بطاقة. ماذا تفعلين؟", x: "رجل يدخل خلف زميل. ليس معه بطاقة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.visitors.o1': "سؤاله بلطف لمن جاء.", // nieuw, nalezen
-    'c.visitors.o2': "تركه يمرّ: دخل مع موظف.", // nieuw, nalezen
-    'c.visitors.o3': "الاتصال بالشرطة فوراً.", // nieuw, nalezen
-    'c.visitors.w': "في حالة الطوارئ يجب معرفة من في الداخل. وليس كل من يدخل له سبب ليكون هناك.", // nieuw, nalezen
-    'l.mailroom': "البريد والطرود", // nieuw, nalezen
-    'w.postkamer': "غرفة البريد", // nieuw, nalezen
-    'w.koerier': "المندوب (شخص يوصل الطرود)", // nieuw, nalezen
-    'w.postvak': "صندوق البريد الشخصي (صندوق للبريد، واحد لكل شخص)", // nieuw, nalezen
-    'w.envelop': "الظرف", // nieuw, nalezen
-    'w.afdeling': "القسم", // nieuw, nalezen
-    'w.postkar': "عربة البريد", // nieuw, nalezen
-    's.mailroom.1': "المندوب يحضر طرداً.", // nieuw, nalezen
-    's.mailroom.2': { m: "ضع الرسائل في الصندوق الصحيح.", f: "ضعي الرسائل في الصندوق الصحيح.", x: "الرسائل توضع في الصندوق الصحيح." }, // nieuw, nalezen
-    's.mailroom.3': "هذا الطرد متضرّر.", // nieuw, nalezen
-    'c.mailroom.q': "لمن هذا الطرد؟", // nieuw, nalezen
-    'c.mailroom.a': "لقسم المالية، في الطابق الثاني.", // nieuw, nalezen
-    'c.mailroom': "البريد خاصّ", // nieuw, nalezen
-    'c.mailroom.b': { m: "البريد والطرود خاصّة. لا تفتح أبداً رسالة أو طرداً لشخص آخر. افحص الاسم والقسم على كل قطعة، وضعها في الصندوق الصحيح. عندما يحضر المندوب طرداً، انظر إليه قبل أن توقّع: هل هو متضرّر؟ اكتب ذلك. هل الطرد غريب: له رائحة، أو يسرّب، أو ليس عليه اسم المرسل؟ لا تفتحه، وأخبر مشرفك. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "البريد والطرود خاصّة. لا تفتحي أبداً رسالة أو طرداً لشخص آخر. افحصي الاسم والقسم على كل قطعة، وضعيها في الصندوق الصحيح. عندما يحضر المندوب طرداً، انظري إليه قبل أن توقّعي: هل هو متضرّر؟ اكتبي ذلك. هل الطرد غريب: له رائحة، أو يسرّب، أو ليس عليه اسم المرسل؟ لا تفتحيه، وأخبري مشرفك. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "البريد والطرود خاصّة. فتح رسالة أو طرد لشخص آخر ممنوع أبداً. فحص الاسم والقسم على كل قطعة، ووضعها في الصندوق الصحيح. عندما يحضر المندوب طرداً، النظر إليه قبل التوقيع: هل هو متضرّر؟ كتابة ذلك. هل الطرد غريب: له رائحة، أو يسرّب، أو ليس عليه اسم المرسل؟ لا يُفتح، والمشرف يجب أن يعرف. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.mailroom.p': "الصندوق مبلّل ومكسور.", // nieuw, nalezen
-    'c.mailroom.s': { m: "المندوب يحضر طرداً. إحدى زواياه مبلّلة وممزّقة. ماذا تفعل؟", f: "المندوب يحضر طرداً. إحدى زواياه مبلّلة وممزّقة. ماذا تفعلين؟", x: "المندوب يحضر طرداً. إحدى زواياه مبلّلة وممزّقة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.mailroom.o1': "كتابة الضرر قبل التوقيع.", // nieuw, nalezen
-    'c.mailroom.o2': "التوقيع، وعدم إخبار أحد.", // nieuw, nalezen
-    'c.mailroom.o3': "فتحه، لرؤية هل كل شيء موجود.", // nieuw, nalezen
-    'c.mailroom.w': "بعد التوقيع يبدو كأن الطرد كان سليماً. عندها لا أحد يدفع ثمن الضرر.", // nieuw, nalezen
-    'l.meetingroom': "تجهيز غرفة الاجتماعات", // nieuw, nalezen
-    'w.vergaderzaal': "غرفة الاجتماعات", // nieuw, nalezen
-    'w.beamer': "جهاز العرض (البروجكتر)", // nieuw, nalezen
-    'w.whiteboard': "اللوح الأبيض", // nieuw, nalezen
-    'w.thermoskan': "الترمس (يحفظ القهوة ساخنة)", // nieuw, nalezen
-    'w.kopje': "الفنجان", // nieuw, nalezen
-    'w.koffieautomaat': "آلة القهوة", // nieuw, nalezen
-    's.meetingroom.1': { m: "ضع عشرة كراسٍ حول الطاولة.", f: "ضعي عشرة كراسٍ حول الطاولة.", x: "عشرة كراسٍ توضع حول الطاولة." }, // nieuw, nalezen
-    's.meetingroom.2': { m: "جهّز القهوة والشاي.", f: "جهّزي القهوة والشاي.", x: "تجهيز القهوة والشاي." }, // nieuw, nalezen
-    's.meetingroom.3': "جهاز العرض لا يعمل.", // nieuw, nalezen
-    'c.meetingroom.q': "متى يبدأ الاجتماع؟", // nieuw, nalezen
-    'c.meetingroom.a': { m: "في العاشرة. تأكّد أن كل شيء جاهز.", f: "في العاشرة. تأكّدي أن كل شيء جاهز.", x: "في العاشرة. كل شيء يجب أن يكون جاهزاً." }, // nieuw, nalezen
-    'c.meetingroom': "جاهزة قبل أول ضيف", // nieuw, nalezen
-    'c.meetingroom.b': { m: "غرفة الاجتماعات يجب أن تكون جاهزة قبل أن يدخل أول شخص. افحص الكراسي والطاولة وجهاز العرض والكابلات. ضع القهوة والشاي والماء، مع الفناجين والحليب. احمل المشروبات الساخنة بحذر، ولا تمرّ بها أبداً فوق الناس. بعد الاجتماع نظّف الطاولة وأعد كل شيء. ما تسمعه في غرفة الاجتماعات، احتفظ به لنفسك.", f: "غرفة الاجتماعات يجب أن تكون جاهزة قبل أن يدخل أول شخص. افحصي الكراسي والطاولة وجهاز العرض والكابلات. ضعي القهوة والشاي والماء، مع الفناجين والحليب. احملي المشروبات الساخنة بحذر، ولا تمرّي بها أبداً فوق الناس. بعد الاجتماع نظّفي الطاولة وأعدي كل شيء. ما تسمعينه في غرفة الاجتماعات، احتفظي به لنفسك.", x: "غرفة الاجتماعات يجب أن تكون جاهزة قبل أن يدخل أول شخص. فحص الكراسي والطاولة وجهاز العرض والكابلات. وضع القهوة والشاي والماء، مع الفناجين والحليب. المشروبات الساخنة تُحمل بحذر، ولا تمرّ أبداً فوق الناس. بعد الاجتماع تنظيف الطاولة وإعادة كل شيء. ما يُسمع في غرفة الاجتماعات يبقى سرّاً." }, // nieuw, nalezen
-    'c.meetingroom.p': "الغرفة جاهزة.", // nieuw, nalezen
-    'c.meetingroom.s': { m: "الاجتماع يبدأ بعد خمس دقائق. جهاز العرض لا يعمل. ماذا تفعل؟", f: "الاجتماع يبدأ بعد خمس دقائق. جهاز العرض لا يعمل. ماذا تفعلين؟", x: "الاجتماع يبدأ بعد خمس دقائق. جهاز العرض لا يعمل. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.meetingroom.o1': "إخبار المنظّم فوراً.", // nieuw, nalezen
-    'c.meetingroom.o2': "الانتظار: ربما لا أحد يحتاجه.", // nieuw, nalezen
-    'c.meetingroom.o3': "ترك ورقة على الطاولة.", // nieuw, nalezen
-    'c.meetingroom.w': "خمس دقائق ما زالت وقتاً كافياً لإصلاحه أو لإيجاد غرفة أخرى. بعدها ينتظر الجميع.", // nieuw, nalezen
-    'u.maintenance': "الأعطال والتصليحات والنقل", // nieuw, nalezen
-    'l.faults': "الإبلاغ عن عطل", // nieuw, nalezen
-    'w.melding': "البلاغ (تخبر أن شيئاً فيه خلل)", // nieuw, nalezen
-    'w.lekkage': "التسرّب (الماء يخرج)", // nieuw, nalezen
-    'w.verwarming': "التدفئة", // nieuw, nalezen
-    'w.airco': "المكيّف", // nieuw, nalezen
-    'w.afvoer': "التصريف (المجرى)", // nieuw, nalezen
-    'w.verstopt': "مسدود (لا شيء يمرّ)", // nieuw, nalezen
-    's.faults.1': "أبلّغ عن العطل.", // nieuw, nalezen
-    's.faults.2': "يوجد تسرّب في المطبخ.", // nieuw, nalezen
-    's.faults.3': "تصريف المرحاض مسدود.", // nieuw, nalezen
-    'c.faults.q': "لماذا الجو بارد هنا هكذا؟", // nieuw, nalezen
-    'c.faults.a': "التدفئة معطّلة. الفنّي يأتي غداً.", // nieuw, nalezen
-    'c.faults': { m: "بلّغ عنه، لا تصلحه وحدك", f: "بلّغي عنه، لا تصلحيه وحدك", x: "الإبلاغ، لا الإصلاح بشكل فردي" }, // nieuw, nalezen
-    'c.faults.b': { m: "هل ترى شيئاً معطّلاً، مثل تسرّب، أو مصباح مطفأ، أو باب لا ينغلق؟ بلّغ عنه، حتى إذا كان صغيراً: في النظام أو لمشرفك. قل أين هو، وماذا ترى ومنذ متى. لا تصلح الكهرباء أو الغاز أو التدفئة بنفسك. هل تشمّ رائحة غاز؟ لا تستعمل مفتاح كهرباء أو هاتفاً قريباً منه، افتح النوافذ، أخرج الناس، واطلب المساعدة من الخارج. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "هل ترين شيئاً معطّلاً، مثل تسرّب، أو مصباح مطفأ، أو باب لا ينغلق؟ بلّغي عنه، حتى إذا كان صغيراً: في النظام أو لمشرفك. قولي أين هو، وماذا ترين ومنذ متى. لا تصلحي الكهرباء أو الغاز أو التدفئة بنفسك. هل تشمّين رائحة غاز؟ لا تستعملي مفتاح كهرباء أو هاتفاً قريباً منه، افتحي النوافذ، أخرجي الناس، واطلبي المساعدة من الخارج. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "شيء معطّل، مثل تسرّب، أو مصباح مطفأ، أو باب لا ينغلق؟ الإبلاغ عنه، حتى إذا كان صغيراً: في النظام أو للمشرف. قول أين هو، وما الذي يُرى ومنذ متى. الكهرباء والغاز والتدفئة لا تُصلح بشكل شخصي. رائحة غاز؟ لا مفتاح كهرباء ولا هاتف قريباً منه، فتح النوافذ، وإخراج الناس، وطلب المساعدة من الخارج. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.faults.p': "أريد أن أبلّغ عن عطل.", // nieuw, nalezen
-    'c.faults.s': { m: "الماء يقطر من السقف في الممرّ. ماذا تفعل؟", f: "الماء يقطر من السقف في الممرّ. ماذا تفعلين؟", x: "الماء يقطر من السقف في الممرّ. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.faults.o1': "الإبلاغ عنه، ووضع دلو تحته.", // nieuw, nalezen
-    'c.faults.o2': "الانتظار: ربما يتوقّف وحده.", // nieuw, nalezen
-    'c.faults.o3': "فتح السقف للنظر.", // nieuw, nalezen
-    'c.faults.w': "التسرّب الصغير قد يصبح ضرراً كبيراً. الدلو يُبقي الأرض جافة، فلا ينزلق أحد.", // nieuw, nalezen
-    'l.repairs': "تصليحات صغيرة", // nieuw, nalezen
-    'w.vervangen': "يستبدل (يضع واحداً جديداً)", // nieuw, nalezen
-    'w.deurklink': "مقبض الباب", // nieuw, nalezen
-    'w.scharnier': "المفصّلة", // nieuw, nalezen
-    'w.gereedschapskist': "صندوق العدّة", // nieuw, nalezen
-    'w.rookmelder': "كاشف الدخان", // nieuw, nalezen
-    'w.batterij': "البطارية", // nieuw, nalezen
-    's.repairs.1': { m: "استبدل المصباح في الممرّ.", f: "استبدلي المصباح في الممرّ.", x: "استبدال المصباح في الممرّ." }, // nieuw, nalezen
-    's.repairs.2': "مقبض الباب مفكوك.", // nieuw, nalezen
+    'c.litter.p': "هنا إبرة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.s': { m: "ترى إبرة في العشب، بجانب مقعد. ماذا تفعل؟", f: "ترين إبرة في العشب، بجانب مقعد. ماذا تفعلين؟", x: "إبرة في العشب، بجانب مقعد. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.o1': "التقاطها بملقط القمامة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.o2': "التقاطها باليد مع القفازات.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.o3': "وضعها في كيس القمامة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.w': "الإبرة يمكن أن تنقل مرضاً. القفازات لا توقف الإبرة، والعلبة الصلبة تحمي الآخرين.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.frontdesk': "الاستقبال والبريد والاجتماعات", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.reception': "في مكتب الاستقبال", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.balie': "مكتب الاستقبال، الكاونتر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bezoeker': "الزائر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.intercom': "الإنترفون (تتكلّم مع شخص عند الباب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doorverbinden': "يحوّل (مكالمة هاتفية)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toestel': "الرقم الداخلي (رقم هاتف داخل المبنى)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wachtruimte': "غرفة الانتظار", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reception.1': "صباح الخير، هل يمكنني مساعدتك؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reception.2': "سأحوّلك.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reception.3': "تفضّل بالجلوس في غرفة الانتظار من فضلك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.q': "عندي موعد مع السيدة Jansen.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.a': "لحظة من فضلك. سأتصل بها.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception': { m: "أنت أول وجه", f: "أنتِ أول وجه", x: "الاستقبال هو أول وجه" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.b': { m: "في مكتب الاستقبال أنت أول شخص يقابله الزائر. ارفع نظرك، وابتسم وسلّم، حتى عندما تكون مشغولاً بالهاتف. خاطب الزوار بـ«u» (حضرتك، رسمي). أجب على الهاتف باسم الشركة واسمك أنت. لا تعرف الجواب؟ قل ذلك، وابحث عن شخص يعرف. لا تعطِ أبداً أسماء الموظفين أو أرقام هواتفهم أو غرفهم لأشخاص لا تعرفهم.", f: "في مكتب الاستقبال أنتِ أول شخص يقابله الزائر. ارفعي نظرك، وابتسمي وسلّمي، حتى عندما تكونين مشغولة بالهاتف. خاطبي الزوار بـ«u» (حضرتك، رسمي). أجيبي على الهاتف باسم الشركة واسمك أنت. لا تعرفين الجواب؟ قولي ذلك، وابحثي عن شخص يعرف. لا تعطي أبداً أسماء الموظفين أو أرقام هواتفهم أو غرفهم لأشخاص لا تعرفينهم.", x: "في مكتب الاستقبال، موظف الاستقبال هو أول شخص يقابله الزائر. رفع النظر والابتسام والتحية، حتى مع الانشغال بالهاتف. مخاطبة الزوار بـ«u» (حضرتك، رسمي). الردّ على الهاتف باسم الشركة والاسم الشخصي. الجواب غير معروف؟ قول ذلك، والبحث عن شخص يعرف. أسماء الموظفين أو أرقام هواتفهم أو غرفهم لا تُعطى أبداً لأشخاص غير معروفين." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.p': "صباح الخير، كيف يمكنني مساعدتك؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.s': { m: "أنت على الهاتف. زائر يأتي إلى المكتب وينتظر. ماذا تفعل؟", f: "أنتِ على الهاتف. زائر يأتي إلى المكتب وينتظر. ماذا تفعلين؟", x: "مكالمة هاتفية جارية. زائر يأتي إلى المكتب وينتظر. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.o1': "رفع النظر، وإظهار القدوم قريباً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.o2': "إنهاء المكالمة، بدون رفع النظر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.o3': "إغلاق الهاتف فوراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.w': "الزائر الذي يُرى ينتظر بهدوء. الزائر الذي لا يُرى يشعر أنه غير مرحّب به.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.visitors': "استقبال الزوار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bezoekerspasje': "بطاقة الزائر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lift': "المصعد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.garderobe': "غرفة المعاطف (حيث تعلّق معطفك)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.parkeerplaats': "مكان الوقوف (موقف السيارة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hal': "البهو (الغرفة الكبيرة عند المدخل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.begeleiden': "يرافق (يمشي مع شخص إلى مكان)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.visitors.1': "هل يمكنك أن تكتب اسمك هنا؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.visitors.2': "تفضّل بطاقة الزائر.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.visitors.3': "سأرافقك إلى المصعد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.q': "أين يمكنني أن أترك معطفي؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.a': "في غرفة المعاطف، بجانب المصعد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors': "كل زائر يسجّل نفسه", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.b': { m: "كل زائر يكتب اسمه في القائمة، أو يسجّل على الشاشة، ويأخذ بطاقة زائر. عندها تعرف من في المبنى. هذا مهم عند الحريق: الجميع يجب أن يخرجوا، وشخص ما يفحص القائمة. في نهاية الزيارة يعيد الزائر البطاقة. لا تُدخل خلفك أشخاصاً لا تعرفهم: اسألهم بلطف عمّن جاؤوا من أجله. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "كل زائر يكتب اسمه في القائمة، أو يسجّل على الشاشة، ويأخذ بطاقة زائر. عندها تعرفين من في المبنى. هذا مهم عند الحريق: الجميع يجب أن يخرجوا، وشخص ما يفحص القائمة. في نهاية الزيارة يعيد الزائر البطاقة. لا تُدخلي خلفك أشخاصاً لا تعرفينهم: اسأليهم بلطف عمّن جاؤوا من أجله. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "كل زائر يكتب اسمه في القائمة، أو يسجّل على الشاشة، ويأخذ بطاقة زائر. عندها يكون معروفاً من في المبنى. هذا مهم عند الحريق: الجميع يجب أن يخرجوا، وشخص ما يفحص القائمة. في نهاية الزيارة يعيد الزائر البطاقة. أشخاص غير معروفين لا يدخلون خلف أحد: السؤال بلطف عمّن جاؤوا من أجله. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.p': "لمن جئت؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.s': { m: "رجل يدخل خلف زميل. ليس معه بطاقة. ماذا تفعل؟", f: "رجل يدخل خلف زميل. ليس معه بطاقة. ماذا تفعلين؟", x: "رجل يدخل خلف زميل. ليس معه بطاقة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.o1': "سؤاله بلطف لمن جاء.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.o2': "تركه يمرّ: دخل مع موظف.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.o3': "الاتصال بالشرطة فوراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.w': "في حالة الطوارئ يجب معرفة من في الداخل. وليس كل من يدخل له سبب ليكون هناك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.mailroom': "البريد والطرود", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.postkamer': "غرفة البريد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koerier': "المندوب (شخص يوصل الطرود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.postvak': "صندوق البريد الشخصي (صندوق للبريد، واحد لكل شخص)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.envelop': "الظرف", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afdeling': "القسم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.postkar': "عربة البريد", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mailroom.1': "المندوب يحضر طرداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mailroom.2': { m: "ضع الرسائل في الصندوق الصحيح.", f: "ضعي الرسائل في الصندوق الصحيح.", x: "الرسائل توضع في الصندوق الصحيح." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.mailroom.3': "هذا الطرد متضرّر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.q': "لمن هذا الطرد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.a': "لقسم المالية، في الطابق الثاني.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom': "البريد خاصّ", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.b': { m: "البريد والطرود خاصّة. لا تفتح أبداً رسالة أو طرداً لشخص آخر. افحص الاسم والقسم على كل قطعة، وضعها في الصندوق الصحيح. عندما يحضر المندوب طرداً، انظر إليه قبل أن توقّع: هل هو متضرّر؟ اكتب ذلك. هل الطرد غريب: له رائحة، أو يسرّب، أو ليس عليه اسم المرسل؟ لا تفتحه، وأخبر مشرفك. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "البريد والطرود خاصّة. لا تفتحي أبداً رسالة أو طرداً لشخص آخر. افحصي الاسم والقسم على كل قطعة، وضعيها في الصندوق الصحيح. عندما يحضر المندوب طرداً، انظري إليه قبل أن توقّعي: هل هو متضرّر؟ اكتبي ذلك. هل الطرد غريب: له رائحة، أو يسرّب، أو ليس عليه اسم المرسل؟ لا تفتحيه، وأخبري مشرفك. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "البريد والطرود خاصّة. فتح رسالة أو طرد لشخص آخر ممنوع أبداً. فحص الاسم والقسم على كل قطعة، ووضعها في الصندوق الصحيح. عندما يحضر المندوب طرداً، النظر إليه قبل التوقيع: هل هو متضرّر؟ كتابة ذلك. هل الطرد غريب: له رائحة، أو يسرّب، أو ليس عليه اسم المرسل؟ لا يُفتح، والمشرف يجب أن يعرف. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.p': "الصندوق مبلّل ومكسور.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.s': { m: "المندوب يحضر طرداً. إحدى زواياه مبلّلة وممزّقة. ماذا تفعل؟", f: "المندوب يحضر طرداً. إحدى زواياه مبلّلة وممزّقة. ماذا تفعلين؟", x: "المندوب يحضر طرداً. إحدى زواياه مبلّلة وممزّقة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.o1': "كتابة الضرر قبل التوقيع.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.o2': "التوقيع، وعدم إخبار أحد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.o3': "فتحه، لرؤية هل كل شيء موجود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.w': "بعد التوقيع يبدو كأن الطرد كان سليماً. عندها لا أحد يدفع ثمن الضرر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.meetingroom': "تجهيز غرفة الاجتماعات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vergaderzaal': "غرفة الاجتماعات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beamer': "جهاز العرض (البروجكتر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.whiteboard': "اللوح الأبيض", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.thermoskan': "الترمس (يحفظ القهوة ساخنة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kopje': "الفنجان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koffieautomaat': "آلة القهوة", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meetingroom.1': { m: "ضع عشرة كراسٍ حول الطاولة.", f: "ضعي عشرة كراسٍ حول الطاولة.", x: "عشرة كراسٍ توضع حول الطاولة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.meetingroom.2': { m: "جهّز القهوة والشاي.", f: "جهّزي القهوة والشاي.", x: "تجهيز القهوة والشاي." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.meetingroom.3': "جهاز العرض لا يعمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.q': "متى يبدأ الاجتماع؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.a': { m: "في العاشرة. تأكّد أن كل شيء جاهز.", f: "في العاشرة. تأكّدي أن كل شيء جاهز.", x: "في العاشرة. كل شيء يجب أن يكون جاهزاً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom': "جاهزة قبل أول ضيف", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.b': { m: "غرفة الاجتماعات يجب أن تكون جاهزة قبل أن يدخل أول شخص. افحص الكراسي والطاولة وجهاز العرض والكابلات. ضع القهوة والشاي والماء، مع الفناجين والحليب. احمل المشروبات الساخنة بحذر، ولا تمرّ بها أبداً فوق الناس. بعد الاجتماع نظّف الطاولة وأعد كل شيء. ما تسمعه في غرفة الاجتماعات، احتفظ به لنفسك.", f: "غرفة الاجتماعات يجب أن تكون جاهزة قبل أن يدخل أول شخص. افحصي الكراسي والطاولة وجهاز العرض والكابلات. ضعي القهوة والشاي والماء، مع الفناجين والحليب. احملي المشروبات الساخنة بحذر، ولا تمرّي بها أبداً فوق الناس. بعد الاجتماع نظّفي الطاولة وأعدي كل شيء. ما تسمعينه في غرفة الاجتماعات، احتفظي به لنفسك.", x: "غرفة الاجتماعات يجب أن تكون جاهزة قبل أن يدخل أول شخص. فحص الكراسي والطاولة وجهاز العرض والكابلات. وضع القهوة والشاي والماء، مع الفناجين والحليب. المشروبات الساخنة تُحمل بحذر، ولا تمرّ أبداً فوق الناس. بعد الاجتماع تنظيف الطاولة وإعادة كل شيء. ما يُسمع في غرفة الاجتماعات يبقى سرّاً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.p': "الغرفة جاهزة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.s': { m: "الاجتماع يبدأ بعد خمس دقائق. جهاز العرض لا يعمل. ماذا تفعل؟", f: "الاجتماع يبدأ بعد خمس دقائق. جهاز العرض لا يعمل. ماذا تفعلين؟", x: "الاجتماع يبدأ بعد خمس دقائق. جهاز العرض لا يعمل. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.o1': "إخبار المنظّم فوراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.o2': "الانتظار: ربما لا أحد يحتاجه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.o3': "ترك ورقة على الطاولة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.w': "خمس دقائق ما زالت وقتاً كافياً لإصلاحه أو لإيجاد غرفة أخرى. بعدها ينتظر الجميع.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.maintenance': "الأعطال والتصليحات والنقل", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.faults': "الإبلاغ عن عطل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.melding': "البلاغ (تخبر أن شيئاً فيه خلل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lekkage': "التسرّب (الماء يخرج)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verwarming': "التدفئة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.airco': "المكيّف", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afvoer': "التصريف (المجرى)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verstopt': "مسدود (لا شيء يمرّ)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.faults.1': "أبلّغ عن العطل.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.faults.2': "يوجد تسرّب في المطبخ.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.faults.3': "تصريف المرحاض مسدود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.q': "لماذا الجو بارد هنا هكذا؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.a': "التدفئة معطّلة. الفنّي يأتي غداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults': { m: "بلّغ عنه، لا تصلحه وحدك", f: "بلّغي عنه، لا تصلحيه وحدك", x: "الإبلاغ، لا الإصلاح بشكل فردي" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.b': { m: "هل ترى شيئاً معطّلاً، مثل تسرّب، أو مصباح مطفأ، أو باب لا ينغلق؟ بلّغ عنه، حتى إذا كان صغيراً: في النظام أو لمشرفك. قل أين هو، وماذا ترى ومنذ متى. لا تصلح الكهرباء أو الغاز أو التدفئة بنفسك. هل تشمّ رائحة غاز؟ لا تستعمل مفتاح كهرباء أو هاتفاً قريباً منه، افتح النوافذ، أخرج الناس، واطلب المساعدة من الخارج. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "هل ترين شيئاً معطّلاً، مثل تسرّب، أو مصباح مطفأ، أو باب لا ينغلق؟ بلّغي عنه، حتى إذا كان صغيراً: في النظام أو لمشرفك. قولي أين هو، وماذا ترين ومنذ متى. لا تصلحي الكهرباء أو الغاز أو التدفئة بنفسك. هل تشمّين رائحة غاز؟ لا تستعملي مفتاح كهرباء أو هاتفاً قريباً منه، افتحي النوافذ، أخرجي الناس، واطلبي المساعدة من الخارج. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "شيء معطّل، مثل تسرّب، أو مصباح مطفأ، أو باب لا ينغلق؟ الإبلاغ عنه، حتى إذا كان صغيراً: في النظام أو للمشرف. قول أين هو، وما الذي يُرى ومنذ متى. الكهرباء والغاز والتدفئة لا تُصلح بشكل شخصي. رائحة غاز؟ لا مفتاح كهرباء ولا هاتف قريباً منه، فتح النوافذ، وإخراج الناس، وطلب المساعدة من الخارج. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.p': "أريد أن أبلّغ عن عطل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.s': { m: "الماء يقطر من السقف في الممرّ. ماذا تفعل؟", f: "الماء يقطر من السقف في الممرّ. ماذا تفعلين؟", x: "الماء يقطر من السقف في الممرّ. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.o1': "الإبلاغ عنه، ووضع دلو تحته.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.o2': "الانتظار: ربما يتوقّف وحده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.o3': "فتح السقف للنظر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.w': "التسرّب الصغير قد يصبح ضرراً كبيراً. الدلو يُبقي الأرض جافة، فلا ينزلق أحد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.repairs': "تصليحات صغيرة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vervangen': "يستبدل (يضع واحداً جديداً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.deurklink': "مقبض الباب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scharnier': "المفصّلة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gereedschapskist': "صندوق العدّة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rookmelder': "كاشف الدخان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.batterij': "البطارية", // nieuw, nalezen // nagelezen AI 28 nov
+    's.repairs.1': { m: "استبدل المصباح في الممرّ.", f: "استبدلي المصباح في الممرّ.", x: "استبدال المصباح في الممرّ." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.repairs.2': "مقبض الباب مفكوك.", // nieuw, nalezen // nagelezen AI 28 nov
     's.repairs.3': { m: "خذ السلّم الصغير، لا الكرسي.", f: "خذي السلّم الصغير، لا الكرسي.", x: "استعمال السلّم الصغير، لا الكرسي." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.repairs.q': "هل كاشف الدخان يصفّر؟", // nieuw, nalezen
-    'c.repairs.a': "نعم، البطارية شبه فارغة.", // nieuw, nalezen
+    'c.repairs.q': "هل كاشف الدخان يصفّر؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.a': "نعم، البطارية شبه فارغة.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.repairs': "السلّم الصغير، وليس الكرسي أبداً", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.repairs.b': { m: "للمصباح أو الرفّ العالي، استعمل السلّم الصغير، وليس أبداً الكرسي أو الطاولة أو الصندوق. ضعه على أرض مستوية، افتحه كاملاً، ولا تقف على الدرجة العليا. أطفِئ الضوء قبل أن تغيّر المصباح، واترك المصباح القديم يبرد. لا تقم إلا بالتصليحات التي تعلّمتها. أعد أدواتك إلى صندوق العدّة عندما تنتهي، حتى لا يتعثّر بها أحد. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "للمصباح أو الرفّ العالي، استعملي السلّم الصغير، وليس أبداً الكرسي أو الطاولة أو الصندوق. ضعيه على أرض مستوية، افتحيه كاملاً، ولا تقفي على الدرجة العليا. أطفئي الضوء قبل أن تغيّري المصباح، واتركي المصباح القديم يبرد. لا تقومي إلا بالتصليحات التي تعلّمتِها. أعدي أدواتك إلى صندوق العدّة عندما تنتهين، حتى لا يتعثّر بها أحد. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "للمصباح أو الرفّ العالي، استعمال السلّم الصغير، وليس أبداً الكرسي أو الطاولة أو الصندوق. وضعه على أرض مستوية، وفتحه كاملاً، والدرجة العليا ليست للوقوف. إطفاء الضوء قبل تغيير المصباح، وترك المصباح القديم يبرد. فقط التصليحات التي تمّ تعلّمها. إعادة الأدوات إلى صندوق العدّة بعد الانتهاء، حتى لا يتعثّر بها أحد. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.repairs.p': "سأحضر السلّم الصغير.", // nieuw, nalezen
-    'c.repairs.s': { m: "مصباح في المكتب معطّل. السلّم الصغير في طابق آخر. ماذا تفعل؟", f: "مصباح في المكتب معطّل. السلّم الصغير في طابق آخر. ماذا تفعلين؟", x: "مصباح في المكتب معطّل. السلّم الصغير في طابق آخر. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.repairs.o1': "إحضار السلّم الصغير.", // nieuw, nalezen
-    'c.repairs.o2': "الوقوف على كرسي المكتب.", // nieuw, nalezen
-    'c.repairs.o3': "الوقوف على المكتب.", // nieuw, nalezen
-    'c.repairs.w': "الكرسي قد يتدحرج أو ينقلب. السقوط عن كرسي قد يسبّب إصابة خطيرة.", // nieuw, nalezen
-    'l.moving': "نقل مكان عمل", // nieuw, nalezen
-    'w.verhuisdoos': "صندوق النقل", // nieuw, nalezen
-    'w.bureau': "المكتب (طاولة الكتابة)", // nieuw, nalezen
-    'w.bureaustoel': "كرسي المكتب", // nieuw, nalezen
-    'w.werkplek': "مكان العمل (المكتب الذي يعمل عليه شخص)", // nieuw, nalezen
-    'w.kamernummer': "رقم الغرفة", // nieuw, nalezen
-    'w.plattegrond': "مخطّط الطابق (خريطة المبنى)", // nieuw, nalezen
-    's.moving.1': { m: "اكتب رقم الغرفة على كل صندوق.", f: "اكتبي رقم الغرفة على كل صندوق.", x: "رقم الغرفة يُكتب على كل صندوق." }, // nieuw, nalezen
-    's.moving.2': { m: "ضع الصناديق على عربة اليد.", f: "ضعي الصناديق على عربة اليد.", x: "الصناديق توضع على عربة اليد." }, // nieuw, nalezen
-    's.moving.3': { m: "أفرِغ مكان العمل.", f: "أفرغي مكان العمل.", x: "إفراغ مكان العمل." }, // nieuw, nalezen
-    'c.moving.q': "إلى أين يجب أن يذهب هذا المكتب؟", // nieuw, nalezen
-    'c.moving.a': { m: "إلى الغرفة اثني عشر. انظر في مخطّط الطابق.", f: "إلى الغرفة اثني عشر. انظري في مخطّط الطابق.", x: "إلى الغرفة اثني عشر. هي في مخطّط الطابق." }, // nieuw, nalezen
-    'c.moving': { m: "النقل: ارفع بذكاء، وضع اسماً على كل شيء", f: "النقل: ارفعي بذكاء، وضعي اسماً على كل شيء", x: "النقل: الرفع بذكاء، والاسم على كل شيء" }, // nieuw, nalezen
-    'c.moving.b': { m: "النقل عمل ثقيل. لا تملأ الصندوق أكثر من اللازم: الكتب والملفات ثقيلة. ارفع والركبتان مثنيتان والظهر مستقيم، قريباً من جسمك. استعمل عربة اليد لعدّة صناديق، وارفع المكتب مع زميل. اكتب رقم الغرفة الجديد على كل صندوق وكرسي وكمبيوتر. افصل الكابلات أولاً. لا تضع أبداً صناديق في ممرّ أو أمام مخرج الطوارئ.", f: "النقل عمل ثقيل. لا تملئي الصندوق أكثر من اللازم: الكتب والملفات ثقيلة. ارفعي والركبتان مثنيتان والظهر مستقيم، قريباً من جسمك. استعملي عربة اليد لعدّة صناديق، وارفعي المكتب مع زميل. اكتبي رقم الغرفة الجديد على كل صندوق وكرسي وكمبيوتر. افصلي الكابلات أولاً. لا تضعي أبداً صناديق في ممرّ أو أمام مخرج الطوارئ.", x: "النقل عمل ثقيل. الصندوق لا يُملأ أكثر من اللازم: الكتب والملفات ثقيلة. الرفع والركبتان مثنيتان والظهر مستقيم، قريباً من الجسم. عربة اليد لعدّة صناديق، والمكتب يُرفع بشخصين. رقم الغرفة الجديد يُكتب على كل صندوق وكرسي وكمبيوتر. فصل الكابلات أولاً. الصناديق لا توضع أبداً في ممرّ أو أمام مخرج الطوارئ." }, // nieuw, nalezen
-    'c.moving.p': "هل يمكنك أن تساعدني في رفع هذا؟", // nieuw, nalezen
-    'c.moving.s': { m: "يجب أن تنقل مكتباً ثقيلاً. زميلك في الاستراحة. ماذا تفعل؟", f: "يجب أن تنقلي مكتباً ثقيلاً. زميلك في الاستراحة. ماذا تفعلين؟", x: "المطلوب نقل مكتب ثقيل. الزميل في الاستراحة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.moving.o1': "انتظار المساعدة، والرفع معاً.", // nieuw, nalezen
-    'c.moving.o2': "جرّه بشكل فردي.", // nieuw, nalezen
-    'c.moving.o3': "رفعه بشكل فردي، بحذر شديد.", // nieuw, nalezen
-    'c.moving.w': "المكتب الثقيل قد يؤذي الظهر عند رفعه بشكل فردي. معاً يكون الأمر سهلاً وآمناً.", // nieuw, nalezen
-    'l.closing': "فتح المبنى وإغلاقه", // nieuw, nalezen
-    'w.sleutelbos': "حزمة المفاتيح", // nieuw, nalezen
-    'w.afsluiten': "يقفل", // nieuw, nalezen
-    'w.ronde': "الجولة (مرور على كل غرفة)", // nieuw, nalezen
-    'w.raam': "النافذة", // nieuw, nalezen
-    'w.alarmcode': "رمز الإنذار", // nieuw, nalezen
-    'w.nachtslot': "القفل الليلي (القفل الإضافي للّيل)", // nieuw, nalezen
-    's.closing.1': "أقوم بالجولة الأخيرة في المبنى.", // nieuw, nalezen
-    's.closing.2': "هل كل النوافذ مغلقة؟", // nieuw, nalezen
-    's.closing.3': { m: "أقفل الباب بالقفل الليلي.", f: "أقفلي الباب بالقفل الليلي.", x: "الباب يُقفل بالقفل الليلي." }, // nieuw, nalezen
-    'c.closing.q': "هل ما زال أحد في الداخل؟", // nieuw, nalezen
-    'c.closing.a': "لا، الجميع ذهبوا. أنا أقفل.", // nieuw, nalezen
-    'c.closing': "رمز الإنذار سرّي", // nieuw, nalezen
+    'c.repairs.p': "سأحضر السلّم الصغير.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.s': { m: "مصباح في المكتب معطّل. السلّم الصغير في طابق آخر. ماذا تفعل؟", f: "مصباح في المكتب معطّل. السلّم الصغير في طابق آخر. ماذا تفعلين؟", x: "مصباح في المكتب معطّل. السلّم الصغير في طابق آخر. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.o1': "إحضار السلّم الصغير.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.o2': "الوقوف على كرسي المكتب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.o3': "الوقوف على المكتب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.w': "الكرسي قد يتدحرج أو ينقلب. السقوط عن كرسي قد يسبّب إصابة خطيرة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.moving': "نقل مكان عمل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verhuisdoos': "صندوق النقل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bureau': "المكتب (طاولة الكتابة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bureaustoel': "كرسي المكتب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkplek': "مكان العمل (المكتب الذي يعمل عليه شخص)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kamernummer': "رقم الغرفة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plattegrond': "مخطّط الطابق (خريطة المبنى)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.moving.1': { m: "اكتب رقم الغرفة على كل صندوق.", f: "اكتبي رقم الغرفة على كل صندوق.", x: "رقم الغرفة يُكتب على كل صندوق." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.moving.2': { m: "ضع الصناديق على عربة اليد.", f: "ضعي الصناديق على عربة اليد.", x: "الصناديق توضع على عربة اليد." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.moving.3': { m: "أفرِغ مكان العمل.", f: "أفرغي مكان العمل.", x: "إفراغ مكان العمل." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.q': "إلى أين يجب أن يذهب هذا المكتب؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.a': { m: "إلى الغرفة اثني عشر. انظر في مخطّط الطابق.", f: "إلى الغرفة اثني عشر. انظري في مخطّط الطابق.", x: "إلى الغرفة اثني عشر. هي في مخطّط الطابق." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving': { m: "النقل: ارفع بذكاء، وضع اسماً على كل شيء", f: "النقل: ارفعي بذكاء، وضعي اسماً على كل شيء", x: "النقل: الرفع بذكاء، والاسم على كل شيء" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.b': { m: "النقل عمل ثقيل. لا تملأ الصندوق أكثر من اللازم: الكتب والملفات ثقيلة. ارفع والركبتان مثنيتان والظهر مستقيم، قريباً من جسمك. استعمل عربة اليد لعدّة صناديق، وارفع المكتب مع زميل. اكتب رقم الغرفة الجديد على كل صندوق وكرسي وكمبيوتر. افصل الكابلات أولاً. لا تضع أبداً صناديق في ممرّ أو أمام مخرج الطوارئ.", f: "النقل عمل ثقيل. لا تملئي الصندوق أكثر من اللازم: الكتب والملفات ثقيلة. ارفعي والركبتان مثنيتان والظهر مستقيم، قريباً من جسمك. استعملي عربة اليد لعدّة صناديق، وارفعي المكتب مع زميل. اكتبي رقم الغرفة الجديد على كل صندوق وكرسي وكمبيوتر. افصلي الكابلات أولاً. لا تضعي أبداً صناديق في ممرّ أو أمام مخرج الطوارئ.", x: "النقل عمل ثقيل. الصندوق لا يُملأ أكثر من اللازم: الكتب والملفات ثقيلة. الرفع والركبتان مثنيتان والظهر مستقيم، قريباً من الجسم. عربة اليد لعدّة صناديق، والمكتب يُرفع بشخصين. رقم الغرفة الجديد يُكتب على كل صندوق وكرسي وكمبيوتر. فصل الكابلات أولاً. الصناديق لا توضع أبداً في ممرّ أو أمام مخرج الطوارئ." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.p': "هل يمكنك أن تساعدني في رفع هذا؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.s': { m: "يجب أن تنقل مكتباً ثقيلاً. زميلك في الاستراحة. ماذا تفعل؟", f: "يجب أن تنقلي مكتباً ثقيلاً. زميلك في الاستراحة. ماذا تفعلين؟", x: "المطلوب نقل مكتب ثقيل. الزميل في الاستراحة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.o1': "انتظار المساعدة، والرفع معاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.o2': "جرّه بشكل فردي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.o3': "رفعه بشكل فردي، بحذر شديد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.w': "المكتب الثقيل قد يؤذي الظهر عند رفعه بشكل فردي. معاً يكون الأمر سهلاً وآمناً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.closing': "فتح المبنى وإغلاقه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sleutelbos': "حزمة المفاتيح", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afsluiten': "يقفل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ronde': "الجولة (مرور على كل غرفة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.raam': "النافذة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alarmcode': "رمز الإنذار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nachtslot': "القفل الليلي (القفل الإضافي للّيل)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.closing.1': "أقوم بالجولة الأخيرة في المبنى.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.closing.2': "هل كل النوافذ مغلقة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.closing.3': { m: "أقفل الباب بالقفل الليلي.", f: "أقفلي الباب بالقفل الليلي.", x: "الباب يُقفل بالقفل الليلي." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.q': "هل ما زال أحد في الداخل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.a': "لا، الجميع ذهبوا. أنا أقفل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing': "رمز الإنذار سرّي", // nieuw, nalezen // nagelezen AI 28 nov
     'c.closing.b': { m: "في نهاية اليوم تقوم بالجولة الأخيرة. تأكّد أن لا أحد بقي في الداخل، وأن النوافذ مغلقة والأضواء مطفأة. مخارج الطوارئ تبقى حرّة. احتفظ بالمفاتيح معك، وليس أبداً في درج. رمز الإنذار سرّي: لا تعطِه أبداً لأحد، ولا حتى على الهاتف. هل ينطلق الإنذار؟ اتبع خطوات شركتك. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في نهاية اليوم تقومين بالجولة الأخيرة. تأكّدي أن لا أحد بقي في الداخل، وأن النوافذ مغلقة والأضواء مطفأة. مخارج الطوارئ تبقى حرّة. احتفظي بالمفاتيح معك، وليس أبداً في درج. رمز الإنذار سرّي: لا تعطيه أبداً لأحد، ولا حتى على الهاتف. هل ينطلق الإنذار؟ اتبعي خطوات شركتك. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في نهاية اليوم تكون الجولة الأخيرة. التأكّد أن لا أحد بقي في الداخل، وأن النوافذ مغلقة والأضواء مطفأة. مخارج الطوارئ تبقى حرّة. المفاتيح تبقى مع حاملها، وليس أبداً في درج. رمز الإنذار سرّي: لا يُعطى أبداً لأحد، ولا حتى على الهاتف. هل ينطلق الإنذار؟ اتّباع خطوات الشركة. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.closing.p': "لا أعطي رمز الإنذار لأحد.", // nieuw, nalezen
-    'c.closing.s': { m: "شخص يتصل: «أنا من شركة الإنذار. ما رمزك؟». ماذا تفعل؟", f: "شخص يتصل: «أنا من شركة الإنذار. ما رمزك؟». ماذا تفعلين؟", x: "شخص يتصل: «أنا من شركة الإنذار. ما الرمز؟». ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.closing.o1': "الرفض، وإخبار المشرف.", // nieuw, nalezen
-    'c.closing.o2': "إعطاء الرمز: صوته لطيف.", // nieuw, nalezen
-    'c.closing.o3': "إعطاء نصف الرمز فقط.", // nieuw, nalezen
-    'c.closing.w': "شركة الإنذار الحقيقية لا تطلب الرمز على الهاتف. اللصّ قد يطلبه.", // nieuw, nalezen
-    'u.guarding': "الدوريات والدخول", // nieuw, nalezen
-    'l.patrol': "الجولة", // nieuw, nalezen
-    'w.surveilleren': "يقوم بدورية (يتجوّل ويراقب)", // nieuw, nalezen
-    'w.zaklamp': "المصباح اليدوي", // nieuw, nalezen
-    'w.terrein': "الموقع (الأرض حول المبنى)", // nieuw, nalezen
-    'w.hek': "السياج، البوّابة", // nieuw, nalezen
-    'w.inbraak': "السطو (شخص يدخل ليسرق)", // nieuw, nalezen
-    'w.openstaan': "مفتوح (باب أو نافذة يجب أن تكون مغلقة)", // nieuw, nalezen
-    's.patrol.1': "أقوم بجولة كل ساعتين.", // nieuw, nalezen
-    's.patrol.2': "البوّابة خلف القاعة مفتوحة.", // nieuw, nalezen
-    's.patrol.3': { m: "خذ المصباح اليدوي معك.", f: "خذي المصباح اليدوي معك.", x: "المصباح اليدوي يُؤخذ في الجولة." }, // nieuw, nalezen
-    'c.patrol.q': { m: "هل رأيتَ شيئاً في جولتك؟", f: "هل رأيتِ شيئاً في جولتك؟", x: "هل كان هناك شيء في الجولة؟" }, // nieuw, nalezen
-    'c.patrol.a': "نعم. نافذة كانت مفتوحة عند الباب الخلفي.", // nieuw, nalezen
-    'c.patrol': { m: "انظر وبلّغ، لا تلعب دور البطل", f: "انظري وبلّغي، لا تلعبي دور البطلة", x: "النظر والإبلاغ، لا دور البطل" }, // nieuw, nalezen
-    'c.patrol.b': { m: "في جولتك تنظر: هل الأبواب والنوافذ مغلقة، هل السياج سليم، هل يوجد شخص لا يجب أن يكون هناك؟ اكتب ما تراه، مع الوقت. هل ترى شيئاً غريباً، مثل نافذة مكسورة أو شخص في الليل؟ لا تدخل وحدك. اتصل بغرفة المراقبة أو بالشرطة عبر جهاز اللاسلكي أو الهاتف، وانتظر في مكان آمن. سلامتك أنت أولاً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في جولتك تنظرين: هل الأبواب والنوافذ مغلقة، هل السياج سليم، هل يوجد شخص لا يجب أن يكون هناك؟ اكتبي ما ترينه، مع الوقت. هل ترين شيئاً غريباً، مثل نافذة مكسورة أو شخص في الليل؟ لا تدخلي وحدك. اتصلي بغرفة المراقبة أو بالشرطة عبر جهاز اللاسلكي أو الهاتف، وانتظري في مكان آمن. سلامتك أنت أولاً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في الجولة يكون النظر: هل الأبواب والنوافذ مغلقة، هل السياج سليم، هل يوجد شخص لا يجب أن يكون هناك؟ كتابة ما يُرى، مع الوقت. شيء غريب، مثل نافذة مكسورة أو شخص في الليل؟ الدخول بشكل فردي ممنوع. الاتصال بغرفة المراقبة أو بالشرطة عبر جهاز اللاسلكي أو الهاتف، والانتظار في مكان آمن. السلامة الشخصية أولاً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.patrol.p': "أرى شخصاً عند السياج.", // nieuw, nalezen
-    'c.patrol.s': { m: "في الليل ترى باباً مكسوراً ومفتوحاً. تسمع ضجيجاً في الداخل. ماذا تفعل؟", f: "في الليل ترين باباً مكسوراً ومفتوحاً. تسمعين ضجيجاً في الداخل. ماذا تفعلين؟", x: "في الليل باب مكسور ومفتوح. من الداخل يأتي ضجيج. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.patrol.o1': "البقاء في الخارج، وطلب المساعدة.", // nieuw, nalezen
-    'c.patrol.o2': "الدخول بسرعة، والنظر.", // nieuw, nalezen
-    'c.patrol.o3': "الصراخ إلى الداخل بالقدوم.", // nieuw, nalezen
-    'c.patrol.w': "اللصّ في الداخل قد يكون خطيراً. الشرطة تعرف ماذا تفعل؛ مهمّة الحارس أن يرى ويبلّغ.", // nieuw, nalezen
-    'l.access': "مراقبة الدخول", // nieuw, nalezen
-    'w.slagboom': "الحاجز (عمود عبر الطريق يرتفع)", // nieuw, nalezen
-    'w.toegangspas': "بطاقة الدخول (بطاقة تفتح الباب)", // nieuw, nalezen
-    'w.legitimatie': "الهوية (جواز السفر أو بطاقة الهوية)", // nieuw, nalezen
-    'w.draaihek': "البوّابة الدوّارة (بوّابة تدور، لشخص واحد في كل مرة)", // nieuw, nalezen
-    'w.kenteken': "رقم اللوحة (أحرف وأرقام السيارة)", // nieuw, nalezen
-    'w.toegang': "الدخول (يُسمح لك أن تدخل)", // nieuw, nalezen
-    's.access.1': "هل يمكنني أن أرى هويتك؟", // nieuw, nalezen
-    's.access.2': "بطاقتك لا تعمل. سأجري اتصالاً.", // nieuw, nalezen
-    's.access.3': "سأفتح الحاجز.", // nieuw, nalezen
-    'c.access.q': "هل يمكنني أن أدخل؟ نسيت بطاقتي.", // nieuw, nalezen
-    'c.access.a': { m: "آسف، بدون بطاقة لا يمكنك الدخول.", f: "آسفة، بدون بطاقة لا يمكنك الدخول.", x: "عذراً، بدون بطاقة لا يمكنك الدخول." }, // nieuw, nalezen
-    'c.access': "بدون بطاقة، لا دخول", // nieuw, nalezen
-    'c.access.b': { m: "عند البوّابة أو المكتب تفحص من يدخل. كل شخص يحتاج بطاقة، أو يجب أن يكون اسمه في القائمة. كن لطيفاً، حتى عندما يكون شخص غاضباً أو مستعجلاً. لا تصنع استثناءات لأن شخصاً يقول إنه المدير: تحقّق من ذلك. لا تُعِر بطاقتك أبداً لأحد، ولا تترك أبداً شخصاً يدخل خلفك. البطاقة المفقودة يجب الإبلاغ عنها فوراً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "عند البوّابة أو المكتب تفحصين من يدخل. كل شخص يحتاج بطاقة، أو يجب أن يكون اسمه في القائمة. كوني لطيفة، حتى عندما يكون شخص غاضباً أو مستعجلاً. لا تصنعي استثناءات لأن شخصاً يقول إنه المدير: تحقّقي من ذلك. لا تُعيري بطاقتك أبداً لأحد، ولا تتركي أبداً شخصاً يدخل خلفك. البطاقة المفقودة يجب الإبلاغ عنها فوراً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "عند البوّابة أو المكتب يكون فحص من يدخل. كل شخص يحتاج بطاقة، أو يجب أن يكون اسمه في القائمة. اللطف مطلوب، حتى عندما يكون شخص غاضباً أو مستعجلاً. لا استثناءات لأن شخصاً يقول إنه المدير: التحقّق من ذلك. البطاقة الشخصية لا تُعار أبداً لأحد، ولا يدخل أحد أبداً خلف حاملها. البطاقة المفقودة يجب الإبلاغ عنها فوراً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.access.p': "هل يمكنني أن أرى بطاقتك؟", // nieuw, nalezen
-    'c.access.s': { m: "رجل في بدلة رسمية يقول: «أنا المدير الجديد. ليس عندي بطاقة بعد». ماذا تفعل؟", f: "رجل في بدلة رسمية يقول: «أنا المدير الجديد. ليس عندي بطاقة بعد». ماذا تفعلين؟", x: "رجل في بدلة رسمية يقول: «أنا المدير الجديد. ليس عندي بطاقة بعد». ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.access.o1': "التحقّق من ذلك، قبل إدخاله.", // nieuw, nalezen
-    'c.access.o2': "إدخاله: يبدو مهمّاً.", // nieuw, nalezen
-    'c.access.o3': "إعطاؤه البطاقة الشخصية.", // nieuw, nalezen
-    'c.access.w': "أي شخص يستطيع أن يقول إنه المدير. فحص سريع يحمي المبنى، والمدير الحقيقي سيفهم.", // nieuw, nalezen
-    'l.cameras': "الكاميرات وغرفة المراقبة", // nieuw, nalezen
-    'w.meldkamer': "غرفة المراقبة (حيث يشاهد الناس الكاميرات ويستقبلون المكالمات)", // nieuw, nalezen
-    'w.beeldscherm': "الشاشة", // nieuw, nalezen
-    'w.camerabeelden': "تسجيلات الكاميرا (ما صوّرته الكاميرا)", // nieuw, nalezen
-    'w.inzoomen': "يقرّب الصورة (زووم)", // nieuw, nalezen
-    'w.bewegingsmelder': "حسّاس الحركة (يرى عندما يتحرّك شيء)", // nieuw, nalezen
-    'w.verdachte': "المشتبه به", // nieuw, nalezen
-    's.cameras.1': "على الكاميرا ثلاثة أرى شخصاً عند السياج.", // nieuw, nalezen
-    's.cameras.2': "سأقرّب الصورة.", // nieuw, nalezen
-    's.cameras.3': "غرفة المراقبة تتصل بالشرطة.", // nieuw, nalezen
-    'c.cameras.q': { m: "ماذا ترى على الشاشة؟", f: "ماذا ترين على الشاشة؟", x: "ما الذي يظهر على الشاشة؟" }, // nieuw, nalezen
-    'c.cameras.a': "رجل عند السياج. سأرسل زميلاً.", // nieuw, nalezen
-    'c.cameras': "تسجيلات الكاميرا خاصّة", // nieuw, nalezen
-    'c.cameras.b': { m: "الكاميرات تصوّر الناس: الموظفين والزوار والمارّة. ما تراه على الشاشات خاصّ. لا تشاهد إلا من أجل عملك، ولا تصوّر الشاشة أبداً بهاتفك. لا ترسل التسجيلات أبداً إلى أصدقاء ولا تنشرها على الإنترنت. هل حدث شيء؟ اكتب الكاميرا والوقت، وأخبر مشرفك. شركتك وحدها تقرّر من يأخذ التسجيلات، مثلاً الشرطة. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الكاميرات تصوّر الناس: الموظفين والزوار والمارّة. ما ترينه على الشاشات خاصّ. لا تشاهدي إلا من أجل عملك، ولا تصوّري الشاشة أبداً بهاتفك. لا ترسلي التسجيلات أبداً إلى أصدقاء ولا تنشريها على الإنترنت. هل حدث شيء؟ اكتبي الكاميرا والوقت، وأخبري مشرفك. شركتك وحدها تقرّر من يأخذ التسجيلات، مثلاً الشرطة. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الكاميرات تصوّر الناس: الموظفين والزوار والمارّة. ما يظهر على الشاشات خاصّ. المشاهدة فقط من أجل العمل، وتصوير الشاشة بالهاتف ممنوع أبداً. إرسال التسجيلات إلى أصدقاء أو نشرها على الإنترنت ممنوع أبداً. هل حدث شيء؟ كتابة الكاميرا والوقت، وإخبار المشرف. الشركة وحدها تقرّر من يأخذ التسجيلات، مثلاً الشرطة. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.cameras.p': "لا يُسمح لي أن أعرض ذلك.", // nieuw, nalezen
-    'c.cameras.s': { m: "زميل يطلب منك أن ترسل له مقطعاً مضحكاً من الكاميرات. ماذا تفعل؟", f: "زميل يطلب منك أن ترسلي له مقطعاً مضحكاً من الكاميرات. ماذا تفعلين؟", x: "زميل يطلب مقطعاً مضحكاً من الكاميرات. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.cameras.o1': "الرفض: التسجيلات خاصّة.", // nieuw, nalezen
-    'c.cameras.o2': "إرساله، له فقط.", // nieuw, nalezen
-    'c.cameras.o3': "تصوير الشاشة بالهاتف.", // nieuw, nalezen
-    'c.cameras.w': "الناس في التسجيلات لم يوافقوا على مشاركتها. إرسالها قد يكلّف المرء عمله.", // nieuw, nalezen
-    'l.report': "جهاز اللاسلكي والتقرير", // nieuw, nalezen
-    'w.portofoon': "جهاز اللاسلكي (الووكي توكي)", // nieuw, nalezen
-    'w.rapport': "التقرير (ما حدث، مكتوباً)", // nieuw, nalezen
-    'w.incident': "الحادثة (شيء حدث بشكل خاطئ)", // nieuw, nalezen
-    'w.tijdstip': "الوقت (متى حدث شيء)", // nieuw, nalezen
-    'w.logboek': "سجلّ الأحداث (دفتر أو تطبيق تكتب فيه كل شيء)", // nieuw, nalezen
-    'w.oproepen': "ينادي (عبر جهاز اللاسلكي)", // nieuw, nalezen
-    's.report.1': "أكتب تقريراً عن الحادثة.", // nieuw, nalezen
-    's.report.2': "كم كانت الساعة بالضبط؟", // nieuw, nalezen
-    's.report.3': { m: "لا أسمعك جيداً. قلها مرة أخرى.", f: "لا أسمعك جيداً. قوليها مرة أخرى.", x: "لا أسمعك جيداً. مرة أخرى من فضلك." }, // nieuw, nalezen
-    'c.report.q': "ماذا يجب أن يكون في التقرير؟", // nieuw, nalezen
-    'c.report.a': "ماذا حدث، وأين، وفي أي ساعة.", // nieuw, nalezen
-    'c.report': { m: "اكتبه فوراً", f: "اكتبيه فوراً", x: "الكتابة فوراً" }, // nieuw, nalezen
-    'c.report.b': { m: "اكتب التقرير مباشرة بعد الحادثة، ما دمت تتذكّرها جيداً. اكتب ما رأيته وسمعته بنفسك: ماذا حدث، وأين، وفي أي ساعة، ومن كان هناك. اكتب الوقائع، لا ما تظنّه. على جهاز اللاسلكي تكلّم باختصار ووضوح، وانتظر حتى ينتهي الشخص الآخر. قل من أنت وأين أنت. التقرير الجيد يساعد الشرطة وشركتك ويساعدك أنت.", f: "اكتبي التقرير مباشرة بعد الحادثة، ما دمت تتذكّرينها جيداً. اكتبي ما رأيتِه وسمعته بنفسك: ماذا حدث، وأين، وفي أي ساعة، ومن كان هناك. اكتبي الوقائع، لا ما تظنّينه. على جهاز اللاسلكي تكلّمي باختصار ووضوح، وانتظري حتى ينتهي الشخص الآخر. قولي من أنتِ وأين أنتِ. التقرير الجيد يساعد الشرطة وشركتك ويساعدك أنت.", x: "كتابة التقرير مباشرة بعد الحادثة، ما دامت الذاكرة جيدة. كتابة ما تمّت رؤيته وسماعه شخصياً: ماذا حدث، وأين، وفي أي ساعة، ومن كان هناك. كتابة الوقائع، لا الآراء. على جهاز اللاسلكي الكلام يكون باختصار ووضوح، مع الانتظار حتى ينتهي الشخص الآخر. ذكر الاسم والمكان. التقرير الجيد يساعد الشرطة والشركة وكاتبه." }, // nieuw, nalezen
-    'c.report.p': "سأكتبه فوراً.", // nieuw, nalezen
-    'c.report.s': { m: "بعد ليلة مزدحمة أنت متعب جداً. كانت هناك حادثة صغيرة واحدة. ماذا تفعل؟", f: "بعد ليلة مزدحمة أنتِ متعبة جداً. كانت هناك حادثة صغيرة واحدة. ماذا تفعلين؟", x: "بعد ليلة مزدحمة التعب كبير. كانت هناك حادثة صغيرة واحدة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.report.o1': "كتابة التقرير قبل الذهاب إلى البيت.", // nieuw, nalezen
-    'c.report.o2': "كتابته غداً، بعد نوم جيد.", // nieuw, nalezen
-    'c.report.o3': "تركه: كانت صغيرة فقط.", // nieuw, nalezen
-    'c.report.w': "غداً تُنسى التفاصيل. التقرير بدون وقت أو مكان لا يساعد أحداً.", // nieuw, nalezen
-    'u.incidents': "الطوارئ والمتجر", // nieuw, nalezen
-    'l.evacuation': "الحريق والإخلاء", // nieuw, nalezen
-    'w.brandmelder': "زر إنذار الحريق (صندوق أحمر تضغطه عند الحريق)", // nieuw, nalezen
-    'w.brandweer': "الإطفاء (رجال الإطفاء)", // nieuw, nalezen
-    'w.branddeur': "باب الحريق (يوقف النار والدخان)", // nieuw, nalezen
-    'w.brandmeldcentrale': "لوحة إنذار الحريق (تُظهر أين الإنذار)", // nieuw, nalezen
-    'w.ontruimingsplan': "خطة الإخلاء (من يفعل ماذا عندما يجب أن يخرج الجميع)", // nieuw, nalezen
-    'w.sirene': "صفّارة الإنذار", // nieuw, nalezen
-    's.evacuation.1': "يوجد إنذار حريق في القاعة اثنين.", // nieuw, nalezen
-    's.evacuation.2': { m: "أبقِ أبواب الحريق مغلقة.", f: "أبقي أبواب الحريق مغلقة.", x: "أبواب الحريق تبقى مغلقة." }, // nieuw, nalezen
-    's.evacuation.3': "أنتظر الإطفاء عند المدخل.", // nieuw, nalezen
-    'c.evacuation.q': "هل الجميع في الخارج؟", // nieuw, nalezen
-    'c.evacuation.a': "لا، شخصان من القائمة ما زالا مفقودين.", // nieuw, nalezen
-    'c.evacuation': "الحريق: الإنذار أولاً، ثم الخروج", // nieuw, nalezen
+    'c.closing.p': "لا أعطي رمز الإنذار لأحد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.s': { m: "شخص يتصل: «أنا من شركة الإنذار. ما رمزك؟». ماذا تفعل؟", f: "شخص يتصل: «أنا من شركة الإنذار. ما رمزك؟». ماذا تفعلين؟", x: "شخص يتصل: «أنا من شركة الإنذار. ما الرمز؟». ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.o1': "الرفض، وإخبار المشرف.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.o2': "إعطاء الرمز: صوته لطيف.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.o3': "إعطاء نصف الرمز فقط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.w': "شركة الإنذار الحقيقية لا تطلب الرمز على الهاتف. اللصّ قد يطلبه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.guarding': "الدوريات والدخول", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.patrol': "الجولة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.surveilleren': "يقوم بدورية (يتجوّل ويراقب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zaklamp': "المصباح اليدوي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.terrein': "الموقع (الأرض حول المبنى)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hek': "السياج، البوّابة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inbraak': "السطو (شخص يدخل ليسرق)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.openstaan': "مفتوح (باب أو نافذة يجب أن تكون مغلقة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.patrol.1': "أقوم بجولة كل ساعتين.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.patrol.2': "البوّابة خلف القاعة مفتوحة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.patrol.3': { m: "خذ المصباح اليدوي معك.", f: "خذي المصباح اليدوي معك.", x: "المصباح اليدوي يُؤخذ في الجولة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.q': { m: "هل رأيتَ شيئاً في جولتك؟", f: "هل رأيتِ شيئاً في جولتك؟", x: "هل كان هناك شيء في الجولة؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.a': "نعم. نافذة كانت مفتوحة عند الباب الخلفي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol': { m: "انظر وبلّغ، لا تلعب دور البطل", f: "انظري وبلّغي، لا تلعبي دور البطلة", x: "النظر والإبلاغ، لا دور البطل" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.b': { m: "في جولتك تنظر: هل الأبواب والنوافذ مغلقة، هل السياج سليم، هل يوجد شخص لا يجب أن يكون هناك؟ اكتب ما تراه، مع الوقت. هل ترى شيئاً غريباً، مثل نافذة مكسورة أو شخص في الليل؟ لا تدخل وحدك. اتصل بغرفة المراقبة أو بالشرطة عبر جهاز اللاسلكي أو الهاتف، وانتظر في مكان آمن. سلامتك أنت أولاً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في جولتك تنظرين: هل الأبواب والنوافذ مغلقة، هل السياج سليم، هل يوجد شخص لا يجب أن يكون هناك؟ اكتبي ما ترينه، مع الوقت. هل ترين شيئاً غريباً، مثل نافذة مكسورة أو شخص في الليل؟ لا تدخلي وحدك. اتصلي بغرفة المراقبة أو بالشرطة عبر جهاز اللاسلكي أو الهاتف، وانتظري في مكان آمن. سلامتك أنت أولاً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في الجولة يكون النظر: هل الأبواب والنوافذ مغلقة، هل السياج سليم، هل يوجد شخص لا يجب أن يكون هناك؟ كتابة ما يُرى، مع الوقت. شيء غريب، مثل نافذة مكسورة أو شخص في الليل؟ الدخول بشكل فردي ممنوع. الاتصال بغرفة المراقبة أو بالشرطة عبر جهاز اللاسلكي أو الهاتف، والانتظار في مكان آمن. السلامة الشخصية أولاً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.p': "أرى شخصاً عند السياج.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.s': { m: "في الليل ترى باباً مكسوراً ومفتوحاً. تسمع ضجيجاً في الداخل. ماذا تفعل؟", f: "في الليل ترين باباً مكسوراً ومفتوحاً. تسمعين ضجيجاً في الداخل. ماذا تفعلين؟", x: "في الليل باب مكسور ومفتوح. من الداخل يأتي ضجيج. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.o1': "البقاء في الخارج، وطلب المساعدة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.o2': "الدخول بسرعة، والنظر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.o3': "الصراخ إلى الداخل بالقدوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.w': "اللصّ في الداخل قد يكون خطيراً. الشرطة تعرف ماذا تفعل؛ مهمّة الحارس أن يرى ويبلّغ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.access': "مراقبة الدخول", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.slagboom': "الحاجز (عمود عبر الطريق يرتفع)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toegangspas': "بطاقة الدخول (بطاقة تفتح الباب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.legitimatie': "الهوية (جواز السفر أو بطاقة الهوية)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.draaihek': "البوّابة الدوّارة (بوّابة تدور، لشخص واحد في كل مرة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kenteken': "رقم اللوحة (أحرف وأرقام السيارة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toegang': "الدخول (يُسمح لك أن تدخل)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.access.1': "هل يمكنني أن أرى هويتك؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.access.2': "بطاقتك لا تعمل. سأجري اتصالاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.access.3': "سأفتح الحاجز.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.q': "هل يمكنني أن أدخل؟ نسيت بطاقتي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.a': { m: "آسف، بدون بطاقة لا يمكنك الدخول.", f: "آسفة، بدون بطاقة لا يمكنك الدخول.", x: "عذراً، بدون بطاقة لا يمكنك الدخول." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access': "بدون بطاقة، لا دخول", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.b': { m: "عند البوّابة أو المكتب تفحص من يدخل. كل شخص يحتاج بطاقة، أو يجب أن يكون اسمه في القائمة. كن لطيفاً، حتى عندما يكون شخص غاضباً أو مستعجلاً. لا تصنع استثناءات لأن شخصاً يقول إنه المدير: تحقّق من ذلك. لا تُعِر بطاقتك أبداً لأحد، ولا تترك أبداً شخصاً يدخل خلفك. البطاقة المفقودة يجب الإبلاغ عنها فوراً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "عند البوّابة أو المكتب تفحصين من يدخل. كل شخص يحتاج بطاقة، أو يجب أن يكون اسمه في القائمة. كوني لطيفة، حتى عندما يكون شخص غاضباً أو مستعجلاً. لا تصنعي استثناءات لأن شخصاً يقول إنه المدير: تحقّقي من ذلك. لا تُعيري بطاقتك أبداً لأحد، ولا تتركي أبداً شخصاً يدخل خلفك. البطاقة المفقودة يجب الإبلاغ عنها فوراً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "عند البوّابة أو المكتب يكون فحص من يدخل. كل شخص يحتاج بطاقة، أو يجب أن يكون اسمه في القائمة. اللطف مطلوب، حتى عندما يكون شخص غاضباً أو مستعجلاً. لا استثناءات لأن شخصاً يقول إنه المدير: التحقّق من ذلك. البطاقة الشخصية لا تُعار أبداً لأحد، ولا يدخل أحد أبداً خلف حاملها. البطاقة المفقودة يجب الإبلاغ عنها فوراً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.p': "هل يمكنني أن أرى بطاقتك؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.s': { m: "رجل في بدلة رسمية يقول: «أنا المدير الجديد. ليس عندي بطاقة بعد». ماذا تفعل؟", f: "رجل في بدلة رسمية يقول: «أنا المدير الجديد. ليس عندي بطاقة بعد». ماذا تفعلين؟", x: "رجل في بدلة رسمية يقول: «أنا المدير الجديد. ليس عندي بطاقة بعد». ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.o1': "التحقّق من ذلك، قبل إدخاله.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.o2': "إدخاله: يبدو مهمّاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.o3': "إعطاؤه البطاقة الشخصية.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.w': "أي شخص يستطيع أن يقول إنه المدير. فحص سريع يحمي المبنى، والمدير الحقيقي سيفهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.cameras': "الكاميرات وغرفة المراقبة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meldkamer': "غرفة المراقبة (حيث يشاهد الناس الكاميرات ويستقبلون المكالمات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beeldscherm': "الشاشة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.camerabeelden': "تسجيلات الكاميرا (ما صوّرته الكاميرا)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inzoomen': "يقرّب الصورة (زووم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bewegingsmelder': "حسّاس الحركة (يرى عندما يتحرّك شيء)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verdachte': "المشتبه به", // nieuw, nalezen // nagelezen AI 28 nov
+    's.cameras.1': "على الكاميرا ثلاثة أرى شخصاً عند السياج.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.cameras.2': "سأقرّب الصورة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.cameras.3': "غرفة المراقبة تتصل بالشرطة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.q': { m: "ماذا ترى على الشاشة؟", f: "ماذا ترين على الشاشة؟", x: "ما الذي يظهر على الشاشة؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.a': "رجل عند السياج. سأرسل زميلاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras': "تسجيلات الكاميرا خاصّة", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.b': { m: "الكاميرات تصوّر الناس: الموظفين والزوار والمارّة. ما تراه على الشاشات خاصّ. لا تشاهد إلا من أجل عملك، ولا تصوّر الشاشة أبداً بهاتفك. لا ترسل التسجيلات أبداً إلى أصدقاء ولا تنشرها على الإنترنت. هل حدث شيء؟ اكتب الكاميرا والوقت، وأخبر مشرفك. شركتك وحدها تقرّر من يأخذ التسجيلات، مثلاً الشرطة. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الكاميرات تصوّر الناس: الموظفين والزوار والمارّة. ما ترينه على الشاشات خاصّ. لا تشاهدي إلا من أجل عملك، ولا تصوّري الشاشة أبداً بهاتفك. لا ترسلي التسجيلات أبداً إلى أصدقاء ولا تنشريها على الإنترنت. هل حدث شيء؟ اكتبي الكاميرا والوقت، وأخبري مشرفك. شركتك وحدها تقرّر من يأخذ التسجيلات، مثلاً الشرطة. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الكاميرات تصوّر الناس: الموظفين والزوار والمارّة. ما يظهر على الشاشات خاصّ. المشاهدة فقط من أجل العمل، وتصوير الشاشة بالهاتف ممنوع أبداً. إرسال التسجيلات إلى أصدقاء أو نشرها على الإنترنت ممنوع أبداً. هل حدث شيء؟ كتابة الكاميرا والوقت، وإخبار المشرف. الشركة وحدها تقرّر من يأخذ التسجيلات، مثلاً الشرطة. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.p': "لا يُسمح لي أن أعرض ذلك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.s': { m: "زميل يطلب منك أن ترسل له مقطعاً مضحكاً من الكاميرات. ماذا تفعل؟", f: "زميل يطلب منك أن ترسلي له مقطعاً مضحكاً من الكاميرات. ماذا تفعلين؟", x: "زميل يطلب مقطعاً مضحكاً من الكاميرات. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.o1': "الرفض: التسجيلات خاصّة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.o2': "إرساله، له فقط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.o3': "تصوير الشاشة بالهاتف.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.w': "الناس في التسجيلات لم يوافقوا على مشاركتها. إرسالها قد يكلّف المرء عمله.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.report': "جهاز اللاسلكي والتقرير", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.portofoon': "جهاز اللاسلكي (الووكي توكي)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rapport': "التقرير (ما حدث، مكتوباً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.incident': "الحادثة (شيء حدث بشكل خاطئ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tijdstip': "الوقت (متى حدث شيء)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.logboek': "سجلّ الأحداث (دفتر أو تطبيق تكتب فيه كل شيء)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oproepen': "ينادي (عبر جهاز اللاسلكي)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.report.1': "أكتب تقريراً عن الحادثة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.report.2': "كم كانت الساعة بالضبط؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.report.3': { m: "لا أسمعك جيداً. قلها مرة أخرى.", f: "لا أسمعك جيداً. قوليها مرة أخرى.", x: "لا أسمعك جيداً. مرة أخرى من فضلك." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.q': "ماذا يجب أن يكون في التقرير؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.a': "ماذا حدث، وأين، وفي أي ساعة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report': { m: "اكتبه فوراً", f: "اكتبيه فوراً", x: "الكتابة فوراً" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.b': { m: "اكتب التقرير مباشرة بعد الحادثة، ما دمت تتذكّرها جيداً. اكتب ما رأيته وسمعته بنفسك: ماذا حدث، وأين، وفي أي ساعة، ومن كان هناك. اكتب الوقائع، لا ما تظنّه. على جهاز اللاسلكي تكلّم باختصار ووضوح، وانتظر حتى ينتهي الشخص الآخر. قل من أنت وأين أنت. التقرير الجيد يساعد الشرطة وشركتك ويساعدك أنت.", f: "اكتبي التقرير مباشرة بعد الحادثة، ما دمت تتذكّرينها جيداً. اكتبي ما رأيتِه وسمعته بنفسك: ماذا حدث، وأين، وفي أي ساعة، ومن كان هناك. اكتبي الوقائع، لا ما تظنّينه. على جهاز اللاسلكي تكلّمي باختصار ووضوح، وانتظري حتى ينتهي الشخص الآخر. قولي من أنتِ وأين أنتِ. التقرير الجيد يساعد الشرطة وشركتك ويساعدك أنت.", x: "كتابة التقرير مباشرة بعد الحادثة، ما دامت الذاكرة جيدة. كتابة ما تمّت رؤيته وسماعه شخصياً: ماذا حدث، وأين، وفي أي ساعة، ومن كان هناك. كتابة الوقائع، لا الآراء. على جهاز اللاسلكي الكلام يكون باختصار ووضوح، مع الانتظار حتى ينتهي الشخص الآخر. ذكر الاسم والمكان. التقرير الجيد يساعد الشرطة والشركة وكاتبه." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.p': "سأكتبه فوراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.s': { m: "بعد ليلة مزدحمة أنت متعب جداً. كانت هناك حادثة صغيرة واحدة. ماذا تفعل؟", f: "بعد ليلة مزدحمة أنتِ متعبة جداً. كانت هناك حادثة صغيرة واحدة. ماذا تفعلين؟", x: "بعد ليلة مزدحمة التعب كبير. كانت هناك حادثة صغيرة واحدة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.o1': "كتابة التقرير قبل الذهاب إلى البيت.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.o2': "كتابته غداً، بعد نوم جيد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.o3': "تركه: كانت صغيرة فقط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.w': "غداً تُنسى التفاصيل. التقرير بدون وقت أو مكان لا يساعد أحداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.incidents': "الطوارئ والمتجر", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.evacuation': "الحريق والإخلاء", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brandmelder': "زر إنذار الحريق (صندوق أحمر تضغطه عند الحريق)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brandweer': "الإطفاء (رجال الإطفاء)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.branddeur': "باب الحريق (يوقف النار والدخان)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brandmeldcentrale': "لوحة إنذار الحريق (تُظهر أين الإنذار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ontruimingsplan': "خطة الإخلاء (من يفعل ماذا عندما يجب أن يخرج الجميع)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sirene': "صفّارة الإنذار", // nieuw, nalezen // nagelezen AI 28 nov
+    's.evacuation.1': "يوجد إنذار حريق في القاعة اثنين.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.evacuation.2': { m: "أبقِ أبواب الحريق مغلقة.", f: "أبقي أبواب الحريق مغلقة.", x: "أبواب الحريق تبقى مغلقة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.evacuation.3': "أنتظر الإطفاء عند المدخل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.q': "هل الجميع في الخارج؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.a': "لا، شخصان من القائمة ما زالا مفقودين.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation': "الحريق: الإنذار أولاً، ثم الخروج", // nieuw, nalezen // nagelezen AI 28 nov
     'c.evacuation.b': { m: "هل ترى ناراً أو دخاناً؟ اضغط زر إنذار الحريق، أو اتصل بـ112. ثم ساعد الناس على الخروج من طرق الهروب، وليس أبداً بالمصعد. أغلق الأبواب خلفك، لكن لا تقفلها. لا تطفئ الحريق إلا إذا كان صغيراً وتعلّمت كيف. اذهب إلى نقطة التجمّع، وعُدّ الموجودين هناك. استقبل الإطفاء عند المدخل، وأخبرهم بما تعرفه. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "هل ترين ناراً أو دخاناً؟ اضغطي زر إنذار الحريق، أو اتصلي بـ112. ثم ساعدي الناس على الخروج من طرق الهروب، وليس أبداً بالمصعد. أغلقي الأبواب خلفك، لكن لا تقفليها. لا تطفئي الحريق إلا إذا كان صغيراً وتعلّمتِ كيف. اذهبي إلى نقطة التجمّع، وعُدّي الموجودين هناك. استقبلي الإطفاء عند المدخل، وأخبريهم بما تعرفينه. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "نار أو دخان؟ الضغط على زر إنذار الحريق، أو الاتصال بـ112. ثم مساعدة الناس على الخروج من طرق الهروب، وليس أبداً بالمصعد. إغلاق الأبواب في الخلف، لكن بدون قفلها. إطفاء الحريق فقط إذا كان صغيراً وبعد تعلّم ذلك. الذهاب إلى نقطة التجمّع، وعَدّ الموجودين هناك. استقبال الإطفاء عند المدخل، وإخبارهم بكل ما هو معروف. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.evacuation.p': "الجميع إلى الخارج، إلى نقطة التجمّع.", // nieuw, nalezen
-    'c.evacuation.s': { m: "إنذار الحريق ينطلق. رجل يريد أن يأخذ المصعد. ماذا تفعل؟", f: "إنذار الحريق ينطلق. رجل يريد أن يأخذ المصعد. ماذا تفعلين؟", x: "إنذار الحريق ينطلق. رجل يريد أن يأخذ المصعد. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.evacuation.o1': "إرساله إلى الدرج.", // nieuw, nalezen
-    'c.evacuation.o2': "تركه: المصعد أسرع.", // nieuw, nalezen
-    'c.evacuation.o3': "الركوب معه في المصعد.", // nieuw, nalezen
-    'c.evacuation.w': "أثناء الحريق قد يتوقّف المصعد أو يمتلئ بالدخان. الدرج هو الطريق الآمن إلى الخارج.", // nieuw, nalezen
-    'l.firstaid': "الإسعافات الأولية و112", // nieuw, nalezen
-    'w.ehbo': "الإسعافات الأولية", // nieuw, nalezen
-    'w.aed': "جهاز الصدمات الكهربائية AED (جهاز يساعد قلباً توقّف)", // nieuw, nalezen
-    'w.reanimeren': "يقوم بالإنعاش القلبي (يضغط على الصدر لإنقاذ حياة)", // nieuw, nalezen
-    'w.bewusteloos': "فاقد الوعي (الشخص لا يستيقظ)", // nieuw, nalezen
-    'w.ademen': "يتنفّس", // nieuw, nalezen
-    'w.alarmnummer': "رقم الطوارئ (112)", // nieuw, nalezen
-    's.firstaid.1': { m: "اتصل بـ112. اطلب سيارة إسعاف.", f: "اتصلي بـ112. اطلبي سيارة إسعاف.", x: "الاتصال بـ112. طلب سيارة إسعاف." }, // nieuw, nalezen
-    's.firstaid.2': { m: "أحضر جهاز AED من الاستقبال.", f: "أحضري جهاز AED من الاستقبال.", x: "إحضار جهاز AED من الاستقبال." }, // nieuw, nalezen
-    's.firstaid.3': "إنه لا يتنفّس. سأبدأ الإنعاش.", // nieuw, nalezen
-    'c.firstaid.q': "أين جهاز AED؟", // nieuw, nalezen
-    'c.firstaid.a': "عند المدخل، بجانب المصعد.", // nieuw, nalezen
-    'c.firstaid': { m: "اتصل بـ112، ابدأ الإنعاش، أحضر جهاز AED", f: "اتصلي بـ112، ابدئي الإنعاش، أحضري جهاز AED", x: "الاتصال بـ112، بدء الإنعاش، إحضار جهاز AED" }, // nieuw, nalezen
-    'c.firstaid.b': { m: "شخص يسقط ولا يتفاعل؟ اتصل بـ112 فوراً، أو اطلب من شخص آخر أن يتصل. افحص هل يتنفّس الشخص بشكل طبيعي. إن لم يتنفّس: ابدأ الإنعاش، واطلب من شخص أن يحضر جهاز AED. جهاز AED يتكلّم ويقول لك ماذا تفعل؛ لا يمكنك أن تخطئ. استمرّ حتى تتسلّم سيارة الإسعاف. هل عندك دورة إسعافات أولية؟ أخبر زملاءك، حتى يعرفوا بمن يتصلون.", f: "شخص يسقط ولا يتفاعل؟ اتصلي بـ112 فوراً، أو اطلبي من شخص آخر أن يتصل. افحصي هل يتنفّس الشخص بشكل طبيعي. إن لم يتنفّس: ابدئي الإنعاش، واطلبي من شخص أن يحضر جهاز AED. جهاز AED يتكلّم ويقول لك ماذا تفعلين؛ لا يمكنكِ أن تخطئي. استمرّي حتى تتسلّم سيارة الإسعاف. هل عندك دورة إسعافات أولية؟ أخبري زملاءك، حتى يعرفوا بمن يتصلون.", x: "شخص يسقط ولا يتفاعل؟ الاتصال بـ112 فوراً، أو الطلب من شخص آخر أن يتصل. فحص هل يتنفّس الشخص بشكل طبيعي. إن لم يتنفّس: بدء الإنعاش، والطلب من شخص أن يحضر جهاز AED. جهاز AED يتكلّم ويقول ماذا يجب فعله؛ الخطأ غير ممكن. الاستمرار حتى تتسلّم سيارة الإسعاف. دورة إسعافات أولية؟ إخبار الزملاء، حتى يعرفوا بمن يتصلون." }, // nieuw, nalezen
-    'c.firstaid.p': "اتصلوا بـ112 وأحضروا جهاز AED.", // nieuw, nalezen
-    'c.firstaid.s': { m: "رجل يسقط في القاعة. لا يتحرّك ولا يتنفّس. ماذا تفعل؟", f: "رجل يسقط في القاعة. لا يتحرّك ولا يتنفّس. ماذا تفعلين؟", x: "رجل يسقط في القاعة. لا يتحرّك ولا يتنفّس. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.firstaid.o1': "الاتصال بـ112، وبدء الإنعاش.", // nieuw, nalezen
-    'c.firstaid.o2': "الانتظار لرؤية هل يستيقظ.", // nieuw, nalezen
-    'c.firstaid.o3': "رفعه، ووضعه على كرسي.", // nieuw, nalezen
-    'c.firstaid.w': "عندما يتوقّف القلب، كل دقيقة مهمّة. الإنعاش وجهاز AED يمكن أن ينقذا حياة قبل أن تأتي سيارة الإسعاف.", // nieuw, nalezen
-    'l.shoplifting': "السرقة من المتجر", // nieuw, nalezen
-    'w.winkeldiefstal': "السرقة من المتجر", // nieuw, nalezen
-    'w.heterdaad': "بالجرم المشهود (تراه يحدث)", // nieuw, nalezen
-    'w.aanhouden': "يحتجز (يمسك شخصاً حتى تأتي الشرطة)", // nieuw, nalezen
-    'w.detectiepoortje': "بوّابة الإنذار (تصفّر عند الباب)", // nieuw, nalezen
-    'w.alarmlabel': "بطاقة الإنذار (تجعل البوّابة تصفّر)", // nieuw, nalezen
-    'w.verstoppen': "يخبّئ", // nieuw, nalezen
-    's.shoplifting.1': "البوّابة تصفّر عند المخرج.", // nieuw, nalezen
-    's.shoplifting.2': "رأيت ذلك يحدث.", // nieuw, nalezen
-    's.shoplifting.3': "أحتجزه حتى تأتي الشرطة.", // nieuw, nalezen
-    'c.shoplifting.q': "هل يُسمح لي أن أفتّش حقيبته؟", // nieuw, nalezen
-    'c.shoplifting.a': "لا. الشرطة تفعل ذلك.", // nieuw, nalezen
-    'c.shoplifting': { m: "السرقة من المتجر: راقب، بلّغ، بلا قوة عنيفة", f: "السرقة من المتجر: راقبي، بلّغي، بلا قوة عنيفة", x: "السرقة من المتجر: المراقبة، الإبلاغ، بلا قوة عنيفة" }, // nieuw, nalezen
+    'c.evacuation.p': "الجميع إلى الخارج، إلى نقطة التجمّع.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.s': { m: "إنذار الحريق ينطلق. رجل يريد أن يأخذ المصعد. ماذا تفعل؟", f: "إنذار الحريق ينطلق. رجل يريد أن يأخذ المصعد. ماذا تفعلين؟", x: "إنذار الحريق ينطلق. رجل يريد أن يأخذ المصعد. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.o1': "إرساله إلى الدرج.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.o2': "تركه: المصعد أسرع.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.o3': "الركوب معه في المصعد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.w': "أثناء الحريق قد يتوقّف المصعد أو يمتلئ بالدخان. الدرج هو الطريق الآمن إلى الخارج.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.firstaid': "الإسعافات الأولية و112", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ehbo': "الإسعافات الأولية", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aed': "جهاز الصدمات الكهربائية AED (جهاز يساعد قلباً توقّف)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.reanimeren': "يقوم بالإنعاش القلبي (يضغط على الصدر لإنقاذ حياة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bewusteloos': "فاقد الوعي (الشخص لا يستيقظ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ademen': "يتنفّس", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alarmnummer': "رقم الطوارئ (112)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.firstaid.1': { m: "اتصل بـ112. اطلب سيارة إسعاف.", f: "اتصلي بـ112. اطلبي سيارة إسعاف.", x: "الاتصال بـ112. طلب سيارة إسعاف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.firstaid.2': { m: "أحضر جهاز AED من الاستقبال.", f: "أحضري جهاز AED من الاستقبال.", x: "إحضار جهاز AED من الاستقبال." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.firstaid.3': "إنه لا يتنفّس. سأبدأ الإنعاش.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.q': "أين جهاز AED؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.a': "عند المدخل، بجانب المصعد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid': { m: "اتصل بـ112، ابدأ الإنعاش، أحضر جهاز AED", f: "اتصلي بـ112، ابدئي الإنعاش، أحضري جهاز AED", x: "الاتصال بـ112، بدء الإنعاش، إحضار جهاز AED" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.b': { m: "شخص يسقط ولا يتفاعل؟ اتصل بـ112 فوراً، أو اطلب من شخص آخر أن يتصل. افحص هل يتنفّس الشخص بشكل طبيعي. إن لم يتنفّس: ابدأ الإنعاش، واطلب من شخص أن يحضر جهاز AED. جهاز AED يتكلّم ويقول لك ماذا تفعل؛ لا يمكنك أن تخطئ. استمرّ حتى تتسلّم سيارة الإسعاف. هل عندك دورة إسعافات أولية؟ أخبر زملاءك، حتى يعرفوا بمن يتصلون.", f: "شخص يسقط ولا يتفاعل؟ اتصلي بـ112 فوراً، أو اطلبي من شخص آخر أن يتصل. افحصي هل يتنفّس الشخص بشكل طبيعي. إن لم يتنفّس: ابدئي الإنعاش، واطلبي من شخص أن يحضر جهاز AED. جهاز AED يتكلّم ويقول لك ماذا تفعلين؛ لا يمكنكِ أن تخطئي. استمرّي حتى تتسلّم سيارة الإسعاف. هل عندك دورة إسعافات أولية؟ أخبري زملاءك، حتى يعرفوا بمن يتصلون.", x: "شخص يسقط ولا يتفاعل؟ الاتصال بـ112 فوراً، أو الطلب من شخص آخر أن يتصل. فحص هل يتنفّس الشخص بشكل طبيعي. إن لم يتنفّس: بدء الإنعاش، والطلب من شخص أن يحضر جهاز AED. جهاز AED يتكلّم ويقول ماذا يجب فعله؛ الخطأ غير ممكن. الاستمرار حتى تتسلّم سيارة الإسعاف. دورة إسعافات أولية؟ إخبار الزملاء، حتى يعرفوا بمن يتصلون." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.p': "اتصلوا بـ112 وأحضروا جهاز AED.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.s': { m: "رجل يسقط في القاعة. لا يتحرّك ولا يتنفّس. ماذا تفعل؟", f: "رجل يسقط في القاعة. لا يتحرّك ولا يتنفّس. ماذا تفعلين؟", x: "رجل يسقط في القاعة. لا يتحرّك ولا يتنفّس. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.o1': "الاتصال بـ112، وبدء الإنعاش.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.o2': "الانتظار لرؤية هل يستيقظ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.o3': "رفعه، ووضعه على كرسي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.w': "عندما يتوقّف القلب، كل دقيقة مهمّة. الإنعاش وجهاز AED يمكن أن ينقذا حياة قبل أن تأتي سيارة الإسعاف.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.shoplifting': "السرقة من المتجر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.winkeldiefstal': "السرقة من المتجر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.heterdaad': "بالجرم المشهود (تراه يحدث)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanhouden': "يحتجز (يمسك شخصاً حتى تأتي الشرطة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.detectiepoortje': "بوّابة الإنذار (تصفّر عند الباب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alarmlabel': "بطاقة الإنذار (تجعل البوّابة تصفّر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verstoppen': "يخبّئ", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shoplifting.1': "البوّابة تصفّر عند المخرج.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shoplifting.2': "رأيت ذلك يحدث.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shoplifting.3': "أحتجزه حتى تأتي الشرطة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.q': "هل يُسمح لي أن أفتّش حقيبته؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.a': "لا. الشرطة تفعل ذلك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting': { m: "السرقة من المتجر: راقب، بلّغ، بلا قوة عنيفة", f: "السرقة من المتجر: راقبي، بلّغي، بلا قوة عنيفة", x: "السرقة من المتجر: المراقبة، الإبلاغ، بلا قوة عنيفة" }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.shoplifting.b': { m: "هل رأيتَ شخصاً يسرق؟ ابقَ هادئاً، واتصل بالشرطة فوراً. بعض المتاجر تسمح للحارس أن يحتجز السارق حتى تأتي الشرطة؛ وأخرى تقول: فقط راقب، وبلّغ، وتذكّر شكل الشخص. لا تضرب ولا تركل أبداً، ولا تمسك أحداً من رقبته أبداً. لا تفتّش أبداً شخصاً أو جيوبه أو حقيبته: هذا للشرطة. اكتب ما رأيته، واحفظ تسجيلات الكاميرا. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "هل رأيتِ شخصاً يسرق؟ ابقي هادئة، واتصلي بالشرطة فوراً. بعض المتاجر تسمح للحارس أن يحتجز السارق حتى تأتي الشرطة؛ وأخرى تقول: فقط راقبي، وبلّغي، وتذكّري شكل الشخص. لا تضربي ولا تركلي أبداً، ولا تمسكي أحداً من رقبته أبداً. لا تفتّشي أبداً شخصاً أو جيوبه أو حقيبته: هذا للشرطة. اكتبي ما رأيتِه، واحفظي تسجيلات الكاميرا. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "شخص يسرق؟ البقاء هادئاً، والاتصال بالشرطة فوراً. بعض المتاجر تسمح للحارس أن يحتجز السارق حتى تأتي الشرطة؛ وأخرى تقول: فقط المراقبة والإبلاغ وتذكُّر شكل الشخص. الضرب والركل ممنوعان أبداً، والإمساك بأحد من رقبته ممنوع أبداً. تفتيش شخص أو جيوبه أو حقيبته ممنوع أبداً: هذا للشرطة. كتابة ما تمّت رؤيته، وحفظ تسجيلات الكاميرا. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.shoplifting.p': "هل يمكنك أن تأتي معي، من فضلك؟", // nieuw, nalezen
-    'c.shoplifting.s': { m: "رأيتَ امرأة تضع قنينة في حقيبتها. إنها تخرج. ماذا تفعل؟", f: "رأيتِ امرأة تضع قنينة في حقيبتها. إنها تخرج. ماذا تفعلين؟", x: "امرأة وضعت قنينة في حقيبتها. إنها تخرج. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.shoplifting.o1': "إيقافها بهدوء، والاتصال بالشرطة.", // nieuw, nalezen
-    'c.shoplifting.o2': "تفتيش حقيبتها عند الباب بسرعة.", // nieuw, nalezen
-    'c.shoplifting.o3': "دفعها بقوة إلى الأرض.", // nieuw, nalezen
-    'c.shoplifting.w': "تفتيش الشخص من عمل الشرطة، والقوة العنيفة قد تؤذي أحداً وتسبّب مشاكل للحارس.", // nieuw, nalezen
-    'l.aggression': "أشخاص صعبون", // nieuw, nalezen
-    'w.agressie': "العدوانية (سلوك غاضب وعنيف)", // nieuw, nalezen
-    'w.schelden': "يشتم", // nieuw, nalezen
-    'w.kalmeren': "يهدأ، يهدّئ", // nieuw, nalezen
-    'w.afstand': "المسافة", // nieuw, nalezen
-    'w.huisverbod': "منع الدخول (لا يُسمح لك أن تدخل هنا بعد الآن)", // nieuw, nalezen
-    'w.bodycam': "كاميرا الجسم (كاميرا صغيرة على الزيّ)", // nieuw, nalezen
-    's.aggression.1': "اهدأ يا سيدي. أريد أن أساعدك.", // nieuw, nalezen
-    's.aggression.2': { m: "حافظ على المسافة وابقَ هادئاً.", f: "حافظي على المسافة وابقي هادئة.", x: "الحفاظ على المسافة والبقاء هادئاً." }, // nieuw, nalezen
-    's.aggression.3': "أنت ممنوع من الدخول. يجب أن تغادر الآن.", // nieuw, nalezen
-    'c.aggression.q': "لماذا لا يُسمح لي أن أدخل؟", // nieuw, nalezen
-    'c.aggression.a': "أنت ممنوع من الدخول هنا.", // nieuw, nalezen
-    'c.aggression': { m: "ابقَ هادئاً، وحافظ على المسافة", f: "ابقي هادئة، وحافظي على المسافة", x: "الهدوء، والحفاظ على المسافة" }, // nieuw, nalezen
-    'c.aggression.b': { m: "الشخص الغاضب يهدأ أسرع عندما تبقى هادئاً. تكلّم ببطء وبصوت منخفض، وخاطب الشخص بـ«u». أبقِ بينكما مسافة ذراع أو أكثر، وأبقِ طريقاً للخروج خلفك. لا تلمس الشخص ولا تصرخ عليه. هل يصبح الأمر خطيراً؟ تراجع، واتصل بزميل أو بالشرطة. اكتب ذلك بعد ذلك. بعد حادثة سيئة، تكلّم عنها مع شخص ما. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الشخص الغاضب يهدأ أسرع عندما تبقين هادئة. تكلّمي ببطء وبصوت منخفض، وخاطبي الشخص بـ«u». أبقي بينكما مسافة ذراع أو أكثر، وأبقي طريقاً للخروج خلفك. لا تلمسي الشخص ولا تصرخي عليه. هل يصبح الأمر خطيراً؟ تراجعي، واتصلي بزميل أو بالشرطة. اكتبي ذلك بعد ذلك. بعد حادثة سيئة، تكلّمي عنها مع شخص ما. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الشخص الغاضب يهدأ أسرع أمام شخص هادئ. الكلام ببطء وبصوت منخفض، ومخاطبة الشخص بـ«u». مسافة ذراع أو أكثر بين الاثنين، وطريق للخروج في الخلف. لا لمس للشخص ولا صراخ عليه. هل يصبح الأمر خطيراً؟ التراجع، والاتصال بزميل أو بالشرطة. كتابة ذلك بعد ذلك. بعد حادثة سيئة، الكلام عنها مع شخص ما. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.aggression.p': "اهدأ. أريد أن أساعدك.", // nieuw, nalezen
-    'c.aggression.s': { m: "رجل يصرخ عليك ويقترب منك كثيراً. ماذا تفعل؟", f: "رجل يصرخ عليك ويقترب منك كثيراً. ماذا تفعلين؟", x: "رجل يصرخ ويقترب كثيراً. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.aggression.o1': "التراجع، والكلام بهدوء.", // nieuw, nalezen
-    'c.aggression.o2': "الصراخ عليه بصوت أعلى منه.", // nieuw, nalezen
-    'c.aggression.o3': "دفعه بعيداً.", // nieuw, nalezen
-    'c.aggression.w': "الكلام الهادئ والمسافة يخفّفان التوتّر. الصراخ أو الدفع يزيد الأمر سوءاً.", // nieuw, nalezen
-    'u.foodhygiene': "النظافة والبرودة", // nieuw, nalezen
-    'l.hygienelock': "غرفة النظافة", // nieuw, nalezen
-    'w.hygienesluis': "غرفة النظافة (الغرفة التي تتنظّف فيها قبل أن تدخل)", // nieuw, nalezen
-    'w.baardnetje': "شبكة اللحية", // nieuw, nalezen
-    'w.laarzenwasser': "غسّالة الأحذية (فرش تنظّف حذاءك المطاطي)", // nieuw, nalezen
-    'w.desinfecteren': "يعقّم (يقتل الجراثيم)", // nieuw, nalezen
-    'w.werkjas': "معطف العمل", // nieuw, nalezen
-    'w.bacterie': "الجرثومة، البكتيريا", // nieuw, nalezen
-    's.hygienelock.1': { m: "اغسل يديك وعقّمهما.", f: "اغسلي يديك وعقّميهما.", x: "غسل اليدين وتعقيمهما." }, // nieuw, nalezen
+    'c.shoplifting.p': "هل يمكنك أن تأتي معي، من فضلك؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.s': { m: "رأيتَ امرأة تضع قنينة في حقيبتها. إنها تخرج. ماذا تفعل؟", f: "رأيتِ امرأة تضع قنينة في حقيبتها. إنها تخرج. ماذا تفعلين؟", x: "امرأة وضعت قنينة في حقيبتها. إنها تخرج. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.o1': "إيقافها بهدوء، والاتصال بالشرطة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.o2': "تفتيش حقيبتها عند الباب بسرعة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.o3': "دفعها بقوة إلى الأرض.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.w': "تفتيش الشخص من عمل الشرطة، والقوة العنيفة قد تؤذي أحداً وتسبّب مشاكل للحارس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.aggression': "أشخاص صعبون", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.agressie': "العدوانية (سلوك غاضب وعنيف)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schelden': "يشتم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kalmeren': "يهدأ، يهدّئ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afstand': "المسافة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huisverbod': "منع الدخول (لا يُسمح لك أن تدخل هنا بعد الآن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bodycam': "كاميرا الجسم (كاميرا صغيرة على الزيّ)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.aggression.1': "اهدأ يا سيدي. أريد أن أساعدك.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.aggression.2': { m: "حافظ على المسافة وابقَ هادئاً.", f: "حافظي على المسافة وابقي هادئة.", x: "الحفاظ على المسافة والبقاء هادئاً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.aggression.3': "أنت ممنوع من الدخول. يجب أن تغادر الآن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.q': "لماذا لا يُسمح لي أن أدخل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.a': "أنت ممنوع من الدخول هنا.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression': { m: "ابقَ هادئاً، وحافظ على المسافة", f: "ابقي هادئة، وحافظي على المسافة", x: "الهدوء، والحفاظ على المسافة" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.b': { m: "الشخص الغاضب يهدأ أسرع عندما تبقى هادئاً. تكلّم ببطء وبصوت منخفض، وخاطب الشخص بـ«u». أبقِ بينكما مسافة ذراع أو أكثر، وأبقِ طريقاً للخروج خلفك. لا تلمس الشخص ولا تصرخ عليه. هل يصبح الأمر خطيراً؟ تراجع، واتصل بزميل أو بالشرطة. اكتب ذلك بعد ذلك. بعد حادثة سيئة، تكلّم عنها مع شخص ما. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الشخص الغاضب يهدأ أسرع عندما تبقين هادئة. تكلّمي ببطء وبصوت منخفض، وخاطبي الشخص بـ«u». أبقي بينكما مسافة ذراع أو أكثر، وأبقي طريقاً للخروج خلفك. لا تلمسي الشخص ولا تصرخي عليه. هل يصبح الأمر خطيراً؟ تراجعي، واتصلي بزميل أو بالشرطة. اكتبي ذلك بعد ذلك. بعد حادثة سيئة، تكلّمي عنها مع شخص ما. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الشخص الغاضب يهدأ أسرع أمام شخص هادئ. الكلام ببطء وبصوت منخفض، ومخاطبة الشخص بـ«u». مسافة ذراع أو أكثر بين الاثنين، وطريق للخروج في الخلف. لا لمس للشخص ولا صراخ عليه. هل يصبح الأمر خطيراً؟ التراجع، والاتصال بزميل أو بالشرطة. كتابة ذلك بعد ذلك. بعد حادثة سيئة، الكلام عنها مع شخص ما. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.p': "اهدأ. أريد أن أساعدك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.s': { m: "رجل يصرخ عليك ويقترب منك كثيراً. ماذا تفعل؟", f: "رجل يصرخ عليك ويقترب منك كثيراً. ماذا تفعلين؟", x: "رجل يصرخ ويقترب كثيراً. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.o1': "التراجع، والكلام بهدوء.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.o2': "الصراخ عليه بصوت أعلى منه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.o3': "دفعه بعيداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.w': "الكلام الهادئ والمسافة يخفّفان التوتّر. الصراخ أو الدفع يزيد الأمر سوءاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.foodhygiene': "النظافة والبرودة", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.hygienelock': "غرفة النظافة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hygienesluis': "غرفة النظافة (الغرفة التي تتنظّف فيها قبل أن تدخل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.baardnetje': "شبكة اللحية", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.laarzenwasser': "غسّالة الأحذية (فرش تنظّف حذاءك المطاطي)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.desinfecteren': "يعقّم (يقتل الجراثيم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkjas': "معطف العمل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bacterie': "الجرثومة، البكتيريا", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hygienelock.1': { m: "اغسل يديك وعقّمهما.", f: "اغسلي يديك وعقّميهما.", x: "غسل اليدين وتعقيمهما." }, // nieuw, nalezen // nagelezen AI 28 nov
     's.hygienelock.2': { m: "البس شبكة الشعر وشبكة اللحية.", f: "البسي شبكة الشعر وشبكة اللحية.", x: "لُبس شبكة الشعر وشبكة اللحية." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    's.hygienelock.3': { m: "امشِ عبر غسّالة الأحذية.", f: "امشي عبر غسّالة الأحذية.", x: "المشي عبر غسّالة الأحذية." }, // nieuw, nalezen
-    'c.hygienelock.q': "هل يمكنني أن أبقي ساعتي؟", // nieuw, nalezen
-    'c.hygienelock.a': "لا، كل المجوهرات تُنزع.", // nieuw, nalezen
-    'c.hygienelock': { m: "ادخل نظيفاً، في كل مرة", f: "ادخلي نظيفة، في كل مرة", x: "الدخول بنظافة، في كل مرة" }, // nieuw, nalezen
-    'c.hygienelock.b': { m: "في مصنع الطعام أنت أكبر خطر على الطعام: الجراثيم تأتي من يديك وشعرك وملابسك. لذلك مُرّ عبر غرفة النظافة في كل مرة تدخل، أيضاً بعد الاستراحة أو المرحاض. شبكة الشعر على الرأس، وشبكة اللحية إذا كانت عندك لحية، وملابس عمل نظيفة، وكل المجوهرات منزوعة. اغسل يديك بالصابون، وجفّفهما وعقّمهما. هل أنت مريض، مع إسهال أو تقيّؤ؟ أخبر مشرفك قبل أن تبدأ. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في مصنع الطعام أنتِ أكبر خطر على الطعام: الجراثيم تأتي من يديك وشعرك وملابسك. لذلك مُرّي عبر غرفة النظافة في كل مرة تدخلين، أيضاً بعد الاستراحة أو المرحاض. شبكة الشعر على الرأس، وشبكة اللحية إذا كانت عندك لحية، وملابس عمل نظيفة، وكل المجوهرات منزوعة. اغسلي يديك بالصابون، وجفّفيهما وعقّميهما. هل أنتِ مريضة، مع إسهال أو تقيّؤ؟ أخبري مشرفك قبل أن تبدئي. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في مصنع الطعام العامل هو أكبر خطر على الطعام: الجراثيم تأتي من اليدين والشعر والملابس. لذلك المرور عبر غرفة النظافة عند كل دخول، أيضاً بعد الاستراحة أو المرحاض. شبكة الشعر على الرأس، وشبكة اللحية لمن له لحية، وملابس عمل نظيفة، وكل المجوهرات منزوعة. غسل اليدين بالصابون، وتجفيفهما وتعقيمهما. مرض، مع إسهال أو تقيّؤ؟ إخبار المشرف قبل البدء. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.hygienelock.p': "عندي إسهال. هل يمكنني أن أعمل اليوم؟", // nieuw, nalezen
-    'c.hygienelock.s': { m: "تعود من المرحاض. زميلك يقول: «لا تمرّ بغرفة النظافة، نحن مشغولون». ماذا تفعل؟", f: "تعودين من المرحاض. زميلك يقول: «لا تمرّي بغرفة النظافة، نحن مشغولون». ماذا تفعلين؟", x: "العودة من المرحاض. زميل يقول: «لا داعي لغرفة النظافة، نحن مشغولون». ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.hygienelock.o1': "المرور بغرفة النظافة رغم ذلك.", // nieuw, nalezen
-    'c.hygienelock.o2': "عدم المرور، هذه المرة فقط.", // nieuw, nalezen
-    'c.hygienelock.o3': "لبس قفازات جديدة فقط.", // nieuw, nalezen
-    'c.hygienelock.w': "الجراثيم من المرحاض يمكن أن تُمرض زبائن كثيرين. دقائق قليلة في غرفة النظافة تمنع ذلك.", // nieuw, nalezen
-    'l.allergens': "مسبّبات الحساسية", // nieuw, nalezen
-    'w.allergeen': "مسبّب الحساسية (طعام يجعل بعض الناس مرضى جداً)", // nieuw, nalezen
-    'w.noten': "المكسّرات", // nieuw, nalezen
-    'w.pinda': "الفول السوداني", // nieuw, nalezen
-    'w.gluten': "الغلوتين (في القمح، أي في الخبز والكعك)", // nieuw, nalezen
-    'w.sesam': "السمسم (بذور صغيرة، مثلاً على الخبز)", // nieuw, nalezen
-    'w.kruisbesmetting': "التلوّث المتبادل (شيء يدخل في طعام لا يجب أن يكون فيه)", // nieuw, nalezen
-    's.allergens.1': "هذا المنتج يحتوي على مكسّرات.", // nieuw, nalezen
-    's.allergens.2': { m: "انظر على الملصق ما هي مسبّبات الحساسية فيه.", f: "انظري على الملصق ما هي مسبّبات الحساسية فيه.", x: "على الملصق مكتوب ما هي مسبّبات الحساسية فيه." }, // nieuw, nalezen
-    's.allergens.3': { m: "نظّف كل شيء جيداً بعد الفول السوداني.", f: "نظّفي كل شيء جيداً بعد الفول السوداني.", x: "تنظيف كل شيء جيداً بعد الفول السوداني." }, // nieuw, nalezen
-    'c.allergens.q': "هل يمكن أن توضع هذه العلبة مع الأخرى؟", // nieuw, nalezen
-    'c.allergens.a': "لا، فيها مكسّرات.", // nieuw, nalezen
-    'c.allergens': "الأثر الصغير يكفي", // nieuw, nalezen
-    'c.allergens.b': { m: "عند بعض الناس، كمية صغيرة جداً من المكسّرات أو الفول السوداني أو الحليب أو البيض أو الغلوتين أو السمسم قد تهدّد الحياة. لهذا يجب أن يقول الملصق بالضبط ما في المنتج. أبقِ مسبّبات الحساسية منفصلة: علب وأدوات وألوان خاصّة بها. بعد منتج فيه مسبّب حساسية، يُنظّف خطّ الإنتاج قبل المنتج التالي. لا تبدّل أبداً مكوّناً بآخر، حتى إذا كان يبدو مثله. هل تشكّ؟ اسأل. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "عند بعض الناس، كمية صغيرة جداً من المكسّرات أو الفول السوداني أو الحليب أو البيض أو الغلوتين أو السمسم قد تهدّد الحياة. لهذا يجب أن يقول الملصق بالضبط ما في المنتج. أبقي مسبّبات الحساسية منفصلة: علب وأدوات وألوان خاصّة بها. بعد منتج فيه مسبّب حساسية، يُنظّف خطّ الإنتاج قبل المنتج التالي. لا تبدّلي أبداً مكوّناً بآخر، حتى إذا كان يبدو مثله. هل تشكّين؟ اسألي. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "عند بعض الناس، كمية صغيرة جداً من المكسّرات أو الفول السوداني أو الحليب أو البيض أو الغلوتين أو السمسم قد تهدّد الحياة. لهذا يجب أن يقول الملصق بالضبط ما في المنتج. مسبّبات الحساسية تبقى منفصلة: علب وأدوات وألوان خاصّة بها. بعد منتج فيه مسبّب حساسية، يُنظّف خطّ الإنتاج قبل المنتج التالي. تبديل مكوّن بآخر ممنوع أبداً، حتى إذا كان يبدو مثله. شكّ؟ السؤال. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.allergens.p': "هل في هذا مكسّرات؟", // nieuw, nalezen
-    'c.allergens.s': { m: "اللوز انتهى. زميل يقول: «استعمل البندق، لن يلاحظ أحد». ماذا تفعل؟", f: "اللوز انتهى. زميل يقول: «استعملي البندق، لن يلاحظ أحد». ماذا تفعلين؟", x: "اللوز انتهى. زميل يقول: «البندق مكانه، لن يلاحظ أحد». ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.allergens.o1': "الرفض، وإخبار المشرف.", // nieuw, nalezen
-    'c.allergens.o2': "استعماله: المكسّرات كلها واحدة.", // nieuw, nalezen
-    'c.allergens.o3': "استعماله، بدون تغيير الملصق.", // nieuw, nalezen
-    'c.allergens.w': "الملصق يجب أن يقول ما في الداخل. نوع مكسّرات خاطئ يمكن أن يُمرض شخصاً عنده حساسية مرضاً شديداً.", // nieuw, nalezen
-    'l.coldroom': "غرفة التبريد والمجمّد", // nieuw, nalezen
-    'w.temperatuur': "درجة الحرارة", // nieuw, nalezen
-    'w.graden': "الدرجات (°C)", // nieuw, nalezen
-    'w.bevroren': "مجمّد", // nieuw, nalezen
-    'w.ontdooien': "يذوّب التجميد", // nieuw, nalezen
-    'w.koelketen': "سلسلة التبريد (الطعام يبقى بارداً طوال الطريق)", // nieuw, nalezen
-    'w.thermokleding': "الملابس الحرارية (ملابس دافئة للبرد)", // nieuw, nalezen
-    's.coldroom.1': "في غرفة التجميد الحرارة ناقص ثماني عشرة درجة.", // nieuw, nalezen
-    's.coldroom.2': { m: "ضع اللحم في غرفة التبريد فوراً.", f: "ضعي اللحم في غرفة التبريد فوراً.", x: "اللحم يوضع في غرفة التبريد فوراً." }, // nieuw, nalezen
-    's.coldroom.3': { m: "اكتب درجة الحرارة في القائمة.", f: "اكتبي درجة الحرارة في القائمة.", x: "درجة الحرارة تُكتب في القائمة." }, // nieuw, nalezen
-    'c.coldroom.q': "لماذا تصفّر غرفة التبريد؟", // nieuw, nalezen
-    'c.coldroom.a': { m: "الباب مفتوح. أغلقه بسرعة.", f: "الباب مفتوح. أغلقيه بسرعة.", x: "الباب مفتوح. يجب إغلاقه بسرعة." }, // nieuw, nalezen
-    'c.coldroom': { m: "عمل في البرد: البس ملابس دافئة، وأبقِ الطعام بارداً", f: "عمل في البرد: البسي ملابس دافئة، وأبقي الطعام بارداً", x: "العمل في البرد: ملابس دافئة، وطعام يبقى بارداً" }, // nieuw, nalezen
-    'c.coldroom.b': { m: "الطعام يجب أن يبقى بارداً طوال الطريق: من الشاحنة إلى غرفة التبريد إلى المتجر. لذلك ضع المنتجات الباردة في مكانها فوراً، وأبقِ أبواب غرفة التبريد والمجمّد مغلقة. افحص درجة الحرارة واكتبها. في المجمّد البس الملابس الحرارية والقفازات وقبّعة، وخذ استراحة دافئة في الوقت المناسب. تأكّد أنك تستطيع دائماً فتح الباب من الداخل. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الطعام يجب أن يبقى بارداً طوال الطريق: من الشاحنة إلى غرفة التبريد إلى المتجر. لذلك ضعي المنتجات الباردة في مكانها فوراً، وأبقي أبواب غرفة التبريد والمجمّد مغلقة. افحصي درجة الحرارة واكتبيها. في المجمّد البسي الملابس الحرارية والقفازات وقبّعة، وخذي استراحة دافئة في الوقت المناسب. تأكّدي أنك تستطيعين دائماً فتح الباب من الداخل. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الطعام يجب أن يبقى بارداً طوال الطريق: من الشاحنة إلى غرفة التبريد إلى المتجر. لذلك المنتجات الباردة توضع في مكانها فوراً، وأبواب غرفة التبريد والمجمّد تبقى مغلقة. فحص درجة الحرارة وكتابتها. في المجمّد لبس الملابس الحرارية والقفازات وقبّعة، واستراحة دافئة في الوقت المناسب. التأكّد أن الباب يُفتح دائماً من الداخل. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.coldroom.p': "الجو حار هنا. التبريد لا يعمل.", // nieuw, nalezen
-    'c.coldroom.s': { m: "ميزان حرارة غرفة التبريد يُظهر رقماً أعلى بكثير من العادي. ماذا تفعل؟", f: "ميزان حرارة غرفة التبريد يُظهر رقماً أعلى بكثير من العادي. ماذا تفعلين؟", x: "ميزان حرارة غرفة التبريد يُظهر رقماً أعلى بكثير من العادي. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.coldroom.o1': "إخبار المشرف فوراً.", // nieuw, nalezen
-    'c.coldroom.o2': "الانتظار: ستبرد من جديد.", // nieuw, nalezen
-    'c.coldroom.o3': "كتابة الرقم العادي في القائمة.", // nieuw, nalezen
-    'c.coldroom.w': "الحرارة الزائدة تعني أن الجراثيم تنمو. المشرف يقرّر هل الطعام ما زال آمناً.", // nieuw, nalezen
-    'l.foreignbody': "الزجاج والمعدن والبلاستيك في الطعام", // nieuw, nalezen
-    'w.metaaldetector': "كاشف المعادن", // nieuw, nalezen
-    'w.glasbreuk': "كسر الزجاج (زجاج انكسر)", // nieuw, nalezen
-    'w.splinter': "الشظية (قطعة صغيرة حادّة)", // nieuw, nalezen
-    'w.vreemdvoorwerp': "الجسم الغريب (شيء في الطعام لا يجب أن يكون فيه)", // nieuw, nalezen
-    'w.vervuild': "ملوّث (دخله شيء وسخ)", // nieuw, nalezen
-    'w.ploegleider': "رئيس الوردية", // nieuw, nalezen
-    's.foreignbody.1': { m: "كاشف المعادن يصفّر. أوقِف الخطّ.", f: "كاشف المعادن يصفّر. أوقفي الخطّ.", x: "كاشف المعادن يصفّر. إيقاف الخطّ." }, // nieuw, nalezen
-    's.foreignbody.2': "انكسر زجاج عند الخطّ اثنين.", // nieuw, nalezen
-    's.foreignbody.3': { m: "ضع المنتج في صندوق المرفوضات.", f: "ضعي المنتج في صندوق المرفوضات.", x: "المنتج يوضع في صندوق المرفوضات." }, // nieuw, nalezen
-    'c.foreignbody.q': "ماذا أفعل بقطعة البلاستيك هذه؟", // nieuw, nalezen
-    'c.foreignbody.a': { m: "أرِها لرئيس الوردية.", f: "أريها لرئيس الوردية.", x: "تُعرض على رئيس الوردية." }, // nieuw, nalezen
-    'c.foreignbody': { m: "شيء في الطعام؟ توقّف وبلّغ", f: "شيء في الطعام؟ توقّفي وبلّغي", x: "شيء في الطعام؟ التوقّف والإبلاغ" }, // nieuw, nalezen
+    's.hygienelock.3': { m: "امشِ عبر غسّالة الأحذية.", f: "امشي عبر غسّالة الأحذية.", x: "المشي عبر غسّالة الأحذية." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.q': "هل يمكنني أن أبقي ساعتي؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.a': "لا، كل المجوهرات تُنزع.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock': { m: "ادخل نظيفاً، في كل مرة", f: "ادخلي نظيفة، في كل مرة", x: "الدخول بنظافة، في كل مرة" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.b': { m: "في مصنع الطعام أنت أكبر خطر على الطعام: الجراثيم تأتي من يديك وشعرك وملابسك. لذلك مُرّ عبر غرفة النظافة في كل مرة تدخل، أيضاً بعد الاستراحة أو المرحاض. شبكة الشعر على الرأس، وشبكة اللحية إذا كانت عندك لحية، وملابس عمل نظيفة، وكل المجوهرات منزوعة. اغسل يديك بالصابون، وجفّفهما وعقّمهما. هل أنت مريض، مع إسهال أو تقيّؤ؟ أخبر مشرفك قبل أن تبدأ. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في مصنع الطعام أنتِ أكبر خطر على الطعام: الجراثيم تأتي من يديك وشعرك وملابسك. لذلك مُرّي عبر غرفة النظافة في كل مرة تدخلين، أيضاً بعد الاستراحة أو المرحاض. شبكة الشعر على الرأس، وشبكة اللحية إذا كانت عندك لحية، وملابس عمل نظيفة، وكل المجوهرات منزوعة. اغسلي يديك بالصابون، وجفّفيهما وعقّميهما. هل أنتِ مريضة، مع إسهال أو تقيّؤ؟ أخبري مشرفك قبل أن تبدئي. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في مصنع الطعام العامل هو أكبر خطر على الطعام: الجراثيم تأتي من اليدين والشعر والملابس. لذلك المرور عبر غرفة النظافة عند كل دخول، أيضاً بعد الاستراحة أو المرحاض. شبكة الشعر على الرأس، وشبكة اللحية لمن له لحية، وملابس عمل نظيفة، وكل المجوهرات منزوعة. غسل اليدين بالصابون، وتجفيفهما وتعقيمهما. مرض، مع إسهال أو تقيّؤ؟ إخبار المشرف قبل البدء. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.p': "عندي إسهال. هل يمكنني أن أعمل اليوم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.s': { m: "تعود من المرحاض. زميلك يقول: «لا تمرّ بغرفة النظافة، نحن مشغولون». ماذا تفعل؟", f: "تعودين من المرحاض. زميلك يقول: «لا تمرّي بغرفة النظافة، نحن مشغولون». ماذا تفعلين؟", x: "العودة من المرحاض. زميل يقول: «لا داعي لغرفة النظافة، نحن مشغولون». ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.o1': "المرور بغرفة النظافة رغم ذلك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.o2': "عدم المرور، هذه المرة فقط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.o3': "لبس قفازات جديدة فقط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.w': "الجراثيم من المرحاض يمكن أن تُمرض زبائن كثيرين. دقائق قليلة في غرفة النظافة تمنع ذلك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.allergens': "مسبّبات الحساسية", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.allergeen': "مسبّب الحساسية (طعام يجعل بعض الناس مرضى جداً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.noten': "المكسّرات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pinda': "الفول السوداني", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gluten': "الغلوتين (في القمح، أي في الخبز والكعك)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sesam': "السمسم (بذور صغيرة، مثلاً على الخبز)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kruisbesmetting': "التلوّث المتبادل (شيء يدخل في طعام لا يجب أن يكون فيه)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.allergens.1': "هذا المنتج يحتوي على مكسّرات.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.allergens.2': { m: "انظر على الملصق ما هي مسبّبات الحساسية فيه.", f: "انظري على الملصق ما هي مسبّبات الحساسية فيه.", x: "على الملصق مكتوب ما هي مسبّبات الحساسية فيه." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.allergens.3': { m: "نظّف كل شيء جيداً بعد الفول السوداني.", f: "نظّفي كل شيء جيداً بعد الفول السوداني.", x: "تنظيف كل شيء جيداً بعد الفول السوداني." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.q': "هل يمكن أن توضع هذه العلبة مع الأخرى؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.a': "لا، فيها مكسّرات.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens': "الأثر الصغير يكفي", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.b': { m: "عند بعض الناس، كمية صغيرة جداً من المكسّرات أو الفول السوداني أو الحليب أو البيض أو الغلوتين أو السمسم قد تهدّد الحياة. لهذا يجب أن يقول الملصق بالضبط ما في المنتج. أبقِ مسبّبات الحساسية منفصلة: علب وأدوات وألوان خاصّة بها. بعد منتج فيه مسبّب حساسية، يُنظّف خطّ الإنتاج قبل المنتج التالي. لا تبدّل أبداً مكوّناً بآخر، حتى إذا كان يبدو مثله. هل تشكّ؟ اسأل. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "عند بعض الناس، كمية صغيرة جداً من المكسّرات أو الفول السوداني أو الحليب أو البيض أو الغلوتين أو السمسم قد تهدّد الحياة. لهذا يجب أن يقول الملصق بالضبط ما في المنتج. أبقي مسبّبات الحساسية منفصلة: علب وأدوات وألوان خاصّة بها. بعد منتج فيه مسبّب حساسية، يُنظّف خطّ الإنتاج قبل المنتج التالي. لا تبدّلي أبداً مكوّناً بآخر، حتى إذا كان يبدو مثله. هل تشكّين؟ اسألي. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "عند بعض الناس، كمية صغيرة جداً من المكسّرات أو الفول السوداني أو الحليب أو البيض أو الغلوتين أو السمسم قد تهدّد الحياة. لهذا يجب أن يقول الملصق بالضبط ما في المنتج. مسبّبات الحساسية تبقى منفصلة: علب وأدوات وألوان خاصّة بها. بعد منتج فيه مسبّب حساسية، يُنظّف خطّ الإنتاج قبل المنتج التالي. تبديل مكوّن بآخر ممنوع أبداً، حتى إذا كان يبدو مثله. شكّ؟ السؤال. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.p': "هل في هذا مكسّرات؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.s': { m: "اللوز انتهى. زميل يقول: «استعمل البندق، لن يلاحظ أحد». ماذا تفعل؟", f: "اللوز انتهى. زميل يقول: «استعملي البندق، لن يلاحظ أحد». ماذا تفعلين؟", x: "اللوز انتهى. زميل يقول: «البندق مكانه، لن يلاحظ أحد». ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.o1': "الرفض، وإخبار المشرف.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.o2': "استعماله: المكسّرات كلها واحدة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.o3': "استعماله، بدون تغيير الملصق.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.w': "الملصق يجب أن يقول ما في الداخل. نوع مكسّرات خاطئ يمكن أن يُمرض شخصاً عنده حساسية مرضاً شديداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.coldroom': "غرفة التبريد والمجمّد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.temperatuur': "درجة الحرارة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.graden': "الدرجات (°C)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bevroren': "مجمّد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ontdooien': "يذوّب التجميد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koelketen': "سلسلة التبريد (الطعام يبقى بارداً طوال الطريق)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.thermokleding': "الملابس الحرارية (ملابس دافئة للبرد)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.coldroom.1': "في غرفة التجميد الحرارة ناقص ثماني عشرة درجة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.coldroom.2': { m: "ضع اللحم في غرفة التبريد فوراً.", f: "ضعي اللحم في غرفة التبريد فوراً.", x: "اللحم يوضع في غرفة التبريد فوراً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.coldroom.3': { m: "اكتب درجة الحرارة في القائمة.", f: "اكتبي درجة الحرارة في القائمة.", x: "درجة الحرارة تُكتب في القائمة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.q': "لماذا تصفّر غرفة التبريد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.a': { m: "الباب مفتوح. أغلقه بسرعة.", f: "الباب مفتوح. أغلقيه بسرعة.", x: "الباب مفتوح. يجب إغلاقه بسرعة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom': { m: "عمل في البرد: البس ملابس دافئة، وأبقِ الطعام بارداً", f: "عمل في البرد: البسي ملابس دافئة، وأبقي الطعام بارداً", x: "العمل في البرد: ملابس دافئة، وطعام يبقى بارداً" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.b': { m: "الطعام يجب أن يبقى بارداً طوال الطريق: من الشاحنة إلى غرفة التبريد إلى المتجر. لذلك ضع المنتجات الباردة في مكانها فوراً، وأبقِ أبواب غرفة التبريد والمجمّد مغلقة. افحص درجة الحرارة واكتبها. في المجمّد البس الملابس الحرارية والقفازات وقبّعة، وخذ استراحة دافئة في الوقت المناسب. تأكّد أنك تستطيع دائماً فتح الباب من الداخل. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الطعام يجب أن يبقى بارداً طوال الطريق: من الشاحنة إلى غرفة التبريد إلى المتجر. لذلك ضعي المنتجات الباردة في مكانها فوراً، وأبقي أبواب غرفة التبريد والمجمّد مغلقة. افحصي درجة الحرارة واكتبيها. في المجمّد البسي الملابس الحرارية والقفازات وقبّعة، وخذي استراحة دافئة في الوقت المناسب. تأكّدي أنك تستطيعين دائماً فتح الباب من الداخل. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الطعام يجب أن يبقى بارداً طوال الطريق: من الشاحنة إلى غرفة التبريد إلى المتجر. لذلك المنتجات الباردة توضع في مكانها فوراً، وأبواب غرفة التبريد والمجمّد تبقى مغلقة. فحص درجة الحرارة وكتابتها. في المجمّد لبس الملابس الحرارية والقفازات وقبّعة، واستراحة دافئة في الوقت المناسب. التأكّد أن الباب يُفتح دائماً من الداخل. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.p': "الجو حار هنا. التبريد لا يعمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.s': { m: "ميزان حرارة غرفة التبريد يُظهر رقماً أعلى بكثير من العادي. ماذا تفعل؟", f: "ميزان حرارة غرفة التبريد يُظهر رقماً أعلى بكثير من العادي. ماذا تفعلين؟", x: "ميزان حرارة غرفة التبريد يُظهر رقماً أعلى بكثير من العادي. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.o1': "إخبار المشرف فوراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.o2': "الانتظار: ستبرد من جديد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.o3': "كتابة الرقم العادي في القائمة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.w': "الحرارة الزائدة تعني أن الجراثيم تنمو. المشرف يقرّر هل الطعام ما زال آمناً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.foreignbody': "الزجاج والمعدن والبلاستيك في الطعام", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.metaaldetector': "كاشف المعادن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.glasbreuk': "كسر الزجاج (زجاج انكسر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.splinter': "الشظية (قطعة صغيرة حادّة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vreemdvoorwerp': "الجسم الغريب (شيء في الطعام لا يجب أن يكون فيه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vervuild': "ملوّث (دخله شيء وسخ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ploegleider': "رئيس الوردية", // nieuw, nalezen // nagelezen AI 28 nov
+    's.foreignbody.1': { m: "كاشف المعادن يصفّر. أوقِف الخطّ.", f: "كاشف المعادن يصفّر. أوقفي الخطّ.", x: "كاشف المعادن يصفّر. إيقاف الخطّ." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.foreignbody.2': "انكسر زجاج عند الخطّ اثنين.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.foreignbody.3': { m: "ضع المنتج في صندوق المرفوضات.", f: "ضعي المنتج في صندوق المرفوضات.", x: "المنتج يوضع في صندوق المرفوضات." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.q': "ماذا أفعل بقطعة البلاستيك هذه؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.a': { m: "أرِها لرئيس الوردية.", f: "أريها لرئيس الوردية.", x: "تُعرض على رئيس الوردية." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody': { m: "شيء في الطعام؟ توقّف وبلّغ", f: "شيء في الطعام؟ توقّفي وبلّغي", x: "شيء في الطعام؟ التوقّف والإبلاغ" }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.foreignbody.b': { m: "الزجاج والمعدن والبلاستيك واللاصقة الطبية والشعرة يجب ألّا تصل أبداً إلى الطعام. هل يصفّر كاشف المعادن، أو تجد شيئاً غريباً؟ ضع المنتج جانباً، وأخبر رئيس الوردية. هل انكسر زجاج؟ أوقِف الخطّ القريب منه: رئيس الوردية يقرّر ما يجب رميه. استعمل فقط اللاصقات الطبية الزرقاء، حتى تُرى بسهولة. لا تُدخل أبداً زجاجاً أو أقلاماً أو أشياء مفكوكة إلى أرض العمل. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الزجاج والمعدن والبلاستيك واللاصقة الطبية والشعرة يجب ألّا تصل أبداً إلى الطعام. هل يصفّر كاشف المعادن، أو تجدين شيئاً غريباً؟ ضعي المنتج جانباً، وأخبري رئيس الوردية. هل انكسر زجاج؟ أوقفي الخطّ القريب منه: رئيس الوردية يقرّر ما يجب رميه. استعملي فقط اللاصقات الطبية الزرقاء، حتى تُرى بسهولة. لا تُدخلي أبداً زجاجاً أو أقلاماً أو أشياء مفكوكة إلى أرض العمل. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الزجاج والمعدن والبلاستيك واللاصقة الطبية والشعرة يجب ألّا تصل أبداً إلى الطعام. هل يصفّر كاشف المعادن، أو يوجد شيء غريب؟ وضع المنتج جانباً، وإخبار رئيس الوردية. هل انكسر زجاج؟ إيقاف الخطّ القريب منه: رئيس الوردية يقرّر ما يجب رميه. فقط اللاصقات الطبية الزرقاء، حتى تُرى بسهولة. الزجاج والأقلام والأشياء المفكوكة ممنوعة أبداً على أرض العمل. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.foreignbody.p': "وجدت شيئاً في المنتج.", // nieuw, nalezen
-    'c.foreignbody.s': { m: "مصباح زجاجي ينكسر فوق الخطّ. المنتجات تستمرّ في التحرّك. ماذا تفعل؟", f: "مصباح زجاجي ينكسر فوق الخطّ. المنتجات تستمرّ في التحرّك. ماذا تفعلين؟", x: "مصباح زجاجي ينكسر فوق الخطّ. المنتجات تستمرّ في التحرّك. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.foreignbody.o1': "إيقاف الخطّ، والاتصال برئيس الوردية.", // nieuw, nalezen
-    'c.foreignbody.o2': "التقاط الزجاج الظاهر.", // nieuw, nalezen
-    'c.foreignbody.o3': "المتابعة: الكاشف يجد الزجاج.", // nieuw, nalezen
-    'c.foreignbody.w': "كاشف المعادن لا يجد الزجاج. القطع الصغيرة غير الظاهرة يمكن أن تؤذي زبوناً أذى شديداً.", // nieuw, nalezen
-    'u.foodline': "خطّ الإنتاج", // nieuw, nalezen
-    'l.cutting': "التقطيع والوزن", // nieuw, nalezen
-    'w.uitbenen': "يُخرج العظم (يقطع العظام من اللحم)", // nieuw, nalezen
-    'w.fileren': "يقطّع فيليه (يقطع السمك أو اللحم قطعاً مسطّحة)", // nieuw, nalezen
-    'w.portie': "الحصّة", // nieuw, nalezen
-    'w.wegen': "يزن", // nieuw, nalezen
-    'w.gewicht': "الوزن", // nieuw, nalezen
-    'w.snijplank': "لوح التقطيع", // nieuw, nalezen
-    's.cutting.1': { m: "زِن كل حصّة.", f: "زني كل حصّة.", x: "وزن كل حصّة." }, // nieuw, nalezen
-    's.cutting.2': "الوزن منخفض جداً.", // nieuw, nalezen
-    's.cutting.3': { m: "اشحذ سكّينك قبل أن تبدأ.", f: "اشحذي سكّينك قبل أن تبدئي.", x: "شحذ السكّين قبل البدء." }, // nieuw, nalezen
-    'c.cutting.q': "كم يجب أن يكون في العلبة؟", // nieuw, nalezen
-    'c.cutting.a': { m: "خمسمئة غرام. انظر إلى الميزان.", f: "خمسمئة غرام. انظري إلى الميزان.", x: "خمسمئة غرام. الميزان يُظهر ذلك." }, // nieuw, nalezen
-    'c.cutting': "سكّين حادّ، يد آمنة", // nieuw, nalezen
+    'c.foreignbody.p': "وجدت شيئاً في المنتج.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.s': { m: "مصباح زجاجي ينكسر فوق الخطّ. المنتجات تستمرّ في التحرّك. ماذا تفعل؟", f: "مصباح زجاجي ينكسر فوق الخطّ. المنتجات تستمرّ في التحرّك. ماذا تفعلين؟", x: "مصباح زجاجي ينكسر فوق الخطّ. المنتجات تستمرّ في التحرّك. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.o1': "إيقاف الخطّ، والاتصال برئيس الوردية.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.o2': "التقاط الزجاج الظاهر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.o3': "المتابعة: الكاشف يجد الزجاج.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.w': "كاشف المعادن لا يجد الزجاج. القطع الصغيرة غير الظاهرة يمكن أن تؤذي زبوناً أذى شديداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.foodline': "خطّ الإنتاج", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.cutting': "التقطيع والوزن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitbenen': "يُخرج العظم (يقطع العظام من اللحم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.fileren': "يقطّع فيليه (يقطع السمك أو اللحم قطعاً مسطّحة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.portie': "الحصّة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wegen': "يزن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gewicht': "الوزن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snijplank': "لوح التقطيع", // nieuw, nalezen // nagelezen AI 28 nov
+    's.cutting.1': { m: "زِن كل حصّة.", f: "زني كل حصّة.", x: "وزن كل حصّة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.cutting.2': "الوزن منخفض جداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.cutting.3': { m: "اشحذ سكّينك قبل أن تبدأ.", f: "اشحذي سكّينك قبل أن تبدئي.", x: "شحذ السكّين قبل البدء." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.q': "كم يجب أن يكون في العلبة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.a': { m: "خمسمئة غرام. انظر إلى الميزان.", f: "خمسمئة غرام. انظري إلى الميزان.", x: "خمسمئة غرام. الميزان يُظهر ذلك." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting': "سكّين حادّ، يد آمنة", // nieuw, nalezen // nagelezen AI 28 nov
     'c.cutting.b': { m: "السكّين الحادّ أكثر أماناً من السكّين غير الحادّ: تحتاج قوة أقلّ، فينزلق أقلّ. البس دائماً قفّاز الحماية من القطع في اليد الأخرى. اقطع بعيداً عن جسمك. ضع السكّين مسطّحاً على اللوح، وليس أبداً في المغسلة أو تحت اللحم. لا تحاول أن تمسك سكّيناً يسقط: تراجع. احمل السكّين ورأسه إلى الأسفل، قريباً من ساقك. حتى الجرح الصغير يجب أن يُغطّى ويُبلّغ عنه.", f: "السكّين الحادّ أكثر أماناً من السكّين غير الحادّ: تحتاجين قوة أقلّ، فينزلق أقلّ. البسي دائماً قفّاز الحماية من القطع في اليد الأخرى. اقطعي بعيداً عن جسمك. ضعي السكّين مسطّحاً على اللوح، وليس أبداً في المغسلة أو تحت اللحم. لا تحاولي أن تمسكي سكّيناً يسقط: تراجعي. احملي السكّين ورأسه إلى الأسفل، قريباً من ساقك. حتى الجرح الصغير يجب أن يُغطّى ويُبلّغ عنه.", x: "السكّين الحادّ أكثر أماناً من السكّين غير الحادّ: يحتاج قوة أقلّ، فينزلق أقلّ. لُبس قفّاز الحماية من القطع دائماً في اليد الأخرى. القطع يكون بعيداً عن الجسم. السكّين يوضع مسطّحاً على اللوح، وليس أبداً في المغسلة أو تحت اللحم. السكّين الذي يسقط لا يُمسك: التراجع. السكّين يُحمل ورأسه إلى الأسفل، قريباً من الساق. حتى الجرح الصغير يجب أن يُغطّى ويُبلّغ عنه." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.cutting.p': "سكّيني غير حادّ.", // nieuw, nalezen
-    'c.cutting.s': { m: "السكّين ينزلق من يدك ويسقط. ماذا تفعل؟", f: "السكّين ينزلق من يدك ويسقط. ماذا تفعلين؟", x: "السكّين ينزلق من اليد ويسقط. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.cutting.o1': "التراجع، وتركه يسقط.", // nieuw, nalezen
-    'c.cutting.o2': "إمساكه بسرعة.", // nieuw, nalezen
-    'c.cutting.o3': "إيقافه بالقدم.", // nieuw, nalezen
-    'c.cutting.w': "السكّين الساقط يجرح عميقاً عند الإمساك به. على الأرض لا يؤذي أحداً.", // nieuw, nalezen
-    'l.labels': "التغليف والملصقات", // nieuw, nalezen
-    'w.etiketteren': "يلصق الملصقات", // nieuw, nalezen
-    'w.lotnummer': "رقم الدفعة (رقم واحد لدفعة واحدة من المنتجات)", // nieuw, nalezen
-    'w.vacuum': "مفرّغ من الهواء (كل الهواء خرج)", // nieuw, nalezen
-    'w.schaal': "الصينية (طبق مسطّح للطعام)", // nieuw, nalezen
-    'w.printer': "الطابعة", // nieuw, nalezen
-    'w.omdoos': "الصندوق الخارجي (الصندوق الكبير حول العبوات الصغيرة)", // nieuw, nalezen
-    's.labels.1': { m: "تأكّد أن التاريخ على الملصق صحيح.", f: "تأكّدي أن التاريخ على الملصق صحيح.", x: "التأكّد أن التاريخ على الملصق صحيح." }, // nieuw, nalezen
-    's.labels.2': { m: "هذه العبوة غير مفرّغة من الهواء. غلّفها من جديد.", f: "هذه العبوة غير مفرّغة من الهواء. غلّفيها من جديد.", x: "هذه العبوة غير مفرّغة من الهواء. يجب تغليفها من جديد." }, // nieuw, nalezen
-    's.labels.3': { m: "اكتب رقم الدفعة في القائمة.", f: "اكتبي رقم الدفعة في القائمة.", x: "رقم الدفعة يُكتب في القائمة." }, // nieuw, nalezen
-    'c.labels.q': "أي تاريخ يجب أن يكون عليه؟", // nieuw, nalezen
-    'c.labels.a': { m: "بعد عشرة أيام. انظر في القائمة.", f: "بعد عشرة أيام. انظري في القائمة.", x: "بعد عشرة أيام. هو في القائمة." }, // nieuw, nalezen
-    'c.labels': "الملصق الخاطئ خطير", // nieuw, nalezen
-    'c.labels.b': { m: "الملصق يقول للزبون ما في الداخل، وكم يزن، وحتى متى يبقى صالحاً. التاريخ الخاطئ أو الملصق الخاطئ قد يُمرض الناس، مثلاً عندما يكون مسبّب حساسية ناقصاً. لذلك افحص أول الملصقات في كل دفعة جديدة: المنتج والتاريخ ورقم الدفعة. هل هناك خطأ؟ توقّف، وأخبر مشرفك. المنتجات ذات الملصق الخاطئ توضع جانباً، ولا تُباع أبداً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الملصق يقول للزبون ما في الداخل، وكم يزن، وحتى متى يبقى صالحاً. التاريخ الخاطئ أو الملصق الخاطئ قد يُمرض الناس، مثلاً عندما يكون مسبّب حساسية ناقصاً. لذلك افحصي أول الملصقات في كل دفعة جديدة: المنتج والتاريخ ورقم الدفعة. هل هناك خطأ؟ توقّفي، وأخبري مشرفك. المنتجات ذات الملصق الخاطئ توضع جانباً، ولا تُباع أبداً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الملصق يقول للزبون ما في الداخل، وكم يزن، وحتى متى يبقى صالحاً. التاريخ الخاطئ أو الملصق الخاطئ قد يُمرض الناس، مثلاً عندما يكون مسبّب حساسية ناقصاً. لذلك فحص أول الملصقات في كل دفعة جديدة: المنتج والتاريخ ورقم الدفعة. هل هناك خطأ؟ التوقّف، وإخبار المشرف. المنتجات ذات الملصق الخاطئ توضع جانباً، ولا تُباع أبداً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.labels.p': "الملصق غير صحيح.", // nieuw, nalezen
-    'c.labels.s': { m: "ترى أن التاريخ على الملصقات متأخّر أسبوعاً. ماذا تفعل؟", f: "ترين أن التاريخ على الملصقات متأخّر أسبوعاً. ماذا تفعلين؟", x: "التاريخ على الملصقات متأخّر أسبوعاً. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.labels.o1': "التوقّف عن التغليف، وإخبار المشرف.", // nieuw, nalezen
-    'c.labels.o2': "المتابعة: أسبوع واحد لا يهمّ.", // nieuw, nalezen
-    'c.labels.o3': "تغيير التاريخ بالقلم.", // nieuw, nalezen
-    'c.labels.w': "التاريخ الخاطئ قد يجعل الناس يأكلون طعاماً لم يعد آمناً. التوقّف الآن أفضل من سحب المنتج لاحقاً.", // nieuw, nalezen
-    'l.linecleaning': "تنظيف الخطّ", // nieuw, nalezen
-    'w.schuim': "الرغوة", // nieuw, nalezen
-    'w.hogedrukspuit': "رشّاش الضغط العالي", // nieuw, nalezen
-    'w.naspoelen': "يشطف (يغسل بماء نظيف)", // nieuw, nalezen
-    'w.demonteren': "يفكّك", // nieuw, nalezen
-    'w.borstel': "الفرشاة", // nieuw, nalezen
-    'w.restjes': "البقايا (قطع صغيرة من الطعام)", // nieuw, nalezen
-    's.linecleaning.1': { m: "أطفِئ الآلة أولاً.", f: "أطفئي الآلة أولاً.", x: "إطفاء الآلة أولاً." }, // nieuw, nalezen
+    'c.cutting.p': "سكّيني غير حادّ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.s': { m: "السكّين ينزلق من يدك ويسقط. ماذا تفعل؟", f: "السكّين ينزلق من يدك ويسقط. ماذا تفعلين؟", x: "السكّين ينزلق من اليد ويسقط. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.o1': "التراجع، وتركه يسقط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.o2': "إمساكه بسرعة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.o3': "إيقافه بالقدم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.w': "السكّين الساقط يجرح عميقاً عند الإمساك به. على الأرض لا يؤذي أحداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.labels': "التغليف والملصقات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.etiketteren': "يلصق الملصقات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lotnummer': "رقم الدفعة (رقم واحد لدفعة واحدة من المنتجات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vacuum': "مفرّغ من الهواء (كل الهواء خرج)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schaal': "الصينية (طبق مسطّح للطعام)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.printer': "الطابعة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.omdoos': "الصندوق الخارجي (الصندوق الكبير حول العبوات الصغيرة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.labels.1': { m: "تأكّد أن التاريخ على الملصق صحيح.", f: "تأكّدي أن التاريخ على الملصق صحيح.", x: "التأكّد أن التاريخ على الملصق صحيح." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.labels.2': { m: "هذه العبوة غير مفرّغة من الهواء. غلّفها من جديد.", f: "هذه العبوة غير مفرّغة من الهواء. غلّفيها من جديد.", x: "هذه العبوة غير مفرّغة من الهواء. يجب تغليفها من جديد." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.labels.3': { m: "اكتب رقم الدفعة في القائمة.", f: "اكتبي رقم الدفعة في القائمة.", x: "رقم الدفعة يُكتب في القائمة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.q': "أي تاريخ يجب أن يكون عليه؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.a': { m: "بعد عشرة أيام. انظر في القائمة.", f: "بعد عشرة أيام. انظري في القائمة.", x: "بعد عشرة أيام. هو في القائمة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels': "الملصق الخاطئ خطير", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.b': { m: "الملصق يقول للزبون ما في الداخل، وكم يزن، وحتى متى يبقى صالحاً. التاريخ الخاطئ أو الملصق الخاطئ قد يُمرض الناس، مثلاً عندما يكون مسبّب حساسية ناقصاً. لذلك افحص أول الملصقات في كل دفعة جديدة: المنتج والتاريخ ورقم الدفعة. هل هناك خطأ؟ توقّف، وأخبر مشرفك. المنتجات ذات الملصق الخاطئ توضع جانباً، ولا تُباع أبداً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الملصق يقول للزبون ما في الداخل، وكم يزن، وحتى متى يبقى صالحاً. التاريخ الخاطئ أو الملصق الخاطئ قد يُمرض الناس، مثلاً عندما يكون مسبّب حساسية ناقصاً. لذلك افحصي أول الملصقات في كل دفعة جديدة: المنتج والتاريخ ورقم الدفعة. هل هناك خطأ؟ توقّفي، وأخبري مشرفك. المنتجات ذات الملصق الخاطئ توضع جانباً، ولا تُباع أبداً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الملصق يقول للزبون ما في الداخل، وكم يزن، وحتى متى يبقى صالحاً. التاريخ الخاطئ أو الملصق الخاطئ قد يُمرض الناس، مثلاً عندما يكون مسبّب حساسية ناقصاً. لذلك فحص أول الملصقات في كل دفعة جديدة: المنتج والتاريخ ورقم الدفعة. هل هناك خطأ؟ التوقّف، وإخبار المشرف. المنتجات ذات الملصق الخاطئ توضع جانباً، ولا تُباع أبداً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.p': "الملصق غير صحيح.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.s': { m: "ترى أن التاريخ على الملصقات متأخّر أسبوعاً. ماذا تفعل؟", f: "ترين أن التاريخ على الملصقات متأخّر أسبوعاً. ماذا تفعلين؟", x: "التاريخ على الملصقات متأخّر أسبوعاً. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.o1': "التوقّف عن التغليف، وإخبار المشرف.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.o2': "المتابعة: أسبوع واحد لا يهمّ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.o3': "تغيير التاريخ بالقلم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.w': "التاريخ الخاطئ قد يجعل الناس يأكلون طعاماً لم يعد آمناً. التوقّف الآن أفضل من سحب المنتج لاحقاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.linecleaning': "تنظيف الخطّ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schuim': "الرغوة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hogedrukspuit': "رشّاش الضغط العالي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.naspoelen': "يشطف (يغسل بماء نظيف)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.demonteren': "يفكّك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.borstel': "الفرشاة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.restjes': "البقايا (قطع صغيرة من الطعام)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.linecleaning.1': { m: "أطفِئ الآلة أولاً.", f: "أطفئي الآلة أولاً.", x: "إطفاء الآلة أولاً." }, // nieuw, nalezen // nagelezen AI 28 nov
     's.linecleaning.2': { m: "رُشّ الرغوة على الحزام.", f: "رُشّي الرغوة على الحزام.", x: "تُرَشّ الرغوة على الحزام." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    's.linecleaning.3': { m: "ثم اشطف كل شيء بماء نظيف.", f: "ثم اشطفي كل شيء بماء نظيف.", x: "ثم شطف كل شيء بماء نظيف." }, // nieuw, nalezen
-    'c.linecleaning.q': "هل الحزام نظيف الآن؟", // nieuw, nalezen
-    'c.linecleaning.a': "ليس بعد. ما زال عليّ أن أشطفه.", // nieuw, nalezen
-    'c.linecleaning': { m: "أطفِئ الآلة قبل التنظيف", f: "أطفئي الآلة قبل التنظيف", x: "إطفاء الآلة قبل التنظيف" }, // nieuw, nalezen
+    's.linecleaning.3': { m: "ثم اشطف كل شيء بماء نظيف.", f: "ثم اشطفي كل شيء بماء نظيف.", x: "ثم شطف كل شيء بماء نظيف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.q': "هل الحزام نظيف الآن؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.a': "ليس بعد. ما زال عليّ أن أشطفه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning': { m: "أطفِئ الآلة قبل التنظيف", f: "أطفئي الآلة قبل التنظيف", x: "إطفاء الآلة قبل التنظيف" }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.linecleaning.b': { m: "لا تنظّف أبداً آلة تعمل. أطفِئها، وتأكّد أن لا أحد يستطيع تشغيلها من جديد: اتبع خطوات شركتك. البس القفازات والنظارات والأحذية المطاطية المناسبة: مواد التنظيف قد تحرق جلدك وعينيك. لا تخلط المواد أبداً. أولاً أزِل البقايا، ثم الرغوة والفرك والشطف. لا ترشّ الماء على الصناديق الكهربائية أو المقابس. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "لا تنظّفي أبداً آلة تعمل. أطفئيها، وتأكّدي أن لا أحد يستطيع تشغيلها من جديد: اتبعي خطوات شركتك. البسي القفازات والنظارات والأحذية المطاطية المناسبة: مواد التنظيف قد تحرق جلدك وعينيك. لا تخلطي المواد أبداً. أولاً أزيلي البقايا، ثم الرغوة والفرك والشطف. لا ترشّي الماء على الصناديق الكهربائية أو المقابس. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "تنظيف آلة تعمل ممنوع أبداً. إطفاؤها، والتأكّد أن لا أحد يستطيع تشغيلها من جديد: اتّباع خطوات الشركة. لُبس القفازات والنظارات والأحذية المطاطية المناسبة: مواد التنظيف قد تحرق الجلد والعينين. خلط المواد ممنوع أبداً. أولاً إزالة البقايا، ثم الرغوة والفرك والشطف. رشّ الماء على الصناديق الكهربائية أو المقابس ممنوع. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.linecleaning.p': "هل الآلة مطفأة؟", // nieuw, nalezen
-    'c.linecleaning.s': { m: "قطعة لحم عالقة في الحزام. الآلة ما زالت تعمل. ماذا تفعل؟", f: "قطعة لحم عالقة في الحزام. الآلة ما زالت تعمل. ماذا تفعلين؟", x: "قطعة لحم عالقة في الحزام. الآلة ما زالت تعمل. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.linecleaning.o1': "إطفاؤها أولاً، ثم إخراجها.", // nieuw, nalezen
-    'c.linecleaning.o2': "سحبها بسرعة باليد.", // nieuw, nalezen
-    'c.linecleaning.o3': "دفعها إلى الخارج بالسكّين.", // nieuw, nalezen
-    'c.linecleaning.w': "الحزام الذي يعمل يمكن أن يسحب اليد في ثانية. الإطفاء يأخذ لحظة فقط.", // nieuw, nalezen
-    'l.haccp': "الفحص والتسجيل (HACCP)", // nieuw, nalezen
-    'w.controlepunt': "نقطة الفحص (خطوة يجب أن تفحص فيها شيئاً)", // nieuw, nalezen
-    'w.kerntemperatuur': "الحرارة الداخلية (الحرارة داخل الطعام)", // nieuw, nalezen
-    'w.prikthermometer': "ميزان الحرارة بالإبرة (تغرزه في الطعام)", // nieuw, nalezen
-    'w.afwijking': "الانحراف (شيء ليس كما يجب)", // nieuw, nalezen
-    'w.steekproef': "الفحص العشوائي (تختبر بعض المنتجات)", // nieuw, nalezen
-    'w.kwaliteitsdienst': "قسم الجودة (QA)", // nieuw, nalezen
-    's.haccp.1': { m: "قِس الحرارة الداخلية بميزان الحرارة بالإبرة.", f: "قيسي الحرارة الداخلية بميزان الحرارة بالإبرة.", x: "قياس الحرارة الداخلية بميزان الحرارة بالإبرة." }, // nieuw, nalezen
-    's.haccp.2': { m: "اكتب كل شيء في القائمة.", f: "اكتبي كل شيء في القائمة.", x: "كتابة كل شيء في القائمة." }, // nieuw, nalezen
-    's.haccp.3': { m: "هل هناك خطأ؟ بلّغ عنه فوراً.", f: "هل هناك خطأ؟ بلّغي عنه فوراً.", x: "هل هناك خطأ؟ الإبلاغ عنه فوراً." }, // nieuw, nalezen
-    'c.haccp.q': "لماذا يجب أن أكتب كل شيء؟", // nieuw, nalezen
-    'c.haccp.a': "هكذا نعرف أن الطعام آمن.", // nieuw, nalezen
-    'c.haccp': { m: "HACCP: افحص، اكتب، بلّغ", f: "HACCP: افحصي، اكتبي، بلّغي", x: "HACCP: الفحص، الكتابة، الإبلاغ" }, // nieuw, nalezen
-    'c.haccp.b': { m: "كل شركة طعام تعمل بخطة لسلامة الغذاء (HACCP). تقول في أي خطوات يجب أن تفحص شيئاً، مثل حرارة غرفة التبريد أو الحرارة الداخلية للّحم المطبوخ. تفحص، وتكتب ذلك، وتوقّع. اكتب ما قسته فعلاً، حتى عندما يكون خطأ. الرقم الخاطئ ليس ذنبك، لكن إخفاءه خطير. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "كل شركة طعام تعمل بخطة لسلامة الغذاء (HACCP). تقول في أي خطوات يجب أن تفحصي شيئاً، مثل حرارة غرفة التبريد أو الحرارة الداخلية للّحم المطبوخ. تفحصين، وتكتبين ذلك، وتوقّعين. اكتبي ما قستِه فعلاً، حتى عندما يكون خطأ. الرقم الخاطئ ليس ذنبك، لكن إخفاءه خطير. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "كل شركة طعام تعمل بخطة لسلامة الغذاء (HACCP). تقول في أي خطوات يجب فحص شيء، مثل حرارة غرفة التبريد أو الحرارة الداخلية للّحم المطبوخ. الفحص، والكتابة، والتوقيع. كتابة ما تمّ قياسه فعلاً، حتى عندما يكون خطأ. الرقم الخاطئ ليس ذنب أحد، لكن إخفاءه خطير. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.haccp.p': "الحرارة مرتفعة جداً.", // nieuw, nalezen
-    'c.haccp.s': { m: "نسيتَ أن تقيس في العاشرة. زميلك يقول: «اكتب رقماً جيداً فقط». ماذا تفعل؟", f: "نسيتِ أن تقيسي في العاشرة. زميلك يقول: «اكتبي رقماً جيداً فقط». ماذا تفعلين؟", x: "القياس في العاشرة نُسي. زميل يقول: «يكفي رقم جيد». ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.haccp.o1': "القياس الآن، وكتابة الوقت الحقيقي.", // nieuw, nalezen
-    'c.haccp.o2': "كتابة رقم جيد للساعة العاشرة.", // nieuw, nalezen
-    'c.haccp.o3': "ترك السطر فارغاً.", // nieuw, nalezen
-    'c.haccp.w': "القائمة يجب أن تُظهر ما حدث فعلاً. الرقم المختلَق يخفي مشكلة قد تُمرض الناس.", // nieuw, nalezen
-    'u.collection': "جمع النفايات", // nieuw, nalezen
-    'l.binlorry': "شاحنة النفايات", // nieuw, nalezen
-    'w.vuilniswagen': "شاحنة النفايات", // nieuw, nalezen
-    'w.kliko': "حاوية النفايات ذات العجلات (صندوق على عجلات)", // nieuw, nalezen
-    'w.kieplift': "رافعة الحاويات (ترفع الحاوية وتقلبها)", // nieuw, nalezen
-    'w.treeplank': "درجة الوقوف الخلفية (درجة في خلف الشاحنة)", // nieuw, nalezen
-    'w.bijplaatsing': "النفايات الإضافية (أكياس متروكة بجانب الحاوية)", // nieuw, nalezen
-    'w.ophaaldag': "يوم الجمع", // nieuw, nalezen
-    's.binlorry.1': { m: "ضع الحاوية على رافعة الحاويات.", f: "ضعي الحاوية على رافعة الحاويات.", x: "الحاوية توضع على رافعة الحاويات." }, // nieuw, nalezen
-    's.binlorry.2': "توجد أكياس بجانب الحاوية الكبيرة.", // nieuw, nalezen
-    's.binlorry.3': { m: "الحاوية ثقيلة جداً. اتركها.", f: "الحاوية ثقيلة جداً. اتركيها.", x: "الحاوية ثقيلة جداً. تبقى في مكانها." }, // nieuw, nalezen
-    'c.binlorry.q': "هل يمكنني أن أركب في الخلف؟", // nieuw, nalezen
-    'c.binlorry.a': { m: "لا، تركب في المقصورة.", f: "لا، تركبين في المقصورة.", x: "لا، الركوب في المقصورة." }, // nieuw, nalezen
-    'c.binlorry': { m: "كن مرئياً، واركب في الداخل", f: "كوني مرئية، واركبي في الداخل", x: "الظهور بوضوح، والركوب في الداخل" }, // nieuw, nalezen
+    'c.linecleaning.p': "هل الآلة مطفأة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.s': { m: "قطعة لحم عالقة في الحزام. الآلة ما زالت تعمل. ماذا تفعل؟", f: "قطعة لحم عالقة في الحزام. الآلة ما زالت تعمل. ماذا تفعلين؟", x: "قطعة لحم عالقة في الحزام. الآلة ما زالت تعمل. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.o1': "إطفاؤها أولاً، ثم إخراجها.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.o2': "سحبها بسرعة باليد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.o3': "دفعها إلى الخارج بالسكّين.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.w': "الحزام الذي يعمل يمكن أن يسحب اليد في ثانية. الإطفاء يأخذ لحظة فقط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.haccp': "الفحص والتسجيل (HACCP)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.controlepunt': "نقطة الفحص (خطوة يجب أن تفحص فيها شيئاً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kerntemperatuur': "الحرارة الداخلية (الحرارة داخل الطعام)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.prikthermometer': "ميزان الحرارة بالإبرة (تغرزه في الطعام)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afwijking': "الانحراف (شيء ليس كما يجب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.steekproef': "الفحص العشوائي (تختبر بعض المنتجات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kwaliteitsdienst': "قسم الجودة (QA)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.haccp.1': { m: "قِس الحرارة الداخلية بميزان الحرارة بالإبرة.", f: "قيسي الحرارة الداخلية بميزان الحرارة بالإبرة.", x: "قياس الحرارة الداخلية بميزان الحرارة بالإبرة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.haccp.2': { m: "اكتب كل شيء في القائمة.", f: "اكتبي كل شيء في القائمة.", x: "كتابة كل شيء في القائمة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.haccp.3': { m: "هل هناك خطأ؟ بلّغ عنه فوراً.", f: "هل هناك خطأ؟ بلّغي عنه فوراً.", x: "هل هناك خطأ؟ الإبلاغ عنه فوراً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.q': "لماذا يجب أن أكتب كل شيء؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.a': "هكذا نعرف أن الطعام آمن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp': { m: "HACCP: افحص، اكتب، بلّغ", f: "HACCP: افحصي، اكتبي، بلّغي", x: "HACCP: الفحص، الكتابة، الإبلاغ" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.b': { m: "كل شركة طعام تعمل بخطة لسلامة الغذاء (HACCP). تقول في أي خطوات يجب أن تفحص شيئاً، مثل حرارة غرفة التبريد أو الحرارة الداخلية للّحم المطبوخ. تفحص، وتكتب ذلك، وتوقّع. اكتب ما قسته فعلاً، حتى عندما يكون خطأ. الرقم الخاطئ ليس ذنبك، لكن إخفاءه خطير. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "كل شركة طعام تعمل بخطة لسلامة الغذاء (HACCP). تقول في أي خطوات يجب أن تفحصي شيئاً، مثل حرارة غرفة التبريد أو الحرارة الداخلية للّحم المطبوخ. تفحصين، وتكتبين ذلك، وتوقّعين. اكتبي ما قستِه فعلاً، حتى عندما يكون خطأ. الرقم الخاطئ ليس ذنبك، لكن إخفاءه خطير. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "كل شركة طعام تعمل بخطة لسلامة الغذاء (HACCP). تقول في أي خطوات يجب فحص شيء، مثل حرارة غرفة التبريد أو الحرارة الداخلية للّحم المطبوخ. الفحص، والكتابة، والتوقيع. كتابة ما تمّ قياسه فعلاً، حتى عندما يكون خطأ. الرقم الخاطئ ليس ذنب أحد، لكن إخفاءه خطير. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.p': "الحرارة مرتفعة جداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.s': { m: "نسيتَ أن تقيس في العاشرة. زميلك يقول: «اكتب رقماً جيداً فقط». ماذا تفعل؟", f: "نسيتِ أن تقيسي في العاشرة. زميلك يقول: «اكتبي رقماً جيداً فقط». ماذا تفعلين؟", x: "القياس في العاشرة نُسي. زميل يقول: «يكفي رقم جيد». ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.o1': "القياس الآن، وكتابة الوقت الحقيقي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.o2': "كتابة رقم جيد للساعة العاشرة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.o3': "ترك السطر فارغاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.w': "القائمة يجب أن تُظهر ما حدث فعلاً. الرقم المختلَق يخفي مشكلة قد تُمرض الناس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.collection': "جمع النفايات", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.binlorry': "شاحنة النفايات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vuilniswagen': "شاحنة النفايات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kliko': "حاوية النفايات ذات العجلات (صندوق على عجلات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kieplift': "رافعة الحاويات (ترفع الحاوية وتقلبها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.treeplank': "درجة الوقوف الخلفية (درجة في خلف الشاحنة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijplaatsing': "النفايات الإضافية (أكياس متروكة بجانب الحاوية)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ophaaldag': "يوم الجمع", // nieuw, nalezen // nagelezen AI 28 nov
+    's.binlorry.1': { m: "ضع الحاوية على رافعة الحاويات.", f: "ضعي الحاوية على رافعة الحاويات.", x: "الحاوية توضع على رافعة الحاويات." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.binlorry.2': "توجد أكياس بجانب الحاوية الكبيرة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.binlorry.3': { m: "الحاوية ثقيلة جداً. اتركها.", f: "الحاوية ثقيلة جداً. اتركيها.", x: "الحاوية ثقيلة جداً. تبقى في مكانها." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.q': "هل يمكنني أن أركب في الخلف؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.a': { m: "لا، تركب في المقصورة.", f: "لا، تركبين في المقصورة.", x: "لا، الركوب في المقصورة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry': { m: "كن مرئياً، واركب في الداخل", f: "كوني مرئية، واركبي في الداخل", x: "الظهور بوضوح، والركوب في الداخل" }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.binlorry.b': { m: "البس ملابسك العاكسة في كل جولة. اصعد وانزل من جهة الرصيف، وليس أبداً من جهة حركة المرور. اركب في المقصورة، لا في خلف الشاحنة: فقط عندما تسمح شركتك بذلك بوضوح، وليس أبداً عندما ترجع الشاحنة إلى الخلف أو تسير بسرعة. ابتعد عن رافعة الحاويات وهي تتحرّك. هل الحاوية ثقيلة جداً، أو يخرج منها شيء؟ اتركها، وبلّغ عنها. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "البسي ملابسك العاكسة في كل جولة. اصعدي وانزلي من جهة الرصيف، وليس أبداً من جهة حركة المرور. اركبي في المقصورة، لا في خلف الشاحنة: فقط عندما تسمح شركتك بذلك بوضوح، وليس أبداً عندما ترجع الشاحنة إلى الخلف أو تسير بسرعة. ابتعدي عن رافعة الحاويات وهي تتحرّك. هل الحاوية ثقيلة جداً، أو يخرج منها شيء؟ اتركيها، وبلّغي عنها. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "لُبس الملابس العاكسة في كل جولة. الصعود والنزول من جهة الرصيف، وليس أبداً من جهة حركة المرور. الركوب في المقصورة، لا في خلف الشاحنة: فقط عندما تسمح الشركة بذلك بوضوح، وليس أبداً عندما ترجع الشاحنة إلى الخلف أو تسير بسرعة. الابتعاد عن رافعة الحاويات وهي تتحرّك. هل الحاوية ثقيلة جداً، أو يخرج منها شيء؟ تركها، والإبلاغ عنها. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.binlorry.p': "هذه الحاوية ثقيلة جداً.", // nieuw, nalezen
-    'c.binlorry.s': { m: "الشارع التالي قريب جداً. السائق يقول: «قف على الدرجة الخلفية». ماذا تفعل؟", f: "الشارع التالي قريب جداً. السائق يقول: «قفي على الدرجة الخلفية». ماذا تفعلين؟", x: "الشارع التالي قريب جداً. السائق يقول: «الوقوف على الدرجة الخلفية يكفي». ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.binlorry.o1': "الركوب في المقصورة رغم ذلك.", // nieuw, nalezen
-    'c.binlorry.o2': "الوقوف على الدرجة: المسافة قريبة.", // nieuw, nalezen
-    'c.binlorry.o3': "المشي خلف الشاحنة.", // nieuw, nalezen
-    'c.binlorry.w': "السقوط من شاحنة متحرّكة من أكبر أخطار هذا العمل. في المقصورة الركوب آمن.", // nieuw, nalezen
-    'l.reversing': "الرجوع إلى الخلف بأمان", // nieuw, nalezen
-    'w.achteruitrijden': "يرجع بالسيارة إلى الخلف", // nieuw, nalezen
-    'w.dodehoek': "النقطة العمياء (حيث لا يراك السائق)", // nieuw, nalezen
-    'w.aanwijzer': "الموجِّه (الشخص الذي يوجّه السائق)", // nieuw, nalezen
-    'w.oogcontact': "التواصل بالعين", // nieuw, nalezen
-    'w.piepen': "يصفّر", // nieuw, nalezen
-    'w.cabine': "المقصورة (حيث يجلس السائق)", // nieuw, nalezen
-    's.reversing.1': { m: "لا تقف أبداً خلف الشاحنة.", f: "لا تقفي أبداً خلف الشاحنة.", x: "الوقوف خلف الشاحنة ممنوع أبداً." }, // nieuw, nalezen
-    's.reversing.2': "لا أراك في المرآة.", // nieuw, nalezen
-    's.reversing.3': { m: "انظر في عيني السائق.", f: "انظري في عيني السائق.", x: "التواصل بالعين مع السائق." }, // nieuw, nalezen
-    'c.reversing.q': "هل يمكنك أن تساعدني في الرجوع إلى الخلف؟", // nieuw, nalezen
-    'c.reversing.a': "نعم، أنا على اليسار. انظر في مرآتك.", // nieuw, nalezen
+    'c.binlorry.p': "هذه الحاوية ثقيلة جداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.s': { m: "الشارع التالي قريب جداً. السائق يقول: «قف على الدرجة الخلفية». ماذا تفعل؟", f: "الشارع التالي قريب جداً. السائق يقول: «قفي على الدرجة الخلفية». ماذا تفعلين؟", x: "الشارع التالي قريب جداً. السائق يقول: «الوقوف على الدرجة الخلفية يكفي». ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.o1': "الركوب في المقصورة رغم ذلك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.o2': "الوقوف على الدرجة: المسافة قريبة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.o3': "المشي خلف الشاحنة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.w': "السقوط من شاحنة متحرّكة من أكبر أخطار هذا العمل. في المقصورة الركوب آمن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.reversing': "الرجوع إلى الخلف بأمان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.achteruitrijden': "يرجع بالسيارة إلى الخلف", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dodehoek': "النقطة العمياء (حيث لا يراك السائق)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanwijzer': "الموجِّه (الشخص الذي يوجّه السائق)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oogcontact': "التواصل بالعين", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.piepen': "يصفّر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.cabine': "المقصورة (حيث يجلس السائق)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reversing.1': { m: "لا تقف أبداً خلف الشاحنة.", f: "لا تقفي أبداً خلف الشاحنة.", x: "الوقوف خلف الشاحنة ممنوع أبداً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.reversing.2': "لا أراك في المرآة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reversing.3': { m: "انظر في عيني السائق.", f: "انظري في عيني السائق.", x: "التواصل بالعين مع السائق." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.q': "هل يمكنك أن تساعدني في الرجوع إلى الخلف؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.a': "نعم، أنا على اليسار. انظر في مرآتك.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.reversing': "ممنوع الوقوف خلف شاحنة ترجع إلى الخلف", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.reversing.b': { m: "حوادث كثيرة مع شاحنات النفايات تحدث عندما ترجع إلى الخلف. السائق لا يرى ما خلف الشاحنة مباشرة: النقطة العمياء. لذلك لا تقف ولا تمشِ أبداً خلف شاحنة قد ترجع. وجّه السائق من الجانب، حيث ترى السائق ويراك في المرآة. انقطع التواصل بالعين؟ السائق يتوقّف. اتفق على إشارات واضحة قبل أن تبدأ. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "حوادث كثيرة مع شاحنات النفايات تحدث عندما ترجع إلى الخلف. السائق لا يرى ما خلف الشاحنة مباشرة: النقطة العمياء. لذلك لا تقفي ولا تمشي أبداً خلف شاحنة قد ترجع. وجّهي السائق من الجانب، حيث ترين السائق ويراك في المرآة. انقطع التواصل بالعين؟ السائق يتوقّف. اتفقي على إشارات واضحة قبل أن تبدئي. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "حوادث كثيرة مع شاحنات النفايات تحدث عندما ترجع إلى الخلف. السائق لا يرى ما خلف الشاحنة مباشرة: النقطة العمياء. لذلك الوقوف أو المشي خلف شاحنة قد ترجع ممنوع أبداً. التوجيه يكون من الجانب، حيث يرى الاثنان بعضهما في المرآة. انقطع التواصل بالعين؟ السائق يتوقّف. الاتفاق على إشارات واضحة قبل البدء. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.reversing.p': "قف! لم أعد أراك.", // nieuw, nalezen
-    'c.reversing.s': { m: "الشاحنة ترجع إلى الخلف. تمشي خلفها لتأخذ كيساً. ماذا تفعل؟", f: "الشاحنة ترجع إلى الخلف. تمشين خلفها لتأخذي كيساً. ماذا تفعلين؟", x: "الشاحنة ترجع إلى الخلف. كيس خلفها يجب أن يُؤخذ. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.reversing.o1': "الانتظار حتى تقف الشاحنة تماماً.", // nieuw, nalezen
-    'c.reversing.o2': "المشي بسرعة: إنها ثانية فقط.", // nieuw, nalezen
-    'c.reversing.o3': "التلويح للسائق، والمشي.", // nieuw, nalezen
-    'c.reversing.w': "السائق لا يرى من هو خلف الشاحنة. ثانية واحدة تكفي لحادث.", // nieuw, nalezen
-    'l.wastesorting': "فرز النفايات", // nieuw, nalezen
-    'w.papier': "الورق", // nieuw, nalezen
-    'w.plastic': "البلاستيك", // nieuw, nalezen
-    'w.gft': "النفايات العضوية (فواكه وخضار ونباتات)", // nieuw, nalezen
-    'w.restafval': "النفايات العامة (ما لا يمكن فرزه)", // nieuw, nalezen
-    'w.karton': "الكرتون", // nieuw, nalezen
-    'w.blik': "العلبة المعدنية", // nieuw, nalezen
-    's.wastesorting.1': "الزجاج يذهب في حاوية الزجاج.", // nieuw, nalezen
-    's.wastesorting.2': "هذا مكانه مع النفايات العامة.", // nieuw, nalezen
-    's.wastesorting.3': { m: "اطوِ الكرتون حتى يصبح مسطّحاً.", f: "اطوي الكرتون حتى يصبح مسطّحاً.", x: "الكرتون يُطوى حتى يصبح مسطّحاً." }, // nieuw, nalezen
-    'c.wastesorting.q': "أين تذهب علبة البيتزا؟", // nieuw, nalezen
-    'c.wastesorting.a': "مع النفايات العامة. عليها دهون.", // nieuw, nalezen
-    'c.wastesorting': "الفرز الجيد يوفّر العمل", // nieuw, nalezen
+    'c.reversing.b': { m: "حوادث كثيرة مع شاحنات النفايات تحدث عندما ترجع إلى الخلف. السائق لا يرى ما خلف الشاحنة مباشرة: النقطة العمياء. لذلك لا تقف ولا تمشِ أبداً خلف شاحنة قد ترجع. وجّه السائق من الجانب، حيث ترى السائق ويراك في المرآة. انقطع التواصل بالعين؟ السائق يتوقّف. اتفق على إشارات واضحة قبل أن تبدأ. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "حوادث كثيرة مع شاحنات النفايات تحدث عندما ترجع إلى الخلف. السائق لا يرى ما خلف الشاحنة مباشرة: النقطة العمياء. لذلك لا تقفي ولا تمشي أبداً خلف شاحنة قد ترجع. وجّهي السائق من الجانب، حيث ترين السائق ويراك في المرآة. انقطع التواصل بالعين؟ السائق يتوقّف. اتفقي على إشارات واضحة قبل أن تبدئي. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "حوادث كثيرة مع شاحنات النفايات تحدث عندما ترجع إلى الخلف. السائق لا يرى ما خلف الشاحنة مباشرة: النقطة العمياء. لذلك الوقوف أو المشي خلف شاحنة قد ترجع ممنوع أبداً. التوجيه يكون من الجانب، حيث يرى الاثنان بعضهما في المرآة. انقطع التواصل بالعين؟ السائق يتوقّف. الاتفاق على إشارات واضحة قبل البدء. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.p': "قف! لم أعد أراك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.s': { m: "الشاحنة ترجع إلى الخلف. تمشي خلفها لتأخذ كيساً. ماذا تفعل؟", f: "الشاحنة ترجع إلى الخلف. تمشين خلفها لتأخذي كيساً. ماذا تفعلين؟", x: "الشاحنة ترجع إلى الخلف. كيس خلفها يجب أن يُؤخذ. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.o1': "الانتظار حتى تقف الشاحنة تماماً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.o2': "المشي بسرعة: إنها ثانية فقط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.o3': "التلويح للسائق، والمشي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.w': "السائق لا يرى من هو خلف الشاحنة. ثانية واحدة تكفي لحادث.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.wastesorting': "فرز النفايات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.papier': "الورق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plastic': "البلاستيك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gft': "النفايات العضوية (فواكه وخضار ونباتات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.restafval': "النفايات العامة (ما لا يمكن فرزه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.karton': "الكرتون", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.blik': "العلبة المعدنية", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wastesorting.1': "الزجاج يذهب في حاوية الزجاج.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wastesorting.2': "هذا مكانه مع النفايات العامة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wastesorting.3': { m: "اطوِ الكرتون حتى يصبح مسطّحاً.", f: "اطوي الكرتون حتى يصبح مسطّحاً.", x: "الكرتون يُطوى حتى يصبح مسطّحاً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.q': "أين تذهب علبة البيتزا؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.a': "مع النفايات العامة. عليها دهون.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting': "الفرز الجيد يوفّر العمل", // nieuw, nalezen // nagelezen AI 28 nov
     'c.wastesorting.b': { m: "النفايات المفروزة يمكن أن تُستعمل من جديد: الورق يصبح ورقاً، والزجاج يصبح زجاجاً. لكن شيئاً واحداً خاطئاً قد يُفسد حمولة كاملة. لذلك انظر في الحاوية قبل أن تفرغها. هل فيها شيء ليس مكانه هناك، مثل كيس نفايات عامة في الورق؟ اتركها، أو اتبع قواعد شركتك. أي نفايات تذهب إلى أين يختلف من بلدة إلى أخرى: تعلّم قواعد منطقتك. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "النفايات المفروزة يمكن أن تُستعمل من جديد: الورق يصبح ورقاً، والزجاج يصبح زجاجاً. لكن شيئاً واحداً خاطئاً قد يُفسد حمولة كاملة. لذلك انظري في الحاوية قبل أن تفرغيها. هل فيها شيء ليس مكانه هناك، مثل كيس نفايات عامة في الورق؟ اتركيها، أو اتبعي قواعد شركتك. أي نفايات تذهب إلى أين يختلف من بلدة إلى أخرى: تعلّمي قواعد منطقتك. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "النفايات المفروزة يمكن أن تُستعمل من جديد: الورق يصبح ورقاً، والزجاج يصبح زجاجاً. لكن شيئاً واحداً خاطئاً قد يُفسد حمولة كاملة. لذلك النظر في الحاوية قبل إفراغها. هل فيها شيء ليس مكانه هناك، مثل كيس نفايات عامة في الورق؟ تركها، أو اتّباع قواعد الشركة. أي نفايات تذهب إلى أين يختلف من بلدة إلى أخرى: تعلُّم قواعد المنطقة. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.wastesorting.p': "هذا ليس مكانه هنا.", // nieuw, nalezen
-    'c.wastesorting.s': { m: "حاوية الورق مليئة بأكياس قمامة سوداء. ماذا تفعل؟", f: "حاوية الورق مليئة بأكياس قمامة سوداء. ماذا تفعلين؟", x: "حاوية الورق مليئة بأكياس قمامة سوداء. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.wastesorting.o1': "تركها، والإبلاغ عنها.", // nieuw, nalezen
-    'c.wastesorting.o2': "إفراغها مع الورق.", // nieuw, nalezen
-    'c.wastesorting.o3': "إخراج الأكياس باليد.", // nieuw, nalezen
-    'c.wastesorting.w': "القمامة في الورق تُفسد الحمولة كلها. والأكياس قد يكون فيها أشياء حادّة أو وسخة.", // nieuw, nalezen
-    'l.wastesafety': "الأشياء الحادّة والرفع", // nieuw, nalezen
-    'w.snijwond': "الجرح القطعي (جرح من شيء حادّ)", // nieuw, nalezen
-    'w.prikken': "يَخِز (رأس حادّ يدخل في الجلد)", // nieuw, nalezen
-    'w.naald': "الإبرة", // nieuw, nalezen
-    'w.scherp': "حادّ", // nieuw, nalezen
-    'w.rugpijn': "ألم الظهر", // nieuw, nalezen
-    'w.tetanusprik': "حقنة الكزاز (حقنة ضدّ مرض يأتي من الوسخ في الجرح)", // nieuw, nalezen
-    's.wastesafety.1': { m: "لا تمسك الكيس أبداً من الأسفل.", f: "لا تمسكي الكيس أبداً من الأسفل.", x: "الكيس لا يُمسك أبداً من الأسفل." }, // nieuw, nalezen
-    's.wastesafety.2': { m: "انتبه، في هذا الكيس زجاج.", f: "انتبهي، في هذا الكيس زجاج.", x: "انتباه، في هذا الكيس زجاج." }, // nieuw, nalezen
-    's.wastesafety.3': "وخزتني إبرة.", // nieuw, nalezen
-    'c.wastesafety.q': "جرحت نفسي. ماذا يجب أن أفعل؟", // nieuw, nalezen
-    'c.wastesafety.a': { m: "اغسل الجرح جيداً. وأخبرني.", f: "اغسلي الجرح جيداً. وأخبريني.", x: "غسل الجرح جيداً. وإخباري بذلك." }, // nieuw, nalezen
-    'c.wastesafety': { m: "لا تضغط على الكيس أبداً", f: "لا تضغطي على الكيس أبداً", x: "الضغط على الكيس ممنوع أبداً" }, // nieuw, nalezen
+    'c.wastesorting.p': "هذا ليس مكانه هنا.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.s': { m: "حاوية الورق مليئة بأكياس قمامة سوداء. ماذا تفعل؟", f: "حاوية الورق مليئة بأكياس قمامة سوداء. ماذا تفعلين؟", x: "حاوية الورق مليئة بأكياس قمامة سوداء. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.o1': "تركها، والإبلاغ عنها.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.o2': "إفراغها مع الورق.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.o3': "إخراج الأكياس باليد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.w': "القمامة في الورق تُفسد الحمولة كلها. والأكياس قد يكون فيها أشياء حادّة أو وسخة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.wastesafety': "الأشياء الحادّة والرفع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snijwond': "الجرح القطعي (جرح من شيء حادّ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.prikken': "يَخِز (رأس حادّ يدخل في الجلد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.naald': "الإبرة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scherp': "حادّ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rugpijn': "ألم الظهر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tetanusprik': "حقنة الكزاز (حقنة ضدّ مرض يأتي من الوسخ في الجرح)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wastesafety.1': { m: "لا تمسك الكيس أبداً من الأسفل.", f: "لا تمسكي الكيس أبداً من الأسفل.", x: "الكيس لا يُمسك أبداً من الأسفل." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.wastesafety.2': { m: "انتبه، في هذا الكيس زجاج.", f: "انتبهي، في هذا الكيس زجاج.", x: "انتباه، في هذا الكيس زجاج." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.wastesafety.3': "وخزتني إبرة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.q': "جرحت نفسي. ماذا يجب أن أفعل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.a': { m: "اغسل الجرح جيداً. وأخبرني.", f: "اغسلي الجرح جيداً. وأخبريني.", x: "غسل الجرح جيداً. وإخباري بذلك." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety': { m: "لا تضغط على الكيس أبداً", f: "لا تضغطي على الكيس أبداً", x: "الضغط على الكيس ممنوع أبداً" }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.wastesafety.b': { m: "كيس القمامة قد يكون فيه زجاج أو سكاكين أو إبر. لذلك لا تضغط الكيس أبداً على جسمك، ولا تعصره أبداً، ولا تحمله أبداً على ساقك: امسكه من الأعلى، بعيداً عنك. البس قفازاتك. ارفع والركبتان مثنيتان والظهر مستقيم، وادفع الحاوية، لا تحملها. هل وخزك شيء أو جرحك؟ اغسل الجرح جيداً بالماء، وأخبر مشرفك في اليوم نفسه.", f: "كيس القمامة قد يكون فيه زجاج أو سكاكين أو إبر. لذلك لا تضغطي الكيس أبداً على جسمك، ولا تعصريه أبداً، ولا تحمليه أبداً على ساقك: امسكيه من الأعلى، بعيداً عنك. البسي قفازاتك. ارفعي والركبتان مثنيتان والظهر مستقيم، وادفعي الحاوية، لا تحمليها. هل وخزكِ شيء أو جرحكِ؟ اغسلي الجرح جيداً بالماء، وأخبري مشرفك في اليوم نفسه.", x: "كيس القمامة قد يكون فيه زجاج أو سكاكين أو إبر. لذلك ضغط الكيس على الجسم ممنوع أبداً، وعصره ممنوع أبداً، وحمله على الساق ممنوع أبداً: يُمسك من الأعلى، بعيداً عن الجسم. لُبس القفازات. الرفع والركبتان مثنيتان والظهر مستقيم، والحاوية تُدفع، لا تُحمل. وخزة أو جرح من شيء؟ غسل الجرح جيداً بالماء، وإخبار المشرف في اليوم نفسه." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.wastesafety.p': "وخزت نفسي.", // nieuw, nalezen
-    'c.wastesafety.s': { m: "كيس يتمزّق. ترى فيه إبرة. ماذا تفعل؟", f: "كيس يتمزّق. ترين فيه إبرة. ماذا تفعلين؟", x: "كيس يتمزّق. فيه إبرة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.wastesafety.o1': "عدم لمسها، والإبلاغ عنها.", // nieuw, nalezen
-    'c.wastesafety.o2': "التقاطها باليد مع القفازات.", // nieuw, nalezen
-    'c.wastesafety.o3': "دفعها إلى داخل الكيس من جديد.", // nieuw, nalezen
-    'c.wastesafety.w': "القفازات لا توقف الإبرة. الإبرة يمكن أن تنقل مرضاً.", // nieuw, nalezen
-    'u.recycling': "مركز إعادة التدوير", // nieuw, nalezen
-    'l.yard': "في مركز إعادة التدوير", // nieuw, nalezen
-    'w.milieustraat': "مركز إعادة التدوير (حيث يحضر الناس النفايات الكبيرة أو الخاصّة)", // nieuw, nalezen
-    'w.grofvuil': "النفايات الكبيرة (أشياء كبيرة، مثل الكنبة)", // nieuw, nalezen
-    'w.puin': "الركام (حجارة وطوب مكسور)", // nieuw, nalezen
-    'w.matras': "الفرشة", // nieuw, nalezen
-    'w.weegbrug': "ميزان الشاحنات (ميزان للسيارات والشاحنات)", // nieuw, nalezen
-    'w.afvalpas': "بطاقة النفايات (يُظهرها السكّان عند البوّابة)", // nieuw, nalezen
-    's.yard.1': "الركام يذهب في الحاوية أربعة.", // nieuw, nalezen
-    's.yard.2': "هل يمكنني أن أرى بطاقة النفايات؟", // nieuw, nalezen
-    's.yard.3': "قُد السيارة فوق الميزان أولاً.", // nieuw, nalezen
-    'c.yard.q': "أين تذهب هذه الفرشة؟", // nieuw, nalezen
-    'c.yard.a': "في حاوية النفايات الكبيرة، في الخلف.", // nieuw, nalezen
-    'c.yard': { m: "ساعد، لكن حافظ على أمان المركز", f: "ساعدي، لكن حافظي على أمان المركز", x: "المساعدة، مع الحفاظ على أمان المركز" }, // nieuw, nalezen
-    'c.yard.b': { m: "في مركز إعادة التدوير تقول للزوار أين تذهب نفاياتهم، وتفحص هل فُرزت جيداً. كن لطيفاً: ناس كثيرون يأتون فقط بضع مرات في السنة ولا يعرفون القواعد. أبعِد الأطفال والزوار عن الآلات وعن حافّة الحاويات العالية. ارفع الأشياء الثقيلة مع زميل، أو دع الزائر يحمل أشياءه بنفسه. هل يحضر شخص شيئاً لا تعرفه؟ اسأل قبل أن يدخل الحاوية. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في مركز إعادة التدوير تقولين للزوار أين تذهب نفاياتهم، وتفحصين هل فُرزت جيداً. كوني لطيفة: ناس كثيرون يأتون فقط بضع مرات في السنة ولا يعرفون القواعد. أبعدي الأطفال والزوار عن الآلات وعن حافّة الحاويات العالية. ارفعي الأشياء الثقيلة مع زميل، أو دعي الزائر يحمل أشياءه بنفسه. هل يحضر شخص شيئاً لا تعرفينه؟ اسألي قبل أن يدخل الحاوية. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في مركز إعادة التدوير قول الزوار أين تذهب نفاياتهم، وفحص هل فُرزت جيداً. اللطف مطلوب: ناس كثيرون يأتون فقط بضع مرات في السنة ولا يعرفون القواعد. الأطفال والزوار يبقون بعيدين عن الآلات وعن حافّة الحاويات العالية. الأشياء الثقيلة تُرفع بشخصين، أو يحمل الزائر أشياءه بنفسه. هل يحضر شخص شيئاً غير معروف؟ السؤال قبل أن يدخل الحاوية. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.yard.p': "هذا يذهب في الحاوية أربعة.", // nieuw, nalezen
-    'c.yard.s': { m: "رجل يريد أن يرمي كيساً ممتلئاً في حاوية الخشب. ماذا تفعل؟", f: "رجل يريد أن يرمي كيساً ممتلئاً في حاوية الخشب. ماذا تفعلين؟", x: "رجل يريد أن يرمي كيساً ممتلئاً في حاوية الخشب. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.yard.o1': "سؤاله ماذا في الكيس.", // nieuw, nalezen
-    'c.yard.o2': "تركه: إنها نفاياته.", // nieuw, nalezen
-    'c.yard.o3': "رميه بدلاً منه.", // nieuw, nalezen
-    'c.yard.w': "شيء واحد خاطئ قد يُفسد حاوية ممتلئة. سؤال لطيف يُبقي النفايات نظيفة.", // nieuw, nalezen
-    'l.hazardous': "النفايات الكيميائية", // nieuw, nalezen
-    'w.chemischafval': "النفايات الكيميائية (نفايات خطيرة، مثل الدهان والزيت)", // nieuw, nalezen
-    'w.spuitbus': "علبة الرشّ (البخّاخ)", // nieuw, nalezen
-    'w.asbest': "الأسبستوس (مادة خطيرة في المباني القديمة)", // nieuw, nalezen
-    'w.lekken': "يسرّب", // nieuw, nalezen
-    'w.gevarensymbool': "رمز الخطر (صورة تحذّر من الخطر)", // nieuw, nalezen
-    'w.vat': "البرميل", // nieuw, nalezen
-    's.hazardous.1': { m: "ضع الدهان مع النفايات الكيميائية.", f: "ضعي الدهان مع النفايات الكيميائية.", x: "الدهان يوضع مع النفايات الكيميائية." }, // nieuw, nalezen
-    's.hazardous.2': { m: "هذه القنينة تسرّب. التقطها بالقفازات.", f: "هذه القنينة تسرّب. التقطيها بالقفازات.", x: "هذه القنينة تسرّب. تُلتقط بالقفازات." }, // nieuw, nalezen
-    's.hazardous.3': "الأسبستوس يجب أن يكون مغلّفاً جيداً.", // nieuw, nalezen
-    'c.hazardous.q': "ماذا في هذه القنينة؟", // nieuw, nalezen
-    'c.hazardous.a': { m: "لا أعرف. ضعها جانباً.", f: "لا أعرف. ضعيها جانباً.", x: "لا أعرف. توضع جانباً." }, // nieuw, nalezen
-    'c.hazardous': { m: "غير معروف؟ لا تفتحه، ولا تشمّه", f: "غير معروف؟ لا تفتحيه، ولا تشمّيه", x: "غير معروف؟ لا فتح، ولا شمّ" }, // nieuw, nalezen
+    'c.wastesafety.p': "وخزت نفسي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.s': { m: "كيس يتمزّق. ترى فيه إبرة. ماذا تفعل؟", f: "كيس يتمزّق. ترين فيه إبرة. ماذا تفعلين؟", x: "كيس يتمزّق. فيه إبرة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.o1': "عدم لمسها، والإبلاغ عنها.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.o2': "التقاطها باليد مع القفازات.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.o3': "دفعها إلى داخل الكيس من جديد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.w': "القفازات لا توقف الإبرة. الإبرة يمكن أن تنقل مرضاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.recycling': "مركز إعادة التدوير", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.yard': "في مركز إعادة التدوير", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.milieustraat': "مركز إعادة التدوير (حيث يحضر الناس النفايات الكبيرة أو الخاصّة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.grofvuil': "النفايات الكبيرة (أشياء كبيرة، مثل الكنبة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.puin': "الركام (حجارة وطوب مكسور)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.matras': "الفرشة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.weegbrug': "ميزان الشاحنات (ميزان للسيارات والشاحنات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afvalpas': "بطاقة النفايات (يُظهرها السكّان عند البوّابة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.yard.1': "الركام يذهب في الحاوية أربعة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.yard.2': "هل يمكنني أن أرى بطاقة النفايات؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.yard.3': "قُد السيارة فوق الميزان أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.q': "أين تذهب هذه الفرشة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.a': "في حاوية النفايات الكبيرة، في الخلف.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard': { m: "ساعد، لكن حافظ على أمان المركز", f: "ساعدي، لكن حافظي على أمان المركز", x: "المساعدة، مع الحفاظ على أمان المركز" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.b': { m: "في مركز إعادة التدوير تقول للزوار أين تذهب نفاياتهم، وتفحص هل فُرزت جيداً. كن لطيفاً: ناس كثيرون يأتون فقط بضع مرات في السنة ولا يعرفون القواعد. أبعِد الأطفال والزوار عن الآلات وعن حافّة الحاويات العالية. ارفع الأشياء الثقيلة مع زميل، أو دع الزائر يحمل أشياءه بنفسه. هل يحضر شخص شيئاً لا تعرفه؟ اسأل قبل أن يدخل الحاوية. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في مركز إعادة التدوير تقولين للزوار أين تذهب نفاياتهم، وتفحصين هل فُرزت جيداً. كوني لطيفة: ناس كثيرون يأتون فقط بضع مرات في السنة ولا يعرفون القواعد. أبعدي الأطفال والزوار عن الآلات وعن حافّة الحاويات العالية. ارفعي الأشياء الثقيلة مع زميل، أو دعي الزائر يحمل أشياءه بنفسه. هل يحضر شخص شيئاً لا تعرفينه؟ اسألي قبل أن يدخل الحاوية. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في مركز إعادة التدوير قول الزوار أين تذهب نفاياتهم، وفحص هل فُرزت جيداً. اللطف مطلوب: ناس كثيرون يأتون فقط بضع مرات في السنة ولا يعرفون القواعد. الأطفال والزوار يبقون بعيدين عن الآلات وعن حافّة الحاويات العالية. الأشياء الثقيلة تُرفع بشخصين، أو يحمل الزائر أشياءه بنفسه. هل يحضر شخص شيئاً غير معروف؟ السؤال قبل أن يدخل الحاوية. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.p': "هذا يذهب في الحاوية أربعة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.s': { m: "رجل يريد أن يرمي كيساً ممتلئاً في حاوية الخشب. ماذا تفعل؟", f: "رجل يريد أن يرمي كيساً ممتلئاً في حاوية الخشب. ماذا تفعلين؟", x: "رجل يريد أن يرمي كيساً ممتلئاً في حاوية الخشب. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.o1': "سؤاله ماذا في الكيس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.o2': "تركه: إنها نفاياته.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.o3': "رميه بدلاً منه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.w': "شيء واحد خاطئ قد يُفسد حاوية ممتلئة. سؤال لطيف يُبقي النفايات نظيفة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.hazardous': "النفايات الكيميائية", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.chemischafval': "النفايات الكيميائية (نفايات خطيرة، مثل الدهان والزيت)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spuitbus': "علبة الرشّ (البخّاخ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.asbest': "الأسبستوس (مادة خطيرة في المباني القديمة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lekken': "يسرّب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gevarensymbool': "رمز الخطر (صورة تحذّر من الخطر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vat': "البرميل", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hazardous.1': { m: "ضع الدهان مع النفايات الكيميائية.", f: "ضعي الدهان مع النفايات الكيميائية.", x: "الدهان يوضع مع النفايات الكيميائية." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.hazardous.2': { m: "هذه القنينة تسرّب. التقطها بالقفازات.", f: "هذه القنينة تسرّب. التقطيها بالقفازات.", x: "هذه القنينة تسرّب. تُلتقط بالقفازات." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.hazardous.3': "الأسبستوس يجب أن يكون مغلّفاً جيداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.q': "ماذا في هذه القنينة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.a': { m: "لا أعرف. ضعها جانباً.", f: "لا أعرف. ضعيها جانباً.", x: "لا أعرف. توضع جانباً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous': { m: "غير معروف؟ لا تفتحه، ولا تشمّه", f: "غير معروف؟ لا تفتحيه، ولا تشمّيه", x: "غير معروف؟ لا فتح، ولا شمّ" }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.hazardous.b': { m: "النفايات الكيميائية، مثل الدهان والزيت ومواد التنظيف والبطاريات وعلب الرشّ، قد تحرق أو تسمّم أو تنفجر. ابحث عن رموز الخطر. البس القفازات ونظارات السلامة. لا تفتح أبداً قنينة لتشمّ ما فيها، ولا تخلط المواد أبداً. أبقِ القنينة التي تسرّب واقفة، وضعها في صينية. الأسبستوس لا يُقبل إلا إذا كان مغلّفاً جيداً: لا تكسره أبداً، ولا تخرجه من الغلاف. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "النفايات الكيميائية، مثل الدهان والزيت ومواد التنظيف والبطاريات وعلب الرشّ، قد تحرق أو تسمّم أو تنفجر. ابحثي عن رموز الخطر. البسي القفازات ونظارات السلامة. لا تفتحي أبداً قنينة لتشمّي ما فيها، ولا تخلطي المواد أبداً. أبقي القنينة التي تسرّب واقفة، وضعيها في صينية. الأسبستوس لا يُقبل إلا إذا كان مغلّفاً جيداً: لا تكسريه أبداً، ولا تخرجيه من الغلاف. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "النفايات الكيميائية، مثل الدهان والزيت ومواد التنظيف والبطاريات وعلب الرشّ، قد تحرق أو تسمّم أو تنفجر. البحث عن رموز الخطر. لُبس القفازات ونظارات السلامة. فتح قنينة لشمّ ما فيها ممنوع أبداً، وخلط المواد ممنوع أبداً. القنينة التي تسرّب تبقى واقفة، وتوضع في صينية. الأسبستوس لا يُقبل إلا إذا كان مغلّفاً جيداً: كسره ممنوع أبداً، وإخراجه من الغلاف ممنوع. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.hazardous.p': "ماذا في هذا؟", // nieuw, nalezen
-    'c.hazardous.s': { m: "امرأة تحضر قنينة بدون ملصق. رائحتها قوية. ماذا تفعل؟", f: "امرأة تحضر قنينة بدون ملصق. رائحتها قوية. ماذا تفعلين؟", x: "امرأة تحضر قنينة بدون ملصق. رائحتها قوية. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.hazardous.o1': "وضعها جانباً، وإخبار المشرف.", // nieuw, nalezen
-    'c.hazardous.o2': "فتحها، وشمّها لمعرفة ما هي.", // nieuw, nalezen
-    'c.hazardous.o3': "سكبها في برميل الدهان.", // nieuw, nalezen
-    'c.hazardous.w': "المنتجات غير المعروفة قد تتفاعل مع غيرها. المشرف يعرف أين يمكن أن تذهب بأمان.", // nieuw, nalezen
-    'l.baler': "مكبس البالات", // nieuw, nalezen
-    'w.balenpers': "مكبس البالات (آلة تكبس النفايات في كتل)", // nieuw, nalezen
-    'w.baal': "البالة (كتلة مكبوسة من الورق أو البلاستيك)", // nieuw, nalezen
-    'w.persen': "يكبس", // nieuw, nalezen
-    'w.vastlopen': "يعلق، ينحشر", // nieuw, nalezen
-    'w.binddraad': "سلك الربط", // nieuw, nalezen
-    'w.vulopening': "فتحة التعبئة (حيث تدخل النفايات)", // nieuw, nalezen
-    's.baler.1': { m: "المكبس عالق. اضغط زر التوقف في الطوارئ.", f: "المكبس عالق. اضغطي زر التوقف في الطوارئ.", x: "المكبس عالق. الضغط على زر التوقف في الطوارئ." }, // nieuw, nalezen
-    's.baler.2': { m: "لا تدخل يدك أبداً في المكبس.", f: "لا تدخلي يدك أبداً في المكبس.", x: "إدخال اليد في المكبس ممنوع أبداً." }, // nieuw, nalezen
-    's.baler.3': { m: "اربط البالة جيداً.", f: "اربطي البالة جيداً.", x: "ربط البالة جيداً." }, // nieuw, nalezen
-    'c.baler.q': "المكبس ينحشر. هل يمكنني أن أنظر؟", // nieuw, nalezen
-    'c.baler.a': "لا. أولاً تُقطع الكهرباء.", // nieuw, nalezen
-    'c.baler': { m: "لا تمدّ يدك أبداً داخل المكبس", f: "لا تمدّي يدك أبداً داخل المكبس", x: "مدّ اليد داخل المكبس ممنوع أبداً" }, // nieuw, nalezen
-    'c.baler.b': { m: "مكبس البالات يكبس بقوة هائلة. لا تستعمله إلا إذا تعلّمت ذلك. لا تدخل أبداً يداً أو ذراعاً أو قدماً في فتحة التعبئة، حتى عندما تبدو الآلة متوقّفة. هل ينحشر؟ اضغط زر التوقف في الطوارئ، وأطفِئه وتأكّد أن لا أحد يستطيع تشغيله: اتبع خطوات شركتك. عندها فقط انظر. لا تتسلّق أبداً داخل المكبس أو الحاوية. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "مكبس البالات يكبس بقوة هائلة. لا تستعمليه إلا إذا تعلّمتِ ذلك. لا تدخلي أبداً يداً أو ذراعاً أو قدماً في فتحة التعبئة، حتى عندما تبدو الآلة متوقّفة. هل ينحشر؟ اضغطي زر التوقف في الطوارئ، وأطفئيه وتأكّدي أن لا أحد يستطيع تشغيله: اتبعي خطوات شركتك. عندها فقط انظري. لا تتسلّقي أبداً داخل المكبس أو الحاوية. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "مكبس البالات يكبس بقوة هائلة. استعماله فقط بعد تعلّم ذلك. إدخال يد أو ذراع أو قدم في فتحة التعبئة ممنوع أبداً، حتى عندما تبدو الآلة متوقّفة. هل ينحشر؟ الضغط على زر التوقف في الطوارئ، وإطفاؤه والتأكّد أن لا أحد يستطيع تشغيله: اتّباع خطوات الشركة. عندها فقط النظر. التسلّق داخل المكبس أو الحاوية ممنوع أبداً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.baler.p': "المكبس عالق.", // nieuw, nalezen
-    'c.baler.s': { m: "قطعة كرتون عالقة في الفتحة. الآلة متوقّفة. ماذا تفعل؟", f: "قطعة كرتون عالقة في الفتحة. الآلة متوقّفة. ماذا تفعلين؟", x: "قطعة كرتون عالقة في الفتحة. الآلة متوقّفة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.baler.o1': "إطفاؤها كاملاً، ثم إخراجها.", // nieuw, nalezen
-    'c.baler.o2': "سحبها بسرعة باليد.", // nieuw, nalezen
-    'c.baler.o3': "دفعها إلى الداخل بالقدم.", // nieuw, nalezen
-    'c.baler.w': "الآلة المتوقّفة قد تبدأ من جديد. بدون قطع الكهرباء، اليد في خطر.", // nieuw, nalezen
-    'l.shovel': "الجرّافة ذات العجلات في المركز", // nieuw, nalezen
-    'w.shovel': "الجرّافة ذات العجلات (آلة كبيرة لها دلو في الأمام)", // nieuw, nalezen
-    'w.zwaailamp': "الضوء الدوّار (ضوء برتقالي فوق الآلة)", // nieuw, nalezen
-    'w.bunker': "الحجيرة (مكان كبير من الخرسانة لنوع واحد من النفايات)", // nieuw, nalezen
-    'w.looppad': "ممرّ المشاة (طريق للناس فقط)", // nieuw, nalezen
-    'w.toeteren': "يضغط على البوق (الزمّور)", // nieuw, nalezen
-    'w.opscheppen': "يجرف (يرفع بالمجرفة)", // nieuw, nalezen
-    's.shovel.1': { m: "ابقَ على ممرّ المشاة.", f: "ابقي على ممرّ المشاة.", x: "البقاء على ممرّ المشاة." }, // nieuw, nalezen
-    's.shovel.2': { m: "الجرّافة ترجع إلى الخلف. انتبه!", f: "الجرّافة ترجع إلى الخلف. انتبهي!", x: "الجرّافة ترجع إلى الخلف. انتباه!" }, // nieuw, nalezen
-    's.shovel.3': "الضوء الدوّار يعمل. الآلة تتحرّك.", // nieuw, nalezen
-    'c.shovel.q': "هل يمكنني أن أمرّ بجانب الجرّافة؟", // nieuw, nalezen
-    'c.shovel.a': "فقط إذا كان السائق يراك.", // nieuw, nalezen
-    'c.shovel': { m: "ابتعد عن طريق الجرّافة", f: "ابتعدي عن طريق الجرّافة", x: "الابتعاد عن طريق الجرّافة" }, // nieuw, nalezen
-    'c.shovel.b': { m: "الجرّافة كبيرة، وسائقها يرى قليلاً حولها، خاصة خلفها. لذلك ابقَ على ممرّات المشاة، والبس ملابسك العاكسة. لا تمشِ أبداً خلف آلة تتحرّك. تريد أن تمرّ؟ انتظر حتى يراك السائق ويعطيك إشارة. الضوء الدوّار يعني: هذه الآلة تعمل. أبعِد الزوار عنها كثيراً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الجرّافة كبيرة، وسائقها يرى قليلاً حولها، خاصة خلفها. لذلك ابقي على ممرّات المشاة، والبسي ملابسك العاكسة. لا تمشي أبداً خلف آلة تتحرّك. تريدين أن تمرّي؟ انتظري حتى يراك السائق ويعطيك إشارة. الضوء الدوّار يعني: هذه الآلة تعمل. أبعدي الزوار عنها كثيراً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الجرّافة كبيرة، وسائقها يرى قليلاً حولها، خاصة خلفها. لذلك البقاء على ممرّات المشاة، ولبس الملابس العاكسة. المشي خلف آلة تتحرّك ممنوع أبداً. المرور؟ الانتظار حتى يرى السائق المارّ ويعطي إشارة. الضوء الدوّار يعني: هذه الآلة تعمل. الزوار يبقون بعيدين عنها كثيراً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.shovel.p': "هل رأيتني؟", // nieuw, nalezen
-    'c.shovel.s': { m: "يجب أن تمرّ بجانب جرّافة تعمل. السائق ينظر إلى الجهة الأخرى. ماذا تفعل؟", f: "يجب أن تمرّي بجانب جرّافة تعمل. السائق ينظر إلى الجهة الأخرى. ماذا تفعلين؟", x: "المطلوب المرور بجانب جرّافة تعمل. السائق ينظر إلى الجهة الأخرى. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.shovel.o1': "الانتظار حتى يرى السائق المارّ.", // nieuw, nalezen
-    'c.shovel.o2': "المرور بسرعة.", // nieuw, nalezen
-    'c.shovel.o3': "المشي خلف الآلة.", // nieuw, nalezen
-    'c.shovel.w': "السائق الذي لم يرَ أحداً لا يستطيع أن يتوقّف له.", // nieuw, nalezen
-    'u.toddlers': "الأطفال", // nieuw, nalezen
-    'l.nappies': "تغيير الحفاضات", // nieuw, nalezen
-    'w.luier': "الحفاض", // nieuw, nalezen
-    'w.verschonen': "يغيّر (الحفاض)", // nieuw, nalezen
-    'w.commode': "طاولة تغيير الحفاض", // nieuw, nalezen
-    'w.billendoekje': "منديل الأطفال المبلّل", // nieuw, nalezen
-    'w.potje': "النونية (قصرية الطفل)", // nieuw, nalezen
-    'w.zindelijk': "يستعمل المرحاض (الطفل يستطيع أن يستعمل المرحاض)", // nieuw, nalezen
-    's.nappies.1': "سأغيّر حفاض Sem.", // nieuw, nalezen
-    's.nappies.2': { m: "اغسل يديك بعد تغيير الحفاض.", f: "اغسلي يديك بعد تغيير الحفاض.", x: "غسل اليدين بعد تغيير الحفاض." }, // nieuw, nalezen
-    's.nappies.3': { m: "لا تترك أبداً طفلاً وحده على طاولة تغيير الحفاض.", f: "لا تتركي أبداً طفلاً وحده على طاولة تغيير الحفاض.", x: "ترك طفل وحده على طاولة تغيير الحفاض ممنوع أبداً." }, // nieuw, nalezen
-    'c.nappies.q': { m: "متى غيّرتَ حفاض Noor؟", f: "متى غيّرتِ حفاض Noor؟", x: "متى تمّ تغيير حفاض Noor؟" }, // nieuw, nalezen
-    'c.nappies.a': "في العاشرة. هذا في التطبيق.", // nieuw, nalezen
-    'c.nappies': "يد واحدة على الطفل", // nieuw, nalezen
-    'c.nappies.b': { m: "جهّز كل شيء قبل أن تضع الطفل على طاولة تغيير الحفاض: حفاضاً نظيفاً ومناديل وملابس. ثم أبقِ يداً واحدة على الطفل طوال الوقت. لا تبتعد أبداً، ولا حتى لثانية. اغسل يديك بعد كل تغيير، ونظّف الطاولة. اكتب متى غيّرتَ الحفاض، حتى يعرف الأهل. هل ترى طفحاً أو جرحاً؟ اكتبه، وأخبر زميلاً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "جهّزي كل شيء قبل أن تضعي الطفل على طاولة تغيير الحفاض: حفاضاً نظيفاً ومناديل وملابس. ثم أبقي يداً واحدة على الطفل طوال الوقت. لا تبتعدي أبداً، ولا حتى لثانية. اغسلي يديك بعد كل تغيير، ونظّفي الطاولة. اكتبي متى غيّرتِ الحفاض، حتى يعرف الأهل. هل ترين طفحاً أو جرحاً؟ اكتبيه، وأخبري زميلاً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "تجهيز كل شيء قبل وضع الطفل على طاولة تغيير الحفاض: حفاض نظيف ومناديل وملابس. ثم يد واحدة على الطفل طوال الوقت. الابتعاد ممنوع أبداً، ولا حتى لثانية. غسل اليدين بعد كل تغيير، وتنظيف الطاولة. كتابة وقت تغيير الحفاض، حتى يعرف الأهل. طفح أو جرح؟ كتابته، وإخبار زميل. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.nappies.p': "أنا أغيّر حفاضه الآن.", // nieuw, nalezen
-    'c.nappies.s': { m: "تغيّر حفاض رضيع. نسيتَ المناديل؛ إنها في الطرف الآخر من الغرفة. ماذا تفعل؟", f: "تغيّرين حفاض رضيع. نسيتِ المناديل؛ إنها في الطرف الآخر من الغرفة. ماذا تفعلين؟", x: "تغيير حفاض رضيع. المناديل منسية؛ إنها في الطرف الآخر من الغرفة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.nappies.o1': "أخذ الرضيع معك.", // nieuw, nalezen
-    'c.nappies.o2': "إحضارها بسرعة: إنها قريبة.", // nieuw, nalezen
-    'c.nappies.o3': "ترك الرضيع، والمناداة.", // nieuw, nalezen
-    'c.nappies.w': "الرضيع يمكن أن يتدحرج عن طاولة تغيير الحفاض في ثانية. الطفل لا يُترك أبداً وحده هناك فوق.", // nieuw, nalezen
-    'l.mealtime': "الأكل والشرب", // nieuw, nalezen
-    'w.fles': "الرضّاعة (زجاجة الطفل)", // nieuw, nalezen
-    'w.slabbetje': "المريلة", // nieuw, nalezen
-    'w.beker': "الكوب (له مقبض)", // nieuw, nalezen
-    'w.kinderstoel': "الكرسي العالي للطفل", // nieuw, nalezen
-    'w.fruithap': "هريس الفواكه", // nieuw, nalezen
-    'w.boertje': "التجشّؤ", // nieuw, nalezen
-    's.mealtime.1': { m: "اغسل يديك قبل الوجبة.", f: "اغسلي يديك قبل الوجبة.", x: "غسل اليدين قبل الوجبة." }, // nieuw, nalezen
+    'c.hazardous.p': "ماذا في هذا؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.s': { m: "امرأة تحضر قنينة بدون ملصق. رائحتها قوية. ماذا تفعل؟", f: "امرأة تحضر قنينة بدون ملصق. رائحتها قوية. ماذا تفعلين؟", x: "امرأة تحضر قنينة بدون ملصق. رائحتها قوية. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.o1': "وضعها جانباً، وإخبار المشرف.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.o2': "فتحها، وشمّها لمعرفة ما هي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.o3': "سكبها في برميل الدهان.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.w': "المنتجات غير المعروفة قد تتفاعل مع غيرها. المشرف يعرف أين يمكن أن تذهب بأمان.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.baler': "مكبس البالات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.balenpers': "مكبس البالات (آلة تكبس النفايات في كتل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.baal': "البالة (كتلة مكبوسة من الورق أو البلاستيك)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.persen': "يكبس", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vastlopen': "يعلق، ينحشر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.binddraad': "سلك الربط", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vulopening': "فتحة التعبئة (حيث تدخل النفايات)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.baler.1': { m: "المكبس عالق. اضغط زر التوقف في الطوارئ.", f: "المكبس عالق. اضغطي زر التوقف في الطوارئ.", x: "المكبس عالق. الضغط على زر التوقف في الطوارئ." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.baler.2': { m: "لا تدخل يدك أبداً في المكبس.", f: "لا تدخلي يدك أبداً في المكبس.", x: "إدخال اليد في المكبس ممنوع أبداً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.baler.3': { m: "اربط البالة جيداً.", f: "اربطي البالة جيداً.", x: "ربط البالة جيداً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.q': "المكبس ينحشر. هل يمكنني أن أنظر؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.a': "لا. أولاً تُقطع الكهرباء.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler': { m: "لا تمدّ يدك أبداً داخل المكبس", f: "لا تمدّي يدك أبداً داخل المكبس", x: "مدّ اليد داخل المكبس ممنوع أبداً" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.b': { m: "مكبس البالات يكبس بقوة هائلة. لا تستعمله إلا إذا تعلّمت ذلك. لا تدخل أبداً يداً أو ذراعاً أو قدماً في فتحة التعبئة، حتى عندما تبدو الآلة متوقّفة. هل ينحشر؟ اضغط زر التوقف في الطوارئ، وأطفِئه وتأكّد أن لا أحد يستطيع تشغيله: اتبع خطوات شركتك. عندها فقط انظر. لا تتسلّق أبداً داخل المكبس أو الحاوية. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "مكبس البالات يكبس بقوة هائلة. لا تستعمليه إلا إذا تعلّمتِ ذلك. لا تدخلي أبداً يداً أو ذراعاً أو قدماً في فتحة التعبئة، حتى عندما تبدو الآلة متوقّفة. هل ينحشر؟ اضغطي زر التوقف في الطوارئ، وأطفئيه وتأكّدي أن لا أحد يستطيع تشغيله: اتبعي خطوات شركتك. عندها فقط انظري. لا تتسلّقي أبداً داخل المكبس أو الحاوية. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "مكبس البالات يكبس بقوة هائلة. استعماله فقط بعد تعلّم ذلك. إدخال يد أو ذراع أو قدم في فتحة التعبئة ممنوع أبداً، حتى عندما تبدو الآلة متوقّفة. هل ينحشر؟ الضغط على زر التوقف في الطوارئ، وإطفاؤه والتأكّد أن لا أحد يستطيع تشغيله: اتّباع خطوات الشركة. عندها فقط النظر. التسلّق داخل المكبس أو الحاوية ممنوع أبداً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.p': "المكبس عالق.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.s': { m: "قطعة كرتون عالقة في الفتحة. الآلة متوقّفة. ماذا تفعل؟", f: "قطعة كرتون عالقة في الفتحة. الآلة متوقّفة. ماذا تفعلين؟", x: "قطعة كرتون عالقة في الفتحة. الآلة متوقّفة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.o1': "إطفاؤها كاملاً، ثم إخراجها.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.o2': "سحبها بسرعة باليد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.o3': "دفعها إلى الداخل بالقدم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.w': "الآلة المتوقّفة قد تبدأ من جديد. بدون قطع الكهرباء، اليد في خطر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.shovel': "الجرّافة ذات العجلات في المركز", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.shovel': "الجرّافة ذات العجلات (آلة كبيرة لها دلو في الأمام)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zwaailamp': "الضوء الدوّار (ضوء برتقالي فوق الآلة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bunker': "الحجيرة (مكان كبير من الخرسانة لنوع واحد من النفايات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.looppad': "ممرّ المشاة (طريق للناس فقط)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toeteren': "يضغط على البوق (الزمّور)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opscheppen': "يجرف (يرفع بالمجرفة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shovel.1': { m: "ابقَ على ممرّ المشاة.", f: "ابقي على ممرّ المشاة.", x: "البقاء على ممرّ المشاة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.shovel.2': { m: "الجرّافة ترجع إلى الخلف. انتبه!", f: "الجرّافة ترجع إلى الخلف. انتبهي!", x: "الجرّافة ترجع إلى الخلف. انتباه!" }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.shovel.3': "الضوء الدوّار يعمل. الآلة تتحرّك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.q': "هل يمكنني أن أمرّ بجانب الجرّافة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.a': "فقط إذا كان السائق يراك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel': { m: "ابتعد عن طريق الجرّافة", f: "ابتعدي عن طريق الجرّافة", x: "الابتعاد عن طريق الجرّافة" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.b': { m: "الجرّافة كبيرة، وسائقها يرى قليلاً حولها، خاصة خلفها. لذلك ابقَ على ممرّات المشاة، والبس ملابسك العاكسة. لا تمشِ أبداً خلف آلة تتحرّك. تريد أن تمرّ؟ انتظر حتى يراك السائق ويعطيك إشارة. الضوء الدوّار يعني: هذه الآلة تعمل. أبعِد الزوار عنها كثيراً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الجرّافة كبيرة، وسائقها يرى قليلاً حولها، خاصة خلفها. لذلك ابقي على ممرّات المشاة، والبسي ملابسك العاكسة. لا تمشي أبداً خلف آلة تتحرّك. تريدين أن تمرّي؟ انتظري حتى يراك السائق ويعطيك إشارة. الضوء الدوّار يعني: هذه الآلة تعمل. أبعدي الزوار عنها كثيراً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الجرّافة كبيرة، وسائقها يرى قليلاً حولها، خاصة خلفها. لذلك البقاء على ممرّات المشاة، ولبس الملابس العاكسة. المشي خلف آلة تتحرّك ممنوع أبداً. المرور؟ الانتظار حتى يرى السائق المارّ ويعطي إشارة. الضوء الدوّار يعني: هذه الآلة تعمل. الزوار يبقون بعيدين عنها كثيراً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.p': "هل رأيتني؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.s': { m: "يجب أن تمرّ بجانب جرّافة تعمل. السائق ينظر إلى الجهة الأخرى. ماذا تفعل؟", f: "يجب أن تمرّي بجانب جرّافة تعمل. السائق ينظر إلى الجهة الأخرى. ماذا تفعلين؟", x: "المطلوب المرور بجانب جرّافة تعمل. السائق ينظر إلى الجهة الأخرى. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.o1': "الانتظار حتى يرى السائق المارّ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.o2': "المرور بسرعة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.o3': "المشي خلف الآلة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.w': "السائق الذي لم يرَ أحداً لا يستطيع أن يتوقّف له.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.toddlers': "الأطفال", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.nappies': "تغيير الحفاضات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.luier': "الحفاض", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verschonen': "يغيّر (الحفاض)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.commode': "طاولة تغيير الحفاض", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.billendoekje': "منديل الأطفال المبلّل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.potje': "النونية (قصرية الطفل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zindelijk': "يستعمل المرحاض (الطفل يستطيع أن يستعمل المرحاض)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.nappies.1': "سأغيّر حفاض Sem.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.nappies.2': { m: "اغسل يديك بعد تغيير الحفاض.", f: "اغسلي يديك بعد تغيير الحفاض.", x: "غسل اليدين بعد تغيير الحفاض." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.nappies.3': { m: "لا تترك أبداً طفلاً وحده على طاولة تغيير الحفاض.", f: "لا تتركي أبداً طفلاً وحده على طاولة تغيير الحفاض.", x: "ترك طفل وحده على طاولة تغيير الحفاض ممنوع أبداً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.q': { m: "متى غيّرتَ حفاض Noor؟", f: "متى غيّرتِ حفاض Noor؟", x: "متى تمّ تغيير حفاض Noor؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.a': "في العاشرة. هذا في التطبيق.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies': "يد واحدة على الطفل", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.b': { m: "جهّز كل شيء قبل أن تضع الطفل على طاولة تغيير الحفاض: حفاضاً نظيفاً ومناديل وملابس. ثم أبقِ يداً واحدة على الطفل طوال الوقت. لا تبتعد أبداً، ولا حتى لثانية. اغسل يديك بعد كل تغيير، ونظّف الطاولة. اكتب متى غيّرتَ الحفاض، حتى يعرف الأهل. هل ترى طفحاً أو جرحاً؟ اكتبه، وأخبر زميلاً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "جهّزي كل شيء قبل أن تضعي الطفل على طاولة تغيير الحفاض: حفاضاً نظيفاً ومناديل وملابس. ثم أبقي يداً واحدة على الطفل طوال الوقت. لا تبتعدي أبداً، ولا حتى لثانية. اغسلي يديك بعد كل تغيير، ونظّفي الطاولة. اكتبي متى غيّرتِ الحفاض، حتى يعرف الأهل. هل ترين طفحاً أو جرحاً؟ اكتبيه، وأخبري زميلاً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "تجهيز كل شيء قبل وضع الطفل على طاولة تغيير الحفاض: حفاض نظيف ومناديل وملابس. ثم يد واحدة على الطفل طوال الوقت. الابتعاد ممنوع أبداً، ولا حتى لثانية. غسل اليدين بعد كل تغيير، وتنظيف الطاولة. كتابة وقت تغيير الحفاض، حتى يعرف الأهل. طفح أو جرح؟ كتابته، وإخبار زميل. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.p': "أنا أغيّر حفاضه الآن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.s': { m: "تغيّر حفاض رضيع. نسيتَ المناديل؛ إنها في الطرف الآخر من الغرفة. ماذا تفعل؟", f: "تغيّرين حفاض رضيع. نسيتِ المناديل؛ إنها في الطرف الآخر من الغرفة. ماذا تفعلين؟", x: "تغيير حفاض رضيع. المناديل منسية؛ إنها في الطرف الآخر من الغرفة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.o1': "أخذ الرضيع معك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.o2': "إحضارها بسرعة: إنها قريبة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.o3': "ترك الرضيع، والمناداة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.w': "الرضيع يمكن أن يتدحرج عن طاولة تغيير الحفاض في ثانية. الطفل لا يُترك أبداً وحده هناك فوق.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.mealtime': "الأكل والشرب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.fles': "الرضّاعة (زجاجة الطفل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.slabbetje': "المريلة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beker': "الكوب (له مقبض)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kinderstoel': "الكرسي العالي للطفل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.fruithap': "هريس الفواكه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.boertje': "التجشّؤ", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mealtime.1': { m: "اغسل يديك قبل الوجبة.", f: "اغسلي يديك قبل الوجبة.", x: "غسل اليدين قبل الوجبة." }, // nieuw, nalezen // nagelezen AI 28 nov
     's.mealtime.2': { m: "أعطِ Lisa رضّاعتها في الثانية عشرة.", f: "أعطي Lisa رضّاعتها في الثانية عشرة.", x: "تُعطى Lisa رضّاعتها في الثانية عشرة." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    's.mealtime.3': "الجميع يجلسون إلى الطاولة.", // nieuw, nalezen
-    'c.mealtime.q': "هل يمكن أن يأخذ Daan بسكويتة؟", // nieuw, nalezen
-    'c.mealtime.a': { m: "لا، عنده حساسية. انظر في القائمة.", f: "لا، عنده حساسية. انظري في القائمة.", x: "لا، عنده حساسية. هي في القائمة." }, // nieuw, nalezen
-    'c.mealtime': { m: "افحص القائمة قبل أن تعطيَ الطعام", f: "افحصي القائمة قبل أن تعطي الطعام", x: "فحص القائمة قبل إعطاء الطعام" }, // nieuw, nalezen
+    's.mealtime.3': "الجميع يجلسون إلى الطاولة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.q': "هل يمكن أن يأخذ Daan بسكويتة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.a': { m: "لا، عنده حساسية. انظر في القائمة.", f: "لا، عنده حساسية. انظري في القائمة.", x: "لا، عنده حساسية. هي في القائمة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime': { m: "افحص القائمة قبل أن تعطيَ الطعام", f: "افحصي القائمة قبل أن تعطي الطعام", x: "فحص القائمة قبل إعطاء الطعام" }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.mealtime.b': { m: "قبل أن تعطيَ الطفل طعاماً أو شراباً، افحص القائمة: بعض الأطفال عندهم حساسية، وآخرون لا يجوز أن يأكلوا طعاماً معيّناً من أجل صحتهم أو دينهم. اغسل يديك وأيدي الأطفال قبل الأكل. اجعل الأطفال يجلسون وهم يأكلون ويشربون، وليس أبداً وهم يمشون أو يركضون. قطّع الطعام قطعاً صغيرة للأطفال الصغار، مثل العنب قطعاً. لا تعطِ أبداً طفلاً شيئاً من بيت طفل آخر. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "قبل أن تعطي الطفل طعاماً أو شراباً، افحصي القائمة: بعض الأطفال عندهم حساسية، وآخرون لا يجوز أن يأكلوا طعاماً معيّناً من أجل صحتهم أو دينهم. اغسلي يديك وأيدي الأطفال قبل الأكل. اجعلي الأطفال يجلسون وهم يأكلون ويشربون، وليس أبداً وهم يمشون أو يركضون. قطّعي الطعام قطعاً صغيرة للأطفال الصغار، مثل العنب قطعاً. لا تعطي أبداً طفلاً شيئاً من بيت طفل آخر. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "قبل إعطاء الطفل طعاماً أو شراباً، فحص القائمة: بعض الأطفال عندهم حساسية، وآخرون لا يجوز أن يأكلوا طعاماً معيّناً من أجل صحتهم أو دينهم. غسل اليدين وأيدي الأطفال قبل الأكل. الأطفال يجلسون وهم يأكلون ويشربون، وليس أبداً وهم يمشون أو يركضون. تقطيع الطعام قطعاً صغيرة للأطفال الصغار، مثل العنب قطعاً. إعطاء طفل شيئاً من بيت طفل آخر ممنوع أبداً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.mealtime.p': "هل يجوز أن يأكل هذا؟", // nieuw, nalezen
-    'c.mealtime.s': { m: "طفل يبكي من أجل بسكويتة. لا تعرف هذا الطفل جيداً. ماذا تفعل؟", f: "طفل يبكي من أجل بسكويتة. لا تعرفين هذا الطفل جيداً. ماذا تفعلين؟", x: "طفل يبكي من أجل بسكويتة. هذا الطفل غير معروف جيداً. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.mealtime.o1': "فحص القائمة أولاً.", // nieuw, nalezen
-    'c.mealtime.o2': "إعطاؤها: إنها بسكويتة فقط.", // nieuw, nalezen
-    'c.mealtime.o3': "إعطاء نصف بسكويتة.", // nieuw, nalezen
-    'c.mealtime.w': "البسكويتة قد يكون فيها مكسّرات أو حليب أو بيض. للطفل الذي عنده حساسية، قد يكون هذا خطيراً جداً.", // nieuw, nalezen
-    'l.naptime': "النوم", // nieuw, nalezen
-    'w.bedje': "سرير الطفل (سرير صغير للرضيع)", // nieuw, nalezen
-    'w.slaapkamer': "غرفة النوم", // nieuw, nalezen
-    'w.knuffel': "الدمية الطرية", // nieuw, nalezen
-    'w.speen': "اللهّاية", // nieuw, nalezen
-    'w.babyfoon': "جهاز مراقبة الطفل", // nieuw, nalezen
-    'w.slaapzak': "كيس النوم للرضيع", // nieuw, nalezen
-    's.naptime.1': { m: "ضع الرضيع على ظهره.", f: "ضعي الرضيع على ظهره.", x: "الرضيع يُوضع على ظهره." }, // nieuw, nalezen
-    's.naptime.2': "أنظر كثيراً في غرفة النوم.", // nieuw, nalezen
-    's.naptime.3': "هذه دميتك. نوماً هنيئاً.", // nieuw, nalezen
-    'c.naptime.q': "هل نامت Mila؟", // nieuw, nalezen
-    'c.naptime.a': "نعم، منذ الساعة الواحدة. سأنظر مرة أخرى بعد قليل.", // nieuw, nalezen
-    'c.naptime': "الرضّع ينامون على ظهورهم", // nieuw, nalezen
-    'c.naptime.b': { m: "الرضيع ينام بأمان أكثر على ظهره، في كيس نوم، في سريره الخاص. لا وسادة، ولا بطانية مفكوكة، ولا ألعاب كبيرة في السرير. أبقِ الغرفة باردة ومنعشة. افحص الأطفال النائمين كثيراً: انظر واستمع، حتى عندما يكون جهاز مراقبة الطفل يعمل. هل يطلب منك أحد الوالدين أن تجعل رضيعه ينام بطريقة أخرى؟ أخبر مشرفك أولاً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الرضيع ينام بأمان أكثر على ظهره، في كيس نوم، في سريره الخاص. لا وسادة، ولا بطانية مفكوكة، ولا ألعاب كبيرة في السرير. أبقي الغرفة باردة ومنعشة. افحصي الأطفال النائمين كثيراً: انظري واستمعي، حتى عندما يكون جهاز مراقبة الطفل يعمل. هل يطلب منك أحد الوالدين أن تجعلي رضيعه ينام بطريقة أخرى؟ أخبري مشرفك أولاً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الرضيع ينام بأمان أكثر على ظهره، في كيس نوم، في سريره الخاص. لا وسادة، ولا بطانية مفكوكة، ولا ألعاب كبيرة في السرير. الغرفة تبقى باردة ومنعشة. فحص الأطفال النائمين كثيراً: النظر والاستماع، حتى عندما يكون جهاز مراقبة الطفل يعمل. هل يطلب أحد الوالدين أن ينام رضيعه بطريقة أخرى؟ إخبار المشرف أولاً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.naptime.p': "سأذهب وأنظر في غرفة النوم.", // nieuw, nalezen
-    'c.naptime.s': { m: "رضيع نام على بطنه في السرير. ماذا تفعل؟", f: "رضيع نام على بطنه في السرير. ماذا تفعلين؟", x: "رضيع نام على بطنه في السرير. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.naptime.o1': "قلبه بلطف على ظهره.", // nieuw, nalezen
-    'c.naptime.o2': "تركه ينام: إنه نائم الآن.", // nieuw, nalezen
-    'c.naptime.o3': "وضع وسادة بجانبه.", // nieuw, nalezen
-    'c.naptime.w': "على ظهره يستطيع الرضيع أن يتنفّس بحرّية. الوسادة قد تغطّي وجهه.", // nieuw, nalezen
-    'l.playtime': "اللعب", // nieuw, nalezen
-    'w.spelen': "يلعب", // nieuw, nalezen
-    'w.speelgoed': "الألعاب", // nieuw, nalezen
-    'w.zandbak': "حوض الرمل", // nieuw, nalezen
-    'w.glijbaan': "الزحليقة", // nieuw, nalezen
-    'w.puzzel': "لعبة التركيب (البازل)", // nieuw, nalezen
-    'w.buitenspelen': "يلعب في الخارج", // nieuw, nalezen
-    's.playtime.1': "سنلعب في الخارج. المعاطف!", // nieuw, nalezen
-    's.playtime.2': { m: "رتّب الألعاب.", f: "رتّبي الألعاب.", x: "ترتيب الألعاب." }, // nieuw, nalezen
-    's.playtime.3': "طفل واحد في كل مرة على الزحليقة.", // nieuw, nalezen
-    'c.playtime.q': "هل يمكنني أن ألعب بلعبة التركيب؟", // nieuw, nalezen
-    'c.playtime.a': "نعم، على الطاولة. بعد ذلك ترتّبها.", // nieuw, nalezen
-    'c.playtime': { m: "العب بأمان: انظر، عُدّ، افحص", f: "العبي بأمان: انظري، عُدّي، افحصي", x: "اللعب بأمان: النظر، العدّ، الفحص" }, // nieuw, nalezen
+    'c.mealtime.p': "هل يجوز أن يأكل هذا؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.s': { m: "طفل يبكي من أجل بسكويتة. لا تعرف هذا الطفل جيداً. ماذا تفعل؟", f: "طفل يبكي من أجل بسكويتة. لا تعرفين هذا الطفل جيداً. ماذا تفعلين؟", x: "طفل يبكي من أجل بسكويتة. هذا الطفل غير معروف جيداً. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.o1': "فحص القائمة أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.o2': "إعطاؤها: إنها بسكويتة فقط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.o3': "إعطاء نصف بسكويتة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.w': "البسكويتة قد يكون فيها مكسّرات أو حليب أو بيض. للطفل الذي عنده حساسية، قد يكون هذا خطيراً جداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.naptime': "النوم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedje': "سرير الطفل (سرير صغير للرضيع)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.slaapkamer': "غرفة النوم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.knuffel': "الدمية الطرية", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.speen': "اللهّاية", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.babyfoon': "جهاز مراقبة الطفل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.slaapzak': "كيس النوم للرضيع", // nieuw, nalezen // nagelezen AI 28 nov
+    's.naptime.1': { m: "ضع الرضيع على ظهره.", f: "ضعي الرضيع على ظهره.", x: "الرضيع يُوضع على ظهره." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.naptime.2': "أنظر كثيراً في غرفة النوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.naptime.3': "هذه دميتك. نوماً هنيئاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.q': "هل نامت Mila؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.a': "نعم، منذ الساعة الواحدة. سأنظر مرة أخرى بعد قليل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime': "الرضّع ينامون على ظهورهم", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.b': { m: "الرضيع ينام بأمان أكثر على ظهره، في كيس نوم، في سريره الخاص. لا وسادة، ولا بطانية مفكوكة، ولا ألعاب كبيرة في السرير. أبقِ الغرفة باردة ومنعشة. افحص الأطفال النائمين كثيراً: انظر واستمع، حتى عندما يكون جهاز مراقبة الطفل يعمل. هل يطلب منك أحد الوالدين أن تجعل رضيعه ينام بطريقة أخرى؟ أخبر مشرفك أولاً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الرضيع ينام بأمان أكثر على ظهره، في كيس نوم، في سريره الخاص. لا وسادة، ولا بطانية مفكوكة، ولا ألعاب كبيرة في السرير. أبقي الغرفة باردة ومنعشة. افحصي الأطفال النائمين كثيراً: انظري واستمعي، حتى عندما يكون جهاز مراقبة الطفل يعمل. هل يطلب منك أحد الوالدين أن تجعلي رضيعه ينام بطريقة أخرى؟ أخبري مشرفك أولاً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الرضيع ينام بأمان أكثر على ظهره، في كيس نوم، في سريره الخاص. لا وسادة، ولا بطانية مفكوكة، ولا ألعاب كبيرة في السرير. الغرفة تبقى باردة ومنعشة. فحص الأطفال النائمين كثيراً: النظر والاستماع، حتى عندما يكون جهاز مراقبة الطفل يعمل. هل يطلب أحد الوالدين أن ينام رضيعه بطريقة أخرى؟ إخبار المشرف أولاً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.p': "سأذهب وأنظر في غرفة النوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.s': { m: "رضيع نام على بطنه في السرير. ماذا تفعل؟", f: "رضيع نام على بطنه في السرير. ماذا تفعلين؟", x: "رضيع نام على بطنه في السرير. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.o1': "قلبه بلطف على ظهره.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.o2': "تركه ينام: إنه نائم الآن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.o3': "وضع وسادة بجانبه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.w': "على ظهره يستطيع الرضيع أن يتنفّس بحرّية. الوسادة قد تغطّي وجهه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.playtime': "اللعب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spelen': "يلعب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.speelgoed': "الألعاب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zandbak': "حوض الرمل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.glijbaan': "الزحليقة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.puzzel': "لعبة التركيب (البازل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.buitenspelen': "يلعب في الخارج", // nieuw, nalezen // nagelezen AI 28 nov
+    's.playtime.1': "سنلعب في الخارج. المعاطف!", // nieuw, nalezen // nagelezen AI 28 nov
+    's.playtime.2': { m: "رتّب الألعاب.", f: "رتّبي الألعاب.", x: "ترتيب الألعاب." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.playtime.3': "طفل واحد في كل مرة على الزحليقة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.q': "هل يمكنني أن ألعب بلعبة التركيب؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.a': "نعم، على الطاولة. بعد ذلك ترتّبها.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime': { m: "العب بأمان: انظر، عُدّ، افحص", f: "العبي بأمان: انظري، عُدّي، افحصي", x: "اللعب بأمان: النظر، العدّ، الفحص" }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.playtime.b': { m: "الأطفال يتعلّمون باللعب، لذلك دعهم يجرّبون الأشياء. لكن أبقِهم دائماً أمام عينيك، في الخارج أيضاً. عُدّ الأطفال عندما تخرجون وعندما تعودون إلى الداخل. افحص ساحة اللعب أولاً: هل البوّابة مغلقة، هل يوجد زجاج أو قمامة؟ الألعاب ذات القطع الصغيرة ليست للأطفال تحت ثلاث سنوات: قد يختنقون بها. نظّف كثيراً الألعاب التي تدخل الفم. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الأطفال يتعلّمون باللعب، لذلك دعيهم يجرّبون الأشياء. لكن أبقيهم دائماً أمام عينيك، في الخارج أيضاً. عُدّي الأطفال عندما تخرجون وعندما تعودون إلى الداخل. افحصي ساحة اللعب أولاً: هل البوّابة مغلقة، هل يوجد زجاج أو قمامة؟ الألعاب ذات القطع الصغيرة ليست للأطفال تحت ثلاث سنوات: قد يختنقون بها. نظّفي كثيراً الألعاب التي تدخل الفم. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الأطفال يتعلّمون باللعب، لذلك يُتركون يجرّبون الأشياء. لكن يبقون دائماً تحت النظر، في الخارج أيضاً. عَدّ الأطفال عند الخروج وعند العودة إلى الداخل. فحص ساحة اللعب أولاً: هل البوّابة مغلقة، هل يوجد زجاج أو قمامة؟ الألعاب ذات القطع الصغيرة ليست للأطفال تحت ثلاث سنوات: قد يختنقون بها. تنظيف الألعاب التي تدخل الفم كثيراً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.playtime.p': "هل الجميع هنا؟", // nieuw, nalezen
-    'c.playtime.s': { m: "تعود إلى الداخل من ساحة اللعب. تعدّ الأطفال: ينقص طفل واحد. ماذا تفعل؟", f: "تعودين إلى الداخل من ساحة اللعب. تعدّين الأطفال: ينقص طفل واحد. ماذا تفعلين؟", x: "العودة إلى الداخل من ساحة اللعب. في العدّ ينقص طفل واحد. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.playtime.o1': "إخبار زميل، والبحث فوراً.", // nieuw, nalezen
-    'c.playtime.o2': "الانتظار: الطفل سيدخل وحده.", // nieuw, nalezen
-    'c.playtime.o3': "العدّ من جديد غداً.", // nieuw, nalezen
-    'c.playtime.w': "الطفل وحده في الخارج قد يتأذّى أو يبتعد. كل دقيقة مهمّة.", // nieuw, nalezen
-    'u.daycare': "الأهل والأمان والمجموعة", // nieuw, nalezen
-    'l.pickup': "الإحضار والاستلام", // nieuw, nalezen
-    'w.ouder': "الوالد، الوالدة", // nieuw, nalezen
-    'w.afscheid': "الوداع", // nieuw, nalezen
-    'w.oppas': "جليسة الأطفال", // nieuw, nalezen
-    'w.schriftje': "الدفتر (للملاحظات بين الأهل والموظفين)", // nieuw, nalezen
-    'w.ouderapp': "تطبيق الأهل (للصور والرسائل إلى الأهل)", // nieuw, nalezen
-    'w.wennen': "يتأقلم (يعتاد على مكان جديد)", // nieuw, nalezen
-    's.pickup.1': "سأكتب ذلك في الدفتر.", // nieuw, nalezen
-    's.pickup.2': "قل باي باي لبابا.", // nieuw, nalezen
-    's.pickup.3': "أضع صورة في تطبيق الأهل.", // nieuw, nalezen
-    'c.pickup.q': "من سيأخذ Sem اليوم؟", // nieuw, nalezen
-    'c.pickup.a': "جدّته. اسمها في القائمة.", // nieuw, nalezen
-    'c.pickup': "فقط للأشخاص الذين في القائمة", // nieuw, nalezen
-    'c.pickup.b': { m: "لا تسلّم الطفل إلا لأحد والديه، أو لشخص أخبرك عنه الأهل. لا تعرف الشخص؟ اسأل من هو، وانظر إلى هويته، وتحقّق مع الأهل أو مشرفك. عند الاستلام أخبر الوالد كيف كان اليوم: الأكل، والنوم، واللعب، وأي شيء خاص. اكتب الأشياء المهمّة في الدفتر أو التطبيق. تكلّم عن الأطفال الآخرين فقط مع أهلهم. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "لا تسلّمي الطفل إلا لأحد والديه، أو لشخص أخبرك عنه الأهل. لا تعرفين الشخص؟ اسألي من هو، وانظري إلى هويته، وتحقّقي مع الأهل أو مشرفك. عند الاستلام أخبري الوالد كيف كان اليوم: الأكل، والنوم، واللعب، وأي شيء خاص. اكتبي الأشياء المهمّة في الدفتر أو التطبيق. تكلّمي عن الأطفال الآخرين فقط مع أهلهم. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الطفل يُسلّم فقط لأحد والديه، أو لشخص أخبر عنه الأهل. الشخص غير معروف؟ سؤاله من هو، والنظر إلى هويته، والتحقّق مع الأهل أو المشرف. عند الاستلام إخبار الوالد كيف كان اليوم: الأكل، والنوم، واللعب، وأي شيء خاص. كتابة الأشياء المهمّة في الدفتر أو التطبيق. الكلام عن الأطفال الآخرين فقط مع أهلهم. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.pickup.p': "من أنت؟ سأتصل بالأهل.", // nieuw, nalezen
-    'c.pickup.s': { m: "رجل لا تعرفه يأتي ليأخذ Sem. اسمه ليس في القائمة. ماذا تفعل؟", f: "رجل لا تعرفينه يأتي ليأخذ Sem. اسمه ليس في القائمة. ماذا تفعلين؟", x: "رجل غير معروف يأتي ليأخذ Sem. اسمه ليس في القائمة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.pickup.o1': "الاتصال بالأهل قبل أن يذهب Sem.", // nieuw, nalezen
-    'c.pickup.o2': "ترك Sem يذهب: هو يعرف الاسم.", // nieuw, nalezen
-    'c.pickup.o3': "سؤال Sem هل يعرفه.", // nieuw, nalezen
-    'c.pickup.w': "المسؤولية عن الطفل تبقى حتى يتسلّمه شخص اختاره الأهل.", // nieuw, nalezen
-    'l.childsafety': "الأمان في المجموعة", // nieuw, nalezen
-    'w.traphekje': "بوّابة الدرج", // nieuw, nalezen
-    'w.vingerstrip': "واقي الأصابع (على الباب، حتى لا تعلق الأصابع)", // nieuw, nalezen
-    'w.verslikken': "يغصّ (الطعام يدخل في المجرى الخطأ)", // nieuw, nalezen
-    'w.bult': "الورم (على الرأس)", // nieuw, nalezen
-    'w.schaafwond': "الخدش (الجلد مكشوط)", // nieuw, nalezen
-    'w.toezicht': "المراقبة (تراقب الأطفال)", // nieuw, nalezen
-    's.childsafety.1': { m: "أغلق بوّابة الدرج دائماً.", f: "أغلقي بوّابة الدرج دائماً.", x: "بوّابة الدرج تُغلق دائماً." }, // nieuw, nalezen
-    's.childsafety.2': "أضع قليلاً من الثلج على الورم.", // nieuw, nalezen
-    's.childsafety.3': "Sem يغصّ. أنا أساعده.", // nieuw, nalezen
-    'c.childsafety.q': "هل سقطت Bo؟", // nieuw, nalezen
-    'c.childsafety.a': "نعم، عندها ورم. سأتصل بأمّها.", // nieuw, nalezen
+    'c.playtime.p': "هل الجميع هنا؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.s': { m: "تعود إلى الداخل من ساحة اللعب. تعدّ الأطفال: ينقص طفل واحد. ماذا تفعل؟", f: "تعودين إلى الداخل من ساحة اللعب. تعدّين الأطفال: ينقص طفل واحد. ماذا تفعلين؟", x: "العودة إلى الداخل من ساحة اللعب. في العدّ ينقص طفل واحد. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.o1': "إخبار زميل، والبحث فوراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.o2': "الانتظار: الطفل سيدخل وحده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.o3': "العدّ من جديد غداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.w': "الطفل وحده في الخارج قد يتأذّى أو يبتعد. كل دقيقة مهمّة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.daycare': "الأهل والأمان والمجموعة", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.pickup': "الإحضار والاستلام", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ouder': "الوالد، الوالدة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afscheid': "الوداع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oppas': "جليسة الأطفال", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schriftje': "الدفتر (للملاحظات بين الأهل والموظفين)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ouderapp': "تطبيق الأهل (للصور والرسائل إلى الأهل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wennen': "يتأقلم (يعتاد على مكان جديد)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pickup.1': "سأكتب ذلك في الدفتر.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pickup.2': "قل باي باي لبابا.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pickup.3': "أضع صورة في تطبيق الأهل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.q': "من سيأخذ Sem اليوم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.a': "جدّته. اسمها في القائمة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup': "فقط للأشخاص الذين في القائمة", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.b': { m: "لا تسلّم الطفل إلا لأحد والديه، أو لشخص أخبرك عنه الأهل. لا تعرف الشخص؟ اسأل من هو، وانظر إلى هويته، وتحقّق مع الأهل أو مشرفك. عند الاستلام أخبر الوالد كيف كان اليوم: الأكل، والنوم، واللعب، وأي شيء خاص. اكتب الأشياء المهمّة في الدفتر أو التطبيق. تكلّم عن الأطفال الآخرين فقط مع أهلهم. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "لا تسلّمي الطفل إلا لأحد والديه، أو لشخص أخبرك عنه الأهل. لا تعرفين الشخص؟ اسألي من هو، وانظري إلى هويته، وتحقّقي مع الأهل أو مشرفك. عند الاستلام أخبري الوالد كيف كان اليوم: الأكل، والنوم، واللعب، وأي شيء خاص. اكتبي الأشياء المهمّة في الدفتر أو التطبيق. تكلّمي عن الأطفال الآخرين فقط مع أهلهم. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الطفل يُسلّم فقط لأحد والديه، أو لشخص أخبر عنه الأهل. الشخص غير معروف؟ سؤاله من هو، والنظر إلى هويته، والتحقّق مع الأهل أو المشرف. عند الاستلام إخبار الوالد كيف كان اليوم: الأكل، والنوم، واللعب، وأي شيء خاص. كتابة الأشياء المهمّة في الدفتر أو التطبيق. الكلام عن الأطفال الآخرين فقط مع أهلهم. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.p': "من أنت؟ سأتصل بالأهل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.s': { m: "رجل لا تعرفه يأتي ليأخذ Sem. اسمه ليس في القائمة. ماذا تفعل؟", f: "رجل لا تعرفينه يأتي ليأخذ Sem. اسمه ليس في القائمة. ماذا تفعلين؟", x: "رجل غير معروف يأتي ليأخذ Sem. اسمه ليس في القائمة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.o1': "الاتصال بالأهل قبل أن يذهب Sem.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.o2': "ترك Sem يذهب: هو يعرف الاسم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.o3': "سؤال Sem هل يعرفه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.w': "المسؤولية عن الطفل تبقى حتى يتسلّمه شخص اختاره الأهل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.childsafety': "الأمان في المجموعة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.traphekje': "بوّابة الدرج", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vingerstrip': "واقي الأصابع (على الباب، حتى لا تعلق الأصابع)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verslikken': "يغصّ (الطعام يدخل في المجرى الخطأ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bult': "الورم (على الرأس)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schaafwond': "الخدش (الجلد مكشوط)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toezicht': "المراقبة (تراقب الأطفال)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.childsafety.1': { m: "أغلق بوّابة الدرج دائماً.", f: "أغلقي بوّابة الدرج دائماً.", x: "بوّابة الدرج تُغلق دائماً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.childsafety.2': "أضع قليلاً من الثلج على الورم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.childsafety.3': "Sem يغصّ. أنا أساعده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.q': "هل سقطت Bo؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.a': "نعم، عندها ورم. سأتصل بأمّها.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.childsafety': { m: "انظر حولك بعيني طفل", f: "انظري حولك بعيني طفل", x: "النظر إلى المكان بعيني طفل" }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.childsafety.b': { m: "الأطفال الصغار يضعون كل شيء في فمهم ويتسلّقون كل شيء. لذلك أبقِ بوّابة الدرج مغلقة، وضع مواد التنظيف والأدوية بعيداً عن متناولهم، وأبعِد المشروبات الساخنة عن الأطفال. افحص الغرفة كل يوم. هل يتأذّى طفل؟ أعطِ الإسعافات الأولية، وهدّئ الطفل، وأخبر الأهل، واكتب ذلك. هل الأمر خطير؟ اتصل بـ112. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الأطفال الصغار يضعون كل شيء في فمهم ويتسلّقون كل شيء. لذلك أبقي بوّابة الدرج مغلقة، وضعي مواد التنظيف والأدوية بعيداً عن متناولهم، وأبعدي المشروبات الساخنة عن الأطفال. افحصي الغرفة كل يوم. هل يتأذّى طفل؟ أعطي الإسعافات الأولية، وهدّئي الطفل، وأخبري الأهل، واكتبي ذلك. هل الأمر خطير؟ اتصلي بـ112. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الأطفال الصغار يضعون كل شيء في فمهم ويتسلّقون كل شيء. لذلك بوّابة الدرج تبقى مغلقة، ومواد التنظيف والأدوية بعيدة عن متناولهم، والمشروبات الساخنة بعيدة عن الأطفال. فحص الغرفة كل يوم. هل يتأذّى طفل؟ الإسعافات الأولية، وتهدئة الطفل، وإخبار الأهل، وكتابة ذلك. هل الأمر خطير؟ الاتصال بـ112. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.childsafety.p': "بوّابة الدرج مفتوحة.", // nieuw, nalezen
-    'c.childsafety.s': { m: "وضعتَ قهوتك الساخنة على طاولة منخفضة. طفل صغير يمشي نحوها. ماذا تفعل؟", f: "وضعتِ قهوتك الساخنة على طاولة منخفضة. طفل صغير يمشي نحوها. ماذا تفعلين؟", x: "قهوة ساخنة على طاولة منخفضة. طفل صغير يمشي نحوها. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.childsafety.o1': "وضع القهوة في مكان عالٍ فوراً.", // nieuw, nalezen
-    'c.childsafety.o2': "الطلب من الطفل ألا يلمسها.", // nieuw, nalezen
-    'c.childsafety.o3': "شربها بسرعة.", // nieuw, nalezen
-    'c.childsafety.w': "القهوة الساخنة قد تحرق طفلاً صغيراً حرقاً شديداً. بعيداً عن متناوله هو المكان الآمن الوحيد.", // nieuw, nalezen
-    'l.sickchild': "طفل مريض والحساسية", // nieuw, nalezen
-    'w.huiduitslag': "الطفح الجلدي (بقع حمراء على الجلد)", // nieuw, nalezen
-    'w.diarree': "الإسهال", // nieuw, nalezen
-    'w.overgeven': "يتقيّأ", // nieuw, nalezen
-    'w.allergielijst': "قائمة الحساسية", // nieuw, nalezen
-    'w.adrenalinepen': "قلم الأدرينالين (قلم دواء لحساسية قوية)", // nieuw, nalezen
-    'w.temperaturen': "يقيس الحرارة", // nieuw, nalezen
-    's.sickchild.1': "Sem عنده حمّى. سأتصل بأبيه.", // nieuw, nalezen
-    's.sickchild.2': { m: "انظر في قائمة الحساسية قبل الوجبة.", f: "انظري في قائمة الحساسية قبل الوجبة.", x: "النظر في قائمة الحساسية قبل الوجبة." }, // nieuw, nalezen
-    's.sickchild.3': { m: "لا تعطِ أبداً دواءً بدون إذن.", f: "لا تعطي أبداً دواءً بدون إذن.", x: "إعطاء دواء بدون إذن ممنوع أبداً." }, // nieuw, nalezen
-    'c.sickchild.q': "كيف حال Jip؟", // nieuw, nalezen
-    'c.sickchild.a': "حرارته عالية جداً. سأقيس حرارته.", // nieuw, nalezen
-    'c.sickchild': { m: "طفل مريض: أخبر، لا تخمّن", f: "طفل مريض: أخبري، لا تخمّني", x: "طفل مريض: الإخبار، لا التخمين" }, // nieuw, nalezen
-    'c.sickchild.b': { m: "انتبه إلى حال الأطفال. هل الطفل ساخن، أو متعب جداً، أو يتقيّأ، أو عنده طفح؟ قِس حرارته، وأخبر زميلك، واتصل بالأهل. لا تعطِ الدواء إلا بإذن مكتوب من الأهل، واكتب ماذا أعطيتَ ومتى. اعرف أي الأطفال عندهم حساسية، وأين دواؤهم. طفل عنده ردّ فعل تحسّسي قوي: أعطِه قلم الأدرينالين إذا تعلّمت ذلك، واتصل بـ112. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "انتبهي إلى حال الأطفال. هل الطفل ساخن، أو متعب جداً، أو يتقيّأ، أو عنده طفح؟ قيسي حرارته، وأخبري زميلك، واتصلي بالأهل. لا تعطي الدواء إلا بإذن مكتوب من الأهل، واكتبي ماذا أعطيتِ ومتى. اعرفي أي الأطفال عندهم حساسية، وأين دواؤهم. طفل عنده ردّ فعل تحسّسي قوي: أعطيه قلم الأدرينالين إذا تعلّمتِ ذلك، واتصلي بـ112. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الانتباه إلى حال الأطفال. هل الطفل ساخن، أو متعب جداً، أو يتقيّأ، أو عنده طفح؟ قياس حرارته، وإخبار الزميل، والاتصال بالأهل. الدواء يُعطى فقط بإذن مكتوب من الأهل، مع كتابة ماذا أُعطي ومتى. معرفة أي الأطفال عندهم حساسية، وأين دواؤهم. طفل عنده ردّ فعل تحسّسي قوي: إعطاؤه قلم الأدرينالين لمن تعلّم ذلك، والاتصال بـ112. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.sickchild.p': "طفلك مريض. هل يمكنك أن تأتي لتأخذه؟", // nieuw, nalezen
-    'c.sickchild.s': { m: "أمّ تقول: «أعطِه شراب الحمّى في الثانية». لا توجد استمارة. ماذا تفعل؟", f: "أمّ تقول: «أعطيه شراب الحمّى في الثانية». لا توجد استمارة. ماذا تفعلين؟", x: "أمّ تقول: «شراب الحمّى في الثانية». لا توجد استمارة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.sickchild.o1': "الطلب منها أن توقّع الاستمارة أولاً.", // nieuw, nalezen
-    'c.sickchild.o2': "إعطاؤه: الأمّ طلبت ذلك.", // nieuw, nalezen
-    'c.sickchild.o3': "إعطاء النصف، احتياطاً.", // nieuw, nalezen
-    'c.sickchild.w': "بدون إذن مكتوب لا يُسمح بإعطاء الدواء. الاستمارة تحمي الطفل وتحمي الموظف.", // nieuw, nalezen
-    'l.grouprules': "المجموعة والقواعد", // nieuw, nalezen
-    'w.pedagogischmedewerker': "موظف رعاية الأطفال", // nieuw, nalezen
-    'w.mentor': "المرشد (الموظف الذي يتابع طفلاً واحداً عن قرب)", // nieuw, nalezen
-    'w.vierogenprincipe': "قاعدة العيون الأربع (شخص بالغ آخر يستطيع دائماً أن يراك أو يسمعك)", // nieuw, nalezen
-    'w.observeren': "يلاحظ (يراقب بانتباه، ويكتب ذلك)", // nieuw, nalezen
-    'w.peuter': "الطفل الصغير (طفل عمره سنتان أو ثلاث)", // nieuw, nalezen
-    'w.groep': "المجموعة (الأطفال الذين يكونون معاً كل يوم)", // nieuw, nalezen
-    's.grouprules.1': "أنا مرشد Lisa.", // nieuw, nalezen
-    's.grouprules.2': "زميل يستطيع دائماً أن يرانا أو يسمعنا.", // nieuw, nalezen
-    's.grouprules.3': { m: "أنا قلق على Daan.", f: "أنا قلقة على Daan.", x: "Daan يقلقني." }, // nieuw, nalezen
-    'c.grouprules.q': "هل يمكنني أن أخرج وحدي مع المجموعة؟", // nieuw, nalezen
-    'c.grouprules.a': { m: "نعم، لكن أخبر زميلاً أولاً.", f: "نعم، لكن أخبري زميلاً أولاً.", x: "نعم، لكن إخبار زميل أولاً." }, // nieuw, nalezen
+    'c.childsafety.b': { m: "الأطفال الصغار يضعون كل شيء في فمهم ويتسلّقون كل شيء. لذلك أبقِ بوّابة الدرج مغلقة، وضع مواد التنظيف والأدوية بعيداً عن متناولهم، وأبعِد المشروبات الساخنة عن الأطفال. افحص الغرفة كل يوم. هل يتأذّى طفل؟ أعطِ الإسعافات الأولية، وهدّئ الطفل، وأخبر الأهل، واكتب ذلك. هل الأمر خطير؟ اتصل بـ112. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "الأطفال الصغار يضعون كل شيء في فمهم ويتسلّقون كل شيء. لذلك أبقي بوّابة الدرج مغلقة، وضعي مواد التنظيف والأدوية بعيداً عن متناولهم، وأبعدي المشروبات الساخنة عن الأطفال. افحصي الغرفة كل يوم. هل يتأذّى طفل؟ أعطي الإسعافات الأولية، وهدّئي الطفل، وأخبري الأهل، واكتبي ذلك. هل الأمر خطير؟ اتصلي بـ112. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الأطفال الصغار يضعون كل شيء في فمهم ويتسلّقون كل شيء. لذلك بوّابة الدرج تبقى مغلقة، ومواد التنظيف والأدوية بعيدة عن متناولهم، والمشروبات الساخنة بعيدة عن الأطفال. فحص الغرفة كل يوم. هل يتأذّى طفل؟ الإسعافات الأولية، وتهدئة الطفل، وإخبار الأهل، وكتابة ذلك. هل الأمر خطير؟ الاتصال بـ112. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.p': "بوّابة الدرج مفتوحة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.s': { m: "وضعتَ قهوتك الساخنة على طاولة منخفضة. طفل صغير يمشي نحوها. ماذا تفعل؟", f: "وضعتِ قهوتك الساخنة على طاولة منخفضة. طفل صغير يمشي نحوها. ماذا تفعلين؟", x: "قهوة ساخنة على طاولة منخفضة. طفل صغير يمشي نحوها. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.o1': "وضع القهوة في مكان عالٍ فوراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.o2': "الطلب من الطفل ألا يلمسها.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.o3': "شربها بسرعة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.w': "القهوة الساخنة قد تحرق طفلاً صغيراً حرقاً شديداً. بعيداً عن متناوله هو المكان الآمن الوحيد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.sickchild': "طفل مريض والحساسية", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huiduitslag': "الطفح الجلدي (بقع حمراء على الجلد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.diarree': "الإسهال", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.overgeven': "يتقيّأ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.allergielijst': "قائمة الحساسية", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.adrenalinepen': "قلم الأدرينالين (قلم دواء لحساسية قوية)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.temperaturen': "يقيس الحرارة", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sickchild.1': "Sem عنده حمّى. سأتصل بأبيه.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sickchild.2': { m: "انظر في قائمة الحساسية قبل الوجبة.", f: "انظري في قائمة الحساسية قبل الوجبة.", x: "النظر في قائمة الحساسية قبل الوجبة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.sickchild.3': { m: "لا تعطِ أبداً دواءً بدون إذن.", f: "لا تعطي أبداً دواءً بدون إذن.", x: "إعطاء دواء بدون إذن ممنوع أبداً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.q': "كيف حال Jip؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.a': "حرارته عالية جداً. سأقيس حرارته.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild': { m: "طفل مريض: أخبر، لا تخمّن", f: "طفل مريض: أخبري، لا تخمّني", x: "طفل مريض: الإخبار، لا التخمين" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.b': { m: "انتبه إلى حال الأطفال. هل الطفل ساخن، أو متعب جداً، أو يتقيّأ، أو عنده طفح؟ قِس حرارته، وأخبر زميلك، واتصل بالأهل. لا تعطِ الدواء إلا بإذن مكتوب من الأهل، واكتب ماذا أعطيتَ ومتى. اعرف أي الأطفال عندهم حساسية، وأين دواؤهم. طفل عنده ردّ فعل تحسّسي قوي: أعطِه قلم الأدرينالين إذا تعلّمت ذلك، واتصل بـ112. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "انتبهي إلى حال الأطفال. هل الطفل ساخن، أو متعب جداً، أو يتقيّأ، أو عنده طفح؟ قيسي حرارته، وأخبري زميلك، واتصلي بالأهل. لا تعطي الدواء إلا بإذن مكتوب من الأهل، واكتبي ماذا أعطيتِ ومتى. اعرفي أي الأطفال عندهم حساسية، وأين دواؤهم. طفل عنده ردّ فعل تحسّسي قوي: أعطيه قلم الأدرينالين إذا تعلّمتِ ذلك، واتصلي بـ112. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "الانتباه إلى حال الأطفال. هل الطفل ساخن، أو متعب جداً، أو يتقيّأ، أو عنده طفح؟ قياس حرارته، وإخبار الزميل، والاتصال بالأهل. الدواء يُعطى فقط بإذن مكتوب من الأهل، مع كتابة ماذا أُعطي ومتى. معرفة أي الأطفال عندهم حساسية، وأين دواؤهم. طفل عنده ردّ فعل تحسّسي قوي: إعطاؤه قلم الأدرينالين لمن تعلّم ذلك، والاتصال بـ112. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.p': "طفلك مريض. هل يمكنك أن تأتي لتأخذه؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.s': { m: "أمّ تقول: «أعطِه شراب الحمّى في الثانية». لا توجد استمارة. ماذا تفعل؟", f: "أمّ تقول: «أعطيه شراب الحمّى في الثانية». لا توجد استمارة. ماذا تفعلين؟", x: "أمّ تقول: «شراب الحمّى في الثانية». لا توجد استمارة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.o1': "الطلب منها أن توقّع الاستمارة أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.o2': "إعطاؤه: الأمّ طلبت ذلك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.o3': "إعطاء النصف، احتياطاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.w': "بدون إذن مكتوب لا يُسمح بإعطاء الدواء. الاستمارة تحمي الطفل وتحمي الموظف.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.grouprules': "المجموعة والقواعد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pedagogischmedewerker': "موظف رعاية الأطفال", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mentor': "المرشد (الموظف الذي يتابع طفلاً واحداً عن قرب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vierogenprincipe': "قاعدة العيون الأربع (شخص بالغ آخر يستطيع دائماً أن يراك أو يسمعك)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.observeren': "يلاحظ (يراقب بانتباه، ويكتب ذلك)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.peuter': "الطفل الصغير (طفل عمره سنتان أو ثلاث)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.groep': "المجموعة (الأطفال الذين يكونون معاً كل يوم)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.grouprules.1': "أنا مرشد Lisa.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.grouprules.2': "زميل يستطيع دائماً أن يرانا أو يسمعنا.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.grouprules.3': { m: "أنا قلق على Daan.", f: "أنا قلقة على Daan.", x: "Daan يقلقني." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.q': "هل يمكنني أن أخرج وحدي مع المجموعة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.a': { m: "نعم، لكن أخبر زميلاً أولاً.", f: "نعم، لكن أخبري زميلاً أولاً.", x: "نعم، لكن إخبار زميل أولاً." }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.grouprules': { m: "لا تكن أبداً وحدك بعيداً عن الأنظار", f: "لا تكوني أبداً وحدك بعيداً عن الأنظار", x: "ممنوع البقاء بشكل فردي بعيداً عن الأنظار" }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.grouprules.b': { m: "في رعاية الأطفال، يجب أن يستطيع شخص بالغ آخر دائماً أن يراك أو يسمعك عندما تكون مع الأطفال. هذا يحمي الأطفال ويحميك. كل طفل له مرشد: موظف واحد يتابع ذلك الطفل عن قرب ويتكلّم مع الأهل. هل أنت قلق على طفل في البيت، مثلاً بسبب كدمات أو خوف؟ لا تسأل الطفل أسئلة كثيرة: أخبر مشرفك، فهو يعرف الخطوات. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في رعاية الأطفال، يجب أن يستطيع شخص بالغ آخر دائماً أن يراك أو يسمعك عندما تكونين مع الأطفال. هذا يحمي الأطفال ويحميك. كل طفل له مرشد: موظف واحد يتابع ذلك الطفل عن قرب ويتكلّم مع الأهل. هل أنتِ قلقة على طفل في البيت، مثلاً بسبب كدمات أو خوف؟ لا تسألي الطفل أسئلة كثيرة: أخبري مشرفك، فهو يعرف الخطوات. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في رعاية الأطفال، يجب أن يستطيع شخص بالغ آخر دائماً أن يرى أو يسمع كل من يكون مع الأطفال. هذا يحمي الأطفال ويحمي الموظفين. كل طفل له مرشد: موظف واحد يتابع ذلك الطفل عن قرب ويتكلّم مع الأهل. قلق على طفل في البيت، مثلاً بسبب كدمات أو خوف؟ لا أسئلة كثيرة للطفل: إخبار المشرف، فهو يعرف الخطوات. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.grouprules.p': "هذا الطفل يقلقني.", // nieuw, nalezen
-    'c.grouprules.s': { m: "ترى كدمات على طفل مرة أخرى. الطفل هادئ. ماذا تفعل؟", f: "ترين كدمات على طفل مرة أخرى. الطفل هادئ. ماذا تفعلين؟", x: "كدمات على طفل مرة أخرى. الطفل هادئ. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.grouprules.o1': "إخبار المشرف في اليوم نفسه.", // nieuw, nalezen
-    'c.grouprules.o2': "سؤال الطفل أسئلة كثيرة.", // nieuw, nalezen
-    'c.grouprules.o3': "الاتصال بالأهل وسؤالهم لماذا.", // nieuw, nalezen
-    'c.grouprules.w': "المشرف يعرف الخطوات عند القلق على طفل. الأسئلة الكثيرة قد تخيف الطفل.", // nieuw, nalezen
+    'c.grouprules.b': { m: "في رعاية الأطفال، يجب أن يستطيع شخص بالغ آخر دائماً أن يراك أو يسمعك عندما تكون مع الأطفال. هذا يحمي الأطفال ويحميك. كل طفل له مرشد: موظف واحد يتابع ذلك الطفل عن قرب ويتكلّم مع الأهل. هل أنت قلق على طفل في البيت، مثلاً بسبب كدمات أو خوف؟ لا تسأل الطفل أسئلة كثيرة: أخبر مشرفك، فهو يعرف الخطوات. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في رعاية الأطفال، يجب أن يستطيع شخص بالغ آخر دائماً أن يراك أو يسمعك عندما تكونين مع الأطفال. هذا يحمي الأطفال ويحميك. كل طفل له مرشد: موظف واحد يتابع ذلك الطفل عن قرب ويتكلّم مع الأهل. هل أنتِ قلقة على طفل في البيت، مثلاً بسبب كدمات أو خوف؟ لا تسألي الطفل أسئلة كثيرة: أخبري مشرفك، فهو يعرف الخطوات. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في رعاية الأطفال، يجب أن يستطيع شخص بالغ آخر دائماً أن يرى أو يسمع كل من يكون مع الأطفال. هذا يحمي الأطفال ويحمي الموظفين. كل طفل له مرشد: موظف واحد يتابع ذلك الطفل عن قرب ويتكلّم مع الأهل. قلق على طفل في البيت، مثلاً بسبب كدمات أو خوف؟ لا أسئلة كثيرة للطفل: إخبار المشرف، فهو يعرف الخطوات. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.p': "هذا الطفل يقلقني.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.s': { m: "ترى كدمات على طفل مرة أخرى. الطفل هادئ. ماذا تفعل؟", f: "ترين كدمات على طفل مرة أخرى. الطفل هادئ. ماذا تفعلين؟", x: "كدمات على طفل مرة أخرى. الطفل هادئ. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.o1': "إخبار المشرف في اليوم نفسه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.o2': "سؤال الطفل أسئلة كثيرة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.o3': "الاتصال بالأهل وسؤالهم لماذا.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.w': "المشرف يعرف الخطوات عند القلق على طفل. الأسئلة الكثيرة قد تخيف الطفل.", // nieuw, nalezen // nagelezen AI 28 nov
     // Second units for Schoonmaak, Horeca, Zorg and Winkel, and "Werken via een uitzendbureau" (23 November 2026).
-    'u.housekeeping': "المراحيض وغرف الفنادق والآلات", // nieuw, nalezen
-    'l.sanitary': "المراحيض والمغاسل", // nieuw, nalezen
-    'w.wastafel': "المغسلة (حوض غسل اليدين في الحمّام أو المرحاض)", // nieuw, nalezen
-    'w.toiletpot': "كرسي المرحاض", // nieuw, nalezen
-    'w.toiletborstel': "فرشاة المرحاض", // nieuw, nalezen
-    'w.urinoir': "المبولة", // nieuw, nalezen
-    'w.kalk': "الكلس (طبقة بيضاء من الماء على الحنفيات والبلاط)", // nieuw, nalezen
-    'w.ontstopper': "أداة التسليك (أداة لمرحاض أو مصرف مسدود)", // nieuw, nalezen
-    's.sanitary.1': "أنظّف المغاسل أولاً، ثم المراحيض.", // nieuw, nalezen
-    's.sanitary.2': "يوجد كلس على الحنفية.", // nieuw, nalezen
-    's.sanitary.3': "المرحاض في الطابق الأول مسدود.", // nieuw, nalezen
-    'c.sanitary.q': "هل انتهت المراحيض؟", // nieuw, nalezen
-    'c.sanitary.a': "ليس بعد. أحد المراحيض مسدود.", // nieuw, nalezen
-    'c.sanitary': "من النظيف إلى المتّسخ", // nieuw, nalezen
-    'c.sanitary.b': { m: "في دورات المياه تعمل من النظيف إلى المتّسخ: أولاً المرايا والمغاسل، ثم المراحيض، والأرض في النهاية. بهذه الطريقة لا تنقل الأوساخ من المرحاض إلى المغسلة. استعمل قطع القماش ذات اللون المخصّص للمراحيض، والبس القفازات. نظّف فرشاة المرحاض أيضاً، واتركها تجفّ. مرحاض مسدود أو مكسور؟ ضع لافتة على الباب، وأبلغ عنه. اغسل يديك عندما تنتهي، حتى لو لبست القفازات. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في دورات المياه تعملين من النظيف إلى المتّسخ: أولاً المرايا والمغاسل، ثم المراحيض، والأرض في النهاية. بهذه الطريقة لا تنقلين الأوساخ من المرحاض إلى المغسلة. استعملي قطع القماش ذات اللون المخصّص للمراحيض، والبسي القفازات. نظّفي فرشاة المرحاض أيضاً، واتركيها تجفّ. مرحاض مسدود أو مكسور؟ ضعي لافتة على الباب، وأبلغي عنه. اغسلي يديك عندما تنتهين، حتى لو لبستِ القفازات. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في دورات المياه يكون العمل من النظيف إلى المتّسخ: أولاً المرايا والمغاسل، ثم المراحيض، والأرض في النهاية. بهذه الطريقة لا تنتقل الأوساخ من المرحاض إلى المغسلة. استعمال قطع القماش ذات اللون المخصّص للمراحيض، ولبس القفازات. تنظيف فرشاة المرحاض أيضاً، وتركها تجفّ. مرحاض مسدود أو مكسور؟ وضع لافتة على الباب، والإبلاغ عنه. غسل اليدين عند الانتهاء، حتى مع لبس القفازات. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.sanitary.p': "هذا المرحاض مسدود. سأضع عليه لافتة.", // nieuw, nalezen
-    'c.sanitary.s': { m: "نظّفتَ مرحاضاً. المغسلة هي التالية. ما زلتَ تمسك قطعة القماش نفسها. ماذا تفعل؟", f: "نظّفتِ مرحاضاً. المغسلة هي التالية. ما زلتِ تمسكين قطعة القماش نفسها. ماذا تفعلين؟", x: "تمّ تنظيف مرحاض. المغسلة هي التالية. قطعة القماش نفسها ما زالت في اليد. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.sanitary.o1': "أخذ قطعة قماش باللون المخصّص للمغسلة.", // nieuw, nalezen
-    'c.sanitary.o2': "استعمال قطعة القماش نفسها: ما زالت تبدو نظيفة.", // nieuw, nalezen
-    'c.sanitary.o3': "شطف قطعة القماش في المرحاض أولاً.", // nieuw, nalezen
-    'c.sanitary.w': "جراثيم المرحاض موجودة على قطعة القماش، حتى عندما لا تُرى. قطعة قماش جديدة تبعدها عن الأيدي والوجوه.", // nieuw, nalezen
-    'l.hotelroom': "غرف الفندق", // nieuw, nalezen
-    'w.laken': "الشرشف (على السرير)", // nieuw, nalezen
-    'w.kussensloop': "كيس الوسادة", // nieuw, nalezen
-    'w.dekbed': "اللحاف", // nieuw, nalezen
-    'w.handdoek': "المنشفة", // nieuw, nalezen
-    'w.kamerlijst': "قائمة الغرف (الغرف التي يجب أن تنظّفها اليوم)", // nieuw, nalezen
-    'w.opmaken': "يرتّب (السرير)", // nieuw, nalezen
-    's.hotelroom.1': "أرتّب السرير بشراشف نظيفة.", // nieuw, nalezen
-    's.hotelroom.2': { m: "ضع منشفتين نظيفتين في الحمّام.", f: "ضعي منشفتين نظيفتين في الحمّام.", x: "توضع منشفتان نظيفتان في الحمّام." }, // nieuw, nalezen
-    's.hotelroom.3': "الغرفة اثنا عشر جاهزة. سأذهب إلى ثلاثة عشر.", // nieuw, nalezen
-    'c.hotelroom.q': "كم غرفة بقيت لك؟", // nieuw, nalezen
-    'c.hotelroom.a': "أربع غرف أخرى. بعدها تنتهي قائمتي.", // nieuw, nalezen
-    'c.hotelroom': { m: "اطرق الباب، وقل من أنت، وانتظر", f: "اطرقي الباب، وقولي من أنتِ، وانتظري", x: "طرق الباب، والتعريف بالنفس، والانتظار" }, // nieuw, nalezen
-    'c.hotelroom.b': { m: "قبل أن تدخل غرفة في الفندق، اطرق الباب وقل من أنت، مثلاً “Housekeeping!”. انتظر لحظة، واطرق مرة أخرى. هل على الباب لافتة “Niet storen” (لا تزعجوا)؟ إذن لا تدخل، واكتب ذلك في قائمة الغرف. هل الضيف في الغرفة؟ اسأل هل يمكنك أن تنظّف الآن، أو ارجع لاحقاً. أغراض الضيف تبقى في مكانها. هل نسي ضيف شيئاً؟ أحضره إلى الاستقبال. لا تحتفظ أبداً بأي شيء لنفسك، ولا حتى بشيء صغير. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "قبل أن تدخلي غرفة في الفندق، اطرقي الباب وقولي من أنتِ، مثلاً “Housekeeping!”. انتظري لحظة، واطرقي مرة أخرى. هل على الباب لافتة “Niet storen” (لا تزعجوا)؟ إذن لا تدخلي، واكتبي ذلك في قائمة الغرف. هل الضيف في الغرفة؟ اسألي هل يمكنك أن تنظّفي الآن، أو ارجعي لاحقاً. أغراض الضيف تبقى في مكانها. هل نسي ضيف شيئاً؟ أحضريه إلى الاستقبال. لا تحتفظي أبداً بأي شيء لنفسك، ولا حتى بشيء صغير. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "قبل دخول غرفة في الفندق، طرق الباب والتعريف بالنفس، مثلاً “Housekeeping!”. الانتظار لحظة، والطرق مرة أخرى. هل على الباب لافتة “Niet storen” (لا تزعجوا)؟ إذن لا دخول، وتسجيل ذلك في قائمة الغرف. هل الضيف في الغرفة؟ السؤال هل يمكن التنظيف الآن، أو الرجوع لاحقاً. أغراض الضيف تبقى في مكانها. هل نسي ضيف شيئاً؟ إحضاره إلى الاستقبال. الاحتفاظ بأي شيء للنفس ممنوع أبداً، ولا حتى بشيء صغير. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.hotelroom.p': "صباح الخير. هل يمكنني أن أنظّف الغرفة الآن؟", // nieuw, nalezen
-    'c.hotelroom.s': { m: "في غرفة فارغة تجد هاتفاً تحت السرير. الضيف غادر. ماذا تفعل؟", f: "في غرفة فارغة تجدين هاتفاً تحت السرير. الضيف غادر. ماذا تفعلين؟", x: "في غرفة فارغة يوجد هاتف تحت السرير. الضيف غادر. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.hotelroom.o1': "إحضاره إلى الاستقبال.", // nieuw, nalezen
-    'c.hotelroom.o2': "الاحتفاظ به: الضيف غادر.", // nieuw, nalezen
-    'c.hotelroom.o3': "تركه تحت السرير.", // nieuw, nalezen
-    'c.hotelroom.w': "الأشياء المفقودة ما زالت ملكاً للضيف. الاستقبال يستطيع أن يعيدها إليه. الاحتفاظ بها سرقة، وقد يكلّفك عملك.", // nieuw, nalezen
-    'l.dosing': "المواد والآلات", // nieuw, nalezen
-    'w.doseren': "يقيس الجرعة (يستعمل الكمية الصحيحة من المادة)", // nieuw, nalezen
-    'w.maatbeker': "كوب القياس", // nieuw, nalezen
-    'w.sprayflacon': "زجاجة الرشّ", // nieuw, nalezen
-    'w.concentraat': "المادة المركّزة (مادة قوية تُخلط بالماء)", // nieuw, nalezen
-    'w.veiligheidsblad': "صحيفة بيانات السلامة (تذكر مخاطر المادة، وما يجب فعله)", // nieuw, nalezen
-    'w.schrobzuigmachine': "آلة الفرك والشفط (آلة تفرك الأرض وتشفطها حتى تجفّ)", // nieuw, nalezen
-    's.dosing.1': { m: "ضع غطاءً واحداً في دلو ماء.", f: "ضعي غطاءً واحداً في دلو ماء.", x: "غطاء واحد في دلو ماء." }, // nieuw, nalezen
-    's.dosing.2': { m: "اقرأ الملصق أولاً.", f: "اقرئي الملصق أولاً.", x: "قراءة الملصق أولاً." }, // nieuw, nalezen
-    's.dosing.3': "آلة الفرك والشفط يجب أن توضع على الشاحن.", // nieuw, nalezen
-    'c.dosing.q': { m: "ضع مادة أكثر قليلاً. هكذا تصبح أنظف.", f: "ضعي مادة أكثر قليلاً. هكذا تصبح أنظف.", x: "الأفضل وضع مادة أكثر قليلاً. هكذا تصبح أنظف." }, // nieuw, nalezen
-    'c.dosing.a': "لا، الأكثر ليس أفضل. أستعمل كوب القياس.", // nieuw, nalezen
-    'c.dosing': "الجرعة الصحيحة، لا أكثر", // nieuw, nalezen
-    'c.dosing.b': { m: "مادة أكثر لا تنظّف أفضل. الكثير منها يترك طبقة لزجة، فتتّسخ الأرض أسرع وقد تصبح زلقة. وهذا أسوأ أيضاً لجلدك ورئتيك. استعمل كوب القياس أو مضخّة الجرعات، واتّبع الملصق. الماء أولاً، ثم المادة: حتى لا تتطاير. قبل أن تستعمل آلة الفرك والشفط، تأكّد أنها مشحونة، وفي خزانها ماء نظيف. في النهاية، أفرغ خزان الماء المتّسخ واشطفه. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "مادة أكثر لا تنظّف أفضل. الكثير منها يترك طبقة لزجة، فتتّسخ الأرض أسرع وقد تصبح زلقة. وهذا أسوأ أيضاً لجلدك ورئتيك. استعملي كوب القياس أو مضخّة الجرعات، واتّبعي الملصق. الماء أولاً، ثم المادة: حتى لا تتطاير. قبل أن تستعملي آلة الفرك والشفط، تأكّدي أنها مشحونة، وفي خزانها ماء نظيف. في النهاية، أفرغي خزان الماء المتّسخ واشطفيه. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "مادة أكثر لا تنظّف أفضل. الكثير منها يترك طبقة لزجة، فتتّسخ الأرض أسرع وقد تصبح زلقة. وهذا أسوأ أيضاً للجلد والرئتين. استعمال كوب القياس أو مضخّة الجرعات، واتّباع الملصق. الماء أولاً، ثم المادة: حتى لا تتطاير. قبل استعمال آلة الفرك والشفط، التأكّد أنها مشحونة، وفي خزانها ماء نظيف. في النهاية، إفراغ خزان الماء المتّسخ وشطفه. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.dosing.p': "كم يجب أن أضع؟", // nieuw, nalezen
+    'u.housekeeping': "المراحيض وغرف الفنادق والآلات", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.sanitary': "المراحيض والمغاسل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wastafel': "المغسلة (حوض غسل اليدين في الحمّام أو المرحاض)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toiletpot': "كرسي المرحاض", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toiletborstel': "فرشاة المرحاض", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.urinoir': "المبولة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kalk': "الكلس (طبقة بيضاء من الماء على الحنفيات والبلاط)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ontstopper': "أداة التسليك (أداة لمرحاض أو مصرف مسدود)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sanitary.1': "أنظّف المغاسل أولاً، ثم المراحيض.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sanitary.2': "يوجد كلس على الحنفية.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sanitary.3': "المرحاض في الطابق الأول مسدود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.q': "هل انتهت المراحيض؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.a': "ليس بعد. أحد المراحيض مسدود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary': "من النظيف إلى المتّسخ", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.b': { m: "في دورات المياه تعمل من النظيف إلى المتّسخ: أولاً المرايا والمغاسل، ثم المراحيض، والأرض في النهاية. بهذه الطريقة لا تنقل الأوساخ من المرحاض إلى المغسلة. استعمل قطع القماش ذات اللون المخصّص للمراحيض، والبس القفازات. نظّف فرشاة المرحاض أيضاً، واتركها تجفّ. مرحاض مسدود أو مكسور؟ ضع لافتة على الباب، وأبلغ عنه. اغسل يديك عندما تنتهي، حتى لو لبست القفازات. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في دورات المياه تعملين من النظيف إلى المتّسخ: أولاً المرايا والمغاسل، ثم المراحيض، والأرض في النهاية. بهذه الطريقة لا تنقلين الأوساخ من المرحاض إلى المغسلة. استعملي قطع القماش ذات اللون المخصّص للمراحيض، والبسي القفازات. نظّفي فرشاة المرحاض أيضاً، واتركيها تجفّ. مرحاض مسدود أو مكسور؟ ضعي لافتة على الباب، وأبلغي عنه. اغسلي يديك عندما تنتهين، حتى لو لبستِ القفازات. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في دورات المياه يكون العمل من النظيف إلى المتّسخ: أولاً المرايا والمغاسل، ثم المراحيض، والأرض في النهاية. بهذه الطريقة لا تنتقل الأوساخ من المرحاض إلى المغسلة. استعمال قطع القماش ذات اللون المخصّص للمراحيض، ولبس القفازات. تنظيف فرشاة المرحاض أيضاً، وتركها تجفّ. مرحاض مسدود أو مكسور؟ وضع لافتة على الباب، والإبلاغ عنه. غسل اليدين عند الانتهاء، حتى مع لبس القفازات. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.p': "هذا المرحاض مسدود. سأضع عليه لافتة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.s': { m: "نظّفتَ مرحاضاً. المغسلة هي التالية. ما زلتَ تمسك قطعة القماش نفسها. ماذا تفعل؟", f: "نظّفتِ مرحاضاً. المغسلة هي التالية. ما زلتِ تمسكين قطعة القماش نفسها. ماذا تفعلين؟", x: "تمّ تنظيف مرحاض. المغسلة هي التالية. قطعة القماش نفسها ما زالت في اليد. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.o1': "أخذ قطعة قماش باللون المخصّص للمغسلة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.o2': "استعمال قطعة القماش نفسها: ما زالت تبدو نظيفة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.o3': "شطف قطعة القماش في المرحاض أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.w': "جراثيم المرحاض موجودة على قطعة القماش، حتى عندما لا تُرى. قطعة قماش جديدة تبعدها عن الأيدي والوجوه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.hotelroom': "غرف الفندق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.laken': "الشرشف (على السرير)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kussensloop': "كيس الوسادة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dekbed': "اللحاف", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handdoek': "المنشفة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kamerlijst': "قائمة الغرف (الغرف التي يجب أن تنظّفها اليوم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opmaken': "يرتّب (السرير)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hotelroom.1': "أرتّب السرير بشراشف نظيفة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hotelroom.2': { m: "ضع منشفتين نظيفتين في الحمّام.", f: "ضعي منشفتين نظيفتين في الحمّام.", x: "توضع منشفتان نظيفتان في الحمّام." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.hotelroom.3': "الغرفة اثنا عشر جاهزة. سأذهب إلى ثلاثة عشر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.q': "كم غرفة بقيت لك؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.a': "أربع غرف أخرى. بعدها تنتهي قائمتي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom': { m: "اطرق الباب، وقل من أنت، وانتظر", f: "اطرقي الباب، وقولي من أنتِ، وانتظري", x: "طرق الباب، والتعريف بالنفس، والانتظار" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.b': { m: "قبل أن تدخل غرفة في الفندق، اطرق الباب وقل من أنت، مثلاً “Housekeeping!”. انتظر لحظة، واطرق مرة أخرى. هل على الباب لافتة “Niet storen” (لا تزعجوا)؟ إذن لا تدخل، واكتب ذلك في قائمة الغرف. هل الضيف في الغرفة؟ اسأل هل يمكنك أن تنظّف الآن، أو ارجع لاحقاً. أغراض الضيف تبقى في مكانها. هل نسي ضيف شيئاً؟ أحضره إلى الاستقبال. لا تحتفظ أبداً بأي شيء لنفسك، ولا حتى بشيء صغير. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "قبل أن تدخلي غرفة في الفندق، اطرقي الباب وقولي من أنتِ، مثلاً “Housekeeping!”. انتظري لحظة، واطرقي مرة أخرى. هل على الباب لافتة “Niet storen” (لا تزعجوا)؟ إذن لا تدخلي، واكتبي ذلك في قائمة الغرف. هل الضيف في الغرفة؟ اسألي هل يمكنك أن تنظّفي الآن، أو ارجعي لاحقاً. أغراض الضيف تبقى في مكانها. هل نسي ضيف شيئاً؟ أحضريه إلى الاستقبال. لا تحتفظي أبداً بأي شيء لنفسك، ولا حتى بشيء صغير. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "قبل دخول غرفة في الفندق، طرق الباب والتعريف بالنفس، مثلاً “Housekeeping!”. الانتظار لحظة، والطرق مرة أخرى. هل على الباب لافتة “Niet storen” (لا تزعجوا)؟ إذن لا دخول، وتسجيل ذلك في قائمة الغرف. هل الضيف في الغرفة؟ السؤال هل يمكن التنظيف الآن، أو الرجوع لاحقاً. أغراض الضيف تبقى في مكانها. هل نسي ضيف شيئاً؟ إحضاره إلى الاستقبال. الاحتفاظ بأي شيء للنفس ممنوع أبداً، ولا حتى بشيء صغير. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.p': "صباح الخير. هل يمكنني أن أنظّف الغرفة الآن؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.s': { m: "في غرفة فارغة تجد هاتفاً تحت السرير. الضيف غادر. ماذا تفعل؟", f: "في غرفة فارغة تجدين هاتفاً تحت السرير. الضيف غادر. ماذا تفعلين؟", x: "في غرفة فارغة يوجد هاتف تحت السرير. الضيف غادر. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.o1': "إحضاره إلى الاستقبال.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.o2': "الاحتفاظ به: الضيف غادر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.o3': "تركه تحت السرير.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.w': "الأشياء المفقودة ما زالت ملكاً للضيف. الاستقبال يستطيع أن يعيدها إليه. الاحتفاظ بها سرقة، وقد يكلّفك عملك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.dosing': "المواد والآلات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doseren': "يقيس الجرعة (يستعمل الكمية الصحيحة من المادة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.maatbeker': "كوب القياس", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sprayflacon': "زجاجة الرشّ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.concentraat': "المادة المركّزة (مادة قوية تُخلط بالماء)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.veiligheidsblad': "صحيفة بيانات السلامة (تذكر مخاطر المادة، وما يجب فعله)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schrobzuigmachine': "آلة الفرك والشفط (آلة تفرك الأرض وتشفطها حتى تجفّ)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dosing.1': { m: "ضع غطاءً واحداً في دلو ماء.", f: "ضعي غطاءً واحداً في دلو ماء.", x: "غطاء واحد في دلو ماء." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.dosing.2': { m: "اقرأ الملصق أولاً.", f: "اقرئي الملصق أولاً.", x: "قراءة الملصق أولاً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.dosing.3': "آلة الفرك والشفط يجب أن توضع على الشاحن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.q': { m: "ضع مادة أكثر قليلاً. هكذا تصبح أنظف.", f: "ضعي مادة أكثر قليلاً. هكذا تصبح أنظف.", x: "الأفضل وضع مادة أكثر قليلاً. هكذا تصبح أنظف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.a': "لا، الأكثر ليس أفضل. أستعمل كوب القياس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing': "الجرعة الصحيحة، لا أكثر", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.b': { m: "مادة أكثر لا تنظّف أفضل. الكثير منها يترك طبقة لزجة، فتتّسخ الأرض أسرع وقد تصبح زلقة. وهذا أسوأ أيضاً لجلدك ورئتيك. استعمل كوب القياس أو مضخّة الجرعات، واتّبع الملصق. الماء أولاً، ثم المادة: حتى لا تتطاير. قبل أن تستعمل آلة الفرك والشفط، تأكّد أنها مشحونة، وفي خزانها ماء نظيف. في النهاية، أفرغ خزان الماء المتّسخ واشطفه. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "مادة أكثر لا تنظّف أفضل. الكثير منها يترك طبقة لزجة، فتتّسخ الأرض أسرع وقد تصبح زلقة. وهذا أسوأ أيضاً لجلدك ورئتيك. استعملي كوب القياس أو مضخّة الجرعات، واتّبعي الملصق. الماء أولاً، ثم المادة: حتى لا تتطاير. قبل أن تستعملي آلة الفرك والشفط، تأكّدي أنها مشحونة، وفي خزانها ماء نظيف. في النهاية، أفرغي خزان الماء المتّسخ واشطفيه. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "مادة أكثر لا تنظّف أفضل. الكثير منها يترك طبقة لزجة، فتتّسخ الأرض أسرع وقد تصبح زلقة. وهذا أسوأ أيضاً للجلد والرئتين. استعمال كوب القياس أو مضخّة الجرعات، واتّباع الملصق. الماء أولاً، ثم المادة: حتى لا تتطاير. قبل استعمال آلة الفرك والشفط، التأكّد أنها مشحونة، وفي خزانها ماء نظيف. في النهاية، إفراغ خزان الماء المتّسخ وشطفه. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.p': "كم يجب أن أضع؟", // nieuw, nalezen // nagelezen AI 28 nov
     'c.dosing.s': { m: "الأرض تبقى لزجة. زميل يقول: «استعمل ضعف كمية المادة». ماذا تفعل؟", f: "الأرض تبقى لزجة. زميل يقول: «استعملي ضعف كمية المادة». ماذا تفعلين؟", x: "الأرض تبقى لزجة. زميل ينصح باستعمال ضعف كمية المادة. ما التصرف الصحيح؟" }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.dosing.o1': "استعمال الجرعة المكتوبة على الملصق، والسؤال.", // nieuw, nalezen
-    'c.dosing.o2': "استعمال الضعف: هكذا تصبح نظيفة.", // nieuw, nalezen
-    'c.dosing.o3': "سكب المادة مباشرة على الأرض.", // nieuw, nalezen
-    'c.dosing.w': "الأرض اللزجة تعني غالباً مادة كثيرة، لا قليلة. الجرعة الصحيحة تنظّف أفضل وهي الأكثر أماناً.", // nieuw, nalezen
-    'l.officenight': "المكاتب، في الصباح الباكر أو في وقت متأخر", // nieuw, nalezen
-    'w.toetsenbord': "لوحة المفاتيح", // nieuw, nalezen
-    'w.papierbak': "سلة الورق (للورق القديم)", // nieuw, nalezen
-    'w.lichtschakelaar': "مفتاح الضوء", // nieuw, nalezen
-    'w.pantry': "المطبخ الصغير (المطبخ الصغير في المكتب)", // nieuw, nalezen
-    'w.deurmat': "ممسحة الأرجل (السجادة عند المدخل)", // nieuw, nalezen
-    'w.alleenwerken': "العمل وحدك (لا أحد غيرك في المبنى)", // nieuw, nalezen
-    's.officenight.1': "أفرغ سلال المهملات وسلة الورق.", // nieuw, nalezen
-    's.officenight.2': "لا ألمس الأوراق التي على المكتب.", // nieuw, nalezen
-    's.officenight.3': "أطفئ الضوء عندما أنتهي.", // nieuw, nalezen
-    'c.officenight.q': { m: "هل تعمل وحدك في المبنى الليلة؟", f: "هل تعملين وحدك في المبنى الليلة؟", x: "هل العمل في المبنى الليلة بدون أحد آخر؟" }, // nieuw, nalezen
-    'c.officenight.a': "نعم. سأرسل لك رسالة عندما أنتهي.", // nieuw, nalezen
-    'c.officenight': "وحدك في المبنى", // nieuw, nalezen
-    'c.officenight.b': { m: "في الصباح الباكر أو في الليل المتأخر تنظّف المكتب غالباً وحدك. اعرف ماذا تفعل إذا حدث شيء: بمن تتّصل، وأين علبة الإسعافات الأولية؟ أبقِ هاتفك معك. اتّفق مع مشرفك أو مع زميل أن ترسل رسالة عندما تبدأ وعندما تنتهي. لا تُدخل أحداً لا تعرفه. لا تلمس الأوراق أو الشاشات أو لوحات المفاتيح أكثر مما يحتاجه التنظيف، ولا تقرأ أبداً ما عليها. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في الصباح الباكر أو في الليل المتأخر تنظّفين المكتب غالباً وحدك. اعرفي ماذا تفعلين إذا حدث شيء: بمن تتّصلين، وأين علبة الإسعافات الأولية؟ أبقي هاتفك معك. اتّفقي مع مشرفك أو مع زميل أن ترسلي رسالة عندما تبدئين وعندما تنتهين. لا تُدخلي أحداً لا تعرفينه. لا تلمسي الأوراق أو الشاشات أو لوحات المفاتيح أكثر مما يحتاجه التنظيف، ولا تقرئي أبداً ما عليها. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في الصباح الباكر أو في الليل المتأخر يكون تنظيف المكتب غالباً بدون أحد آخر. معرفة ما يجب فعله إذا حدث شيء: بمن يكون الاتصال، وأين علبة الإسعافات الأولية؟ إبقاء الهاتف قريباً. الاتفاق مع المشرف أو مع زميل على إرسال رسالة عند البدء وعند الانتهاء. عدم إدخال أي شخص غير معروف. عدم لمس الأوراق أو الشاشات أو لوحات المفاتيح أكثر مما يحتاجه التنظيف، وقراءة ما عليها ممنوعة أبداً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.officenight.p': "انتهيت وسأذهب إلى البيت الآن.", // nieuw, nalezen
-    'c.officenight.s': { m: "في الليل يطرق رجل على الباب الزجاجي. يقول إنه يعمل هنا ونسي مفتاحه. ماذا تفعل؟", f: "في الليل يطرق رجل على الباب الزجاجي. يقول إنه يعمل هنا ونسي مفتاحه. ماذا تفعلين؟", x: "في الليل يطرق رجل على الباب الزجاجي. يقول إنه يعمل هنا ونسي مفتاحه. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.officenight.o1': "عدم فتح الباب. الاتصال بالمشرف.", // nieuw, nalezen
-    'c.officenight.o2': "إدخاله: يبدو لطيفاً.", // nieuw, nalezen
-    'c.officenight.o3': "إعطاؤه مفتاحك الخاص.", // nieuw, nalezen
-    'c.officenight.w': "أي شخص يستطيع أن يقول إنه يعمل هناك. المشرف يستطيع أن يتحقّق من ذلك. سلامتك والمبنى أولاً.", // nieuw, nalezen
-    'u.cooking': "المطبخ والخدمة", // nieuw, nalezen
-    'l.knives': "السكاكين والتقطيع", // nieuw, nalezen
-    'w.koksmes': "سكين الشيف (سكين مطبخ كبيرة)", // nieuw, nalezen
-    'w.dunschiller': "مقشّرة الخضار", // nieuw, nalezen
-    'w.schillen': "يقشّر", // nieuw, nalezen
-    'w.hakken': "يفرم (يقطّع قطعاً صغيرة جداً)", // nieuw, nalezen
-    'w.raspen': "يبشر", // nieuw, nalezen
-    'w.blokjes': "المكعّبات (قطع صغيرة مربّعة)", // nieuw, nalezen
-    's.knives.1': { m: "قطّع الجزر مكعّبات.", f: "قطّعي الجزر مكعّبات.", x: "تقطيع الجزر مكعّبات." }, // nieuw, nalezen
-    's.knives.2': { m: "لا تضع السكين في المجلى.", f: "لا تضعي السكين في المجلى.", x: "السكين لا توضع في المجلى." }, // nieuw, nalezen
-    's.knives.3': { m: "افرم البقدونس ناعماً.", f: "افرمي البقدونس ناعماً.", x: "فرم البقدونس ناعماً." }, // nieuw, nalezen
-    'c.knives.q': { m: "هل تستطيع أن تقطّع البصل؟", f: "هل تستطيعين أن تقطّعي البصل؟", x: "هل يمكن تقطيع البصل؟" }, // nieuw, nalezen
-    'c.knives.a': "نعم يا شيف. حلقات أم مكعّبات؟", // nieuw, nalezen
-    'c.knives': "السكين أداة، وليست لعبة", // nieuw, nalezen
-    'c.knives.b': { m: "أبقِ سكينك حادّة: السكين غير الحادّة تنزلق بسهولة أكبر. قطّع على لوح لا يتحرّك: ضع تحته قطعة قماش مبلّلة. اثنِ أصابعك إلى الداخل، مثل المخلب. امشِ ورأس السكين إلى الأسفل، قريباً من ساقك، وقل “Mes!” عندما تمرّ بجانب أحد. لا تضع السكين أبداً في مجلى مليء بالماء: قد يمسكها أحد دون أن يراها. سكين تسقط؟ تراجع إلى الخلف، لا تمسكها. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "أبقي سكينك حادّة: السكين غير الحادّة تنزلق بسهولة أكبر. قطّعي على لوح لا يتحرّك: ضعي تحته قطعة قماش مبلّلة. اثني أصابعك إلى الداخل، مثل المخلب. امشي ورأس السكين إلى الأسفل، قريباً من ساقك، وقولي “Mes!” عندما تمرّين بجانب أحد. لا تضعي السكين أبداً في مجلى مليء بالماء: قد يمسكها أحد دون أن يراها. سكين تسقط؟ تراجعي إلى الخلف، لا تمسكيها. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "إبقاء السكين حادّة: السكين غير الحادّة تنزلق بسهولة أكبر. التقطيع على لوح لا يتحرّك: مع قطعة قماش مبلّلة تحته. ثني الأصابع إلى الداخل، مثل المخلب. المشي ورأس السكين إلى الأسفل، قريباً من الساق، وقول “Mes!” عند المرور بجانب أحد. وضع السكين في مجلى مليء بالماء ممنوع أبداً: قد يمسكها أحد دون أن يراها. سكين تسقط؟ التراجع إلى الخلف، وعدم الإمساك بها. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.knives.p': "سكين! أنا أمرّ خلفك.", // nieuw, nalezen
-    'c.knives.s': { m: "تقطّع. سكينك تنزلق عن اللوح وتسقط. ماذا تفعل؟", f: "تقطّعين. سكينك تنزلق عن اللوح وتسقط. ماذا تفعلين؟", x: "التقطيع جارٍ. السكين تنزلق عن اللوح وتسقط. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.knives.o1': "التراجع، وتركها تسقط.", // nieuw, nalezen
-    'c.knives.o2': "الإمساك بها بسرعة باليد.", // nieuw, nalezen
-    'c.knives.o3': "إيقافها بالقدم.", // nieuw, nalezen
-    'c.knives.w': "السكين الساقطة قد تجرح اليد أو القدم جرحاً عميقاً. السكين على الأرض تحتاج فقط إلى غسل.", // nieuw, nalezen
-    'l.rawcooked': "النيء والمطبوخ ومسبّبات الحساسية", // nieuw, nalezen
-    'w.rauw': "نيء (غير مطبوخ)", // nieuw, nalezen
-    'w.gaar': "مطبوخ، ناضج (جاهز للأكل)", // nieuw, nalezen
-    'w.afdekken': "يغطّي (بغطاء أو بورق نايلون)", // nieuw, nalezen
-    'w.kleurcode': "رمز الألوان (لون واحد للوح والسكين لكل نوع من الطعام)", // nieuw, nalezen
-    'w.allergenenlijst': "قائمة مسبّبات الحساسية (تذكر ما في كل طبق)", // nieuw, nalezen
-    'w.glutenvrij': "خالٍ من الغلوتين (بدون غلوتين)", // nieuw, nalezen
-    's.rawcooked.1': "اللحم النيء يوضع في أسفل الثلاجة.", // nieuw, nalezen
-    's.rawcooked.2': "هل نضج الدجاج؟", // nieuw, nalezen
-    's.rawcooked.3': { m: "غطِّ العلب في غرفة التبريد.", f: "غطّي العلب في غرفة التبريد.", x: "تغطية العلب في غرفة التبريد." }, // nieuw, nalezen
-    'c.rawcooked.q': "هل هذه الصلصة خالية من الغلوتين؟", // nieuw, nalezen
-    'c.rawcooked.a': { m: "لست متأكداً. سأنظر في قائمة مسبّبات الحساسية.", f: "لست متأكدة. سأنظر في قائمة مسبّبات الحساسية.", x: "لا أعرف بالضبط. سأنظر في قائمة مسبّبات الحساسية." }, // nieuw, nalezen
-    'c.rawcooked': "النيء والجاهز لا يتلامسان أبداً", // nieuw, nalezen
-    'c.rawcooked.b': { m: "اللحم والسمك والبيض النيء قد تحمل جراثيم. أبعدها عن الطعام الجاهز للأكل. استعمل لوحاً وسكيناً منفصلين، أو رمز الألوان في مطبخك، واغسل يديك بعد أن تلمس الطعام النيء. اللحم النيء يوضع في أسفل الثلاجة، حتى لا يقطر شيء على الطعام الآخر. غطِّ الطعام واكتب عليه التاريخ. مع الحساسية، قد يكفي أثر صغير: استعمل أدوات نظيفة. يجب أن يستطيع المطعم أن يخبر الضيوف بمسبّبات الحساسية في كل طبق: انظر في قائمة مسبّبات الحساسية. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "اللحم والسمك والبيض النيء قد تحمل جراثيم. أبعديها عن الطعام الجاهز للأكل. استعملي لوحاً وسكيناً منفصلين، أو رمز الألوان في مطبخك، واغسلي يديك بعد أن تلمسي الطعام النيء. اللحم النيء يوضع في أسفل الثلاجة، حتى لا يقطر شيء على الطعام الآخر. غطّي الطعام واكتبي عليه التاريخ. مع الحساسية، قد يكفي أثر صغير: استعملي أدوات نظيفة. يجب أن يستطيع المطعم أن يخبر الضيوف بمسبّبات الحساسية في كل طبق: انظري في قائمة مسبّبات الحساسية. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "اللحم والسمك والبيض النيء قد تحمل جراثيم. إبعادها عن الطعام الجاهز للأكل. استعمال لوح وسكين منفصلين، أو رمز الألوان في المطبخ، وغسل اليدين بعد لمس الطعام النيء. اللحم النيء يوضع في أسفل الثلاجة، حتى لا يقطر شيء على الطعام الآخر. تغطية الطعام وكتابة التاريخ عليه. مع الحساسية، قد يكفي أثر صغير: استعمال أدوات نظيفة. يجب أن يستطيع المطعم أن يخبر الضيوف بمسبّبات الحساسية في كل طبق: النظر في قائمة مسبّبات الحساسية. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.rawcooked.p': "أي لوح للحم النيء؟", // nieuw, nalezen
-    'c.rawcooked.s': { m: "تقطّع دجاجاً نيئاً. بعد ذلك يجب أن تقطّع طماطم لسلطة. ماذا تفعل؟", f: "تقطّعين دجاجاً نيئاً. بعد ذلك يجب أن تقطّعي طماطم لسلطة. ماذا تفعلين؟", x: "تمّ تقطيع دجاج نيء. بعد ذلك يجب تقطيع طماطم لسلطة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.rawcooked.o1': "أخذ لوح نظيف وسكين نظيفة.", // nieuw, nalezen
-    'c.rawcooked.o2': "مسح اللوح بقطعة قماش، والاستمرار.", // nieuw, nalezen
-    'c.rawcooked.o3': "تقطيع الطماطم على اللوح نفسه.", // nieuw, nalezen
-    'c.rawcooked.w': "جراثيم الدجاج النيء تنتقل إلى الطماطم، والسلطة لا تُطبخ بعد ذلك. اللوح النظيف يمنع هذا.", // nieuw, nalezen
-    'l.pass': "غرفة غسل الصحون ومنضدة التقديم", // nieuw, nalezen
-    'w.pass': "منضدة التقديم (المنضدة التي تنتظر عليها الصحون النادل)", // nieuw, nalezen
-    'w.bon': "ورقة الطلب (الطلب من النادل إلى المطبخ)", // nieuw, nalezen
-    'w.spoelkeuken': "غرفة غسل الصحون (حيث تُغسل الصحون)", // nieuw, nalezen
-    'w.vaatwaskorf': "سلة غسّالة الصحون (السلة التي تدخل غسّالة الصحون)", // nieuw, nalezen
-    'w.voorspoelen': "يشطف مسبقاً (يشطف قبل الآلة)", // nieuw, nalezen
-    'w.warmhoudlamp': "مصباح التسخين (يُبقي الصحون ساخنة)", // nieuw, nalezen
-    's.pass.1': "طلب الطاولة ثمانية على منضدة التقديم.", // nieuw, nalezen
-    's.pass.2': "طلبان جديدان يصلان.", // nieuw, nalezen
-    's.pass.3': { m: "اشطف الصحون أولاً.", f: "اشطفي الصحون أولاً.", x: "شطف الصحون أولاً." }, // nieuw, nalezen
-    'c.pass.q': "أين طلب الطاولة اثني عشر؟", // nieuw, nalezen
-    'c.pass.a': "إنه على منضدة التقديم. سأحضره الآن.", // nieuw, nalezen
-    'c.pass': "منضدة التقديم: الصحون لا تنتظر", // nieuw, nalezen
+    'c.dosing.o1': "استعمال الجرعة المكتوبة على الملصق، والسؤال.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.o2': "استعمال الضعف: هكذا تصبح نظيفة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.o3': "سكب المادة مباشرة على الأرض.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.w': "الأرض اللزجة تعني غالباً مادة كثيرة، لا قليلة. الجرعة الصحيحة تنظّف أفضل وهي الأكثر أماناً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.officenight': "المكاتب، في الصباح الباكر أو في وقت متأخر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toetsenbord': "لوحة المفاتيح", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.papierbak': "سلة الورق (للورق القديم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lichtschakelaar': "مفتاح الضوء", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pantry': "المطبخ الصغير (المطبخ الصغير في المكتب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.deurmat': "ممسحة الأرجل (السجادة عند المدخل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alleenwerken': "العمل وحدك (لا أحد غيرك في المبنى)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.officenight.1': "أفرغ سلال المهملات وسلة الورق.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.officenight.2': "لا ألمس الأوراق التي على المكتب.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.officenight.3': "أطفئ الضوء عندما أنتهي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.q': { m: "هل تعمل وحدك في المبنى الليلة؟", f: "هل تعملين وحدك في المبنى الليلة؟", x: "هل العمل في المبنى الليلة بدون أحد آخر؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.a': "نعم. سأرسل لك رسالة عندما أنتهي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight': "وحدك في المبنى", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.b': { m: "في الصباح الباكر أو في الليل المتأخر تنظّف المكتب غالباً وحدك. اعرف ماذا تفعل إذا حدث شيء: بمن تتّصل، وأين علبة الإسعافات الأولية؟ أبقِ هاتفك معك. اتّفق مع مشرفك أو مع زميل أن ترسل رسالة عندما تبدأ وعندما تنتهي. لا تُدخل أحداً لا تعرفه. لا تلمس الأوراق أو الشاشات أو لوحات المفاتيح أكثر مما يحتاجه التنظيف، ولا تقرأ أبداً ما عليها. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في الصباح الباكر أو في الليل المتأخر تنظّفين المكتب غالباً وحدك. اعرفي ماذا تفعلين إذا حدث شيء: بمن تتّصلين، وأين علبة الإسعافات الأولية؟ أبقي هاتفك معك. اتّفقي مع مشرفك أو مع زميل أن ترسلي رسالة عندما تبدئين وعندما تنتهين. لا تُدخلي أحداً لا تعرفينه. لا تلمسي الأوراق أو الشاشات أو لوحات المفاتيح أكثر مما يحتاجه التنظيف، ولا تقرئي أبداً ما عليها. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في الصباح الباكر أو في الليل المتأخر يكون تنظيف المكتب غالباً بدون أحد آخر. معرفة ما يجب فعله إذا حدث شيء: بمن يكون الاتصال، وأين علبة الإسعافات الأولية؟ إبقاء الهاتف قريباً. الاتفاق مع المشرف أو مع زميل على إرسال رسالة عند البدء وعند الانتهاء. عدم إدخال أي شخص غير معروف. عدم لمس الأوراق أو الشاشات أو لوحات المفاتيح أكثر مما يحتاجه التنظيف، وقراءة ما عليها ممنوعة أبداً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.p': "انتهيت وسأذهب إلى البيت الآن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.s': { m: "في الليل يطرق رجل على الباب الزجاجي. يقول إنه يعمل هنا ونسي مفتاحه. ماذا تفعل؟", f: "في الليل يطرق رجل على الباب الزجاجي. يقول إنه يعمل هنا ونسي مفتاحه. ماذا تفعلين؟", x: "في الليل يطرق رجل على الباب الزجاجي. يقول إنه يعمل هنا ونسي مفتاحه. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.o1': "عدم فتح الباب. الاتصال بالمشرف.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.o2': "إدخاله: يبدو لطيفاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.o3': "إعطاؤه مفتاحك الخاص.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.w': "أي شخص يستطيع أن يقول إنه يعمل هناك. المشرف يستطيع أن يتحقّق من ذلك. سلامتك والمبنى أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.cooking': "المطبخ والخدمة", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.knives': "السكاكين والتقطيع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koksmes': "سكين الشيف (سكين مطبخ كبيرة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dunschiller': "مقشّرة الخضار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schillen': "يقشّر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hakken': "يفرم (يقطّع قطعاً صغيرة جداً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.raspen': "يبشر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.blokjes': "المكعّبات (قطع صغيرة مربّعة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.knives.1': { m: "قطّع الجزر مكعّبات.", f: "قطّعي الجزر مكعّبات.", x: "تقطيع الجزر مكعّبات." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.knives.2': { m: "لا تضع السكين في المجلى.", f: "لا تضعي السكين في المجلى.", x: "السكين لا توضع في المجلى." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.knives.3': { m: "افرم البقدونس ناعماً.", f: "افرمي البقدونس ناعماً.", x: "فرم البقدونس ناعماً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.q': { m: "هل تستطيع أن تقطّع البصل؟", f: "هل تستطيعين أن تقطّعي البصل؟", x: "هل يمكن تقطيع البصل؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.a': "نعم يا شيف. حلقات أم مكعّبات؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives': "السكين أداة، وليست لعبة", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.b': { m: "أبقِ سكينك حادّة: السكين غير الحادّة تنزلق بسهولة أكبر. قطّع على لوح لا يتحرّك: ضع تحته قطعة قماش مبلّلة. اثنِ أصابعك إلى الداخل، مثل المخلب. امشِ ورأس السكين إلى الأسفل، قريباً من ساقك، وقل “Mes!” عندما تمرّ بجانب أحد. لا تضع السكين أبداً في مجلى مليء بالماء: قد يمسكها أحد دون أن يراها. سكين تسقط؟ تراجع إلى الخلف، لا تمسكها. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "أبقي سكينك حادّة: السكين غير الحادّة تنزلق بسهولة أكبر. قطّعي على لوح لا يتحرّك: ضعي تحته قطعة قماش مبلّلة. اثني أصابعك إلى الداخل، مثل المخلب. امشي ورأس السكين إلى الأسفل، قريباً من ساقك، وقولي “Mes!” عندما تمرّين بجانب أحد. لا تضعي السكين أبداً في مجلى مليء بالماء: قد يمسكها أحد دون أن يراها. سكين تسقط؟ تراجعي إلى الخلف، لا تمسكيها. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "إبقاء السكين حادّة: السكين غير الحادّة تنزلق بسهولة أكبر. التقطيع على لوح لا يتحرّك: مع قطعة قماش مبلّلة تحته. ثني الأصابع إلى الداخل، مثل المخلب. المشي ورأس السكين إلى الأسفل، قريباً من الساق، وقول “Mes!” عند المرور بجانب أحد. وضع السكين في مجلى مليء بالماء ممنوع أبداً: قد يمسكها أحد دون أن يراها. سكين تسقط؟ التراجع إلى الخلف، وعدم الإمساك بها. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.p': "سكين! أنا أمرّ خلفك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.s': { m: "تقطّع. سكينك تنزلق عن اللوح وتسقط. ماذا تفعل؟", f: "تقطّعين. سكينك تنزلق عن اللوح وتسقط. ماذا تفعلين؟", x: "التقطيع جارٍ. السكين تنزلق عن اللوح وتسقط. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.o1': "التراجع، وتركها تسقط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.o2': "الإمساك بها بسرعة باليد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.o3': "إيقافها بالقدم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.w': "السكين الساقطة قد تجرح اليد أو القدم جرحاً عميقاً. السكين على الأرض تحتاج فقط إلى غسل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.rawcooked': "النيء والمطبوخ ومسبّبات الحساسية", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rauw': "نيء (غير مطبوخ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gaar': "مطبوخ، ناضج (جاهز للأكل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afdekken': "يغطّي (بغطاء أو بورق نايلون)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kleurcode': "رمز الألوان (لون واحد للوح والسكين لكل نوع من الطعام)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.allergenenlijst': "قائمة مسبّبات الحساسية (تذكر ما في كل طبق)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.glutenvrij': "خالٍ من الغلوتين (بدون غلوتين)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rawcooked.1': "اللحم النيء يوضع في أسفل الثلاجة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rawcooked.2': "هل نضج الدجاج؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rawcooked.3': { m: "غطِّ العلب في غرفة التبريد.", f: "غطّي العلب في غرفة التبريد.", x: "تغطية العلب في غرفة التبريد." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.q': "هل هذه الصلصة خالية من الغلوتين؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.a': { m: "لست متأكداً. سأنظر في قائمة مسبّبات الحساسية.", f: "لست متأكدة. سأنظر في قائمة مسبّبات الحساسية.", x: "لا أعرف بالضبط. سأنظر في قائمة مسبّبات الحساسية." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked': "النيء والجاهز لا يتلامسان أبداً", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.b': { m: "اللحم والسمك والبيض النيء قد تحمل جراثيم. أبعدها عن الطعام الجاهز للأكل. استعمل لوحاً وسكيناً منفصلين، أو رمز الألوان في مطبخك، واغسل يديك بعد أن تلمس الطعام النيء. اللحم النيء يوضع في أسفل الثلاجة، حتى لا يقطر شيء على الطعام الآخر. غطِّ الطعام واكتب عليه التاريخ. مع الحساسية، قد يكفي أثر صغير: استعمل أدوات نظيفة. يجب أن يستطيع المطعم أن يخبر الضيوف بمسبّبات الحساسية في كل طبق: انظر في قائمة مسبّبات الحساسية. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "اللحم والسمك والبيض النيء قد تحمل جراثيم. أبعديها عن الطعام الجاهز للأكل. استعملي لوحاً وسكيناً منفصلين، أو رمز الألوان في مطبخك، واغسلي يديك بعد أن تلمسي الطعام النيء. اللحم النيء يوضع في أسفل الثلاجة، حتى لا يقطر شيء على الطعام الآخر. غطّي الطعام واكتبي عليه التاريخ. مع الحساسية، قد يكفي أثر صغير: استعملي أدوات نظيفة. يجب أن يستطيع المطعم أن يخبر الضيوف بمسبّبات الحساسية في كل طبق: انظري في قائمة مسبّبات الحساسية. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "اللحم والسمك والبيض النيء قد تحمل جراثيم. إبعادها عن الطعام الجاهز للأكل. استعمال لوح وسكين منفصلين، أو رمز الألوان في المطبخ، وغسل اليدين بعد لمس الطعام النيء. اللحم النيء يوضع في أسفل الثلاجة، حتى لا يقطر شيء على الطعام الآخر. تغطية الطعام وكتابة التاريخ عليه. مع الحساسية، قد يكفي أثر صغير: استعمال أدوات نظيفة. يجب أن يستطيع المطعم أن يخبر الضيوف بمسبّبات الحساسية في كل طبق: النظر في قائمة مسبّبات الحساسية. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.p': "أي لوح للحم النيء؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.s': { m: "تقطّع دجاجاً نيئاً. بعد ذلك يجب أن تقطّع طماطم لسلطة. ماذا تفعل؟", f: "تقطّعين دجاجاً نيئاً. بعد ذلك يجب أن تقطّعي طماطم لسلطة. ماذا تفعلين؟", x: "تمّ تقطيع دجاج نيء. بعد ذلك يجب تقطيع طماطم لسلطة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.o1': "أخذ لوح نظيف وسكين نظيفة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.o2': "مسح اللوح بقطعة قماش، والاستمرار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.o3': "تقطيع الطماطم على اللوح نفسه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.w': "جراثيم الدجاج النيء تنتقل إلى الطماطم، والسلطة لا تُطبخ بعد ذلك. اللوح النظيف يمنع هذا.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.pass': "غرفة غسل الصحون ومنضدة التقديم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pass': "منضدة التقديم (المنضدة التي تنتظر عليها الصحون النادل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bon': "ورقة الطلب (الطلب من النادل إلى المطبخ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spoelkeuken': "غرفة غسل الصحون (حيث تُغسل الصحون)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vaatwaskorf': "سلة غسّالة الصحون (السلة التي تدخل غسّالة الصحون)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorspoelen': "يشطف مسبقاً (يشطف قبل الآلة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.warmhoudlamp': "مصباح التسخين (يُبقي الصحون ساخنة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pass.1': "طلب الطاولة ثمانية على منضدة التقديم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pass.2': "طلبان جديدان يصلان.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pass.3': { m: "اشطف الصحون أولاً.", f: "اشطفي الصحون أولاً.", x: "شطف الصحون أولاً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.q': "أين طلب الطاولة اثني عشر؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.a': "إنه على منضدة التقديم. سأحضره الآن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass': "منضدة التقديم: الصحون لا تنتظر", // nieuw, nalezen // nagelezen AI 28 nov
     'c.pass.b': { m: "على منضدة التقديم يضع المطبخ الصحون للنادل. الطعام الساخن يجب أن يصل إلى الضيف بسرعة، لذلك لا ينتظر الصحن طويلاً على المنضدة. افحص ورقة الطلب: الطاولة الصحيحة، والأطباق الصحيحة، وحافة الصحن نظيفة؟ عندها خذه. في غرفة غسل الصحون: اشطف أولاً، وضع كل شيء في السلال، واترك الآلة تفعل الباقي. لا تفتح الآلة وهي تعمل: البخار ساخن جداً. البس القفازات عندما تملأ مواد الآلة. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "على منضدة التقديم يضع المطبخ الصحون للنادل. الطعام الساخن يجب أن يصل إلى الضيف بسرعة، لذلك لا ينتظر الصحن طويلاً على المنضدة. افحصي ورقة الطلب: الطاولة الصحيحة، والأطباق الصحيحة، وحافة الصحن نظيفة؟ عندها خذيه. في غرفة غسل الصحون: اشطفي أولاً، وضعي كل شيء في السلال، واتركي الآلة تفعل الباقي. لا تفتحي الآلة وهي تعمل: البخار ساخن جداً. البسي القفازات عندما تملئين مواد الآلة. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "على منضدة التقديم يضع المطبخ الصحون للنادل. الطعام الساخن يجب أن يصل إلى الضيف بسرعة، لذلك لا ينتظر الصحن طويلاً على المنضدة. فحص ورقة الطلب: الطاولة الصحيحة، والأطباق الصحيحة، وحافة الصحن نظيفة؟ عندها أخذه. في غرفة غسل الصحون: الشطف أولاً، ووضع كل شيء في السلال، وترك الآلة تفعل الباقي. فتح الآلة وهي تعمل ممنوع: البخار ساخن جداً. لُبس القفازات عند ملء مواد الآلة. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.pass.p': "لأي طاولة هذا؟", // nieuw, nalezen
-    'c.pass.s': { m: "على منضدة التقديم صحنان. لا تعرف لأي طاولة هما. ماذا تفعل؟", f: "على منضدة التقديم صحنان. لا تعرفين لأي طاولة هما. ماذا تفعلين؟", x: "على منضدة التقديم صحنان. الطاولة غير معروفة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.pass.o1': "النظر في ورقة الطلب، أو سؤال الشيف.", // nieuw, nalezen
-    'c.pass.o2': "أخذهما إلى طاولة تنتظر.", // nieuw, nalezen
-    'c.pass.o3': "الانتظار حتى يأخذهما شخص آخر.", // nieuw, nalezen
-    'c.pass.w': "صحن على الطاولة الخطأ يعني ضيفين ينتظران وطعاماً بارداً. سؤال قصير أسرع.", // nieuw, nalezen
-    'l.bill': "الأطباق والحساب", // nieuw, nalezen
-    'w.voorgerecht': "المقبّلات (الطبق الأول)", // nieuw, nalezen
-    'w.hoofdgerecht': "الطبق الرئيسي", // nieuw, nalezen
-    'w.nagerecht': "الحلوى (الطبق الأخير)", // nieuw, nalezen
-    'w.reservering': "الحجز (طاولة محجوزة مسبقاً)", // nieuw, nalezen
-    'w.pinapparaat': "جهاز الدفع بالبطاقة", // nieuw, nalezen
-    'w.apartbetalen': "الدفع بشكل منفصل (كل شخص يدفع عن نفسه)", // nieuw, nalezen
-    's.bill.1': "هل عندكم حجز؟", // nieuw, nalezen
-    's.bill.2': "هل تريدون الدفع معاً أم بشكل منفصل؟", // nieuw, nalezen
-    's.bill.3': "هل أحضر الطبق الرئيسي الآن؟", // nieuw, nalezen
-    'c.bill.q': "هل يمكن أن ندفع بشكل منفصل؟", // nieuw, nalezen
-    'c.bill.a': "نعم طبعاً. سأحضر جهاز الدفع بالبطاقة.", // nieuw, nalezen
-    'c.bill': { m: "المال على الطاولة: عُدّه مرتين", f: "المال على الطاولة: عُدّيه مرتين", x: "المال على الطاولة: العدّ مرتين" }, // nieuw, nalezen
+    'c.pass.p': "لأي طاولة هذا؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.s': { m: "على منضدة التقديم صحنان. لا تعرف لأي طاولة هما. ماذا تفعل؟", f: "على منضدة التقديم صحنان. لا تعرفين لأي طاولة هما. ماذا تفعلين؟", x: "على منضدة التقديم صحنان. الطاولة غير معروفة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.o1': "النظر في ورقة الطلب، أو سؤال الشيف.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.o2': "أخذهما إلى طاولة تنتظر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.o3': "الانتظار حتى يأخذهما شخص آخر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.w': "صحن على الطاولة الخطأ يعني ضيفين ينتظران وطعاماً بارداً. سؤال قصير أسرع.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.bill': "الأطباق والحساب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorgerecht': "المقبّلات (الطبق الأول)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hoofdgerecht': "الطبق الرئيسي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nagerecht': "الحلوى (الطبق الأخير)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.reservering': "الحجز (طاولة محجوزة مسبقاً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pinapparaat': "جهاز الدفع بالبطاقة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.apartbetalen': "الدفع بشكل منفصل (كل شخص يدفع عن نفسه)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.bill.1': "هل عندكم حجز؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.bill.2': "هل تريدون الدفع معاً أم بشكل منفصل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.bill.3': "هل أحضر الطبق الرئيسي الآن؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.q': "هل يمكن أن ندفع بشكل منفصل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.a': "نعم طبعاً. سأحضر جهاز الدفع بالبطاقة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill': { m: "المال على الطاولة: عُدّه مرتين", f: "المال على الطاولة: عُدّيه مرتين", x: "المال على الطاولة: العدّ مرتين" }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.bill.b': { m: "عندما يدفع الضيف، قل المبلغ بوضوح ودع الضيف يرى جهاز الدفع. مع النقود، عُدّ المال عندما تستلمه، ومرة أخرى عندما تعطي الباقي. المال يذهب إلى صندوق الدفع أو إلى محفظة الخدمة الخاصة بك، ولا يذهب أبداً إلى جيبك. البقشيش (fooi) يذهب إلى حيث تقول شركتك، مثلاً في علبة البقشيش. هل غادر ضيف دون أن يدفع؟ لا تركض وراءه: أخبر مديرك. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "عندما يدفع الضيف، قولي المبلغ بوضوح ودعي الضيف يرى جهاز الدفع. مع النقود، عُدّي المال عندما تستلمينه، ومرة أخرى عندما تعطين الباقي. المال يذهب إلى صندوق الدفع أو إلى محفظة الخدمة الخاصة بك، ولا يذهب أبداً إلى جيبك. البقشيش (fooi) يذهب إلى حيث تقول شركتك، مثلاً في علبة البقشيش. هل غادر ضيف دون أن يدفع؟ لا تركضي وراءه: أخبري مديرك. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "عندما يدفع الضيف، قول المبلغ بوضوح وترك الضيف يرى جهاز الدفع. مع النقود، عَدّ المال عند استلامه، ومرة أخرى عند إعطاء الباقي. المال يذهب إلى صندوق الدفع أو إلى محفظة الخدمة، ولا يذهب أبداً إلى الجيب الخاص. البقشيش (fooi) يذهب إلى حيث تقول الشركة، مثلاً في علبة البقشيش. هل غادر ضيف دون أن يدفع؟ الركض وراءه ممنوع: إخبار المدير. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.bill.p': "المبلغ خمسة وأربعون يورو، من فضلك.", // nieuw, nalezen
+    'c.bill.p': "المبلغ خمسة وأربعون يورو، من فضلك.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.bill.s': { m: "ضيف يعطيك مالاً ويقول: «المبلغ صحيح». لم تعدّه. ماذا تفعل؟", f: "ضيف يعطيك مالاً ويقول: «المبلغ صحيح». لم تعدّيه. ماذا تفعلين؟", x: "ضيف يعطي مالاً ويقول: «المبلغ صحيح». المال لم يُعدّ بعد. ما التصرف الصحيح؟" }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.bill.o1': "عَدّه والضيف موجود.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.bill.o2': "وضعه جانباً، وعَدّه لاحقاً.", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.bill.o3': "الثقة بالضيف: قول شكراً.", // nieuw, nalezen
-    'c.bill.w': "إذا كان العدّ لاحقاً وكان هناك مال ناقص، لا أحد يستطيع أن يتحقّق مما حدث. العدّ على الطاولة يحمي الضيف ويحميك.", // nieuw, nalezen
-    'u.carework': "العناية الشخصية والرعاية المنزلية", // nieuw, nalezen
-    'l.washing': "الغسل وارتداء الملابس", // nieuw, nalezen
-    'w.washandje': "قفاز الغسل (قطعة قماش صغيرة مثل القفاز)", // nieuw, nalezen
-    'w.douchestoel': "كرسي الاستحمام", // nieuw, nalezen
-    'w.tandenpoetsen': "تنظيف الأسنان بالفرشاة", // nieuw, nalezen
-    'w.kammen': "يمشّط", // nieuw, nalezen
-    'w.scheren': "يحلق", // nieuw, nalezen
-    'w.steunkous': "الجورب الضاغط (جورب ضيّق للساقين)", // nieuw, nalezen
-    's.washing.1': "هل الماء دافئ بما يكفي؟", // nieuw, nalezen
-    's.washing.2': "هل تريد أن تغسل وجهك بنفسك؟", // nieuw, nalezen
-    's.washing.3': "سألبسك الآن الجوارب الضاغطة.", // nieuw, nalezen
-    'c.washing.q': "لا أريد أن أستحمّ اليوم.", // nieuw, nalezen
-    'c.washing.a': "لا بأس. هل أساعدك عند المغسلة؟", // nieuw, nalezen
-    'c.washing': { m: "اسأل أولاً، وغطِّ، ودعه يختار", f: "اسألي أولاً، وغطّي، ودعيه يختار", x: "السؤال أولاً، والتغطية، وترك الاختيار" }, // nieuw, nalezen
-    'c.washing.b': { m: "غسل شخص آخر أمر شخصي جداً. قل ما ستفعله، واسأل أولاً. غطِّ بمنشفة أجزاء الجسم التي لا تغسلها. أغلق الباب أو الستارة. دع المستفيد من الرعاية يختار: الدوش أو الغسل عند المغسلة، وأي ملابس يلبس. دع المستفيد من الرعاية يفعل ما ما زال يستطيع فعله، حتى لو كان أبطأ. هل يقول المستفيد من الرعاية لا؟ لا تجبره. حاول مرة أخرى لاحقاً، واعرض شيئاً آخر، وأخبر الممرّضة.", f: "غسل شخص آخر أمر شخصي جداً. قولي ما ستفعلينه، واسألي أولاً. غطّي بمنشفة أجزاء الجسم التي لا تغسلينها. أغلقي الباب أو الستارة. دعي المستفيد من الرعاية يختار: الدوش أو الغسل عند المغسلة، وأي ملابس يلبس. دعي المستفيد من الرعاية يفعل ما ما زال يستطيع فعله، حتى لو كان أبطأ. هل يقول المستفيد من الرعاية لا؟ لا تجبريه. حاولي مرة أخرى لاحقاً، واعرضي شيئاً آخر، وأخبري الممرّضة.", x: "غسل شخص آخر أمر شخصي جداً. شرح ما سيحدث، والسؤال أولاً. تغطية أجزاء الجسم التي لا تُغسل بمنشفة. إغلاق الباب أو الستارة. ترك المستفيد من الرعاية يختار: الدوش أو الغسل عند المغسلة، وأي ملابس يلبس. ترك المستفيد من الرعاية يفعل ما ما زال يستطيع فعله، حتى لو كان أبطأ. هل يقول المستفيد من الرعاية لا؟ الإجبار ممنوع. المحاولة مرة أخرى لاحقاً، وعرض شيء آخر، وإخبار الممرّضة." }, // nieuw, nalezen
-    'c.washing.p': "ماذا تريد أن تلبس اليوم؟", // nieuw, nalezen
-    'c.washing.s': { m: "مستفيدة من الرعاية تقول إنها لا تريد أن تُغسل اليوم. ماذا تفعل؟", f: "مستفيدة من الرعاية تقول إنها لا تريد أن تُغسل اليوم. ماذا تفعلين؟", x: "مستفيدة من الرعاية تقول إنها لا تريد أن تُغسل اليوم. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.washing.o1': "قبول ذلك، وإخبار الممرّضة.", // nieuw, nalezen
-    'c.washing.o2': "غسلها رغم ذلك: هذا في القائمة.", // nieuw, nalezen
-    'c.washing.o3': "تخطّي الغسل، وعدم قول شيء.", // nieuw, nalezen
-    'c.washing.w': "من حقّ المستفيد من الرعاية أن يقول لا. إجبار الرعاية يضرّ الثقة. الممرّضة تستطيع أن تنظر في السبب، وفيما يمكن فعله.", // nieuw, nalezen
-    'l.observing': "الملاحظة والتسجيل", // nieuw, nalezen
-    'w.rapporteren': "يسجّل (يكتب ما رآه في ملف الرعاية)", // nieuw, nalezen
-    'w.zorgdossier': "ملف الرعاية (كل شيء عن رعاية مستفيد واحد)", // nieuw, nalezen
-    'w.drukplek': "قرحة الضغط (بقعة حمراء من الاستلقاء أو الجلوس طويلاً)", // nieuw, nalezen
-    'w.huid': "الجلد", // nieuw, nalezen
-    'w.plassen': "يتبوّل", // nieuw, nalezen
-    'w.vochtlijst': "قائمة السوائل (كم يشرب المستفيد من الرعاية)", // nieuw, nalezen
-    's.observing.1': "السيدة عندها بقعة حمراء على كعبها.", // nieuw, nalezen
-    's.observing.2': "السيد شرب قليلاً اليوم.", // nieuw, nalezen
-    's.observing.3': "أكتب ذلك في ملف الرعاية.", // nieuw, nalezen
-    'c.observing.q': "هل هناك شيء خاص مع السيدة Jansen؟", // nieuw, nalezen
-    'c.observing.a': "نعم. لم تتبوّل تقريباً اليوم.", // nieuw, nalezen
-    'c.observing': { m: "اكتب ما تراه، لا ما تظنّه", f: "اكتبي ما ترينه، لا ما تظنّينه", x: "كتابة ما يُرى، لا ما يُظنّ" }, // nieuw, nalezen
-    'c.observing.b': { m: "ما تكتبه في ملف الرعاية يقرؤه الزميل التالي. اكتب حقائق: ما رأيته أو سمعته أو قسته، ومتى. لا تكتب “Mevrouw is lastig” (السيدة صعبة)، بل “Mevrouw wilde niet eten en duwde het bord weg” (السيدة لم ترد أن تأكل ودفعت الصحن بعيداً). اكتبه في اليوم نفسه، بجمل قصيرة. لست متأكداً كيف تكتبه بالهولندية؟ أخبر الممرّضة، واكتباه معاً. انظر إلى الجلد عندما تغسل شخصاً: البقعة الحمراء التي لا تزول قد تكون بداية قرحة ضغط. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "ما تكتبينه في ملف الرعاية يقرؤه الزميل التالي. اكتبي حقائق: ما رأيته أو سمعته أو قسته، ومتى. لا تكتبي “Mevrouw is lastig” (السيدة صعبة)، بل “Mevrouw wilde niet eten en duwde het bord weg” (السيدة لم ترد أن تأكل ودفعت الصحن بعيداً). اكتبيه في اليوم نفسه، بجمل قصيرة. لستِ متأكدة كيف تكتبينه بالهولندية؟ أخبري الممرّضة، واكتباه معاً. انظري إلى الجلد عندما تغسلين شخصاً: البقعة الحمراء التي لا تزول قد تكون بداية قرحة ضغط. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "ما يُكتب في ملف الرعاية يقرؤه الزميل التالي. كتابة الحقائق: ما تمّت رؤيته أو سماعه أو قياسه، ومتى. ليس “Mevrouw is lastig” (السيدة صعبة)، بل “Mevrouw wilde niet eten en duwde het bord weg” (السيدة لم ترد أن تأكل ودفعت الصحن بعيداً). الكتابة في اليوم نفسه، بجمل قصيرة. الكتابة بالهولندية صعبة؟ إخبار الممرّضة، والكتابة معاً. النظر إلى الجلد أثناء غسل شخص: البقعة الحمراء التي لا تزول قد تكون بداية قرحة ضغط. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.observing.p': "أكتب ما رأيته.", // nieuw, nalezen
-    'c.observing.s': { m: "مستفيدة من الرعاية كانت غاضبة أثناء الغسل. يجب أن تكتب ذلك في الملف. ماذا تفعل؟", f: "مستفيدة من الرعاية كانت غاضبة أثناء الغسل. يجب أن تكتبي ذلك في الملف. ماذا تفعلين؟", x: "مستفيدة من الرعاية كانت غاضبة أثناء الغسل. يجب كتابة ذلك في الملف. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.observing.o1': "كتابة ما قالته وما فعلته، ومتى.", // nieuw, nalezen
-    'c.observing.o2': "كتابة: “سيدة صعبة، كالعادة.”", // nieuw, nalezen
-    'c.observing.o3': "عدم كتابة شيء: هذا عادي.", // nieuw, nalezen
-    'c.observing.w': "الحقائق تساعد الزميل التالي والممرّضة على التصرّف. الرأي لا يقول ما حدث.", // nieuw, nalezen
-    'l.homecare': "الرعاية المنزلية", // nieuw, nalezen
-    'w.thuiszorg': "الرعاية المنزلية (الرعاية في بيت المستفيد نفسه)", // nieuw, nalezen
-    'w.sleutelkluis': "خزنة المفتاح (علبة صغيرة برمز، فيها مفتاح البيت)", // nieuw, nalezen
-    'w.zorgplan': "خطة الرعاية (أي رعاية يحصل عليها المستفيد، وكيف)", // nieuw, nalezen
-    'w.wijkverpleegkundige': "ممرّضة الحي (ممرّضة فريق الرعاية المنزلية)", // nieuw, nalezen
-    'w.mantelzorger': "مقدّم الرعاية من العائلة (قريب أو صديق يعتني بالمستفيد)", // nieuw, nalezen
-    'w.alarmknop': "زرّ الإنذار (يلبسه المستفيد، ليطلب المساعدة)", // nieuw, nalezen
-    's.homecare.1': "أرنّ الجرس أولاً. ثم آخذ المفتاح.", // nieuw, nalezen
-    's.homecare.2': "ماذا يوجد في خطة الرعاية؟", // nieuw, nalezen
-    's.homecare.3': "سأتأخّر اليوم ربع ساعة.", // nieuw, nalezen
-    'c.homecare.q': "من هناك؟", // nieuw, nalezen
-    'c.homecare.a': "صباح الخير، الرعاية المنزلية. هل يمكنني أن أدخل؟", // nieuw, nalezen
+    'c.bill.o3': "الثقة بالضيف: قول شكراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.w': "إذا كان العدّ لاحقاً وكان هناك مال ناقص، لا أحد يستطيع أن يتحقّق مما حدث. العدّ على الطاولة يحمي الضيف ويحميك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.carework': "العناية الشخصية والرعاية المنزلية", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.washing': "الغسل وارتداء الملابس", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.washandje': "قفاز الغسل (قطعة قماش صغيرة مثل القفاز)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.douchestoel': "كرسي الاستحمام", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tandenpoetsen': "تنظيف الأسنان بالفرشاة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kammen': "يمشّط", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scheren': "يحلق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.steunkous': "الجورب الضاغط (جورب ضيّق للساقين)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.washing.1': "هل الماء دافئ بما يكفي؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.washing.2': "هل تريد أن تغسل وجهك بنفسك؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.washing.3': "سألبسك الآن الجوارب الضاغطة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.q': "لا أريد أن أستحمّ اليوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.a': "لا بأس. هل أساعدك عند المغسلة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing': { m: "اسأل أولاً، وغطِّ، ودعه يختار", f: "اسألي أولاً، وغطّي، ودعيه يختار", x: "السؤال أولاً، والتغطية، وترك الاختيار" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.b': { m: "غسل شخص آخر أمر شخصي جداً. قل ما ستفعله، واسأل أولاً. غطِّ بمنشفة أجزاء الجسم التي لا تغسلها. أغلق الباب أو الستارة. دع المستفيد من الرعاية يختار: الدوش أو الغسل عند المغسلة، وأي ملابس يلبس. دع المستفيد من الرعاية يفعل ما ما زال يستطيع فعله، حتى لو كان أبطأ. هل يقول المستفيد من الرعاية لا؟ لا تجبره. حاول مرة أخرى لاحقاً، واعرض شيئاً آخر، وأخبر الممرّضة.", f: "غسل شخص آخر أمر شخصي جداً. قولي ما ستفعلينه، واسألي أولاً. غطّي بمنشفة أجزاء الجسم التي لا تغسلينها. أغلقي الباب أو الستارة. دعي المستفيد من الرعاية يختار: الدوش أو الغسل عند المغسلة، وأي ملابس يلبس. دعي المستفيد من الرعاية يفعل ما ما زال يستطيع فعله، حتى لو كان أبطأ. هل يقول المستفيد من الرعاية لا؟ لا تجبريه. حاولي مرة أخرى لاحقاً، واعرضي شيئاً آخر، وأخبري الممرّضة.", x: "غسل شخص آخر أمر شخصي جداً. شرح ما سيحدث، والسؤال أولاً. تغطية أجزاء الجسم التي لا تُغسل بمنشفة. إغلاق الباب أو الستارة. ترك المستفيد من الرعاية يختار: الدوش أو الغسل عند المغسلة، وأي ملابس يلبس. ترك المستفيد من الرعاية يفعل ما ما زال يستطيع فعله، حتى لو كان أبطأ. هل يقول المستفيد من الرعاية لا؟ الإجبار ممنوع. المحاولة مرة أخرى لاحقاً، وعرض شيء آخر، وإخبار الممرّضة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.p': "ماذا تريد أن تلبس اليوم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.s': { m: "مستفيدة من الرعاية تقول إنها لا تريد أن تُغسل اليوم. ماذا تفعل؟", f: "مستفيدة من الرعاية تقول إنها لا تريد أن تُغسل اليوم. ماذا تفعلين؟", x: "مستفيدة من الرعاية تقول إنها لا تريد أن تُغسل اليوم. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.o1': "قبول ذلك، وإخبار الممرّضة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.o2': "غسلها رغم ذلك: هذا في القائمة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.o3': "تخطّي الغسل، وعدم قول شيء.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.w': "من حقّ المستفيد من الرعاية أن يقول لا. إجبار الرعاية يضرّ الثقة. الممرّضة تستطيع أن تنظر في السبب، وفيما يمكن فعله.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.observing': "الملاحظة والتسجيل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rapporteren': "يسجّل (يكتب ما رآه في ملف الرعاية)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zorgdossier': "ملف الرعاية (كل شيء عن رعاية مستفيد واحد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.drukplek': "قرحة الضغط (بقعة حمراء من الاستلقاء أو الجلوس طويلاً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huid': "الجلد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plassen': "يتبوّل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vochtlijst': "قائمة السوائل (كم يشرب المستفيد من الرعاية)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.observing.1': "السيدة عندها بقعة حمراء على كعبها.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.observing.2': "السيد شرب قليلاً اليوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.observing.3': "أكتب ذلك في ملف الرعاية.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.q': "هل هناك شيء خاص مع السيدة Jansen؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.a': "نعم. لم تتبوّل تقريباً اليوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing': { m: "اكتب ما تراه، لا ما تظنّه", f: "اكتبي ما ترينه، لا ما تظنّينه", x: "كتابة ما يُرى، لا ما يُظنّ" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.b': { m: "ما تكتبه في ملف الرعاية يقرؤه الزميل التالي. اكتب حقائق: ما رأيته أو سمعته أو قسته، ومتى. لا تكتب “Mevrouw is lastig” (السيدة صعبة)، بل “Mevrouw wilde niet eten en duwde het bord weg” (السيدة لم ترد أن تأكل ودفعت الصحن بعيداً). اكتبه في اليوم نفسه، بجمل قصيرة. لست متأكداً كيف تكتبه بالهولندية؟ أخبر الممرّضة، واكتباه معاً. انظر إلى الجلد عندما تغسل شخصاً: البقعة الحمراء التي لا تزول قد تكون بداية قرحة ضغط. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "ما تكتبينه في ملف الرعاية يقرؤه الزميل التالي. اكتبي حقائق: ما رأيته أو سمعته أو قسته، ومتى. لا تكتبي “Mevrouw is lastig” (السيدة صعبة)، بل “Mevrouw wilde niet eten en duwde het bord weg” (السيدة لم ترد أن تأكل ودفعت الصحن بعيداً). اكتبيه في اليوم نفسه، بجمل قصيرة. لستِ متأكدة كيف تكتبينه بالهولندية؟ أخبري الممرّضة، واكتباه معاً. انظري إلى الجلد عندما تغسلين شخصاً: البقعة الحمراء التي لا تزول قد تكون بداية قرحة ضغط. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "ما يُكتب في ملف الرعاية يقرؤه الزميل التالي. كتابة الحقائق: ما تمّت رؤيته أو سماعه أو قياسه، ومتى. ليس “Mevrouw is lastig” (السيدة صعبة)، بل “Mevrouw wilde niet eten en duwde het bord weg” (السيدة لم ترد أن تأكل ودفعت الصحن بعيداً). الكتابة في اليوم نفسه، بجمل قصيرة. الكتابة بالهولندية صعبة؟ إخبار الممرّضة، والكتابة معاً. النظر إلى الجلد أثناء غسل شخص: البقعة الحمراء التي لا تزول قد تكون بداية قرحة ضغط. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.p': "أكتب ما رأيته.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.s': { m: "مستفيدة من الرعاية كانت غاضبة أثناء الغسل. يجب أن تكتب ذلك في الملف. ماذا تفعل؟", f: "مستفيدة من الرعاية كانت غاضبة أثناء الغسل. يجب أن تكتبي ذلك في الملف. ماذا تفعلين؟", x: "مستفيدة من الرعاية كانت غاضبة أثناء الغسل. يجب كتابة ذلك في الملف. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.o1': "كتابة ما قالته وما فعلته، ومتى.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.o2': "كتابة: “سيدة صعبة، كالعادة.”", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.o3': "عدم كتابة شيء: هذا عادي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.w': "الحقائق تساعد الزميل التالي والممرّضة على التصرّف. الرأي لا يقول ما حدث.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.homecare': "الرعاية المنزلية", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.thuiszorg': "الرعاية المنزلية (الرعاية في بيت المستفيد نفسه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sleutelkluis': "خزنة المفتاح (علبة صغيرة برمز، فيها مفتاح البيت)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zorgplan': "خطة الرعاية (أي رعاية يحصل عليها المستفيد، وكيف)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wijkverpleegkundige': "ممرّضة الحي (ممرّضة فريق الرعاية المنزلية)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mantelzorger': "مقدّم الرعاية من العائلة (قريب أو صديق يعتني بالمستفيد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alarmknop': "زرّ الإنذار (يلبسه المستفيد، ليطلب المساعدة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.homecare.1': "أرنّ الجرس أولاً. ثم آخذ المفتاح.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.homecare.2': "ماذا يوجد في خطة الرعاية؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.homecare.3': "سأتأخّر اليوم ربع ساعة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.q': "من هناك؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.a': "صباح الخير، الرعاية المنزلية. هل يمكنني أن أدخل؟", // nieuw, nalezen // nagelezen AI 28 nov
     'c.homecare': "ضيف في بيت شخص آخر", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.homecare.b': { m: "في الرعاية المنزلية تعمل في بيت المستفيد من الرعاية نفسه. أنت ضيف هناك: رنّ الجرس وقل من أنت، حتى عندما يكون معك مفتاح. رمز خزنة المفتاح سرّي. لا تكتبه أبداً حيث يمكن أن يراه الآخرون، وأغلق خزنة المفتاح دائماً من جديد. اتّبع خطة الرعاية: ما تفعله مكتوب فيها. هل هناك شيء مختلف، أو لا يفتح المستفيد الباب؟ لا تذهب ببساطة. اتّصل بفريقك أو بممرّضة الحي. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في الرعاية المنزلية تعملين في بيت المستفيد من الرعاية نفسه. أنتِ ضيفة هناك: رنّي الجرس وقولي من أنتِ، حتى عندما يكون معك مفتاح. رمز خزنة المفتاح سرّي. لا تكتبيه أبداً حيث يمكن أن يراه الآخرون، وأغلقي خزنة المفتاح دائماً من جديد. اتّبعي خطة الرعاية: ما تفعلينه مكتوب فيها. هل هناك شيء مختلف، أو لا يفتح المستفيد الباب؟ لا تذهبي ببساطة. اتّصلي بفريقك أو بممرّضة الحي. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في الرعاية المنزلية يكون العمل في بيت المستفيد من الرعاية نفسه. الدخول هناك يكون كضيف: رَنّ الجرس والتعريف بالنفس، حتى مع وجود مفتاح. رمز خزنة المفتاح سرّي. كتابته حيث يمكن أن يراه الآخرون ممنوعة أبداً، وإغلاق خزنة المفتاح دائماً من جديد. اتّباع خطة الرعاية: ما يجب فعله مكتوب فيها. هل هناك شيء مختلف، أو لا يفتح المستفيد الباب؟ الذهاب ببساطة غير مسموح. الاتصال بالفريق أو بممرّضة الحي. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.homecare.p': "صباح الخير، أنا من الرعاية المنزلية.", // nieuw, nalezen
-    'c.homecare.s': { m: "ترنّ الجرس. المستفيدة لا تفتح. سيارتها موجودة. ماذا تفعل؟", f: "ترنّين الجرس. المستفيدة لا تفتح. سيارتها موجودة. ماذا تفعلين؟", x: "الجرس رنّ. المستفيدة لا تفتح. سيارتها موجودة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.homecare.o1': "الاتصال بالفريق، والانتظار.", // nieuw, nalezen
-    'c.homecare.o2': "الذهاب إلى المستفيد التالي.", // nieuw, nalezen
+    'c.homecare.p': "صباح الخير، أنا من الرعاية المنزلية.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.s': { m: "ترنّ الجرس. المستفيدة لا تفتح. سيارتها موجودة. ماذا تفعل؟", f: "ترنّين الجرس. المستفيدة لا تفتح. سيارتها موجودة. ماذا تفعلين؟", x: "الجرس رنّ. المستفيدة لا تفتح. سيارتها موجودة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.o1': "الاتصال بالفريق، والانتظار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.o2': "الذهاب إلى المستفيد التالي.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.homecare.o3': "رَنّ الجرس مرة أخرى، ثم الذهاب.", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.homecare.w': "ربما سقطت المستفيدة، أو هي مريضة. الفريق يعرف ماذا يفعل، ومن عنده مفتاح.", // nieuw, nalezen
-    'l.liftaids': "أدوات الرفع والسلامة", // nieuw, nalezen
-    'w.glijlaken': "ملاءة الانزلاق (ملاءة ناعمة لتحريك المستفيد في السرير)", // nieuw, nalezen
-    'w.tilband': "حزام الرفع (يوضع تحت المستفيد، للرافعة)", // nieuw, nalezen
-    'w.stalift': "رافعة الوقوف (تساعد المستفيد على الوقوف)", // nieuw, nalezen
-    'w.werkhoogte': "ارتفاع العمل (السرير على ارتفاع وركيك)", // nieuw, nalezen
-    'w.bedhek': "حاجز السرير", // nieuw, nalezen
-    'w.transferplank': "لوح النقل (لوح للانزلاق من السرير إلى الكرسي)", // nieuw, nalezen
-    's.liftaids.1': { m: "اضبط السرير على ارتفاع العمل.", f: "اضبطي السرير على ارتفاع العمل.", x: "ضبط السرير على ارتفاع العمل." }, // nieuw, nalezen
-    's.liftaids.2': "هل الفرامل مشدودة على الكرسي المتحرّك؟", // nieuw, nalezen
-    's.liftaids.3': "نفعل هذا بشخصين.", // nieuw, nalezen
-    'c.liftaids.q': { m: "هل تستطيع أن تقلب السيدة وحدك؟", f: "هل تستطيعين أن تقلبي السيدة وحدك؟", x: "هل يمكن قلب السيدة بدون مساعدة؟" }, // nieuw, nalezen
-    'c.liftaids.a': "مع ملاءة الانزلاق أستطيع. سأحضرها.", // nieuw, nalezen
-    'c.liftaids': { m: "دع الأداة ترفع عنك", f: "دعي الأداة ترفع عنك", x: "الرفع بالأداة، لا بالجسم" }, // nieuw, nalezen
+    'c.homecare.w': "ربما سقطت المستفيدة، أو هي مريضة. الفريق يعرف ماذا يفعل، ومن عنده مفتاح.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.liftaids': "أدوات الرفع والسلامة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.glijlaken': "ملاءة الانزلاق (ملاءة ناعمة لتحريك المستفيد في السرير)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tilband': "حزام الرفع (يوضع تحت المستفيد، للرافعة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stalift': "رافعة الوقوف (تساعد المستفيد على الوقوف)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkhoogte': "ارتفاع العمل (السرير على ارتفاع وركيك)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedhek': "حاجز السرير", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.transferplank': "لوح النقل (لوح للانزلاق من السرير إلى الكرسي)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.liftaids.1': { m: "اضبط السرير على ارتفاع العمل.", f: "اضبطي السرير على ارتفاع العمل.", x: "ضبط السرير على ارتفاع العمل." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.liftaids.2': "هل الفرامل مشدودة على الكرسي المتحرّك؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.liftaids.3': "نفعل هذا بشخصين.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.q': { m: "هل تستطيع أن تقلب السيدة وحدك؟", f: "هل تستطيعين أن تقلبي السيدة وحدك؟", x: "هل يمكن قلب السيدة بدون مساعدة؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.a': "مع ملاءة الانزلاق أستطيع. سأحضرها.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids': { m: "دع الأداة ترفع عنك", f: "دعي الأداة ترفع عنك", x: "الرفع بالأداة، لا بالجسم" }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.liftaids.b': { m: "قبل أن تستعمل الرافعة، افحصها: هل البطارية مشحونة، وهل حزام الرفع بالمقاس الصحيح وغير ممزّق؟ شدّ الفرامل على السرير والكرسي المتحرّك. ارفع السرير إلى ارتفاع وركيك، حتى لا تنحني. أخبر المستفيد من الرعاية بكل خطوة. خطة الرعاية تذكر أي أداة يحتاجها المستفيد. هل الأداة مكسورة أو غير موجودة؟ لا تعمل بدونها: أبلغ عن ذلك، واطلب من زميل أن يساعدك. لم يشرح لك أحد كيف تعمل الأداة؟ اسأل قبل أن تبدأ. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "قبل أن تستعملي الرافعة، افحصيها: هل البطارية مشحونة، وهل حزام الرفع بالمقاس الصحيح وغير ممزّق؟ شدّي الفرامل على السرير والكرسي المتحرّك. ارفعي السرير إلى ارتفاع وركيك، حتى لا تنحني. أخبري المستفيد من الرعاية بكل خطوة. خطة الرعاية تذكر أي أداة يحتاجها المستفيد. هل الأداة مكسورة أو غير موجودة؟ لا تعملي بدونها: أبلغي عن ذلك، واطلبي من زميل أن يساعدك. لم يشرح لك أحد كيف تعمل الأداة؟ اسألي قبل أن تبدئي. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "قبل استعمال الرافعة، فحصها: هل البطارية مشحونة، وهل حزام الرفع بالمقاس الصحيح وغير ممزّق؟ شَدّ الفرامل على السرير والكرسي المتحرّك. رفع السرير إلى ارتفاع الوركين، حتى لا يكون انحناء. إخبار المستفيد من الرعاية بكل خطوة. خطة الرعاية تذكر أي أداة يحتاجها المستفيد. هل الأداة مكسورة أو غير موجودة؟ العمل بدونها ممنوع: الإبلاغ عن ذلك، وطلب المساعدة من زميل. طريقة عمل الأداة غير مشروحة؟ السؤال قبل البدء. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.liftaids.p': "حزام الرفع ممزّق. سأحضر واحداً آخر.", // nieuw, nalezen
-    'c.liftaids.s': { m: "تريد أن تستعمل الرافعة. في حزام الرفع تمزّق صغير. ماذا تفعل؟", f: "تريدين أن تستعملي الرافعة. في حزام الرفع تمزّق صغير. ماذا تفعلين؟", x: "الرافعة مطلوبة الآن. في حزام الرفع تمزّق صغير. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.liftaids.o1': "أخذ حزام آخر، والإبلاغ عن التمزّق.", // nieuw, nalezen
-    'c.liftaids.o2': "استعماله: التمزّق صغير جداً.", // nieuw, nalezen
-    'c.liftaids.o3': "ربط عقدة في الحزام.", // nieuw, nalezen
-    'c.liftaids.w': "التمزّق الصغير قد يكبر تحت وزن شخص. السقوط من الرافعة قد يؤذي المستفيد من الرعاية بشدّة.", // nieuw, nalezen
-    'u.shopfloor': "صندوق الدفع والمخزون والإغلاق", // nieuw, nalezen
-    'l.returns': "الإرجاع وصندوق الدفع", // nieuw, nalezen
-    'w.terugbrengen': "يُرجع (منتجاً إلى المتجر)", // nieuw, nalezen
-    'w.klantenkaart': "بطاقة العميل (بطاقة لجمع النقاط)", // nieuw, nalezen
-    'w.statiegeld': "مبلغ التأمين على العبوات (مال يُسترجع عن زجاجة أو علبة فارغة)", // nieuw, nalezen
-    'w.kassalade': "درج صندوق الدفع (الدرج الذي فيه المال)", // nieuw, nalezen
-    'w.streepjescode': "الرمز الشريطي (الباركود)", // nieuw, nalezen
-    'w.tegoedbon': "قسيمة الرصيد (ورقة للشراء من المتجر لاحقاً)", // nieuw, nalezen
-    's.returns.1': "هل تجمع النقاط ببطاقة العميل؟", // nieuw, nalezen
-    's.returns.2': "الرمز الشريطي لا يعمل.", // nieuw, nalezen
-    's.returns.3': "هل تريد استرجاع المال أم قسيمة رصيد؟", // nieuw, nalezen
-    'c.returns.q': "أريد أن أُرجع هذه الكنزة.", // nieuw, nalezen
-    'c.returns.a': "هذا ممكن. هل ما زال معك الإيصال؟", // nieuw, nalezen
-    'c.returns': { m: "الإرجاع: اتّبع قواعد المتجر", f: "الإرجاع: اتّبعي قواعد المتجر", x: "الإرجاع: اتّباع قواعد المتجر" }, // nieuw, nalezen
+    'c.liftaids.p': "حزام الرفع ممزّق. سأحضر واحداً آخر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.s': { m: "تريد أن تستعمل الرافعة. في حزام الرفع تمزّق صغير. ماذا تفعل؟", f: "تريدين أن تستعملي الرافعة. في حزام الرفع تمزّق صغير. ماذا تفعلين؟", x: "الرافعة مطلوبة الآن. في حزام الرفع تمزّق صغير. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.o1': "أخذ حزام آخر، والإبلاغ عن التمزّق.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.o2': "استعماله: التمزّق صغير جداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.o3': "ربط عقدة في الحزام.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.w': "التمزّق الصغير قد يكبر تحت وزن شخص. السقوط من الرافعة قد يؤذي المستفيد من الرعاية بشدّة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.shopfloor': "صندوق الدفع والمخزون والإغلاق", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.returns': "الإرجاع وصندوق الدفع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.terugbrengen': "يُرجع (منتجاً إلى المتجر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.klantenkaart': "بطاقة العميل (بطاقة لجمع النقاط)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.statiegeld': "مبلغ التأمين على العبوات (مال يُسترجع عن زجاجة أو علبة فارغة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kassalade': "درج صندوق الدفع (الدرج الذي فيه المال)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.streepjescode': "الرمز الشريطي (الباركود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tegoedbon': "قسيمة الرصيد (ورقة للشراء من المتجر لاحقاً)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.returns.1': "هل تجمع النقاط ببطاقة العميل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.returns.2': "الرمز الشريطي لا يعمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.returns.3': "هل تريد استرجاع المال أم قسيمة رصيد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.q': "أريد أن أُرجع هذه الكنزة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.a': "هذا ممكن. هل ما زال معك الإيصال؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns': { m: "الإرجاع: اتّبع قواعد المتجر", f: "الإرجاع: اتّبعي قواعد المتجر", x: "الإرجاع: اتّباع قواعد المتجر" }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.returns.b': { m: "لكل متجر قواعده الخاصة للإرجاع: كم يوماً، مع الإيصال أو بدونه، استرجاع المال أو قسيمة رصيد. تعلّمها، واتّبعها مع كل عميل. لست متأكداً؟ اسأل زميلاً أو المدير، ولا تقرّر وحدك. في نهاية مناوبتك، عُدّ درج صندوقك، مع زميل إذا كان متجرك يفعل ذلك. لا تأخذ أبداً مالاً من الصندوق لنفسك، ولا حتى لتستلفه للحظة. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "لكل متجر قواعده الخاصة للإرجاع: كم يوماً، مع الإيصال أو بدونه، استرجاع المال أو قسيمة رصيد. تعلّميها، واتّبعيها مع كل عميل. لستِ متأكدة؟ اسألي زميلاً أو المدير، ولا تقرّري وحدك. في نهاية مناوبتك، عُدّي درج صندوقك، مع زميل إذا كان متجرك يفعل ذلك. لا تأخذي أبداً مالاً من الصندوق لنفسك، ولا حتى لتستلفيه للحظة. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "لكل متجر قواعده الخاصة للإرجاع: كم يوماً، مع الإيصال أو بدونه، استرجاع المال أو قسيمة رصيد. تعلُّم هذه القواعد، واتّباعها مع كل عميل. هناك شكّ؟ سؤال زميل أو المدير، وعدم القرار بشكل فردي. في نهاية المناوبة، عَدّ درج الصندوق، مع زميل إذا كان المتجر يفعل ذلك. أخذ مال من الصندوق للنفس ممنوع أبداً، ولا حتى كسلفة للحظة. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.returns.p': "سأسأل مدير المتجر فقط.", // nieuw, nalezen
-    'c.returns.s': { m: "عميلة تريد استرجاع مالها مقابل حذاء. ليس معها إيصال. أنت لا تعرف القاعدة. ماذا تفعل؟", f: "عميلة تريد استرجاع مالها مقابل حذاء. ليس معها إيصال. أنتِ لا تعرفين القاعدة. ماذا تفعلين؟", x: "عميلة تريد استرجاع مالها مقابل حذاء. ليس معها إيصال. القاعدة غير معروفة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.returns.o1': "سؤال المدير عمّا يجب فعله.", // nieuw, nalezen
-    'c.returns.o2': "إعادة المال: إنها لطيفة.", // nieuw, nalezen
-    'c.returns.o3': "قول لا، وصرفها.", // nieuw, nalezen
-    'c.returns.w': "المدير يعرف القواعد ويستطيع أن يقرّر. هكذا تحصل العميلة على جواب عادل، ولا يقع اللوم عليك.", // nieuw, nalezen
-    'l.facing': "ترتيب الرفوف والمنتجات الباردة", // nieuw, nalezen
-    'w.facen': "يرتّب الواجهة (يسحب المنتجات إلى الأمام، والملصق إلى الأمام)", // nieuw, nalezen
-    'w.afprijzen': "يخفّض السعر (يعطي سعراً أقل)", // nieuw, nalezen
-    'w.koelvak': "رفّ التبريد (الرفّ البارد في المتجر)", // nieuw, nalezen
-    'w.diepvries': "المجمّد", // nieuw, nalezen
-    'w.uitpakken': "يفكّ التغليف", // nieuw, nalezen
-    'w.schapkaartje': "بطاقة الرفّ (بطاقة السعر على الرفّ)", // nieuw, nalezen
-    's.facing.1': "رفّ التبريد أولاً، ثم الباقي.", // nieuw, nalezen
+    'c.returns.p': "سأسأل مدير المتجر فقط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.s': { m: "عميلة تريد استرجاع مالها مقابل حذاء. ليس معها إيصال. أنت لا تعرف القاعدة. ماذا تفعل؟", f: "عميلة تريد استرجاع مالها مقابل حذاء. ليس معها إيصال. أنتِ لا تعرفين القاعدة. ماذا تفعلين؟", x: "عميلة تريد استرجاع مالها مقابل حذاء. ليس معها إيصال. القاعدة غير معروفة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.o1': "سؤال المدير عمّا يجب فعله.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.o2': "إعادة المال: إنها لطيفة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.o3': "قول لا، وصرفها.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.w': "المدير يعرف القواعد ويستطيع أن يقرّر. هكذا تحصل العميلة على جواب عادل، ولا يقع اللوم عليك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.facing': "ترتيب الرفوف والمنتجات الباردة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.facen': "يرتّب الواجهة (يسحب المنتجات إلى الأمام، والملصق إلى الأمام)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afprijzen': "يخفّض السعر (يعطي سعراً أقل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koelvak': "رفّ التبريد (الرفّ البارد في المتجر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.diepvries': "المجمّد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitpakken': "يفكّ التغليف", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schapkaartje': "بطاقة الرفّ (بطاقة السعر على الرفّ)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.facing.1': "رفّ التبريد أولاً، ثم الباقي.", // nieuw, nalezen // nagelezen AI 28 nov
     's.facing.2': { m: "ضع كل شيء مرتّباً إلى الأمام.", f: "ضعي كل شيء مرتّباً إلى الأمام.", x: "كل شيء يوضع مرتّباً إلى الأمام." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    's.facing.3': { m: "خفّض سعر منتجات اليوم.", f: "خفّضي سعر منتجات اليوم.", x: "تخفيض سعر منتجات اليوم." }, // nieuw, nalezen
-    'c.facing.q': "هل انتهيت من رفّ التبريد؟", // nieuw, nalezen
-    'c.facing.a': "تقريباً. ما زال عليّ أن أرتّب الواجهة.", // nieuw, nalezen
-    'c.facing': "البارد أولاً، والرفّ يبدو ممتلئاً", // nieuw, nalezen
-    'c.facing.b': { m: "المنتجات الباردة والمجمّدة تدخل الثلاجة أو المجمّد أولاً، قبل أي شيء آخر. لا يجوز أن تبقى في الحرارة طويلاً. ثم الباقي. ترتيب الواجهة يعني: اسحب المنتجات إلى الأمام، والملصق نحو العميل. هكذا يبدو الرفّ ممتلئاً ومرتّباً. افحص بطاقة الرفّ: هل السعر صحيح لهذا المنتج؟ عندما تفتح الكراتين، اقطع بعيداً عن جسمك، وليس عميقاً جداً: قد تتلف المنتج. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "المنتجات الباردة والمجمّدة تدخل الثلاجة أو المجمّد أولاً، قبل أي شيء آخر. لا يجوز أن تبقى في الحرارة طويلاً. ثم الباقي. ترتيب الواجهة يعني: اسحبي المنتجات إلى الأمام، والملصق نحو العميل. هكذا يبدو الرفّ ممتلئاً ومرتّباً. افحصي بطاقة الرفّ: هل السعر صحيح لهذا المنتج؟ عندما تفتحين الكراتين، اقطعي بعيداً عن جسمك، وليس عميقاً جداً: قد تتلفين المنتج. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "المنتجات الباردة والمجمّدة تدخل الثلاجة أو المجمّد أولاً، قبل أي شيء آخر. لا يجوز أن تبقى في الحرارة طويلاً. ثم الباقي. ترتيب الواجهة يعني: سحب المنتجات إلى الأمام، والملصق نحو العميل. هكذا يبدو الرفّ ممتلئاً ومرتّباً. فحص بطاقة الرفّ: هل السعر صحيح لهذا المنتج؟ عند فتح الكراتين، القطع بعيداً عن الجسم، وليس عميقاً جداً: قد يتلف المنتج. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.facing.p': "المنتجات الباردة أولاً، ثم الباقي.", // nieuw, nalezen
-    'c.facing.s': { m: "تصل منصّة حليب ومنصّة رقائق بطاطس. أنت وحدك. ماذا تفعل؟", f: "تصل منصّة حليب ومنصّة رقائق بطاطس. أنتِ وحدك. ماذا تفعلين؟", x: "تصل منصّة حليب ومنصّة رقائق بطاطس. لا يوجد زميل. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.facing.o1': "وضع الحليب في الثلاجة أولاً.", // nieuw, nalezen
-    'c.facing.o2': "البدء بالرقائق: إنها أخفّ.", // nieuw, nalezen
-    'c.facing.o3': "ترك الاثنين حتى يأتي زميل.", // nieuw, nalezen
-    'c.facing.w': "الحليب الذي يبقى في الحرارة طويلاً قد يُمرض العملاء، ويجب رميه. الرقائق تستطيع أن تنتظر.", // nieuw, nalezen
-    'l.shrink': "التلف والسرقة", // nieuw, nalezen
-    'w.derving': "الفاقد (ما يخسره المتجر: منتجات مكسورة أو قديمة أو مسروقة)", // nieuw, nalezen
-    'w.afschrijven': "يشطب (يسجّل المنتج كخسارة)", // nieuw, nalezen
-    'w.personeelsaankoop': "مشتريات الموظفين (ما تشتريه في متجرك)", // nieuw, nalezen
-    'w.tassencontrole': "تفتيش الحقائب", // nieuw, nalezen
-    'w.kassamedewerker': "أمين الصندوق، أمينة الصندوق", // nieuw, nalezen
-    'w.winkelwagen': "عربة التسوّق", // nieuw, nalezen
-    's.shrink.1': "هذا المرطبان مكسور. سأشطبه.", // nieuw, nalezen
-    's.shrink.2': "أدفع ثمن مشترياتي عند صندوق زميل.", // nieuw, nalezen
-    's.shrink.3': "هناك عربة تسوّق ممتلئة عند المخرج.", // nieuw, nalezen
-    'c.shrink.q': "هل يمكنني أن أنظر في حقيبتك؟", // nieuw, nalezen
-    'c.shrink.a': "نعم طبعاً. هذا إيصالي.", // nieuw, nalezen
-    'c.shrink': { m: "مشترياتك: ادفع مثل أي عميل", f: "مشترياتك: ادفعي مثل أي عميل", x: "المشتريات الخاصة: الدفع مثل أي عميل" }, // nieuw, nalezen
-    'c.shrink.b': { m: "المتجر يخسر كثيراً بسبب المنتجات المكسورة والقديمة والسرقة. ساعد على أن يبقى ذلك قليلاً. منتج مكسور أو تالف؟ لا ترجعه إلى الرفّ: اشطبه بالطريقة التي يتّبعها متجرك. مشترياتك الخاصة: ادفع عند الصندوق مثل كل عميل، واحتفظ بالإيصال. في متاجر كثيرة لا يجوز لك أن تسجّل مشترياتك بنفسك على الصندوق: زميل يفعل ذلك. لا تأكل أبداً منتجاً ولا تأخذه دون أن تدفع، ولا حتى منتجاً صغيراً. بعض المتاجر تفتّش الحقائب: هذه قاعدة المتجر، وليست علامة عدم ثقة بك. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "المتجر يخسر كثيراً بسبب المنتجات المكسورة والقديمة والسرقة. ساعدي على أن يبقى ذلك قليلاً. منتج مكسور أو تالف؟ لا ترجعيه إلى الرفّ: اشطبيه بالطريقة التي يتّبعها متجرك. مشترياتك الخاصة: ادفعي عند الصندوق مثل كل عميل، واحتفظي بالإيصال. في متاجر كثيرة لا يجوز لك أن تسجّلي مشترياتك بنفسك على الصندوق: زميل يفعل ذلك. لا تأكلي أبداً منتجاً ولا تأخذيه دون أن تدفعي، ولا حتى منتجاً صغيراً. بعض المتاجر تفتّش الحقائب: هذه قاعدة المتجر، وليست علامة عدم ثقة بك. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "المتجر يخسر كثيراً بسبب المنتجات المكسورة والقديمة والسرقة. المساعدة على أن يبقى ذلك قليلاً. منتج مكسور أو تالف؟ عدم إرجاعه إلى الرفّ: شطبه بالطريقة التي يتّبعها المتجر. المشتريات الخاصة: الدفع عند الصندوق مثل كل عميل، والاحتفاظ بالإيصال. في متاجر كثيرة لا يجوز تسجيل المشتريات الخاصة على الصندوق بنفسك: زميل يفعل ذلك. أكل منتج أو أخذه دون دفع ممنوع أبداً، ولا حتى منتج صغير. بعض المتاجر تفتّش الحقائب: هذه قاعدة المتجر، وليست علامة عدم ثقة بالعامل. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.shrink.p': "أدفع أولاً، وأحتفظ بالإيصال.", // nieuw, nalezen
-    'c.shrink.s': { m: "في نهاية مناوبتك أنت جائع. شطيرة انتهى تاريخها اليوم. ماذا تفعل؟", f: "في نهاية مناوبتك أنتِ جائعة. شطيرة انتهى تاريخها اليوم. ماذا تفعلين؟", x: "في نهاية المناوبة يأتي الجوع. شطيرة انتهى تاريخها اليوم. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.shrink.o1': "سؤال المدير عن القاعدة.", // nieuw, nalezen
-    'c.shrink.o2': "أكلها: ستُرمى على كل حال.", // nieuw, nalezen
-    'c.shrink.o3': "أخذها إلى البيت في الحقيبة.", // nieuw, nalezen
-    'c.shrink.w': "في متاجر كثيرة، أخذ منتج دون دفع سرقة، حتى لو كان قديماً. السؤال أولاً يحميك.", // nieuw, nalezen
-    'l.shopclose': "إغلاق المتجر", // nieuw, nalezen
-    'w.sluitingstijd': "وقت الإغلاق", // nieuw, nalezen
-    'w.rolluik': "الستارة المعدنية (باب معدني يُنزل أمام المتجر)", // nieuw, nalezen
-    'w.kasverschil': "فرق الصندوق (مال أكثر أو أقل في الصندوق مما يجب)", // nieuw, nalezen
-    'w.kluis': "الخزنة (صندوق قوي للمال)", // nieuw, nalezen
-    'w.overval': "السطو (شخص يأخذ المال بالتهديد)", // nieuw, nalezen
-    'w.achterdeur': "الباب الخلفي", // nieuw, nalezen
-    's.shopclose.1': "سنغلق بعد عشر دقائق.", // nieuw, nalezen
-    's.shopclose.2': "نعدّ الصندوق بشخصين.", // nieuw, nalezen
-    's.shopclose.3': "هل الباب الخلفي مقفل؟", // nieuw, nalezen
-    'c.shopclose.q': "هل يمكنني أن أدخل بسرعة؟", // nieuw, nalezen
-    'c.shopclose.a': { m: "آسف، نحن مغلقون. غداً نفتح في الساعة الثامنة.", f: "آسفة، نحن مغلقون. غداً نفتح في الساعة الثامنة.", x: "عذراً، نحن مغلقون. غداً نفتح في الساعة الثامنة." }, // nieuw, nalezen
-    'c.shopclose': { m: "سطو: أعطِ المال، وابقَ آمناً", f: "سطو: أعطي المال، وابقي آمنة", x: "سطو: إعطاء المال، والبقاء في أمان" }, // nieuw, nalezen
+    's.facing.3': { m: "خفّض سعر منتجات اليوم.", f: "خفّضي سعر منتجات اليوم.", x: "تخفيض سعر منتجات اليوم." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.q': "هل انتهيت من رفّ التبريد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.a': "تقريباً. ما زال عليّ أن أرتّب الواجهة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing': "البارد أولاً، والرفّ يبدو ممتلئاً", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.b': { m: "المنتجات الباردة والمجمّدة تدخل الثلاجة أو المجمّد أولاً، قبل أي شيء آخر. لا يجوز أن تبقى في الحرارة طويلاً. ثم الباقي. ترتيب الواجهة يعني: اسحب المنتجات إلى الأمام، والملصق نحو العميل. هكذا يبدو الرفّ ممتلئاً ومرتّباً. افحص بطاقة الرفّ: هل السعر صحيح لهذا المنتج؟ عندما تفتح الكراتين، اقطع بعيداً عن جسمك، وليس عميقاً جداً: قد تتلف المنتج. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "المنتجات الباردة والمجمّدة تدخل الثلاجة أو المجمّد أولاً، قبل أي شيء آخر. لا يجوز أن تبقى في الحرارة طويلاً. ثم الباقي. ترتيب الواجهة يعني: اسحبي المنتجات إلى الأمام، والملصق نحو العميل. هكذا يبدو الرفّ ممتلئاً ومرتّباً. افحصي بطاقة الرفّ: هل السعر صحيح لهذا المنتج؟ عندما تفتحين الكراتين، اقطعي بعيداً عن جسمك، وليس عميقاً جداً: قد تتلفين المنتج. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "المنتجات الباردة والمجمّدة تدخل الثلاجة أو المجمّد أولاً، قبل أي شيء آخر. لا يجوز أن تبقى في الحرارة طويلاً. ثم الباقي. ترتيب الواجهة يعني: سحب المنتجات إلى الأمام، والملصق نحو العميل. هكذا يبدو الرفّ ممتلئاً ومرتّباً. فحص بطاقة الرفّ: هل السعر صحيح لهذا المنتج؟ عند فتح الكراتين، القطع بعيداً عن الجسم، وليس عميقاً جداً: قد يتلف المنتج. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.p': "المنتجات الباردة أولاً، ثم الباقي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.s': { m: "تصل منصّة حليب ومنصّة رقائق بطاطس. أنت وحدك. ماذا تفعل؟", f: "تصل منصّة حليب ومنصّة رقائق بطاطس. أنتِ وحدك. ماذا تفعلين؟", x: "تصل منصّة حليب ومنصّة رقائق بطاطس. لا يوجد زميل. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.o1': "وضع الحليب في الثلاجة أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.o2': "البدء بالرقائق: إنها أخفّ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.o3': "ترك الاثنين حتى يأتي زميل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.w': "الحليب الذي يبقى في الحرارة طويلاً قد يُمرض العملاء، ويجب رميه. الرقائق تستطيع أن تنتظر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.shrink': "التلف والسرقة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.derving': "الفاقد (ما يخسره المتجر: منتجات مكسورة أو قديمة أو مسروقة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afschrijven': "يشطب (يسجّل المنتج كخسارة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.personeelsaankoop': "مشتريات الموظفين (ما تشتريه في متجرك)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tassencontrole': "تفتيش الحقائب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kassamedewerker': "أمين الصندوق، أمينة الصندوق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.winkelwagen': "عربة التسوّق", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shrink.1': "هذا المرطبان مكسور. سأشطبه.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shrink.2': "أدفع ثمن مشترياتي عند صندوق زميل.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shrink.3': "هناك عربة تسوّق ممتلئة عند المخرج.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.q': "هل يمكنني أن أنظر في حقيبتك؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.a': "نعم طبعاً. هذا إيصالي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink': { m: "مشترياتك: ادفع مثل أي عميل", f: "مشترياتك: ادفعي مثل أي عميل", x: "المشتريات الخاصة: الدفع مثل أي عميل" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.b': { m: "المتجر يخسر كثيراً بسبب المنتجات المكسورة والقديمة والسرقة. ساعد على أن يبقى ذلك قليلاً. منتج مكسور أو تالف؟ لا ترجعه إلى الرفّ: اشطبه بالطريقة التي يتّبعها متجرك. مشترياتك الخاصة: ادفع عند الصندوق مثل كل عميل، واحتفظ بالإيصال. في متاجر كثيرة لا يجوز لك أن تسجّل مشترياتك بنفسك على الصندوق: زميل يفعل ذلك. لا تأكل أبداً منتجاً ولا تأخذه دون أن تدفع، ولا حتى منتجاً صغيراً. بعض المتاجر تفتّش الحقائب: هذه قاعدة المتجر، وليست علامة عدم ثقة بك. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "المتجر يخسر كثيراً بسبب المنتجات المكسورة والقديمة والسرقة. ساعدي على أن يبقى ذلك قليلاً. منتج مكسور أو تالف؟ لا ترجعيه إلى الرفّ: اشطبيه بالطريقة التي يتّبعها متجرك. مشترياتك الخاصة: ادفعي عند الصندوق مثل كل عميل، واحتفظي بالإيصال. في متاجر كثيرة لا يجوز لك أن تسجّلي مشترياتك بنفسك على الصندوق: زميل يفعل ذلك. لا تأكلي أبداً منتجاً ولا تأخذيه دون أن تدفعي، ولا حتى منتجاً صغيراً. بعض المتاجر تفتّش الحقائب: هذه قاعدة المتجر، وليست علامة عدم ثقة بك. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "المتجر يخسر كثيراً بسبب المنتجات المكسورة والقديمة والسرقة. المساعدة على أن يبقى ذلك قليلاً. منتج مكسور أو تالف؟ عدم إرجاعه إلى الرفّ: شطبه بالطريقة التي يتّبعها المتجر. المشتريات الخاصة: الدفع عند الصندوق مثل كل عميل، والاحتفاظ بالإيصال. في متاجر كثيرة لا يجوز تسجيل المشتريات الخاصة على الصندوق بنفسك: زميل يفعل ذلك. أكل منتج أو أخذه دون دفع ممنوع أبداً، ولا حتى منتج صغير. بعض المتاجر تفتّش الحقائب: هذه قاعدة المتجر، وليست علامة عدم ثقة بالعامل. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.p': "أدفع أولاً، وأحتفظ بالإيصال.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.s': { m: "في نهاية مناوبتك أنت جائع. شطيرة انتهى تاريخها اليوم. ماذا تفعل؟", f: "في نهاية مناوبتك أنتِ جائعة. شطيرة انتهى تاريخها اليوم. ماذا تفعلين؟", x: "في نهاية المناوبة يأتي الجوع. شطيرة انتهى تاريخها اليوم. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.o1': "سؤال المدير عن القاعدة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.o2': "أكلها: ستُرمى على كل حال.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.o3': "أخذها إلى البيت في الحقيبة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.w': "في متاجر كثيرة، أخذ منتج دون دفع سرقة، حتى لو كان قديماً. السؤال أولاً يحميك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.shopclose': "إغلاق المتجر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sluitingstijd': "وقت الإغلاق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rolluik': "الستارة المعدنية (باب معدني يُنزل أمام المتجر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kasverschil': "فرق الصندوق (مال أكثر أو أقل في الصندوق مما يجب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kluis': "الخزنة (صندوق قوي للمال)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.overval': "السطو (شخص يأخذ المال بالتهديد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.achterdeur': "الباب الخلفي", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shopclose.1': "سنغلق بعد عشر دقائق.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shopclose.2': "نعدّ الصندوق بشخصين.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shopclose.3': "هل الباب الخلفي مقفل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.q': "هل يمكنني أن أدخل بسرعة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.a': { m: "آسف، نحن مغلقون. غداً نفتح في الساعة الثامنة.", f: "آسفة، نحن مغلقون. غداً نفتح في الساعة الثامنة.", x: "عذراً، نحن مغلقون. غداً نفتح في الساعة الثامنة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose': { m: "سطو: أعطِ المال، وابقَ آمناً", f: "سطو: أعطي المال، وابقي آمنة", x: "سطو: إعطاء المال، والبقاء في أمان" }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.shopclose.b': { m: "في وقت الإغلاق يكون في الصندوق مال كثير، لذلك عند المتاجر قواعد: العدّ بشخصين، ونقل المال إلى الخزنة، وقفل الباب الخلفي أولاً. سطو (overval)؟ حياتك أغلى من المال. ابقَ هادئاً، وافعل ما يقولون، ولا تقاوم ولا تركض وراءهم. تذكّر ما تستطيع: الملابس، والطول، والصوت. عندما يذهبون: اقفل الباب، واتّصل بـ112، ولا تلمس شيئاً. بعد ذلك، تكلّم عن الأمر مع مديرك أو مع شخص تثق به. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في وقت الإغلاق يكون في الصندوق مال كثير، لذلك عند المتاجر قواعد: العدّ بشخصين، ونقل المال إلى الخزنة، وقفل الباب الخلفي أولاً. سطو (overval)؟ حياتك أغلى من المال. ابقي هادئة، وافعلي ما يقولون، ولا تقاومي ولا تركضي وراءهم. تذكّري ما تستطيعين: الملابس، والطول، والصوت. عندما يذهبون: اقفلي الباب، واتّصلي بـ112، ولا تلمسي شيئاً. بعد ذلك، تكلّمي عن الأمر مع مديرك أو مع شخص تثقين به. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في وقت الإغلاق يكون في الصندوق مال كثير، لذلك عند المتاجر قواعد: العدّ بشخصين، ونقل المال إلى الخزنة، وقفل الباب الخلفي أولاً. سطو (overval)؟ الحياة أغلى من المال. البقاء هادئاً، وفعل ما يقولون، وعدم المقاومة أو الركض وراءهم. تذكُّر ما يمكن: الملابس، والطول، والصوت. بعد ذهابهم: قفل الباب، والاتصال بـ112، وعدم لمس أي شيء. بعد ذلك، الكلام عن الأمر مع المدير أو مع شخص موثوق. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.shopclose.p': "نحن نغلق. سأقفل الباب.", // nieuw, nalezen
-    'c.shopclose.s': { m: "رجل معه سكين يريد المال من صندوقك. ماذا تفعل؟", f: "رجل معه سكين يريد المال من صندوقك. ماذا تفعلين؟", x: "رجل معه سكين يريد المال من الصندوق. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.shopclose.o1': "البقاء هادئاً، وإعطاؤه المال.", // nieuw, nalezen
-    'c.shopclose.o2': "مقاومته: المال ليس له.", // nieuw, nalezen
-    'c.shopclose.o3': "الركض إلى الخلف، والانغلاق في غرفة.", // nieuw, nalezen
-    'c.shopclose.w': "المقاومة أو الهرب تجعل السارق متوتّراً وأكثر خطراً. المال يمكن تعويضه. حياة الإنسان لا تُعوَّض.", // nieuw, nalezen
-    'u.uitzend': "العمل عن طريق وكالة توظيف مؤقت", // nieuw, nalezen
-    'l.hirer': "الوكالة والشركة المستخدِمة", // nieuw, nalezen
-    'w.inlener': "الشركة المستخدِمة (الشركة التي ترسلك الوكالة للعمل فيها)", // nieuw, nalezen
-    'w.vestiging': "الفرع (مكتب الوكالة في مدينتك)", // nieuw, nalezen
-    'w.intakegesprek': "مقابلة التسجيل (أول حديث في الوكالة)", // nieuw, nalezen
-    'w.opstapplaats': "نقطة الركوب (حيث تأخذك حافلة الوكالة)", // nieuw, nalezen
-    'w.bedrijfsregels': "قواعد الشركة (قواعد الشركة المستخدِمة)", // nieuw, nalezen
-    'w.aanspreekpunt': "الشخص المرجعي (الشخص الذي تذهب إليه بأسئلتك)", // nieuw, nalezen
-    's.hirer.1': { m: "غداً تعمل عند شركة مستخدِمة جديدة.", f: "غداً تعملين عند شركة مستخدِمة جديدة.", x: "غداً يكون العمل عند شركة مستخدِمة جديدة." }, // nieuw, nalezen
-    's.hirer.2': "من هو الشخص المرجعي لي هنا؟", // nieuw, nalezen
-    's.hirer.3': "الحافلة تنطلق من نقطة الركوب في الساعة السادسة.", // nieuw, nalezen
-    'c.hirer.q': { m: "هل تستطيع أن تبدأ غداً عند شركة مستخدِمة جديدة؟", f: "هل تستطيعين أن تبدئي غداً عند شركة مستخدِمة جديدة؟", x: "هل يمكن البدء غداً عند شركة مستخدِمة جديدة؟" }, // nieuw, nalezen
-    'c.hirer.a': "نعم. متى يجب أن أكون هناك؟", // nieuw, nalezen
-    'c.hirer': "شركتان: من يفعل ماذا؟", // nieuw, nalezen
-    'c.hirer.b': { m: "أنت تعمل عن طريق وكالة (uitzendbureau)، لكنك تقوم بالعمل في شركة أخرى: الشركة المستخدِمة (inlener). الوكالة هي صاحب عملك: عقدك وأجرك وقسيمة راتبك وأيام إجازتك تأتي من الوكالة. الشركة المستخدِمة تقول لك ماذا تفعل في مكان العمل، ويجب أن تجعل عملك آمناً، تماماً مثل عمالها. بلّغ عن مرضك بالطريقة التي تقولها وكالتك: غالباً للوكالة وللشركة المستخدِمة. احفظ في هاتفك اسم ورقم الشخص المرجعي لك في الوكالة. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "أنتِ تعملين عن طريق وكالة (uitzendbureau)، لكنك تقومين بالعمل في شركة أخرى: الشركة المستخدِمة (inlener). الوكالة هي صاحب عملك: عقدك وأجرك وقسيمة راتبك وأيام إجازتك تأتي من الوكالة. الشركة المستخدِمة تقول لكِ ماذا تفعلين في مكان العمل، ويجب أن تجعل عملكِ آمناً، تماماً مثل عمالها. بلّغي عن مرضك بالطريقة التي تقولها وكالتك: غالباً للوكالة وللشركة المستخدِمة. احفظي في هاتفك اسم ورقم الشخص المرجعي لكِ في الوكالة. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "العمل يكون عن طريق وكالة (uitzendbureau)، لكن مكان العمل شركة أخرى: الشركة المستخدِمة (inlener). الوكالة هي صاحب العمل: العقد والأجر وقسيمة الراتب وأيام الإجازة تأتي من الوكالة. الشركة المستخدِمة تقول ما يجب فعله في مكان العمل، ويجب أن تجعل العمل آمناً، تماماً مثل عمالها. التبليغ عن المرض بالطريقة التي تقولها الوكالة: غالباً للوكالة وللشركة المستخدِمة. حفظ اسم ورقم الشخص المرجعي في الوكالة في الهاتف. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen
-    'c.hirer.p': "من هو الشخص المرجعي لي في الوكالة؟", // nieuw, nalezen
-    'c.hirer.s': { m: "عند الشركة المستخدِمة يجب أن تعمل على آلة. لم يشرح لك أحد كيف. ماذا تفعل؟", f: "عند الشركة المستخدِمة يجب أن تعملي على آلة. لم يشرح لكِ أحد كيف. ماذا تفعلين؟", x: "عند الشركة المستخدِمة يجب العمل على آلة. لم يشرح أحد كيف. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.hirer.o1': "طلب الشرح من الشركة المستخدِمة أولاً.", // nieuw, nalezen
-    'c.hirer.o2': "التجربة: الوكالة هي المسؤولة.", // nieuw, nalezen
-    'c.hirer.o3': "الذهاب إلى البيت، وعدم قول شيء.", // nieuw, nalezen
-    'c.hirer.w': "يجب على الشركة المستخدِمة أن تشرح طريقة العمل بأمان، مثل ما تفعل مع عمالها. طلب ذلك حقك.", // nieuw, nalezen
-    'l.phases': "عقدك والمراحل", // nieuw, nalezen
-    'w.fase': "المرحلة (خطوة في عقدك مع الوكالة: A أو B أو C)", // nieuw, nalezen
-    'w.uitzendbeding': "شرط الوكالة (عملك يمكن أن يتوقّف عندما لا تحتاجك الشركة المستخدِمة)", // nieuw, nalezen
-    'w.aflopen': "ينتهي (عقد)", // nieuw, nalezen
-    'w.doorwerken': "يستمرّ في العمل (في المكان نفسه)", // nieuw, nalezen
-    'w.vastecontract': "العقد الدائم (عقد بدون تاريخ نهاية)", // nieuw, nalezen
-    'w.onderbreking': "الانقطاع (فترة بدون عمل بين عقدين)", // nieuw, nalezen
-    's.phases.1': "في أي مرحلة أنا الآن؟", // nieuw, nalezen
-    's.phases.2': "عقدي ينتهي الأسبوع القادم.", // nieuw, nalezen
-    's.phases.3': "هل أستطيع أن أستمرّ في العمل هنا؟", // nieuw, nalezen
-    'c.phases.q': "مهمّتك تنتهي يوم الجمعة.", // nieuw, nalezen
-    'c.phases.a': "حسناً. هل عندكم عمل آخر لي؟", // nieuw, nalezen
-    'c.phases': "المراحل A وB وC", // nieuw, nalezen
-    'c.phases.b': { m: "معظم العمال المؤقتين يعملون تحت اتفاقية عمل جماعية للعمال المؤقتين (uitzend-cao). فيها مراحل. في المرحلة A، يمكن عادة أن يتوقّف عملك عندما لا تحتاجك الشركة المستخدِمة بعد الآن (uitzendbeding). في المرحلة B، تحصل على عقود لمدة محدّدة. في المرحلة C، تحصل على عقد دائم مع الوكالة. مدّة كل مرحلة مكتوبة في اتفاقيتك الجماعية (cao). اسأل الوكالة في أي مرحلة أنت، واحتفظ بكل عقودك. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "معظم العمال المؤقتين يعملون تحت اتفاقية عمل جماعية للعمال المؤقتين (uitzend-cao). فيها مراحل. في المرحلة A، يمكن عادة أن يتوقّف عملك عندما لا تحتاجك الشركة المستخدِمة بعد الآن (uitzendbeding). في المرحلة B، تحصلين على عقود لمدة محدّدة. في المرحلة C، تحصلين على عقد دائم مع الوكالة. مدّة كل مرحلة مكتوبة في اتفاقيتك الجماعية (cao). اسألي الوكالة في أي مرحلة أنتِ، واحتفظي بكل عقودك. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "معظم العمال المؤقتين يعملون تحت اتفاقية عمل جماعية للعمال المؤقتين (uitzend-cao). فيها مراحل. في المرحلة A، يمكن عادة أن يتوقّف العمل عندما لا تحتاج الشركة المستخدِمة العامل بعد الآن (uitzendbeding). في المرحلة B، تكون العقود لمدة محدّدة. في المرحلة C، يكون العقد دائماً مع الوكالة. مدّة كل مرحلة مكتوبة في الاتفاقية الجماعية (cao). سؤال الوكالة عن المرحلة الحالية، والاحتفاظ بكل العقود. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen
-    'c.phases.p': "كم تدوم المرحلة A بالنسبة لي؟", // nieuw, nalezen
-    'c.phases.s': { m: "عملت وقتاً طويلاً لدى الوكالة نفسها. ما زلت تحصل على عقود قصيرة. ماذا تفعل؟", f: "عملتِ وقتاً طويلاً لدى الوكالة نفسها. ما زلتِ تحصلين على عقود قصيرة. ماذا تفعلين؟", x: "مضى وقت طويل من العمل لدى الوكالة نفسها. العقود ما زالت قصيرة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.phases.o1': "سؤال الوكالة عن المرحلة الحالية.", // nieuw, nalezen
-    'c.phases.o2': "لا شيء: العمل المؤقت قصير دائماً.", // nieuw, nalezen
-    'c.phases.o3': "التوقّف، والبحث عن وكالة أخرى.", // nieuw, nalezen
-    'c.phases.w': "بعد وقت كافٍ، تعطيك الاتفاقية الجماعية أماناً أكثر. الوكالة تستطيع أن تقول لك أين أنت، والنقابة تستطيع أن تتحقّق من ذلك معك.", // nieuw, nalezen
-    'l.deductions': "الأجر والخصومات", // nieuw, nalezen
-    'w.inhouding': "الخصم (مال يُقتطع من أجرك)", // nieuw, nalezen
-    'w.vastekracht': "العامل الدائم (عامل توظّفه الشركة المستخدِمة نفسها)", // nieuw, nalezen
-    'w.vervoer': "النقل (الحافلة أو الشاحنة الصغيرة إلى العمل)", // nieuw, nalezen
-    'w.schriftelijk': "كتابةً (على ورق أو في بريد إلكتروني)", // nieuw, nalezen
-    'w.navragen': "يستفسر (يتحقّق هل الشيء صحيح)", // nieuw, nalezen
-    'w.brutoloon': "الأجر الإجمالي (أجرك قبل الضريبة والخصومات)", // nieuw, nalezen
-    's.deductions.1': "ما هذا الخصم في قسيمة راتبي؟", // nieuw, nalezen
-    's.deductions.2': "هل أكسب مثل العمال الدائمين؟", // nieuw, nalezen
-    's.deductions.3': "أريد أن أرى ذلك على ورق أولاً.", // nieuw, nalezen
-    'c.deductions.q': "نخصم تكاليف الحافلة من أجرك.", // nieuw, nalezen
-    'c.deductions.a': "هل هذا مسموح؟ سأتحقّق من ذلك أولاً.", // nieuw, nalezen
-    'c.deductions': "ماذا يجوز أن يُخصم من أجرك؟", // nieuw, nalezen
-    'c.deductions.b': { m: "لك الحق على الأقل في نفس الأجر الذي يحصل عليه عمال الشركة المستخدِمة الذين يقومون بنفس العمل. المال الذي يُخصم من أجرك (inhouding) يجب أن يكون في قسيمة راتبك. الضريبة والاشتراكات تُخصم بحكم القانون. غير ذلك، لا يجوز للوكالة أن تخصم من الحد الأدنى للأجور إلا تكلفتين: إيجار سكنك وقسط التأمين الصحي، وفقط إذا وافقت على ذلك كتابةً. التكاليف الأخرى، مثل النقل وملابس العمل والغرامات أو رسوم لإيجاد عمل لك، لا يجوز أن تُخصم من الحد الأدنى للأجور. لا تفهم خصماً؟ اطلب من الوكالة أن تشرحه لك كتابةً. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork.", f: "لكِ الحق على الأقل في نفس الأجر الذي يحصل عليه عمال الشركة المستخدِمة الذين يقومون بنفس العمل. المال الذي يُخصم من أجرك (inhouding) يجب أن يكون في قسيمة راتبك. الضريبة والاشتراكات تُخصم بحكم القانون. غير ذلك، لا يجوز للوكالة أن تخصم من الحد الأدنى للأجور إلا تكلفتين: إيجار سكنك وقسط التأمين الصحي، وفقط إذا وافقتِ على ذلك كتابةً. التكاليف الأخرى، مثل النقل وملابس العمل والغرامات أو رسوم لإيجاد عمل لكِ، لا يجوز أن تُخصم من الحد الأدنى للأجور. لا تفهمين خصماً؟ اطلبي من الوكالة أن تشرحه لكِ كتابةً. معلومات عامة. لوضعك أنت: اسألي النقابة أو Juridisch Loket أو FairWork.", x: "للعامل الحق على الأقل في نفس الأجر الذي يحصل عليه عمال الشركة المستخدِمة الذين يقومون بنفس العمل. المال الذي يُخصم من الأجر (inhouding) يجب أن يكون في قسيمة الراتب. الضريبة والاشتراكات تُخصم بحكم القانون. غير ذلك، لا يجوز للوكالة أن تخصم من الحد الأدنى للأجور إلا تكلفتين: إيجار السكن وقسط التأمين الصحي، وفقط بعد موافقة مكتوبة. التكاليف الأخرى، مثل النقل وملابس العمل والغرامات أو رسوم إيجاد العمل، لا يجوز أن تُخصم من الحد الأدنى للأجور. خصم غير مفهوم؟ طلب شرح مكتوب من الوكالة. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork." }, // nieuw, nalezen
-    'c.deductions.p': "لماذا هذا الخصم؟", // nieuw, nalezen
-    'c.deductions.s': { m: "الوكالة تخصم مالاً من أجرك مقابل الحافلة إلى العمل. أنت تكسب الحد الأدنى للأجور. ماذا تفعل؟", f: "الوكالة تخصم مالاً من أجرك مقابل الحافلة إلى العمل. أنتِ تكسبين الحد الأدنى للأجور. ماذا تفعلين؟", x: "الوكالة تخصم مالاً من الأجر مقابل الحافلة إلى العمل. الأجر هو الحد الأدنى للأجور. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.deductions.o1': "السؤال عن ذلك: هذا غير مسموح.", // nieuw, nalezen
-    'c.deductions.o2': "لا شيء: الحافلة كل يوم.", // nieuw, nalezen
-    'c.deductions.o3': "التوقّف عن ركوب الحافلة، والمشي.", // nieuw, nalezen
-    'c.deductions.w': "من الحد الأدنى للأجور، لا يجوز أن يُخصم إلا الإيجار والتأمين الصحي، وفقط بموافقتك المكتوبة. النقابة أو Juridisch Loket يستطيعان المساعدة.", // nieuw, nalezen
-    'l.agencyhome': "السكن والمساعدة", // nieuw, nalezen
-    'w.huisvesting': "السكن (مكان للعيش، ترتّبه الوكالة)", // nieuw, nalezen
-    'w.huisgenoot': "شريك السكن (شخص يعيش في البيت نفسه)", // nieuw, nalezen
-    'w.huisregels': "قواعد البيت (قواعد البيت الذي تعيش فيه)", // nieuw, nalezen
-    'w.huismeester': "مدير السكن (الشخص الذي يعتني بالبيت)", // nieuw, nalezen
-    'w.meldpunt': "مكتب البلاغات (مكان يمكن فيه التبليغ عن مشكلة)", // nieuw, nalezen
-    'w.advies': "النصيحة", // nieuw, nalezen
-    's.agencyhome.1': "أريد عقد إيجار خاصاً بي.", // nieuw, nalezen
-    's.agencyhome.2': "يوجد عفن في الحمّام.", // nieuw, nalezen
-    's.agencyhome.3': "سأتّصل بالنقابة لأطلب النصيحة.", // nieuw, nalezen
-    'c.agencyhome.q': { m: "يجب أن تترك السكن يوم الجمعة.", f: "يجب أن تتركي السكن يوم الجمعة.", x: "يجب ترك السكن يوم الجمعة." }, // nieuw, nalezen
-    'c.agencyhome.a': "هذا وقت قصير جداً. سأطلب النصيحة أولاً.", // nieuw, nalezen
-    'c.agencyhome': { m: "سكنك، وأين تجد المساعدة", f: "سكنك، وأين تجدين المساعدة", x: "السكن، وأين توجد المساعدة" }, // nieuw, nalezen
-    'c.agencyhome.b': { m: "هل الوكالة ترتّب سكنك؟ عندها تحصل على عقد إيجار خاص بك، مكتوب، ومنفصل عن عقد العمل. احتفظ بنسخة. فيه ما تدفعه، وكيف ومتى ينتهي الإيجار. عملك يتوقّف؟ سكنك لا يتوقّف دائماً في اليوم نفسه: اطلب النصيحة قبل أن تغادر. سكن غير آمن أو مزدحم جداً، أو تهديدات، أو أجر منخفض جداً؟ اطلب المساعدة: النقابة، أو Juridisch Loket (نصيحة قانونية مجانية)، أو FairWork، أو Nederlandse Arbeidsinspectie (مفتشية العمل الهولندية)، حيث تستطيع أيضاً أن تبلّغ بدون اسمك. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork.", f: "هل الوكالة ترتّب سكنك؟ عندها تحصلين على عقد إيجار خاص بكِ، مكتوب، ومنفصل عن عقد العمل. احتفظي بنسخة. فيه ما تدفعينه، وكيف ومتى ينتهي الإيجار. عملك يتوقّف؟ سكنك لا يتوقّف دائماً في اليوم نفسه: اطلبي النصيحة قبل أن تغادري. سكن غير آمن أو مزدحم جداً، أو تهديدات، أو أجر منخفض جداً؟ اطلبي المساعدة: النقابة، أو Juridisch Loket (نصيحة قانونية مجانية)، أو FairWork، أو Nederlandse Arbeidsinspectie (مفتشية العمل الهولندية)، حيث تستطيعين أيضاً أن تبلّغي بدون اسمك. معلومات عامة. لوضعك أنت: اسألي النقابة أو Juridisch Loket أو FairWork.", x: "هل الوكالة ترتّب السكن؟ عندها يكون هناك عقد إيجار خاص، مكتوب، ومنفصل عن عقد العمل. الاحتفاظ بنسخة. فيه المبلغ المدفوع، وكيف ومتى ينتهي الإيجار. العمل يتوقّف؟ السكن لا يتوقّف دائماً في اليوم نفسه: طلب النصيحة قبل المغادرة. سكن غير آمن أو مزدحم جداً، أو تهديدات، أو أجر منخفض جداً؟ طلب المساعدة: النقابة، أو Juridisch Loket (نصيحة قانونية مجانية)، أو FairWork، أو Nederlandse Arbeidsinspectie (مفتشية العمل الهولندية)، حيث يمكن أيضاً التبليغ بدون اسم. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork." }, // nieuw, nalezen
-    'c.agencyhome.p': "هل يمكنني أن آخذ نسخة من عقد الإيجار؟", // nieuw, nalezen
-    'c.agencyhome.s': { m: "عملك يتوقّف. مدير السكن يقول إنه يجب أن تترك البيت اليوم. ماذا تفعل؟", f: "عملك يتوقّف. مدير السكن يقول إنه يجب أن تتركي البيت اليوم. ماذا تفعلين؟", x: "العمل يتوقّف. مدير السكن يقول إن ترك البيت يجب أن يكون اليوم. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.agencyhome.o1': "سؤال النقابة أو Juridisch Loket أولاً.", // nieuw, nalezen
-    'c.agencyhome.o2': "المغادرة اليوم، والنوم عند صديق.", // nieuw, nalezen
-    'c.agencyhome.o3': "حزم الحقيبة، والنوم في الخارج.", // nieuw, nalezen
-    'c.agencyhome.w': "لعقد الإيجار قواعده الخاصة، منفصلة عن العمل. النصيحة تساعد على معرفة متى يجب المغادرة فعلاً.", // nieuw, nalezen
+    'c.shopclose.p': "نحن نغلق. سأقفل الباب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.s': { m: "رجل معه سكين يريد المال من صندوقك. ماذا تفعل؟", f: "رجل معه سكين يريد المال من صندوقك. ماذا تفعلين؟", x: "رجل معه سكين يريد المال من الصندوق. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.o1': "البقاء هادئاً، وإعطاؤه المال.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.o2': "مقاومته: المال ليس له.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.o3': "الركض إلى الخلف، والانغلاق في غرفة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.w': "المقاومة أو الهرب تجعل السارق متوتّراً وأكثر خطراً. المال يمكن تعويضه. حياة الإنسان لا تُعوَّض.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.uitzend': "العمل عن طريق وكالة توظيف مؤقت", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.hirer': "الوكالة والشركة المستخدِمة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inlener': "الشركة المستخدِمة (الشركة التي ترسلك الوكالة للعمل فيها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vestiging': "الفرع (مكتب الوكالة في مدينتك)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.intakegesprek': "مقابلة التسجيل (أول حديث في الوكالة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opstapplaats': "نقطة الركوب (حيث تأخذك حافلة الوكالة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedrijfsregels': "قواعد الشركة (قواعد الشركة المستخدِمة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanspreekpunt': "الشخص المرجعي (الشخص الذي تذهب إليه بأسئلتك)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hirer.1': { m: "غداً تعمل عند شركة مستخدِمة جديدة.", f: "غداً تعملين عند شركة مستخدِمة جديدة.", x: "غداً يكون العمل عند شركة مستخدِمة جديدة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.hirer.2': "من هو الشخص المرجعي لي هنا؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hirer.3': "الحافلة تنطلق من نقطة الركوب في الساعة السادسة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.q': { m: "هل تستطيع أن تبدأ غداً عند شركة مستخدِمة جديدة؟", f: "هل تستطيعين أن تبدئي غداً عند شركة مستخدِمة جديدة؟", x: "هل يمكن البدء غداً عند شركة مستخدِمة جديدة؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.a': "نعم. متى يجب أن أكون هناك؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer': "شركتان: من يفعل ماذا؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.b': { m: "أنت تعمل عن طريق وكالة (uitzendbureau)، لكنك تقوم بالعمل في شركة أخرى: الشركة المستخدِمة (inlener). الوكالة هي صاحب عملك: عقدك وأجرك وقسيمة راتبك وأيام إجازتك تأتي من الوكالة. الشركة المستخدِمة تقول لك ماذا تفعل في مكان العمل، ويجب أن تجعل عملك آمناً، تماماً مثل عمالها. بلّغ عن مرضك بالطريقة التي تقولها وكالتك: غالباً للوكالة وللشركة المستخدِمة. احفظ في هاتفك اسم ورقم الشخص المرجعي لك في الوكالة. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "أنتِ تعملين عن طريق وكالة (uitzendbureau)، لكنك تقومين بالعمل في شركة أخرى: الشركة المستخدِمة (inlener). الوكالة هي صاحب عملك: عقدك وأجرك وقسيمة راتبك وأيام إجازتك تأتي من الوكالة. الشركة المستخدِمة تقول لكِ ماذا تفعلين في مكان العمل، ويجب أن تجعل عملكِ آمناً، تماماً مثل عمالها. بلّغي عن مرضك بالطريقة التي تقولها وكالتك: غالباً للوكالة وللشركة المستخدِمة. احفظي في هاتفك اسم ورقم الشخص المرجعي لكِ في الوكالة. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "العمل يكون عن طريق وكالة (uitzendbureau)، لكن مكان العمل شركة أخرى: الشركة المستخدِمة (inlener). الوكالة هي صاحب العمل: العقد والأجر وقسيمة الراتب وأيام الإجازة تأتي من الوكالة. الشركة المستخدِمة تقول ما يجب فعله في مكان العمل، ويجب أن تجعل العمل آمناً، تماماً مثل عمالها. التبليغ عن المرض بالطريقة التي تقولها الوكالة: غالباً للوكالة وللشركة المستخدِمة. حفظ اسم ورقم الشخص المرجعي في الوكالة في الهاتف. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.p': "من هو الشخص المرجعي لي في الوكالة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.s': { m: "عند الشركة المستخدِمة يجب أن تعمل على آلة. لم يشرح لك أحد كيف. ماذا تفعل؟", f: "عند الشركة المستخدِمة يجب أن تعملي على آلة. لم يشرح لكِ أحد كيف. ماذا تفعلين؟", x: "عند الشركة المستخدِمة يجب العمل على آلة. لم يشرح أحد كيف. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.o1': "طلب الشرح من الشركة المستخدِمة أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.o2': "التجربة: الوكالة هي المسؤولة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.o3': "الذهاب إلى البيت، وعدم قول شيء.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.w': "يجب على الشركة المستخدِمة أن تشرح طريقة العمل بأمان، مثل ما تفعل مع عمالها. طلب ذلك حقك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.phases': "عقدك والمراحل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.fase': "المرحلة (خطوة في عقدك مع الوكالة: A أو B أو C)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitzendbeding': "شرط الوكالة (عملك يمكن أن يتوقّف عندما لا تحتاجك الشركة المستخدِمة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aflopen': "ينتهي (عقد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doorwerken': "يستمرّ في العمل (في المكان نفسه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vastecontract': "العقد الدائم (عقد بدون تاريخ نهاية)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderbreking': "الانقطاع (فترة بدون عمل بين عقدين)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.phases.1': "في أي مرحلة أنا الآن؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.phases.2': "عقدي ينتهي الأسبوع القادم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.phases.3': "هل أستطيع أن أستمرّ في العمل هنا؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.q': "مهمّتك تنتهي يوم الجمعة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.a': "حسناً. هل عندكم عمل آخر لي؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases': "المراحل A وB وC", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.b': { m: "معظم العمال المؤقتين يعملون تحت اتفاقية عمل جماعية للعمال المؤقتين (uitzend-cao). فيها مراحل. في المرحلة A، يمكن عادة أن يتوقّف عملك عندما لا تحتاجك الشركة المستخدِمة بعد الآن (uitzendbeding). في المرحلة B، تحصل على عقود لمدة محدّدة. في المرحلة C، تحصل على عقد دائم مع الوكالة. مدّة كل مرحلة مكتوبة في اتفاقيتك الجماعية (cao). اسأل الوكالة في أي مرحلة أنت، واحتفظ بكل عقودك. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "معظم العمال المؤقتين يعملون تحت اتفاقية عمل جماعية للعمال المؤقتين (uitzend-cao). فيها مراحل. في المرحلة A، يمكن عادة أن يتوقّف عملك عندما لا تحتاجك الشركة المستخدِمة بعد الآن (uitzendbeding). في المرحلة B، تحصلين على عقود لمدة محدّدة. في المرحلة C، تحصلين على عقد دائم مع الوكالة. مدّة كل مرحلة مكتوبة في اتفاقيتك الجماعية (cao). اسألي الوكالة في أي مرحلة أنتِ، واحتفظي بكل عقودك. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "معظم العمال المؤقتين يعملون تحت اتفاقية عمل جماعية للعمال المؤقتين (uitzend-cao). فيها مراحل. في المرحلة A، يمكن عادة أن يتوقّف العمل عندما لا تحتاج الشركة المستخدِمة العامل بعد الآن (uitzendbeding). في المرحلة B، تكون العقود لمدة محدّدة. في المرحلة C، يكون العقد دائماً مع الوكالة. مدّة كل مرحلة مكتوبة في الاتفاقية الجماعية (cao). سؤال الوكالة عن المرحلة الحالية، والاحتفاظ بكل العقود. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.p': "كم تدوم المرحلة A بالنسبة لي؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.s': { m: "عملت وقتاً طويلاً لدى الوكالة نفسها. ما زلت تحصل على عقود قصيرة. ماذا تفعل؟", f: "عملتِ وقتاً طويلاً لدى الوكالة نفسها. ما زلتِ تحصلين على عقود قصيرة. ماذا تفعلين؟", x: "مضى وقت طويل من العمل لدى الوكالة نفسها. العقود ما زالت قصيرة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.o1': "سؤال الوكالة عن المرحلة الحالية.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.o2': "لا شيء: العمل المؤقت قصير دائماً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.o3': "التوقّف، والبحث عن وكالة أخرى.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.w': "بعد وقت كافٍ، تعطيك الاتفاقية الجماعية أماناً أكثر. الوكالة تستطيع أن تقول لك أين أنت، والنقابة تستطيع أن تتحقّق من ذلك معك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.deductions': "الأجر والخصومات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inhouding': "الخصم (مال يُقتطع من أجرك)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vastekracht': "العامل الدائم (عامل توظّفه الشركة المستخدِمة نفسها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vervoer': "النقل (الحافلة أو الشاحنة الصغيرة إلى العمل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schriftelijk': "كتابةً (على ورق أو في بريد إلكتروني)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.navragen': "يستفسر (يتحقّق هل الشيء صحيح)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brutoloon': "الأجر الإجمالي (أجرك قبل الضريبة والخصومات)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.deductions.1': "ما هذا الخصم في قسيمة راتبي؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.deductions.2': "هل أكسب مثل العمال الدائمين؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.deductions.3': "أريد أن أرى ذلك على ورق أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.q': "نخصم تكاليف الحافلة من أجرك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.a': "هل هذا مسموح؟ سأتحقّق من ذلك أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions': "ماذا يجوز أن يُخصم من أجرك؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.b': { m: "لك الحق على الأقل في نفس الأجر الذي يحصل عليه عمال الشركة المستخدِمة الذين يقومون بنفس العمل. المال الذي يُخصم من أجرك (inhouding) يجب أن يكون في قسيمة راتبك. الضريبة والاشتراكات تُخصم بحكم القانون. غير ذلك، لا يجوز للوكالة أن تخصم من الحد الأدنى للأجور إلا تكلفتين: إيجار سكنك وقسط التأمين الصحي، وفقط إذا وافقت على ذلك كتابةً. التكاليف الأخرى، مثل النقل وملابس العمل والغرامات أو رسوم لإيجاد عمل لك، لا يجوز أن تُخصم من الحد الأدنى للأجور. لا تفهم خصماً؟ اطلب من الوكالة أن تشرحه لك كتابةً. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork.", f: "لكِ الحق على الأقل في نفس الأجر الذي يحصل عليه عمال الشركة المستخدِمة الذين يقومون بنفس العمل. المال الذي يُخصم من أجرك (inhouding) يجب أن يكون في قسيمة راتبك. الضريبة والاشتراكات تُخصم بحكم القانون. غير ذلك، لا يجوز للوكالة أن تخصم من الحد الأدنى للأجور إلا تكلفتين: إيجار سكنك وقسط التأمين الصحي، وفقط إذا وافقتِ على ذلك كتابةً. التكاليف الأخرى، مثل النقل وملابس العمل والغرامات أو رسوم لإيجاد عمل لكِ، لا يجوز أن تُخصم من الحد الأدنى للأجور. لا تفهمين خصماً؟ اطلبي من الوكالة أن تشرحه لكِ كتابةً. معلومات عامة. لوضعك أنت: اسألي النقابة أو Juridisch Loket أو FairWork.", x: "للعامل الحق على الأقل في نفس الأجر الذي يحصل عليه عمال الشركة المستخدِمة الذين يقومون بنفس العمل. المال الذي يُخصم من الأجر (inhouding) يجب أن يكون في قسيمة الراتب. الضريبة والاشتراكات تُخصم بحكم القانون. غير ذلك، لا يجوز للوكالة أن تخصم من الحد الأدنى للأجور إلا تكلفتين: إيجار السكن وقسط التأمين الصحي، وفقط بعد موافقة مكتوبة. التكاليف الأخرى، مثل النقل وملابس العمل والغرامات أو رسوم إيجاد العمل، لا يجوز أن تُخصم من الحد الأدنى للأجور. خصم غير مفهوم؟ طلب شرح مكتوب من الوكالة. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.p': "لماذا هذا الخصم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.s': { m: "الوكالة تخصم مالاً من أجرك مقابل الحافلة إلى العمل. أنت تكسب الحد الأدنى للأجور. ماذا تفعل؟", f: "الوكالة تخصم مالاً من أجرك مقابل الحافلة إلى العمل. أنتِ تكسبين الحد الأدنى للأجور. ماذا تفعلين؟", x: "الوكالة تخصم مالاً من الأجر مقابل الحافلة إلى العمل. الأجر هو الحد الأدنى للأجور. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.o1': "السؤال عن ذلك: هذا غير مسموح.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.o2': "لا شيء: الحافلة كل يوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.o3': "التوقّف عن ركوب الحافلة، والمشي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.w': "من الحد الأدنى للأجور، لا يجوز أن يُخصم إلا الإيجار والتأمين الصحي، وفقط بموافقتك المكتوبة. النقابة أو Juridisch Loket يستطيعان المساعدة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.agencyhome': "السكن والمساعدة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huisvesting': "السكن (مكان للعيش، ترتّبه الوكالة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huisgenoot': "شريك السكن (شخص يعيش في البيت نفسه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huisregels': "قواعد البيت (قواعد البيت الذي تعيش فيه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huismeester': "مدير السكن (الشخص الذي يعتني بالبيت)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meldpunt': "مكتب البلاغات (مكان يمكن فيه التبليغ عن مشكلة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.advies': "النصيحة", // nieuw, nalezen // nagelezen AI 28 nov
+    's.agencyhome.1': "أريد عقد إيجار خاصاً بي.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.agencyhome.2': "يوجد عفن في الحمّام.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.agencyhome.3': "سأتّصل بالنقابة لأطلب النصيحة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.q': { m: "يجب أن تترك السكن يوم الجمعة.", f: "يجب أن تتركي السكن يوم الجمعة.", x: "يجب ترك السكن يوم الجمعة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.a': "هذا وقت قصير جداً. سأطلب النصيحة أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome': { m: "سكنك، وأين تجد المساعدة", f: "سكنك، وأين تجدين المساعدة", x: "السكن، وأين توجد المساعدة" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.b': { m: "هل الوكالة ترتّب سكنك؟ عندها تحصل على عقد إيجار خاص بك، مكتوب، ومنفصل عن عقد العمل. احتفظ بنسخة. فيه ما تدفعه، وكيف ومتى ينتهي الإيجار. عملك يتوقّف؟ سكنك لا يتوقّف دائماً في اليوم نفسه: اطلب النصيحة قبل أن تغادر. سكن غير آمن أو مزدحم جداً، أو تهديدات، أو أجر منخفض جداً؟ اطلب المساعدة: النقابة، أو Juridisch Loket (نصيحة قانونية مجانية)، أو FairWork، أو Nederlandse Arbeidsinspectie (مفتشية العمل الهولندية)، حيث تستطيع أيضاً أن تبلّغ بدون اسمك. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork.", f: "هل الوكالة ترتّب سكنك؟ عندها تحصلين على عقد إيجار خاص بكِ، مكتوب، ومنفصل عن عقد العمل. احتفظي بنسخة. فيه ما تدفعينه، وكيف ومتى ينتهي الإيجار. عملك يتوقّف؟ سكنك لا يتوقّف دائماً في اليوم نفسه: اطلبي النصيحة قبل أن تغادري. سكن غير آمن أو مزدحم جداً، أو تهديدات، أو أجر منخفض جداً؟ اطلبي المساعدة: النقابة، أو Juridisch Loket (نصيحة قانونية مجانية)، أو FairWork، أو Nederlandse Arbeidsinspectie (مفتشية العمل الهولندية)، حيث تستطيعين أيضاً أن تبلّغي بدون اسمك. معلومات عامة. لوضعك أنت: اسألي النقابة أو Juridisch Loket أو FairWork.", x: "هل الوكالة ترتّب السكن؟ عندها يكون هناك عقد إيجار خاص، مكتوب، ومنفصل عن عقد العمل. الاحتفاظ بنسخة. فيه المبلغ المدفوع، وكيف ومتى ينتهي الإيجار. العمل يتوقّف؟ السكن لا يتوقّف دائماً في اليوم نفسه: طلب النصيحة قبل المغادرة. سكن غير آمن أو مزدحم جداً، أو تهديدات، أو أجر منخفض جداً؟ طلب المساعدة: النقابة، أو Juridisch Loket (نصيحة قانونية مجانية)، أو FairWork، أو Nederlandse Arbeidsinspectie (مفتشية العمل الهولندية)، حيث يمكن أيضاً التبليغ بدون اسم. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.p': "هل يمكنني أن آخذ نسخة من عقد الإيجار؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.s': { m: "عملك يتوقّف. مدير السكن يقول إنه يجب أن تترك البيت اليوم. ماذا تفعل؟", f: "عملك يتوقّف. مدير السكن يقول إنه يجب أن تتركي البيت اليوم. ماذا تفعلين؟", x: "العمل يتوقّف. مدير السكن يقول إن ترك البيت يجب أن يكون اليوم. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.o1': "سؤال النقابة أو Juridisch Loket أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.o2': "المغادرة اليوم، والنوم عند صديق.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.o3': "حزم الحقيبة، والنوم في الخارج.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.w': "لعقد الإيجار قواعده الخاصة، منفصلة عن العمل. النصيحة تساعد على معرفة متى يجب المغادرة فعلاً.", // nieuw, nalezen // nagelezen AI 28 nov
     // The basis units at four lessons (23 November 2026): two new lessons each in Solliciteren, Wonen en papieren, Loon, Verlof, Ziekte, Uitbuiting herkennen, Naar je werk, Je werk afronden, Stage lopen, Meedoen in Nederland and Online op je werk.
-    'l.vacancy': "قراءة إعلان وظيفة", // nieuw, nalezen
-    'w.advertentie': "الإعلان (نص يعرض عملاً أو شيئاً)", // nieuw, nalezen
-    'w.eis': "الشرط (ما يجب امتلاكه أو القدرة عليه)", // nieuw, nalezen
-    'w.parttime': "دوام جزئي (ساعات أقل في الأسبوع)", // nieuw, nalezen
-    'w.fulltime': "دوام كامل (أسبوع عمل كامل)", // nieuw, nalezen
-    'w.sollicitatiebrief': "رسالة طلب العمل", // nieuw, nalezen
-    'w.contactpersoon': "الشخص المسؤول عن التواصل (الشخص الذي يمكن الاتصال به أو الكتابة إليه)", // nieuw, nalezen
-    's.vacancy.1': "رأيت إعلانكم على الإنترنت.", // nieuw, nalezen
-    's.vacancy.2': "هل الوظيفة بدوام جزئي أم بدوام كامل؟", // nieuw, nalezen
-    's.vacancy.3': "ما هي الشروط؟", // nieuw, nalezen
-    'c.vacancy.q': { m: "لماذا تتصل؟", f: "لماذا تتصلين؟", x: "ما سبب الاتصال؟" }, // nieuw, nalezen
-    'c.vacancy.a': "أتصل بخصوص الوظيفة الشاغرة عندكم. هل ما زالت متاحة؟", // nieuw, nalezen
-    'l.result': "بعد المقابلة", // nieuw, nalezen
-    'w.aangenomen': "مقبول في العمل (الحصول على الوظيفة)", // nieuw, nalezen
-    'w.afwijzing': "الرفض (عدم الحصول على الوظيفة)", // nieuw, nalezen
-    'w.aanbod': "العرض (يعرضون عليك الوظيفة)", // nieuw, nalezen
-    'w.proefdag': "يوم التجربة (يوم عمل واحد للتجربة)", // nieuw, nalezen
-    'w.nabellen': "يعاود الاتصال (للسؤال عن سير الأمور)", // nieuw, nalezen
-    'w.teleurgesteld': "خائب الأمل", // nieuw, nalezen
-    's.result.1': "لقد تمّ قبولك في العمل!", // nieuw, nalezen
-    's.result.2': "وصلني رفض.", // nieuw, nalezen
-    's.result.3': "هل يوم التجربة مدفوع الأجر؟", // nieuw, nalezen
-    'c.result.q': "للأسف، اخترنا شخصاً آخر.", // nieuw, nalezen
-    'c.result.a': "خسارة. هل يمكنني أن أسأل لماذا؟", // nieuw, nalezen
-    'l.residence': "أوراق إقامتك", // nieuw, nalezen
-    'w.verblijfsvergunning': "تصريح الإقامة", // nieuw, nalezen
-    'w.pasfoto': "صورة جواز السفر", // nieuw, nalezen
-    'w.vingerafdruk': "بصمة الإصبع", // nieuw, nalezen
-    'w.geldig': "ساري المفعول (ما زال صالحاً للاستخدام)", // nieuw, nalezen
-    'w.verloopdatum': "تاريخ الانتهاء (آخر يوم يكون فيه صالحاً)", // nieuw, nalezen
-    'w.volgnummer': "رقم الدور (الورقة التي فيها دورك)", // nieuw, nalezen
-    's.residence.1': "تصريح إقامتي ساري المفعول لسنة أخرى.", // nieuw, nalezen
-    's.residence.2': "ما تاريخ انتهاء جواز سفرك؟", // nieuw, nalezen
-    's.residence.3': "عندي موعد في البلدية.", // nieuw, nalezen
-    'c.residence.q': "تصريح إقامتك على وشك الانتهاء.", // nieuw, nalezen
-    'c.residence.a': "إذن سأطلب تصريحاً جديداً فوراً.", // nieuw, nalezen
-    'l.newhome': "الانتقال إلى بيت جديد", // nieuw, nalezen
-    'w.brievenbus': "صندوق البريد", // nieuw, nalezen
-    'w.meterstand': "قراءة العدّاد (الأرقام على عدّاد الغاز أو الكهرباء أو الماء)", // nieuw, nalezen
-    'w.naambordje': "لوحة الاسم (اسمك على الباب)", // nieuw, nalezen
-    'w.woning': "المسكن (بيت أو شقة)", // nieuw, nalezen
-    'w.doorsturen': "يحوّل (يرسل إلى عنوان جديد)", // nieuw, nalezen
-    'w.verhuisdag': "يوم الانتقال", // nieuw, nalezen
-    's.newhome.1': "سأنتقل إلى بيت جديد الأسبوع القادم.", // nieuw, nalezen
-    's.newhome.2': "اسمي ليس على صندوق البريد.", // nieuw, nalezen
-    's.newhome.3': "أبلّغ عن عنواني الجديد.", // nieuw, nalezen
-    'c.newhome.q': { m: "أين تسكن الآن؟", f: "أين تسكنين الآن؟", x: "ما عنوان السكن الآن؟" }, // nieuw, nalezen
-    'c.newhome.a': "في مسكن جديد. هذا عنواني الجديد.", // nieuw, nalezen
-    'l.payparts': "ما في قسيمة راتبك", // nieuw, nalezen
-    'w.pensioen': "المعاش التقاعدي (مال لوقت الكِبَر)", // nieuw, nalezen
-    'w.periode': "الفترة (الأسابيع أو الشهر لهذا الأجر)", // nieuw, nalezen
-    'w.bedrag': "المبلغ (من المال)", // nieuw, nalezen
-    'w.totaal': "المجموع", // nieuw, nalezen
-    'w.afkorting': "الاختصار (شكل قصير لكلمة)", // nieuw, nalezen
-    'w.personeelsnummer': "الرقم الوظيفي (رقمك في الشركة)", // nieuw, nalezen
-    's.payparts.1': "ماذا يعني هذا الاختصار؟", // nieuw, nalezen
-    's.payparts.2': "هذا المبلغ يذهب إلى معاشي التقاعدي.", // nieuw, nalezen
-    's.payparts.3': "عن أي فترة هذا الأجر؟", // nieuw, nalezen
-    'c.payparts.q': "ما رقمك الوظيفي؟", // nieuw, nalezen
-    'c.payparts.a': "إنه في الأعلى، بجانب اسمي.", // nieuw, nalezen
-    'l.latepay': "أجر متأخر أو ناقص أو نقدي", // nieuw, nalezen
-    'w.zwartwerken': "العمل بالأسود (بدون عقد، بدون ضرائب، بدون حقوق على الورق)", // nieuw, nalezen
-    'w.voorschot': "السُّلفة (جزء من أجرك قبل يوم الدفع)", // nieuw, nalezen
-    'w.nabetaling': "الدفعة اللاحقة (مال يأتي لاحقاً لتصحيح أجرك)", // nieuw, nalezen
-    'w.tekort': "النقص (مال ناقص)", // nieuw, nalezen
-    'w.betaaldag': "يوم دفع الأجر", // nieuw, nalezen
-    'w.bankafschrift': "كشف الحساب البنكي (قائمة بالمال الداخل والخارج)", // nieuw, nalezen
-    's.latepay.1': "أجري متأخر.", // nieuw, nalezen
-    's.latepay.2': "أنا لا أعمل بالأسود.", // nieuw, nalezen
-    's.latepay.3': "هل يمكنني الحصول على سُلفة؟", // nieuw, nalezen
-    'c.latepay.q': { m: "ستحصل على المال الناقص الشهر القادم.", f: "ستحصلين على المال الناقص الشهر القادم.", x: "المال الناقص يأتي الشهر القادم." }, // nieuw, nalezen
-    'c.latepay.a': "هل يمكنني الحصول على ذلك على ورق؟", // nieuw, nalezen
-    'l.holiday': "تخطيط إجازتك", // nieuw, nalezen
-    'w.saldo': "الرصيد (كم يوماً بقي لك)", // nieuw, nalezen
-    'w.goedkeuren': "يوافق على (يقول نعم)", // nieuw, nalezen
-    'w.verlopen': "ينتهي (لم يعد صالحاً)", // nieuw, nalezen
-    'w.zomervakantie': "العطلة الصيفية", // nieuw, nalezen
-    'w.drukte': "وقت الضغط (عمل كثير)", // nieuw, nalezen
-    'w.aanvraag': "الطلب (طلب شيء ما، غالباً في استمارة)", // nieuw, nalezen
-    's.holiday.1': "كم يوم إجازة بقي لي؟", // nieuw, nalezen
-    's.holiday.2': "تمّت الموافقة على إجازتي.", // nieuw, nalezen
-    's.holiday.3': "أملأ الاستمارة.", // nieuw, nalezen
-    'c.holiday.q': { m: "في الصيف يكون العمل كثيراً. هل يمكنك أن تأخذ إجازة في مايو؟", f: "في الصيف يكون العمل كثيراً. هل يمكنك أن تأخذي إجازة في مايو؟", x: "في الصيف يكون العمل كثيراً. هل الإجازة في مايو ممكنة؟" }, // nieuw, nalezen
-    'c.holiday.a': "أفضّل في يوليو. عندها تكون عائلتي في البيت.", // nieuw, nalezen
-    'l.special': "إجازات خاصة", // nieuw, nalezen
-    'w.bruiloft': "حفل الزفاف", // nieuw, nalezen
-    'w.begrafenis': "الجنازة", // nieuw, nalezen
-    'w.geboorteverlof': "إجازة الولادة (للشريك، عند ولادة طفل)", // nieuw, nalezen
-    'w.bijzonderverlof': "الإجازة الخاصة (مثلاً لحفل زفاف أو جنازة)", // nieuw, nalezen
-    'w.kerstdagen': "عيد الميلاد (يوما عيد الميلاد)", // nieuw, nalezen
-    'w.vrijvragen': "يطلب يوم إجازة", // nieuw, nalezen
-    's.special.1': "أخي سيتزوّج. هل يمكنني أن أطلب يوم إجازة؟", // nieuw, nalezen
-    's.special.2': "عمّي توفّي. الجنازة يوم الجمعة.", // nieuw, nalezen
-    's.special.3': "هل يجب أن أعمل في أيام عيد الميلاد؟", // nieuw, nalezen
-    'c.special.q': { m: "مبروك على طفلك! هل ستأخذ إجازة الولادة؟", f: "مبروك على طفلك! هل ستأخذين إجازة الولادة؟", x: "مبروك على المولود! هل ستكون هناك إجازة ولادة؟" }, // nieuw, nalezen
-    'c.special.a': "نعم، في الأسبوع الأول أبقى في البيت.", // nieuw, nalezen
-    'l.unwell': "الشعور بالتوعّك", // nieuw, nalezen
-    'w.hoofdpijn': "الصداع", // nieuw, nalezen
-    'w.griep': "الإنفلونزا", // nieuw, nalezen
-    'w.verkouden': "مصاب بالزكام", // nieuw, nalezen
-    'w.nietlekker': "متوعّك (شعور بمرض خفيف)", // nieuw, nalezen
-    'w.naarhuis': "يذهب إلى البيت", // nieuw, nalezen
-    'w.uitzieken': "يبقى في البيت حتى يشفى", // nieuw, nalezen
-    's.unwell.1': "لا أشعر أنني بخير.", // nieuw, nalezen
-    's.unwell.2': "عندي صداع وزكام.", // nieuw, nalezen
-    's.unwell.3': { m: "سأذهب إلى البيت. أنا مريض.", f: "سأذهب إلى البيت. أنا مريضة.", x: "سأذهب إلى البيت. أشعر بالمرض." }, // nieuw, nalezen
-    'c.unwell.q': { m: "وجهك شاحب. هل أنت بخير؟", f: "وجهك شاحب. هل أنتِ بخير؟", x: "الوجه شاحب. هل كل شيء بخير؟" }, // nieuw, nalezen
-    'c.unwell.a': "لا، لا أشعر أنني بخير. هل يمكنني الذهاب إلى البيت؟", // nieuw, nalezen
-    'l.injury': "إصابة بسبب العمل", // nieuw, nalezen
-    'w.bedrijfsongeval': "حادث العمل", // nieuw, nalezen
-    'w.verzekering': "التأمين", // nieuw, nalezen
-    'w.schadevergoeding': "التعويض (مال مقابل الضرر)", // nieuw, nalezen
-    'w.oorzaak': "السبب (لماذا حدث)", // nieuw, nalezen
-    'w.letsel': "الإصابة (ضرر في الجسم)", // nieuw, nalezen
-    'w.verklaring': "الإفادة (ما يُكتب أو يُقال عمّا حدث)", // nieuw, nalezen
-    's.injury.1': "تعرّضت لحادث عمل.", // nieuw, nalezen
-    's.injury.2': "ما كان السبب؟", // nieuw, nalezen
-    's.injury.3': "زميلي رأى ذلك.", // nieuw, nalezen
-    'c.injury.q': { m: "هل تكتب إفادتك هنا؟", f: "هل تكتبين إفادتك هنا؟", x: "هل يمكن كتابة الإفادة هنا؟" }, // nieuw, nalezen
-    'c.injury.a': "نعم. هل يمكنني أن آخذ نسخة؟", // nieuw, nalezen
-    'l.debt': "دَين للمدير أو للوكالة", // nieuw, nalezen
-    'w.lening': "القرض", // nieuw, nalezen
-    'w.lenen': "يقترض، يُقرض", // nieuw, nalezen
-    'w.vastzitten': "عالق (لا يمكن المغادرة)", // nieuw, nalezen
-    'w.tussenpersoon': "الوسيط (شخص يرتّب العمل مقابل المال)", // nieuw, nalezen
-    'w.rente': "الفائدة (مال إضافي يُدفع على القرض)", // nieuw, nalezen
-    'w.belofte': "الوعد", // nieuw, nalezen
-    's.debt.1': "اضطررت أن أدفع مقابل هذا العمل.", // nieuw, nalezen
-    's.debt.2': "دَيني يزيد كل شهر.", // nieuw, nalezen
-    's.debt.3': "الوسيط يحتفظ بجواز سفري.", // nieuw, nalezen
-    'c.debt.q': { m: "لا يجوز لك أن تغادر إلا بعد أن تدفع دَينك.", f: "لا يجوز لكِ أن تغادري إلا بعد أن تدفعي دَينك.", x: "المغادرة ممنوعة قبل دفع الدَّين." }, // nieuw, nalezen
-    'c.debt.a': "هذا غير مسموح. سأطلب المساعدة.", // nieuw, nalezen
-    'l.inspection': "التفتيش ومساعدة أخرى", // nieuw, nalezen
-    'w.inspectie': "التفتيش (أشخاص يتحقّقون هل العمل عادل وآمن)", // nieuw, nalezen
-    'w.controle': "الفحص، المراقبة", // nieuw, nalezen
-    'w.slachtoffer': "الضحية", // nieuw, nalezen
-    'w.mensenhandel': "الاتجار بالبشر (استغلال الناس وبيعهم للعمل أو للجنس)", // nieuw, nalezen
-    'w.vertrouwen': "يثق", // nieuw, nalezen
-    'w.tolk': "المترجم الشفهي", // nieuw, nalezen
-    's.inspection.1': "غداً يأتي التفتيش.", // nieuw, nalezen
-    's.inspection.2': "هل يمكنني الحصول على مترجم؟", // nieuw, nalezen
-    's.inspection.3': "أنا لا أثق بهذا الرجل.", // nieuw, nalezen
-    'c.inspection.q': { m: "هل تريد أن تتكلم مع المفتشين؟", f: "هل تريدين أن تتكلمي مع المفتشين؟", x: "هل هناك رغبة في الكلام مع المفتشين؟" }, // nieuw, nalezen
-    'c.inspection.a': "نعم، لكن يجب ألا يسمع مديري ذلك.", // nieuw, nalezen
-    'l.carpool': "مشاركة السيارة وحافلة العمل", // nieuw, nalezen
-    'w.carpoolen': "مشاركة السيارة (الذهاب إلى العمل معاً في سيارة واحدة)", // nieuw, nalezen
-    'w.meerijden': "الركوب مع شخص (في سيارة شخص آخر)", // nieuw, nalezen
-    'w.gordel': "حزام الأمان", // nieuw, nalezen
-    'w.instappen': "يركب (سيارة أو حافلة أو قطاراً)", // nieuw, nalezen
-    'w.uitstappen': "ينزل (من سيارة أو حافلة أو قطار)", // nieuw, nalezen
-    'w.bijrijder': "الراكب (بجانب السائق)", // nieuw, nalezen
-    's.carpool.1': "هل يمكنني أن أركب معك؟", // nieuw, nalezen
-    's.carpool.2': "ضع حزام الأمان.", // nieuw, nalezen
-    's.carpool.3': "أنزل عند المحطة.", // nieuw, nalezen
-    'c.carpool.q': "من سيقود غداً؟", // nieuw, nalezen
-    'c.carpool.a': "أنا سأقود. سآتي لآخذك في الساعة السادسة.", // nieuw, nalezen
-    'l.train': "القطار والتأخير والوصول متأخراً", // nieuw, nalezen
-    'w.station': "محطة القطار", // nieuw, nalezen
-    'w.perron': "الرصيف (مكان ركوب القطار)", // nieuw, nalezen
-    'w.overstappen': "يبدّل (إلى قطار أو حافلة أخرى)", // nieuw, nalezen
-    'w.uitvallen': "يُلغى (القطار لا يسير)", // nieuw, nalezen
-    'w.kaartje': "التذكرة", // nieuw, nalezen
-    'w.reisplanner': "مخطّط الرحلات (تطبيق يعرض القطارات والحافلات)", // nieuw, nalezen
-    's.train.1': "قطاري أُلغي.", // nieuw, nalezen
-    's.train.2': "يجب أن أبدّل القطار مرة واحدة.", // nieuw, nalezen
-    's.train.3': "من أي رصيف يغادر القطار؟", // nieuw, nalezen
-    'c.train.q': { m: "لماذا تأخرت كثيراً؟", f: "لماذا تأخرتِ كثيراً؟", x: "ما سبب هذا التأخير الكبير؟" }, // nieuw, nalezen
-    'c.train.a': "قطاري أُلغي. أرسلت لك رسالة.", // nieuw, nalezen
-    'l.checklist': { m: "تحقّق قبل أن تنتهي", f: "تحقّقي قبل أن تنتهي", x: "التحقّق قبل الانتهاء" }, // nieuw, nalezen
-    'w.checklist': "قائمة التحقّق (قائمة بأشياء يجب فحصها)", // nieuw, nalezen
-    'w.afvinken': "يضع علامة (علامة صح بجانب مهمة)", // nieuw, nalezen
-    'w.overdoen': "يعيد العمل", // nieuw, nalezen
-    'w.compleet': "كامل (لا ينقصه شيء)", // nieuw, nalezen
-    'w.vergeten': "ينسى", // nieuw, nalezen
-    'w.resultaat': "النتيجة", // nieuw, nalezen
-    's.checklist.1': "أضع علامة على كل شيء في قائمة التحقّق.", // nieuw, nalezen
-    's.checklist.2': "هل الطلبية كاملة؟", // nieuw, nalezen
-    's.checklist.3': "يجب أن أعيد هذا.", // nieuw, nalezen
-    'c.checklist.q': { m: "ألم تنسَ شيئاً؟", f: "ألم تنسي شيئاً؟", x: "هل نُسي شيء؟" }, // nieuw, nalezen
-    'c.checklist.a': "سأنظر في قائمة التحقّق مرة أخرى.", // nieuw, nalezen
-    'l.leavesite': "مغادرة مكان عملك", // nieuw, nalezen
-    'w.terugzetten': "يعيد (إلى مكانه)", // nieuw, nalezen
-    'w.vegen': "يكنس", // nieuw, nalezen
-    'w.vloer': "الأرضية", // nieuw, nalezen
-    'w.uitdoen': "يطفئ (الضوء، آلة)", // nieuw, nalezen
-    'w.alslaatste': "آخر واحد", // nieuw, nalezen
-    'w.achterlaten': "يترك (كيف يُترك المكان)", // nieuw, nalezen
-    's.leavesite.1': "أترك مكاني مرتّباً.", // nieuw, nalezen
-    's.leavesite.2': "من يغادر آخر واحد؟", // nieuw, nalezen
-    's.leavesite.3': "أطفئ الضوء وأغلق الباب.", // nieuw, nalezen
-    'c.leavesite.q': { m: "هل أنت آخر من يغادر اليوم؟", f: "هل أنتِ آخر من يغادر اليوم؟", x: "من آخر من يغادر اليوم؟" }, // nieuw, nalezen
-    'c.leavesite.a': "نعم. أطفئ كل شيء وأقفل الباب.", // nieuw, nalezen
-    'l.stagedays': "كل يوم في تدريبك العملي", // nieuw, nalezen
-    'w.stageplek': "مكان التدريب (الشركة التي يكون فيها التدريب العملي)", // nieuw, nalezen
-    'w.afwezig': "غائب (غير موجود)", // nieuw, nalezen
-    'w.aanwezig': "حاضر (موجود)", // nieuw, nalezen
-    'w.stagevergoeding': "مكافأة التدريب (مال قد يُعطى في مكان التدريب)", // nieuw, nalezen
-    'w.begeleiding': "الإرشاد (مساعدة من المرشد)", // nieuw, nalezen
-    'w.leerling': "الطالب (في المدرسة)", // nieuw, nalezen
-    's.stagedays.1': { m: "سأكون غائباً غداً. أنا مريض.", f: "سأكون غائبة غداً. أنا مريضة.", x: "لن آتي غداً. أشعر بالمرض." }, // nieuw, nalezen
-    's.stagedays.2': "هل أحصل على مكافأة تدريب؟", // nieuw, nalezen
-    's.stagedays.3': "أعمل أربعة أيام في مكان تدريبي.", // nieuw, nalezen
-    'c.stagedays.q': { m: "لماذا كنت غائباً أمس؟", f: "لماذا كنتِ غائبة أمس؟", x: "ما سبب الغياب أمس؟" }, // nieuw, nalezen
-    'c.stagedays.a': { m: "كنت مريضاً. اتصلت بالمدرسة والشركة.", f: "كنت مريضة. اتصلت بالمدرسة والشركة.", x: "كنت أشعر بالمرض. اتصلت بالمدرسة والشركة." }, // nieuw, nalezen
-    'l.stageend': "نهاية تدريبك العملي", // nieuw, nalezen
-    'w.eindgesprek': "المقابلة الختامية (في نهاية التدريب)", // nieuw, nalezen
-    'w.geslaagd': "ناجح (أداء جيد بما يكفي)", // nieuw, nalezen
-    'w.gezakt': "راسب (ليس جيداً بما يكفي هذه المرة)", // nieuw, nalezen
-    'w.herkansing': "إعادة الامتحان (فرصة جديدة)", // nieuw, nalezen
-    'w.bedanken': "يشكر", // nieuw, nalezen
-    'w.trakteren': "يضيّف (يحضر شيئاً لذيذاً للأكل للجميع)", // nieuw, nalezen
-    's.stageend.1': "غداً عندي المقابلة الختامية.", // nieuw, nalezen
-    's.stageend.2': "نجحت في تدريبي العملي.", // nieuw, nalezen
-    's.stageend.3': "أريد أن أشكر الجميع.", // nieuw, nalezen
-    'c.stageend.q': { m: "يومك الأخير! ماذا ستفعل الآن؟", f: "يومك الأخير! ماذا ستفعلين الآن؟", x: "اليوم الأخير! ما الخطوة التالية الآن؟" }, // nieuw, nalezen
-    'c.stageend.a': "أولاً أحصل على شهادتي. ثم أبحث عن عمل.", // nieuw, nalezen
-    'l.neighbours': "حيّك", // nieuw, nalezen
-    'w.buurt': "الحيّ", // nieuw, nalezen
-    'w.buurthuis': "مركز الحيّ (بيت للأنشطة في حيّك)", // nieuw, nalezen
-    'w.straat': "الشارع", // nieuw, nalezen
-    'w.kennismaken': "يتعرّف على (يلتقي شخصاً لأول مرة)", // nieuw, nalezen
-    'w.overlast': "الإزعاج (ضجيج أو مشاكل للآخرين)", // nieuw, nalezen
-    'w.buurvrouw': "الجارة", // nieuw, nalezen
-    's.neighbours.1': "أسكن في هذا الشارع منذ وقت قصير.", // nieuw, nalezen
-    's.neighbours.2': "أتمرّن على الهولندية في المكتبة.", // nieuw, nalezen
-    's.neighbours.3': "عذراً على الإزعاج.", // nieuw, nalezen
-    'c.neighbours.q': "مرحباً، أنا جارتك الجديدة.", // nieuw, nalezen
-    'c.neighbours.a': "تشرّفت بمعرفتك! أنا علي.", // nieuw, nalezen
-    'l.join': "المدرسة والرياضة والعمل التطوعي", // nieuw, nalezen
-    'w.vrijwilliger': "المتطوّع (شخص يساعد بدون أجر)", // nieuw, nalezen
-    'w.vrijwilligerswerk': "العمل التطوعي", // nieuw, nalezen
-    'w.sportclub': "النادي الرياضي", // nieuw, nalezen
-    'w.ouderavond': "اجتماع أولياء الأمور (في المدرسة)", // nieuw, nalezen
-    'w.leraar': "المعلّم", // nieuw, nalezen
-    'w.basisschool': "المدرسة الابتدائية", // nieuw, nalezen
-    's.join.1': "ابني يذهب إلى المدرسة الابتدائية.", // nieuw, nalezen
-    's.join.2': "ألعب كرة القدم في نادٍ رياضي.", // nieuw, nalezen
-    's.join.3': "يوم السبت أقوم بعمل تطوعي.", // nieuw, nalezen
-    'c.join.q': { m: "هل ستأتي إلى اجتماع أولياء الأمور؟", f: "هل ستأتين إلى اجتماع أولياء الأمور؟", x: "هل سيكون هناك حضور في اجتماع أولياء الأمور؟" }, // nieuw, nalezen
-    'c.join.a': "نعم. أودّ أن أتكلم مع المعلّم.", // nieuw, nalezen
-    'l.workphotos': "الصور والبيانات", // nieuw, nalezen
-    'w.gezicht': "الوجه", // nieuw, nalezen
-    'w.klantgegevens': "بيانات الزبائن (اسم الزبون وعنوانه وهاتفه)", // nieuw, nalezen
-    'w.onlinezetten': "ينشر على الإنترنت", // nieuw, nalezen
-    'w.wissen': "يحذف", // nieuw, nalezen
-    'w.werktelefoon': "هاتف العمل", // nieuw, nalezen
-    'w.bestand': "الملف (على الحاسوب)", // nieuw, nalezen
-    's.workphotos.1': "لا أنشر صوراً من العمل على الإنترنت.", // nieuw, nalezen
-    's.workphotos.2': "أحذف الصورة فوراً.", // nieuw, nalezen
-    's.workphotos.3': "وجهه ظاهر في الصورة.", // nieuw, nalezen
-    'c.workphotos.q': "هل يمكنني أن ألتقط لك صورة؟ للإنترنت.", // nieuw, nalezen
-    'c.workphotos.a': "لا، شكراً. لا أريد أن أكون على الإنترنت.", // nieuw, nalezen
-    'l.device': "هاتف وحاسوب آمنان", // nieuw, nalezen
-    'w.update': "التحديث (نسخة جديدة من تطبيق أو برنامج)", // nieuw, nalezen
-    'w.virus': "الفيروس (برنامج يضرّ الحاسوب)", // nieuw, nalezen
-    'w.wifi': "الواي فاي", // nieuw, nalezen
-    'w.usbstick': "ذاكرة USB", // nieuw, nalezen
-    'w.installeren': "يثبّت (برنامجاً)", // nieuw, nalezen
-    'w.openbaar': "عام (للجميع)", // nieuw, nalezen
-    's.device.1': "سأثبّت التحديث هذا المساء.", // nieuw, nalezen
-    's.device.2': "ذاكرة USB هذه كانت على الأرض.", // nieuw, nalezen
-    's.device.3': "هل هذا الواي فاي آمن؟", // nieuw, nalezen
-    'c.device.q': "هل يجوز أن أضع هذا التطبيق على هاتف العمل؟", // nieuw, nalezen
-    'c.device.a': "اسأل قسم تقنية المعلومات أولاً.", // nieuw, nalezen
-    'c.vacancy': { m: "اتصل، أو أرسل رسالة قصيرة", f: "اتصلي، أو أرسلي رسالة قصيرة", x: "الاتصال، أو إرسال رسالة قصيرة" }, // nieuw, nalezen
-    'c.vacancy.b': { m: "اقرأ الإعلان جيداً: الساعات، والمكان، وما يجب أن يكون لديك، مثل رخصة قيادة أو شهادة. لا يلزم أن يكون لديك كل شيء: إذا كان لديك معظمه، فجرّب على أي حال. اتصل أو اكتب رسالة قصيرة: قل اسمك، وأي وظيفة، ولماذا تريدها. لا تدفع مالاً أبداً للحصول على عمل، ولا ترسل أبداً رموز الدخول الخاصة بك من أجل إعلان.", f: "اقرئي الإعلان جيداً: الساعات، والمكان، وما يجب أن يكون لديك، مثل رخصة قيادة أو شهادة. لا يلزم أن يكون لديك كل شيء: إذا كان لديك معظمه، فجرّبي على أي حال. اتصلي أو اكتبي رسالة قصيرة: قولي اسمك، وأي وظيفة، ولماذا تريدينها. لا تدفعي مالاً أبداً للحصول على عمل، ولا ترسلي أبداً رموز الدخول الخاصة بك من أجل إعلان.", x: "قراءة الإعلان جيداً: الساعات، والمكان، والمطلوب، مثل رخصة قيادة أو شهادة. ليس من اللازم توفّر كل شيء: عند توفّر معظمه، تستحق المحاولة على أي حال. الاتصال أو كتابة رسالة قصيرة: ذكر الاسم، وأي وظيفة، وسبب الرغبة فيها. لا يجوز أبداً دفع مال للحصول على عمل، ولا إرسال رموز الدخول أبداً من أجل إعلان." }, // nieuw, nalezen
-    'c.vacancy.p': "ليست لديّ شهادة، لكن عندي خبرة كبيرة.", // nieuw, nalezen
-    'c.vacancy.s': { m: "إعلان يطلب خبرة 3 سنوات. لديك خبرة 2 سنة فقط. ماذا تفعل؟", f: "إعلان يطلب خبرة 3 سنوات. لديك خبرة 2 سنة فقط. ماذا تفعلين؟", x: "إعلان يطلب خبرة 3 سنوات. الخبرة الموجودة 2 سنة فقط. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.vacancy.o1': "التقديم على أي حال، وذكر المهارات الموجودة.", // nieuw, nalezen
-    'c.vacancy.o2': "عدم التقديم: الخبرة قليلة جداً.", // nieuw, nalezen
-    'c.vacancy.o3': "كتابة 3 سنوات: لا أحد يتحقّق.", // nieuw, nalezen
-    'c.vacancy.w': "الإعلان غالباً يطلب أكثر مما تحتاجه الوظيفة فعلاً. الصدق بشأن القدرات أفضل من الكذب.", // nieuw, nalezen
-    'c.result': "الرفض ليس النهاية", // nieuw, nalezen
-    'c.result.b': { m: "لم تسمع شيئاً بعد أسبوع؟ يمكنك أن تعاود الاتصال وتسأل بأدب. حصلت على رفض؟ اسأل ماذا يمكنك أن تفعل بشكل أفضل في المرة القادمة: كثير من أصحاب العمل يخبرونك. ثم جرّب مرة أخرى: معظم الناس يحصلون على بعض الرفض أولاً. حصلت على قبول؟ اسأل متى تبدأ، واطلب عقدك قبل أن تبدأ. دُعيت إلى يوم تجربة؟ اسأل قبله كم يدوم، وهل هو مدفوع الأجر.", f: "لم تسمعي شيئاً بعد أسبوع؟ يمكنك أن تعاودي الاتصال وتسألي بأدب. حصلتِ على رفض؟ اسألي ماذا يمكنك أن تفعلي بشكل أفضل في المرة القادمة: كثير من أصحاب العمل يخبرونك. ثم جرّبي مرة أخرى: معظم الناس يحصلون على بعض الرفض أولاً. حصلتِ على قبول؟ اسألي متى تبدئين، واطلبي عقدك قبل أن تبدئي. دُعيتِ إلى يوم تجربة؟ اسألي قبله كم يدوم، وهل هو مدفوع الأجر.", x: "لا خبر بعد أسبوع؟ معاودة الاتصال والسؤال بأدب أمر ممكن. جاء رفض؟ السؤال عمّا يمكن تحسينه في المرة القادمة: كثير من أصحاب العمل يجيبون. ثم المحاولة مرة أخرى: معظم الناس يحصلون على بعض الرفض أولاً. جاء قبول؟ السؤال عن موعد البدء، وطلب العقد قبل البدء. دعوة إلى يوم تجربة؟ السؤال قبله عن مدّته، وهل هو مدفوع الأجر." }, // nieuw, nalezen
-    'c.result.p': "ماذا يمكنني أن أفعل بشكل أفضل في المرة القادمة؟", // nieuw, nalezen
-    'c.result.s': { m: "بعد مقابلة عمل، يصلك رفض بالإيميل. ماذا تفعل؟", f: "بعد مقابلة عمل، يصلك رفض بالإيميل. ماذا تفعلين؟", x: "بعد مقابلة عمل، يصل رفض بالإيميل. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.result.o1': "السؤال بأدب عمّا يمكن تحسينه.", // nieuw, nalezen
-    'c.result.o2': "الرد بأنهم أخطؤوا.", // nieuw, nalezen
-    'c.result.o3': "التوقّف عن التقديم: لا فائدة.", // nieuw, nalezen
-    'c.result.w': "الملاحظات تساعد في المقابلة القادمة. والسؤال المهذّب يترك أيضاً صورة جيدة.", // nieuw, nalezen
-    'c.residence': { m: "أوراقك: تحقّق من التاريخ", f: "أوراقك: تحقّقي من التاريخ", x: "الأوراق: التحقّق من التاريخ" }, // nieuw, nalezen
-    'c.residence.b': { m: "من الاتحاد الأوروبي؟ عندها يحق لك أن تسكن وتعمل هنا بجواز سفر أو بطاقة هوية سارية: لا تحتاج إلى تصريح. من خارج الاتحاد الأوروبي؟ عندها تحتاج إلى تصريح إقامة ساري المفعول. على البطاقة مكتوب هل يحق لك العمل. تحقّق من تاريخ انتهاء أوراقك. اطلب تصريحاً جديداً من IND في الوقت المناسب: قبل التاريخ بأشهر، وليس في الأسبوع الأخير. احتفظ بنسخة من كل رسالة. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "من الاتحاد الأوروبي؟ عندها يحق لكِ أن تسكني وتعملي هنا بجواز سفر أو بطاقة هوية سارية: لا تحتاجين إلى تصريح. من خارج الاتحاد الأوروبي؟ عندها تحتاجين إلى تصريح إقامة ساري المفعول. على البطاقة مكتوب هل يحق لكِ العمل. تحقّقي من تاريخ انتهاء أوراقك. اطلبي تصريحاً جديداً من IND في الوقت المناسب: قبل التاريخ بأشهر، وليس في الأسبوع الأخير. احتفظي بنسخة من كل رسالة. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "من الاتحاد الأوروبي؟ عندها يحق السكن والعمل هنا بجواز سفر أو بطاقة هوية سارية: لا حاجة إلى تصريح. من خارج الاتحاد الأوروبي؟ عندها يلزم تصريح إقامة ساري المفعول. على البطاقة مكتوب هل العمل مسموح. التحقّق من تاريخ انتهاء الأوراق. طلب تصريح جديد من IND في الوقت المناسب: قبل التاريخ بأشهر، وليس في الأسبوع الأخير. الاحتفاظ بنسخة من كل رسالة. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen
-    'c.residence.p': "تصريحي سينتهي قريباً. ماذا يجب أن أفعل؟", // nieuw, nalezen
-    'c.residence.s': { m: "تصريح إقامتك ينتهي بعد شهرين. أنت مشغول جداً في العمل. ماذا تفعل؟", f: "تصريح إقامتك ينتهي بعد شهرين. أنتِ مشغولة جداً في العمل. ماذا تفعلين؟", x: "تصريح الإقامة ينتهي بعد شهرين. العمل كثير جداً. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.residence.o1': "طلب تصريح جديد الآن.", // nieuw, nalezen
-    'c.residence.o2': "الانتظار حتى الأسبوع الأخير.", // nieuw, nalezen
-    'c.residence.o3': "لا شيء: العمل أولاً.", // nieuw, nalezen
-    'c.residence.w': "بدون تصريح ساري المفعول، قد لا يكون العمل مسموحاً. التصريح الجديد يأخذ وقتاً، لذلك تكون البداية مبكرة.", // nieuw, nalezen
-    'c.newhome': { m: "عنوان جديد؟ أخبر الجميع", f: "عنوان جديد؟ أخبري الجميع", x: "عنوان جديد؟ إخبار الجميع" }, // nieuw, nalezen
-    'c.newhome.b': { m: "ستنتقل؟ أبلغ البلدية (gemeente) بعنوانك الجديد بسرعة: هذا واجب عليك. أبلغ أيضاً صاحب العمل والبنك والتأمين والطبيب. ضع اسمك على صندوق البريد، وإلا فلن تصلك الرسائل. في يوم الانتقال، اكتب قراءات العدّادات والتقط لها صوراً. عندها تدفع فقط ثمن ما استهلكته.", f: "ستنتقلين؟ أبلغي البلدية (gemeente) بعنوانك الجديد بسرعة: هذا واجب عليكِ. أبلغي أيضاً صاحب العمل والبنك والتأمين والطبيب. ضعي اسمك على صندوق البريد، وإلا فلن تصلك الرسائل. في يوم الانتقال، اكتبي قراءات العدّادات والتقطي لها صوراً. عندها تدفعين فقط ثمن ما استهلكتِه.", x: "انتقال إلى بيت جديد؟ إبلاغ البلدية (gemeente) بالعنوان الجديد بسرعة: هذا واجب. إبلاغ صاحب العمل والبنك والتأمين والطبيب أيضاً. وضع الاسم على صندوق البريد، وإلا فلن تصل الرسائل. في يوم الانتقال، كتابة قراءات العدّادات والتقاط صور لها. عندها يكون الدفع فقط مقابل ما تمّ استهلاكه." }, // nieuw, nalezen
-    'c.newhome.p': "انتقلت إلى بيت جديد. هذا عنواني الجديد.", // nieuw, nalezen
-    'c.newhome.s': { m: "انتقلت قبل أسبوعين. رسائلك ما زالت تذهب إلى عنوانك القديم. ماذا تفعل؟", f: "انتقلتِ قبل أسبوعين. رسائلك ما زالت تذهب إلى عنوانك القديم. ماذا تفعلين؟", x: "الانتقال كان قبل أسبوعين. الرسائل ما زالت تذهب إلى العنوان القديم. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.newhome.o1': "إعطاء العنوان الجديد للبلدية الآن.", // nieuw, nalezen
-    'c.newhome.o2': "الانتظار: البريد سيجد طريقه.", // nieuw, nalezen
-    'c.newhome.o3': "طلب حفظ الرسائل من الجار القديم.", // nieuw, nalezen
-    'c.newhome.w': "الرسائل المهمة، مثل الغرامات أو رسائل الضرائب، فيها مواعيد. عندما تذهب إلى العنوان الخطأ، قد تضيع.", // nieuw, nalezen
-    'c.payparts': { m: "اقرأ كل سطر", f: "اقرئي كل سطر", x: "قراءة كل سطر" }, // nieuw, nalezen
-    'c.payparts.b': { m: "في قسيمة راتبك أسطر كثيرة وكلمات قصيرة. في الأعلى: اسمك ورقمك الوظيفي والفترة. ثم أجرك الإجمالي وساعاتك وأي أجر إضافي. ثم ما يُخصم: الضريبة والأقساط. في كثير من الوظائف، تدفع أنت وصاحب العمل معاً لمعاشك التقاعدي: ترى حصتك في قسيمة راتبك. في الأسفل: أجرك الصافي. لا تفهم سطراً؟ اطلب من صاحب العمل أن يشرحه لك. احتفظ بكل قسائم راتبك. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "في قسيمة راتبك أسطر كثيرة وكلمات قصيرة. في الأعلى: اسمك ورقمك الوظيفي والفترة. ثم أجرك الإجمالي وساعاتك وأي أجر إضافي. ثم ما يُخصم: الضريبة والأقساط. في كثير من الوظائف، تدفعين أنتِ وصاحب العمل معاً لمعاشك التقاعدي: ترين حصتك في قسيمة راتبك. في الأسفل: أجرك الصافي. لا تفهمين سطراً؟ اطلبي من صاحب العمل أن يشرحه لكِ. احتفظي بكل قسائم راتبك. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "في قسيمة الراتب أسطر كثيرة وكلمات قصيرة. في الأعلى: الاسم والرقم الوظيفي والفترة. ثم الأجر الإجمالي والساعات وأي أجر إضافي. ثم ما يُخصم: الضريبة والأقساط. في كثير من الوظائف، يدفع العامل وصاحب العمل معاً للمعاش التقاعدي: حصة العامل ظاهرة في قسيمة الراتب. في الأسفل: الأجر الصافي. سطر غير مفهوم؟ طلب الشرح من صاحب العمل. الاحتفاظ بكل قسائم الراتب. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen
-    'c.payparts.p': "ماذا يعني هذا السطر في قسيمة راتبي؟", // nieuw, nalezen
-    'c.payparts.s': { m: "في قسيمة راتبك يذهب مال إلى «pensioen». لا تعرف لماذا. ماذا تفعل؟", f: "في قسيمة راتبك يذهب مال إلى «pensioen». لا تعرفين لماذا. ماذا تفعلين؟", x: "في قسيمة الراتب يذهب مال إلى «pensioen». السبب غير معروف. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.payparts.o1': "طلب الشرح من صاحب العمل.", // nieuw, nalezen
-    'c.payparts.o2': "طلب إيقافه، للحصول على مال أكثر الآن.", // nieuw, nalezen
-    'c.payparts.o3': "تجاهله: البقاء في هذا العمل لن يطول.", // nieuw, nalezen
-    'c.payparts.w': "مال المعاش التقاعدي يُدّخر لك، للمستقبل. عادةً يبقى لك عند تغيير العمل. السؤال يساعد على معرفة ما هو لك.", // nieuw, nalezen
-    'c.latepay': { m: "أجر متأخر أو نقدي؟ تصرّف في الوقت المناسب", f: "أجر متأخر أو نقدي؟ تصرّفي في الوقت المناسب", x: "أجر متأخر أو نقدي؟ التصرّف في الوقت المناسب" }, // nieuw, nalezen
-    'c.latepay.b': { m: "يجب أن يصل أجرك في اليوم المذكور في عقدك أو في الاتفاقية الجماعية (cao). الأجر متأخر، أو هناك مال ناقص؟ اسأل عن ذلك كتابةً، مثلاً في إيميل. احتفظ بكشوف حسابك البنكي وبقائمة ساعاتك الخاصة. يُدفع لك نقداً، بدون قسيمة راتب؟ عندها يكون غالباً عملاً بالأسود (zwart): ساعاتك غير مسجّلة، ولاحقاً يصعب إثبات عملك أو الحصول على إعانة. اطلب قسيمة راتب. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork.", f: "يجب أن يصل أجرك في اليوم المذكور في عقدك أو في الاتفاقية الجماعية (cao). الأجر متأخر، أو هناك مال ناقص؟ اسألي عن ذلك كتابةً، مثلاً في إيميل. احتفظي بكشوف حسابك البنكي وبقائمة ساعاتك الخاصة. يُدفع لكِ نقداً، بدون قسيمة راتب؟ عندها يكون غالباً عملاً بالأسود (zwart): ساعاتك غير مسجّلة، ولاحقاً يصعب إثبات عملك أو الحصول على إعانة. اطلبي قسيمة راتب. معلومات عامة. لوضعك أنت: اسألي النقابة أو Juridisch Loket أو FairWork.", x: "يجب أن يصل الأجر في اليوم المذكور في العقد أو في الاتفاقية الجماعية (cao). الأجر متأخر، أو هناك مال ناقص؟ السؤال عن ذلك كتابةً، مثلاً في إيميل. الاحتفاظ بكشوف الحساب البنكي وبقائمة شخصية للساعات. دفع نقدي، بدون قسيمة راتب؟ عندها يكون غالباً عملاً بالأسود (zwart): الساعات غير مسجّلة، ولاحقاً يصعب إثبات العمل أو الحصول على إعانة. طلب قسيمة راتب. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork." }, // nieuw, nalezen
-    'c.latepay.p': "أجري لم يصل بعد. متى سيصل؟", // nieuw, nalezen
-    'c.latepay.s': { m: "مديرك يقول: «من الآن أدفع لك نقداً. بدون قسيمة راتب، هذا أسهل». ماذا تفعل؟", f: "مديرك يقول: «من الآن أدفع لك نقداً. بدون قسيمة راتب، هذا أسهل». ماذا تفعلين؟", x: "المدير يقول: «من الآن الدفع نقداً. بدون قسيمة راتب، هذا أسهل». ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.latepay.o1': "الرفض، وطلب قسيمة راتب.", // nieuw, nalezen
-    'c.latepay.o2': "الموافقة: النقد يعني مالاً أكثر.", // nieuw, nalezen
-    'c.latepay.o3': "الموافقة، لكن لهذا الشهر فقط.", // nieuw, nalezen
-    'c.latepay.w': "بدون قسيمة راتب، العمل غير موجود على الورق. عندها قد تضيع حقوق، مثلاً الإعانة عند فقدان العمل.", // nieuw, nalezen
-    'c.holiday': { m: "أيام إجازتك: استخدمها في الوقت المناسب", f: "أيام إجازتك: استخدميها في الوقت المناسب", x: "أيام الإجازة: استخدامها في الوقت المناسب" }, // nieuw, nalezen
-    'c.holiday.b': { m: "تحقّق كم يوم إجازة بقي لك: غالباً تجده في قسيمة راتبك أو في التطبيق. خطّط لإجازتك مبكراً، واطلبها كتابةً. أيام إجازتك القانونية تنتهي بعد 6 أشهر من نهاية السنة، إلا إذا لم تستطع أن تأخذها. الأيام الإضافية من الاتفاقية الجماعية أو العقد تبقى صالحة مدة أطول، عادةً 5 سنوات. عملك ينتهي؟ عندها تحصل على مال مقابل الأيام التي لم تأخذها. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "تحقّقي كم يوم إجازة بقي لكِ: غالباً تجدينه في قسيمة راتبك أو في التطبيق. خطّطي لإجازتك مبكراً، واطلبيها كتابةً. أيام إجازتك القانونية تنتهي بعد 6 أشهر من نهاية السنة، إلا إذا لم تستطيعي أن تأخذيها. الأيام الإضافية من الاتفاقية الجماعية أو العقد تبقى صالحة مدة أطول، عادةً 5 سنوات. عملك ينتهي؟ عندها تحصلين على مال مقابل الأيام التي لم تأخذيها. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "التحقّق من عدد أيام الإجازة الباقية: غالباً موجود في قسيمة الراتب أو في التطبيق. التخطيط للإجازة مبكراً، وطلبها كتابةً. أيام الإجازة القانونية تنتهي بعد 6 أشهر من نهاية السنة، إلا إذا لم يكن أخذها ممكناً. الأيام الإضافية من الاتفاقية الجماعية أو العقد تبقى صالحة مدة أطول، عادةً 5 سنوات. العمل ينتهي؟ عندها يُدفع مال مقابل الأيام التي لم تُؤخذ. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen
-    'c.holiday.p': "أريد أن آخذ أيام إجازتي هذه السنة.", // nieuw, nalezen
-    'c.holiday.s': { m: "نحن في نوفمبر. بقي لك 12 يوم إجازة من هذه السنة. مشرفك لا يقول شيئاً عن ذلك. ماذا تفعل؟", f: "نحن في نوفمبر. بقي لك 12 يوم إجازة من هذه السنة. مشرفك لا يقول شيئاً عن ذلك. ماذا تفعلين؟", x: "نحن في نوفمبر. بقي 12 يوم إجازة من هذه السنة. المشرف لا يقول شيئاً عن ذلك. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.holiday.o1': "السؤال متى يمكن أخذها.", // nieuw, nalezen
-    'c.holiday.o2': "لا شيء: تبقى إلى الأبد.", // nieuw, nalezen
-    'c.holiday.o3': "نسيانها: لقد ضاعت الآن.", // nieuw, nalezen
-    'c.holiday.w': "أيام الإجازة للراحة، ويمكن أن تنتهي صلاحيتها. عند السؤال في الوقت المناسب، يبقى التخطيط لها ممكناً.", // nieuw, nalezen
-    'c.special': "زفاف، جنازة، طفل", // nieuw, nalezen
-    'c.special.b': { m: "وُلد طفلك، وأنت الشريك؟ عندها تحصل على إجازة ولادة مدفوعة الأجر لمدة 1 أسبوع، خلال أول 4 أسابيع. الاتفاقية الجماعية تعطي غالباً إجازة خاصة (bijzonder verlof) لزفافك، أو لجنازة في عائلتك. العطل الرسمية، مثل عيد الميلاد: لا يوجد قانون يقول إنك في إجازة. عقدك أو الاتفاقية الجماعية يقولان هل أنت في إجازة، أو هل تحصل على أجر إضافي. اطلب أيام إجازتك في الوقت المناسب. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "وُلد طفلك، وأنتِ الشريكة؟ عندها تحصلين على إجازة ولادة مدفوعة الأجر لمدة 1 أسبوع، خلال أول 4 أسابيع. الاتفاقية الجماعية تعطي غالباً إجازة خاصة (bijzonder verlof) لزفافك، أو لجنازة في عائلتك. العطل الرسمية، مثل عيد الميلاد: لا يوجد قانون يقول إنكِ في إجازة. عقدك أو الاتفاقية الجماعية يقولان هل أنتِ في إجازة، أو هل تحصلين على أجر إضافي. اطلبي أيام إجازتك في الوقت المناسب. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "وُلد الطفل، والإجازة للشريك؟ عندها توجد للشريك إجازة ولادة مدفوعة الأجر لمدة 1 أسبوع، خلال أول 4 أسابيع. الاتفاقية الجماعية تعطي غالباً إجازة خاصة (bijzonder verlof) للزفاف، أو لجنازة في العائلة. العطل الرسمية، مثل عيد الميلاد: لا يوجد قانون يجعلها يوم إجازة. العقد أو الاتفاقية الجماعية يحدّدان هل هي إجازة، أو هل يوجد أجر إضافي. طلب أيام الإجازة في الوقت المناسب. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen
-    'c.special.p': "زوجتي ستلد. كيف أطلب إجازة الولادة؟", // nieuw, nalezen
-    'c.special.s': { m: "والدك توفّي في الخارج. تريد أن تذهب إلى الجنازة. ماذا تفعل؟", f: "والدك توفّي في الخارج. تريدين أن تذهبي إلى الجنازة. ماذا تفعلين؟", x: "الوالد توفّي في الخارج. الرغبة هي الذهاب إلى الجنازة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.special.o1': "إبلاغ صاحب العمل، والسؤال عن الإجازة الممكنة.", // nieuw, nalezen
-    'c.special.o2': "الذهاب ببساطة، والإبلاغ بعد العودة.", // nieuw, nalezen
-    'c.special.o3': "عدم الذهاب: لم تبقَ أيام إجازة.", // nieuw, nalezen
-    'c.special.w': "صاحب العمل يفهم أن هذا مهم جداً. كثير من الاتفاقيات الجماعية تعطي إجازة خاصة، ويمكن أيضاً استخدام أيام الإجازة.", // nieuw, nalezen
-    'c.unwell': "المرض في العمل، أو في الإجازة", // nieuw, nalezen
-    'c.unwell.b': { m: "تشعر بالمرض في العمل؟ أخبر مشرفك قبل أن تذهب إلى البيت: هذا هو إبلاغك عن المرض. لا تغادر هكذا فقط. مرضت أثناء إجازتك؟ أبلغ صاحب العمل بنفس الطريقة كما في البيت، حتى من الخارج. عندها عادةً لا تُحسب أيام المرض أيام إجازة. قد تحتاج إلى ورقة من طبيب هناك. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "تشعرين بالمرض في العمل؟ أخبري مشرفك قبل أن تذهبي إلى البيت: هذا هو إبلاغك عن المرض. لا تغادري هكذا فقط. مرضتِ أثناء إجازتك؟ أبلغي صاحب العمل بنفس الطريقة كما في البيت، حتى من الخارج. عندها عادةً لا تُحسب أيام المرض أيام إجازة. قد تحتاجين إلى ورقة من طبيب هناك. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "شعور بالمرض في العمل؟ إخبار المشرف قبل الذهاب إلى البيت: هذا هو الإبلاغ عن المرض. لا تجوز المغادرة هكذا فقط. مرض أثناء الإجازة؟ إبلاغ صاحب العمل بنفس الطريقة كما في البيت، حتى من الخارج. عندها عادةً لا تُحسب أيام المرض أيام إجازة. قد تلزم ورقة من طبيب هناك. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen
-    'c.unwell.p': "مرضت أثناء الإجازة.", // nieuw, nalezen
-    'c.unwell.s': { m: "أنت في إجازة في بلدك. تصاب بالإنفلونزا وتبقى في السرير 5 أيام. ماذا تفعل؟", f: "أنتِ في إجازة في بلدك. تُصابين بالإنفلونزا وتبقين في السرير 5 أيام. ماذا تفعلين؟", x: "إجازة في البلد الأصلي. إنفلونزا، والبقاء في السرير 5 أيام. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.unwell.o1': "إبلاغ صاحب العمل فوراً.", // nieuw, nalezen
-    'c.unwell.o2': "لا شيء: إنها إجازة على أي حال.", // nieuw, nalezen
-    'c.unwell.o3': "إخبار صاحب العمل بعد العودة.", // nieuw, nalezen
-    'c.unwell.w': "عند الإبلاغ في الوقت المناسب، عادةً لا تُحسب أيام المرض أيام إجازة. عندها يبقى استخدام تلك الأيام لاحقاً ممكناً.", // nieuw, nalezen
-    'c.injury': { m: "أُصبت في العمل: اكتب ما حدث", f: "أُصبتِ في العمل: اكتبي ما حدث", x: "إصابة في العمل: كتابة ما حدث" }, // nieuw, nalezen
-    'c.injury.b': { m: "أُصبت في العمل؟ اكتب ماذا حدث، ومتى وأين، ومن رأى ذلك. التقط صوراً، واحتفظ بكل الأوراق من الطبيب. اطلب نسخة من تقرير الحادث. أُصبت لأن العمل لم يكن آمناً؟ عندها يجب على صاحب العمل عادةً أن يدفع عن ضررك. لا يلزمك أن تثبت أن الخطأ خطؤه: صاحب العمل هو الذي يجب أن يُظهر أنه فعل ما يكفي لسلامتك. اطلب النصيحة قبل أن توقّع على أي شيء. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "أُصبتِ في العمل؟ اكتبي ماذا حدث، ومتى وأين، ومن رأى ذلك. التقطي صوراً، واحتفظي بكل الأوراق من الطبيب. اطلبي نسخة من تقرير الحادث. أُصبتِ لأن العمل لم يكن آمناً؟ عندها يجب على صاحب العمل عادةً أن يدفع عن ضررك. لا يلزمكِ أن تثبتي أن الخطأ خطؤه: صاحب العمل هو الذي يجب أن يُظهر أنه فعل ما يكفي لسلامتك. اطلبي النصيحة قبل أن توقّعي على أي شيء. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "إصابة في العمل؟ كتابة ماذا حدث، ومتى وأين، ومن رأى ذلك. التقاط صور، والاحتفاظ بكل الأوراق من الطبيب. طلب نسخة من تقرير الحادث. إصابة لأن العمل لم يكن آمناً؟ عندها يجب على صاحب العمل عادةً أن يدفع عن الضرر. لا يلزم إثبات أن الخطأ خطؤه: صاحب العمل هو الذي يجب أن يُظهر أنه فعل ما يكفي للسلامة. طلب النصيحة قبل التوقيع على أي شيء. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen
-    'c.injury.p': "هل يمكنني أن آخذ نسخة من التقرير؟", // nieuw, nalezen
-    'c.injury.s': { m: "جرحت يدك في آلة بدون واقٍ. لاحقاً يطلب منك مديرك أن توقّع ورقة: «كان الخطأ خطئي أنا». ماذا تفعل؟", f: "جرحتِ يدك في آلة بدون واقٍ. لاحقاً يطلب منكِ مديرك أن توقّعي ورقة: «كان الخطأ خطئي أنا». ماذا تفعلين؟", x: "إصابة في اليد عند آلة بدون واقٍ. لاحقاً يطلب المدير التوقيع على ورقة: «كان الخطأ خطئي أنا». ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.injury.o1': "عدم التوقيع. طلب النصيحة أولاً.", // nieuw, nalezen
-    'c.injury.o2': "التوقيع، حتى لا تكون هناك مشاكل.", // nieuw, nalezen
-    'c.injury.o3': "التوقيع، مع الاحتفاظ بصورة من الورقة.", // nieuw, nalezen
-    'c.injury.w': "ما يتمّ توقيعه قد يُحسب لاحقاً، مثلاً عند طلب تعويض. أولاً النصيحة من النقابة أو Juridisch Loket.", // nieuw, nalezen
-    'c.debt': "دَين لا ينتهي أبداً", // nieuw, nalezen
-    'c.debt.b': { m: "في هولندا لا يجوز لوكالة أن تطلب منك مالاً مقابل إيجاد عمل لك. اضطررت أن تقترض مالاً للسفر أو للعمل، والدَّين يكبر باستمرار؟ يجب أن تبقى حتى يُدفع؟ هذه علامة استغلال. الدَّين لا يعني أبداً أنه يجب أن تستمر في العمل: يحق لك أن تتوقف. احتفظ بكل ورقة ورسالة عن الدَّين. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork.", f: "في هولندا لا يجوز لوكالة أن تطلب منكِ مالاً مقابل إيجاد عمل لكِ. اضطررتِ أن تقترضي مالاً للسفر أو للعمل، والدَّين يكبر باستمرار؟ يجب أن تبقي حتى يُدفع؟ هذه علامة استغلال. الدَّين لا يعني أبداً أنه يجب أن تستمري في العمل: يحق لكِ أن تتوقفي. احتفظي بكل ورقة ورسالة عن الدَّين. معلومات عامة. لوضعك أنت: اسألي النقابة أو Juridisch Loket أو FairWork.", x: "في هولندا لا يجوز لوكالة أن تطلب مالاً مقابل إيجاد عمل. اقتراض مال للسفر أو للعمل، والدَّين يكبر باستمرار؟ البقاء إجباري حتى يُدفع؟ هذه علامة استغلال. الدَّين لا يعني أبداً أن الاستمرار في العمل واجب: التوقّف حق. الاحتفاظ بكل ورقة ورسالة عن الدَّين. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork." }, // nieuw, nalezen
-    'c.debt.p': "كم بقي عليّ أن أدفع؟ أريد ذلك على ورق.", // nieuw, nalezen
-    'c.debt.s': { m: "الوكالة دفعت ثمن تذكرة حافلتك. الآن تخصم مالاً من أجرك كل أسبوع، والدَّين لا يصغر. ماذا تفعل؟", f: "الوكالة دفعت ثمن تذكرة حافلتك. الآن تخصم مالاً من أجرك كل أسبوع، والدَّين لا يصغر. ماذا تفعلين؟", x: "الوكالة دفعت ثمن تذكرة الحافلة. الآن تخصم مالاً من الأجر كل أسبوع، والدَّين لا يصغر. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.debt.o1': "طلب قائمة على ورق، وطلب المساعدة.", // nieuw, nalezen
-    'c.debt.o2': "العمل ساعات أكثر للدفع بسرعة أكبر.", // nieuw, nalezen
-    'c.debt.o3': "السكوت: الوكالة ساعدت.", // nieuw, nalezen
-    'c.debt.w': "الدَّين الذي لا يصغر يُبقي الشخص عالقاً. مع القائمة، تستطيع النقابة أو FairWork التحقّق هل هو عادل.", // nieuw, nalezen
-    'c.inspection': "التفتيش موجود من أجلك", // nieuw, nalezen
-    'c.inspection.b': { m: "Nederlandse Arbeidsinspectie (مفتشية العمل الهولندية) تتحقّق هل العمل آمن وعادل: الأجر والساعات والاستغلال. يحق للمفتشين أن يأتوا إلى عملك ويتكلموا مع العمال. يمكنك أن تقول لهم الحقيقة: هم لا يخبرون مديرك من بلّغ عن شيء. تحتاج إلى مساعدة بلغتك؟ اطلب مترجماً. FairWork تساعد ضحايا الاستغلال مجاناً، حتى الأشخاص الذين ليست لديهم أوراق سارية. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork.", f: "Nederlandse Arbeidsinspectie (مفتشية العمل الهولندية) تتحقّق هل العمل آمن وعادل: الأجر والساعات والاستغلال. يحق للمفتشين أن يأتوا إلى عملك ويتكلموا مع العمال. يمكنكِ أن تقولي لهم الحقيقة: هم لا يخبرون مديرك من بلّغ عن شيء. تحتاجين إلى مساعدة بلغتك؟ اطلبي مترجماً. FairWork تساعد ضحايا الاستغلال مجاناً، حتى الأشخاص الذين ليست لديهم أوراق سارية. معلومات عامة. لوضعك أنت: اسألي النقابة أو Juridisch Loket أو FairWork.", x: "Nederlandse Arbeidsinspectie (مفتشية العمل الهولندية) تتحقّق هل العمل آمن وعادل: الأجر والساعات والاستغلال. يحق للمفتشين أن يأتوا إلى مكان العمل ويتكلموا مع العمال. قول الحقيقة لهم ممكن: هم لا يخبرون المدير من بلّغ عن شيء. حاجة إلى مساعدة باللغة الأم؟ طلب مترجم. FairWork تساعد ضحايا الاستغلال مجاناً، حتى الأشخاص الذين ليست لديهم أوراق سارية. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork." }, // nieuw, nalezen
-    'c.inspection.p': "أريد أن أقول شيئاً، لكن بدون وجود مديري.", // nieuw, nalezen
-    'c.inspection.s': { m: "مفتش يسأل عن ساعاتك. مديرك قال لك أن تقول 8 ساعات. أنت تعمل 12 ساعة. ماذا تفعل؟", f: "مفتش يسأل عن ساعاتك. مديرك قال لكِ أن تقولي 8 ساعات. أنتِ تعملين 12 ساعة. ماذا تفعلين؟", x: "مفتش يسأل عن ساعات العمل. المدير طلب قول 8 ساعات. العمل الحقيقي 12 ساعة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.inspection.o1': "قول الحقيقة للمفتش.", // nieuw, nalezen
-    'c.inspection.o2': "قول 8 ساعات، كما قال المدير.", // nieuw, nalezen
-    'c.inspection.o3': "السكوت، والابتعاد.", // nieuw, nalezen
-    'c.inspection.w': "المفتش لا يستطيع المساعدة إلا عندما يعرف الحقيقة. قول الحقيقة يساعد صاحبها، ويساعد الزملاء أيضاً.", // nieuw, nalezen
-    'c.carpool': "في السيارة: الحزام، والاتفاق على التكاليف", // nieuw, nalezen
-    'c.carpool.b': { m: "كل من في السيارة يضع حزام الأمان، حتى في الخلف. السائق يحتاج إلى رخصة قيادة سارية، ويجب ألا يشرب الكحول قبل القيادة. أشخاص كثيرون جداً في الحافلة، أو السائق يقود بشكل خطير؟ قل ذلك، ولا تركب. تشارك السيارة مع زملاء؟ اتفقوا أولاً على تقسيم تكاليف الوقود. في حافلة العمل التابعة للوكالة؟ اسأل كم يكلّفك ذلك، واحصل عليه على ورق.", f: "كل من في السيارة يضع حزام الأمان، حتى في الخلف. السائق يحتاج إلى رخصة قيادة سارية، ويجب ألا يشرب الكحول قبل القيادة. أشخاص كثيرون جداً في الحافلة، أو السائق يقود بشكل خطير؟ قولي ذلك، ولا تركبي. تشاركين السيارة مع زملاء؟ اتفقوا أولاً على تقسيم تكاليف الوقود. في حافلة العمل التابعة للوكالة؟ اسألي كم يكلّفك ذلك، واحصلي عليه على ورق.", x: "كل من في السيارة يضع حزام الأمان، حتى في الخلف. السائق يحتاج إلى رخصة قيادة سارية، ويجب ألا يشرب الكحول قبل القيادة. أشخاص كثيرون جداً في الحافلة، أو السائق يقود بشكل خطير؟ قول ذلك، وعدم الركوب. مشاركة السيارة مع زملاء؟ الاتفاق أولاً على تقسيم تكاليف الوقود. في حافلة العمل التابعة للوكالة؟ السؤال عن التكلفة، والحصول عليها على ورق." }, // nieuw, nalezen
-    'c.carpool.p': "يوجد أشخاص كثيرون جداً في الحافلة. لن أركب.", // nieuw, nalezen
-    'c.carpool.s': { m: "حافلة العمل فيها 9 مقاعد. هذا الصباح يريد 11 شخصاً أن يركبوا. ماذا تفعل؟", f: "حافلة العمل فيها 9 مقاعد. هذا الصباح يريد 11 شخصاً أن يركبوا. ماذا تفعلين؟", x: "حافلة العمل فيها 9 مقاعد. هذا الصباح يريد 11 شخصاً أن يركبوا. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.carpool.o1': "عدم الركوب، والاتصال بالمشرف.", // nieuw, nalezen
-    'c.carpool.o2': "الجلوس على الأرض في الخلف.", // nieuw, nalezen
-    'c.carpool.o3': "الانحشار مع الآخرين: إنها 20 دقيقة فقط.", // nieuw, nalezen
-    'c.carpool.w': "بدون مقعد وحزام، يمكن لحادث صغير أن يكون خطيراً جداً. صاحب العمل أو الوكالة يستطيع إيجاد حل آخر.", // nieuw, nalezen
-    'c.train': { m: "القطار متأخر؟ أرسل رسالة فوراً", f: "القطار متأخر؟ أرسلي رسالة فوراً", x: "القطار متأخر؟ إرسال رسالة فوراً" }, // nieuw, nalezen
-    'c.train.b': { m: "انظر في مخطّط الرحلات قبل أن تخرج: القطارات والحافلات قد تتأخر أو تُلغى. قطارك متأخر؟ أرسل إلى مشرفك رسالة فوراً، مع الوقت الذي ستصل فيه. في أيام العاصفة أو الأشغال على السكة، خذ قطاراً أبكر. بعد تأخير طويل، يمكنك غالباً أن تستعيد مالاً: انظر في موقع شركة القطارات.", f: "انظري في مخطّط الرحلات قبل أن تخرجي: القطارات والحافلات قد تتأخر أو تُلغى. قطارك متأخر؟ أرسلي إلى مشرفك رسالة فوراً، مع الوقت الذي ستصلين فيه. في أيام العاصفة أو الأشغال على السكة، خذي قطاراً أبكر. بعد تأخير طويل، يمكنك غالباً أن تستعيدي مالاً: انظري في موقع شركة القطارات.", x: "النظر في مخطّط الرحلات قبل الخروج: القطارات والحافلات قد تتأخر أو تُلغى. القطار متأخر؟ إرسال رسالة إلى المشرف فوراً، مع وقت الوصول. في أيام العاصفة أو الأشغال على السكة، أخذ قطار أبكر. بعد تأخير طويل، غالباً يمكن استعادة مال: النظر في موقع شركة القطارات." }, // nieuw, nalezen
-    'c.train.p': "قطاري متأخر. سأكون هناك في الساعة التاسعة.", // nieuw, nalezen
-    'c.train.s': { m: "قطارك أُلغي. القطار التالي بعد 30 دقيقة. نوبتك تبدأ بعد 40 دقيقة. ماذا تفعل؟", f: "قطارك أُلغي. القطار التالي بعد 30 دقيقة. نوبتك تبدأ بعد 40 دقيقة. ماذا تفعلين؟", x: "القطار أُلغي. القطار التالي بعد 30 دقيقة. النوبة تبدأ بعد 40 دقيقة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.train.o1': "إرسال رسالة الآن عن التأخير.", // nieuw, nalezen
-    'c.train.o2': "الانتظار، والشرح عند الوصول.", // nieuw, nalezen
-    'c.train.o3': "العودة إلى البيت: ليس الذنب ذنبك.", // nieuw, nalezen
-    'c.train.w': "المشرف يستطيع التخطيط بشكل أفضل عندما يعرف مبكراً. التأخير ليس ذنبك، لكن الإخبار عنه مسؤوليتك.", // nieuw, nalezen
-    'c.checklist': { m: "تحقّق بنفسك أولاً", f: "تحقّقي بنفسك أولاً", x: "التحقّق الذاتي أولاً" }, // nieuw, nalezen
-    'c.checklist.b': { m: "قبل أن تقول «klaar» (انتهيت)، تحقّق من عملك بنفسك. استخدم قائمة التحقّق إن وُجدت، وضع علامة على كل خطوة. انظر إلى عملك كأنك أنت الزبون. شيء ليس جيداً؟ أعده الآن: هذا أسرع من لاحقاً. لست متأكداً؟ اطلب من زميل أن ينظر. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "قبل أن تقولي «klaar» (انتهيت)، تحقّقي من عملك بنفسك. استخدمي قائمة التحقّق إن وُجدت، وضعي علامة على كل خطوة. انظري إلى عملك كأنكِ أنتِ الزبونة. شيء ليس جيداً؟ أعيديه الآن: هذا أسرع من لاحقاً. لستِ متأكدة؟ اطلبي من زميل أن ينظر. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "قبل قول «klaar» (انتهيت)، التحقّق من العمل بشكل ذاتي. استخدام قائمة التحقّق إن وُجدت، ووضع علامة على كل خطوة. النظر إلى العمل بعين الزبون. شيء ليس جيداً؟ إعادته الآن: هذا أسرع من لاحقاً. شكّ؟ طلب نظرة من زميل. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.checklist.p': "انتهيت. هل يمكنك أن تتحقّق منه قليلاً؟", // nieuw, nalezen
-    'c.checklist.s': { m: "انتهيت. في قائمة التحقّق خطوة واحدة بدون علامة. تظن أنك قمت بها. ماذا تفعل؟", f: "انتهيتِ. في قائمة التحقّق خطوة واحدة بدون علامة. تظنين أنكِ قمتِ بها. ماذا تفعلين؟", x: "العمل انتهى. في قائمة التحقّق خطوة واحدة بدون علامة. يبدو أنها تمّت. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.checklist.o1': "التحقّق من تلك الخطوة مرة أخرى، ثم وضع العلامة.", // nieuw, nalezen
-    'c.checklist.o2': "وضع العلامة: على الأرجح تمّت.", // nieuw, nalezen
-    'c.checklist.o3': "تركها مفتوحة: لا أحد يقرأ القائمة.", // nieuw, nalezen
-    'c.checklist.w': "قائمة التحقّق تساعد فقط عندما تكون صحيحة. نظرة أخرى تأخذ دقيقة. الخطأ قد يأخذ ساعات.", // nieuw, nalezen
-    'c.leavesite': { m: "اتركه كما تحب أن تجده", f: "اتركيه كما تحبين أن تجديه", x: "ترك المكان كما يُحَبّ أن يوجد" }, // nieuw, nalezen
-    'c.leavesite.b': { m: "في نهاية عملك، اترك مكانك نظيفاً وآمناً. أعد الأدوات والمواد إلى مكانها، واكنس الأرضية. أطفئ الآلات والأضواء التي استخدمتها. أنت آخر واحد؟ تحقّق من النوافذ والأبواب، وأقفل بالطريقة التي تقولها شركتك. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في نهاية عملك، اتركي مكانك نظيفاً وآمناً. أعيدي الأدوات والمواد إلى مكانها، واكنسي الأرضية. أطفئي الآلات والأضواء التي استخدمتِها. أنتِ آخر واحدة؟ تحقّقي من النوافذ والأبواب، وأقفلي بالطريقة التي تقولها شركتك. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في نهاية العمل، ترك المكان نظيفاً وآمناً. إعادة الأدوات والمواد إلى مكانها، وكنس الأرضية. إطفاء الآلات والأضواء المستخدمة. آخر من يغادر؟ التحقّق من النوافذ والأبواب، والإقفال بالطريقة التي تحدّدها الشركة. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.leavesite.p': { m: "أنا آخر واحد. هل يجب أن أقفل الباب؟", f: "أنا آخر واحدة. هل يجب أن أقفل الباب؟", x: "أنا آخر من يغادر. هل يجب أن أقفل الباب؟" }, // nieuw, nalezen
-    'c.leavesite.s': { m: "أنت آخر واحد في العمل. لا تعرف كيف تشغّل الإنذار. ماذا تفعل؟", f: "أنتِ آخر واحدة في العمل. لا تعرفين كيف تشغّلين الإنذار. ماذا تفعلين؟", x: "آخر شخص في العمل. طريقة تشغيل الإنذار غير معروفة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.leavesite.o1': "الاتصال بالمشرف والسؤال.", // nieuw, nalezen
-    'c.leavesite.o2': "المغادرة بدون الإنذار: الوقت متأخر.", // nieuw, nalezen
-    'c.leavesite.o3': "تجربة الأزرار حتى يصدر صوت.", // nieuw, nalezen
-    'c.leavesite.w': "المبنى بدون إنذار ليس آمناً. المشرف يفضّل أن يتلقّى اتصالاً على أن يجد مشكلة غداً.", // nieuw, nalezen
-    'c.stagedays': "طالب، وزميل", // nieuw, nalezen
-    'c.stagedays.b': { m: "في مكان تدريبك أنت موجود لتتعلّم، لكنك تعمل مثل زميل: في الوقت، مع قواعد المكان، وتتصل عندما تكون مريضاً. يمكنك أن تسأل أسئلة كثيرة: لهذا أنت هناك. عملك يجب أن يساعدك على التعلّم، وليس فقط التنظيف أو الحمل طوال اليوم. ليس الأمر كذلك؟ تكلّم مع مشرف التدريب في المدرسة. مكافأة التدريب لا تُعطى دائماً: اسأل عنها قبل أن تبدأ. القواعد تختلف من مدرسة لأخرى: اسأل مشرف التدريب.", f: "في مكان تدريبك أنتِ موجودة لتتعلّمي، لكنكِ تعملين مثل زميلة: في الوقت، مع قواعد المكان، وتتصلين عندما تكونين مريضة. يمكنكِ أن تسألي أسئلة كثيرة: لهذا أنتِ هناك. عملك يجب أن يساعدك على التعلّم، وليس فقط التنظيف أو الحمل طوال اليوم. ليس الأمر كذلك؟ تكلّمي مع مشرف التدريب في المدرسة. مكافأة التدريب لا تُعطى دائماً: اسألي عنها قبل أن تبدئي. القواعد تختلف من مدرسة لأخرى: اسألي مشرف التدريب.", x: "في مكان التدريب الهدف هو التعلّم، لكن العمل يكون مثل أي زميل: في الوقت، مع قواعد المكان، والاتصال عند المرض. طرح أسئلة كثيرة مسموح: لهذا يوجد التدريب. العمل يجب أن يساعد على التعلّم، وليس فقط التنظيف أو الحمل طوال اليوم. ليس الأمر كذلك؟ الكلام مع مشرف التدريب في المدرسة. مكافأة التدريب لا تُعطى دائماً: السؤال عنها قبل البدء. القواعد تختلف من مدرسة لأخرى: السؤال عند مشرف التدريب." }, // nieuw, nalezen
-    'c.stagedays.p': "أريد أن أتعلّم هذا أيضاً. هل يمكنني أن أشاهد؟", // nieuw, nalezen
-    'c.stagedays.s': { m: "في مكان تدريبك تنظّف المقصف فقط، كل يوم، منذ ثلاثة أسابيع. ماذا تفعل؟", f: "في مكان تدريبك تنظّفين المقصف فقط، كل يوم، منذ ثلاثة أسابيع. ماذا تفعلين؟", x: "في مكان التدريب العمل هو تنظيف المقصف فقط، كل يوم، منذ ثلاثة أسابيع. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.stagedays.o1': "الكلام عن ذلك مع مشرف التدريب.", // nieuw, nalezen
-    'c.stagedays.o2': "القيام بذلك والسكوت: هذا دور الطالب.", // nieuw, nalezen
-    'c.stagedays.o3': "البقاء في البيت حتى يعطوا عملاً آخر.", // nieuw, nalezen
-    'c.stagedays.w': "التدريب العملي لتعلّم المهنة. مشرف التدريب يستطيع أن يتكلم مع الشركة عن مهام أفضل.", // nieuw, nalezen
-    'c.stageend': { m: "أنهِ جيداً، واطلب توصية", f: "أنهي جيداً، واطلبي توصية", x: "نهاية جيدة، وطلب توصية" }, // nieuw, nalezen
-    'c.stageend.b': { m: "في المقابلة الختامية تسمع ما كان جيداً وما يمكن أن يكون أفضل. اطلب أمثلة، واكتبها لعملك القادم. سار الأمر جيداً؟ اسأل هل يمكنك أن تذكر اسمهم كمرجع. في يومك الأخير، اشكر زملاءك: كثير من الناس هنا يحضرون شيئاً صغيراً للأكل، مثل كعكة أو حلويات. القواعد تختلف من مدرسة لأخرى: اسأل مشرف التدريب.", f: "في المقابلة الختامية تسمعين ما كان جيداً وما يمكن أن يكون أفضل. اطلبي أمثلة، واكتبيها لعملك القادم. سار الأمر جيداً؟ اسألي هل يمكنكِ أن تذكري اسمهم كمرجع. في يومك الأخير، اشكري زملاءك: كثير من الناس هنا يحضرون شيئاً صغيراً للأكل، مثل كعكة أو حلويات. القواعد تختلف من مدرسة لأخرى: اسألي مشرف التدريب.", x: "في المقابلة الختامية يُقال ما كان جيداً وما يمكن أن يكون أفضل. طلب أمثلة، وكتابتها للعمل القادم. سار الأمر جيداً؟ السؤال هل يمكن ذكر اسمهم كمرجع. في اليوم الأخير، شكر الزملاء: كثير من الناس هنا يحضرون شيئاً صغيراً للأكل، مثل كعكة أو حلويات. القواعد تختلف من مدرسة لأخرى: السؤال عند مشرف التدريب." }, // nieuw, nalezen
-    'c.stageend.p': "هل يمكنني أن أذكر اسمك كمرجع؟", // nieuw, nalezen
-    'c.stageend.s': { m: "إنه اليوم الأخير من تدريبك. ماذا تفعل؟", f: "إنه اليوم الأخير من تدريبك. ماذا تفعلين؟", x: "إنه اليوم الأخير من التدريب. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.stageend.o1': "شكر الزملاء، والوداع.", // nieuw, nalezen
-    'c.stageend.o2': "المغادرة بهدوء، بدون كلام.", // nieuw, nalezen
-    'c.stageend.o3': "طلب هدية من الشركة.", // nieuw, nalezen
-    'c.stageend.w': "الوداع الجيد يترك صورة جيدة. ربما يكون العمل هناك ممكناً لاحقاً، أو تلزم توصية منهم.", // nieuw, nalezen
-    'c.neighbours': { m: "سلّم على جيرانك", f: "سلّمي على جيرانك", x: "إلقاء التحية على الجيران" }, // nieuw, nalezen
-    'c.neighbours.b': { m: "جديد في شارع؟ سلّم على جيرانك وقل لهم اسمك. هذا يجعل حلّ المشاكل أسهل لاحقاً. تعمل ليلاً، أو تسكن مع أشخاص كثيرين؟ حافظ على الهدوء في وقت متأخر من المساء وفي الليل. ضع القمامة في الخارج في اليوم الصحيح. في المكتبة ومركز الحيّ يمكنك غالباً أن تتمرّن على الهولندية، أحياناً مجاناً.", f: "جديدة في شارع؟ سلّمي على جيرانك وقولي لهم اسمك. هذا يجعل حلّ المشاكل أسهل لاحقاً. تعملين ليلاً، أو تسكنين مع أشخاص كثيرين؟ حافظي على الهدوء في وقت متأخر من المساء وفي الليل. ضعي القمامة في الخارج في اليوم الصحيح. في المكتبة ومركز الحيّ يمكنكِ غالباً أن تتمرّني على الهولندية، أحياناً مجاناً.", x: "سكن جديد في شارع؟ التسليم على الجيران وذكر الاسم لهم. هذا يجعل حلّ المشاكل أسهل لاحقاً. عمل ليلي، أو سكن مع أشخاص كثيرين؟ الحفاظ على الهدوء في وقت متأخر من المساء وفي الليل. وضع القمامة في الخارج في اليوم الصحيح. في المكتبة ومركز الحيّ يمكن غالباً التمرّن على الهولندية، أحياناً مجاناً." }, // nieuw, nalezen
-    'c.neighbours.p': "مرحباً، أنا علي. أسكن في البيت المجاور.", // nieuw, nalezen
-    'c.neighbours.s': { m: "تسكن مع خمسة زملاء. جار يقول إن هناك ضجيجاً كثيراً في الليل. ماذا تفعل؟", f: "تسكنين مع خمسة زملاء. جار يقول إن هناك ضجيجاً كثيراً في الليل. ماذا تفعلين؟", x: "السكن مع خمسة زملاء. جار يقول إن هناك ضجيجاً كثيراً في الليل. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.neighbours.o1': "الاعتذار، والاتفاق على الهدوء.", // nieuw, nalezen
-    'c.neighbours.o2': "القول إن الجميع يعملون ويحتاجون إلى الراحة.", // nieuw, nalezen
-    'c.neighbours.o3': "السكوت، وإغلاق الباب.", // nieuw, nalezen
-    'c.neighbours.w': "الكلام الجيد مبكراً يمنع مشاكل أكبر. الجيران الذين يعرفونك غالباً ألطف وأكثر استعداداً للمساعدة.", // nieuw, nalezen
+    'l.vacancy': "قراءة إعلان وظيفة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.advertentie': "الإعلان (نص يعرض عملاً أو شيئاً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.eis': "الشرط (ما يجب امتلاكه أو القدرة عليه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.parttime': "دوام جزئي (ساعات أقل في الأسبوع)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.fulltime': "دوام كامل (أسبوع عمل كامل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sollicitatiebrief': "رسالة طلب العمل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.contactpersoon': "الشخص المسؤول عن التواصل (الشخص الذي يمكن الاتصال به أو الكتابة إليه)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vacancy.1': "رأيت إعلانكم على الإنترنت.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vacancy.2': "هل الوظيفة بدوام جزئي أم بدوام كامل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vacancy.3': "ما هي الشروط؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.q': { m: "لماذا تتصل؟", f: "لماذا تتصلين؟", x: "ما سبب الاتصال؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.a': "أتصل بخصوص الوظيفة الشاغرة عندكم. هل ما زالت متاحة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.result': "بعد المقابلة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aangenomen': "مقبول في العمل (الحصول على الوظيفة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afwijzing': "الرفض (عدم الحصول على الوظيفة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanbod': "العرض (يعرضون عليك الوظيفة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.proefdag': "يوم التجربة (يوم عمل واحد للتجربة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nabellen': "يعاود الاتصال (للسؤال عن سير الأمور)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teleurgesteld': "خائب الأمل", // nieuw, nalezen // nagelezen AI 28 nov
+    's.result.1': "لقد تمّ قبولك في العمل!", // nieuw, nalezen // nagelezen AI 28 nov
+    's.result.2': "وصلني رفض.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.result.3': "هل يوم التجربة مدفوع الأجر؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.q': "للأسف، اخترنا شخصاً آخر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.a': "خسارة. هل يمكنني أن أسأل لماذا؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.residence': "أوراق إقامتك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verblijfsvergunning': "تصريح الإقامة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pasfoto': "صورة جواز السفر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vingerafdruk': "بصمة الإصبع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geldig': "ساري المفعول (ما زال صالحاً للاستخدام)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verloopdatum': "تاريخ الانتهاء (آخر يوم يكون فيه صالحاً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.volgnummer': "رقم الدور (الورقة التي فيها دورك)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.residence.1': "تصريح إقامتي ساري المفعول لسنة أخرى.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.residence.2': "ما تاريخ انتهاء جواز سفرك؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.residence.3': "عندي موعد في البلدية.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.q': "تصريح إقامتك على وشك الانتهاء.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.a': "إذن سأطلب تصريحاً جديداً فوراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.newhome': "الانتقال إلى بيت جديد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brievenbus': "صندوق البريد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meterstand': "قراءة العدّاد (الأرقام على عدّاد الغاز أو الكهرباء أو الماء)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.naambordje': "لوحة الاسم (اسمك على الباب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.woning': "المسكن (بيت أو شقة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doorsturen': "يحوّل (يرسل إلى عنوان جديد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verhuisdag': "يوم الانتقال", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newhome.1': "سأنتقل إلى بيت جديد الأسبوع القادم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newhome.2': "اسمي ليس على صندوق البريد.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newhome.3': "أبلّغ عن عنواني الجديد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.q': { m: "أين تسكن الآن؟", f: "أين تسكنين الآن؟", x: "ما عنوان السكن الآن؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.a': "في مسكن جديد. هذا عنواني الجديد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.payparts': "ما في قسيمة راتبك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pensioen': "المعاش التقاعدي (مال لوقت الكِبَر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.periode': "الفترة (الأسابيع أو الشهر لهذا الأجر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedrag': "المبلغ (من المال)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.totaal': "المجموع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afkorting': "الاختصار (شكل قصير لكلمة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.personeelsnummer': "الرقم الوظيفي (رقمك في الشركة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.payparts.1': "ماذا يعني هذا الاختصار؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.payparts.2': "هذا المبلغ يذهب إلى معاشي التقاعدي.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.payparts.3': "عن أي فترة هذا الأجر؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.q': "ما رقمك الوظيفي؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.a': "إنه في الأعلى، بجانب اسمي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.latepay': "أجر متأخر أو ناقص أو نقدي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zwartwerken': "العمل بالأسود (بدون عقد، بدون ضرائب، بدون حقوق على الورق)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorschot': "السُّلفة (جزء من أجرك قبل يوم الدفع)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nabetaling': "الدفعة اللاحقة (مال يأتي لاحقاً لتصحيح أجرك)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tekort': "النقص (مال ناقص)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.betaaldag': "يوم دفع الأجر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bankafschrift': "كشف الحساب البنكي (قائمة بالمال الداخل والخارج)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.latepay.1': "أجري متأخر.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.latepay.2': "أنا لا أعمل بالأسود.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.latepay.3': "هل يمكنني الحصول على سُلفة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.q': { m: "ستحصل على المال الناقص الشهر القادم.", f: "ستحصلين على المال الناقص الشهر القادم.", x: "المال الناقص يأتي الشهر القادم." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.a': "هل يمكنني الحصول على ذلك على ورق؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.holiday': "تخطيط إجازتك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.saldo': "الرصيد (كم يوماً بقي لك)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedkeuren': "يوافق على (يقول نعم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verlopen': "ينتهي (لم يعد صالحاً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zomervakantie': "العطلة الصيفية", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.drukte': "وقت الضغط (عمل كثير)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanvraag': "الطلب (طلب شيء ما، غالباً في استمارة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.holiday.1': "كم يوم إجازة بقي لي؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.holiday.2': "تمّت الموافقة على إجازتي.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.holiday.3': "أملأ الاستمارة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.q': { m: "في الصيف يكون العمل كثيراً. هل يمكنك أن تأخذ إجازة في مايو؟", f: "في الصيف يكون العمل كثيراً. هل يمكنك أن تأخذي إجازة في مايو؟", x: "في الصيف يكون العمل كثيراً. هل الإجازة في مايو ممكنة؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.a': "أفضّل في يوليو. عندها تكون عائلتي في البيت.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.special': "إجازات خاصة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bruiloft': "حفل الزفاف", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.begrafenis': "الجنازة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geboorteverlof': "إجازة الولادة (للشريك، عند ولادة طفل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijzonderverlof': "الإجازة الخاصة (مثلاً لحفل زفاف أو جنازة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kerstdagen': "عيد الميلاد (يوما عيد الميلاد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vrijvragen': "يطلب يوم إجازة", // nieuw, nalezen // nagelezen AI 28 nov
+    's.special.1': "أخي سيتزوّج. هل يمكنني أن أطلب يوم إجازة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.special.2': "عمّي توفّي. الجنازة يوم الجمعة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.special.3': "هل يجب أن أعمل في أيام عيد الميلاد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.q': { m: "مبروك على طفلك! هل ستأخذ إجازة الولادة؟", f: "مبروك على طفلك! هل ستأخذين إجازة الولادة؟", x: "مبروك على المولود! هل ستكون هناك إجازة ولادة؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.a': "نعم، في الأسبوع الأول أبقى في البيت.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.unwell': "الشعور بالتوعّك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hoofdpijn': "الصداع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.griep': "الإنفلونزا", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verkouden': "مصاب بالزكام", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nietlekker': "متوعّك (شعور بمرض خفيف)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.naarhuis': "يذهب إلى البيت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitzieken': "يبقى في البيت حتى يشفى", // nieuw, nalezen // nagelezen AI 28 nov
+    's.unwell.1': "لا أشعر أنني بخير.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.unwell.2': "عندي صداع وزكام.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.unwell.3': { m: "سأذهب إلى البيت. أنا مريض.", f: "سأذهب إلى البيت. أنا مريضة.", x: "سأذهب إلى البيت. أشعر بالمرض." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.q': { m: "وجهك شاحب. هل أنت بخير؟", f: "وجهك شاحب. هل أنتِ بخير؟", x: "الوجه شاحب. هل كل شيء بخير؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.a': "لا، لا أشعر أنني بخير. هل يمكنني الذهاب إلى البيت؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.injury': "إصابة بسبب العمل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedrijfsongeval': "حادث العمل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verzekering': "التأمين", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schadevergoeding': "التعويض (مال مقابل الضرر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oorzaak': "السبب (لماذا حدث)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.letsel': "الإصابة (ضرر في الجسم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verklaring': "الإفادة (ما يُكتب أو يُقال عمّا حدث)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.injury.1': "تعرّضت لحادث عمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.injury.2': "ما كان السبب؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.injury.3': "زميلي رأى ذلك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.q': { m: "هل تكتب إفادتك هنا؟", f: "هل تكتبين إفادتك هنا؟", x: "هل يمكن كتابة الإفادة هنا؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.a': "نعم. هل يمكنني أن آخذ نسخة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.debt': "دَين للمدير أو للوكالة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lening': "القرض", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lenen': "يقترض، يُقرض", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vastzitten': "عالق (لا يمكن المغادرة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tussenpersoon': "الوسيط (شخص يرتّب العمل مقابل المال)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rente': "الفائدة (مال إضافي يُدفع على القرض)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.belofte': "الوعد", // nieuw, nalezen // nagelezen AI 28 nov
+    's.debt.1': "اضطررت أن أدفع مقابل هذا العمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.debt.2': "دَيني يزيد كل شهر.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.debt.3': "الوسيط يحتفظ بجواز سفري.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.q': { m: "لا يجوز لك أن تغادر إلا بعد أن تدفع دَينك.", f: "لا يجوز لكِ أن تغادري إلا بعد أن تدفعي دَينك.", x: "المغادرة ممنوعة قبل دفع الدَّين." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.a': "هذا غير مسموح. سأطلب المساعدة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.inspection': "التفتيش ومساعدة أخرى", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inspectie': "التفتيش (أشخاص يتحقّقون هل العمل عادل وآمن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.controle': "الفحص، المراقبة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.slachtoffer': "الضحية", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mensenhandel': "الاتجار بالبشر (استغلال الناس وبيعهم للعمل أو للجنس)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vertrouwen': "يثق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tolk': "المترجم الشفهي", // nieuw, nalezen // nagelezen AI 28 nov
+    's.inspection.1': "غداً يأتي التفتيش.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.inspection.2': "هل يمكنني الحصول على مترجم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.inspection.3': "أنا لا أثق بهذا الرجل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.q': { m: "هل تريد أن تتكلم مع المفتشين؟", f: "هل تريدين أن تتكلمي مع المفتشين؟", x: "هل هناك رغبة في الكلام مع المفتشين؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.a': "نعم، لكن يجب ألا يسمع مديري ذلك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.carpool': "مشاركة السيارة وحافلة العمل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.carpoolen': "مشاركة السيارة (الذهاب إلى العمل معاً في سيارة واحدة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meerijden': "الركوب مع شخص (في سيارة شخص آخر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gordel': "حزام الأمان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.instappen': "يركب (سيارة أو حافلة أو قطاراً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitstappen': "ينزل (من سيارة أو حافلة أو قطار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijrijder': "الراكب (بجانب السائق)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carpool.1': "هل يمكنني أن أركب معك؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carpool.2': "ضع حزام الأمان.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carpool.3': "أنزل عند المحطة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.q': "من سيقود غداً؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.a': "أنا سأقود. سآتي لآخذك في الساعة السادسة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.train': "القطار والتأخير والوصول متأخراً", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.station': "محطة القطار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.perron': "الرصيف (مكان ركوب القطار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.overstappen': "يبدّل (إلى قطار أو حافلة أخرى)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitvallen': "يُلغى (القطار لا يسير)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kaartje': "التذكرة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.reisplanner': "مخطّط الرحلات (تطبيق يعرض القطارات والحافلات)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.train.1': "قطاري أُلغي.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.train.2': "يجب أن أبدّل القطار مرة واحدة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.train.3': "من أي رصيف يغادر القطار؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.q': { m: "لماذا تأخرت كثيراً؟", f: "لماذا تأخرتِ كثيراً؟", x: "ما سبب هذا التأخير الكبير؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.a': "قطاري أُلغي. أرسلت لك رسالة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.checklist': { m: "تحقّق قبل أن تنتهي", f: "تحقّقي قبل أن تنتهي", x: "التحقّق قبل الانتهاء" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'w.checklist': "قائمة التحقّق (قائمة بأشياء يجب فحصها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afvinken': "يضع علامة (علامة صح بجانب مهمة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.overdoen': "يعيد العمل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.compleet': "كامل (لا ينقصه شيء)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vergeten': "ينسى", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.resultaat': "النتيجة", // nieuw, nalezen // nagelezen AI 28 nov
+    's.checklist.1': "أضع علامة على كل شيء في قائمة التحقّق.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.checklist.2': "هل الطلبية كاملة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.checklist.3': "يجب أن أعيد هذا.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.q': { m: "ألم تنسَ شيئاً؟", f: "ألم تنسي شيئاً؟", x: "هل نُسي شيء؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.a': "سأنظر في قائمة التحقّق مرة أخرى.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.leavesite': "مغادرة مكان عملك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.terugzetten': "يعيد (إلى مكانه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vegen': "يكنس", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vloer': "الأرضية", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitdoen': "يطفئ (الضوء، آلة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alslaatste': "آخر واحد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.achterlaten': "يترك (كيف يُترك المكان)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.leavesite.1': "أترك مكاني مرتّباً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.leavesite.2': "من يغادر آخر واحد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.leavesite.3': "أطفئ الضوء وأغلق الباب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.q': { m: "هل أنت آخر من يغادر اليوم؟", f: "هل أنتِ آخر من يغادر اليوم؟", x: "من آخر من يغادر اليوم؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.a': "نعم. أطفئ كل شيء وأقفل الباب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.stagedays': "كل يوم في تدريبك العملي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stageplek': "مكان التدريب (الشركة التي يكون فيها التدريب العملي)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afwezig': "غائب (غير موجود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanwezig': "حاضر (موجود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stagevergoeding': "مكافأة التدريب (مال قد يُعطى في مكان التدريب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.begeleiding': "الإرشاد (مساعدة من المرشد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.leerling': "الطالب (في المدرسة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.stagedays.1': { m: "سأكون غائباً غداً. أنا مريض.", f: "سأكون غائبة غداً. أنا مريضة.", x: "لن آتي غداً. أشعر بالمرض." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.stagedays.2': "هل أحصل على مكافأة تدريب؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.stagedays.3': "أعمل أربعة أيام في مكان تدريبي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.q': { m: "لماذا كنت غائباً أمس؟", f: "لماذا كنتِ غائبة أمس؟", x: "ما سبب الغياب أمس؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.a': { m: "كنت مريضاً. اتصلت بالمدرسة والشركة.", f: "كنت مريضة. اتصلت بالمدرسة والشركة.", x: "كنت أشعر بالمرض. اتصلت بالمدرسة والشركة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'l.stageend': "نهاية تدريبك العملي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.eindgesprek': "المقابلة الختامية (في نهاية التدريب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geslaagd': "ناجح (أداء جيد بما يكفي)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gezakt': "راسب (ليس جيداً بما يكفي هذه المرة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.herkansing': "إعادة الامتحان (فرصة جديدة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedanken': "يشكر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.trakteren': "يضيّف (يحضر شيئاً لذيذاً للأكل للجميع)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.stageend.1': "غداً عندي المقابلة الختامية.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.stageend.2': "نجحت في تدريبي العملي.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.stageend.3': "أريد أن أشكر الجميع.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.q': { m: "يومك الأخير! ماذا ستفعل الآن؟", f: "يومك الأخير! ماذا ستفعلين الآن؟", x: "اليوم الأخير! ما الخطوة التالية الآن؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.a': "أولاً أحصل على شهادتي. ثم أبحث عن عمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.neighbours': "حيّك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.buurt': "الحيّ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.buurthuis': "مركز الحيّ (بيت للأنشطة في حيّك)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.straat': "الشارع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kennismaken': "يتعرّف على (يلتقي شخصاً لأول مرة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.overlast': "الإزعاج (ضجيج أو مشاكل للآخرين)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.buurvrouw': "الجارة", // nieuw, nalezen // nagelezen AI 28 nov
+    's.neighbours.1': "أسكن في هذا الشارع منذ وقت قصير.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.neighbours.2': "أتمرّن على الهولندية في المكتبة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.neighbours.3': "عذراً على الإزعاج.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.q': "مرحباً، أنا جارتك الجديدة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.a': "تشرّفت بمعرفتك! أنا علي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.join': "المدرسة والرياضة والعمل التطوعي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vrijwilliger': "المتطوّع (شخص يساعد بدون أجر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vrijwilligerswerk': "العمل التطوعي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sportclub': "النادي الرياضي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ouderavond': "اجتماع أولياء الأمور (في المدرسة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.leraar': "المعلّم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.basisschool': "المدرسة الابتدائية", // nieuw, nalezen // nagelezen AI 28 nov
+    's.join.1': "ابني يذهب إلى المدرسة الابتدائية.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.join.2': "ألعب كرة القدم في نادٍ رياضي.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.join.3': "يوم السبت أقوم بعمل تطوعي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.q': { m: "هل ستأتي إلى اجتماع أولياء الأمور؟", f: "هل ستأتين إلى اجتماع أولياء الأمور؟", x: "هل سيكون هناك حضور في اجتماع أولياء الأمور؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.a': "نعم. أودّ أن أتكلم مع المعلّم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.workphotos': "الصور والبيانات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gezicht': "الوجه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.klantgegevens': "بيانات الزبائن (اسم الزبون وعنوانه وهاتفه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onlinezetten': "ينشر على الإنترنت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wissen': "يحذف", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werktelefoon': "هاتف العمل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bestand': "الملف (على الحاسوب)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workphotos.1': "لا أنشر صوراً من العمل على الإنترنت.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workphotos.2': "أحذف الصورة فوراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workphotos.3': "وجهه ظاهر في الصورة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.q': "هل يمكنني أن ألتقط لك صورة؟ للإنترنت.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.a': "لا، شكراً. لا أريد أن أكون على الإنترنت.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.device': "هاتف وحاسوب آمنان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.update': "التحديث (نسخة جديدة من تطبيق أو برنامج)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.virus': "الفيروس (برنامج يضرّ الحاسوب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wifi': "الواي فاي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.usbstick': "ذاكرة USB", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.installeren': "يثبّت (برنامجاً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.openbaar': "عام (للجميع)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.device.1': "سأثبّت التحديث هذا المساء.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.device.2': "ذاكرة USB هذه كانت على الأرض.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.device.3': "هل هذا الواي فاي آمن؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.q': "هل يجوز أن أضع هذا التطبيق على هاتف العمل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.a': "اسأل قسم تقنية المعلومات أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy': { m: "اتصل، أو أرسل رسالة قصيرة", f: "اتصلي، أو أرسلي رسالة قصيرة", x: "الاتصال، أو إرسال رسالة قصيرة" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.b': { m: "اقرأ الإعلان جيداً: الساعات، والمكان، وما يجب أن يكون لديك، مثل رخصة قيادة أو شهادة. لا يلزم أن يكون لديك كل شيء: إذا كان لديك معظمه، فجرّب على أي حال. اتصل أو اكتب رسالة قصيرة: قل اسمك، وأي وظيفة، ولماذا تريدها. لا تدفع مالاً أبداً للحصول على عمل، ولا ترسل أبداً رموز الدخول الخاصة بك من أجل إعلان.", f: "اقرئي الإعلان جيداً: الساعات، والمكان، وما يجب أن يكون لديك، مثل رخصة قيادة أو شهادة. لا يلزم أن يكون لديك كل شيء: إذا كان لديك معظمه، فجرّبي على أي حال. اتصلي أو اكتبي رسالة قصيرة: قولي اسمك، وأي وظيفة، ولماذا تريدينها. لا تدفعي مالاً أبداً للحصول على عمل، ولا ترسلي أبداً رموز الدخول الخاصة بك من أجل إعلان.", x: "قراءة الإعلان جيداً: الساعات، والمكان، والمطلوب، مثل رخصة قيادة أو شهادة. ليس من اللازم توفّر كل شيء: عند توفّر معظمه، تستحق المحاولة على أي حال. الاتصال أو كتابة رسالة قصيرة: ذكر الاسم، وأي وظيفة، وسبب الرغبة فيها. لا يجوز أبداً دفع مال للحصول على عمل، ولا إرسال رموز الدخول أبداً من أجل إعلان." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.p': "ليست لديّ شهادة، لكن عندي خبرة كبيرة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.s': { m: "إعلان يطلب خبرة 3 سنوات. لديك خبرة 2 سنة فقط. ماذا تفعل؟", f: "إعلان يطلب خبرة 3 سنوات. لديك خبرة 2 سنة فقط. ماذا تفعلين؟", x: "إعلان يطلب خبرة 3 سنوات. الخبرة الموجودة 2 سنة فقط. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.o1': "التقديم على أي حال، وذكر المهارات الموجودة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.o2': "عدم التقديم: الخبرة قليلة جداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.o3': "كتابة 3 سنوات: لا أحد يتحقّق.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.w': "الإعلان غالباً يطلب أكثر مما تحتاجه الوظيفة فعلاً. الصدق بشأن القدرات أفضل من الكذب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result': "الرفض ليس النهاية", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.b': { m: "لم تسمع شيئاً بعد أسبوع؟ يمكنك أن تعاود الاتصال وتسأل بأدب. حصلت على رفض؟ اسأل ماذا يمكنك أن تفعل بشكل أفضل في المرة القادمة: كثير من أصحاب العمل يخبرونك. ثم جرّب مرة أخرى: معظم الناس يحصلون على بعض الرفض أولاً. حصلت على قبول؟ اسأل متى تبدأ، واطلب عقدك قبل أن تبدأ. دُعيت إلى يوم تجربة؟ اسأل قبله كم يدوم، وهل هو مدفوع الأجر.", f: "لم تسمعي شيئاً بعد أسبوع؟ يمكنك أن تعاودي الاتصال وتسألي بأدب. حصلتِ على رفض؟ اسألي ماذا يمكنك أن تفعلي بشكل أفضل في المرة القادمة: كثير من أصحاب العمل يخبرونك. ثم جرّبي مرة أخرى: معظم الناس يحصلون على بعض الرفض أولاً. حصلتِ على قبول؟ اسألي متى تبدئين، واطلبي عقدك قبل أن تبدئي. دُعيتِ إلى يوم تجربة؟ اسألي قبله كم يدوم، وهل هو مدفوع الأجر.", x: "لا خبر بعد أسبوع؟ معاودة الاتصال والسؤال بأدب أمر ممكن. جاء رفض؟ السؤال عمّا يمكن تحسينه في المرة القادمة: كثير من أصحاب العمل يجيبون. ثم المحاولة مرة أخرى: معظم الناس يحصلون على بعض الرفض أولاً. جاء قبول؟ السؤال عن موعد البدء، وطلب العقد قبل البدء. دعوة إلى يوم تجربة؟ السؤال قبله عن مدّته، وهل هو مدفوع الأجر." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.p': "ماذا يمكنني أن أفعل بشكل أفضل في المرة القادمة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.s': { m: "بعد مقابلة عمل، يصلك رفض بالإيميل. ماذا تفعل؟", f: "بعد مقابلة عمل، يصلك رفض بالإيميل. ماذا تفعلين؟", x: "بعد مقابلة عمل، يصل رفض بالإيميل. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.o1': "السؤال بأدب عمّا يمكن تحسينه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.o2': "الرد بأنهم أخطؤوا.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.o3': "التوقّف عن التقديم: لا فائدة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.w': "الملاحظات تساعد في المقابلة القادمة. والسؤال المهذّب يترك أيضاً صورة جيدة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence': { m: "أوراقك: تحقّق من التاريخ", f: "أوراقك: تحقّقي من التاريخ", x: "الأوراق: التحقّق من التاريخ" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.b': { m: "من الاتحاد الأوروبي؟ عندها يحق لك أن تسكن وتعمل هنا بجواز سفر أو بطاقة هوية سارية: لا تحتاج إلى تصريح. من خارج الاتحاد الأوروبي؟ عندها تحتاج إلى تصريح إقامة ساري المفعول. على البطاقة مكتوب هل يحق لك العمل. تحقّق من تاريخ انتهاء أوراقك. اطلب تصريحاً جديداً من IND في الوقت المناسب: قبل التاريخ بأشهر، وليس في الأسبوع الأخير. احتفظ بنسخة من كل رسالة. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "من الاتحاد الأوروبي؟ عندها يحق لكِ أن تسكني وتعملي هنا بجواز سفر أو بطاقة هوية سارية: لا تحتاجين إلى تصريح. من خارج الاتحاد الأوروبي؟ عندها تحتاجين إلى تصريح إقامة ساري المفعول. على البطاقة مكتوب هل يحق لكِ العمل. تحقّقي من تاريخ انتهاء أوراقك. اطلبي تصريحاً جديداً من IND في الوقت المناسب: قبل التاريخ بأشهر، وليس في الأسبوع الأخير. احتفظي بنسخة من كل رسالة. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "من الاتحاد الأوروبي؟ عندها يحق السكن والعمل هنا بجواز سفر أو بطاقة هوية سارية: لا حاجة إلى تصريح. من خارج الاتحاد الأوروبي؟ عندها يلزم تصريح إقامة ساري المفعول. على البطاقة مكتوب هل العمل مسموح. التحقّق من تاريخ انتهاء الأوراق. طلب تصريح جديد من IND في الوقت المناسب: قبل التاريخ بأشهر، وليس في الأسبوع الأخير. الاحتفاظ بنسخة من كل رسالة. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.p': "تصريحي سينتهي قريباً. ماذا يجب أن أفعل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.s': { m: "تصريح إقامتك ينتهي بعد شهرين. أنت مشغول جداً في العمل. ماذا تفعل؟", f: "تصريح إقامتك ينتهي بعد شهرين. أنتِ مشغولة جداً في العمل. ماذا تفعلين؟", x: "تصريح الإقامة ينتهي بعد شهرين. العمل كثير جداً. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.o1': "طلب تصريح جديد الآن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.o2': "الانتظار حتى الأسبوع الأخير.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.o3': "لا شيء: العمل أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.w': "بدون تصريح ساري المفعول، قد لا يكون العمل مسموحاً. التصريح الجديد يأخذ وقتاً، لذلك تكون البداية مبكرة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome': { m: "عنوان جديد؟ أخبر الجميع", f: "عنوان جديد؟ أخبري الجميع", x: "عنوان جديد؟ إخبار الجميع" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.b': { m: "ستنتقل؟ أبلغ البلدية (gemeente) بعنوانك الجديد بسرعة: هذا واجب عليك. أبلغ أيضاً صاحب العمل والبنك والتأمين والطبيب. ضع اسمك على صندوق البريد، وإلا فلن تصلك الرسائل. في يوم الانتقال، اكتب قراءات العدّادات والتقط لها صوراً. عندها تدفع فقط ثمن ما استهلكته.", f: "ستنتقلين؟ أبلغي البلدية (gemeente) بعنوانك الجديد بسرعة: هذا واجب عليكِ. أبلغي أيضاً صاحب العمل والبنك والتأمين والطبيب. ضعي اسمك على صندوق البريد، وإلا فلن تصلك الرسائل. في يوم الانتقال، اكتبي قراءات العدّادات والتقطي لها صوراً. عندها تدفعين فقط ثمن ما استهلكتِه.", x: "انتقال إلى بيت جديد؟ إبلاغ البلدية (gemeente) بالعنوان الجديد بسرعة: هذا واجب. إبلاغ صاحب العمل والبنك والتأمين والطبيب أيضاً. وضع الاسم على صندوق البريد، وإلا فلن تصل الرسائل. في يوم الانتقال، كتابة قراءات العدّادات والتقاط صور لها. عندها يكون الدفع فقط مقابل ما تمّ استهلاكه." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.p': "انتقلت إلى بيت جديد. هذا عنواني الجديد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.s': { m: "انتقلت قبل أسبوعين. رسائلك ما زالت تذهب إلى عنوانك القديم. ماذا تفعل؟", f: "انتقلتِ قبل أسبوعين. رسائلك ما زالت تذهب إلى عنوانك القديم. ماذا تفعلين؟", x: "الانتقال كان قبل أسبوعين. الرسائل ما زالت تذهب إلى العنوان القديم. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.o1': "إعطاء العنوان الجديد للبلدية الآن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.o2': "الانتظار: البريد سيجد طريقه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.o3': "طلب حفظ الرسائل من الجار القديم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.w': "الرسائل المهمة، مثل الغرامات أو رسائل الضرائب، فيها مواعيد. عندما تذهب إلى العنوان الخطأ، قد تضيع.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts': { m: "اقرأ كل سطر", f: "اقرئي كل سطر", x: "قراءة كل سطر" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.b': { m: "في قسيمة راتبك أسطر كثيرة وكلمات قصيرة. في الأعلى: اسمك ورقمك الوظيفي والفترة. ثم أجرك الإجمالي وساعاتك وأي أجر إضافي. ثم ما يُخصم: الضريبة والأقساط. في كثير من الوظائف، تدفع أنت وصاحب العمل معاً لمعاشك التقاعدي: ترى حصتك في قسيمة راتبك. في الأسفل: أجرك الصافي. لا تفهم سطراً؟ اطلب من صاحب العمل أن يشرحه لك. احتفظ بكل قسائم راتبك. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "في قسيمة راتبك أسطر كثيرة وكلمات قصيرة. في الأعلى: اسمك ورقمك الوظيفي والفترة. ثم أجرك الإجمالي وساعاتك وأي أجر إضافي. ثم ما يُخصم: الضريبة والأقساط. في كثير من الوظائف، تدفعين أنتِ وصاحب العمل معاً لمعاشك التقاعدي: ترين حصتك في قسيمة راتبك. في الأسفل: أجرك الصافي. لا تفهمين سطراً؟ اطلبي من صاحب العمل أن يشرحه لكِ. احتفظي بكل قسائم راتبك. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "في قسيمة الراتب أسطر كثيرة وكلمات قصيرة. في الأعلى: الاسم والرقم الوظيفي والفترة. ثم الأجر الإجمالي والساعات وأي أجر إضافي. ثم ما يُخصم: الضريبة والأقساط. في كثير من الوظائف، يدفع العامل وصاحب العمل معاً للمعاش التقاعدي: حصة العامل ظاهرة في قسيمة الراتب. في الأسفل: الأجر الصافي. سطر غير مفهوم؟ طلب الشرح من صاحب العمل. الاحتفاظ بكل قسائم الراتب. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.p': "ماذا يعني هذا السطر في قسيمة راتبي؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.s': { m: "في قسيمة راتبك يذهب مال إلى «pensioen». لا تعرف لماذا. ماذا تفعل؟", f: "في قسيمة راتبك يذهب مال إلى «pensioen». لا تعرفين لماذا. ماذا تفعلين؟", x: "في قسيمة الراتب يذهب مال إلى «pensioen». السبب غير معروف. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.o1': "طلب الشرح من صاحب العمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.o2': "طلب إيقافه، للحصول على مال أكثر الآن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.o3': "تجاهله: البقاء في هذا العمل لن يطول.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.w': "مال المعاش التقاعدي يُدّخر لك، للمستقبل. عادةً يبقى لك عند تغيير العمل. السؤال يساعد على معرفة ما هو لك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay': { m: "أجر متأخر أو نقدي؟ تصرّف في الوقت المناسب", f: "أجر متأخر أو نقدي؟ تصرّفي في الوقت المناسب", x: "أجر متأخر أو نقدي؟ التصرّف في الوقت المناسب" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.b': { m: "يجب أن يصل أجرك في اليوم المذكور في عقدك أو في الاتفاقية الجماعية (cao). الأجر متأخر، أو هناك مال ناقص؟ اسأل عن ذلك كتابةً، مثلاً في إيميل. احتفظ بكشوف حسابك البنكي وبقائمة ساعاتك الخاصة. يُدفع لك نقداً، بدون قسيمة راتب؟ عندها يكون غالباً عملاً بالأسود (zwart): ساعاتك غير مسجّلة، ولاحقاً يصعب إثبات عملك أو الحصول على إعانة. اطلب قسيمة راتب. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork.", f: "يجب أن يصل أجرك في اليوم المذكور في عقدك أو في الاتفاقية الجماعية (cao). الأجر متأخر، أو هناك مال ناقص؟ اسألي عن ذلك كتابةً، مثلاً في إيميل. احتفظي بكشوف حسابك البنكي وبقائمة ساعاتك الخاصة. يُدفع لكِ نقداً، بدون قسيمة راتب؟ عندها يكون غالباً عملاً بالأسود (zwart): ساعاتك غير مسجّلة، ولاحقاً يصعب إثبات عملك أو الحصول على إعانة. اطلبي قسيمة راتب. معلومات عامة. لوضعك أنت: اسألي النقابة أو Juridisch Loket أو FairWork.", x: "يجب أن يصل الأجر في اليوم المذكور في العقد أو في الاتفاقية الجماعية (cao). الأجر متأخر، أو هناك مال ناقص؟ السؤال عن ذلك كتابةً، مثلاً في إيميل. الاحتفاظ بكشوف الحساب البنكي وبقائمة شخصية للساعات. دفع نقدي، بدون قسيمة راتب؟ عندها يكون غالباً عملاً بالأسود (zwart): الساعات غير مسجّلة، ولاحقاً يصعب إثبات العمل أو الحصول على إعانة. طلب قسيمة راتب. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.p': "أجري لم يصل بعد. متى سيصل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.s': { m: "مديرك يقول: «من الآن أدفع لك نقداً. بدون قسيمة راتب، هذا أسهل». ماذا تفعل؟", f: "مديرك يقول: «من الآن أدفع لك نقداً. بدون قسيمة راتب، هذا أسهل». ماذا تفعلين؟", x: "المدير يقول: «من الآن الدفع نقداً. بدون قسيمة راتب، هذا أسهل». ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.o1': "الرفض، وطلب قسيمة راتب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.o2': "الموافقة: النقد يعني مالاً أكثر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.o3': "الموافقة، لكن لهذا الشهر فقط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.w': "بدون قسيمة راتب، العمل غير موجود على الورق. عندها قد تضيع حقوق، مثلاً الإعانة عند فقدان العمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday': { m: "أيام إجازتك: استخدمها في الوقت المناسب", f: "أيام إجازتك: استخدميها في الوقت المناسب", x: "أيام الإجازة: استخدامها في الوقت المناسب" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.b': { m: "تحقّق كم يوم إجازة بقي لك: غالباً تجده في قسيمة راتبك أو في التطبيق. خطّط لإجازتك مبكراً، واطلبها كتابةً. أيام إجازتك القانونية تنتهي بعد 6 أشهر من نهاية السنة، إلا إذا لم تستطع أن تأخذها. الأيام الإضافية من الاتفاقية الجماعية أو العقد تبقى صالحة مدة أطول، عادةً 5 سنوات. عملك ينتهي؟ عندها تحصل على مال مقابل الأيام التي لم تأخذها. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "تحقّقي كم يوم إجازة بقي لكِ: غالباً تجدينه في قسيمة راتبك أو في التطبيق. خطّطي لإجازتك مبكراً، واطلبيها كتابةً. أيام إجازتك القانونية تنتهي بعد 6 أشهر من نهاية السنة، إلا إذا لم تستطيعي أن تأخذيها. الأيام الإضافية من الاتفاقية الجماعية أو العقد تبقى صالحة مدة أطول، عادةً 5 سنوات. عملك ينتهي؟ عندها تحصلين على مال مقابل الأيام التي لم تأخذيها. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "التحقّق من عدد أيام الإجازة الباقية: غالباً موجود في قسيمة الراتب أو في التطبيق. التخطيط للإجازة مبكراً، وطلبها كتابةً. أيام الإجازة القانونية تنتهي بعد 6 أشهر من نهاية السنة، إلا إذا لم يكن أخذها ممكناً. الأيام الإضافية من الاتفاقية الجماعية أو العقد تبقى صالحة مدة أطول، عادةً 5 سنوات. العمل ينتهي؟ عندها يُدفع مال مقابل الأيام التي لم تُؤخذ. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.p': "أريد أن آخذ أيام إجازتي هذه السنة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.s': { m: "نحن في نوفمبر. بقي لك 12 يوم إجازة من هذه السنة. مشرفك لا يقول شيئاً عن ذلك. ماذا تفعل؟", f: "نحن في نوفمبر. بقي لك 12 يوم إجازة من هذه السنة. مشرفك لا يقول شيئاً عن ذلك. ماذا تفعلين؟", x: "نحن في نوفمبر. بقي 12 يوم إجازة من هذه السنة. المشرف لا يقول شيئاً عن ذلك. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.o1': "السؤال متى يمكن أخذها.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.o2': "لا شيء: تبقى إلى الأبد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.o3': "نسيانها: لقد ضاعت الآن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.w': "أيام الإجازة للراحة، ويمكن أن تنتهي صلاحيتها. عند السؤال في الوقت المناسب، يبقى التخطيط لها ممكناً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special': "زفاف، جنازة، طفل", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.b': { m: "وُلد طفلك، وأنت الشريك؟ عندها تحصل على إجازة ولادة مدفوعة الأجر لمدة 1 أسبوع، خلال أول 4 أسابيع. الاتفاقية الجماعية تعطي غالباً إجازة خاصة (bijzonder verlof) لزفافك، أو لجنازة في عائلتك. العطل الرسمية، مثل عيد الميلاد: لا يوجد قانون يقول إنك في إجازة. عقدك أو الاتفاقية الجماعية يقولان هل أنت في إجازة، أو هل تحصل على أجر إضافي. اطلب أيام إجازتك في الوقت المناسب. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "وُلد طفلك، وأنتِ الشريكة؟ عندها تحصلين على إجازة ولادة مدفوعة الأجر لمدة 1 أسبوع، خلال أول 4 أسابيع. الاتفاقية الجماعية تعطي غالباً إجازة خاصة (bijzonder verlof) لزفافك، أو لجنازة في عائلتك. العطل الرسمية، مثل عيد الميلاد: لا يوجد قانون يقول إنكِ في إجازة. عقدك أو الاتفاقية الجماعية يقولان هل أنتِ في إجازة، أو هل تحصلين على أجر إضافي. اطلبي أيام إجازتك في الوقت المناسب. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "وُلد الطفل، والإجازة للشريك؟ عندها توجد للشريك إجازة ولادة مدفوعة الأجر لمدة 1 أسبوع، خلال أول 4 أسابيع. الاتفاقية الجماعية تعطي غالباً إجازة خاصة (bijzonder verlof) للزفاف، أو لجنازة في العائلة. العطل الرسمية، مثل عيد الميلاد: لا يوجد قانون يجعلها يوم إجازة. العقد أو الاتفاقية الجماعية يحدّدان هل هي إجازة، أو هل يوجد أجر إضافي. طلب أيام الإجازة في الوقت المناسب. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.p': "زوجتي ستلد. كيف أطلب إجازة الولادة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.s': { m: "والدك توفّي في الخارج. تريد أن تذهب إلى الجنازة. ماذا تفعل؟", f: "والدك توفّي في الخارج. تريدين أن تذهبي إلى الجنازة. ماذا تفعلين؟", x: "الوالد توفّي في الخارج. الرغبة هي الذهاب إلى الجنازة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.o1': "إبلاغ صاحب العمل، والسؤال عن الإجازة الممكنة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.o2': "الذهاب ببساطة، والإبلاغ بعد العودة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.o3': "عدم الذهاب: لم تبقَ أيام إجازة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.w': "صاحب العمل يفهم أن هذا مهم جداً. كثير من الاتفاقيات الجماعية تعطي إجازة خاصة، ويمكن أيضاً استخدام أيام الإجازة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell': "المرض في العمل، أو في الإجازة", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.b': { m: "تشعر بالمرض في العمل؟ أخبر مشرفك قبل أن تذهب إلى البيت: هذا هو إبلاغك عن المرض. لا تغادر هكذا فقط. مرضت أثناء إجازتك؟ أبلغ صاحب العمل بنفس الطريقة كما في البيت، حتى من الخارج. عندها عادةً لا تُحسب أيام المرض أيام إجازة. قد تحتاج إلى ورقة من طبيب هناك. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "تشعرين بالمرض في العمل؟ أخبري مشرفك قبل أن تذهبي إلى البيت: هذا هو إبلاغك عن المرض. لا تغادري هكذا فقط. مرضتِ أثناء إجازتك؟ أبلغي صاحب العمل بنفس الطريقة كما في البيت، حتى من الخارج. عندها عادةً لا تُحسب أيام المرض أيام إجازة. قد تحتاجين إلى ورقة من طبيب هناك. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "شعور بالمرض في العمل؟ إخبار المشرف قبل الذهاب إلى البيت: هذا هو الإبلاغ عن المرض. لا تجوز المغادرة هكذا فقط. مرض أثناء الإجازة؟ إبلاغ صاحب العمل بنفس الطريقة كما في البيت، حتى من الخارج. عندها عادةً لا تُحسب أيام المرض أيام إجازة. قد تلزم ورقة من طبيب هناك. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.p': "مرضت أثناء الإجازة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.s': { m: "أنت في إجازة في بلدك. تصاب بالإنفلونزا وتبقى في السرير 5 أيام. ماذا تفعل؟", f: "أنتِ في إجازة في بلدك. تُصابين بالإنفلونزا وتبقين في السرير 5 أيام. ماذا تفعلين؟", x: "إجازة في البلد الأصلي. إنفلونزا، والبقاء في السرير 5 أيام. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.o1': "إبلاغ صاحب العمل فوراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.o2': "لا شيء: إنها إجازة على أي حال.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.o3': "إخبار صاحب العمل بعد العودة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.w': "عند الإبلاغ في الوقت المناسب، عادةً لا تُحسب أيام المرض أيام إجازة. عندها يبقى استخدام تلك الأيام لاحقاً ممكناً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury': { m: "أُصبت في العمل: اكتب ما حدث", f: "أُصبتِ في العمل: اكتبي ما حدث", x: "إصابة في العمل: كتابة ما حدث" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.b': { m: "أُصبت في العمل؟ اكتب ماذا حدث، ومتى وأين، ومن رأى ذلك. التقط صوراً، واحتفظ بكل الأوراق من الطبيب. اطلب نسخة من تقرير الحادث. أُصبت لأن العمل لم يكن آمناً؟ عندها يجب على صاحب العمل عادةً أن يدفع عن ضررك. لا يلزمك أن تثبت أن الخطأ خطؤه: صاحب العمل هو الذي يجب أن يُظهر أنه فعل ما يكفي لسلامتك. اطلب النصيحة قبل أن توقّع على أي شيء. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "أُصبتِ في العمل؟ اكتبي ماذا حدث، ومتى وأين، ومن رأى ذلك. التقطي صوراً، واحتفظي بكل الأوراق من الطبيب. اطلبي نسخة من تقرير الحادث. أُصبتِ لأن العمل لم يكن آمناً؟ عندها يجب على صاحب العمل عادةً أن يدفع عن ضررك. لا يلزمكِ أن تثبتي أن الخطأ خطؤه: صاحب العمل هو الذي يجب أن يُظهر أنه فعل ما يكفي لسلامتك. اطلبي النصيحة قبل أن توقّعي على أي شيء. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "إصابة في العمل؟ كتابة ماذا حدث، ومتى وأين، ومن رأى ذلك. التقاط صور، والاحتفاظ بكل الأوراق من الطبيب. طلب نسخة من تقرير الحادث. إصابة لأن العمل لم يكن آمناً؟ عندها يجب على صاحب العمل عادةً أن يدفع عن الضرر. لا يلزم إثبات أن الخطأ خطؤه: صاحب العمل هو الذي يجب أن يُظهر أنه فعل ما يكفي للسلامة. طلب النصيحة قبل التوقيع على أي شيء. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.p': "هل يمكنني أن آخذ نسخة من التقرير؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.s': { m: "جرحت يدك في آلة بدون واقٍ. لاحقاً يطلب منك مديرك أن توقّع ورقة: «كان الخطأ خطئي أنا». ماذا تفعل؟", f: "جرحتِ يدك في آلة بدون واقٍ. لاحقاً يطلب منكِ مديرك أن توقّعي ورقة: «كان الخطأ خطئي أنا». ماذا تفعلين؟", x: "إصابة في اليد عند آلة بدون واقٍ. لاحقاً يطلب المدير التوقيع على ورقة: «كان الخطأ خطئي أنا». ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.o1': "عدم التوقيع. طلب النصيحة أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.o2': "التوقيع، حتى لا تكون هناك مشاكل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.o3': "التوقيع، مع الاحتفاظ بصورة من الورقة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.w': "ما يتمّ توقيعه قد يُحسب لاحقاً، مثلاً عند طلب تعويض. أولاً النصيحة من النقابة أو Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt': "دَين لا ينتهي أبداً", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.b': { m: "في هولندا لا يجوز لوكالة أن تطلب منك مالاً مقابل إيجاد عمل لك. اضطررت أن تقترض مالاً للسفر أو للعمل، والدَّين يكبر باستمرار؟ يجب أن تبقى حتى يُدفع؟ هذه علامة استغلال. الدَّين لا يعني أبداً أنه يجب أن تستمر في العمل: يحق لك أن تتوقف. احتفظ بكل ورقة ورسالة عن الدَّين. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork.", f: "في هولندا لا يجوز لوكالة أن تطلب منكِ مالاً مقابل إيجاد عمل لكِ. اضطررتِ أن تقترضي مالاً للسفر أو للعمل، والدَّين يكبر باستمرار؟ يجب أن تبقي حتى يُدفع؟ هذه علامة استغلال. الدَّين لا يعني أبداً أنه يجب أن تستمري في العمل: يحق لكِ أن تتوقفي. احتفظي بكل ورقة ورسالة عن الدَّين. معلومات عامة. لوضعك أنت: اسألي النقابة أو Juridisch Loket أو FairWork.", x: "في هولندا لا يجوز لوكالة أن تطلب مالاً مقابل إيجاد عمل. اقتراض مال للسفر أو للعمل، والدَّين يكبر باستمرار؟ البقاء إجباري حتى يُدفع؟ هذه علامة استغلال. الدَّين لا يعني أبداً أن الاستمرار في العمل واجب: التوقّف حق. الاحتفاظ بكل ورقة ورسالة عن الدَّين. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.p': "كم بقي عليّ أن أدفع؟ أريد ذلك على ورق.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.s': { m: "الوكالة دفعت ثمن تذكرة حافلتك. الآن تخصم مالاً من أجرك كل أسبوع، والدَّين لا يصغر. ماذا تفعل؟", f: "الوكالة دفعت ثمن تذكرة حافلتك. الآن تخصم مالاً من أجرك كل أسبوع، والدَّين لا يصغر. ماذا تفعلين؟", x: "الوكالة دفعت ثمن تذكرة الحافلة. الآن تخصم مالاً من الأجر كل أسبوع، والدَّين لا يصغر. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.o1': "طلب قائمة على ورق، وطلب المساعدة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.o2': "العمل ساعات أكثر للدفع بسرعة أكبر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.o3': "السكوت: الوكالة ساعدت.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.w': "الدَّين الذي لا يصغر يُبقي الشخص عالقاً. مع القائمة، تستطيع النقابة أو FairWork التحقّق هل هو عادل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection': "التفتيش موجود من أجلك", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.b': { m: "Nederlandse Arbeidsinspectie (مفتشية العمل الهولندية) تتحقّق هل العمل آمن وعادل: الأجر والساعات والاستغلال. يحق للمفتشين أن يأتوا إلى عملك ويتكلموا مع العمال. يمكنك أن تقول لهم الحقيقة: هم لا يخبرون مديرك من بلّغ عن شيء. تحتاج إلى مساعدة بلغتك؟ اطلب مترجماً. FairWork تساعد ضحايا الاستغلال مجاناً، حتى الأشخاص الذين ليست لديهم أوراق سارية. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork.", f: "Nederlandse Arbeidsinspectie (مفتشية العمل الهولندية) تتحقّق هل العمل آمن وعادل: الأجر والساعات والاستغلال. يحق للمفتشين أن يأتوا إلى عملك ويتكلموا مع العمال. يمكنكِ أن تقولي لهم الحقيقة: هم لا يخبرون مديرك من بلّغ عن شيء. تحتاجين إلى مساعدة بلغتك؟ اطلبي مترجماً. FairWork تساعد ضحايا الاستغلال مجاناً، حتى الأشخاص الذين ليست لديهم أوراق سارية. معلومات عامة. لوضعك أنت: اسألي النقابة أو Juridisch Loket أو FairWork.", x: "Nederlandse Arbeidsinspectie (مفتشية العمل الهولندية) تتحقّق هل العمل آمن وعادل: الأجر والساعات والاستغلال. يحق للمفتشين أن يأتوا إلى مكان العمل ويتكلموا مع العمال. قول الحقيقة لهم ممكن: هم لا يخبرون المدير من بلّغ عن شيء. حاجة إلى مساعدة باللغة الأم؟ طلب مترجم. FairWork تساعد ضحايا الاستغلال مجاناً، حتى الأشخاص الذين ليست لديهم أوراق سارية. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.p': "أريد أن أقول شيئاً، لكن بدون وجود مديري.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.s': { m: "مفتش يسأل عن ساعاتك. مديرك قال لك أن تقول 8 ساعات. أنت تعمل 12 ساعة. ماذا تفعل؟", f: "مفتش يسأل عن ساعاتك. مديرك قال لكِ أن تقولي 8 ساعات. أنتِ تعملين 12 ساعة. ماذا تفعلين؟", x: "مفتش يسأل عن ساعات العمل. المدير طلب قول 8 ساعات. العمل الحقيقي 12 ساعة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.o1': "قول الحقيقة للمفتش.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.o2': "قول 8 ساعات، كما قال المدير.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.o3': "السكوت، والابتعاد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.w': "المفتش لا يستطيع المساعدة إلا عندما يعرف الحقيقة. قول الحقيقة يساعد صاحبها، ويساعد الزملاء أيضاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool': "في السيارة: الحزام، والاتفاق على التكاليف", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.b': { m: "كل من في السيارة يضع حزام الأمان، حتى في الخلف. السائق يحتاج إلى رخصة قيادة سارية، ويجب ألا يشرب الكحول قبل القيادة. أشخاص كثيرون جداً في الحافلة، أو السائق يقود بشكل خطير؟ قل ذلك، ولا تركب. تشارك السيارة مع زملاء؟ اتفقوا أولاً على تقسيم تكاليف الوقود. في حافلة العمل التابعة للوكالة؟ اسأل كم يكلّفك ذلك، واحصل عليه على ورق.", f: "كل من في السيارة يضع حزام الأمان، حتى في الخلف. السائق يحتاج إلى رخصة قيادة سارية، ويجب ألا يشرب الكحول قبل القيادة. أشخاص كثيرون جداً في الحافلة، أو السائق يقود بشكل خطير؟ قولي ذلك، ولا تركبي. تشاركين السيارة مع زملاء؟ اتفقوا أولاً على تقسيم تكاليف الوقود. في حافلة العمل التابعة للوكالة؟ اسألي كم يكلّفك ذلك، واحصلي عليه على ورق.", x: "كل من في السيارة يضع حزام الأمان، حتى في الخلف. السائق يحتاج إلى رخصة قيادة سارية، ويجب ألا يشرب الكحول قبل القيادة. أشخاص كثيرون جداً في الحافلة، أو السائق يقود بشكل خطير؟ قول ذلك، وعدم الركوب. مشاركة السيارة مع زملاء؟ الاتفاق أولاً على تقسيم تكاليف الوقود. في حافلة العمل التابعة للوكالة؟ السؤال عن التكلفة، والحصول عليها على ورق." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.p': "يوجد أشخاص كثيرون جداً في الحافلة. لن أركب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.s': { m: "حافلة العمل فيها 9 مقاعد. هذا الصباح يريد 11 شخصاً أن يركبوا. ماذا تفعل؟", f: "حافلة العمل فيها 9 مقاعد. هذا الصباح يريد 11 شخصاً أن يركبوا. ماذا تفعلين؟", x: "حافلة العمل فيها 9 مقاعد. هذا الصباح يريد 11 شخصاً أن يركبوا. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.o1': "عدم الركوب، والاتصال بالمشرف.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.o2': "الجلوس على الأرض في الخلف.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.o3': "الانحشار مع الآخرين: إنها 20 دقيقة فقط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.w': "بدون مقعد وحزام، يمكن لحادث صغير أن يكون خطيراً جداً. صاحب العمل أو الوكالة يستطيع إيجاد حل آخر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train': { m: "القطار متأخر؟ أرسل رسالة فوراً", f: "القطار متأخر؟ أرسلي رسالة فوراً", x: "القطار متأخر؟ إرسال رسالة فوراً" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.b': { m: "انظر في مخطّط الرحلات قبل أن تخرج: القطارات والحافلات قد تتأخر أو تُلغى. قطارك متأخر؟ أرسل إلى مشرفك رسالة فوراً، مع الوقت الذي ستصل فيه. في أيام العاصفة أو الأشغال على السكة، خذ قطاراً أبكر. بعد تأخير طويل، يمكنك غالباً أن تستعيد مالاً: انظر في موقع شركة القطارات.", f: "انظري في مخطّط الرحلات قبل أن تخرجي: القطارات والحافلات قد تتأخر أو تُلغى. قطارك متأخر؟ أرسلي إلى مشرفك رسالة فوراً، مع الوقت الذي ستصلين فيه. في أيام العاصفة أو الأشغال على السكة، خذي قطاراً أبكر. بعد تأخير طويل، يمكنك غالباً أن تستعيدي مالاً: انظري في موقع شركة القطارات.", x: "النظر في مخطّط الرحلات قبل الخروج: القطارات والحافلات قد تتأخر أو تُلغى. القطار متأخر؟ إرسال رسالة إلى المشرف فوراً، مع وقت الوصول. في أيام العاصفة أو الأشغال على السكة، أخذ قطار أبكر. بعد تأخير طويل، غالباً يمكن استعادة مال: النظر في موقع شركة القطارات." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.p': "قطاري متأخر. سأكون هناك في الساعة التاسعة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.s': { m: "قطارك أُلغي. القطار التالي بعد 30 دقيقة. نوبتك تبدأ بعد 40 دقيقة. ماذا تفعل؟", f: "قطارك أُلغي. القطار التالي بعد 30 دقيقة. نوبتك تبدأ بعد 40 دقيقة. ماذا تفعلين؟", x: "القطار أُلغي. القطار التالي بعد 30 دقيقة. النوبة تبدأ بعد 40 دقيقة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.o1': "إرسال رسالة الآن عن التأخير.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.o2': "الانتظار، والشرح عند الوصول.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.o3': "العودة إلى البيت: ليس الذنب ذنبك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.w': "المشرف يستطيع التخطيط بشكل أفضل عندما يعرف مبكراً. التأخير ليس ذنبك، لكن الإخبار عنه مسؤوليتك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist': { m: "تحقّق بنفسك أولاً", f: "تحقّقي بنفسك أولاً", x: "التحقّق الذاتي أولاً" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.b': { m: "قبل أن تقول «klaar» (انتهيت)، تحقّق من عملك بنفسك. استخدم قائمة التحقّق إن وُجدت، وضع علامة على كل خطوة. انظر إلى عملك كأنك أنت الزبون. شيء ليس جيداً؟ أعده الآن: هذا أسرع من لاحقاً. لست متأكداً؟ اطلب من زميل أن ينظر. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "قبل أن تقولي «klaar» (انتهيت)، تحقّقي من عملك بنفسك. استخدمي قائمة التحقّق إن وُجدت، وضعي علامة على كل خطوة. انظري إلى عملك كأنكِ أنتِ الزبونة. شيء ليس جيداً؟ أعيديه الآن: هذا أسرع من لاحقاً. لستِ متأكدة؟ اطلبي من زميل أن ينظر. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "قبل قول «klaar» (انتهيت)، التحقّق من العمل بشكل ذاتي. استخدام قائمة التحقّق إن وُجدت، ووضع علامة على كل خطوة. النظر إلى العمل بعين الزبون. شيء ليس جيداً؟ إعادته الآن: هذا أسرع من لاحقاً. شكّ؟ طلب نظرة من زميل. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.p': "انتهيت. هل يمكنك أن تتحقّق منه قليلاً؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.s': { m: "انتهيت. في قائمة التحقّق خطوة واحدة بدون علامة. تظن أنك قمت بها. ماذا تفعل؟", f: "انتهيتِ. في قائمة التحقّق خطوة واحدة بدون علامة. تظنين أنكِ قمتِ بها. ماذا تفعلين؟", x: "العمل انتهى. في قائمة التحقّق خطوة واحدة بدون علامة. يبدو أنها تمّت. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.o1': "التحقّق من تلك الخطوة مرة أخرى، ثم وضع العلامة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.o2': "وضع العلامة: على الأرجح تمّت.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.o3': "تركها مفتوحة: لا أحد يقرأ القائمة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.w': "قائمة التحقّق تساعد فقط عندما تكون صحيحة. نظرة أخرى تأخذ دقيقة. الخطأ قد يأخذ ساعات.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite': { m: "اتركه كما تحب أن تجده", f: "اتركيه كما تحبين أن تجديه", x: "ترك المكان كما يُحَبّ أن يوجد" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.b': { m: "في نهاية عملك، اترك مكانك نظيفاً وآمناً. أعد الأدوات والمواد إلى مكانها، واكنس الأرضية. أطفئ الآلات والأضواء التي استخدمتها. أنت آخر واحد؟ تحقّق من النوافذ والأبواب، وأقفل بالطريقة التي تقولها شركتك. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في نهاية عملك، اتركي مكانك نظيفاً وآمناً. أعيدي الأدوات والمواد إلى مكانها، واكنسي الأرضية. أطفئي الآلات والأضواء التي استخدمتِها. أنتِ آخر واحدة؟ تحقّقي من النوافذ والأبواب، وأقفلي بالطريقة التي تقولها شركتك. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في نهاية العمل، ترك المكان نظيفاً وآمناً. إعادة الأدوات والمواد إلى مكانها، وكنس الأرضية. إطفاء الآلات والأضواء المستخدمة. آخر من يغادر؟ التحقّق من النوافذ والأبواب، والإقفال بالطريقة التي تحدّدها الشركة. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.p': { m: "أنا آخر واحد. هل يجب أن أقفل الباب؟", f: "أنا آخر واحدة. هل يجب أن أقفل الباب؟", x: "أنا آخر من يغادر. هل يجب أن أقفل الباب؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.s': { m: "أنت آخر واحد في العمل. لا تعرف كيف تشغّل الإنذار. ماذا تفعل؟", f: "أنتِ آخر واحدة في العمل. لا تعرفين كيف تشغّلين الإنذار. ماذا تفعلين؟", x: "آخر شخص في العمل. طريقة تشغيل الإنذار غير معروفة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.o1': "الاتصال بالمشرف والسؤال.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.o2': "المغادرة بدون الإنذار: الوقت متأخر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.o3': "تجربة الأزرار حتى يصدر صوت.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.w': "المبنى بدون إنذار ليس آمناً. المشرف يفضّل أن يتلقّى اتصالاً على أن يجد مشكلة غداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays': "طالب، وزميل", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.b': { m: "في مكان تدريبك أنت موجود لتتعلّم، لكنك تعمل مثل زميل: في الوقت، مع قواعد المكان، وتتصل عندما تكون مريضاً. يمكنك أن تسأل أسئلة كثيرة: لهذا أنت هناك. عملك يجب أن يساعدك على التعلّم، وليس فقط التنظيف أو الحمل طوال اليوم. ليس الأمر كذلك؟ تكلّم مع مشرف التدريب في المدرسة. مكافأة التدريب لا تُعطى دائماً: اسأل عنها قبل أن تبدأ. القواعد تختلف من مدرسة لأخرى: اسأل مشرف التدريب.", f: "في مكان تدريبك أنتِ موجودة لتتعلّمي، لكنكِ تعملين مثل زميلة: في الوقت، مع قواعد المكان، وتتصلين عندما تكونين مريضة. يمكنكِ أن تسألي أسئلة كثيرة: لهذا أنتِ هناك. عملك يجب أن يساعدك على التعلّم، وليس فقط التنظيف أو الحمل طوال اليوم. ليس الأمر كذلك؟ تكلّمي مع مشرف التدريب في المدرسة. مكافأة التدريب لا تُعطى دائماً: اسألي عنها قبل أن تبدئي. القواعد تختلف من مدرسة لأخرى: اسألي مشرف التدريب.", x: "في مكان التدريب الهدف هو التعلّم، لكن العمل يكون مثل أي زميل: في الوقت، مع قواعد المكان، والاتصال عند المرض. طرح أسئلة كثيرة مسموح: لهذا يوجد التدريب. العمل يجب أن يساعد على التعلّم، وليس فقط التنظيف أو الحمل طوال اليوم. ليس الأمر كذلك؟ الكلام مع مشرف التدريب في المدرسة. مكافأة التدريب لا تُعطى دائماً: السؤال عنها قبل البدء. القواعد تختلف من مدرسة لأخرى: السؤال عند مشرف التدريب." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.p': "أريد أن أتعلّم هذا أيضاً. هل يمكنني أن أشاهد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.s': { m: "في مكان تدريبك تنظّف المقصف فقط، كل يوم، منذ ثلاثة أسابيع. ماذا تفعل؟", f: "في مكان تدريبك تنظّفين المقصف فقط، كل يوم، منذ ثلاثة أسابيع. ماذا تفعلين؟", x: "في مكان التدريب العمل هو تنظيف المقصف فقط، كل يوم، منذ ثلاثة أسابيع. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.o1': "الكلام عن ذلك مع مشرف التدريب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.o2': "القيام بذلك والسكوت: هذا دور الطالب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.o3': "البقاء في البيت حتى يعطوا عملاً آخر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.w': "التدريب العملي لتعلّم المهنة. مشرف التدريب يستطيع أن يتكلم مع الشركة عن مهام أفضل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend': { m: "أنهِ جيداً، واطلب توصية", f: "أنهي جيداً، واطلبي توصية", x: "نهاية جيدة، وطلب توصية" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.b': { m: "في المقابلة الختامية تسمع ما كان جيداً وما يمكن أن يكون أفضل. اطلب أمثلة، واكتبها لعملك القادم. سار الأمر جيداً؟ اسأل هل يمكنك أن تذكر اسمهم كمرجع. في يومك الأخير، اشكر زملاءك: كثير من الناس هنا يحضرون شيئاً صغيراً للأكل، مثل كعكة أو حلويات. القواعد تختلف من مدرسة لأخرى: اسأل مشرف التدريب.", f: "في المقابلة الختامية تسمعين ما كان جيداً وما يمكن أن يكون أفضل. اطلبي أمثلة، واكتبيها لعملك القادم. سار الأمر جيداً؟ اسألي هل يمكنكِ أن تذكري اسمهم كمرجع. في يومك الأخير، اشكري زملاءك: كثير من الناس هنا يحضرون شيئاً صغيراً للأكل، مثل كعكة أو حلويات. القواعد تختلف من مدرسة لأخرى: اسألي مشرف التدريب.", x: "في المقابلة الختامية يُقال ما كان جيداً وما يمكن أن يكون أفضل. طلب أمثلة، وكتابتها للعمل القادم. سار الأمر جيداً؟ السؤال هل يمكن ذكر اسمهم كمرجع. في اليوم الأخير، شكر الزملاء: كثير من الناس هنا يحضرون شيئاً صغيراً للأكل، مثل كعكة أو حلويات. القواعد تختلف من مدرسة لأخرى: السؤال عند مشرف التدريب." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.p': "هل يمكنني أن أذكر اسمك كمرجع؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.s': { m: "إنه اليوم الأخير من تدريبك. ماذا تفعل؟", f: "إنه اليوم الأخير من تدريبك. ماذا تفعلين؟", x: "إنه اليوم الأخير من التدريب. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.o1': "شكر الزملاء، والوداع.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.o2': "المغادرة بهدوء، بدون كلام.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.o3': "طلب هدية من الشركة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.w': "الوداع الجيد يترك صورة جيدة. ربما يكون العمل هناك ممكناً لاحقاً، أو تلزم توصية منهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours': { m: "سلّم على جيرانك", f: "سلّمي على جيرانك", x: "إلقاء التحية على الجيران" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.b': { m: "جديد في شارع؟ سلّم على جيرانك وقل لهم اسمك. هذا يجعل حلّ المشاكل أسهل لاحقاً. تعمل ليلاً، أو تسكن مع أشخاص كثيرين؟ حافظ على الهدوء في وقت متأخر من المساء وفي الليل. ضع القمامة في الخارج في اليوم الصحيح. في المكتبة ومركز الحيّ يمكنك غالباً أن تتمرّن على الهولندية، أحياناً مجاناً.", f: "جديدة في شارع؟ سلّمي على جيرانك وقولي لهم اسمك. هذا يجعل حلّ المشاكل أسهل لاحقاً. تعملين ليلاً، أو تسكنين مع أشخاص كثيرين؟ حافظي على الهدوء في وقت متأخر من المساء وفي الليل. ضعي القمامة في الخارج في اليوم الصحيح. في المكتبة ومركز الحيّ يمكنكِ غالباً أن تتمرّني على الهولندية، أحياناً مجاناً.", x: "سكن جديد في شارع؟ التسليم على الجيران وذكر الاسم لهم. هذا يجعل حلّ المشاكل أسهل لاحقاً. عمل ليلي، أو سكن مع أشخاص كثيرين؟ الحفاظ على الهدوء في وقت متأخر من المساء وفي الليل. وضع القمامة في الخارج في اليوم الصحيح. في المكتبة ومركز الحيّ يمكن غالباً التمرّن على الهولندية، أحياناً مجاناً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.p': "مرحباً، أنا علي. أسكن في البيت المجاور.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.s': { m: "تسكن مع خمسة زملاء. جار يقول إن هناك ضجيجاً كثيراً في الليل. ماذا تفعل؟", f: "تسكنين مع خمسة زملاء. جار يقول إن هناك ضجيجاً كثيراً في الليل. ماذا تفعلين؟", x: "السكن مع خمسة زملاء. جار يقول إن هناك ضجيجاً كثيراً في الليل. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.o1': "الاعتذار، والاتفاق على الهدوء.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.o2': "القول إن الجميع يعملون ويحتاجون إلى الراحة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.o3': "السكوت، وإغلاق الباب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.w': "الكلام الجيد مبكراً يمنع مشاكل أكبر. الجيران الذين يعرفونك غالباً ألطف وأكثر استعداداً للمساعدة.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.join': { m: "شارك: تتعلّم الهولندية أسرع", f: "شاركي: تتعلّمين الهولندية أسرع", x: "المشاركة: تعلُّم الهولندية أسرع" }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.join.b': { m: "خارج العمل، تتعلّم الهولندية بأسرع شكل عندما تفعل أشياء مع الناس: الرياضة، أو نادٍ، أو العمل التطوعي. طفلك في المدرسة؟ اذهب إلى اجتماع أولياء الأمور، حتى لو لم تكن هولنديتك ممتازة: المعلّم يريد أن يتعرّف عليك. يمكنك أن تطلب كلاماً بطيئاً بالهولندية، أو تستخدم تطبيق ترجمة. العمل التطوعي يبدو جيداً أيضاً في سيرتك الذاتية.", f: "خارج العمل، تتعلّمين الهولندية بأسرع شكل عندما تفعلين أشياء مع الناس: الرياضة، أو نادٍ، أو العمل التطوعي. طفلك في المدرسة؟ اذهبي إلى اجتماع أولياء الأمور، حتى لو لم تكن هولنديتك ممتازة: المعلّم يريد أن يتعرّف عليكِ. يمكنكِ أن تطلبي كلاماً بطيئاً بالهولندية، أو تستخدمي تطبيق ترجمة. العمل التطوعي يبدو جيداً أيضاً في سيرتك الذاتية.", x: "خارج العمل، أسرع طريقة لتعلّم الهولندية هي القيام بأشياء مع الناس: الرياضة، أو نادٍ، أو العمل التطوعي. طفل في المدرسة؟ الذهاب إلى اجتماع أولياء الأمور، حتى لو لم تكن الهولندية ممتازة: المعلّم يريد التعرّف على الأهل. طلب كلام بطيء بالهولندية مسموح، أو استخدام تطبيق ترجمة. العمل التطوعي يبدو جيداً أيضاً في السيرة الذاتية." }, // nieuw, nalezen
-    'c.join.p': "هل يمكنك أن تتكلم ببطء أكثر قليلاً؟", // nieuw, nalezen
-    'c.join.s': { m: "أنت مدعو إلى اجتماع أولياء الأمور. هولنديتك ليست جيدة بعد. ماذا تفعل؟", f: "أنتِ مدعوة إلى اجتماع أولياء الأمور. هولنديتك ليست جيدة بعد. ماذا تفعلين؟", x: "دعوة إلى اجتماع أولياء الأمور. الهولندية ليست جيدة بعد. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.join.o1': "الذهاب، واستخدام هولندية بسيطة أو تطبيق.", // nieuw, nalezen
-    'c.join.o2': "عدم الذهاب: المعلّم لن يفهم.", // nieuw, nalezen
-    'c.join.o3': "إرسال رسالة قصيرة عن الانشغال.", // nieuw, nalezen
-    'c.join.w': "المعلّم يريد أن يتكلم عن الطفل، وليس عن اللغة الهولندية. الحضور يُظهر الاهتمام.", // nieuw, nalezen
-    'c.workphotos': { m: "اسأل أولاً، ثم انشر", f: "اسألي أولاً، ثم انشري", x: "السؤال أولاً، ثم النشر" }, // nieuw, nalezen
-    'c.workphotos.b': { m: "صورة في العمل قد تُظهر أكثر مما تظن: زبوناً، أو عميلاً، أو شاشة، أو ورقة فيها أسماء. لا تنشر صوراً من العمل على الإنترنت بدون إذن من صاحب العمل، ولا تنشر أبداً صور أشخاص بدون موافقتهم. بيانات الزبائن تبقى في العمل: لا ترسلها إلى هاتفك أو إيميلك الخاص. أرسلت شيئاً بالخطأ؟ أخبر مشرفك فوراً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "صورة في العمل قد تُظهر أكثر مما تظنين: زبوناً، أو عميلاً، أو شاشة، أو ورقة فيها أسماء. لا تنشري صوراً من العمل على الإنترنت بدون إذن من صاحب العمل، ولا تنشري أبداً صور أشخاص بدون موافقتهم. بيانات الزبائن تبقى في العمل: لا ترسليها إلى هاتفك أو إيميلك الخاص. أرسلتِ شيئاً بالخطأ؟ أخبري مشرفك فوراً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "صورة في العمل قد تُظهر أكثر من المتوقّع: زبوناً، أو عميلاً، أو شاشة، أو ورقة فيها أسماء. لا يجوز نشر صور من العمل على الإنترنت بدون إذن من صاحب العمل، ولا يجوز أبداً نشر صور أشخاص بدون موافقتهم. بيانات الزبائن تبقى في العمل: لا يجوز إرسالها إلى هاتف أو إيميل خاص. إرسال شيء بالخطأ؟ إخبار المشرف فوراً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.workphotos.p': "سأطلب الإذن أولاً.", // nieuw, nalezen
-    'c.workphotos.s': { m: "زميل يضع صورة مضحكة لزبون في تطبيق الفريق. ماذا تفعل؟", f: "زميل يضع صورة مضحكة لزبون في تطبيق الفريق. ماذا تفعلين؟", x: "زميل يضع صورة مضحكة لزبون في تطبيق الفريق. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.workphotos.o1': "القول إن هذا غير مقبول، وعدم مشاركتها.", // nieuw, nalezen
-    'c.workphotos.o2': "مشاركتها: إنها في تطبيق الفريق فقط.", // nieuw, nalezen
-    'c.workphotos.o3': "الإعجاب بها، لكن بدون مشاركتها.", // nieuw, nalezen
-    'c.workphotos.w': "الزبون لم يوافق على هذه الصورة. الصور في تطبيق يمكن أن تنتشر في كل مكان، بسرعة. قول ذلك بلطف يحمي الزبون والزميل.", // nieuw, nalezen
-    'c.device': "التحديثات نعم، الذاكرات الغريبة لا", // nieuw, nalezen
-    'c.device.b': { m: "ثبّت التحديثات على هاتفك وحاسوبك: إنها تسدّ ثغرات يستخدمها المخترقون. وجدت ذاكرة USB؟ لا تضعها في حاسوبك: أعطها لقسم تقنية المعلومات. على هاتف أو حاسوب العمل، ثبّت فقط التطبيقات التي يسمح بها عملك. على واي فاي عام، لا تدخل إلى حسابك البنكي أو إلى عملك. اقفل هاتفك برمز. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "ثبّتي التحديثات على هاتفك وحاسوبك: إنها تسدّ ثغرات يستخدمها المخترقون. وجدتِ ذاكرة USB؟ لا تضعيها في حاسوبك: أعطيها لقسم تقنية المعلومات. على هاتف أو حاسوب العمل، ثبّتي فقط التطبيقات التي يسمح بها عملك. على واي فاي عام، لا تدخلي إلى حسابك البنكي أو إلى عملك. اقفلي هاتفك برمز. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "تثبيت التحديثات على الهاتف والحاسوب: إنها تسدّ ثغرات يستخدمها المخترقون. العثور على ذاكرة USB؟ لا يجوز وضعها في الحاسوب: تسليمها لقسم تقنية المعلومات. على هاتف أو حاسوب العمل، تثبيت التطبيقات التي يسمح بها العمل فقط. على واي فاي عام، لا يجوز الدخول إلى الحساب البنكي أو إلى العمل. قفل الهاتف برمز. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.device.p': "وجدت ذاكرة USB. ماذا يجب أن أفعل بها؟", // nieuw, nalezen
-    'c.device.s': { m: "تجد ذاكرة USB في موقف السيارات. مكتوب عليها «Salaris». ماذا تفعل؟", f: "تجدين ذاكرة USB في موقف السيارات. مكتوب عليها «Salaris». ماذا تفعلين؟", x: "ذاكرة USB في موقف السيارات. مكتوب عليها «Salaris». ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.device.o1': "تسليمها لقسم تقنية المعلومات.", // nieuw, nalezen
-    'c.device.o2': "وضعها في الحاسوب لمعرفة صاحبها.", // nieuw, nalezen
-    'c.device.o3': "أخذها إلى البيت والنظر فيها هناك.", // nieuw, nalezen
-    'c.device.w': "الذاكرة قد يكون عليها فيروس، حتى عندما تبدو مثيرة للاهتمام. قسم تقنية المعلومات يستطيع فحصها بأمان.", // nieuw, nalezen
+    'c.join.b': { m: "خارج العمل، تتعلّم الهولندية بأسرع شكل عندما تفعل أشياء مع الناس: الرياضة، أو نادٍ، أو العمل التطوعي. طفلك في المدرسة؟ اذهب إلى اجتماع أولياء الأمور، حتى لو لم تكن هولنديتك ممتازة: المعلّم يريد أن يتعرّف عليك. يمكنك أن تطلب كلاماً بطيئاً بالهولندية، أو تستخدم تطبيق ترجمة. العمل التطوعي يبدو جيداً أيضاً في سيرتك الذاتية.", f: "خارج العمل، تتعلّمين الهولندية بأسرع شكل عندما تفعلين أشياء مع الناس: الرياضة، أو نادٍ، أو العمل التطوعي. طفلك في المدرسة؟ اذهبي إلى اجتماع أولياء الأمور، حتى لو لم تكن هولنديتك ممتازة: المعلّم يريد أن يتعرّف عليكِ. يمكنكِ أن تطلبي كلاماً بطيئاً بالهولندية، أو تستخدمي تطبيق ترجمة. العمل التطوعي يبدو جيداً أيضاً في سيرتك الذاتية.", x: "خارج العمل، أسرع طريقة لتعلّم الهولندية هي القيام بأشياء مع الناس: الرياضة، أو نادٍ، أو العمل التطوعي. طفل في المدرسة؟ الذهاب إلى اجتماع أولياء الأمور، حتى لو لم تكن الهولندية ممتازة: المعلّم يريد التعرّف على الأهل. طلب كلام بطيء بالهولندية مسموح، أو استخدام تطبيق ترجمة. العمل التطوعي يبدو جيداً أيضاً في السيرة الذاتية." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.p': "هل يمكنك أن تتكلم ببطء أكثر قليلاً؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.s': { m: "أنت مدعو إلى اجتماع أولياء الأمور. هولنديتك ليست جيدة بعد. ماذا تفعل؟", f: "أنتِ مدعوة إلى اجتماع أولياء الأمور. هولنديتك ليست جيدة بعد. ماذا تفعلين؟", x: "دعوة إلى اجتماع أولياء الأمور. الهولندية ليست جيدة بعد. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.o1': "الذهاب، واستخدام هولندية بسيطة أو تطبيق.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.o2': "عدم الذهاب: المعلّم لن يفهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.o3': "إرسال رسالة قصيرة عن الانشغال.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.w': "المعلّم يريد أن يتكلم عن الطفل، وليس عن اللغة الهولندية. الحضور يُظهر الاهتمام.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos': { m: "اسأل أولاً، ثم انشر", f: "اسألي أولاً، ثم انشري", x: "السؤال أولاً، ثم النشر" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.b': { m: "صورة في العمل قد تُظهر أكثر مما تظن: زبوناً، أو عميلاً، أو شاشة، أو ورقة فيها أسماء. لا تنشر صوراً من العمل على الإنترنت بدون إذن من صاحب العمل، ولا تنشر أبداً صور أشخاص بدون موافقتهم. بيانات الزبائن تبقى في العمل: لا ترسلها إلى هاتفك أو إيميلك الخاص. أرسلت شيئاً بالخطأ؟ أخبر مشرفك فوراً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "صورة في العمل قد تُظهر أكثر مما تظنين: زبوناً، أو عميلاً، أو شاشة، أو ورقة فيها أسماء. لا تنشري صوراً من العمل على الإنترنت بدون إذن من صاحب العمل، ولا تنشري أبداً صور أشخاص بدون موافقتهم. بيانات الزبائن تبقى في العمل: لا ترسليها إلى هاتفك أو إيميلك الخاص. أرسلتِ شيئاً بالخطأ؟ أخبري مشرفك فوراً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "صورة في العمل قد تُظهر أكثر من المتوقّع: زبوناً، أو عميلاً، أو شاشة، أو ورقة فيها أسماء. لا يجوز نشر صور من العمل على الإنترنت بدون إذن من صاحب العمل، ولا يجوز أبداً نشر صور أشخاص بدون موافقتهم. بيانات الزبائن تبقى في العمل: لا يجوز إرسالها إلى هاتف أو إيميل خاص. إرسال شيء بالخطأ؟ إخبار المشرف فوراً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.p': "سأطلب الإذن أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.s': { m: "زميل يضع صورة مضحكة لزبون في تطبيق الفريق. ماذا تفعل؟", f: "زميل يضع صورة مضحكة لزبون في تطبيق الفريق. ماذا تفعلين؟", x: "زميل يضع صورة مضحكة لزبون في تطبيق الفريق. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.o1': "القول إن هذا غير مقبول، وعدم مشاركتها.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.o2': "مشاركتها: إنها في تطبيق الفريق فقط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.o3': "الإعجاب بها، لكن بدون مشاركتها.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.w': "الزبون لم يوافق على هذه الصورة. الصور في تطبيق يمكن أن تنتشر في كل مكان، بسرعة. قول ذلك بلطف يحمي الزبون والزميل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device': "التحديثات نعم، الذاكرات الغريبة لا", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.b': { m: "ثبّت التحديثات على هاتفك وحاسوبك: إنها تسدّ ثغرات يستخدمها المخترقون. وجدت ذاكرة USB؟ لا تضعها في حاسوبك: أعطها لقسم تقنية المعلومات. على هاتف أو حاسوب العمل، ثبّت فقط التطبيقات التي يسمح بها عملك. على واي فاي عام، لا تدخل إلى حسابك البنكي أو إلى عملك. اقفل هاتفك برمز. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "ثبّتي التحديثات على هاتفك وحاسوبك: إنها تسدّ ثغرات يستخدمها المخترقون. وجدتِ ذاكرة USB؟ لا تضعيها في حاسوبك: أعطيها لقسم تقنية المعلومات. على هاتف أو حاسوب العمل، ثبّتي فقط التطبيقات التي يسمح بها عملك. على واي فاي عام، لا تدخلي إلى حسابك البنكي أو إلى عملك. اقفلي هاتفك برمز. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "تثبيت التحديثات على الهاتف والحاسوب: إنها تسدّ ثغرات يستخدمها المخترقون. العثور على ذاكرة USB؟ لا يجوز وضعها في الحاسوب: تسليمها لقسم تقنية المعلومات. على هاتف أو حاسوب العمل، تثبيت التطبيقات التي يسمح بها العمل فقط. على واي فاي عام، لا يجوز الدخول إلى الحساب البنكي أو إلى العمل. قفل الهاتف برمز. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.p': "وجدت ذاكرة USB. ماذا يجب أن أفعل بها؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.s': { m: "تجد ذاكرة USB في موقف السيارات. مكتوب عليها «Salaris». ماذا تفعل؟", f: "تجدين ذاكرة USB في موقف السيارات. مكتوب عليها «Salaris». ماذا تفعلين؟", x: "ذاكرة USB في موقف السيارات. مكتوب عليها «Salaris». ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.o1': "تسليمها لقسم تقنية المعلومات.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.o2': "وضعها في الحاسوب لمعرفة صاحبها.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.o3': "أخذها إلى البيت والنظر فيها هناك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.w': "الذاكرة قد يكون عليها فيروس، حتى عندما تبدو مثيرة للاهتمام. قسم تقنية المعلومات يستطيع فحصها بأمان.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Veiligheid op het werk" (four lessons) and the VOG lesson of "Werken via een uitzendbureau" (23 November 2026).
-    'u.safework': "السلامة في العمل", // nieuw, nalezen
-    'l.vog': "ماضيك: شهادة VOG", // nieuw, nalezen
-    'w.vog': "شهادة حسن السيرة والسلوك (VOG: ورقة من الحكومة تقول إن ماضيك ليس مشكلة لهذا العمل)", // nieuw, nalezen
-    'w.strafblad': "السجل الجنائي (الجرائم التي أدانتك بها المحكمة)", // nieuw, nalezen
-    'w.screening': "التحقّق من الخلفية (فحص الماضي قبل بدء العمل)", // nieuw, nalezen
-    'w.personenregister': "سجلّ رعاية الأطفال (كل من يعمل في رعاية الأطفال يجب أن يكون مسجّلاً فيه)", // nieuw, nalezen
-    'w.beveiligerspas': "بطاقة حارس الأمن (البطاقة اللازمة للعمل كحارس أمن)", // nieuw, nalezen
-    'w.verleden': "الماضي", // nieuw, nalezen
-    's.vog.1': "في قطاع الرعاية يطلبون شهادة VOG دائماً تقريباً.", // nieuw, nalezen
-    's.vog.2': "عندي VOG واسمي موجود في سجلّ رعاية الأطفال.", // nieuw, nalezen
-    's.vog.3': "أحصل على بطاقة حارس الأمن بعد التحقّق من الخلفية.", // nieuw, nalezen
-    'c.vog.q': "الوكالة تطلب شهادة VOG. هل هي عندك؟", // nieuw, nalezen
-    'c.vog.a': "لا. ما زلت أنتظر الإيميل من Justis.", // nieuw, nalezen
-    'l.safetysigns': "لافتات السلامة", // nieuw, nalezen
-    'w.verbodsbord': "لافتة المنع (دائرة حمراء عليها خط: لا يجوز فعل هذا)", // nieuw, nalezen
-    'w.gebodsbord': "لافتة الإلزام (دائرة زرقاء فيها صورة بيضاء: يجب فعل هذا)", // nieuw, nalezen
-    'w.waarschuwingsbord': "لافتة التحذير (مثلث أصفر بحافة سوداء: انتباه، خطر)", // nieuw, nalezen
-    'w.reddingsbord': "لافتة الإنقاذ (مستطيل أخضر: طريق الخروج، أو الإسعافات الأولية)", // nieuw, nalezen
-    'w.brandbord': "لافتة معدات الحريق (مربع أحمر: هنا طفاية حريق أو خرطوم حريق)", // nieuw, nalezen
-    'w.pictogram': "الرمز المصوّر (صورة بسيطة تقول شيئاً بدون كلمات)", // nieuw, nalezen
-    's.safetysigns.1': "اللافتة الحمراء المستديرة تعني: هذا غير مسموح.", // nieuw, nalezen
-    's.safetysigns.2': { m: "اللافتة الزرقاء تقول ما يجب أن تفعله.", f: "اللافتة الزرقاء تقول ما يجب أن تفعليه.", x: "اللافتة الزرقاء تقول ما يجب فعله." }, // nieuw, nalezen
-    's.safetysigns.3': { m: "اتبع اللافتات الخضراء إلى مخرج الطوارئ.", f: "اتبعي اللافتات الخضراء إلى مخرج الطوارئ.", x: "اللافتات الخضراء تقود إلى مخرج الطوارئ." }, // nieuw, nalezen
-    'c.safetysigns.q': "ماذا تعني هذه اللافتة الصفراء؟", // nieuw, nalezen
-    'c.safetysigns.a': "انتباه، خطر. إنها لافتة تحذير.", // nieuw, nalezen
-    'l.substances': "المواد الخطرة", // nieuw, nalezen
-    'w.stofmasker': "كمّامة الغبار (تغطي الأنف والفم)", // nieuw, nalezen
-    'w.giftig': "سامّ", // nieuw, nalezen
-    'w.bijtend': "أكّال (يحرق الجلد أو يأكل المعدن)", // nieuw, nalezen
-    'w.drinkfles': "قنينة الشرب", // nieuw, nalezen
-    'w.opbergen': "يحفظ في مكانه (في مكانه الخاص، مثلاً خزانة تُقفل)", // nieuw, nalezen
-    'w.dop': "الغطاء (لقنينة أو علبة)", // nieuw, nalezen
-    's.substances.1': { m: "انظر أولاً إلى رمز الخطر على الملصق.", f: "انظري أولاً إلى رمز الخطر على الملصق.", x: "أولاً النظر إلى رمز الخطر على الملصق." }, // nieuw, nalezen
-    's.substances.2': { m: "لا تسكبه أبداً في قنينة شرب.", f: "لا تسكبيه أبداً في قنينة شرب.", x: "لا يُسكب أبداً في قنينة شرب." }, // nieuw, nalezen
-    's.substances.3': { m: "هنا يجب أن تلبس كمّامة الغبار.", f: "هنا يجب أن تلبسي كمّامة الغبار.", x: "هنا يجب لبس كمّامة الغبار." }, // nieuw, nalezen
-    'c.substances.q': "هل هذه المادة سامّة؟", // nieuw, nalezen
-    'c.substances.a': "هذا مكتوب في صحيفة بيانات السلامة. سأبحث عنه.", // nieuw, nalezen
-    'l.firefight': "الحريق", // nieuw, nalezen
-    'w.branddriehoek': "مثلث الحريق (النار تحتاج إلى وقود وهواء وحرارة؛ إزالة واحد منها تطفئ النار)", // nieuw, nalezen
-    'w.zuurstof': "الأكسجين (في الهواء؛ النار تحتاج إليه)", // nieuw, nalezen
-    'w.blussen': "يطفئ (حريقاً)", // nieuw, nalezen
-    'w.blusdeken': "بطانية الحريق", // nieuw, nalezen
-    'w.openvuur': "النار المكشوفة (لهب، مثلاً من ولّاعة أو موقد غاز)", // nieuw, nalezen
-    'w.brandslang': "خرطوم الحريق (على بكرة في الحائط)", // nieuw, nalezen
-    's.firefight.1': { m: "لا ترمِ الماء أبداً على زيت مشتعل.", f: "لا ترمي الماء أبداً على زيت مشتعل.", x: "لا يُرمى الماء أبداً على زيت مشتعل." }, // nieuw, nalezen
-    's.firefight.2': { m: "أنت لا تطفئ بنفسك إلا حريقاً صغيراً.", f: "أنتِ لا تطفئين بنفسك إلا حريقاً صغيراً.", x: "إطفاء الحريق بالنفس يكون للحريق الصغير فقط." }, // nieuw, nalezen
-    's.firefight.3': { m: "ضع بطانية الحريق على المقلاة.", f: "ضعي بطانية الحريق على المقلاة.", x: "بطانية الحريق توضع على المقلاة." }, // nieuw, nalezen
-    'c.firefight.q': "يوجد حريق في سلة المهملات!", // nieuw, nalezen
-    'c.firefight.a': "إنه صغير. سأحضر طفاية الحريق.", // nieuw, nalezen
-    'l.permitwork': "التصاريح والأماكن المغلقة والرفع", // nieuw, nalezen
-    'w.werkvergunningveilig': "تصريح سلامة العمل (ورقة سلامة للعمل الخطر: ماذا، وأين، وأي مخاطر؛ ليست أوراق إقامتك أو عملك)", // nieuw, nalezen
-    'w.beslotenruimte': "المكان المغلق (خزّان أو حفرة أو مجرى صرف: صغير، وفيه قليل من الهواء النقي)", // nieuw, nalezen
-    'w.gasmeting': "قياس الغاز (يُقاس الهواء قبل الدخول)", // nieuw, nalezen
-    'w.mangatwacht': "مراقب الفتحة (الشخص الذي يبقى في الخارج عند الفتحة، ويبقى على تواصل، ويطلق الإنذار)", // nieuw, nalezen
-    'w.signaalgever': "مُعطي الإشارات (الشخص الذي يعطي سائق الرافعة إشارات باليد)", // nieuw, nalezen
-    'w.hijsen': "يرفع (حمولة بالرافعة)", // nieuw, nalezen
-    's.permitwork.1': "لا نبدأ بدون تصريح سلامة العمل.", // nieuw, nalezen
-    's.permitwork.2': "أولاً قياس الغاز، وبعدها فقط ندخل المكان المغلق.", // nieuw, nalezen
-    's.permitwork.3': { m: "انظر إلى مُعطي الإشارات: رفع، إنزال، توقّف.", f: "انظري إلى مُعطي الإشارات: رفع، إنزال، توقّف.", x: "النظر إلى مُعطي الإشارات: رفع، إنزال، توقّف." }, // nieuw, nalezen
-    'c.permitwork.q': "من يبقى في الخارج عند الخزّان؟", // nieuw, nalezen
-    'c.permitwork.a': { m: "أنا. أنا مراقب الفتحة.", f: "أنا. أنا مراقبة الفتحة.", x: "أنا. مهمّتي مراقبة الفتحة." }, // nieuw, nalezen
-    'c.vog': "شهادة VOG: فحص ماضيك", // nieuw, nalezen
-    'c.vog.b': { m: "لبعض الوظائف، تطلب الوكالة أو صاحب العمل شهادة VOG (Verklaring Omtrent het Gedrag). إنها ورقة من الحكومة: تقول إن ماضيك ليس مشكلة لهذا العمل. في الرعاية ورعاية الأطفال والحراسة الأمنية تحتاج إليها دائماً تقريباً. عادةً يبدأ صاحب العمل الطلب عبر الإنترنت. تصلك رسالة إيميل من Justis، وتكمل الطلب بـDigiD وتدفع. اسأل أولاً من يدفع: غالباً يعيد صاحب العمل المبلغ لك. للمتطوعين الذين يعملون مع الأطفال أو الأشخاص الضعفاء تكون غالباً مجانية. عندك سجلّ جنائي؟ هذا لا يعني دائماً عدم الحصول على VOG: Justis تنظر إلى ما يهمّ لهذا العمل. لست متأكداً؟ اسأل Juridisch Loket. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "لبعض الوظائف، تطلب الوكالة أو صاحب العمل شهادة VOG (Verklaring Omtrent het Gedrag). إنها ورقة من الحكومة: تقول إن ماضيكِ ليس مشكلة لهذا العمل. في الرعاية ورعاية الأطفال والحراسة الأمنية تحتاجين إليها دائماً تقريباً. عادةً يبدأ صاحب العمل الطلب عبر الإنترنت. تصلكِ رسالة إيميل من Justis، وتكملين الطلب بـDigiD وتدفعين. اسألي أولاً من يدفع: غالباً يعيد صاحب العمل المبلغ لكِ. للمتطوعين الذين يعملون مع الأطفال أو الأشخاص الضعفاء تكون غالباً مجانية. عندكِ سجلّ جنائي؟ هذا لا يعني دائماً عدم الحصول على VOG: Justis تنظر إلى ما يهمّ لهذا العمل. لستِ متأكدة؟ اسألي Juridisch Loket. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "لبعض الوظائف، تطلب الوكالة أو صاحب العمل شهادة VOG (Verklaring Omtrent het Gedrag). إنها ورقة من الحكومة: تقول إن الماضي ليس مشكلة لهذا العمل. في الرعاية ورعاية الأطفال والحراسة الأمنية تكون مطلوبة دائماً تقريباً. عادةً يبدأ صاحب العمل الطلب عبر الإنترنت. بعدها تصل رسالة إيميل من Justis، ويُكمَل الطلب بـDigiD ويُدفع المبلغ. السؤال أولاً عمّن يدفع: غالباً يعيد صاحب العمل المبلغ. للمتطوعين الذين يعملون مع الأطفال أو الأشخاص الضعفاء تكون غالباً مجانية. يوجد سجلّ جنائي؟ هذا لا يعني دائماً عدم الحصول على VOG: Justis تنظر إلى ما يهمّ لهذا العمل. عدم التأكّد؟ سؤال Juridisch Loket. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen
-    'c.vog.p': "هل يجب أن أدفع ثمن VOG بنفسي؟", // nieuw, nalezen
-    'c.vog.s': { m: "عملك الجديد في دار رعاية يطلب VOG. قبل سنوات، كانت عندك مشكلة مع الشرطة. ماذا تفعل؟", f: "عملكِ الجديد في دار رعاية يطلب VOG. قبل سنوات، كانت عندكِ مشكلة مع الشرطة. ماذا تفعلين؟", x: "العمل الجديد في دار رعاية يطلب VOG. قبل سنوات، كانت هناك مشكلة مع الشرطة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.vog.o1': "تقديم الطلب، وسؤال Juridisch Loket عند القلق.", // nieuw, nalezen
-    'c.vog.o2': "عدم تقديم الطلب: الرفض مؤكّد.", // nieuw, nalezen
-    'c.vog.o3': "قول إنه لا يوجد وقت، والبحث عن عمل آخر.", // nieuw, nalezen
-    'c.vog.w': "Justis تنظر فقط إلى ما يهمّ للعمل. كثير من الناس الذين في ماضيهم شيء ما يحصلون مع ذلك على VOG. النصيحة تساعد عند عدم التأكّد.", // nieuw, nalezen
-    'c.safetysigns': "ما هو VCA؟", // nieuw, nalezen
-    'c.safetysigns.b': { m: "VCA شهادة سلامة. كثير من الشركات تطلبها، أيضاً عن طريق وكالة، مثلاً في البناء والصناعة. معظم العمال يأخذون B-VCA (VCA Basis)؛ المشرف يأخذ VOL-VCA. تأخذ دورة، وامتحاناً بأسئلة اختيار من متعدّد في مركز امتحان معترف به. غالباً تستطيع أن تقدّم الامتحان بعدة لغات، مثلاً الإنجليزية أو البولندية: اسأل مركز الامتحان. الشهادة صالحة لمدة 10 سنوات. غالباً يدفع صاحب العمل أو الوكالة: اسأل قبل أن تدفع بنفسك. لا يجوز للوكالة أن تخصم أي تكلفة كانت من أجرك (انظر الموضوع عن العمل عن طريق وكالة). في هذه الدروس تتعلّم بعض الكلمات التي تصادفها في العمل الآمن وفي VCA. من أجل VCA تأخذ دورة وامتحاناً. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "VCA شهادة سلامة. كثير من الشركات تطلبها، أيضاً عن طريق وكالة، مثلاً في البناء والصناعة. معظم العمال يأخذون B-VCA (VCA Basis)؛ المشرف يأخذ VOL-VCA. تأخذين دورة، وامتحاناً بأسئلة اختيار من متعدّد في مركز امتحان معترف به. غالباً تستطيعين أن تقدّمي الامتحان بعدة لغات، مثلاً الإنجليزية أو البولندية: اسألي مركز الامتحان. الشهادة صالحة لمدة 10 سنوات. غالباً يدفع صاحب العمل أو الوكالة: اسألي قبل أن تدفعي بنفسك. لا يجوز للوكالة أن تخصم أي تكلفة كانت من أجركِ (انظري الموضوع عن العمل عن طريق وكالة). في هذه الدروس تتعلّمين بعض الكلمات التي تصادفينها في العمل الآمن وفي VCA. من أجل VCA تأخذين دورة وامتحاناً. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "VCA شهادة سلامة. كثير من الشركات تطلبها، أيضاً عن طريق وكالة، مثلاً في البناء والصناعة. معظم العمال يأخذون B-VCA (VCA Basis)؛ المشرف يأخذ VOL-VCA. يتضمّن ذلك دورة، وامتحاناً بأسئلة اختيار من متعدّد في مركز امتحان معترف به. غالباً يمكن تقديم الامتحان بعدة لغات، مثلاً الإنجليزية أو البولندية: السؤال عند مركز الامتحان. الشهادة صالحة لمدة 10 سنوات. غالباً يدفع صاحب العمل أو الوكالة: السؤال قبل الدفع بالنفس. لا يجوز للوكالة أن تخصم أي تكلفة كانت من الأجر (المزيد في الموضوع عن العمل عن طريق وكالة). في هذه الدروس يتمّ تعلّم بعض الكلمات التي تظهر في العمل الآمن وفي VCA. من أجل VCA تلزم دورة وامتحان. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen
-    'c.safetysigns.p': "من يدفع ثمن دورة VCA؟", // nieuw, nalezen
+    'u.safework': "السلامة في العمل", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.vog': "ماضيك: شهادة VOG", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vog': "شهادة حسن السيرة والسلوك (VOG: ورقة من الحكومة تقول إن ماضيك ليس مشكلة لهذا العمل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.strafblad': "السجل الجنائي (الجرائم التي أدانتك بها المحكمة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.screening': "التحقّق من الخلفية (فحص الماضي قبل بدء العمل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.personenregister': "سجلّ رعاية الأطفال (كل من يعمل في رعاية الأطفال يجب أن يكون مسجّلاً فيه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beveiligerspas': "بطاقة حارس الأمن (البطاقة اللازمة للعمل كحارس أمن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verleden': "الماضي", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vog.1': "في قطاع الرعاية يطلبون شهادة VOG دائماً تقريباً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vog.2': "عندي VOG واسمي موجود في سجلّ رعاية الأطفال.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vog.3': "أحصل على بطاقة حارس الأمن بعد التحقّق من الخلفية.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.q': "الوكالة تطلب شهادة VOG. هل هي عندك؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.a': "لا. ما زلت أنتظر الإيميل من Justis.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.safetysigns': "لافتات السلامة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verbodsbord': "لافتة المنع (دائرة حمراء عليها خط: لا يجوز فعل هذا)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gebodsbord': "لافتة الإلزام (دائرة زرقاء فيها صورة بيضاء: يجب فعل هذا)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.waarschuwingsbord': "لافتة التحذير (مثلث أصفر بحافة سوداء: انتباه، خطر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.reddingsbord': "لافتة الإنقاذ (مستطيل أخضر: طريق الخروج، أو الإسعافات الأولية)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brandbord': "لافتة معدات الحريق (مربع أحمر: هنا طفاية حريق أو خرطوم حريق)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pictogram': "الرمز المصوّر (صورة بسيطة تقول شيئاً بدون كلمات)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.safetysigns.1': "اللافتة الحمراء المستديرة تعني: هذا غير مسموح.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.safetysigns.2': { m: "اللافتة الزرقاء تقول ما يجب أن تفعله.", f: "اللافتة الزرقاء تقول ما يجب أن تفعليه.", x: "اللافتة الزرقاء تقول ما يجب فعله." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.safetysigns.3': { m: "اتبع اللافتات الخضراء إلى مخرج الطوارئ.", f: "اتبعي اللافتات الخضراء إلى مخرج الطوارئ.", x: "اللافتات الخضراء تقود إلى مخرج الطوارئ." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.q': "ماذا تعني هذه اللافتة الصفراء؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.a': "انتباه، خطر. إنها لافتة تحذير.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.substances': "المواد الخطرة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stofmasker': "كمّامة الغبار (تغطي الأنف والفم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.giftig': "سامّ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijtend': "أكّال (يحرق الجلد أو يأكل المعدن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.drinkfles': "قنينة الشرب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opbergen': "يحفظ في مكانه (في مكانه الخاص، مثلاً خزانة تُقفل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dop': "الغطاء (لقنينة أو علبة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.substances.1': { m: "انظر أولاً إلى رمز الخطر على الملصق.", f: "انظري أولاً إلى رمز الخطر على الملصق.", x: "أولاً النظر إلى رمز الخطر على الملصق." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.substances.2': { m: "لا تسكبه أبداً في قنينة شرب.", f: "لا تسكبيه أبداً في قنينة شرب.", x: "لا يُسكب أبداً في قنينة شرب." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.substances.3': { m: "هنا يجب أن تلبس كمّامة الغبار.", f: "هنا يجب أن تلبسي كمّامة الغبار.", x: "هنا يجب لبس كمّامة الغبار." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.q': "هل هذه المادة سامّة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.a': "هذا مكتوب في صحيفة بيانات السلامة. سأبحث عنه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.firefight': "الحريق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.branddriehoek': "مثلث الحريق (النار تحتاج إلى وقود وهواء وحرارة؛ إزالة واحد منها تطفئ النار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zuurstof': "الأكسجين (في الهواء؛ النار تحتاج إليه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.blussen': "يطفئ (حريقاً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.blusdeken': "بطانية الحريق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.openvuur': "النار المكشوفة (لهب، مثلاً من ولّاعة أو موقد غاز)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brandslang': "خرطوم الحريق (على بكرة في الحائط)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.firefight.1': { m: "لا ترمِ الماء أبداً على زيت مشتعل.", f: "لا ترمي الماء أبداً على زيت مشتعل.", x: "لا يُرمى الماء أبداً على زيت مشتعل." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.firefight.2': { m: "أنت لا تطفئ بنفسك إلا حريقاً صغيراً.", f: "أنتِ لا تطفئين بنفسك إلا حريقاً صغيراً.", x: "إطفاء الحريق بالنفس يكون للحريق الصغير فقط." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.firefight.3': { m: "ضع بطانية الحريق على المقلاة.", f: "ضعي بطانية الحريق على المقلاة.", x: "بطانية الحريق توضع على المقلاة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.q': "يوجد حريق في سلة المهملات!", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.a': "إنه صغير. سأحضر طفاية الحريق.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.permitwork': "التصاريح والأماكن المغلقة والرفع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkvergunningveilig': "تصريح سلامة العمل (ورقة سلامة للعمل الخطر: ماذا، وأين، وأي مخاطر؛ ليست أوراق إقامتك أو عملك)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beslotenruimte': "المكان المغلق (خزّان أو حفرة أو مجرى صرف: صغير، وفيه قليل من الهواء النقي)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gasmeting': "قياس الغاز (يُقاس الهواء قبل الدخول)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mangatwacht': "مراقب الفتحة (الشخص الذي يبقى في الخارج عند الفتحة، ويبقى على تواصل، ويطلق الإنذار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.signaalgever': "مُعطي الإشارات (الشخص الذي يعطي سائق الرافعة إشارات باليد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hijsen': "يرفع (حمولة بالرافعة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.permitwork.1': "لا نبدأ بدون تصريح سلامة العمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.permitwork.2': "أولاً قياس الغاز، وبعدها فقط ندخل المكان المغلق.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.permitwork.3': { m: "انظر إلى مُعطي الإشارات: رفع، إنزال، توقّف.", f: "انظري إلى مُعطي الإشارات: رفع، إنزال، توقّف.", x: "النظر إلى مُعطي الإشارات: رفع، إنزال، توقّف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.q': "من يبقى في الخارج عند الخزّان؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.a': { m: "أنا. أنا مراقب الفتحة.", f: "أنا. أنا مراقبة الفتحة.", x: "أنا. مهمّتي مراقبة الفتحة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog': "شهادة VOG: فحص ماضيك", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.b': { m: "لبعض الوظائف، تطلب الوكالة أو صاحب العمل شهادة VOG (Verklaring Omtrent het Gedrag). إنها ورقة من الحكومة: تقول إن ماضيك ليس مشكلة لهذا العمل. في الرعاية ورعاية الأطفال والحراسة الأمنية تحتاج إليها دائماً تقريباً. عادةً يبدأ صاحب العمل الطلب عبر الإنترنت. تصلك رسالة إيميل من Justis، وتكمل الطلب بـDigiD وتدفع. اسأل أولاً من يدفع: غالباً يعيد صاحب العمل المبلغ لك. للمتطوعين الذين يعملون مع الأطفال أو الأشخاص الضعفاء تكون غالباً مجانية. عندك سجلّ جنائي؟ هذا لا يعني دائماً عدم الحصول على VOG: Justis تنظر إلى ما يهمّ لهذا العمل. لست متأكداً؟ اسأل Juridisch Loket. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "لبعض الوظائف، تطلب الوكالة أو صاحب العمل شهادة VOG (Verklaring Omtrent het Gedrag). إنها ورقة من الحكومة: تقول إن ماضيكِ ليس مشكلة لهذا العمل. في الرعاية ورعاية الأطفال والحراسة الأمنية تحتاجين إليها دائماً تقريباً. عادةً يبدأ صاحب العمل الطلب عبر الإنترنت. تصلكِ رسالة إيميل من Justis، وتكملين الطلب بـDigiD وتدفعين. اسألي أولاً من يدفع: غالباً يعيد صاحب العمل المبلغ لكِ. للمتطوعين الذين يعملون مع الأطفال أو الأشخاص الضعفاء تكون غالباً مجانية. عندكِ سجلّ جنائي؟ هذا لا يعني دائماً عدم الحصول على VOG: Justis تنظر إلى ما يهمّ لهذا العمل. لستِ متأكدة؟ اسألي Juridisch Loket. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "لبعض الوظائف، تطلب الوكالة أو صاحب العمل شهادة VOG (Verklaring Omtrent het Gedrag). إنها ورقة من الحكومة: تقول إن الماضي ليس مشكلة لهذا العمل. في الرعاية ورعاية الأطفال والحراسة الأمنية تكون مطلوبة دائماً تقريباً. عادةً يبدأ صاحب العمل الطلب عبر الإنترنت. بعدها تصل رسالة إيميل من Justis، ويُكمَل الطلب بـDigiD ويُدفع المبلغ. السؤال أولاً عمّن يدفع: غالباً يعيد صاحب العمل المبلغ. للمتطوعين الذين يعملون مع الأطفال أو الأشخاص الضعفاء تكون غالباً مجانية. يوجد سجلّ جنائي؟ هذا لا يعني دائماً عدم الحصول على VOG: Justis تنظر إلى ما يهمّ لهذا العمل. عدم التأكّد؟ سؤال Juridisch Loket. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.p': "هل يجب أن أدفع ثمن VOG بنفسي؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.s': { m: "عملك الجديد في دار رعاية يطلب VOG. قبل سنوات، كانت عندك مشكلة مع الشرطة. ماذا تفعل؟", f: "عملكِ الجديد في دار رعاية يطلب VOG. قبل سنوات، كانت عندكِ مشكلة مع الشرطة. ماذا تفعلين؟", x: "العمل الجديد في دار رعاية يطلب VOG. قبل سنوات، كانت هناك مشكلة مع الشرطة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.o1': "تقديم الطلب، وسؤال Juridisch Loket عند القلق.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.o2': "عدم تقديم الطلب: الرفض مؤكّد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.o3': "قول إنه لا يوجد وقت، والبحث عن عمل آخر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.w': "Justis تنظر فقط إلى ما يهمّ للعمل. كثير من الناس الذين في ماضيهم شيء ما يحصلون مع ذلك على VOG. النصيحة تساعد عند عدم التأكّد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns': "ما هو VCA؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.b': { m: "VCA شهادة سلامة. كثير من الشركات تطلبها، أيضاً عن طريق وكالة، مثلاً في البناء والصناعة. معظم العمال يأخذون B-VCA (VCA Basis)؛ المشرف يأخذ VOL-VCA. تأخذ دورة، وامتحاناً بأسئلة اختيار من متعدّد في مركز امتحان معترف به. غالباً تستطيع أن تقدّم الامتحان بعدة لغات، مثلاً الإنجليزية أو البولندية: اسأل مركز الامتحان. الشهادة صالحة لمدة 10 سنوات. غالباً يدفع صاحب العمل أو الوكالة: اسأل قبل أن تدفع بنفسك. لا يجوز للوكالة أن تخصم أي تكلفة كانت من أجرك (انظر الموضوع عن العمل عن طريق وكالة). في هذه الدروس تتعلّم بعض الكلمات التي تصادفها في العمل الآمن وفي VCA. من أجل VCA تأخذ دورة وامتحاناً. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "VCA شهادة سلامة. كثير من الشركات تطلبها، أيضاً عن طريق وكالة، مثلاً في البناء والصناعة. معظم العمال يأخذون B-VCA (VCA Basis)؛ المشرف يأخذ VOL-VCA. تأخذين دورة، وامتحاناً بأسئلة اختيار من متعدّد في مركز امتحان معترف به. غالباً تستطيعين أن تقدّمي الامتحان بعدة لغات، مثلاً الإنجليزية أو البولندية: اسألي مركز الامتحان. الشهادة صالحة لمدة 10 سنوات. غالباً يدفع صاحب العمل أو الوكالة: اسألي قبل أن تدفعي بنفسك. لا يجوز للوكالة أن تخصم أي تكلفة كانت من أجركِ (انظري الموضوع عن العمل عن طريق وكالة). في هذه الدروس تتعلّمين بعض الكلمات التي تصادفينها في العمل الآمن وفي VCA. من أجل VCA تأخذين دورة وامتحاناً. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "VCA شهادة سلامة. كثير من الشركات تطلبها، أيضاً عن طريق وكالة، مثلاً في البناء والصناعة. معظم العمال يأخذون B-VCA (VCA Basis)؛ المشرف يأخذ VOL-VCA. يتضمّن ذلك دورة، وامتحاناً بأسئلة اختيار من متعدّد في مركز امتحان معترف به. غالباً يمكن تقديم الامتحان بعدة لغات، مثلاً الإنجليزية أو البولندية: السؤال عند مركز الامتحان. الشهادة صالحة لمدة 10 سنوات. غالباً يدفع صاحب العمل أو الوكالة: السؤال قبل الدفع بالنفس. لا يجوز للوكالة أن تخصم أي تكلفة كانت من الأجر (المزيد في الموضوع عن العمل عن طريق وكالة). في هذه الدروس يتمّ تعلّم بعض الكلمات التي تظهر في العمل الآمن وفي VCA. من أجل VCA تلزم دورة وامتحان. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.p': "من يدفع ثمن دورة VCA؟", // nieuw, nalezen // nagelezen AI 28 nov
     'c.safetysigns.s': { m: "وكالة تقول: «تحتاج إلى VCA. تدفع ثمن الدورة، أو نخصمها من أجرك». ماذا تفعل؟", f: "وكالة تقول: «تحتاجين إلى VCA. تدفعين ثمن الدورة، أو نخصمها من أجركِ». ماذا تفعلين؟", x: "وكالة تقول: «VCA مطلوب. ثمن الدورة يدفعه العامل، أو يُخصم من الأجر». ما التصرف الصحيح؟" }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.safetysigns.o1': "السؤال عمّن يدفع، وطلب ذلك كتابةً.", // nieuw, nalezen
-    'c.safetysigns.o2': "الدفع فوراً، للحصول على العمل.", // nieuw, nalezen
-    'c.safetysigns.o3': "عدم قول شيء، والتوقيع.", // nieuw, nalezen
-    'c.safetysigns.w': "غالباً يدفع صاحب العمل أو الوكالة ثمن VCA. إذا كان يجب دفع شيء، فمن المهمّ معرفة ذلك مسبقاً، على ورق.", // nieuw, nalezen
-    'c.substances': { m: "اقرأ الملصق، ثم اعمل", f: "اقرئي الملصق، ثم اعملي", x: "قراءة الملصق أولاً، ثم العمل" }, // nieuw, nalezen
+    'c.safetysigns.o1': "السؤال عمّن يدفع، وطلب ذلك كتابةً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.o2': "الدفع فوراً، للحصول على العمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.o3': "عدم قول شيء، والتوقيع.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.w': "غالباً يدفع صاحب العمل أو الوكالة ثمن VCA. إذا كان يجب دفع شيء، فمن المهمّ معرفة ذلك مسبقاً، على ورق.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances': { m: "اقرأ الملصق، ثم اعمل", f: "اقرئي الملصق، ثم اعملي", x: "قراءة الملصق أولاً، ثم العمل" }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.substances.b': { m: "المادة الخطرة عليها معيّن أحمر على الملصق، وفيه صورة سوداء: رمز الخطر. الصورة تُظهر الخطر، مثلاً النار أو السمّ أو مادة تحرق الجلد. الملصق وصحيفة بيانات السلامة (veiligheidsblad) يقولان كيف تعمل بها بأمان، وماذا تفعل إذا حدث خطأ. البس ما يقولانه: قفازات أو نظارات سلامة أو كمّامة. أغلق الغطاء، واحفظ المادة في مكانها الخاص. لا تسكبها أبداً في قنينة شرب: قد يشربها شخص ما. لا تأكل ولا تشرب ولا تدخّن أثناء العمل بها، واغسل يديك بعد ذلك. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "المادة الخطرة عليها معيّن أحمر على الملصق، وفيه صورة سوداء: رمز الخطر. الصورة تُظهر الخطر، مثلاً النار أو السمّ أو مادة تحرق الجلد. الملصق وصحيفة بيانات السلامة (veiligheidsblad) يقولان كيف تعملين بها بأمان، وماذا تفعلين إذا حدث خطأ. البسي ما يقولانه: قفازات أو نظارات سلامة أو كمّامة. أغلقي الغطاء، واحفظي المادة في مكانها الخاص. لا تسكبيها أبداً في قنينة شرب: قد يشربها شخص ما. لا تأكلي ولا تشربي ولا تدخّني أثناء العمل بها، واغسلي يديك بعد ذلك. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "المادة الخطرة عليها معيّن أحمر على الملصق، وفيه صورة سوداء: رمز الخطر. الصورة تُظهر الخطر، مثلاً النار أو السمّ أو مادة تحرق الجلد. الملصق وصحيفة بيانات السلامة (veiligheidsblad) يقولان كيف يكون العمل بها آمناً، وما العمل إذا حدث خطأ. لُبس ما يقولانه: قفازات أو نظارات سلامة أو كمّامة. إغلاق الغطاء، وحفظ المادة في مكانها الخاص. لا يجوز أبداً سكبها في قنينة شرب: قد يشربها شخص ما. لا أكل ولا شرب ولا تدخين أثناء العمل بها، وغسل اليدين بعد ذلك. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.substances.p': "أين صحيفة بيانات السلامة لهذه المادة؟", // nieuw, nalezen
-    'c.substances.s': { m: "زميل يسكب مادة تنظيف في قنينة ماء فارغة، ليأخذها معه. ماذا تفعل؟", f: "زميل يسكب مادة تنظيف في قنينة ماء فارغة، ليأخذها معه. ماذا تفعلين؟", x: "زميل يسكب مادة تنظيف في قنينة ماء فارغة، ليأخذها معه. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.substances.o1': "قول إن هذا خطر: قد يشربها شخص ما.", // nieuw, nalezen
-    'c.substances.o2': "لا شيء: إنها قنينته هو.", // nieuw, nalezen
-    'c.substances.o3': "وضع ملصق صغير على القنينة.", // nieuw, nalezen
-    'c.substances.w': "في قنينة الشرب، تبدو المادة مثل الماء أو العصير. قد يشربها شخص ما بالخطأ. المادة تبقى في عبوتها الأصلية، مع الملصق.", // nieuw, nalezen
-    'c.firefight': "حريق صغير أم حريق كبير؟", // nieuw, nalezen
-    'c.firefight.b': { m: "النار تحتاج إلى ثلاثة أشياء: وقود وهواء وحرارة. هذا هو مثلث الحريق. أزل واحداً منها، فتنطفئ النار. بطانية الحريق تزيل الهواء. الماء يزيل الحرارة، لكن لا تستعمل الماء أبداً على زيت أو دهن مشتعل، أو على الأجهزة الكهربائية. انظر إلى طفاية الحريق: مكتوب عليها لأي شيء هي. الرغوة والبودرة تعملان على حرائق كثيرة؛ CO2 مناسب لحرائق الكهرباء. أبعد الشرر والنار المكشوفة عن المواد التي تحترق بسهولة. لا تطفئ بنفسك إلا الحريق الصغير، وفقط عندما يكون ذلك آمناً. الحريق أكبر؟ اخرج، وأغلق الباب خلفك، وأطلق الإنذار. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "النار تحتاج إلى ثلاثة أشياء: وقود وهواء وحرارة. هذا هو مثلث الحريق. أزيلي واحداً منها، فتنطفئ النار. بطانية الحريق تزيل الهواء. الماء يزيل الحرارة، لكن لا تستعملي الماء أبداً على زيت أو دهن مشتعل، أو على الأجهزة الكهربائية. انظري إلى طفاية الحريق: مكتوب عليها لأي شيء هي. الرغوة والبودرة تعملان على حرائق كثيرة؛ CO2 مناسب لحرائق الكهرباء. أبعدي الشرر والنار المكشوفة عن المواد التي تحترق بسهولة. لا تطفئي بنفسك إلا الحريق الصغير، وفقط عندما يكون ذلك آمناً. الحريق أكبر؟ اخرجي، وأغلقي الباب خلفك، وأطلقي الإنذار. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "النار تحتاج إلى ثلاثة أشياء: وقود وهواء وحرارة. هذا هو مثلث الحريق. إزالة واحد منها تطفئ النار. بطانية الحريق تزيل الهواء. الماء يزيل الحرارة، لكن لا يجوز أبداً استعمال الماء على زيت أو دهن مشتعل، أو على الأجهزة الكهربائية. على طفاية الحريق مكتوب لأي شيء هي. الرغوة والبودرة تعملان على حرائق كثيرة؛ CO2 مناسب لحرائق الكهرباء. إبعاد الشرر والنار المكشوفة عن المواد التي تحترق بسهولة. إطفاء الحريق بالنفس يكون للحريق الصغير فقط، وفقط عندما يكون ذلك آمناً. الحريق أكبر؟ الخروج، وإغلاق الباب، وإطلاق الإنذار. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.firefight.p': "أين بطانية الحريق؟", // nieuw, nalezen
-    'c.firefight.s': { m: "زيت في مقلاة يشتعل في المقصف. اللهب ما زال صغيراً. ماذا تفعل؟", f: "زيت في مقلاة يشتعل في المقصف. اللهب ما زال صغيراً. ماذا تفعلين؟", x: "زيت في مقلاة يشتعل في المقصف. اللهب ما زال صغيراً. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.firefight.o1': "وضع بطانية الحريق على المقلاة.", // nieuw, nalezen
-    'c.firefight.o2': "رمي كأس ماء عليها.", // nieuw, nalezen
-    'c.firefight.o3': "حمل المقلاة إلى الخارج.", // nieuw, nalezen
-    'c.firefight.w': { m: "الماء على الزيت المشتعل يصنع كرة نار كبيرة. البطانية تزيل الهواء، فتنطفئ النار. أطفئ مصدر الحرارة إذا استطعت.", f: "الماء على الزيت المشتعل يصنع كرة نار كبيرة. البطانية تزيل الهواء، فتنطفئ النار. أطفئي مصدر الحرارة إذا استطعتِ.", x: "الماء على الزيت المشتعل يصنع كرة نار كبيرة. البطانية تزيل الهواء، فتنطفئ النار. إطفاء مصدر الحرارة إذا كان ذلك ممكناً." }, // nieuw, nalezen
-    'c.permitwork': "العمل الخطر: التصريح أولاً", // nieuw, nalezen
-    'c.permitwork.b': { m: "للعمل الخطر، مثل اللحام قرب أشياء تحترق، أو العمل في خزّان أو حفرة، تستعمل الشركة غالباً تصريح سلامة العمل (werkvergunning). هذه ورقة سلامة، وليست أوراق إقامتك أو عملك. فيها ما تفعله، وأين، وما المخاطر الموجودة، وماذا يجب فعله بشأنها. اقرأها، ولا تبدأ إلا بعد توقيعها. في المكان المغلق قد يكون الهواء قليلاً جداً أو يوجد غاز خطر: أولاً قياس الغاز، ومراقب الفتحة يبقى في الخارج. شخص في الداخل في خطر؟ أطلق الإنذار: لا تدخل أبداً بدون حماية. مع الرافعة، شخص واحد يعطي الإشارات: مُعطي الإشارات. لا تقف أبداً تحت حمولة معلّقة. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "للعمل الخطر، مثل اللحام قرب أشياء تحترق، أو العمل في خزّان أو حفرة، تستعمل الشركة غالباً تصريح سلامة العمل (werkvergunning). هذه ورقة سلامة، وليست أوراق إقامتكِ أو عملكِ. فيها ما تفعلينه، وأين، وما المخاطر الموجودة، وماذا يجب فعله بشأنها. اقرئيها، ولا تبدئي إلا بعد توقيعها. في المكان المغلق قد يكون الهواء قليلاً جداً أو يوجد غاز خطر: أولاً قياس الغاز، ومراقب الفتحة يبقى في الخارج. شخص في الداخل في خطر؟ أطلقي الإنذار: لا تدخلي أبداً بدون حماية. مع الرافعة، شخص واحد يعطي الإشارات: مُعطي الإشارات. لا تقفي أبداً تحت حمولة معلّقة. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "للعمل الخطر، مثل اللحام قرب أشياء تحترق، أو العمل في خزّان أو حفرة، تستعمل الشركة غالباً تصريح سلامة العمل (werkvergunning). هذه ورقة سلامة، وليست أوراق الإقامة أو العمل. فيها العمل المطلوب، وأين، وما المخاطر الموجودة، وماذا يجب فعله بشأنها. قراءتها، وعدم البدء إلا بعد توقيعها. في المكان المغلق قد يكون الهواء قليلاً جداً أو يوجد غاز خطر: أولاً قياس الغاز، ومراقب الفتحة يبقى في الخارج. شخص في الداخل في خطر؟ إطلاق الإنذار: لا يجوز أبداً الدخول بدون حماية. مع الرافعة، شخص واحد يعطي الإشارات: مُعطي الإشارات. لا يجوز أبداً الوقوف تحت حمولة معلّقة. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.permitwork.p': "هل تمّ توقيع تصريح سلامة العمل؟", // nieuw, nalezen
-    'c.permitwork.s': { m: "زميلك في خزّان لا يردّ. أنت مراقب الفتحة. ماذا تفعل؟", f: "زميلكِ في خزّان لا يردّ. أنتِ مراقبة الفتحة. ماذا تفعلين؟", x: "زميل في خزّان لا يردّ. مهمّة مراقبة الفتحة عندك. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.permitwork.o1': "إطلاق الإنذار، والبقاء في الخارج.", // nieuw, nalezen
-    'c.permitwork.o2': "الدخول بسرعة لمساعدته.", // nieuw, nalezen
-    'c.permitwork.o3': "الانتظار بضع دقائق، ثم النظر.", // nieuw, nalezen
-    'c.permitwork.w': "الغاز الذي أذى الزميل يمكن أن يؤذي المنقذ أيضاً. كثير من الضحايا في الخزّانات كانوا من المنقذين. بعد الإنذار، تأتي مساعدة مع حماية.", // nieuw, nalezen
+    'c.substances.p': "أين صحيفة بيانات السلامة لهذه المادة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.s': { m: "زميل يسكب مادة تنظيف في قنينة ماء فارغة، ليأخذها معه. ماذا تفعل؟", f: "زميل يسكب مادة تنظيف في قنينة ماء فارغة، ليأخذها معه. ماذا تفعلين؟", x: "زميل يسكب مادة تنظيف في قنينة ماء فارغة، ليأخذها معه. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.o1': "قول إن هذا خطر: قد يشربها شخص ما.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.o2': "لا شيء: إنها قنينته هو.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.o3': "وضع ملصق صغير على القنينة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.w': "في قنينة الشرب، تبدو المادة مثل الماء أو العصير. قد يشربها شخص ما بالخطأ. المادة تبقى في عبوتها الأصلية، مع الملصق.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight': "حريق صغير أم حريق كبير؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.b': { m: "النار تحتاج إلى ثلاثة أشياء: وقود وهواء وحرارة. هذا هو مثلث الحريق. أزل واحداً منها، فتنطفئ النار. بطانية الحريق تزيل الهواء. الماء يزيل الحرارة، لكن لا تستعمل الماء أبداً على زيت أو دهن مشتعل، أو على الأجهزة الكهربائية. انظر إلى طفاية الحريق: مكتوب عليها لأي شيء هي. الرغوة والبودرة تعملان على حرائق كثيرة؛ CO2 مناسب لحرائق الكهرباء. أبعد الشرر والنار المكشوفة عن المواد التي تحترق بسهولة. لا تطفئ بنفسك إلا الحريق الصغير، وفقط عندما يكون ذلك آمناً. الحريق أكبر؟ اخرج، وأغلق الباب خلفك، وأطلق الإنذار. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "النار تحتاج إلى ثلاثة أشياء: وقود وهواء وحرارة. هذا هو مثلث الحريق. أزيلي واحداً منها، فتنطفئ النار. بطانية الحريق تزيل الهواء. الماء يزيل الحرارة، لكن لا تستعملي الماء أبداً على زيت أو دهن مشتعل، أو على الأجهزة الكهربائية. انظري إلى طفاية الحريق: مكتوب عليها لأي شيء هي. الرغوة والبودرة تعملان على حرائق كثيرة؛ CO2 مناسب لحرائق الكهرباء. أبعدي الشرر والنار المكشوفة عن المواد التي تحترق بسهولة. لا تطفئي بنفسك إلا الحريق الصغير، وفقط عندما يكون ذلك آمناً. الحريق أكبر؟ اخرجي، وأغلقي الباب خلفك، وأطلقي الإنذار. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "النار تحتاج إلى ثلاثة أشياء: وقود وهواء وحرارة. هذا هو مثلث الحريق. إزالة واحد منها تطفئ النار. بطانية الحريق تزيل الهواء. الماء يزيل الحرارة، لكن لا يجوز أبداً استعمال الماء على زيت أو دهن مشتعل، أو على الأجهزة الكهربائية. على طفاية الحريق مكتوب لأي شيء هي. الرغوة والبودرة تعملان على حرائق كثيرة؛ CO2 مناسب لحرائق الكهرباء. إبعاد الشرر والنار المكشوفة عن المواد التي تحترق بسهولة. إطفاء الحريق بالنفس يكون للحريق الصغير فقط، وفقط عندما يكون ذلك آمناً. الحريق أكبر؟ الخروج، وإغلاق الباب، وإطلاق الإنذار. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.p': "أين بطانية الحريق؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.s': { m: "زيت في مقلاة يشتعل في المقصف. اللهب ما زال صغيراً. ماذا تفعل؟", f: "زيت في مقلاة يشتعل في المقصف. اللهب ما زال صغيراً. ماذا تفعلين؟", x: "زيت في مقلاة يشتعل في المقصف. اللهب ما زال صغيراً. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.o1': "وضع بطانية الحريق على المقلاة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.o2': "رمي كأس ماء عليها.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.o3': "حمل المقلاة إلى الخارج.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.w': { m: "الماء على الزيت المشتعل يصنع كرة نار كبيرة. البطانية تزيل الهواء، فتنطفئ النار. أطفئ مصدر الحرارة إذا استطعت.", f: "الماء على الزيت المشتعل يصنع كرة نار كبيرة. البطانية تزيل الهواء، فتنطفئ النار. أطفئي مصدر الحرارة إذا استطعتِ.", x: "الماء على الزيت المشتعل يصنع كرة نار كبيرة. البطانية تزيل الهواء، فتنطفئ النار. إطفاء مصدر الحرارة إذا كان ذلك ممكناً." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork': "العمل الخطر: التصريح أولاً", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.b': { m: "للعمل الخطر، مثل اللحام قرب أشياء تحترق، أو العمل في خزّان أو حفرة، تستعمل الشركة غالباً تصريح سلامة العمل (werkvergunning). هذه ورقة سلامة، وليست أوراق إقامتك أو عملك. فيها ما تفعله، وأين، وما المخاطر الموجودة، وماذا يجب فعله بشأنها. اقرأها، ولا تبدأ إلا بعد توقيعها. في المكان المغلق قد يكون الهواء قليلاً جداً أو يوجد غاز خطر: أولاً قياس الغاز، ومراقب الفتحة يبقى في الخارج. شخص في الداخل في خطر؟ أطلق الإنذار: لا تدخل أبداً بدون حماية. مع الرافعة، شخص واحد يعطي الإشارات: مُعطي الإشارات. لا تقف أبداً تحت حمولة معلّقة. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "للعمل الخطر، مثل اللحام قرب أشياء تحترق، أو العمل في خزّان أو حفرة، تستعمل الشركة غالباً تصريح سلامة العمل (werkvergunning). هذه ورقة سلامة، وليست أوراق إقامتكِ أو عملكِ. فيها ما تفعلينه، وأين، وما المخاطر الموجودة، وماذا يجب فعله بشأنها. اقرئيها، ولا تبدئي إلا بعد توقيعها. في المكان المغلق قد يكون الهواء قليلاً جداً أو يوجد غاز خطر: أولاً قياس الغاز، ومراقب الفتحة يبقى في الخارج. شخص في الداخل في خطر؟ أطلقي الإنذار: لا تدخلي أبداً بدون حماية. مع الرافعة، شخص واحد يعطي الإشارات: مُعطي الإشارات. لا تقفي أبداً تحت حمولة معلّقة. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "للعمل الخطر، مثل اللحام قرب أشياء تحترق، أو العمل في خزّان أو حفرة، تستعمل الشركة غالباً تصريح سلامة العمل (werkvergunning). هذه ورقة سلامة، وليست أوراق الإقامة أو العمل. فيها العمل المطلوب، وأين، وما المخاطر الموجودة، وماذا يجب فعله بشأنها. قراءتها، وعدم البدء إلا بعد توقيعها. في المكان المغلق قد يكون الهواء قليلاً جداً أو يوجد غاز خطر: أولاً قياس الغاز، ومراقب الفتحة يبقى في الخارج. شخص في الداخل في خطر؟ إطلاق الإنذار: لا يجوز أبداً الدخول بدون حماية. مع الرافعة، شخص واحد يعطي الإشارات: مُعطي الإشارات. لا يجوز أبداً الوقوف تحت حمولة معلّقة. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.p': "هل تمّ توقيع تصريح سلامة العمل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.s': { m: "زميلك في خزّان لا يردّ. أنت مراقب الفتحة. ماذا تفعل؟", f: "زميلكِ في خزّان لا يردّ. أنتِ مراقبة الفتحة. ماذا تفعلين؟", x: "زميل في خزّان لا يردّ. مهمّة مراقبة الفتحة عندك. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.o1': "إطلاق الإنذار، والبقاء في الخارج.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.o2': "الدخول بسرعة لمساعدته.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.o3': "الانتظار بضع دقائق، ثم النظر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.w': "الغاز الذي أذى الزميل يمكن أن يؤذي المنقذ أيضاً. كثير من الضحايا في الخزّانات كانوا من المنقذين. بعد الإنذار، تأتي مساعدة مع حماية.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Operator in de procesindustrie", the fourth own unit of Productie (23 November 2026).
-    'u.process': "مشغّل في مصانع الإنتاج المستمر", // nieuw, nalezen
-    'l.plantround': "الجولة وغرفة التحكّم", // nieuw, nalezen
-    'w.controlekamer': "غرفة التحكّم (حيث يراقب المشغّلون المصنع كله على الشاشات)", // nieuw, nalezen
-    'w.operator': "المشغّل (الشخص الذي يشغّل آلات المصنع ويراقبها)", // nieuw, nalezen
-    'w.drukmeter': "مقياس الضغط (عدّاد مستدير بإبرة)", // nieuw, nalezen
-    'w.niveau': "المستوى (إلى أي حدّ يكون الخزّان أو الصومعة ممتلئاً)", // nieuw, nalezen
-    'w.snelheid': "السرعة (مدى سرعة عمل الخطّ أو الآلة)", // nieuw, nalezen
-    'w.alarmmelding': "رسالة الإنذار (تحذير على الشاشة بأن هناك شيئاً غير طبيعي)", // nieuw, nalezen
-    's.plantround.1': "أقوم بجولتي.", // nieuw, nalezen
-    's.plantround.2': "الضغط مرتفع جداً.", // nieuw, nalezen
-    's.plantround.3': "أسجّل القيمة.", // nieuw, nalezen
-    'c.plantround.q': "لماذا يوجد إنذار على الشاشة؟", // nieuw, nalezen
-    'c.plantround.a': "المستوى في الخزّان رقم اثنين مرتفع جداً.", // nieuw, nalezen
-    'l.plantfault': "العطل", // nieuw, nalezen
-    'w.stilstand': "التوقّف (الخطّ يتوقّف، ولا يُنتَج شيء)", // nieuw, nalezen
-    'w.opstarten': "يشغّل (آلة أو خطّاً، خطوة بخطوة)", // nieuw, nalezen
-    'w.stilzetten': "يوقف (يوقف آلة بالطريقة الصحيحة)", // nieuw, nalezen
-    'w.technischedienst': "قسم الصيانة (TD: يصلحون الآلات)", // nieuw, nalezen
-    'w.onderhoudsmonteur': "فنّي الصيانة", // nieuw, nalezen
-    'w.resetten': "يعيد الضبط (يمسح العطل من الشاشة أو من لوحة التحكّم)", // nieuw, nalezen
-    's.plantfault.1': "عند حدوث عطل، أتصل برئيس الوردية.", // nieuw, nalezen
-    's.plantfault.2': { m: "لا تمدّ يدك أبداً داخل آلة تعمل.", f: "لا تمدّي يدك أبداً داخل آلة تعمل.", x: "لا يجوز أبداً مدّ اليد داخل آلة تعمل." }, // nieuw, nalezen
-    's.plantfault.3': "قسم الصيانة في الطريق.", // nieuw, nalezen
-    'c.plantfault.q': "هل يمكنني تشغيل الخطّ من جديد؟", // nieuw, nalezen
-    'c.plantfault.a': { m: "لا، انتظر. قفل الميكانيكي ما زال عليه.", f: "لا، انتظري. قفل الميكانيكي ما زال عليه.", x: "لا، ليس بعد. قفل الميكانيكي ما زال عليه." }, // nieuw, nalezen
-    'l.shiftwork': "النوبات والليالي", // nieuw, nalezen
-    'w.ploeg': "فريق الوردية (المجموعة التي تعمل في النوبات نفسها)", // nieuw, nalezen
-    'w.ploegwissel': "تبديل الوردية (فريق يذهب إلى البيت، والفريق التالي يبدأ)", // nieuw, nalezen
-    'w.volcontinu': "على مدار الساعة (المصنع يعمل ليلاً ونهاراً، كل أيام الأسبوع)", // nieuw, nalezen
-    'w.overdagslapen': "النوم في النهار (بعد نوبة ليلية)", // nieuw, nalezen
-    'w.broodtrommel': "علبة الطعام", // nieuw, nalezen
-    'w.aflosser': "البديل (الزميل الذي يأخذ مكان العامل في العمل)", // nieuw, nalezen
-    's.shiftwork.1': "مصنعنا يعمل على مدار الساعة.", // nieuw, nalezen
-    's.shiftwork.2': { m: "اكتبه في سجلّ الأحداث للوردية التالية.", f: "اكتبيه في سجلّ الأحداث للوردية التالية.", x: "يُكتب في سجلّ الأحداث للوردية التالية." }, // nieuw, nalezen
-    's.shiftwork.3': "أنا في الوقت المحدّد للتسليم.", // nieuw, nalezen
-    'c.shiftwork.q': "ماذا حدث الليلة الماضية؟", // nieuw, nalezen
-    'c.shiftwork.a': "المضخّة رقم ثلاثة توقّفت. هذا مكتوب في سجلّ الأحداث.", // nieuw, nalezen
-    'l.heatdust': "الحرارة والبخار والغبار", // nieuw, nalezen
-    'w.smeltoven': "فرن الصهر (فرن ساخن جداً يصهر الزجاج أو المعدن)", // nieuw, nalezen
-    'w.stoom': "البخار (بخار ماء ساخن جداً)", // nieuw, nalezen
-    'w.stoomleiding': "أنبوب البخار (يكون ساخناً، حتى عندما لا يُرى بخار)", // nieuw, nalezen
-    'w.hittekleding': "ملابس الحماية من الحرارة", // nieuw, nalezen
-    'w.kwartsstof': "غبار الكوارتز (غبار ناعم جداً من الطين أو الرمل أو الحجر؛ يضرّ الرئتين)", // nieuw, nalezen
-    'w.explosiegevaar': "خطر الانفجار (الغبار أو الأبخرة في الهواء يمكن أن تنفجر؛ لافتة صفراء عليها EX)", // nieuw, nalezen
-    's.heatdust.1': { m: "اشرب الماء كثيراً قرب فرن الصهر.", f: "اشربي الماء كثيراً قرب فرن الصهر.", x: "شرب الماء كثيراً قرب فرن الصهر." }, // nieuw, nalezen
-    's.heatdust.2': { m: "غبار الكوارتز لا تراه. ضع كمّامة الغبار.", f: "غبار الكوارتز لا ترينه. ضعي كمّامة الغبار.", x: "غبار الكوارتز لا يُرى. لبس كمّامة الغبار ضروري." }, // nieuw, nalezen
-    's.heatdust.3': "هنا خطر انفجار: ممنوع الشرر.", // nieuw, nalezen
-    'c.heatdust.q': "هل يمكن أن يدخل هاتفي معي إلى هذه المنطقة؟", // nieuw, nalezen
-    'c.heatdust.a': "لا. هنا خطر انفجار.", // nieuw, nalezen
-    'c.plantround': { m: "قم بجولتك، وسجّل ما تراه", f: "قومي بجولتك، وسجّلي ما ترينه", x: "الجولة، ثم تسجيل كل شيء" }, // nieuw, nalezen
-    'c.plantround.b': { m: "المصنع الذي يعمل ليلاً ونهاراً يحتاج إلى عيون وآذان. في جولتك تنظر وتسمع وتشمّ: صوت جديد أو تسرّب أو رائحة غريبة قد يكون أول علامة على مشكلة. تقرأ العدّادات: درجة الحرارة والضغط والسرعة والمستوى. سجّل كل قيمة فوراً، مع الوقت، على القائمة أو في النظام. ليس لاحقاً، من الذاكرة. قيمة مرتفعة جداً أو منخفضة جداً؟ أخبر غرفة التحكّم أو رئيس الوردية فوراً. الإنذار على الشاشة ليس أبداً «مجرد إنذار»: لا تطفئه قبل أن تعرف لماذا انطلق. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "المصنع الذي يعمل ليلاً ونهاراً يحتاج إلى عيون وآذان. في جولتك تنظرين وتسمعين وتشمّين: صوت جديد أو تسرّب أو رائحة غريبة قد يكون أول علامة على مشكلة. تقرئين العدّادات: درجة الحرارة والضغط والسرعة والمستوى. سجّلي كل قيمة فوراً، مع الوقت، على القائمة أو في النظام. ليس لاحقاً، من الذاكرة. قيمة مرتفعة جداً أو منخفضة جداً؟ أخبري غرفة التحكّم أو رئيس الوردية فوراً. الإنذار على الشاشة ليس أبداً «مجرد إنذار»: لا تطفئيه قبل أن تعرفي لماذا انطلق. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "المصنع الذي يعمل ليلاً ونهاراً يحتاج إلى عيون وآذان. في الجولة يكون النظر والاستماع والشمّ: صوت جديد أو تسرّب أو رائحة غريبة قد يكون أول علامة على مشكلة. قراءة العدّادات: درجة الحرارة والضغط والسرعة والمستوى. تسجيل كل قيمة فوراً، مع الوقت، على القائمة أو في النظام. ليس لاحقاً، من الذاكرة. قيمة مرتفعة جداً أو منخفضة جداً؟ إخبار غرفة التحكّم أو رئيس الوردية فوراً. الإنذار على الشاشة ليس أبداً «مجرد إنذار»: لا يُطفأ قبل معرفة سبب انطلاقه. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.plantround.p': "درجة الحرارة مرتفعة جداً.", // nieuw, nalezen
-    'c.plantround.s': { m: "في جولتك، الضغط مرتفع قليلاً أكثر من اللازم. نوبتك تكاد تنتهي. ماذا تفعل؟", f: "في جولتكِ، الضغط مرتفع قليلاً أكثر من اللازم. نوبتكِ تكاد تنتهي. ماذا تفعلين؟", x: "في الجولة، الضغط مرتفع قليلاً أكثر من اللازم. النوبة تكاد تنتهي. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.plantround.o1': "إخبار غرفة التحكّم فوراً.", // nieuw, nalezen
-    'c.plantround.o2': "تسجيله، وعدم إخبار أحد.", // nieuw, nalezen
-    'c.plantround.o3': "تركه للوردية التالية.", // nieuw, nalezen
-    'c.plantround.w': "في المصنع، التغيير الصغير قد يكبر بسرعة. عندما تعرف غرفة التحكّم مبكراً، تستطيع أن تتصرّف قبل أن يحدث خطأ.", // nieuw, nalezen
-    'c.plantfault': "الإيقاف، ثم القفل، ثم التصليح", // nieuw, nalezen
-    'c.plantfault.b': { m: "عند حدوث عطل يتوقّف الخطّ، والجميع يريده أن يعمل من جديد بسرعة. لكن حوادث كثيرة تحدث في هذه اللحظة بالذات. لا تمدّ يدك أبداً داخل آلة تعمل، ولا حتى «للحظة فقط». اتصل برئيس الوردية أو بقسم الصيانة. قبل أن يعمل أي شخص على الآلة، تُوقَف وتُقفَل، حتى لا يستطيع أحد تشغيلها. غالباً يضع كل من يعمل عليها قفله الخاص. لا تشغّلها من جديد إلا عندما تُزال كل الأقفال ويقول رئيس الوردية إن ذلك آمن. شغّلها خطوة بخطوة، بالطريقة التي تعلّمتها. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "عند حدوث عطل يتوقّف الخطّ، والجميع يريده أن يعمل من جديد بسرعة. لكن حوادث كثيرة تحدث في هذه اللحظة بالذات. لا تمدّي يدك أبداً داخل آلة تعمل، ولا حتى «للحظة فقط». اتصلي برئيس الوردية أو بقسم الصيانة. قبل أن يعمل أي شخص على الآلة، تُوقَف وتُقفَل، حتى لا يستطيع أحد تشغيلها. غالباً يضع كل من يعمل عليها قفله الخاص. لا تشغّليها من جديد إلا عندما تُزال كل الأقفال ويقول رئيس الوردية إن ذلك آمن. شغّليها خطوة بخطوة، بالطريقة التي تعلّمتِها. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "عند حدوث عطل يتوقّف الخطّ، والجميع يريده أن يعمل من جديد بسرعة. لكن حوادث كثيرة تحدث في هذه اللحظة بالذات. لا يجوز أبداً مدّ اليد داخل آلة تعمل، ولا حتى «للحظة فقط». الاتصال برئيس الوردية أو بقسم الصيانة. قبل أن يعمل أي شخص على الآلة، تُوقَف وتُقفَل، حتى لا يستطيع أحد تشغيلها. غالباً يضع كل من يعمل عليها قفله الخاص. التشغيل من جديد يكون فقط عندما تُزال كل الأقفال ويقول رئيس الوردية إن ذلك آمن. التشغيل خطوة بخطوة، بالطريقة التي تمّ تعلّمها. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.plantfault.p': "ما زال عليه قفل.", // nieuw, nalezen
-    'c.plantfault.s': { m: "منتج عالق في الآلة. الآلة ما زالت تعمل. زميل يقول: «اسحبه بسرعة». ماذا تفعل؟", f: "منتج عالق في الآلة. الآلة ما زالت تعمل. زميل يقول: «اسحبيه بسرعة». ماذا تفعلين؟", x: "منتج عالق في الآلة. الآلة ما زالت تعمل. زميل يقول: «يجب سحبه بسرعة». ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.plantfault.o1': "عدم مدّ اليد: الاتصال برئيس الوردية.", // nieuw, nalezen
-    'c.plantfault.o2': "سحبه بسرعة باليد.", // nieuw, nalezen
-    'c.plantfault.o3': "دفعه بعصا والآلة تعمل.", // nieuw, nalezen
-    'c.plantfault.w': "الآلة التي ما زالت تعمل يمكن أن تتحرّك في أي لحظة. الآلة الموقوفة والمقفلة لا تستطيع أن تؤذي أحداً.", // nieuw, nalezen
-    'c.shiftwork': "الليالي: النوم والأكل والحضور في الوقت", // nieuw, nalezen
-    'c.shiftwork.b': { m: "مصانع كثيرة تعمل ليلاً ونهاراً، كل أيام الأسبوع. تعمل بالتناوب في النوبة الصباحية والمسائية والليلية، غالباً في ثلاث أو خمس ورديات. بعد النوبة الليلية، نم في غرفة مظلمة وهادئة، وأخبر عائلتك متى تنام. كُل في أوقات ثابتة، وخذ طعامك معك: في الليل يكون المقصف غالباً مغلقاً. كن في الوقت المحدّد للتسليم: زميلك ينتظر، ولا يجوز ترك المصنع وحده. للعمل الليلي قواعد إضافية، في القانون وغالباً في اتفاقية العمل الجماعية (cao)، مثلاً عن الراحة بعد لياليك. اسأل عن القواعد في مكان عملك. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "مصانع كثيرة تعمل ليلاً ونهاراً، كل أيام الأسبوع. تعملين بالتناوب في النوبة الصباحية والمسائية والليلية، غالباً في ثلاث أو خمس ورديات. بعد النوبة الليلية، نامي في غرفة مظلمة وهادئة، وأخبري عائلتك متى تنامين. كُلي في أوقات ثابتة، وخذي طعامك معك: في الليل يكون المقصف غالباً مغلقاً. كوني في الوقت المحدّد للتسليم: زميلكِ ينتظر، ولا يجوز ترك المصنع وحده. للعمل الليلي قواعد إضافية، في القانون وغالباً في اتفاقية العمل الجماعية (cao)، مثلاً عن الراحة بعد لياليكِ. اسألي عن القواعد في مكان عملك. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "مصانع كثيرة تعمل ليلاً ونهاراً، كل أيام الأسبوع. العمل يكون بالتناوب في النوبة الصباحية والمسائية والليلية، غالباً في ثلاث أو خمس ورديات. بعد النوبة الليلية، النوم في غرفة مظلمة وهادئة، وإخبار العائلة بوقت النوم. الأكل في أوقات ثابتة، وأخذ الطعام من البيت: في الليل يكون المقصف غالباً مغلقاً. الحضور في الوقت المحدّد للتسليم: الزميل ينتظر، ولا يجوز ترك المصنع وحده. للعمل الليلي قواعد إضافية، في القانون وغالباً في اتفاقية العمل الجماعية (cao)، مثلاً عن الراحة بعد الليالي. السؤال عن القواعد في مكان العمل مهمّ. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen
-    'c.shiftwork.p': "ما هي القواعد للنوبات الليلية؟", // nieuw, nalezen
-    'c.shiftwork.s': { m: "بعد أربع ليالٍ، يطلب منك رئيس الوردية أن تعمل ليلة أخرى. أنت متعب جداً. ماذا تفعل؟", f: "بعد أربع ليالٍ، يطلب منكِ رئيس الوردية أن تعملي ليلة أخرى. أنتِ متعبة جداً. ماذا تفعلين؟", x: "بعد أربع ليالٍ، يطلب رئيس الوردية العمل ليلة أخرى. التعب شديد جداً. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.shiftwork.o1': "قول إن التعب شديد جداً، والسؤال عن القواعد.", // nieuw, nalezen
-    'c.shiftwork.o2': "الموافقة، وشرب الكثير من القهوة.", // nieuw, nalezen
-    'c.shiftwork.o3': "الموافقة، والنوم قليلاً في الاستراحة.", // nieuw, nalezen
-    'c.shiftwork.w': "الناس المتعبون يرتكبون أخطاء أكثر، وفي المصنع قد يكون الخطأ خطيراً. توجد قواعد عن الراحة بعد النوبات الليلية.", // nieuw, nalezen
-    'c.heatdust': "الحرارة والغبار والشرر", // nieuw, nalezen
+    'u.process': "مشغّل في مصانع الإنتاج المستمر", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.plantround': "الجولة وغرفة التحكّم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.controlekamer': "غرفة التحكّم (حيث يراقب المشغّلون المصنع كله على الشاشات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.operator': "المشغّل (الشخص الذي يشغّل آلات المصنع ويراقبها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.drukmeter': "مقياس الضغط (عدّاد مستدير بإبرة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.niveau': "المستوى (إلى أي حدّ يكون الخزّان أو الصومعة ممتلئاً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snelheid': "السرعة (مدى سرعة عمل الخطّ أو الآلة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alarmmelding': "رسالة الإنذار (تحذير على الشاشة بأن هناك شيئاً غير طبيعي)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantround.1': "أقوم بجولتي.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantround.2': "الضغط مرتفع جداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantround.3': "أسجّل القيمة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.q': "لماذا يوجد إنذار على الشاشة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.a': "المستوى في الخزّان رقم اثنين مرتفع جداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.plantfault': "العطل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stilstand': "التوقّف (الخطّ يتوقّف، ولا يُنتَج شيء)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opstarten': "يشغّل (آلة أو خطّاً، خطوة بخطوة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stilzetten': "يوقف (يوقف آلة بالطريقة الصحيحة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.technischedienst': "قسم الصيانة (TD: يصلحون الآلات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderhoudsmonteur': "فنّي الصيانة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.resetten': "يعيد الضبط (يمسح العطل من الشاشة أو من لوحة التحكّم)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantfault.1': "عند حدوث عطل، أتصل برئيس الوردية.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantfault.2': { m: "لا تمدّ يدك أبداً داخل آلة تعمل.", f: "لا تمدّي يدك أبداً داخل آلة تعمل.", x: "لا يجوز أبداً مدّ اليد داخل آلة تعمل." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantfault.3': "قسم الصيانة في الطريق.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.q': "هل يمكنني تشغيل الخطّ من جديد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.a': { m: "لا، انتظر. قفل الميكانيكي ما زال عليه.", f: "لا، انتظري. قفل الميكانيكي ما زال عليه.", x: "لا، ليس بعد. قفل الميكانيكي ما زال عليه." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'l.shiftwork': "النوبات والليالي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ploeg': "فريق الوردية (المجموعة التي تعمل في النوبات نفسها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ploegwissel': "تبديل الوردية (فريق يذهب إلى البيت، والفريق التالي يبدأ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.volcontinu': "على مدار الساعة (المصنع يعمل ليلاً ونهاراً، كل أيام الأسبوع)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.overdagslapen': "النوم في النهار (بعد نوبة ليلية)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.broodtrommel': "علبة الطعام", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aflosser': "البديل (الزميل الذي يأخذ مكان العامل في العمل)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shiftwork.1': "مصنعنا يعمل على مدار الساعة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shiftwork.2': { m: "اكتبه في سجلّ الأحداث للوردية التالية.", f: "اكتبيه في سجلّ الأحداث للوردية التالية.", x: "يُكتب في سجلّ الأحداث للوردية التالية." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.shiftwork.3': "أنا في الوقت المحدّد للتسليم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.q': "ماذا حدث الليلة الماضية؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.a': "المضخّة رقم ثلاثة توقّفت. هذا مكتوب في سجلّ الأحداث.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.heatdust': "الحرارة والبخار والغبار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.smeltoven': "فرن الصهر (فرن ساخن جداً يصهر الزجاج أو المعدن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stoom': "البخار (بخار ماء ساخن جداً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stoomleiding': "أنبوب البخار (يكون ساخناً، حتى عندما لا يُرى بخار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hittekleding': "ملابس الحماية من الحرارة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kwartsstof': "غبار الكوارتز (غبار ناعم جداً من الطين أو الرمل أو الحجر؛ يضرّ الرئتين)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.explosiegevaar': "خطر الانفجار (الغبار أو الأبخرة في الهواء يمكن أن تنفجر؛ لافتة صفراء عليها EX)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.heatdust.1': { m: "اشرب الماء كثيراً قرب فرن الصهر.", f: "اشربي الماء كثيراً قرب فرن الصهر.", x: "شرب الماء كثيراً قرب فرن الصهر." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.heatdust.2': { m: "غبار الكوارتز لا تراه. ضع كمّامة الغبار.", f: "غبار الكوارتز لا ترينه. ضعي كمّامة الغبار.", x: "غبار الكوارتز لا يُرى. لبس كمّامة الغبار ضروري." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.heatdust.3': "هنا خطر انفجار: ممنوع الشرر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.q': "هل يمكن أن يدخل هاتفي معي إلى هذه المنطقة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.a': "لا. هنا خطر انفجار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround': { m: "قم بجولتك، وسجّل ما تراه", f: "قومي بجولتك، وسجّلي ما ترينه", x: "الجولة، ثم تسجيل كل شيء" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.b': { m: "المصنع الذي يعمل ليلاً ونهاراً يحتاج إلى عيون وآذان. في جولتك تنظر وتسمع وتشمّ: صوت جديد أو تسرّب أو رائحة غريبة قد يكون أول علامة على مشكلة. تقرأ العدّادات: درجة الحرارة والضغط والسرعة والمستوى. سجّل كل قيمة فوراً، مع الوقت، على القائمة أو في النظام. ليس لاحقاً، من الذاكرة. قيمة مرتفعة جداً أو منخفضة جداً؟ أخبر غرفة التحكّم أو رئيس الوردية فوراً. الإنذار على الشاشة ليس أبداً «مجرد إنذار»: لا تطفئه قبل أن تعرف لماذا انطلق. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "المصنع الذي يعمل ليلاً ونهاراً يحتاج إلى عيون وآذان. في جولتك تنظرين وتسمعين وتشمّين: صوت جديد أو تسرّب أو رائحة غريبة قد يكون أول علامة على مشكلة. تقرئين العدّادات: درجة الحرارة والضغط والسرعة والمستوى. سجّلي كل قيمة فوراً، مع الوقت، على القائمة أو في النظام. ليس لاحقاً، من الذاكرة. قيمة مرتفعة جداً أو منخفضة جداً؟ أخبري غرفة التحكّم أو رئيس الوردية فوراً. الإنذار على الشاشة ليس أبداً «مجرد إنذار»: لا تطفئيه قبل أن تعرفي لماذا انطلق. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "المصنع الذي يعمل ليلاً ونهاراً يحتاج إلى عيون وآذان. في الجولة يكون النظر والاستماع والشمّ: صوت جديد أو تسرّب أو رائحة غريبة قد يكون أول علامة على مشكلة. قراءة العدّادات: درجة الحرارة والضغط والسرعة والمستوى. تسجيل كل قيمة فوراً، مع الوقت، على القائمة أو في النظام. ليس لاحقاً، من الذاكرة. قيمة مرتفعة جداً أو منخفضة جداً؟ إخبار غرفة التحكّم أو رئيس الوردية فوراً. الإنذار على الشاشة ليس أبداً «مجرد إنذار»: لا يُطفأ قبل معرفة سبب انطلاقه. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.p': "درجة الحرارة مرتفعة جداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.s': { m: "في جولتك، الضغط مرتفع قليلاً أكثر من اللازم. نوبتك تكاد تنتهي. ماذا تفعل؟", f: "في جولتكِ، الضغط مرتفع قليلاً أكثر من اللازم. نوبتكِ تكاد تنتهي. ماذا تفعلين؟", x: "في الجولة، الضغط مرتفع قليلاً أكثر من اللازم. النوبة تكاد تنتهي. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.o1': "إخبار غرفة التحكّم فوراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.o2': "تسجيله، وعدم إخبار أحد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.o3': "تركه للوردية التالية.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.w': "في المصنع، التغيير الصغير قد يكبر بسرعة. عندما تعرف غرفة التحكّم مبكراً، تستطيع أن تتصرّف قبل أن يحدث خطأ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault': "الإيقاف، ثم القفل، ثم التصليح", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.b': { m: "عند حدوث عطل يتوقّف الخطّ، والجميع يريده أن يعمل من جديد بسرعة. لكن حوادث كثيرة تحدث في هذه اللحظة بالذات. لا تمدّ يدك أبداً داخل آلة تعمل، ولا حتى «للحظة فقط». اتصل برئيس الوردية أو بقسم الصيانة. قبل أن يعمل أي شخص على الآلة، تُوقَف وتُقفَل، حتى لا يستطيع أحد تشغيلها. غالباً يضع كل من يعمل عليها قفله الخاص. لا تشغّلها من جديد إلا عندما تُزال كل الأقفال ويقول رئيس الوردية إن ذلك آمن. شغّلها خطوة بخطوة، بالطريقة التي تعلّمتها. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "عند حدوث عطل يتوقّف الخطّ، والجميع يريده أن يعمل من جديد بسرعة. لكن حوادث كثيرة تحدث في هذه اللحظة بالذات. لا تمدّي يدك أبداً داخل آلة تعمل، ولا حتى «للحظة فقط». اتصلي برئيس الوردية أو بقسم الصيانة. قبل أن يعمل أي شخص على الآلة، تُوقَف وتُقفَل، حتى لا يستطيع أحد تشغيلها. غالباً يضع كل من يعمل عليها قفله الخاص. لا تشغّليها من جديد إلا عندما تُزال كل الأقفال ويقول رئيس الوردية إن ذلك آمن. شغّليها خطوة بخطوة، بالطريقة التي تعلّمتِها. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "عند حدوث عطل يتوقّف الخطّ، والجميع يريده أن يعمل من جديد بسرعة. لكن حوادث كثيرة تحدث في هذه اللحظة بالذات. لا يجوز أبداً مدّ اليد داخل آلة تعمل، ولا حتى «للحظة فقط». الاتصال برئيس الوردية أو بقسم الصيانة. قبل أن يعمل أي شخص على الآلة، تُوقَف وتُقفَل، حتى لا يستطيع أحد تشغيلها. غالباً يضع كل من يعمل عليها قفله الخاص. التشغيل من جديد يكون فقط عندما تُزال كل الأقفال ويقول رئيس الوردية إن ذلك آمن. التشغيل خطوة بخطوة، بالطريقة التي تمّ تعلّمها. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.p': "ما زال عليه قفل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.s': { m: "منتج عالق في الآلة. الآلة ما زالت تعمل. زميل يقول: «اسحبه بسرعة». ماذا تفعل؟", f: "منتج عالق في الآلة. الآلة ما زالت تعمل. زميل يقول: «اسحبيه بسرعة». ماذا تفعلين؟", x: "منتج عالق في الآلة. الآلة ما زالت تعمل. زميل يقول: «يجب سحبه بسرعة». ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.o1': "عدم مدّ اليد: الاتصال برئيس الوردية.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.o2': "سحبه بسرعة باليد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.o3': "دفعه بعصا والآلة تعمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.w': "الآلة التي ما زالت تعمل يمكن أن تتحرّك في أي لحظة. الآلة الموقوفة والمقفلة لا تستطيع أن تؤذي أحداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork': "الليالي: النوم والأكل والحضور في الوقت", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.b': { m: "مصانع كثيرة تعمل ليلاً ونهاراً، كل أيام الأسبوع. تعمل بالتناوب في النوبة الصباحية والمسائية والليلية، غالباً في ثلاث أو خمس ورديات. بعد النوبة الليلية، نم في غرفة مظلمة وهادئة، وأخبر عائلتك متى تنام. كُل في أوقات ثابتة، وخذ طعامك معك: في الليل يكون المقصف غالباً مغلقاً. كن في الوقت المحدّد للتسليم: زميلك ينتظر، ولا يجوز ترك المصنع وحده. للعمل الليلي قواعد إضافية، في القانون وغالباً في اتفاقية العمل الجماعية (cao)، مثلاً عن الراحة بعد لياليك. اسأل عن القواعد في مكان عملك. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "مصانع كثيرة تعمل ليلاً ونهاراً، كل أيام الأسبوع. تعملين بالتناوب في النوبة الصباحية والمسائية والليلية، غالباً في ثلاث أو خمس ورديات. بعد النوبة الليلية، نامي في غرفة مظلمة وهادئة، وأخبري عائلتك متى تنامين. كُلي في أوقات ثابتة، وخذي طعامك معك: في الليل يكون المقصف غالباً مغلقاً. كوني في الوقت المحدّد للتسليم: زميلكِ ينتظر، ولا يجوز ترك المصنع وحده. للعمل الليلي قواعد إضافية، في القانون وغالباً في اتفاقية العمل الجماعية (cao)، مثلاً عن الراحة بعد لياليكِ. اسألي عن القواعد في مكان عملك. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "مصانع كثيرة تعمل ليلاً ونهاراً، كل أيام الأسبوع. العمل يكون بالتناوب في النوبة الصباحية والمسائية والليلية، غالباً في ثلاث أو خمس ورديات. بعد النوبة الليلية، النوم في غرفة مظلمة وهادئة، وإخبار العائلة بوقت النوم. الأكل في أوقات ثابتة، وأخذ الطعام من البيت: في الليل يكون المقصف غالباً مغلقاً. الحضور في الوقت المحدّد للتسليم: الزميل ينتظر، ولا يجوز ترك المصنع وحده. للعمل الليلي قواعد إضافية، في القانون وغالباً في اتفاقية العمل الجماعية (cao)، مثلاً عن الراحة بعد الليالي. السؤال عن القواعد في مكان العمل مهمّ. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.p': "ما هي القواعد للنوبات الليلية؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.s': { m: "بعد أربع ليالٍ، يطلب منك رئيس الوردية أن تعمل ليلة أخرى. أنت متعب جداً. ماذا تفعل؟", f: "بعد أربع ليالٍ، يطلب منكِ رئيس الوردية أن تعملي ليلة أخرى. أنتِ متعبة جداً. ماذا تفعلين؟", x: "بعد أربع ليالٍ، يطلب رئيس الوردية العمل ليلة أخرى. التعب شديد جداً. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.o1': "قول إن التعب شديد جداً، والسؤال عن القواعد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.o2': "الموافقة، وشرب الكثير من القهوة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.o3': "الموافقة، والنوم قليلاً في الاستراحة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.w': "الناس المتعبون يرتكبون أخطاء أكثر، وفي المصنع قد يكون الخطأ خطيراً. توجد قواعد عن الراحة بعد النوبات الليلية.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust': "الحرارة والغبار والشرر", // nieuw, nalezen // nagelezen AI 28 nov
     'c.heatdust.b': { m: "قرب فرن الصهر أو فرن الحرق أو البخار يكون الجو حاراً جداً. اشرب الماء كثيراً، حتى قبل أن تشعر بالعطش. البس ملابس الحماية من الحرارة، ولا تلمس الأنابيب أو القطع بدون قفازات: البخار والمعدن الساخن يحرقان، حتى عندما لا تراهما. تشعر بدوخة أو غثيان؟ توقّف، واذهب إلى مكان بارد، وأخبر أحداً. الغبار من الطين أو الرمل أو الحجر قد يحتوي على غبار الكوارتز (kwartsstof). لا تراه، لكنه يضرّ رئتيك. استعمل الشفط، والبس كمّامة الغبار، ولا تنفخ الغبار أبداً بالهواء المضغوط. في بعض المناطق يمكن أن ينفجر الغبار أو الأبخرة: لافتة صفراء عليها EX تُظهر ذلك. هناك: لا شرر، ولا نار، وغالباً لا هاتف عادي. اسأل ما المسموح في كل منطقة. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "قرب فرن الصهر أو فرن الحرق أو البخار يكون الجو حاراً جداً. اشربي الماء كثيراً، حتى قبل أن تشعري بالعطش. البسي ملابس الحماية من الحرارة، ولا تلمسي الأنابيب أو القطع بدون قفازات: البخار والمعدن الساخن يحرقان، حتى عندما لا ترينهما. تشعرين بدوخة أو غثيان؟ توقّفي، واذهبي إلى مكان بارد، وأخبري أحداً. الغبار من الطين أو الرمل أو الحجر قد يحتوي على غبار الكوارتز (kwartsstof). لا ترينه، لكنه يضرّ رئتيكِ. استعملي الشفط، والبسي كمّامة الغبار، ولا تنفخي الغبار أبداً بالهواء المضغوط. في بعض المناطق يمكن أن ينفجر الغبار أو الأبخرة: لافتة صفراء عليها EX تُظهر ذلك. هناك: لا شرر، ولا نار، وغالباً لا هاتف عادي. اسألي ما المسموح في كل منطقة. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "قرب فرن الصهر أو فرن الحرق أو البخار يكون الجو حاراً جداً. شرب الماء كثيراً، حتى قبل الشعور بالعطش. لُبس ملابس الحماية من الحرارة، وعدم لمس الأنابيب أو القطع بدون قفازات: البخار والمعدن الساخن يحرقان، حتى عندما لا يُريان. دوخة أو غثيان؟ التوقّف، والذهاب إلى مكان بارد، وإخبار أحد. الغبار من الطين أو الرمل أو الحجر قد يحتوي على غبار الكوارتز (kwartsstof). هو لا يُرى، لكنه يضرّ الرئتين. استعمال الشفط، ولبس كمّامة الغبار، ونفخ الغبار بالهواء المضغوط ممنوع أبداً. في بعض المناطق يمكن أن ينفجر الغبار أو الأبخرة: لافتة صفراء عليها EX تُظهر ذلك. هناك: لا شرر، ولا نار، وغالباً لا هاتف عادي. السؤال عمّا هو مسموح في كل منطقة. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.heatdust.p': "لا أشعر أنني بخير. سأذهب إلى مكان بارد.", // nieuw, nalezen
-    'c.heatdust.s': { m: "على آلتك غبار طين ناعم. زميل يقول: «انفخه بمسدس الهواء». ماذا تفعل؟", f: "على آلتكِ غبار طين ناعم. زميل يقول: «انفخيه بمسدس الهواء». ماذا تفعلين؟", x: "على الآلة غبار طين ناعم. زميل يقول: «الأسرع نفخه بمسدس الهواء». ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.heatdust.o1': "التنظيف بقطعة قماش مبلّلة، أو بالمكنسة الكهربائية.", // nieuw, nalezen
-    'c.heatdust.o2': "نفخه: هذا أسرع.", // nieuw, nalezen
-    'c.heatdust.o3': "تركه للوردية التالية.", // nieuw, nalezen
-    'c.heatdust.w': "النفخ يجعل الغبار يطير، في الهواء وإلى الرئتين. القماشة المبلّلة أو المكنسة الكهربائية تُبقي الغبار في الأسفل.", // nieuw, nalezen
+    'c.heatdust.p': "لا أشعر أنني بخير. سأذهب إلى مكان بارد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.s': { m: "على آلتك غبار طين ناعم. زميل يقول: «انفخه بمسدس الهواء». ماذا تفعل؟", f: "على آلتكِ غبار طين ناعم. زميل يقول: «انفخيه بمسدس الهواء». ماذا تفعلين؟", x: "على الآلة غبار طين ناعم. زميل يقول: «الأسرع نفخه بمسدس الهواء». ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.o1': "التنظيف بقطعة قماش مبلّلة، أو بالمكنسة الكهربائية.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.o2': "نفخه: هذا أسرع.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.o3': "تركه للوردية التالية.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.w': "النفخ يجعل الغبار يطير، في الهواء وإلى الرئتين. القماشة المبلّلة أو المكنسة الكهربائية تُبقي الغبار في الأسفل.", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (debts, taxes, discrimination, the union, kiln, mixing lab, first weeks, order picking) (26 November 2026).
-    'l.discrimination': "التمييز والمضايقة", // nieuw, nalezen
-    'w.andersbehandelen': "يعامل بشكل مختلف (أسوأ من الآخرين)", // nieuw, nalezen
-    'w.afkomst': "الأصل (البلد أو المجموعة التي ينحدر منها الشخص أو عائلته)", // nieuw, nalezen
-    'w.geloof': "الدين، الإيمان", // nieuw, nalezen
-    'w.uitschelden': "يشتم (يقول كلمات قبيحة لشخص)", // nieuw, nalezen
-    'w.bedreigen': "يهدّد (يقول إنه سيؤذي شخصاً)", // nieuw, nalezen
-    'w.geweld': "العنف", // nieuw, nalezen
-    's.discrimination.1': "أُعامَل بشكل مختلف بسبب ديني.", // nieuw, nalezen
-    's.discrimination.2': "هو يهدّدني. لا أشعر بالأمان.", // nieuw, nalezen
-    's.discrimination.3': "يحقّ لي أن أقول لا، حتى لمديري.", // nieuw, nalezen
-    'c.discrimination.q': { m: "هل أنت بخير؟ إنهم يشتمونك باستمرار.", f: "هل أنتِ بخير؟ إنهم يشتمونكِ باستمرار.", x: "هل كل شيء بخير؟ الشتائم لا تتوقّف." }, // nieuw, nalezen
-    'c.discrimination.a': "لا، لست بخير. سأبلّغ عن ذلك.", // nieuw, nalezen
-    'l.union': "النقابة ومجلس العمّال", // nieuw, nalezen
-    'w.lidworden': "يصبح عضواً، ينضمّ", // nieuw, nalezen
-    'w.contributie': "رسوم العضوية (تُدفع كل شهر)", // nieuw, nalezen
-    'w.opkomenvoor': "يدافع عن (يدافع عن مصالح شخص)", // nieuw, nalezen
-    'w.onderhandelen': "يتفاوض (يتكلّم الطرفان حتى يتّفقا)", // nieuw, nalezen
-    'w.loonsverhoging': "زيادة الأجر", // nieuw, nalezen
-    'w.ondernemingsraad': "مجلس العمّال (OR: زملاء منتخَبون للكلام مع المدير)", // nieuw, nalezen
-    's.union.1': "أصبح عضواً في النقابة.", // nieuw, nalezen
-    's.union.2': "النقابة تتفاوض على اتفاقية العمل الجماعية (cao).", // nieuw, nalezen
-    's.union.3': "من هم أعضاء مجلس العمّال؟", // nieuw, nalezen
-    'c.union.q': { m: "لماذا أنت عضو في النقابة؟", f: "لماذا أنتِ عضوة في النقابة؟", x: "لماذا العضوية في النقابة؟" }, // nieuw, nalezen
-    'c.union.a': "يدافعون عني عندما تكون هناك مشكلة.", // nieuw, nalezen
-    'l.debthelp': "الديون والمساعدة", // nieuw, nalezen
-    'w.herinnering': "رسالة التذكير (رسالة: الدفع لم يتمّ بعد)", // nieuw, nalezen
-    'w.aanmaning': "الإنذار بالدفع (الدفع قبل تاريخ معيّن، وإلا قد تأتي تكاليف إضافية)", // nieuw, nalezen
-    'w.betalingsregeling': "خطة التقسيط (دفع الدَّين على أجزاء صغيرة)", // nieuw, nalezen
-    'w.deurwaarder': "المحضر القضائي (موظف رسمي يحصّل الدَّين، غالباً بعد قرار قاضٍ)", // nieuw, nalezen
-    'w.schuldhulp': "المساعدة في الديون (مساعدة مجانية في الديون، من البلدية)", // nieuw, nalezen
-    'w.achterstand': "المتأخرات (مال كان يجب دفعه من قبل)", // nieuw, nalezen
-    's.debthelp.1': "وصلني إنذار بالدفع.", // nieuw, nalezen
-    's.debthelp.2': "هل يمكنني أن أدفع على أقساط؟", // nieuw, nalezen
-    's.debthelp.3': "أريد مساعدة في ديوني.", // nieuw, nalezen
-    'c.debthelp.q': { m: "لم تدفع الفاتورة بعد.", f: "لم تدفعي الفاتورة بعد.", x: "الفاتورة لم تُدفع بعد." }, // nieuw, nalezen
-    'c.debthelp.a': "هذا صحيح. هل يمكنني الحصول على خطة تقسيط؟", // nieuw, nalezen
-    'l.taxes': "الضرائب والإعانات", // nieuw, nalezen
-    'w.jaaropgave': "الكشف السنوي (ورقة من صاحب العمل فيها الأجر عن السنة كلها)", // nieuw, nalezen
-    'w.blauweenvelop': "الظرف الأزرق (رسائل Belastingdienst تأتي فيه)", // nieuw, nalezen
-    'w.teruggave': "الاسترداد (مال الضرائب الذي يُعاد)", // nieuw, nalezen
-    'w.uitstel': "التأجيل (وقت إضافي: يمكن القيام بالأمر لاحقاً)", // nieuw, nalezen
-    'w.huurtoeslag': "إعانة الإيجار (مال من الحكومة للمساعدة في دفع الإيجار)", // nieuw, nalezen
-    'w.belastingtelefoon': "خط الهاتف المجاني لـBelastingdienst", // nieuw, nalezen
-    's.taxes.1': "أحتاج إلى كشفي السنوي للتصريح الضريبي.", // nieuw, nalezen
-    's.taxes.2': "أكسب أكثر الآن. سأبلّغ عن ذلك فوراً.", // nieuw, nalezen
-    's.taxes.3': "سأسترجع مالاً من Belastingdienst.", // nieuw, nalezen
-    'c.taxes.q': "هناك ظرف أزرق لك.", // nieuw, nalezen
-    'c.taxes.a': "شكراً. سأفتحه فوراً.", // nieuw, nalezen
-    'l.kiln': "الفرن والزجاج والخزف", // nieuw, nalezen
-    'w.pers': "المكبس (آلة تكبس الطين أو المسحوق في شكل)", // nieuw, nalezen
-    'w.glazuur': "الطلاء الزجاجي (طبقة لامعة تشبه الزجاج على بلاطة أو فنجان)", // nieuw, nalezen
-    'w.tunneloven': "الفرن النفقي (فرن طويل؛ المنتجات تمرّ فيه ببطء)", // nieuw, nalezen
-    'w.scherf': "الشظية (قطعة حادّة من زجاج أو بلاط مكسور)", // nieuw, nalezen
-    'w.gloeiend': "متوهّج (ساخن جداً حتى يلمع باللون الأحمر)", // nieuw, nalezen
-    'w.armbeschermer': "واقي الذراع (كمّ يحمي الذراع من الجروح)", // nieuw, nalezen
-    's.kiln.1': "البلاط يمرّ ببطء في الفرن النفقي.", // nieuw, nalezen
-    's.kiln.2': "في هذه البلاطة شقّ. إنها مرفوضة.", // nieuw, nalezen
-    's.kiln.3': { m: "البس واقيات الذراع قرب الزجاج.", f: "البسي واقيات الذراع قرب الزجاج.", x: "لبس واقيات الذراع قرب الزجاج ضروري." }, // nieuw, nalezen
-    'c.kiln.q': "هل يمكنني أن ألتقط الشظايا بيدي؟", // nieuw, nalezen
-    'c.kiln.a': { m: "لا. استعمل الفرشاة والمجرفة الصغيرة.", f: "لا. استعملي الفرشاة والمجرفة الصغيرة.", x: "لا. بالفرشاة والمجرفة الصغيرة." }, // nieuw, nalezen
-    'l.mixlab': "قاعة الخلط والمختبر", // nieuw, nalezen
-    'w.batch': "الدفعة (كمية واحدة تُصنع مرة واحدة، حسب وصفة واحدة)", // nieuw, nalezen
-    'w.afwegen': "يزن بدقّة (يزن الكمية التي تقولها الوصفة بالضبط)", // nieuw, nalezen
-    'w.mengvat': "خزّان الخلط (خزّان كبير فيه خلّاط)", // nieuw, nalezen
-    'w.labjas': "معطف المختبر", // nieuw, nalezen
-    'w.laboratorium': "المختبر (هنا يُفحص المنتج)", // nieuw, nalezen
-    'w.grondstof': "المادة الخام (ما يُصنع منه المنتج)", // nieuw, nalezen
-    's.mixlab.1': { m: "زِن المواد الخام بدقّة.", f: "زِني المواد الخام بدقّة.", x: "وزن المواد الخام بدقّة ضروري." }, // nieuw, nalezen
-    's.mixlab.2': "آخذ عيّنة للمختبر.", // nieuw, nalezen
-    's.mixlab.3': { m: "أي دفعة هذه؟ انظر إلى الملصق.", f: "أي دفعة هذه؟ انظري إلى الملصق.", x: "أي دفعة هذه؟ الجواب على الملصق." }, // nieuw, nalezen
-    'c.mixlab.q': "هل تمّت الموافقة على الدفعة؟", // nieuw, nalezen
-    'c.mixlab.a': "ليس بعد. المختبر يفحص العيّنة.", // nieuw, nalezen
-    'c.discrimination': { m: "تُعامَل بظلم؟ هذا ليس ذنبك", f: "تُعامَلين بظلم؟ هذا ليس ذنبكِ", x: "معاملة ظالمة؟ لا ذنب لمن يتعرّض لها" }, // nieuw, nalezen
-    'c.discrimination.b': { m: "التمييز هو أن تُعامَل بشكل مختلف أو أسوأ بسبب من أنت: أصلك، أو لون بشرتك، أو دينك، أو جنسك، أو عمرك، أو إعاقة، أو من تحبّ. المضايقة هي مثلاً اللمس غير المرغوب فيه، أو التعليقات الجنسية، أو التهديد، أو الشتم. الاثنان ممنوعان في العمل، وهذا ليس ذنبك أبداً. يحقّ لك أن تقول لا، حتى لمديرك. اكتب ما حدث، ومتى، ومن رآه. تكلّم مع مشرفك، أو مع الشخص المؤتمن (vertrouwenspersoon) إذا كان في شركتك واحد. خارج عملك، تساعدك خدمة مكافحة التمييز في مدينتك مجاناً (discriminatie.nl). College voor de Rechten van de Mens (هيئة حقوق الإنسان) يمكنها أن تُبدي رأيها في حالتك، مجاناً أيضاً. عنف أو تهديد؟ اذهب إلى الشرطة. في خطر: اتصل بـ112. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork.", f: "التمييز هو أن تُعامَلي بشكل مختلف أو أسوأ بسبب من أنتِ: أصلك، أو لون بشرتك، أو دينك، أو جنسك، أو عمرك، أو إعاقة، أو من تحبّين. المضايقة هي مثلاً اللمس غير المرغوب فيه، أو التعليقات الجنسية، أو التهديد، أو الشتم. الاثنان ممنوعان في العمل، وهذا ليس ذنبكِ أبداً. يحقّ لكِ أن تقولي لا، حتى لمديرك. اكتبي ما حدث، ومتى، ومن رآه. تكلّمي مع مشرفك، أو مع الشخص المؤتمن (vertrouwenspersoon) إذا كان في شركتك واحد. خارج عملك، تساعدكِ خدمة مكافحة التمييز في مدينتك مجاناً (discriminatie.nl). College voor de Rechten van de Mens (هيئة حقوق الإنسان) يمكنها أن تُبدي رأيها في حالتكِ، مجاناً أيضاً. عنف أو تهديد؟ اذهبي إلى الشرطة. في خطر: اتصلي بـ112. معلومات عامة. لوضعك أنت: اسألي النقابة أو Juridisch Loket أو FairWork.", x: "التمييز هو المعاملة المختلفة أو الأسوأ بسبب هوية الشخص: الأصل، أو لون البشرة، أو الدين، أو الجنس، أو العمر، أو إعاقة، أو من يحبّ. المضايقة هي مثلاً اللمس غير المرغوب فيه، أو التعليقات الجنسية، أو التهديد، أو الشتم. الاثنان ممنوعان في العمل، وهذا ليس ذنب الشخص أبداً. قول لا حقّ، حتى للمدير. كتابة ما حدث، ومتى، ومن رآه. الكلام مع المشرف، أو مع الشخص المؤتمن (vertrouwenspersoon) إذا كان في الشركة واحد. خارج العمل، تساعد خدمة مكافحة التمييز في المدينة مجاناً (discriminatie.nl). College voor de Rechten van de Mens (هيئة حقوق الإنسان) يمكنها أن تُبدي رأيها في الحالة، مجاناً أيضاً. عنف أو تهديد؟ الذهاب إلى الشرطة. في خطر: الاتصال بـ112. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork." }, // nieuw, nalezen
-    'c.discrimination.p': "أريد أن أبلّغ عن شيء. هل يمكنني أن أتكلّم معك بسرّية؟", // nieuw, nalezen
-    'c.discrimination.s': { m: "زميل يشتمك كثيراً بسبب البلد الذي جئت منه. الآخرون يضحكون. ماذا تفعل؟", f: "زميل يشتمكِ كثيراً بسبب البلد الذي جئتِ منه. الآخرون يضحكون. ماذا تفعلين؟", x: "زميل يوجّه الشتائم كثيراً بسبب بلد الأصل. الآخرون يضحكون. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.discrimination.o1': "كتابة ما حدث، وإخبار شخص موثوق.", // nieuw, nalezen
-    'c.discrimination.o2': "السكوت: هذا جزء من العمل.", // nieuw, nalezen
-    'c.discrimination.o3': "ترك العمل، وعدم إخبار أحد بالسبب.", // nieuw, nalezen
-    'c.discrimination.w': "الشتم بسبب الأصل تمييز، وهو ممنوع. عند الكتابة والكلام عنه، يستطيع أحد أن يساعد في إيقافه.", // nieuw, nalezen
-    'c.union': "معاً أقوى", // nieuw, nalezen
-    'c.union.b': { m: "النقابة (vakbond)، مثلاً FNV أو CNV، تدافع عن العمّال. هي تعقد اتفاقات مع أصحاب العمل عن الأجر والعمل: اتفاقية العمل الجماعية (cao). اتفاقيات جماعية كثيرة تنطبق على الجميع في قطاع ما، حتى عندما لا تكون عضواً. الأعضاء يدفعون رسوماً (contributie) كل شهر، ويحصلون على نصيحة ومساعدة، مثلاً في مشكلة عن الأجر أو الفصل من العمل. انضمّ في الوقت المناسب: غالباً تساعد النقابة فقط في مشكلة تبدأ بعد انضمامك. الانضمام اختيارك أنت، ولا يجوز لصاحب العمل أن يعاقبك عليه. الشركة التي فيها 50 عاملاً أو أكثر يجب أن يكون فيها مجلس عمّال (ondernemingsraad، OR): زملاء ينتخبهم العمّال. مجلس العمّال يتكلّم مع المدير مثلاً عن ساعات العمل والسلامة. الشركة الأصغر يمكن أن يكون فيها ممثّلون للموظفين (personeelsvertegenwoordiging). عندك أسئلة؟ اسأل زميلاً في مجلس العمّال. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "النقابة (vakbond)، مثلاً FNV أو CNV، تدافع عن العمّال. هي تعقد اتفاقات مع أصحاب العمل عن الأجر والعمل: اتفاقية العمل الجماعية (cao). اتفاقيات جماعية كثيرة تنطبق على الجميع في قطاع ما، حتى عندما لا تكونين عضوة. الأعضاء يدفعون رسوماً (contributie) كل شهر، ويحصلون على نصيحة ومساعدة، مثلاً في مشكلة عن الأجر أو الفصل من العمل. انضمّي في الوقت المناسب: غالباً تساعد النقابة فقط في مشكلة تبدأ بعد انضمامكِ. الانضمام اختياركِ أنتِ، ولا يجوز لصاحب العمل أن يعاقبكِ عليه. الشركة التي فيها 50 عاملاً أو أكثر يجب أن يكون فيها مجلس عمّال (ondernemingsraad، OR): زملاء ينتخبهم العمّال. مجلس العمّال يتكلّم مع المدير مثلاً عن ساعات العمل والسلامة. الشركة الأصغر يمكن أن يكون فيها ممثّلون للموظفين (personeelsvertegenwoordiging). عندكِ أسئلة؟ اسألي زميلاً في مجلس العمّال. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "النقابة (vakbond)، مثلاً FNV أو CNV، تدافع عن العمّال. هي تعقد اتفاقات مع أصحاب العمل عن الأجر والعمل: اتفاقية العمل الجماعية (cao). اتفاقيات جماعية كثيرة تنطبق على الجميع في قطاع ما، حتى بدون عضوية. الأعضاء يدفعون رسوماً (contributie) كل شهر، ويحصلون على نصيحة ومساعدة، مثلاً في مشكلة عن الأجر أو الفصل من العمل. الانضمام في الوقت المناسب مهمّ: غالباً تساعد النقابة فقط في مشكلة تبدأ بعد الانضمام. الانضمام اختيار شخصي، ولا يجوز لصاحب العمل أن يعاقب عليه. الشركة التي فيها 50 عاملاً أو أكثر يجب أن يكون فيها مجلس عمّال (ondernemingsraad، OR): زملاء ينتخبهم العمّال. مجلس العمّال يتكلّم مع المدير مثلاً عن ساعات العمل والسلامة. الشركة الأصغر يمكن أن يكون فيها ممثّلون للموظفين (personeelsvertegenwoordiging). أسئلة؟ يمكن سؤال زميل في مجلس العمّال. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen
-    'c.union.p': "عندي سؤال عن جداول العمل الجديدة. هل يستطيع مجلس العمّال أن يفعل شيئاً بخصوصه؟", // nieuw, nalezen
-    'c.union.s': { m: "شركتك تخطّط لنوبات مسائية أكثر بكثير. زملاء كثيرون غير راضين. ماذا تستطيع أن تفعل؟", f: "شركتكِ تخطّط لنوبات مسائية أكثر بكثير. زملاء كثيرون غير راضين. ماذا تستطيعين أن تفعلي؟", x: "الشركة تخطّط لنوبات مسائية أكثر بكثير. زملاء كثيرون غير راضين. ما التصرف الممكن؟" }, // nieuw, nalezen
-    'c.union.o1': "سؤال زميل في مجلس العمّال عن ذلك.", // nieuw, nalezen
-    'c.union.o2': "التوقّف عن الحضور في المساء.", // nieuw, nalezen
-    'c.union.o3': "السكوت: لا شيء يمكن أن يتغيّر.", // nieuw, nalezen
-    'c.union.w': "لمجلس العمّال رأي في قواعد ساعات العمل. يستطيع أن يتكلّم عنها مع المدير، باسم كل العمّال معاً.", // nieuw, nalezen
-    'c.debthelp': { m: "افتح كل رسالة، واطلب المساعدة مبكراً", f: "افتحي كل رسالة، واطلبي المساعدة مبكراً", x: "فتح كل رسالة، وطلب المساعدة مبكراً" }, // nieuw, nalezen
-    'c.debthelp.b': { m: "لم تدفع فاتورة في الوقت المحدّد؟ عندها تصلك أولاً رسالة تذكير (herinnering)، ولاحقاً إنذار بالدفع (aanmaning). قبل أن يحقّ لشركة أن تطلب منك تكاليف إضافية على ذلك، يجب أن تعطيك 14 يوماً للدفع. لذلك افتح كل رسالة، حتى عندما تخاف منها. لا تستطيع أن تدفع كل شيء مرة واحدة؟ اتصل أو اكتب، واطلب خطة تقسيط (betalingsregeling). الـdeurwaarder (المحضر القضائي) موظف رسمي يحصّل الديون، غالباً بعد قرار قاضٍ. يستطيع مثلاً أن يأخذ جزءاً من أجرك، لكن يجب دائماً أن يترك لك ما يكفي للعيش. ديون؟ اطلب المساعدة مبكراً، عندما تكون ما زالت صغيرة. الـgemeente (البلدية) تقدّم مساعدة مجانية في الديون (schuldhulp). على geldfit.nl يمكنك أن تقوم باختبار مجاني وأن تجد مساعدة قريبة منك. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "لم تدفعي فاتورة في الوقت المحدّد؟ عندها تصلكِ أولاً رسالة تذكير (herinnering)، ولاحقاً إنذار بالدفع (aanmaning). قبل أن يحقّ لشركة أن تطلب منكِ تكاليف إضافية على ذلك، يجب أن تعطيكِ 14 يوماً للدفع. لذلك افتحي كل رسالة، حتى عندما تخافين منها. لا تستطيعين أن تدفعي كل شيء مرة واحدة؟ اتصلي أو اكتبي، واطلبي خطة تقسيط (betalingsregeling). الـdeurwaarder (المحضر القضائي) موظف رسمي يحصّل الديون، غالباً بعد قرار قاضٍ. يستطيع مثلاً أن يأخذ جزءاً من أجركِ، لكن يجب دائماً أن يترك لكِ ما يكفي للعيش. ديون؟ اطلبي المساعدة مبكراً، عندما تكون ما زالت صغيرة. الـgemeente (البلدية) تقدّم مساعدة مجانية في الديون (schuldhulp). على geldfit.nl يمكنكِ أن تقومي باختبار مجاني وأن تجدي مساعدة قريبة منكِ. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "فاتورة لم تُدفع في الوقت المحدّد؟ عندها تصل أولاً رسالة تذكير (herinnering)، ولاحقاً إنذار بالدفع (aanmaning). قبل أن يحقّ لشركة أن تطلب تكاليف إضافية على ذلك، يجب أن تعطي مهلة 14 يوماً للدفع. لذلك فتح كل رسالة مهمّ، حتى عند الخوف منها. دفع كل شيء مرة واحدة غير ممكن؟ الاتصال أو الكتابة، وطلب خطة تقسيط (betalingsregeling). الـdeurwaarder (المحضر القضائي) موظف رسمي يحصّل الديون، غالباً بعد قرار قاضٍ. يستطيع مثلاً أن يأخذ جزءاً من الأجر، لكن يجب دائماً أن يترك ما يكفي للعيش. ديون؟ طلب المساعدة مبكراً، عندما تكون ما زالت صغيرة. الـgemeente (البلدية) تقدّم مساعدة مجانية في الديون (schuldhulp). على geldfit.nl يمكن القيام باختبار مجاني وإيجاد مساعدة قريبة. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen
-    'c.debthelp.p': "لا أستطيع أن أدفع كل شيء مرة واحدة. هل يمكنني أن أدفع على أقساط؟", // nieuw, nalezen
-    'c.debthelp.s': { m: "يصلك إنذار بالدفع لفاتورة هاتفك. ليس معك المال هذا الشهر. ماذا تفعل؟", f: "يصلكِ إنذار بالدفع لفاتورة هاتفكِ. ليس معكِ المال هذا الشهر. ماذا تفعلين؟", x: "يصل إنذار بالدفع لفاتورة الهاتف. المال غير متوفّر هذا الشهر. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.debthelp.o1': "الاتصال بالشركة، وطلب خطة تقسيط.", // nieuw, nalezen
-    'c.debthelp.o2': "وضع الرسالة جانباً، والانتظار.", // nieuw, nalezen
-    'c.debthelp.o3': "اقتراض المال بسرعة بطريقة «اشترِ الآن وادفع لاحقاً».", // nieuw, nalezen
-    'c.debthelp.w': "عند القول في الوقت المناسب، تستطيع الشركة غالباً أن توافق على دفعات صغيرة. الرسالة الموضوعة جانباً لا تختفي: التكاليف تكبر فقط.", // nieuw, nalezen
-    'c.taxes': "التصريح الضريبي والإعانات", // nieuw, nalezen
-    'c.taxes.b': { m: "التصريح الضريبي (aangifte) عن السنة الماضية يجب أن يُقدَّم قبل 1 مايو. وصلتك رسالة تطلب منك أن تقدّمه؟ عندها يجب عليك ذلك. أحياناً تسترجع مالاً. تحتاج إلى الكشف السنوي (jaaropgave) من صاحب العمل. ليس عندك وقت؟ يمكنك أن تطلب وقتاً إضافياً (uitstel). الإعانات (toeslagen)، مثل zorgtoeslag وhuurtoeslag، هي دفعة مسبقة: تعتمد على ما ستكسبه هذه السنة. تكسب أكثر، أو يتغيّر شيء آخر؟ بلّغ عن ذلك فوراً في Mijn toeslagen. إذا لم تفعل، قد يجب عليك أن تُرجع مبلغاً كبيراً لاحقاً. يجب أن تُرجع مالاً؟ يمكنك أن تطلب خطة تقسيط. مساعدة مجانية: BelastingTelefoon، أو مكتب Belastingdienst (احجز موعداً أولاً)، أو المكتبة العامة. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "التصريح الضريبي (aangifte) عن السنة الماضية يجب أن يُقدَّم قبل 1 مايو. وصلتكِ رسالة تطلب منكِ أن تقدّميه؟ عندها يجب عليكِ ذلك. أحياناً تسترجعين مالاً. تحتاجين إلى الكشف السنوي (jaaropgave) من صاحب العمل. ليس عندكِ وقت؟ يمكنكِ أن تطلبي وقتاً إضافياً (uitstel). الإعانات (toeslagen)، مثل zorgtoeslag وhuurtoeslag، هي دفعة مسبقة: تعتمد على ما ستكسبينه هذه السنة. تكسبين أكثر، أو يتغيّر شيء آخر؟ بلّغي عن ذلك فوراً في Mijn toeslagen. إذا لم تفعلي، قد يجب عليكِ أن تُرجعي مبلغاً كبيراً لاحقاً. يجب أن تُرجعي مالاً؟ يمكنكِ أن تطلبي خطة تقسيط. مساعدة مجانية: BelastingTelefoon، أو مكتب Belastingdienst (احجزي موعداً أولاً)، أو المكتبة العامة. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "التصريح الضريبي (aangifte) عن السنة الماضية يجب أن يُقدَّم قبل 1 مايو. وصلت رسالة تطلب تقديمه؟ عندها يكون ذلك واجباً. أحياناً يُستردّ مال. الكشف السنوي (jaaropgave) من صاحب العمل ضروري. لا وقت؟ يمكن طلب وقت إضافي (uitstel). الإعانات (toeslagen)، مثل zorgtoeslag وhuurtoeslag، هي دفعة مسبقة: تعتمد على الدخل المتوقّع هذه السنة. الدخل يرتفع، أو يتغيّر شيء آخر؟ التبليغ عن ذلك فوراً في Mijn toeslagen. بدون ذلك، قد يجب إرجاع مبلغ كبير لاحقاً. إرجاع مال واجب؟ يمكن طلب خطة تقسيط. مساعدة مجانية: BelastingTelefoon، أو مكتب Belastingdienst (حجز موعد أولاً)، أو المكتبة العامة. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen
-    'c.taxes.p': "دخلي تغيّر. كيف أبلّغ عن ذلك؟", // nieuw, nalezen
-    'c.taxes.s': { m: "تحصل على عمل جديد وتكسب أكثر كل شهر. تحصل على huurtoeslag. ماذا تفعل؟", f: "تحصلين على عمل جديد وتكسبين أكثر كل شهر. تحصلين على huurtoeslag. ماذا تفعلين؟", x: "عمل جديد، والدخل أكثر كل شهر. هناك huurtoeslag أيضاً. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.taxes.o1': "التبليغ عن الدخل الجديد في Mijn toeslagen.", // nieuw, nalezen
-    'c.taxes.o2': "الانتظار حتى تسأل Belastingdienst.", // nieuw, nalezen
-    'c.taxes.o3': "التوقّف عن دفع الإيجار.", // nieuw, nalezen
-    'c.taxes.w': "الإعانة تعتمد على الدخل. عند التبليغ عن التغيير في الوقت المناسب، يصل المبلغ الصحيح، ولا حاجة إلى إرجاع مبلغ كبير لاحقاً.", // nieuw, nalezen
-    'c.kiln': "حادّ وساخن وثقيل", // nieuw, nalezen
+    'l.discrimination': "التمييز والمضايقة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.andersbehandelen': "يعامل بشكل مختلف (أسوأ من الآخرين)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afkomst': "الأصل (البلد أو المجموعة التي ينحدر منها الشخص أو عائلته)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geloof': "الدين، الإيمان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitschelden': "يشتم (يقول كلمات قبيحة لشخص)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedreigen': "يهدّد (يقول إنه سيؤذي شخصاً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geweld': "العنف", // nieuw, nalezen // nagelezen AI 28 nov
+    's.discrimination.1': "أُعامَل بشكل مختلف بسبب ديني.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.discrimination.2': "هو يهدّدني. لا أشعر بالأمان.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.discrimination.3': "يحقّ لي أن أقول لا، حتى لمديري.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.q': { m: "هل أنت بخير؟ إنهم يشتمونك باستمرار.", f: "هل أنتِ بخير؟ إنهم يشتمونكِ باستمرار.", x: "هل كل شيء بخير؟ الشتائم لا تتوقّف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.a': "لا، لست بخير. سأبلّغ عن ذلك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.union': "النقابة ومجلس العمّال", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lidworden': "يصبح عضواً، ينضمّ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.contributie': "رسوم العضوية (تُدفع كل شهر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opkomenvoor': "يدافع عن (يدافع عن مصالح شخص)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderhandelen': "يتفاوض (يتكلّم الطرفان حتى يتّفقا)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.loonsverhoging': "زيادة الأجر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ondernemingsraad': "مجلس العمّال (OR: زملاء منتخَبون للكلام مع المدير)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.union.1': "أصبح عضواً في النقابة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.union.2': "النقابة تتفاوض على اتفاقية العمل الجماعية (cao).", // nieuw, nalezen // nagelezen AI 28 nov
+    's.union.3': "من هم أعضاء مجلس العمّال؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.q': { m: "لماذا أنت عضو في النقابة؟", f: "لماذا أنتِ عضوة في النقابة؟", x: "لماذا العضوية في النقابة؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.a': "يدافعون عني عندما تكون هناك مشكلة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.debthelp': "الديون والمساعدة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.herinnering': "رسالة التذكير (رسالة: الدفع لم يتمّ بعد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanmaning': "الإنذار بالدفع (الدفع قبل تاريخ معيّن، وإلا قد تأتي تكاليف إضافية)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.betalingsregeling': "خطة التقسيط (دفع الدَّين على أجزاء صغيرة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.deurwaarder': "المحضر القضائي (موظف رسمي يحصّل الدَّين، غالباً بعد قرار قاضٍ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schuldhulp': "المساعدة في الديون (مساعدة مجانية في الديون، من البلدية)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.achterstand': "المتأخرات (مال كان يجب دفعه من قبل)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.debthelp.1': "وصلني إنذار بالدفع.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.debthelp.2': "هل يمكنني أن أدفع على أقساط؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.debthelp.3': "أريد مساعدة في ديوني.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.q': { m: "لم تدفع الفاتورة بعد.", f: "لم تدفعي الفاتورة بعد.", x: "الفاتورة لم تُدفع بعد." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.a': "هذا صحيح. هل يمكنني الحصول على خطة تقسيط؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.taxes': "الضرائب والإعانات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.jaaropgave': "الكشف السنوي (ورقة من صاحب العمل فيها الأجر عن السنة كلها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.blauweenvelop': "الظرف الأزرق (رسائل Belastingdienst تأتي فيه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teruggave': "الاسترداد (مال الضرائب الذي يُعاد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitstel': "التأجيل (وقت إضافي: يمكن القيام بالأمر لاحقاً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huurtoeslag': "إعانة الإيجار (مال من الحكومة للمساعدة في دفع الإيجار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.belastingtelefoon': "خط الهاتف المجاني لـBelastingdienst", // nieuw, nalezen // nagelezen AI 28 nov
+    's.taxes.1': "أحتاج إلى كشفي السنوي للتصريح الضريبي.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.taxes.2': "أكسب أكثر الآن. سأبلّغ عن ذلك فوراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.taxes.3': "سأسترجع مالاً من Belastingdienst.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.q': "هناك ظرف أزرق لك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.a': "شكراً. سأفتحه فوراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.kiln': "الفرن والزجاج والخزف", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pers': "المكبس (آلة تكبس الطين أو المسحوق في شكل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.glazuur': "الطلاء الزجاجي (طبقة لامعة تشبه الزجاج على بلاطة أو فنجان)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tunneloven': "الفرن النفقي (فرن طويل؛ المنتجات تمرّ فيه ببطء)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scherf': "الشظية (قطعة حادّة من زجاج أو بلاط مكسور)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gloeiend': "متوهّج (ساخن جداً حتى يلمع باللون الأحمر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.armbeschermer': "واقي الذراع (كمّ يحمي الذراع من الجروح)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.kiln.1': "البلاط يمرّ ببطء في الفرن النفقي.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.kiln.2': "في هذه البلاطة شقّ. إنها مرفوضة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.kiln.3': { m: "البس واقيات الذراع قرب الزجاج.", f: "البسي واقيات الذراع قرب الزجاج.", x: "لبس واقيات الذراع قرب الزجاج ضروري." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.q': "هل يمكنني أن ألتقط الشظايا بيدي؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.a': { m: "لا. استعمل الفرشاة والمجرفة الصغيرة.", f: "لا. استعملي الفرشاة والمجرفة الصغيرة.", x: "لا. بالفرشاة والمجرفة الصغيرة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'l.mixlab': "قاعة الخلط والمختبر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.batch': "الدفعة (كمية واحدة تُصنع مرة واحدة، حسب وصفة واحدة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afwegen': "يزن بدقّة (يزن الكمية التي تقولها الوصفة بالضبط)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mengvat': "خزّان الخلط (خزّان كبير فيه خلّاط)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.labjas': "معطف المختبر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.laboratorium': "المختبر (هنا يُفحص المنتج)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.grondstof': "المادة الخام (ما يُصنع منه المنتج)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mixlab.1': { m: "زِن المواد الخام بدقّة.", f: "زِني المواد الخام بدقّة.", x: "وزن المواد الخام بدقّة ضروري." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.mixlab.2': "آخذ عيّنة للمختبر.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mixlab.3': { m: "أي دفعة هذه؟ انظر إلى الملصق.", f: "أي دفعة هذه؟ انظري إلى الملصق.", x: "أي دفعة هذه؟ الجواب على الملصق." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.q': "هل تمّت الموافقة على الدفعة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.a': "ليس بعد. المختبر يفحص العيّنة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination': { m: "تُعامَل بظلم؟ هذا ليس ذنبك", f: "تُعامَلين بظلم؟ هذا ليس ذنبكِ", x: "معاملة ظالمة؟ لا ذنب لمن يتعرّض لها" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.b': { m: "التمييز هو أن تُعامَل بشكل مختلف أو أسوأ بسبب من أنت: أصلك، أو لون بشرتك، أو دينك، أو جنسك، أو عمرك، أو إعاقة، أو من تحبّ. المضايقة هي مثلاً اللمس غير المرغوب فيه، أو التعليقات الجنسية، أو التهديد، أو الشتم. الاثنان ممنوعان في العمل، وهذا ليس ذنبك أبداً. يحقّ لك أن تقول لا، حتى لمديرك. اكتب ما حدث، ومتى، ومن رآه. تكلّم مع مشرفك، أو مع الشخص المؤتمن (vertrouwenspersoon) إذا كان في شركتك واحد. خارج عملك، تساعدك خدمة مكافحة التمييز في مدينتك مجاناً (discriminatie.nl). College voor de Rechten van de Mens (هيئة حقوق الإنسان) يمكنها أن تُبدي رأيها في حالتك، مجاناً أيضاً. عنف أو تهديد؟ اذهب إلى الشرطة. في خطر: اتصل بـ112. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork.", f: "التمييز هو أن تُعامَلي بشكل مختلف أو أسوأ بسبب من أنتِ: أصلك، أو لون بشرتك، أو دينك، أو جنسك، أو عمرك، أو إعاقة، أو من تحبّين. المضايقة هي مثلاً اللمس غير المرغوب فيه، أو التعليقات الجنسية، أو التهديد، أو الشتم. الاثنان ممنوعان في العمل، وهذا ليس ذنبكِ أبداً. يحقّ لكِ أن تقولي لا، حتى لمديرك. اكتبي ما حدث، ومتى، ومن رآه. تكلّمي مع مشرفك، أو مع الشخص المؤتمن (vertrouwenspersoon) إذا كان في شركتك واحد. خارج عملك، تساعدكِ خدمة مكافحة التمييز في مدينتك مجاناً (discriminatie.nl). College voor de Rechten van de Mens (هيئة حقوق الإنسان) يمكنها أن تُبدي رأيها في حالتكِ، مجاناً أيضاً. عنف أو تهديد؟ اذهبي إلى الشرطة. في خطر: اتصلي بـ112. معلومات عامة. لوضعك أنت: اسألي النقابة أو Juridisch Loket أو FairWork.", x: "التمييز هو المعاملة المختلفة أو الأسوأ بسبب هوية الشخص: الأصل، أو لون البشرة، أو الدين، أو الجنس، أو العمر، أو إعاقة، أو من يحبّ. المضايقة هي مثلاً اللمس غير المرغوب فيه، أو التعليقات الجنسية، أو التهديد، أو الشتم. الاثنان ممنوعان في العمل، وهذا ليس ذنب الشخص أبداً. قول لا حقّ، حتى للمدير. كتابة ما حدث، ومتى، ومن رآه. الكلام مع المشرف، أو مع الشخص المؤتمن (vertrouwenspersoon) إذا كان في الشركة واحد. خارج العمل، تساعد خدمة مكافحة التمييز في المدينة مجاناً (discriminatie.nl). College voor de Rechten van de Mens (هيئة حقوق الإنسان) يمكنها أن تُبدي رأيها في الحالة، مجاناً أيضاً. عنف أو تهديد؟ الذهاب إلى الشرطة. في خطر: الاتصال بـ112. معلومات عامة. لوضعك أنت: اسأل النقابة أو Juridisch Loket أو FairWork." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.p': "أريد أن أبلّغ عن شيء. هل يمكنني أن أتكلّم معك بسرّية؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.s': { m: "زميل يشتمك كثيراً بسبب البلد الذي جئت منه. الآخرون يضحكون. ماذا تفعل؟", f: "زميل يشتمكِ كثيراً بسبب البلد الذي جئتِ منه. الآخرون يضحكون. ماذا تفعلين؟", x: "زميل يوجّه الشتائم كثيراً بسبب بلد الأصل. الآخرون يضحكون. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.o1': "كتابة ما حدث، وإخبار شخص موثوق.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.o2': "السكوت: هذا جزء من العمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.o3': "ترك العمل، وعدم إخبار أحد بالسبب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.w': "الشتم بسبب الأصل تمييز، وهو ممنوع. عند الكتابة والكلام عنه، يستطيع أحد أن يساعد في إيقافه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union': "معاً أقوى", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.b': { m: "النقابة (vakbond)، مثلاً FNV أو CNV، تدافع عن العمّال. هي تعقد اتفاقات مع أصحاب العمل عن الأجر والعمل: اتفاقية العمل الجماعية (cao). اتفاقيات جماعية كثيرة تنطبق على الجميع في قطاع ما، حتى عندما لا تكون عضواً. الأعضاء يدفعون رسوماً (contributie) كل شهر، ويحصلون على نصيحة ومساعدة، مثلاً في مشكلة عن الأجر أو الفصل من العمل. انضمّ في الوقت المناسب: غالباً تساعد النقابة فقط في مشكلة تبدأ بعد انضمامك. الانضمام اختيارك أنت، ولا يجوز لصاحب العمل أن يعاقبك عليه. الشركة التي فيها 50 عاملاً أو أكثر يجب أن يكون فيها مجلس عمّال (ondernemingsraad، OR): زملاء ينتخبهم العمّال. مجلس العمّال يتكلّم مع المدير مثلاً عن ساعات العمل والسلامة. الشركة الأصغر يمكن أن يكون فيها ممثّلون للموظفين (personeelsvertegenwoordiging). عندك أسئلة؟ اسأل زميلاً في مجلس العمّال. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "النقابة (vakbond)، مثلاً FNV أو CNV، تدافع عن العمّال. هي تعقد اتفاقات مع أصحاب العمل عن الأجر والعمل: اتفاقية العمل الجماعية (cao). اتفاقيات جماعية كثيرة تنطبق على الجميع في قطاع ما، حتى عندما لا تكونين عضوة. الأعضاء يدفعون رسوماً (contributie) كل شهر، ويحصلون على نصيحة ومساعدة، مثلاً في مشكلة عن الأجر أو الفصل من العمل. انضمّي في الوقت المناسب: غالباً تساعد النقابة فقط في مشكلة تبدأ بعد انضمامكِ. الانضمام اختياركِ أنتِ، ولا يجوز لصاحب العمل أن يعاقبكِ عليه. الشركة التي فيها 50 عاملاً أو أكثر يجب أن يكون فيها مجلس عمّال (ondernemingsraad، OR): زملاء ينتخبهم العمّال. مجلس العمّال يتكلّم مع المدير مثلاً عن ساعات العمل والسلامة. الشركة الأصغر يمكن أن يكون فيها ممثّلون للموظفين (personeelsvertegenwoordiging). عندكِ أسئلة؟ اسألي زميلاً في مجلس العمّال. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "النقابة (vakbond)، مثلاً FNV أو CNV، تدافع عن العمّال. هي تعقد اتفاقات مع أصحاب العمل عن الأجر والعمل: اتفاقية العمل الجماعية (cao). اتفاقيات جماعية كثيرة تنطبق على الجميع في قطاع ما، حتى بدون عضوية. الأعضاء يدفعون رسوماً (contributie) كل شهر، ويحصلون على نصيحة ومساعدة، مثلاً في مشكلة عن الأجر أو الفصل من العمل. الانضمام في الوقت المناسب مهمّ: غالباً تساعد النقابة فقط في مشكلة تبدأ بعد الانضمام. الانضمام اختيار شخصي، ولا يجوز لصاحب العمل أن يعاقب عليه. الشركة التي فيها 50 عاملاً أو أكثر يجب أن يكون فيها مجلس عمّال (ondernemingsraad، OR): زملاء ينتخبهم العمّال. مجلس العمّال يتكلّم مع المدير مثلاً عن ساعات العمل والسلامة. الشركة الأصغر يمكن أن يكون فيها ممثّلون للموظفين (personeelsvertegenwoordiging). أسئلة؟ يمكن سؤال زميل في مجلس العمّال. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.p': "عندي سؤال عن جداول العمل الجديدة. هل يستطيع مجلس العمّال أن يفعل شيئاً بخصوصه؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.s': { m: "شركتك تخطّط لنوبات مسائية أكثر بكثير. زملاء كثيرون غير راضين. ماذا تستطيع أن تفعل؟", f: "شركتكِ تخطّط لنوبات مسائية أكثر بكثير. زملاء كثيرون غير راضين. ماذا تستطيعين أن تفعلي؟", x: "الشركة تخطّط لنوبات مسائية أكثر بكثير. زملاء كثيرون غير راضين. ما التصرف الممكن؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.o1': "سؤال زميل في مجلس العمّال عن ذلك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.o2': "التوقّف عن الحضور في المساء.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.o3': "السكوت: لا شيء يمكن أن يتغيّر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.w': "لمجلس العمّال رأي في قواعد ساعات العمل. يستطيع أن يتكلّم عنها مع المدير، باسم كل العمّال معاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp': { m: "افتح كل رسالة، واطلب المساعدة مبكراً", f: "افتحي كل رسالة، واطلبي المساعدة مبكراً", x: "فتح كل رسالة، وطلب المساعدة مبكراً" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.b': { m: "لم تدفع فاتورة في الوقت المحدّد؟ عندها تصلك أولاً رسالة تذكير (herinnering)، ولاحقاً إنذار بالدفع (aanmaning). قبل أن يحقّ لشركة أن تطلب منك تكاليف إضافية على ذلك، يجب أن تعطيك 14 يوماً للدفع. لذلك افتح كل رسالة، حتى عندما تخاف منها. لا تستطيع أن تدفع كل شيء مرة واحدة؟ اتصل أو اكتب، واطلب خطة تقسيط (betalingsregeling). الـdeurwaarder (المحضر القضائي) موظف رسمي يحصّل الديون، غالباً بعد قرار قاضٍ. يستطيع مثلاً أن يأخذ جزءاً من أجرك، لكن يجب دائماً أن يترك لك ما يكفي للعيش. ديون؟ اطلب المساعدة مبكراً، عندما تكون ما زالت صغيرة. الـgemeente (البلدية) تقدّم مساعدة مجانية في الديون (schuldhulp). على geldfit.nl يمكنك أن تقوم باختبار مجاني وأن تجد مساعدة قريبة منك. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "لم تدفعي فاتورة في الوقت المحدّد؟ عندها تصلكِ أولاً رسالة تذكير (herinnering)، ولاحقاً إنذار بالدفع (aanmaning). قبل أن يحقّ لشركة أن تطلب منكِ تكاليف إضافية على ذلك، يجب أن تعطيكِ 14 يوماً للدفع. لذلك افتحي كل رسالة، حتى عندما تخافين منها. لا تستطيعين أن تدفعي كل شيء مرة واحدة؟ اتصلي أو اكتبي، واطلبي خطة تقسيط (betalingsregeling). الـdeurwaarder (المحضر القضائي) موظف رسمي يحصّل الديون، غالباً بعد قرار قاضٍ. يستطيع مثلاً أن يأخذ جزءاً من أجركِ، لكن يجب دائماً أن يترك لكِ ما يكفي للعيش. ديون؟ اطلبي المساعدة مبكراً، عندما تكون ما زالت صغيرة. الـgemeente (البلدية) تقدّم مساعدة مجانية في الديون (schuldhulp). على geldfit.nl يمكنكِ أن تقومي باختبار مجاني وأن تجدي مساعدة قريبة منكِ. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "فاتورة لم تُدفع في الوقت المحدّد؟ عندها تصل أولاً رسالة تذكير (herinnering)، ولاحقاً إنذار بالدفع (aanmaning). قبل أن يحقّ لشركة أن تطلب تكاليف إضافية على ذلك، يجب أن تعطي مهلة 14 يوماً للدفع. لذلك فتح كل رسالة مهمّ، حتى عند الخوف منها. دفع كل شيء مرة واحدة غير ممكن؟ الاتصال أو الكتابة، وطلب خطة تقسيط (betalingsregeling). الـdeurwaarder (المحضر القضائي) موظف رسمي يحصّل الديون، غالباً بعد قرار قاضٍ. يستطيع مثلاً أن يأخذ جزءاً من الأجر، لكن يجب دائماً أن يترك ما يكفي للعيش. ديون؟ طلب المساعدة مبكراً، عندما تكون ما زالت صغيرة. الـgemeente (البلدية) تقدّم مساعدة مجانية في الديون (schuldhulp). على geldfit.nl يمكن القيام باختبار مجاني وإيجاد مساعدة قريبة. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.p': "لا أستطيع أن أدفع كل شيء مرة واحدة. هل يمكنني أن أدفع على أقساط؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.s': { m: "يصلك إنذار بالدفع لفاتورة هاتفك. ليس معك المال هذا الشهر. ماذا تفعل؟", f: "يصلكِ إنذار بالدفع لفاتورة هاتفكِ. ليس معكِ المال هذا الشهر. ماذا تفعلين؟", x: "يصل إنذار بالدفع لفاتورة الهاتف. المال غير متوفّر هذا الشهر. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.o1': "الاتصال بالشركة، وطلب خطة تقسيط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.o2': "وضع الرسالة جانباً، والانتظار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.o3': "اقتراض المال بسرعة بطريقة «اشترِ الآن وادفع لاحقاً».", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.w': "عند القول في الوقت المناسب، تستطيع الشركة غالباً أن توافق على دفعات صغيرة. الرسالة الموضوعة جانباً لا تختفي: التكاليف تكبر فقط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes': "التصريح الضريبي والإعانات", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.b': { m: "التصريح الضريبي (aangifte) عن السنة الماضية يجب أن يُقدَّم قبل 1 مايو. وصلتك رسالة تطلب منك أن تقدّمه؟ عندها يجب عليك ذلك. أحياناً تسترجع مالاً. تحتاج إلى الكشف السنوي (jaaropgave) من صاحب العمل. ليس عندك وقت؟ يمكنك أن تطلب وقتاً إضافياً (uitstel). الإعانات (toeslagen)، مثل zorgtoeslag وhuurtoeslag، هي دفعة مسبقة: تعتمد على ما ستكسبه هذه السنة. تكسب أكثر، أو يتغيّر شيء آخر؟ بلّغ عن ذلك فوراً في Mijn toeslagen. إذا لم تفعل، قد يجب عليك أن تُرجع مبلغاً كبيراً لاحقاً. يجب أن تُرجع مالاً؟ يمكنك أن تطلب خطة تقسيط. مساعدة مجانية: BelastingTelefoon، أو مكتب Belastingdienst (احجز موعداً أولاً)، أو المكتبة العامة. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "التصريح الضريبي (aangifte) عن السنة الماضية يجب أن يُقدَّم قبل 1 مايو. وصلتكِ رسالة تطلب منكِ أن تقدّميه؟ عندها يجب عليكِ ذلك. أحياناً تسترجعين مالاً. تحتاجين إلى الكشف السنوي (jaaropgave) من صاحب العمل. ليس عندكِ وقت؟ يمكنكِ أن تطلبي وقتاً إضافياً (uitstel). الإعانات (toeslagen)، مثل zorgtoeslag وhuurtoeslag، هي دفعة مسبقة: تعتمد على ما ستكسبينه هذه السنة. تكسبين أكثر، أو يتغيّر شيء آخر؟ بلّغي عن ذلك فوراً في Mijn toeslagen. إذا لم تفعلي، قد يجب عليكِ أن تُرجعي مبلغاً كبيراً لاحقاً. يجب أن تُرجعي مالاً؟ يمكنكِ أن تطلبي خطة تقسيط. مساعدة مجانية: BelastingTelefoon، أو مكتب Belastingdienst (احجزي موعداً أولاً)، أو المكتبة العامة. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "التصريح الضريبي (aangifte) عن السنة الماضية يجب أن يُقدَّم قبل 1 مايو. وصلت رسالة تطلب تقديمه؟ عندها يكون ذلك واجباً. أحياناً يُستردّ مال. الكشف السنوي (jaaropgave) من صاحب العمل ضروري. لا وقت؟ يمكن طلب وقت إضافي (uitstel). الإعانات (toeslagen)، مثل zorgtoeslag وhuurtoeslag، هي دفعة مسبقة: تعتمد على الدخل المتوقّع هذه السنة. الدخل يرتفع، أو يتغيّر شيء آخر؟ التبليغ عن ذلك فوراً في Mijn toeslagen. بدون ذلك، قد يجب إرجاع مبلغ كبير لاحقاً. إرجاع مال واجب؟ يمكن طلب خطة تقسيط. مساعدة مجانية: BelastingTelefoon، أو مكتب Belastingdienst (حجز موعد أولاً)، أو المكتبة العامة. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.p': "دخلي تغيّر. كيف أبلّغ عن ذلك؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.s': { m: "تحصل على عمل جديد وتكسب أكثر كل شهر. تحصل على huurtoeslag. ماذا تفعل؟", f: "تحصلين على عمل جديد وتكسبين أكثر كل شهر. تحصلين على huurtoeslag. ماذا تفعلين؟", x: "عمل جديد، والدخل أكثر كل شهر. هناك huurtoeslag أيضاً. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.o1': "التبليغ عن الدخل الجديد في Mijn toeslagen.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.o2': "الانتظار حتى تسأل Belastingdienst.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.o3': "التوقّف عن دفع الإيجار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.w': "الإعانة تعتمد على الدخل. عند التبليغ عن التغيير في الوقت المناسب، يصل المبلغ الصحيح، ولا حاجة إلى إرجاع مبلغ كبير لاحقاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln': "حادّ وساخن وثقيل", // nieuw, nalezen // nagelezen AI 28 nov
     'c.kiln.b': { m: "في مصنع البلاط أو الزجاج تُكبس المنتجات في شكل، ثم تأخذ طلاءً زجاجياً، وتمرّ ببطء في فرن طويل. بعد الفرن يجب أن تبرد: لا تلمسها وهي ساخنة، أو البس قفازات مقاومة للحرارة. الزجاج والبلاط المكسور حادّان جداً. البس قفازات مقاومة للقطع، وواقيات الذراع، ونظارات السلامة. لا تحاول أبداً أن تمسك لوح زجاج يسقط: ارجع إلى الخلف. التقط الشظايا بالفرشاة والمجرفة الصغيرة، ولا تلتقطها أبداً بيديك، وضعها في الحاوية الصحيحة. الطلاء الزجاجي والغبار قد يحتويان على مواد ضارّة: اغسل يديك قبل أن تأكل أو تشرب. عند المكبس، لا تُدخل يدك أبداً وهو يعمل. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في مصنع البلاط أو الزجاج تُكبس المنتجات في شكل، ثم تأخذ طلاءً زجاجياً، وتمرّ ببطء في فرن طويل. بعد الفرن يجب أن تبرد: لا تلمسيها وهي ساخنة، أو البسي قفازات مقاومة للحرارة. الزجاج والبلاط المكسور حادّان جداً. البسي قفازات مقاومة للقطع، وواقيات الذراع، ونظارات السلامة. لا تحاولي أبداً أن تمسكي لوح زجاج يسقط: ارجعي إلى الخلف. التقطي الشظايا بالفرشاة والمجرفة الصغيرة، ولا تلتقطيها أبداً بيديك، وضعيها في الحاوية الصحيحة. الطلاء الزجاجي والغبار قد يحتويان على مواد ضارّة: اغسلي يديك قبل أن تأكلي أو تشربي. عند المكبس، لا تُدخلي يدك أبداً وهو يعمل. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في مصنع البلاط أو الزجاج تُكبس المنتجات في شكل، ثم تأخذ طلاءً زجاجياً، وتمرّ ببطء في فرن طويل. بعد الفرن يجب أن تبرد: لمسها وهي ساخنة ممنوع، إلا بقفازات مقاومة للحرارة. الزجاج والبلاط المكسور حادّان جداً. لُبس قفازات مقاومة للقطع، وواقيات الذراع، ونظارات السلامة. إمساك لوح زجاج يسقط ممنوع أبداً: الرجوع إلى الخلف. التقاط الشظايا بالفرشاة والمجرفة الصغيرة، وليس أبداً باليدين، ووضعها في الحاوية الصحيحة. الطلاء الزجاجي والغبار قد يحتويان على مواد ضارّة: غسل اليدين قبل الأكل أو الشرب. عند المكبس، إدخال اليد وهو يعمل ممنوع أبداً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.kiln.p': "انتبه، شظايا! سأحضر الفرشاة والمجرفة الصغيرة.", // nieuw, nalezen
-    'c.kiln.s': { m: "لوح زجاج ينزلق من الرفّ ويبدأ بالسقوط. ماذا تفعل؟", f: "لوح زجاج ينزلق من الرفّ ويبدأ بالسقوط. ماذا تفعلين؟", x: "لوح زجاج ينزلق من الرفّ ويبدأ بالسقوط. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.kiln.o1': "الرجوع إلى الخلف، وتركه يسقط.", // nieuw, nalezen
-    'c.kiln.o2': "إمساكه باليدين.", // nieuw, nalezen
-    'c.kiln.o3': "إيقافه بالرِّجل.", // nieuw, nalezen
-    'c.kiln.w': "اللوح الساقط قد يجرح جرحاً عميقاً جداً، حتى من خلال القفازات. اللوح المكسور يكلّف مالاً فقط.", // nieuw, nalezen
-    'c.mixlab': { m: "اتبع الوصفة بالضبط", f: "اتبعي الوصفة بالضبط", x: "اتباع الوصفة بالضبط" }, // nieuw, nalezen
-    'c.mixlab.b': { m: "في قاعة الخلط تصنع دفعة حسب وصفة: أي مواد خام، وكم، وبأي ترتيب. زِن كل شيء بدقّة، واكتب ما أضفته، مع رقم الدفعة. لست متأكداً؟ اسأل، ولا تخمّن. قبل أن تستعمل برميلاً أو كيساً، اقرأ الملصق: ما في داخله، ورقم الدفعة، وعلامات الخطر. لا تضع أبداً في برميل أو كيس شيئاً لا ينتمي إليه. للعيّنة، استعمل مغرفة نظيفة ووعاءً نظيفاً، وضع عليه ملصقاً فوراً. المسحوق والأبخرة قد تكون ضارّة: استعمل الشفط، والبس ما يلزم، مثل معطف المختبر، أو النظارات الواقية، أو القفازات، أو الكمّامة. في صناعة الطعام تلبس أيضاً شبكة الشعر وتغسل يديك كثيراً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في قاعة الخلط تصنعين دفعة حسب وصفة: أي مواد خام، وكم، وبأي ترتيب. زِني كل شيء بدقّة، واكتبي ما أضفتِه، مع رقم الدفعة. لستِ متأكدة؟ اسألي، ولا تخمّني. قبل أن تستعملي برميلاً أو كيساً، اقرئي الملصق: ما في داخله، ورقم الدفعة، وعلامات الخطر. لا تضعي أبداً في برميل أو كيس شيئاً لا ينتمي إليه. للعيّنة، استعملي مغرفة نظيفة ووعاءً نظيفاً، وضعي عليه ملصقاً فوراً. المسحوق والأبخرة قد تكون ضارّة: استعملي الشفط، والبسي ما يلزم، مثل معطف المختبر، أو النظارات الواقية، أو القفازات، أو الكمّامة. في صناعة الطعام تلبسين أيضاً شبكة الشعر وتغسلين يديك كثيراً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في قاعة الخلط تُصنع الدفعة حسب وصفة: أي مواد خام، وكم، وبأي ترتيب. وزن كل شيء بدقّة، وكتابة ما أُضيف، مع رقم الدفعة. عدم تأكّد؟ السؤال، وعدم التخمين. قبل استعمال برميل أو كيس، قراءة الملصق: ما في داخله، ورقم الدفعة، وعلامات الخطر. وضع شيء في برميل أو كيس لا ينتمي إليه ممنوع أبداً. للعيّنة، استعمال مغرفة نظيفة ووعاء نظيف، ووضع ملصق عليه فوراً. المسحوق والأبخرة قد تكون ضارّة: استعمال الشفط، ولبس ما يلزم، مثل معطف المختبر، أو النظارات الواقية، أو القفازات، أو الكمّامة. في صناعة الطعام تُلبس أيضاً شبكة الشعر وتُغسل اليدان كثيراً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.mixlab.p': { m: "لست متأكداً. كم يجب أن نضع؟", f: "لست متأكدة. كم يجب أن نضع؟", x: "لا أعرف بالضبط. كم يجب أن نضع؟" }, // nieuw, nalezen
-    'c.mixlab.s': { m: "الوصفة تقول 25 كيلو. بالخطأ وضعت 26 كيلو، وهو الآن في خزّان الخلط. ماذا تفعل؟", f: "الوصفة تقول 25 كيلو. بالخطأ وضعتِ 26 كيلو، وهو الآن في خزّان الخلط. ماذا تفعلين؟", x: "الوصفة تقول 25 كيلو. بالخطأ وُضع 26 كيلو، وهو الآن في خزّان الخلط. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.mixlab.o1': "إخبار رئيس الوردية، وكتابة ذلك.", // nieuw, nalezen
-    'c.mixlab.o2': "السكوت: كيلو واحد ليس كثيراً.", // nieuw, nalezen
-    'c.mixlab.o3': "إخراج القليل باليد.", // nieuw, nalezen
-    'c.mixlab.w': "كمية خاطئة واحدة قد تُفسد الدفعة كلها. عندما يعرف رئيس الوردية في الوقت المناسب، يستطيع المختبر أن يفحصها قبل أن تكمل الدفعة طريقها.", // nieuw, nalezen
+    'c.kiln.p': "انتبه، شظايا! سأحضر الفرشاة والمجرفة الصغيرة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.s': { m: "لوح زجاج ينزلق من الرفّ ويبدأ بالسقوط. ماذا تفعل؟", f: "لوح زجاج ينزلق من الرفّ ويبدأ بالسقوط. ماذا تفعلين؟", x: "لوح زجاج ينزلق من الرفّ ويبدأ بالسقوط. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.o1': "الرجوع إلى الخلف، وتركه يسقط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.o2': "إمساكه باليدين.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.o3': "إيقافه بالرِّجل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.w': "اللوح الساقط قد يجرح جرحاً عميقاً جداً، حتى من خلال القفازات. اللوح المكسور يكلّف مالاً فقط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab': { m: "اتبع الوصفة بالضبط", f: "اتبعي الوصفة بالضبط", x: "اتباع الوصفة بالضبط" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.b': { m: "في قاعة الخلط تصنع دفعة حسب وصفة: أي مواد خام، وكم، وبأي ترتيب. زِن كل شيء بدقّة، واكتب ما أضفته، مع رقم الدفعة. لست متأكداً؟ اسأل، ولا تخمّن. قبل أن تستعمل برميلاً أو كيساً، اقرأ الملصق: ما في داخله، ورقم الدفعة، وعلامات الخطر. لا تضع أبداً في برميل أو كيس شيئاً لا ينتمي إليه. للعيّنة، استعمل مغرفة نظيفة ووعاءً نظيفاً، وضع عليه ملصقاً فوراً. المسحوق والأبخرة قد تكون ضارّة: استعمل الشفط، والبس ما يلزم، مثل معطف المختبر، أو النظارات الواقية، أو القفازات، أو الكمّامة. في صناعة الطعام تلبس أيضاً شبكة الشعر وتغسل يديك كثيراً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في قاعة الخلط تصنعين دفعة حسب وصفة: أي مواد خام، وكم، وبأي ترتيب. زِني كل شيء بدقّة، واكتبي ما أضفتِه، مع رقم الدفعة. لستِ متأكدة؟ اسألي، ولا تخمّني. قبل أن تستعملي برميلاً أو كيساً، اقرئي الملصق: ما في داخله، ورقم الدفعة، وعلامات الخطر. لا تضعي أبداً في برميل أو كيس شيئاً لا ينتمي إليه. للعيّنة، استعملي مغرفة نظيفة ووعاءً نظيفاً، وضعي عليه ملصقاً فوراً. المسحوق والأبخرة قد تكون ضارّة: استعملي الشفط، والبسي ما يلزم، مثل معطف المختبر، أو النظارات الواقية، أو القفازات، أو الكمّامة. في صناعة الطعام تلبسين أيضاً شبكة الشعر وتغسلين يديك كثيراً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في قاعة الخلط تُصنع الدفعة حسب وصفة: أي مواد خام، وكم، وبأي ترتيب. وزن كل شيء بدقّة، وكتابة ما أُضيف، مع رقم الدفعة. عدم تأكّد؟ السؤال، وعدم التخمين. قبل استعمال برميل أو كيس، قراءة الملصق: ما في داخله، ورقم الدفعة، وعلامات الخطر. وضع شيء في برميل أو كيس لا ينتمي إليه ممنوع أبداً. للعيّنة، استعمال مغرفة نظيفة ووعاء نظيف، ووضع ملصق عليه فوراً. المسحوق والأبخرة قد تكون ضارّة: استعمال الشفط، ولبس ما يلزم، مثل معطف المختبر، أو النظارات الواقية، أو القفازات، أو الكمّامة. في صناعة الطعام تُلبس أيضاً شبكة الشعر وتُغسل اليدان كثيراً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.p': { m: "لست متأكداً. كم يجب أن نضع؟", f: "لست متأكدة. كم يجب أن نضع؟", x: "لا أعرف بالضبط. كم يجب أن نضع؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.s': { m: "الوصفة تقول 25 كيلو. بالخطأ وضعت 26 كيلو، وهو الآن في خزّان الخلط. ماذا تفعل؟", f: "الوصفة تقول 25 كيلو. بالخطأ وضعتِ 26 كيلو، وهو الآن في خزّان الخلط. ماذا تفعلين؟", x: "الوصفة تقول 25 كيلو. بالخطأ وُضع 26 كيلو، وهو الآن في خزّان الخلط. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.o1': "إخبار رئيس الوردية، وكتابة ذلك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.o2': "السكوت: كيلو واحد ليس كثيراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.o3': "إخراج القليل باليد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.w': "كمية خاطئة واحدة قد تُفسد الدفعة كلها. عندما يعرف رئيس الوردية في الوقت المناسب، يستطيع المختبر أن يفحصها قبل أن تكمل الدفعة طريقها.", // nieuw, nalezen // nagelezen AI 28 nov
     // four new lessons (performance review, forms, voicemail, the dentist) (27 November 2026).
-    'l.forms': "تعبئة استمارة", // nieuw, nalezen
-    'w.invullen': "يملأ، يعبّئ (استمارة)", // nieuw, nalezen
-    'w.vakje': "الخانة (مربّع صغير في استمارة)", // nieuw, nalezen
-    'w.aankruisen': "يضع علامة (يضع علامة × في خانة)", // nieuw, nalezen
-    'w.verplichtveld': "الحقل الإلزامي (يجب ملؤه؛ غالباً عليه علامة *)", // nieuw, nalezen
-    'w.postcode': "الرمز البريدي (رمز قصير للشارع أو المدينة، جزء من العنوان)", // nieuw, nalezen
-    'w.hoofdletters': "الحروف الكبيرة (A، B، C)", // nieuw, nalezen
-    's.forms.1': { m: "اكتب اسمك بالحروف الكبيرة.", f: "اكتبي اسمكِ بالحروف الكبيرة.", x: "الاسم يُكتب بالحروف الكبيرة." }, // nieuw, nalezen
-    's.forms.2': { m: "ضع علامة في الخانة الصحيحة.", f: "ضعي علامة في الخانة الصحيحة.", x: "العلامة توضع في الخانة الصحيحة." }, // nieuw, nalezen
-    's.forms.3': "هل يمكنك أن تساعدني في هذه الاستمارة؟", // nieuw, nalezen
-    'c.forms.q': { m: "هل ملأت الاستمارة بعد؟", f: "هل ملأتِ الاستمارة بعد؟", x: "هل الاستمارة جاهزة بعد؟" }, // nieuw, nalezen
-    'c.forms.a': "تقريباً. أين أوقّع؟", // nieuw, nalezen
-    'l.voicemail': "البريد الصوتي ومعاودة الاتصال", // nieuw, nalezen
-    'w.piep': "الصفّارة (الصوت القصير؛ بعده تُقال الرسالة)", // nieuw, nalezen
-    'w.beluisteren': "يستمع إلى (رسالة)", // nieuw, nalezen
-    'w.boodschap': "الرسالة (ما يُقال في البريد الصوتي لشخص ما)", // nieuw, nalezen
-    'w.noemen': "يذكر، يقول (الاسم، الرقم)", // nieuw, nalezen
-    'w.zosnelmogelijk': "في أسرع وقت ممكن", // nieuw, nalezen
-    'w.opnieuw': "من جديد (مرة أخرى)", // nieuw, nalezen
-    's.voicemail.1': "أنا علي حداد. أتصل بخصوص جدول عملي.", // nieuw, nalezen
-    's.voicemail.2': "أستمع إلى بريدي الصوتي كل يوم.", // nieuw, nalezen
-    's.voicemail.3': "سأتصل مرة أخرى لاحقاً.", // nieuw, nalezen
-    'c.voicemail.q': { m: "اترك اسمك ورقمك بعد الصفّارة.", f: "اتركي اسمكِ ورقمكِ بعد الصفّارة.", x: "يُرجى ترك الاسم والرقم بعد الصفّارة." }, // nieuw, nalezen
-    'c.voicemail.a': "أنا علي. هل يمكنك أن تعاود الاتصال بي في أسرع وقت ممكن؟", // nieuw, nalezen
-    'l.dentist': "طبيب الأسنان", // nieuw, nalezen
-    'w.tandarts': "طبيب الأسنان", // nieuw, nalezen
-    'w.kiespijn': "ألم الأسنان", // nieuw, nalezen
-    'w.gaatje': "التسوّس (ثقب صغير في سنّ)", // nieuw, nalezen
-    'w.vulling': "الحشوة (طبيب الأسنان يسدّ الثقب في السنّ)", // nieuw, nalezen
-    'w.gebit': "الأسنان (كل الأسنان معاً)", // nieuw, nalezen
-    'w.aanvullendeverzekering': "التأمين الإضافي (يمكن اختياره فوق التأمين الصحي الأساسي)", // nieuw, nalezen
-    's.dentist.1': "عندي ألم في أسناني منذ يومين.", // nieuw, nalezen
-    's.dentist.2': "عندي تسوّس. سأحصل على حشوة.", // nieuw, nalezen
-    's.dentist.3': "كم تكلّف الحشوة؟", // nieuw, nalezen
-    'c.dentist.q': { m: "متى كنت عند طبيب الأسنان آخر مرة؟", f: "متى كنتِ عند طبيب الأسنان آخر مرة؟", x: "متى كانت آخر زيارة لطبيب الأسنان؟" }, // nieuw, nalezen
-    'c.dentist.a': "قبل سنة. أريد فحصاً دورياً.", // nieuw, nalezen
-    'c.forms': { m: "الاستمارة: اكتب بوضوح، واحمِ رقم BSN الخاص بك", f: "الاستمارة: اكتبي بوضوح، واحمي رقم BSN الخاص بكِ", x: "الاستمارة: كتابة واضحة، وحماية رقم BSN" }, // nieuw, nalezen
-    'c.forms.b': { m: "الاستمارة تطلب غالباً اسمك، وتاريخ ميلادك، وعنوانك، ورمزك البريدي. اكتب بوضوح، غالباً بالحروف الكبيرة. الحقل الذي عليه نجمة (*) إلزامي: يجب أن تملأه. ضع علامة في الخانة الصحيحة. لا تفهم سؤالاً؟ اطلب المساعدة قبل أن توقّع. لا توقّع أبداً على شيء لا تفهمه. رقم BSN الخاص بك: بعض الجهات فقط يحقّ لها أن تطلبه، مثل صاحب العمل، والـgemeente (البلدية)، وBelastingdienst، وشركة تأمينك الصحي، وطبيبك، وبنكك. المتجر أو النادي الرياضي لا يحقّ له ذلك. لا تعطِ رقم BSN أبداً لشخص غريب، في تطبيق أو على الهاتف. لست متأكداً؟ اسأل لماذا يحتاجونه. مكتبات عامة كثيرة تساعد في الاستمارات مجاناً، غالباً في ساعة استقبال بدون موعد. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "الاستمارة تطلب غالباً اسمكِ، وتاريخ ميلادكِ، وعنوانكِ، ورمزكِ البريدي. اكتبي بوضوح، غالباً بالحروف الكبيرة. الحقل الذي عليه نجمة (*) إلزامي: يجب أن تملئيه. ضعي علامة في الخانة الصحيحة. لا تفهمين سؤالاً؟ اطلبي المساعدة قبل أن توقّعي. لا توقّعي أبداً على شيء لا تفهمينه. رقم BSN الخاص بكِ: بعض الجهات فقط يحقّ لها أن تطلبه، مثل صاحب العمل، والـgemeente (البلدية)، وBelastingdienst، وشركة تأمينكِ الصحي، وطبيبكِ، وبنككِ. المتجر أو النادي الرياضي لا يحقّ له ذلك. لا تعطي رقم BSN أبداً لشخص غريب، في تطبيق أو على الهاتف. لستِ متأكدة؟ اسألي لماذا يحتاجونه. مكتبات عامة كثيرة تساعد في الاستمارات مجاناً، غالباً في ساعة استقبال بدون موعد. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "الاستمارة تطلب غالباً الاسم، وتاريخ الميلاد، والعنوان، والرمز البريدي. الكتابة بوضوح، غالباً بالحروف الكبيرة. الحقل الذي عليه نجمة (*) إلزامي: يجب ملؤه. وضع علامة في الخانة الصحيحة. سؤال غير مفهوم؟ طلب المساعدة قبل التوقيع. لا يُوقَّع أبداً على شيء غير مفهوم. رقم BSN: بعض الجهات فقط يحقّ لها أن تطلبه، مثل صاحب العمل، والـgemeente (البلدية)، وBelastingdienst، وشركة التأمين الصحي، والطبيب، والبنك. المتجر أو النادي الرياضي لا يحقّ له ذلك. لا يُعطى رقم BSN أبداً لشخص غريب، في تطبيق أو على الهاتف. هناك شكّ؟ السؤال عن سبب الحاجة إليه. مكتبات عامة كثيرة تساعد في الاستمارات مجاناً، غالباً في ساعة استقبال بدون موعد. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen
-    'c.forms.p': "هل رقم BSN إلزامي هنا؟", // nieuw, nalezen
-    'c.forms.s': { m: "تسجّل في نادٍ رياضي. الاستمارة تطلب رقم BSN الخاص بك. ماذا تفعل؟", f: "تسجّلين في نادٍ رياضي. الاستمارة تطلب رقم BSN الخاص بكِ. ماذا تفعلين؟", x: "تسجيل في نادٍ رياضي. الاستمارة تطلب رقم BSN. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.forms.o1': "ترك الخانة فارغة، والسؤال لماذا يحتاجونه.", // nieuw, nalezen
-    'c.forms.o2': "ملؤها: كل استمارة يمكن أن تطلبه.", // nieuw, nalezen
-    'c.forms.o3': "إعطاء بيانات دخول DigiD بدلاً منه.", // nieuw, nalezen
-    'c.forms.w': { m: "النادي الرياضي لا يحقّ له أن يستعمل رقم BSN الخاص بك. بعض الجهات فقط يحقّ لها ذلك، مثل صاحب العمل، والـgemeente، وشركة التأمين الصحي. عندما تسأل لماذا، تحمي رقمك.", f: "النادي الرياضي لا يحقّ له أن يستعمل رقم BSN الخاص بكِ. بعض الجهات فقط يحقّ لها ذلك، مثل صاحب العمل، والـgemeente، وشركة التأمين الصحي. عندما تسألين لماذا، تحمين رقمكِ.", x: "النادي الرياضي لا يحقّ له أن يستعمل رقم BSN. بعض الجهات فقط يحقّ لها ذلك، مثل صاحب العمل، والـgemeente، وشركة التأمين الصحي. السؤال عن السبب يحمي الرقم." }, // nieuw, nalezen
-    'c.voicemail': "الرسالة الصوتية: من، ولماذا، والرقم", // nieuw, nalezen
-    'c.voicemail.b': { m: "لا أحد يردّ؟ اترك رسالة قصيرة (boodschap) بعد الصفّارة (piep). قل اسمك، ولماذا تتصل، ورقم هاتفك. تكلّم ببطء، وقل رقمك مرتين. فاتتك مكالمة؟ استمع أولاً إلى بريدك الصوتي، ثم عاود الاتصال في أسرع وقت ممكن. لا تفهم رسالة؟ استمع إليها مرة أخرى، أو اطلب من زميل أن يستمع معك. جهّز بريدك الصوتي، واستمع إليه كل يوم. تبلّغ عن مرضك؟ في شركات كثيرة لا تكفي الرسالة: اتصل مرة أخرى حتى تتكلّم مع شخص. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "لا أحد يردّ؟ اتركي رسالة قصيرة (boodschap) بعد الصفّارة (piep). قولي اسمكِ، ولماذا تتصلين، ورقم هاتفكِ. تكلّمي ببطء، وقولي رقمكِ مرتين. فاتتكِ مكالمة؟ استمعي أولاً إلى بريدكِ الصوتي، ثم عاودي الاتصال في أسرع وقت ممكن. لا تفهمين رسالة؟ استمعي إليها مرة أخرى، أو اطلبي من زميل أن يستمع معكِ. جهّزي بريدكِ الصوتي، واستمعي إليه كل يوم. تبلّغين عن مرضكِ؟ في شركات كثيرة لا تكفي الرسالة: اتصلي مرة أخرى حتى تتكلّمي مع شخص. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "لا أحد يردّ؟ ترك رسالة قصيرة (boodschap) بعد الصفّارة (piep). ذكر الاسم، وسبب الاتصال، ورقم الهاتف. الكلام ببطء، وذكر الرقم مرتين. مكالمة فائتة؟ الاستماع أولاً إلى البريد الصوتي، ثم معاودة الاتصال في أسرع وقت ممكن. رسالة غير مفهومة؟ الاستماع إليها مرة أخرى، أو طلب الاستماع معاً من زميل. تجهيز البريد الصوتي، والاستماع إليه كل يوم. تبليغ عن المرض؟ في شركات كثيرة لا تكفي الرسالة: الاتصال مرة أخرى حتى الكلام مع شخص. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.voicemail.p': "هل يمكنني أن أترك رسالة؟", // nieuw, nalezen
-    'c.voicemail.s': { m: "ستتأخّر، وتتصل بمشرفتك. تسمع بريدها الصوتي. ماذا تقول بعد الصفّارة؟", f: "ستتأخّرين، وتتصلين بمشرفتكِ. تسمعين بريدها الصوتي. ماذا تقولين بعد الصفّارة؟", x: "تأخير متوقَّع، واتصال بالمشرفة. يردّ بريدها الصوتي. ما الذي يُقال بعد الصفّارة؟" }, // nieuw, nalezen
-    'c.voicemail.o1': "الاسم، وسبب الاتصال، والرقم.", // nieuw, nalezen
-    'c.voicemail.o2': "فقط «Bel me terug»، ثم إنهاء المكالمة.", // nieuw, nalezen
-    'c.voicemail.o3': "لا شيء: إنهاء المكالمة، والانتظار.", // nieuw, nalezen
-    'c.voicemail.w': "مع الاسم والسبب والرقم، تعرف المشرفة ماذا يحدث، وتستطيع أن تعاود الاتصال فوراً.", // nieuw, nalezen
-    'c.dentist': { m: "طبيب الأسنان: فحص دوري، واسأل عن السعر", f: "طبيب الأسنان: فحص دوري، واسألي عن السعر", x: "طبيب الأسنان: فحص دوري، والسؤال عن السعر" }, // nieuw, nalezen
-    'c.dentist.b': { m: "سجّل عند طبيب أسنان (tandarts) قريب من بيتك، واذهب إلى الفحص الدوري (controle) بانتظام، غالباً مرة في السنة. ألم في الأسنان؟ اتصل بطبيب أسنانك وقل إن الألم شديد جداً: عندها تحصل غالباً على موعد قريب. في الليل أو في عطلة نهاية الأسبوع، اتصل بطبيب أسنانك أنت: الرسالة الهاتفية تقول لك أي طبيب أسنان يساعد الآن. للبالغين، التأمين الصحي الأساسي يدفع القليل جداً عند طبيب الأسنان: عادةً لا يدفع الفحص الدوري ولا الحشوة. يمكنك أن تختار تأميناً إضافياً (aanvullende verzekering) لطبيب الأسنان: تحقّق مما يدفعه. للأطفال تحت 18 سنة، التأمين الأساسي يدفع معظم علاج الأسنان. اسأل كم يكلّف العلاج قبل أن يبدأ. للعلاج الكبير، يجب على طبيب الأسنان أن يعطيك السعر على ورق أولاً. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "سجّلي عند طبيب أسنان (tandarts) قريب من بيتكِ، واذهبي إلى الفحص الدوري (controle) بانتظام، غالباً مرة في السنة. ألم في الأسنان؟ اتصلي بطبيب أسنانكِ وقولي إن الألم شديد جداً: عندها تحصلين غالباً على موعد قريب. في الليل أو في عطلة نهاية الأسبوع، اتصلي بطبيب أسنانكِ أنتِ: الرسالة الهاتفية تقول لكِ أي طبيب أسنان يساعد الآن. للبالغين، التأمين الصحي الأساسي يدفع القليل جداً عند طبيب الأسنان: عادةً لا يدفع الفحص الدوري ولا الحشوة. يمكنكِ أن تختاري تأميناً إضافياً (aanvullende verzekering) لطبيب الأسنان: تحقّقي مما يدفعه. للأطفال تحت 18 سنة، التأمين الأساسي يدفع معظم علاج الأسنان. اسألي كم يكلّف العلاج قبل أن يبدأ. للعلاج الكبير، يجب على طبيب الأسنان أن يعطيكِ السعر على ورق أولاً. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "التسجيل عند طبيب أسنان (tandarts) قريب من البيت، والذهاب إلى الفحص الدوري (controle) بانتظام، غالباً مرة في السنة. ألم في الأسنان؟ الاتصال بطبيب الأسنان، وقول إن الألم شديد جداً: عندها يكون الموعد غالباً قريباً. في الليل أو في عطلة نهاية الأسبوع، الاتصال بطبيب الأسنان الخاص: الرسالة الهاتفية تقول أي طبيب أسنان يساعد الآن. للبالغين، التأمين الصحي الأساسي يدفع القليل جداً عند طبيب الأسنان: عادةً لا يدفع الفحص الدوري ولا الحشوة. يمكن اختيار تأمين إضافي (aanvullende verzekering) لطبيب الأسنان: التحقّق مما يدفعه مهمّ. للأطفال تحت 18 سنة، التأمين الأساسي يدفع معظم علاج الأسنان. السؤال عن تكلفة العلاج قبل أن يبدأ. للعلاج الكبير، يجب على طبيب الأسنان أن يعطي السعر على ورق أولاً. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen
-    'c.dentist.p': "عندي ألم شديد. هل يمكنني أن آتي اليوم؟", // nieuw, nalezen
-    'c.dentist.s': { m: "إنه السبت، في المساء. عندك ألم شديد في الأسنان، والمسكّن لا يساعد. ماذا تفعل؟", f: "إنه السبت، في المساء. عندكِ ألم شديد في الأسنان، والمسكّن لا يساعد. ماذا تفعلين؟", x: "إنه السبت، في المساء. ألم شديد في الأسنان، والمسكّن لا يساعد. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.dentist.o1': "الاتصال بطبيب الأسنان: الرسالة تقول من يساعد الآن.", // nieuw, nalezen
-    'c.dentist.o2': "الاتصال بـ112: هذه حالة طوارئ.", // nieuw, nalezen
-    'c.dentist.o3': "الانتظار حتى يوم الاثنين، وأخذ مسكّنات أكثر.", // nieuw, nalezen
-    'c.dentist.w': "خارج ساعات العمل، يساعد طبيب أسنان مناوب في الألم العاجل. 112 فقط لحالات الطوارئ، مثل الخطر على الحياة.", // nieuw, nalezen
+    'l.forms': "تعبئة استمارة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.invullen': "يملأ، يعبّئ (استمارة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vakje': "الخانة (مربّع صغير في استمارة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aankruisen': "يضع علامة (يضع علامة × في خانة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verplichtveld': "الحقل الإلزامي (يجب ملؤه؛ غالباً عليه علامة *)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.postcode': "الرمز البريدي (رمز قصير للشارع أو المدينة، جزء من العنوان)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hoofdletters': "الحروف الكبيرة (A، B، C)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.forms.1': { m: "اكتب اسمك بالحروف الكبيرة.", f: "اكتبي اسمكِ بالحروف الكبيرة.", x: "الاسم يُكتب بالحروف الكبيرة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.forms.2': { m: "ضع علامة في الخانة الصحيحة.", f: "ضعي علامة في الخانة الصحيحة.", x: "العلامة توضع في الخانة الصحيحة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.forms.3': "هل يمكنك أن تساعدني في هذه الاستمارة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.q': { m: "هل ملأت الاستمارة بعد؟", f: "هل ملأتِ الاستمارة بعد؟", x: "هل الاستمارة جاهزة بعد؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.a': "تقريباً. أين أوقّع؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.voicemail': "البريد الصوتي ومعاودة الاتصال", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.piep': "الصفّارة (الصوت القصير؛ بعده تُقال الرسالة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beluisteren': "يستمع إلى (رسالة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.boodschap': "الرسالة (ما يُقال في البريد الصوتي لشخص ما)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.noemen': "يذكر، يقول (الاسم، الرقم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zosnelmogelijk': "في أسرع وقت ممكن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opnieuw': "من جديد (مرة أخرى)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.voicemail.1': "أنا علي حداد. أتصل بخصوص جدول عملي.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.voicemail.2': "أستمع إلى بريدي الصوتي كل يوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.voicemail.3': "سأتصل مرة أخرى لاحقاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.q': { m: "اترك اسمك ورقمك بعد الصفّارة.", f: "اتركي اسمكِ ورقمكِ بعد الصفّارة.", x: "يُرجى ترك الاسم والرقم بعد الصفّارة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.a': "أنا علي. هل يمكنك أن تعاود الاتصال بي في أسرع وقت ممكن؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.dentist': "طبيب الأسنان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tandarts': "طبيب الأسنان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kiespijn': "ألم الأسنان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gaatje': "التسوّس (ثقب صغير في سنّ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vulling': "الحشوة (طبيب الأسنان يسدّ الثقب في السنّ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gebit': "الأسنان (كل الأسنان معاً)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanvullendeverzekering': "التأمين الإضافي (يمكن اختياره فوق التأمين الصحي الأساسي)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dentist.1': "عندي ألم في أسناني منذ يومين.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dentist.2': "عندي تسوّس. سأحصل على حشوة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dentist.3': "كم تكلّف الحشوة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.q': { m: "متى كنت عند طبيب الأسنان آخر مرة؟", f: "متى كنتِ عند طبيب الأسنان آخر مرة؟", x: "متى كانت آخر زيارة لطبيب الأسنان؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.a': "قبل سنة. أريد فحصاً دورياً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms': { m: "الاستمارة: اكتب بوضوح، واحمِ رقم BSN الخاص بك", f: "الاستمارة: اكتبي بوضوح، واحمي رقم BSN الخاص بكِ", x: "الاستمارة: كتابة واضحة، وحماية رقم BSN" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.b': { m: "الاستمارة تطلب غالباً اسمك، وتاريخ ميلادك، وعنوانك، ورمزك البريدي. اكتب بوضوح، غالباً بالحروف الكبيرة. الحقل الذي عليه نجمة (*) إلزامي: يجب أن تملأه. ضع علامة في الخانة الصحيحة. لا تفهم سؤالاً؟ اطلب المساعدة قبل أن توقّع. لا توقّع أبداً على شيء لا تفهمه. رقم BSN الخاص بك: بعض الجهات فقط يحقّ لها أن تطلبه، مثل صاحب العمل، والـgemeente (البلدية)، وBelastingdienst، وشركة تأمينك الصحي، وطبيبك، وبنكك. المتجر أو النادي الرياضي لا يحقّ له ذلك. لا تعطِ رقم BSN أبداً لشخص غريب، في تطبيق أو على الهاتف. لست متأكداً؟ اسأل لماذا يحتاجونه. مكتبات عامة كثيرة تساعد في الاستمارات مجاناً، غالباً في ساعة استقبال بدون موعد. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "الاستمارة تطلب غالباً اسمكِ، وتاريخ ميلادكِ، وعنوانكِ، ورمزكِ البريدي. اكتبي بوضوح، غالباً بالحروف الكبيرة. الحقل الذي عليه نجمة (*) إلزامي: يجب أن تملئيه. ضعي علامة في الخانة الصحيحة. لا تفهمين سؤالاً؟ اطلبي المساعدة قبل أن توقّعي. لا توقّعي أبداً على شيء لا تفهمينه. رقم BSN الخاص بكِ: بعض الجهات فقط يحقّ لها أن تطلبه، مثل صاحب العمل، والـgemeente (البلدية)، وBelastingdienst، وشركة تأمينكِ الصحي، وطبيبكِ، وبنككِ. المتجر أو النادي الرياضي لا يحقّ له ذلك. لا تعطي رقم BSN أبداً لشخص غريب، في تطبيق أو على الهاتف. لستِ متأكدة؟ اسألي لماذا يحتاجونه. مكتبات عامة كثيرة تساعد في الاستمارات مجاناً، غالباً في ساعة استقبال بدون موعد. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "الاستمارة تطلب غالباً الاسم، وتاريخ الميلاد، والعنوان، والرمز البريدي. الكتابة بوضوح، غالباً بالحروف الكبيرة. الحقل الذي عليه نجمة (*) إلزامي: يجب ملؤه. وضع علامة في الخانة الصحيحة. سؤال غير مفهوم؟ طلب المساعدة قبل التوقيع. لا يُوقَّع أبداً على شيء غير مفهوم. رقم BSN: بعض الجهات فقط يحقّ لها أن تطلبه، مثل صاحب العمل، والـgemeente (البلدية)، وBelastingdienst، وشركة التأمين الصحي، والطبيب، والبنك. المتجر أو النادي الرياضي لا يحقّ له ذلك. لا يُعطى رقم BSN أبداً لشخص غريب، في تطبيق أو على الهاتف. هناك شكّ؟ السؤال عن سبب الحاجة إليه. مكتبات عامة كثيرة تساعد في الاستمارات مجاناً، غالباً في ساعة استقبال بدون موعد. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.p': "هل رقم BSN إلزامي هنا؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.s': { m: "تسجّل في نادٍ رياضي. الاستمارة تطلب رقم BSN الخاص بك. ماذا تفعل؟", f: "تسجّلين في نادٍ رياضي. الاستمارة تطلب رقم BSN الخاص بكِ. ماذا تفعلين؟", x: "تسجيل في نادٍ رياضي. الاستمارة تطلب رقم BSN. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.o1': "ترك الخانة فارغة، والسؤال لماذا يحتاجونه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.o2': "ملؤها: كل استمارة يمكن أن تطلبه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.o3': "إعطاء بيانات دخول DigiD بدلاً منه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.w': { m: "النادي الرياضي لا يحقّ له أن يستعمل رقم BSN الخاص بك. بعض الجهات فقط يحقّ لها ذلك، مثل صاحب العمل، والـgemeente، وشركة التأمين الصحي. عندما تسأل لماذا، تحمي رقمك.", f: "النادي الرياضي لا يحقّ له أن يستعمل رقم BSN الخاص بكِ. بعض الجهات فقط يحقّ لها ذلك، مثل صاحب العمل، والـgemeente، وشركة التأمين الصحي. عندما تسألين لماذا، تحمين رقمكِ.", x: "النادي الرياضي لا يحقّ له أن يستعمل رقم BSN. بعض الجهات فقط يحقّ لها ذلك، مثل صاحب العمل، والـgemeente، وشركة التأمين الصحي. السؤال عن السبب يحمي الرقم." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail': "الرسالة الصوتية: من، ولماذا، والرقم", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.b': { m: "لا أحد يردّ؟ اترك رسالة قصيرة (boodschap) بعد الصفّارة (piep). قل اسمك، ولماذا تتصل، ورقم هاتفك. تكلّم ببطء، وقل رقمك مرتين. فاتتك مكالمة؟ استمع أولاً إلى بريدك الصوتي، ثم عاود الاتصال في أسرع وقت ممكن. لا تفهم رسالة؟ استمع إليها مرة أخرى، أو اطلب من زميل أن يستمع معك. جهّز بريدك الصوتي، واستمع إليه كل يوم. تبلّغ عن مرضك؟ في شركات كثيرة لا تكفي الرسالة: اتصل مرة أخرى حتى تتكلّم مع شخص. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "لا أحد يردّ؟ اتركي رسالة قصيرة (boodschap) بعد الصفّارة (piep). قولي اسمكِ، ولماذا تتصلين، ورقم هاتفكِ. تكلّمي ببطء، وقولي رقمكِ مرتين. فاتتكِ مكالمة؟ استمعي أولاً إلى بريدكِ الصوتي، ثم عاودي الاتصال في أسرع وقت ممكن. لا تفهمين رسالة؟ استمعي إليها مرة أخرى، أو اطلبي من زميل أن يستمع معكِ. جهّزي بريدكِ الصوتي، واستمعي إليه كل يوم. تبلّغين عن مرضكِ؟ في شركات كثيرة لا تكفي الرسالة: اتصلي مرة أخرى حتى تتكلّمي مع شخص. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "لا أحد يردّ؟ ترك رسالة قصيرة (boodschap) بعد الصفّارة (piep). ذكر الاسم، وسبب الاتصال، ورقم الهاتف. الكلام ببطء، وذكر الرقم مرتين. مكالمة فائتة؟ الاستماع أولاً إلى البريد الصوتي، ثم معاودة الاتصال في أسرع وقت ممكن. رسالة غير مفهومة؟ الاستماع إليها مرة أخرى، أو طلب الاستماع معاً من زميل. تجهيز البريد الصوتي، والاستماع إليه كل يوم. تبليغ عن المرض؟ في شركات كثيرة لا تكفي الرسالة: الاتصال مرة أخرى حتى الكلام مع شخص. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.p': "هل يمكنني أن أترك رسالة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.s': { m: "ستتأخّر، وتتصل بمشرفتك. تسمع بريدها الصوتي. ماذا تقول بعد الصفّارة؟", f: "ستتأخّرين، وتتصلين بمشرفتكِ. تسمعين بريدها الصوتي. ماذا تقولين بعد الصفّارة؟", x: "تأخير متوقَّع، واتصال بالمشرفة. يردّ بريدها الصوتي. ما الذي يُقال بعد الصفّارة؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.o1': "الاسم، وسبب الاتصال، والرقم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.o2': "فقط «Bel me terug»، ثم إنهاء المكالمة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.o3': "لا شيء: إنهاء المكالمة، والانتظار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.w': "مع الاسم والسبب والرقم، تعرف المشرفة ماذا يحدث، وتستطيع أن تعاود الاتصال فوراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist': { m: "طبيب الأسنان: فحص دوري، واسأل عن السعر", f: "طبيب الأسنان: فحص دوري، واسألي عن السعر", x: "طبيب الأسنان: فحص دوري، والسؤال عن السعر" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.b': { m: "سجّل عند طبيب أسنان (tandarts) قريب من بيتك، واذهب إلى الفحص الدوري (controle) بانتظام، غالباً مرة في السنة. ألم في الأسنان؟ اتصل بطبيب أسنانك وقل إن الألم شديد جداً: عندها تحصل غالباً على موعد قريب. في الليل أو في عطلة نهاية الأسبوع، اتصل بطبيب أسنانك أنت: الرسالة الهاتفية تقول لك أي طبيب أسنان يساعد الآن. للبالغين، التأمين الصحي الأساسي يدفع القليل جداً عند طبيب الأسنان: عادةً لا يدفع الفحص الدوري ولا الحشوة. يمكنك أن تختار تأميناً إضافياً (aanvullende verzekering) لطبيب الأسنان: تحقّق مما يدفعه. للأطفال تحت 18 سنة، التأمين الأساسي يدفع معظم علاج الأسنان. اسأل كم يكلّف العلاج قبل أن يبدأ. للعلاج الكبير، يجب على طبيب الأسنان أن يعطيك السعر على ورق أولاً. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "سجّلي عند طبيب أسنان (tandarts) قريب من بيتكِ، واذهبي إلى الفحص الدوري (controle) بانتظام، غالباً مرة في السنة. ألم في الأسنان؟ اتصلي بطبيب أسنانكِ وقولي إن الألم شديد جداً: عندها تحصلين غالباً على موعد قريب. في الليل أو في عطلة نهاية الأسبوع، اتصلي بطبيب أسنانكِ أنتِ: الرسالة الهاتفية تقول لكِ أي طبيب أسنان يساعد الآن. للبالغين، التأمين الصحي الأساسي يدفع القليل جداً عند طبيب الأسنان: عادةً لا يدفع الفحص الدوري ولا الحشوة. يمكنكِ أن تختاري تأميناً إضافياً (aanvullende verzekering) لطبيب الأسنان: تحقّقي مما يدفعه. للأطفال تحت 18 سنة، التأمين الأساسي يدفع معظم علاج الأسنان. اسألي كم يكلّف العلاج قبل أن يبدأ. للعلاج الكبير، يجب على طبيب الأسنان أن يعطيكِ السعر على ورق أولاً. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "التسجيل عند طبيب أسنان (tandarts) قريب من البيت، والذهاب إلى الفحص الدوري (controle) بانتظام، غالباً مرة في السنة. ألم في الأسنان؟ الاتصال بطبيب الأسنان، وقول إن الألم شديد جداً: عندها يكون الموعد غالباً قريباً. في الليل أو في عطلة نهاية الأسبوع، الاتصال بطبيب الأسنان الخاص: الرسالة الهاتفية تقول أي طبيب أسنان يساعد الآن. للبالغين، التأمين الصحي الأساسي يدفع القليل جداً عند طبيب الأسنان: عادةً لا يدفع الفحص الدوري ولا الحشوة. يمكن اختيار تأمين إضافي (aanvullende verzekering) لطبيب الأسنان: التحقّق مما يدفعه مهمّ. للأطفال تحت 18 سنة، التأمين الأساسي يدفع معظم علاج الأسنان. السؤال عن تكلفة العلاج قبل أن يبدأ. للعلاج الكبير، يجب على طبيب الأسنان أن يعطي السعر على ورق أولاً. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.p': "عندي ألم شديد. هل يمكنني أن آتي اليوم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.s': { m: "إنه السبت، في المساء. عندك ألم شديد في الأسنان، والمسكّن لا يساعد. ماذا تفعل؟", f: "إنه السبت، في المساء. عندكِ ألم شديد في الأسنان، والمسكّن لا يساعد. ماذا تفعلين؟", x: "إنه السبت، في المساء. ألم شديد في الأسنان، والمسكّن لا يساعد. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.o1': "الاتصال بطبيب الأسنان: الرسالة تقول من يساعد الآن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.o2': "الاتصال بـ112: هذه حالة طوارئ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.o3': "الانتظار حتى يوم الاثنين، وأخذ مسكّنات أكثر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.w': "خارج ساعات العمل، يساعد طبيب أسنان مناوب في الألم العاجل. 112 فقط لحالات الطوارئ، مثل الخطر على الحياة.", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 

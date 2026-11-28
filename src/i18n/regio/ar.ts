@@ -11,7 +11,7 @@ const t: CultureTranslation = {
     regionHint: {
       m: 'هل تسكن أو تعمل في Zuid-Limburg؟ عندها تحصل على دروس إضافية عن منطقتك.',
       f: 'هل تسكنين أو تعملين في Zuid-Limburg؟ عندها تحصلين على دروس إضافية عن منطقتك.',
-    }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    }, // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     regionOther: 'مكان آخر / أفضّل ألّا أقول',
     regionNone: 'لم يتم الاختيار',
     socialMap: 'جهات المساعدة',
@@ -43,7 +43,7 @@ const t: CultureTranslation = {
     'rg.zl.s.2.1': 'أسكن في هولندا وأعمل في ألمانيا.',
     'rg.zl.s.2.2': 'هل يمكن التكلم بالهولندية؟ أنا لا أفهم اللهجة.',
     'rg.zl.s.2.3': 'هل يمكنني أن آخذ إجازة في الكرنفال؟',
-    'rg.zl.c.2.q': 'عذراً، أنا أتكلم بسرعة أكثر من اللازم.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'rg.zl.c.2.q': 'عذراً، أنا أتكلم بسرعة أكثر من اللازم.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     'rg.zl.c.2.a': 'نعم، أبطأ قليلاً من فضلك.',
     'rg.zl.c.1': { m: 'سجّل عنوانك وابحث عن بيت', f: 'سجّلي عنوانك وابحثي عن بيت' },
     'rg.zl.c.1.b': {
