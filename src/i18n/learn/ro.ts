@@ -6,13 +6,13 @@ const t: CultureTranslation = {
     sayAloud: "Nu e nevoie de microfon. Spune cu voce tare, apoi mergi mai departe.",
     micRetry: "Încearcă din nou microfonul",
     micFailed: "Microfonul nu a funcționat. Spune cu voce tare, apoi mergi mai departe.",
-    micRefused: "Aplicația nu are voie să folosească microfonul. Îl poți porni.", // nieuw, nalezen
-    micTurnOn: "Pornește microfonul", // nieuw, nalezen
-    micStepsIos: "Atinge „•••” sau „aA” în bara de adrese › Configurări site web › Microfon › Permite. Sau: Configurări › Aplicații › Safari › Microfon. Apoi atinge butonul de mai jos.", // nieuw, nalezen
-    micStepsIosOther: "Atinge pictograma din stânga adresei web › Permisiuni › Microfon › Permite. Sau: Configurări › Aplicații › {app} › Microfon. Apoi atinge butonul de mai jos.", // nieuw, nalezen
-    micStepsAndroid: "Atinge pictograma din stânga adresei web › Permisiuni › Microfon › Permite. Apoi atinge butonul de mai jos.", // nieuw, nalezen
-    micStepsAndroidApp: "Ține apăsat pe pictograma Vloertaal de pe ecranul principal › Informații aplicație › Permisiuni › Microfon › Permite. Apoi atinge butonul de mai jos.", // nieuw, nalezen
-    micStepsDesktop: "Dă clic pe pictograma din stânga adresei web › Microfon › Permite. Apoi dă clic pe butonul de mai jos.", // nieuw, nalezen
+    micRefused: "Aplicația nu are voie să folosească microfonul. Îl poți porni.", // nieuw, nalezen // nagelezen AI 28 nov
+    micTurnOn: "Pornește microfonul", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsIos: "Atinge „•••” sau „aA” în bara de adrese › Configurări site web › Microfon › Permite. Sau: Configurări › Aplicații › Safari › Microfon. Apoi atinge butonul de mai jos.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsIosOther: "Atinge pictograma din stânga adresei web › Permisiuni › Microfon › Permite. Sau: Configurări › Aplicații › {app} › Microfon. Apoi atinge butonul de mai jos.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsAndroid: "Atinge pictograma din stânga adresei web › Permisiuni › Microfon › Permite. Apoi atinge butonul de mai jos.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsAndroidApp: "Ține apăsat pe pictograma Vloertaal de pe ecranul principal › Informații aplicație › Permisiuni › Microfon › Permite. Apoi atinge butonul de mai jos.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsDesktop: "Dă clic pe pictograma din stânga adresei web › Microfon › Permite. Apoi dă clic pe butonul de mai jos.", // nieuw, nalezen // nagelezen AI 28 nov
     whichPicture: "Care imagine este?",
     sayAloudInstead: "Spune cu voce tare în schimb",
     wordsPractised: "Cuvinte exersate",
@@ -56,7 +56,7 @@ const t: CultureTranslation = {
     'c.mistakes.a.why': "La un compliment se răspunde cu mulțumesc.",
     'c.respect.a.why': "Hărțuirea trebuie spusă, ca cineva să poată ajuta.",
     'c.gossip.a.why': "Neparticiparea la bârfe păstrează încrederea în echipă.",
-    'c.boundaries.a.why': "Ai voie să oprești o glumă care rănește. Spune-o clar.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.boundaries.a.why': "Ai voie să oprești clar o glumă care rănește.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.health.a.why': "Pauza protejează sănătatea, așa că se ia.",
     'c.rights.a.why': "O concediere nu se semnează niciodată pe loc. Întâi se cere sfat.",
     'c.mustmay.a.why': "Voluntar înseamnă că poți alege: nu e nevoie să lucrezi sâmbătă.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -210,127 +210,127 @@ const t: CultureTranslation = {
     'c.brakes.a.why': "Întrebarea e dacă trebuie unul nou: da, și de ce.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "Întrebarea e ce trebuie făcut: uită-te pe fișa de lucru.", // nieuw, nalezen // nagelezen AI 22 nov
     // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
-    'c.mowing.a.why': "Se întreabă dacă ai voie să-l iei: da, și ce faci întâi.", // nieuw, nalezen
-    'c.pruning.a.why': "Se întreabă ce crengi: doar cele uscate.", // nieuw, nalezen
-    'c.hedge.a.why': "Se întreabă cât de înalt: până la sfoară, nu mai jos.", // nieuw, nalezen
-    'c.chainsaw.a.why': "Se întreabă dacă ai voie: încă nu, și ce vine întâi.", // nieuw, nalezen
-    'c.weeding.a.why': "Se întreabă dacă e buruiană: nu, și ce faci cu ea.", // nieuw, nalezen
-    'c.planting.a.why': "Se întreabă unde se pune: locul din stratul de flori.", // nieuw, nalezen
-    'c.roadside.a.why': "Se întreabă dacă poți traversa: nu, așteaptă, și de ce.", // nieuw, nalezen
-    'c.litter.a.why': "Un locuitor întreabă când: nu știi, dar spui cine știe.", // nieuw, nalezen
-    'c.reception.a.why': "Un vizitator are o programare: un moment, suni tu.", // nieuw, nalezen
-    'c.visitors.a.why': "Se întreabă unde se lasă haina: locul, și unde e.", // nieuw, nalezen
-    'c.mailroom.a.why': "Se întreabă pentru cine e: departamentul și etajul.", // nieuw, nalezen
-    'c.meetingroom.a.why': "Se întreabă la ce oră: ora, și ce trebuie făcut.", // nieuw, nalezen
-    'c.faults.a.why': "Se întreabă de ce e frig: ce e stricat și când vine ajutorul.", // nieuw, nalezen
-    'c.repairs.a.why': "Se întreabă dacă piuie: da, și de ce.", // nieuw, nalezen
-    'c.moving.a.why': "Se întreabă unde trebuie dus: camera, și unde să te uiți.", // nieuw, nalezen
-    'c.closing.a.why': "Se întreabă dacă mai e cineva înăuntru: nu, și ce faci acum.", // nieuw, nalezen
-    'c.patrol.a.why': "Se întreabă dacă ai văzut ceva: da, ce și unde.", // nieuw, nalezen
-    'c.access.a.why': "Cineva vrea să intre fără card: îmi pare rău, nu fără card.", // nieuw, nalezen
-    'c.cameras.a.why': "Se întreabă ce vezi: cine, unde și ce faci.", // nieuw, nalezen
-    'c.report.a.why': "Se întreabă ce intră în raport: ce, unde și când.", // nieuw, nalezen
-    'c.evacuation.a.why': "Se întreabă dacă sunt toți afară: nu, și câți lipsesc.", // nieuw, nalezen
-    'c.firstaid.a.why': "Se întreabă unde e defibrilatorul: locul, și ce e lângă el.", // nieuw, nalezen
-    'c.shoplifting.a.why': "Se întreabă dacă ai voie să cauți într-o geantă: nu, și cine face asta.", // nieuw, nalezen
-    'c.aggression.a.why': "Se întreabă de ce nu: motivul, spus calm.", // nieuw, nalezen
-    'c.hygienelock.a.why': "Se întreabă de ceas: nu, și regula din spatele lui.", // nieuw, nalezen
-    'c.allergens.a.why': "Se întreabă dacă pot sta împreună: nu, și de ce.", // nieuw, nalezen
-    'c.coldroom.a.why': "Se întreabă de ce piuie: cauza, și ce e de făcut.", // nieuw, nalezen
-    'c.foreignbody.a.why': "Se întreabă ce e de făcut: cui să-i arăți.", // nieuw, nalezen
-    'c.cutting.a.why': "Se întreabă cât: greutatea, și unde să te uiți.", // nieuw, nalezen
-    'c.labels.a.why': "Se întreabă ce dată: când, și unde să te uiți.", // nieuw, nalezen
-    'c.linecleaning.a.why': "Se întreabă dacă e curat: încă nu, și ce a mai rămas.", // nieuw, nalezen
-    'c.haccp.a.why': "Se întreabă de ce: ca să știm că mâncarea e sigură.", // nieuw, nalezen
-    'c.binlorry.a.why': "Se întreabă dacă poți merge pe spate: nu, și unde mergi.", // nieuw, nalezen
-    'c.reversing.a.why': "Ți se cere ajutorul: da, unde stai și ce trebuie făcut.", // nieuw, nalezen
-    'c.wastesorting.a.why': "Se întreabă unde se pune: unde merge, și de ce.", // nieuw, nalezen
-    'c.wastesafety.a.why': "Se întreabă ce faci după o tăietură: speli rana și spui.", // nieuw, nalezen
-    'c.yard.a.why': "Se întreabă unde se pune: containerul, și unde e.", // nieuw, nalezen
-    'c.hazardous.a.why': "Se întreabă ce e înăuntru: nu știi, deci o pui deoparte.", // nieuw, nalezen
-    'c.baler.a.why': "Se întreabă dacă te poți uita: nu, și ce vine întâi.", // nieuw, nalezen
-    'c.shovel.a.why': "Se întreabă dacă poți trece: doar când te vede șoferul.", // nieuw, nalezen
-    'c.nappies.a.why': "Se întreabă când: ora, și unde scrie.", // nieuw, nalezen
-    'c.mealtime.a.why': "Se întreabă dacă are voie: nu, de ce, și unde să te uiți.", // nieuw, nalezen
-    'c.naptime.a.why': "Se întreabă dacă doarme: da, de când, și că verifici.", // nieuw, nalezen
-    'c.playtime.a.why': "Un copil întreabă dacă se poate juca: da, unde, și ce urmează.", // nieuw, nalezen
-    'c.pickup.a.why': "Se întreabă cine îl ia: persoana, și că e pe listă.", // nieuw, nalezen
-    'c.childsafety.a.why': "Se întreabă dacă a căzut: da, ce are, și pe cine suni.", // nieuw, nalezen
-    'c.sickchild.a.why': "Se întreabă ce face: ce vezi, și ce faci.", // nieuw, nalezen
-    'c.grouprules.a.why': "Se întreabă dacă ai voie să ieși fără un coleg: da, dar întâi îi spui unui coleg.", // nieuw, nalezen
+    'c.mowing.a.why': "Se întreabă dacă ai voie să-l iei: da, și ce faci întâi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.a.why': "Se întreabă ce crengi: doar cele uscate.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.a.why': "Se întreabă cât de înalt: până la sfoară, nu mai jos.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.a.why': "Se întreabă dacă ai voie: încă nu, și ce vine întâi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.a.why': "Se întreabă dacă e buruiană: nu, și ce faci cu ea.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.a.why': "Se întreabă unde se pune: locul din stratul de flori.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.a.why': "Se întreabă dacă poți traversa: nu, așteaptă, și de ce.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.a.why': "Un locuitor întreabă când: nu știi, dar spui cine știe.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.a.why': "Un vizitator are o programare: un moment, suni tu.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.a.why': "Se întreabă unde se lasă haina: locul, și unde e.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.a.why': "Se întreabă pentru cine e: departamentul și etajul.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.a.why': "Se întreabă la ce oră: ora, și ce trebuie făcut.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.a.why': "Se întreabă de ce e frig: ce e stricat și când vine ajutorul.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.a.why': "Se întreabă dacă piuie: da, și de ce.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.a.why': "Se întreabă unde trebuie dus: camera, și unde să te uiți.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.a.why': "Se întreabă dacă mai e cineva înăuntru: nu, și ce faci acum.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.a.why': "Se întreabă dacă ai văzut ceva: da, ce și unde.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.a.why': "Cineva vrea să intre fără card: îmi pare rău, nu fără card.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.a.why': "Se întreabă ce vezi: cine, unde și ce faci.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.a.why': "Se întreabă ce intră în raport: ce, unde și când.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.a.why': "Se întreabă dacă sunt toți afară: nu, și câți lipsesc.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.a.why': "Se întreabă unde e defibrilatorul: locul, și ce e lângă el.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.a.why': "Se întreabă dacă ai voie să cauți într-o geantă: nu, și cine face asta.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.a.why': "Se întreabă de ce nu: motivul, spus calm.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.a.why': "Se întreabă de ceas: nu, și regula din spatele lui.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.a.why': "Se întreabă dacă pot sta împreună: nu, și de ce.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.a.why': "Se întreabă de ce piuie: cauza, și ce e de făcut.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.a.why': "Se întreabă ce e de făcut: cui să-i arăți.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.a.why': "Se întreabă cât: greutatea, și unde să te uiți.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.a.why': "Se întreabă ce dată: când, și unde să te uiți.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.a.why': "Se întreabă dacă e curat: încă nu, și ce a mai rămas.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.a.why': "Se întreabă de ce: ca să știm că mâncarea e sigură.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.a.why': "Se întreabă dacă poți merge pe spate: nu, și unde mergi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.a.why': "Ți se cere ajutorul: da, unde stai și ce trebuie făcut.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.a.why': "Se întreabă unde se pune: unde merge, și de ce.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.a.why': "Se întreabă ce faci după o tăietură: speli rana și spui.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.a.why': "Se întreabă unde se pune: containerul, și unde e.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.a.why': "Se întreabă ce e înăuntru: nu știi, deci o pui deoparte.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.a.why': "Se întreabă dacă te poți uita: nu, și ce vine întâi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.a.why': "Se întreabă dacă poți trece: doar când te vede șoferul.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.a.why': "Se întreabă când: ora, și unde scrie.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.a.why': "Se întreabă dacă are voie: nu, de ce, și unde să te uiți.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.a.why': "Se întreabă dacă doarme: da, de când, și că verifici.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.a.why': "Un copil întreabă dacă se poate juca: da, unde, și ce urmează.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.a.why': "Se întreabă cine îl ia: persoana, și că e pe listă.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.a.why': "Se întreabă dacă a căzut: da, ce are, și pe cine suni.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.a.why': "Se întreabă ce face: ce vezi, și ce faci.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.a.why': "Se întreabă dacă ai voie să ieși fără un coleg: da, dar întâi îi spui unui coleg.", // nieuw, nalezen // nagelezen AI 28 nov
     // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
-    'c.sanitary.a.why': "Se întreabă dacă e gata: încă nu, și de ce.", // nieuw, nalezen
-    'c.hotelroom.a.why': "Se întreabă câte au mai rămas: numărul, și când termini.", // nieuw, nalezen
-    'c.dosing.a.why': "Ți se spune să pui mai mult: nu, mai mult nu e mai bine, și ce folosești.", // nieuw, nalezen
-    'c.officenight.a.why': "Se întreabă dacă lucrezi fără colegi: da, și trimiți un mesaj.", // nieuw, nalezen
-    'c.knives.a.why': "Ți se cere să tai: da, chef, și o întrebare despre cum.", // nieuw, nalezen
-    'c.rawcooked.a.why': "Se întreabă dacă e fără gluten: nu știi sigur, deci te uiți pe listă.", // nieuw, nalezen
-    'c.pass.a.why': "Se întreabă unde e mâncarea: pe pass, și o duci acum.", // nieuw, nalezen
-    'c.bill.a.why': "Se cere plata separată: da, și aduci POS-ul.", // nieuw, nalezen
-    'c.washing.a.why': "Clientul spune nu: e în regulă, și oferi altceva.", // nieuw, nalezen
-    'c.observing.a.why': "Se întreabă dacă e ceva deosebit: da, și ce anume.", // nieuw, nalezen
-    'c.homecare.a.why': "Se întreabă cine e: un salut, cine ești, și dacă poți intra.", // nieuw, nalezen
-    'c.liftaids.a.why': "Ți se cere s-o faci fără ajutor: da, cu cearșaful de alunecare, și îl iei.", // nieuw, nalezen
-    'c.returns.a.why': "Se cere un retur: da, și o întrebare despre bon.", // nieuw, nalezen
-    'c.facing.a.why': "Se întreabă dacă ai terminat: aproape, și ce a mai rămas.", // nieuw, nalezen
-    'c.shrink.a.why': "Se cere să se uite în geantă: da, și arăți bonul.", // nieuw, nalezen
-    'c.shopclose.a.why': "Se cere să intre: îmi pare rău, e închis, și când se deschide iar.", // nieuw, nalezen
-    'c.hirer.a.why': "Ți se cere să începi într-un loc nou: da, și o întrebare despre oră.", // nieuw, nalezen
-    'c.phases.a.why': "Ți se spune că munca se oprește: bine, și ceri altă muncă.", // nieuw, nalezen
-    'c.deductions.a.why': "Ți se spune de o reținere: întrebi dacă e permisă și verifici.", // nieuw, nalezen
-    'c.agencyhome.a.why': "Ți se spune să pleci curând: e puțin timp, și ceri întâi un sfat.", // nieuw, nalezen
+    'c.sanitary.a.why': "Se întreabă dacă e gata: încă nu, și de ce.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.a.why': "Se întreabă câte au mai rămas: numărul, și când termini.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.a.why': "Ți se spune să pui mai mult: nu, mai mult nu e mai bine, și ce folosești.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.a.why': "Se întreabă dacă lucrezi fără colegi: da, și trimiți un mesaj.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.a.why': "Ți se cere să tai: da, chef, și o întrebare despre cum.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.a.why': "Se întreabă dacă e fără gluten: nu știi sigur, deci te uiți pe listă.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.a.why': "Se întreabă unde e mâncarea: pe pass, și o duci acum.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.a.why': "Se cere plata separată: da, și aduci POS-ul.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.a.why': "Clientul spune nu: e în regulă, și oferi altceva.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.a.why': "Se întreabă dacă e ceva deosebit: da, și ce anume.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.a.why': "Se întreabă cine e: un salut, cine ești, și dacă poți intra.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.a.why': "Ți se cere s-o faci fără ajutor: da, cu cearșaful de alunecare, și îl iei.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.a.why': "Se cere un retur: da, și o întrebare despre bon.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.a.why': "Se întreabă dacă ai terminat: aproape, și ce a mai rămas.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.a.why': "Se cere să se uite în geantă: da, și arăți bonul.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.a.why': "Se cere să intre: îmi pare rău, e închis, și când se deschide iar.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.a.why': "Ți se cere să începi într-un loc nou: da, și o întrebare despre oră.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.a.why': "Ți se spune că munca se oprește: bine, și ceri altă muncă.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.a.why': "Ți se spune de o reținere: întrebi dacă e permisă și verifici.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.a.why': "Ți se spune să pleci curând: e puțin timp, și ceri întâi un sfat.", // nieuw, nalezen // nagelezen AI 28 nov
     // The basis units at four lessons (23 November 2026).
-    'c.roster.a.why': "Ți se spune că programul s-a schimbat: spui bine și întrebi ce zi.", // nieuw, nalezen
-    'c.breaks.a.why': "Te întreabă de pauza de prânz: ora și cât durează.", // nieuw, nalezen
-    'c.wound.a.why': "Cineva e pe punctul să leșine: îl lași să stea întins și aduci ajutor.", // nieuw, nalezen
-    'c.callhelp.a.why': "Te întreabă dacă răspunde: nu, nu reacționează.", // nieuw, nalezen
-    'c.vacancy.a.why': "Te întreabă de ce suni: pentru postul liber, și mai e valabil?", // nieuw, nalezen
-    'c.result.a.why': "Ți se spune nu: răspunzi calm și întrebi de ce.", // nieuw, nalezen
-    'c.residence.a.why': "Ți se spune că permisul expiră în curând: ceri imediat unul nou.", // nieuw, nalezen
-    'c.newhome.a.why': "Te întreabă unde locuiești: o locuință nouă și noua adresă.", // nieuw, nalezen
-    'c.payparts.a.why': "Ți se cere numărul de angajat: unde e pe fluturașul de salariu.", // nieuw, nalezen
-    'c.latepay.a.why': "Ți se spune că banii vin mai târziu: vrei asta pe hârtie.", // nieuw, nalezen
-    'c.holiday.a.why': "Ți se cere să pleci în mai: preferi iulie și spui de ce.", // nieuw, nalezen
-    'c.special.a.why': "Te întreabă de concediul de naștere: da, și când.", // nieuw, nalezen
-    'c.unwell.a.why': "Te întreabă dacă ești bine: nu, și poți merge acasă?", // nieuw, nalezen
-    'c.injury.a.why': "Ți se cere o declarație: da, și o copie pentru tine.", // nieuw, nalezen
-    'c.debt.a.why': "Ți se spune să rămâi până plătești datoria: nu e voie, ceri ajutor.", // nieuw, nalezen
-    'c.inspection.a.why': "Ți se cere să vorbești: da, dar nu unde aude șeful.", // nieuw, nalezen
-    'c.carpool.a.why': "Te întreabă cine conduce: tu, și când îi iei.", // nieuw, nalezen
-    'c.train.a.why': "Te întreabă de ce ai întârziat: trenul, și ai trimis un mesaj.", // nieuw, nalezen
-    'c.checklist.a.why': "Te întreabă dacă ai uitat ceva: încă o privire pe listă.", // nieuw, nalezen
-    'c.leavesite.a.why': "Te întreabă dacă închizi tu: da, totul oprit și ușa încuiată.", // nieuw, nalezen
-    'c.stagedays.a.why': "Te întreabă de ce ai lipsit: ți-a fost rău și ai sunat la amândouă.", // nieuw, nalezen
-    'c.stageend.a.why': "Te întreabă de planuri: întâi diploma, apoi munca.", // nieuw, nalezen
-    'c.neighbours.a.why': "O vecină nouă te salută: te bucuri să o cunoști și îți spui numele.", // nieuw, nalezen
-    'c.join.a.why': "Te întreabă dacă vii: da, și vrei să vorbești cu profesorul.", // nieuw, nalezen
-    'c.workphotos.a.why': "Ți se cere o poză pentru internet: un nu politicos.", // nieuw, nalezen
-    'c.device.a.why': "Te întreabă de o aplicație nouă: întâi întrebi la departamentul IT.", // nieuw, nalezen
+    'c.roster.a.why': "Ți se spune că programul s-a schimbat: spui bine și întrebi ce zi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.a.why': "Te întreabă de pauza de prânz: ora și cât durează.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.a.why': "Cineva e pe punctul să leșine: îl lași să stea întins și aduci ajutor.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.a.why': "Te întreabă dacă răspunde: nu, nu reacționează.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.a.why': "Te întreabă de ce suni: pentru postul liber, și mai e valabil?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.a.why': "Ți se spune nu: răspunzi calm și întrebi de ce.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.a.why': "Ți se spune că permisul expiră în curând: ceri imediat unul nou.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.a.why': "Te întreabă unde locuiești: o locuință nouă și noua adresă.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.a.why': "Ți se cere numărul de angajat: unde e pe fluturașul de salariu.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.a.why': "Ți se spune că banii vin mai târziu: vrei asta pe hârtie.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.a.why': "Ți se cere să pleci în mai: preferi iulie și spui de ce.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.a.why': "Te întreabă de concediul de naștere: da, și când.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.a.why': "Te întreabă dacă ești bine: nu, și poți merge acasă?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.a.why': "Ți se cere o declarație: da, și o copie pentru tine.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.a.why': "Ți se spune să rămâi până plătești datoria: nu e voie, ceri ajutor.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.a.why': "Ți se cere să vorbești: da, dar nu unde aude șeful.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.a.why': "Te întreabă cine conduce: tu, și când îi iei.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.a.why': "Te întreabă de ce ai întârziat: trenul, și ai trimis un mesaj.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.a.why': "Te întreabă dacă ai uitat ceva: încă o privire pe listă.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.a.why': "Te întreabă dacă închizi tu: da, totul oprit și ușa încuiată.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.a.why': "Te întreabă de ce ai lipsit: ți-a fost rău și ai sunat la amândouă.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.a.why': "Te întreabă de planuri: întâi diploma, apoi munca.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.a.why': "O vecină nouă te salută: te bucuri să o cunoști și îți spui numele.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.a.why': "Te întreabă dacă vii: da, și vrei să vorbești cu profesorul.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.a.why': "Ți se cere o poză pentru internet: un nu politicos.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.a.why': "Te întreabă de o aplicație nouă: întâi întrebi la departamentul IT.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Veiligheid op het werk" and the VOG (23 November 2026).
-    'c.safetysigns.a.why': "Te întreabă ce înseamnă un indicator: atenție, și ce indicator e.", // nieuw, nalezen
-    'c.substances.a.why': "Te întreabă dacă e toxic: nu ghicești, te uiți.", // nieuw, nalezen
-    'c.firefight.a.why': "Ți se spune că e foc: e mic, deci iei extinctorul.", // nieuw, nalezen
-    'c.permitwork.a.why': "Te întreabă cine stă afară: tu, și sarcina ta.", // nieuw, nalezen
-    'c.vog.a.why': "Te întreabă de VOG: încă nu, și ce aștepți.", // nieuw, nalezen
+    'c.safetysigns.a.why': "Te întreabă ce înseamnă un indicator: atenție, și ce indicator e.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.a.why': "Te întreabă dacă e toxic: nu ghicești, te uiți.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.a.why': "Ți se spune că e foc: e mic, deci iei extinctorul.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.a.why': "Te întreabă cine stă afară: tu, și sarcina ta.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.a.why': "Te întreabă de VOG: încă nu, și ce aștepți.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Operator in de procesindustrie" (23 November 2026).
-    'c.plantround.a.why': "Te întreabă de alarmă: ce e prea mare și unde.", // nieuw, nalezen
-    'c.plantfault.a.why': "Întrebarea e dacă linia poate porni: nu, încă e un lacăt pe ea.", // nieuw, nalezen
-    'c.shiftwork.a.why': "Te întreabă ce s-a întâmplat: defecțiunea și unde e scrisă.", // nieuw, nalezen
-    'c.heatdust.a.why': "Întrebarea e despre telefon: nu, din cauza pericolului de aici.", // nieuw, nalezen
+    'c.plantround.a.why': "Te întreabă de alarmă: ce e prea mare și unde.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.a.why': "Întrebarea e dacă linia poate porni: nu, încă e un lacăt pe ea.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.a.why': "Te întreabă ce s-a întâmplat: defecțiunea și unde e scrisă.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.a.why': "Întrebarea e despre telefon: nu, din cauza pericolului de aici.", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (26 November 2026).
-    'c.debthelp.a.why': "Ți se spune că factura nu e plătită: da, și ceri un plan de rate.", // nieuw, nalezen
-    'c.taxes.a.why': "Ți se spune că e un plic albastru: mulțumești și îl deschizi imediat.", // nieuw, nalezen
-    'c.discrimination.a.why': "Te întreabă dacă ești bine: nu, și o să raportezi.", // nieuw, nalezen
-    'c.union.a.why': "Te întreabă de ce ești în sindicat: te apără.", // nieuw, nalezen
-    'c.kiln.a.why': "Întrebarea e dacă cioburile se pot strânge cu mâna: nu, cu mătura mică și fărașul.", // nieuw, nalezen
-    'c.mixlab.a.why': "Întrebarea e dacă șarja e aprobată: încă nu, laboratorul o testează.", // nieuw, nalezen
-    'c.firstweeks.a.why': "Te întreabă de tur: aproape tot, și o întrebare.", // nieuw, nalezen
-    'c.orderpick.a.why': "Ți se cere să conduci stivuitorul retractabil: nu, fără instruire pentru asta.", // nieuw, nalezen
+    'c.debthelp.a.why': "Ți se spune că factura nu e plătită: da, și ceri un plan de rate.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.a.why': "Ți se spune că e un plic albastru: mulțumești și îl deschizi imediat.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.a.why': "Te întreabă dacă ești bine: nu, și o să raportezi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.a.why': "Te întreabă de ce ești în sindicat: te apără.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.a.why': "Întrebarea e dacă cioburile se pot strânge cu mâna: nu, cu mătura mică și fărașul.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.a.why': "Întrebarea e dacă șarja e aprobată: încă nu, laboratorul o testează.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.a.why': "Te întreabă de tur: aproape tot, și o întrebare.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.a.why': "Ți se cere să conduci stivuitorul retractabil: nu, fără instruire pentru asta.", // nieuw, nalezen // nagelezen AI 28 nov
     // four new lessons (27 November 2026).
-    'd.appraisal.a.why': "Te întreabă de obiectiv: un lucru clar pe care vrei să-l înveți.", // nieuw, nalezen
-    'c.forms.a.why': "Te întreabă de formular: aproape, și unde semnezi.", // nieuw, nalezen
-    'c.voicemail.a.why': "Ți se cer numele și numărul: numele tău, și ceri să te sune înapoi.", // nieuw, nalezen
-    'c.dentist.a.why': "Te întreabă de ultima vizită: când, și ceri un control.", // nieuw, nalezen
+    'd.appraisal.a.why': "Te întreabă de obiectiv: un lucru clar pe care vrei să-l înveți.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.a.why': "Te întreabă de formular: aproape, și unde semnezi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.a.why': "Ți se cer numele și numărul: numele tău, și ceri să te sune înapoi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.a.why': "Te întreabă de ultima vizită: când, și ceri un control.", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 

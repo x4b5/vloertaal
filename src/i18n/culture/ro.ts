@@ -186,31 +186,31 @@ const t: CultureTranslation = {
     's.task.3': 'Puteți să-mi arătați încă o dată?',
     'd.task.q': 'Ai terminat?',
     'd.task.a': 'Aproape. Încă cinci minute.',
-    'l.clear': 'Scurt și clar', // nieuw, nalezen
-    'w.kort': 'scurt', // nieuw, nalezen
-    'w.duidelijk': 'clar', // nieuw, nalezen
-    'w.belangrijkste': 'cel mai important lucru', // nieuw, nalezen
-    'w.rustig': 'calm, liniștit', // nieuw, nalezen
-    'w.teveel': 'prea mult', // nieuw, nalezen
-    'w.vraag': 'întrebarea', // nieuw, nalezen
-    's.clear.1': 'O spun scurt: utilajul e stricat.', // nieuw, nalezen
-    's.clear.2': { m: 'Întâi cel mai important: sunt bolnav.', f: 'Întâi cel mai important: sunt bolnavă.', x: 'Întâi cel mai important: sunt bolnav / bolnavă.' }, // nieuw, nalezen
-    's.clear.3': 'Scuze, vorbesc prea repede și prea mult.', // nieuw, nalezen
-    'd.clear.q': 'E clar?', // nieuw, nalezen
-    'd.clear.a': 'Da. Mai am o întrebare.', // nieuw, nalezen
+    'l.clear': 'Scurt și clar', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kort': 'scurt', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.duidelijk': 'clar', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.belangrijkste': 'cel mai important lucru', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rustig': 'calm, liniștit', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teveel': 'prea mult', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vraag': 'întrebarea', // nieuw, nalezen // nagelezen AI 28 nov
+    's.clear.1': 'O spun scurt: utilajul e stricat.', // nieuw, nalezen // nagelezen AI 28 nov
+    's.clear.2': { m: 'Întâi cel mai important: sunt bolnav.', f: 'Întâi cel mai important: sunt bolnavă.', x: 'Întâi cel mai important: m-am îmbolnăvit.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
+    's.clear.3': 'Scuze, vorbesc prea repede și prea mult.', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.clear.q': 'E clar?', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.clear.a': 'Da. Mai am o întrebare.', // nieuw, nalezen // nagelezen AI 28 nov
     // Vertaalronde 5 november 2026: l.newcolleague en c.newcolleague.
-    'l.newcolleague': "Să ajuți un coleg nou", // nieuw, nalezen
-    'w.welkom': "bun venit", // nieuw, nalezen
-    'w.inwerken': "a instrui un coleg nou (a-i arăta munca în primele zile)", // nieuw, nalezen
-    'w.stap': "pasul (o mică parte dintr-o sarcină)", // nieuw, nalezen
-    'w.nadoen': "a face la fel (a face ce ți-a arătat cineva)", // nieuw, nalezen
-    'w.geduld': "răbdarea", // nieuw, nalezen
-    'w.kast': "dulapul", // nieuw, nalezen
-    's.newcolleague.1': "Bun venit! Azi îți arăt eu munca.", // nieuw, nalezen
-    's.newcolleague.2': "Întâi uită-te. Apoi faci și tu la fel.", // nieuw, nalezen
-    's.newcolleague.3': "Mănușile sunt în dulapul acela.", // nieuw, nalezen
-    'd.newcolleague.q': "Cred că am înțeles.", // nieuw, nalezen
-    'd.newcolleague.a': "Bine. Arată-mi.", // nieuw, nalezen
+    'l.newcolleague': "Să ajuți un coleg nou", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.welkom': "bun venit", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inwerken': "a instrui un coleg nou (a-i arăta munca în primele zile)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stap': "pasul (o mică parte dintr-o sarcină)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nadoen': "a face la fel (a face ce ți-a arătat cineva)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geduld': "răbdarea", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kast': "dulapul", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.1': "Bun venit! Azi îți arăt eu munca.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.2': "Întâi uită-te. Apoi faci și tu la fel.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.3': "Mănușile sunt în dulapul acela.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.newcolleague.q': "Cred că am înțeles.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.newcolleague.a': "Bine. Arată-mi.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.newcolleague': "Arată, pas cu pas", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.b': "Ce a fost greu pentru tine în primele săptămâni e greu și pentru un coleg nou. Explică munca în pași mici: întâi asta, apoi aia. Nu vorbi mai repede sau mai tare: arată și lasă-l să facă după tine. Nu întreba „Snap je het?”: mulți spun „da” și când nu înțeleg. Spune în schimb „Laat eens zien” și uită-te. Spune-i unde sunt lucrurile, de exemplu toaleta, cantina și mănușile. Ai răbdare (geduld): învățatul durează, pentru toată lumea.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.p': "Bravo! Acum pasul următor.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -220,67 +220,67 @@ const t: CultureTranslation = {
     'c.newcolleague.o3': "Explici totul încă o dată, mai repede și mai tare.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.w': "Mulți spun „ja” și când n-au înțeles. Când el îți arată, vedeți amândoi dacă merge. E mai repede decât să repari o greșeală mai târziu.", // nieuw, nalezen // nagelezen AI 22 nov
     // Vertaalronde 5 november 2026: Goed communiceren (u.communicate).
-    'u.communicate': "Să comunici bine", // nieuw, nalezen
-    'l.explain': "Să spui ce nu e în regulă", // nieuw, nalezen
-    'w.ietsmis': "ceva nu e în regulă", // nieuw, nalezen
-    'w.stilstaan': "a sta, a fi oprit (un utilaj, o bandă)", // nieuw, nalezen
-    'w.lampje': "beculețul (de avertizare)", // nieuw, nalezen
-    'w.komen': "a veni", // nieuw, nalezen
-    'w.nodighebben': "a avea nevoie de", // nieuw, nalezen
-    'w.meteen': "imediat, pe loc", // nieuw, nalezen
-    's.explain.1': "Banda s-a oprit. La linia doi. Poți să vii?", // nieuw, nalezen
-    's.explain.2': "Pe utilaj e aprins un bec roșu.", // nieuw, nalezen
-    's.explain.3': "E periculos. Poți să vii imediat?", // nieuw, nalezen
-    'd.explain.q': "Ce nu e în regulă?", // nieuw, nalezen
-    'd.explain.a': "Scanerul nu merge. Am nevoie de unul nou.", // nieuw, nalezen
-    'l.listen': "Să asculți bine", // nieuw, nalezen
-    'w.uitpraten': "a termina de vorbit (a lăsa pe cineva să termine)", // nieuw, nalezen
-    'w.onderbreken': "a întrerupe", // nieuw, nalezen
-    'w.aankijken': "a se uita la (cineva)", // nieuw, nalezen
-    'w.bedoelen': "a vrea să spună, a se referi la", // nieuw, nalezen
-    'w.dus': "deci (ca să verifici ce ai auzit)", // nieuw, nalezen
-    'w.doorvragen': "a mai întreba (până e clar)", // nieuw, nalezen
-    's.listen.1': "Deci întâi număr cutiile, și apoi împachetez?", // nieuw, nalezen
-    's.listen.2': "Ce vrei să spui cu cuvântul ăsta?", // nieuw, nalezen
-    's.listen.3': "Scuze, te rog, termină ce spuneai.", // nieuw, nalezen
-    'd.listen.q': "Mâine începi deja la patru.", // nieuw, nalezen
-    'd.listen.a': "Serios? Sau era o glumă?", // nieuw, nalezen
-    'l.calm': "Să-ți păstrezi calmul", // nieuw, nalezen
-    'w.nadenken': "a se gândi (la ceva)", // nieuw, nalezen
-    'w.ademhalen': "a respira", // nieuw, nalezen
-    'w.oplossen': "a rezolva, a lămuri", // nieuw, nalezen
-    'w.druk': "aglomerat (mult de lucru)", // nieuw, nalezen
-    'w.straks': "mai târziu (azi), peste puțin", // nieuw, nalezen
-    'w.misverstand': "neînțelegerea", // nieuw, nalezen
-    's.calm.1': "Vreau să rezolv asta calm.", // nieuw, nalezen
-    's.calm.2': "Pot să mă gândesc puțin?", // nieuw, nalezen
-    's.calm.3': "Putem vorbi mai târziu?", // nieuw, nalezen
-    'd.calm.q': "De ce nu e gata încă asta?", // nieuw, nalezen
-    'd.calm.a': "Scuze, e foarte aglomerat. Ce trebuie făcut întâi?", // nieuw, nalezen
-    'l.talkintime': "Vorbește la timp despre asta", // nieuw, nalezen
-    'w.gesprek': "discuția, conversația", // nieuw, nalezen
-    'w.bespreken': "a discuta (despre ceva)", // nieuw, nalezen
-    'w.zorgenmaken': "a-ți face griji", // nieuw, nalezen
-    'w.oplossing': "soluția", // nieuw, nalezen
-    'w.ineens': "deodată, dintr-odată", // nieuw, nalezen
-    'w.wegblijven': "a lipsi (a nu veni la muncă)", // nieuw, nalezen
-    's.talkintime.1': "Ceva mă deranjează. Ai puțin timp?", // nieuw, nalezen
-    's.talkintime.2': "Vreau să discut ceva cu tine.", // nieuw, nalezen
-    's.talkintime.3': "Mă gândesc să-mi dau demisia. Putem vorbi întâi?", // nieuw, nalezen
-    'd.talkintime.q': "Ai puțin timp? Ceva mă deranjează.", // nieuw, nalezen
-    'd.talkintime.a': "Sigur. Ce s-a întâmplat?", // nieuw, nalezen
-    'l.reachable': "Să fii de găsit la telefon", // nieuw, nalezen
-    'w.opnemen': "a răspunde (la telefon)", // nieuw, nalezen
-    'w.gemisteoproep': "apelul pierdut", // nieuw, nalezen
-    'w.voicemail': "mesageria vocală", // nieuw, nalezen
-    'w.beltegoed': "creditul (pe cartelă)", // nieuw, nalezen
-    'w.bereik': "semnalul (la telefon)", // nieuw, nalezen
-    'w.onbekend': "necunoscut (un număr necunoscut)", // nieuw, nalezen
-    's.reachable.1': "Olandeza mea nu e încă bună. Puteți vorbi mai rar?", // nieuw, nalezen
-    's.reachable.2': "Puteți să mi-l trimiteți și ca mesaj?", // nieuw, nalezen
-    's.reachable.3': "Am un număr nou.", // nieuw, nalezen
-    'd.reachable.q': "Bună dimineața, sunt de la planificare.", // nieuw, nalezen
-    'd.reachable.a': "Bună dimineața. M-ați sunat? Scuze, n-am apucat să răspund.", // nieuw, nalezen
+    'u.communicate': "Să comunici bine", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.explain': "Să spui ce nu e în regulă", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ietsmis': "ceva nu e în regulă", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stilstaan': "a sta, a fi oprit (un utilaj, o bandă)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lampje': "beculețul (de avertizare)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.komen': "a veni", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nodighebben': "a avea nevoie de", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meteen': "imediat, pe loc", // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.1': "Banda s-a oprit. La linia doi. Poți să vii?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.2': "Pe utilaj e aprins un bec roșu.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.3': "E periculos. Poți să vii imediat?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.explain.q': "Ce nu e în regulă?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.explain.a': "Scanerul nu merge. Am nevoie de unul nou.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.listen': "Să asculți bine", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitpraten': "a termina de vorbit (a lăsa pe cineva să termine)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderbreken': "a întrerupe", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aankijken': "a se uita la (cineva)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedoelen': "a vrea să spună, a se referi la", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dus': "deci (ca să verifici ce ai auzit)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doorvragen': "a mai întreba (până e clar)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.1': "Deci întâi număr cutiile, și apoi împachetez?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.2': "Ce vrei să spui cu cuvântul ăsta?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.3': "Scuze, te rog, termină ce spuneai.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.listen.q': "Mâine începi deja la patru.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.listen.a': "Serios? Sau era o glumă?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.calm': "Să-ți păstrezi calmul", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nadenken': "a se gândi (la ceva)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ademhalen': "a respira", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oplossen': "a rezolva, a lămuri", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.druk': "aglomerat (mult de lucru)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.straks': "mai târziu (azi), peste puțin", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.misverstand': "neînțelegerea", // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.1': "Vreau să rezolv asta calm.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.2': "Pot să mă gândesc puțin?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.3': "Putem vorbi mai târziu?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.calm.q': "De ce nu e gata încă asta?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.calm.a': "Scuze, e foarte aglomerat. Ce trebuie făcut întâi?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.talkintime': "Vorbește la timp despre asta", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gesprek': "discuția, conversația", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bespreken': "a discuta (despre ceva)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zorgenmaken': "a-ți face griji", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oplossing': "soluția", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ineens': "deodată, dintr-odată", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wegblijven': "a lipsi (a nu veni la muncă)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.1': "Ceva mă deranjează. Ai puțin timp?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.2': "Vreau să discut ceva cu tine.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.3': "Mă gândesc să-mi dau demisia. Putem vorbi întâi?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.talkintime.q': "Ai puțin timp? Ceva mă deranjează.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.talkintime.a': "Sigur. Ce s-a întâmplat?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.reachable': "Să fii de găsit la telefon", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opnemen': "a răspunde (la telefon)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gemisteoproep': "apelul pierdut", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voicemail': "mesageria vocală", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beltegoed': "creditul (pe cartelă)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bereik': "semnalul (la telefon)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onbekend': "necunoscut (un număr necunoscut)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.1': "Olandeza mea nu e încă bună. Puteți vorbi mai rar?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.2': "Puteți să mi-l trimiteți și ca mesaj?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.3': "Am un număr nou.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.reachable.q': "Bună dimineața, sunt de la planificare.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.reachable.a': "Bună dimineața. M-ați sunat? Scuze, n-am apucat să răspund.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.explain': "Ce, unde, de ce ai nevoie", // nieuw, nalezen // nagelezen AI 22 nov
     'c.explain.b': "Când ceva nu e în regulă la muncă, spune-o în trei pași. Întâi ce nu e în regulă: „De band staat stil.” Apoi unde: „Bij lijn twee.” Apoi de ce ai nevoie: „Kun je komen?” Acum celălalt știe ce să facă, fără multe întrebări. Nu știi cuvântul? Arată cu degetul. E periculos? Spune asta întâi: „Het is gevaarlijk.” Un accident? Întâi cheamă ajutor (mai multe în lecția „Cum raportezi un accident”).", // nieuw, nalezen // nagelezen AI 22 nov
     'c.explain.p': "Poți să vii să te uiți?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -322,43 +322,43 @@ const t: CultureTranslation = {
     'c.reachable.o3': "Suni înapoi săptămâna viitoare, când ai timp liber.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.reachable.w': "Agențiile sună des când e de lucru. Când suni înapoi în aceeași zi, arăți că vrei munca, și poate o primești.", // nieuw, nalezen // nagelezen AI 22 nov
     // Vertaalronde 5 november 2026: Feedback en overleg (u.feedback).
-    'u.feedback': "Feedback și ședințe de echipă", // nieuw, nalezen
-    'l.getfeedback': "Când primești feedback", // nieuw, nalezen
-    'w.tip': "sfatul (un sfat scurt)", // nieuw, nalezen
-    'w.verbeterpunt': "punctul de îmbunătățit (ce poate fi mai bine)", // nieuw, nalezen
-    'w.goedbedoeld': "cu intenție bună (ca să te ajute)", // nieuw, nalezen
-    'w.kritiek': "critica (ce crede cineva că nu e bine)", // nieuw, nalezen
-    'w.normaal': "normal", // nieuw, nalezen
-    'w.positief': "pozitiv (despre ce merge bine)", // nieuw, nalezen
-    's.getfeedback.1': "Mulțumesc, e bine de știut.", // nieuw, nalezen
-    's.getfeedback.2': "Poți să-mi dai un exemplu?", // nieuw, nalezen
-    's.getfeedback.3': "Ce pot să fac mai bine?", // nieuw, nalezen
-    'd.getfeedback.q': "Pot să-ți dau puțin feedback?", // nieuw, nalezen
-    'd.getfeedback.a': "Da, te rog. Vreau să fac treaba bine.", // nieuw, nalezen
-    'l.givefeedback': "Când dai feedback", // nieuw, nalezen
-    'w.dichtplakken': "a închide cu bandă adezivă", // nieuw, nalezen
-    'w.netjes': "îngrijit, ordonat", // nieuw, nalezen
-    'w.scheef': "strâmb, nu drept", // nieuw, nalezen
-    'w.vriendelijk': "prietenos, amabil", // nieuw, nalezen
-    'w.concreet': "concret (cu un exemplu clar)", // nieuw, nalezen
-    'w.ondervierogen': "între patru ochi (doar voi doi)", // nieuw, nalezen
-    's.givefeedback.1': "Faci asta bine.", // nieuw, nalezen
-    's.givefeedback.2': "Poți să închizi și cutiile cu bandă?", // nieuw, nalezen
-    's.givefeedback.3': "Văd că cutiile stau strâmb.", // nieuw, nalezen
-    'd.givefeedback.q': "Ce părere ai despre munca mea?", // nieuw, nalezen
-    'd.givefeedback.a': "Îngrijit! Doar cutiile stau strâmb.", // nieuw, nalezen
-    'l.meeting': "Să vorbești la ședința de echipă", // nieuw, nalezen
-    'w.werkoverleg': "ședința de echipă (despre muncă)", // nieuw, nalezen
-    'w.beurt': "rândul (momentul tău să vorbești)", // nieuw, nalezen
-    'w.idee': "ideea", // nieuw, nalezen
-    'w.mening': "părerea (ce crezi despre asta)", // nieuw, nalezen
-    'w.handopsteken': "a ridica mâna", // nieuw, nalezen
-    'w.agenda': "ordinea de zi (lista de puncte pentru ședință)", // nieuw, nalezen
-    's.meeting.1': "Pot să spun ceva?", // nieuw, nalezen
-    's.meeting.2': "Am o întrebare despre programul de lucru.", // nieuw, nalezen
-    's.meeting.3': "Am o idee.", // nieuw, nalezen
-    'd.meeting.q': "Mai are cineva o întrebare?", // nieuw, nalezen
-    'd.meeting.a': "Da. Când vine noul program de lucru?", // nieuw, nalezen
+    'u.feedback': "Feedback și ședințe de echipă", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.getfeedback': "Când primești feedback", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tip': "sfatul (un sfat scurt)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verbeterpunt': "punctul de îmbunătățit (ce poate fi mai bine)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedbedoeld': "cu intenție bună (ca să te ajute)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kritiek': "critica (ce crede cineva că nu e bine)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.normaal': "normal", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.positief': "pozitiv (despre ce merge bine)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.1': "Mulțumesc, e bine de știut.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.2': "Poți să-mi dai un exemplu?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.3': "Ce pot să fac mai bine?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.getfeedback.q': "Pot să-ți dau puțin feedback?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.getfeedback.a': "Da, te rog. Vreau să fac treaba bine.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.givefeedback': "Când dai feedback", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dichtplakken': "a închide cu bandă adezivă", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.netjes': "îngrijit, ordonat", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scheef': "strâmb, nu drept", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vriendelijk': "prietenos, amabil", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.concreet': "concret (cu un exemplu clar)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ondervierogen': "între patru ochi (doar voi doi)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.1': "Faci asta bine.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.2': "Poți să închizi și cutiile cu bandă?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.3': "Văd că cutiile stau strâmb.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.givefeedback.q': "Ce părere ai despre munca mea?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.givefeedback.a': "Îngrijit! Doar cutiile stau strâmb.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.meeting': "Să vorbești la ședința de echipă", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkoverleg': "ședința de echipă (despre muncă)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beurt': "rândul (momentul tău să vorbești)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.idee': "ideea", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mening': "părerea (ce crezi despre asta)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handopsteken': "a ridica mâna", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.agenda': "ordinea de zi (lista de puncte pentru ședință)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.1': "Pot să spun ceva?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.2': "Am o întrebare despre programul de lucru.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.3': "Am o idee.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.meeting.q': "Mai are cineva o întrebare?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.meeting.a': "Da. Când vine noul program de lucru?", // nieuw, nalezen // nagelezen AI 28 nov
     'c.getfeedback': "Feedbackul e despre munca ta", // nieuw, nalezen // nagelezen AI 22 nov
     'c.getfeedback.b': "Feedbackul e ce spune cineva despre munca ta: ce merge bine și ce poate fi mai bine. E despre munca ta, nu despre tine. La muncă aici, feedbackul e normal și e menit să ajute. Nu e clar ce să faci altfel? Cere un exemplu. Întâi ascultă și nu te apăra imediat. Apoi mulțumește și încearcă. Poți să ceri și tu feedback: „Wat kan ik beter doen?”", // nieuw, nalezen // nagelezen AI 22 nov
     'c.getfeedback.p': "Mulțumesc. Poți să-mi dai un exemplu?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -426,76 +426,76 @@ const t: CultureTranslation = {
     'c.whereis.o3': "Începi munca în hainele tale.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.w': { m: "Să întrebi durează zece secunde. Dacă cauți singur, poți întârzia. Colegii știu că e greu să te descurci într-un loc nou.", f: "Să întrebi durează zece secunde. Dacă cauți singură, poți întârzia. Colegii știu că e greu să te descurci într-un loc nou.", x: "Să întrebi durează zece secunde. Dacă cauți pe cont propriu, poți întârzia. Colegii știu că e greu să te descurci într-un loc nou." }, // nieuw, nalezen // nagelezen AI 22 nov
     // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): the tips of l.roster, l.breaks, l.wound and l.callhelp.
-    'c.wound': "O arsură? Răcește-o cu apă", // nieuw, nalezen
-    'c.wound.b': "O tăietură mică: apasă pe ea cu o cârpă curată sau cu un bandaj și spune-i persoanei de prim ajutor din firmă. O arsură: răcește-o imediat cu apă călduță de la robinet, cel puțin 10 minute. Ai ceva în ochi? Clătește-l cu apă sau la dușul pentru ochi. E grav? Sună la 112. Întreabă în prima zi unde sunt trusa de prim ajutor și dușul pentru ochi.", // nieuw, nalezen
-    'c.wound.p': "M-am ars. Unde e un robinet?", // nieuw, nalezen
-    'c.wound.s': "Un coleg se arde la mână de la o mașină fierbinte. Ce faci?", // nieuw, nalezen
-    'c.wound.o1': "Răcești arsura cu apă călduță de la robinet.", // nieuw, nalezen
-    'c.wound.o2': "Pui imediat unt sau o cremă pe ea.", // nieuw, nalezen
-    'c.wound.o3': "Pui gheață direct pe piele și aștepți.", // nieuw, nalezen
-    'c.wound.w': "Apa scoate căldura din piele, așa că arsura e mai puțin adâncă. Gheața, untul și crema o pot agrava.", // nieuw, nalezen
-    'c.callhelp': "Suni la 112: spune întâi unde", // nieuw, nalezen
-    'c.callhelp.b': "Sună la 112 când o viață e în pericol sau când contează fiecare minut. Spune întâi unde ești: strada, numărul și orașul. Apoi spune ce s-a întâmplat. Rămâi la telefon și răspunde la întrebări. Roagă un coleg să aștepte ambulanța la intrare. Nu știi adresa locului de muncă? Caut-o azi.", // nieuw, nalezen
-    'c.callhelp.p': "Sun la 112. Poți să aștepți tu ambulanța?", // nieuw, nalezen
-    'c.callhelp.s': "Suni la 112. Operatorul pune multe întrebări, dar tu vrei să-ți ajuți colegul. Ce faci?", // nieuw, nalezen
-    'c.callhelp.o1': "Rămâi la telefon și răspunzi.", // nieuw, nalezen
-    'c.callhelp.o2': "Închizi și te duci la coleg.", // nieuw, nalezen
-    'c.callhelp.o3': "Spui „veniți repede” și închizi.", // nieuw, nalezen
-    'c.callhelp.w': "Operatorul trimite ajutor în timp ce vorbești și îți spune ce să faci. Dacă închizi prea devreme, ajutorul poate ajunge în locul greșit.", // nieuw, nalezen
-    'c.roster': "Uită-te zilnic la programul de lucru", // nieuw, nalezen
-    'c.roster.b': "Programul se poate schimba, chiar și în ultima clipă. Uită-te la el în fiecare zi, în aplicație sau pe panou. Vezi o schimbare? Verifică dacă poți veni. Nu poți lucra într-o zi? Spune din timp, nu chiar în ziua respectivă. Vrei să schimbi o tură? Întreabă-l întâi pe șef: multe firme au o regulă pentru asta. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
-    'c.roster.p': "Sâmbătă nu pot. Pot să fac schimb?", // nieuw, nalezen
-    'c.roster.s': "Programul tău s-a schimbat. Acum trebuie să lucrezi sâmbătă, dar nu poți. Ce faci?", // nieuw, nalezen
-    'c.roster.o1': "Îi spui azi șefului și ceri să faci schimb.", // nieuw, nalezen
-    'c.roster.o2': "Nu spui nimic și stai acasă sâmbătă.", // nieuw, nalezen
-    'c.roster.o3': "Rogi un coleg să meargă în locul tău și nu spui nimănui.", // nieuw, nalezen
-    'c.roster.w': "Când spui din timp, șeful poate găsi pe altcineva. Să lipsești fără un cuvânt e considerat foarte grav.", // nieuw, nalezen
-    'c.breaks': "Notează-ți orele", // nieuw, nalezen
-    'c.breaks.b': "Notează în fiecare zi când începi, când termini și cât durează pauza. Propria ta listă te ajută când salariul nu e corect. Trebuie să pleci mai devreme, de exemplu la doctor? Întreabă-l pe șef din timp. Ai lucrat mai mult decât era planificat? Notează și asta. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
-    'c.breaks.p': "Mâine trebuie să merg la doctor. Pot pleca mai devreme?", // nieuw, nalezen
-    'c.breaks.s': "Mâine trebuie să mergi la doctor la ora trei. Tura ta se termină la cinci. Ce faci?", // nieuw, nalezen
-    'c.breaks.o1': "Îl întrebi azi pe șef dacă poți pleca mai devreme.", // nieuw, nalezen
-    'c.breaks.o2': "Pleci la trei și explici a doua zi.", // nieuw, nalezen
-    'c.breaks.o3': "Renunți la doctor și îți termini tura.", // nieuw, nalezen
-    'c.breaks.w': "Când întrebi din timp, șeful poate planifica munca. Să pleci fără să întrebi e considerat lipsă de seriozitate.", // nieuw, nalezen
+    'c.wound': "O arsură? Răcește-o cu apă", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.b': "O tăietură mică: apasă pe ea cu o cârpă curată sau cu un bandaj și spune-i persoanei de prim ajutor din firmă. O arsură: răcește-o imediat cu apă călduță de la robinet, cel puțin 10 minute. Ai ceva în ochi? Clătește-l cu apă sau la dușul pentru ochi. E grav? Sună la 112. Întreabă în prima zi unde sunt trusa de prim ajutor și dușul pentru ochi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.p': "M-am ars. Unde e un robinet?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.s': "Un coleg se arde la mână de la o mașină fierbinte. Ce faci?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o1': "Răcești arsura cu apă călduță de la robinet.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o2': "Pui imediat unt sau o cremă pe ea.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o3': "Pui gheață direct pe piele și aștepți.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.w': "Apa scoate căldura din piele, așa că arsura e mai puțin adâncă. Gheața, untul și crema o pot agrava.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp': "Suni la 112: spune întâi unde", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.b': "Sună la 112 când o viață e în pericol sau când contează fiecare minut. Spune întâi unde ești: strada, numărul și orașul. Apoi spune ce s-a întâmplat. Rămâi la telefon și răspunde la întrebări. Roagă un coleg să aștepte ambulanța la intrare. Nu știi adresa locului de muncă? Caut-o azi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.p': "Sun la 112. Poți să aștepți tu ambulanța?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.s': "Suni la 112. Operatorul pune multe întrebări, dar tu vrei să-ți ajuți colegul. Ce faci?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o1': "Rămâi la telefon și răspunzi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o2': "Închizi și te duci la coleg.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o3': "Spui „veniți repede” și închizi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.w': "Operatorul trimite ajutor în timp ce vorbești și îți spune ce să faci. Dacă închizi prea devreme, ajutorul poate ajunge în locul greșit.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster': "Uită-te zilnic la programul de lucru", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.b': "Programul se poate schimba, chiar și în ultima clipă. Uită-te la el în fiecare zi, în aplicație sau pe panou. Vezi o schimbare? Verifică dacă poți veni. Nu poți lucra într-o zi? Spune din timp, nu chiar în ziua respectivă. Vrei să schimbi o tură? Întreabă-l întâi pe șef: multe firme au o regulă pentru asta. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.p': "Sâmbătă nu pot. Pot să fac schimb?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.s': "Programul tău s-a schimbat. Acum trebuie să lucrezi sâmbătă, dar nu poți. Ce faci?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o1': "Îi spui azi șefului și ceri să faci schimb.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o2': "Nu spui nimic și stai acasă sâmbătă.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o3': "Rogi un coleg să meargă în locul tău și nu spui nimănui.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.w': "Când spui din timp, șeful poate găsi pe altcineva. Să lipsești fără un cuvânt e considerat foarte grav.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks': "Notează-ți orele", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.b': "Notează în fiecare zi când începi, când termini și cât durează pauza. Propria ta listă te ajută când salariul nu e corect. Trebuie să pleci mai devreme, de exemplu la doctor? Întreabă-l pe șef din timp. Ai lucrat mai mult decât era planificat? Notează și asta. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.p': "Mâine trebuie să merg la doctor. Pot pleca mai devreme?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.s': "Mâine trebuie să mergi la doctor la ora trei. Tura ta se termină la cinci. Ce faci?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o1': "Îl întrebi azi pe șef dacă poți pleca mai devreme.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o2': "Pleci la trei și explici a doua zi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o3': "Renunți la doctor și îți termini tura.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.w': "Când întrebi din timp, șeful poate planifica munca. Să pleci fără să întrebi e considerat lipsă de seriozitate.", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (26 November 2026).
-    'c.firstweeks': "Întreabă din nou: e normal", // nieuw, nalezen
-    'c.firstweeks.b': "În primele săptămâni, nimeni nu se așteaptă să știi totul. Adesea primești un tur prin firmă (rondleiding) și un coleg care te îndrumă. Întâi te uiți, apoi faci tu, în timp ce colegul se uită. Ai uitat ceva? Întreabă din nou: „Wil je het nog een keer laten zien?” E mai bine decât să ghicești. Notează cuvintele noi și pașii într-un carnețel. Unele contracte încep cu o perioadă de probă (proeftijd): atunci tu sau angajatorul puteți încheia repede contractul. Întreabă dacă contractul tău are una. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
-    'c.firstweeks.p': "Am uitat. Îmi mai arăți o dată?", // nieuw, nalezen
-    'c.firstweeks.s': "Ieri colegul ți-a arătat cum pornești mașina. Azi nu-ți amintești al treilea pas. Ce faci?", // nieuw, nalezen
-    'c.firstweeks.o1': "Îl rogi pe coleg să-ți mai arate o dată.", // nieuw, nalezen
-    'c.firstweeks.o2': "Ghicești și încerci.", // nieuw, nalezen
-    'c.firstweeks.o3': "Aștepți până o pornește altcineva.", // nieuw, nalezen
-    'c.firstweeks.w': "E normal să întrebi din nou în primele săptămâni. Să ghicești la o mașină poate fi periculos și costă mai mult timp.", // nieuw, nalezen
-    'c.orderpick': "Mergi pe aleea pietonală", // nieuw, nalezen
-    'c.orderpick.b': "Într-un depozit mare pregătești comenzi cu o listă de picking și un scaner: scanezi fiecare articol, ca produsele potrivite să ajungă la clientul potrivit. Mulți lucrători care pregătesc comenzi conduc un utilaj mic care îi ridică sau un stivuitor retractabil pentru rafturile înalte. Conduce un astfel de utilaj doar după ce ai făcut instruirea pentru el, adesea cu un certificat. Mergi pe aleile pietonale și ține-te departe de utilajele în mișcare: șoferul nu te vede mereu. În camera frigorifică sau în camera de congelare, poartă hainele călduroase, mănușile și căciula pe care le primești de la muncă. Ia-ți pauzele de încălzire și spune cuiva când intri. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen
-    'c.orderpick.p': "Mă duc puțin la cantină să mă încălzesc.", // nieuw, nalezen
-    'c.orderpick.s': "Trebuie să ajungi pe celălalt culoar. Aleea pietonală face un ocol; drept, printre utilaje, e mai repede. Ce faci?", // nieuw, nalezen
-    'c.orderpick.o1': "Mergi pe aleea pietonală, chiar dacă e mai lungă.", // nieuw, nalezen
-    'c.orderpick.o2': "Treci în fugă printre utilaje.", // nieuw, nalezen
-    'c.orderpick.o3': "Treci pe jos și le faci semn șoferilor.", // nieuw, nalezen
-    'c.orderpick.w': "Adesea șoferul unui utilaj nu te poate vedea, de exemplu din spatele unei încărcături înalte. Pe aleea pietonală, oamenii sunt așteptați și sunt în siguranță.", // nieuw, nalezen
+    'c.firstweeks': "Întreabă din nou: e normal", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.b': "În primele săptămâni, nimeni nu se așteaptă să știi totul. Adesea primești un tur prin firmă (rondleiding) și un coleg care te îndrumă. Întâi te uiți, apoi faci tu, în timp ce colegul se uită. Ai uitat ceva? Întreabă din nou: „Wil je het nog een keer laten zien?” E mai bine decât să ghicești. Notează cuvintele noi și pașii într-un carnețel. Unele contracte încep cu o perioadă de probă (proeftijd): atunci tu sau angajatorul puteți încheia repede contractul. Întreabă dacă contractul tău are una. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.p': "Am uitat. Îmi mai arăți o dată?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.s': "Ieri colegul ți-a arătat cum pornești mașina. Azi nu-ți amintești al treilea pas. Ce faci?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.o1': "Îl rogi pe coleg să-ți mai arate o dată.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.o2': "Ghicești și încerci.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.o3': "Aștepți până o pornește altcineva.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.w': "E normal să întrebi din nou în primele săptămâni. Să ghicești la o mașină poate fi periculos și costă mai mult timp.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick': "Mergi pe aleea pietonală", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.b': "Într-un depozit mare pregătești comenzi cu o listă de picking și un scaner: scanezi fiecare articol, ca produsele potrivite să ajungă la clientul potrivit. Mulți lucrători care pregătesc comenzi conduc un utilaj mic care îi ridică sau un stivuitor retractabil pentru rafturile înalte. Conduce un astfel de utilaj doar după ce ai făcut instruirea pentru el, adesea cu un certificat. Mergi pe aleile pietonale și ține-te departe de utilajele în mișcare: șoferul nu te vede mereu. În camera frigorifică sau în camera de congelare, poartă hainele călduroase, mănușile și căciula pe care le primești de la muncă. Ia-ți pauzele de încălzire și spune cuiva când intri. Regulile diferă de la o firmă la alta: întreabă-l pe șef care sunt regulile acolo unde lucrezi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.p': "Mă duc puțin la cantină să mă încălzesc.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.s': "Trebuie să ajungi pe celălalt culoar. Aleea pietonală face un ocol; drept, printre utilaje, e mai repede. Ce faci?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o1': "Mergi pe aleea pietonală, chiar dacă e mai lungă.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o2': "Treci în fugă printre utilaje.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o3': "Treci pe jos și le faci semn șoferilor.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.w': "Adesea șoferul unui utilaj nu te poate vedea, de exemplu din spatele unei încărcături înalte. Pe aleea pietonală, oamenii sunt așteptați și sunt în siguranță.", // nieuw, nalezen // nagelezen AI 28 nov
     // four new lessons (27 November 2026).
-    'l.appraisal': "Discuția despre performanță", // nieuw, nalezen
-    'w.functioneringsgesprek': "discuția despre performanță (o discuție cu șeful despre cum merge munca ta și ce vrei să înveți)", // nieuw, nalezen
-    'w.beoordelingsgesprek': "discuția de evaluare (o discuție în care șeful dă o apreciere despre munca ta)", // nieuw, nalezen
-    'w.voorbereiden': "a pregăti (a te pregăti pentru ceva)", // nieuw, nalezen
-    'w.goedgaan': "a merge bine", // nieuw, nalezen
-    'w.doel': "obiectivul, scopul (ce vrei să atingi)", // nieuw, nalezen
-    'w.voorgezien': "a semna „văzut” (ai citit; nu înseamnă că ești de acord)", // nieuw, nalezen
-    's.appraisal.1': "Pregătesc bine discuția.", // nieuw, nalezen
-    's.appraisal.2': "Aș vrea să învăț ceva nou.", // nieuw, nalezen
-    's.appraisal.3': "Pot să citesc întâi raportul?", // nieuw, nalezen
-    'd.appraisal.q': "Care e obiectivul tău pentru anul viitor?", // nieuw, nalezen
-    'd.appraisal.a': "Aș vrea să-mi iau certificatul de motostivuitorist.", // nieuw, nalezen
-    'c.appraisal': "Evaluarea ta: pregătește-o, citește-o", // nieuw, nalezen
-    'c.appraisal.b': "Multe firme au o dată sau de două ori pe an o discuție despre munca ta. Într-o discuție despre performanță (functioneringsgesprek) vorbiți împreună: ce merge bine, ce poate fi mai bine și ce vrei să înveți. Într-o discuție de evaluare (beoordelingsgesprek) șeful dă o apreciere. Ea poate conta pentru salariu sau pentru un contract nou. Pregătește discuția: notează ce merge bine, ce e greu și ce vrei să înveți. Ai voie să ceri un curs sau o instruire. La final faceți înțelegeri (afspraken), des într-un raport scurt. Citește-l bine înainte să-l semnezi și cere o copie. Nu ești de acord? Semnează „voor gezien” (văzut), nu „voor akkoord” (de acord), și scrie-ți propria părere. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen
-    'c.appraisal.p': "Semnez „văzut”, nu „de acord”.", // nieuw, nalezen
-    'c.appraisal.s': "După discuția de evaluare primești raportul de semnat. Crezi că un punct din el nu e adevărat. Ce faci?", // nieuw, nalezen
-    'c.appraisal.o1': "Semnezi „voor gezien” și îți scrii părerea.", // nieuw, nalezen
-    'c.appraisal.o2': "Semnezi repede „voor akkoord”, ca să termini.", // nieuw, nalezen
-    'c.appraisal.o3': "Nu spui nimic și nu semnezi deloc.", // nieuw, nalezen
-    'c.appraisal.w': "„Voor gezien” înseamnă că ai citit, nu că ești de acord. Când spui asta și îți scrii propria părere, șeful știe ce crezi.", // nieuw, nalezen
+    'l.appraisal': "Discuția despre performanță", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.functioneringsgesprek': "discuția despre performanță (o discuție cu șeful despre cum merge munca ta și ce vrei să înveți)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beoordelingsgesprek': "discuția de evaluare (o discuție în care șeful dă o apreciere despre munca ta)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorbereiden': "a pregăti (a te pregăti pentru ceva)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedgaan': "a merge bine", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doel': "obiectivul, scopul (ce vrei să atingi)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorgezien': "a semna „văzut” (ai citit; nu înseamnă că ești de acord)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.1': "Pregătesc bine discuția.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.2': "Aș vrea să învăț ceva nou.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.3': "Pot să citesc întâi raportul?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.appraisal.q': "Care e obiectivul tău pentru anul viitor?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.appraisal.a': "Aș vrea să-mi iau certificatul de motostivuitorist.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal': "Evaluarea ta: pregătește-o, citește-o", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.b': "Multe firme au o dată sau de două ori pe an o discuție despre munca ta. Într-o discuție despre performanță (functioneringsgesprek) vorbiți împreună: ce merge bine, ce poate fi mai bine și ce vrei să înveți. Într-o discuție de evaluare (beoordelingsgesprek) șeful dă o apreciere. Ea poate conta pentru salariu sau pentru un contract nou. Pregătește discuția: notează ce merge bine, ce e greu și ce vrei să înveți. Ai voie să ceri un curs sau o instruire. La final faceți înțelegeri (afspraken), des într-un raport scurt. Citește-l bine înainte să-l semnezi și cere o copie. Nu ești de acord? Semnează „voor gezien” (văzut), nu „voor akkoord” (de acord), și scrie-ți propria părere. Informații generale. Pentru situația ta: întreabă angajatorul, sindicatul sau Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.p': "Semnez „văzut”, nu „de acord”.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.s': "După discuția de evaluare primești raportul de semnat. Crezi că un punct din el nu e adevărat. Ce faci?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o1': "Semnezi „voor gezien” și îți scrii părerea.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o2': "Semnezi repede „voor akkoord”, ca să termini.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o3': "Nu spui nimic și nu semnezi deloc.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.w': "„Voor gezien” înseamnă că ai citit, nu că ești de acord. Când spui asta și îți scrii propria părere, șeful știe ce crezi.", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 
