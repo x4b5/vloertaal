@@ -7,8 +7,8 @@ import type { CultureTranslation } from '../culture/types';
  */
 const t: CultureTranslation = {
   ui: {
-    regionTitle: { m: 'ኣበይ ኢኻ ትነብር?', f: 'ኣበይ ኢኺ ትነብሪ?', x: 'ኣበይ ኢኹም ትነብሩ?' }, // x: nieuw, nalezen
-    regionHint: {
+    regionTitle: { m: 'ኣበይ ኢኻ ትነብር?', f: 'ኣበይ ኢኺ ትነብሪ?', x: 'ኣበይ ኢኹም ትነብሩ?' }, // x: nieuw, nalezen // nagelezen AI 28 nov
+    regionHint: { // nagelezen AI 28 nov
       m: 'ኣብ Zuid-Limburg ትነብር ወይ ትሰርሕ ዲኻ? ሽዑ ብዛዕባ ዞባኻ ተወሳኺ ትምህርቲ ትረኽብ።',
       f: 'ኣብ Zuid-Limburg ትነብሪ ወይ ትሰርሒ ዲኺ? ሽዑ ብዛዕባ ዞባኺ ተወሳኺ ትምህርቲ ትረኽቢ።', x: 'ኣብ Zuid-Limburg ትነብሩ ወይ ትሰርሑ ዲኹም? ሽዑ ብዛዕባ ዞባኹም ተወሳኺ ትምህርቲ ትረኽቡ።',
     }, // nieuw, nalezen (AI-correctie 2 nov 2026)
@@ -20,13 +20,13 @@ const t: CultureTranslation = {
       f: 'ንምንታይ ናበይ ከም ትኸዲ። ክትድውሊ ወይ ነቲ ወብሳይት ክትከፍቲ ሓደ መስመር ጠውቒ።',
     },
     socialMapNote: 'ሓፈሻዊ ሓበሬታ እዩ፡ ምኽሪ ኣይኮነን። ኣስማት፡ ቁጽርታትን ወብሳይታትን ክቕየሩ ይኽእሉ።',
-    socialMapWrong: { m: 'ገለ ጌጋ ኣሎ ዶ? ናብ hoi@vloertaal.nl ኢመይል ስደድ።', f: 'ገለ ጌጋ ኣሎ ዶ? ናብ hoi@vloertaal.nl ኢመይል ስደዲ።', x: 'ገለ ጌጋ ኣሎ ዶ? ናብ hoi@vloertaal.nl ኢመይል ስደዱ።' }, // x: nieuw, nalezen
+    socialMapWrong: { m: 'ገለ ጌጋ ኣሎ ዶ? ናብ hoi@vloertaal.nl ኢመይል ስደድ።', f: 'ገለ ጌጋ ኣሎ ዶ? ናብ hoi@vloertaal.nl ኢመይል ስደዲ።', x: 'ገለ ጌጋ ኣሎ ዶ? ናብ hoi@vloertaal.nl ኢመይል ስደዱ።' }, // x: nieuw, nalezen // nagelezen AI 28 nov
   },
   gloss: {
-    'rg.zl.u': { m: 'ዞባኻ፡ Zuid-Limburg', f: 'ዞባኺ፡ Zuid-Limburg', x: 'ዞባኹም፡ Zuid-Limburg' }, // x: nieuw, nalezen
+    'rg.zl.u': { m: 'ዞባኻ፡ Zuid-Limburg', f: 'ዞባኺ፡ Zuid-Limburg', x: 'ዞባኹም፡ Zuid-Limburg' }, // x: nieuw, nalezen // nagelezen AI 28 nov
     'rg.zl.l.1': { m: 'ምምሕዳር ከተማን ገዛኻን', f: 'ምምሕዳር ከተማን ገዛኺን' },
     'rg.zl.w.gemeentehuis': 'ህንጻ ምምሕዳር ከተማ',
-    'rg.zl.w.loket': 'መቐበሊ ግልጋሎት (ኮንተር)', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'rg.zl.w.loket': 'መቐበሊ ግልጋሎት (ኮንተር)', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     'rg.zl.w.verhuizing': 'ምግዓዝ (ናብ ሓድሽ ገዛ)',
     'rg.zl.w.woningcorporatie': 'ትካል ገዛውቲ (ማሕበራዊ ገዛ ብክራይ)',
     'rg.zl.w.wachtlijst': 'ዝርዝር ተጸበይቲ',
@@ -34,18 +34,18 @@ const t: CultureTranslation = {
     'rg.zl.s.1.1': 'ኣብ ምምሕዳር ከተማ ክምዝገብ እደሊ።',
     'rg.zl.s.1.2': 'ሰዓት 10:00 ቆጸራ ኣለኒ።',
     'rg.zl.s.1.3': 'ንገዛ ኣብ ዝርዝር ተጸበይቲ ኣለኹ።',
-    'rg.zl.c.1.q': { m: 'ኣበይ ኢኻ ትነብር?', f: 'ኣበይ ኢኺ ትነብሪ?', x: 'ኣበይ ኢኹም ትነብሩ?' }, // x: nieuw, nalezen
+    'rg.zl.c.1.q': { m: 'ኣበይ ኢኻ ትነብር?', f: 'ኣበይ ኢኺ ትነብሪ?', x: 'ኣበይ ኢኹም ትነብሩ?' }, // x: nieuw, nalezen // nagelezen AI 28 nov
     'rg.zl.c.1.a': 'ኣብ Heerlen። ሕጂ ገዛ ቀይረ።',
     'rg.zl.l.2': 'ዶብ፡ ካርኒቫልን ዘዬን',
     'rg.zl.w.grens': 'ዶብ (ኣብ መንጎ ክልተ ሃገራት)',
     'rg.zl.w.buitenland': 'ወጻኢ ሃገር፡ ካልእ ሃገር',
-    'rg.zl.w.carnaval': 'ካርኒቫል (ኣብ ለካቲት ወይ መጋቢት ኣብ ጎደናታት ዝግበር ዓቢ በዓል)', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'rg.zl.w.carnaval': 'ካርኒቫል (ኣብ ለካቲት ወይ መጋቢት ኣብ ጎደናታት ዝግበር ዓቢ በዓል)', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     'rg.zl.w.dialect': 'ዘዬ (ናይቲ ከባቢ ኣዘራርባ)',
     'rg.zl.w.verstaan': 'ምርዳእ (ሰብ ዝብሎ)',
     'rg.zl.w.langzaam': 'ብቐስታ',
     'rg.zl.s.2.1': 'ኣብ ሆላንድ እነብር፡ ኣብ ጀርመን ድማ እሰርሕ።',
     'rg.zl.s.2.2': 'ሆላንድኛ ክትዛረቡ ትኽእሉ ዶ? ነቲ ዘዬ ኣይርደኣንን።',
-    'rg.zl.s.2.3': 'ንካርኒቫል ዕረፍቲ ክወስድ እኽእል ዶ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'rg.zl.s.2.3': 'ንካርኒቫል ዕረፍቲ ክወስድ እኽእል ዶ?', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     'rg.zl.c.2.q': 'ይቕሬታ፡ ብጣዕሚ ቀልጢፈ እዛረብ ኣለኹ።',
     'rg.zl.c.2.a': 'እወ፡ በጃኹም ቁሩብ ብቐስታ።',
     'rg.zl.c.1': { m: 'ኣድራሻኻ ኣመዝግብ፡ ገዛ ድማ ድለ', f: 'ኣድራሻኺ ኣመዝግቢ፡ ገዛ ድማ ድለዪ' },
@@ -67,9 +67,9 @@ const t: CultureTranslation = {
     },
     'rg.zl.c.2': 'ካርኒቫል፡ ዘዬን ዶብን',
     'rg.zl.c.2.b': {
-      m: 'ካርኒቫል (ኣብ Limburg «vastelaovend» እውን ይበሃል) ኩሉ ዓመት ኣብ ዝተፈላለየ ዕለት እዩ፡ ኣብ የካቲት ወይ መጋቢት። ወግዓዊ በዓል ኣይኮነን፡ ዕረፍቲ ኣቐዲምካ ሕተት። ብዙሓት ሰባት ኣብ ስራሕ ብዘዬ Limburg ይዛረቡ። እንተ ዘይተረደኣካ ልሙድ እዩ። ብትሕትና ሕተት፡ «Kunt u Nederlands praten?» ገለ ብጾት ስራሕ ጀርመንኛ ወይ ፈረንሳይኛ ይዛረቡ። ኣብ ሓንቲ ሃገር ትነብር ኣብ ካልእ ድማ ትሰርሕ ዲኻ? ቅድሚ ምፍራምካ፡ ብዛዕባ ግብሪ፡ መድሕንን ሓገዛትን ካብ GrensInfoPunt ናጻ ምኽሪ ሕተት።',
-      f: 'ካርኒቫል (ኣብ Limburg «vastelaovend» እውን ይበሃል) ኩሉ ዓመት ኣብ ዝተፈላለየ ዕለት እዩ፡ ኣብ የካቲት ወይ መጋቢት። ወግዓዊ በዓል ኣይኮነን፡ ዕረፍቲ ኣቐዲምኪ ሕተቲ። ብዙሓት ሰባት ኣብ ስራሕ ብዘዬ Limburg ይዛረቡ። እንተ ዘይተረደኣኪ ልሙድ እዩ። ብትሕትና ሕተቲ፡ «Kunt u Nederlands praten?» ገለ ብጾት ስራሕ ጀርመንኛ ወይ ፈረንሳይኛ ይዛረቡ። ኣብ ሓንቲ ሃገር ትነብሪ ኣብ ካልእ ድማ ትሰርሒ ዲኺ? ቅድሚ ምፍራምኪ፡ ብዛዕባ ግብሪ፡ መድሕንን ሓገዛትን ካብ GrensInfoPunt ናጻ ምኽሪ ሕተቲ።', x: 'ካርኒቫል (ኣብ Limburg «vastelaovend» እውን ይበሃል) ኩሉ ዓመት ኣብ ዝተፈላለየ ዕለት እዩ፡ ኣብ የካቲት ወይ መጋቢት። ወግዓዊ በዓል ኣይኮነን፡ ዕረፍቲ ኣቐዲምኩም ሕተቱ። ብዙሓት ሰባት ኣብ ስራሕ ብዘዬ Limburg ይዛረቡ። እንተ ዘይተረደኣኩም ልሙድ እዩ። ብትሕትና ሕተቱ፡ «Kunt u Nederlands praten?» ገለ ብጾት ስራሕ ጀርመንኛ ወይ ፈረንሳይኛ ይዛረቡ። ኣብ ሓንቲ ሃገር ትነብሩ ኣብ ካልእ ድማ ትሰርሑ ዲኹም? ቅድሚ ምፍራምኩም፡ ብዛዕባ ግብሪ፡ መድሕንን ሓገዛትን ካብ GrensInfoPunt ናጻ ምኽሪ ሕተቱ።', // x: nieuw, nalezen
-    }, // nagelezen AI 22 nov
+      m: 'ካርኒቫል (ኣብ Limburg «vastelaovend» እውን ይበሃል) ኩሉ ዓመት ኣብ ዝተፈላለየ ዕለት እዩ፡ ኣብ የካቲት ወይ መጋቢት። ወግዓዊ በዓል ኣይኮነን፡ ዕረፍቲ ኣቐዲምካ ሕተት። ብዙሓት ሰባት ኣብ ስራሕ ብዘዬ Limburg ይዛረቡ። እንተ ዘይተረደኣካ ልሙድ እዩ። ብትሕትና ሕተት፡ «Kunt u Nederlands praten»? ገለ ብጾት ስራሕ ጀርመንኛ ወይ ፈረንሳይኛ ይዛረቡ። ኣብ ሓንቲ ሃገር ትነብር ኣብ ካልእ ድማ ትሰርሕ ዲኻ? ቅድሚ ምፍራምካ፡ ብዛዕባ ግብሪ፡ መድሕንን ሓገዛትን ካብ GrensInfoPunt ናጻ ምኽሪ ሕተት።',
+      f: 'ካርኒቫል (ኣብ Limburg «vastelaovend» እውን ይበሃል) ኩሉ ዓመት ኣብ ዝተፈላለየ ዕለት እዩ፡ ኣብ የካቲት ወይ መጋቢት። ወግዓዊ በዓል ኣይኮነን፡ ዕረፍቲ ኣቐዲምኪ ሕተቲ። ብዙሓት ሰባት ኣብ ስራሕ ብዘዬ Limburg ይዛረቡ። እንተ ዘይተረደኣኪ ልሙድ እዩ። ብትሕትና ሕተቲ፡ «Kunt u Nederlands praten»? ገለ ብጾት ስራሕ ጀርመንኛ ወይ ፈረንሳይኛ ይዛረቡ። ኣብ ሓንቲ ሃገር ትነብሪ ኣብ ካልእ ድማ ትሰርሒ ዲኺ? ቅድሚ ምፍራምኪ፡ ብዛዕባ ግብሪ፡ መድሕንን ሓገዛትን ካብ GrensInfoPunt ናጻ ምኽሪ ሕተቲ።', x: 'ካርኒቫል (ኣብ Limburg «vastelaovend» እውን ይበሃል) ኩሉ ዓመት ኣብ ዝተፈላለየ ዕለት እዩ፡ ኣብ የካቲት ወይ መጋቢት። ወግዓዊ በዓል ኣይኮነን፡ ዕረፍቲ ኣቐዲምኩም ሕተቱ። ብዙሓት ሰባት ኣብ ስራሕ ብዘዬ Limburg ይዛረቡ። እንተ ዘይተረደኣኩም ልሙድ እዩ። ብትሕትና ሕተቱ፡ «Kunt u Nederlands praten»? ገለ ብጾት ስራሕ ጀርመንኛ ወይ ፈረንሳይኛ ይዛረቡ። ኣብ ሓንቲ ሃገር ትነብሩ ኣብ ካልእ ድማ ትሰርሑ ዲኹም? ቅድሚ ምፍራምኩም፡ ብዛዕባ ግብሪ፡ መድሕንን ሓገዛትን ካብ GrensInfoPunt ናጻ ምኽሪ ሕተቱ።', // x: nieuw, nalezen
+    }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'rg.zl.c.2.p': 'ብሆላንድኛ ክትብልዎ ትኽእሉ ዶ?',
     'rg.zl.c.2.s': { m: 'ሓደ ብጻይ ስራሕ ሓደ ዕማም ብዘዬ ይገልጽ። ኣይተረደኣካን። እንታይ ትገብር?', f: 'ሓደ ብጻይ ስራሕ ሓደ ዕማም ብዘዬ ይገልጽ። ኣይተረደኣክን። እንታይ ትገብሪ?' },
     'rg.zl.c.2.o1': { m: 'ብሆላንድኛ ክብሎ ይኽእል እንተ ኾይኑ ብትሕትና ሕተቶ።', f: 'ብሆላንድኛ ክብሎ ይኽእል እንተ ኾይኑ ብትሕትና ሕተትዮ።' },

@@ -6,13 +6,13 @@ const t: CultureTranslation = {
     sayAloud: { m: "لا حاجة للميكروفون. قلها بصوت عالٍ، ثم تابع.", f: "لا حاجة للميكروفون. قوليها بصوت عالٍ، ثم تابعي." },
     micRetry: { m: "جرّب الميكروفون مرة أخرى", f: "جرّبي الميكروفون مرة أخرى" },
     micFailed: { m: "لم يعمل الميكروفون. قلها بصوت عالٍ، ثم تابع.", f: "لم يعمل الميكروفون. قوليها بصوت عالٍ، ثم تابعي." },
-    micRefused: { m: "لا يُسمح للتطبيق باستخدام الميكروفون. يمكنك تشغيله.", f: "لا يُسمح للتطبيق باستخدام الميكروفون. يمكنكِ تشغيله.", x: "لا يُسمح للتطبيق باستخدام الميكروفون. يمكن تشغيله." }, // nieuw, nalezen
-    micTurnOn: { m: "شغّل الميكروفون", f: "شغّلي الميكروفون", x: "تشغيل الميكروفون" }, // nieuw, nalezen
-    micStepsIos: { m: "اضغط على «•••» أو «aA» في شريط العنوان › إعدادات موقع الويب › الميكروفون › سماح. أو: الإعدادات › التطبيقات › Safari › الميكروفون. ثم اضغط على الزر في الأسفل.", f: "اضغطي على «•••» أو «aA» في شريط العنوان › إعدادات موقع الويب › الميكروفون › سماح. أو: الإعدادات › التطبيقات › Safari › الميكروفون. ثم اضغطي على الزر في الأسفل.", x: "الخطوات: «•••» أو «aA» في شريط العنوان › إعدادات موقع الويب › الميكروفون › سماح. أو: الإعدادات › التطبيقات › Safari › الميكروفون. ثم الزر في الأسفل." }, // nieuw, nalezen
-    micStepsIosOther: { m: "اضغط على الرمز بجانب عنوان الموقع › الأذونات › الميكروفون › السماح. أو: الإعدادات › التطبيقات › {app} › الميكروفون. ثم اضغط على الزر في الأسفل.", f: "اضغطي على الرمز بجانب عنوان الموقع › الأذونات › الميكروفون › السماح. أو: الإعدادات › التطبيقات › {app} › الميكروفون. ثم اضغطي على الزر في الأسفل.", x: "الخطوات: الرمز بجانب عنوان الموقع › الأذونات › الميكروفون › السماح. أو: الإعدادات › التطبيقات › {app} › الميكروفون. ثم الزر في الأسفل." }, // nieuw, nalezen
-    micStepsAndroid: { m: "اضغط على الرمز بجانب عنوان الموقع › الأذونات › الميكروفون › السماح. ثم اضغط على الزر في الأسفل.", f: "اضغطي على الرمز بجانب عنوان الموقع › الأذونات › الميكروفون › السماح. ثم اضغطي على الزر في الأسفل.", x: "الخطوات: الرمز بجانب عنوان الموقع › الأذونات › الميكروفون › السماح. ثم الزر في الأسفل." }, // nieuw, nalezen
-    micStepsAndroidApp: { m: "اضغط مطولاً على رمز Vloertaal في الشاشة الرئيسية › معلومات التطبيق › الأذونات › الميكروفون › السماح. ثم اضغط على الزر في الأسفل.", f: "اضغطي مطولاً على رمز Vloertaal في الشاشة الرئيسية › معلومات التطبيق › الأذونات › الميكروفون › السماح. ثم اضغطي على الزر في الأسفل.", x: "الخطوات: ضغط مطوّل على رمز Vloertaal في الشاشة الرئيسية › معلومات التطبيق › الأذونات › الميكروفون › السماح. ثم الزر في الأسفل." }, // nieuw, nalezen
-    micStepsDesktop: { m: "انقر على الرمز بجانب عنوان الموقع › الميكروفون › السماح. ثم انقر على الزر في الأسفل.", f: "انقري على الرمز بجانب عنوان الموقع › الميكروفون › السماح. ثم انقري على الزر في الأسفل.", x: "الخطوات: الرمز بجانب عنوان الموقع › الميكروفون › السماح. ثم الزر في الأسفل." }, // nieuw, nalezen
+    micRefused: { m: "لا يُسمح للتطبيق باستخدام الميكروفون. يمكنك تشغيله.", f: "لا يُسمح للتطبيق باستخدام الميكروفون. يمكنكِ تشغيله.", x: "لا يُسمح للتطبيق باستخدام الميكروفون. يمكن تشغيله." }, // nieuw, nalezen // nagelezen AI 28 nov
+    micTurnOn: { m: "شغّل الميكروفون", f: "شغّلي الميكروفون", x: "تشغيل الميكروفون" }, // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsIos: { m: "اضغط على «•••» أو «aA» في شريط العنوان › إعدادات موقع الويب › الميكروفون › سماح. أو: الإعدادات › التطبيقات › Safari › الميكروفون. ثم اضغط على الزر في الأسفل.", f: "اضغطي على «•••» أو «aA» في شريط العنوان › إعدادات موقع الويب › الميكروفون › سماح. أو: الإعدادات › التطبيقات › Safari › الميكروفون. ثم اضغطي على الزر في الأسفل.", x: "الخطوات: «•••» أو «aA» في شريط العنوان › إعدادات موقع الويب › الميكروفون › سماح. أو: الإعدادات › التطبيقات › Safari › الميكروفون. ثم الزر في الأسفل." }, // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsIosOther: { m: "اضغط على الرمز بجانب عنوان الموقع › الأذونات › الميكروفون › السماح. أو: الإعدادات › التطبيقات › {app} › الميكروفون. ثم اضغط على الزر في الأسفل.", f: "اضغطي على الرمز بجانب عنوان الموقع › الأذونات › الميكروفون › السماح. أو: الإعدادات › التطبيقات › {app} › الميكروفون. ثم اضغطي على الزر في الأسفل.", x: "الخطوات: الرمز بجانب عنوان الموقع › الأذونات › الميكروفون › السماح. أو: الإعدادات › التطبيقات › {app} › الميكروفون. ثم الزر في الأسفل." }, // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsAndroid: { m: "اضغط على الرمز بجانب عنوان الموقع › الأذونات › الميكروفون › السماح. ثم اضغط على الزر في الأسفل.", f: "اضغطي على الرمز بجانب عنوان الموقع › الأذونات › الميكروفون › السماح. ثم اضغطي على الزر في الأسفل.", x: "الخطوات: الرمز بجانب عنوان الموقع › الأذونات › الميكروفون › السماح. ثم الزر في الأسفل." }, // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsAndroidApp: { m: "اضغط مطولاً على رمز Vloertaal في الشاشة الرئيسية › معلومات التطبيق › الأذونات › الميكروفون › السماح. ثم اضغط على الزر في الأسفل.", f: "اضغطي مطولاً على رمز Vloertaal في الشاشة الرئيسية › معلومات التطبيق › الأذونات › الميكروفون › السماح. ثم اضغطي على الزر في الأسفل.", x: "الخطوات: ضغط مطوّل على رمز Vloertaal في الشاشة الرئيسية › معلومات التطبيق › الأذونات › الميكروفون › السماح. ثم الزر في الأسفل." }, // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsDesktop: { m: "انقر على الرمز بجانب عنوان الموقع › الميكروفون › السماح. ثم انقر على الزر في الأسفل.", f: "انقري على الرمز بجانب عنوان الموقع › الميكروفون › السماح. ثم انقري على الزر في الأسفل.", x: "الخطوات: الرمز بجانب عنوان الموقع › الميكروفون › السماح. ثم الزر في الأسفل." }, // nieuw, nalezen // nagelezen AI 28 nov
     whichPicture: "أيّ صورة هي؟",
     sayAloudInstead: { m: "قلها بصوت عالٍ بدلاً من ذلك", f: "قوليها بصوت عالٍ بدلاً من ذلك" },
     wordsPractised: "كلمات تم التدرّب عليها",
@@ -21,15 +21,15 @@ const t: CultureTranslation = {
   gloss: {
     'c.hello.a.why': "يُرَدّ على الوداع بالوداع.",
     'c.people.a.why': "السؤال عن الاسم. هذا الرد يذكر اسماً.",
-    'c.arrive.a.why': "السؤال عن سبب المجيء. هذا الرد يقول إن اليوم أول يوم عمل.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.arrive.a.why': "السؤال عن سبب المجيء: هذا الرد يقول إن اليوم أول يوم عمل.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.understand.a.why': "شيء غير مفهوم؟ طلب التكرار أمر عادي.",
     'c.translate.a.why': "الورقة غير واضحة بعد، لذلك تُترجم أولاً.",
     'c.understood.a.why': "بإعادة قول المهمة يُتأكَّد من أن التعليمات واضحة.",
     'c.keeplearning.a.why': "طلب الهولندية لا بأس به: التمرين يساعد.",
     'c.gear.a.why': "السؤال عن الخوذة: نعم، هي على الرأس.",
     'c.danger.a.why': "عند وقوع حادث يُتصل بالرقم 112 أولاً.",
-    'c.alarm.a.why': "السؤال: هل خرج الجميع؟ هذا الرد يقول من لا يزال غائباً.", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.accident.a.why': "السؤال: ماذا حدث؟ هذا الرد يقول ما حدث وكيف حاله.",
+    'c.alarm.a.why': "السؤال عن خروج الجميع: هذا الرد يقول من لا يزال غائباً.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.accident.a.why': "السؤال عمّا حدث: هذا الرد يقول ما حدث وكيف حاله.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.notyet.a.why': "عند «جرّب فقط»، الرد الآمن هو طلبُ أن يُعرَض العمل أولاً.",
     'c.things.a.why': "السؤال «إلى أين». هذا الرد يذكر مكاناً.",
     'c.directions.a.why': "يسار أم يمين؟ هذا الرد يختار واحداً ويقول أين.",
@@ -86,11 +86,11 @@ const t: CultureTranslation = {
     'c.service.a.why': "طُلبت الفاتورة: موافقة قصيرة، ثم إحضارها.",
     'c.cleaning.a.why': "انتهى؟ هذا الرد يقول تقريباً، وكم بقي.",
     'c.cleansafe.a.why': "الأرضية المبللة زلقة: التحذير يساعد.",
-    'c.shelves.a.why': "السؤال «أين». هذا الرد يذكر الممر ويعرض المساعدة.",
+    'c.shelves.a.why': "السؤال «أين»: هذا الرد يذكر الممر ويعرض المساعدة.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.checkout.a.why': "السؤال عن الدفع بالبطاقة: «نعم» قصيرة ولطيفة.",
-    'c.counting.a.why': "السؤال: كم؟ هذا الرد يعطي العدد، ويتحقق منه رقماً رقماً.", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.hours.a.why': "السؤال عن الوقت. هذا الرد يذكر وقتاً.",
-    'c.measures.a.why': "السؤال عن الطول. هذا الرد يذكر طولاً.",
+    'c.counting.a.why': "السؤال عن العدد: هذا الرد يعطي العدد، ويتحقق منه رقماً رقماً.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.hours.a.why': "السؤال عن الوقت: هذا الرد يذكر وقتاً.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.measures.a.why': "السؤال عن الطول: هذا الرد يذكر طولاً.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.aihelp.a.why': "السؤال عمّن كتبه: «نعم» صادقة تذكر المساعدة.",
     'c.aiprivate.a.why': "يُطلب وضع أسماء في روبوت دردشة: هذا الرد يقول «لا» ويذكر السبب.",
     'c.aifake.a.why': "رقم جديد يطلب مالاً: هذا الرد يتحقق أولاً.",
@@ -162,9 +162,9 @@ const t: CultureTranslation = {
     'c.vancheck.a.why': "السؤال هل الشاحنة بخير: لا، وما هو المكسور.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.delay.a.why': "السؤال عن المكان: المكان، ومدة التأخير.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Hulp vragen" at four lessons (14 November 2026).
-    'c.howto.a.why': "السؤال: هل الطريقة معروفة؟ هذا الرد يقول بصدق: لا، ليس بعد.", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.mayask.a.why': "السؤال: هل هناك سؤال؟ هذا الرد يقول نعم، ويسأل أولاً إن كان هناك وقت.", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.whereis.a.why': "السؤال: هل يمكن إيجاده؟ هذا الرد يقول لا، ويطلب الإشارة إليه.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.howto.a.why': "السؤال عن معرفة الطريقة، وهذا الرد يقول بصدق: لا، ليس بعد.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.mayask.a.why': "السؤال عن وجود سؤال: هذا الرد يقول نعم، ويسأل أولاً إن كان هناك وقت.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.whereis.a.why': "السؤال عن إمكانية إيجاده: هذا الرد يقول لا، ويطلب الإشارة إليه.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     // "Instructies", a new basis unit (u.do, 14 November 2026).
     'c.putdown.a.why': "طلب الإمساك بشيء: نعم، وأين يوضع.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.onoff.a.why': "السؤال هل الباب مغلق: لا، وإغلاقه الآن.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -210,122 +210,127 @@ const t: CultureTranslation = {
     'c.brakes.a.why': "السؤال هل يجب تغييره: نعم، والسبب.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "السؤال ماذا يجب أن يُعمل: النظر في أمر العمل.", // nieuw, nalezen // nagelezen AI 22 nov
     // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
-    'c.mowing.a.why': "السؤال هل يُسمح بأخذها: نعم، وما الذي يأتي أولاً.", // nieuw, nalezen
-    'c.pruning.a.why': "السؤال أيّ أغصان: الميتة فقط.", // nieuw, nalezen
-    'c.hedge.a.why': "السؤال كم الارتفاع: حتى الخطّ، لا أقلّ.", // nieuw, nalezen
-    'c.chainsaw.a.why': "السؤال هل يُسمح: ليس بعد، وما الذي يأتي أولاً.", // nieuw, nalezen
-    'c.weeding.a.why': "السؤال هل هي عشبة ضارّة: لا، وماذا يُفعل بها.", // nieuw, nalezen
-    'c.planting.a.why': "السؤال أين توضع: المكان في حوض الزهور.", // nieuw, nalezen
-    'c.roadside.a.why': "السؤال هل يمكن العبور: لا، الانتظار، والسبب.", // nieuw, nalezen
-    'c.litter.a.why': "ساكن يسأل متى: الجواب غير معروف، ومن يعرفه.", // nieuw, nalezen
-    'c.reception.a.why': "زائر عنده موعد: لحظة، والاتصال به.", // nieuw, nalezen
-    'c.visitors.a.why': "السؤال أين يوضع المعطف: المكان، وأين هو.", // nieuw, nalezen
-    'c.mailroom.a.why': "السؤال لمن هو: القسم، والطابق.", // nieuw, nalezen
-    'c.meetingroom.a.why': "السؤال في أي ساعة: الوقت، وما يجب عمله.", // nieuw, nalezen
-    'c.faults.a.why': "السؤال لماذا الجو بارد: ما المعطّل، ومتى تأتي المساعدة.", // nieuw, nalezen
-    'c.repairs.a.why': "السؤال هل يصفّر: نعم، والسبب.", // nieuw, nalezen
-    'c.moving.a.why': "السؤال إلى أين يذهب: الغرفة، وأين يُنظر.", // nieuw, nalezen
-    'c.closing.a.why': "السؤال هل بقي أحد في الداخل: لا، وما يحدث الآن.", // nieuw, nalezen
-    'c.patrol.a.why': "السؤال هل كان هناك شيء: نعم، ماذا، وأين.", // nieuw, nalezen
-    'c.access.a.why': "طلب الدخول بدون بطاقة: عذراً، ليس بدون بطاقة.", // nieuw, nalezen
-    'c.cameras.a.why': "السؤال ماذا يظهر: من، وأين، وما العمل.", // nieuw, nalezen
-    'c.report.a.why': "السؤال ماذا يكون في التقرير: ماذا، وأين، ومتى.", // nieuw, nalezen
-    'c.evacuation.a.why': "السؤال هل الجميع في الخارج: لا، وكم شخصاً ناقصاً.", // nieuw, nalezen
-    'c.firstaid.a.why': "السؤال أين جهاز AED: المكان، وما بجانبه.", // nieuw, nalezen
-    'c.shoplifting.a.why': "السؤال هل يُسمح بتفتيش حقيبة: لا، ومن يفعل ذلك.", // nieuw, nalezen
-    'c.aggression.a.why': "السؤال لماذا لا: السبب، بهدوء.", // nieuw, nalezen
-    'c.hygienelock.a.why': "السؤال عن الساعة: لا، والقاعدة وراء ذلك.", // nieuw, nalezen
-    'c.allergens.a.why': "السؤال هل يمكن وضعهما معاً: لا، والسبب.", // nieuw, nalezen
-    'c.coldroom.a.why': "السؤال لماذا تصفّر: السبب، وما العمل.", // nieuw, nalezen
-    'c.foreignbody.a.why': "السؤال ما العمل: لمن تُعرض.", // nieuw, nalezen
-    'c.cutting.a.why': "السؤال كم: الوزن، وأين يُنظر.", // nieuw, nalezen
-    'c.labels.a.why': "السؤال أي تاريخ: متى، وأين يُنظر.", // nieuw, nalezen
-    'c.linecleaning.a.why': "السؤال هل هو نظيف: ليس بعد، وما الذي بقي.", // nieuw, nalezen
-    'c.haccp.a.why': "السؤال لماذا: حتى نعرف أن الطعام آمن.", // nieuw, nalezen
-    'c.binlorry.a.why': "السؤال هل يُسمح بالركوب في الخلف: لا، وأين يكون الركوب.", // nieuw, nalezen
-    'c.reversing.a.why': "طلب المساعدة: نعم، مكان الوقوف، وما العمل.", // nieuw, nalezen
-    'c.wastesorting.a.why': "السؤال أين تذهب: الحاوية، والسبب.", // nieuw, nalezen
-    'c.wastesafety.a.why': "السؤال ما العمل بعد الجرح: الغسل، والإخبار.", // nieuw, nalezen
-    'c.yard.a.why': "السؤال أين تذهب: الحاوية، وأين هي.", // nieuw, nalezen
-    'c.hazardous.a.why': "السؤال ماذا في الداخل: غير معروف، لذلك توضع جانباً.", // nieuw, nalezen
-    'c.baler.a.why': "السؤال هل يُسمح بالنظر: لا، وما الذي يأتي أولاً.", // nieuw, nalezen
-    'c.shovel.a.why': "السؤال هل يُسمح بالمرور: فقط عندما يرى السائق المارّ.", // nieuw, nalezen
-    'c.nappies.a.why': "السؤال متى: الوقت، وأين هو مكتوب.", // nieuw, nalezen
-    'c.mealtime.a.why': "السؤال هل يُسمح له: لا، والسبب، وأين يُنظر.", // nieuw, nalezen
-    'c.naptime.a.why': "السؤال هل نامت: نعم، منذ متى، وأن هناك نظرة أخرى.", // nieuw, nalezen
-    'c.playtime.a.why': "طفل يسأل هل يُسمح له أن يلعب: نعم، أين، وماذا بعد ذلك.", // nieuw, nalezen
-    'c.pickup.a.why': "السؤال من يأخذه: الشخص، وأن اسمها في القائمة.", // nieuw, nalezen
-    'c.childsafety.a.why': "السؤال هل سقطت: نعم، ما عندها، وبمن يكون الاتصال.", // nieuw, nalezen
-    'c.sickchild.a.why': "السؤال كيف حاله: ما يُرى، وما العمل.", // nieuw, nalezen
-    'c.grouprules.a.why': "السؤال هل يُسمح بالخروج بشكل فردي: نعم، لكن بعد إخبار زميل.", // nieuw, nalezen
+    'c.mowing.a.why': "السؤال هل يُسمح بأخذها: نعم، وما الذي يأتي أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.a.why': "السؤال أيّ أغصان: الميتة فقط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.a.why': "السؤال كم الارتفاع: حتى الخطّ، لا أقلّ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.a.why': "السؤال هل يُسمح: ليس بعد، وما الذي يأتي أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.a.why': "السؤال هل هي عشبة ضارّة: لا، وماذا يُفعل بها.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.a.why': "السؤال أين توضع: المكان في حوض الزهور.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.a.why': "السؤال هل يمكن العبور: لا، الانتظار، والسبب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.a.why': "ساكن يسأل متى: الجواب غير معروف، ومن يعرفه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.a.why': "زائر عنده موعد: لحظة، والاتصال به.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.a.why': "السؤال أين يوضع المعطف: المكان، وأين هو.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.a.why': "السؤال لمن هو: القسم، والطابق.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.a.why': "السؤال في أي ساعة: الوقت، وما يجب عمله.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.a.why': "السؤال لماذا الجو بارد: ما المعطّل، ومتى تأتي المساعدة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.a.why': "السؤال هل يصفّر: نعم، والسبب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.a.why': "السؤال إلى أين يذهب: الغرفة، وأين يُنظر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.a.why': "السؤال هل بقي أحد في الداخل: لا، وما يحدث الآن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.a.why': "السؤال هل كان هناك شيء: نعم، ماذا، وأين.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.a.why': "طلب الدخول بدون بطاقة: عذراً، ليس بدون بطاقة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.a.why': "السؤال ماذا يظهر: من، وأين، وما العمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.a.why': "السؤال ماذا يكون في التقرير: ماذا، وأين، ومتى.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.a.why': "السؤال هل الجميع في الخارج: لا، وكم شخصاً ناقصاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.a.why': "السؤال أين جهاز AED: المكان، وما بجانبه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.a.why': "السؤال هل يُسمح بتفتيش حقيبة: لا، ومن يفعل ذلك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.a.why': "السؤال لماذا لا: السبب، بهدوء.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.a.why': "السؤال عن الساعة: لا، والقاعدة وراء ذلك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.a.why': "السؤال هل يمكن وضعهما معاً: لا، والسبب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.a.why': "السؤال لماذا تصفّر: السبب، وما العمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.a.why': "السؤال ما العمل: لمن تُعرض.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.a.why': "السؤال كم: الوزن، وأين يُنظر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.a.why': "السؤال أي تاريخ: متى، وأين يُنظر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.a.why': "السؤال هل هو نظيف: ليس بعد، وما الذي بقي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.a.why': "السؤال لماذا: حتى نعرف أن الطعام آمن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.a.why': "السؤال هل يُسمح بالركوب في الخلف: لا، وأين يكون الركوب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.a.why': "طلب المساعدة: نعم، مكان الوقوف، وما العمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.a.why': "السؤال أين تذهب: الحاوية، والسبب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.a.why': "السؤال ما العمل بعد الجرح: الغسل، والإخبار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.a.why': "السؤال أين تذهب: الحاوية، وأين هي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.a.why': "السؤال ماذا في الداخل: غير معروف، لذلك توضع جانباً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.a.why': "السؤال هل يُسمح بالنظر: لا، وما الذي يأتي أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.a.why': "السؤال هل يُسمح بالمرور: فقط عندما يرى السائق المارّ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.a.why': "السؤال متى: الوقت، وأين هو مكتوب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.a.why': "السؤال هل يُسمح له: لا، والسبب، وأين يُنظر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.a.why': "السؤال هل نامت: نعم، منذ متى، وأن هناك نظرة أخرى.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.a.why': "طفل يسأل هل يُسمح له أن يلعب: نعم، أين، وماذا بعد ذلك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.a.why': "السؤال من يأخذه: الشخص، وأن اسمها في القائمة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.a.why': "السؤال هل سقطت: نعم، ما عندها، وبمن يكون الاتصال.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.a.why': "السؤال كيف حاله: ما يُرى، وما العمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.a.why': "السؤال هل يُسمح بالخروج بشكل فردي: نعم، لكن بعد إخبار زميل.", // nieuw, nalezen // nagelezen AI 28 nov
     // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
-    'c.sanitary.a.why': "السؤال هل انتهى العمل: ليس بعد، والسبب.", // nieuw, nalezen
-    'c.hotelroom.a.why': "السؤال كم بقي: العدد، ومتى ينتهي العمل.", // nieuw, nalezen
-    'c.dosing.a.why': "طلب وضع مادة أكثر: لا، الأكثر ليس أفضل، وما يُستعمل.", // nieuw, nalezen
-    'c.officenight.a.why': "السؤال هل العمل بدون أحد آخر: نعم، وستُرسل رسالة.", // nieuw, nalezen
-    'c.knives.a.why': "طلب التقطيع: نعم يا شيف، وسؤال عن الطريقة.", // nieuw, nalezen
-    'c.rawcooked.a.why': "السؤال هل هي خالية من الغلوتين: لا يقين، لذلك النظر في القائمة.", // nieuw, nalezen
-    'c.pass.a.why': "السؤال أين الطعام: على منضدة التقديم، وسيُحضر الآن.", // nieuw, nalezen
-    'c.bill.a.why': "طلب الدفع بشكل منفصل: نعم، وإحضار جهاز الدفع.", // nieuw, nalezen
-    'c.washing.a.why': "المستفيد من الرعاية يقول لا: لا بأس، وعرض شيء آخر.", // nieuw, nalezen
-    'c.observing.a.why': "السؤال هل هناك شيء خاص: نعم، وما هو بالضبط.", // nieuw, nalezen
-    'c.homecare.a.why': "السؤال من هناك: تحية، ومن القادم، وطلب الإذن بالدخول.", // nieuw, nalezen
-    'c.liftaids.a.why': "طلب القيام بذلك بدون مساعدة: نعم، مع ملاءة الانزلاق، وإحضارها.", // nieuw, nalezen
-    'c.returns.a.why': "طلب إرجاع منتج: نعم، وسؤال عن الإيصال.", // nieuw, nalezen
-    'c.facing.a.why': "السؤال هل انتهى العمل: تقريباً، وما بقي.", // nieuw, nalezen
-    'c.shrink.a.why': "طلب النظر في الحقيبة: نعم، وإظهار الإيصال.", // nieuw, nalezen
-    'c.shopclose.a.why': "طلب الدخول: عذراً، مغلق، ومتى يفتح المتجر من جديد.", // nieuw, nalezen
-    'c.hirer.a.why': "طلب البدء في مكان جديد: نعم، وسؤال عن الوقت.", // nieuw, nalezen
-    'c.phases.a.why': "خبر توقّف العمل: حسناً، وطلب عمل آخر.", // nieuw, nalezen
-    'c.deductions.a.why': "خبر عن خصم: السؤال هل هو مسموح، والتحقّق.", // nieuw, nalezen
-    'c.agencyhome.a.why': "طلب المغادرة قريباً: هذا قصير، وطلب النصيحة أولاً.", // nieuw, nalezen
+    'c.sanitary.a.why': "السؤال هل انتهى العمل: ليس بعد، والسبب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.a.why': "السؤال كم بقي: العدد، ومتى ينتهي العمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.a.why': "طلب وضع مادة أكثر: لا، الأكثر ليس أفضل، وما يُستعمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.a.why': "السؤال هل العمل بدون أحد آخر: نعم، وستُرسل رسالة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.a.why': "طلب التقطيع: نعم يا شيف، وسؤال عن الطريقة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.a.why': "السؤال هل هي خالية من الغلوتين: لا يقين، لذلك النظر في القائمة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.a.why': "السؤال أين الطعام: على منضدة التقديم، وسيُحضر الآن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.a.why': "طلب الدفع بشكل منفصل: نعم، وإحضار جهاز الدفع.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.a.why': "المستفيد من الرعاية يقول لا: لا بأس، وعرض شيء آخر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.a.why': "السؤال هل هناك شيء خاص: نعم، وما هو بالضبط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.a.why': "السؤال من هناك: تحية، ومن القادم، وطلب الإذن بالدخول.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.a.why': "طلب القيام بذلك بدون مساعدة: نعم، مع ملاءة الانزلاق، وإحضارها.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.a.why': "طلب إرجاع منتج: نعم، وسؤال عن الإيصال.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.a.why': "السؤال هل انتهى العمل: تقريباً، وما بقي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.a.why': "طلب النظر في الحقيبة: نعم، وإظهار الإيصال.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.a.why': "طلب الدخول: عذراً، مغلق، ومتى يفتح المتجر من جديد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.a.why': "طلب البدء في مكان جديد: نعم، وسؤال عن الوقت.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.a.why': "خبر توقّف العمل: حسناً، وطلب عمل آخر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.a.why': "خبر عن خصم: السؤال هل هو مسموح، والتحقّق.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.a.why': "طلب المغادرة قريباً: هذا قصير، وطلب النصيحة أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
     // The basis units at four lessons (23 November 2026).
-    'c.roster.a.why': "خبر تغيّر الجدول: حسناً، وأي يوم.", // nieuw, nalezen
-    'c.breaks.a.why': "السؤال عن استراحة الغداء: الوقت، وكم تدوم.", // nieuw, nalezen
-    'c.wound.a.why': "شخص سيُغمى عليه: جعله يستلقي، وإحضار المساعدة.", // nieuw, nalezen
-    'c.callhelp.a.why': "السؤال هل يستجيب: لا، لا يتفاعل.", // nieuw, nalezen
-    'c.vacancy.a.why': "السؤال عن سبب الاتصال: الوظيفة الشاغرة، وهل ما زالت متاحة؟", // nieuw, nalezen
-    'c.result.a.why': "خبر الرفض: رد هادئ، وسؤال عن السبب.", // nieuw, nalezen
-    'c.residence.a.why': "خبر قرب انتهاء التصريح: طلب تصريح جديد فوراً.", // nieuw, nalezen
-    'c.newhome.a.why': "السؤال عن السكن: مسكن جديد، والعنوان الجديد.", // nieuw, nalezen
-    'c.payparts.a.why': "السؤال عن الرقم الوظيفي: مكانه في قسيمة الراتب.", // nieuw, nalezen
-    'c.latepay.a.why': "خبر أن المال يأتي لاحقاً: طلب ذلك على ورق.", // nieuw, nalezen
-    'c.holiday.a.why': "طلب الإجازة في مايو: تفضيل يوليو، والسبب.", // nieuw, nalezen
-    'c.special.a.why': "السؤال عن إجازة الولادة: نعم، ومتى.", // nieuw, nalezen
-    'c.unwell.a.why': "السؤال عن الحال: لا، وطلب الذهاب إلى البيت.", // nieuw, nalezen
-    'c.injury.a.why': "طلب إفادة: نعم، ونسخة شخصية.", // nieuw, nalezen
-    'c.debt.a.why': "طلب البقاء حتى دفع الدَّين: غير مسموح، وطلب المساعدة.", // nieuw, nalezen
-    'c.inspection.a.why': "عرض الكلام: نعم، لكن بعيداً عن سمع المدير.", // nieuw, nalezen
-    'c.carpool.a.why': "السؤال عمّن يقود: أنا، ووقت المرور لأخذ الآخر.", // nieuw, nalezen
-    'c.train.a.why': "السؤال عن سبب التأخير: القطار، ورسالة أُرسلت.", // nieuw, nalezen
-    'c.checklist.a.why': "السؤال عن نسيان شيء: نظرة أخرى في القائمة.", // nieuw, nalezen
-    'c.leavesite.a.why': "السؤال عن آخر من يغادر: نعم، كل شيء مطفأ والباب مقفل.", // nieuw, nalezen
-    'c.stagedays.a.why': "السؤال عن سبب الغياب: مرض، واتصال بالجهتين.", // nieuw, nalezen
-    'c.stageend.a.why': "السؤال عن الخطط: الشهادة أولاً، ثم العمل.", // nieuw, nalezen
-    'c.neighbours.a.why': "جارة جديدة تسلّم: سعادة بالتعارف، وذكر الاسم.", // nieuw, nalezen
-    'c.join.a.why': "السؤال عن الحضور: نعم، ورغبة في الكلام مع المعلّم.", // nieuw, nalezen
-    'c.workphotos.a.why': "طلب صورة للإنترنت: رفض مهذّب.", // nieuw, nalezen
-    'c.device.a.why': "السؤال عن تطبيق جديد: سؤال قسم تقنية المعلومات أولاً.", // nieuw, nalezen
+    'c.roster.a.why': "خبر تغيّر الجدول: حسناً، وأي يوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.a.why': "السؤال عن استراحة الغداء: الوقت، وكم تدوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.a.why': "شخص سيُغمى عليه: جعله يستلقي، وإحضار المساعدة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.a.why': "السؤال هل يستجيب: لا، لا يتفاعل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.a.why': "السؤال عن سبب الاتصال: الوظيفة الشاغرة، وهل ما زالت متاحة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.a.why': "خبر الرفض: رد هادئ، وسؤال عن السبب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.a.why': "خبر قرب انتهاء التصريح: طلب تصريح جديد فوراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.a.why': "السؤال عن السكن: مسكن جديد، والعنوان الجديد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.a.why': "السؤال عن الرقم الوظيفي: مكانه في قسيمة الراتب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.a.why': "خبر أن المال يأتي لاحقاً: طلب ذلك على ورق.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.a.why': "طلب الإجازة في مايو: تفضيل يوليو، والسبب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.a.why': "السؤال عن إجازة الولادة: نعم، ومتى.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.a.why': "السؤال عن الحال: لا، وطلب الذهاب إلى البيت.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.a.why': "طلب إفادة: نعم، ونسخة شخصية.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.a.why': "طلب البقاء حتى دفع الدَّين: غير مسموح، وطلب المساعدة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.a.why': "عرض الكلام: نعم، لكن بعيداً عن سمع المدير.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.a.why': "السؤال عمّن يقود: أنا، ووقت المرور لأخذ الآخر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.a.why': "السؤال عن سبب التأخير: القطار، ورسالة أُرسلت.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.a.why': "السؤال عن نسيان شيء: نظرة أخرى في القائمة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.a.why': "السؤال عن آخر من يغادر: نعم، كل شيء مطفأ والباب مقفل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.a.why': "السؤال عن سبب الغياب: مرض، واتصال بالجهتين.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.a.why': "السؤال عن الخطط: الشهادة أولاً، ثم العمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.a.why': "جارة جديدة تسلّم: سعادة بالتعارف، وذكر الاسم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.a.why': "السؤال عن الحضور: نعم، ورغبة في الكلام مع المعلّم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.a.why': "طلب صورة للإنترنت: رفض مهذّب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.a.why': "السؤال عن تطبيق جديد: سؤال قسم تقنية المعلومات أولاً.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Veiligheid op het werk" and the VOG (23 November 2026).
-    'c.safetysigns.a.why': "السؤال عن معنى لافتة: انتباه، ونوع اللافتة.", // nieuw, nalezen
-    'c.substances.a.why': "السؤال هل هي سامّة: لا تخمين، بل بحث عن الجواب.", // nieuw, nalezen
-    'c.firefight.a.why': "خبر عن حريق: إنه صغير، لذلك إحضار الطفاية.", // nieuw, nalezen
-    'c.permitwork.a.why': "السؤال عمّن يبقى في الخارج: أنا، والمهمّة.", // nieuw, nalezen
-    'c.vog.a.why': "السؤال عن VOG: ليس بعد، وما الذي يُنتظر.", // nieuw, nalezen
+    'c.safetysigns.a.why': "السؤال عن معنى لافتة: انتباه، ونوع اللافتة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.a.why': "السؤال هل هي سامّة: لا تخمين، بل بحث عن الجواب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.a.why': "خبر عن حريق: إنه صغير، لذلك إحضار الطفاية.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.a.why': "السؤال عمّن يبقى في الخارج: أنا، والمهمّة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.a.why': "السؤال عن VOG: ليس بعد، وما الذي يُنتظر.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Operator in de procesindustrie" (23 November 2026).
-    'c.plantround.a.why': "السؤال عن الإنذار: ما المرتفع جداً، وأين.", // nieuw, nalezen
-    'c.plantfault.a.why': "السؤال هل يمكن التشغيل: لا، ما زال عليه قفل.", // nieuw, nalezen
-    'c.shiftwork.a.why': "السؤال عمّا حدث: العطل، وأين هو مكتوب.", // nieuw, nalezen
-    'c.heatdust.a.why': "السؤال عن الهاتف: لا، بسبب الخطر هنا.", // nieuw, nalezen
+    'c.plantround.a.why': "السؤال عن الإنذار: ما المرتفع جداً، وأين.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.a.why': "السؤال هل يمكن التشغيل: لا، ما زال عليه قفل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.a.why': "السؤال عمّا حدث: العطل، وأين هو مكتوب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.a.why': "السؤال عن الهاتف: لا، بسبب الخطر هنا.", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (26 November 2026).
-    'c.debthelp.a.why': "خبر أن الفاتورة لم تُدفع: نعم، وطلب خطة تقسيط.", // nieuw, nalezen
-    'c.taxes.a.why': "خبر عن ظرف أزرق: شكر، وفتحه فوراً.", // nieuw, nalezen
-    'c.discrimination.a.why': "السؤال عن الحال: لا، وسيتمّ التبليغ.", // nieuw, nalezen
-    'c.union.a.why': "السؤال عن سبب العضوية: النقابة تدافع عن العضو.", // nieuw, nalezen
-    'c.kiln.a.why': "السؤال عن التقاط الشظايا باليد: لا، بالفرشاة والمجرفة الصغيرة.", // nieuw, nalezen
-    'c.mixlab.a.why': "السؤال هل تمّت الموافقة على الدفعة: ليس بعد، المختبر يفحصها.", // nieuw, nalezen
-    'c.firstweeks.a.why': "السؤال عن الجولة التعريفية: تقريباً كل شيء، وسؤال واحد.", // nieuw, nalezen
-    'c.orderpick.a.why': "طلب قيادة رافعة reachtruck: لا، لا تدريب عليها.", // nieuw, nalezen
+    'c.debthelp.a.why': "خبر أن الفاتورة لم تُدفع: نعم، وطلب خطة تقسيط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.a.why': "خبر عن ظرف أزرق: شكر، وفتحه فوراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.a.why': "السؤال عن الحال: لا، وسيتمّ التبليغ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.a.why': "السؤال عن سبب العضوية: النقابة تدافع عن العضو.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.a.why': "السؤال عن التقاط الشظايا باليد: لا، بالفرشاة والمجرفة الصغيرة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.a.why': "السؤال هل تمّت الموافقة على الدفعة: ليس بعد، المختبر يفحصها.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.a.why': "السؤال عن الجولة التعريفية: تقريباً كل شيء، وسؤال واحد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.a.why': "طلب قيادة رافعة reachtruck: لا، لا تدريب عليها.", // nieuw, nalezen // nagelezen AI 28 nov
+    // four new lessons (27 November 2026).
+    'd.appraisal.a.why': "السؤال عن الهدف: شيء واضح واحد يُراد تعلّمه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.a.why': "السؤال عن الاستمارة: تقريباً، وأين التوقيع.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.a.why': "طلب الاسم والرقم: الاسم، وطلب معاودة الاتصال.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.a.why': "السؤال عن آخر زيارة: متى، وطلب فحص دوري.", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 

@@ -95,7 +95,9 @@ describe('Herhaal vandaag rotates sentences and chats', () => {
     // take half the places, so the sentences of the lessons that went well come back later.
     // 23 November 2026: "Als het misgaat" and "Tijd en rooster" (both in the first 16 units) got two
     // lessons each (12 sentences more): 64% by 12 weeks, so the limit is 0.6.
-    expect(sentences.size / allSentences).toBeGreaterThan(0.6);
+    // 27 November 2026: "Een formulier invullen" (l.forms) in "Getallen en gegevens", one of the first
+    // 16 units (3 sentences more): 58% by 12 weeks, so the limit is 0.55 (lowered; the same effect).
+    expect(sentences.size / allSentences).toBeGreaterThan(0.55);
     // After 6 weeks more than half of the chats came back (a weak lesson keeps the chat to itself:
     // with "Klanken" in the first 16 units 58%), after 12 weeks nearly all.
     expect(chatsBy42.size / allChats).toBeGreaterThan(0.55);

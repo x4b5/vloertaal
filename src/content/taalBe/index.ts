@@ -88,6 +88,9 @@ export const BE_LESSON_TODO: readonly string[] = [
   // The four rights lessons of 26 November 2026 (debts, tax and allowances, discrimination, the union
   // and the works council): Dutch bodies and rules, a Belgian version with Belgian sources still to write.
   'l.debthelp', 'l.taxes', 'l.discrimination', 'l.union',
+  // Two of the four new lessons of 27 November 2026: the form (the BSN and who may ask for it) and the
+  // dentist (Dutch health insurance): a Belgian version with Belgian sources still to write.
+  'l.forms', 'l.dentist',
 ];
 
 /** Every Belgian file written so far. */

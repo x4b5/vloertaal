@@ -9,7 +9,7 @@ export const ar: Gloss = {
     "be.c.je": "«je» أم «u»؟", // = c.je
     "be.c.je.b": "في فلاندرن يقول كثير من الناس «u» في العمل، خاصة في البداية: للمدير أو للزبون أو لشخص أكبر سناً. الزملاء يقولون لبعضهم غالباً «je»، وفي الكلام يُسمع أيضاً «ge». عند الشك، الأفضل البدء بـ«u» والاستماع إلى ما يفعله الآخرون.", // nieuw, nalezen
     "be.c.je.p": "هل يمكنني أن أقول لك «je»؟", // = c.je.p
-    "be.c.je.s": "مشرفتك الجديدة تقول: «Zeg maar je, hoor!» ماذا تقصد مشرفتك بذلك؟", // = c.je.s
+    "be.c.je.s": "مشرفتك الجديدة تقول: «Zeg maar je, hoor!». ماذا تقصد مشرفتك بذلك؟", // nieuw, nalezen (AI-correctie 28 nov 2026) = c.je.s
     "be.c.je.o1": { m: "تريدك أن تقول لها «je».", f: "تريدك أن تقولي لها «je»." }, // = c.je.o1
     "be.c.je.o2": { m: "تطلب منك أن تقول شيئاً.", f: "تطلب منكِ أن تقولي شيئاً." }, // = c.je.o2
     "be.c.je.o3": { m: "تريدك أن تتكلم بأدب أكثر.", f: "تريدك أن تتكلمي بأدب أكثر." }, // = c.je.o3
@@ -33,7 +33,7 @@ export const fa: Gloss = {
     "be.c.je": "«je» یا «u»؟", // = c.je
     "be.c.je.b": "در فلاندر خیلی‌ها سر کار «u» می‌گویند، مخصوصاً اول کار: به رئیس، به مشتری یا به آدم مسن‌تر. همکاران به هم اغلب «je» می‌گویند و در حرف زدن «ge» هم می‌شنوی. اگر مطمئن نیستی، با «u» شروع کن و گوش کن دیگران چه می‌کنند.", // nieuw, nalezen
     "be.c.je.p": "می‌توانم به تو «je» بگویم؟", // = c.je.p
-    "be.c.je.s": "سرپرست جدیدت می‌گوید: «Zeg maar je, hoor!» منظورش چیست؟", // = c.je.s
+    "be.c.je.s": "سرپرست جدیدت می‌گوید: «Zeg maar je, hoor!». منظورش چیست؟", // nieuw, nalezen (AI-correctie 28 nov 2026) = c.je.s
     "be.c.je.o1": "می‌خواهد به او «je» بگویی.", // = c.je.o1
     "be.c.je.o2": "از تو می‌خواهد چیزی بگویی.", // = c.je.o2
     "be.c.je.o3": "می‌خواهد مؤدبانه‌تر حرف بزنی.", // = c.je.o3
@@ -45,7 +45,7 @@ export const prs: Gloss = {
     "be.c.je": "«je» یا «u»؟", // = c.je
     "be.c.je.b": "در فلاندر بسیاری از مردم سر کار «u» می‌گویند، خصوصاً در اول: به آمر، به مشتری یا به یک شخص مسن‌تر. همکاران به یکدیگر اکثراً «je» می‌گویند و در گپ زدن «ge» را هم می‌شنوید. اگر مطمئن نیستید، با «u» شروع کنید و گوش کنید که دیگران چه می‌کنند.", // nieuw, nalezen
     "be.c.je.p": "می‌توانم به شما «je» بگویم؟", // = c.je.p
-    "be.c.je.s": "سرپرست نو شما می‌گوید: «Zeg maar je, hoor!» منظورش چیست؟", // = c.je.s
+    "be.c.je.s": "سرپرست نو شما می‌گوید: «Zeg maar je, hoor!». منظورش چیست؟", // nieuw, nalezen (AI-correctie 28 nov 2026) = c.je.s
     "be.c.je.o1": "او می‌خواهد که به او «je» بگویید.", // = c.je.o1
     "be.c.je.o2": "او از شما می‌خواهد که چیزی بگویید.", // = c.je.o2
     "be.c.je.o3": "او می‌خواهد که مؤدبانه‌تر گپ بزنید.", // = c.je.o3
@@ -117,7 +117,7 @@ export const es: Gloss = {
     "be.c.je": "¿“Je” o “u”?", // = c.je
     "be.c.je.b": "En Flandes mucha gente dice «u» en el trabajo, sobre todo al principio: al jefe, a un cliente o a una persona mayor. Entre compañeros se dice a menudo «je», y al hablar también oyes «ge». Si tienes dudas, empieza con «u» y escucha lo que hacen los demás.", // nieuw, nalezen
     "be.c.je.p": "¿Puedo decirte “je”?", // = c.je.p
-    "be.c.je.s": "Tu nueva encargada dice: “Zeg maar je, hoor!” ¿Qué quiere decir?", // = c.je.s
+    "be.c.je.s": "Tu nueva encargada dice: “Zeg maar je, hoor!”. ¿Qué quiere decir?", // nieuw, nalezen (AI-correctie 28 nov 2026) = c.je.s
     "be.c.je.o1": "Quiere que le digas “je”.", // = c.je.o1
     "be.c.je.o2": "Te pide que digas algo.", // = c.je.o2
     "be.c.je.o3": "Quiere que hables con más educación.", // = c.je.o3
@@ -166,7 +166,7 @@ export const so: Gloss = {
     "be.c.je": "“Je” mise “u”?", // nieuw, nalezen
     "be.c.je.b": "Flanders dad badan ayaa shaqada ku yidhaahda “u”, gaar ahaan bilowga: madaxa, macmiilka ama qof ka weyn. Saaxiibada shaqadu badanaa midba midka kale wuxuu ku yidhaahdaa “je”, hadalka dhexdiisana waxaad sidoo kale maqlaysaa “ge”. Haddii aadan hubin, ku bilow “u” oo dhegayso waxa kuwa kale sameeyaan.", // nieuw, nalezen
     "be.c.je.p": "Ma kugu odhan karaa “je”?", // nieuw, nalezen
-    "be.c.je.s": "Madaxaaga cusub (naag) ayaa leh: “Zeg maar je, hoor!” Maxay ula jeeddaa?", // nieuw, nalezen
+    "be.c.je.s": "Madaxaaga cusub (haweeney) ayaa leh: “Zeg maar je, hoor!” Maxay ula jeeddaa?", // nieuw, nalezen (AI-correctie 28 nov 2026)
     "be.c.je.o1": "Waxay rabtaa inaad ku tidhaahdo “je”.", // nieuw, nalezen
     "be.c.je.o2": "Waxay kaa codsanaysaa inaad wax tidhaahdo.", // nieuw, nalezen
     "be.c.je.o3": "Waxay rabtaa inaad si edeb badan u hadasho.", // nieuw, nalezen

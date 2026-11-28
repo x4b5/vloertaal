@@ -30,7 +30,7 @@ const t: CultureTranslation = {
     's.roundsounds.3': 'هذا المعطف غالٍ أكثر من اللازم.',
     'c.roundsounds.q': 'هل الباب مفتوح؟',
     'c.roundsounds.a': 'لا، إنه مغلق.',
-    'c.roundsounds.a.why': 'السؤال: هل الباب مفتوح؟ هذا الرد يقول: لا.',
+    'c.roundsounds.a.why': 'السؤال عمّا إذا كان الباب مفتوحاً، وهذا الرد يقول: لا.', // nieuw, nalezen (AI-correctie 28 nov 2026)
     'l.pbgk': "p أو b، g، k أو h", // nagelezen (2e lezing)
     'w.kl.pak': 'البدلة',
     'w.kl.bak': 'الصندوق، السلة',
@@ -45,21 +45,21 @@ const t: CultureTranslation = {
     'c.pbgk.a': 'بخير، لكنني أشعر بالبرد.',
     'c.pbgk.a.why': 'السؤال عن الحال: جواب، ثم وصف الشعور.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     // "Hoe zeg je het?" (src/content/klankMond.ts): how the mouth makes each sound.
-    'k.uitleg.a': 'الفم مفتوح، أقلّ قليلًا من «aa». اللسان إلى الخلف. الصوت قصير.', // nieuw, nalezen
-    'k.uitleg.aa': 'الفم مفتوح على وسعه. الشفتان مرتخيتان. اللسان منخفض ومسطّح.', // nieuw, nalezen
-    'k.uitleg.e': 'الفم نصف مفتوح، أكثر من «ee». الشفتان مرتخيتان. الصوت قصير.', // nieuw, nalezen
-    'k.uitleg.ee': 'الفم نصف مفتوح. الشفتان ممدودتان كما في الابتسامة. طرف اللسان يلمس الأسنان السفلى.', // nieuw, nalezen
-    'k.uitleg.i': 'مثل «ie»، لكن الفم مفتوح أكثر قليلًا ومرتخٍ. الصوت قصير.', // nieuw, nalezen
-    'k.uitleg.ie': 'الفم شبه مغلق. الشفتان ممدودتان كما في الابتسامة. اللسان مرتفع وإلى الأمام.', // nieuw, nalezen
-    'k.uitleg.o': 'الفم مفتوح. الشفتان مستديرتان قليلًا. اللسان إلى الخلف. الصوت قصير.', // nieuw, nalezen
-    'k.uitleg.oo': 'الشفتان مستديرتان. الفم نصف مفتوح. في النهاية تصغر الشفتان.', // nieuw, nalezen
-    'k.uitleg.u': 'الشفتان مستديرتان قليلًا، غير مشدودتين. اللسان إلى الأمام. الصوت قصير.', // nieuw, nalezen
-    'k.uitleg.uu': 'الشفتان مستديرتان ومشدودتان، كما للقُبلة. اللسان إلى الأمام، كما في «ie».', // nieuw, nalezen
-    'k.uitleg.oe': 'الشفتان مستديرتان ومشدودتان، إلى الأمام كثيرًا. تبقى فتحة صغيرة فقط. اللسان يبقى في خلف الفم.', // nieuw, nalezen
-    'k.uitleg.eu': 'الفم نصف مفتوح. الشفتان مستديرتان، لكن غير مشدودتين. اللسان إلى الأمام، كما في «ee».', // nieuw, nalezen
-    'k.uitleg.ui': 'في البداية: الفم نصف مفتوح والشفتان مستديرتان. ثم تصغر الشفتان حتى «uu». تبقى الشفتان مستديرتين.', // nieuw, nalezen
-    'k.uitleg.ij': 'في البداية: الفم نصف مفتوح والشفتان ممدودتان. ثم يكاد الفم ينغلق، حتى «ie».', // nieuw, nalezen
-    'k.uitleg.ou': 'في البداية: الفم مفتوح. ثم تصبح الشفتان صغيرتين ومستديرتين، حتى «oe».', // nieuw, nalezen
+    'k.uitleg.a': 'الفم مفتوح، أقلّ قليلًا من «aa». اللسان إلى الخلف. الصوت قصير.', // nieuw, nalezen // nagelezen AI 28 nov
+    'k.uitleg.aa': 'الفم مفتوح على وسعه. الشفتان مرتخيتان. اللسان منخفض ومسطّح.', // nieuw, nalezen // nagelezen AI 28 nov
+    'k.uitleg.e': 'الفم نصف مفتوح، أكثر من «ee». الشفتان مرتخيتان. الصوت قصير.', // nieuw, nalezen // nagelezen AI 28 nov
+    'k.uitleg.ee': 'الفم نصف مفتوح. الشفتان ممدودتان كما في الابتسامة. طرف اللسان يلمس الأسنان السفلى.', // nieuw, nalezen // nagelezen AI 28 nov
+    'k.uitleg.i': 'مثل «ie»، لكن الفم مفتوح أكثر قليلًا ومرتخٍ. الصوت قصير.', // nieuw, nalezen // nagelezen AI 28 nov
+    'k.uitleg.ie': 'الفم شبه مغلق. الشفتان ممدودتان كما في الابتسامة. اللسان مرتفع وإلى الأمام.', // nieuw, nalezen // nagelezen AI 28 nov
+    'k.uitleg.o': 'الفم مفتوح. الشفتان مستديرتان قليلًا. اللسان إلى الخلف. الصوت قصير.', // nieuw, nalezen // nagelezen AI 28 nov
+    'k.uitleg.oo': 'الشفتان مستديرتان. الفم نصف مفتوح. في النهاية تصغر الشفتان.', // nieuw, nalezen // nagelezen AI 28 nov
+    'k.uitleg.u': 'الشفتان مستديرتان قليلًا، غير مشدودتين. اللسان إلى الأمام. الصوت قصير.', // nieuw, nalezen // nagelezen AI 28 nov
+    'k.uitleg.uu': 'الشفتان مستديرتان ومشدودتان، كما للقُبلة. اللسان إلى الأمام، كما في «ie».', // nieuw, nalezen // nagelezen AI 28 nov
+    'k.uitleg.oe': 'الشفتان مستديرتان ومشدودتان، إلى الأمام كثيرًا. تبقى فتحة صغيرة فقط. اللسان يبقى في خلف الفم.', // nieuw, nalezen // nagelezen AI 28 nov
+    'k.uitleg.eu': 'الفم نصف مفتوح. الشفتان مستديرتان، لكن غير مشدودتين. اللسان إلى الأمام، كما في «ee».', // nieuw, nalezen // nagelezen AI 28 nov
+    'k.uitleg.ui': 'في البداية: الفم نصف مفتوح والشفتان مستديرتان. ثم تصغر الشفتان حتى «uu». تبقى الشفتان مستديرتين.', // nieuw, nalezen // nagelezen AI 28 nov
+    'k.uitleg.ij': 'في البداية: الفم نصف مفتوح والشفتان ممدودتان. ثم يكاد الفم ينغلق، حتى «ie».', // nieuw, nalezen // nagelezen AI 28 nov
+    'k.uitleg.ou': 'في البداية: الفم مفتوح. ثم تصبح الشفتان صغيرتين ومستديرتين، حتى «oe».', // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 export default t;

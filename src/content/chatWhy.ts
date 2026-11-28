@@ -306,6 +306,11 @@ const reasons: Record<string, string> = {
   'c.mixlab.a': 'Asked if the batch is approved: not yet, the lab is testing it.',
   'c.firstweeks.a': 'Asked about the tour: almost everything, and one question.',
   'c.orderpick.a': 'Asked to drive the reach truck: no, no training for it.',
+  // The four new lessons of 27 November 2026.
+  'd.appraisal.a': 'Asked about your goal: one clear thing you want to learn.',
+  'c.forms.a': 'Asked about the form: almost, and where to sign.',
+  'c.voicemail.a': 'Asked for your name and number: your name, and a call back.',
+  'c.dentist.a': 'Asked about your last visit: when, and you ask for a check-up.',
 };
 
 /** Why the right reply of a chat fits, with its translation id; undefined when there is none. */

@@ -5,189 +5,189 @@ import type { CultureTranslation } from '../culture/types';
 const t: CultureTranslation = {
   ui: {
     kunJeNu: "حالا چه کارهایی می‌توانید بکنید؟", // nieuw, nalezen // nagelezen AI 31 okt
-    kunNote: "سطحِ کنار هر جمله فقط راهنماست، نه یک سطح رسمی.", // nieuw, nalezen
+    kunNote: "سطحِ کنار هر جمله فقط راهنماست، نه یک سطح رسمی.", // nieuw, nalezen // nagelezen AI 28 nov
     coachCanDo: "تعداد جمله‌های «می‌توانم …» از موضوع‌هایی که تمام کرده‌اید", // nieuw, nalezen // nagelezen AI 31 okt
-    kunLuisteren: "شنیدن", // nieuw, nalezen
-    kunSpreken: "صحبت کردن", // nieuw, nalezen
-    kunLezen: "خواندن", // nieuw, nalezen
-    kunSchrijven: "نوشتن", // nieuw, nalezen
-    kunGesprekken: "گفتگو", // nieuw, nalezen
+    kunLuisteren: "شنیدن", // nieuw, nalezen // nagelezen AI 28 nov
+    kunSpreken: "صحبت کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    kunLezen: "خواندن", // nieuw, nalezen // nagelezen AI 28 nov
+    kunSchrijven: "نوشتن", // nieuw, nalezen // nagelezen AI 28 nov
+    kunGesprekken: "گفتگو", // nieuw, nalezen // nagelezen AI 28 nov
   },
   gloss: {
-    'kjn.u.firstday.1': "می‌توانم خودم را به یک همکار معرفی کنم.", // nieuw, nalezen
-    'kjn.u.firstday.2': "می‌توانم بپرسم پیش چه کسی باید خودم را معرفی کنم.", // nieuw, nalezen
-    'kjn.u.help.1': "می‌توانم بگویم که متوجه نمی‌شوم.", // nieuw, nalezen
-    'kjn.u.help.2': "می‌توانم از کسی بخواهم آهسته‌تر حرف بزند.", // nieuw, nalezen
-    'kjn.u.do.1': "می‌توانم دستور کوتاهی مثل «Zet het neer» را بفهمم.", // nieuw, nalezen
-    'kjn.u.do.2': "می‌توانم بگویم که کارم تمام شده.", // nieuw, nalezen
-    'kjn.u.tools.1': "می‌توانم از کسی بخواهم آن را بنویسد یا نشانم بدهد.", // nieuw, nalezen
-    'kjn.u.tools.2': "می‌توانم کاری را که از من خواسته‌اند دوباره بگویم تا مطمئن شوم درست فهمیده‌ام.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'kjn.u.tools.3': "می‌توانم بگویم که می‌خواهم هلندی تمرین کنم.", // nieuw, nalezen
-    'kjn.u.data.1': "می‌توانم اسمم را حرف‌به‌حرف بگویم.", // nieuw, nalezen
-    'kjn.u.data.2': "می‌توانم بگویم چه روزهایی می‌توانم کار کنم.", // nieuw, nalezen
-    'kjn.u.data.3': "می‌توانم یک تاریخ را وقتی می‌شنوم بفهمم.", // nieuw, nalezen
-    'kjn.u.sounds.1': "می‌توانم کلمه‌هایی مثل man و maan را از هم تشخیص بدهم.", // nieuw, nalezen
-    'kjn.u.sounds.2': "می‌توانم جمله‌های کوتاه با صداهای سخت را تکرار کنم.", // nieuw, nalezen
-    'kjn.u.safety.1': "می‌توانم هشداری مثل «Pas op!» را بفهمم.", // nieuw, nalezen
-    'kjn.u.safety.2': "می‌توانم بگویم که چیزی را هنوز یاد نگرفته‌ام.", // nieuw, nalezen
-    'kjn.u.emergency.1': "می‌توانم بپرسم کپسول آتش‌نشانی کجاست.", // nieuw, nalezen
-    'kjn.u.emergency.2': "می‌توانم یک حادثه را گزارش بدهم.", // nieuw, nalezen
-    'kjn.u.apply.1': "می‌توانم بگویم چه تجربه‌ای دارم.", // nieuw, nalezen
-    'kjn.u.apply.2': "می‌توانم در مصاحبهٔ کاری دربارهٔ خودم حرف بزنم.", // nieuw, nalezen
-    'kjn.u.contract.1': "می‌توانم بپرسم هفته‌ای چند ساعت کار می‌کنم.", // nieuw, nalezen
-    'kjn.u.contract.2': "می‌توانم بپرسم قراردادم موقت است یا دائمی.", // nieuw, nalezen
-    'kjn.u.contract.3': "می‌توانم بگویم کی می‌توانم کار کنم و کی نمی‌توانم.", // nieuw, nalezen
-    'kjn.u.grow.1': "می‌توانم بگویم چه مدرک‌ها و گواهی‌هایی دارم.", // nieuw, nalezen
-    'kjn.u.grow.2': "می‌توانم بگویم در چه کاری خوبم.", // nieuw, nalezen
-    'kjn.u.lost.1': "می‌توانم بگویم قراردادم تمام می‌شود.", // nieuw, nalezen
-    'kjn.u.lost.2': "می‌توانم بپرسم پول تعطیلاتم پرداخت می‌شود یا نه.", // nieuw, nalezen
-    'kjn.u.stage.1': "می‌توانم بپرسم مربی کارآموزی‌ام در شرکت کیست.", // nieuw, nalezen
-    'kjn.u.stage.2': "می‌توانم بازخورد و یک مثال بخواهم.", // nieuw, nalezen
-    'kjn.u.time.1': "می‌توانم بگویم شیفتم ساعت چند شروع می‌شود.", // nieuw, nalezen
-    'kjn.u.time.2': "می‌توانم بگویم که مریضم.", // nieuw, nalezen
-    'kjn.u.pay.1': "می‌توانم بگویم فیش حقوقی‌ام درست نیست.", // nieuw, nalezen
-    'kjn.u.pay.2': "می‌توانم کلمه‌هایی مثل bruto و netto را بخوانم.", // nieuw, nalezen
-    'kjn.u.leave.1': "می‌توانم مرخصی درخواست کنم.", // nieuw, nalezen
-    'kjn.u.leave.2': "می‌توانم بگویم که بچه‌ام مریض است.", // nieuw, nalezen
-    'kjn.u.contact.1': "می‌توانم تلفن کنم و بگویم چه کسی هستم.", // nieuw, nalezen
-    'kjn.u.contact.2': "می‌توانم از کسی بخواهم دوباره به من زنگ بزند.", // nieuw, nalezen
-    'kjn.u.contact.3': "می‌توانم یک پیام کوتاه به محل کارم بنویسم.", // nieuw, nalezen
-    'kjn.u.house.1': "می‌توانم قانون‌هایی مثل «Roken verboden» را بخوانم.", // nieuw, nalezen
-    'kjn.u.house.2': "می‌توانم بپرسم کجا می‌شود سیگار کشید.", // nieuw, nalezen
-    'kjn.u.house.3': "می‌توانم بگویم که کاری مجاز نیست.", // nieuw, nalezen
-    'kjn.u.numbers.1': "می‌توانم ساعت‌هایی مثل «kwart over vier» را بفهمم.", // nieuw, nalezen
-    'kjn.u.numbers.2': "می‌توانم بگویم قیمت یا وزن چیزی چقدر است.", // nieuw, nalezen
-    'kjn.u.numbers.3': "می‌توانم عددهایی مثل ۱۳ و ۳۰ را از هم تشخیص بدهم.", // nieuw, nalezen
-    'kjn.u.shop.1': "می‌توانم از مشتری بپرسم می‌خواهد با کارت پرداخت کند یا نه.", // nieuw, nalezen
-    'kjn.u.shop.2': "می‌توانم راه را در فروشگاه به مشتری نشان بدهم.", // nieuw, nalezen
-    'kjn.u.ai.1': "می‌توانم بپرسم یک جواب درست است یا نه.", // nieuw, nalezen
-    'kjn.u.ai.2': "می‌توانم بگویم می‌خواهم با یک آدم حرف بزنم.", // nieuw, nalezen
-    'kjn.u.finish.1': "می‌توانم بپرسم یک کلمه روی برگهٔ کار چه معنایی دارد.", // nieuw, nalezen
-    'kjn.u.finish.2': "می‌توانم بگویم چه چیزی تمام شده و چه چیزی نه.", // nieuw, nalezen
-    'kjn.u.online.1': "می‌توانم بگویم رمزم کار نمی‌کند.", // nieuw, nalezen
-    'kjn.u.online.2': "می‌توانم یک ایمیل مشکوک را تشخیص بدهم.", // nieuw, nalezen
-    'kjn.u.teamwork.1': "می‌توانم بگویم که چیزی اذیتم می‌کند.", // nieuw, nalezen
-    'kjn.u.teamwork.2': "می‌توانم با آرامش به کار اضافه نه بگویم.", // nieuw, nalezen
-    'kjn.u.teamwork.3': "می‌توانم بپرسم اول چه کار باید بکنم.", // nieuw, nalezen
-    'kjn.u.social.1': "می‌توانم در وقت استراحت کمی گپ بزنم.", // nieuw, nalezen
-    'kjn.u.social.2': "می‌توانم بگویم که اشتباه کردم.", // nieuw, nalezen
-    'kjn.u.social.3': "می‌توانم بگویم که چیزی از حد و مرز من گذشته است.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'kjn.u.sayings.1': "می‌توانم چند اصطلاح رایج را بفهمم.", // nieuw, nalezen
-    'kjn.u.sayings.2': "می‌توانم بگویم که چیزی خیلی آسان است (een eitje).", // nieuw, nalezen
-    'kjn.u.rights.1': "می‌توانم بگویم که حق استراحت دارم.", // nieuw, nalezen
-    'kjn.u.rights.2': "می‌توانم بگویم که می‌خواهم شکایت کنم.", // nieuw, nalezen
-    'kjn.u.exploit.1': "می‌توانم بگویم که پاسپورتم پیش خودم می‌ماند.", // nieuw, nalezen
-    'kjn.u.exploit.2': "می‌توانم بپرسم که آیا می‌شود چیزی را بدون اسمم گزارش بدهم.", // nieuw, nalezen
-    'kjn.u.papers.1': "می‌توانم بگویم که آدرسم عوض شده است.", // nieuw, nalezen
-    'kjn.u.papers.2': "می‌توانم بپرسم اجاره چقدر است.", // nieuw, nalezen
-    'kjn.u.health.1': "می‌توانم بگویم کجایم درد می‌کند.", // nieuw, nalezen
-    'kjn.u.health.2': "می‌توانم از پزشک خانواده وقت بگیرم.", // nieuw, nalezen
-    'kjn.u.money.1': "می‌توانم بگویم که یک نامه را نمی‌فهمم.", // nieuw, nalezen
-    'kjn.u.money.2': "می‌توانم پشت تلفن به یک کلاهبردار نه بگویم.", // nieuw, nalezen
-    'kjn.u.travel.1': "می‌توانم بگویم چطور سر کار می‌روم.", // nieuw, nalezen
-    'kjn.u.travel.2': "می‌توانم بپرسم ایستگاه اتوبوس کجاست.", // nieuw, nalezen
-    'kjn.u.society.1': "می‌توانم بپرسم اجازه دارم رأی بدهم یا نه.", // nieuw, nalezen
-    'kjn.u.society.2': "می‌توانم بگویم که می‌خواهم اعتراض کنم.", // nieuw, nalezen
-    'kjn.u.warehouse.1': "می‌توانم دستورهای کوتاه در انبار را بفهمم.", // nieuw, nalezen
-    'kjn.u.warehouse.2': "می‌توانم بگویم چیزی کجاست: سمت چپ یا سمت راست.", // nieuw, nalezen
-    'kjn.u.build.1': "می‌توانم یک هشدار در کارگاه ساختمانی را بفهمم.", // nieuw, nalezen
-    'kjn.u.build.2': "می‌توانم ابزار بخواهم.", // nieuw, nalezen
-    'kjn.u.factory.1': "می‌توانم بگویم که یک خرابی پیش آمده.", // nieuw, nalezen
-    'kjn.u.factory.2': "می‌توانم بگویم یک محصول چه ایرادی دارد.", // nieuw, nalezen
-    'kjn.u.care.1': "می‌توانم از یک مراجع بپرسم که اجازه می‌دهد کمکش کنم یا نه.", // nieuw, nalezen
-    'kjn.u.care.2': "می‌توانم چیزی را به پرستار خبر بدهم.", // nieuw, nalezen
-    'kjn.u.horeca.1': "می‌توانم از مهمان‌ها بپرسم چه میل دارند بنوشند.", // nieuw, nalezen
-    'kjn.u.horeca.2': "می‌توانم بگویم که از سرآشپز می‌پرسم.", // nieuw, nalezen
-    'kjn.u.clean.1': "می‌توانم بپرسم وسایل نظافت کجاست.", // nieuw, nalezen
-    'kjn.u.clean.2': "می‌توانم به کسی هشدار بدهم که زمین لیز است.", // nieuw, nalezen
-    'kjn.u.kas.1': "می‌توانم بپرسم از کدام ردیف شروع کنم.", // nieuw, nalezen
-    'kjn.u.kas.2': "می‌توانم بپرسم یک گلخانه سم‌پاشی شده یا نه.", // nieuw, nalezen
-    'kjn.u.tech.1': "می‌توانم بپرسم هنوز برق هست یا نه.", // nieuw, nalezen
-    'kjn.u.tech.2': "می‌توانم بگویم که یک کابل خراب است.", // nieuw, nalezen
-    'kjn.u.garage.1': "می‌توانم بگویم که یک لاستیک پنچر است.", // nieuw, nalezen
-    'kjn.u.garage.2': "می‌توانم بگویم که مشتری اول باید موافقت کند.", // nieuw, nalezen
-    'kjn.u.sick.1': "می‌توانم خبر بدهم که مریضم، و وقتی خوب شدم هم خبر بدهم.", // nieuw, nalezen
-    'kjn.u.sick.2': "می‌توانم بگویم چه کاری را هنوز نمی‌توانم انجام بدهم.", // nieuw, nalezen
-    'kjn.u.sick.3': "می‌توانم بگویم که اول نیمه‌روز کار می‌کنم.", // nieuw, nalezen
-    'kjn.u.health.3': "می‌توانم بگویم که کار برایم زیادی شده.", // nieuw, nalezen
-    'kjn.u.factory.3': "می‌توانم خبر بدهم که یک زخم کوچک دارم.", // nieuw, nalezen
-    'kjn.u.delivery.1': "می‌توانم بگویم که مشتری خانه نیست.", // nieuw, nalezen
-    'kjn.u.delivery.2': "می‌توانم از همسایه‌ها بخواهم یک بسته را تحویل بگیرند.", // nieuw, nalezen
-    'kjn.u.delivery.3': "می‌توانم بپرسم چه کسی مسیر و ساعت‌هایم را تعیین می‌کند.", // nieuw, nalezen
-    'kjn.u.afbouw.1': "می‌توانم مالهٔ دندانه‌دار یا کمچه را بخواهم.", // nieuw, nalezen
-    'kjn.u.afbouw.2': "می‌توانم بپرسم با کاشی‌ها از کجا شروع کنم.", // nieuw, nalezen
-    'kjn.u.afbouw.3': "می‌توانم بگویم که دیوار هنوز خشک نیست.", // nieuw, nalezen
+    'kjn.u.firstday.1': "می‌توانم خودم را به یک همکار معرفی کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.firstday.2': "می‌توانم بپرسم پیش چه کسی باید خودم را معرفی کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.help.1': "می‌توانم بگویم که متوجه نمی‌شوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.help.2': "می‌توانم از کسی بخواهم آهسته‌تر حرف بزند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.do.1': "می‌توانم دستور کوتاهی مثل «Zet het neer» را بفهمم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.do.2': "می‌توانم بگویم که کارم تمام شده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.tools.1': "می‌توانم از کسی بخواهم آن را بنویسد یا نشانم بدهد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.tools.2': "می‌توانم کاری را که از من خواسته‌اند دوباره بگویم تا مطمئن شوم درست فهمیده‌ام.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'kjn.u.tools.3': "می‌توانم بگویم که می‌خواهم هلندی تمرین کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.data.1': "می‌توانم اسمم را حرف‌به‌حرف بگویم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.data.2': "می‌توانم بگویم چه روزهایی می‌توانم کار کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.data.3': "می‌توانم یک تاریخ را وقتی می‌شنوم بفهمم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.sounds.1': "می‌توانم کلمه‌هایی مثل man و maan را از هم تشخیص بدهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.sounds.2': "می‌توانم جمله‌های کوتاه با صداهای سخت را تکرار کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.safety.1': "می‌توانم هشداری مثل «Pas op!» را بفهمم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.safety.2': "می‌توانم بگویم که چیزی را هنوز یاد نگرفته‌ام.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.emergency.1': "می‌توانم بپرسم کپسول آتش‌نشانی کجاست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.emergency.2': "می‌توانم یک حادثه را گزارش بدهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.apply.1': "می‌توانم بگویم چه تجربه‌ای دارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.apply.2': "می‌توانم در مصاحبهٔ کاری دربارهٔ خودم حرف بزنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.contract.1': "می‌توانم بپرسم هفته‌ای چند ساعت کار می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.contract.2': "می‌توانم بپرسم قراردادم موقت است یا دائمی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.contract.3': "می‌توانم بگویم کی می‌توانم کار کنم و کی نمی‌توانم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.grow.1': "می‌توانم بگویم چه مدرک‌ها و گواهی‌هایی دارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.grow.2': "می‌توانم بگویم در چه کاری خوبم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.lost.1': "می‌توانم بگویم قراردادم تمام می‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.lost.2': "می‌توانم بپرسم پول تعطیلاتم پرداخت می‌شود یا نه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.stage.1': "می‌توانم بپرسم مربی کارآموزی‌ام در شرکت کیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.stage.2': "می‌توانم بازخورد و یک مثال بخواهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.time.1': "می‌توانم بگویم شیفتم ساعت چند شروع می‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.time.2': "می‌توانم بگویم که مریضم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.pay.1': "می‌توانم بگویم فیش حقوقی‌ام درست نیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.pay.2': "می‌توانم کلمه‌هایی مثل bruto و netto را بخوانم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.leave.1': "می‌توانم مرخصی درخواست کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.leave.2': "می‌توانم بگویم که بچه‌ام مریض است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.contact.1': "می‌توانم تلفن کنم و بگویم چه کسی هستم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.contact.2': "می‌توانم از کسی بخواهم دوباره به من زنگ بزند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.contact.3': "می‌توانم یک پیام کوتاه به محل کارم بنویسم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.house.1': "می‌توانم قانون‌هایی مثل «Roken verboden» را بخوانم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.house.2': "می‌توانم بپرسم کجا می‌شود سیگار کشید.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.house.3': "می‌توانم بگویم که کاری مجاز نیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.numbers.1': "می‌توانم ساعت‌هایی مثل «kwart over vier» را بفهمم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.numbers.2': "می‌توانم بگویم قیمت یا وزن چیزی چقدر است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.numbers.3': "می‌توانم عددهایی مثل ۱۳ و ۳۰ را از هم تشخیص بدهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.shop.1': "می‌توانم از مشتری بپرسم می‌خواهد با کارت پرداخت کند یا نه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.shop.2': "می‌توانم راه را در فروشگاه به مشتری نشان بدهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.ai.1': "می‌توانم بپرسم یک جواب درست است یا نه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.ai.2': "می‌توانم بگویم می‌خواهم با یک آدم حرف بزنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.finish.1': "می‌توانم بپرسم یک کلمه روی برگهٔ کار چه معنایی دارد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.finish.2': "می‌توانم بگویم چه چیزی تمام شده و چه چیزی نه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.online.1': "می‌توانم بگویم رمزم کار نمی‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.online.2': "می‌توانم یک ایمیل مشکوک را تشخیص بدهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.teamwork.1': "می‌توانم بگویم که چیزی اذیتم می‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.teamwork.2': "می‌توانم با آرامش به کار اضافه نه بگویم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.teamwork.3': "می‌توانم بپرسم اول چه کار باید بکنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.social.1': "می‌توانم در وقت استراحت کمی گپ بزنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.social.2': "می‌توانم بگویم که اشتباه کردم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.social.3': "می‌توانم بگویم که چیزی از حد و مرز من گذشته است.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'kjn.u.sayings.1': "می‌توانم چند اصطلاح رایج را بفهمم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.sayings.2': "می‌توانم بگویم که چیزی خیلی آسان است (een eitje).", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.rights.1': "می‌توانم بگویم که حق استراحت دارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.rights.2': "می‌توانم بگویم که می‌خواهم شکایت کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.exploit.1': "می‌توانم بگویم که پاسپورتم پیش خودم می‌ماند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.exploit.2': "می‌توانم بپرسم که آیا می‌شود چیزی را بدون اسمم گزارش بدهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.papers.1': "می‌توانم بگویم که آدرسم عوض شده است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.papers.2': "می‌توانم بپرسم اجاره چقدر است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.health.1': "می‌توانم بگویم کجایم درد می‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.health.2': "می‌توانم از پزشک خانواده وقت بگیرم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.money.1': "می‌توانم بگویم که یک نامه را نمی‌فهمم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.money.2': "می‌توانم پشت تلفن به یک کلاهبردار نه بگویم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.travel.1': "می‌توانم بگویم چطور سر کار می‌روم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.travel.2': "می‌توانم بپرسم ایستگاه اتوبوس کجاست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.society.1': "می‌توانم بپرسم اجازه دارم رأی بدهم یا نه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.society.2': "می‌توانم بگویم که می‌خواهم اعتراض کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.warehouse.1': "می‌توانم دستورهای کوتاه در انبار را بفهمم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.warehouse.2': "می‌توانم بگویم چیزی کجاست: سمت چپ یا سمت راست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.build.1': "می‌توانم یک هشدار در کارگاه ساختمانی را بفهمم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.build.2': "می‌توانم ابزار بخواهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.factory.1': "می‌توانم بگویم که یک خرابی پیش آمده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.factory.2': "می‌توانم بگویم یک محصول چه ایرادی دارد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.care.1': "می‌توانم از یک مراجع بپرسم که اجازه می‌دهد کمکش کنم یا نه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.care.2': "می‌توانم چیزی را به پرستار خبر بدهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.horeca.1': "می‌توانم از مهمان‌ها بپرسم چه میل دارند بنوشند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.horeca.2': "می‌توانم بگویم که از سرآشپز می‌پرسم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.clean.1': "می‌توانم بپرسم وسایل نظافت کجاست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.clean.2': "می‌توانم به کسی هشدار بدهم که زمین لیز است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.kas.1': "می‌توانم بپرسم از کدام ردیف شروع کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.kas.2': "می‌توانم بپرسم یک گلخانه سم‌پاشی شده یا نه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.tech.1': "می‌توانم بپرسم هنوز برق هست یا نه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.tech.2': "می‌توانم بگویم که یک کابل خراب است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.garage.1': "می‌توانم بگویم که یک لاستیک پنچر است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.garage.2': "می‌توانم بگویم که مشتری اول باید موافقت کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.sick.1': "می‌توانم خبر بدهم که مریضم، و وقتی خوب شدم هم خبر بدهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.sick.2': "می‌توانم بگویم چه کاری را هنوز نمی‌توانم انجام بدهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.sick.3': "می‌توانم بگویم که اول نیمه‌روز کار می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.health.3': "می‌توانم بگویم که کار برایم زیادی شده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.factory.3': "می‌توانم خبر بدهم که یک زخم کوچک دارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.delivery.1': "می‌توانم بگویم که مشتری خانه نیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.delivery.2': "می‌توانم از همسایه‌ها بخواهم یک بسته را تحویل بگیرند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.delivery.3': "می‌توانم بپرسم چه کسی مسیر و ساعت‌هایم را تعیین می‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.afbouw.1': "می‌توانم مالهٔ دندانه‌دار یا کمچه را بخواهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.afbouw.2': "می‌توانم بپرسم با کاشی‌ها از کجا شروع کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.afbouw.3': "می‌توانم بگویم که دیوار هنوز خشک نیست.", // nieuw, nalezen // nagelezen AI 28 nov
     // Goed communiceren en Feedback en overleg (5 nov 2026)
-    'kjn.u.communicate.1': "می‌توانم توضیح بدهم چه مشکلی هست.", // nieuw, nalezen
-    'kjn.u.communicate.2': "می‌توانم بگویم چه شنیدم.", // nieuw, nalezen
-    'kjn.u.communicate.3': "می‌توانم به‌موقع وقت گفت‌وگو بخواهم.", // nieuw, nalezen
-    'kjn.u.feedback.1': "می‌توانم وقتی بازخورد می‌گیرم یک مثال بخواهم.", // nieuw, nalezen
-    'kjn.u.feedback.2': "می‌توانم با مهربانی بگویم چه چیزی می‌تواند بهتر شود.", // nieuw, nalezen
-    'kjn.u.feedback.3': "می‌توانم در جلسهٔ تیم یک سؤال بپرسم.", // nieuw, nalezen
+    'kjn.u.communicate.1': "می‌توانم توضیح بدهم چه مشکلی هست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.communicate.2': "می‌توانم بگویم چه شنیدم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.communicate.3': "می‌توانم به‌موقع وقت گفت‌وگو بخواهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.feedback.1': "می‌توانم وقتی بازخورد می‌گیرم یک مثال بخواهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.feedback.2': "می‌توانم با مهربانی بگویم چه چیزی می‌تواند بهتر شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.feedback.3': "می‌توانم در جلسهٔ تیم یک سؤال بپرسم.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Metselen, hout en vastmaken" and "Machines en gereedschap" (20-21 November 2026).
-    'kjn.u.ruwbouw.1': "می‌توانم ارهٔ دستی یا دریل شارژی را بخواهم.", // nieuw, nalezen
-    'kjn.u.ruwbouw.2': "می‌توانم بپرسم یک تخته را چطور محکم کنم.", // nieuw, nalezen
-    'kjn.u.machines.1': "می‌توانم بگویم که حفاظ دستگاه خراب است.", // nieuw, nalezen
-    'kjn.u.machines.2': "می‌توانم بپرسم هر چند وقت یک بار نمونه بردارم.", // nieuw, nalezen
+    'kjn.u.ruwbouw.1': "می‌توانم ارهٔ دستی یا دریل شارژی را بخواهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.ruwbouw.2': "می‌توانم بپرسم یک تخته را چطور محکم کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.machines.1': "می‌توانم بگویم که حفاظ دستگاه خراب است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.machines.2': "می‌توانم بپرسم هر چند وقت یک بار نمونه بردارم.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Elektra, leidingen en metaal" (21 November 2026).
-    'kjn.u.install.1': "می‌توانم بپرسم اجازه دارم تابلو برق را باز کنم یا نه.", // nieuw, nalezen
-    'kjn.u.install.2': "می‌توانم بگویم که یک اتصال لوله نشت می‌کند.", // nieuw, nalezen
+    'kjn.u.install.1': "می‌توانم بپرسم اجازه دارم تابلو برق را باز کنم یا نه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.install.2': "می‌توانم بگویم که یک اتصال لوله نشت می‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Assemblage en montage" (21 November 2026).
-    'kjn.u.montage.1': "می‌توانم بگویم که جعبهٔ قطعات تقریباً خالی است.", // nieuw, nalezen
-    'kjn.u.montage.2': "می‌توانم بپرسم یک پیچ چقدر باید سفت باشد.", // nieuw, nalezen
+    'kjn.u.montage.1': "می‌توانم بگویم که جعبهٔ قطعات تقریباً خالی است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.montage.2': "می‌توانم بپرسم یک پیچ چقدر باید سفت باشد.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Kweken, sorteren en de kas" and "Banden, olie en remmen" (22 November 2026).
-    'kjn.u.kweek.1': "می‌توانم بگویم که روی یک گیاه کپک هست.", // nieuw, nalezen
-    'kjn.u.kweek.2': "می‌توانم بپرسم یک گوجه‌فرنگی به اندازهٔ کافی رسیده یا نه.", // nieuw, nalezen
-    'kjn.u.carservice.1': "می‌توانم بگویم که چراغ هشدار روشن است.", // nieuw, nalezen
-    'kjn.u.carservice.2': "می‌توانم بپرسم چقدر روغن باید ریخت.", // nieuw, nalezen
+    'kjn.u.kweek.1': "می‌توانم بگویم که روی یک گیاه کپک هست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.kweek.2': "می‌توانم بپرسم یک گوجه‌فرنگی به اندازهٔ کافی رسیده یا نه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.carservice.1': "می‌توانم بگویم که چراغ هشدار روشن است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.carservice.2': "می‌توانم بپرسم چقدر روغن باید ریخت.", // nieuw, nalezen // nagelezen AI 28 nov
     // The new sectors (23 November 2026).
-    'kjn.u.mowing.1': "می‌توانم بگویم که چمن زیادی خیس است.", // nieuw, nalezen
-    'kjn.u.mowing.2': "می‌توانم بپرسم کدام شاخه‌ها باید بریده شوند.", // nieuw, nalezen
-    'kjn.u.planting.1': "می‌توانم بگویم که خرده‌شیشه هست.", // nieuw, nalezen
-    'kjn.u.planting.2': "می‌توانم بپرسم اجازه دارم از خیابان رد شوم یا نه.", // nieuw, nalezen
-    'kjn.u.frontdesk.1': "می‌توانم به یک مهمان سلام کنم و کمکش کنم.", // nieuw, nalezen
-    'kjn.u.frontdesk.2': "می‌توانم بپرسم یک بسته مال کیست.", // nieuw, nalezen
-    'kjn.u.maintenance.1': "می‌توانم یک خرابی را گزارش بدهم.", // nieuw, nalezen
-    'kjn.u.maintenance.2': "می‌توانم بپرسم یک میز کجا باید برود.", // nieuw, nalezen
-    'kjn.u.guarding.1': "می‌توانم بخواهم مدرک شناسایی کسی را ببینم.", // nieuw, nalezen
-    'kjn.u.guarding.2': "می‌توانم پشت بی‌سیم بگویم چه می‌بینم.", // nieuw, nalezen
-    'kjn.u.incidents.1': "می‌توانم به ۱۱۲ زنگ بزنم و بگویم چه شده.", // nieuw, nalezen
-    'kjn.u.incidents.2': "می‌توانم با یک مشتری عصبانی آرام حرف بزنم.", // nieuw, nalezen
-    'kjn.u.foodhygiene.1': "می‌توانم بگویم که سردخانه زیادی گرم است.", // nieuw, nalezen
-    'kjn.u.foodhygiene.2': "می‌توانم بپرسم داخلش آجیل هست یا نه.", // nieuw, nalezen
-    'kjn.u.foodline.1': "می‌توانم بگویم که برچسب درست نیست.", // nieuw, nalezen
-    'kjn.u.foodline.2': "می‌توانم بپرسم چقدر باید در یک ظرف برود.", // nieuw, nalezen
-    'kjn.u.collection.1': "می‌توانم به راننده کمک کنم دنده‌عقب برود.", // nieuw, nalezen
-    'kjn.u.collection.2': "می‌توانم بگویم که یک سطل چرخ‌دار زیادی سنگین است.", // nieuw, nalezen
-    'kjn.u.recycling.1': "می‌توانم به یک مراجعه‌کننده بگویم زباله‌اش کجا می‌رود.", // nieuw, nalezen
-    'kjn.u.recycling.2': "می‌توانم بگویم که پرس گیر کرده.", // nieuw, nalezen
-    'kjn.u.toddlers.1': "می‌توانم بگویم که می‌روم پوشک یک بچه را عوض کنم.", // nieuw, nalezen
-    'kjn.u.toddlers.2': "می‌توانم بپرسم یک بچه خوابش برده یا نه.", // nieuw, nalezen
-    'kjn.u.daycare.1': "می‌توانم به پدر یا مادری بگویم روز چطور گذشت.", // nieuw, nalezen
-    'kjn.u.daycare.2': "می‌توانم بپرسم چه کسی برای بردن یک بچه می‌آید.", // nieuw, nalezen
+    'kjn.u.mowing.1': "می‌توانم بگویم که چمن زیادی خیس است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.mowing.2': "می‌توانم بپرسم کدام شاخه‌ها باید بریده شوند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.planting.1': "می‌توانم بگویم که خرده‌شیشه هست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.planting.2': "می‌توانم بپرسم اجازه دارم از خیابان رد شوم یا نه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.frontdesk.1': "می‌توانم به یک مهمان سلام کنم و کمکش کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.frontdesk.2': "می‌توانم بپرسم یک بسته مال کیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.maintenance.1': "می‌توانم یک خرابی را گزارش بدهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.maintenance.2': "می‌توانم بپرسم یک میز کجا باید برود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.guarding.1': "می‌توانم بخواهم مدرک شناسایی کسی را ببینم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.guarding.2': "می‌توانم پشت بی‌سیم بگویم چه می‌بینم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.incidents.1': "می‌توانم به ۱۱۲ زنگ بزنم و بگویم چه شده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.incidents.2': "می‌توانم با یک مشتری عصبانی آرام حرف بزنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.foodhygiene.1': "می‌توانم بگویم که سردخانه زیادی گرم است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.foodhygiene.2': "می‌توانم بپرسم داخلش آجیل هست یا نه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.foodline.1': "می‌توانم بگویم که برچسب درست نیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.foodline.2': "می‌توانم بپرسم چقدر باید در یک ظرف برود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.collection.1': "می‌توانم به راننده کمک کنم دنده‌عقب برود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.collection.2': "می‌توانم بگویم که یک سطل چرخ‌دار زیادی سنگین است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.recycling.1': "می‌توانم به یک مراجعه‌کننده بگویم زباله‌اش کجا می‌رود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.recycling.2': "می‌توانم بگویم که پرس گیر کرده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.toddlers.1': "می‌توانم بگویم که می‌روم پوشک یک بچه را عوض کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.toddlers.2': "می‌توانم بپرسم یک بچه خوابش برده یا نه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.daycare.1': "می‌توانم به پدر یا مادری بگویم روز چطور گذشت.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.daycare.2': "می‌توانم بپرسم چه کسی برای بردن یک بچه می‌آید.", // nieuw, nalezen // nagelezen AI 28 nov
     // Five new units (23 November 2026).
-    'kjn.u.uitzend.1': "می‌توانم بپرسم در کدام مرحله هستم.", // nieuw, nalezen
-    'kjn.u.uitzend.2': "می‌توانم بپرسم یک کسر از حقوقم برای چیست.", // nieuw, nalezen
-    'kjn.u.housekeeping.1': "می‌توانم بگویم یک توالت گرفته است.", // nieuw, nalezen
-    'kjn.u.housekeeping.2': "می‌توانم بپرسم چقدر ماده در سطل بریزم.", // nieuw, nalezen
-    'kjn.u.cooking.1': "می‌توانم از سرآشپز بپرسم چیزی را چطور ببُرم.", // nieuw, nalezen
-    'kjn.u.cooking.2': "می‌توانم از مهمان بپرسم می‌خواهد جدا حساب کند یا نه.", // nieuw, nalezen
-    'kjn.u.carework.1': "می‌توانم از مراجع بپرسم چه می‌خواهد بپوشد.", // nieuw, nalezen
-    'kjn.u.carework.2': "می‌توانم به پرستار بگویم چه دیدم.", // nieuw, nalezen
-    'kjn.u.shopfloor.1': "می‌توانم رسید خرید را از مشتری بخواهم.", // nieuw, nalezen
-    'kjn.u.shopfloor.2': "می‌توانم بگویم فروشگاه به‌زودی بسته می‌شود.", // nieuw, nalezen
+    'kjn.u.uitzend.1': "می‌توانم بپرسم در کدام مرحله هستم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.uitzend.2': "می‌توانم بپرسم یک کسر از حقوقم برای چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.housekeeping.1': "می‌توانم بگویم یک توالت گرفته است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.housekeeping.2': "می‌توانم بپرسم چقدر ماده در سطل بریزم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.cooking.1': "می‌توانم از سرآشپز بپرسم چیزی را چطور ببُرم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.cooking.2': "می‌توانم از مهمان بپرسم می‌خواهد جدا حساب کند یا نه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.carework.1': "می‌توانم از مراجع بپرسم چه می‌خواهد بپوشد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.carework.2': "می‌توانم به پرستار بگویم چه دیدم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.shopfloor.1': "می‌توانم رسید خرید را از مشتری بخواهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.shopfloor.2': "می‌توانم بگویم فروشگاه به‌زودی بسته می‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Veiligheid op het werk" and the VOG (23 November 2026).
-    'kjn.u.safework.1': "می‌توانم چند کلمه دربارهٔ تابلوهای ایمنی و آتش را بشناسم.", // nieuw, nalezen
-    'kjn.u.safework.2': "می‌توانم بپرسم که یک ماده سمی است یا نه.", // nieuw, nalezen
+    'kjn.u.safework.1': "می‌توانم چند کلمه دربارهٔ تابلوهای ایمنی و آتش را بشناسم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.safework.2': "می‌توانم بپرسم که یک ماده سمی است یا نه.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Operator in de procesindustrie" (23 November 2026).
-    'kjn.u.process.1': "می‌توانم بگویم که فشار خیلی بالاست.", // nieuw, nalezen
-    'kjn.u.process.2': "می‌توانم موقع تحویل شیفت تعریف کنم که چه اتفاقی افتاده.", // nieuw, nalezen
+    'kjn.u.process.1': "می‌توانم بگویم که فشار خیلی بالاست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.process.2': "می‌توانم موقع تحویل شیفت تعریف کنم که چه اتفاقی افتاده.", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (26 November 2026).
-    'kjn.u.firstday.3': "می‌توانم از کسی بخواهم دوباره نشانم بدهد.", // nieuw, nalezen
-    'kjn.u.rights.3': "می‌توانم بگویم که با من رفتار متفاوتی می‌شود.", // nieuw, nalezen
-    'kjn.u.money.3': "می‌توانم قسط‌بندی بخواهم.", // nieuw, nalezen
-    'kjn.u.warehouse.3': "می‌توانم بگویم که بدون آموزش با ریچ‌تراک کار نمی‌کنم.", // nieuw, nalezen
-    'kjn.u.process.3': "می‌توانم بپرسم چقدر از یک مادهٔ اولیه باید داخلش برود.", // nieuw, nalezen
+    'kjn.u.firstday.3': "می‌توانم از کسی بخواهم دوباره نشانم بدهد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.rights.3': "می‌توانم بگویم که با من رفتار متفاوتی می‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.money.3': "می‌توانم قسط‌بندی بخواهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.warehouse.3': "می‌توانم بگویم که بدون آموزش با ریچ‌تراک کار نمی‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'kjn.u.process.3': "می‌توانم بپرسم چقدر از یک مادهٔ اولیه باید داخلش برود.", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 

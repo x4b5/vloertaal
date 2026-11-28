@@ -32,12 +32,16 @@ export const COMMUNICATION: readonly CommunicationTopic[] = [
   {
     unit: 'u.feedback', titleNl: 'Feedback en overleg', lessons: [
       ['l.getfeedback', 'Feedback krijgen'], ['l.givefeedback', 'Feedback geven'], ['l.meeting', 'Iets zeggen in het werkoverleg'],
+      // 27 November 2026.
+      ['l.appraisal', 'Het functioneringsgesprek'],
     ],
   },
   { unit: 'u.social', titleNl: 'Omgang met collega’s', lessons: [['l.smalltalk', 'Een praatje en de pauze'], ['l.mistakes', 'Feedback en fouten']] },
   {
     unit: 'u.contact', titleNl: 'Bellen en appen met je werk', lessons: [
       ['l.callin', 'Bellen naar je werk'], ['l.texting', 'Appjes en de rooster-app'], ['l.email', 'Schrijven naar je werk'],
+      // 27 November 2026.
+      ['l.voicemail', 'De voicemail en terugbellen'],
     ],
   },
   { unit: 'u.finish', titleNl: 'Je werk afronden', lessons: [['l.handover', 'Klaar, of nog niet?']] },

@@ -147,7 +147,7 @@ export const fr: Gloss = {
     'be.c.details.o1': "Tu épelles ton nom lentement et tu demandes de le relire.", // nieuw, nalezen
     'be.c.details.o2': "Tu ne dis rien : une petite erreur dans ton nom, ce n’est pas grave.", // nieuw, nalezen
     'be.c.details.o3': "Tu raccroches, en espérant qu’ils trouvent l’erreur plus tard.", // nieuw, nalezen
-    'be.c.details.w': "Ton nom doit être le même sur ton contrat, ta fiche de paie (loonbrief) et ta carte d’identité ou ta carte de séjour. Alors ton salaire et tes impôts sont justes. Épeler et réentendre, c’est une vérification rapide.", // nieuw, nalezen
+    'be.c.details.w': "Ton nom doit être le même sur ton contrat, ta fiche de paie (loonbrief) et ta carte d’identité ou ta carte de séjour. Alors ton salaire et tes impôts sont justes. Épeler et faire relire, c’est une vérification rapide.", // nieuw, nalezen (AI-correctie 28 nov 2026)
 };
 
 export const de: Gloss = {

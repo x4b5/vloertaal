@@ -3,17 +3,17 @@ import type { CultureTranslation } from '../culture/types';
 const t: CultureTranslation = {
   ui: {
     about: 'Sobre o Vloertaal',
-    forCoaches: 'Para orientadores e empregadores', // nieuw, nalezen
-    whatsNew: 'O que há de novo?', // nieuw, nalezen
-    newsInDutch: 'As alterações estão em neerlandês.', // nieuw, nalezen
-    upcomingNow: 'Estamos a trabalhar nisto agora.', // nieuw, nalezen
+    forCoaches: 'Para orientadores e empregadores', // nieuw, nalezen // nagelezen AI 28 nov
+    whatsNew: 'O que há de novo?', // nieuw, nalezen // nagelezen AI 28 nov
+    newsInDutch: 'As alterações estão em neerlandês.', // nieuw, nalezen // nagelezen AI 28 nov
+    upcomingNow: 'Estamos a trabalhar nisto agora.', // nieuw, nalezen // nagelezen AI 28 nov
   },
   gloss: {
     'a.what': 'O que é o Vloertaal?',
-    'a.what.b': 'O Vloertaal ajuda-te a aprender o neerlandês de que precisas no trabalho: no armazém, na cozinha, na fábrica ou na obra. Não só as palavras do trabalho em si, mas toda a língua à volta do trabalho: procurar emprego, o teu contrato e o recibo de vencimento, os teus direitos, a casa e os papéis, avisar que estás doente e dar-te bem com os colegas. As lições são curtas, por isso podes praticar alguns minutos todos os dias. Vê o Vloertaal como um pequeno extra para os momentos livres. Não substitui um curso de línguas nem um professor de línguas.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'a.what.lead': 'Com o Vloertaal aprendes o neerlandês para o teu trabalho. Também aprendes como funciona o trabalho aqui: o teu contrato, o teu salário, a baixa por doença. Uma lição dura poucos minutos. É um extra: um curso de línguas continua a ser necessário.', // nieuw, nalezen
-    'a.story': 'Porquê o Vloertaal?', // nieuw, nalezen
-    'a.story.b': 'Olá, sou o Xavier. Trabalho como técnico de emprego. Ajudo as pessoas a encontrar trabalho. Às vezes, um emprego corre mal na mesma. Muitas vezes, a causa é a língua: alguém não percebe as explicações ou não tem coragem de perguntar. Por isso comecei o Vloertaal. Espero que a app ajude, para que mais pessoas possam fazer bem o seu trabalho e manter o emprego. Mas não consigo nem quero construir esta app sozinho.', // nieuw, nalezen
+    'a.what.b': 'O Vloertaal ajuda-te a aprender o neerlandês de que precisas no trabalho: no armazém, na cozinha, na fábrica ou na obra. Não só as palavras do trabalho em si, mas toda a língua à volta do trabalho: procurar emprego, o teu contrato e o recibo de vencimento, os teus direitos, a casa e os papéis, avisar que estás doente e dar-te bem com os colegas. As lições são curtas, por isso podes praticar alguns minutos todos os dias. Vê o Vloertaal como um pequeno extra para os momentos livres. Não substitui um curso de línguas nem um professor de línguas.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'a.what.lead': 'Com o Vloertaal aprendes o neerlandês para o teu trabalho. Também aprendes como funciona o trabalho aqui: o teu contrato, o teu salário, a baixa por doença. Uma lição dura poucos minutos. É um extra: um curso de línguas continua a ser necessário.', // nieuw, nalezen // nagelezen AI 28 nov
+    'a.story': 'Porquê o Vloertaal?', // nieuw, nalezen // nagelezen AI 28 nov
+    'a.story.b': 'Olá, sou o Xavier. Trabalho como técnico de emprego. Ajudo as pessoas a encontrar trabalho. Às vezes, um emprego corre mal na mesma. Muitas vezes, a causa é a língua: alguém não percebe as explicações ou não tem coragem de perguntar. Por isso comecei o Vloertaal. Espero que a app ajude, para que mais pessoas possam fazer bem o seu trabalho e manter o emprego. Mas não consigo nem quero construir esta app sozinho.', // nieuw, nalezen // nagelezen AI 28 nov
     'a.beta': 'Uma versão de teste',
     'a.beta.b': 'Agora continuamos a construir o Vloertaal, juntos. A app ainda é uma versão de teste (beta). Estamos a testá-la com um pequeno grupo de alunos e orientadores. Ainda não está tudo verificado, e precisamos de ajuda com isso. Uma das nossas línguas é a tua língua materna? Ou sabes muito sobre o trabalho e as regras nos Países Baixos ou na Bélgica? Então ajuda-nos a melhorar a app. Encontraste um erro? Diz-nos. O nosso endereço está no fundo desta página.', // nieuw, nalezen // nagelezen AI ronde 3
     'a.mission': 'A nossa missão',
@@ -23,11 +23,11 @@ const t: CultureTranslation = {
     'a.how': 'Como funciona?',
     'a.how.b': 'Aprendes neerlandês com ajuda na tua língua: vês as instruções e as palavras também em português. Ouves, tocas no ecrã, fazes frases e praticas conversas curtas com colegas.',
     'a.culture': 'Como funciona aqui',
-    'a.culture.b': 'A língua vem primeiro. Mas o Vloertaal também fala de como as coisas costumam ser num local de trabalho nos Países Baixos e na Bélgica: dizer "je" ao teu chefe, fazer perguntas, chegar a horas e dizer quando alguma coisa te incomoda. Encontras estas dicas nas lições e em "Dicas para o trabalho".', // nieuw, nalezen (Nederland en België)
+    'a.culture.b': 'A língua vem primeiro. Mas o Vloertaal também fala de como as coisas costumam ser num local de trabalho nos Países Baixos e na Bélgica: dizer "je" ao teu chefe, fazer perguntas, chegar a horas e dizer quando alguma coisa te incomoda. Encontras estas dicas nas lições e em "Dicas para o trabalho".', // nieuw, nalezen (Nederland en België) // nagelezen AI 28 nov
     'a.who': 'Para quem é?',
-    'a.who.b': 'Para todas as pessoas que estão a começar a trabalhar nos Países Baixos ou na Bélgica. Línguas de ajuda: árabe, tigrínia, persa, dari, somali, ucraniano, turco, polaco, romeno, búlgaro, espanhol, português, francês e alemão.', // nieuw, nalezen (Nederland en België)
+    'a.who.b': 'Para todas as pessoas que estão a começar a trabalhar nos Países Baixos ou na Bélgica. Línguas de ajuda: árabe, tigrínia, persa, dari, somali, ucraniano, turco, polaco, romeno, búlgaro, espanhol, português, francês e alemão.', // nieuw, nalezen (Nederland en België) // nagelezen AI 28 nov
     'a.free': 'A tua privacidade',
-    'a.free.b': 'Não precisas de conta. O teu progresso fica guardado só neste telemóvel ou computador. Se estiver ligado, a app conta de forma anónima quantas vezes e em quantos dias as lições são feitas: sem nome, sem rastreio. Se a app tiver um erro, também o conta, sem nada sobre ti. Podes desligar isto nas Definições. O resultado do teste, as tuas respostas a «Tens coragem de fazer isto?» e a gravação da tua voz também ficam só neste telemóvel ou computador. Um professor ou coach só vê o que tu lhe mostras, por exemplo o cartão em «Mostra como te está a correr». Se ligares «O telemóvel ouve (experimental)», o próprio telemóvel reconhece o teu neerlandês. Nada vai para nós nem para outros.', // toets-zin en begeleider-zin nieuw, nalezen (luister-zin nieuw, nalezen) // nagelezen AI 31 okt (fout-zin nieuw, nalezen) // dagen-zin nieuw, nalezen // durf-zin (5 nov 2026) nieuw, nalezen
+    'a.free.b': 'Não precisas de conta. O teu progresso fica guardado só neste telemóvel ou computador. Se estiver ligado, a app conta de forma anónima quantas vezes e em quantos dias as lições são feitas: sem nome, sem rastreio. Se a app tiver um erro, também o conta, sem nada sobre ti. Podes desligar isto nas Definições. O resultado do teste, as tuas respostas a «Tens coragem de fazer isto?» e a gravação da tua voz também ficam só neste telemóvel ou computador. Um professor ou coach só vê o que tu lhe mostras, por exemplo o cartão em «Mostra como te está a correr». Ligas «O telemóvel ouve (experimental)»? Então o próprio telemóvel reconhece o teu neerlandês. Nada vai para nós nem para outros.', // nieuw, nalezen (AI-correctie 28 nov 2026)
     'a.disclaimer': 'É bom saber',
     'a.disclaimer.b': 'As dicas do Vloertaal são informação geral, não são aconselhamento jurídico. As regras podem mudar; os textos foram atualizados pela última vez em outubro de 2026. Para a tua situação, pergunta ao teu empregador, a um sindicato ou ao Juridisch Loket.',
     'a.contact': 'Uma pergunta ou um erro?',

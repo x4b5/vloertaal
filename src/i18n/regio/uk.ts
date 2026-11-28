@@ -8,7 +8,7 @@ import type { CultureTranslation } from '../culture/types';
 const t: CultureTranslation = {
   ui: {
     regionTitle: 'Де ти живеш?',
-    regionHint: 'Ти живеш або працюєш у регіоні Zuid-Limburg? Тоді отримаєш додаткові уроки про свій регіон.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    regionHint: 'Ти живеш або працюєш у регіоні Zuid-Limburg? Тоді отримаєш додаткові уроки про свій регіон.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     regionOther: 'В іншому місці / не хочу казати',
     regionNone: 'Не вибрано',
     socialMap: 'Де знайти допомогу',
@@ -29,7 +29,7 @@ const t: CultureTranslation = {
     'rg.zl.s.1.2': 'У мене запис на десяту годину.',
     'rg.zl.s.1.3': 'Я стою в черзі на житло.',
     'rg.zl.c.1.q': 'Де ти живеш?',
-    'rg.zl.c.1.a': { m: 'У Heerlen. Я щойно переїхав.', f: 'У Heerlen. Я щойно переїхала.', x: 'У Heerlen. Я живу тут недавно.' }, // x: nieuw, nalezen
+    'rg.zl.c.1.a': { m: 'У Heerlen. Я щойно переїхав.', f: 'У Heerlen. Я щойно переїхала.', x: 'У Heerlen. Я живу тут недавно.' }, // x: nieuw, nalezen // nagelezen AI 28 nov
     'rg.zl.l.2': 'Кордон, карнавал і діалект',
     'rg.zl.w.grens': 'кордон (між двома країнами)',
     'rg.zl.w.buitenland': 'закордон, інша країна',

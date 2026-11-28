@@ -310,7 +310,8 @@ export const communicateUnit: Unit = {
  * course, and getting feedback and the word "feedback" itself were missing). In the theme
  * "Samenwerken", right after "Samenwerken" (u.teamwork) in the course; "Goed communiceren"
  * (u.communicate, built at the same time) goes in between when the two are merged: teamwork,
- * communicate, feedback. Three lessons: getting feedback, giving it, speaking up in a team meeting.
+ * communicate, feedback. Three lessons: getting feedback, giving it, speaking up in a team meeting;
+ * a fourth since 27 November 2026: the performance review (l.appraisal).
  *
  * "de feedback" itself is a word of "Feedback and mistakes" (w.feedback, l.mistakes, Omgang met
  * collega's): its card says what it means, and here the word comes back in the chat of the first
@@ -395,6 +396,36 @@ export const feedbackUnit: Unit = {
       ],
       dialogues: [
         chat(line('d.meeting.q', 'Heeft iemand nog een vraag?', 'Does anyone have a question?'), line('d.meeting.a', 'Ja. Wanneer komt het nieuwe rooster?', 'Yes. When does the new roster come?')),
+      ],
+    },
+    {
+      // "Het functioneringsgesprek" (l.appraisal, 27 November 2026, the owner's choice: four new
+      // lessons in existing units), before the mixed review. The yearly talk about your work and the
+      // appraisal: preparing it, what goes well, what you want to learn, the agreements, and the
+      // report you read and sign ("voor gezien" when you do not agree). Already words of other
+      // lessons, used here in a sentence, the chat or the tip only: "leren" (l.mistakes), "het
+      // verslag" (l.review), "de afspraak" (l.agree), "de cursus" and "het heftruckcertificaat" and
+      // "halen" (l.certs), "het gesprek" (l.talkintime) and "tekenen" (l.findwork). Drawn: the
+      // review itself (two at a table, a sheet between them) and preparing it (writing a list at
+      // home); the other four are abstract. The tip is in cultureTipsBase.ts (c.appraisal); its facts
+      // have a ⚖️ note there and a section in docs/juridische-check.md.
+      id: 'l.appraisal',
+      title: 'The performance review',
+      words: [
+        { id: 'w.functioneringsgesprek', nl: 'het functioneringsgesprek', en: 'the performance review (a talk with your supervisor about how your work goes and what you want to learn)', emoji: '🗂️' },
+        { id: 'w.beoordelingsgesprek', nl: 'het beoordelingsgesprek', en: 'the appraisal (a talk where your supervisor gives a judgement about your work)', emoji: '📊', picture: false },
+        { id: 'w.voorbereiden', nl: 'voorbereiden', en: 'to prepare (to get ready for something)', emoji: '📝' },
+        { id: 'w.goedgaan', nl: 'goed gaan', en: 'to go well', emoji: '👍', picture: false },
+        { id: 'w.doel', nl: 'het doel', en: 'the goal (what you want to reach)', emoji: '🎯', picture: false },
+        { id: 'w.voorgezien', nl: 'voor gezien tekenen', en: 'to sign "as seen" (you have read it; it does not mean that you agree)', emoji: '👁️', picture: false },
+      ],
+      sentences: [
+        { id: 's.appraisal.1', nl: 'Ik bereid het gesprek goed voor.', en: 'I prepare the talk well.' },
+        { id: 's.appraisal.2', nl: 'Ik wil graag iets nieuws leren.', en: 'I would like to learn something new.' },
+        { id: 's.appraisal.3', nl: 'Mag ik het verslag eerst lezen?', en: 'May I read the report first?' },
+      ],
+      dialogues: [
+        chat(line('d.appraisal.q', 'Wat is jouw doel voor volgend jaar?', 'What is your goal for next year?'), line('d.appraisal.a', 'Ik wil graag mijn heftruckcertificaat halen.', 'I would like to get my forklift certificate.')),
       ],
     },
   ] satisfies Lesson[],

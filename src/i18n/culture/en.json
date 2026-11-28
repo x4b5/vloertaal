@@ -372,6 +372,14 @@
     "c.orderpick.o1": "Take the walkway, also if it is longer.",
     "c.orderpick.o2": "Run across quickly between the trucks.",
     "c.orderpick.o3": "Walk across, and wave to the drivers.",
-    "c.orderpick.w": "A truck driver often cannot see you, for example behind a high load. On the walkway, people are expected and safe."
+    "c.orderpick.w": "A truck driver often cannot see you, for example behind a high load. On the walkway, people are expected and safe.",
+    "c.appraisal": "Your review: prepare it, read it",
+    "c.appraisal.b": "Many companies have a talk about your work once or twice a year. In a performance review (functioneringsgesprek) you talk together: what goes well, what can be better, and what you want to learn. In an appraisal (beoordelingsgesprek) your supervisor gives a judgement. It can count for your pay or for a new contract. Prepare the talk: write down what goes well, what is hard, and what you want to learn. You may ask for a course or training. At the end you make agreements (afspraken), often in a short report. Read it well before you sign it, and ask for a copy. Do you not agree? Sign \"voor gezien\" (seen), not \"voor akkoord\" (agreed), and write down your own view. General information. For your situation: ask your employer, the union or the Juridisch Loket.",
+    "c.appraisal.p": "I sign it as seen, not as agreed.",
+    "c.appraisal.s": "After your appraisal you get the report to sign. One point in it is not true, you think. What do you do?",
+    "c.appraisal.o1": "Sign \"voor gezien\", and write down your view.",
+    "c.appraisal.o2": "Sign \"voor akkoord\" quickly, so it is done.",
+    "c.appraisal.o3": "Say nothing, and do not sign at all.",
+    "c.appraisal.w": "\"Voor gezien\" means that you have read it, not that you agree. When you say it and write down your own view, your supervisor knows what you think."
   }
 }

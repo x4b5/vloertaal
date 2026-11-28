@@ -9,9 +9,9 @@ const lang: HelpLanguageSource = {
   ui: {
     theme: 'ظاهر',
     themeAuto: 'خودکار',
-    themeSand: 'ماسه', // nieuw, nalezen
-    themeHarbour: 'بندر', // nieuw, nalezen
-    themeWorkwear: 'لباس کار', // nieuw, nalezen
+    themeSand: 'ماسه', // nieuw, nalezen // nagelezen AI 28 nov
+    themeHarbour: 'بندر', // nieuw, nalezen // nagelezen AI 28 nov
+    themeWorkwear: 'لباس کار', // nieuw, nalezen // nagelezen AI 28 nov
     themeDark: 'تیره',
     voice: 'صدای هلندی',
     voiceAuto: 'خودکار',
@@ -20,7 +20,7 @@ const lang: HelpLanguageSource = {
     appTagline: 'هلندی برای محیط کار',
     chooseLanguage: 'زبان خود را انتخاب کنید',
     englishOnly: 'فقط انگلیسی',
-    beta: 'ترجمه هنوز بررسی نشده است', // nieuw, nalezen
+    beta: 'ترجمه هنوز بررسی نشده است', // nieuw, nalezen // nagelezen AI 28 nov
     dayStreak: 'روز پشت سر هم',
     streakStarted: 'روزهای پشت سر همِ شما شروع شد! فردا برگردید.',
     streakGrew: '{n} روز پشت سر هم! ادامه بدهید.',
@@ -29,14 +29,14 @@ const lang: HelpLanguageSource = {
     locked: 'اول درس قبلی را تمام کنید',
     newWord: 'کلمهٔ جدید',
     tapToHear: 'برای شنیدن ضربه بزنید',
-    sayItAloud: 'آن را بلند بگویید.', // nieuw, nalezen
-    sayItQuietly: 'آن را آرام بگویید، یا در ذهن‌تان.', // nieuw, nalezen
+    sayItAloud: 'آن را بلند بگویید.', // nieuw, nalezen // nagelezen AI 28 nov
+    sayItQuietly: 'آن را آرام بگویید، یا در ذهن‌تان.', // nieuw, nalezen // nagelezen AI 28 nov
     whatDoesThisMean: 'این یعنی چه؟',
-    snapQuestion: 'متوجه شدید؟', // nieuw, nalezen
-    snapYes: 'بله، باشه.', // nieuw, nalezen
-    snapGoodAsk: 'خوب است که می‌پرسید!', // nieuw, nalezen
-    snapRight: 'درست فهمیدید!', // nieuw, nalezen
-    snapAskBetter: 'دیدید؟ پرسیدن بهتر بود.', // nieuw, nalezen
+    snapQuestion: 'متوجه شدید؟', // nieuw, nalezen // nagelezen AI 28 nov
+    snapYes: 'بله، باشه.', // nieuw, nalezen // nagelezen AI 28 nov
+    snapGoodAsk: 'خوب است که می‌پرسید!', // nieuw, nalezen // nagelezen AI 28 nov
+    snapRight: 'درست فهمیدید!', // nieuw, nalezen // nagelezen AI 28 nov
+    snapAskBetter: 'دیدید؟ پرسیدن بهتر بود.', // nieuw, nalezen // nagelezen AI 28 nov
     whichOneIs: 'کدام یک «{word}» است؟',
     mixLesson: 'مرور ترکیبی',
     whatDoYouHear: 'چه می‌شنوید؟',
@@ -48,8 +48,8 @@ const lang: HelpLanguageSource = {
     almost: 'درست است، ولی به املا دقت کنید',
     incorrect: 'نه کاملاً',
     correctAnswer: 'پاسخ درست',
-    rightAnswerIs: 'پاسخ درست این است:', // nieuw, nalezen
-    bestAnswerIs: 'بهترین پاسخ این است:', // nieuw, nalezen
+    rightAnswerIs: 'پاسخ درست این است:', // nieuw, nalezen // nagelezen AI 28 nov
+    bestAnswerIs: 'بهترین پاسخ این است:', // nieuw, nalezen // nagelezen AI 28 nov
     yourAnswer: 'پاسخ شما',
     inARow: '{n} پشت سر هم',
     cantListen: 'الان نمی‌توانم گوش بدهم',
@@ -65,8 +65,8 @@ const lang: HelpLanguageSource = {
     whoLegal: 'مشاورهٔ رایگان دربارهٔ قرارداد، حقوق یا اخراج.',
     whoInspection: 'گزارش کار ناامن، حقوق خیلی کم یا استثمار. می‌توانید ناشناس بمانید.',
     whoFairwork: 'در کار از شما سوءاستفاده می‌شود، یا فکر می‌کنید این‌طور است.',
-    who113: 'به پایان دادن به زندگی‌تان فکر می‌کنید، یا نگران کسی هستید. رایگان، شب و روز.', // nieuw, nalezen
-    whoVeiligThuis: 'خشونت یا بدرفتاری در خانه، علیه شما یا کس دیگری. رایگان، بدون گفتن نام هم می‌شود.', // nieuw, nalezen
+    who113: 'به پایان دادن به زندگی‌تان فکر می‌کنید، یا نگران کسی هستید. رایگان، شب و روز.', // nieuw, nalezen // nagelezen AI 28 nov
+    whoVeiligThuis: 'خشونت یا بدرفتاری در خانه، علیه شما یا کس دیگری. رایگان، بدون گفتن نام هم می‌شود.', // nieuw, nalezen // nagelezen AI 28 nov
     settings: 'تنظیمات',
     helpLanguage: 'زبان کمکی',
     resetProgress: 'پاک کردن پیشرفت من',
@@ -96,9 +96,9 @@ const lang: HelpLanguageSource = {
     chooseSector: 'کجا کار می‌کنید؟',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'در کدام کشور کار می‌کنید؟',
-    countryHint: 'کلمات و نکته‌های همان کشور را می‌بینید.', // nieuw, nalezen (taal: woorden en tips, 9 nov 2026)
-    onePhoneTitle: 'آنچه یاد می‌گیرید فقط روی همین گوشی است.', // nieuw, nalezen (één telefoon, 20 nov 2026)
-    onePhoneText: 'همیشه از همین گوشی استفاده کنید.', // nieuw, nalezen (één telefoon, 20 nov 2026)
+    countryHint: 'کلمات و نکته‌های همان کشور را می‌بینید.', // nieuw, nalezen (taal: woorden en tips, 9 nov 2026) // nagelezen AI 28 nov
+    onePhoneTitle: 'آنچه یاد می‌گیرید فقط روی همین گوشی است.', // nieuw, nalezen (één telefoon, 20 nov 2026) // nagelezen AI 28 nov
+    onePhoneText: 'همیشه از همین گوشی استفاده کنید.', // nieuw, nalezen (één telefoon, 20 nov 2026) // nagelezen AI 28 nov
     countryNl: 'هلند',
     countryBe: 'بلژیک (فلاندر)',
     tipsNote: 'این نکته‌ها درباره کار در هلند است. اطلاعات کلی است، نه مشاوره حقوقی.',
@@ -112,17 +112,17 @@ const lang: HelpLanguageSource = {
     sectorProduction: 'تولید',
     sectorCare: 'مراقبت و پرستاری',
     sectorHospitality: 'رستوران و هتل',
-    sectorRetail: 'فروشگاه و سوپرمارکت', // nieuw, nalezen
+    sectorRetail: 'فروشگاه و سوپرمارکت', // nieuw, nalezen // nagelezen AI 28 nov
     sectorCleaning: 'نظافت',
     sectorHorticulture: 'باغبانی و گلخانه', // nagelezen (2e lezing)
-    sectorTechnical: 'کارهای فنی', // nieuw (30 okt 2026), nalezen
-    sectorGarage: 'تعمیرگاه خودرو', // nieuw (30 okt 2026), nalezen
+    sectorTechnical: 'کارهای فنی', // nieuw (30 okt 2026), nalezen // nagelezen AI 28 nov
+    sectorGarage: 'تعمیرگاه خودرو', // nieuw (30 okt 2026), nalezen // nagelezen AI 28 nov
     sound: 'صدا',
     soundOn: 'صدا روشن',
     withoutSound: 'بدون صدا',
     quietHint: 'بدون صدا، درس‌ها سؤال شنیداری ندارند و هیچ چیز خودکار پخش نمی‌شود. برای شنیدن یک کلمه 🔊 را بزنید، مثلاً با هدفون.',
     soundOffToast: 'بدون صدا. می‌توانید صدا را در تنظیمات روشن کنید.',
-    noInternetSound: 'اینترنت نیست: صدا الان کار نمی‌کند.', // nieuw, nalezen
+    noInternetSound: 'اینترنت نیست: صدا الان کار نمی‌کند.', // nieuw, nalezen // nagelezen AI 28 nov
     stillToDo: 'امروز هنوز مانده',
     streakStopped: 'روزهای پشت سر همِ شما بعد از {n} روز قطع شد. امروز دوباره شروع کنید.',
     recordN: 'بهترین رکورد شما: {n} روز',
@@ -137,7 +137,7 @@ const lang: HelpLanguageSource = {
     tomorrowN: 'فردا: {n} کلمه',
     firstWordsTomorrow: 'فردا اولین کلمه‌های شما برمی‌گردند',
     extraRound: 'یک دور اضافه',
-    reviewFirstHint: 'اول مرور کنید. این‌طور بیشتر یادتان می‌ماند.', // nieuw, nalezen
+    reviewFirstHint: 'اول مرور کنید. این‌طور بیشتر یادتان می‌ماند.', // nieuw, nalezen // nagelezen AI 28 nov
     wordsStrongerN: '{n} کلمه قوی‌تر',
     noMistakes: 'بدون اشتباه',
     nextUp: 'بعدی',
@@ -152,21 +152,21 @@ const lang: HelpLanguageSource = {
     backupSave: 'دانلود',
     backupLoad: 'برگرداندن',
     backupBad: 'این فایل Vloertaal نیست.',
-    backupAsk: 'می‌خواهید این فایل را به پیشرفت خود اضافه کنید، یا پیشرفت خود را با آن عوض کنید؟', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    backupAsk: 'می‌خواهید این فایل را به پیشرفت خود اضافه کنید، یا پیشرفت خود را با آن عوض کنید؟', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     backupMerge: 'با هم جمع کنید',
     backupReplace: 'عوض کنید',
     backupBack: 'پیشرفت شما برگشت.',
     backupNothingNew: 'چیز تازه‌ای نبود: این از قبل روی گوشی شما بود.',
     cancel: 'لغو',
     remindTitle: 'هر روز به من یادآوری کنید',
-    remindEvent: 'وقت تمرین هلندی (10 دقیقه)', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    remindEvent: 'وقت تمرین هلندی (10 دقیقه)', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     remindHint: 'تقویم گوشی به شما یادآوری می‌کند. چیزی برای ما فرستاده نمی‌شود.',
     remindBefore: 'قبل از کار',
     remindAfter: 'بعد از کار',
     remindOwn: 'زمان دیگر',
     remindAdd: 'افزودن به تقویم من',
     remindAdded: 'فایل را باز کنید تا به تقویم شما اضافه شود.',
-    remindAddedAsk: 'اضافه شد؟ پس آن را در تقویم خود می‌بینید.', // nieuw, nalezen
+    remindAddedAsk: 'اضافه شد؟ پس آن را در تقویم خود می‌بینید.', // nieuw, nalezen // nagelezen AI 28 nov
     navAbout: 'درباره',
     tagMeaning: 'معنی',
     tagPick: 'انتخاب کنید',
@@ -182,7 +182,7 @@ const lang: HelpLanguageSource = {
     daysUnit: 'روز',
     wordsUnit: 'کلمه',
     countTitle: 'شمارش ناشناس',
-    countHint: 'برنامه می‌شمارد که درس‌ها چند بار انجام می‌شوند و تقریباً چقدر طول می‌کشند. و اینکه آیا برنامه جایی خطا می‌دهد. بدون نام، بدون حساب، بدون ردیابی.', // fout-zin nieuw, nalezen
+    countHint: 'برنامه می‌شمارد که درس‌ها چند بار انجام می‌شوند و تقریباً چقدر طول می‌کشند. و اینکه آیا برنامه جایی خطا می‌دهد. بدون نام، بدون حساب، بدون ردیابی.', // fout-zin nieuw, nalezen // nagelezen AI 28 nov
     certificate: 'گواهی',
     myCertificates: 'گواهی‌های من',
     certsEmpty: 'همهٔ درس‌های یک بخش را تمام کنید. بعد یک گواهی می‌گیرید.',
@@ -218,20 +218,20 @@ const lang: HelpLanguageSource = {
     recommended: 'پیشنهادی',
     allTopics: 'همهٔ موضوع‌ها',
     topicsOrder: 'نمایش موضوع‌ها',
-    privacyLink: 'بیانیهٔ حریم خصوصی را بخوانید (به هلندی)', // nieuw, nalezen
-    routeTitle: 'چه می‌خواهید یاد بگیرید؟', // nieuw, nalezen
-    routeLearn: 'یادگیری هلندی برای کار، و اینکه کار اینجا چطور است', // nieuw, nalezen
-    routeRules: 'هلندی بلدم: فقط قوانین کار', // nieuw, nalezen
-    routeLearnShort: 'یادگیری هلندی', // nieuw, nalezen
-    switchTitle: 'رفتن به Werkregels؟', // nieuw, nalezen
-    switchDutch: 'همه چیز هلندی می‌شود. زبان کمکی شما خاموش می‌شود.', // nieuw, nalezen
-    switchReview: 'تا وقتی برنگردید، قوانین را مرور می‌کنید، نه کلمات را.', // nieuw, nalezen
-    switchKept: 'پیشرفت شما ذخیره می‌ماند. از همین‌جا می‌توانید برگردید.', // nieuw, nalezen
-    switchGo: 'بله، به Werkregels', // nieuw, nalezen
+    privacyLink: 'بیانیهٔ حریم خصوصی را بخوانید (به هلندی)', // nieuw, nalezen // nagelezen AI 28 nov
+    routeTitle: 'چه می‌خواهید یاد بگیرید؟', // nieuw, nalezen // nagelezen AI 28 nov
+    routeLearn: 'یادگیری هلندی برای کار، و اینکه کار اینجا چطور است', // nieuw, nalezen // nagelezen AI 28 nov
+    routeRules: 'هلندی بلدم: فقط قوانین کار', // nieuw, nalezen // nagelezen AI 28 nov
+    routeLearnShort: 'یادگیری هلندی', // nieuw, nalezen // nagelezen AI 28 nov
+    switchTitle: 'رفتن به Werkregels؟', // nieuw, nalezen // nagelezen AI 28 nov
+    switchDutch: 'همه چیز هلندی می‌شود. زبان کمکی شما خاموش می‌شود.', // nieuw, nalezen // nagelezen AI 28 nov
+    switchReview: 'تا وقتی برنگردید، قوانین را مرور می‌کنید، نه کلمات را.', // nieuw, nalezen // nagelezen AI 28 nov
+    switchKept: 'پیشرفت شما ذخیره می‌ماند. از همین‌جا می‌توانید برگردید.', // nieuw, nalezen // nagelezen AI 28 nov
+    switchGo: 'بله، به Werkregels', // nieuw, nalezen // nagelezen AI 28 nov
     byTheme: 'بر اساس بخش‌ها',
     inOrder: 'به ترتیب',
-    searchTopics: 'جستجوی موضوع', // nieuw, nalezen
-    searchNone: 'موضوعی با این کلمه نیست.', // nieuw, nalezen
+    searchTopics: 'جستجوی موضوع', // nieuw, nalezen // nagelezen AI 28 nov
+    searchNone: 'موضوعی با این کلمه نیست.', // nieuw, nalezen // nagelezen AI 28 nov
     lessonsUnit: 'درس',
     lessonsUnitOne: 'درس',
     topicsUnit: 'موضوع',
@@ -242,32 +242,32 @@ const lang: HelpLanguageSource = {
     speakPrompt: 'گوش کنید، بعد بگویید',
     tapToSpeak: 'بزنید و حرف بزنید',
     stopRecording: 'توقف',
-    micPrivacy: "هیچ‌کس دیگری صدای شما را نمی‌شنود. چیزی فرستاده نمی‌شود.", // nieuw, nalezen
+    micPrivacy: "هیچ‌کس دیگری صدای شما را نمی‌شنود. چیزی فرستاده نمی‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
     micUnavailable: 'میکروفون خاموش است. حالا آن را بلند بگویید، بعد ادامه بدهید.',
     cantSpeak: 'الان نمی‌توانم حرف بزنم',
     soundsSame: 'مثل هم شنیده می‌شود',
     sayAgain: 'دوباره بگویید',
-    hearMine: 'صدای خودتان را بشنوید', // nieuw, nalezen
-    thenNow: 'قبلاً و حالا', // nieuw, nalezen
-    thenNowFirst: 'بار اول شما: {date}', // nieuw, nalezen
-    sayTogether: "با هم بگویید", // nieuw, nalezen
-    chorusHint: "همزمان با صدا بگویید. چیزی ضبط نمی‌شود.", // nieuw, nalezen
-    chorusAlone: "حالا فقط خودتان", // nieuw, nalezen
-    speakBrave: "اشتباه بخشی از یادگیری است. متوجه نشدند؟ یک بار دیگر بگو.", // nieuw, nalezen
-    speakBrave2: "استرس داری؟ عادی است. باز هم بگو.", // nieuw, nalezen
-    speakBrave3: "لازم نیست کامل بگویی. فقط امتحان کن.", // nieuw, nalezen
-    reasonTitle: "چرا هلندی یاد می‌گیری؟", // nieuw, nalezen
-    reasonHint: "یکی یا دو تا انتخاب کن.", // nieuw, nalezen
-    reasonDone: "تمام", // nieuw, nalezen
-    reasonWork: "کارم را خوب انجام دهم", // nieuw, nalezen
-    reasonKids: "بچه‌هایم", // nieuw, nalezen
-    reasonColleagues: "با همکاران حرف بزنم", // nieuw, nalezen
-    reasonArrange: "کارهایم را خودم انجام دهم", // nieuw, nalezen
-    reasonJob: "کار بهتر", // nieuw, nalezen
-    reasonHome: "در هلند احساس کنم در خانه‌ام هستم", // nieuw, nalezen
+    hearMine: 'صدای خودتان را بشنوید', // nieuw, nalezen // nagelezen AI 28 nov
+    thenNow: 'قبلاً و حالا', // nieuw, nalezen // nagelezen AI 28 nov
+    thenNowFirst: 'بار اول شما: {date}', // nieuw, nalezen // nagelezen AI 28 nov
+    sayTogether: "با هم بگویید", // nieuw, nalezen // nagelezen AI 28 nov
+    chorusHint: "همزمان با صدا بگویید. چیزی ضبط نمی‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    chorusAlone: "حالا فقط خودتان", // nieuw, nalezen // nagelezen AI 28 nov
+    speakBrave: "اشتباه بخشی از یادگیری است. متوجه نشدند؟ یک بار دیگر بگویید.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    speakBrave2: "استرس دارید؟ عادی است. باز هم بگویید.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    speakBrave3: "لازم نیست کامل بگویید. فقط امتحان کنید.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    reasonTitle: "چرا هلندی یاد می‌گیرید؟", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    reasonHint: "یکی یا دو تا انتخاب کنید.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    reasonDone: "تمام", // nieuw, nalezen // nagelezen AI 28 nov
+    reasonWork: "کارم را خوب انجام دهم", // nieuw, nalezen // nagelezen AI 28 nov
+    reasonKids: "بچه‌هایم", // nieuw, nalezen // nagelezen AI 28 nov
+    reasonColleagues: "با همکاران حرف بزنم", // nieuw, nalezen // nagelezen AI 28 nov
+    reasonArrange: "کارهایم را خودم انجام دهم", // nieuw, nalezen // nagelezen AI 28 nov
+    reasonJob: "کار بهتر", // nieuw, nalezen // nagelezen AI 28 nov
+    reasonHome: "در هلند احساس کنم در خانه‌ام هستم", // nieuw, nalezen // nagelezen AI 28 nov
     speakMe: 'من',
     speakingPractice: 'تمرین حرف زدن',
-    speakingHint: "کلمه‌ها را بلند بگویید و مقایسه کنید. هیچ‌کس دیگری صدای شما را نمی‌شنود: چیزی فرستاده نمی‌شود. اولین ضبط شما از هر جمله روی گوشی‌تان می‌ماند تا بعداً مقایسه کنید.", // nieuw, nalezen
+    speakingHint: "کلمه‌ها را بلند بگویید و مقایسه کنید. هیچ‌کس دیگری صدای شما را نمی‌شنود: چیزی فرستاده نمی‌شود. اولین ضبط شما از هر جمله روی گوشی‌تان می‌ماند تا بعداً مقایسه کنید.", // nieuw, nalezen // nagelezen AI 28 nov
     savingOffline: 'در حال ذخیره…',
     savedOffline: 'برای استفاده بدون اینترنت ذخیره شد',
     offlineNoSpace: 'جای کافی روی این گوشی نیست. یک موضوع ذخیره‌شده را پاک کنید یا جا باز کنید.',
@@ -292,9 +292,9 @@ const lang: HelpLanguageSource = {
     settingOn: 'روشن',
     settingOff: 'خاموش',
     sectorGroupMake: 'ساخت و جابه‌جایی',
-    sectorGroupCare: "مراقبت و کودکان", // nieuw, nalezen
-    sectorGroupShop: 'فروشگاه و رستوران', // nieuw, nalezen
-    sectorGroupBuild: 'ساختمان و فنی', // nieuw (30 okt 2026), nalezen
+    sectorGroupCare: "مراقبت و کودکان", // nieuw, nalezen // nagelezen AI 28 nov
+    sectorGroupShop: 'فروشگاه و رستوران', // nieuw, nalezen // nagelezen AI 28 nov
+    sectorGroupBuild: 'ساختمان و فنی', // nieuw (30 okt 2026), nalezen // nagelezen AI 28 nov
     voiceWoman: 'صدای زن',
     voiceMan: 'صدای مرد',
     writingPick: 'انتخاب کلمه',
@@ -332,11 +332,11 @@ const lang: HelpLanguageSource = {
     bramPerfect: 'خیلی خوب. این کلمه‌ها را بلدید.',
     bramGood: 'کار خوبی بود. قدم به قدم.',
     bramHard: 'خوب شد که تمرین کردید. کلمه‌های سخت دوباره می‌آیند.',
-    bramReview: 'خوب است. تکرار کمک می‌کند چیزها را به خاطر بسپارید.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    bramReview: 'خوب است. تکرار کمک می‌کند چیزها را به خاطر بسپارید.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     bramIntro: 'من Bram هستم، همکار شما.',
     bramIntroHello: 'سلام، من Bram هستم.',
     showDutch: 'نمایش به هلندی',
-    showAnswers: 'نمایش پاسخ‌ها', // nieuw, nalezen
+    showAnswers: 'نمایش پاسخ‌ها', // nieuw, nalezen // nagelezen AI 28 nov
     lastUpdated: 'آخرین به‌روزرسانی: {date}',
     /* G4 b3 */
     buildListen: 'گوش کنید و جمله را بسازید',
@@ -359,24 +359,24 @@ const lang: HelpLanguageSource = {
     remindStop: 'یادآوری را خاموش کنید',
     remindStopped: 'فایل را باز کنید تا یادآوری از تقویم شما برداشته شود.',
     remindStoppedAndroid: 'یادآوری را خودتان در تقویم Google پاک کنید.',
-    resetKeeps: 'درس‌ها، کلمه‌ها، روزهای پشت سر هم و گواهی‌های شما پاک می‌شوند. زبان و تنظیمات شما می‌مانند.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    resetKeeps: 'درس‌ها، کلمه‌ها، روزهای پشت سر هم و گواهی‌های شما پاک می‌شوند. زبان و تنظیمات شما می‌مانند.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'بارگیری نشد. اینترنت وصل است؟',
     retry: 'دوباره امتحان کنید',
     /* The start screen when the app cannot start (src/components/Splash.tsx BootFailed). */
-    bootFailed: 'Vloertaal اجرا نمی‌شود.', // nieuw, nalezen
-    bootFailedHint: 'اول پیشرفت خود را نگه دارید. بعد از نو شروع کنید.', // nieuw, nalezen
-    startOver: 'از نو شروع کنید', // nieuw, nalezen
-    crashed: 'مشکلی پیش آمد. پیشرفت شما ذخیره شده است.', // nieuw, nalezen
+    bootFailed: 'Vloertaal اجرا نمی‌شود.', // nieuw, nalezen // nagelezen AI 28 nov
+    bootFailedHint: 'اول پیشرفت خود را نگه دارید. بعد از نو شروع کنید.', // nieuw, nalezen // nagelezen AI 28 nov
+    startOver: 'از نو شروع کنید', // nieuw, nalezen // nagelezen AI 28 nov
+    crashed: 'مشکلی پیش آمد. پیشرفت شما ذخیره شده است.', // nieuw, nalezen // nagelezen AI 28 nov
     /* "Wat ken je al?" (src/components/Toets.tsx) */
     toetsTitle: 'از قبل چه می‌دانید؟', // nieuw, nalezen // nagelezen AI 31 okt
     toetsOffer: 'حدود 10 دقیقه. نمره‌ای در کار نیست. فقط برای خودتان است.', // nieuw, nalezen // nagelezen AI 31 okt
     toetsEndOffer: 'خیلی چیزها یاد گرفته‌اید. آزمون را دوباره انجام بدهید و ببینید حالا چه می‌دانید.', // nieuw, nalezen // nagelezen AI 31 okt
-    toetsPartListen: 'شنیدن', // nieuw, nalezen
-    toetsPartWords: 'کلمه‌ها', // nieuw, nalezen
-    toetsPartSentences: 'جمله‌ها', // nieuw, nalezen
+    toetsPartListen: 'شنیدن', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsPartWords: 'کلمه‌ها', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsPartSentences: 'جمله‌ها', // nieuw, nalezen // nagelezen AI 28 nov
     toetsListenAsk: 'گوش کنید. یعنی چه؟', // nieuw, nalezen // nagelezen AI 31 okt
-    toetsNotSure: 'نمی‌دانید؟ روی «نمی‌دانم» بزنید. اشکالی ندارد.', // nieuw, nalezen
+    toetsNotSure: 'نمی‌دانید؟ روی «نمی‌دانم» بزنید. اشکالی ندارد.', // nieuw, nalezen // nagelezen AI 28 nov
     toetsMicKeep: 'صدای ضبط‌شدهٔ شما فقط روی همین گوشی می‌ماند. بعداً می‌توانید دوباره صدای خودتان را بشنوید.', // nieuw, nalezen // nagelezen AI 31 okt
     toetsStartDone: 'شروع خوبی بود! این‌ها را از قبل می‌دانید.', // nieuw, nalezen // nagelezen AI 31 okt
     toetsEndDone: 'آفرین! ببینید حالا چه می‌دانید.', // nieuw, nalezen // nagelezen AI 31 okt
@@ -384,169 +384,169 @@ const lang: HelpLanguageSource = {
     toetsYouNow: 'شما حالا', // nieuw, nalezen // nagelezen AI 31 okt
     toetsKeepGoing: 'هر روز کمی تمرین کنید. این‌طوری بیشتر و بیشتر یاد می‌گیرید.', // nieuw, nalezen // nagelezen AI 31 okt
     toetsStart: 'آزمون را شروع کنید', // nieuw, nalezen // nagelezen AI 31 okt
-    toetsIdk: 'نمی‌دانم', // nieuw, nalezen
-    toetsMore: 'بیشتر از قبل', // nieuw, nalezen
-    toetsSame: 'تقریباً مثل قبل', // nieuw, nalezen
-    toetsMoreAll: 'همه با هم: الان بیشتر از قبل می‌دانید.', // nieuw, nalezen
-    toetsSameAll: 'همه با هم: تقریباً مثل قبل.', // nieuw, nalezen
+    toetsIdk: 'نمی‌دانم', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsMore: 'بیشتر از قبل', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsSame: 'تقریباً مثل قبل', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsMoreAll: 'همه با هم: الان بیشتر از قبل می‌دانید.', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsSameAll: 'همه با هم: تقریباً مثل قبل.', // nieuw, nalezen // nagelezen AI 28 nov
     /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
-    toetsDurfIntro: 'اول 5 سؤال درباره خودتان. درست یا غلط وجود ندارد.', // nieuw, nalezen
-    toetsDurfAsk: 'جرئت می‌کنید این کار را بکنید؟', // nieuw, nalezen
-    toetsDurfUnderstand: 'بگویید که چیزی را نمی‌فهمید', // nieuw, nalezen
-    toetsDurfBoss: 'از مسئول‌تان چیزی بپرسید', // nieuw, nalezen
-    toetsDurfHelp: 'کمک بخواهید', // nieuw, nalezen
-    toetsDurfUnsafe: 'بگویید که چیزی ایمن نیست', // nieuw, nalezen
-    toetsDurfBreak: 'در زمان استراحت کمی با یک همکار حرف بزنید', // nieuw, nalezen
-    toetsDurfNotYet: 'هنوز نه', // nieuw, nalezen
-    toetsDurfABit: 'کمی', // nieuw, nalezen
-    toetsDurfYes: 'بله', // nieuw, nalezen
-    toetsDurfAgain: 'چند هفته بعد دوباره می‌پرسیم.', // nieuw, nalezen
-    tempo: 'سرعت', // nieuw, nalezen
-    tempoCalm: 'آرام', // nieuw, nalezen
-    tempoNormal: 'عادی', // nieuw, nalezen
+    toetsDurfIntro: 'اول 5 سؤال درباره خودتان. درست یا غلط وجود ندارد.', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsDurfAsk: 'جرئت می‌کنید این کار را بکنید؟', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsDurfUnderstand: 'بگویید که چیزی را نمی‌فهمید', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsDurfBoss: 'از مسئول‌تان چیزی بپرسید', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsDurfHelp: 'کمک بخواهید', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsDurfUnsafe: 'بگویید که چیزی ایمن نیست', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsDurfBreak: 'در زمان استراحت کمی با یک همکار حرف بزنید', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsDurfNotYet: 'هنوز نه', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsDurfABit: 'کمی', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsDurfYes: 'بله', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsDurfAgain: 'چند هفته بعد دوباره می‌پرسیم.', // nieuw, nalezen // nagelezen AI 28 nov
+    tempo: 'سرعت', // nieuw, nalezen // nagelezen AI 28 nov
+    tempoCalm: 'آرام', // nieuw, nalezen // nagelezen AI 28 nov
+    tempoNormal: 'عادی', // nieuw, nalezen // nagelezen AI 28 nov
     tempoHint: 'آرام یعنی آهسته و واضح. عادی مثل حرف زدن همکاران است. اگر خیلی چیزها را می‌فهمید، «عادی» را انتخاب کنید.', // nieuw, nalezen // nagelezen AI 31 okt
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
     coachCard: 'نشان بدهید چطور پیش می‌رود', // nieuw, nalezen // nagelezen AI 31 okt
     coachCardIntro: 'این کارت پیشرفت شما را نشان می‌دهد. آن را به معلم، مربی یا رئیستان نشان بدهید. خودتان تصمیم می‌گیرید.', // nieuw, nalezen // nagelezen AI 31 okt
-    coachCardNo: 'می‌توانید «نه» هم بگویید.', // nieuw, nalezen
+    coachCardNo: 'می‌توانید «نه» هم بگویید.', // nieuw, nalezen // nagelezen AI 28 nov
     coachCardKeep: 'گوشی‌تان خودش کارت را می‌سازد. چیزی فرستاده نمی‌شود. Vloertaal چیزی نگه نمی‌دارد.', // nieuw, nalezen // nagelezen AI 31 okt
-    coachCardWhat: 'روی کارت، به هلندی:', // nieuw, nalezen
-    coachTopics: 'موضوع‌های تمام‌شده', // nieuw, nalezen
-    coachDays: 'روزهای تمرین در 4 هفتهٔ گذشته', // nieuw, nalezen
-    coachLast: 'آخرین درس، با تاریخ', // nieuw, nalezen
-    coachCode: 'کد: همان عددها، کوتاه، برای خلاصهٔ گروه. بدون نام.', // nieuw, nalezen
+    coachCardWhat: 'روی کارت، به هلندی:', // nieuw, nalezen // nagelezen AI 28 nov
+    coachTopics: 'موضوع‌های تمام‌شده', // nieuw, nalezen // nagelezen AI 28 nov
+    coachDays: 'روزهای تمرین در 4 هفتهٔ گذشته', // nieuw, nalezen // nagelezen AI 28 nov
+    coachLast: 'آخرین درس، با تاریخ', // nieuw, nalezen // nagelezen AI 28 nov
+    coachCode: 'کد: همان عددها، کوتاه، برای خلاصهٔ گروه. بدون نام.', // nieuw, nalezen // nagelezen AI 28 nov
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
-    listenTrial: 'گوش دادن گوشی (آزمایشی)', // nieuw, nalezen
-    listenHint: 'بعد از حرف زدن، گوشی می‌گوید که حرف شما را فهمید یا نه. این کار روی خود گوشی انجام می‌شود. چیزی برای ما یا دیگران فرستاده نمی‌شود.', // nieuw, nalezen
-    listenNeedsPack: 'گوشی اول زبان هلندی لازم دارد. دانلود بزرگی است: از وای‌فای استفاده کنید.', // nieuw, nalezen
-    listenDownload: 'دانلود هلندی', // nieuw, nalezen
-    listenNotNow: 'الان نه', // nieuw, nalezen
-    listenDownloading: 'هلندی در راه است. بعداً دوباره امتحان کنید.', // nieuw, nalezen
-    listenFailed: 'نشد. بعداً با وای‌فای دوباره امتحان کنید.', // nieuw, nalezen
-    listenPrivacy: 'خود گوشی گوش می‌دهد. چیزی فرستاده نمی‌شود.', // nieuw, nalezen
-    heardWait: 'گوشی گوش می‌دهد…', // nieuw, nalezen
-    heardOk: 'فهمید', // nieuw, nalezen
-    heardAlmost: 'تقریباً: {word} را دوباره بگویید', // nieuw, nalezen
-    heardNotYet: 'هنوز نفهمید', // nieuw, nalezen
-    goOnAnyway: 'با این حال ادامه', // nieuw, nalezen
+    listenTrial: 'گوش دادن گوشی (آزمایشی)', // nieuw, nalezen // nagelezen AI 28 nov
+    listenHint: 'بعد از حرف زدن، گوشی می‌گوید که حرف شما را فهمید یا نه. این کار روی خود گوشی انجام می‌شود. چیزی برای ما یا دیگران فرستاده نمی‌شود.', // nieuw, nalezen // nagelezen AI 28 nov
+    listenNeedsPack: 'گوشی اول زبان هلندی لازم دارد. دانلود بزرگی است: از وای‌فای استفاده کنید.', // nieuw, nalezen // nagelezen AI 28 nov
+    listenDownload: 'دانلود هلندی', // nieuw, nalezen // nagelezen AI 28 nov
+    listenNotNow: 'الان نه', // nieuw, nalezen // nagelezen AI 28 nov
+    listenDownloading: 'هلندی در راه است. بعداً دوباره امتحان کنید.', // nieuw, nalezen // nagelezen AI 28 nov
+    listenFailed: 'نشد. بعداً با وای‌فای دوباره امتحان کنید.', // nieuw, nalezen // nagelezen AI 28 nov
+    listenPrivacy: 'خود گوشی گوش می‌دهد. چیزی فرستاده نمی‌شود.', // nieuw, nalezen // nagelezen AI 28 nov
+    heardWait: 'گوشی گوش می‌دهد…', // nieuw, nalezen // nagelezen AI 28 nov
+    heardOk: 'فهمید', // nieuw, nalezen // nagelezen AI 28 nov
+    heardAlmost: 'تقریباً: {word} را دوباره بگویید', // nieuw, nalezen // nagelezen AI 28 nov
+    heardNotYet: 'هنوز نفهمید', // nieuw, nalezen // nagelezen AI 28 nov
+    goOnAnyway: 'با این حال ادامه', // nieuw, nalezen // nagelezen AI 28 nov
     fasterAsk: 'می‌خواهید سریع‌تر یاد بگیرید؟', // nieuw, nalezen // nagelezen AI 31 okt
-    fasterHint: 'توضیح کمتر در درس‌های تازه. هلندی با سرعت عادی.', // nieuw, nalezen
-    fasterYes: 'بله', // nieuw, nalezen
-    fasterNo: 'نه', // nieuw, nalezen
-    easierNext: 'درس بعدی کمی کوتاه‌تر است.', // nieuw, nalezen
-    fasterSetting: 'سریع‌تر یاد گرفتن', // nieuw, nalezen
-    fasterSettingHint: 'روشن: توضیح کمتر در درس‌های تازه، و هلندی با سرعت عادی. خاموش: مثل قبل.', // nieuw, nalezen
-    feelAsk: 'نظرتان درباره Vloertaal چیست؟', // nieuw, nalezen
-    feelGood: 'خوب', // nieuw, nalezen
-    feelOk: 'متوسط', // nieuw, nalezen
-    feelBad: 'خوب نیست', // nieuw, nalezen
-    feelThanks: 'ممنون! این به ما کمک می‌کند Vloertaal را بهتر کنیم.', // nieuw, nalezen
-    tempoFasterHint: 'سریع‌تر یاد گرفتن: توضیح کمتر در درس‌های تازه، و هلندی با سرعت عادی.', // nieuw, nalezen
-    samenTitle: 'با هم تمرین کنید', // nieuw, nalezen
-    samenRowHint: 'دو نفر، یک گوشی', // nieuw, nalezen
+    fasterHint: 'توضیح کمتر در درس‌های تازه. هلندی با سرعت عادی.', // nieuw, nalezen // nagelezen AI 28 nov
+    fasterYes: 'بله', // nieuw, nalezen // nagelezen AI 28 nov
+    fasterNo: 'نه', // nieuw, nalezen // nagelezen AI 28 nov
+    easierNext: 'درس بعدی کمی کوتاه‌تر است.', // nieuw, nalezen // nagelezen AI 28 nov
+    fasterSetting: 'سریع‌تر یاد گرفتن', // nieuw, nalezen // nagelezen AI 28 nov
+    fasterSettingHint: 'روشن: توضیح کمتر در درس‌های تازه، و هلندی با سرعت عادی. خاموش: مثل قبل.', // nieuw, nalezen // nagelezen AI 28 nov
+    feelAsk: 'نظرتان درباره Vloertaal چیست؟', // nieuw, nalezen // nagelezen AI 28 nov
+    feelGood: 'خوب', // nieuw, nalezen // nagelezen AI 28 nov
+    feelOk: 'متوسط', // nieuw, nalezen // nagelezen AI 28 nov
+    feelBad: 'خوب نیست', // nieuw, nalezen // nagelezen AI 28 nov
+    feelThanks: 'ممنون! این به ما کمک می‌کند Vloertaal را بهتر کنیم.', // nieuw, nalezen // nagelezen AI 28 nov
+    tempoFasterHint: 'سریع‌تر یاد گرفتن: توضیح کمتر در درس‌های تازه، و هلندی با سرعت عادی.', // nieuw, nalezen // nagelezen AI 28 nov
+    samenTitle: 'با هم تمرین کنید', // nieuw, nalezen // nagelezen AI 28 nov
+    samenRowHint: 'دو نفر، یک گوشی', // nieuw, nalezen // nagelezen AI 28 nov
     samenIntro: 'با یک همکار، دوست یا معلم تمرین کنید. به نوبت بخوانید.', // nieuw, nalezen // nagelezen AI 31 okt
-    samenHow: 'نفر 1 همکار است. نفر 2 جواب می‌دهد.', // nieuw, nalezen
-    samenNoScore: 'چیزی ضبط نمی‌شود. نمره‌ای در کار نیست.', // nieuw, nalezen
-    samenPerson: 'نفر {n}', // nieuw, nalezen
-    samenAnswer: 'جواب', // nieuw, nalezen
+    samenHow: 'نفر 1 همکار است. نفر 2 جواب می‌دهد.', // nieuw, nalezen // nagelezen AI 28 nov
+    samenNoScore: 'چیزی ضبط نمی‌شود. نمره‌ای در کار نیست.', // nieuw, nalezen // nagelezen AI 28 nov
+    samenPerson: 'نفر {n}', // nieuw, nalezen // nagelezen AI 28 nov
+    samenAnswer: 'جواب', // nieuw, nalezen // nagelezen AI 28 nov
     samenHear: 'گوش بدهید', // nieuw, nalezen // nagelezen AI 31 okt
-    samenNext: 'بعدی', // nieuw, nalezen
-    samenTranslation: 'ترجمه', // nieuw, nalezen
-    samenEnd: 'آفرین! نقش‌ها را عوض کنید و دوباره انجام دهید؟', // nieuw, nalezen
-    samenSwap: 'نقش‌ها را عوض کنید', // nieuw, nalezen
-    samenStop: 'تمام', // nieuw, nalezen
-    checkStart: 'این را بلدم: آزمون کوتاه', // nieuw, nalezen
-    checkPassed: 'این را بلدید. این موضوع را تمام‌شده علامت بزنید؟', // nieuw, nalezen
-    checkNoCert: 'آن وقت هنوز گواهی ندارید. گواهی را بعد از درس‌ها می‌گیرید.', // nieuw, nalezen
-    checkNotYet: 'درس‌ها در این موضوع به شما کمک می‌کنند.', // nieuw, nalezen
-    checkMark: 'علامت زدن', // nieuw, nalezen
-    checkVia: 'با آزمون', // nieuw, nalezen
-    checkUndo: 'با این حال درس‌ها را انجام دهید', // nieuw, nalezen
-    shareInvite: 'من با Vloertaal هلندی را برای کارم یاد می‌گیرم. رایگان است: {link}', // nieuw, nalezen
+    samenNext: 'بعدی', // nieuw, nalezen // nagelezen AI 28 nov
+    samenTranslation: 'ترجمه', // nieuw, nalezen // nagelezen AI 28 nov
+    samenEnd: 'آفرین! نقش‌ها را عوض کنید و دوباره انجام دهید؟', // nieuw, nalezen // nagelezen AI 28 nov
+    samenSwap: 'نقش‌ها را عوض کنید', // nieuw, nalezen // nagelezen AI 28 nov
+    samenStop: 'تمام', // nieuw, nalezen // nagelezen AI 28 nov
+    checkStart: 'این را بلدم: آزمون کوتاه', // nieuw, nalezen // nagelezen AI 28 nov
+    checkPassed: 'این را بلدید. این موضوع را تمام‌شده علامت بزنید؟', // nieuw, nalezen // nagelezen AI 28 nov
+    checkNoCert: 'آن وقت هنوز گواهی ندارید. گواهی را بعد از درس‌ها می‌گیرید.', // nieuw, nalezen // nagelezen AI 28 nov
+    checkNotYet: 'درس‌ها در این موضوع به شما کمک می‌کنند.', // nieuw, nalezen // nagelezen AI 28 nov
+    checkMark: 'علامت زدن', // nieuw, nalezen // nagelezen AI 28 nov
+    checkVia: 'با آزمون', // nieuw, nalezen // nagelezen AI 28 nov
+    checkUndo: 'با این حال درس‌ها را انجام دهید', // nieuw, nalezen // nagelezen AI 28 nov
+    shareInvite: 'من با Vloertaal هلندی را برای کارم یاد می‌گیرم. رایگان است: {link}', // nieuw, nalezen // nagelezen AI 28 nov
     briefjeWhat: 'Vloertaal یک برنامهٔ رایگان برای یادگیری هلندیِ کار است.', // nieuw, nalezen
     briefjeHow: 'درس‌های کوتاه روی گوشی خود، با توضیح به زبان خود. بدون حساب.', // nieuw, nalezen
     briefjeOpen: 'روی گوشی خود باز کنید:', // nieuw, nalezen
-    workTry: 'امروز سر کار امتحانش کنید', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    workTryWhen: 'وقتی:', // nieuw, nalezen
-    workTryThen: 'آن‌وقت بگویید:', // nieuw, nalezen
-    colleagueCard: 'برای همکارتان', // nieuw, nalezen
-    colleagueCardHint: 'این را به همکاری که هلندی صحبت می‌کند نشان دهید. در آن نوشته که چطور می‌تواند در تمرین به شما کمک کند.', // nieuw, nalezen
-    colleagueShare: 'برای همکارتان بفرستید', // nieuw, nalezen
-    forCoach: 'برای مربی شما', // nieuw, nalezen
-    rulesInDutch: 'کار اینجا چطور است، به هلندی ساده. گوشی آن را بلند می‌خواند.', // nieuw, nalezen
-    bridgeTextOne: 'حالا هلندی زیادی بلدید. در هر موضوع می‌توانید بخوانید کار اینجا چطور است، به هلندی ساده.', // nieuw, nalezen
-    noHelpLanguage: 'هیچ: هلندی صحبت می‌کنم', // nieuw, nalezen
-    kaartSaid: 'جمله‌هایی که سر کار گفتید', // nieuw, nalezen
-    kaartHard: 'کلماتی که هنوز سخت است', // nieuw, nalezen
-    kaartRules: 'درس‌هایی درباره اینکه کار اینجا چطور است', // nieuw, nalezen
-    coachCardRights: 'موضوع‌های مربوط به حق‌های شما با نام نشان داده شود', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    speakFromMemory: 'حالا از حفظ: به هلندی چه بود؟', // nieuw, nalezen
-    keptNofM: 'واژه‌های دو هفته پیش یا قدیمی‌تر: هنوز {n} از {m} را بلد بودید.', // nieuw, nalezen
-    verbSecond: 'فعل در جای دوم است.', // nieuw, nalezen
-    playPoints: 'امتیاز', // nieuw, nalezen
-    playTotal: 'همهٔ امتیازهای شما', // nieuw, nalezen
-    sfeer: 'حال‌وهوا', // nieuw, nalezen
-    sfeerCalm: 'آرام', // nieuw, nalezen
-    sfeerGame: 'بازی', // nieuw, nalezen
-    sfeerHint: 'آرام: هیچ چیز حرکت نمی‌کند، جشنی نیست. بازی: امتیاز، صدا و حرکت زیاد.', // nieuw, nalezen
-    sectorGroupService: "خدمات و نگهبانی", // nieuw, nalezen
-    sectorGroupOutdoor: "کار در فضای باز", // nieuw, nalezen
-    sectorChildcare: "مهدکودک", // nieuw, nalezen
-    sectorWaste: "زباله و بازیافت", // nieuw, nalezen
-    sectorFood: "صنایع غذایی", // nieuw, nalezen
-    sectorSecurity: "نگهبانی و حراست", // nieuw, nalezen
-    sectorFacility: "خدمات ساختمان", // nieuw, nalezen
-    sectorGreen: "فضای سبز و باغ‌ها", // nieuw, nalezen
-    playLevel: 'سطح', // nieuw, nalezen
-    playLevel1: 'تازه‌کار', // nieuw, nalezen
-    playLevel2: 'کارآموز', // nieuw, nalezen
-    playLevel3: 'همکار', // nieuw, nalezen
-    playLevel4: 'ماهر', // nieuw, nalezen
-    playLevel5: 'باتجربه', // nieuw, nalezen
-    playLevel6: 'استادکار', // nieuw, nalezen
-    playLevelUp: 'سطح جدید:', // nieuw, nalezen
-    playPerfect: 'بدون اشتباه:', // nieuw, nalezen
-    playDayGoal: 'هدف امروز', // nieuw, nalezen
-    playDayGoalDone: 'به هدف امروز رسیدید!', // nieuw, nalezen
-    playNewTool: 'تازه در جعبه‌ابزار شما:', // nieuw, nalezen
-    playToolbox: 'جعبه‌ابزار من', // nieuw, nalezen
-    playToolboxEmpty: 'یک درس را با بازی تمام کنید. بعد اولین ابزارتان را می‌گیرید.', // nieuw, nalezen
-    infoMore: 'توضیح بیشتر', // nieuw, nalezen
-    tipsAbout: 'دربارهٔ این نکته‌ها', // nieuw, nalezen
-    tipsNotChecked: 'هنوز یک متخصص این توضیح را بررسی نکرده است.', // nieuw, nalezen
-    lawStale: 'تاریخ این توضیح: {month}. برای قوانین تازه، به Juridisch Loket یا Work in NL مراجعه کنید.', // nieuw, nalezen
-    lawStaleBe: 'تاریخ این توضیح: {month}. برای قوانین تازه، به justitiehuis یا werk.belgie.be مراجعه کنید.', // nieuw, nalezen
-    aboutMore: 'بیشتر دربارهٔ Vloertaal', // nieuw, nalezen
-    geluktAsk: 'این را سر کار گفتی؟', // nieuw, nalezen
-    geluktYes: 'بله، شد', // nieuw, nalezen
-    geluktNotYet: 'هنوز نه', // nieuw, nalezen
-    geluktDoneN: 'آفرین! تا حالا {n} جمله سر کار موفق بوده.', // nieuw, nalezen
-    geluktDoneOne: 'آفرین! اولین جمله‌ات سر کار موفق بود.', // nieuw, nalezen
-    geluktWhere: 'آن‌ها را در تنظیمات پیدا می‌کنی.', // nieuw, nalezen
-    geluktTitle: 'موفق سر کار', // nieuw, nalezen
-    geluktListHint: 'این جمله‌ها را سر کار گفتی.', // nieuw, nalezen
-    nextMinutesN: 'حدود {n} دقیقه', // nieuw, nalezen
-    saveFailed: 'پیشرفت شما ذخیره نشد. آیا گوشی پر است؟ کمی جا باز کنید. یا در تنظیمات: «پیشرفت خود را نگه دارید».', // nieuw, nalezen
-    bewaarNudge: 'گوشی شما ممکن است گاهی پیشرفت شما را پاک کند. پس یک نسخه نگه دارید.', // nieuw, nalezen
-    bewaarGo: 'همین حالا ذخیره کنید', // nieuw, nalezen
-    backupShare: 'برای خودتان بفرستید', // nieuw, nalezen
-    backupShareHint: 'فایل را برای خودتان بفرستید، مثلاً در واتس‌اپ یا با ایمیل.', // nieuw, nalezen
-    backupMade: 'تمام شد. این فایل را خوب نگه دارید. بعداً با آن پیشرفت خود را برمی‌گردانید.', // nieuw, nalezen
-    speakTurnPrompt: 'چه می‌گویی؟', // nieuw, nalezen
-    speakTurnExample: 'نمونه', // nieuw, nalezen
-    speakTurnReveal: 'جواب را بشنو', // nieuw, nalezen
-    sceneTitle: 'در محل کار گوش کن', // nieuw, nalezen
-    sceneIntro: 'مثل سر کار، سر و صدا هست. گوش کن. بعد سؤال‌ها می‌آیند.', // nieuw, nalezen
-    buildFront: 'کلمهٔ علامت‌دار را اول بگذارید', // nieuw, nalezen
-    bridgeTitle: 'قوانین کار', // nieuw, nalezen
-    bridgeText: 'حالا هلندی زیادی بلدید. می‌خواهید قوانین کار را هم یاد بگیرید؟ آن وقت همه‌چیز به هلندی است.', // nieuw, nalezen
-    bridgeGo: 'بله، نشان بدهید', // nieuw, nalezen
-    klankTitle: 'چطور می‌گویند؟', // nieuw, nalezen
-    klankHint: 'روی یک صدا ضربه بزنید. ببینید دهان چطور آن را می‌سازد.', // nieuw, nalezen
-    klankSpeed: 'سرعت', // nieuw, nalezen
-    klankScrub: 'کلمه، صدا به صدا', // nieuw, nalezen
-    tagSound: 'صدا', // nieuw, nalezen
-    commLabel: "ارتباط", // nieuw, nalezen
+    workTry: 'امروز سر کار امتحانش کنید', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    workTryWhen: 'وقتی:', // nieuw, nalezen // nagelezen AI 28 nov
+    workTryThen: 'آن‌وقت بگویید:', // nieuw, nalezen // nagelezen AI 28 nov
+    colleagueCard: 'برای همکارتان', // nieuw, nalezen // nagelezen AI 28 nov
+    colleagueCardHint: 'این را به همکاری که هلندی صحبت می‌کند نشان دهید. در آن نوشته که چطور می‌تواند در تمرین به شما کمک کند.', // nieuw, nalezen // nagelezen AI 28 nov
+    colleagueShare: 'برای همکارتان بفرستید', // nieuw, nalezen // nagelezen AI 28 nov
+    forCoach: 'برای مربی شما', // nieuw, nalezen // nagelezen AI 28 nov
+    rulesInDutch: 'کار اینجا چطور است، به هلندی ساده. گوشی آن را بلند می‌خواند.', // nieuw, nalezen // nagelezen AI 28 nov
+    bridgeTextOne: 'حالا هلندی زیادی بلدید. در هر موضوع می‌توانید بخوانید کار اینجا چطور است، به هلندی ساده.', // nieuw, nalezen // nagelezen AI 28 nov
+    noHelpLanguage: 'هیچ: هلندی صحبت می‌کنم', // nieuw, nalezen // nagelezen AI 28 nov
+    kaartSaid: 'جمله‌هایی که سر کار گفتید', // nieuw, nalezen // nagelezen AI 28 nov
+    kaartHard: 'کلماتی که هنوز سخت است', // nieuw, nalezen // nagelezen AI 28 nov
+    kaartRules: 'درس‌هایی درباره اینکه کار اینجا چطور است', // nieuw, nalezen // nagelezen AI 28 nov
+    coachCardRights: 'موضوع‌های مربوط به حق‌های شما با نام نشان داده شود', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    speakFromMemory: 'حالا از حفظ: به هلندی چه بود؟', // nieuw, nalezen // nagelezen AI 28 nov
+    keptNofM: 'واژه‌های دو هفته پیش یا قدیمی‌تر: هنوز {n} از {m} را بلد بودید.', // nieuw, nalezen // nagelezen AI 28 nov
+    verbSecond: 'فعل در جای دوم است.', // nieuw, nalezen // nagelezen AI 28 nov
+    playPoints: 'امتیاز', // nieuw, nalezen // nagelezen AI 28 nov
+    playTotal: 'همهٔ امتیازهای شما', // nieuw, nalezen // nagelezen AI 28 nov
+    sfeer: 'حال‌وهوا', // nieuw, nalezen // nagelezen AI 28 nov
+    sfeerCalm: 'آرام', // nieuw, nalezen // nagelezen AI 28 nov
+    sfeerGame: 'بازی', // nieuw, nalezen // nagelezen AI 28 nov
+    sfeerHint: 'آرام: هیچ چیز حرکت نمی‌کند، جشنی نیست. بازی: امتیاز، صدا و حرکت زیاد.', // nieuw, nalezen // nagelezen AI 28 nov
+    sectorGroupService: "خدمات و نگهبانی", // nieuw, nalezen // nagelezen AI 28 nov
+    sectorGroupOutdoor: "کار در فضای باز", // nieuw, nalezen // nagelezen AI 28 nov
+    sectorChildcare: "مهدکودک", // nieuw, nalezen // nagelezen AI 28 nov
+    sectorWaste: "زباله و بازیافت", // nieuw, nalezen // nagelezen AI 28 nov
+    sectorFood: "صنایع غذایی", // nieuw, nalezen // nagelezen AI 28 nov
+    sectorSecurity: "نگهبانی و حراست", // nieuw, nalezen // nagelezen AI 28 nov
+    sectorFacility: "خدمات ساختمان", // nieuw, nalezen // nagelezen AI 28 nov
+    sectorGreen: "فضای سبز و باغ‌ها", // nieuw, nalezen // nagelezen AI 28 nov
+    playLevel: 'سطح', // nieuw, nalezen // nagelezen AI 28 nov
+    playLevel1: 'تازه‌کار', // nieuw, nalezen // nagelezen AI 28 nov
+    playLevel2: 'کارآموز', // nieuw, nalezen // nagelezen AI 28 nov
+    playLevel3: 'همکار', // nieuw, nalezen // nagelezen AI 28 nov
+    playLevel4: 'ماهر', // nieuw, nalezen // nagelezen AI 28 nov
+    playLevel5: 'باتجربه', // nieuw, nalezen // nagelezen AI 28 nov
+    playLevel6: 'استادکار', // nieuw, nalezen // nagelezen AI 28 nov
+    playLevelUp: 'سطح جدید:', // nieuw, nalezen // nagelezen AI 28 nov
+    playPerfect: 'بدون اشتباه:', // nieuw, nalezen // nagelezen AI 28 nov
+    playDayGoal: 'هدف امروز', // nieuw, nalezen // nagelezen AI 28 nov
+    playDayGoalDone: 'به هدف امروز رسیدید!', // nieuw, nalezen // nagelezen AI 28 nov
+    playNewTool: 'تازه در جعبه‌ابزار شما:', // nieuw, nalezen // nagelezen AI 28 nov
+    playToolbox: 'جعبه‌ابزار من', // nieuw, nalezen // nagelezen AI 28 nov
+    playToolboxEmpty: 'یک درس را با بازی تمام کنید. بعد اولین ابزارتان را می‌گیرید.', // nieuw, nalezen // nagelezen AI 28 nov
+    infoMore: 'توضیح بیشتر', // nieuw, nalezen // nagelezen AI 28 nov
+    tipsAbout: 'دربارهٔ این نکته‌ها', // nieuw, nalezen // nagelezen AI 28 nov
+    tipsNotChecked: 'هنوز یک متخصص این توضیح را بررسی نکرده است.', // nieuw, nalezen // nagelezen AI 28 nov
+    lawStale: 'تاریخ این توضیح: {month}. برای قوانین تازه، به Juridisch Loket یا Work in NL مراجعه کنید.', // nieuw, nalezen // nagelezen AI 28 nov
+    lawStaleBe: 'تاریخ این توضیح: {month}. برای قوانین تازه، به justitiehuis یا werk.belgie.be مراجعه کنید.', // nieuw, nalezen // nagelezen AI 28 nov
+    aboutMore: 'بیشتر دربارهٔ Vloertaal', // nieuw, nalezen // nagelezen AI 28 nov
+    geluktAsk: 'این را سر کار گفتید؟', // nieuw, nalezen (AI-correctie 28 nov 2026)
+    geluktYes: 'بله، شد', // nieuw, nalezen // nagelezen AI 28 nov
+    geluktNotYet: 'هنوز نه', // nieuw, nalezen // nagelezen AI 28 nov
+    geluktDoneN: 'آفرین! تا حالا {n} جمله سر کار موفق بوده.', // nieuw, nalezen // nagelezen AI 28 nov
+    geluktDoneOne: 'آفرین! اولین جملهٔ شما سر کار موفق بود.', // nieuw, nalezen (AI-correctie 28 nov 2026)
+    geluktWhere: 'آن‌ها را در تنظیمات پیدا می‌کنید.', // nieuw, nalezen (AI-correctie 28 nov 2026)
+    geluktTitle: 'موفق سر کار', // nieuw, nalezen // nagelezen AI 28 nov
+    geluktListHint: 'این جمله‌ها را سر کار گفتید.', // nieuw, nalezen (AI-correctie 28 nov 2026)
+    nextMinutesN: 'حدود {n} دقیقه', // nieuw, nalezen // nagelezen AI 28 nov
+    saveFailed: 'پیشرفت شما ذخیره نشد. آیا گوشی پر است؟ کمی جا باز کنید. یا در تنظیمات: «پیشرفت خود را نگه دارید».', // nieuw, nalezen // nagelezen AI 28 nov
+    bewaarNudge: 'گوشی شما ممکن است گاهی پیشرفت شما را پاک کند. پس یک نسخه نگه دارید.', // nieuw, nalezen // nagelezen AI 28 nov
+    bewaarGo: 'همین حالا ذخیره کنید', // nieuw, nalezen // nagelezen AI 28 nov
+    backupShare: 'برای خودتان بفرستید', // nieuw, nalezen // nagelezen AI 28 nov
+    backupShareHint: 'فایل را برای خودتان بفرستید، مثلاً در واتس‌اپ یا با ایمیل.', // nieuw, nalezen // nagelezen AI 28 nov
+    backupMade: 'تمام شد. این فایل را خوب نگه دارید. بعداً با آن پیشرفت خود را برمی‌گردانید.', // nieuw, nalezen // nagelezen AI 28 nov
+    speakTurnPrompt: 'چه می‌گویید؟', // nieuw, nalezen (AI-correctie 28 nov 2026)
+    speakTurnExample: 'نمونه', // nieuw, nalezen // nagelezen AI 28 nov
+    speakTurnReveal: 'جواب را بشنوید', // nieuw, nalezen (AI-correctie 28 nov 2026)
+    sceneTitle: 'در محل کار گوش کنید', // nieuw, nalezen (AI-correctie 28 nov 2026)
+    sceneIntro: 'مثل سر کار، سر و صدا هست. گوش کنید. بعد سؤال‌ها می‌آیند.', // nieuw, nalezen (AI-correctie 28 nov 2026)
+    buildFront: 'کلمهٔ علامت‌دار را اول بگذارید', // nieuw, nalezen // nagelezen AI 28 nov
+    bridgeTitle: 'قوانین کار', // nieuw, nalezen // nagelezen AI 28 nov
+    bridgeText: 'حالا هلندی زیادی بلدید. می‌خواهید قوانین کار را هم یاد بگیرید؟ آن وقت همه‌چیز به هلندی است.', // nieuw, nalezen // nagelezen AI 28 nov
+    bridgeGo: 'بله، نشان بدهید', // nieuw, nalezen // nagelezen AI 28 nov
+    klankTitle: 'چطور می‌گویند؟', // nieuw, nalezen // nagelezen AI 28 nov
+    klankHint: 'روی یک صدا ضربه بزنید. ببینید دهان چطور آن را می‌سازد.', // nieuw, nalezen // nagelezen AI 28 nov
+    klankSpeed: 'سرعت', // nieuw, nalezen // nagelezen AI 28 nov
+    klankScrub: 'کلمه، صدا به صدا', // nieuw, nalezen // nagelezen AI 28 nov
+    tagSound: 'صدا', // nieuw, nalezen // nagelezen AI 28 nov
+    commLabel: "ارتباط", // nieuw, nalezen // nagelezen AI 28 nov
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
@@ -641,7 +641,7 @@ const lang: HelpLanguageSource = {
     'w.beter': 'بهتر',
 
     // Sentences
-    's.hello.1': 'سلام، من تازه‌واردم.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    's.hello.1': 'سلام، من تازه‌واردم.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     's.hello.2': 'صبح بخیر، من علی هستم.',
     's.hello.3': 'ممنون، تا فردا!',
     's.people.1': 'اسم من سارا است.',
@@ -731,141 +731,141 @@ const lang: HelpLanguageSource = {
     'p.call112': 'با 112 تماس بگیر!',
     'p.hurt': 'من زخمی شده‌ام.',
     // Logistiek at four lessons per unit (14 November 2026).
-    'l.picking': "جمع کردن سفارش‌ها", // nieuw, nalezen
-    'w.artikel': "کالا (یک محصول)", // nieuw, nalezen
-    'w.vak': "خانهٔ قفسه (یک جا در قفسه)", // nieuw, nalezen
-    'w.sticker': "استیکر، برچسب", // nieuw, nalezen
-    'w.verzamelen': "جمع کردن، برداشتن", // nieuw, nalezen
-    'w.ontbreken': "نبودن، کم بودن (آنجا نیست)", // nieuw, nalezen
-    'w.locatie': "محل (کد جا، مثل A-12)", // nieuw, nalezen
-    's.picking.1': "کالاهای این سفارش را جمع می‌کنم.", // nieuw, nalezen
-    's.picking.2': "این کالا نیست. خانهٔ قفسه خالی است.", // nieuw, nalezen
-    's.picking.3': "برچسب باید روی جعبه باشد.", // nieuw, nalezen
-    'c.picking.q': "کدام محل است؟", // nieuw, nalezen
-    'c.picking.a': "راهروی سه، خانهٔ دوازده.", // nieuw, nalezen
-    'l.loading': "بار زدن و خالی کردن بار", // nieuw, nalezen
-    'w.vrachtwagen': "کامیون", // nieuw, nalezen
-    'w.chauffeur': "راننده", // nieuw, nalezen
-    'w.lossen': "خالی کردن بار (چیزها را از کامیون بیرون آوردن)", // nieuw, nalezen
-    'w.pompwagen': "جک پالت (چرخ دستی‌ای که پالت را بلند می‌کند)", // nieuw, nalezen
-    'w.folie': "سلفون (پلاستیک نازک دور پالت)", // nieuw, nalezen
-    'w.vrachtbrief': "بارنامه (کاغذی که می‌گوید داخل کامیون چیست)", // nieuw, nalezen
-    's.loading.1': "کامیون کنار درِ چهار است.", // nieuw, nalezen
-    's.loading.2': "اول این پالت‌ها را خالی می‌کنیم.", // nieuw, nalezen
-    's.loading.3': "راننده منتظر بارنامه است.", // nieuw, nalezen
-    'c.loading.q': "این پالت آماده است؟", // nieuw, nalezen
-    'c.loading.a': "نه، هنوز باید دورش سلفون پیچیده شود.", // nieuw, nalezen
+    'l.picking': "جمع کردن سفارش‌ها", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.artikel': "کالا (یک محصول)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vak': "خانهٔ قفسه (یک جا در قفسه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sticker': "استیکر، برچسب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verzamelen': "جمع کردن، برداشتن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ontbreken': "نبودن، کم بودن (آنجا نیست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.locatie': "محل (کد جا، مثل A-12)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.picking.1': "کالاهای این سفارش را جمع می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.picking.2': "این کالا نیست. خانهٔ قفسه خالی است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.picking.3': "برچسب باید روی جعبه باشد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.picking.q': "کدام محل است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.picking.a': "راهروی سه، خانهٔ دوازده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.loading': "بار زدن و خالی کردن بار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vrachtwagen': "کامیون", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.chauffeur': "راننده", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lossen': "خالی کردن بار (چیزها را از کامیون بیرون آوردن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pompwagen': "جک پالت (چرخ دستی‌ای که پالت را بلند می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.folie': "سلفون (پلاستیک نازک دور پالت)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vrachtbrief': "بارنامه (کاغذی که می‌گوید داخل کامیون چیست)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.loading.1': "کامیون کنار درِ چهار است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.loading.2': "اول این پالت‌ها را خالی می‌کنیم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.loading.3': "راننده منتظر بارنامه است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.loading.q': "این پالت آماده است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.loading.a': "نه، هنوز باید دورش سلفون پیچیده شود.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Hulp vragen" at four lessons (14 November 2026).
-    'l.howto': "این را چطور انجام بدهم؟", // nieuw, nalezen
-    'w.hoe': "چطور", // nieuw, nalezen
-    'w.zo': "این‌طور، این‌جوری", // nieuw, nalezen
-    'w.moeilijk': "سخت", // nieuw, nalezen
-    'w.makkelijk': "آسان", // nieuw, nalezen
-    'w.weten': "دانستن", // nieuw, nalezen
-    'w.klopt': "درست است", // nieuw, nalezen
-    's.howto.1': "این را چطور باید انجام بدهم؟", // nieuw, nalezen
-    's.howto.2': "این برای من سخت است.", // nieuw, nalezen
-    's.howto.3': "این‌طور درست انجام می‌دهم؟", // nieuw, nalezen
-    'c.howto.q': "می‌دانی این چطور انجام می‌شود؟", // nieuw, nalezen
-    'c.howto.a': "نه، هنوز این را نمی‌دانم.", // nieuw, nalezen
-    'l.mayask': "می‌توانم چیزی بپرسم؟", // nieuw, nalezen
-    'w.vragen': "پرسیدن", // nieuw, nalezen
-    'w.wie': "چه کسی، کی", // nieuw, nalezen
-    'w.even': "یک لحظه", // nieuw, nalezen
-    'w.tijd': "وقت", // nieuw, nalezen
-    'w.storen': "مزاحم شدن (مزاحم کسی که سرش شلوغ است)", // nieuw, nalezen
-    'w.twijfelen': "شک داشتن (مطمئن نیستی)", // nieuw, nalezen
-    's.mayask.1': "می‌توانم چیزی بپرسم؟", // nieuw, nalezen
-    's.mayask.2': "ببخشید که مزاحم می‌شوم.", // nieuw, nalezen
-    's.mayask.3': "چه کسی می‌تواند به من کمک کند؟", // nieuw, nalezen
-    'c.mayask.q': "سؤالی داری؟", // nieuw, nalezen
-    'c.mayask.a': "بله. یک لحظه وقت داری؟", // nieuw, nalezen
-    'l.whereis': "کجاست؟", // nieuw, nalezen
-    'w.hier': "اینجا", // nieuw, nalezen
-    'w.daar': "آنجا", // nieuw, nalezen
-    'w.kwijt': "گم‌شده (نمی‌توانی پیدایش کنی)", // nieuw, nalezen
-    'w.uitgang': "خروجی", // nieuw, nalezen
-    'w.aanwijzen': "نشان دادن (نشان بدهی کجاست)", // nieuw, nalezen
-    'w.naast': "کنارِ", // nieuw, nalezen
-    's.whereis.1': "راه را گم کرده‌ام.", // nieuw, nalezen
-    's.whereis.2': "خروجی کجاست؟", // nieuw, nalezen
-    's.whereis.3': "دستشویی آنجاست، کنار غذاخوری.", // nieuw, nalezen
-    'c.whereis.q': "می‌توانی پیدایش کنی؟", // nieuw, nalezen
-    'c.whereis.a': "نه. می‌توانی نشانش بدهی؟", // nieuw, nalezen
+    'l.howto': "این را چطور انجام بدهم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hoe': "چطور", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zo': "این‌طور، این‌جوری", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.moeilijk': "سخت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.makkelijk': "آسان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.weten': "دانستن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.klopt': "درست است", // nieuw, nalezen // nagelezen AI 28 nov
+    's.howto.1': "این را چطور باید انجام بدهم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.howto.2': "این برای من سخت است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.howto.3': "این‌طور درست انجام می‌دهم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.howto.q': "می‌دانی این چطور انجام می‌شود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.howto.a': "نه، هنوز این را نمی‌دانم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.mayask': "می‌توانم چیزی بپرسم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vragen': "پرسیدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wie': "چه کسی، کی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.even': "یک لحظه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tijd': "وقت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.storen': "مزاحم شدن (مزاحم کسی که سرش شلوغ است)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.twijfelen': "شک داشتن (مطمئن نیستی)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mayask.1': "می‌توانم چیزی بپرسم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mayask.2': "ببخشید که مزاحم می‌شوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mayask.3': "چه کسی می‌تواند به من کمک کند؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mayask.q': "سؤالی داری؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mayask.a': "بله. یک لحظه وقت داری؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.whereis': "کجاست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hier': "اینجا", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.daar': "آنجا", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kwijt': "گم‌شده (نمی‌توانی پیدایش کنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitgang': "خروجی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanwijzen': "نشان دادن (نشان بدهی کجاست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.naast': "کنارِ", // nieuw, nalezen // nagelezen AI 28 nov
+    's.whereis.1': "راه را گم کرده‌ام.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.whereis.2': "خروجی کجاست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.whereis.3': "دستشویی آنجاست، کنار غذاخوری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.whereis.q': "می‌توانی پیدایش کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.whereis.a': "نه. می‌توانی نشانش بدهی؟", // nieuw, nalezen // nagelezen AI 28 nov
     // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): l.roster, l.breaks, l.wound and l.callhelp.
-    'l.wound': "زخم‌های کوچک و سوختگی", // nieuw, nalezen
-    'w.wond': "زخم", // nieuw, nalezen
-    'w.verband': "باند", // nieuw, nalezen
-    'w.koelen': "خنک کردن (با آب سرد)", // nieuw, nalezen
-    'w.snee': "بریدگی (زخم کوچکی از چاقو یا چیز تیز)", // nieuw, nalezen
-    'w.flauwvallen': "غش کردن", // nieuw, nalezen
-    'w.oogdouche': "دوش چشم (آب برای شستن چشم‌ها)", // nieuw, nalezen
-    's.wound.1': "سوختگی را با آب خنک کن.", // nieuw, nalezen
-    's.wound.2': "یک بریدگی کوچک است. روی زخم فشار بده.", // nieuw, nalezen
-    's.wound.3': "دوش چشم کجاست؟", // nieuw, nalezen
-    'c.wound.q': "همکارم دارد غش می‌کند.", // nieuw, nalezen
-    'c.wound.a': "بگذار کمی دراز بکشد. من کمک می‌آورم.", // nieuw, nalezen
-    'l.callhelp': "زنگ زدن به ۱۱۲", // nieuw, nalezen
-    'w.hulpdiensten': "خدمات اضطراری (آمبولانس، آتش‌نشانی، پلیس)", // nieuw, nalezen
-    'w.straatnaam': "اسم خیابان", // nieuw, nalezen
-    'w.huisnummer': "پلاک خانه", // nieuw, nalezen
-    'w.aanspreekbaar': "هوشیار (وقتی با او حرف می‌زنی واکنش نشان می‌دهد)", // nieuw, nalezen
-    'w.opwachten': "منتظر ماندن و استقبال کردن (از کسی کنار در)", // nieuw, nalezen
-    'w.aandelijn': "پشت خط ماندن (قطع نمی‌کنی)", // nieuw, nalezen
-    's.callhelp.1': "به ۱۱۲ زنگ می‌زنم. آمبولانس لازم دارم.", // nieuw, nalezen
-    's.callhelp.2': "اسم خیابان و پلاک خانه چیست؟", // nieuw, nalezen
-    's.callhelp.3': "کنار ورودی منتظر آمبولانس می‌مانم.", // nieuw, nalezen
-    'c.callhelp.q': "وقتی با او حرف می‌زنی واکنش نشان می‌دهد؟", // nieuw, nalezen
-    'c.callhelp.a': "نه. واکنش نشان نمی‌دهد.", // nieuw, nalezen
-    'l.roster': "برنامهٔ کاری‌ات", // nieuw, nalezen
-    'w.weekrooster': "برنامهٔ کاری هفتگی (چه کسی این هفته کی کار می‌کند)", // nieuw, nalezen
-    'w.roosterapp': "اپ برنامهٔ کاری (شیفت‌هایت روی گوشی‌ات)", // nieuw, nalezen
-    'w.beschikbaar': "در دسترس (آن موقع می‌توانی کار کنی)", // nieuw, nalezen
-    'w.wijziging': "تغییر", // nieuw, nalezen
-    'w.invallen': "جای کسی کار کردن (برای کسی که نیست کار کردن)", // nieuw, nalezen
-    'w.vrijedag': "روز تعطیل", // nieuw, nalezen
-    's.roster.1': "برنامهٔ کاری جدید در اپ است.", // nieuw, nalezen
-    's.roster.2': "شنبه در دسترسی؟", // nieuw, nalezen
-    's.roster.3': "می‌توانی فردا جای سارا کار کنی؟", // nieuw, nalezen
-    'c.roster.q': "در برنامهٔ کاری‌ات تغییری هست.", // nieuw, nalezen
-    'c.roster.a': "باشه. کدام روز باید کار کنم؟", // nieuw, nalezen
-    'l.breaks': "ساعت‌ها و استراحت‌ها", // nieuw, nalezen
-    'w.lunchpauze': "استراحت ناهار", // nieuw, nalezen
-    'w.rusttijd': "زمان استراحت (وقت آزاد بین دو شیفت)", // nieuw, nalezen
-    'w.werkdag': "روز کاری", // nieuw, nalezen
-    'w.urenlijst': "فهرست ساعت‌ها (جایی که ساعت‌هایی را که کار کردی می‌نویسی)", // nieuw, nalezen
-    'w.eerderweg': "زودتر رفتن", // nieuw, nalezen
-    'w.achterelkaar': "پشت سر هم (یکی بعد از دیگری)", // nieuw, nalezen
-    's.breaks.1': "ساعت‌هایم را در فهرست ساعت‌ها می‌نویسم.", // nieuw, nalezen
-    's.breaks.2': "می‌توانم امروز یک ساعت زودتر بروم؟", // nieuw, nalezen
-    's.breaks.3': "شش روز پشت سر هم کار کرده‌ام.", // nieuw, nalezen
-    'c.breaks.q': "استراحت ناهارت کی است؟", // nieuw, nalezen
-    'c.breaks.a': "ساعت دوازده، نیم ساعت.", // nieuw, nalezen
+    'l.wound': "زخم‌های کوچک و سوختگی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wond': "زخم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verband': "باند", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koelen': "خنک کردن (با آب سرد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snee': "بریدگی (زخم کوچکی از چاقو یا چیز تیز)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.flauwvallen': "غش کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oogdouche': "دوش چشم (آب برای شستن چشم‌ها)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wound.1': "سوختگی را با آب خنک کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wound.2': "یک بریدگی کوچک است. روی زخم فشار بده.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wound.3': "دوش چشم کجاست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.q': "همکارم دارد غش می‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.a': "بگذار کمی دراز بکشد. من کمک می‌آورم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.callhelp': "زنگ زدن به ۱۱۲", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hulpdiensten': "خدمات اضطراری (آمبولانس، آتش‌نشانی، پلیس)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.straatnaam': "اسم خیابان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huisnummer': "پلاک خانه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanspreekbaar': "هوشیار (وقتی با او حرف می‌زنی واکنش نشان می‌دهد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opwachten': "منتظر ماندن و استقبال کردن (از کسی کنار در)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aandelijn': "پشت خط ماندن (قطع نمی‌کنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.callhelp.1': "به ۱۱۲ زنگ می‌زنم. آمبولانس لازم دارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.callhelp.2': "اسم خیابان و پلاک خانه چیست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.callhelp.3': "کنار ورودی منتظر آمبولانس می‌مانم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.q': "وقتی با او حرف می‌زنی واکنش نشان می‌دهد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.a': "نه. واکنش نشان نمی‌دهد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.roster': "برنامهٔ کاری‌ات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.weekrooster': "برنامهٔ کاری هفتگی (چه کسی این هفته کی کار می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.roosterapp': "اپ برنامهٔ کاری (شیفت‌هایت روی گوشی‌ات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beschikbaar': "در دسترس (آن موقع می‌توانی کار کنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wijziging': "تغییر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.invallen': "جای کسی کار کردن (برای کسی که نیست کار کردن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vrijedag': "روز تعطیل", // nieuw, nalezen // nagelezen AI 28 nov
+    's.roster.1': "برنامهٔ کاری جدید در اپ است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.roster.2': "شنبه در دسترسی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.roster.3': "می‌توانی فردا جای سارا کار کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.q': "در برنامهٔ کاری‌ات تغییری هست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.a': "باشه. کدام روز باید کار کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.breaks': "ساعت‌ها و استراحت‌ها", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lunchpauze': "استراحت ناهار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rusttijd': "زمان استراحت (وقت آزاد بین دو شیفت)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkdag': "روز کاری", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.urenlijst': "فهرست ساعت‌ها (جایی که ساعت‌هایی را که کار کردی می‌نویسی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.eerderweg': "زودتر رفتن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.achterelkaar': "پشت سر هم (یکی بعد از دیگری)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.breaks.1': "ساعت‌هایم را در فهرست ساعت‌ها می‌نویسم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.breaks.2': "می‌توانم امروز یک ساعت زودتر بروم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.breaks.3': "شش روز پشت سر هم کار کرده‌ام.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.q': "استراحت ناهارت کی است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.a': "ساعت دوازده، نیم ساعت.", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (26 November 2026).
-    'l.firstweeks': "هفته‌های اولت", // nieuw, nalezen
-    'w.rondleiding': "بازدید آشنایی (کسی ساختمان را به تو نشان می‌دهد)", // nieuw, nalezen
-    'w.begeleider': "راهنما (همکاری که در هفته‌های اول کمکت می‌کند)", // nieuw, nalezen
-    'w.notitieboekje': "دفترچهٔ یادداشت", // nieuw, nalezen
-    'w.meelopen': "همراه یک همکار رفتن (و دیدن اینکه چطور کار می‌کند)", // nieuw, nalezen
-    'w.onthouden': "به خاطر سپردن", // nieuw, nalezen
-    'w.zelfstandig': "مستقل (بدون کمک)", // nieuw, nalezen
-    's.firstweeks.1': "می‌شود یک بار دیگر نشانم بدهی؟", // nieuw, nalezen
-    's.firstweeks.2': "امروز همراه سارا می‌روم.", // nieuw, nalezen
-    's.firstweeks.3': "آن را در دفترچهٔ یادداشتم می‌نویسم.", // nieuw, nalezen
-    'c.firstweeks.q': "همه چیزِ بازدید آشنایی یادت هست؟", // nieuw, nalezen
-    'c.firstweeks.a': "تقریباً همه چیز. غذاخوری کجا بود؟", // nieuw, nalezen
-    'l.orderpick': "جمع‌آوری سفارش و ریچ‌تراک", // nieuw, nalezen
-    'w.orderpicker': "جمع‌کنندهٔ سفارش (کارگری که سفارش‌ها را جمع می‌کند؛ همچنین وسیلهٔ کوچکی که رویش می‌ایستی تا از بالا کالا برداری)", // nieuw, nalezen
-    'w.reachtruck': "ریچ‌تراک (لیفتراکی برای قفسه‌های خیلی بلند؛ شاخک‌هایش جلو می‌روند)", // nieuw, nalezen
-    'w.picklijst': "فهرست برداشت (فهرست کالاهایی که باید جمع کنی)", // nieuw, nalezen
-    'w.scannen': "اسکن کردن", // nieuw, nalezen
-    'w.voetganger': "عابر پیاده (کسی که پیاده است)", // nieuw, nalezen
-    'w.opwarmen': "گرم شدن (در یک جای گرم، بعد از کار در سرما)", // nieuw, nalezen
-    's.orderpick.1': "هر کالای فهرست برداشت را اسکن می‌کنم.", // nieuw, nalezen
-    's.orderpick.2': "عابران پیاده روی مسیر عابر راه می‌روند.", // nieuw, nalezen
-    's.orderpick.3': "در اتاق انجماد لباس گرم می‌پوشم.", // nieuw, nalezen
-    'c.orderpick.q': "می‌توانی یک لحظه با ریچ‌تراک کار کنی؟", // nieuw, nalezen
-    'c.orderpick.a': "نه، اجازه ندارم. برایش آموزش ندیده‌ام.", // nieuw, nalezen
+    'l.firstweeks': "هفته‌های اولت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rondleiding': "بازدید آشنایی (کسی ساختمان را به تو نشان می‌دهد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.begeleider': "راهنما (همکاری که در هفته‌های اول کمکت می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.notitieboekje': "دفترچهٔ یادداشت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meelopen': "همراه یک همکار رفتن (و دیدن اینکه چطور کار می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onthouden': "به خاطر سپردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zelfstandig': "مستقل (بدون کمک)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.firstweeks.1': "می‌شود یک بار دیگر نشانم بدهی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.firstweeks.2': "امروز همراه سارا می‌روم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.firstweeks.3': "آن را در دفترچهٔ یادداشتم می‌نویسم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.q': "همه چیزِ بازدید آشنایی یادت هست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.a': "تقریباً همه چیز. غذاخوری کجا بود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.orderpick': "جمع‌آوری سفارش و ریچ‌تراک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.orderpicker': "جمع‌کنندهٔ سفارش (کارگری که سفارش‌ها را جمع می‌کند؛ همچنین وسیلهٔ کوچکی که رویش می‌ایستی تا از بالا کالا برداری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.reachtruck': "ریچ‌تراک (لیفتراکی برای قفسه‌های خیلی بلند؛ شاخک‌هایش جلو می‌روند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.picklijst': "فهرست برداشت (فهرست کالاهایی که باید جمع کنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scannen': "اسکن کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voetganger': "عابر پیاده (کسی که پیاده است)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opwarmen': "گرم شدن (در یک جای گرم، بعد از کار در سرما)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.orderpick.1': "هر کالای فهرست برداشت را اسکن می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.orderpick.2': "عابران پیاده روی مسیر عابر راه می‌روند.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.orderpick.3': "در اتاق انجماد لباس گرم می‌پوشم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.q': "می‌توانی یک لحظه با ریچ‌تراک کار کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.a': "نه، اجازه ندارم. برایش آموزش ندیده‌ام.", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 

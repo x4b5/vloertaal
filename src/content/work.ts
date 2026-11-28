@@ -4183,6 +4183,34 @@ export const dataUnit = unit('data', 'Numbers and details', 'Getallen en gegeven
     ],
     [['Welke datum is het vandaag?', 'What is the date today?'], ['Het is maandag drie juni.', 'It is Monday, 3 June.']],
   ),
+  // "Een formulier invullen" (l.forms, 27 November 2026, the owner's choice: four new lessons in
+  // existing units), before the mixed review. Writing in capital letters, ticking a box, the
+  // required field, the signature, and the BSN only where it belongs. Already words of other
+  // lessons, used here in a sentence, the chat or the tip only: "het formulier" and "de
+  // geboortedatum" (l.details), "de handtekening" (l.workorder), "het adres" and "het BSN" (l.bsn)
+  // and "verplicht" (l.diploma). Drawn: filling in, the box and ticking it (an empty box; a pen
+  // making a cross in one: illustrators, keep the two apart); the postcode and the capital letters
+  // would need text in the picture, and the required field is abstract. The tip is in workTips.ts
+  // (c.forms); its facts have a ⚖️ note there and a section in docs/juridische-check.md. It names
+  // the BSN: NL-only in Belgium for now (BE_LESSON_TODO in src/content/taalBe).
+  lesson(
+    'forms',
+    'Filling in a form',
+    [
+      ['invullen', 'invullen', 'to fill in (a form)', '🖊️'],
+      ['vakje', 'het vakje', 'the box (a small square on a form)', '⬜'],
+      ['aankruisen', 'aankruisen', 'to tick (to put a cross in a box)', '☑️'],
+      ['verplichtveld', 'het verplichte veld', 'the required field (you must fill it in; often marked with a *)', '✳️', false],
+      ['postcode', 'de postcode', 'the postcode (a short code for your street or town, part of your address)', '🏷️', false],
+      ['hoofdletters', 'de hoofdletters', 'the capital letters (A, B, C)', '🔠', false],
+    ],
+    [
+      ['Schrijf je naam in hoofdletters.', 'Write your name in capital letters.'],
+      ['Kruis het goede vakje aan.', 'Tick the right box.'],
+      ['Kunt u mij helpen met dit formulier?', 'Can you help me with this form?'],
+    ],
+    [['Heb je het formulier al ingevuld?', 'Have you filled in the form yet?'], ['Bijna. Waar moet mijn handtekening?', 'Almost. Where does my signature go?']],
+  ),
 ]);
 
 // ---- Work and contracts: lesson 4 (30 October 2026) ----
@@ -5423,6 +5451,75 @@ const topEight: Record<string, Lesson[]> = {
 /** A unit with its new lessons of 26 November 2026 at the end (topEight above), or the unit itself. */
 const withTopEight = (u: Unit): Unit => (topEight[u.id] ? { ...u, lessons: [...u.lessons, ...topEight[u.id]] } : u);
 
+// ---- Four new lessons in existing units (27 November 2026, the owner's choice) ----
+// Two of the four are here: "De voicemail en terugbellen" (u.contact) and "De tandarts" (u.health,
+// its sixth teaching lesson). "Een formulier invullen" is at the end of dataUnit above (u.data is not
+// one of workUnits) and "Het functioneringsgesprek" in cultureUnits.ts (u.feedback). Each comes at
+// the end of its unit, before the mixed review. Words that are already words of other lessons come
+// in a sentence, the chat or the tip only. The tips are in workTips.ts; the facts in them have a ⚖️
+// note there and a section in docs/juridische-check.md. The dentist's costs are about Dutch
+// insurance (BE_LESSON_TODO in src/content/taalBe). Translations follow
+// (src/content/translationPending.ts), and so do the drawings (placeholders in src/pictures/extra4).
+
+const extraFour: Record<string, Lesson[]> = {
+  // Bellen en appen: leaving a short message, listening to your voicemail, calling back. "de
+  // voicemail", "de gemiste oproep" and "opnemen" (l.reachable), "terugbellen" and "inspreken"
+  // (l.callin), "langzaam" (l.understand), "het nummer" (l.aifake), "achterlaten" (l.leavesite) and
+  // "het rooster" (l.clock) come in a sentence, the chat or the tip only. Drawn: the beep (a phone
+  // that gives a short tone) and listening to a message (a phone at the ear, a voicemail sign);
+  // the other four are abstract.
+  'u.contact': [
+    lesson(
+      'voicemail',
+      'Voicemail and calling back',
+      [
+        ['piep', 'de piep', 'the beep (the short sound; after it you speak your message)', '🔔'],
+        ['beluisteren', 'beluisteren', 'to listen to (a message)', '🎧'],
+        ['boodschap', 'de boodschap', 'the message (what you say on someone’s voicemail)', '💬', false],
+        ['noemen', 'noemen', 'to say, to name (your name, your number)', '🗣️', false],
+        ['zosnelmogelijk', 'zo snel mogelijk', 'as soon as possible', '⏱️', false],
+        ['opnieuw', 'opnieuw', 'again (one more time)', '🔁', false],
+      ],
+      [
+        ['Met Ali Haddad. Ik bel over mijn rooster.', 'This is Ali Haddad. I am calling about my roster.'],
+        ['Ik beluister mijn voicemail elke dag.', 'I listen to my voicemail every day.', ['Elke dag beluister ik mijn voicemail.']],
+        ['Ik bel later opnieuw.', 'I will call again later.'],
+      ],
+      [['Spreek uw naam en nummer in na de piep.', 'Leave your name and number after the beep.'], ['Met Ali. Wilt u mij zo snel mogelijk terugbellen?', 'This is Ali. Would you call me back as soon as possible?']],
+    ),
+  ],
+  // Gezondheid: the dentist. Toothache, an appointment, the check-up, a filling, the costs and the
+  // dentist on duty at night or in the weekend. "de controle" (l.inspection), "de pijn" (l.sick),
+  // "vergoeden" (l.insurance), "de zorgverzekering" and "inschrijven" (l.bsn), "de huisartsenpost"
+  // (l.doctor) and "de afspraak" (l.agree) come in a sentence, the chat or the tip only. Drawn: the
+  // dentist, toothache (a hand on a swollen cheek), the cavity and the filling (one tooth with a
+  // dark hole, one with a light patch: illustrators, keep the two apart) and the teeth (a row of
+  // teeth); the supplementary insurance is abstract.
+  'u.health': [
+    lesson(
+      'dentist',
+      'The dentist',
+      [
+        ['tandarts', 'de tandarts', 'the dentist', '🦷'],
+        ['kiespijn', 'de kiespijn', 'the toothache', '😣'],
+        ['gaatje', 'het gaatje', 'the cavity (a small hole in a tooth)', '🕳️'],
+        ['vulling', 'de vulling', 'the filling (the dentist closes the hole in a tooth)', '🩹'],
+        ['gebit', 'het gebit', 'the teeth (all your teeth together)', '😁'],
+        ['aanvullendeverzekering', 'de aanvullende verzekering', 'the extra insurance (you can choose it on top of the basic health insurance)', '➕', false],
+      ],
+      [
+        ['Ik heb al twee dagen kiespijn.', 'I have had toothache for two days.'],
+        ['Ik heb een gaatje. Ik krijg een vulling.', 'I have a cavity. I am getting a filling.'],
+        ['Wat kost een vulling?', 'What does a filling cost?'],
+      ],
+      [['Wanneer was je voor het laatst bij de tandarts?', 'When were you last at the dentist?'], ['Een jaar geleden. Ik wil graag een controle.', 'A year ago. I would like a check-up.']],
+    ),
+  ],
+};
+
+/** A unit with its new lessons of 27 November 2026 at the end (extraFour above), or the unit itself. */
+const withExtraFour = (u: Unit): Unit => (extraFour[u.id] ? { ...u, lessons: [...u.lessons, ...extraFour[u.id]] } : u);
+
 // ---- Course order of everything in this file ----
 
 const byId = (id: string) => coreUnits.find((u) => u.id === id)!;
@@ -5507,7 +5604,8 @@ export const workUnits: Unit[] = [
   processUnit,
   // The basis units at four lessons (23 November 2026): their two new lessons at the end (basisFour above).
   // The eight new lessons of 26 November 2026 (topEight above): at the end of their unit too.
-].map(withFour).map(withTopEight);
+  // The four new lessons of 27 November 2026 (extraFour above): the same.
+].map(withFour).map(withTopEight).map(withExtraFour);
 
 
 /** This file's address (saved with the app for offline use, src/content/lessonTexts.ts). */

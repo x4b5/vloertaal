@@ -6,13 +6,13 @@ const t: CultureTranslation = {
     sayAloud: "Mikrofon gerekmez. Sesli söyle, sonra devam et.",
     micRetry: "Mikrofonu tekrar dene",
     micFailed: "Mikrofon çalışmadı. Sesli söyle, sonra devam et.",
-    micRefused: "Uygulama mikrofonunu kullanamıyor. Mikrofonu açabilirsin.", // nieuw, nalezen
-    micTurnOn: "Mikrofonu aç", // nieuw, nalezen
-    micStepsIos: "Adres çubuğunda “•••” ya da “aA”ya dokun › Web Sitesi Ayarları › Mikrofon › İzin Ver. Ya da: Ayarlar › Uygulamalar › Safari › Mikrofon. Sonra aşağıdaki düğmeye dokun.", // nieuw, nalezen
-    micStepsIosOther: "Web adresinin solundaki simgeye dokun › İzinler › Mikrofon › İzin ver. Ya da: Ayarlar › Uygulamalar › {app} › Mikrofon. Sonra aşağıdaki düğmeye dokun.", // nieuw, nalezen
-    micStepsAndroid: "Web adresinin solundaki simgeye dokun › İzinler › Mikrofon › İzin ver. Sonra aşağıdaki düğmeye dokun.", // nieuw, nalezen
-    micStepsAndroidApp: "Ana ekrandaki Vloertaal simgesine basılı tut › Uygulama bilgileri › İzinler › Mikrofon › İzin ver. Sonra aşağıdaki düğmeye dokun.", // nieuw, nalezen
-    micStepsDesktop: "Web adresinin solundaki simgeye tıkla › Mikrofon › İzin ver. Sonra aşağıdaki düğmeye tıkla.", // nieuw, nalezen
+    micRefused: "Uygulama mikrofonunu kullanamıyor. Mikrofonu açabilirsin.", // nieuw, nalezen // nagelezen AI 28 nov
+    micTurnOn: "Mikrofonu aç", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsIos: "Adres çubuğunda “•••” ya da “aA”ya dokun › Web Sitesi Ayarları › Mikrofon › İzin Ver. Ya da: Ayarlar › Uygulamalar › Safari › Mikrofon. Sonra aşağıdaki düğmeye dokun.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsIosOther: "Web adresinin solundaki simgeye dokun › İzinler › Mikrofon › İzin ver. Ya da: Ayarlar › Uygulamalar › {app} › Mikrofon. Sonra aşağıdaki düğmeye dokun.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsAndroid: "Web adresinin solundaki simgeye dokun › İzinler › Mikrofon › İzin ver. Sonra aşağıdaki düğmeye dokun.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsAndroidApp: "Ana ekrandaki Vloertaal simgesine basılı tut › Uygulama bilgileri › İzinler › Mikrofon › İzin ver. Sonra aşağıdaki düğmeye dokun.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsDesktop: "Web adresinin solundaki simgeye tıkla › Mikrofon › İzin ver. Sonra aşağıdaki düğmeye tıkla.", // nieuw, nalezen // nagelezen AI 28 nov
     whichPicture: "Hangi resim?",
     sayAloudInstead: "Bunun yerine sesli söyle",
     wordsPractised: "Tekrar edilen kelimeler",
@@ -21,7 +21,7 @@ const t: CultureTranslation = {
   gloss: {
     'c.hello.a.why': "Vedalaşmaya vedayla karşılık verilir.",
     'c.people.a.why': "Soru bir isim soruyor. Bu cevap bir isim veriyor.",
-    'c.arrive.a.why': "Soru neden gelindiğini soruyor. Bu cevap yeni olduğunu ve bugün başladığını söylüyor.",
+    'c.arrive.a.why': "Soru neden gelindiğini soruyor: bu cevap yeni olduğunu ve bugün başladığını söylüyor.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.understand.a.why': "Anlaşılmadı mı? Tekrar söylenmesini istemek normaldir.",
     'c.translate.a.why': "Not henüz anlaşılmadı, bu yüzden önce çevrilir.",
     'c.understood.a.why': "Görevi tekrar söylemek, sıranın doğru anlaşıldığını kontrol eder.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
@@ -64,7 +64,7 @@ const t: CultureTranslation = {
     'c.illness.a.why': "Tıbbi ayrıntılar patron için değil, işyeri hekimi içindir.",
     'c.warning.a.why': "İşveren pasaportun kopyasını alabilir, pasaportu tutamaz.",
     'c.gethelp.a.why': "Neyin yanlış olduğunu açıkça söylemek yardım etmelerini sağlar.",
-    'c.callin.a.why': "Ne zaman döneceğin soruluyor: bu cevap bir gün veriyor.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.callin.a.why': "Ne zaman döneceğin soruluyor. Bu cevap bir gün veriyor.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.texting.a.why': "Uygulamada hızlı cevap planlamaya yardımcı olur.",
     'c.certs.a.why': "Dürüst bir \"hayır\" ve öğrenme isteği: iyi bir cevap.",
     'c.diploma.a.why': "Eğitime \"evet\" demek ve kimin ödediğini sormak normaldir.",
@@ -86,11 +86,11 @@ const t: CultureTranslation = {
     'c.service.a.why': "Hesap istendi: kısa bir \"evet\" ve hemen gidilir.",
     'c.cleaning.a.why': "Bitti mi? Bu cevap \"neredeyse\" diyor ve kaç tane kaldığını söylüyor.",
     'c.cleansafe.a.why': "Islak zemin kaygandır: uyarı yardımcı olur.",
-    'c.shelves.a.why': "Soru \"nerede\" diye soruyor. Bu cevap koridoru söylüyor ve yardım ediyor.",
+    'c.shelves.a.why': "Soru \"nerede\" diye soruyor: bu cevap koridoru söylüyor ve yardım ediyor.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.checkout.a.why': "Kartla ödeme soruluyor: kısa ve nazik bir \"evet\".",
     'c.counting.a.why': "Kaç tane olduğu soruluyor: bu cevap sayıyı veriyor ve rakam rakam kontrol ediyor.", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.hours.a.why': "Soru saati soruyor. Bu cevap bir saat söylüyor.",
-    'c.measures.a.why': "Soru uzunluğu soruyor. Bu cevap bir uzunluk söylüyor.",
+    'c.hours.a.why': "Soru saati soruyor: bu cevap bir saat söylüyor.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.measures.a.why': "Soru uzunluğu soruyor: bu cevap bir uzunluk söylüyor.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.aihelp.a.why': "Kimin yazdığı soruluyor: yardımı da söyleyen dürüst bir “evet”.",
     'c.aiprivate.a.why': "Sohbet robotuna isim yazman isteniyor: bu cevap “hayır” diyor ve nedenini söylüyor.",
     'c.aifake.a.why': "Yeni bir numara para istiyor: bu cevap önce kontrol ediyor.",
@@ -209,122 +209,127 @@ const t: CultureTranslation = {
     'c.brakes.a.why': "Yenisinin gerekip gerekmediği soruluyor: evet, bir de nedeni.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "Ne yapılması gerektiği soruluyor: iş emrine bakılır.", // nieuw, nalezen // nagelezen AI 22 nov
     // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
-    'c.mowing.a.why': "Alıp alamayacağın soruluyor: evet, bir de önce ne yapılacağı.", // nieuw, nalezen
-    'c.pruning.a.why': "Hangi dallar olduğu soruluyor: sadece kuru olanlar.", // nieuw, nalezen
-    'c.hedge.a.why': "Ne kadar yüksek olacağı soruluyor: ipe kadar, daha alçak değil.", // nieuw, nalezen
-    'c.chainsaw.a.why': "İzin olup olmadığı soruluyor: henüz değil, bir de önce ne geldiği.", // nieuw, nalezen
-    'c.weeding.a.why': "Yabani ot olup olmadığı soruluyor: hayır, bir de onunla ne yapılacağı.", // nieuw, nalezen
-    'c.planting.a.why': "Nereye gittiği soruluyor: çiçek tarhındaki yeri.", // nieuw, nalezen
-    'c.roadside.a.why': "Karşıya geçilip geçilemeyeceği soruluyor: hayır, bekle, bir de nedeni.", // nieuw, nalezen
-    'c.litter.a.why': "Bir mahalle sakini ne zaman olacağını soruyor: bilmiyorsun, bir de kimin bildiği.", // nieuw, nalezen
-    'c.reception.a.why': "Bir ziyaretçinin randevusu var: bir dakika, sen arıyorsun.", // nieuw, nalezen
-    'c.visitors.a.why': "Montun nereye gideceği soruluyor: yeri, bir de nerede olduğu.", // nieuw, nalezen
-    'c.mailroom.a.why': "Kimin için olduğu soruluyor: bölüm, bir de kat.", // nieuw, nalezen
-    'c.meetingroom.a.why': "Saat kaçta olduğu soruluyor: saat, bir de ne yapılması gerektiği.", // nieuw, nalezen
-    'c.faults.a.why': "Neden soğuk olduğu soruluyor: neyin bozuk olduğu, bir de yardımın ne zaman geldiği.", // nieuw, nalezen
-    'c.repairs.a.why': "Ötüp ötmediği soruluyor: evet, bir de nedeni.", // nieuw, nalezen
-    'c.moving.a.why': "Nereye gittiği soruluyor: oda, bir de nereye bakılacağı.", // nieuw, nalezen
-    'c.closing.a.why': "İçeride biri olup olmadığı soruluyor: hayır, bir de şimdi ne yaptığın.", // nieuw, nalezen
-    'c.patrol.a.why': "Bir şey görüp görmediğin soruluyor: evet, ne, bir de nerede.", // nieuw, nalezen
-    'c.access.a.why': "Kartsız içeri girmek isteniyor: üzgünüm, kartsız olmaz.", // nieuw, nalezen
-    'c.cameras.a.why': "Ne gördüğün soruluyor: kimi, nerede, bir de ne yaptığın.", // nieuw, nalezen
-    'c.report.a.why': "Rapora ne yazılacağı soruluyor: ne, nerede ve ne zaman.", // nieuw, nalezen
-    'c.evacuation.a.why': "Herkesin dışarıda olup olmadığı soruluyor: hayır, kaç kişinin eksik olduğu.", // nieuw, nalezen
-    'c.firstaid.a.why': "AED’nin nerede olduğu soruluyor: yeri, bir de yanında ne olduğu.", // nieuw, nalezen
-    'c.shoplifting.a.why': "Bir çantanın aranıp aranamayacağı soruluyor: hayır, bir de bunu kimin yaptığı.", // nieuw, nalezen
-    'c.aggression.a.why': "Neden olmadığı soruluyor: nedeni, sakince söyleniyor.", // nieuw, nalezen
-    'c.hygienelock.a.why': "Saat soruluyor: hayır, bir de arkasındaki kural.", // nieuw, nalezen
-    'c.allergens.a.why': "Birlikte gidip gidemeyeceği soruluyor: hayır, bir de nedeni.", // nieuw, nalezen
-    'c.coldroom.a.why': "Neden öttüğü soruluyor: nedeni, bir de ne yapılacağı.", // nieuw, nalezen
-    'c.foreignbody.a.why': "Ne yapılacağı soruluyor: kime gösterileceği.", // nieuw, nalezen
-    'c.cutting.a.why': "Ne kadar olduğu soruluyor: ağırlık, bir de nereye bakılacağı.", // nieuw, nalezen
-    'c.labels.a.why': "Hangi tarih olduğu soruluyor: ne zaman, bir de nereye bakılacağı.", // nieuw, nalezen
-    'c.linecleaning.a.why': "Temiz olup olmadığı soruluyor: henüz değil, bir de ne kaldığı.", // nieuw, nalezen
-    'c.haccp.a.why': "Nedeni soruluyor: yiyeceğin güvenli olduğunu bilmek için.", // nieuw, nalezen
-    'c.binlorry.a.why': "Arkada gidilip gidilemeyeceği soruluyor: hayır, bir de nerede gidileceği.", // nieuw, nalezen
-    'c.reversing.a.why': "Yardım isteniyor: evet, nerede durduğun, bir de ne yapılacağı.", // nieuw, nalezen
-    'c.wastesorting.a.why': "Nereye gittiği soruluyor: hangi kutu, bir de nedeni.", // nieuw, nalezen
-    'c.wastesafety.a.why': "Kesikten sonra ne yapılacağı soruluyor: yıka, bir de söyle.", // nieuw, nalezen
-    'c.yard.a.why': "Nereye gittiği soruluyor: konteyner, bir de nerede olduğu.", // nieuw, nalezen
-    'c.hazardous.a.why': "İçinde ne olduğu soruluyor: bilmiyorsun, o yüzden kenara koy.", // nieuw, nalezen
-    'c.baler.a.why': "Bakılıp bakılamayacağı soruluyor: hayır, bir de önce ne geldiği.", // nieuw, nalezen
-    'c.shovel.a.why': "Geçilip geçilemeyeceği soruluyor: sadece şoför seni görüyorsa.", // nieuw, nalezen
-    'c.nappies.a.why': "Ne zaman olduğu soruluyor: saat, bir de nerede yazdığı.", // nieuw, nalezen
-    'c.mealtime.a.why': "Yiyip yiyemeyeceği soruluyor: hayır, nedeni, bir de nereye bakılacağı.", // nieuw, nalezen
-    'c.naptime.a.why': "Uyuyup uyumadığı soruluyor: evet, ne zamandan beri, bir de kontrol ettiğin.", // nieuw, nalezen
-    'c.playtime.a.why': "Bir çocuğun oynayıp oynayamayacağı soruluyor: evet, nerede, bir de sonra ne olacağı.", // nieuw, nalezen
-    'c.pickup.a.why': "Kimin alacağı soruluyor: kişi, bir de listede olduğu.", // nieuw, nalezen
-    'c.childsafety.a.why': "Düşüp düşmediği soruluyor: evet, neyi olduğu, bir de kimi aradığın.", // nieuw, nalezen
-    'c.sickchild.a.why': "Nasıl olduğu soruluyor: ne gördüğün, bir de ne yaptığın.", // nieuw, nalezen
-    'c.grouprules.a.why': "Tek başına gidip gidemeyeceğin soruluyor: evet, ama önce bir iş arkadaşına söyle.", // nieuw, nalezen
+    'c.mowing.a.why': "Alıp alamayacağın soruluyor: evet, bir de önce ne yapılacağı.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.a.why': "Hangi dallar olduğu soruluyor: sadece kuru olanlar.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.a.why': "Ne kadar yüksek olacağı soruluyor: ipe kadar, daha alçak değil.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.a.why': "İzin olup olmadığı soruluyor: henüz değil, bir de önce ne geldiği.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.a.why': "Yabani ot olup olmadığı soruluyor: hayır, bir de onunla ne yapılacağı.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.a.why': "Nereye gittiği soruluyor: çiçek tarhındaki yeri.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.a.why': "Karşıya geçilip geçilemeyeceği soruluyor: hayır, bekle, bir de nedeni.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.a.why': "Bir mahalle sakini ne zaman olacağını soruyor: bilmiyorsun, bir de kimin bildiği.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.a.why': "Bir ziyaretçinin randevusu var: bir dakika, sen arıyorsun.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.a.why': "Montun nereye gideceği soruluyor: yeri, bir de nerede olduğu.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.a.why': "Kimin için olduğu soruluyor: bölüm, bir de kat.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.a.why': "Saat kaçta olduğu soruluyor: saat, bir de ne yapılması gerektiği.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.a.why': "Neden soğuk olduğu soruluyor: neyin bozuk olduğu, bir de yardımın ne zaman geldiği.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.a.why': "Ötüp ötmediği soruluyor: evet, bir de nedeni.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.a.why': "Nereye gittiği soruluyor: oda, bir de nereye bakılacağı.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.a.why': "İçeride biri olup olmadığı soruluyor: hayır, bir de şimdi ne yaptığın.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.a.why': "Bir şey görüp görmediğin soruluyor: evet, ne, bir de nerede.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.a.why': "Kartsız içeri girmek isteniyor: üzgünüm, kartsız olmaz.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.a.why': "Ne gördüğün soruluyor: kimi, nerede, bir de ne yaptığın.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.a.why': "Rapora ne yazılacağı soruluyor: ne, nerede ve ne zaman.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.a.why': "Herkesin dışarıda olup olmadığı soruluyor: hayır, kaç kişinin eksik olduğu.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.a.why': "AED’nin nerede olduğu soruluyor: yeri, bir de yanında ne olduğu.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.a.why': "Bir çantanın aranıp aranamayacağı soruluyor: hayır, bir de bunu kimin yaptığı.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.a.why': "Neden olmadığı soruluyor: nedeni, sakince söyleniyor.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.a.why': "Saat soruluyor: hayır, bir de arkasındaki kural.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.a.why': "Birlikte gidip gidemeyeceği soruluyor: hayır, bir de nedeni.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.a.why': "Neden öttüğü soruluyor: nedeni, bir de ne yapılacağı.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.a.why': "Ne yapılacağı soruluyor: kime gösterileceği.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.a.why': "Ne kadar olduğu soruluyor: ağırlık, bir de nereye bakılacağı.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.a.why': "Hangi tarih olduğu soruluyor: ne zaman, bir de nereye bakılacağı.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.a.why': "Temiz olup olmadığı soruluyor: henüz değil, bir de ne kaldığı.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.a.why': "Nedeni soruluyor: yiyeceğin güvenli olduğunu bilmek için.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.a.why': "Arkada gidilip gidilemeyeceği soruluyor: hayır, bir de nerede gidileceği.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.a.why': "Yardım isteniyor: evet, nerede durduğun, bir de ne yapılacağı.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.a.why': "Nereye gittiği soruluyor: hangi kutu, bir de nedeni.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.a.why': "Kesikten sonra ne yapılacağı soruluyor: yıka, bir de söyle.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.a.why': "Nereye gittiği soruluyor: konteyner, bir de nerede olduğu.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.a.why': "İçinde ne olduğu soruluyor: bilmiyorsun, o yüzden kenara koy.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.a.why': "Bakılıp bakılamayacağı soruluyor: hayır, bir de önce ne geldiği.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.a.why': "Geçilip geçilemeyeceği soruluyor: sadece şoför seni görüyorsa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.a.why': "Ne zaman olduğu soruluyor: saat, bir de nerede yazdığı.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.a.why': "Yiyip yiyemeyeceği soruluyor: hayır, nedeni, bir de nereye bakılacağı.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.a.why': "Uyuyup uyumadığı soruluyor: evet, ne zamandan beri, bir de kontrol ettiğin.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.a.why': "Bir çocuğun oynayıp oynayamayacağı soruluyor: evet, nerede, bir de sonra ne olacağı.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.a.why': "Kimin alacağı soruluyor: kişi, bir de listede olduğu.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.a.why': "Düşüp düşmediği soruluyor: evet, neyi olduğu, bir de kimi aradığın.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.a.why': "Nasıl olduğu soruluyor: ne gördüğün, bir de ne yaptığın.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.a.why': "Tek başına gidip gidemeyeceğin soruluyor: evet, ama önce bir iş arkadaşına söyle.", // nieuw, nalezen // nagelezen AI 28 nov
     // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
-    'c.sanitary.a.why': "Bitip bitmediği soruluyor: henüz değil, bir de nedeni.", // nieuw, nalezen
-    'c.hotelroom.a.why': "Kaç tane kaldığı soruluyor: sayı, bir de ne zaman bittiği.", // nieuw, nalezen
-    'c.dosing.a.why': "Daha fazla kullanman söyleniyor: hayır, fazlası daha iyi değil, bir de ne kullandığın.", // nieuw, nalezen
-    'c.officenight.a.why': "Tek başına çalışıp çalışmadığın soruluyor: evet, bir de mesaj atacağın.", // nieuw, nalezen
-    'c.knives.a.why': "Kesmen isteniyor: evet şef, bir de nasıl kesileceğine dair bir soru.", // nieuw, nalezen
-    'c.rawcooked.a.why': "Glutensiz olup olmadığı soruluyor: emin değilsin, bu yüzden listeye bakıyorsun.", // nieuw, nalezen
-    'c.pass.a.why': "Yemeğin nerede olduğu soruluyor: pass’te, bir de şimdi getirdiğin.", // nieuw, nalezen
-    'c.bill.a.why': "Ayrı ödemek isteniyor: evet, bir de kart makinesini aldığın.", // nieuw, nalezen
-    'c.washing.a.why': "Danışan hayır diyor: sorun değil, bir de başka bir şey önerdiğin.", // nieuw, nalezen
-    'c.observing.a.why': "Özel bir şey olup olmadığı soruluyor: evet, bir de tam olarak ne olduğu.", // nieuw, nalezen
-    'c.homecare.a.why': "Kimin geldiği soruluyor: bir selam, kim olduğun, bir de içeri girip giremeyeceğin.", // nieuw, nalezen
-    'c.liftaids.a.why': "Tek başına yapman isteniyor: evet, kaydırma çarşafıyla, bir de onu aldığın.", // nieuw, nalezen
-    'c.returns.a.why': "İade etmek isteniyor: evet, bir de fişle ilgili bir soru.", // nieuw, nalezen
-    'c.facing.a.why': "İşin bitip bitmediği soruluyor: neredeyse, bir de geriye ne kaldığı.", // nieuw, nalezen
-    'c.shrink.a.why': "Çantana bakmak isteniyor: evet, bir de fişi gösterdiğin.", // nieuw, nalezen
-    'c.shopclose.a.why': "İçeri girmek isteniyor: üzgünüm, kapalı, bir de ne zaman tekrar açıldığı.", // nieuw, nalezen
-    'c.hirer.a.why': "Yeni bir yerde başlaman isteniyor: evet, bir de saatle ilgili bir soru.", // nieuw, nalezen
-    'c.phases.a.why': "İşin bittiği söyleniyor: tamam, bir de başka iş istediğin.", // nieuw, nalezen
-    'c.deductions.a.why': "Bir kesinti söyleniyor: buna izin olup olmadığını soruyorsun, bir de kontrol ediyorsun.", // nieuw, nalezen
-    'c.agencyhome.a.why': "Yakında çıkman söyleniyor: bu kısa, bir de önce tavsiye aldığın.", // nieuw, nalezen
+    'c.sanitary.a.why': "Bitip bitmediği soruluyor: henüz değil, bir de nedeni.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.a.why': "Kaç tane kaldığı soruluyor: sayı, bir de ne zaman bittiği.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.a.why': "Daha fazla kullanman söyleniyor: hayır, fazlası daha iyi değil, bir de ne kullandığın.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.a.why': "Tek başına çalışıp çalışmadığın soruluyor: evet, bir de mesaj atacaksın.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.knives.a.why': "Kesmen isteniyor: evet şef, bir de nasıl kesileceğine dair bir soru.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.a.why': "Glutensiz olup olmadığı soruluyor: emin değilsin, bu yüzden listeye bakıyorsun.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.a.why': "Yemeğin nerede olduğu soruluyor: pass’te, bir de şimdi getiriyorsun.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.bill.a.why': "Ayrı ödemek isteniyor: evet, bir de kart makinesini getiriyorsun.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.washing.a.why': "Danışan hayır diyor: sorun değil, bir de başka bir şey öneriyorsun.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.observing.a.why': "Özel bir şey olup olmadığı soruluyor: evet, bir de tam olarak ne olduğu.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.a.why': "Kimin geldiği soruluyor: bir selam, kim olduğun, bir de içeri girip giremeyeceğini soruyorsun.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.liftaids.a.why': "Tek başına yapman isteniyor: evet, kaydırma çarşafıyla, bir de onu getiriyorsun.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.returns.a.why': "İade etmek isteniyor: evet, bir de fişle ilgili bir soru.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.a.why': "İşin bitip bitmediği soruluyor: neredeyse, bir de geriye ne kaldığı.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.a.why': "Çantana bakmak isteniyor: evet, bir de fişi gösteriyorsun.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.shopclose.a.why': "İçeri girmek isteniyor: üzgünüm, kapalı, bir de ne zaman tekrar açıldığı.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.a.why': "Yeni bir yerde başlaman isteniyor: evet, bir de saatle ilgili bir soru.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.a.why': "İşin bittiği söyleniyor: tamam, bir de başka iş istiyorsun.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.deductions.a.why': "Bir kesinti söyleniyor: buna izin olup olmadığını soruyorsun, bir de kontrol ediyorsun.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.a.why': "Yakında çıkman söyleniyor: bu kısa bir süre, bir de önce tavsiye alıyorsun.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     // The basis units at four lessons (23 November 2026).
-    'c.roster.a.why': "Çalışma planının değiştiği söyleniyor: tamam, bir de hangi gün.", // nieuw, nalezen
-    'c.breaks.a.why': "Öğle molası soruluyor: saati, bir de ne kadar sürdüğü.", // nieuw, nalezen
-    'c.wound.a.why': "Bayılmak üzere: onu yatırırsın ve yardım getirirsin.", // nieuw, nalezen
-    'c.callhelp.a.why': "Tepki verip vermediği soruluyor: hayır, tepki vermiyor.", // nieuw, nalezen
-    'c.vacancy.a.why': "Neden aradığın soruluyor: iş ilanı, bir de hâlâ açık mı?", // nieuw, nalezen
-    'c.result.a.why': "Hayır deniyor: sakin bir cevap, bir de nedenini soruyorsun.", // nieuw, nalezen
-    'c.residence.a.why': "İznin süresinin neredeyse dolduğu söyleniyor: hemen başvuruyorsun.", // nieuw, nalezen
-    'c.newhome.a.why': "Nerede oturduğun soruluyor: yeni bir ev, bir de yeni adres.", // nieuw, nalezen
-    'c.payparts.a.why': "Personel numaran soruluyor: maaş bordrosunda nerede olduğu.", // nieuw, nalezen
-    'c.latepay.a.why': "Paranın sonra geleceği söyleniyor: bunu yazılı olarak istiyorsun.", // nieuw, nalezen
-    'c.holiday.a.why': "Mayısta gitmen isteniyor: temmuzu tercih ediyorsun, bir de nedenini söylüyorsun.", // nieuw, nalezen
-    'c.special.a.why': "Doğum izni soruluyor: evet, bir de ne zaman.", // nieuw, nalezen
-    'c.unwell.a.why': "İyi olup olmadığın soruluyor: hayır, bir de eve gidebilir misin?", // nieuw, nalezen
-    'c.injury.a.why': "İfade isteniyor: evet, bir de senin için bir kopya.", // nieuw, nalezen
-    'c.debt.a.why': "Borç ödenene kadar kalman söyleniyor: buna izin yok, yardım al.", // nieuw, nalezen
-    'c.inspection.a.why': "Konuşmak isteyip istemediğin soruluyor: evet, ama patronun duyamayacağı bir yerde.", // nieuw, nalezen
-    'c.carpool.a.why': "Kimin süreceği soruluyor: sen, bir de onları ne zaman alacağın.", // nieuw, nalezen
-    'c.train.a.why': "Neden geç kaldığın soruluyor: tren, bir de mesaj attın.", // nieuw, nalezen
-    'c.checklist.a.why': "Bir şey unutup unutmadığın soruluyor: listeye bir kez daha bakmak.", // nieuw, nalezen
-    'c.leavesite.a.why': "En son senin çıkıp çıkmadığın soruluyor: evet, her şey kapalı ve kapı kilitli.", // nieuw, nalezen
-    'c.stagedays.a.why': "Neden olmadığın soruluyor: hastaydın, bir de ikisini de aradın.", // nieuw, nalezen
-    'c.stageend.a.why': "Planların soruluyor: önce diploma, sonra iş.", // nieuw, nalezen
-    'c.neighbours.a.why': "Yeni bir komşu merhaba diyor: tanıştığına memnunsun, bir de adın.", // nieuw, nalezen
-    'c.join.a.why': "Gelip gelmeyeceğin soruluyor: evet, bir de öğretmenle konuşmak istiyorsun.", // nieuw, nalezen
-    'c.workphotos.a.why': "İnternet için bir fotoğraf isteniyor: kibar bir hayır.", // nieuw, nalezen
-    'c.device.a.why': "Yeni bir uygulama soruluyor: önce bilgi işlem bölümüne sor.", // nieuw, nalezen
+    'c.roster.a.why': "Çalışma planının değiştiği söyleniyor: tamam, bir de hangi gün.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.a.why': "Öğle molası soruluyor: saati, bir de ne kadar sürdüğü.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.a.why': "Bayılmak üzere: onu yatırırsın ve yardım getirirsin.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.a.why': "Tepki verip vermediği soruluyor: hayır, tepki vermiyor.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.a.why': "Neden aradığın soruluyor: iş ilanı, bir de hâlâ açık mı?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.a.why': "Hayır deniyor: sakin bir cevap, bir de nedenini soruyorsun.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.a.why': "İznin süresinin neredeyse dolduğu söyleniyor: hemen başvuruyorsun.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.a.why': "Nerede oturduğun soruluyor: yeni bir ev, bir de yeni adres.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.a.why': "Personel numaran soruluyor: maaş bordrosunda nerede olduğu.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.a.why': "Paranın sonra geleceği söyleniyor: bunu yazılı olarak istiyorsun.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.a.why': "Mayısta gitmen isteniyor: temmuzu tercih ediyorsun, bir de nedenini söylüyorsun.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.a.why': "Doğum izni soruluyor: evet, bir de ne zaman.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.a.why': "İyi olup olmadığın soruluyor: hayır, bir de eve gidip gidemeyeceğini soruyorsun.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.injury.a.why': "İfade isteniyor: evet, bir de senin için bir kopya.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.a.why': "Borç ödenene kadar kalman söyleniyor: buna izin yok, yardım al.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.a.why': "Konuşmak isteyip istemediğin soruluyor: evet, ama patronun duyamayacağı bir yerde.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.a.why': "Kimin süreceği soruluyor: sen, bir de onları ne zaman alacağın.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.a.why': "Neden geç kaldığın soruluyor: tren, bir de mesaj attın.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.a.why': "Bir şey unutup unutmadığın soruluyor: listeye bir kez daha bakmak.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.a.why': "En son senin çıkıp çıkmadığın soruluyor: evet, her şey kapalı ve kapı kilitli.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.a.why': "Neden olmadığın soruluyor: hastaydın, bir de ikisini de aradın.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.a.why': "Planların soruluyor: önce diploma, sonra iş.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.a.why': "Yeni bir komşu merhaba diyor: tanıştığına memnunsun, bir de adın.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.a.why': "Gelip gelmeyeceğin soruluyor: evet, bir de öğretmenle konuşmak istiyorsun.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.a.why': "İnternet için bir fotoğraf isteniyor: kibar bir hayır.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.a.why': "Yeni bir uygulama soruluyor: önce bilgi işlem bölümüne sor.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Veiligheid op het werk" and the VOG (23 November 2026).
-    'c.safetysigns.a.why': "Bir işaretin ne demek olduğu soruluyor: dikkat, bir de hangi işaret olduğu.", // nieuw, nalezen
-    'c.substances.a.why': "Zehirli olup olmadığı soruluyor: tahmin etmiyorsun, bakıyorsun.", // nieuw, nalezen
-    'c.firefight.a.why': "Yangın olduğu söyleniyor: küçük, bu yüzden söndürücüyü getiriyorsun.", // nieuw, nalezen
-    'c.permitwork.a.why': "Dışarıda kimin kalacağı soruluyor: sen, bir de görevin.", // nieuw, nalezen
-    'c.vog.a.why': "VOG’un soruluyor: henüz yok, bir de ne beklediğin.", // nieuw, nalezen
+    'c.safetysigns.a.why': "Bir işaretin ne demek olduğu soruluyor: dikkat, bir de hangi işaret olduğu.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.a.why': "Zehirli olup olmadığı soruluyor: tahmin etmiyorsun, bakıyorsun.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.a.why': "Yangın olduğu söyleniyor: küçük, bu yüzden söndürücüyü getiriyorsun.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.a.why': "Dışarıda kimin kalacağı soruluyor: sen, bir de görevin.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.a.why': "VOG’un soruluyor: henüz yok, bir de ne beklediğin.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Operator in de procesindustrie" (23 November 2026).
-    'c.plantround.a.why': "Alarm soruluyor: ne çok yüksek, bir de nerede.", // nieuw, nalezen
-    'c.plantfault.a.why': "Çalıştırılabilir mi diye soruluyor: hayır, üzerinde hâlâ bir kilit var.", // nieuw, nalezen
-    'c.shiftwork.a.why': "Ne olduğu soruluyor: arıza, bir de nereye yazıldığı.", // nieuw, nalezen
-    'c.heatdust.a.why': "Telefon soruluyor: hayır, buradaki tehlike yüzünden.", // nieuw, nalezen
+    'c.plantround.a.why': "Alarm soruluyor: ne çok yüksek, bir de nerede.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.a.why': "Çalıştırılabilir mi diye soruluyor: hayır, üzerinde hâlâ bir kilit var.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.a.why': "Ne olduğu soruluyor: arıza, bir de nereye yazıldığı.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.a.why': "Telefon soruluyor: hayır, buradaki tehlike yüzünden.", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (26 November 2026).
-    'c.debthelp.a.why': "Faturanın ödenmediği söyleniyor: evet, bir de ödeme planı istiyorsun.", // nieuw, nalezen
-    'c.taxes.a.why': "Mavi bir zarf olduğu söyleniyor: teşekkürler, bir de hemen açıyorsun.", // nieuw, nalezen
-    'c.discrimination.a.why': "İyi olup olmadığın soruluyor: hayır, bir de bunu bildireceksin.", // nieuw, nalezen
-    'c.union.a.why': "Neden üye olduğun soruluyor: seni savunuyorlar.", // nieuw, nalezen
-    'c.kiln.a.why': "Kırık parçaları elle toplamak soruluyor: hayır, el süpürgesi ve faraş.", // nieuw, nalezen
-    'c.mixlab.a.why': "Partinin onaylanıp onaylanmadığı soruluyor: henüz değil, laboratuvar test ediyor.", // nieuw, nalezen
-    'c.firstweeks.a.why': "Tur soruluyor: neredeyse her şey, bir de bir soru.", // nieuw, nalezen
-    'c.orderpick.a.why': "Reach truck kullanman isteniyor: hayır, bunun için eğitim yok.", // nieuw, nalezen
+    'c.debthelp.a.why': "Faturanın ödenmediği söyleniyor: evet, bir de ödeme planı istiyorsun.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.a.why': "Mavi bir zarf olduğu söyleniyor: teşekkürler, bir de hemen açıyorsun.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.a.why': "İyi olup olmadığın soruluyor: hayır, bir de bunu bildireceksin.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.a.why': "Neden üye olduğun soruluyor: seni savunuyorlar.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.a.why': "Kırık parçaları elle toplamak soruluyor: hayır, el süpürgesi ve faraş.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.a.why': "Partinin onaylanıp onaylanmadığı soruluyor: henüz değil, laboratuvar test ediyor.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.a.why': "Tur soruluyor: neredeyse her şey, bir de bir soru.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.a.why': "Reach truck kullanman isteniyor: hayır, bunun için eğitim yok.", // nieuw, nalezen // nagelezen AI 28 nov
+    // four new lessons (27 November 2026).
+    'd.appraisal.a.why': "Hedefin soruluyor: öğrenmek istediğin açık bir şey.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.a.why': "Form soruluyor: neredeyse, bir de nereye imza atılacağı.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.a.why': "Adın ve numaran isteniyor: adın, bir de geri arama ricası.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.a.why': "Son ziyaretin soruluyor: ne zaman, bir de bir kontrol istiyorsun.", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 

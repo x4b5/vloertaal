@@ -23,7 +23,7 @@ const t: CultureTranslation = {
     'c.je.w': '"Zeg maar je" é simpático: ela quer menos distância. Em muitos locais de trabalho nos Países Baixos é normal dizer "je" ao chefe.',
     'c.names': 'Nomes próprios e um aperto de mão',
     'c.names.b': 'No primeiro dia, dá um aperto de mão curto, olha para a pessoa e diz o teu primeiro nome. Os colegas e os chefes costumam tratar-se pelo primeiro nome.',
-    'c.names.p': { m: 'Olá, sou Ali. Sou novo aqui.', f: 'Olá, sou Ali. Sou nova aqui.', x: 'Olá, sou Ali. Sou novo / nova aqui.' },
+    'c.names.p': { m: 'Olá, sou Ali. Sou novo aqui.', f: 'Olá, sou Ali. Sou nova aqui.', x: 'Olá, sou Ali. Comecei há pouco tempo aqui.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.names.s': 'Um colega vem ter contigo: "Hoi, ik ben Mark." O que fazes?',
     'c.names.o1': 'Dás-lhe a mão e dizes o teu nome.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.names.o2': 'Acenas com a cabeça, sorris e esperas que te façam perguntas.', // nagelezen (2e lezing) // nagelezen AI 22 nov
@@ -98,7 +98,7 @@ const t: CultureTranslation = {
     'c.limits.p': 'Esta caixa é pesada demais. Podes ajudar um momento?',
     'c.limits.s': 'Tens de levantar uma caixa que é pesada demais para ti. O que fazes?',
     'c.limits.o1': 'Pedes ajuda a um colega ou usas um carrinho.',
-    'c.limits.o2': { m: 'Levantas na mesma, para ninguém pensar que és fraco.', f: 'Levantas na mesma, para ninguém pensar que és fraca.', x: 'Levantas na mesma, para ninguém pensar que és fraco/a.' },
+    'c.limits.o2': { m: 'Levantas na mesma, para ninguém pensar que és fraco.', f: 'Levantas na mesma, para ninguém pensar que és fraca.', x: 'Levantas na mesma, para ninguém pensar que te falta força.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.limits.o3': 'Deixas a caixa ali e não dizes nada.',
     'c.limits.w': 'Pedir ajuda é trabalho de equipa normal. Umas costas magoadas custam muito mais do que um minuto de ajuda.',
     'c.time': 'A horas quer dizer um pouco antes',
@@ -122,7 +122,7 @@ const t: CultureTranslation = {
     'c.speakup.p': 'Há uma coisa que me incomoda. Podemos falar um momento?',
     'c.speakup.s': 'Um colega deixa sempre o trabalho pesado para ti. Isso incomoda-te. O que fazes?',
     'c.speakup.o1': 'Dizes ao colega o que te incomoda.', // nagelezen (2e lezing) // nagelezen AI 22 nov
-    'c.speakup.o2': { m: 'Ficas calado e cada vez mais zangado.', f: 'Ficas calada e cada vez mais zangada.', x: 'Ficas calado/a e cada vez mais zangado/a.' },
+    'c.speakup.o2': { m: 'Ficas calado e cada vez mais zangado.', f: 'Ficas calada e cada vez mais zangada.', x: 'Não dizes nada e a tua raiva vai crescendo.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.speakup.o3': 'Queixas-te dele a todos os outros colegas.',
     'c.speakup.w': 'Os colegas nos Países Baixos costumam preferir ouvir as coisas diretamente. Dizer cedo e com calma mantém a boa relação.',
     'c.no': '"Afspraak is afspraak"',
@@ -186,30 +186,30 @@ const t: CultureTranslation = {
     's.task.3': 'Pode mostrar outra vez?',
     'd.task.q': 'Já acabaste?',
     'd.task.a': 'Quase. Mais cinco minutos.',
-    'l.clear': 'Curto e claro', // nieuw, nalezen
-    'w.kort': 'curto, breve', // nieuw, nalezen
-    'w.duidelijk': 'claro', // nieuw, nalezen
-    'w.belangrijkste': 'o mais importante', // nieuw, nalezen
-    'w.rustig': 'calmo, com calma', // nieuw, nalezen
-    'w.teveel': 'demasiado', // nieuw, nalezen
-    'w.vraag': 'a pergunta', // nieuw, nalezen
-    's.clear.1': 'Vou ser breve: a máquina está avariada.', // nieuw, nalezen
-    's.clear.2': 'Primeiro o mais importante: estou doente.', // nieuw, nalezen
-    's.clear.3': 'Desculpa, falo demasiado depressa e demasiado.', // nieuw, nalezen
-    'd.clear.q': 'Está claro?', // nieuw, nalezen
-    'd.clear.a': 'Sim. Tenho mais uma pergunta.', // nieuw, nalezen
-    'l.newcolleague': "Ajudar um colega novo", // nieuw, nalezen
-    'w.welkom': "bem-vindo", // nieuw, nalezen
-    'w.inwerken': "ensinar o trabalho a um colega novo (nos primeiros dias)", // nieuw, nalezen
-    'w.stap': "o passo (uma pequena parte de uma tarefa)", // nieuw, nalezen
-    'w.nadoen': "imitar (fazer o que alguém te mostrou)", // nieuw, nalezen
-    'w.geduld': "a paciência", // nieuw, nalezen
-    'w.kast': "o armário", // nieuw, nalezen
-    's.newcolleague.1': "Bem-vindo! Hoje mostro-te o trabalho.", // nieuw, nalezen
-    's.newcolleague.2': "Primeiro observa. Depois fazes igual.", // nieuw, nalezen
-    's.newcolleague.3': "As luvas estão naquele armário.", // nieuw, nalezen
-    'd.newcolleague.q': "Acho que percebi.", // nieuw, nalezen
-    'd.newcolleague.a': "Boa. Mostra lá.", // nieuw, nalezen
+    'l.clear': 'Curto e claro', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kort': 'curto, breve', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.duidelijk': 'claro', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.belangrijkste': 'o mais importante', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rustig': 'calmo, com calma', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teveel': 'demasiado', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vraag': 'a pergunta', // nieuw, nalezen // nagelezen AI 28 nov
+    's.clear.1': 'Vou ser breve: a máquina está avariada.', // nieuw, nalezen // nagelezen AI 28 nov
+    's.clear.2': 'Primeiro o mais importante: estou doente.', // nieuw, nalezen // nagelezen AI 28 nov
+    's.clear.3': 'Desculpa, falo demasiado depressa e demasiado.', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.clear.q': 'Está claro?', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.clear.a': 'Sim. Tenho mais uma pergunta.', // nieuw, nalezen // nagelezen AI 28 nov
+    'l.newcolleague': "Ajudar um colega novo", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.welkom': "bem-vindo", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inwerken': "ensinar o trabalho a um colega novo (nos primeiros dias)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stap': "o passo (uma pequena parte de uma tarefa)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nadoen': "imitar (fazer o que alguém te mostrou)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geduld': "a paciência", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kast': "o armário", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.1': "Bem-vindo! Hoje mostro-te o trabalho.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.2': "Primeiro observa. Depois fazes igual.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.3': "As luvas estão naquele armário.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.newcolleague.q': "Acho que percebi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.newcolleague.a': "Boa. Mostra lá.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.newcolleague': "Mostra, passo a passo", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.b': "O que foi difícil para ti nas primeiras semanas também é difícil para um colega novo. Explica o trabalho em passos pequenos: primeiro isto, depois aquilo. Não fales mais depressa nem mais alto: mostra, e deixa-o fazer a seguir a ti. Não perguntes \"Snap je het?\": muitas pessoas dizem que sim, mesmo quando não percebem. Diz antes \"Laat eens zien\", e observa. Diz-lhe onde estão as coisas, como a casa de banho, a cantina e as luvas. Tem paciência (geduld): aprender leva tempo, para toda a gente.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.p': "Muito bem! Agora o passo seguinte.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -218,67 +218,67 @@ const t: CultureTranslation = {
     'c.newcolleague.o2': "Dizes \"Goed zo,\" e voltas ao teu trabalho.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.o3': "Explicas tudo outra vez, mais depressa e mais alto.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.w': "Muitas pessoas dizem \"ja\", mesmo quando não perceberam. Quando ele mostra, os dois veem se funciona. Isso é mais rápido do que corrigir um erro mais tarde.", // nieuw, nalezen // nagelezen AI 22 nov
-    'u.communicate': 'Comunicar bem', // nieuw, nalezen
-    'l.explain': 'Dizer o que está mal', // nieuw, nalezen
-    'w.ietsmis': 'há alguma coisa mal', // nieuw, nalezen
-    'w.stilstaan': 'estar parado, ter parado (uma máquina, um tapete rolante)', // nieuw, nalezen
-    'w.lampje': 'a luz (de aviso)', // nieuw, nalezen
-    'w.komen': 'vir', // nieuw, nalezen
-    'w.nodighebben': 'precisar de', // nieuw, nalezen
-    'w.meteen': 'já, imediatamente', // nieuw, nalezen
-    's.explain.1': 'O tapete parou. Na linha dois. Podes vir?', // nieuw, nalezen
-    's.explain.2': 'Há uma luz vermelha acesa na máquina.', // nieuw, nalezen
-    's.explain.3': 'É perigoso. Podes vir já?', // nieuw, nalezen
-    'd.explain.q': 'O que é que está mal?', // nieuw, nalezen
-    'd.explain.a': 'O scanner não funciona. Preciso de um novo.', // nieuw, nalezen
-    'l.listen': 'Ouvir bem', // nieuw, nalezen
-    'w.uitpraten': 'acabar de falar (deixar alguém acabar)', // nieuw, nalezen
-    'w.onderbreken': 'interromper', // nieuw, nalezen
-    'w.aankijken': 'olhar para (alguém)', // nieuw, nalezen
-    'w.bedoelen': 'querer dizer', // nieuw, nalezen
-    'w.dus': 'então (para confirmar o que ouviste)', // nieuw, nalezen
-    'w.doorvragen': 'continuar a perguntar (até ficar claro)', // nieuw, nalezen
-    's.listen.1': 'Então primeiro contar as caixas, e depois embalar?', // nieuw, nalezen
-    's.listen.2': 'O que queres dizer com essa palavra?', // nieuw, nalezen
-    's.listen.3': 'Desculpa, acaba de falar.', // nieuw, nalezen
-    'd.listen.q': 'Amanhã já começas às quatro.', // nieuw, nalezen
-    'd.listen.a': 'A sério? Ou era uma piada?', // nieuw, nalezen
-    'l.calm': 'Manter a calma', // nieuw, nalezen
-    'w.nadenken': 'pensar (em alguma coisa)', // nieuw, nalezen
-    'w.ademhalen': 'respirar', // nieuw, nalezen
-    'w.oplossen': 'resolver', // nieuw, nalezen
-    'w.druk': 'com muito trabalho (muito para fazer)', // nieuw, nalezen
-    'w.straks': 'mais logo (hoje), daqui a pouco', // nieuw, nalezen
-    'w.misverstand': 'o mal-entendido', // nieuw, nalezen
-    's.calm.1': 'Quero resolver isto com calma.', // nieuw, nalezen
-    's.calm.2': 'Posso pensar um momento?', // nieuw, nalezen
-    's.calm.3': 'Podemos falar mais logo?', // nieuw, nalezen
-    'd.calm.q': 'Porque é que isto ainda não está feito?', // nieuw, nalezen
-    'd.calm.a': 'Desculpa, há muito trabalho. O que vem primeiro?', // nieuw, nalezen
-    'l.talkintime': 'Falar sobre isso a tempo', // nieuw, nalezen
-    'w.gesprek': 'a conversa', // nieuw, nalezen
-    'w.bespreken': 'falar sobre, discutir', // nieuw, nalezen
-    'w.zorgenmaken': 'preocupar-se', // nieuw, nalezen
-    'w.oplossing': 'a solução', // nieuw, nalezen
-    'w.ineens': 'de repente', // nieuw, nalezen
-    'w.wegblijven': 'faltar (não ir trabalhar)', // nieuw, nalezen
-    's.talkintime.1': 'Há uma coisa que me incomoda. Tens um momento?', // nieuw, nalezen
-    's.talkintime.2': 'Quero falar contigo sobre uma coisa.', // nieuw, nalezen
-    's.talkintime.3': 'Estou a pensar em sair. Podemos falar primeiro?', // nieuw, nalezen
-    'd.talkintime.q': 'Tens um momento? Há uma coisa que me incomoda.', // nieuw, nalezen
-    'd.talkintime.a': 'Claro. O que se passa?', // nieuw, nalezen
-    'l.reachable': 'Estar contactável', // nieuw, nalezen
-    'w.opnemen': 'atender (o telefone)', // nieuw, nalezen
-    'w.gemisteoproep': 'a chamada perdida', // nieuw, nalezen
-    'w.voicemail': 'o correio de voz', // nieuw, nalezen
-    'w.beltegoed': 'o saldo do telemóvel (pré-pago)', // nieuw, nalezen
-    'w.bereik': 'a rede (no telemóvel)', // nieuw, nalezen
-    'w.onbekend': 'desconhecido (um número desconhecido)', // nieuw, nalezen
-    's.reachable.1': 'O meu neerlandês ainda não é bom. Pode falar devagar?', // nieuw, nalezen
-    's.reachable.2': 'Pode mandar também por mensagem?', // nieuw, nalezen
-    's.reachable.3': 'Tenho um número novo.', // nieuw, nalezen
-    'd.reachable.q': 'Bom dia, daqui fala o planeamento.', // nieuw, nalezen
-    'd.reachable.a': 'Bom dia. Ligou-me? Desculpe, não consegui atender.', // nieuw, nalezen
+    'u.communicate': 'Comunicar bem', // nieuw, nalezen // nagelezen AI 28 nov
+    'l.explain': 'Dizer o que está mal', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ietsmis': 'há alguma coisa mal', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stilstaan': 'estar parado, ter parado (uma máquina, um tapete rolante)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lampje': 'a luz (de aviso)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.komen': 'vir', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nodighebben': 'precisar de', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meteen': 'já, imediatamente', // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.1': 'O tapete parou. Na linha dois. Podes vir?', // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.2': 'Há uma luz vermelha acesa na máquina.', // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.3': 'É perigoso. Podes vir já?', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.explain.q': 'O que é que está mal?', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.explain.a': 'O scanner não funciona. Preciso de um novo.', // nieuw, nalezen // nagelezen AI 28 nov
+    'l.listen': 'Ouvir bem', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitpraten': 'acabar de falar (deixar alguém acabar)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderbreken': 'interromper', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aankijken': 'olhar para (alguém)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedoelen': 'querer dizer', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dus': 'então (para confirmar o que ouviste)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doorvragen': 'continuar a perguntar (até ficar claro)', // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.1': 'Então primeiro contar as caixas, e depois embalar?', // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.2': 'O que queres dizer com essa palavra?', // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.3': 'Desculpa, acaba de falar.', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.listen.q': 'Amanhã já começas às quatro.', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.listen.a': 'A sério? Ou era uma piada?', // nieuw, nalezen // nagelezen AI 28 nov
+    'l.calm': 'Manter a calma', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nadenken': 'pensar (em alguma coisa)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ademhalen': 'respirar', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oplossen': 'resolver', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.druk': 'com muito trabalho (muito para fazer)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.straks': 'mais logo (hoje), daqui a pouco', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.misverstand': 'o mal-entendido', // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.1': 'Quero resolver isto com calma.', // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.2': 'Posso pensar um momento?', // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.3': 'Podemos falar mais logo?', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.calm.q': 'Porque é que isto ainda não está feito?', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.calm.a': 'Desculpa, há muito trabalho. O que vem primeiro?', // nieuw, nalezen // nagelezen AI 28 nov
+    'l.talkintime': 'Falar sobre isso a tempo', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gesprek': 'a conversa', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bespreken': 'falar sobre, discutir', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zorgenmaken': 'preocupar-se', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oplossing': 'a solução', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ineens': 'de repente', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wegblijven': 'faltar (não ir trabalhar)', // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.1': 'Há uma coisa que me incomoda. Tens um momento?', // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.2': 'Quero falar contigo sobre uma coisa.', // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.3': 'Estou a pensar em sair. Podemos falar primeiro?', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.talkintime.q': 'Tens um momento? Há uma coisa que me incomoda.', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.talkintime.a': 'Claro. O que se passa?', // nieuw, nalezen // nagelezen AI 28 nov
+    'l.reachable': 'Estar contactável', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opnemen': 'atender (o telefone)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gemisteoproep': 'a chamada perdida', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voicemail': 'o correio de voz', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beltegoed': 'o saldo do telemóvel (pré-pago)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bereik': 'a rede (no telemóvel)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onbekend': 'desconhecido (um número desconhecido)', // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.1': 'O meu neerlandês ainda não é bom. Pode falar devagar?', // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.2': 'Pode mandar também por mensagem?', // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.3': 'Tenho um número novo.', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.reachable.q': 'Bom dia, daqui fala o planeamento.', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.reachable.a': 'Bom dia. Ligou-me? Desculpe, não consegui atender.', // nieuw, nalezen // nagelezen AI 28 nov
     'c.explain': 'O quê, onde, e do que precisas', // nieuw, nalezen // nagelezen AI 22 nov
     'c.explain.b': 'Quando alguma coisa está mal no trabalho, diz em três passos. Primeiro o que está mal: "De band staat stil." Depois onde: "Bij lijn twee." Depois do que precisas: "Kun je komen?" Assim a outra pessoa sabe o que fazer, sem muitas perguntas. Não sabes a palavra? Aponta para a coisa. É perigoso? Diz isso primeiro: "Het is gevaarlijk." Um acidente? Primeiro pede ajuda (mais na lição "Comunicar um acidente").', // nieuw, nalezen // nagelezen AI 22 nov
     'c.explain.p': 'Podes vir ver?', // nieuw, nalezen // nagelezen AI 22 nov
@@ -319,43 +319,43 @@ const t: CultureTranslation = {
     'c.reachable.o2': 'Esperas até te ligarem outra vez.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.reachable.o3': 'Ligas de volta na próxima semana, quando estiveres livre.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.reachable.w': 'As agências ligam muitas vezes quando há trabalho. Quando ligas de volta no mesmo dia, mostras que o queres, e talvez fiques com o trabalho.', // nieuw, nalezen // nagelezen AI 22 nov
-    'u.feedback': 'Feedback e reuniões de equipa', // nieuw, nalezen
-    'l.getfeedback': 'Receber feedback', // nieuw, nalezen
-    'w.tip': 'a dica (um conselho curto)', // nieuw, nalezen
-    'w.verbeterpunt': 'o ponto a melhorar (o que pode ser melhor)', // nieuw, nalezen
-    'w.goedbedoeld': 'bem-intencionado (para te ajudar)', // nieuw, nalezen
-    'w.kritiek': 'a crítica (o que alguém acha que não está bom)', // nieuw, nalezen
-    'w.normaal': 'normal', // nieuw, nalezen
-    'w.positief': 'positivo (sobre o que corre bem)', // nieuw, nalezen
-    's.getfeedback.1': { m: 'Obrigado, é bom saber.', f: 'Obrigada, é bom saber.', x: 'Obrigado / obrigada, é bom saber.' }, // nieuw, nalezen
-    's.getfeedback.2': 'Podes dar um exemplo?', // nieuw, nalezen
-    's.getfeedback.3': 'O que posso fazer melhor?', // nieuw, nalezen
-    'd.getfeedback.q': 'Posso dar-te algum feedback?', // nieuw, nalezen
-    'd.getfeedback.a': 'Sim, por favor. Quero fazer bem.', // nieuw, nalezen
-    'l.givefeedback': 'Dar feedback', // nieuw, nalezen
-    'w.dichtplakken': 'fechar com fita-cola', // nieuw, nalezen
-    'w.netjes': 'arrumado, bem feito', // nieuw, nalezen
-    'w.scheef': 'torto, não direito', // nieuw, nalezen
-    'w.vriendelijk': 'simpático, amável', // nieuw, nalezen
-    'w.concreet': 'concreto (com um exemplo claro)', // nieuw, nalezen
-    'w.ondervierogen': 'a sós (só vocês os dois)', // nieuw, nalezen
-    's.givefeedback.1': 'Fazes isso bem.', // nieuw, nalezen
-    's.givefeedback.2': 'Podes também fechar as caixas com fita-cola?', // nieuw, nalezen
-    's.givefeedback.3': 'Vejo que as caixas estão tortas.', // nieuw, nalezen
-    'd.givefeedback.q': 'O que achas do meu trabalho?', // nieuw, nalezen
-    'd.givefeedback.a': 'Bem arrumado! Só as caixas estão tortas.', // nieuw, nalezen
-    'l.meeting': 'Falar numa reunião de equipa', // nieuw, nalezen
-    'w.werkoverleg': 'a reunião de equipa (sobre o trabalho)', // nieuw, nalezen
-    'w.beurt': 'a vez (o teu momento de falar)', // nieuw, nalezen
-    'w.idee': 'a ideia', // nieuw, nalezen
-    'w.mening': 'a opinião (o que pensas sobre isso)', // nieuw, nalezen
-    'w.handopsteken': 'levantar a mão', // nieuw, nalezen
-    'w.agenda': 'a ordem de trabalhos (a lista de pontos da reunião)', // nieuw, nalezen
-    's.meeting.1': 'Posso dizer uma coisa?', // nieuw, nalezen
-    's.meeting.2': 'Tenho uma pergunta sobre o horário.', // nieuw, nalezen
-    's.meeting.3': 'Tenho uma ideia.', // nieuw, nalezen
-    'd.meeting.q': 'Alguém tem alguma pergunta?', // nieuw, nalezen
-    'd.meeting.a': 'Sim. Quando sai o novo horário?', // nieuw, nalezen
+    'u.feedback': 'Feedback e reuniões de equipa', // nieuw, nalezen // nagelezen AI 28 nov
+    'l.getfeedback': 'Receber feedback', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tip': 'a dica (um conselho curto)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verbeterpunt': 'o ponto a melhorar (o que pode ser melhor)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedbedoeld': 'bem-intencionado (para te ajudar)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kritiek': 'a crítica (o que alguém acha que não está bom)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.normaal': 'normal', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.positief': 'positivo (sobre o que corre bem)', // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.1': { m: 'Obrigado, é bom saber.', f: 'Obrigada, é bom saber.', x: 'Agradeço, é bom saber.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
+    's.getfeedback.2': 'Podes dar um exemplo?', // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.3': 'O que posso fazer melhor?', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.getfeedback.q': 'Posso dar-te algum feedback?', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.getfeedback.a': 'Sim, por favor. Quero fazer bem.', // nieuw, nalezen // nagelezen AI 28 nov
+    'l.givefeedback': 'Dar feedback', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dichtplakken': 'fechar com fita-cola', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.netjes': 'arrumado, bem feito', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scheef': 'torto, não direito', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vriendelijk': 'simpático, amável', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.concreet': 'concreto (com um exemplo claro)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ondervierogen': 'a sós (só vocês os dois)', // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.1': 'Fazes isso bem.', // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.2': 'Podes também fechar as caixas com fita-cola?', // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.3': 'Vejo que as caixas estão tortas.', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.givefeedback.q': 'O que achas do meu trabalho?', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.givefeedback.a': 'Bem arrumado! Só as caixas estão tortas.', // nieuw, nalezen // nagelezen AI 28 nov
+    'l.meeting': 'Falar numa reunião de equipa', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkoverleg': 'a reunião de equipa (sobre o trabalho)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beurt': 'a vez (o teu momento de falar)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.idee': 'a ideia', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mening': 'a opinião (o que pensas sobre isso)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handopsteken': 'levantar a mão', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.agenda': 'a ordem de trabalhos (a lista de pontos da reunião)', // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.1': 'Posso dizer uma coisa?', // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.2': 'Tenho uma pergunta sobre o horário.', // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.3': 'Tenho uma ideia.', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.meeting.q': 'Alguém tem alguma pergunta?', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.meeting.a': 'Sim. Quando sai o novo horário?', // nieuw, nalezen // nagelezen AI 28 nov
     'c.getfeedback': 'O feedback é sobre o teu trabalho', // nieuw, nalezen // nagelezen AI 22 nov
     'c.getfeedback.b': 'O feedback é o que alguém diz sobre o teu trabalho: o que corre bem, e o que pode ser melhor. É sobre o teu trabalho, não sobre ti. Aqui, no trabalho, o feedback é normal e serve para ajudar. Não é claro o que deves fazer de outra forma? Pede um exemplo. Primeiro ouve, e não te defendas logo. Depois agradece, e experimenta. Também podes pedir feedback tu: "Wat kan ik beter doen?"', // nieuw, nalezen // nagelezen AI 22 nov
     'c.getfeedback.p': { m: 'Obrigado. Podes dar um exemplo?', f: 'Obrigada. Podes dar um exemplo?', x: 'Agradeço. Podes dar um exemplo?' }, // nieuw, nalezen // nagelezen AI 22 nov
@@ -423,55 +423,76 @@ const t: CultureTranslation = {
     'c.whereis.o3': "Começas a trabalhar com a tua própria roupa.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.w': "Perguntar demora dez segundos. Se procuras sem ajuda, podes chegar tarde. Os colegas sabem que num sítio novo é difícil encontrar o caminho.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): the tips of l.roster, l.breaks, l.wound and l.callhelp.
-    'c.wound': "Uma queimadura? Arrefece com água", // nieuw, nalezen
-    'c.wound.b': "Um corte pequeno: carrega em cima com um pano limpo ou uma ligadura, e avisa o socorrista. Uma queimadura: arrefece logo com água morna corrente, pelo menos 10 minutos. Alguma coisa no olho? Lava com água, ou no lava-olhos. É grave? Liga para o 112. Pergunta no primeiro dia onde estão a caixa de primeiros socorros e o lava-olhos.", // nieuw, nalezen
-    'c.wound.p': "Queimei-me. Onde há uma torneira?", // nieuw, nalezen
-    'c.wound.s': "Um colega queima a mão numa máquina quente. O que fazes?", // nieuw, nalezen
-    'c.wound.o1': "Arrefeces com água morna corrente.", // nieuw, nalezen
-    'c.wound.o2': "Pões logo manteiga ou um creme.", // nieuw, nalezen
-    'c.wound.o3': "Pões gelo diretamente na pele, e esperas.", // nieuw, nalezen
-    'c.wound.w': "A água tira o calor da pele, por isso a queimadura fica menos funda. O gelo, a manteiga e o creme podem piorar.", // nieuw, nalezen
-    'c.callhelp': "Ligar para o 112: primeiro diz onde", // nieuw, nalezen
-    'c.callhelp.b': "Liga para o 112 quando uma vida está em perigo, ou quando cada minuto conta. Primeiro diz onde estás: a rua, o número e a localidade. Depois diz o que aconteceu. Fica em linha e responde às perguntas. Pede a um colega para esperar pela ambulância à entrada. Não sabes a morada do teu trabalho? Procura-a hoje.", // nieuw, nalezen
-    'c.callhelp.p': "Vou ligar para o 112. Podes esperar tu pela ambulância?", // nieuw, nalezen
-    'c.callhelp.s': "Ligas para o 112. O operador faz muitas perguntas, mas tu queres ajudar o teu colega. O que fazes?", // nieuw, nalezen
-    'c.callhelp.o1': "Ficas em linha e respondes.", // nieuw, nalezen
-    'c.callhelp.o2': "Desligas, e vais ter com o teu colega.", // nieuw, nalezen
-    'c.callhelp.o3': "Dizes \"venham depressa\", e desligas.", // nieuw, nalezen
-    'c.callhelp.w': "O operador manda ajuda enquanto falas, e diz-te o que fazer. Se desligares cedo demais, a ajuda pode ir para o sítio errado.", // nieuw, nalezen
-    'c.roster': "Vê o teu horário todos os dias", // nieuw, nalezen
-    'c.roster.b': "O horário pode mudar, também em cima da hora. Vê-o todos os dias, na app ou no quadro. Vês uma mudança? Confirma que podes ir. Não podes trabalhar num dia? Diz cedo, não no próprio dia. Queres trocar um turno? Pergunta primeiro ao teu chefe: muitas empresas têm uma regra para isso. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.roster.p': "No sábado não posso. Posso trocar?", // nieuw, nalezen
-    'c.roster.s': "O teu horário mudou. Agora tens de trabalhar no sábado, mas não podes. O que fazes?", // nieuw, nalezen
-    'c.roster.o1': "Dizes hoje ao teu chefe, e pedes para trocar.", // nieuw, nalezen
-    'c.roster.o2': "Não dizes nada, e ficas em casa no sábado.", // nieuw, nalezen
-    'c.roster.o3': "Pedes a um colega para ir, e não dizes a ninguém.", // nieuw, nalezen
-    'c.roster.w': "Se disseres cedo, o teu chefe pode arranjar outra pessoa. Faltar sem dizer nada é visto como muito grave.", // nieuw, nalezen
-    'c.breaks': "Aponta as tuas horas", // nieuw, nalezen
-    'c.breaks.b': "Aponta todos os dias quando começas, quando acabas e quanto tempo dura a tua pausa. A tua própria lista ajuda quando o teu salário não está certo. Tens de sair mais cedo, por exemplo para ir ao médico? Pergunta ao teu chefe a tempo. Trabalhaste mais do que estava previsto? Aponta isso também. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.breaks.p': "Amanhã tenho de ir ao médico. Posso sair mais cedo?", // nieuw, nalezen
-    'c.breaks.s': "Amanhã tens de ir ao médico às três. O teu turno acaba às cinco. O que fazes?", // nieuw, nalezen
-    'c.breaks.o1': "Perguntas hoje ao teu chefe se podes sair mais cedo.", // nieuw, nalezen
-    'c.breaks.o2': "Sais às três, e explicas no dia seguinte.", // nieuw, nalezen
-    'c.breaks.o3': "Não vais ao médico, e acabas o teu turno.", // nieuw, nalezen
-    'c.breaks.w': "Se perguntares a tempo, o teu chefe pode planear o trabalho. Sair sem perguntar é visto como pouco sério.", // nieuw, nalezen
+    'c.wound': "Uma queimadura? Arrefece com água", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.b': "Um corte pequeno: carrega em cima com um pano limpo ou uma ligadura, e avisa o socorrista. Uma queimadura: arrefece logo com água morna corrente, pelo menos 10 minutos. Alguma coisa no olho? Lava com água, ou no lava-olhos. É grave? Liga para o 112. Pergunta no primeiro dia onde estão a caixa de primeiros socorros e o lava-olhos.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.p': "Queimei-me. Onde há uma torneira?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.s': "Um colega queima a mão numa máquina quente. O que fazes?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o1': "Arrefeces com água morna corrente.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o2': "Pões logo manteiga ou um creme.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o3': "Pões gelo diretamente na pele, e esperas.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.w': "A água tira o calor da pele, por isso a queimadura fica menos funda. O gelo, a manteiga e o creme podem piorar.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp': "Ligar para o 112: primeiro diz onde", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.b': "Liga para o 112 quando uma vida está em perigo, ou quando cada minuto conta. Primeiro diz onde estás: a rua, o número e a localidade. Depois diz o que aconteceu. Fica em linha e responde às perguntas. Pede a um colega para esperar pela ambulância à entrada. Não sabes a morada do teu trabalho? Procura-a hoje.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.p': "Vou ligar para o 112. Podes esperar tu pela ambulância?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.s': "Ligas para o 112. O operador faz muitas perguntas, mas tu queres ajudar o teu colega. O que fazes?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o1': "Ficas em linha e respondes.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o2': "Desligas, e vais ter com o teu colega.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o3': "Dizes \"venham depressa\", e desligas.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.w': "O operador manda ajuda enquanto falas, e diz-te o que fazer. Se desligares cedo demais, a ajuda pode ir para o sítio errado.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster': "Vê o teu horário todos os dias", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.b': "O horário pode mudar, também em cima da hora. Vê-o todos os dias, na app ou no quadro. Vês uma mudança? Confirma que podes ir. Não podes trabalhar num dia? Diz cedo, não no próprio dia. Queres trocar um turno? Pergunta primeiro ao teu chefe: muitas empresas têm uma regra para isso. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.p': "No sábado não posso. Posso trocar?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.s': "O teu horário mudou. Agora tens de trabalhar no sábado, mas não podes. O que fazes?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o1': "Dizes hoje ao teu chefe, e pedes para trocar.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o2': "Não dizes nada, e ficas em casa no sábado.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o3': "Pedes a um colega para ir, e não dizes a ninguém.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.w': "Se disseres cedo, o teu chefe pode arranjar outra pessoa. Faltar sem dizer nada é visto como muito grave.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks': "Aponta as tuas horas", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.b': "Aponta todos os dias quando começas, quando acabas e quanto tempo dura a tua pausa. A tua própria lista ajuda quando o teu salário não está certo. Tens de sair mais cedo, por exemplo para ir ao médico? Pergunta ao teu chefe a tempo. Trabalhaste mais do que estava previsto? Aponta isso também. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.p': "Amanhã tenho de ir ao médico. Posso sair mais cedo?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.s': "Amanhã tens de ir ao médico às três. O teu turno acaba às cinco. O que fazes?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o1': "Perguntas hoje ao teu chefe se podes sair mais cedo.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o2': "Sais às três, e explicas no dia seguinte.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o3': "Não vais ao médico, e acabas o teu turno.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.w': "Se perguntares a tempo, o teu chefe pode planear o trabalho. Sair sem perguntar é visto como pouco sério.", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (26 November 2026).
-    'c.firstweeks': "Perguntar outra vez é normal", // nieuw, nalezen
-    'c.firstweeks.b': "Nas tuas primeiras semanas, ninguém espera que saibas tudo. Muitas vezes fazes uma visita guiada (rondleiding) e tens um colega que te acompanha. Primeiro observa, depois faz tu enquanto o teu colega observa. Esqueceste-te de alguma coisa? Pergunta outra vez: \"Wil je het nog een keer laten zien?\" É melhor do que adivinhar. Escreve as palavras novas e os passos num pequeno caderno. Alguns contratos começam com um período experimental (proeftijd): nesse tempo, tu ou o teu empregador podem acabar o contrato depressa. Pergunta se o teu contrato tem um. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.firstweeks.p': "Esqueci-me. Podes mostrar outra vez?", // nieuw, nalezen
-    'c.firstweeks.s': "Ontem o teu colega mostrou-te como ligar a máquina. Hoje não te lembras do terceiro passo. O que fazes?", // nieuw, nalezen
-    'c.firstweeks.o1': "Pedes ao teu colega para mostrar outra vez.", // nieuw, nalezen
-    'c.firstweeks.o2': "Adivinhas, e experimentas.", // nieuw, nalezen
-    'c.firstweeks.o3': "Esperas até outra pessoa a ligar.", // nieuw, nalezen
-    'c.firstweeks.w': "Perguntar outra vez é normal nas primeiras semanas. Adivinhar numa máquina pode ser perigoso, e custa mais tempo.", // nieuw, nalezen
-    'c.orderpick': "Anda pelo caminho para peões", // nieuw, nalezen
-    'c.orderpick.b': "Num armazém grande, preparas encomendas com uma lista de picking e um leitor: passas cada artigo no leitor, para os produtos certos irem para o cliente certo. Muitos preparadores de encomendas conduzem um pequeno veículo que os levanta, ou um empilhador retrátil para as estantes altas. Só conduzas um quando tiveres tido a formação para isso, muitas vezes com um certificado. Anda pelos caminhos para peões, e fica longe dos empilhadores em movimento: o condutor nem sempre te consegue ver. Na câmara frigorífica ou na câmara de congelação, usa a roupa quente, as luvas e o gorro que recebes do trabalho. Faz as tuas pausas para aquecer, e avisa alguém quando entras. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen
-    'c.orderpick.p': "Vou aquecer-me um bocado na cantina.", // nieuw, nalezen
-    'c.orderpick.s': "Tens de ir para o outro corredor. O caminho para peões dá a volta; a direito é mais rápido, entre os empilhadores. O que fazes?", // nieuw, nalezen
-    'c.orderpick.o1': "Vais pelo caminho para peões, mesmo que seja mais longo.", // nieuw, nalezen
-    'c.orderpick.o2': "Atravessas a correr entre os empilhadores.", // nieuw, nalezen
-    'c.orderpick.o3': "Atravessas a pé, e acenas aos condutores.", // nieuw, nalezen
-    'c.orderpick.w': "O condutor de um empilhador muitas vezes não te consegue ver, por exemplo atrás de uma carga alta. No caminho para peões, as pessoas são esperadas e estão seguras.", // nieuw, nalezen
+    'c.firstweeks': "Perguntar outra vez é normal", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.b': "Nas tuas primeiras semanas, ninguém espera que saibas tudo. Muitas vezes fazes uma visita guiada (rondleiding) e tens um colega que te acompanha. Primeiro observa, depois faz tu enquanto o teu colega observa. Esqueceste-te de alguma coisa? Pergunta outra vez: \"Wil je het nog een keer laten zien?\" É melhor do que adivinhar. Escreve as palavras novas e os passos num pequeno caderno. Alguns contratos começam com um período experimental (proeftijd): nesse tempo, tu ou o teu empregador podem acabar o contrato depressa. Pergunta se o teu contrato tem um. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.p': "Esqueci-me. Podes mostrar outra vez?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.s': "Ontem o teu colega mostrou-te como ligar a máquina. Hoje não te lembras do terceiro passo. O que fazes?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.o1': "Pedes ao teu colega para mostrar outra vez.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.o2': "Adivinhas, e experimentas.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.o3': "Esperas até outra pessoa a ligar.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.w': "Perguntar outra vez é normal nas primeiras semanas. Adivinhar numa máquina pode ser perigoso, e custa mais tempo.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick': "Anda pelo caminho para peões", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.b': "Num armazém grande, preparas encomendas com uma lista de picking e um leitor: passas cada artigo no leitor, para os produtos certos irem para o cliente certo. Muitos preparadores de encomendas conduzem um pequeno veículo que os levanta, ou um empilhador retrátil para as estantes altas. Só conduzas um quando tiveres tido a formação para isso, muitas vezes com um certificado. Anda pelos caminhos para peões, e fica longe dos empilhadores em movimento: o condutor nem sempre te consegue ver. Na câmara frigorífica ou na câmara de congelação, usa a roupa quente, as luvas e o gorro que recebes do trabalho. Faz as tuas pausas para aquecer, e avisa alguém quando entras. As regras são diferentes em cada empresa: pergunta ao teu chefe quais são as regras onde trabalhas.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.p': "Vou aquecer-me um bocado na cantina.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.s': "Tens de ir para o outro corredor. O caminho para peões dá a volta; a direito é mais rápido, entre os empilhadores. O que fazes?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o1': "Vais pelo caminho para peões, mesmo que seja mais longo.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o2': "Atravessas a correr entre os empilhadores.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o3': "Atravessas a pé, e acenas aos condutores.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.w': "O condutor de um empilhador muitas vezes não te consegue ver, por exemplo atrás de uma carga alta. No caminho para peões, as pessoas são esperadas e estão seguras.", // nieuw, nalezen // nagelezen AI 28 nov
+    // four new lessons (27 November 2026).
+    'l.appraisal': "A conversa sobre o desempenho", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.functioneringsgesprek': "a conversa sobre o desempenho (uma conversa com o teu chefe sobre como corre o teu trabalho e o que queres aprender)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beoordelingsgesprek': "a conversa de avaliação (uma conversa em que o teu chefe dá uma avaliação do teu trabalho)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorbereiden': "preparar (preparar-se para alguma coisa)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedgaan': "correr bem", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doel': "o objetivo (o que queres alcançar)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorgezien': "assinar como \"visto\" (leste; não quer dizer que concordas)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.1': "Preparo bem a conversa.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.2': "Gostava de aprender uma coisa nova.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.3': "Posso ler primeiro o relatório?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.appraisal.q': "Qual é o teu objetivo para o próximo ano?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.appraisal.a': "Gostava de tirar o certificado de empilhador.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal': "A tua avaliação: prepara-a, lê-a", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.b': "Muitas empresas têm, uma ou duas vezes por ano, uma conversa sobre o teu trabalho. Numa conversa sobre o desempenho (functioneringsgesprek) falam juntos: o que corre bem, o que pode ser melhor e o que queres aprender. Numa conversa de avaliação (beoordelingsgesprek) o teu chefe dá uma avaliação. Pode contar para o teu salário ou para um novo contrato. Prepara a conversa: escreve o que corre bem, o que é difícil e o que queres aprender. Podes pedir um curso ou uma formação. No fim fazem acordos (afspraken), muitas vezes num relatório curto. Lê-o bem antes de o assinares, e pede uma cópia. Não concordas? Assina \"voor gezien\" (visto), não \"voor akkoord\" (de acordo), e escreve a tua própria opinião. Informação geral. Para a tua situação: pergunta ao teu empregador, ao sindicato ou ao Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.p': "Assino como visto, não como de acordo.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.s': "Depois da tua conversa de avaliação, recebes o relatório para assinar. Achas que um ponto não é verdade. O que fazes?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o1': "Assinas \"voor gezien\", e escreves a tua opinião.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o2': "Assinas \"voor akkoord\" depressa, para ficar resolvido.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o3': "Não dizes nada, e não assinas de todo.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.w': "\"Voor gezien\" quer dizer que leste, não que concordas. Quando o dizes e escreves a tua própria opinião, o teu chefe sabe o que pensas.", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 

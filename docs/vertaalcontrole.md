@@ -2433,3 +2433,190 @@ Schulden en hulp, belasting en toeslagen, discriminatie en intimidatie, de vakbo
 - deurwaarder = deyn-ururiyaha sharciga; OR = golaha shaqaalaha; reachtruck onvertaald.
 ### ti
 - ባይቶ ሰራሕተኛታት; ኣኻቢ ዕዳ ቤት ፍርዲ; stoffer en blik omschreven.
+
+## Vier nieuwe lessen (27 november 2026)
+
+Het functioneringsgesprek, een formulier invullen, de voicemail en de tandarts: met AI vertaald in alle 14 hulptalen, elke regel met `// nieuw, nalezen`. Wat een moedertaalspreker het eerst moet nalezen:
+
+### ro
+- functioneringsgesprek = discuția despre performanță; piep = semnalul sonor.
+### es
+- entrevista de desempeño; gebit = la dentadura (kan als kunstgebit gelezen worden).
+### pt
+- conversa sobre o desempenho; vulling = a obturação; gebit = os dentes.
+### fr
+- entretien annuel / entretien d'évaluation; voor gezien = pour prise de connaissance.
+### ar
+- محادثة الأداء / محادثة التقييم; voor gezien = للاطّلاع; "never" in x-vormen als lijdende vorm: even sterk?
+### tr
+- performans görüşmesi / değerlendirme görüşmesi; voor gezien = görüldü.
+### fa
+- بیمهٔ تکمیلی; گفت‌وگو دربارهٔ عملکرد; voor gezien = دیده شد.
+### prs
+- داکتر دندان; tandarts van dienst = داکتر دندان نوکریوال (nieuw woord); gratis = مفت.
+### pl
+- rozmowa okresowa / rozmowa oceniająca; voor gezien = do wiadomości.
+### uk
+- для ознайомлення; стоматолог; карієс.
+### bg
+- за запознаване; "Do you not agree?" = Не си на същото мнение? (losser).
+### ti
+- ሓኪም ስኒ; ነቓዕ ስኒ; መምልኢ ስኒ; ተወሳኺ መድሕን (nieuwe termen).
+### so
+- wada-hadalka shaqada / qiimaynta; daloolka, buuxinta iligga nalezen.
+### de
+- gaatje = das Loch im Zahn; voor gezien = zur Kenntnis genommen.
+
+## AI-nalezing van alle overige teksten, alle hulptalen (28 november 2026)
+
+De eigenaar: "Kijk alle vertalingen nog eens kritisch na." Op 22 november was het gevoelige deel al nagelezen; deze ronde las al het andere: elke regel met alleen `// nieuw, nalezen` (woorden, zinnen, gesprekjes, tips van de nieuwe onderwerpen van deze week, schermteksten, "Over", klanken …), samen ruim 68.000 regels.
+
+**Werkwijze, zoals op 22 november.** Per taal één AI-lezer met het Engels en het Nederlands naast elke vertaling (lijst uit `npm run review:export`). A = verkeerde betekenis, een feit sterker of zwakker, de verkeerde persoon, een foute m/f/x-vorm of een verkeerd aantal zinnen; B = vorm, variant, term, "je/u". Bij twijfel niets veranderen maar een vraag noteren. Elke gelezen sleutel kreeg `// nagelezen AI 28 nov`, elke veranderde `// nieuw, nalezen (AI-correctie 28 nov 2026)`. Daarna las een tweede, onafhankelijke AI-lezer elke wijziging opnieuw: van de 522 wijzigingen 504 goed, 10 teruggezet, 8 nog verbeterd. Een laatste slag voerde de Belgische voorstellen door (211 be-sleutels), schreef 186 vormen met een schuine streep ("ziek / zieke") neutraal en trok in 339 sleutels het aantal zinnen gelijk met het Engels (meestal een punt binnen de aanhalingstekens, waardoor de app de zin niet splitste). Na afloop: `tsc` en alle tests groen.
+
+**Dit vervangt geen moedertaalspreker.** De vragen hieronder zijn voor hen.
+
+**Wat opviel over alle talen heen.**
+- **"Mag" als "kan"** in rechten en regels, vooral in uk (має право), bg, fa en prs.
+- **x-vormen met een schuine streep** ("болен / болна", "obrigado / obrigada") in plaats van een neutrale zin: in bijna alle talen met geslacht.
+- **Waarom-regels in de verkeerde persoon** (3e persoon of lijdende vorm, terwijl het Engels "you" zegt): prs (57), uk, tr, de, ti.
+- **"Nooit X" zonder ontkennend werkwoord** in veiligheidstips: ar (kon als "altijd" gelezen worden), so, ti.
+- **Het aantal zinnen** in de tekst over gratis gebruik (`a.free.b`) klopte in bijna alle talen niet meer met het Engels.
+- **Schermteksten in de verkeerde variant of vorm:** pt in Braziliaans Portugees, fa en prs met تو waar de app شما gebruikt.
+
+| Taal | Rijen | A | B | Na 2e lezing | Vertrouwen |
+|---|---|---|---|---|---|
+| Arabisch (ar) | 5694 | 23 | 33 | 1 verbeterd | middel-hoog |
+| Bulgaars (bg) | 4568 | 9 | 26 | 1 terug | middel-hoog |
+| Dari (prs) | 4368 | 63 | 17 | alles goed | middel-hoog |
+| Duits (de) | 4420 | 1 | 22 | 1 verbeterd | middel-hoog |
+| Frans (fr) | 4477 | 3 | 8 | alles goed | hoog |
+| Oekraïens (uk) | 4593 | 30 | 31 | 1 verbeterd | middel-hoog |
+| Perzisch (Iran) (fa) | 4376 | 5 | 29 | alles goed | middel-hoog |
+| Pools (pl) | 4600 | 9 | 19 | 1 verbeterd | hoog |
+| Portugees (pt) | 4506 | 4 | 19 | alles goed | middel-hoog |
+| Roemeens (ro) | 4514 | 6 | 17 | 2 terug | middel-hoog |
+| Somalisch (so) | 5758 | 17 | 48 | 2 verbeterd | middel-hoog |
+| Spaans (es) | 4499 | 16 | 41 | 6 terug, 1 verbeterd | hoog |
+| Tigrinya (ti) | 6936 | 23 | 51 | 1 terug, 1 verbeterd | middel-hoog |
+| Turks (tr) | 4401 | 6 | 22 | alles goed | hoog |
+
+**Keuzes voor de eigenaar.**
+- **Verdiepingen in het Oekraïens (en Bulgaars):** daar is de begane grond de 1e verdieping. `s.rounds.1` zegt nu "tweede" (getal zoals het Engels); een Oekraïner kan dat één verdieping te laag begrijpen. De uitleg staat bij `w.verdieping`.
+- **De Belgische slotregel over uitbuiting** heeft geen neutrale x-vorm (`be.closing.abuse.nl`), daarom eindigen de x-vormen van die tips in ar en ti mannelijk.
+- **Duits "1.Mai" zonder spatie:** met spatie knipt de zinssplitser de zin in tweeën.
+
+### Arabisch (ar)
+
+- ar: 5694 rijen, 23 A, 33 B, vertrouwen middel-hoog. Details: scratchpad/ar28/notes.txt.
+- A: c.safetysigns.s x "contant" toegevoegd; zinsaantal bij citaten (c.dosing.s, c.bill.s) en a.free.b; x gelijk aan m (c.delay.q, ui.geluktAsk); x leesbaar als mannelijke gebiedende wijs (s.fastening.1, s.mowing.1, s.linecleaning.2 → lijdende vorm); ui.speakBrave3 las als "je mag het niet perfect zeggen"; "nooit X" zonder ontkenning in veiligheidstips (c.hedge.b, c.litter.b, c.repairs.b, c.closing.b, c.evacuation.b, c.cutting.b, c.binlorry.b, c.mealtime.b, c.kiln.b) en titels (c.repairs, c.reversing, c.grouprules) → «وليس أبداً» / «ممنوع».
+- B: لُبس i.p.v. لبس (13); klinkertekens om masdar en gebiedende wijs te onderscheiden (11); telegrafische x-vormen; زيارة → ضيف.
+- BE-voorstellen: be.c.illness.p x; zinsaantal (Latijnse kleine letter aan zinsbegin, punt buiten «») in be.c.jobends.w, be.c.police.w, be.c.housing.s, be.c.extra.s, be.c.illness.s, be.c.mychoice.s, be.c.review.s, be.c.plain.b, be.c.letters.s, be.c.contract.w x, be.c.backtowork.s x; be.c.join x تعلُّم.
+- Vragen: abuse-slotregel in x mannelijk (geen x-variant in BE); masdar-stijl leesbaar?; mannelijke vormen in vaste UI-teksten; الطاهي of الشيف.
+
+### Bulgaars (bg)
+
+- bg: 4568 rijen, 9 A, 26 B, vertrouwen middel-hoog.
+- A: a.free.b zinsaantal; s.sick.1 en s.clear.2 x zonder schuine streep ("Днес се разболях"); ui.speakBrave2 neutraal; c.discrimination.a.why ("you" weggevallen); "mag" i.p.v. "kan" in s.discrimination.3, c.discrimination.b, s.council.1, kjn.u.society.1.
+- B: mannelijke vormen in gewone teksten neutraal ("представи се"); gelaatsscherm = щит за лице; rolluik ≠ rolmaat; overvaller = обирджия; c.wound.b "(BHV’er)" weggelaten (geldt ook in België).
+- BE-voorstellen: schuine strepen m/f neutraal herschrijven in be.c.housing.p, be.c.payslip.s, be.c.leave.b, be.c.illness.b, be.c.ww.b, be.c.jobends.b, be.c.mychoice.s/.o2, be.c.feelwell.s, be.c.review.b/.o2, be.c.login.o1/.w; be.w.zzper en be.s.permit.2 "самостоятелно заето лице"; be.s.council.2 en be.c.council.p "Имам ли право".
+- Vragen: huismeester (домакинът?); verdieping (NL 1e = BG 2e etage); namen Latijns of Cyrillisch; "Разболях се" natuurlijk?; дванайсет/дванадесет.
+
+### Dari (prs)
+
+- prs: 4368 rijen, 63 A, 17 B, vertrouwen middel-hoog.
+- A: 57 why-regels in de 3e persoon of lijdende vorm, terwijl het Engels "you" zegt → "u" (شما); c.visitors.w betekenis omgedraaid; c.knives.b en a.free.b zinsaantal; ui.keptNofM getal; c.debt.b "mag"; s.siteday.3 "kan struikelen" i.p.v. "zult".
+- B: UI-aanspreekvorm شما; termen gelijk (کثافات, طعام‌خانه, دکان, کپسول آتش‌خاموش‌کن, تیلفون, تفریح); "loose" ≠ wijd; c.mealtime.b "mogen niet".
+- BE-voorstellen: be.c.sick.w "regel" ≠ "wet"; be.c.kids.b "mag niet"; be.c.letters.o2; be.c.extra.o3 getal; be.c.neighbours.b term; zinsaantal (punt buiten «», Latijnse kleine letter aan zinsbegin) in be.c.findwork.s, be.c.contract.s, be.c.review.s, be.c.plain.b, be.c.jobends.w, be.c.boundaries.w.
+- Vragen: دراز voor "la"; فرش voor "vloer"; jij/u tussen collega's; مراجع; پمپرز of پوشک; تفریح voor werkpauze.
+
+### Duits (de)
+
+- de: 4420 rijen, 1 A, 22 B, vertrouwen middel-hoog.
+- A: c.homecare.o3 "Kling" (klinken) → "Klingel" (aanbellen).
+- B: Agentur → Zeitarbeitsfirma (l.debt, c.debt, c.carpool); "man" → "du" waar het Engels "you" zegt; minder literair (Merk dir, wird abgeschaltet); kleine grammatica.
+- BE-voorstellen: be.c.contract.o3 "gearbeitet hast"; be.c.jobends.w natuurlijker; be.s.council.1 "durch"; be.w.wijkagent "der Polizist deines Viertels"; be.c.police.w "Du antwortest"; be.c.review.b/.p natuurlijker.
+- Vragen: "das" of "die VOG"; Partner/Partnerin in c.special.b; "1.Mai" zonder spatie; Zeitarbeitsfirma ook voor een privé-bemiddelaar?
+
+### Frans (fr)
+
+- fr: 4477 rijen, 3 A, 8 B, vertrouwen hoog.
+- A: s.firstweeks.2 "je suis Sara" (= ik ben Sara) → j'accompagne Sara; a.free.b en c.wood.w zinsaantal.
+- B: ui.speakBrave2 neutraal; coach; l'appli n'a pas l'autorisation; w.agressie = l'agressivité; w.wegblijven = rester absent; a.culture.b "je" (ik) vs "tu".
+- BE-voorstellen: be.c.review.o2 x "sans aide"; be.c.details.w "faire relire"; be.c.nextstep.b "Adulte" (geen 18); mutuelle/mutualité gelijktrekken (voorstel: mutuelle).
+- Vragen: passage piéton = zebrapad → allée piétonne?; ~18 oude x-vormen met schuine streep; intimidation of harcèlement; noix vs fruits à coque; résident/client.
+
+### Oekraïens (uk)
+
+- uk: 4593 rijen, 30 A, 31 B, vertrouwen middel-hoog. Details: scratchpad/uk28/fixes.tsv, be.tsv.
+- A: "mag" als "kan" (можна → має право) in c.forms.b/.w, c.deductions.b, c.union.b, c.residence.b, c.debt.b, c.discrimination.b, s.discrimination.3, c.safetysigns.b; verkeerde persoon in why-regels (8); x-vormen met schuine streep (5); c.report.b x onzin; zinsaantal c.knives.b, c.closing.s, c.body.s x; c.phases.q opdracht ≠ taak; s.rounds.1 verdieping 3 → 2 (zoals het Engels).
+- B: zinnen zonder persoon/werkwoord; "мусить могти"; Доброго ранку; піддон; давиться (stikt nog niet).
+- BE-voorstellen: "не може" → "не має права" in be.c.findwork.b, be.c.agency.b, be.c.housing.b, be.c.kids.b, be.c.illness.b, be.c.newjob.w, be.c.boundaries.b; be.c.police.w persoon; x-schuine strepen be.c.login.b/.o1/.w, be.c.review.b/.o2; be.c.council.p; be.c.extra.o3 "13-та"; be.c.ww.o2; be.c.mychoice.o2; meer "/"-vormen in gewone be-strings.
+- Vragen: verdieping (UA telt anders); c.wound.b "(BHV’er)" weghalen?; довідка про несудимість voor VOG.
+
+### Perzisch (Iran) (fa)
+
+- fa: 4376 rijen, 5 A, 29 B, vertrouwen middel-hoog. Details: scratchpad/fa28/fixes.jsonl.
+- A: c.knives.b en a.free.b zinsaantal; c.deductions.b en c.debt.b "mag" (recht) i.p.v. "kan"; c.visitors.w betekenis omgedraaid.
+- B: UI-aanspreekvorm شما gelijk (13 teksten met تو); je/u zoals het Nederlands; postvak = قفسهٔ نامه; inbraakalarm = دزدگیر; opties beschrijvend.
+- BE-voorstellen: zinsaantal (punt buiten », Latijnse kleine letter aan zinsbegin) in be.c.findwork.s, be.c.contract.s, be.c.housing.s, be.c.extra.s/.b, be.c.plain.b, be.c.review.s, be.c.mychoice.s, be.c.insurance.b, be.c.jobends.w, be.c.boundaries.w, be.c.placement.s; be.c.sick.w mag/mag niet; be.c.neighbours.q je-vorm; opties gebiedend vs beschrijvend.
+- Vragen: w.mensenhandel "سکس" te grof?; afkeurbak twee termen; babyfoon; c.closing.s vraagteken buiten de aanhalingstekens.
+
+### Pools (pl)
+
+- pl: 4600 rijen, 9 A, 19 B, vertrouwen hoog.
+- A: acht x-vormen met schuine streep neutraal (s.dates.3, s.sick.1, s.clear.2, s.clock.2, s.unwell.3, s.measures.3, s.stagedays.1, s.grouprules.1); c.binlorry.b veiligheidsinstructie las alsof je alleen met toestemming in de cabine mag.
+- B: natuurlijker Pools; "Ik zit ergens mee" = Coś mnie martwi; w.opwachten = przywitać; persoon terug ("zaraz sprawdzisz"); pojemnik na braki.
+- BE-voorstellen: schuine strepen in be.c.illness.p, be.c.review.b/.o2, be.c.login.o1/.w, be.c.payslip.b/.p, be.c.letters.p, be.c.leave.b, be.c.ww.b, be.c.jobends.b, be.c.mychoice.s/.o2.
+- Buiten de opdracht (al nagelezen): x met schuine streep in c.notyet.p, c.sick.p, c.clock.p, c.scams.p, c.aifake.p, s.body.3, c.body.p, p.hurt.
+- Vragen: intimidatie = zastraszanie / nękanie?; "Choruję" natuurlijk?; pan/pani of pan / pani.
+
+### Portugees (pt)
+
+- pt: 4506 rijen, 4 A, 19 B, vertrouwen middel-hoog.
+- A: a.free.b zinsaantal; x-vormen zonder "obrigado / obrigada" (s.getfeedback.1, c.budget.a, c.taxes.a → "Agradeço").
+- B: UI-blok in Braziliaans Portugees/"você" → Europees (speakBrave, reasonTitle …); carrinho de mão (kruiwagen) → carrinho de carga; termen a termo / sem termo; je-vorm; neutraal i.p.v. mannelijk.
+- BE-voorstellen: be.c.nextstep.o1-3 en be.c.placement.o1/o2 in tegenwoordige tijd; be.c.review.o2 x "sem ajuda"; mutualidade de saúde / caixa de saúde gelijktrekken.
+- Nog te doen (door de lead): s.mistakes.3 en c.mistakes.a x-vorm "obrigado / obrigada".
+- Vragen: "Só metas / Só trabalhes …" correct EP?; "Agradeço" natuurlijk?; onpersoonlijke .why-regels.
+
+### Roemeens (ro)
+
+- ro: 4514 rijen (+12 regelHulp), 6 A, 17 B, vertrouwen middel-hoog.
+- A: s.clear.2 en kjn.u.time.2 x-vorm zonder schuine streep; a.free.b en c.boundaries.a.why zinsaantal; c.vacancy.b "bijna alles" → "het grootste deel"; regelHulp VOG ≠ strafblad (certificatul de bună conduită).
+- B: consistente termen (șeful, olandeză, Olanda, extinctorul, filtrul sanitar); stiloul injector cu adrenalină; adâncitura; natuurlijker zinnen; neutraal zonder singur.
+- BE-voorstellen: be.c.illness.p/.s/.o1, be.c.review.o2, be.c.login.o1/.w (x zonder schuine streep); be.c.aiprivate.b slotzin volgens vaste regel; be.s.health.3 "inspecția muncii".
+- Vragen: "Se întreabă dacă…" of "Te întreabă…"; babyfoon; lista de picking; Țările de Jos → overal Olanda?; deuk lovitură/adâncitură.
+
+### Somalisch (so)
+
+- so: 5758 rijen (alles), 17 A, 48 B, vertrouwen middel-hoog.
+- A: c.wound.a "ga liggen" → "laat hem liggen"; voorschot horumarin (ontwikkeling) → horudhac; vloer dabaq (verdieping) → dhulka/sagxadda; luier verschonen las als "Sem vervangen"; tegoedbon "schuldbriefje" → warqadda dukaanka; c.playtime.s "één klein kind" → "er ontbreekt één kind"; "nooit …" zonder ontkennend werkwoord in veiligheidszinnen (c.repairs.b, c.evacuation.b, c.binlorry.b); kjn.u.garage.2 "moet" ontbrak.
+- B: tikfouten (dansan → demsan …), grammatica, termen gelijk (aqalka dhirta, warqadda mushaharka, Af-Holandiis …), regel steviger in c.substances.w.
+- BE-voorstellen: be.c.agency.w "waajib" (must); be.c.accident.w "kugu"; be.c.neighbours.p "guriga ku xiga"; be.c.je.s "haweeney" i.p.v. "naag".
+- Nog te doen: c.upkeep.b "dansan" → "demsan" (al nagelezen).
+- Vragen: "naag" in ui.genderWoman respectvol genoeg of "haweeney"?; maandnamen; saxiix/saxeex.
+
+### Spaans (es)
+
+- es: 4499 rijen, 16 A, 41 B, vertrouwen hoog. Details: scratchpad/es28/log.json, fixes.py.
+- A: c.inspection.a "kan niet horen" → "mag niet horen"; x-vormen met schuine streep (s.sick.1, s.clear.2, s.unwell.3, s.stagedays.1, kjn.u.time.2 "me encuentro mal"; c.arrive.a; s.plain.2; s.grouprules.1); zinsaantal bij citaten `.” ¿Qué` → `”. ¿Qué` (7 situaties).
+- B: Latijns-Amerikaanse woorden → Spanje (computadora → ordenador …); subjuntivo; termen gelijk; mannelijke vormen neutraal; onnatuurlijk Spaans.
+- BE-voorstellen: be.c.aiprivate.b slotzin; be.c.findwork.s, be.c.extra.s, be.c.illness.s interpunctie; be.c.illness.p/.s/.o1 en be.c.review.o2 x; be.s.health.3 "ante"; be.w.inchecken/uitchecken zonder "boleto"; be.w.waarderen; be.c.nextstep.o1-3 en be.c.placement.o1-2 tegenwoordige tijd.
+- Buiten de opdracht (al nagelezen): zinsaantal bij citaten in c.mustmay.s, c.greensafe.s, c.mayask.b, c.counting.s, c.clear.s, c.newcolleague.s, c.testing.s, c.tyres.s; be.c.placement.b slotzin; x-schuine strepen in c.alarm.p, c.sick.p, s.illness.1, c.backtowork.q, s.healthy.1, c.howto.s, c.boundaries.s, c.healthy.b/.p, c.placement.b, c.review.o2, ui.fact3; computadora in w.computer, c.aiplan.b, ui.fact3.
+- Vragen: "me encuentro mal" of "estoy de baja"; encarar; concejo municipal; pluma de adrenalina; el cao.
+
+### Tigrinya (ti)
+
+- ti: 6936 rijen (alles), 23 A, 51 B, vertrouwen middel-hoog.
+- A: f-vormen met mannelijk werkwoord (9: c.payparts.s/.o3, c.vog.b, c.residence.b, c.callhelp.b, c.roster.b/.s, c.leavesite.s, ui.toetsNotSure); c.carpool.a.why persoon; c.checklist.o2 "vaak" → "waarschijnlijk"; zinsaantal c.dosing.s, c.bill.s, c.observing.b, a.free.b (ontbrekend stuk toegevoegd); c.liftaids.b "niet kijken" → "niet bukken"; mannelijke vormen in gewone UI-teksten → neutraal meervoud; ui.klankHint ontbrak; w.parkeerplaats "verpakking van een auto" → parkeerplaats.
+- B: waarom-regels onpersoonlijk zoals de rest (18); "nooit X" met ፈጺሙ ኣይኮነን (9 tips + titels); vormen en typo's; Amhaars → Tigrinya; vapour = ህፋው.
+- BE-voorstellen: be.c.housing.s en be.c.extra.s zinsaantal; be.c.feelwell.b f typo; be.closing.abuse.nl x-vorm toevoegen (en dan de x-slotregel van c.deductions.b, c.agencyhome.b, c.latepay.b, c.discrimination.b, c.debt.b, c.inspection.b); be.c.placement.o1 term.
+- Vragen: "X ግን ፈጺሙ" of "ፈጺሙ ኣይኮነን"; ተሰይሩ/ተሰቢሩ; mannelijk "je" in woordglossen; ክረምቲ of ሓጋይ.
+
+### Turks (tr)
+
+- tr: 4401 rijen, 6 A, 22 B, vertrouwen hoog.
+- A: c.roster.s (las als verbod), c.unwell.a.why (vraag i.p.v. beschrijving), c.repairs.q (vraagpartikel), a.story.b en a.free.b (zinsaantal), c.shoplifting.w (grammatica).
+- B: waarom-regels als gewone zin (9), je/u zoals het Nederlands, Hollandaca, hatalı ürün kutusu, beoordelingsgesprek = değerlendirir.
+- BE-voorstellen: be.c.neighbours.q "ben yeni komşunum"; be.c.review.b/.s/.w "mentor" i.p.v. "eğitmen".
+- Vragen: danışan vs bakımını yaptığın kişi; bone of saç filesi; "Elimi kestim" neutraler?; «» of “”.

@@ -68,6 +68,7 @@ import groupBasis from './groupBasis';
 import groupVeilig2 from './groupVeilig2';
 import groupProces from './groupProces';
 import groupTop8 from './groupTop8';
+import groupExtra4 from './groupExtra4';
 import group53 from './group53';
 import group54 from './group54';
 import group55 from './group55';
@@ -180,6 +181,9 @@ const words: Record<string, () => JSX.Element> = {
   // The eight new lessons of 26 November 2026: their 27 drawable words, PLACEHOLDERS for now
   // (./placeholder.tsx).
   ...groupTop8,
+  // The four new lessons of 27 November 2026: their 12 drawable words, PLACEHOLDERS for now
+  // (./placeholder.tsx).
+  ...groupExtra4,
   // "Tegels, stuc en verf" (u.afbouw, 20 November 2026): l.tiletools, l.tiling and l.plaster.
   ...group53,
   ...group54,

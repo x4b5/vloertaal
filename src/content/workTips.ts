@@ -28,7 +28,7 @@ const tip = (t: CultureTip, end = ADVICE_LINE): CultureTip => ({ ...t, body: end
 const SAID: Record<string, string> = { interview: 'Heb je nog vragen?', hours: 'Morgen begin je om half negen.', counting: 'Ga naar gang zevenenveertig.' };
 
 /** The heading of a situation that does not ask "What do you do?" (see SituationAsk). */
-const ASK: Record<string, SituationAsk> = { texting: 'which', diploma: 'which', hours: 'which', counting: 'which', measures: 'whatsay', dates: 'which', body: 'whatsay', mychoice: 'whatsay', email: 'which', council: 'which' };
+const ASK: Record<string, SituationAsk> = { texting: 'which', diploma: 'which', hours: 'which', counting: 'which', measures: 'whatsay', dates: 'which', body: 'whatsay', mychoice: 'whatsay', email: 'which', council: 'which', voicemail: 'whatsay' };
 
 const tipFor = (
   slug: string,
@@ -4630,10 +4630,112 @@ const topEightTips: CultureTip[] = [
   ),
 ];
 
+/**
+ * The tips of the four new lessons of 27 November 2026 that are in ./work.ts: filling in a form
+ * (u.data, dataUnit), the voicemail (u.contact) and the dentist (u.health; extraFour). The form and
+ * the dentist name rights and facts (the BSN, health insurance, the dentist's price): ADVICE_LINE,
+ * each with a section in docs/juridische-check.md; the voicemail is how it goes at work (HOUSE_LINE).
+ * No amounts. The form (the BSN) and the dentist (Dutch insurance) are about the Netherlands
+ * (BE_LESSON_TODO in src/content/taalBe). The fourth tip, of the performance review, is in
+ * cultureTipsBase.ts (c.appraisal).
+ */
+const extraFourTips: CultureTip[] = [
+  // ⚖️ check: A field with a star (*) is required ⚖️ (no law: the usual sign on Dutch forms and websites;
+  // "a field with a star" is how the form says it).
+  // ⚖️ check: Never sign what you do not understand ⚖️ (advice: a signature binds you (BW 3:33 en 3:35,
+  // the will that appears from your signature); ask for help first; the same advice as c.findwork).
+  // ⚖️ check: Only some organisations may ask for your BSN, like your employer, the gemeente, the
+  // Belastingdienst, your health insurer, your doctor and your bank; a shop or a sports club may not ⚖️
+  // (UAVG art. 46: a number set by law (the BSN) may only be used where a law allows it; Wet algemene
+  // bepalingen burgerservicenummer art. 10 en 12; the employer: Wet op de loonbelasting 1964 art. 28;
+  // the gemeente: Wet BRP; zorgaanbieders and zorgverzekeraars: Wet gebruik burgerservicenummer in de
+  // zorg; banks: AWR art. 53 (renseignering) and Wwft; rijksoverheid.nl "Wie mag mijn
+  // burgerservicenummer (BSN) gebruiken?" and autoriteitpersoonsgegevens.nl "Burgerservicenummer
+  // (BSN)": a shop, a gym or a sports club may not ask for it; nakijken).
+  // ⚖️ check: Never give it to a stranger, in an app or on the phone; not sure: ask why they need it ⚖️
+  // (advice against identity fraud: rijksoverheid.nl "Identiteitsfraude", Centraal Meldpunt
+  // Identiteitsfraude (CMI); the same advice as c.bsn ("First ask why they need it")).
+  // ⚖️ check: Many libraries help with forms, often at a walk-in hour ⚖️ (Informatiepunt Digitale
+  // Overheid in the library: rijksoverheid.nl "Kan ik hulp krijgen om online mijn belastingen en
+  // toeslagen te regelen?", digitaleoverheid.nl "Informatiepunt Digitale Overheid"; the same
+  // as c.taxes; "many" on purpose).
+  tipFor(
+    'forms',
+    '🖊️',
+    'A form: write clearly, and guard your BSN',
+    'A form often asks for your name, date of birth, address and postcode. Write clearly, often in capital letters. A field with a star (*) is required: you must fill it in. Tick the right box. Do you not understand a question? Ask for help before you sign. Never sign what you do not understand. Your BSN: only some organisations may ask for it, like your employer, the gemeente, the Belastingdienst, your health insurer, your doctor and your bank. A shop or a sports club may not. Never give your BSN to a stranger, in an app or on the phone. Not sure? Ask why they need it. Many libraries help with forms for free, often at a walk-in hour.',
+    ['Is mijn BSN hier verplicht?', 'Is my BSN required here?'],
+    'You sign up at a sports club. The form asks for your BSN. What do you do?',
+    [
+      'Leave it empty, and ask why they need it.',
+      'Fill it in: every form may ask for it.',
+      'Give your DigiD login instead.',
+    ],
+    'A sports club may not use your BSN. Only some organisations may, like your employer, the gemeente and your health insurer. When you ask why, you protect your number.',
+    ADVICE_LINE,
+  ),
+  // How sick calls and messages go differs per company: HOUSE_LINE. The rest is advice (no law).
+  tipFor(
+    'voicemail',
+    '🎧',
+    'A message: who, why, your number',
+    'No answer? Leave a short message (boodschap) after the beep (piep). Say your name, why you call, and your phone number. Speak slowly, and say your number twice. Missed a call? First listen to your voicemail, then call back as soon as possible. Do you not understand a message? Listen to it again, or ask a colleague to listen with you. Set up your voicemail, and listen to it every day. Calling in sick? At many companies a message is not enough: call again until you speak to someone.',
+    ['Mag ik een boodschap achterlaten?', 'May I leave a message?'],
+    'You will be late, and you call your supervisor. You hear her voicemail. What do you say after the beep?',
+    [
+      'Your name, why you call, and your number.',
+      'Only "Bel me terug", and hang up.',
+      'Nothing: you hang up, and wait.',
+    ],
+    'With your name, the reason and your number, your supervisor knows what is going on, and can call you back right away.',
+    HOUSE_LINE,
+  ),
+  // ⚖️ check: Register with a dentist, go for a check-up regularly, often once a year ⚖️ (no law:
+  // advice of the KNMT (allesoverhetgebit.nl "Hoe vaak naar de tandarts?": how often, the dentist
+  // decides with you; often once or twice a year); "often" on purpose).
+  // ⚖️ check: At night or in the weekend, call your own dentist: the phone message tells you which
+  // dentist helps now ⚖️ (dentists arrange urgent care outside office hours for their patients, often
+  // in a rota (dienstdoende tandarts) or a tandartsenpost; KNMT, allesoverhetgebit.nl "Spoed buiten
+  // kantoortijden"; Wkkgz (good care, also out of hours); nakijken).
+  // ⚖️ check: For adults the basic health insurance pays for very little at the dentist: usually not
+  // the check-up or a filling ⚖️ (Zvw and Besluit zorgverzekering art. 2.7: for 18 and older only
+  // specialist dental surgery (kaakchirurgie), a full denture (with a part to pay yourself) and dental
+  // care in special cases (bijzondere tandheelkunde); rijksoverheid.nl "Wordt mijn tandartsbezoek
+  // vergoed door de zorgverzekering?"; zorginstituutnederland.nl "Mondzorg"; the basic package of 2026
+  // has no general dental care for adults (nakijken for 2027)).
+  // ⚖️ check: You can choose an extra insurance for the dentist; check what it pays ⚖️ (aanvullende
+  // verzekering: voluntary, the insurer sets what it pays, often a maximum per year; the insurer may
+  // refuse or set conditions for it, unlike the basic insurance; rijksoverheid.nl "aanvullende
+  // verzekering"; no amounts).
+  // ⚖️ check: For children under 18 the basic insurance pays for most dental care ⚖️ (Besluit
+  // zorgverzekering art. 2.7 lid 2: mondzorg for insured persons under 18, except crowns, bridges and
+  // implants and, in most cases, orthodontics (a brace); no own risk (eigen risico) under 18, Zvw art.
+  // 19; rijksoverheid.nl idem; "most" on purpose).
+  // ⚖️ check: Ask what a treatment costs before it starts; for a big treatment the dentist must give
+  // you the price on paper first ⚖️ (NZa, Regeling mondzorg (the prices are maximum tariffs set by
+  // the NZa) and its rule on price information: a written cost estimate before a treatment above a
+  // set amount; nza.nl "Tandarts: vooraf een prijsopgave"; no amount in the tip; nakijken).
+  tipFor(
+    'dentist',
+    '🦷',
+    'The dentist: a check-up, and ask the price',
+    'Register with a dentist (tandarts) near your home, and go for a check-up (controle) regularly, often once a year. Toothache? Call your dentist and say that it hurts a lot: then you often get an appointment soon. At night or in the weekend, call your own dentist: the phone message tells you which dentist helps now. For adults, the basic health insurance pays for very little at the dentist: usually not the check-up or a filling. You can choose an extra insurance (aanvullende verzekering) for the dentist: check what it pays. For children under 18, the basic insurance pays for most dental care. Ask what a treatment costs before it starts. For a big treatment, the dentist must give you the price on paper first.',
+    ['Ik heb veel pijn. Kan ik vandaag nog komen?', 'I am in a lot of pain. Can I still come today?'],
+    'It is Saturday evening. You have bad toothache, and a painkiller does not help. What do you do?',
+    [
+      'Call your dentist: the message says who helps now.',
+      'Call 112: it is an emergency.',
+      'Wait until Monday, and take more painkillers.',
+    ],
+    'Outside office hours, a dentist on duty helps with urgent pain. 112 is only for an emergency, like danger to life.',
+    ADVICE_LINE,
+  ),
+];
+
 const lessonOrder = [doUnit, toolsUnit, dataUnit, ...workUnits].flatMap((u) => u.lessons.map((l) => l.id));
 
 /** One "Zo werkt het hier" tip per lesson of toolsUnit, dataUnit and workUnits, in course order. */
-export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips, ...installTips, ...montageTips, ...kweekServiceTips, ...groenFacilitairTips, ...vierSectorenTips, ...vijfUnitsTips, ...basisFourTips, ...safeworkTips, ...processTips, ...topEightTips].sort(
+export const workTips: CultureTip[] = [...doTips, ...toolsTips, ...coreTips, ...applyTips, ...houseTips, ...socialTips, ...laterTips, ...sectorTips, ...shopNumbersTips, ...aiTips, ...kasTips, ...sayingsTips, ...dataTips, ...moreTips, ...entreeTips, ...deliveryTips, ...sectorFourTips, ...afbouwTips, ...bouwMoreTips, ...machinesTips, ...installTips, ...montageTips, ...kweekServiceTips, ...groenFacilitairTips, ...vierSectorenTips, ...vijfUnitsTips, ...basisFourTips, ...safeworkTips, ...processTips, ...topEightTips, ...extraFourTips].sort(
   (a, b) => lessonOrder.indexOf(a.lessonId) - lessonOrder.indexOf(b.lessonId),
 );
 

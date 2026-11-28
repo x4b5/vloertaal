@@ -42,8 +42,8 @@ const t: CultureTranslation = {
     'w.pijpenstelen.lit': 'está a chover tubos de cachimbo',
     'w.hart': 'palavras amigas que dão coragem',
     'w.hart.lit': 'um coração debaixo do cinto',
-    's.plain.1': 'Avisa se não for seguro.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    's.plain.2': { m: 'Estou mesmo muito cansado.', f: 'Estou mesmo muito cansada.', x: 'Estou mesmo muito cansado / cansada.' },
+    's.plain.1': 'Avisa se não for seguro.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    's.plain.2': { m: 'Estou mesmo muito cansado.', f: 'Estou mesmo muito cansada.', x: 'Sinto mesmo um cansaço enorme.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     's.plain.3': 'Vou direto ao assunto.',
     'c.plain.q': 'Está a chover muito!',
     'c.plain.a': 'Então hoje vou de autocarro.',

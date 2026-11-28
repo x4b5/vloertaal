@@ -36,7 +36,7 @@ export const ar: Gloss = {
   'be.c.jobends.o1': "السؤال عمّا يقوله عقد الإيجار، وطلب النصيحة.", // nieuw, nalezen
   'be.c.jobends.o2': "ترك الغرفة يوم الجمعة، لأن العمل ينتهي.", // nieuw, nalezen
   'be.c.jobends.o3': "البقاء، وعدم الحديث عن ذلك مع أحد.", // nieuw, nalezen
-  'be.c.jobends.w': "عقد الإيجار منفصل عن عقد العمل. فيه مدة البقاء المسموحة. justitiehuis يعطي أول استشارة مجانية.", // nieuw, nalezen
+  'be.c.jobends.w': "عقد الإيجار منفصل عن عقد العمل. فيه مدة البقاء المسموحة. يمكن الحصول على أول استشارة مجانية في justitiehuis.", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.newjob': 'البحث عن عمل جديد',
   'be.c.newjob.b': end("قبل ترك العمل، من المهم طلب رسالة توصية (referentie). الاحتفاظ بقسائم الأجر (loonbrieven) والعقد وورقة C4. تحديث السيرة الذاتية. البحث عن عمل في VDAB (vdab.be) وفي مكاتب العمل المؤقت (interimkantoren). يجب عدم دفع أي مال أبداً مقابل الحصول على عمل.", arBase, 'abuse'), // nieuw, nalezen (AI-correctie 2 nov 2026)
   'be.c.newjob.p': 'هل يمكنني أن أعطي اسمك كمرجع؟',
@@ -104,7 +104,7 @@ export const fa: Gloss = {
   'be.c.jobends.o1': "بپرس در قرارداد اجاره‌ات چه نوشته، و مشورت بگیر.", // nieuw, nalezen
   'be.c.jobends.o2': "جمعه از اتاق برو، چون کار تمام می‌شود.", // nieuw, nalezen
   'be.c.jobends.o3': "بمان، و با هیچ‌کس دربارهٔ آن حرف نزن.", // nieuw, nalezen
-  'be.c.jobends.w': "قرارداد اجاره‌ات از قرارداد کارت جداست. در آن نوشته چه مدت می‌توانی بمانی. justitiehuis می‌تواند اولین مشاوره را رایگان به تو بدهد.", // nieuw, nalezen
+  'be.c.jobends.w': "قرارداد اجاره‌ات از قرارداد کارت جداست. در آن نوشته چه مدت می‌توانی بمانی. در justitiehuis می‌توانی اولین مشاوره را رایگان بگیری.", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.newjob': 'دنبال کار جدید گشتن',
   'be.c.newjob.b': end("پیش از رفتن، یک معرفی‌نامه (referentie) بخواه. فیش‌های حقوقی (loonbrieven)، قرارداد و C4 خودت را نگه دار. رزومه‌ات را به‌روز کن. در VDAB (vdab.be) و در دفترهای کاریابی موقت (interimkantoren) دنبال کار بگرد. هرگز برای گرفتن کار پول نده.", faBase, 'abuse'), // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.newjob.p': 'می‌توانم اسم شما را به‌عنوان معرف بدهم؟',
@@ -138,7 +138,7 @@ export const prs: Gloss = {
   'be.c.jobends.o1': "بپرسید که در قرارداد کرایه چه نوشته، و مشوره بگیرید.", // nieuw, nalezen
   'be.c.jobends.o2': "روز جمعه از اتاق بروید، چون کار ختم می‌شود.", // nieuw, nalezen
   'be.c.jobends.o3': "بمانید، و با هیچ کس دربارهٔ آن گپ نزنید.", // nieuw, nalezen
-  'be.c.jobends.w': "قرارداد کرایهٔ شما از قرارداد کار جداست. در آن نوشته که چه مدت می‌توانید بمانید. justitiehuis می‌تواند اولین مشوره را رایگان به شما بدهد.", // nieuw, nalezen
+  'be.c.jobends.w': "قرارداد کرایهٔ شما از قرارداد کار جداست. در آن نوشته که چه مدت می‌توانید بمانید. در justitiehuis می‌توانید اولین مشوره را رایگان بگیرید.", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.newjob': 'کار نو پالیدن',
   'be.c.newjob.b': end("پیش از رفتن، یک معرفی‌نامه (referentie) بخواهید. ورق‌های معاش (loonbrieven)، قرارداد و C4 خود را نگه دارید. CV خود را تازه کنید. در VDAB (vdab.be) و در دفترهای کاریابی موقت (interimkantoren) کار بپالید. هرگز برای گرفتن کار پول ندهید.", prsBase, 'abuse'), // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.newjob.p': 'نام شما را به حیث معرف داده می‌توانم؟',
@@ -158,7 +158,7 @@ export const uk: Gloss = {
   'be.s.jobends.3': "Я питаю свій ziekenfonds, чи діє далі моє страхування.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.s.newjob.2': 'Я зберігаю свої розрахункові листи.',
   'be.c.ww': "Допомога з безробіття", // nieuw, nalezen
-  'be.c.ww.b': end("Втратив / втратила роботу? Роботодавець дає тобі C4, найпізніше в останній робочий день. Одразу зареєструйся як шукач роботи у VDAB. Потім подай заяву на допомогу через профспілку (ABVV, ACV чи ACLVB) або через HVW, якщо ти не член профспілки. Заяву подають не в саму RVA: RVA вирішує. Спершу ти маєш пропрацювати достатньо довго. Допомога обмежена в часі: як довго, залежить від того, скільки ти працював / працювала. Ти звільнився / звільнилася сам / сама без поважної причини? Тоді зазвичай якийсь час не отримуєш допомоги.", ukBase, 'advice'), // nieuw, nalezen
+  'be.c.ww.b': end("Більше не маєш роботи? Роботодавець дає тобі C4, найпізніше в останній робочий день. Одразу зареєструйся як шукач роботи у VDAB. Потім подай заяву на допомогу через профспілку (ABVV, ACV чи ACLVB) або через HVW, якщо ти не член профспілки. Заяву подають не в саму RVA: RVA вирішує. Спершу ти маєш пропрацювати достатньо довго. Допомога обмежена в часі: як довго, залежить від тривалості твоєї роботи. Звільнення було з твоєї власної волі, без поважної причини? Тоді зазвичай якийсь час не отримуєш допомоги.", ukBase, 'advice'), // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.ww.p': "Я хочу подати заяву на допомогу. Що мені робити?", // nieuw, nalezen
   'be.c.ww.s': 'Ти сердишся через роботу й хочеш сьогодні звільнитися. Що розумно?',
   'be.c.ww.o1': 'Спершу порадитися, перш ніж звільнятися.',
@@ -166,7 +166,7 @@ export const uk: Gloss = {
   'be.c.ww.o3': 'Перестати ходити на роботу й нічого не казати.',
   'be.c.ww.w': "Звільнення може коштувати тобі допомоги на якийсь час. Розмова спершу з керівником, профспілкою чи justitiehuis може допомогти знайти кращий шлях.", // nieuw, nalezen
   'be.c.jobends': "Робота закінчується: що ще припиняється?",
-  'be.c.jobends.b': end("Коли твоя робота закінчується, перевір остаточний розрахунок (eindafrekening) і попроси свій C4. Ти службовець (bediende)? Тоді отримуєш відпускні разом з останньою зарплатою. Робітник (arbeider)? Тоді отримуєш їх наступного року з відпускної каси (vakantiekas). Житло чи бус через агентство можуть закінчитися водночас. Твій договір оренди має свої правила: порадься, перш ніж виїжджати з житла. На лікування ти застрахований / застрахована через свій ziekenfonds. З допомогою з безробіття ти зазвичай залишаєшся застрахованим / застрахованою. Переїжджаєш? Повідом gemeente протягом 8 робочих днів. Повертаєшся до своєї країни? Запитай свій ziekenfonds.", ukBase, 'advice'), // nieuw, nalezen
+  'be.c.jobends.b': end("Коли твоя робота закінчується, перевір остаточний розрахунок (eindafrekening) і попроси свій C4. Ти службовець (bediende)? Тоді отримуєш відпускні разом з останньою зарплатою. Робітник (arbeider)? Тоді отримуєш їх наступного року з відпускної каси (vakantiekas). Житло чи бус через агентство можуть закінчитися водночас. Твій договір оренди має свої правила: порадься, перш ніж виїжджати з житла. Страховка на лікування в тебе є через твій ziekenfonds. З допомогою з безробіття страховка зазвичай зберігається. Переїжджаєш? Повідом gemeente протягом 8 робочих днів. Повертаєшся до своєї країни? Запитай свій ziekenfonds.", ukBase, 'advice'), // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.jobends.p': "Коли я отримаю остаточний розрахунок?",
   'be.c.jobends.s': "Твоя робота закінчується в пʼятницю. Агентство також дає тобі кімнату. Що ти зробиш?", // nieuw, nalezen
   'be.c.jobends.o1': "Запитаєш, що написано в договорі оренди, і порадишся.", // nieuw, nalezen
@@ -180,7 +180,7 @@ export const uk: Gloss = {
   'be.c.newjob.o1': "Не платитимеш. Шукатимеш справжнє агентство.", // nieuw, nalezen
   'be.c.newjob.o2': 'Заплатиш, бо добра робота того варта.',
   'be.c.newjob.o3': 'Заплатиш половину зараз, а решту потім.',
-  'be.c.newjob.w': "Вимагати гроші за роботу — це тривожний знак. Агентство тимчасової роботи не може брати з тебе гроші за пошук роботи. Також можна шукати роботу у VDAB.", // nieuw, nalezen
+  'be.c.newjob.w': "Вимагати гроші за роботу — це тривожний знак. Агентство тимчасової роботи не має права брати з тебе гроші за пошук роботи. Також можна шукати роботу у VDAB.", // nieuw, nalezen (AI-correctie 28 nov 2026)
 };
 
 export const tr: Gloss = {
@@ -226,7 +226,7 @@ export const pl: Gloss = {
   'be.s.jobends.3': "Pytam mój ziekenfonds, czy moje ubezpieczenie trwa dalej.", // nieuw, nalezen
   'be.s.newjob.2': 'Zachowuję moje paski wypłaty.',
   'be.c.ww': "Zasiłek dla bezrobotnych", // nieuw, nalezen
-  'be.c.ww.b': end("Straciłeś / straciłaś pracę? Pracodawca daje ci C4, najpóźniej w ostatnim dniu pracy. Od razu zarejestruj się w VDAB jako osoba szukająca pracy. Potem złóż wniosek o zasiłek przez związek zawodowy (ABVV, ACV albo ACLVB) albo przez HVW, jeśli nie jesteś członkiem związku. Nie składasz go w samym RVA: RVA decyduje. Najpierw musisz przepracować wystarczająco długo. Zasiłek jest ograniczony w czasie: jak długo, zależy od tego, jak długo pracowałeś / pracowałaś. Sam / sama się zwolniłeś / zwolniłaś bez ważnego powodu? Wtedy zwykle przez jakiś czas nie dostajesz zasiłku.", plBase, 'advice'), // nieuw, nalezen
+  'be.c.ww.b': end("Nie masz już pracy? Pracodawca daje ci C4, najpóźniej w ostatnim dniu pracy. Od razu zarejestruj się w VDAB jako osoba szukająca pracy. Potem złóż wniosek o zasiłek przez związek zawodowy (ABVV, ACV albo ACLVB) albo przez HVW, jeśli nie jesteś członkiem związku. Nie składasz go w samym RVA: RVA decyduje. Najpierw musisz przepracować wystarczająco długo. Zasiłek jest ograniczony w czasie: jak długo, zależy od czasu twojej pracy. Odejście z pracy było twoją decyzją, bez ważnego powodu? Wtedy zwykle przez jakiś czas nie dostajesz zasiłku.", plBase, 'advice'), // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.ww.p': "Chcę złożyć wniosek o zasiłek. Co mam zrobić?", // nieuw, nalezen
   'be.c.ww.s': { m: 'Jesteś zły na swoją pracę i chcesz się dziś zwolnić. Co jest mądre?', f: 'Jesteś zła na swoją pracę i chcesz się dziś zwolnić. Co jest mądre?', x: 'Twoja praca cię złości i chcesz się dziś zwolnić. Co jest mądre?' },
   'be.c.ww.o1': 'Najpierw prosisz o radę, zanim odejdziesz z pracy.',
@@ -234,7 +234,7 @@ export const pl: Gloss = {
   'be.c.ww.o3': 'Przestajesz przychodzić do pracy i nic nie mówisz.',
   'be.c.ww.w': "Zwolnienie się może cię kosztować zasiłek na jakiś czas. Rozmowa najpierw z przełożonym, związkiem zawodowym albo justitiehuis może pomóc znaleźć lepsze wyjście.", // nieuw, nalezen
   'be.c.jobends': "Kończy się praca: co jeszcze się kończy?",
-  'be.c.jobends.b': end("Kiedy twoja praca się kończy, sprawdź końcowe rozliczenie (eindafrekening) i poproś o C4. Jesteś pracownikiem umysłowym (bediende)? Wtedy dostajesz wynagrodzenie urlopowe z ostatnią pensją. Pracownikiem fizycznym (arbeider)? Wtedy dostajesz je w następnym roku z kasy urlopowej (vakantiekas). Mieszkanie albo bus przez agencję mogą skończyć się w tym samym czasie. Twoja umowa najmu ma własne zasady: poproś o radę, zanim wyprowadzisz się z mieszkania. Na leczenie jesteś ubezpieczony / ubezpieczona przez swój ziekenfonds. Z zasiłkiem dla bezrobotnych zwykle zostajesz ubezpieczony / ubezpieczona. Przeprowadzasz się? Zgłoś to w gminie (gemeente) w ciągu 8 dni roboczych. Wracasz do swojego kraju? Zapytaj swój ziekenfonds.", plBase, 'advice'), // nieuw, nalezen (AI-correctie 2 nov 2026)
+  'be.c.jobends.b': end("Kiedy twoja praca się kończy, sprawdź końcowe rozliczenie (eindafrekening) i poproś o C4. Jesteś pracownikiem umysłowym (bediende)? Wtedy dostajesz wynagrodzenie urlopowe z ostatnią pensją. Pracownikiem fizycznym (arbeider)? Wtedy dostajesz je w następnym roku z kasy urlopowej (vakantiekas). Mieszkanie albo bus przez agencję mogą skończyć się w tym samym czasie. Twoja umowa najmu ma własne zasady: poproś o radę, zanim wyprowadzisz się z mieszkania. Ubezpieczenie na leczenie masz przez swój ziekenfonds. Z zasiłkiem dla bezrobotnych zwykle zachowujesz ubezpieczenie. Przeprowadzasz się? Zgłoś to w gminie (gemeente) w ciągu 8 dni roboczych. Wracasz do swojego kraju? Zapytaj swój ziekenfonds.", plBase, 'advice'), // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.jobends.p': "Kiedy dostanę rozliczenie końcowe?",
   'be.c.jobends.s': "Twoja praca kończy się w piątek. Agencja załatwia ci też pokój. Co robisz?", // nieuw, nalezen
   'be.c.jobends.o1': "Pytasz, co jest w umowie najmu, i prosisz o radę.", // nieuw, nalezen
@@ -294,7 +294,7 @@ export const bg: Gloss = {
   'be.s.jobends.3': "Питам своя ziekenfonds дали осигуровката ми продължава.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.s.newjob.2': 'Пазя фишовете си за заплата.',
   'be.c.ww': "Обезщетение за безработица", // nieuw, nalezen
-  'be.c.ww.b': end("Загуби работата си? Работодателят ти дава C4, най-късно в последния ти работен ден. Веднага се запиши като търсещ работа във VDAB. След това подай молба за обезщетение чрез синдикат (ABVV, ACV или ACLVB) или чрез HVW, ако не си член. Не подаваш молбата в самата RVA: RVA решава. Първо трябва да си работил / работила достатъчно дълго. Обезщетението е ограничено във времето: колко дълго зависи от това колко дълго си работил / работила. Напусна сам / сама, без основателна причина? Тогава обикновено известно време не получаваш обезщетение.", bgBase, 'advice'), // nieuw, nalezen
+  'be.c.ww.b': end("Загуби работата си? Работодателят ти дава C4, най-късно в последния ти работен ден. Веднага се запиши като търсещ работа във VDAB. След това подай молба за обезщетение чрез синдикат (ABVV, ACV или ACLVB) или чрез HVW, ако не си член. Не подаваш молбата в самата RVA: RVA решава. Първо трябва да имаш достатъчно дълъг трудов стаж. Обезщетението е ограничено във времето: колко дълго зависи от трудовия ти стаж. Напусна по собствено желание, без основателна причина? Тогава обикновено известно време не получаваш обезщетение.", bgBase, 'advice'), // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.ww.p': "Искам да подам молба за обезщетение. Какво трябва да направя?", // nieuw, nalezen
   'be.c.ww.s': { m: 'Ядосан си на работата си и искаш да напуснеш днес. Кое е разумно?', f: 'Ядосана си на работата си и искаш да напуснеш днес. Кое е разумно?', x: 'Работата те ядосва и искаш да напуснеш днес. Кое е разумно?' },
   'be.c.ww.o1': 'Първо да потърсиш съвет, преди да напуснеш.',
@@ -302,7 +302,7 @@ export const bg: Gloss = {
   'be.c.ww.o3': 'Да спреш да ходиш на работа, без да кажеш нищо.',
   'be.c.ww.w': "Напускането може да ти струва обезщетението за известно време. Ако първо говориш с началника, синдиката или justitiehuis, може да намериш по-добър път.", // nieuw, nalezen
   'be.c.jobends': "Работата свършва: какво друго спира?",
-  'be.c.jobends.b': end("Когато работата ти свърши, провери окончателното плащане (eindafrekening) и поискай своя C4. Служител ли си (bediende)? Тогава получаваш парите за отпуск с последната си заплата. Работник (arbeider)? Тогава ги получаваш следващата година от касата за отпуски (vakantiekas). Жилището или бусът чрез агенцията може да спрат по същото време. Договорът ти за наем има свои правила: потърси съвет, преди да напуснеш жилището. За лечение си осигурен / осигурена чрез своя ziekenfonds. С обезщетение за безработица обикновено оставаш осигурен / осигурена. Местиш се? Кажи на gemeente до 8 работни дни. Връщаш се в своята страна? Попитай своя ziekenfonds.", bgBase, 'advice'), // nieuw, nalezen (AI-correctie 2 nov 2026)
+  'be.c.jobends.b': end("Когато работата ти свърши, провери окончателното плащане (eindafrekening) и поискай своя C4. Служител ли си (bediende)? Тогава получаваш парите за отпуск с последната си заплата. Работник (arbeider)? Тогава ги получаваш следващата година от касата за отпуски (vakantiekas). Жилището или бусът чрез агенцията може да спрат по същото време. Договорът ти за наем има свои правила: потърси съвет, преди да напуснеш жилището. За лечение имаш осигуровка чрез своя ziekenfonds. С обезщетение за безработица осигуровката ти обикновено остава. Местиш се? Кажи на gemeente до 8 работни дни. Връщаш се в своята страна? Попитай своя ziekenfonds.", bgBase, 'advice'), // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.jobends.p': "Кога ще получа окончателното плащане?",
   'be.c.jobends.s': "Работата ти свършва в петък. Агенцията ти урежда и стаята. Какво правиш?", // nieuw, nalezen
   'be.c.jobends.o1': "Питаш какво пише в договора за наем и търсиш съвет.", // nieuw, nalezen
@@ -404,7 +404,7 @@ export const fr: Gloss = {
   'be.c.ww.o3': 'Ne viens plus au travail sans rien dire.',
   'be.c.ww.w': "Démissionner peut te coûter tes allocations pendant un temps. Parler d’abord avec ton responsable, le syndicat ou le justitiehuis peut t’aider à trouver une meilleure solution.", // nieuw, nalezen
   'be.c.jobends': "Ton travail s’arrête : qu’est-ce qui s’arrête aussi ?",
-  'be.c.jobends.b': end("Quand ton travail s’arrête, vérifie ton décompte final (eindafrekening), et demande ton C4. Tu es employé ou employée (bediende) ? Alors tu reçois ton pécule de vacances avec ton dernier salaire. Ouvrier ou ouvrière (arbeider) ? Alors tu le reçois l’année suivante, de la caisse de vacances (vakantiekas). Le logement ou une camionnette par l’agence peuvent s’arrêter en même temps. Ton contrat de location a ses propres règles : demande conseil avant de quitter le logement. Pour tes soins, tu es assuré ou assurée par ta mutualité (ziekenfonds). Avec des allocations de chômage, tu restes en général assuré ou assurée. Tu déménages ? Préviens la gemeente (commune) dans les 8 jours ouvrables. Tu retournes dans ton pays ? Demande à ta mutualité.", frBase, 'advice'), // nieuw, nalezen
+  'be.c.jobends.b': end("Quand ton travail s’arrête, vérifie ton décompte final (eindafrekening), et demande ton C4. Tu es employé ou employée (bediende) ? Alors tu reçois ton pécule de vacances avec ton dernier salaire. Ouvrier ou ouvrière (arbeider) ? Alors tu le reçois l’année suivante, de la caisse de vacances (vakantiekas). Le logement ou une camionnette par l’agence peuvent s’arrêter en même temps. Ton contrat de location a ses propres règles : demande conseil avant de quitter le logement. Pour tes soins, tu es assuré ou assurée par ta mutuelle (ziekenfonds). Avec des allocations de chômage, tu restes en général assuré ou assurée. Tu déménages ? Préviens la gemeente (commune) dans les 8 jours ouvrables. Tu retournes dans ton pays ? Demande à ta mutuelle.", frBase, 'advice'), // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.jobends.p': "Quand est-ce que je reçois mon solde de tout compte ?",
   'be.c.jobends.s': "Ton travail s’arrête vendredi. L’agence s’occupe aussi de ta chambre. Que fais-tu ?", // nieuw, nalezen
   'be.c.jobends.o1': "Demande ce que dit ton contrat de location, et fais-toi conseiller.", // nieuw, nalezen
@@ -444,7 +444,7 @@ export const de: Gloss = {
   'be.c.jobends.o1': "Frag, was in deinem Mietvertrag steht, und lass dich beraten.", // nieuw, nalezen
   'be.c.jobends.o2': "Verlass das Zimmer am Freitag, weil die Arbeit aufhört.", // nieuw, nalezen
   'be.c.jobends.o3': "Bleib und sprich mit niemandem darüber.", // nieuw, nalezen
-  'be.c.jobends.w': "Dein Mietvertrag ist getrennt von deinem Arbeitsvertrag. Darin steht, wie lange du bleiben darfst. Das Justitiehuis kann dich kostenlos ein erstes Mal beraten.", // nieuw, nalezen
+  'be.c.jobends.w': "Dein Mietvertrag ist getrennt von deinem Arbeitsvertrag. Darin steht, wie lange du bleiben darfst. Im Justitiehuis bekommst du eine erste Beratung kostenlos.", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.newjob': 'Neue Arbeit suchen',
   'be.c.newjob.b': end("Bevor du gehst, bitte um eine Referenz (referentie). Bewahre deine Lohnabrechnungen (loonbrieven), deinen Vertrag und dein C4 auf. Aktualisiere deinen Lebenslauf. Such Arbeit beim VDAB (vdab.be) und bei Zeitarbeitsfirmen (interimkantoren). Zahl nie Geld, um eine Arbeit zu bekommen.", deBase, 'abuse'), // nieuw, nalezen
   'be.c.newjob.p': 'Darf ich Sie als Referenz angeben?',

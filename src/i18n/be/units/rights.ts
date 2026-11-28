@@ -29,7 +29,7 @@ export const ar: Gloss = {
   'be.c.rights': 'التمييز والفصل من العمل',
   'be.c.rights.b': end("التمييز في العمل ممنوع، مثلاً بسبب الأصل أو الدين أو الجنس أو العمر أو الإعاقة. يمكن الإبلاغ عنه مجاناً لدى Unia. وفي ما يخصّ الخدمات الفلامندية، مثل VDAB، يكون التوجّه إلى Vlaams Mensenrechteninstituut. يحق لصاحب العمل إنهاء العقد، لكن عليه أن يعطي مهلة إشعار (opzegtermijn) أو أن يدفع الأجر عن تلك المدة (opzegvergoeding). غالباً يمكن السؤال عن الأسباب برسالة مسجّلة. عند انتهاء العمل تأتي ورقة C4: هي ضرورية لإعانة البطالة. لا توقيع على ورقة عن الفصل من العمل غير مفهومة. أولاً طلب المساعدة من النقابة (ABVV أو ACV أو ACLVB)، أو من ممثل النقابة في مكان العمل (syndicale afgevaardigde)، أو من justitiehuis.", arBase, 'abuse'), // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.rights.p': 'أريد أن أطلب النصيحة أولاً.',
-  'be.c.rights.s': { m: 'مديرك يعطيك ورقة: «وقّع اليوم، وتغادر باتفاق بيننا.» أنت لا تفهمها جيداً. ماذا تفعل؟', f: 'مديرك يعطيك ورقة: «وقّعي اليوم، وتغادرين باتفاق بيننا.» أنت لا تفهمينها جيداً. ماذا تفعلين؟' },
+  'be.c.rights.s': { m: 'مديرك يعطيك ورقة: «وقّع اليوم، وتغادر باتفاق بيننا». أنت لا تفهمها جيداً. ماذا تفعل؟', f: 'مديرك يعطيك ورقة: «وقّعي اليوم، وتغادرين باتفاق بيننا». أنت لا تفهمينها جيداً. ماذا تفعلين؟' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.rights.o1': { m: 'لا توقّع الآن. اطلب وقتاً واطلب النصيحة أولاً.', f: 'لا توقّعي الآن. اطلبي وقتاً واطلبي النصيحة أولاً.' },
   'be.c.rights.o2': { m: 'وقّعها، لأن المدير يقول إنها جيدة.', f: 'وقّعيها، لأن المدير يقول إنها جيدة.' },
   'be.c.rights.o3': { m: 'ضع الورقة جانباً ولا تتكلم عنها أبداً.', f: 'ضعي الورقة جانباً ولا تتكلمي عنها أبداً.' },
@@ -75,7 +75,7 @@ export const fa: Gloss = {
   'be.c.rights': 'تبعیض و اخراج',
   'be.c.rights.b': end("تبعیض در کار ممنوع است، مثلاً به خاطر اصل و نسب، دین، جنسیت، سن یا معلولیت. می‌توانی آن را رایگان به Unia گزارش بدهی. برای اداره‌های فلاندری، مثل VDAB، به Vlaams Mensenrechteninstituut مراجعه می‌کنی. کارفرما می‌تواند قراردادت را تمام کند، اما باید به تو مهلت پیش‌آگهی (opzegtermijn) بدهد یا دستمزد آن مدت را بپردازد (opzegvergoeding). اغلب می‌توانی با نامهٔ سفارشی دلیل‌ها را بپرسی. وقتی کارت تمام می‌شود، یک C4 می‌گیری: برای کمک‌هزینهٔ بیکاری به آن نیاز داری. کاغذی دربارهٔ اخراجت را که نمی‌فهمی امضا نکن. اول از اتحادیهٔ کارگری (ABVV، ACV یا ACLVB)، نمایندهٔ اتحادیه در محل کار (syndicale afgevaardigde) یا justitiehuis کمک بخواه.", faBase, 'abuse'), // nieuw, nalezen
   'be.c.rights.p': 'می‌خواهم اول مشورت بگیرم.',
-  'be.c.rights.s': 'رئیست کاغذی به تو می‌دهد: «امروز امضا کن، بعد با توافق می‌روی.» خوب متوجهش نمی‌شوی. چه کار می‌کنی؟',
+  'be.c.rights.s': 'رئیست کاغذی به تو می‌دهد: «امروز امضا کن، بعد با توافق می‌روی». خوب متوجهش نمی‌شوی. چه کار می‌کنی؟', // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.rights.o1': 'هنوز امضا نکن. وقت بخواه و اول مشورت بگیر.',
   'be.c.rights.o2': 'امضایش کن، چون رئیس می‌گوید مشکلی نیست.',
   'be.c.rights.o3': 'کاغذ را کنار بگذار و هیچ‌وقت درباره‌اش حرف نزن.',
@@ -98,7 +98,7 @@ export const prs: Gloss = {
   'be.c.rights': 'تبعیض و برطرفی از کار',
   'be.c.rights.b': end("تبعیض در کار ممنوع است، مثلاً به خاطر اصلیت، دین، جنسیت، سن یا معلولیت. می‌توانید آن را رایگان به Unia گزارش بدهید. برای اداره‌های فلاندری، مانند VDAB، به Vlaams Mensenrechteninstituut مراجعه می‌کنید. کارفرما می‌تواند قرارداد شما را ختم کند، اما باید به شما مهلت اطلاع قبلی (opzegtermijn) بدهد یا معاش آن مدت را بپردازد (opzegvergoeding). اکثراً می‌توانید با نامهٔ ثبت‌شده دلایل را بپرسید. وقتی کار شما ختم می‌شود، یک C4 می‌گیرید: برای کمک‌پول بیکاری به آن ضرورت دارید. کاغذی را دربارهٔ برطرفی خود که نمی‌فهمید امضا نکنید. اول از اتحادیهٔ کارگری (ABVV، ACV یا ACLVB)، نمایندهٔ اتحادیه در جای کار (syndicale afgevaardigde) یا justitiehuis کمک بخواهید.", prsBase, 'abuse'), // nieuw, nalezen
   'be.c.rights.p': 'می‌خواهم اول مشوره بگیرم.',
-  'be.c.rights.s': 'آمر شما یک کاغذ به شما می‌دهد: «امروز امضا کنید، بعد با موافقه می‌روید.» آن را خوب نمی‌فهمید. چه می‌کنید؟', // nagelezen AI ronde 3
+  'be.c.rights.s': 'آمر شما یک کاغذ به شما می‌دهد: «امروز امضا کنید، بعد با موافقه می‌روید». آن را خوب نمی‌فهمید. چه می‌کنید؟', // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.rights.o1': 'هنوز امضا نکنید. وقت بخواهید و اول مشوره بگیرید.',
   'be.c.rights.o2': 'امضا کنید، چون آمر می‌گوید مشکلی نیست.',
   'be.c.rights.o3': 'کاغذ را یک طرف بگذارید و هیچ وقت دربارهٔ آن گپ نزنید.',
@@ -177,7 +177,7 @@ export const pl: Gloss = {
 export const ro: Gloss = {
   'be.w.arbowet': "legea privind siguranța și sănătatea la locul de muncă (Welzijnswet)", // nieuw, nalezen
   'be.w.arbeidsinspectie': "inspecția muncii (verifică regulile la locul de muncă)", // nieuw, nalezen
-  'be.s.health.3': "Raportez asta la inspecție.", // nieuw, nalezen
+  'be.s.health.3': "Raportez asta la inspecția muncii.", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.w.juridischloket': "justitiehuis (primul sfat juridic gratuit)", // nieuw, nalezen
   'be.c.health': 'Pauze și ore de lucru',
   'be.c.health.b': end("Legea îți protejează siguranța și sănătatea la locul de muncă (Welzijnswet). Lucrezi mai mult de 6 ore? Atunci ai o pauză. Dacă sectorul tău nu are altă regulă, ea durează cel puțin 15 minute. De obicei lucrezi cel mult 8 ore pe zi și în medie 38 de ore pe săptămână. Sectorul tău poate avea alte reguli. Angajatorul trebuie să îți dea gratuit echipament de protecție, de exemplu încălțăminte de protecție sau mănuși. Muncă periculoasă? Raportează la Toezicht op het Welzijn op het Werk. Ore prea multe sau salariu prea mic? Raportează la Toezicht op de Sociale Wetten. Numele tău rămâne secret.", roBase, 'advice'), // nieuw, nalezen
@@ -223,7 +223,7 @@ export const bg: Gloss = {
 export const es: Gloss = {
   'be.w.arbowet': "la ley de seguridad y salud en el trabajo (Welzijnswet)", // nieuw, nalezen
   'be.w.arbeidsinspectie': "la inspección de trabajo (controla las normas en el trabajo)", // nieuw, nalezen
-  'be.s.health.3': "Lo denuncio a la inspección.", // nieuw, nalezen
+  'be.s.health.3': "Lo denuncio ante la inspección de trabajo.", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.w.juridischloket': "el justitiehuis (primer consejo legal gratis)", // nieuw, nalezen
   'be.c.health': 'Pausas y horas de trabajo',
   'be.c.health.b': end("La ley protege tu seguridad y tu salud en el trabajo (Welzijnswet). ¿Trabajas más de 6 horas? Entonces tienes una pausa. Si tu sector no tiene otra norma, dura al menos 15 minutos. Normalmente trabajas como máximo 8 horas al día y 38 horas a la semana de media. Tu sector puede tener otras normas. Tu empresa tiene que darte gratis el equipo de protección, como zapatos de seguridad o guantes. ¿Trabajo peligroso? Denúncialo a Toezicht op het Welzijn op het Werk. ¿Horarios demasiado largos o poco sueldo? Denúncialo a Toezicht op de Sociale Wetten. Tu nombre queda en secreto.", esBase, 'advice'), // nieuw, nalezen

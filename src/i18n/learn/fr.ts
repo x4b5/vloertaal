@@ -6,13 +6,13 @@ const t: CultureTranslation = {
     sayAloud: "Pas besoin de micro. Dis-le à voix haute, puis continue.",
     micRetry: "Réessayer le micro",
     micFailed: "Le micro n’a pas marché. Dis-le à voix haute, puis continue.",
-    micRefused: "L’app ne peut pas utiliser ton micro. Tu peux l’activer.", // nieuw, nalezen
-    micTurnOn: "Active le micro", // nieuw, nalezen
-    micStepsIos: "Touche « ••• » ou « aA » dans la barre d’adresse › Réglages du site web › Micro › Autoriser. Ou : Réglages › Apps › Safari › Micro. Puis touche le bouton ci-dessous.", // nieuw, nalezen
-    micStepsIosOther: "Touche l’icône à gauche de l’adresse web › Autorisations › Micro › Autoriser. Ou : Réglages › Apps › {app} › Micro. Puis touche le bouton ci-dessous.", // nieuw, nalezen
-    micStepsAndroid: "Touche l’icône à gauche de l’adresse web › Autorisations › Micro › Autoriser. Puis touche le bouton ci-dessous.", // nieuw, nalezen
-    micStepsAndroidApp: "Appuie longtemps sur l’icône de Vloertaal sur ton écran d’accueil › Infos sur l’appli › Autorisations › Micro › Autoriser. Puis touche le bouton ci-dessous.", // nieuw, nalezen
-    micStepsDesktop: "Clique sur l’icône à gauche de l’adresse web › Micro › Autoriser. Puis clique sur le bouton ci-dessous.", // nieuw, nalezen
+    micRefused: "L’appli n’a pas l’autorisation d’utiliser ton micro. Tu peux l’activer.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    micTurnOn: "Active le micro", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsIos: "Touche « ••• » ou « aA » dans la barre d’adresse › Réglages du site web › Micro › Autoriser. Ou : Réglages › Apps › Safari › Micro. Puis touche le bouton ci-dessous.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsIosOther: "Touche l’icône à gauche de l’adresse web › Autorisations › Micro › Autoriser. Ou : Réglages › Apps › {app} › Micro. Puis touche le bouton ci-dessous.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsAndroid: "Touche l’icône à gauche de l’adresse web › Autorisations › Micro › Autoriser. Puis touche le bouton ci-dessous.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsAndroidApp: "Appuie longtemps sur l’icône de Vloertaal sur ton écran d’accueil › Infos sur l’appli › Autorisations › Micro › Autoriser. Puis touche le bouton ci-dessous.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsDesktop: "Clique sur l’icône à gauche de l’adresse web › Micro › Autoriser. Puis clique sur le bouton ci-dessous.", // nieuw, nalezen // nagelezen AI 28 nov
     whichPicture: "C’est quelle image ?",
     sayAloudInstead: "Dis-le plutôt à voix haute",
     wordsPractised: "Mots pratiqués",
@@ -208,122 +208,127 @@ const t: CultureTranslation = {
     'c.brakes.a.why': "On demande s’il doit être changé : oui, et pourquoi.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "On demande ce qu’il faut faire : regarder le bon de travail.", // nieuw, nalezen // nagelezen AI 22 nov
     // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
-    'c.mowing.a.why': "On demande si on peut la prendre : oui, et ce qu’il faut faire d’abord.", // nieuw, nalezen
-    'c.pruning.a.why': "On demande quelles branches : seulement les mortes.", // nieuw, nalezen
-    'c.hedge.a.why': "On demande à quelle hauteur : jusqu’à la corde, pas plus bas.", // nieuw, nalezen
-    'c.chainsaw.a.why': "On demande si on peut : pas encore, et ce qui vient d’abord.", // nieuw, nalezen
-    'c.weeding.a.why': "On demande si c’est une mauvaise herbe : non, et quoi en faire.", // nieuw, nalezen
-    'c.planting.a.why': "On demande où elle va : l’endroit dans le parterre.", // nieuw, nalezen
-    'c.roadside.a.why': "On demande si on peut traverser : non, attendre, et pourquoi.", // nieuw, nalezen
-    'c.litter.a.why': "Un habitant demande quand : on ne sait pas, et qui le sait.", // nieuw, nalezen
-    'c.reception.a.why': "Un visiteur a rendez-vous : un moment, on appelle.", // nieuw, nalezen
-    'c.visitors.a.why': "On demande où va le manteau : l’endroit, et où il se trouve.", // nieuw, nalezen
-    'c.mailroom.a.why': "On demande pour qui c’est : le service, et l’étage.", // nieuw, nalezen
-    'c.meetingroom.a.why': "On demande à quelle heure : l’heure, et ce qu’il faut faire.", // nieuw, nalezen
-    'c.faults.a.why': "On demande pourquoi il fait froid : ce qui est en panne, et quand l’aide arrive.", // nieuw, nalezen
-    'c.repairs.a.why': "On demande si ça bipe : oui, et pourquoi.", // nieuw, nalezen
-    'c.moving.a.why': "On demande où ça va : le bureau, et où regarder.", // nieuw, nalezen
-    'c.closing.a.why': "On demande s’il y a quelqu’un : non, et ce qu’on fait maintenant.", // nieuw, nalezen
-    'c.patrol.a.why': "On demande si on a vu quelque chose : oui, quoi, et où.", // nieuw, nalezen
-    'c.access.a.why': "On demande à entrer sans carte : on regrette, pas sans carte.", // nieuw, nalezen
-    'c.cameras.a.why': "On demande ce qu’on voit : qui, où, et ce qu’on fait.", // nieuw, nalezen
-    'c.report.a.why': "On demande ce qui va dans le rapport : quoi, où et quand.", // nieuw, nalezen
-    'c.evacuation.a.why': "On demande si tout le monde est sorti : non, combien manquent.", // nieuw, nalezen
-    'c.firstaid.a.why': "On demande où est le défibrillateur : l’endroit, et ce qu’il y a à côté.", // nieuw, nalezen
-    'c.shoplifting.a.why': "On demande si on peut fouiller un sac : non, et qui fait ça.", // nieuw, nalezen
-    'c.aggression.a.why': "On demande pourquoi pas : la raison, dite calmement.", // nieuw, nalezen
-    'c.hygienelock.a.why': "On demande pour une montre : non, et la règle derrière.", // nieuw, nalezen
-    'c.allergens.a.why': "On demande si ça peut aller ensemble : non, et pourquoi.", // nieuw, nalezen
-    'c.coldroom.a.why': "On demande pourquoi ça bipe : la cause, et quoi faire.", // nieuw, nalezen
-    'c.foreignbody.a.why': "On demande quoi faire : à qui le montrer.", // nieuw, nalezen
-    'c.cutting.a.why': "On demande combien : le poids, et où regarder.", // nieuw, nalezen
-    'c.labels.a.why': "On demande quelle date : quand, et où regarder.", // nieuw, nalezen
-    'c.linecleaning.a.why': "On demande si c’est propre : pas encore, et ce qui reste à faire.", // nieuw, nalezen
-    'c.haccp.a.why': "On demande pourquoi : pour savoir que la nourriture est sûre.", // nieuw, nalezen
-    'c.binlorry.a.why': "On demande si on peut monter à l’arrière : non, et où monter.", // nieuw, nalezen
-    'c.reversing.a.why': "On demande de l’aide : oui, où on se trouve, et quoi faire.", // nieuw, nalezen
-    'c.wastesorting.a.why': "On demande où ça va : la poubelle, et pourquoi.", // nieuw, nalezen
-    'c.wastesafety.a.why': "On demande quoi faire après une coupure : laver, et le dire.", // nieuw, nalezen
-    'c.yard.a.why': "On demande où ça va : le conteneur, et où il se trouve.", // nieuw, nalezen
-    'c.hazardous.a.why': "On demande ce qu’il y a dedans : on ne sait pas, alors on le met de côté.", // nieuw, nalezen
-    'c.baler.a.why': "On demande si on peut regarder : non, et ce qui vient d’abord.", // nieuw, nalezen
-    'c.shovel.a.why': "On demande si on peut passer : seulement si le conducteur voit la personne.", // nieuw, nalezen
-    'c.nappies.a.why': "On demande quand : l’heure, et où c’est noté.", // nieuw, nalezen
-    'c.mealtime.a.why': "On demande s’il peut en avoir : non, pourquoi, et où regarder.", // nieuw, nalezen
-    'c.naptime.a.why': "On demande si elle dort : oui, depuis quand, et qu’on va vérifier.", // nieuw, nalezen
-    'c.playtime.a.why': "On demande si l’enfant peut jouer : oui, où, et quoi ensuite.", // nieuw, nalezen
-    'c.pickup.a.why': "On demande qui vient chercher : la personne, et qu’elle est sur la liste.", // nieuw, nalezen
-    'c.childsafety.a.why': "On demande si elle est tombée : oui, ce qu’elle a, et qui on appelle.", // nieuw, nalezen
-    'c.sickchild.a.why': "On demande comment il va : ce qu’on voit, et ce qu’on fait.", // nieuw, nalezen
-    'c.grouprules.a.why': "On demande si on peut sortir sans collègue : oui, mais en prévenant d’abord un collègue.", // nieuw, nalezen
+    'c.mowing.a.why': "On demande si on peut la prendre : oui, et ce qu’il faut faire d’abord.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.a.why': "On demande quelles branches : seulement les mortes.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.a.why': "On demande à quelle hauteur : jusqu’à la corde, pas plus bas.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.a.why': "On demande si on peut : pas encore, et ce qui vient d’abord.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.a.why': "On demande si c’est une mauvaise herbe : non, et quoi en faire.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.a.why': "On demande où elle va : l’endroit dans le parterre.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.a.why': "On demande si on peut traverser : non, attendre, et pourquoi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.a.why': "Un habitant demande quand : on ne sait pas, et qui le sait.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.a.why': "Un visiteur a rendez-vous : un moment, on appelle.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.a.why': "On demande où va le manteau : l’endroit, et où il se trouve.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.a.why': "On demande pour qui c’est : le service, et l’étage.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.a.why': "On demande à quelle heure : l’heure, et ce qu’il faut faire.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.a.why': "On demande pourquoi il fait froid : ce qui est en panne, et quand l’aide arrive.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.a.why': "On demande si ça bipe : oui, et pourquoi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.a.why': "On demande où ça va : le bureau, et où regarder.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.a.why': "On demande s’il y a quelqu’un : non, et ce qu’on fait maintenant.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.a.why': "On demande si on a vu quelque chose : oui, quoi, et où.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.a.why': "On demande à entrer sans carte : on regrette, pas sans carte.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.a.why': "On demande ce qu’on voit : qui, où, et ce qu’on fait.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.a.why': "On demande ce qui va dans le rapport : quoi, où et quand.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.a.why': "On demande si tout le monde est sorti : non, combien manquent.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.a.why': "On demande où est le défibrillateur : l’endroit, et ce qu’il y a à côté.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.a.why': "On demande si on peut fouiller un sac : non, et qui fait ça.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.a.why': "On demande pourquoi pas : la raison, dite calmement.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.a.why': "On demande pour une montre : non, et la règle derrière.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.a.why': "On demande si ça peut aller ensemble : non, et pourquoi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.a.why': "On demande pourquoi ça bipe : la cause, et quoi faire.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.a.why': "On demande quoi faire : à qui le montrer.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.a.why': "On demande combien : le poids, et où regarder.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.a.why': "On demande quelle date : quand, et où regarder.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.a.why': "On demande si c’est propre : pas encore, et ce qui reste à faire.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.a.why': "On demande pourquoi : pour savoir que la nourriture est sûre.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.a.why': "On demande si on peut monter à l’arrière : non, et où monter.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.a.why': "On demande de l’aide : oui, où on se trouve, et quoi faire.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.a.why': "On demande où ça va : la poubelle, et pourquoi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.a.why': "On demande quoi faire après une coupure : laver, et le dire.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.a.why': "On demande où ça va : le conteneur, et où il se trouve.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.a.why': "On demande ce qu’il y a dedans : on ne sait pas, alors on le met de côté.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.a.why': "On demande si on peut regarder : non, et ce qui vient d’abord.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.a.why': "On demande si on peut passer : seulement si le conducteur voit la personne.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.a.why': "On demande quand : l’heure, et où c’est noté.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.a.why': "On demande s’il peut en avoir : non, pourquoi, et où regarder.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.a.why': "On demande si elle dort : oui, depuis quand, et qu’on va vérifier.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.a.why': "On demande si l’enfant peut jouer : oui, où, et quoi ensuite.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.a.why': "On demande qui vient chercher : la personne, et qu’elle est sur la liste.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.a.why': "On demande si elle est tombée : oui, ce qu’elle a, et qui on appelle.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.a.why': "On demande comment il va : ce qu’on voit, et ce qu’on fait.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.a.why': "On demande si on peut sortir sans collègue : oui, mais en prévenant d’abord un collègue.", // nieuw, nalezen // nagelezen AI 28 nov
     // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
-    'c.sanitary.a.why': "On demande si c’est fini : pas encore, et pourquoi.", // nieuw, nalezen
-    'c.hotelroom.a.why': "On demande combien il en reste : le nombre, et quand on aura fini.", // nieuw, nalezen
-    'c.dosing.a.why': "On dit d’en mettre plus : non, plus n’est pas mieux, et ce qu’on utilise.", // nieuw, nalezen
-    'c.officenight.a.why': "On demande si on travaille seul : oui, et on enverra un message.", // nieuw, nalezen
-    'c.knives.a.why': "On demande de couper : oui, chef, et une question sur comment.", // nieuw, nalezen
-    'c.rawcooked.a.why': "On demande si c’est sans gluten : pas sûr, alors on regarde la liste.", // nieuw, nalezen
-    'c.pass.a.why': "On demande où est le plat : au passe, et on l’apporte maintenant.", // nieuw, nalezen
-    'c.bill.a.why': "On demande à payer séparément : oui, et on va chercher le terminal de paiement.", // nieuw, nalezen
-    'c.washing.a.why': "Le résident dit non : c’est d’accord, et on propose autre chose.", // nieuw, nalezen
-    'c.observing.a.why': "On demande s’il y a quelque chose de spécial : oui, et quoi exactement.", // nieuw, nalezen
-    'c.homecare.a.why': "On demande qui est là : un bonjour, qui on est, et est-ce que je peux entrer.", // nieuw, nalezen
-    'c.liftaids.a.why': "On demande de le faire sans aide : oui, avec le drap de glisse, et on va le chercher.", // nieuw, nalezen
-    'c.returns.a.why': "On demande à rapporter un article : oui, et une question sur le ticket.", // nieuw, nalezen
-    'c.facing.a.why': "On demande si c’est fini : presque, et ce qui reste à faire.", // nieuw, nalezen
-    'c.shrink.a.why': "On demande à regarder dans le sac : oui, et on montre le ticket.", // nieuw, nalezen
-    'c.shopclose.a.why': "On demande à entrer : désolé, c’est fermé, et quand ça rouvre.", // nieuw, nalezen
-    'c.hirer.a.why': "On demande de commencer ailleurs : oui, et une question sur l’heure.", // nieuw, nalezen
-    'c.phases.a.why': "On dit que la mission s’arrête : d’accord, et on demande un autre travail.", // nieuw, nalezen
-    'c.deductions.a.why': "On parle d’une retenue : on demande si c’est permis, et on vérifie.", // nieuw, nalezen
-    'c.agencyhome.a.why': "On dit de partir bientôt : c’est court, et on demande d’abord conseil.", // nieuw, nalezen
+    'c.sanitary.a.why': "On demande si c’est fini : pas encore, et pourquoi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.a.why': "On demande combien il en reste : le nombre, et quand on aura fini.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.a.why': "On dit d’en mettre plus : non, plus n’est pas mieux, et ce qu’on utilise.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.a.why': "On demande si on travaille seul : oui, et on enverra un message.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.a.why': "On demande de couper : oui, chef, et une question sur comment.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.a.why': "On demande si c’est sans gluten : pas sûr, alors on regarde la liste.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.a.why': "On demande où est le plat : au passe, et on l’apporte maintenant.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.a.why': "On demande à payer séparément : oui, et on va chercher le terminal de paiement.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.a.why': "Le résident dit non : c’est d’accord, et on propose autre chose.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.a.why': "On demande s’il y a quelque chose de spécial : oui, et quoi exactement.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.a.why': "On demande qui est là : un bonjour, qui on est, et est-ce que je peux entrer.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.a.why': "On demande de le faire sans aide : oui, avec le drap de glisse, et on va le chercher.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.a.why': "On demande à rapporter un article : oui, et une question sur le ticket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.a.why': "On demande si c’est fini : presque, et ce qui reste à faire.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.a.why': "On demande à regarder dans le sac : oui, et on montre le ticket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.a.why': "On demande à entrer : désolé, c’est fermé, et quand ça rouvre.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.a.why': "On demande de commencer ailleurs : oui, et une question sur l’heure.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.a.why': "On dit que la mission s’arrête : d’accord, et on demande un autre travail.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.a.why': "On parle d’une retenue : on demande si c’est permis, et on vérifie.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.a.why': "On dit de partir bientôt : c’est court, et on demande d’abord conseil.", // nieuw, nalezen // nagelezen AI 28 nov
     // The basis units at four lessons (23 November 2026).
-    'c.roster.a.why': "On dit que le planning a changé : d’accord, et quel jour.", // nieuw, nalezen
-    'c.breaks.a.why': "On demande la pause déjeuner : l’heure, et combien de temps.", // nieuw, nalezen
-    'c.wound.a.why': "Quelqu’un va s’évanouir : on l’allonge, et on va chercher de l’aide.", // nieuw, nalezen
-    'c.callhelp.a.why': "On demande s’il réagit : non, il ne réagit pas.", // nieuw, nalezen
-    'c.vacancy.a.why': "On demande pourquoi on appelle : l’offre d’emploi, et est-ce qu’elle est encore libre ?", // nieuw, nalezen
-    'c.result.a.why': "On dit non : une réponse calme, et on demande pourquoi.", // nieuw, nalezen
-    'c.residence.a.why': "On dit que le titre de séjour expire bientôt : on en demande tout de suite un nouveau.", // nieuw, nalezen
-    'c.newhome.a.why': "On demande où on habite : un nouveau logement, et la nouvelle adresse.", // nieuw, nalezen
-    'c.payparts.a.why': "On demande le matricule : où il est sur la fiche de paie.", // nieuw, nalezen
-    'c.latepay.a.why': "On dit que l’argent arrive plus tard : on le veut sur papier.", // nieuw, nalezen
-    'c.holiday.a.why': "On propose de partir en mai : on préfère juillet, et on dit pourquoi.", // nieuw, nalezen
-    'c.special.a.why': "On demande pour le congé de naissance : oui, et quand.", // nieuw, nalezen
-    'c.unwell.a.why': "On demande si ça va : non, et est-ce qu’on peut rentrer ?", // nieuw, nalezen
-    'c.injury.a.why': "On demande une déclaration : oui, et une copie pour soi.", // nieuw, nalezen
-    'c.debt.a.why': "On dit de rester jusqu’à ce que la dette soit payée : ce n’est pas permis, on demande de l’aide.", // nieuw, nalezen
-    'c.inspection.a.why': "On propose de parler : oui, mais pas là où le patron peut entendre.", // nieuw, nalezen
-    'c.carpool.a.why': "On demande qui conduit : c’est moi, et l’heure où je passe prendre l’autre.", // nieuw, nalezen
-    'c.train.a.why': "On demande pourquoi on est en retard : le train, et on a envoyé un message.", // nieuw, nalezen
-    'c.checklist.a.why': "On demande si on a oublié quelque chose : encore un coup d’œil à la liste.", // nieuw, nalezen
-    'c.leavesite.a.why': "On demande qui part en dernier : oui, tout est éteint et la porte est fermée à clé.", // nieuw, nalezen
-    'c.stagedays.a.why': "On demande pourquoi on n’était pas là : malade, et on a appelé les deux.", // nieuw, nalezen
-    'c.stageend.a.why': "On demande les projets : d’abord le diplôme, ensuite le travail.", // nieuw, nalezen
-    'c.neighbours.a.why': "Une nouvelle voisine dit bonjour : un plaisir de faire connaissance, et on donne son nom.", // nieuw, nalezen
-    'c.join.a.why': "On demande si on vient : oui, et on veut parler à l’enseignant.", // nieuw, nalezen
-    'c.workphotos.a.why': "On demande une photo pour internet : un non poli.", // nieuw, nalezen
-    'c.device.a.why': "On demande pour une nouvelle appli : d’abord demander au service informatique.", // nieuw, nalezen
+    'c.roster.a.why': "On dit que le planning a changé : d’accord, et quel jour.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.a.why': "On demande la pause déjeuner : l’heure, et combien de temps.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.a.why': "Quelqu’un va s’évanouir : on l’allonge, et on va chercher de l’aide.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.a.why': "On demande s’il réagit : non, il ne réagit pas.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.a.why': "On demande pourquoi on appelle : l’offre d’emploi, et est-ce qu’elle est encore libre ?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.a.why': "On dit non : une réponse calme, et on demande pourquoi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.a.why': "On dit que le titre de séjour expire bientôt : on en demande tout de suite un nouveau.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.a.why': "On demande où on habite : un nouveau logement, et la nouvelle adresse.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.a.why': "On demande le matricule : où il est sur la fiche de paie.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.a.why': "On dit que l’argent arrive plus tard : on le veut sur papier.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.a.why': "On propose de partir en mai : on préfère juillet, et on dit pourquoi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.a.why': "On demande pour le congé de naissance : oui, et quand.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.a.why': "On demande si ça va : non, et est-ce qu’on peut rentrer ?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.a.why': "On demande une déclaration : oui, et une copie pour soi.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.a.why': "On dit de rester jusqu’à ce que la dette soit payée : ce n’est pas permis, on demande de l’aide.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.a.why': "On propose de parler : oui, mais pas là où le patron peut entendre.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.a.why': "On demande qui conduit : c’est moi, et l’heure où je passe prendre l’autre.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.a.why': "On demande pourquoi on est en retard : le train, et on a envoyé un message.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.a.why': "On demande si on a oublié quelque chose : encore un coup d’œil à la liste.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.a.why': "On demande qui part en dernier : oui, tout est éteint et la porte est fermée à clé.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.a.why': "On demande pourquoi on n’était pas là : malade, et on a appelé les deux.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.a.why': "On demande les projets : d’abord le diplôme, ensuite le travail.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.a.why': "Une nouvelle voisine dit bonjour : un plaisir de faire connaissance, et on donne son nom.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.a.why': "On demande si on vient : oui, et on veut parler à l’enseignant.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.a.why': "On demande une photo pour internet : un non poli.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.a.why': "On demande pour une nouvelle appli : d’abord demander au service informatique.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Veiligheid op het werk" and the VOG (23 November 2026).
-    'c.safetysigns.a.why': "On demande ce que veut dire un panneau : attention, et quel panneau c’est.", // nieuw, nalezen
-    'c.substances.a.why': "On demande si c’est toxique : on ne devine pas, on vérifie.", // nieuw, nalezen
-    'c.firefight.a.why': "On annonce un feu : il est petit, alors on va chercher l’extincteur.", // nieuw, nalezen
-    'c.permitwork.a.why': "On demande qui reste dehors : moi, et quelle est ma tâche.", // nieuw, nalezen
-    'c.vog.a.why': "On demande la VOG : pas encore, et ce qu’on attend.", // nieuw, nalezen
+    'c.safetysigns.a.why': "On demande ce que veut dire un panneau : attention, et quel panneau c’est.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.a.why': "On demande si c’est toxique : on ne devine pas, on vérifie.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.a.why': "On annonce un feu : il est petit, alors on va chercher l’extincteur.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.a.why': "On demande qui reste dehors : moi, et quelle est ma tâche.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.a.why': "On demande la VOG : pas encore, et ce qu’on attend.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Operator in de procesindustrie" (23 November 2026).
-    'c.plantround.a.why': "On demande pourquoi il y a une alarme : ce qui est trop haut, et où.", // nieuw, nalezen
-    'c.plantfault.a.why': "On demande si on peut démarrer : non, il y a encore un cadenas dessus.", // nieuw, nalezen
-    'c.shiftwork.a.why': "On demande ce qui s’est passé : la panne, et où c’est noté.", // nieuw, nalezen
-    'c.heatdust.a.why': "On demande pour le téléphone : non, à cause du danger ici.", // nieuw, nalezen
+    'c.plantround.a.why': "On demande pourquoi il y a une alarme : ce qui est trop haut, et où.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.a.why': "On demande si on peut démarrer : non, il y a encore un cadenas dessus.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.a.why': "On demande ce qui s’est passé : la panne, et où c’est noté.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.a.why': "On demande pour le téléphone : non, à cause du danger ici.", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (26 November 2026).
-    'c.debthelp.a.why': "On dit que la facture n’est pas payée : oui, et on demande un plan de paiement.", // nieuw, nalezen
-    'c.taxes.a.why': "On dit qu’il y a une enveloppe bleue : merci, et on l’ouvre tout de suite.", // nieuw, nalezen
-    'c.discrimination.a.why': "On demande si ça va : non, et on va le signaler.", // nieuw, nalezen
-    'c.union.a.why': "On demande pourquoi on est membre : le syndicat nous défend.", // nieuw, nalezen
-    'c.kiln.a.why': "On demande pour ramasser les éclats à la main : non, avec la balayette et la pelle.", // nieuw, nalezen
-    'c.mixlab.a.why': "On demande si le lot est approuvé : pas encore, le labo le teste.", // nieuw, nalezen
-    'c.firstweeks.a.why': "On demande pour la visite : presque tout, et une question.", // nieuw, nalezen
-    'c.orderpick.a.why': "On demande de conduire le chariot à mât rétractable : non, pas de formation pour ça.", // nieuw, nalezen
+    'c.debthelp.a.why': "On dit que la facture n’est pas payée : oui, et on demande un plan de paiement.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.a.why': "On dit qu’il y a une enveloppe bleue : merci, et on l’ouvre tout de suite.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.a.why': "On demande si ça va : non, et on va le signaler.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.a.why': "On demande pourquoi on est membre : le syndicat nous défend.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.a.why': "On demande pour ramasser les éclats à la main : non, avec la balayette et la pelle.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.a.why': "On demande si le lot est approuvé : pas encore, le labo le teste.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.a.why': "On demande pour la visite : presque tout, et une question.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.a.why': "On demande de conduire le chariot à mât rétractable : non, pas de formation pour ça.", // nieuw, nalezen // nagelezen AI 28 nov
+    // four new lessons (27 November 2026).
+    'd.appraisal.a.why': "On demande l’objectif : une chose claire qu’on veut apprendre.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.a.why': "On demande pour le formulaire : presque, et où signer.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.a.why': "On demande le nom et le numéro : le nom, et une demande de rappel.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.a.why': "On demande la dernière visite : quand, et on demande un contrôle.", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 

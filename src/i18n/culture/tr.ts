@@ -186,30 +186,30 @@ const t: CultureTranslation = {
     's.task.3': 'Bir kez daha gösterebilir misiniz?',
     'd.task.q': 'Bitirdin mi?',
     'd.task.a': 'Neredeyse. Beş dakika daha.',
-    'l.clear': 'Kısa ve net', // nieuw, nalezen
-    'w.kort': 'kısa', // nieuw, nalezen
-    'w.duidelijk': 'net, açık', // nieuw, nalezen
-    'w.belangrijkste': 'en önemli şey', // nieuw, nalezen
-    'w.rustig': 'sakin, sakince', // nieuw, nalezen
-    'w.teveel': 'çok fazla', // nieuw, nalezen
-    'w.vraag': 'soru', // nieuw, nalezen
-    's.clear.1': 'Kısaca söyleyeyim: makine bozuk.', // nieuw, nalezen
-    's.clear.2': 'Önce en önemlisi: hastayım.', // nieuw, nalezen
-    's.clear.3': 'Pardon, çok hızlı ve çok fazla konuşuyorum.', // nieuw, nalezen
-    'd.clear.q': 'Anlaşıldı mı?', // nieuw, nalezen
-    'd.clear.a': 'Evet. Bir sorum daha var.', // nieuw, nalezen
-    'l.newcolleague': "Yeni bir iş arkadaşına yardım etmek", // nieuw, nalezen
-    'w.welkom': "hoş geldin", // nieuw, nalezen
-    'w.inwerken': "işe alıştırmak (ilk günlerde yeni bir iş arkadaşına işi göstermek)", // nieuw, nalezen
-    'w.stap': "adım (bir işin küçük bir parçası)", // nieuw, nalezen
-    'w.nadoen': "aynısını yapmak (birinin sana gösterdiğini yapmak)", // nieuw, nalezen
-    'w.geduld': "sabır", // nieuw, nalezen
-    'w.kast': "dolap", // nieuw, nalezen
-    's.newcolleague.1': "Hoş geldin! Bugün sana işi göstereceğim.", // nieuw, nalezen
-    's.newcolleague.2': "Önce izle. Sonra aynısını sen yaparsın.", // nieuw, nalezen
-    's.newcolleague.3': "Eldivenler şu dolapta.", // nieuw, nalezen
-    'd.newcolleague.q': "Anladım, sanırım.", // nieuw, nalezen
-    'd.newcolleague.a': "Güzel. Göster bakalım.", // nieuw, nalezen
+    'l.clear': 'Kısa ve net', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kort': 'kısa', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.duidelijk': 'net, açık', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.belangrijkste': 'en önemli şey', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rustig': 'sakin, sakince', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teveel': 'çok fazla', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vraag': 'soru', // nieuw, nalezen // nagelezen AI 28 nov
+    's.clear.1': 'Kısaca söyleyeyim: makine bozuk.', // nieuw, nalezen // nagelezen AI 28 nov
+    's.clear.2': 'Önce en önemlisi: hastayım.', // nieuw, nalezen // nagelezen AI 28 nov
+    's.clear.3': 'Pardon, çok hızlı ve çok fazla konuşuyorum.', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.clear.q': 'Anlaşıldı mı?', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.clear.a': 'Evet. Bir sorum daha var.', // nieuw, nalezen // nagelezen AI 28 nov
+    'l.newcolleague': "Yeni bir iş arkadaşına yardım etmek", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.welkom': "hoş geldin", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inwerken': "işe alıştırmak (ilk günlerde yeni bir iş arkadaşına işi göstermek)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stap': "adım (bir işin küçük bir parçası)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nadoen': "aynısını yapmak (birinin sana gösterdiğini yapmak)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geduld': "sabır", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kast': "dolap", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.1': "Hoş geldin! Bugün sana işi göstereceğim.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.2': "Önce izle. Sonra aynısını sen yaparsın.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.3': "Eldivenler şu dolapta.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.newcolleague.q': "Anladım, sanırım.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.newcolleague.a': "Güzel. Göster bakalım.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.newcolleague': "Göster, adım adım", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.b': "İlk haftalarında senin için zor olan şey, yeni bir iş arkadaşı için de zordur. İşi küçük adımlarla anlat: önce bu, sonra şu. Daha hızlı ya da daha yüksek sesle konuşma: göster ve senden sonra o da yapsın. “Snap je het?” diye sorma: birçok kişi anlamasa da evet der. Bunun yerine “Laat eens zien” de ve izle. Tuvalet, yemekhane ve eldivenler gibi şeylerin nerede olduğunu söyle. Sabırlı ol (geduld): öğrenmek herkes için zaman alır.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.p': "Aferin! Şimdi sıradaki adım.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -219,67 +219,67 @@ const t: CultureTranslation = {
     'c.newcolleague.o3': "Hepsini yeniden, daha hızlı ve daha yüksek sesle anlatırsın.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.w': "Birçok kişi anlamasa da “ja” der. O gösterince, ikiniz de işin doğru olup olmadığını görürsünüz. Bu, sonra bir hatayı düzeltmekten daha hızlıdır.", // nieuw, nalezen // nagelezen AI 22 nov
     // Vertaalronde 5 november 2026: u.communicate (Goed communiceren) en u.feedback (Feedback en overleg).
-    'u.communicate': "İyi iletişim kurmak", // nieuw, nalezen
-    'l.explain': "Neyin yanlış olduğunu söylemek", // nieuw, nalezen
-    'w.ietsmis': "bir sorun var, bir şey yanlış", // nieuw, nalezen
-    'w.stilstaan': "durmak, durmuş olmak (bir makine, bir bant)", // nieuw, nalezen
-    'w.lampje': "(uyarı) lambası", // nieuw, nalezen
-    'w.komen': "gelmek", // nieuw, nalezen
-    'w.nodighebben': "ihtiyacı olmak", // nieuw, nalezen
-    'w.meteen': "hemen, derhal", // nieuw, nalezen
-    's.explain.1': "Bant durdu. İkinci hatta. Gelebilir misin?", // nieuw, nalezen
-    's.explain.2': "Makinede kırmızı bir lamba yanıyor.", // nieuw, nalezen
-    's.explain.3': "Tehlikeli. Hemen gelebilir misin?", // nieuw, nalezen
-    'd.explain.q': "Sorun ne?", // nieuw, nalezen
-    'd.explain.a': "Barkod okuyucu çalışmıyor. Yenisine ihtiyacım var.", // nieuw, nalezen
-    'l.listen': "İyi dinlemek", // nieuw, nalezen
-    'w.uitpraten': "sözünü bitirmek (birinin sözünü bitirmesine izin vermek)", // nieuw, nalezen
-    'w.onderbreken': "sözünü kesmek", // nieuw, nalezen
-    'w.aankijken': "(birine) bakmak", // nieuw, nalezen
-    'w.bedoelen': "kastetmek, demek istemek", // nieuw, nalezen
-    'w.dus': "yani (duyduğunu kontrol etmek için)", // nieuw, nalezen
-    'w.doorvragen': "sormaya devam etmek (anlaşılana kadar)", // nieuw, nalezen
-    's.listen.1': "Yani önce kutuları sayacağım, sonra paketleyeceğim, öyle mi?", // nieuw, nalezen
-    's.listen.2': "O kelimeyle ne demek istiyorsun?", // nieuw, nalezen
-    's.listen.3': "Pardon, sen sözünü bitir.", // nieuw, nalezen
-    'd.listen.q': "Yarın daha saat dörtte başlıyorsun.", // nieuw, nalezen
-    'd.listen.a': "Gerçekten mi? Yoksa şaka mıydı?", // nieuw, nalezen
-    'l.calm': "Sakin kalmak", // nieuw, nalezen
-    'w.nadenken': "düşünmek (bir şey hakkında)", // nieuw, nalezen
-    'w.ademhalen': "nefes almak", // nieuw, nalezen
-    'w.oplossen': "çözmek, halletmek", // nieuw, nalezen
-    'w.druk': "yoğun (çok iş var)", // nieuw, nalezen
-    'w.straks': "birazdan, sonra (bugün)", // nieuw, nalezen
-    'w.misverstand': "yanlış anlaşılma", // nieuw, nalezen
-    's.calm.1': "Bunu sakince çözmek istiyorum.", // nieuw, nalezen
-    's.calm.2': "Biraz düşünebilir miyim?", // nieuw, nalezen
-    's.calm.3': "Sonra konuşabilir miyiz?", // nieuw, nalezen
-    'd.calm.q': "Bu neden hâlâ bitmedi?", // nieuw, nalezen
-    'd.calm.a': "Pardon, çok yoğunuz. Önce ne yapılmalı?", // nieuw, nalezen
-    'l.talkintime': "Zamanında konuşmak", // nieuw, nalezen
-    'w.gesprek': "görüşme, konuşma", // nieuw, nalezen
-    'w.bespreken': "konuşmak, görüşmek (bir konuyu)", // nieuw, nalezen
-    'w.zorgenmaken': "endişelenmek", // nieuw, nalezen
-    'w.oplossing': "çözüm", // nieuw, nalezen
-    'w.ineens': "birden, aniden", // nieuw, nalezen
-    'w.wegblijven': "gelmemek (işe gelmemek)", // nieuw, nalezen
-    's.talkintime.1': "Bir şey beni rahatsız ediyor. Biraz vaktin var mı?", // nieuw, nalezen
-    's.talkintime.2': "Seninle bir şey konuşmak istiyorum.", // nieuw, nalezen
-    's.talkintime.3': "İşi bırakmayı düşünüyorum. Önce konuşabilir miyiz?", // nieuw, nalezen
-    'd.talkintime.q': "Biraz vaktin var mı? Bir şey beni rahatsız ediyor.", // nieuw, nalezen
-    'd.talkintime.a': "Tabii. Ne oldu?", // nieuw, nalezen
-    'l.reachable': "Ulaşılabilir olmak", // nieuw, nalezen
-    'w.opnemen': "(telefonu) açmak, cevap vermek", // nieuw, nalezen
-    'w.gemisteoproep': "cevapsız arama", // nieuw, nalezen
-    'w.voicemail': "sesli mesaj", // nieuw, nalezen
-    'w.beltegoed': "telefon bakiyesi, kontör (ön ödemeli)", // nieuw, nalezen
-    'w.bereik': "çekim, sinyal (telefonda)", // nieuw, nalezen
-    'w.onbekend': "bilinmeyen (bilinmeyen bir numara)", // nieuw, nalezen
-    's.reachable.1': "Hollandacam henüz iyi değil. Yavaş konuşabilir misiniz?", // nieuw, nalezen
-    's.reachable.2': "Bunu mesaj olarak da gönderebilir misiniz?", // nieuw, nalezen
-    's.reachable.3': "Yeni bir numaram var.", // nieuw, nalezen
-    'd.reachable.q': "Günaydın, planlamadan arıyorum.", // nieuw, nalezen
-    'd.reachable.a': "Günaydın. Beni aramışsınız? Pardon, kaçırdım.", // nieuw, nalezen
+    'u.communicate': "İyi iletişim kurmak", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.explain': "Neyin yanlış olduğunu söylemek", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ietsmis': "bir sorun var, bir şey yanlış", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stilstaan': "durmak, durmuş olmak (bir makine, bir bant)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lampje': "(uyarı) lambası", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.komen': "gelmek", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nodighebben': "ihtiyacı olmak", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meteen': "hemen, derhal", // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.1': "Bant durdu. İkinci hatta. Gelebilir misin?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.2': "Makinede kırmızı bir lamba yanıyor.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.3': "Tehlikeli. Hemen gelebilir misin?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.explain.q': "Sorun ne?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.explain.a': "Barkod okuyucu çalışmıyor. Yenisine ihtiyacım var.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.listen': "İyi dinlemek", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitpraten': "sözünü bitirmek (birinin sözünü bitirmesine izin vermek)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderbreken': "sözünü kesmek", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aankijken': "(birine) bakmak", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedoelen': "kastetmek, demek istemek", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dus': "yani (duyduğunu kontrol etmek için)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doorvragen': "sormaya devam etmek (anlaşılana kadar)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.1': "Yani önce kutuları sayacağım, sonra paketleyeceğim, öyle mi?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.2': "O kelimeyle ne demek istiyorsun?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.3': "Pardon, sen sözünü bitir.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.listen.q': "Yarın daha saat dörtte başlıyorsun.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.listen.a': "Gerçekten mi? Yoksa şaka mıydı?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.calm': "Sakin kalmak", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nadenken': "düşünmek (bir şey hakkında)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ademhalen': "nefes almak", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oplossen': "çözmek, halletmek", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.druk': "yoğun (çok iş var)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.straks': "birazdan, sonra (bugün)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.misverstand': "yanlış anlaşılma", // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.1': "Bunu sakince çözmek istiyorum.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.2': "Biraz düşünebilir miyim?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.3': "Sonra konuşabilir miyiz?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.calm.q': "Bu neden hâlâ bitmedi?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.calm.a': "Pardon, çok yoğunuz. Önce ne yapılmalı?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.talkintime': "Zamanında konuşmak", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gesprek': "görüşme, konuşma", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bespreken': "konuşmak, görüşmek (bir konuyu)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zorgenmaken': "endişelenmek", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oplossing': "çözüm", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ineens': "birden, aniden", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wegblijven': "gelmemek (işe gelmemek)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.1': "Bir şey beni rahatsız ediyor. Biraz vaktin var mı?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.2': "Seninle bir şey konuşmak istiyorum.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.3': "İşi bırakmayı düşünüyorum. Önce konuşabilir miyiz?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.talkintime.q': "Biraz vaktin var mı? Bir şey beni rahatsız ediyor.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.talkintime.a': "Tabii. Ne oldu?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.reachable': "Ulaşılabilir olmak", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opnemen': "(telefonu) açmak, cevap vermek", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gemisteoproep': "cevapsız arama", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voicemail': "sesli mesaj", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beltegoed': "telefon bakiyesi, kontör (ön ödemeli)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bereik': "çekim, sinyal (telefonda)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onbekend': "bilinmeyen (bilinmeyen bir numara)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.1': "Hollandacam henüz iyi değil. Yavaş konuşabilir misiniz?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.2': "Bunu mesaj olarak da gönderebilir misiniz?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.3': "Yeni bir numaram var.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.reachable.q': "Günaydın, planlamadan arıyorum.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.reachable.a': "Günaydın. Beni aramışsınız? Pardon, kaçırdım.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.explain': "Ne, nerede, neye ihtiyacın var", // nieuw, nalezen // nagelezen AI 22 nov
     'c.explain.b': "İşte bir sorun olduğunda, bunu üç adımda söyle. Önce sorun ne: “De band staat stil.” Sonra nerede: “Bij lijn twee.” Sonra neye ihtiyacın var: “Kun je komen?” Böylece karşındaki kişi, çok soru sormadan ne yapacağını bilir. Onun adını bilmiyor musun? Parmağınla göster. Tehlikeli mi? Bunu ilk önce söyle: “Het is gevaarlijk.” Kaza mı oldu? Önce yardım çağır (daha fazlası “Kaza bildirmek” dersinde).", // nieuw, nalezen // nagelezen AI 22 nov
     'c.explain.p': "Gelip bir bakabilir misin?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -320,43 +320,43 @@ const t: CultureTranslation = {
     'c.reachable.o2': "Seni tekrar aramalarını beklersin.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.reachable.o3': "Gelecek hafta, boş olduğunda geri ararsın.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.reachable.w': "Ajanslar iş olduğunda sık sık arar. Aynı gün geri ararsan işi istediğini gösterirsin ve belki işi sen alırsın.", // nieuw, nalezen // nagelezen AI 22 nov
-    'u.feedback': "Geri bildirim ve ekip toplantısı", // nieuw, nalezen
-    'l.getfeedback': "Geri bildirim almak", // nieuw, nalezen
-    'w.tip': "ipucu (kısa bir tavsiye)", // nieuw, nalezen
-    'w.verbeterpunt': "geliştirilecek nokta (daha iyi olabilecek şey)", // nieuw, nalezen
-    'w.goedbedoeld': "iyi niyetle söylenmiş (sana yardım etmek için)", // nieuw, nalezen
-    'w.kritiek': "eleştiri (birinin iyi bulmadığı şey)", // nieuw, nalezen
-    'w.normaal': "normal", // nieuw, nalezen
-    'w.positief': "olumlu (iyi giden şey hakkında)", // nieuw, nalezen
-    's.getfeedback.1': "Teşekkürler, bunu bilmek iyi oldu.", // nieuw, nalezen
-    's.getfeedback.2': "Bir örnek verebilir misin?", // nieuw, nalezen
-    's.getfeedback.3': "Neyi daha iyi yapabilirim?", // nieuw, nalezen
-    'd.getfeedback.q': "Sana biraz geri bildirim verebilir miyim?", // nieuw, nalezen
-    'd.getfeedback.a': "Evet, lütfen. İşimi iyi yapmak istiyorum.", // nieuw, nalezen
-    'l.givefeedback': "Geri bildirim vermek", // nieuw, nalezen
-    'w.dichtplakken': "bantla kapatmak", // nieuw, nalezen
-    'w.netjes': "düzgün, derli toplu", // nieuw, nalezen
-    'w.scheef': "eğri, düz değil", // nieuw, nalezen
-    'w.vriendelijk': "nazik, güler yüzlü", // nieuw, nalezen
-    'w.concreet': "somut (açık bir örnekle)", // nieuw, nalezen
-    'w.ondervierogen': "baş başa (sadece ikiniz)", // nieuw, nalezen
-    's.givefeedback.1': "Bunu iyi yapıyorsun.", // nieuw, nalezen
-    's.givefeedback.2': "Kutuları da bantla kapatabilir misin?", // nieuw, nalezen
-    's.givefeedback.3': "Kutuların eğri durduğunu görüyorum.", // nieuw, nalezen
-    'd.givefeedback.q': "İşimi nasıl buluyorsun?", // nieuw, nalezen
-    'd.givefeedback.a': "Düzgün! Sadece kutular eğri duruyor.", // nieuw, nalezen
-    'l.meeting': "Ekip toplantısında söz almak", // nieuw, nalezen
-    'w.werkoverleg': "ekip toplantısı (iş hakkında)", // nieuw, nalezen
-    'w.beurt': "sıra (konuşma sırası)", // nieuw, nalezen
-    'w.idee': "fikir", // nieuw, nalezen
-    'w.mening': "görüş (o konuda ne düşündüğün)", // nieuw, nalezen
-    'w.handopsteken': "elini kaldırmak", // nieuw, nalezen
-    'w.agenda': "gündem (toplantıdaki konuların listesi)", // nieuw, nalezen
-    's.meeting.1': "Bir şey söyleyebilir miyim?", // nieuw, nalezen
-    's.meeting.2': "Çalışma planıyla ilgili bir sorum var.", // nieuw, nalezen
-    's.meeting.3': "Bir fikrim var.", // nieuw, nalezen
-    'd.meeting.q': "Başka sorusu olan var mı?", // nieuw, nalezen
-    'd.meeting.a': "Evet. Yeni çalışma planı ne zaman gelecek?", // nieuw, nalezen
+    'u.feedback': "Geri bildirim ve ekip toplantısı", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.getfeedback': "Geri bildirim almak", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tip': "ipucu (kısa bir tavsiye)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verbeterpunt': "geliştirilecek nokta (daha iyi olabilecek şey)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedbedoeld': "iyi niyetle söylenmiş (sana yardım etmek için)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kritiek': "eleştiri (birinin iyi bulmadığı şey)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.normaal': "normal", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.positief': "olumlu (iyi giden şey hakkında)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.1': "Teşekkürler, bunu bilmek iyi oldu.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.2': "Bir örnek verebilir misin?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.3': "Neyi daha iyi yapabilirim?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.getfeedback.q': "Sana biraz geri bildirim verebilir miyim?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.getfeedback.a': "Evet, lütfen. İşimi iyi yapmak istiyorum.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.givefeedback': "Geri bildirim vermek", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dichtplakken': "bantla kapatmak", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.netjes': "düzgün, derli toplu", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scheef': "eğri, düz değil", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vriendelijk': "nazik, güler yüzlü", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.concreet': "somut (açık bir örnekle)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ondervierogen': "baş başa (sadece ikiniz)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.1': "Bunu iyi yapıyorsun.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.2': "Kutuları da bantla kapatabilir misin?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.3': "Kutuların eğri durduğunu görüyorum.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.givefeedback.q': "İşimi nasıl buluyorsun?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.givefeedback.a': "Düzgün! Sadece kutular eğri duruyor.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.meeting': "Ekip toplantısında söz almak", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkoverleg': "ekip toplantısı (iş hakkında)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beurt': "sıra (konuşma sırası)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.idee': "fikir", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mening': "görüş (o konuda ne düşündüğün)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handopsteken': "elini kaldırmak", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.agenda': "gündem (toplantıdaki konuların listesi)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.1': "Bir şey söyleyebilir miyim?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.2': "Çalışma planıyla ilgili bir sorum var.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.3': "Bir fikrim var.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.meeting.q': "Başka sorusu olan var mı?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.meeting.a': "Evet. Yeni çalışma planı ne zaman gelecek?", // nieuw, nalezen // nagelezen AI 28 nov
     'c.getfeedback': "Geri bildirim işinle ilgilidir", // nieuw, nalezen // nagelezen AI 22 nov
     'c.getfeedback.b': "Geri bildirim, birinin işin hakkında söylediğidir: neyin iyi gittiği ve neyin daha iyi olabileceği. Bu senin işinle ilgilidir, seninle değil. Burada iş yerinde geri bildirim normaldir ve yardım etmek içindir. Neyi farklı yapacağın açık değil mi? Bir örnek iste. Önce dinle ve hemen kendini savunma. Sonra teşekkür et ve dene. Sen de geri bildirim isteyebilirsin: “Wat kan ik beter doen?”", // nieuw, nalezen // nagelezen AI 22 nov
     'c.getfeedback.p': "Teşekkürler. Bir örnek verebilir misin?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -424,55 +424,76 @@ const t: CultureTranslation = {
     'c.whereis.o3': "Kendi kıyafetlerinle işe başlarsın.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.w': "Sormak on saniye sürer. Tek başına aramak geç kalmana neden olabilir. İş arkadaşları yeni bir yerde yol bulmanın zor olduğunu bilir.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): the tips of l.roster, l.breaks, l.wound and l.callhelp.
-    'c.wound': "Yanık mı? Suyla soğut", // nieuw, nalezen
-    'c.wound.b': "Küçük bir kesik: temiz bir bez ya da sargıyla üzerine bastır ve ilk yardım görevlisine söyle. Bir yanık: hemen ılık akan suyla, en az 10 dakika soğut. Gözüne bir şey mi kaçtı? Suyla ya da göz duşunda yıka. Ciddi mi? 112’yi ara. İlk gününde ilk yardım çantasının ve göz duşunun nerede olduğunu sor.", // nieuw, nalezen
-    'c.wound.p': "Kendimi yaktım. Musluk nerede?", // nieuw, nalezen
-    'c.wound.s': "Bir iş arkadaşın elini sıcak bir makinede yakıyor. Ne yaparsın?", // nieuw, nalezen
-    'c.wound.o1': "Ilık akan suyla soğutursun.", // nieuw, nalezen
-    'c.wound.o2': "Hemen üzerine tereyağı ya da krem sürersin.", // nieuw, nalezen
-    'c.wound.o3': "Doğrudan cilde buz koyar ve beklersin.", // nieuw, nalezen
-    'c.wound.w': "Su ısıyı ciltten çeker, böylece yanık daha az derin olur. Buz, tereyağı ve krem durumu kötüleştirebilir.", // nieuw, nalezen
-    'c.callhelp': "112’yi aramak: önce nerede olduğunu söyle", // nieuw, nalezen
-    'c.callhelp.b': "Bir hayat tehlikedeyse ya da her dakika önemliyse 112’yi ara. Önce nerede olduğunu söyle: sokak, numara ve şehir. Sonra ne olduğunu söyle. Hatta kal ve soruları cevapla. Bir iş arkadaşından ambulansı girişte beklemesini iste. İş yerinin adresini bilmiyor musun? Bugün öğren.", // nieuw, nalezen
-    'c.callhelp.p': "112’yi arıyorum. Ambulansı bekler misin?", // nieuw, nalezen
-    'c.callhelp.s': "112’yi arıyorsun. Operatör çok soru soruyor, ama sen iş arkadaşına yardım etmek istiyorsun. Ne yaparsın?", // nieuw, nalezen
-    'c.callhelp.o1': "Hatta kalır ve cevap verirsin.", // nieuw, nalezen
-    'c.callhelp.o2': "Telefonu kapatır ve iş arkadaşına gidersin.", // nieuw, nalezen
-    'c.callhelp.o3': "\"Çabuk gelin\" der ve kapatırsın.", // nieuw, nalezen
-    'c.callhelp.w': "Operatör sen konuşurken yardım gönderir ve sana ne yapacağını söyler. Çok erken kapatırsan yardım yanlış yere gidebilir.", // nieuw, nalezen
-    'c.roster': "Çalışma planına her gün bak", // nieuw, nalezen
-    'c.roster.b': "Çalışma planı değişebilir, son anda bile. Ona her gün bak, uygulamada ya da panoda. Bir değişiklik mi görüyorsun? Gelebileceğini kontrol et. Bir gün çalışamıyor musun? Bunu erken söyle, o gün değil. Bir vardiyayı değiştirmek mi istiyorsun? Önce amirine sor: birçok şirketin bunun için bir kuralı vardır. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.roster.p': "Cumartesi çalışamam. Değiştirebilir miyim?", // nieuw, nalezen
-    'c.roster.s': "Çalışma planın değişti. Şimdi cumartesi çalışman gerekiyor, ama çalışamazsın. Ne yaparsın?", // nieuw, nalezen
-    'c.roster.o1': "Bugün amirine söyler ve vardiyayı değiştirmeyi istersin.", // nieuw, nalezen
-    'c.roster.o2': "Hiçbir şey söylemez ve cumartesi evde kalırsın.", // nieuw, nalezen
-    'c.roster.o3': "Bir iş arkadaşından gitmesini ister ve kimseye söylemezsin.", // nieuw, nalezen
-    'c.roster.w': "Erken söylersen amirin başka birini bulabilir. Haber vermeden gelmemek çok ciddi bir şey olarak görülür.", // nieuw, nalezen
-    'c.breaks': "Saatlerini not et", // nieuw, nalezen
-    'c.breaks.b': "Her gün ne zaman başladığını, ne zaman bitirdiğini ve molanın ne kadar sürdüğünü not et. Maaşın doğru olmadığında kendi listen yardımcı olur. Erken çıkman mı gerekiyor, örneğin doktor için? Amirine zamanında sor. Planlanandan daha uzun mu çalıştın? Bunu da not et. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.breaks.p': "Yarın doktora gitmem gerekiyor. Erken çıkabilir miyim?", // nieuw, nalezen
-    'c.breaks.s': "Yarın saat üçte doktora gitmen gerekiyor. Vardiyan beşte bitiyor. Ne yaparsın?", // nieuw, nalezen
-    'c.breaks.o1': "Bugün amirine erken çıkıp çıkamayacağını sorarsın.", // nieuw, nalezen
-    'c.breaks.o2': "Üçte çıkar ve ertesi gün açıklarsın.", // nieuw, nalezen
-    'c.breaks.o3': "Doktora gitmez ve vardiyanı bitirirsin.", // nieuw, nalezen
-    'c.breaks.w': "Zamanında sormak, amirinin işi planlamasını sağlar. Sormadan çıkmak güvenilmezlik olarak görülür.", // nieuw, nalezen
+    'c.wound': "Yanık mı? Suyla soğut", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.b': "Küçük bir kesik: temiz bir bez ya da sargıyla üzerine bastır ve ilk yardım görevlisine söyle. Bir yanık: hemen ılık akan suyla, en az 10 dakika soğut. Gözüne bir şey mi kaçtı? Suyla ya da göz duşunda yıka. Ciddi mi? 112’yi ara. İlk gününde ilk yardım çantasının ve göz duşunun nerede olduğunu sor.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.p': "Kendimi yaktım. Musluk nerede?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.s': "Bir iş arkadaşın elini sıcak bir makinede yakıyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o1': "Ilık akan suyla soğutursun.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o2': "Hemen üzerine tereyağı ya da krem sürersin.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o3': "Doğrudan cilde buz koyar ve beklersin.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.w': "Su ısıyı ciltten çeker, böylece yanık daha az derin olur. Buz, tereyağı ve krem durumu kötüleştirebilir.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp': "112’yi aramak: önce nerede olduğunu söyle", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.b': "Bir hayat tehlikedeyse ya da her dakika önemliyse 112’yi ara. Önce nerede olduğunu söyle: sokak, numara ve şehir. Sonra ne olduğunu söyle. Hatta kal ve soruları cevapla. Bir iş arkadaşından ambulansı girişte beklemesini iste. İş yerinin adresini bilmiyor musun? Bugün öğren.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.p': "112’yi arıyorum. Ambulansı bekler misin?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.s': "112’yi arıyorsun. Operatör çok soru soruyor, ama sen iş arkadaşına yardım etmek istiyorsun. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o1': "Hatta kalır ve cevap verirsin.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o2': "Telefonu kapatır ve iş arkadaşına gidersin.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o3': "\"Çabuk gelin\" der ve kapatırsın.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.w': "Operatör sen konuşurken yardım gönderir ve sana ne yapacağını söyler. Çok erken kapatırsan yardım yanlış yere gidebilir.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster': "Çalışma planına her gün bak", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.b': "Çalışma planı değişebilir, son anda bile. Ona her gün bak, uygulamada ya da panoda. Bir değişiklik mi görüyorsun? Gelebileceğini kontrol et. Bir gün çalışamıyor musun? Bunu erken söyle, o gün değil. Bir vardiyayı değiştirmek mi istiyorsun? Önce amirine sor: birçok şirketin bunun için bir kuralı vardır. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.p': "Cumartesi çalışamam. Değiştirebilir miyim?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.s': "Çalışma planın değişti. Şimdi cumartesi çalışman gerekiyor, ama o gün çalışamıyorsun. Ne yaparsın?", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.roster.o1': "Bugün amirine söyler ve vardiyayı değiştirmeyi istersin.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o2': "Hiçbir şey söylemez ve cumartesi evde kalırsın.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o3': "Bir iş arkadaşından gitmesini ister ve kimseye söylemezsin.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.w': "Erken söylersen amirin başka birini bulabilir. Haber vermeden gelmemek çok ciddi bir şey olarak görülür.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks': "Saatlerini not et", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.b': "Her gün ne zaman başladığını, ne zaman bitirdiğini ve molanın ne kadar sürdüğünü not et. Maaşın doğru olmadığında kendi listen yardımcı olur. Erken çıkman mı gerekiyor, örneğin doktor için? Amirine zamanında sor. Planlanandan daha uzun mu çalıştın? Bunu da not et. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.p': "Yarın doktora gitmem gerekiyor. Erken çıkabilir miyim?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.s': "Yarın saat üçte doktora gitmen gerekiyor. Vardiyan beşte bitiyor. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o1': "Bugün amirine erken çıkıp çıkamayacağını sorarsın.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o2': "Üçte çıkar ve ertesi gün açıklarsın.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o3': "Doktora gitmez ve vardiyanı bitirirsin.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.w': "Zamanında sormak, amirinin işi planlamasını sağlar. Sormadan çıkmak güvenilmezlik olarak görülür.", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (26 November 2026).
-    'c.firstweeks': "Tekrar sor: bu normal", // nieuw, nalezen
-    'c.firstweeks.b': "İlk haftalarında kimse senden her şeyi bilmeni beklemez. Çoğu zaman bir tanıtım turu (rondleiding) olur ve sana yol gösteren bir iş arkadaşın olur. Önce izle, sonra iş arkadaşın izlerken kendin yap. Bir şeyi mi unuttun? Tekrar sor: \"Wil je het nog een keer laten zien?\" Bu, tahmin etmekten daha iyidir. Yeni kelimeleri ve adımları küçük bir not defterine yaz. Bazı sözleşmeler bir deneme süresiyle (proeftijd) başlar: o sürede sen ya da işverenin işi hızla bitirebilir. Sözleşmende deneme süresi olup olmadığını sor. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.firstweeks.p': "Unuttum. Bir kez daha gösterir misin?", // nieuw, nalezen
-    'c.firstweeks.s': "Dün iş arkadaşın sana makineyi nasıl çalıştıracağını gösterdi. Bugün üçüncü adımı hatırlamıyorsun. Ne yaparsın?", // nieuw, nalezen
-    'c.firstweeks.o1': "İş arkadaşından bir kez daha göstermesini istersin.", // nieuw, nalezen
-    'c.firstweeks.o2': "Tahmin eder ve denersin.", // nieuw, nalezen
-    'c.firstweeks.o3': "Başka biri çalıştırana kadar beklersin.", // nieuw, nalezen
-    'c.firstweeks.w': "İlk haftalarda tekrar sormak normaldir. Bir makinede tahminle iş yapmak tehlikeli olabilir ve daha çok zaman alır.", // nieuw, nalezen
-    'c.orderpick': "Yaya yolunda yürü", // nieuw, nalezen
-    'c.orderpick.b': "Büyük bir depoda siparişleri bir toplama listesi ve bir barkod okuyucuyla toplarsın: her ürünü okutursun, böylece doğru ürünler doğru müşteriye gider. Birçok sipariş toplayıcı, onları yukarı kaldıran küçük bir araç ya da yüksek raflar için bir reach truck kullanır. Bunları ancak eğitimini aldıysan kullan, çoğu zaman bir sertifikayla. Yaya yollarında yürü ve hareket eden araçlardan uzak dur: sürücü seni her zaman göremez. Soğuk odada ya da dondurucuda, işten aldığın sıcak kıyafetleri, eldivenleri ve şapkayı giy. Isınma molalarını kullan ve içeri girdiğinde birine haber ver. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen
-    'c.orderpick.p': "Biraz yemekhanede ısınmaya gidiyorum.", // nieuw, nalezen
-    'c.orderpick.s': "Diğer koridora gitmen gerekiyor. Yaya yolu etrafından dolaşıyor; araçların arasından düz geçmek daha hızlı. Ne yaparsın?", // nieuw, nalezen
-    'c.orderpick.o1': "Daha uzun olsa da yaya yolunu kullanırsın.", // nieuw, nalezen
-    'c.orderpick.o2': "Araçların arasından hızla koşarak geçersin.", // nieuw, nalezen
-    'c.orderpick.o3': "Yürüyerek geçer ve sürücülere el sallarsın.", // nieuw, nalezen
-    'c.orderpick.w': "Bir araç sürücüsü seni çoğu zaman göremez, örneğin yüksek bir yükün arkasındayken. Yaya yolunda insanlar beklenir ve güvendedir.", // nieuw, nalezen
+    'c.firstweeks': "Tekrar sor: bu normal", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.b': "İlk haftalarında kimse senden her şeyi bilmeni beklemez. Çoğu zaman bir tanıtım turu (rondleiding) olur ve sana yol gösteren bir iş arkadaşın olur. Önce izle, sonra iş arkadaşın izlerken kendin yap. Bir şeyi mi unuttun? Tekrar sor: \"Wil je het nog een keer laten zien?\" Bu, tahmin etmekten daha iyidir. Yeni kelimeleri ve adımları küçük bir not defterine yaz. Bazı sözleşmeler bir deneme süresiyle (proeftijd) başlar: o sürede sen ya da işverenin işi hızla bitirebilir. Sözleşmende deneme süresi olup olmadığını sor. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.p': "Unuttum. Bir kez daha gösterir misin?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.s': "Dün iş arkadaşın sana makineyi nasıl çalıştıracağını gösterdi. Bugün üçüncü adımı hatırlamıyorsun. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.o1': "İş arkadaşından bir kez daha göstermesini istersin.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.o2': "Tahmin eder ve denersin.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.o3': "Başka biri çalıştırana kadar beklersin.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.w': "İlk haftalarda tekrar sormak normaldir. Bir makinede tahminle iş yapmak tehlikeli olabilir ve daha çok zaman alır.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick': "Yaya yolunda yürü", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.b': "Büyük bir depoda siparişleri bir toplama listesi ve bir barkod okuyucuyla toplarsın: her ürünü okutursun, böylece doğru ürünler doğru müşteriye gider. Birçok sipariş toplayıcı, onları yukarı kaldıran küçük bir araç ya da yüksek raflar için bir reach truck kullanır. Bunları ancak eğitimini aldıysan kullan, çoğu zaman bir sertifikayla. Yaya yollarında yürü ve hareket eden araçlardan uzak dur: sürücü seni her zaman göremez. Soğuk odada ya da dondurucuda, işten aldığın sıcak kıyafetleri, eldivenleri ve şapkayı giy. Isınma molalarını kullan ve içeri girdiğinde birine haber ver. Kurallar şirketten şirkete değişir: çalıştığın yerde kuralların ne olduğunu amirine sor.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.p': "Biraz yemekhanede ısınmaya gidiyorum.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.s': "Diğer koridora gitmen gerekiyor. Yaya yolu etrafından dolaşıyor; araçların arasından düz geçmek daha hızlı. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o1': "Daha uzun olsa da yaya yolunu kullanırsın.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o2': "Araçların arasından hızla koşarak geçersin.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o3': "Yürüyerek geçer ve sürücülere el sallarsın.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.w': "Bir araç sürücüsü seni çoğu zaman göremez, örneğin yüksek bir yükün arkasındayken. Yaya yolunda insanlar beklenir ve güvendedir.", // nieuw, nalezen // nagelezen AI 28 nov
+    // four new lessons (27 November 2026).
+    'l.appraisal': "Performans görüşmesi", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.functioneringsgesprek': "performans görüşmesi (amirinle işinin nasıl gittiği ve ne öğrenmek istediğin hakkında bir konuşma)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beoordelingsgesprek': "değerlendirme görüşmesi (amirinin işini değerlendirdiği bir konuşma)", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'w.voorbereiden': "hazırlamak (bir şeye hazırlanmak)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedgaan': "iyi gitmek", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doel': "hedef (ulaşmak istediğin şey)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorgezien': "“görüldü” diye imzalamak (okuduğunu gösterir; kabul ettiğin anlamına gelmez)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.1': "Görüşmeye iyi hazırlanıyorum.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.2': "Yeni bir şey öğrenmek istiyorum.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.3': "Önce raporu okuyabilir miyim?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.appraisal.q': "Gelecek yıl için hedefin ne?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.appraisal.a': "Forklift sertifikamı almak istiyorum.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal': "Görüşmen: hazırlan, oku", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.b': "Birçok şirkette yılda bir ya da iki kez işin hakkında bir görüşme yapılır. Performans görüşmesinde (functioneringsgesprek) birlikte konuşursunuz: neyin iyi gittiği, neyin daha iyi olabileceği ve ne öğrenmek istediğin. Değerlendirme görüşmesinde (beoordelingsgesprek) amirin işini değerlendirir. Bu, maaşın ya da yeni bir sözleşme için önemli olabilir. Görüşmeye hazırlan: neyin iyi gittiğini, neyin zor olduğunu ve ne öğrenmek istediğini yaz. Bir kurs ya da eğitim isteyebilirsin. Sonunda anlaşmalar (afspraken) yaparsınız, çoğu zaman kısa bir raporda. İmzalamadan önce iyice oku ve bir kopya iste. Kabul etmiyor musun? “Voor akkoord” (kabul edildi) diye değil, “voor gezien” (görüldü) diye imzala ve kendi görüşünü yaz. Genel bilgi. Kendi durumun için işverenine, sendikaya veya Juridisch Loket’e sor.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.appraisal.p': "Görüldü diye imzalıyorum, kabul edildi diye değil.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.s': "Değerlendirme görüşmenden sonra imzalaman için raporu alıyorsun. Sence içindeki bir nokta doğru değil. Ne yaparsın?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o1': "“Voor gezien” diye imzalar ve görüşünü yazarsın.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o2': "İş bitsin diye hızlıca “voor akkoord” diye imzalarsın.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o3': "Hiçbir şey söylemez ve hiç imzalamazsın.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.w': "“Voor gezien”, okuduğun anlamına gelir, kabul ettiğin anlamına değil. Bunu söyleyip kendi görüşünü yazdığında amirin ne düşündüğünü bilir.", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 

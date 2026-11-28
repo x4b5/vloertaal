@@ -167,8 +167,8 @@ export const bg: Gloss = {
 };
 
 export const es: Gloss = {
-    "be.w.inchecken": "el billete, el boleto", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    "be.w.uitchecken": "el abono (un billete o boleto para un periodo)", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    "be.w.inchecken": "el billete", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    "be.w.uitchecken": "el abono (un billete para un periodo)", // nieuw, nalezen (AI-correctie 28 nov 2026)
     "be.w.bankpas": "la tarjeta bancaria", // nieuw, nalezen
     "be.w.reiskosten": "el dinero para el viaje al trabajo (de tu empresa)", // nieuw, nalezen
     "be.s.transit.1": "En el autobús pago con mi tarjeta bancaria.", // nieuw, nalezen

@@ -185,6 +185,11 @@ export const tipIcons: Readonly<Record<string, string>> = {
   '🥼': 'w.labjas',
   '📒': 'w.notitieboekje',
   '🚶': 'w.voetganger',
+  // The four new lessons of 27 November 2026 (placeholders for now, src/pictures/extra4): the
+  // voicemail and the dentist show a word of their own lesson; the performance review (✍) and the
+  // form (🖊) keep the signing pictures of the work rules (w.tekenen, w.handtekening).
+  '🎧': 'w.beluisteren',
+  '🦷': 'w.tandarts',
   // The sector lessons of 14 November 2026: each tip shows a word of its own lesson.
   '📏': 'w.rolmaat',
   '🛏': 'w.bed',

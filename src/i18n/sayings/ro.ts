@@ -42,8 +42,8 @@ const t: CultureTranslation = {
     'w.pijpenstelen.lit': 'plouă cu țevi de pipă',
     'w.hart': 'vorbe bune care dau curaj',
     'w.hart.lit': 'o inimă sub curea',
-    's.plain.1': 'Avertizează-i pe ceilalți când ceva nu e sigur.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    's.plain.2': { m: 'Sunt foarte, foarte obosit.', f: 'Sunt foarte, foarte obosită.', x: 'Chiar nu mai pot de oboseală.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    's.plain.1': 'Avertizează-i pe ceilalți când ceva nu e sigur.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    's.plain.2': { m: 'Sunt foarte, foarte obosit.', f: 'Sunt foarte, foarte obosită.', x: 'Chiar nu mai pot de oboseală.' }, // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     's.plain.3': 'Spun direct despre ce e vorba.',
     'c.plain.q': 'Plouă foarte tare!',
     'c.plain.a': 'Atunci azi iau autobuzul.',

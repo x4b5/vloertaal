@@ -3,50 +3,50 @@ import type { CultureTranslation } from '../culture/types';
 /** Somali (so): sayings and expressions (src/content/sayings.ts): the unit, what the words say and mean, and the sayings in later lessons. */
 const t: CultureTranslation = {
   ui: {
-    sayingBadge: "Sida loo dhaho", // nieuw, nalezen
-    tagSaying: "Oraah", // nieuw, nalezen
-    literally: "Erey ahaan:", // nieuw, nalezen
-    itMeans: "Macnaheedu waa:", // nieuw, nalezen
+    sayingBadge: "Sida loo dhaho", // nieuw, nalezen // nagelezen AI 28 nov
+    tagSaying: "Oraah", // nieuw, nalezen // nagelezen AI 28 nov
+    literally: "Erey ahaan:", // nieuw, nalezen // nagelezen AI 28 nov
+    itMeans: "Macnaheedu waa:", // nieuw, nalezen // nagelezen AI 28 nov
   },
   gloss: {
-    'u.sayings': "Oraahyo iyo maahmaahyo", // nieuw, nalezen
-    'l.easy': "Marka shaqadu si fiican u socoto", // nieuw, nalezen
-    'w.eitje': "aad u fudud", // nieuw, nalezen
-    'w.eitje.lit': "ukun yar", // nieuw, nalezen
-    'w.alseentrein': "aad u fiican, dhib la'aan", // nieuw, nalezen
-    'w.alseentrein.lit': "sida tareen", // nieuw, nalezen
-    'w.mouwen': "inaad si adag shaqada u bilowdo", // nieuw, nalezen
-    'w.mouwen.lit': "gacmaha oo laga soo saaro gacmaha shaatiga", // nieuw, nalezen
-    'w.handje': "inaad wax yar caawiso", // nieuw, nalezen
-    'w.handje.lit': "inaad gacan yar ku caawiso", // nieuw, nalezen
-    'w.knie': "inaad si fiican u taqaan sida loo sameeyo", // nieuw, nalezen
-    'w.knie.lit': "inaad jilibka hoostiisa ku hayso", // nieuw, nalezen
-    'w.bakker': "dhammaaday, la xalliyay", // nieuw, nalezen
-    'w.bakker.lit': "loogu talagalay rootiilaha", // nieuw, nalezen
-    's.easy.1': "Shaqadaas yar aad bay u fudud tahay.", // nieuw, nalezen
-    's.easy.2': "Shaqadu si aad u fiican ayay u socotaa.", // nieuw, nalezen
-    's.easy.3': "Kaalay, aan shaqada bilowno.", // nieuw, nalezen
-    'c.easy.q': "Wax yar ma i caawin kartaa?", // nieuw, nalezen
-    'c.easy.a': "Haa, dabcan, waan imanayaa.", // nieuw, nalezen
+    'u.sayings': "Oraahyo iyo maahmaahyo", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.easy': "Marka shaqadu si fiican u socoto", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.eitje': "aad u fudud", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.eitje.lit': "ukun yar", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alseentrein': "aad u fiican, dhib la'aan", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alseentrein.lit': "sida tareen", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mouwen': "inaad si adag shaqada u bilowdo", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mouwen.lit': "gacmaha oo laga soo saaro gacmaha shaatiga", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handje': "inaad wax yar caawiso", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handje.lit': "inaad gacan yar ku caawiso", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.knie': "inaad si fiican u taqaan sida loo sameeyo", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.knie.lit': "inaad jilibka hoostiisa ku hayso", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bakker': "dhammaaday, la xalliyay", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bakker.lit': "loogu talagalay rootiilaha", // nieuw, nalezen // nagelezen AI 28 nov
+    's.easy.1': "Shaqadaas yar aad bay u fudud tahay.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.easy.2': "Shaqadu si aad u fiican ayay u socotaa.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.easy.3': "Kaalay, aan shaqada bilowno.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.easy.q': "Wax yar ma i caawin kartaa?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.easy.a': "Haa, dabcan, waan imanayaa.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.easy.a.why': "“Een handje helpen” waa codsi caawimo: haa, iyo inaad u timaado.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.plain': "Sheeg sida ay tahay", // nieuw, nalezen
-    'w.aandebel': "inaad kuwa kale uga digto in wax qaldan yihiin", // nieuw, nalezen
-    'w.aandebel.lit': "inaad jiidato jaraska", // nieuw, nalezen
-    'w.tandvlees': "inaad aad u daallan tahay", // nieuw, nalezen
-    'w.tandvlees.lit': "inaad ku socoto ciridka", // nieuw, nalezen
-    'w.deur': "inaad isla markiiba sheegto, adigoon bilow dheer samayn", // nieuw, nalezen
-    'w.deur.lit': "inaad guriga ugu dhacdo albaabka", // nieuw, nalezen
-    'w.blad': "inaad si daacad ah u sheegto waxaad ka fikirayso", // nieuw, nalezen
-    'w.blad.lit': "inaadan caleen afkaaga hor dhigin", // nieuw, nalezen
-    'w.pijpenstelen': "roob aad u xoog badan ayaa da'aya", // nieuw, nalezen
-    'w.pijpenstelen.lit': "waxaa da'aya ulaha qaliyuunka", // nieuw, nalezen
-    'w.hart': "ereyo naxariis leh oo geesinimo ku siiya", // nieuw, nalezen
-    'w.hart.lit': "wadne la geliyo suunka hoostiisa", // nieuw, nalezen
-    's.plain.1': "Sheeg marka aysan ammaan ahayn.", // nieuw, nalezen
-    's.plain.2': "Run ahaantii aad baan u daallanahay.", // nieuw, nalezen
-    's.plain.3': "Si toos ah ayaan arrinta ugu gelayaa.", // nieuw, nalezen
-    'c.plain.q': "Roob aad u xoog badan ayaa da'aya!", // nieuw, nalezen
-    'c.plain.a': "Markaas maanta baska ayaan raacayaa.", // nieuw, nalezen
+    'l.plain': "Sheeg sida ay tahay", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aandebel': "inaad kuwa kale uga digto in wax qaldan yihiin", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aandebel.lit': "inaad jiidato jaraska", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tandvlees': "inaad aad u daallan tahay", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tandvlees.lit': "inaad ku socoto ciridka", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.deur': "inaad isla markiiba sheegto, adigoon bilow dheer samayn", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.deur.lit': "inaad guriga ugu dhacdo albaabka", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.blad': "inaad si daacad ah u sheegto waxaad ka fikirayso", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.blad.lit': "inaadan caleen afkaaga hor dhigin", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pijpenstelen': "roob aad u xoog badan ayaa da'aya", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pijpenstelen.lit': "waxaa da'aya ulaha qaliyuunka", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hart': "ereyo naxariis leh oo geesinimo ku siiya", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hart.lit': "wadne la geliyo suunka hoostiisa", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plain.1': "Sheeg marka aysan ammaan ahayn.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plain.2': "Run ahaantii aad baan u daallanahay.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plain.3': "Si toos ah ayaan arrinta ugu gelayaa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plain.q': "Roob aad u xoog badan ayaa da'aya!", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plain.a': "Markaas maanta baska ayaan raacayaa.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.plain.a.why': "Roob aad u xoog badan: baska dhexdiisa waad engegnaanaysaa.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.easy': "Oraahyo: ereyadu waxay macnayaan wax kale", // nieuw, nalezen // nagelezen AI 22 nov
     'c.easy.b': "Halkan dadku inta badan waxay isticmaalaan oraahyo, xitaa shaqada. Ereyadu waxay sheegaan hal shay, laakiin waxay macnayaan wax kale. “Een eitje” waa ukun yar, laakiin macnaheedu waa: aad u fudud. Adigu uma baahnid inaad oraahyo isticmaasho. Oraah ma fahmin? Markaas iska weydii waxay macnaheedu yahay.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -92,29 +92,29 @@ const t: CultureTranslation = {
     'zg.pluis.o2': "Shaqadu waa jilicsan tahay oo fiican.", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.pluis.o3': "Waa inaad dhar cusub iibsato.", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.pluis.w': "“Niet pluis” macnaheedu waa: aan sax ahayn, aan la aamini karin. Qandaraas la'aan iyo inaad baasaboorkaaga bixiso waa calaamado digniin ah.", // nieuw, nalezen // nagelezen AI 22 nov
-    'zg.oefening.lit': "Tababarku wuxuu dhalaa farshaxan.", // nieuw, nalezen
-    'zg.oefening.m': "Haddii aad wax badan ku tababarto, waad ku fiicnaanaysaa.", // nieuw, nalezen
+    'zg.oefening.lit': "Tababarku wuxuu dhalaa farshaxan.", // nieuw, nalezen // nagelezen AI 28 nov
+    'zg.oefening.m': "Haddii aad wax badan ku tababarto, waad ku fiicnaanaysaa.", // nieuw, nalezen // nagelezen AI 28 nov
     'zg.oefening.s': "Koorsada waad u aragtaa inay adag tahay. Macallimaddaadu waxay tiri: “Oefening baart kunst.” Maxay uga jeeddaa?", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.oefening.o1': "Sii wad tababarka, markaas waad ku fiicnaan doontaa.", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.oefening.o2': "Waa inaad aaddo cashar farshaxan.", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.oefening.o3': "Jooji, aad bay kuugu adag tahay.", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.oefening.w': "Tani waa maahmaah: tababar ayaad ku fiicnaanaysaa. Sidoo kale waa run marka aad baranayso Af-Holandiis.", // nieuw, nalezen // nagelezen AI 22 nov
-    'zg.zwartwit.lit': "Hubi inaad u haysato madow ku qoran caddaan.", // nieuw, nalezen
-    'zg.zwartwit.m': "Hubi inaad ku haysato warqad, qoraal ahaan.", // nieuw, nalezen
+    'zg.zwartwit.lit': "Hubi inaad u haysato madow ku qoran caddaan.", // nieuw, nalezen // nagelezen AI 28 nov
+    'zg.zwartwit.m': "Hubi inaad ku haysato warqad, qoraal ahaan.", // nieuw, nalezen // nagelezen AI 28 nov
     'zg.zwartwit.s': "Madaxaagu wuxuu kuu ballanqaaday mushahar badan. Saaxiibtaada shaqadu waxay tiri: “Zorg dat je het zwart op wit hebt.” Maxay uga jeeddaa?", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.zwartwit.o1': "Ballanqaadka qoraal ahaan u weydii.", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.zwartwit.o2': "Weydii warqad madow iyo caddaan ah.", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.zwartwit.o3': "Waxba ha weydiin.", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.zwartwit.w': "Wax qoran waa caddayn. Mushaharka, saacadaha iyo qandaraaskaaga, weydii “zwart op wit”.", // nieuw, nalezen // nagelezen AI 22 nov
-    'zg.temooi.lit': "Taasi aad bay u qurux badan tahay si ay run u noqoto.", // nieuw, nalezen
-    'zg.temooi.m': "Aad bay u wanaagsan tahay oo malaha run ma aha.", // nieuw, nalezen
+    'zg.temooi.lit': "Taasi aad bay u qurux badan tahay si ay run u noqoto.", // nieuw, nalezen // nagelezen AI 28 nov
+    'zg.temooi.m': "Aad bay u wanaagsan tahay oo malaha run ma aha.", // nieuw, nalezen // nagelezen AI 28 nov
     'zg.temooi.s': "Waxaa kuu yimid fariin: “Waxaad ku guulaysatay 1,000 euro! Soo dir macluumaadka bangigaaga.” Deriskaagu waxay tiri: “Dat is te mooi om waar te zijn.” Maxay uga jeeddaa?", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.temooi.o1': "Malaha waa khiyaano.", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.temooi.o2': "Nasiib baad leedahay: dhakhso u dir.", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.temooi.o3': "Fariintu aad bay u qurux badan tahay.", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.temooi.w': "Dalabyada u muuqda kuwo aad u wanaagsan inta badan waa khiyaano. Weligaa ha dirin macluumaadka bangigaaga.", // nieuw, nalezen // nagelezen AI 22 nov
-    'zg.haast.lit': "Degdeg la isku dhakhsiiyo dhif buu wanaagsan yahay.", // nieuw, nalezen
-    'zg.haast.m': "Marka aad degdegto, inta badan wax baa qaldama.", // nieuw, nalezen
+    'zg.haast.lit': "Degdeg la isku dhakhsiiyo dhif buu wanaagsan yahay.", // nieuw, nalezen // nagelezen AI 28 nov
+    'zg.haast.m': "Marka aad degdegto, inta badan wax baa qaldama.", // nieuw, nalezen // nagelezen AI 28 nov
     'zg.haast.s': "Waad soo daahday oo waxaad rabtaa inaad baaskiil ku dhex marto nalka casaanka. Saaxiibkaaga shaqadu wuxuu yiri: “Haastige spoed is zelden goed.” Muxuu uga jeedaa?", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.haast.o1': "Ha degdegin: ammaan ma aha.", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.haast.o2': "Baaskiilka si dhakhso ah u wad.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -127,22 +127,22 @@ const t: CultureTranslation = {
     'zg.waagt.o2': "Ha u codsan shaqadan.", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.waagt.o3': "Waa inaad ciyaar ciyaarto si aad u guulaysato.", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.waagt.w': "Maahmaahdani waxay kuu sheegaysaa inaad isku daydo. Codsigu wax yar buu ku kacaa, isku day kastana wax baad ka baranaysaa.", // nieuw, nalezen // nagelezen AI 22 nov
-    'zg.koning.lit': "Macmiilku waa boqor.", // nieuw, nalezen
-    'zg.koning.m': "Macmiilku aad buu muhiim u yahay: si fiican oo naxariis leh u caawi.", // nieuw, nalezen
+    'zg.koning.lit': "Macmiilku waa boqor.", // nieuw, nalezen // nagelezen AI 28 nov
+    'zg.koning.m': "Macmiilku aad buu muhiim u yahay: si fiican oo naxariis leh u caawi.", // nieuw, nalezen // nagelezen AI 28 nov
     'zg.koning.s': "Macmiil ayaa in yar edeb daran. Madaxaagu wuxuu yiri: “De klant is koning.” Muxuu uga jeedaa?", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.koning.o1': "Naxariis ku sii jir oo macmiilka si fiican u caawi.", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.koning.o2': "Macmiilku waa boqor dhab ah.", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.koning.o3': "Macmiilka ka codso inuu baxo.", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.koning.w': "Dukaanka macmiilka ayaa ka horreeya, sidaas darteed edeb ku sii jir. Macmiil ma edeb daran yahay ama ma ku hanjabayaa? Markaas u yeer madaxaaga.", // nieuw, nalezen // nagelezen AI 22 nov
-    'zg.tijdgeld.lit': "Waqtigu waa lacag.", // nieuw, nalezen
-    'zg.tijdgeld.m': "Waqtigu qiimo badan buu leeyahay: ha khasaarin.", // nieuw, nalezen
+    'zg.tijdgeld.lit': "Waqtigu waa lacag.", // nieuw, nalezen // nagelezen AI 28 nov
+    'zg.tijdgeld.m': "Waqtigu qiimo badan buu leeyahay: ha khasaarin.", // nieuw, nalezen // nagelezen AI 28 nov
     'zg.tijdgeld.s': "Madaxaagu wuxuu rabaa in gaariga xamuulka si dhakhso ah loo raro. Wuxuu yiri: “Tijd is geld.” Muxuu uga jeedaa?", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.tijdgeld.o1': "Si dhakhso ah u shaqee, waqti ha khasaarin.", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.tijdgeld.o2': "Lacag baad u helaysaa inaad soo daahdo.", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.tijdgeld.o3': "Saacaddu aad bay qaali u tahay.", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.tijdgeld.w': "Oraahdani waxay ka dhigan tahay in waqtigu qiimo leeyahay. Weligeed sabab uma aha shaqo aan ammaan ahayn ama saacado aan mushahar lahayn.", // nieuw, nalezen // nagelezen AI 22 nov
-    'zg.eindjes.lit': "Way adag tahay in darafyada yar la isku xiro.", // nieuw, nalezen
-    'zg.eindjes.m': "Way adag tahay inaad wax walba ku bixiso lacagta aad haysato.", // nieuw, nalezen
+    'zg.eindjes.lit': "Way adag tahay in darafyada yar la isku xiro.", // nieuw, nalezen // nagelezen AI 28 nov
+    'zg.eindjes.m': "Way adag tahay inaad wax walba ku bixiso lacagta aad haysato.", // nieuw, nalezen // nagelezen AI 28 nov
     'zg.eindjes.s': "Saaxiibad shaqo ayaa tiri: “Het is moeilijk om de eindjes aan elkaar te knopen.” Maxay uga jeeddaa?", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.eindjes.o1': "Lacag ku filan uma hayso wax walba.", // nieuw, nalezen // nagelezen AI 22 nov
     'zg.eindjes.o2': "Ma xiri karto kabaheeda.", // nieuw, nalezen // nagelezen AI 22 nov

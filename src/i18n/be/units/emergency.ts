@@ -170,5 +170,5 @@ export const so: Gloss = {
     "be.c.accident.o1": "Isla maalintaas u sheeg madaxaaga.", // nieuw, nalezen
     "be.c.accident.o2": "Waxba ha odhan, si aadan shaqada u waayin.", // nieuw, nalezen
     "be.c.accident.o3": "Sug oo eeg in xanuunku iskiis u tago.", // nieuw, nalezen
-    "be.c.accident.w": "Isla maalintaas sheeg, xitaa haddii uu u muuqdo mid yar: xanuunku goor dambe wuu sii xumaan karaa. Loo-shaqeeyahaaga looma oggola inuu kuu ciqaabo inaad sheegtay. Ma waxaad ka shaqeysaa xafiis shaqo-qoris? Sidoo kale u sheeg xafiiska shaqo-qorista.", // nieuw, nalezen
+    "be.c.accident.w": "Isla maalintaas sheeg, xitaa haddii uu u muuqdo mid yar: xanuunku goor dambe wuu sii xumaan karaa. Loo-shaqeeyahaaga looma oggola inuu kugu ciqaabo sheegiddaas. Ma waxaad ka shaqeysaa xafiis shaqo-qoris? Sidoo kale u sheeg xafiiska shaqo-qorista.", // nieuw, nalezen (AI-correctie 28 nov 2026)
 };

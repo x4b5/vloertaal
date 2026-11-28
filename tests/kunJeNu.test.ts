@@ -127,7 +127,7 @@ describe('translations where required', () => {
         if (t && typeof t !== 'string') expect(t.x, `${lang.code} ${id}`).toBeTruthy();
       }
     }
-    expect(getHelpLanguage('ro', 'x')!.gloss['kjn.u.time.2']).toBe('Pot să spun că sunt bolnav / bolnavă.');
+    expect(getHelpLanguage('ro', 'x')!.gloss['kjn.u.time.2']).toBe('Pot să spun că m-am îmbolnăvit.');
     expect(getHelpLanguage('ro', 'f')!.gloss['kjn.u.time.2']).toBe('Pot să spun că sunt bolnavă.');
   });
 

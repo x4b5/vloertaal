@@ -32,7 +32,7 @@ export const ar: Gloss = {
   'be.c.police.q': 'هل يمكنني رؤية بطاقة هويتك؟', // nieuw, nalezen
   'be.c.police.a': 'نعم، تفضّل. ماذا يحدث؟', // nieuw, nalezen
   'be.c.council': 'البلدية، ومن يحق له التصويت', // nieuw, nalezen
-  'be.c.council.b': 'البلدية (gemeente) تحفظ عنوانك وتعطيك بطاقة الهوية. انتقال إلى بيت جديد؟ يجب إبلاغ بلدية البيت الجديد خلال 8 أيام عمل. بعدها يأتي شرطي الحي (wijkagent) ليتأكد أنك تسكن هناك. كل 6 سنوات تجري انتخابات المجلس البلدي (gemeenteraad). يحق التصويت فيها لمن هو من بلد آخر في الاتحاد الأوروبي، ولمن هو من خارج الاتحاد الأوروبي بعد 5 سنوات من الإقامة القانونية. أولاً يلزم التسجيل كناخب في البلدية. في فلاندرز التصويت للمجلس البلدي غير إلزامي. في الانتخابات الأخرى يجب على البلجيكيين الذهاب للتصويت (opkomstplicht). تصل رسالة (oproepingsbrief): يجب أخذها مع بطاقة الهوية. عند الشك: السؤال في البلدية.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.council.b': 'البلدية (gemeente) تحفظ عنوانك وتعطيك بطاقة الهوية. انتقال إلى بيت جديد؟ يجب إبلاغ بلدية البيت الجديد خلال 8 أيام عمل. بعدها يأتي شرطي الحي (wijkagent) ليتأكد أنك تسكن هناك. كل 6 سنوات تجري انتخابات المجلس البلدي (gemeenteraad). يحق التصويت فيها لمن هو من بلد آخر في الاتحاد الأوروبي، ولمن هو من خارج الاتحاد الأوروبي بعد 5 سنوات من الإقامة القانونية. أولاً يلزم التسجيل كناخب في البلدية. في فلاندرز التصويت للمجلس البلدي غير إلزامي. في الانتخابات الأخرى يجب على البلجيكيين الذهاب للتصويت (opkomstplicht). تصل رسالة (oproepingsbrief): يجب أخذها مع بطاقة الهوية. هل هناك شك؟ يمكن السؤال في البلدية.', // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.council.p': 'هل يحق لي التصويت للمجلس البلدي؟ هل يجب أن أسجّل أولاً؟', // nieuw, nalezen
   'be.c.council.s': 'الأصل من المغرب، والإقامة في خنت (Gent) قانونية منذ ست سنوات. لا جنسية بلجيكية. قريباً انتخابات للمجلس البلدي. ما الصحيح؟', // nieuw, nalezen
   'be.c.council.o1': 'يحق التصويت، بعد التسجيل في البلدية.', // nieuw, nalezen
@@ -46,7 +46,7 @@ export const ar: Gloss = {
   'be.c.police.o1': 'الرد كتابةً، قبل التاريخ المذكور في الرسالة.', // nieuw, nalezen
   'be.c.police.o2': 'الاتصال بهم مرة، وانتظار أن يعاودوا الاتصال.', // nieuw, nalezen
   'be.c.police.o3': 'الانتظار: بعد ذلك التاريخ ينتهي الأمر وحده.', // nieuw, nalezen
-  'be.c.police.w': 'الرد يكون كتابةً، قبل التاريخ المذكور في الرسالة. بعد ذلك التاريخ يكون الوقت متأخراً غالباً. justitiehuis يعطي استشارة أولى مجانية.', // nieuw, nalezen
+  'be.c.police.w': 'الرد يكون كتابةً، قبل التاريخ المذكور في الرسالة. بعد ذلك التاريخ يكون الوقت متأخراً غالباً. يمكن الحصول على استشارة أولى مجانية في justitiehuis.', // nieuw, nalezen (AI-correctie 28 nov 2026)
   // be.l.neighbours and be.l.join, the twins of l.neighbours and l.join (23 November 2026).
   'be.l.neighbours': "حيّك", // nieuw, nalezen
   'be.w.buurt': "الحيّ", // nieuw, nalezen
@@ -80,7 +80,7 @@ export const ar: Gloss = {
   'be.c.neighbours.o2': "القول إن الجميع يعملون ويحتاجون إلى الراحة.", // nieuw, nalezen
   'be.c.neighbours.o3': "السكوت، وإغلاق الباب.", // nieuw, nalezen
   'be.c.neighbours.w': "الكلام الجيد مبكراً يمنع مشاكل أكبر. الجيران الذين يعرفونك غالباً ألطف وأكثر استعداداً للمساعدة.", // nieuw, nalezen
-  'be.c.join': { m: "شارك: تتعلّم الهولندية أسرع", f: "شاركي: تتعلّمين الهولندية أسرع", x: "المشاركة: تعلّم الهولندية أسرع" }, // nieuw, nalezen
+  'be.c.join': { m: "شارك: تتعلّم الهولندية أسرع", f: "شاركي: تتعلّمين الهولندية أسرع", x: "المشاركة: تعلُّم الهولندية أسرع" }, // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.join.b': { m: "خارج العمل، تتعلّم الهولندية بأسرع شكل عندما تفعل أشياء مع الناس: الرياضة، أو نادٍ، أو العمل التطوعي. طفلك في المدرسة؟ اذهب إلى اجتماع أولياء الأمور، حتى لو لم تكن هولنديتك ممتازة: المعلّم يريد أن يتعرّف عليك. يمكنك أن تطلب كلاماً بطيئاً بالهولندية، أو تستخدم تطبيق ترجمة. العمل التطوعي يبدو جيداً أيضاً في سيرتك الذاتية.", f: "خارج العمل، تتعلّمين الهولندية بأسرع شكل عندما تفعلين أشياء مع الناس: الرياضة، أو نادٍ، أو العمل التطوعي. طفلك في المدرسة؟ اذهبي إلى اجتماع أولياء الأمور، حتى لو لم تكن هولنديتك ممتازة: المعلّم يريد أن يتعرّف عليكِ. يمكنكِ أن تطلبي كلاماً بطيئاً بالهولندية، أو تستخدمي تطبيق ترجمة. العمل التطوعي يبدو جيداً أيضاً في سيرتك الذاتية.", x: "خارج العمل، أسرع طريقة لتعلّم الهولندية هي القيام بأشياء مع الناس: الرياضة، أو نادٍ، أو العمل التطوعي. طفل في المدرسة؟ الذهاب إلى اجتماع أولياء الأمور، حتى لو لم تكن الهولندية ممتازة: المعلّم يريد التعرّف على الأهل. طلب كلام بطيء بالهولندية مسموح، أو استخدام تطبيق ترجمة. العمل التطوعي يبدو جيداً أيضاً في السيرة الذاتية." }, // nieuw, nalezen
   'be.c.join.p': "هل يمكنك أن تتكلم ببطء أكثر قليلاً؟", // nieuw, nalezen
   'be.c.join.s': { m: "أنت مدعو إلى اجتماع أولياء الأمور. هولنديتك ليست جيدة بعد. ماذا تفعل؟", f: "أنتِ مدعوة إلى اجتماع أولياء الأمور. هولنديتك ليست جيدة بعد. ماذا تفعلين؟", x: "دعوة إلى اجتماع أولياء الأمور. الهولندية ليست جيدة بعد. ما التصرف الصحيح؟" }, // nieuw, nalezen
@@ -216,7 +216,7 @@ export const fa: Gloss = {
   'be.c.police.o1': 'قبل از تاریخی که در نامه آمده، کتبی پاسخ بده.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.police.o2': 'یک بار زنگ بزن و منتظر بمان تا به تو زنگ بزنند.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.police.o3': 'صبر کن: بعد از آن تاریخ خودش تمام می‌شود.', // nieuw, nalezen // nagelezen AI ronde 3
-  'be.c.police.w': 'کتبی پاسخ می‌دهی، قبل از تاریخی که در نامه آمده. بعد از آن تاریخ اغلب دیر است. justitiehuis اولین مشاوره را رایگان می‌دهد.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.w': 'کتبی پاسخ می‌دهی، قبل از تاریخی که در نامه آمده. بعد از آن تاریخ اغلب دیر است. در justitiehuis اولین مشاوره رایگان است.', // nieuw, nalezen (AI-correctie 28 nov 2026)
   // be.l.neighbours and be.l.join, the twins of l.neighbours and l.join (23 November 2026).
   'be.l.neighbours': "محله‌ات", // nieuw, nalezen
   'be.w.buurt': "محله", // nieuw, nalezen
@@ -228,7 +228,7 @@ export const fa: Gloss = {
   'be.s.neighbours.1': "مدت کوتاهی است که در این خیابان زندگی می‌کنم.", // nieuw, nalezen
   'be.s.neighbours.2': "در کتابخانه هلندی تمرین می‌کنم.", // nieuw, nalezen
   'be.s.neighbours.3': "ببخشید بابت مزاحمت.", // nieuw, nalezen
-  'be.c.neighbours.q': "سلام، من همسایهٔ جدیدتان هستم.", // nieuw, nalezen
+  'be.c.neighbours.q': "سلام، من همسایهٔ جدیدت هستم.", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.neighbours.a': "از آشنایی‌تان خوشوقتم! من علی هستم.", // nieuw, nalezen
   'be.l.join': "مدرسه، ورزش و کار داوطلبانه", // nieuw, nalezen
   'be.w.vrijwilliger': "داوطلب (کسی که بدون دستمزد کمک می‌کند)", // nieuw, nalezen
@@ -301,7 +301,7 @@ export const prs: Gloss = {
   'be.c.police.o1': 'پیش از تاریخی که در نامه آمده، کتبی جواب بدهید.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.police.o2': 'یک بار زنگ بزنید و منتظر بمانید تا به شما زنگ بزنند.', // nieuw, nalezen
   'be.c.police.o3': 'صبر کنید: بعد از آن تاریخ خودش ختم می‌شود.', // nieuw, nalezen
-  'be.c.police.w': 'به‌طور کتبی جواب می‌دهید، پیش از تاریخی که در نامه آمده. بعد از آن تاریخ اکثراً دیر است. justitiehuis اولین مشوره را رایگان می‌دهد.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.w': 'به‌طور کتبی جواب می‌دهید، پیش از تاریخی که در نامه آمده. بعد از آن تاریخ اکثراً دیر است. در justitiehuis اولین مشوره رایگان است.', // nieuw, nalezen (AI-correctie 28 nov 2026)
   // be.l.neighbours and be.l.join, the twins of l.neighbours and l.join (23 November 2026).
   'be.l.neighbours': "محلهٔ شما", // nieuw, nalezen
   'be.w.buurt': "محله", // nieuw, nalezen
@@ -328,7 +328,7 @@ export const prs: Gloss = {
   'be.c.join.q': "به جلسهٔ والدین می‌آیید؟", // nieuw, nalezen
   'be.c.join.a': "بلی. می‌خواهم با معلم گپ بزنم.", // nieuw, nalezen
   'be.c.neighbours': "به همسایه‌های خود سلام بدهید", // nieuw, nalezen
-  'be.c.neighbours.b': "در یک سرک نو آمده‌اید؟ به همسایه‌های خود سلام بدهید و نام خود را بگویید. این کار حل مشکلات را بعداً آسان‌تر می‌کند. شب کار می‌کنید، یا با مردم زیاد زندگی می‌کنید؟ ناوقت شب و در شب آرام باشید. زباله‌های خود را در روز درست بیرون بگذارید. در کتابخانه و خانهٔ محله اکثراً می‌توانید هالندی تمرین کنید، گاهی مفت.", // nieuw, nalezen
+  'be.c.neighbours.b': "در یک سرک نو آمده‌اید؟ به همسایه‌های خود سلام بدهید و نام خود را بگویید. این کار حل مشکلات را بعداً آسان‌تر می‌کند. شب کار می‌کنید، یا با مردم زیاد زندگی می‌کنید؟ ناوقت شب و در شب آرام باشید. کثافات خود را در روز درست بیرون بگذارید. در کتابخانه و خانهٔ محله اکثراً می‌توانید هالندی تمرین کنید، گاهی مفت.", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.neighbours.p': "سلام، من علی هستم. در خانهٔ پهلو زندگی می‌کنم.", // nieuw, nalezen
   'be.c.neighbours.s': "شما با پنج همکار زندگی می‌کنید. یک همسایه می‌گوید که شب‌ها اکثراً سر و صدا است. چه می‌کنید؟", // nieuw, nalezen
   'be.c.neighbours.o1': "معذرت بخواهید، و موافقه کنید که آرام باشید.", // nieuw, nalezen
@@ -373,7 +373,7 @@ export const uk: Gloss = {
   'be.c.police.a': 'Так, ось вона. Що сталося?', // nieuw, nalezen
   'be.c.council': 'Твоя громада і хто може голосувати', // nieuw, nalezen
   'be.c.council.b': 'Громада (gemeente) зберігає твою адресу і видає тобі ID-картку. Переїжджаєш? Повідом громаду нового житла протягом 8 робочих днів. Потім дільничний (wijkagent) приходить перевірити, що ти там живеш. Кожні 6 років відбуваються вибори до ради громади (gemeenteraad). Голосувати можуть люди з іншої країни ЄС, а люди з-поза ЄС — після 5 років законного перебування. Спершу треба зареєструватися як виборець у громаді. У Фландрії голосувати за раду громади не обов’язково. На інших виборах бельгійці мусять прийти голосувати (opkomstplicht). Ти отримаєш лист (oproepingsbrief): візьми його разом з ID-карткою. Не знаєш точно? Запитай у громаді.', // nieuw, nalezen // nagelezen AI ronde 3
-  'be.c.council.p': 'Чи можу я голосувати за раду громади? Мені спершу треба зареєструватися?', // nieuw, nalezen
+  'be.c.council.p': 'Чи маю я право голосувати за раду громади? Мені спершу треба зареєструватися?', // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.council.s': 'Ти з Марокко і вже шість років законно живеш у Генті (Gent). У тебе немає бельгійського громадянства. Скоро вибори до ради громади. Що правда?', // nieuw, nalezen
   'be.c.council.o1': 'Можна голосувати, після реєстрації в громаді.', // nieuw, nalezen
   'be.c.council.o2': 'Можна голосувати і за федеральний парламент.', // nieuw, nalezen
@@ -386,7 +386,7 @@ export const uk: Gloss = {
   'be.c.police.o1': 'Відповіси письмово, до дати в листі.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.police.o2': 'Подзвониш один раз і чекатимеш, поки передзвонять.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.police.o3': 'Чекатимеш: після цієї дати все мине саме.', // nieuw, nalezen // nagelezen AI ronde 3
-  'be.c.police.w': 'Відповідають письмово, до дати в листі. Після неї часто вже запізно. У justitiehuis дають першу пораду безкоштовно.', // nieuw, nalezen
+  'be.c.police.w': 'Відповідай письмово, до дати в листі. Після неї часто вже запізно. У justitiehuis дають першу пораду безкоштовно.', // nieuw, nalezen (AI-correctie 28 nov 2026)
   // be.l.neighbours and be.l.join, the twins of l.neighbours and l.join (23 November 2026).
   'be.l.neighbours': "Твій район", // nieuw, nalezen
   'be.w.buurt': "район, околиця", // nieuw, nalezen
@@ -483,7 +483,7 @@ export const tr: Gloss = {
   'be.s.neighbours.1': "Kısa süredir bu sokakta oturuyorum.", // nieuw, nalezen
   'be.s.neighbours.2': "Kütüphanede Hollandaca pratik yapıyorum.", // nieuw, nalezen
   'be.s.neighbours.3': "Rahatsızlık için özür dilerim.", // nieuw, nalezen
-  'be.c.neighbours.q': "Merhaba, ben yeni komşunuzum.", // nieuw, nalezen
+  'be.c.neighbours.q': "Merhaba, ben yeni komşunum.", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.neighbours.a': "Tanıştığımıza memnun oldum! Ben Ali.", // nieuw, nalezen
   'be.l.join': "Okul, spor ve gönüllülük", // nieuw, nalezen
   'be.w.vrijwilliger': "gönüllü (para almadan yardım eden kişi)", // nieuw, nalezen
@@ -695,7 +695,7 @@ export const bg: Gloss = {
   'be.w.oproepingsbrief': 'поканата за гласуване (писмо: къде и кога гласуваш)', // nieuw, nalezen
   'be.w.opkomstplicht': 'задължението да отидеш да гласуваш', // nieuw, nalezen
   'be.s.council.1': 'Местя се. Давам новия си адрес на общината.', // nieuw, nalezen
-  'be.s.council.2': 'Мога ли да гласувам за общинския съвет?', // nieuw, nalezen
+  'be.s.council.2': 'Имам ли право да гласувам за общинския съвет?', // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.s.council.3': 'Поканата ми за гласуване дойде по пощата.', // nieuw, nalezen
   'be.c.council.q': 'Ще ходиш ли да гласуваш в неделя?', // nieuw, nalezen
   'be.c.council.a': 'Да. Имам поканата и личната си карта.', // nieuw, nalezen
@@ -713,14 +713,14 @@ export const bg: Gloss = {
   'be.c.police.a': 'Да, ето я. Какво има?', // nieuw, nalezen
   'be.c.council': 'Твоята община и кой може да гласува', // nieuw, nalezen
   'be.c.council.b': 'Общината (gemeente) пази адреса ти и ти издава личната карта. Местиш се? Съобщи на общината на новото жилище до 8 работни дни. След това кварталният полицай (wijkagent) идва да провери, че живееш там. На всеки 6 години има избори за общински съвет (gemeenteraad). В тях могат да гласуват хора от друга страна от ЕС, а хора извън ЕС след 5 години законно пребиваване. Първо се записваш като избирател в общината. Във Фландрия гласуването за общинския съвет не е задължително. На другите избори белгийците трябва да отидат да гласуват (opkomstplicht). Получаваш писмо (oproepingsbrief): вземи го с личната си карта. Не знаеш със сигурност? Попитай в общината.', // nieuw, nalezen // nagelezen AI ronde 3
-  'be.c.council.p': 'Мога ли да гласувам за общинския съвет? Трябва ли първо да се запиша?', // nieuw, nalezen
+  'be.c.council.p': 'Имам ли право да гласувам за общинския съвет? Трябва ли първо да се запиша?', // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.council.s': 'Идваш от Мароко и от шест години живееш законно в Гент (Gent). Нямаш белгийско гражданство. Скоро има избори за общински съвет. Кое е вярно?', // nieuw, nalezen
   'be.c.council.o1': 'Можеш да гласуваш, след като се запишеш в общината.', // nieuw, nalezen
   'be.c.council.o2': 'Можеш да гласуваш и за федералния парламент.', // nieuw, nalezen
   'be.c.council.o3': 'Без белгийски паспорт изобщо не можеш да гласуваш.', // nieuw, nalezen
   'be.c.council.w': 'След 5 години законно пребиваване можеш да гласуваш за общинския съвет. Първо трябва да се запишеш като избирател. За федералния парламент трябва белгийско гражданство.', // nieuw, nalezen
   'be.c.police': 'Личната ти карта и твоите права', // nieuw, nalezen
-  'be.c.police.b': 'От 15 години трябва винаги да носиш личната си карта (или картата за пребиваване) и да я показваш, когато полицията поиска. Получаваш писмо с решение, с което не си съгласен / съгласна, например глоба от общината? Тогава можеш да отговориш писмено (bezwaar maken). В писмото пише как и до кога. Направи го преди тази дата. Всички са равни пред закона. Полицията иска да те разпита? Тогава имаш право първо да говориш с адвокат. Първият съвет от адвокат е безплатен, в justitiehuis. Дискриминация? Unia може да помогне.', // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.police.b': 'От 15 години трябва винаги да носиш личната си карта (или картата за пребиваване) и да я показваш, когато полицията поиска. Получаваш писмо с решение, с което не се съгласяваш, например глоба от общината? Тогава можеш да отговориш писмено (bezwaar maken). В писмото пише как и до кога. Направи го преди тази дата. Всички са равни пред закона. Полицията иска да те разпита? Тогава имаш право първо да говориш с адвокат. Първият съвет от адвокат е безплатен, в justitiehuis. Дискриминация? Unia може да помогне.', // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.police.p': 'Не приемам това решение. Подавам възражение.', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.police.s': 'Получаваш с писмо глоба от общината. Мислиш, че не е правилна. В писмото има дата за отговор. Какво правиш?', // nieuw, nalezen
   'be.c.police.o1': 'Отговаряш писмено, преди датата в писмото.', // nieuw, nalezen
@@ -1034,13 +1034,13 @@ export const de: Gloss = {
   'be.w.burgemeester': 'der Bürgermeister', // nieuw, nalezen
   'be.w.oproepingsbrief': 'die Wahlaufforderung (Brief: wo und wann du wählst)', // nieuw, nalezen
   'be.w.opkomstplicht': 'die Pflicht, wählen zu gehen', // nieuw, nalezen
-  'be.s.council.1': 'Ich ziehe um. Ich gebe der Gemeinde meine neue Adresse.', // nieuw, nalezen
+  'be.s.council.1': 'Ich ziehe um. Ich gebe der Gemeinde meine neue Adresse durch.', // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.s.council.2': 'Darf ich für den Gemeinderat wählen?', // nieuw, nalezen
   'be.s.council.3': 'Meine Wahlaufforderung kam mit der Post.', // nieuw, nalezen
   'be.c.council.q': 'Gehst du am Sonntag wählen?', // nieuw, nalezen
   'be.c.council.a': 'Ja. Ich habe meine Wahlaufforderung und meinen Personalausweis.', // nieuw, nalezen
   'be.l.police': 'Polizei, Widerspruch und deine Rechte', // nieuw, nalezen
-  'be.w.wijkagent': 'der Bezirkspolizist (die Polizei deines Viertels)', // nieuw, nalezen
+  'be.w.wijkagent': 'der Bezirkspolizist (der Polizist deines Viertels)', // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.w.identiteitskaart': 'der Personalausweis (eID)', // nieuw, nalezen
   'be.w.boete': 'das Bußgeld (Geld, das du als Strafe zahlen musst)', // nieuw, nalezen
   'be.w.bezwaar': 'der Widerspruch (du sagst schriftlich, dass du nicht einverstanden bist)', // nieuw, nalezen
@@ -1066,7 +1066,7 @@ export const de: Gloss = {
   'be.c.police.o1': 'Du antwortest schriftlich, vor dem Datum im Brief.', // nieuw, nalezen
   'be.c.police.o2': 'Du rufst einmal an und wartest auf einen Rückruf.', // nieuw, nalezen
   'be.c.police.o3': 'Du wartest: Nach diesem Datum ist es von selbst vorbei.', // nieuw, nalezen
-  'be.c.police.w': 'Man antwortet schriftlich, vor dem Datum im Brief. Danach ist es oft zu spät. Das Justitiehuis gibt eine erste Beratung kostenlos.', // nieuw, nalezen
+  'be.c.police.w': 'Du antwortest schriftlich, vor dem Datum im Brief. Danach ist es oft zu spät. Im Justitiehuis bekommst du eine erste Beratung kostenlos.', // nieuw, nalezen (AI-correctie 28 nov 2026)
   // be.l.neighbours and be.l.join, the twins of l.neighbours and l.join (23 November 2026).
   'be.l.neighbours': "Deine Nachbarschaft", // nieuw, nalezen
   'be.w.buurt': "die Nachbarschaft, das Viertel", // nieuw, nalezen
@@ -1180,7 +1180,7 @@ export const so: Gloss = {
   'be.c.join.a': "Haa. Waxaan jeclaan lahaa inaan la hadlo macallinka.", // nieuw, nalezen
   'be.c.neighbours': "Salaan deriskaaga", // nieuw, nalezen
   'be.c.neighbours.b': "Ma ku cusub tahay waddo? Salaan deriskaaga oo u sheeg magacaaga. Taasi waxay goor dambe fududaysaa xallinta dhibaatooyinka. Ma habeenkii ayaad shaqaysaa, mise dad badan ayaad la nooshahay? Aamus fiidka dambe iyo habeenkii. Qashinkaaga bannaanka dhig maalinta saxda ah. Maktabadda iyo xarunta xaafadda badanaa waxaad ku tababaran kartaa Af-Holandiiska, mararka qaarkood bilaash.", // nieuw, nalezen
-  'be.c.neighbours.p': "Salaan, waxaan ahay Ali. Waxaan ku noolahay dhinaca.", // nieuw, nalezen
+  'be.c.neighbours.p': "Salaan, waxaan ahay Ali. Waxaan ku noolahay guriga ku xiga.", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.neighbours.s': "Waxaad la nooshahay shan saaxiib shaqo. Deris ayaa yiri habeenkii badanaa waa buuq. Maxaad samaynaysaa?", // nieuw, nalezen
   'be.c.neighbours.o1': "Raali gelin bixi, oo ku heshiiya inaad aamusaysaan.", // nieuw, nalezen
   'be.c.neighbours.o2': "Dheh dhammaantiin waad shaqaysaan oo waxaad u baahan tihiin nasasho.", // nieuw, nalezen

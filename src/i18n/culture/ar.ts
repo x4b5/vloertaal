@@ -16,7 +16,7 @@ const t: CultureTranslation = {
     'c.je': '«je» أم «u»؟',
     'c.je.b': { m: 'في العمل يقول معظم الناس «je» (أنتَ، غير رسمي) لبعضهم، وغالباً للمدير أيضاً. إذا لم تكن متأكداً، ابدأ بـ«u» (حضرتك، رسمي) وانتبه لما يفعله الآخرون. قول «je» ليس قلة أدب هنا.', f: 'في العمل يقول معظم الناس «je» (أنتِ، غير رسمي) لبعضهم، وغالباً للمدير أيضاً. إذا لم تكوني متأكدة، ابدئي بـ«u» (حضرتك، رسمي) وانتبهي لما يفعله الآخرون. قول «je» ليس قلة أدب هنا.' },
     'c.je.p': 'هل يمكنني أن أقول لك «je»؟',
-    'c.je.s': 'مشرفتك الجديدة تقول: «Zeg maar je, hoor!» ماذا تقصد مشرفتك بذلك؟',
+    'c.je.s': 'مشرفتك الجديدة تقول: «Zeg maar je, hoor!». ماذا تقصد مشرفتك بذلك؟', // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.je.o1': { m: 'تريدك أن تقول لها «je».', f: 'تريدك أن تقولي لها «je».' },
     'c.je.o2': { m: 'تطلب منك أن تقول شيئاً.', f: 'تطلب منكِ أن تقولي شيئاً.' }, // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.je.o3': { m: 'تريدك أن تتكلم بأدب أكثر.', f: 'تريدك أن تتكلمي بأدب أكثر.' }, // nagelezen (2e lezing) // nagelezen AI 22 nov
@@ -24,7 +24,7 @@ const t: CultureTranslation = {
     'c.names': 'الاسم الأول والمصافحة',
     'c.names.b': { m: 'في يومك الأول، صافح مصافحة قصيرة، وانظر إلى الشخص، وقل اسمك الأول. الزملاء والمديرون يستخدمون الاسم الأول عادةً.', f: 'في يومك الأول، صافحي مصافحة قصيرة، وانظري إلى الشخص، وقولي اسمك الأول. الزملاء والمديرون يستخدمون الاسم الأول عادةً.' },
     'c.names.p': 'مرحباً، أنا علي. أنا جديد هنا.',
-    'c.names.s': { m: 'زميل يأتي إليك ويقول: «Hoi, ik ben Mark.» ماذا تفعل؟', f: 'زميل يأتي إليك ويقول: «Hoi, ik ben Mark.» ماذا تفعلين؟' },
+    'c.names.s': { m: 'زميل يأتي إليك ويقول: «Hoi, ik ben Mark». ماذا تفعل؟', f: 'زميل يأتي إليك ويقول: «Hoi, ik ben Mark». ماذا تفعلين؟' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.names.o1': { m: 'صافحه وقل اسمك.', f: 'صافحيه وقولي اسمك.' }, // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.names.o2': { m: 'أومئ برأسك وابتسم، وانتظر الأسئلة.', f: 'أومئي برأسك وابتسمي، وانتظري الأسئلة.' }, // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.names.o3': { m: 'صافحه وناده «meneer» (سيدي).', f: 'صافحيه وناديه «meneer» (سيدي).' }, // nagelezen (2e lezing) // nagelezen AI 22 nov
@@ -80,7 +80,7 @@ const t: CultureTranslation = {
     'c.notyet': { m: 'لم تتعلّمه بعد؟ قل ذلك', f: 'لم تتعلّميه بعد؟ قولي ذلك' },
     'c.notyet.b': { m: 'يجب على الشركة التي تعمل فيها أن تشرح لك كيف تعمل بأمان. لا تستخدم آلة أو رافعة شوكية لم يعلّمك أحد كيف تستخدمها. أن تقول «Dit heb ik nog niet geleerd» أمر عادي هنا: هذا يُظهر أنك تعمل بأمان.', f: 'يجب على الشركة التي تعملين فيها أن تشرح لكِ كيف تعملين بأمان. لا تستخدمي آلة أو رافعة شوكية لم يعلّمكِ أحد كيف تستخدمينها. أن تقولي «Dit heb ik nog niet geleerd» أمر عادي هنا: هذا يُظهر أنكِ تعملين بأمان.' },
     'c.notyet.p': 'لم أتعلّم هذا بعد. هل يمكنك أن تريني كيف؟',
-    'c.notyet.s': { m: 'صباح مزدحم. مشرفك يقول: «Pak jij even de heftruck? Het is makkelijk.» لم تقُد رافعة شوكية أبداً. ماذا تفعل؟', f: 'صباح مزدحم. مشرفك يقول: «Pak jij even de heftruck? Het is makkelijk.» لم تقودي رافعة شوكية أبداً. ماذا تفعلين؟' },
+    'c.notyet.s': { m: 'صباح مزدحم. مشرفك يقول: «Pak jij even de heftruck? Het is makkelijk». لم تقُد رافعة شوكية أبداً. ماذا تفعل؟', f: 'صباح مزدحم. مشرفك يقول: «Pak jij even de heftruck? Het is makkelijk». لم تقودي رافعة شوكية أبداً. ماذا تفعلين؟' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.notyet.o1': { m: 'قل إنك لم تتعلّم ذلك. اطلب أن يعلّموك.', f: 'قولي إنكِ لم تتعلّمي ذلك. اطلبي أن يعلّموكِ.' }, // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.notyet.o2': { m: 'قُدها ببطء وبحذر، هذه المرة فقط.', f: 'قوديها ببطء وبحذر، هذه المرة فقط.' },
     'c.notyet.o3': { m: 'قل «ja» وتمنَّ أن يمرّ الأمر بخير.', f: 'قولي «ja» وتمنَّي أن يمرّ الأمر بخير.' },
@@ -88,7 +88,7 @@ const t: CultureTranslation = {
     'c.direct': 'الصراحة ليست قلة أدب',
     'c.direct.b': { m: 'الزملاء الهولنديون يقولون الأشياء غالباً بشكل مباشر جداً، مثل «Dat is fout» أو «Doe het zo». هم عادةً لا يقصدون الإساءة. يمكنك أنت أيضاً أن تكون مباشراً، ما دمت لطيفاً.', f: 'الزملاء الهولنديون يقولون الأشياء غالباً بشكل مباشر جداً، مثل «Dat is fout» أو «Doe het zo». هم عادةً لا يقصدون الإساءة. يمكنك أنت أيضاً أن تكوني مباشرة، ما دمت لطيفة.' },
     'c.direct.p': 'حسناً، كيف يجب أن أفعلها إذن؟',
-    'c.direct.s': { m: 'زميل يقول: «Nee, dat is fout. Die doos moet daar.» ماذا تفعل؟', f: 'زميل يقول: «Nee, dat is fout. Die doos moet daar.» ماذا تفعلين؟' },
+    'c.direct.s': { m: 'زميل يقول: «Nee, dat is fout. Die doos moet daar». ماذا تفعل؟', f: 'زميل يقول: «Nee, dat is fout. Die doos moet daar». ماذا تفعلين؟' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.direct.o1': { m: 'اسأل كيف يجب أن تفعلها، وانقل الصندوق.', f: 'اسألي كيف يجب أن تفعليها، وانقلي الصندوق.' },
     'c.direct.o2': { m: 'اعتذر مرات كثيرة: زميلك غاضب.', f: 'اعتذري مرات كثيرة: زميلك غاضب.' }, // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.direct.o3': { m: 'لا تقل شيئاً واترك الصندوق في مكانه.', f: 'لا تقولي شيئاً واتركي الصندوق في مكانه.' },
@@ -144,7 +144,7 @@ const t: CultureTranslation = {
     'c.clear': { m: 'قل الأهم أولاً', f: 'قولي الأهم أولاً', x: 'البدء بالأهم' }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.clear.b': { m: 'في لغات كثيرة، من الأدب أن تُحكى القصة كلها أولاً، والمقصود في النهاية. في العمل هنا العكس. قل أولاً ما المشكلة أو ما تحتاجه. ثم اذكر السبب. تكلّم بهدوء، وتوقّف بعد جملتين أو ثلاث، حتى يستطيع الآخر أن يسأل. وفي مقابلة العمل أيضاً: الجواب أولاً، ثم مثال. الكلام البطيء ليس قلة أدب هنا: هو يساعد الناس على فهمك.', f: 'في لغات كثيرة، من الأدب أن تُحكى القصة كلها أولاً، والمقصود في النهاية. في العمل هنا العكس. قولي أولاً ما المشكلة أو ما تحتاجينه. ثم اذكري السبب. تكلّمي بهدوء، وتوقّفي بعد جملتين أو ثلاث، حتى يستطيع الآخر أن يسأل. وفي مقابلة العمل أيضاً: الجواب أولاً، ثم مثال. الكلام البطيء ليس قلة أدب هنا: هو يساعد الناس على فهمكِ.', x: 'في لغات كثيرة، من الأدب أن تُحكى القصة كلها أولاً، والمقصود في النهاية. في العمل هنا العكس. أولاً ما المشكلة أو ما المطلوب. ثم السبب. المهم هو الكلام بهدوء، والتوقف بعد جملتين أو ثلاث، حتى يستطيع الآخر أن يسأل. وفي مقابلة العمل أيضاً: الجواب أولاً، ثم مثال. الكلام البطيء ليس قلة أدب هنا: هو يساعد الناس على الفهم.' },
     'c.clear.p': 'عفواً، سأقولها مرة أخرى بهدوء.', // nieuw, nalezen // nagelezen AI 22 nov
-    'c.clear.s': { m: 'تصل إلى العمل متأخراً 20 دقيقة. مشرفك يسأل: «Wat is er?» ماذا تفعل؟', f: 'تصلين إلى العمل متأخرة 20 دقيقة. مشرفك يسأل: «Wat is er?» ماذا تفعلين؟', x: 'هناك تأخير 20 دقيقة في الوصول إلى العمل. المشرف يسأل: «Wat is er?» ما التصرف الصحيح؟' }, // nieuw, nalezen // nagelezen AI 22 nov
+    'c.clear.s': { m: 'تصل إلى العمل متأخراً 20 دقيقة. مشرفك يسأل: «Wat is er?». ماذا تفعل؟', f: 'تصلين إلى العمل متأخرة 20 دقيقة. مشرفك يسأل: «Wat is er?». ماذا تفعلين؟', x: 'هناك تأخير 20 دقيقة في الوصول إلى العمل. المشرف يسأل: «Wat is er?». ما التصرف الصحيح؟' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.clear.o1': { m: 'قل أولاً إنك متأخر واعتذر. ثم قل السبب.', f: 'قولي أولاً إنكِ متأخرة واعتذري. ثم قولي السبب.', x: 'الإبلاغ أولاً بالتأخير والاعتذار. ثم ذكر السبب.' }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.clear.o2': { m: 'احكِ كل ما حدث هذا الصباح، من البداية.', f: 'احكي كل ما حدث هذا الصباح، من البداية.', x: 'حكاية كل ما حدث هذا الصباح، من البداية.' }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.clear.o3': { m: 'لا تقل شيئاً وابدأ العمل بسرعة.', f: 'لا تقولي شيئاً وابدئي العمل بسرعة.', x: 'السكوت والبدء بالعمل بسرعة.' }, // nieuw, nalezen // nagelezen AI 22 nov
@@ -186,138 +186,138 @@ const t: CultureTranslation = {
     's.task.3': 'هل يمكنك أن تُريني مرة أخرى؟',
     'd.task.q': 'هل انتهيت؟',
     'd.task.a': 'تقريباً. بقيت خمس دقائق.',
-    'l.clear': 'باختصار ووضوح', // nieuw, nalezen
-    'w.kort': 'قصير', // nieuw, nalezen
-    'w.duidelijk': 'واضح', // nieuw, nalezen
-    'w.belangrijkste': 'الأهم، أهم شيء', // nieuw, nalezen
-    'w.rustig': 'هادئ، بهدوء', // nieuw, nalezen
-    'w.teveel': 'أكثر من اللازم', // nieuw, nalezen
-    'w.vraag': 'السؤال', // nieuw, nalezen
-    's.clear.1': 'سأقولها باختصار: الآلة معطّلة.', // nieuw, nalezen
-    's.clear.2': { m: 'الأهم أولاً: أنا مريض.', f: 'الأهم أولاً: أنا مريضة.', x: 'الأهم أولاً: أشعر بالمرض.' }, // nieuw, nalezen
-    's.clear.3': 'عفواً، أتكلم بسرعة كبيرة وكثيراً جداً.', // nieuw, nalezen
-    'd.clear.q': 'هل الأمر واضح؟', // nieuw, nalezen
-    'd.clear.a': 'نعم. بقي عندي سؤال واحد.', // nieuw, nalezen
+    'l.clear': 'باختصار ووضوح', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kort': 'قصير', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.duidelijk': 'واضح', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.belangrijkste': 'الأهم، أهم شيء', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rustig': 'هادئ، بهدوء', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teveel': 'أكثر من اللازم', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vraag': 'السؤال', // nieuw, nalezen // nagelezen AI 28 nov
+    's.clear.1': 'سأقولها باختصار: الآلة معطّلة.', // nieuw, nalezen // nagelezen AI 28 nov
+    's.clear.2': { m: 'الأهم أولاً: أنا مريض.', f: 'الأهم أولاً: أنا مريضة.', x: 'الأهم أولاً: أشعر بالمرض.' }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.clear.3': 'عفواً، أتكلم بسرعة كبيرة وكثيراً جداً.', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.clear.q': 'هل الأمر واضح؟', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.clear.a': 'نعم. بقي عندي سؤال واحد.', // nieuw, nalezen // nagelezen AI 28 nov
     // Een nieuwe collega helpen (5 nov 2026)
-    'l.newcolleague': "مساعدة زميل جديد", // nieuw, nalezen
-    'w.welkom': "أهلاً وسهلاً، مرحباً", // nieuw, nalezen
-    'w.inwerken': "تدريب زميل جديد على العمل (في الأيام الأولى)", // nieuw, nalezen
-    'w.stap': "الخطوة (جزء صغير من مهمة)", // nieuw, nalezen
-    'w.nadoen': "يقلّد (يفعل ما أراه إياه شخص آخر)", // nieuw, nalezen
-    'w.geduld': "الصبر", // nieuw, nalezen
-    'w.kast': "الخزانة", // nieuw, nalezen
-    's.newcolleague.1': "أهلاً! اليوم أعرّفك على العمل.", // nieuw, nalezen
-    's.newcolleague.2': "انظر أولاً. ثم افعلها مثلي.", // nieuw, nalezen
-    's.newcolleague.3': "القفازات في تلك الخزانة.", // nieuw, nalezen
-    'd.newcolleague.q': "فهمت، على ما أظن.", // nieuw, nalezen
-    'd.newcolleague.a': "جميل. أرِني.", // nieuw, nalezen
+    'l.newcolleague': "مساعدة زميل جديد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.welkom': "أهلاً وسهلاً، مرحباً", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inwerken': "تدريب زميل جديد على العمل (في الأيام الأولى)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stap': "الخطوة (جزء صغير من مهمة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nadoen': "يقلّد (يفعل ما أراه إياه شخص آخر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geduld': "الصبر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kast': "الخزانة", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.1': "أهلاً! اليوم أعرّفك على العمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.2': "انظر أولاً. ثم افعلها مثلي.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.3': "القفازات في تلك الخزانة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.newcolleague.q': "فهمت، على ما أظن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.newcolleague.a': "جميل. أرِني.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.newcolleague': { m: "اعرض العمل خطوة خطوة", f: "اعرضي العمل خطوة خطوة", x: "عرض العمل خطوة خطوة" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.b': { m: "ما كان صعباً عليك في أسابيعك الأولى صعب على الزميل الجديد أيضاً. اشرح العمل بخطوات صغيرة: أولاً هذا، ثم ذاك. لا تتكلم أسرع أو بصوت أعلى: أرِه العمل، ودعه يفعله بعدك. لا تسأل «Snap je het?»: كثير من الناس يقولون نعم، حتى عندما لا يفهمون. قل بدلاً من ذلك «Laat eens zien»، وراقب. أخبره أين توجد الأشياء، مثل المرحاض والمقصف والقفازات. كن صبوراً (geduld): التعلّم يأخذ وقتاً، عند الجميع.", f: "ما كان صعباً عليكِ في أسابيعك الأولى صعب على الزميل الجديد أيضاً. اشرحي العمل بخطوات صغيرة: أولاً هذا، ثم ذاك. لا تتكلمي أسرع أو بصوت أعلى: أريه العمل، ودعيه يفعله بعدك. لا تسألي «Snap je het?»: كثير من الناس يقولون نعم، حتى عندما لا يفهمون. قولي بدلاً من ذلك «Laat eens zien»، وراقبي. أخبريه أين توجد الأشياء، مثل المرحاض والمقصف والقفازات. كوني صبورة (geduld): التعلّم يأخذ وقتاً، عند الجميع.", x: "ما كان صعباً في الأسابيع الأولى صعب على الزميل الجديد أيضاً. الشرح يكون بخطوات صغيرة: أولاً هذا، ثم ذاك. لا حاجة للكلام أسرع أو بصوت أعلى: الأفضل عرض العمل، ثم تركه يفعله بعد ذلك. السؤال «Snap je het?» لا يكفي: كثير من الناس يقولون نعم، حتى عندما لا يفهمون. الأفضل قول «Laat eens zien»، والمراقبة. من المفيد ذكر أماكن الأشياء، مثل المرحاض والمقصف والقفازات. الصبر (geduld) مهم: التعلّم يأخذ وقتاً، عند الجميع." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.p': "أحسنت! والآن الخطوة التالية.", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.newcolleague.s': { m: "تشرح مهمة لزميل جديد. يقول: «Ja, ja, ik snap het.» ماذا تفعل؟", f: "تشرحين مهمة لزميل جديد. يقول: «Ja, ja, ik snap het.» ماذا تفعلين؟", x: "شرح مهمة لزميل جديد. يقول: «Ja, ja, ik snap het.» ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 22 nov
+    'c.newcolleague.s': { m: "تشرح مهمة لزميل جديد. يقول: «Ja, ja, ik snap het». ماذا تفعل؟", f: "تشرحين مهمة لزميل جديد. يقول: «Ja, ja, ik snap het». ماذا تفعلين؟", x: "شرح مهمة لزميل جديد. يقول: «Ja, ja, ik snap het». ما التصرف الصحيح؟" }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.newcolleague.o1': { m: "قل «Laat eens zien»، وراقبه وهو يقوم بها.", f: "قولي «Laat eens zien»، وراقبيه وهو يقوم بها.", x: "قول «Laat eens zien»، ومراقبته وهو يقوم بها." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.o2': { m: "قل «Goed zo»، وارجع إلى عملك.", f: "قولي «Goed zo»، وارجعي إلى عملك.", x: "قول «Goed zo»، والرجوع إلى العمل الخاص." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.o3': { m: "اشرح كل شيء مرة أخرى، أسرع وبصوت أعلى.", f: "اشرحي كل شيء مرة أخرى، أسرع وبصوت أعلى.", x: "شرح كل شيء مرة أخرى، أسرع وبصوت أعلى." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.w': "كثير من الناس يقولون «ja»، حتى عندما لم يفهموا. عندما يُريك ذلك، تريان كلاكما إن كان الأمر يعمل. هذا أسرع من إصلاح خطأ لاحقاً.", // nieuw, nalezen // nagelezen AI 22 nov
     // Goed communiceren en Feedback en overleg (5 nov 2026)
-    'u.communicate': "التواصل الجيد", // nieuw, nalezen
-    'u.feedback': "الملاحظات واجتماعات الفريق", // nieuw, nalezen
-    'l.explain': "شرح المشكلة", // nieuw, nalezen
-    'w.ietsmis': "هناك شيء غير صحيح", // nieuw, nalezen
-    'w.stilstaan': "يتوقف، متوقف (آلة، حزام ناقل)", // nieuw, nalezen
-    'w.lampje': "المصباح الصغير (ضوء التحذير)", // nieuw, nalezen
-    'w.komen': "يأتي", // nieuw, nalezen
-    'w.nodighebben': "يحتاج", // nieuw, nalezen
-    'w.meteen': "فوراً، حالاً", // nieuw, nalezen
-    's.explain.1': "الحزام الناقل متوقف. عند الخط الثاني. هل يمكنك أن تأتي؟", // nieuw, nalezen
-    's.explain.2': "هناك ضوء أحمر مشتعل على الآلة.", // nieuw, nalezen
-    's.explain.3': "هذا خطير. هل يمكنك أن تأتي فوراً؟", // nieuw, nalezen
-    'd.explain.q': "ما المشكلة؟", // nieuw, nalezen
-    'd.explain.a': "الماسح الضوئي لا يعمل. أحتاج واحداً جديداً.", // nieuw, nalezen
-    'l.listen': "الاستماع الجيد", // nieuw, nalezen
-    'w.uitpraten': "يُنهي كلامه (ترك الآخر يُنهي كلامه)", // nieuw, nalezen
-    'w.onderbreken': "يقاطع", // nieuw, nalezen
-    'w.aankijken': "ينظر إلى (شخص)", // nieuw, nalezen
-    'w.bedoelen': "يقصد", // nieuw, nalezen
-    'w.dus': "إذن، يعني (للتأكد مما سمعته)", // nieuw, nalezen
-    'w.doorvragen': "يسأل أكثر (حتى يصبح الأمر واضحاً)", // nieuw, nalezen
-    's.listen.1': "يعني أولاً أعدّ الصناديق، ثم أغلّفها؟", // nieuw, nalezen
-    's.listen.2': "ماذا تقصد بهذه الكلمة؟", // nieuw, nalezen
-    's.listen.3': "عفواً، أكمل كلامك.", // nieuw, nalezen
-    'd.listen.q': { m: "غداً تبدأ باكراً، في الساعة الرابعة.", f: "غداً تبدئين باكراً، في الساعة الرابعة.", x: "غداً يبدأ العمل باكراً، في الساعة الرابعة." }, // nieuw, nalezen
-    'd.listen.a': "حقاً؟ أم كانت هذه مزحة؟", // nieuw, nalezen
-    'l.calm': "الحفاظ على الهدوء", // nieuw, nalezen
-    'w.nadenken': "يفكّر (في شيء)", // nieuw, nalezen
-    'w.ademhalen': "يتنفّس", // nieuw, nalezen
-    'w.oplossen': "يحلّ (مشكلة)", // nieuw, nalezen
-    'w.druk': "مزدحم، مشغول (عمل كثير)", // nieuw, nalezen
-    'w.straks': "بعد قليل، لاحقاً (اليوم)", // nieuw, nalezen
-    'w.misverstand': "سوء الفهم", // nieuw, nalezen
-    's.calm.1': "أريد أن أحلّ الأمر بهدوء.", // nieuw, nalezen
-    's.calm.2': "هل يمكنني أن أفكّر لحظة؟", // nieuw, nalezen
-    's.calm.3': "هل يمكن أن نتكلم بعد قليل؟", // nieuw, nalezen
-    'd.calm.q': "لماذا لم ينتهِ هذا بعد؟", // nieuw, nalezen
-    'd.calm.a': "عفواً، العمل كثير جداً. ما الذي يجب أولاً؟", // nieuw, nalezen
-    'l.talkintime': "الكلام عن الأمر في وقته", // nieuw, nalezen
-    'w.gesprek': "الحديث، المحادثة", // nieuw, nalezen
-    'w.bespreken': "يناقش، يتكلم عن", // nieuw, nalezen
-    'w.zorgenmaken': "يقلق", // nieuw, nalezen
-    'w.oplossing': "الحل", // nieuw, nalezen
-    'w.ineens': "فجأة", // nieuw, nalezen
-    'w.wegblijven': "يغيب (لا يأتي إلى العمل)", // nieuw, nalezen
-    's.talkintime.1': "هناك شيء يشغلني. هل عندك لحظة؟", // nieuw, nalezen
-    's.talkintime.2': "أريد أن أناقش معك أمراً.", // nieuw, nalezen
-    's.talkintime.3': "أفكّر في ترك العمل. هل يمكن أن نتكلم أولاً؟", // nieuw, nalezen
-    'd.talkintime.q': "هل عندك لحظة؟ هناك شيء يشغلني.", // nieuw, nalezen
-    'd.talkintime.a': "طبعاً. ما الأمر؟", // nieuw, nalezen
-    'l.reachable': "إمكانية الوصول إليك", // nieuw, nalezen
-    'w.opnemen': "يردّ (على الهاتف)", // nieuw, nalezen
-    'w.gemisteoproep': "المكالمة الفائتة", // nieuw, nalezen
-    'w.voicemail': "البريد الصوتي", // nieuw, nalezen
-    'w.beltegoed': "رصيد الهاتف (مسبق الدفع)", // nieuw, nalezen
-    'w.bereik': "التغطية، الإرسال (في الهاتف)", // nieuw, nalezen
-    'w.onbekend': "مجهول (رقم مجهول)", // nieuw, nalezen
-    's.reachable.1': "لغتي الهولندية ليست جيدة بعد. هل يمكنك أن تتكلم ببطء؟", // nieuw, nalezen
-    's.reachable.2': "هل يمكنك أن ترسلها في رسالة أيضاً؟", // nieuw, nalezen
-    's.reachable.3': "عندي رقم جديد.", // nieuw, nalezen
-    'd.reachable.q': "صباح الخير، معك قسم التخطيط.", // nieuw, nalezen
-    'd.reachable.a': "صباح الخير. هل اتصلتم بي؟ عفواً، فاتتني المكالمة.", // nieuw, nalezen
-    'l.getfeedback': "تلقّي الملاحظات", // nieuw, nalezen
-    'w.tip': "النصيحة (نصيحة قصيرة)", // nieuw, nalezen
-    'w.verbeterpunt': "نقطة للتحسين (ما يمكن أن يكون أفضل)", // nieuw, nalezen
-    'w.goedbedoeld': "بنيّة حسنة (للمساعدة)", // nieuw, nalezen
-    'w.kritiek': "النقد (ما يراه شخص غير جيد)", // nieuw, nalezen
-    'w.normaal': "عادي، طبيعي", // nieuw, nalezen
-    'w.positief': "إيجابي (عمّا يسير جيداً)", // nieuw, nalezen
-    's.getfeedback.1': "شكراً، من الجيد أن أعرف ذلك.", // nieuw, nalezen
-    's.getfeedback.2': "هل يمكنك أن تعطيني مثالاً؟", // nieuw, nalezen
-    's.getfeedback.3': "ماذا أستطيع أن أفعل بشكل أفضل؟", // nieuw, nalezen
-    'd.getfeedback.q': "هل يمكنني أن أعطيك بعض الملاحظات؟", // nieuw, nalezen
-    'd.getfeedback.a': "نعم، من فضلك. أريد أن أؤدي العمل جيداً.", // nieuw, nalezen
-    'l.givefeedback': "إعطاء الملاحظات", // nieuw, nalezen
-    'w.dichtplakken': "يغلق بالشريط اللاصق", // nieuw, nalezen
-    'w.netjes': "مرتّب، أنيق", // nieuw, nalezen
-    'w.scheef': "مائل، غير مستقيم", // nieuw, nalezen
-    'w.vriendelijk': "لطيف، ودود", // nieuw, nalezen
-    'w.concreet': "محدّد، ملموس (مع مثال واضح)", // nieuw, nalezen
-    'w.ondervierogen': "على انفراد (بين شخصين فقط)", // nieuw, nalezen
-    's.givefeedback.1': "تقوم بهذا جيداً.", // nieuw, nalezen
-    's.givefeedback.2': "هل يمكنك أن تغلق الصناديق بالشريط اللاصق أيضاً؟", // nieuw, nalezen
-    's.givefeedback.3': "أرى أن الصناديق مائلة.", // nieuw, nalezen
-    'd.givefeedback.q': "ما رأيك في عملي؟", // nieuw, nalezen
-    'd.givefeedback.a': "مرتّب! فقط الصناديق مائلة.", // nieuw, nalezen
-    'l.meeting': "الكلام في اجتماع الفريق", // nieuw, nalezen
-    'w.werkoverleg': "اجتماع الفريق (عن العمل)", // nieuw, nalezen
-    'w.beurt': "الدور (وقت الكلام)", // nieuw, nalezen
-    'w.idee': "الفكرة", // nieuw, nalezen
-    'w.mening': "الرأي (ما يظنه المرء في الأمر)", // nieuw, nalezen
-    'w.handopsteken': "يرفع يده", // nieuw, nalezen
-    'w.agenda': "جدول الأعمال (قائمة نقاط الاجتماع)", // nieuw, nalezen
-    's.meeting.1': "هل يمكنني أن أقول شيئاً؟", // nieuw, nalezen
-    's.meeting.2': "عندي سؤال عن جدول العمل.", // nieuw, nalezen
-    's.meeting.3': "عندي فكرة.", // nieuw, nalezen
-    'd.meeting.q': "هل عند أحد سؤال؟", // nieuw, nalezen
-    'd.meeting.a': "نعم. متى يأتي جدول العمل الجديد؟", // nieuw, nalezen
+    'u.communicate': "التواصل الجيد", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.feedback': "الملاحظات واجتماعات الفريق", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.explain': "شرح المشكلة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ietsmis': "هناك شيء غير صحيح", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stilstaan': "يتوقف، متوقف (آلة، حزام ناقل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lampje': "المصباح الصغير (ضوء التحذير)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.komen': "يأتي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nodighebben': "يحتاج", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meteen': "فوراً، حالاً", // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.1': "الحزام الناقل متوقف. عند الخط الثاني. هل يمكنك أن تأتي؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.2': "هناك ضوء أحمر مشتعل على الآلة.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.3': "هذا خطير. هل يمكنك أن تأتي فوراً؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.explain.q': "ما المشكلة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.explain.a': "الماسح الضوئي لا يعمل. أحتاج واحداً جديداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.listen': "الاستماع الجيد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitpraten': "يُنهي كلامه (ترك الآخر يُنهي كلامه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderbreken': "يقاطع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aankijken': "ينظر إلى (شخص)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedoelen': "يقصد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dus': "إذن، يعني (للتأكد مما سمعته)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doorvragen': "يسأل أكثر (حتى يصبح الأمر واضحاً)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.1': "يعني أولاً أعدّ الصناديق، ثم أغلّفها؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.2': "ماذا تقصد بهذه الكلمة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.3': "عفواً، أكمل كلامك.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.listen.q': { m: "غداً تبدأ باكراً، في الساعة الرابعة.", f: "غداً تبدئين باكراً، في الساعة الرابعة.", x: "غداً يبدأ العمل باكراً، في الساعة الرابعة." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'd.listen.a': "حقاً؟ أم كانت هذه مزحة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.calm': "الحفاظ على الهدوء", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nadenken': "يفكّر (في شيء)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ademhalen': "يتنفّس", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oplossen': "يحلّ (مشكلة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.druk': "مزدحم، مشغول (عمل كثير)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.straks': "بعد قليل، لاحقاً (اليوم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.misverstand': "سوء الفهم", // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.1': "أريد أن أحلّ الأمر بهدوء.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.2': "هل يمكنني أن أفكّر لحظة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.3': "هل يمكن أن نتكلم بعد قليل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.calm.q': "لماذا لم ينتهِ هذا بعد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.calm.a': "عفواً، العمل كثير جداً. ما الذي يجب أولاً؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.talkintime': "الكلام عن الأمر في وقته", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gesprek': "الحديث، المحادثة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bespreken': "يناقش، يتكلم عن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zorgenmaken': "يقلق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oplossing': "الحل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ineens': "فجأة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wegblijven': "يغيب (لا يأتي إلى العمل)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.1': "هناك شيء يشغلني. هل عندك لحظة؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.2': "أريد أن أناقش معك أمراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.3': "أفكّر في ترك العمل. هل يمكن أن نتكلم أولاً؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.talkintime.q': "هل عندك لحظة؟ هناك شيء يشغلني.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.talkintime.a': "طبعاً. ما الأمر؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.reachable': "إمكانية الوصول إليك", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opnemen': "يردّ (على الهاتف)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gemisteoproep': "المكالمة الفائتة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voicemail': "البريد الصوتي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beltegoed': "رصيد الهاتف (مسبق الدفع)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bereik': "التغطية، الإرسال (في الهاتف)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onbekend': "مجهول (رقم مجهول)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.1': "لغتي الهولندية ليست جيدة بعد. هل يمكنك أن تتكلم ببطء؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.2': "هل يمكنك أن ترسلها في رسالة أيضاً؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.3': "عندي رقم جديد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.reachable.q': "صباح الخير، معك قسم التخطيط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.reachable.a': "صباح الخير. هل اتصلتم بي؟ عفواً، فاتتني المكالمة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.getfeedback': "تلقّي الملاحظات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tip': "النصيحة (نصيحة قصيرة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verbeterpunt': "نقطة للتحسين (ما يمكن أن يكون أفضل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedbedoeld': "بنيّة حسنة (للمساعدة)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kritiek': "النقد (ما يراه شخص غير جيد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.normaal': "عادي، طبيعي", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.positief': "إيجابي (عمّا يسير جيداً)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.1': "شكراً، من الجيد أن أعرف ذلك.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.2': "هل يمكنك أن تعطيني مثالاً؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.3': "ماذا أستطيع أن أفعل بشكل أفضل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.getfeedback.q': "هل يمكنني أن أعطيك بعض الملاحظات؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.getfeedback.a': "نعم، من فضلك. أريد أن أؤدي العمل جيداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.givefeedback': "إعطاء الملاحظات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dichtplakken': "يغلق بالشريط اللاصق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.netjes': "مرتّب، أنيق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scheef': "مائل، غير مستقيم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vriendelijk': "لطيف، ودود", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.concreet': "محدّد، ملموس (مع مثال واضح)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ondervierogen': "على انفراد (بين شخصين فقط)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.1': "تقوم بهذا جيداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.2': "هل يمكنك أن تغلق الصناديق بالشريط اللاصق أيضاً؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.3': "أرى أن الصناديق مائلة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.givefeedback.q': "ما رأيك في عملي؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.givefeedback.a': "مرتّب! فقط الصناديق مائلة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.meeting': "الكلام في اجتماع الفريق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkoverleg': "اجتماع الفريق (عن العمل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beurt': "الدور (وقت الكلام)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.idee': "الفكرة", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mening': "الرأي (ما يظنه المرء في الأمر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handopsteken': "يرفع يده", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.agenda': "جدول الأعمال (قائمة نقاط الاجتماع)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.1': "هل يمكنني أن أقول شيئاً؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.2': "عندي سؤال عن جدول العمل.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.3': "عندي فكرة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.meeting.q': "هل عند أحد سؤال؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.meeting.a': "نعم. متى يأتي جدول العمل الجديد؟", // nieuw, nalezen // nagelezen AI 28 nov
     'c.explain': { m: "ما المشكلة، وأين، وماذا تحتاج", f: "ما المشكلة، وأين، وماذا تحتاجين", x: "ما المشكلة، وأين، وما المطلوب" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.explain.b': { m: "عندما يكون هناك خطأ في العمل، قُله في ثلاث خطوات. أولاً ما المشكلة: «De band staat stil.». ثم أين: «Bij lijn twee.». ثم ماذا تحتاج: «Kun je komen?». هكذا يعرف الآخر ماذا يفعل، بدون أسئلة كثيرة. لا تعرف الكلمة المناسبة؟ أشِر إليه. هل هو خطير؟ قل ذلك أولاً: «Het is gevaarlijk.». حادث؟ اطلب المساعدة أولاً (المزيد في درس «الإبلاغ عن حادث»).", f: "عندما يكون هناك خطأ في العمل، قوليه في ثلاث خطوات. أولاً ما المشكلة: «De band staat stil.». ثم أين: «Bij lijn twee.». ثم ماذا تحتاجين: «Kun je komen?». هكذا يعرف الآخر ماذا يفعل، بدون أسئلة كثيرة. لا تعرفين الكلمة المناسبة؟ أشيري إليه. هل هو خطير؟ قولي ذلك أولاً: «Het is gevaarlijk.». حادث؟ اطلبي المساعدة أولاً (المزيد في درس «الإبلاغ عن حادث»).", x: "عندما يكون هناك خطأ في العمل، يُقال ذلك في ثلاث خطوات. أولاً ما المشكلة: «De band staat stil.». ثم أين: «Bij lijn twee.». ثم ما المطلوب: «Kun je komen?». هكذا يعرف الآخر ماذا يفعل، بدون أسئلة كثيرة. الكلمة المناسبة غير معروفة؟ تكفي الإشارة إليه. هل هو خطير؟ يُقال ذلك أولاً: «Het is gevaarlijk.». حادث؟ طلب المساعدة أولاً (المزيد في درس «الإبلاغ عن حادث»)." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.explain.p': "هل يمكنك أن تأتي لتلقي نظرة؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -361,7 +361,7 @@ const t: CultureTranslation = {
     'c.getfeedback': "الملاحظات تتعلق بعملك", // nieuw, nalezen // nagelezen AI 22 nov
     'c.getfeedback.b': { m: "الملاحظات (feedback) هي ما يقوله شخص عن عملك: ما يسير جيداً، وما يمكن أن يكون أفضل. هي عن عملك، وليست عنك أنت. في العمل هنا، الملاحظات أمر عادي وهدفها المساعدة. ليس واضحاً ما الذي يجب أن تغيّره؟ اطلب مثالاً. استمع أولاً، ولا تدافع عن نفسك فوراً. ثم قل شكراً، وجرّب ذلك. يمكنك أيضاً أن تطلب الملاحظات بنفسك: «Wat kan ik beter doen?»", f: "الملاحظات (feedback) هي ما يقوله شخص عن عملك: ما يسير جيداً، وما يمكن أن يكون أفضل. هي عن عملك، وليست عنكِ أنتِ. في العمل هنا، الملاحظات أمر عادي وهدفها المساعدة. ليس واضحاً ما الذي يجب أن تغيّريه؟ اطلبي مثالاً. استمعي أولاً، ولا تدافعي عن نفسك فوراً. ثم قولي شكراً، وجرّبي ذلك. يمكنكِ أيضاً أن تطلبي الملاحظات بنفسك: «Wat kan ik beter doen?»", x: "الملاحظات (feedback) هي ما يقوله شخص عن العمل: ما يسير جيداً، وما يمكن أن يكون أفضل. هي عن العمل، وليست عن الشخص نفسه. في العمل هنا، الملاحظات أمر عادي وهدفها المساعدة. ليس واضحاً ما الذي يجب تغييره؟ طلب مثال يساعد. الاستماع أولاً، بدون دفاع عن النفس فوراً. ثم الشكر، والتجربة. طلب الملاحظات ممكن أيضاً: «Wat kan ik beter doen?»" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.getfeedback.p': "شكراً. هل يمكنك أن تعطيني مثالاً؟", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.getfeedback.s': { m: "مشرفتك تنظر إلى عملك وتقول: «Dit kan beter.» لا تعرف ماذا تقصد. ماذا تفعل؟", f: "مشرفتك تنظر إلى عملك وتقول: «Dit kan beter.» لا تعرفين ماذا تقصد. ماذا تفعلين؟", x: "المشرفة تنظر إلى العمل وتقول: «Dit kan beter.» قصدها غير واضح. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 22 nov
+    'c.getfeedback.s': { m: "مشرفتك تنظر إلى عملك وتقول: «Dit kan beter». لا تعرف ماذا تقصد. ماذا تفعل؟", f: "مشرفتك تنظر إلى عملك وتقول: «Dit kan beter». لا تعرفين ماذا تقصد. ماذا تفعلين؟", x: "المشرفة تنظر إلى العمل وتقول: «Dit kan beter». قصدها غير واضح. ما التصرف الصحيح؟" }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.getfeedback.o1': { m: "قل شكراً، واطلب مثالاً.", f: "قولي شكراً، واطلبي مثالاً.", x: "الشكر، وطلب مثال." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.getfeedback.o2': { m: "قل إنك بذلت كل جهدك فعلاً.", f: "قولي إنكِ بذلتِ كل جهدك فعلاً.", x: "التأكيد على بذل كل الجهد فعلاً." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.getfeedback.o3': { m: "أومئ برأسك، وافعلها بالطريقة نفسها مرة أخرى.", f: "أومئي برأسك، وافعليها بالطريقة نفسها مرة أخرى.", x: "الإيماء بالرأس، وفعلها بالطريقة نفسها مرة أخرى." }, // nieuw, nalezen // nagelezen AI 22 nov
@@ -409,7 +409,7 @@ const t: CultureTranslation = {
     'c.howto.o3': "التوقف والانتظار حتى يأتي أحد.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.howto.w': { m: "نظرة قصيرة واحدة من زميل توفّر عملاً كثيراً فيما بعد. وتتعلم المهمة أسرع.", f: "نظرة قصيرة واحدة من زميل توفّر عملاً كثيراً فيما بعد. وتتعلمين المهمة أسرع.", x: "نظرة قصيرة واحدة من زميل توفّر عملاً كثيراً فيما بعد. وتعلُّم المهمة يصير أسرع." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.mayask': "اللحظة المناسبة للسؤال", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.mayask.b': { m: "هل الأمر يخص السلامة، أو قد يحدث شيء خطأ الآن؟ اسأل فوراً، حتى لو كان زميلك مشغولاً. هل الأمر غير مستعجل؟ انتظر حتى ينتهي زميلك، ثم اسأل: «Heb je even tijd?» هل عندك أسئلة صغيرة كثيرة؟ اكتبها واسألها معاً. لا أحد يجد السؤال مزعجاً. الخطأ يكلّف وقتاً أكثر.", f: "هل الأمر يخص السلامة، أو قد يحدث شيء خطأ الآن؟ اسألي فوراً، حتى لو كان زميلك مشغولاً. هل الأمر غير مستعجل؟ انتظري حتى ينتهي زميلك، ثم اسألي: «Heb je even tijd?» هل عندك أسئلة صغيرة كثيرة؟ اكتبيها واسأليها معاً. لا أحد يجد السؤال مزعجاً. الخطأ يكلّف وقتاً أكثر.", x: "هل الأمر يخص السلامة، أو قد يحدث شيء خطأ الآن؟ السؤال يكون فوراً، حتى لو كان الزميل مشغولاً. هل الأمر غير مستعجل؟ الانتظار يكون حتى ينتهي الزميل، ثم السؤال: «Heb je even tijd?» هل هناك أسئلة صغيرة كثيرة؟ الحل: كتابتها وطرحها معاً. لا أحد يجد السؤال مزعجاً. الخطأ يكلّف وقتاً أكثر." }, // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mayask.b': { m: "هل الأمر يخص السلامة، أو قد يحدث شيء خطأ الآن؟ اسأل فوراً، حتى لو كان زميلك مشغولاً. هل الأمر غير مستعجل؟ انتظر حتى ينتهي زميلك، ثم اسأل: «Heb je even tijd?». هل عندك أسئلة صغيرة كثيرة؟ اكتبها واسألها معاً. لا أحد يجد السؤال مزعجاً. الخطأ يكلّف وقتاً أكثر.", f: "هل الأمر يخص السلامة، أو قد يحدث شيء خطأ الآن؟ اسألي فوراً، حتى لو كان زميلك مشغولاً. هل الأمر غير مستعجل؟ انتظري حتى ينتهي زميلك، ثم اسألي: «Heb je even tijd?». هل عندك أسئلة صغيرة كثيرة؟ اكتبيها واسأليها معاً. لا أحد يجد السؤال مزعجاً. الخطأ يكلّف وقتاً أكثر.", x: "هل الأمر يخص السلامة، أو قد يحدث شيء خطأ الآن؟ السؤال يكون فوراً، حتى لو كان الزميل مشغولاً. هل الأمر غير مستعجل؟ الانتظار يكون حتى ينتهي الزميل، ثم السؤال: «Heb je even tijd?». هل هناك أسئلة صغيرة كثيرة؟ الحل: كتابتها وطرحها معاً. لا أحد يجد السؤال مزعجاً. الخطأ يكلّف وقتاً أكثر." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.mayask.p': { m: "آسف على الإزعاج. هل عندك قليل من الوقت؟", f: "آسفة على الإزعاج. هل عندك قليل من الوقت؟" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.mayask.s': { m: "زميلك يتكلم في الهاتف. عندك سؤال غير مستعجل. ماذا تفعل؟", f: "زميلك يتكلم في الهاتف. عندك سؤال غير مستعجل. ماذا تفعلين؟", x: "الزميل يتكلم في الهاتف. هناك سؤال غير مستعجل. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.mayask.o1': "الانتظار حتى تنتهي المكالمة، ثم السؤال.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -425,55 +425,76 @@ const t: CultureTranslation = {
     'c.whereis.o3': "بدء العمل بملابسك العادية.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.w': "السؤال يأخذ عشر ثوانٍ. البحث وحدك قد يجعلك تتأخر. الزملاء يعرفون أن إيجاد الطريق في مكان جديد صعب.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): the tips of l.roster, l.breaks, l.wound and l.callhelp.
-    'c.wound': { m: "حرق؟ برّده بالماء", f: "حرق؟ برّديه بالماء", x: "حرق؟ التبريد بالماء" }, // nieuw, nalezen
-    'c.wound.b': { m: "جرح صغير: اضغط عليه بقطعة قماش نظيفة أو بضمادة، وأخبر المسعف. حرق: برّده فوراً بماء فاتر جارٍ، لمدة 10 دقائق على الأقل. شيء في عينك؟ اغسلها بالماء، أو عند دُش العين. الأمر خطير؟ اتصل بـ112. اسأل في يومك الأول أين صندوق الإسعافات الأولية ودُش العين.", f: "جرح صغير: اضغطي عليه بقطعة قماش نظيفة أو بضمادة، وأخبري المسعف. حرق: برّديه فوراً بماء فاتر جارٍ، لمدة 10 دقائق على الأقل. شيء في عينك؟ اغسليها بالماء، أو عند دُش العين. الأمر خطير؟ اتصلي بـ112. اسألي في يومك الأول أين صندوق الإسعافات الأولية ودُش العين.", x: "جرح صغير: الضغط عليه بقطعة قماش نظيفة أو بضمادة، وإخبار المسعف. حرق: تبريده فوراً بماء فاتر جارٍ، لمدة 10 دقائق على الأقل. شيء في العين؟ غسلها بالماء، أو عند دُش العين. الأمر خطير؟ الاتصال بـ112. السؤال في اليوم الأول عن مكان صندوق الإسعافات الأولية ودُش العين." }, // nieuw, nalezen
-    'c.wound.p': "احترقت. أين صنبور الماء؟", // nieuw, nalezen
-    'c.wound.s': { m: "زميل يحرق يده بآلة ساخنة. ماذا تفعل؟", f: "زميل يحرق يده بآلة ساخنة. ماذا تفعلين؟", x: "زميل يحرق يده بآلة ساخنة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.wound.o1': "تبريد الحرق بماء فاتر جارٍ.", // nieuw, nalezen
-    'c.wound.o2': "وضع زبدة أو كريم عليه فوراً.", // nieuw, nalezen
-    'c.wound.o3': "وضع الثلج مباشرة على الجلد، والانتظار.", // nieuw, nalezen
-    'c.wound.w': "الماء يُخرج الحرارة من الجلد، فيكون الحرق أقل عمقاً. الثلج والزبدة والكريم قد تجعله أسوأ.", // nieuw, nalezen
-    'c.callhelp': { m: "الاتصال بـ112: قل المكان أولاً", f: "الاتصال بـ112: قولي المكان أولاً", x: "الاتصال بـ112: المكان أولاً" }, // nieuw, nalezen
-    'c.callhelp.b': { m: "اتصل بـ112 عندما تكون حياة في خطر، أو عندما تكون كل دقيقة مهمة. قل أولاً أين أنت: الشارع والرقم والمدينة. ثم قل ماذا حدث. ابقَ على الخط وأجب عن الأسئلة. اطلب من زميل أن ينتظر سيارة الإسعاف عند المدخل. لا تعرف عنوان عملك؟ ابحث عنه اليوم.", f: "اتصلي بـ112 عندما تكون حياة في خطر، أو عندما تكون كل دقيقة مهمة. قولي أولاً أين أنتِ: الشارع والرقم والمدينة. ثم قولي ماذا حدث. ابقي على الخط وأجيبي عن الأسئلة. اطلبي من زميل أن ينتظر سيارة الإسعاف عند المدخل. لا تعرفين عنوان عملك؟ ابحثي عنه اليوم.", x: "الاتصال بـ112 عندما تكون حياة في خطر، أو عندما تكون كل دقيقة مهمة. أولاً ذكر المكان: الشارع والرقم والمدينة. ثم ذكر ما حدث. البقاء على الخط والإجابة عن الأسئلة. الطلب من زميل أن ينتظر سيارة الإسعاف عند المدخل. عنوان العمل غير معروف؟ البحث عنه اليوم." }, // nieuw, nalezen
-    'c.callhelp.p': "أتصل بـ112. هل يمكنك أن تنتظر سيارة الإسعاف؟", // nieuw, nalezen
-    'c.callhelp.s': { m: "تتصل بـ112. موظف الطوارئ يسأل أسئلة كثيرة، لكنك تريد أن تساعد زميلك. ماذا تفعل؟", f: "تتصلين بـ112. موظف الطوارئ يسأل أسئلة كثيرة، لكنكِ تريدين أن تساعدي زميلك. ماذا تفعلين؟", x: "اتصال بـ112. موظف الطوارئ يسأل أسئلة كثيرة، لكن الزميل يحتاج إلى مساعدة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.callhelp.o1': "البقاء على الخط والإجابة.", // nieuw, nalezen
-    'c.callhelp.o2': "إنهاء المكالمة، والذهاب إلى الزميل.", // nieuw, nalezen
-    'c.callhelp.o3': "قول «تعالوا بسرعة»، وإنهاء المكالمة.", // nieuw, nalezen
-    'c.callhelp.w': "موظف الطوارئ يرسل المساعدة أثناء الكلام، ويقول ما يجب فعله. إنهاء المكالمة مبكراً جداً قد يرسل المساعدة إلى المكان الخطأ.", // nieuw, nalezen
-    'c.roster': { m: "انظر في جدول عملك كل يوم", f: "انظري في جدول عملك كل يوم", x: "النظر في جدول العمل كل يوم" }, // nieuw, nalezen
-    'c.roster.b': { m: "جدول العمل قد يتغيّر، حتى في آخر لحظة. انظر فيه كل يوم، في التطبيق أو على اللوحة. ترى تغييراً؟ تأكّد أنك تستطيع المجيء. لا تستطيع العمل في يوم ما؟ قل ذلك مبكراً، وليس في اليوم نفسه. تريد تبديل نوبة؟ اسأل مشرفك أولاً: كثير من الشركات عندها قاعدة لذلك. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "جدول العمل قد يتغيّر، حتى في آخر لحظة. انظري فيه كل يوم، في التطبيق أو على اللوحة. ترين تغييراً؟ تأكّدي أنكِ تستطيعين المجيء. لا تستطيعين العمل في يوم ما؟ قولي ذلك مبكراً، وليس في اليوم نفسه. تريدين تبديل نوبة؟ اسألي مشرفك أولاً: كثير من الشركات عندها قاعدة لذلك. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "جدول العمل قد يتغيّر، حتى في آخر لحظة. النظر فيه كل يوم، في التطبيق أو على اللوحة. تغيير في الجدول؟ التأكّد من إمكانية المجيء. العمل غير ممكن في يوم ما؟ قول ذلك مبكراً، وليس في اليوم نفسه. الرغبة في تبديل نوبة؟ السؤال عند المشرف أولاً: كثير من الشركات عندها قاعدة لذلك. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.roster.p': "لا أستطيع يوم السبت. هل يمكنني أن أبدّل؟", // nieuw, nalezen
-    'c.roster.s': { m: "جدول عملك تغيّر. الآن يجب أن تعمل يوم السبت، لكنك لا تستطيع. ماذا تفعل؟", f: "جدول عملك تغيّر. الآن يجب أن تعملي يوم السبت، لكنكِ لا تستطيعين. ماذا تفعلين؟", x: "جدول العمل تغيّر. الآن العمل يوم السبت، لكن هذا غير ممكن. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.roster.o1': "إخبار المشرف اليوم، وطلب التبديل.", // nieuw, nalezen
-    'c.roster.o2': "السكوت، والبقاء في البيت يوم السبت.", // nieuw, nalezen
-    'c.roster.o3': "طلب الذهاب من زميل، وعدم إخبار أحد.", // nieuw, nalezen
-    'c.roster.w': "عند القول مبكراً، يستطيع المشرف أن يجد شخصاً آخر. الغياب بدون كلمة يُعتبر أمراً خطيراً جداً.", // nieuw, nalezen
-    'c.breaks': { m: "اكتب ساعاتك", f: "اكتبي ساعاتك", x: "كتابة الساعات" }, // nieuw, nalezen
-    'c.breaks.b': { m: "اكتب كل يوم متى تبدأ، ومتى تتوقف، وكم تدوم استراحتك. قائمتك الخاصة تساعد عندما لا يكون أجرك صحيحاً. يجب أن تغادر مبكراً، مثلاً إلى الطبيب؟ اسأل مشرفك في الوقت المناسب. عملت أطول من المخطّط؟ اكتب ذلك أيضاً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "اكتبي كل يوم متى تبدئين، ومتى تتوقفين، وكم تدوم استراحتك. قائمتك الخاصة تساعد عندما لا يكون أجرك صحيحاً. يجب أن تغادري مبكراً، مثلاً إلى الطبيب؟ اسألي مشرفك في الوقت المناسب. عملتِ أطول من المخطّط؟ اكتبي ذلك أيضاً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "كتابة وقت البدء، ووقت التوقف، ومدة الاستراحة كل يوم. القائمة الشخصية تساعد عندما لا يكون الأجر صحيحاً. مغادرة مبكرة ضرورية، مثلاً إلى الطبيب؟ السؤال عند المشرف في الوقت المناسب. عمل أطول من المخطّط؟ كتابة ذلك أيضاً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.breaks.p': "يجب أن أذهب إلى الطبيب غداً. هل يمكنني أن أغادر مبكراً؟", // nieuw, nalezen
-    'c.breaks.s': { m: "غداً يجب أن تذهب إلى الطبيب في الساعة الثالثة. نوبتك تنتهي في الساعة الخامسة. ماذا تفعل؟", f: "غداً يجب أن تذهبي إلى الطبيب في الساعة الثالثة. نوبتك تنتهي في الساعة الخامسة. ماذا تفعلين؟", x: "غداً موعد عند الطبيب في الساعة الثالثة. النوبة تنتهي في الساعة الخامسة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.breaks.o1': "سؤال المشرف اليوم هل المغادرة المبكرة ممكنة.", // nieuw, nalezen
-    'c.breaks.o2': "المغادرة في الساعة الثالثة، والشرح في اليوم التالي.", // nieuw, nalezen
-    'c.breaks.o3': "إلغاء الطبيب، وإكمال النوبة.", // nieuw, nalezen
-    'c.breaks.w': "السؤال في الوقت المناسب يساعد المشرف على تخطيط العمل. المغادرة بدون سؤال تُعتبر عدم مسؤولية.", // nieuw, nalezen
+    'c.wound': { m: "حرق؟ برّده بالماء", f: "حرق؟ برّديه بالماء", x: "حرق؟ التبريد بالماء" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.b': { m: "جرح صغير: اضغط عليه بقطعة قماش نظيفة أو بضمادة، وأخبر المسعف. حرق: برّده فوراً بماء فاتر جارٍ، لمدة 10 دقائق على الأقل. شيء في عينك؟ اغسلها بالماء، أو عند دُش العين. الأمر خطير؟ اتصل بـ112. اسأل في يومك الأول أين صندوق الإسعافات الأولية ودُش العين.", f: "جرح صغير: اضغطي عليه بقطعة قماش نظيفة أو بضمادة، وأخبري المسعف. حرق: برّديه فوراً بماء فاتر جارٍ، لمدة 10 دقائق على الأقل. شيء في عينك؟ اغسليها بالماء، أو عند دُش العين. الأمر خطير؟ اتصلي بـ112. اسألي في يومك الأول أين صندوق الإسعافات الأولية ودُش العين.", x: "جرح صغير: الضغط عليه بقطعة قماش نظيفة أو بضمادة، وإخبار المسعف. حرق: تبريده فوراً بماء فاتر جارٍ، لمدة 10 دقائق على الأقل. شيء في العين؟ غسلها بالماء، أو عند دُش العين. الأمر خطير؟ الاتصال بـ112. السؤال في اليوم الأول عن مكان صندوق الإسعافات الأولية ودُش العين." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.p': "احترقت. أين صنبور الماء؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.s': { m: "زميل يحرق يده بآلة ساخنة. ماذا تفعل؟", f: "زميل يحرق يده بآلة ساخنة. ماذا تفعلين؟", x: "زميل يحرق يده بآلة ساخنة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o1': "تبريد الحرق بماء فاتر جارٍ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o2': "وضع زبدة أو كريم عليه فوراً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o3': "وضع الثلج مباشرة على الجلد، والانتظار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.w': "الماء يُخرج الحرارة من الجلد، فيكون الحرق أقل عمقاً. الثلج والزبدة والكريم قد تجعله أسوأ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp': { m: "الاتصال بـ112: قل المكان أولاً", f: "الاتصال بـ112: قولي المكان أولاً", x: "الاتصال بـ112: المكان أولاً" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.b': { m: "اتصل بـ112 عندما تكون حياة في خطر، أو عندما تكون كل دقيقة مهمة. قل أولاً أين أنت: الشارع والرقم والمدينة. ثم قل ماذا حدث. ابقَ على الخط وأجب عن الأسئلة. اطلب من زميل أن ينتظر سيارة الإسعاف عند المدخل. لا تعرف عنوان عملك؟ ابحث عنه اليوم.", f: "اتصلي بـ112 عندما تكون حياة في خطر، أو عندما تكون كل دقيقة مهمة. قولي أولاً أين أنتِ: الشارع والرقم والمدينة. ثم قولي ماذا حدث. ابقي على الخط وأجيبي عن الأسئلة. اطلبي من زميل أن ينتظر سيارة الإسعاف عند المدخل. لا تعرفين عنوان عملك؟ ابحثي عنه اليوم.", x: "الاتصال بـ112 عندما تكون حياة في خطر، أو عندما تكون كل دقيقة مهمة. أولاً ذكر المكان: الشارع والرقم والمدينة. ثم ذكر ما حدث. البقاء على الخط والإجابة عن الأسئلة. الطلب من زميل أن ينتظر سيارة الإسعاف عند المدخل. عنوان العمل غير معروف؟ البحث عنه اليوم." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.p': "أتصل بـ112. هل يمكنك أن تنتظر سيارة الإسعاف؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.s': { m: "تتصل بـ112. موظف الطوارئ يسأل أسئلة كثيرة، لكنك تريد أن تساعد زميلك. ماذا تفعل؟", f: "تتصلين بـ112. موظف الطوارئ يسأل أسئلة كثيرة، لكنكِ تريدين أن تساعدي زميلك. ماذا تفعلين؟", x: "اتصال بـ112. موظف الطوارئ يسأل أسئلة كثيرة، لكن الزميل يحتاج إلى مساعدة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o1': "البقاء على الخط والإجابة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o2': "إنهاء المكالمة، والذهاب إلى الزميل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o3': "قول «تعالوا بسرعة»، وإنهاء المكالمة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.w': "موظف الطوارئ يرسل المساعدة أثناء الكلام، ويقول ما يجب فعله. إنهاء المكالمة مبكراً جداً قد يرسل المساعدة إلى المكان الخطأ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster': { m: "انظر في جدول عملك كل يوم", f: "انظري في جدول عملك كل يوم", x: "النظر في جدول العمل كل يوم" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.b': { m: "جدول العمل قد يتغيّر، حتى في آخر لحظة. انظر فيه كل يوم، في التطبيق أو على اللوحة. ترى تغييراً؟ تأكّد أنك تستطيع المجيء. لا تستطيع العمل في يوم ما؟ قل ذلك مبكراً، وليس في اليوم نفسه. تريد تبديل نوبة؟ اسأل مشرفك أولاً: كثير من الشركات عندها قاعدة لذلك. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "جدول العمل قد يتغيّر، حتى في آخر لحظة. انظري فيه كل يوم، في التطبيق أو على اللوحة. ترين تغييراً؟ تأكّدي أنكِ تستطيعين المجيء. لا تستطيعين العمل في يوم ما؟ قولي ذلك مبكراً، وليس في اليوم نفسه. تريدين تبديل نوبة؟ اسألي مشرفك أولاً: كثير من الشركات عندها قاعدة لذلك. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "جدول العمل قد يتغيّر، حتى في آخر لحظة. النظر فيه كل يوم، في التطبيق أو على اللوحة. تغيير في الجدول؟ التأكّد من إمكانية المجيء. العمل غير ممكن في يوم ما؟ قول ذلك مبكراً، وليس في اليوم نفسه. الرغبة في تبديل نوبة؟ السؤال عند المشرف أولاً: كثير من الشركات عندها قاعدة لذلك. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.p': "لا أستطيع يوم السبت. هل يمكنني أن أبدّل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.s': { m: "جدول عملك تغيّر. الآن يجب أن تعمل يوم السبت، لكنك لا تستطيع. ماذا تفعل؟", f: "جدول عملك تغيّر. الآن يجب أن تعملي يوم السبت، لكنكِ لا تستطيعين. ماذا تفعلين؟", x: "جدول العمل تغيّر. الآن العمل يوم السبت، لكن هذا غير ممكن. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o1': "إخبار المشرف اليوم، وطلب التبديل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o2': "السكوت، والبقاء في البيت يوم السبت.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o3': "طلب الذهاب من زميل، وعدم إخبار أحد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.w': "عند القول مبكراً، يستطيع المشرف أن يجد شخصاً آخر. الغياب بدون كلمة يُعتبر أمراً خطيراً جداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks': { m: "اكتب ساعاتك", f: "اكتبي ساعاتك", x: "كتابة الساعات" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.b': { m: "اكتب كل يوم متى تبدأ، ومتى تتوقف، وكم تدوم استراحتك. قائمتك الخاصة تساعد عندما لا يكون أجرك صحيحاً. يجب أن تغادر مبكراً، مثلاً إلى الطبيب؟ اسأل مشرفك في الوقت المناسب. عملت أطول من المخطّط؟ اكتب ذلك أيضاً. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "اكتبي كل يوم متى تبدئين، ومتى تتوقفين، وكم تدوم استراحتك. قائمتك الخاصة تساعد عندما لا يكون أجرك صحيحاً. يجب أن تغادري مبكراً، مثلاً إلى الطبيب؟ اسألي مشرفك في الوقت المناسب. عملتِ أطول من المخطّط؟ اكتبي ذلك أيضاً. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "كتابة وقت البدء، ووقت التوقف، ومدة الاستراحة كل يوم. القائمة الشخصية تساعد عندما لا يكون الأجر صحيحاً. مغادرة مبكرة ضرورية، مثلاً إلى الطبيب؟ السؤال عند المشرف في الوقت المناسب. عمل أطول من المخطّط؟ كتابة ذلك أيضاً. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.p': "يجب أن أذهب إلى الطبيب غداً. هل يمكنني أن أغادر مبكراً؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.s': { m: "غداً يجب أن تذهب إلى الطبيب في الساعة الثالثة. نوبتك تنتهي في الساعة الخامسة. ماذا تفعل؟", f: "غداً يجب أن تذهبي إلى الطبيب في الساعة الثالثة. نوبتك تنتهي في الساعة الخامسة. ماذا تفعلين؟", x: "غداً موعد عند الطبيب في الساعة الثالثة. النوبة تنتهي في الساعة الخامسة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o1': "سؤال المشرف اليوم هل المغادرة المبكرة ممكنة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o2': "المغادرة في الساعة الثالثة، والشرح في اليوم التالي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o3': "إلغاء الطبيب، وإكمال النوبة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.w': "السؤال في الوقت المناسب يساعد المشرف على تخطيط العمل. المغادرة بدون سؤال تُعتبر عدم مسؤولية.", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (26 November 2026).
-    'c.firstweeks': "السؤال من جديد أمر عادي", // nieuw, nalezen
-    'c.firstweeks.b': { m: "في أسابيعك الأولى، لا أحد يتوقّع منك أن تعرف كل شيء. غالباً تحصل على جولة تعريفية (rondleiding) وزميل يرافقك. شاهد أولاً، ثم قم بالعمل بنفسك وزميلك يشاهد. نسيت شيئاً؟ اسأل من جديد: «Wil je het nog een keer laten zien?». هذا أفضل من التخمين. اكتب الكلمات الجديدة والخطوات في دفتر صغير. بعض العقود تبدأ بفترة تجربة (proeftijd): عندها تستطيع أنت أو صاحب العمل إنهاء العمل بسرعة. اسأل هل في عقدك فترة تجربة. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في أسابيعك الأولى، لا أحد يتوقّع منكِ أن تعرفي كل شيء. غالباً تحصلين على جولة تعريفية (rondleiding) وزميل يرافقكِ. شاهدي أولاً، ثم قومي بالعمل بنفسكِ وزميلكِ يشاهد. نسيتِ شيئاً؟ اسألي من جديد: «Wil je het nog een keer laten zien?». هذا أفضل من التخمين. اكتبي الكلمات الجديدة والخطوات في دفتر صغير. بعض العقود تبدأ بفترة تجربة (proeftijd): عندها تستطيعين أنتِ أو صاحب العمل إنهاء العمل بسرعة. اسألي هل في عقدكِ فترة تجربة. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في الأسابيع الأولى، لا أحد يتوقّع معرفة كل شيء. غالباً هناك جولة تعريفية (rondleiding) وزميل يرافق. المشاهدة أولاً، ثم القيام بالعمل بالنفس والزميل يشاهد. نسيان شيء؟ السؤال من جديد: «Wil je het nog een keer laten zien?». هذا أفضل من التخمين. كتابة الكلمات الجديدة والخطوات في دفتر صغير. بعض العقود تبدأ بفترة تجربة (proeftijd): عندها يستطيع العامل أو صاحب العمل إنهاء العمل بسرعة. السؤال هل في العقد فترة تجربة. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.firstweeks.p': "نسيته. هل يمكنك أن تريني إياه مرة أخرى؟", // nieuw, nalezen
-    'c.firstweeks.s': { m: "أمس أراك زميلك كيف تشغّل الآلة. اليوم لا تتذكّر الخطوة الثالثة. ماذا تفعل؟", f: "أمس أراكِ زميلكِ كيف تشغّلين الآلة. اليوم لا تتذكّرين الخطوة الثالثة. ماذا تفعلين؟", x: "أمس شرح زميل كيف تُشغَّل الآلة. اليوم الخطوة الثالثة غير واضحة في الذاكرة. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.firstweeks.o1': "طلب من الزميل أن يريها مرة أخرى.", // nieuw, nalezen
-    'c.firstweeks.o2': "التخمين، والتجربة.", // nieuw, nalezen
-    'c.firstweeks.o3': "الانتظار حتى يشغّلها شخص آخر.", // nieuw, nalezen
-    'c.firstweeks.w': "السؤال من جديد أمر عادي في الأسابيع الأولى. التخمين عند آلة قد يكون خطيراً، ويكلّف وقتاً أكثر.", // nieuw, nalezen
-    'c.orderpick': { m: "امشِ على ممرّ المشاة", f: "امشي على ممرّ المشاة", x: "المشي على ممرّ المشاة" }, // nieuw, nalezen
-    'c.orderpick.b': { m: "في مستودع كبير تجمع الطلبيات بقائمة الالتقاط وجهاز المسح: تمسح كل قطعة، لكي تذهب المنتجات الصحيحة إلى الزبون الصحيح. كثير من جامعي الطلبيات يقودون عربة صغيرة ترفعهم إلى الأعلى، أو رافعة reachtruck للرفوف العالية. لا تقُد واحدة إلا عندما تكون قد أخذت التدريب عليها، غالباً مع شهادة. امشِ على ممرّات المشاة، وابقَ بعيداً عن العربات التي تتحرّك: السائق لا يستطيع دائماً أن يراك. في غرفة التبريد أو غرفة التجميد، البس الملابس الدافئة والقفازات والقبّعة التي تأخذها من العمل. خذ استراحات التدفئة، وأخبر أحداً عندما تدخل. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في مستودع كبير تجمعين الطلبيات بقائمة الالتقاط وجهاز المسح: تمسحين كل قطعة، لكي تذهب المنتجات الصحيحة إلى الزبون الصحيح. كثير من جامعي الطلبيات يقودون عربة صغيرة ترفعهم إلى الأعلى، أو رافعة reachtruck للرفوف العالية. لا تقودي واحدة إلا عندما تكونين قد أخذتِ التدريب عليها، غالباً مع شهادة. امشي على ممرّات المشاة، وابقي بعيدة عن العربات التي تتحرّك: السائق لا يستطيع دائماً أن يراكِ. في غرفة التبريد أو غرفة التجميد، البسي الملابس الدافئة والقفازات والقبّعة التي تأخذينها من العمل. خذي استراحات التدفئة، وأخبري أحداً عندما تدخلين. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في مستودع كبير تُجمع الطلبيات بقائمة الالتقاط وجهاز المسح: كل قطعة تُمسح، لكي تذهب المنتجات الصحيحة إلى الزبون الصحيح. كثير من جامعي الطلبيات يقودون عربة صغيرة ترفعهم إلى الأعلى، أو رافعة reachtruck للرفوف العالية. القيادة مسموحة فقط بعد التدريب عليها، غالباً مع شهادة. المشي على ممرّات المشاة، والابتعاد عن العربات التي تتحرّك: السائق لا يستطيع دائماً أن يرى الناس. في غرفة التبريد أو غرفة التجميد، لبس الملابس الدافئة والقفازات والقبّعة التي يعطيها العمل. أخذ استراحات التدفئة، وإخبار أحد عند الدخول. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen
-    'c.orderpick.p': "سأذهب لأتدفّأ قليلاً في المقصف.", // nieuw, nalezen
-    'c.orderpick.s': { m: "يجب أن تذهب إلى الممرّ الآخر. ممرّ المشاة يلفّ حول المكان؛ المرور مباشرة بين العربات أسرع. ماذا تفعل؟", f: "يجب أن تذهبي إلى الممرّ الآخر. ممرّ المشاة يلفّ حول المكان؛ المرور مباشرة بين العربات أسرع. ماذا تفعلين؟", x: "الوجهة هي الممرّ الآخر. ممرّ المشاة يلفّ حول المكان؛ المرور مباشرة بين العربات أسرع. ما التصرف الصحيح؟" }, // nieuw, nalezen
-    'c.orderpick.o1': "أخذ ممرّ المشاة، حتى لو كان أطول.", // nieuw, nalezen
-    'c.orderpick.o2': "الركض بسرعة بين العربات.", // nieuw, nalezen
-    'c.orderpick.o3': "المشي مباشرة، والتلويح للسائقين.", // nieuw, nalezen
-    'c.orderpick.w': "سائق العربة غالباً لا يستطيع أن يرى الناس، مثلاً خلف حمولة عالية. على ممرّ المشاة، يتوقّع السائقون وجود الناس، والناس في أمان.", // nieuw, nalezen
+    'c.firstweeks': "السؤال من جديد أمر عادي", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.b': { m: "في أسابيعك الأولى، لا أحد يتوقّع منك أن تعرف كل شيء. غالباً تحصل على جولة تعريفية (rondleiding) وزميل يرافقك. شاهد أولاً، ثم قم بالعمل بنفسك وزميلك يشاهد. نسيت شيئاً؟ اسأل من جديد: «Wil je het nog een keer laten zien?». هذا أفضل من التخمين. اكتب الكلمات الجديدة والخطوات في دفتر صغير. بعض العقود تبدأ بفترة تجربة (proeftijd): عندها تستطيع أنت أو صاحب العمل إنهاء العمل بسرعة. اسأل هل في عقدك فترة تجربة. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في أسابيعك الأولى، لا أحد يتوقّع منكِ أن تعرفي كل شيء. غالباً تحصلين على جولة تعريفية (rondleiding) وزميل يرافقكِ. شاهدي أولاً، ثم قومي بالعمل بنفسكِ وزميلكِ يشاهد. نسيتِ شيئاً؟ اسألي من جديد: «Wil je het nog een keer laten zien?». هذا أفضل من التخمين. اكتبي الكلمات الجديدة والخطوات في دفتر صغير. بعض العقود تبدأ بفترة تجربة (proeftijd): عندها تستطيعين أنتِ أو صاحب العمل إنهاء العمل بسرعة. اسألي هل في عقدكِ فترة تجربة. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في الأسابيع الأولى، لا أحد يتوقّع معرفة كل شيء. غالباً هناك جولة تعريفية (rondleiding) وزميل يرافق. المشاهدة أولاً، ثم القيام بالعمل بالنفس والزميل يشاهد. نسيان شيء؟ السؤال من جديد: «Wil je het nog een keer laten zien?». هذا أفضل من التخمين. كتابة الكلمات الجديدة والخطوات في دفتر صغير. بعض العقود تبدأ بفترة تجربة (proeftijd): عندها يستطيع العامل أو صاحب العمل إنهاء العمل بسرعة. السؤال هل في العقد فترة تجربة. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.p': "نسيته. هل يمكنك أن تريني إياه مرة أخرى؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.s': { m: "أمس أراك زميلك كيف تشغّل الآلة. اليوم لا تتذكّر الخطوة الثالثة. ماذا تفعل؟", f: "أمس أراكِ زميلكِ كيف تشغّلين الآلة. اليوم لا تتذكّرين الخطوة الثالثة. ماذا تفعلين؟", x: "أمس شرح زميل كيف تُشغَّل الآلة. اليوم الخطوة الثالثة غير واضحة في الذاكرة. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.o1': "الطلب من الزميل أن يُريها مرة أخرى.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.firstweeks.o2': "التخمين، والتجربة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.o3': "الانتظار حتى يشغّلها شخص آخر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.w': "السؤال من جديد أمر عادي في الأسابيع الأولى. التخمين عند آلة قد يكون خطيراً، ويكلّف وقتاً أكثر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick': { m: "امشِ على ممرّ المشاة", f: "امشي على ممرّ المشاة", x: "المشي على ممرّ المشاة" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.b': { m: "في مستودع كبير تجمع الطلبيات بقائمة الالتقاط وجهاز المسح: تمسح كل قطعة، لكي تذهب المنتجات الصحيحة إلى الزبون الصحيح. كثير من جامعي الطلبيات يقودون عربة صغيرة ترفعهم إلى الأعلى، أو رافعة reachtruck للرفوف العالية. لا تقُد واحدة إلا عندما تكون قد أخذت التدريب عليها، غالباً مع شهادة. امشِ على ممرّات المشاة، وابقَ بعيداً عن العربات التي تتحرّك: السائق لا يستطيع دائماً أن يراك. في غرفة التبريد أو غرفة التجميد، البس الملابس الدافئة والقفازات والقبّعة التي تأخذها من العمل. خذ استراحات التدفئة، وأخبر أحداً عندما تدخل. القواعد تختلف من شركة لأخرى: اسأل مشرفك عن القواعد في مكان عملك.", f: "في مستودع كبير تجمعين الطلبيات بقائمة الالتقاط وجهاز المسح: تمسحين كل قطعة، لكي تذهب المنتجات الصحيحة إلى الزبون الصحيح. كثير من جامعي الطلبيات يقودون عربة صغيرة ترفعهم إلى الأعلى، أو رافعة reachtruck للرفوف العالية. لا تقودي واحدة إلا عندما تكونين قد أخذتِ التدريب عليها، غالباً مع شهادة. امشي على ممرّات المشاة، وابقي بعيدة عن العربات التي تتحرّك: السائق لا يستطيع دائماً أن يراكِ. في غرفة التبريد أو غرفة التجميد، البسي الملابس الدافئة والقفازات والقبّعة التي تأخذينها من العمل. خذي استراحات التدفئة، وأخبري أحداً عندما تدخلين. القواعد تختلف من شركة لأخرى: اسألي مشرفك عن القواعد في مكان عملك.", x: "في مستودع كبير تُجمع الطلبيات بقائمة الالتقاط وجهاز المسح: كل قطعة تُمسح، لكي تذهب المنتجات الصحيحة إلى الزبون الصحيح. كثير من جامعي الطلبيات يقودون عربة صغيرة ترفعهم إلى الأعلى، أو رافعة reachtruck للرفوف العالية. القيادة مسموحة فقط بعد التدريب عليها، غالباً مع شهادة. المشي على ممرّات المشاة، والابتعاد عن العربات التي تتحرّك: السائق لا يستطيع دائماً أن يرى الناس. في غرفة التبريد أو غرفة التجميد، لبس الملابس الدافئة والقفازات والقبّعة التي يعطيها العمل. أخذ استراحات التدفئة، وإخبار أحد عند الدخول. القواعد تختلف من شركة لأخرى: السؤال عن قواعد مكان العمل يكون عند المشرف." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.p': "سأذهب لأتدفّأ قليلاً في المقصف.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.s': { m: "يجب أن تذهب إلى الممرّ الآخر. ممرّ المشاة يلفّ حول المكان؛ المرور مباشرة بين العربات أسرع. ماذا تفعل؟", f: "يجب أن تذهبي إلى الممرّ الآخر. ممرّ المشاة يلفّ حول المكان؛ المرور مباشرة بين العربات أسرع. ماذا تفعلين؟", x: "الوجهة هي الممرّ الآخر. ممرّ المشاة يلفّ حول المكان؛ المرور مباشرة بين العربات أسرع. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o1': "أخذ ممرّ المشاة، حتى لو كان أطول.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o2': "الركض بسرعة بين العربات.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o3': "المشي مباشرة، والتلويح للسائقين.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.w': "سائق العربة غالباً لا يستطيع أن يرى الناس، مثلاً خلف حمولة عالية. على ممرّ المشاة، يتوقّع السائقون وجود الناس، والناس في أمان.", // nieuw, nalezen // nagelezen AI 28 nov
+    // four new lessons (27 November 2026).
+    'l.appraisal': "محادثة الأداء", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.functioneringsgesprek': "محادثة الأداء (محادثة مع المشرف عن سير العمل وعمّا يريد العامل أن يتعلّمه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beoordelingsgesprek': "محادثة التقييم (محادثة يعطي فيها المشرف حكماً على العمل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorbereiden': "يحضّر، يستعدّ (يتجهّز لشيء ما)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedgaan': "يسير جيداً", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doel': "الهدف (ما يريد الشخص أن يصل إليه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorgezien': "يوقّع «للاطّلاع» (يعني: قرأته؛ لا يعني الموافقة)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.1': "أحضّر للمحادثة جيداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.2': "أريد أن أتعلّم شيئاً جديداً.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.3': "هل يمكنني أن أقرأ التقرير أولاً؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.appraisal.q': { m: "ما الهدف الذي تريد أن تصل إليه في السنة القادمة؟", f: "ما الهدف الذي تريدين أن تصلي إليه في السنة القادمة؟", x: "ما الهدف للسنة القادمة؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'd.appraisal.a': "أريد أن أحصل على شهادة قيادة الرافعة الشوكية.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal': { m: "محادثة الأداء: حضّر لها، واقرأ التقرير", f: "محادثة الأداء: حضّري لها، واقرئي التقرير", x: "محادثة الأداء: التحضير لها، وقراءة التقرير" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.b': { m: "شركات كثيرة تجري محادثة عن عملك مرة أو مرتين في السنة. في محادثة الأداء (functioneringsgesprek) تتكلّمان معاً: ما يسير جيداً، وما يمكن أن يكون أفضل، وما تريد أن تتعلّمه. في محادثة التقييم (beoordelingsgesprek) يعطي مشرفك حكماً. قد يؤثّر ذلك على أجرك أو على عقد جديد. حضّر للمحادثة: اكتب ما يسير جيداً، وما هو صعب، وما تريد أن تتعلّمه. يمكنك أن تطلب دورة أو تدريباً. في النهاية تتّفقان على أمور (afspraken)، غالباً في تقرير قصير. اقرأه جيداً قبل أن توقّعه، واطلب نسخة منه. لست موافقاً؟ وقّع بـ«voor gezien» (للاطّلاع)، وليس بـ«voor akkoord» (موافق)، واكتب رأيك أنت. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو Juridisch Loket.", f: "شركات كثيرة تجري محادثة عن عملكِ مرة أو مرتين في السنة. في محادثة الأداء (functioneringsgesprek) تتكلّمان معاً: ما يسير جيداً، وما يمكن أن يكون أفضل، وما تريدين أن تتعلّميه. في محادثة التقييم (beoordelingsgesprek) يعطي مشرفكِ حكماً. قد يؤثّر ذلك على أجركِ أو على عقد جديد. حضّري للمحادثة: اكتبي ما يسير جيداً، وما هو صعب، وما تريدين أن تتعلّميه. يمكنكِ أن تطلبي دورة أو تدريباً. في النهاية تتّفقان على أمور (afspraken)، غالباً في تقرير قصير. اقرئيه جيداً قبل أن توقّعيه، واطلبي نسخة منه. لستِ موافقة؟ وقّعي بـ«voor gezien» (للاطّلاع)، وليس بـ«voor akkoord» (موافق)، واكتبي رأيكِ أنتِ. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو Juridisch Loket.", x: "شركات كثيرة تجري محادثة عن العمل مرة أو مرتين في السنة. في محادثة الأداء (functioneringsgesprek) يكون الكلام معاً: ما يسير جيداً، وما يمكن أن يكون أفضل، وما يريد العامل أن يتعلّمه. في محادثة التقييم (beoordelingsgesprek) يعطي المشرف حكماً. قد يؤثّر ذلك على الأجر أو على عقد جديد. التحضير للمحادثة: كتابة ما يسير جيداً، وما هو صعب، وما يُراد تعلّمه. يمكن طلب دورة أو تدريب. في النهاية يُتّفق على أمور (afspraken)، غالباً في تقرير قصير. قراءته جيداً قبل التوقيع، وطلب نسخة منه. عدم موافقة؟ التوقيع بـ«voor gezien» (للاطّلاع)، وليس بـ«voor akkoord» (موافق)، وكتابة الرأي الشخصي. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو Juridisch Loket." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.p': "أوقّع للاطّلاع، وليس للموافقة.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.s': { m: "بعد محادثة التقييم تحصل على التقرير لتوقّعه. نقطة واحدة فيه غير صحيحة، في رأيك. ماذا تفعل؟", f: "بعد محادثة التقييم تحصلين على التقرير لتوقّعيه. نقطة واحدة فيه غير صحيحة، في رأيكِ. ماذا تفعلين؟", x: "بعد محادثة التقييم يصل التقرير للتوقيع. نقطة واحدة فيه غير صحيحة، على ما يبدو. ما التصرف الصحيح؟" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o1': "التوقيع بـ«voor gezien»، وكتابة الرأي الشخصي.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o2': "التوقيع بسرعة بـ«voor akkoord»، لكي ينتهي الأمر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o3': "السكوت، وعدم التوقيع إطلاقاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.w': { m: "«Voor gezien» يعني أنك قرأته، وليس أنك موافق. عندما تقول ذلك وتكتب رأيك أنت، يعرف مشرفك ما تفكّر فيه.", f: "«Voor gezien» يعني أنكِ قرأتِه، وليس أنكِ موافقة. عندما تقولين ذلك وتكتبين رأيكِ أنتِ، يعرف مشرفكِ ما تفكّرين فيه.", x: "«Voor gezien» يعني القراءة، وليس الموافقة. عند قول ذلك وكتابة الرأي الشخصي، يعرف المشرف وجهة النظر." }, // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 

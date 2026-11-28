@@ -13,7 +13,7 @@ export const ar: Gloss = {
     'be.c.letters': "عدم تجاهل الرسائل", // nieuw, nalezen
     'be.c.letters.b': { m: 'الرسائل من FOD Financiën (الضرائب) أو البلدية (gemeente) أو RVA أو OCMW لا تُهمل. رسائل كثيرة تصل أيضاً عبر الإنترنت، في eBox. من المفيد طلب المساعدة في القراءة من شخص موثوق. التصريح الضريبي (aangifte) يكون على MyMinfin، بـitsme أو بـeID. غالباً يصل اقتراح معبّأ مسبقاً: المطلوب فحصه جيداً. FOD Financiën يساعد مجاناً. أطفال؟ Groeipakket مال للأطفال من الحكومة الفلامنكية. مشاكل مالية؟ OCMW وCAW يساعدان مجاناً. نصائح عن المال: wikifin.be. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', f: 'الرسائل من FOD Financiën (الضرائب) أو البلدية (gemeente) أو RVA أو OCMW لا تُهمل. رسائل كثيرة تصل أيضاً عبر الإنترنت، في eBox. من المفيد طلب المساعدة في القراءة من شخص موثوق. التصريح الضريبي (aangifte) يكون على MyMinfin، بـitsme أو بـeID. غالباً يصل اقتراح معبّأ مسبقاً: المطلوب فحصه جيداً. FOD Financiën يساعد مجاناً. أطفال؟ Groeipakket مال للأطفال من الحكومة الفلامنكية. مشاكل مالية؟ OCMW وCAW يساعدان مجاناً. نصائح عن المال: wikifin.be. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', x: 'الرسائل من FOD Financiën (الضرائب) أو البلدية (gemeente) أو RVA أو OCMW لا تُهمل. رسائل كثيرة تصل أيضاً عبر الإنترنت، في eBox. من المفيد طلب المساعدة في القراءة من شخص موثوق. التصريح الضريبي (aangifte) يكون على MyMinfin، بـitsme أو بـeID. غالباً يصل اقتراح معبّأ مسبقاً: المطلوب فحصه جيداً. FOD Financiën يساعد مجاناً. أطفال؟ Groeipakket مال للأطفال من الحكومة الفلامنكية. مشاكل مالية؟ OCMW وCAW يساعدان مجاناً. نصائح عن المال: wikifin.be. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).' }, // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.letters.p': "وصلتني رسالة. هل تستطيع أن تساعدني؟", // nieuw, nalezen
-    'be.c.letters.s': "وصلت رسالة من FOD Financiën، وهي غير مفهومة. ما التصرف الصحيح؟", // nieuw, nalezen
+    'be.c.letters.s': "وصلت رسالة من FOD Financiën. الرسالة غير مفهومة. ما التصرف الصحيح؟", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'be.c.letters.o1': "طلب المساعدة في القراءة من شخص موثوق.", // nieuw, nalezen
     'be.c.letters.o2': "وضعها في درج والانتظار.", // nieuw, nalezen
     'be.c.letters.o3': "رميها، لأنها على الأغلب إعلان.", // nieuw, nalezen
@@ -57,7 +57,7 @@ export const prs: Gloss = {
     'be.c.letters.p': "یک نامه گرفته‌ام. می‌توانی کمکم کنی؟", // nieuw, nalezen
     'be.c.letters.s': "از FOD Financiën نامه‌ای می‌گیرید. آن را نمی‌فهمید. چه می‌کنید؟", // nieuw, nalezen
     'be.c.letters.o1': "از کسی که به او اعتماد دارید بخواهید در خواندنش کمک کند.", // nieuw, nalezen
-    'be.c.letters.o2': "آن را در دراز بگذارید و صبر کنید.", // nieuw, nalezen
+    'be.c.letters.o2': "آن را در جعبهٔ میز بگذارید و صبر کنید.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'be.c.letters.o3': "دورش بیندازید، چون احتمالاً اعلان است.", // nieuw, nalezen
     'be.c.letters.w': "نامه‌های رسمی اکثراً تاریخی برای جواب دادن دارند. اگر به وقتش جواب بدهید، مشکل معمولاً آسان‌تر حل می‌شود. شاید حتی پول پس بگیرید.", // nieuw, nalezen
 };
@@ -68,7 +68,7 @@ export const uk: Gloss = {
     'be.c.letters.a': "Так, через MyMinfin. Я отримаю гроші назад.", // nieuw, nalezen
     'be.c.letters': "Не ігноруй листи", // nieuw, nalezen
     'be.c.letters.b': "Не ігноруй листи від FOD Financiën (податки), громади (gemeente), RVA чи OCMW. Багато листів приходить і онлайн, у твій eBox. Попроси людину, якій довіряєш, допомогти їх прочитати. Податкову декларацію (aangifte) ти подаєш у MyMinfin, через itsme або eID. Часто ти отримуєш уже заповнену пропозицію: уважно її перевір. FOD Financiën допомагає безкоштовно. Маєш дітей? Groeipakket — це гроші на дітей від уряду Фландрії. Проблеми з грошима? OCMW і CAW допомагають безкоштовно. Поради про гроші: wikifin.be. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen
-    'be.c.letters.p': "Я отримав / отримала лист. Можеш мені допомогти?", // nieuw, nalezen
+    'be.c.letters.p': "Мені прийшов лист. Можеш мені допомогти?", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'be.c.letters.s': "Ти отримуєш лист від FOD Financiën. Ти його не розумієш. Що ти зробиш?", // nieuw, nalezen
     'be.c.letters.o1': "Попросиш людину, якій довіряєш, допомогти прочитати.", // nieuw, nalezen
     'be.c.letters.o2': "Покладеш його в шухляду й чекатимеш.", // nieuw, nalezen
@@ -96,7 +96,7 @@ export const pl: Gloss = {
     'be.c.letters.a': "Tak, przez MyMinfin. Dostanę zwrot pieniędzy.", // nieuw, nalezen
     'be.c.letters': "Nie ignoruj listów", // nieuw, nalezen
     'be.c.letters.b': "Nie ignoruj listów od FOD Financiën (podatki), gminy (gemeente), RVA ani OCMW. Wiele listów przychodzi też przez internet, do twojej skrzynki eBox. Poproś kogoś, komu ufasz, o pomoc w czytaniu. Zeznanie podatkowe (aangifte) składasz w MyMinfin, przez itsme albo eID. Często dostajesz gotową, wypełnioną propozycję: sprawdź ją dokładnie. FOD Financiën pomaga za darmo. Masz dzieci? Groeipakket to pieniądze na dzieci od rządu Flandrii. Problemy z pieniędzmi? OCMW i CAW pomagają za darmo. Porady o pieniądzach: wikifin.be. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo justitiehuis (bezpłatna porada prawna).", // nieuw, nalezen
-    'be.c.letters.p': "Dostałem / dostałam list. Możesz mi pomóc?", // nieuw, nalezen
+    'be.c.letters.p': "Przyszedł do mnie list. Możesz mi pomóc?", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'be.c.letters.s': "Dostajesz list od FOD Financiën. Nie rozumiesz go. Co robisz?", // nieuw, nalezen
     'be.c.letters.o1': "Prosisz kogoś, komu ufasz, o pomoc w czytaniu.", // nieuw, nalezen
     'be.c.letters.o2': "Wkładasz go do szuflady i czekasz.", // nieuw, nalezen

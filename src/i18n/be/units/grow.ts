@@ -30,7 +30,7 @@ export const ar: Gloss = {
   'be.c.mychoice': "نقاط قوتك مهمة", // nieuw, nalezen
   'be.c.mychoice.b': { m: 'في ماذا أنت جيد؟ فكّر في العمل والمدرسة والبيت. رعاية العائلة أو عمل الطلاب (studentenjob) أو العمل التطوعي تُحتسب أيضاً. ماذا تحب، وماذا لا تحب؟ لست متأكداً أي عمل يناسبك؟ اطلب تدريب استكشاف قصيراً (snuffelstage)، أو اذهب إلى يوم الأبواب المفتوحة (opendeurdag). في المدرسة يساعدك مركز CLB على الاختيار، مجاناً. البالغون يمكنهم أن يسألوا VDAB.', f: 'في ماذا أنتِ جيدة؟ فكّري في العمل والمدرسة والبيت. رعاية العائلة أو عمل الطلاب (studentenjob) أو العمل التطوعي تُحتسب أيضاً. ماذا تحبين، وماذا لا تحبين؟ لستِ متأكدة أي عمل يناسبك؟ اطلبي تدريب استكشاف قصيراً (snuffelstage)، أو اذهبي إلى يوم الأبواب المفتوحة (opendeurdag). في المدرسة يساعدكِ مركز CLB على الاختيار، مجاناً. البالغون يمكنهم أن يسألوا VDAB.', x: 'ما نقاط القوة؟ التفكير في العمل والمدرسة والبيت يساعد. رعاية العائلة أو عمل الطلاب (studentenjob) أو العمل التطوعي تُحتسب أيضاً. ما الذي يعجب، وما الذي لا يعجب؟ لا يقين بالعمل المناسب؟ يمكن طلب تدريب استكشاف قصير (snuffelstage)، أو الذهاب إلى يوم الأبواب المفتوحة (opendeurdag). في المدرسة يساعد مركز CLB على الاختيار، مجاناً. البالغون يمكنهم أن يسألوا VDAB.' }, // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.mychoice.p': "أستطيع التعامل جيداً مع الناس. أساعد كثيراً في البيت.", // nieuw, nalezen
-  'be.c.mychoice.s': "في المدرسة السؤال: «ما نقاط قوتك؟» لم يكن هناك عمل مدفوع أبداً. ما الجواب الأفضل؟", // nieuw, nalezen
+  'be.c.mychoice.s': "في المدرسة السؤال: «ما نقاط قوتك؟». لم يكن هناك عمل مدفوع أبداً. ما الجواب الأفضل؟", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.mychoice.o1': "المهارات في البيت، مثل رعاية الآخرين.", // nieuw, nalezen
   'be.c.mychoice.o2': "أن الجواب غير معروف بعد، لعدم وجود عمل سابق.", // nieuw, nalezen
   'be.c.mychoice.o3': "القدرة على القيام بأي عمل، كل شيء حقاً.", // nieuw, nalezen
@@ -112,7 +112,7 @@ export const fa: Gloss = {
   'be.c.mychoice': "نقاط قوتت مهم‌اند", // nieuw, nalezen
   'be.c.mychoice.b': "در چه چیزی خوبی؟ به کار، مدرسه و خانه فکر کن. مراقبت از خانواده، کار دانشجویی (studentenjob) یا کار داوطلبانه هم حساب می‌شود. چه چیزی را دوست داری و چه چیزی را نه؟ مطمئن نیستی چه کاری به تو می‌خورد؟ یک کارآموزی آشنایی کوتاه (snuffelstage) بخواه، یا به روز درهای باز (opendeurdag) برو. در مدرسه، CLB رایگان در انتخاب کمکت می‌کند. بزرگسالان می‌توانند از VDAB بپرسند.", // nieuw, nalezen
   'be.c.mychoice.p': "می‌توانم با آدم‌ها خوب کنار بیایم. در خانه خیلی کمک می‌کنم.", // nieuw, nalezen
-  'be.c.mychoice.s': "در مدرسه از تو می‌پرسند: «در چه کاری خوبی؟» تا حالا کار با حقوق نداشته‌ای. چه می‌گویی؟", // nieuw, nalezen
+  'be.c.mychoice.s': "در مدرسه از تو می‌پرسند: «در چه کاری خوبی؟». تا حالا کار با حقوق نداشته‌ای. چه می‌گویی؟", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.mychoice.o1': "کارهایی که در خانه خوب انجام می‌دهی، مثل مراقبت از دیگران.", // nieuw, nalezen
   'be.c.mychoice.o2': "اینکه هنوز نمی‌دانی، چون هیچ‌وقت کار نداشته‌ای.", // nieuw, nalezen
   'be.c.mychoice.o3': "اینکه هر کاری را می‌توانی انجام بدهی، واقعاً همه‌چیز.", // nieuw, nalezen
@@ -153,7 +153,7 @@ export const prs: Gloss = {
   'be.c.mychoice': "نقاط قوت شما مهم است", // nieuw, nalezen
   'be.c.mychoice.b': "در چه چیزی خوب هستید؟ به کار، مکتب و خانه فکر کنید. مراقبت از خانواده، کار محصلی (studentenjob) یا کار داوطلبانه هم حساب می‌شود. چه چیزی را دوست دارید و چه چیزی را نه؟ مطمئن نیستید چه کاری به شما می‌خورد؟ یک کارآموزی آشنایی کوتاه (snuffelstage) بخواهید، یا به روز دروازه‌های باز (opendeurdag) بروید. در مکتب، CLB رایگان در انتخاب کمک تان می‌کند. کاهلان می‌توانند از VDAB بپرسند.", // nieuw, nalezen
   'be.c.mychoice.p': "می‌توانم با مردم خوب کنار بیایم. در خانه زیاد کمک می‌کنم.", // nieuw, nalezen
-  'be.c.mychoice.s': "در مکتب از شما می‌پرسند: «در چه کاری خوب هستید؟» تا حالا کار با معاش نداشته‌اید. چه می‌گویید؟", // nieuw, nalezen
+  'be.c.mychoice.s': "در مکتب از شما می‌پرسند: «در چه کاری خوب هستید؟». تا حالا کار با معاش نداشته‌اید. چه می‌گویید؟", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.mychoice.o1': "کارهایی که در خانه خوب انجام می‌دهید، مثل مراقبت از دیگران.", // nieuw, nalezen
   'be.c.mychoice.o2': "اینکه هنوز نمی‌دانید، چون هیچ وقت کار نداشته‌اید.", // nieuw, nalezen
   'be.c.mychoice.o3': "اینکه هر کاری را انجام داده می‌توانید، واقعاً همه چیز.", // nieuw, nalezen
@@ -196,7 +196,7 @@ export const uk: Gloss = {
   'be.c.mychoice.p': "Я вмію ладнати з людьми. Удома я багато допомагаю.", // nieuw, nalezen
   'be.c.mychoice.s': "У школі питають: «Що ти добре вмієш?» У тебе ще не було оплачуваної роботи. Що ти скажеш?", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.mychoice.o1': "Що ти добре робиш удома, наприклад доглядаєш інших.", // nieuw, nalezen
-  'be.c.mychoice.o2': "Що ще не знаєш, бо ще не мав / мала роботи.", // nieuw, nalezen
+  'be.c.mychoice.o2': "Що ще не знаєш, бо в тебе ще не було роботи.", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.mychoice.o3': "Що ти можеш робити будь-яку роботу, геть усе.", // nieuw, nalezen
   'be.c.mychoice.w': "Уміння з дому теж важливі. Догляд, планування й допомога — це вміння, потрібні роботодавцям. Скажи, що ти робиш, і наведи приклад.", // nieuw, nalezen
   'be.c.nextstep': "Диплом — і для дорослих теж", // nieuw, nalezen
@@ -276,9 +276,9 @@ export const pl: Gloss = {
   'be.c.mychoice': "Twoje mocne strony się liczą", // nieuw, nalezen
   'be.c.mychoice.b': "Co dobrze ci wychodzi? Pomyśl o pracy, szkole i domu. Opieka nad rodziną, praca studencka (studentenjob) czy wolontariat też się liczą. Co lubisz, a czego nie? Nie wiesz na pewno, jaka praca do ciebie pasuje? Poproś o krótką praktykę zapoznawczą (snuffelstage) albo idź na dzień otwarty (opendeurdag). W szkole CLB za darmo pomaga ci wybrać. Dorośli mogą zapytać w VDAB.", // nieuw, nalezen
   'be.c.mychoice.p': "Umiem dobrze dogadywać się z ludźmi. W domu dużo pomagam.", // nieuw, nalezen
-  'be.c.mychoice.s': "W szkole pytają: „W czym jesteś dobry / dobra?”. Nigdy nie miałeś / miałaś płatnej pracy. Co mówisz?", // nieuw, nalezen
+  'be.c.mychoice.s': "W szkole pytają: „Co ci dobrze wychodzi?”. Nie masz doświadczenia w płatnej pracy. Co mówisz?", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.mychoice.o1': "Co dobrze robisz w domu, na przykład opiekę nad innymi.", // nieuw, nalezen
-  'be.c.mychoice.o2': "Że jeszcze nie wiesz, bo nigdy nie miałeś / miałaś pracy.", // nieuw, nalezen
+  'be.c.mychoice.o2': "Że jeszcze nie wiesz, bo nie masz doświadczenia w pracy.", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.mychoice.o3': "Że umiesz robić każdą pracę, wszystko.", // nieuw, nalezen
   'be.c.mychoice.w': "Umiejętności z domu też się liczą. Opieka, planowanie i pomaganie to umiejętności, których potrzebują pracodawcy. Powiedz, co robisz, z przykładem.", // nieuw, nalezen
   'be.c.nextstep': "Dyplom, także dla dorosłych", // nieuw, nalezen
@@ -358,9 +358,9 @@ export const bg: Gloss = {
   'be.c.mychoice': "Силните ти страни имат значение", // nieuw, nalezen
   'be.c.mychoice.b': "В какво те бива? Помисли за работата, училището и дома. Грижата за семейството, студентската работа (studentenjob) или доброволчеството също се броят. Какво харесваш и какво не? Не знаеш със сигурност каква работа ти подхожда? Поискай кратък опознавателен стаж (snuffelstage) или иди на ден на отворените врати (opendeurdag). В училище CLB безплатно ти помага да избереш. Възрастните могат да питат VDAB.", // nieuw, nalezen
   'be.c.mychoice.p': "Разбирам се добре с хората. Вкъщи помагам много.", // nieuw, nalezen
-  'be.c.mychoice.s': "В училище питат: „В какво си добър / добра?“ Никога не си имал / имала платена работа. Какво казваш?", // nieuw, nalezen
+  'be.c.mychoice.s': "В училище питат: „В какво те бива?“ Нямаш опит в платена работа. Какво казваш?", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.mychoice.o1': "Какво правиш добре вкъщи, например грижа за другите.", // nieuw, nalezen
-  'be.c.mychoice.o2': "Че още не знаеш, защото никога не си работил / работила.", // nieuw, nalezen
+  'be.c.mychoice.o2': "Че още не знаеш, защото още нямаш трудов опит.", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.mychoice.o3': "Че можеш всякаква работа, абсолютно всичко.", // nieuw, nalezen
   'be.c.mychoice.w': "Уменията от вкъщи също се броят. Грижата, планирането и помощта са умения, които трябват на работодателите. Кажи какво правиш, с пример.", // nieuw, nalezen
   'be.c.nextstep': "Диплома, и за възрастни", // nieuw, nalezen
@@ -375,7 +375,7 @@ export const bg: Gloss = {
 
 export const es: Gloss = {
   'be.l.nextstep': "Seguir aprendiendo después de la escuela", // nieuw, nalezen
-  'be.w.waarderen': "hacer reconocer (un título)", // nieuw, nalezen
+  'be.w.waarderen': "pedir que reconozcan (un título)", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.w.bijbaan': "el trabajo de estudiante (un trabajo pequeño mientras estudias)", // nieuw, nalezen // nagelezen AI ronde 3
   'be.w.meeloopdag': "la práctica de prueba (una visita corta para ver el trabajo)", // nieuw, nalezen
   'be.w.niveau2': "la enseñanza secundaria (para jóvenes, hasta unos 18 años)", // nieuw, nalezen
@@ -408,9 +408,9 @@ export const es: Gloss = {
   'be.c.nextstep.b': "Antes de los 18, tienes que ir a la escuela (leerplicht). Desde los 15 o 16, también puedes aprender en una empresa y en la escuela: la formación dual (duaal leren). ¿Tienes más edad y todavía no tienes título? En la educación de adultos (volwassenenonderwijs), en un CVO, todavía puedes sacar tu título de secundaria. Antes lo llamaban tweedekansonderwijs. ¿Buscas trabajo? El VDAB tiene cursos para muchos oficios. Para quien busca empleo, muchos son gratis. Ve a una jornada de puertas abiertas (opendeurdag), y pide ayuda al VDAB. ¿Todavía vas a la escuela? Pregunta al CLB.", // nieuw, nalezen
   'be.c.nextstep.p': "¿Todavía puedo sacar mi título como persona adulta?", // nieuw, nalezen
   'be.c.nextstep.s': "Tienes 24 años y no tienes título de secundaria. Quieres un trabajo mejor. ¿Qué haces?", // nieuw, nalezen
-  'be.c.nextstep.o1': "Pregunta al VDAB o a un CVO cómo sacar tu título.", // nieuw, nalezen
-  'be.c.nextstep.o2': "Espera: a los 24 ya eres demasiado mayor para aprender.", // nieuw, nalezen
-  'be.c.nextstep.o3': "Coge cualquier trabajo, y deja de aprender para siempre.", // nieuw, nalezen
+  'be.c.nextstep.o1': "Preguntas al VDAB o a un CVO cómo sacar tu título.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+  'be.c.nextstep.o2': "Esperas: a los 24 ya eres demasiado mayor para aprender.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+  'be.c.nextstep.o3': "Coges cualquier trabajo, y dejas de aprender para siempre.", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.nextstep.w': "Los adultos también pueden aprender. En un CVO puedes sacar tu título. El VDAB tiene cursos para muchos oficios, y para quien busca empleo muchos son gratis.", // nieuw, nalezen
 };
 
@@ -449,9 +449,9 @@ export const pt: Gloss = {
   'be.c.nextstep.b': "Até aos 18 anos, tens de ir à escola (leerplicht). A partir dos 15 ou 16, também podes aprender numa empresa e na escola: a formação dual (duaal leren). Já passaste essa idade e ainda não tens diploma? No ensino de adultos (volwassenenonderwijs), num CVO, ainda podes tirar o teu diploma do secundário. Antes chamavam-lhe tweedekansonderwijs. Procuras trabalho? O VDAB tem cursos para muitas profissões. Para quem procura emprego, muitos são grátis. Vai a um dia aberto (opendeurdag), e pede ajuda ao VDAB. Ainda andas na escola? Pergunta ao CLB.", // nieuw, nalezen
   'be.c.nextstep.p': "Ainda posso tirar o meu diploma em adulto?", // nieuw, nalezen
   'be.c.nextstep.s': "Tens 24 anos e não tens o diploma do secundário. Queres um trabalho melhor. O que fazes?", // nieuw, nalezen
-  'be.c.nextstep.o1': "Pergunta ao VDAB ou a um CVO como tirar o teu diploma.", // nieuw, nalezen
-  'be.c.nextstep.o2': "Espera: aos 24 já é tarde demais para aprender.", // nieuw, nalezen
-  'be.c.nextstep.o3': "Aceita qualquer trabalho, e deixa de aprender de vez.", // nieuw, nalezen
+  'be.c.nextstep.o1': "Perguntas ao VDAB ou a um CVO como tirar o teu diploma.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+  'be.c.nextstep.o2': "Esperas: aos 24 já é tarde demais para aprender.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+  'be.c.nextstep.o3': "Aceitas qualquer trabalho, e deixas de aprender de vez.", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.nextstep.w': "Os adultos também podem aprender. Num CVO podes tirar o teu diploma. O VDAB tem cursos para muitas profissões, e para quem procura emprego muitos são grátis.", // nieuw, nalezen
 };
 
@@ -487,7 +487,7 @@ export const fr: Gloss = {
   'be.c.mychoice.o3': "Que tu peux faire n’importe quel travail, vraiment tout.", // nieuw, nalezen
   'be.c.mychoice.w': "Ce que tu sais faire à la maison compte aussi. S’occuper des autres, organiser et aider, ce sont des compétences dont les employeurs ont besoin. Dis ce que tu as fait, avec un exemple.", // nieuw, nalezen
   'be.c.nextstep': "Un diplôme, même adulte", // nieuw, nalezen
-  'be.c.nextstep.b': "Avant 18 ans, tu dois aller à l’école (leerplicht). Dès 15 ou 16 ans, tu peux aussi apprendre en entreprise et à l’école : la formation en alternance (duaal leren). Plus de 18 ans, et pas encore de diplôme ? Dans l’enseignement pour adultes (volwassenenonderwijs), dans un CVO, tu peux encore obtenir ton diplôme du secondaire. Avant, on appelait cela tweedekansonderwijs. Tu cherches du travail ? Le VDAB a des formations pour beaucoup de métiers. Pour les demandeurs d’emploi, beaucoup sont gratuites. Va à une journée portes ouvertes (opendeurdag), et demande de l’aide au VDAB. Encore à l’école ? Demande au CLB.", // nieuw, nalezen
+  'be.c.nextstep.b': "Avant 18 ans, tu dois aller à l’école (leerplicht). Dès 15 ou 16 ans, tu peux aussi apprendre en entreprise et à l’école : la formation en alternance (duaal leren). Adulte, et pas encore de diplôme ? Dans l’enseignement pour adultes (volwassenenonderwijs), dans un CVO, tu peux encore obtenir ton diplôme du secondaire. Avant, on appelait cela tweedekansonderwijs. Tu cherches du travail ? Le VDAB a des formations pour beaucoup de métiers. Pour les demandeurs d’emploi, beaucoup sont gratuites. Va à une journée portes ouvertes (opendeurdag), et demande de l’aide au VDAB. Encore à l’école ? Demande au CLB.", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.nextstep.p': "Est-ce que je peux encore obtenir mon diplôme à l’âge adulte ?", // nieuw, nalezen
   'be.c.nextstep.s': "Tu as 24 ans et pas de diplôme du secondaire. Tu veux un meilleur travail. Que fais-tu ?", // nieuw, nalezen
   'be.c.nextstep.o1': "Demande au VDAB ou à un CVO comment obtenir ton diplôme.", // nieuw, nalezen

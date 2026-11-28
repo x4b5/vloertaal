@@ -24,7 +24,7 @@ export const ar: Gloss = {
     'be.c.extra': "أجر العطلة وعلاوة نهاية السنة", // nieuw, nalezen
     'be.c.extra.b': { m: 'هناك أجر عطلة (vakantiegeld). يتوقف على العمل في السنة السابقة. موظف (bediende، غالباً عمل مكتبي أو في متجر)؟ صاحب العمل يدفعه: الأجر العادي أثناء العطلة، ومرة في السنة مال إضافي (dubbel vakantiegeld). عامل (arbeider، غالباً عمل يدوي)؟ صندوق العطل (vakantiekas أو RJV) يدفعه، ابتداءً من مايو. قطاعات كثيرة تعطي أيضاً علاوة نهاية السنة (eindejaarspremie). لا يجوز أبداً أن يكون الأجر أقل من الحد الأدنى للـparitair comité (barema). الساعات الإضافية تعطي 50% إضافية على الأقل، وغالباً وقت راحة لاحقاً. معلومات عامة. لوضعك أنت: اسأل صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', f: 'هناك أجر عطلة (vakantiegeld). يتوقف على العمل في السنة السابقة. موظفة (bediende، غالباً عمل مكتبي أو في متجر)؟ صاحب العمل يدفعه: الأجر العادي أثناء العطلة، ومرة في السنة مال إضافي (dubbel vakantiegeld). عاملة (arbeider، غالباً عمل يدوي)؟ صندوق العطل (vakantiekas أو RJV) يدفعه، ابتداءً من مايو. قطاعات كثيرة تعطي أيضاً علاوة نهاية السنة (eindejaarspremie). لا يجوز أبداً أن يكون الأجر أقل من الحد الأدنى للـparitair comité (barema). الساعات الإضافية تعطي 50% إضافية على الأقل، وغالباً وقت راحة لاحقاً. معلومات عامة. لوضعك أنت: اسألي صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).', x: 'هناك أجر عطلة (vakantiegeld). يتوقف على العمل في السنة السابقة. العمل بصفة bediende (غالباً عمل مكتبي أو في متجر)؟ صاحب العمل يدفعه: الأجر العادي أثناء العطلة، ومرة في السنة مال إضافي (dubbel vakantiegeld). العمل بصفة arbeider (غالباً عمل يدوي)؟ صندوق العطل (vakantiekas أو RJV) يدفعه، ابتداءً من مايو. قطاعات كثيرة تعطي أيضاً علاوة نهاية السنة (eindejaarspremie). لا يجوز أبداً أن يكون الأجر أقل من الحد الأدنى للـparitair comité (barema). الساعات الإضافية تعطي 50% إضافية على الأقل، وغالباً وقت راحة لاحقاً. معلومات عامة. للوضع الشخصي: يمكن سؤال صاحب العمل أو النقابة أو justitiehuis (استشارة قانونية مجانية).' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
     'be.c.extra.p': "متى أحصل على أجر العطلة؟", // nieuw, nalezen
-    'be.c.extra.s': "العمل في مصنع بصفة arbeider. زميل يقول: «في مايو يأتي مال إضافي، لكن ليس من المدير.» ما هو؟", // nieuw, nalezen
+    'be.c.extra.s': "العمل في مصنع بصفة arbeider. زميل يقول: «في مايو يأتي مال إضافي، لكن ليس من المدير». ما هو؟", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'be.c.extra.o1': "أجر العطلة، من صندوق العطل (vakantiekas).", // nieuw, nalezen
     'be.c.extra.o2': "هدية من النقابة، لأعضائها.", // nieuw, nalezen
     'be.c.extra.o3': "شهر ثالث عشر من المدير، للجميع.", // nieuw, nalezen
@@ -49,7 +49,7 @@ export const ti: Gloss = {
     'be.c.extra': "ገንዘብ ዕረፍቲን ናይ መወዳእታ ዓመት ተወሳኺ ክፍሊትን", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'be.c.extra.b': "ገንዘብ ዕረፍቲ (vakantiegeld) ትረኽቡ። ኣብ ዝሓለፈ ዓመት ዝሰራሕኩምዎ ይምርኮስ። bediende (ብዙሕ ግዜ ስራሕ ቤት ጽሕፈት ወይ ድኳን) ዲኹም? ኣስራሒኹም ይኸፍሎ፡ ኣብ ግዜ ዕረፍቲ ንቡር ደሞዝ፡ ኣብ ዓመት ሓንሳእ ድማ ተወሳኺ ገንዘብ (dubbel vakantiegeld)። arbeider (ብዙሕ ግዜ ስራሕ ኢድ) ዲኹም? ፈንድ ዕረፍቲ (vakantiekas ወይ RJV) ይኸፍሎ፡ ካብ ግንቦት። ብዙሓት ዘርፍታት ናይ መወዳእታ ዓመት ተወሳኺ ክፍሊት (eindejaarspremie) እውን ይህቡ። ደሞዝኩም ካብ ዝተሓተ መጠን paritair comité (barema) ፈጺሙ ክትሕት የብሉን። ተወሳኺ ሰዓታት እንተ ወሓደ 50% ተወሳኺ ይህብ፡ ብዙሕ ግዜ ድማ ደሓር ዕረፍቲ። ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትኩም፡ ንኣስራሒኹም፡ ንማሕበር ሰራሕተኛታት ወይ ንjustitiehuis (ናጻ ሕጋዊ ምኽሪ) ሕተቱ።", // nieuw, nalezen (AI-correctie 2 nov 2026)
     'be.c.extra.p': "ገንዘብ ዕረፍተይ መዓስ እረክብ?", // nieuw, nalezen
-    'be.c.extra.s': "ኣብ ፋብሪካ ከም arbeider ትሰርሑ። መሳርሕቲ ይብል፡ «ኣብ ግንቦት ተወሳኺ ገንዘብ ትረኽቡ፡ ካብ ሓለቓ ግን ኣይኮነን።» እዚ እንታይ እዩ?", // nieuw, nalezen
+    'be.c.extra.s': "ኣብ ፋብሪካ ከም arbeider ትሰርሑ። መሳርሕቲ ይብል፡ «ኣብ ግንቦት ተወሳኺ ገንዘብ ትረኽቡ፡ ካብ ሓለቓ ግን ኣይኮነን»። እዚ እንታይ እዩ?", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'be.c.extra.o1': "ገንዘብ ዕረፍቲ፡ ካብ ፈንድ ዕረፍቲ (vakantiekas)።", // nieuw, nalezen
     'be.c.extra.o2': "ካብ ማሕበር ሰራሕተኛታት ንኣባላቱ ዝወሃብ ህያብ።", // nieuw, nalezen
     'be.c.extra.o3': "ካብ ሓለቓ 13ይ ወርሒ፡ ንኹሉ ሰብ።", // nieuw, nalezen
@@ -72,9 +72,9 @@ export const fa: Gloss = {
     'be.c.payslip.o3': "یک ماه صبر کن: در loonbrief بعدی درست می‌شود.", // nieuw, nalezen
     'be.c.payslip.w': "اشتباه در فیش حقوقی پیش می‌آید. پرسیدن دربارهٔ آن عادی و حق توست. یادداشت تاریخ‌ها و ساعت‌ها خیلی کمک می‌کند. هنوز درست نیست؟ اتحادیهٔ کارگری می‌تواند کمک کند.", // nieuw, nalezen
     'be.c.extra': "پول تعطیلات و پاداش آخر سال", // nieuw, nalezen
-    'be.c.extra.b': "تو پول تعطیلات (vakantiegeld) می‌گیری. مقدارش به کار سال قبل بستگی دارد. bediende هستی (اغلب کار اداری یا در فروشگاه)؟ کارفرما آن را می‌پردازد: حقوق معمول در تعطیلات، و سالی یک بار پول اضافه (dubbel vakantiegeld). arbeider هستی (اغلب کار با دست)؟ صندوق تعطیلات (vakantiekas یا RJV) آن را می‌پردازد، از ماه مه. خیلی از رشته‌ها پاداش آخر سال (eindejaarspremie) هم می‌دهند. حقوق تو هرگز نباید کمتر از حداقل paritair comité (barema) باشد. اضافه‌کاری دست‌کم 50% بیشتر می‌دهد، و اغلب بعداً مرخصی. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشاورهٔ حقوقی رایگان) بپرس.", // nieuw, nalezen
+    'be.c.extra.b': "تو پول تعطیلات (vakantiegeld) می‌گیری. مقدارش به کار سال قبل بستگی دارد. آیا bediende هستی (اغلب کار اداری یا در فروشگاه)؟ کارفرما آن را می‌پردازد: حقوق معمول در تعطیلات، و سالی یک بار پول اضافه (dubbel vakantiegeld). آیا arbeider هستی (اغلب کار با دست)؟ صندوق تعطیلات (vakantiekas یا RJV) آن را می‌پردازد، از ماه مه. خیلی از رشته‌ها پاداش آخر سال (eindejaarspremie) هم می‌دهند. حقوق تو هرگز نباید کمتر از حداقل paritair comité (barema) باشد. اضافه‌کاری دست‌کم 50% بیشتر می‌دهد، و اغلب بعداً مرخصی. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشاورهٔ حقوقی رایگان) بپرس.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'be.c.extra.p': "پول تعطیلاتم را کی می‌گیرم؟", // nieuw, nalezen
-    'be.c.extra.s': "تو در یک کارخانه arbeider هستی. همکاری می‌گوید: «در ماه مه پول اضافه می‌گیری، ولی نه از رئیس.» این چیست؟", // nieuw, nalezen
+    'be.c.extra.s': "تو در یک کارخانه arbeider هستی. همکاری می‌گوید: «در ماه مه پول اضافه می‌گیری، ولی نه از رئیس». این چیست؟", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'be.c.extra.o1': "پول تعطیلات، از صندوق تعطیلات (vakantiekas).", // nieuw, nalezen
     'be.c.extra.o2': "هدیه‌ای از اتحادیه، برای اعضایش.", // nieuw, nalezen
     'be.c.extra.o3': "حقوق ماه سیزدهم از رئیس، برای همه.", // nieuw, nalezen
@@ -97,12 +97,12 @@ export const prs: Gloss = {
     'be.c.payslip.o3': "یک ماه صبر کنید: در loonbrief بعدی درست می‌شود.", // nieuw, nalezen
     'be.c.payslip.w': "اشتباه در ورق معاش پیش می‌آید. پرسیدن دربارهٔ آن عادی و حق شماست. یادداشت تاریخ‌ها و ساعت‌ها بسیار کمک می‌کند. هنوز درست نیست؟ اتحادیهٔ کارگری کمک کرده می‌تواند.", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.extra': "پول رخصتی و پاداش آخر سال", // nieuw, nalezen
-    'be.c.extra.b': "شما پول رخصتی (vakantiegeld) می‌گیرید. مقدار آن به کار سال گذشته بستگی دارد. bediende هستید (اکثراً کار دفتری یا در دکان)؟ کارفرما آن را می‌پردازد: معاش معمول در رخصتی، و سالی یک بار پول اضافی (dubbel vakantiegeld). arbeider هستید (اکثراً کار با دست)؟ صندوق رخصتی (vakantiekas یا RJV) آن را می‌پردازد، از ماه می. بسیاری از رشته‌ها پاداش آخر سال (eindejaarspremie) هم می‌دهند. معاش شما هرگز نباید کمتر از حداقل paritair comité (barema) باشد. اضافه‌کاری دست‌کم 50% بیشتر می‌دهد، و اکثراً بعداً رخصتی. معلومات عمومی. برای وضعیت خود تان: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشورهٔ حقوقی رایگان) بپرسید.", // nieuw, nalezen
+    'be.c.extra.b': "شما پول رخصتی (vakantiegeld) می‌گیرید. مقدار آن به کار سال گذشته بستگی دارد. آیا bediende هستید (اکثراً کار دفتری یا در دکان)؟ کارفرما آن را می‌پردازد: معاش معمول در رخصتی، و سالی یک بار پول اضافی (dubbel vakantiegeld). آیا arbeider هستید (اکثراً کار با دست)؟ صندوق رخصتی (vakantiekas یا RJV) آن را می‌پردازد، از ماه می. بسیاری از رشته‌ها پاداش آخر سال (eindejaarspremie) هم می‌دهند. معاش شما هرگز نباید کمتر از حداقل paritair comité (barema) باشد. اضافه‌کاری دست‌کم 50% بیشتر می‌دهد، و اکثراً بعداً رخصتی. معلومات عمومی. برای وضعیت خود تان: از کارفرما، اتحادیهٔ کارگری یا justitiehuis (مشورهٔ حقوقی رایگان) بپرسید.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'be.c.extra.p': "پول رخصتی خود را چه وقت می‌گیرم؟", // nieuw, nalezen
-    'be.c.extra.s': "شما در یک فابریکه arbeider هستید. یک همکار می‌گوید: «در ماه می پول اضافی می‌گیرید، ولی نه از آمر.» این چیست؟", // nieuw, nalezen // nagelezen AI ronde 3
+    'be.c.extra.s': "شما در یک فابریکه arbeider هستید. یک همکار می‌گوید: «در ماه می پول اضافی می‌گیرید، ولی نه از آمر». این چیست؟", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'be.c.extra.o1': "پول رخصتی، از صندوق رخصتی (vakantiekas).", // nieuw, nalezen
     'be.c.extra.o2': "تحفه‌ای از اتحادیه، برای اعضای آن.", // nieuw, nalezen
-    'be.c.extra.o3': "معاش ماه سیزدهم از آمر، برای همه.", // nieuw, nalezen
+    'be.c.extra.o3': "معاش ماه ۱۳ام از آمر، برای همه.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'be.c.extra.w': "برای arbeider، صندوق رخصتی پول رخصتی را می‌پردازد، نه آمر. این حق شماست، نه تحفه: با کار تان جمع می‌شود. پاداش آخر سال به رشتهٔ کاری شما بستگی دارد.", // nieuw, nalezen
 };
 
@@ -114,9 +114,9 @@ export const uk: Gloss = {
     'be.w.minimumloon': "шкала мінімальної оплати (твоєї галузі)", // nieuw, nalezen
     'be.s.extra.1': "Чи отримую я премію за нічну роботу?", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.payslip': "Перевіряй свій loonbrief", // nieuw, nalezen
-    'be.c.payslip.b': "Brutoloon — це твоя зарплата до будь-яких відрахувань. Nettoloon — це те, що приходить на твій банківський рахунок. Між ними відраховують дві речі: RSZ (соціальне страхування, 13,07% від зарплати брутто) і bedrijfsvoorheffing (аванс податку). Роботодавець мусить давати тобі розрахунковий лист (loonbrief). Там часто є номер твого paritair comité: домовленості твоєї галузі, також про мінімальну оплату. Отримуєш талони на харчування (maaltijdcheques)? Невелику частину ти платиш сам / сама. Перевіряй години й оплату в кожному loonbrief і записуй свої робочі години. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen // nagelezen AI ronde 3
-    'be.c.payslip.p': "Я працював / працювала більше годин. Можете перевірити?", // nieuw, nalezen
-    'be.c.payslip.s': "У твоєму loonbrief менше годин, ніж ти працював / працювала. Що ти зробиш?", // nieuw, nalezen
+    'be.c.payslip.b': "Brutoloon — це твоя зарплата до будь-яких відрахувань. Nettoloon — це те, що приходить на твій банківський рахунок. Між ними відраховують дві речі: RSZ (соціальне страхування, 13,07% від зарплати брутто) і bedrijfsvoorheffing (аванс податку). Роботодавець мусить давати тобі розрахунковий лист (loonbrief). Там часто є номер твого paritair comité: домовленості твоєї галузі, також про мінімальну оплату. Отримуєш талони на харчування (maaltijdcheques)? Невелику частину ти оплачуєш із власної кишені. Перевіряй години й оплату в кожному loonbrief і записуй свої робочі години. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або justitiehuis (безкоштовна юридична порада).", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'be.c.payslip.p': "У мене було більше робочих годин. Можете перевірити?", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'be.c.payslip.s': "У твоєму loonbrief менше годин, ніж у тебе було насправді. Що ти зробиш?", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'be.c.payslip.o1': "Покажеш свої записи й попросиш роботодавця перевірити.", // nieuw, nalezen
     'be.c.payslip.o2': "Нічого не скажеш, бо не хочеш проблем.", // nieuw, nalezen
     'be.c.payslip.o3': "Почекаєш місяць: у наступному loonbrief усе буде правильно.", // nieuw, nalezen
@@ -127,7 +127,7 @@ export const uk: Gloss = {
     'be.c.extra.s': "Ти arbeider на фабриці. Колега каже: «У травні ти отримаєш додаткові гроші, але не від шефа.» Що це?", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.extra.o1': "Відпускні, від відпускної каси (vakantiekas).", // nieuw, nalezen
     'be.c.extra.o2': "Подарунок від профспілки, для її членів.", // nieuw, nalezen
-    'be.c.extra.o3': "Тринадцята зарплата від шефа, для всіх.", // nieuw, nalezen
+    'be.c.extra.o3': "13-та зарплата від шефа, для всіх.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'be.c.extra.w': "Для arbeider відпускні платить відпускна каса, а не шеф. Це твоє право, не подарунок: ти накопичуєш їх своєю роботою. Премія наприкінці року залежить від твоєї галузі.", // nieuw, nalezen
 };
 
@@ -164,8 +164,8 @@ export const pl: Gloss = {
     'be.w.minimumloon': "tabela płac minimalnych (twojej branży)", // nieuw, nalezen
     'be.s.extra.1': "Czy dostaję premię za pracę w nocy?", // nieuw, nalezen
     'be.c.payslip': "Sprawdzaj swój loonbrief", // nieuw, nalezen
-    'be.c.payslip.b': "Brutoloon to twoja płaca przed wszystkimi potrąceniami. Nettoloon to to, co trafia na twoje konto. Różnica to dwa potrącenia: RSZ (ubezpieczenie społeczne, 13,07% płacy brutto) i bedrijfsvoorheffing (zaliczka na podatek). Pracodawca musi dawać ci pasek wypłaty (loonbrief). Często jest na nim numer twojego paritair comité: umowy twojej branży, także o płacy minimalnej. Dostajesz bony na posiłki (maaltijdcheques)? Małą część płacisz za nie sam / sama. Sprawdzaj godziny i płacę na każdym loonbrief i zapisuj godziny pracy. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo justitiehuis (bezpłatna porada prawna).", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'be.c.payslip.p': "Przepracowałem / przepracowałam więcej godzin. Może pan / pani to sprawdzić?", // nieuw, nalezen
+    'be.c.payslip.b': "Brutoloon to twoja płaca przed wszystkimi potrąceniami. Nettoloon to to, co trafia na twoje konto. Różnica to dwa potrącenia: RSZ (ubezpieczenie społeczne, 13,07% płacy brutto) i bedrijfsvoorheffing (zaliczka na podatek). Pracodawca musi dawać ci pasek wypłaty (loonbrief). Często jest na nim numer twojego paritair comité: umowy twojej branży, także o płacy minimalnej. Dostajesz bony na posiłki (maaltijdcheques)? Małą część płacisz za nie z własnej kieszeni. Sprawdzaj godziny i płacę na każdym loonbrief i zapisuj godziny pracy. To ogólne informacje. W twojej sytuacji zapytaj pracodawcę, związek zawodowy albo justitiehuis (bezpłatna porada prawna).", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'be.c.payslip.p': "Mam więcej przepracowanych godzin. Może pan / pani to sprawdzić?", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'be.c.payslip.s': "Na twoim loonbrief jest mniej godzin, niż przepracowano. Co robisz?", // nieuw, nalezen
     'be.c.payslip.o1': "Pokazujesz swoje notatki i prosisz pracodawcę o sprawdzenie.", // nieuw, nalezen
     'be.c.payslip.o2': "Nic nie mówisz, bo nie chcesz problemów.", // nieuw, nalezen
@@ -216,7 +216,7 @@ export const bg: Gloss = {
     'be.c.payslip': "Проверявай своя loonbrief", // nieuw, nalezen
     'be.c.payslip.b': "Brutoloon е заплатата ти преди всякакви удръжки. Nettoloon е това, което идва по банковата ти сметка. Между тях се удържат две неща: RSZ (социалното осигуряване, 13,07% от брутната заплата) и bedrijfsvoorheffing (аванс за данъка). Работодателят трябва да ти дава фиш за заплата (loonbrief). На него често има номера на твоя paritair comité: споразуменията на твоя сектор, също за минималната заплата. Получаваш ли ваучери за храна (maaltijdcheques)? Малка част от тях плащаш ти. Проверявай часовете и заплатата на всеки loonbrief и записвай часовете си. Това е обща информация. За твоя случай питай работодателя, синдиката или justitiehuis (безплатен правен съвет).", // nieuw, nalezen // nagelezen AI ronde 3
     'be.c.payslip.p': "Работих повече часове. Можете ли да проверите?", // nieuw, nalezen
-    'be.c.payslip.s': "На твоя loonbrief има по-малко часове, отколкото си работил / работила. Какво правиш?", // nieuw, nalezen
+    'be.c.payslip.s': "На твоя loonbrief има по-малко часове от отработените. Какво правиш?", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'be.c.payslip.o1': "Показваш бележките си и молиш работодателя да провери.", // nieuw, nalezen
     'be.c.payslip.o2': "Не казваш нищо, защото не искаш проблеми.", // nieuw, nalezen
     'be.c.payslip.o3': "Чакаш месец: на следващия loonbrief ще е вярно.", // nieuw, nalezen
@@ -249,7 +249,7 @@ export const es: Gloss = {
     'be.c.extra': "La paga de vacaciones y la prima de fin de año", // nieuw, nalezen
     'be.c.extra.b': "Recibes paga de vacaciones (vakantiegeld). Depende del trabajo del año anterior. ¿Eres bediende (muchas veces trabajo de oficina o de tienda)? Entonces paga tu empresa: tu sueldo normal durante las vacaciones, y una vez al año dinero extra (dubbel vakantiegeld). ¿Eres arbeider (muchas veces trabajo manual)? Entonces paga una caja de vacaciones (vakantiekas o RJV), desde mayo. Muchos sectores dan también una prima de fin de año (eindejaarspremie). Tu sueldo nunca puede ser más bajo que el mínimo de tu paritair comité (barema). Las horas extra dan al menos un 50% más, y muchas veces tiempo libre después. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al justitiehuis (consejo legal gratis).", // nieuw, nalezen
     'be.c.extra.p': "¿Cuándo recibo mi paga de vacaciones?", // nieuw, nalezen
-    'be.c.extra.s': "Trabajas como arbeider en una fábrica. Un compañero dice: “En mayo te llega dinero extra, pero no del jefe.” ¿Qué es?", // nieuw, nalezen
+    'be.c.extra.s': "Trabajas como arbeider en una fábrica. Un compañero dice: “En mayo te llega dinero extra, pero no del jefe”. ¿Qué es?", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'be.c.extra.o1': "La paga de vacaciones, de la caja de vacaciones (vakantiekas).", // nieuw, nalezen
     'be.c.extra.o2': "Un regalo del sindicato, para sus miembros.", // nieuw, nalezen
     'be.c.extra.o3': "Una paga extra del jefe, para todos.", // nieuw, nalezen

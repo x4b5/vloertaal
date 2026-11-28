@@ -6,13 +6,13 @@ const t: CultureTranslation = {
     sayAloud: "Мікрофон не потрібен. Скажи це вголос, потім продовжуй.",
     micRetry: "Спробуй мікрофон ще раз",
     micFailed: "Мікрофон не спрацював. Скажи це вголос, потім продовжуй.",
-    micRefused: "Застосунок не має доступу до мікрофона. Ти можеш його увімкнути.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    micTurnOn: "Увімкни мікрофон", // nieuw, nalezen
-    micStepsIos: "Торкнися «•••» або «aA» в адресному рядку › Параметри вебсайту › Мікрофон › Дозволити. Або: Параметри › Програми › Safari › Мікрофон. Потім торкнися кнопки нижче.", // nieuw, nalezen
-    micStepsIosOther: "Торкнися значка ліворуч від вебадреси › Дозволи › Мікрофон › Дозволити. Або: Параметри › Програми › {app} › Мікрофон. Потім торкнися кнопки нижче.", // nieuw, nalezen
-    micStepsAndroid: "Торкнися значка ліворуч від вебадреси › Дозволи › Мікрофон › Дозволити. Потім торкнися кнопки нижче.", // nieuw, nalezen
-    micStepsAndroidApp: "Утримуй значок Vloertaal на головному екрані › Про додаток › Дозволи › Мікрофон › Дозволити. Потім торкнися кнопки нижче.", // nieuw, nalezen
-    micStepsDesktop: "Клацни значок ліворуч від вебадреси › Мікрофон › Дозволити. Потім клацни кнопку нижче.", // nieuw, nalezen
+    micRefused: "Застосунок не має доступу до мікрофона. Ти можеш його увімкнути.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    micTurnOn: "Увімкни мікрофон", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsIos: "Торкнися «•••» або «aA» в адресному рядку › Параметри вебсайту › Мікрофон › Дозволити. Або: Параметри › Програми › Safari › Мікрофон. Потім торкнися кнопки нижче.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsIosOther: "Торкнися значка ліворуч від вебадреси › Дозволи › Мікрофон › Дозволити. Або: Параметри › Програми › {app} › Мікрофон. Потім торкнися кнопки нижче.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsAndroid: "Торкнися значка ліворуч від вебадреси › Дозволи › Мікрофон › Дозволити. Потім торкнися кнопки нижче.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsAndroidApp: "Утримуй значок Vloertaal на головному екрані › Про додаток › Дозволи › Мікрофон › Дозволити. Потім торкнися кнопки нижче.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsDesktop: "Клацни значок ліворуч від вебадреси › Мікрофон › Дозволити. Потім клацни кнопку нижче.", // nieuw, nalezen // nagelezen AI 28 nov
     whichPicture: "Яка це картинка?",
     sayAloudInstead: "Натомість скажи вголос",
     wordsPractised: "Повторені слова",
@@ -21,7 +21,7 @@ const t: CultureTranslation = {
   gloss: {
     'c.hello.a.why': "На прощання відповідають прощанням.",
     'c.people.a.why': "Питають імʼя. Ця відповідь його називає.",
-    'c.arrive.a.why': "Питають, навіщо людина прийшла. Ця відповідь каже: новий працівник, починає сьогодні.",
+    'c.arrive.a.why': "Питають, навіщо людина прийшла; ця відповідь каже: новий працівник, починає сьогодні.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.understand.a.why': "Щось незрозуміло? Попросити повторити — це нормально.",
     'c.translate.a.why': "Записка ще незрозуміла, тому спершу її перекладають.",
     'c.understood.a.why': "Повторення завдання перевіряє, чи зрозумілий порядок дій.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
@@ -86,11 +86,11 @@ const t: CultureTranslation = {
     'c.service.a.why': "Попросили рахунок: коротке «так» — і вже йдуть.",
     'c.cleaning.a.why': "Готово? Ця відповідь каже «майже» і скільки лишилося.",
     'c.cleansafe.a.why': "Мокра підлога слизька: попередження допомагає.",
-    'c.shelves.a.why': "Питають «де». Ця відповідь називає прохід і пропонує допомогу.",
+    'c.shelves.a.why': "Питають «де»: ця відповідь називає прохід і пропонує допомогу.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.checkout.a.why': "Питають, чи можна платити карткою: коротке привітне «так».",
     'c.counting.a.why': "Питають, скільки: ця відповідь називає число і перевіряє його цифра за цифрою.", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.hours.a.why': "Питають про час. Ця відповідь називає час.",
-    'c.measures.a.why': "Питають про довжину. Ця відповідь називає довжину.",
+    'c.hours.a.why': "Питають про час: ця відповідь називає час.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.measures.a.why': "Питають про довжину: ця відповідь називає довжину.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.aihelp.a.why': "Питають, хто це написав: чесне «так», яке називає помічника.",
     'c.aiprivate.a.why': "Просять вставити імена в чат-бот: ця відповідь каже «ні» і пояснює чому.",
     'c.aifake.a.why': "Новий номер просить грошей: ця відповідь спершу перевіряє.",
@@ -210,122 +210,127 @@ const t: CultureTranslation = {
     'c.brakes.a.why': "Питають, чи треба новий: так, і чому.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "Питають, що треба зробити: подивитися в наряд.", // nieuw, nalezen // nagelezen AI 22 nov
     // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
-    'c.mowing.a.why': "Питають, чи можна взяти: так, і що зробити спершу.", // nieuw, nalezen
-    'c.pruning.a.why': "Питають, які гілки: лише сухі.", // nieuw, nalezen
-    'c.hedge.a.why': "Питають, якої висоти: до мотузки, не нижче.", // nieuw, nalezen
-    'c.chainsaw.a.why': "Питають, чи можна: ще ні, і що спершу.", // nieuw, nalezen
-    'c.weeding.a.why': "Питають, чи це бур’ян: ні, і що з ним робити.", // nieuw, nalezen
-    'c.planting.a.why': "Питають, куди: місце на клумбі.", // nieuw, nalezen
-    'c.roadside.a.why': "Питають, чи можна перейти: ні, зачекати, і чому.", // nieuw, nalezen
-    'c.litter.a.why': "Мешканець питає, коли: ти не знаєш, і хто знає.", // nieuw, nalezen
-    'c.reception.a.why': "У відвідувача зустріч: хвилинку, ти дзвониш.", // nieuw, nalezen
-    'c.visitors.a.why': "Питають, куди пальто: місце, і де воно.", // nieuw, nalezen
-    'c.mailroom.a.why': "Питають, для кого: відділ і поверх.", // nieuw, nalezen
-    'c.meetingroom.a.why': "Питають, о котрій: година, і що треба зробити.", // nieuw, nalezen
-    'c.faults.a.why': "Питають, чому холодно: що зламалося, і коли прийде допомога.", // nieuw, nalezen
-    'c.repairs.a.why': "Питають, чи пищить: так, і чому.", // nieuw, nalezen
-    'c.moving.a.why': "Питають, куди: кімната, і куди дивитися.", // nieuw, nalezen
-    'c.closing.a.why': "Питають, чи хтось усередині: ні, і що ти робиш зараз.", // nieuw, nalezen
-    'c.patrol.a.why': "Питають, чи щось було видно: так, що і де.", // nieuw, nalezen
-    'c.access.a.why': "Просять зайти без картки: вибачте, без картки не можна.", // nieuw, nalezen
-    'c.cameras.a.why': "Питають, що видно: хто, де, і що ти робиш.", // nieuw, nalezen
-    'c.report.a.why': "Питають, що писати у звіті: що, де і коли.", // nieuw, nalezen
-    'c.evacuation.a.why': "Питають, чи всі вийшли: ні, скількох бракує.", // nieuw, nalezen
-    'c.firstaid.a.why': "Питають, де дефібрилятор: місце, і що поруч.", // nieuw, nalezen
-    'c.shoplifting.a.why': "Питають, чи можна обшукати сумку: ні, і хто це робить.", // nieuw, nalezen
-    'c.aggression.a.why': "Питають, чому не можна: причина, сказана спокійно.", // nieuw, nalezen
-    'c.hygienelock.a.why': "Питають про годинник: ні, і правило за цим.", // nieuw, nalezen
-    'c.allergens.a.why': "Питають, чи можна разом: ні, і чому.", // nieuw, nalezen
-    'c.coldroom.a.why': "Питають, чому пищить: причина, і що робити.", // nieuw, nalezen
-    'c.foreignbody.a.why': "Питають, що робити: кому це показати.", // nieuw, nalezen
-    'c.cutting.a.why': "Питають, скільки: вага, і куди дивитися.", // nieuw, nalezen
-    'c.labels.a.why': "Питають, яку дату: коли, і куди дивитися.", // nieuw, nalezen
-    'c.linecleaning.a.why': "Питають, чи чисто: ще ні, і що залишилося.", // nieuw, nalezen
-    'c.haccp.a.why': "Питають, навіщо: щоб знати, що їжа безпечна.", // nieuw, nalezen
-    'c.binlorry.a.why': "Питають, чи можна їхати ззаду: ні, і де їхати.", // nieuw, nalezen
-    'c.reversing.a.why': "Просять допомогти: так, де ти стоїш, і що робити.", // nieuw, nalezen
-    'c.wastesorting.a.why': "Питають, куди: бак, і чому.", // nieuw, nalezen
-    'c.wastesafety.a.why': "Питають, що робити після порізу: промити й сказати.", // nieuw, nalezen
-    'c.yard.a.why': "Питають, куди: контейнер, і де він.", // nieuw, nalezen
-    'c.hazardous.a.why': "Питають, що всередині: ти не знаєш, тож відстав окремо.", // nieuw, nalezen
-    'c.baler.a.why': "Питають, чи можна подивитися: ні, і що спершу.", // nieuw, nalezen
-    'c.shovel.a.why': "Питають, чи можна пройти: лише коли водій тебе бачить.", // nieuw, nalezen
-    'c.nappies.a.why': "Питають, коли: час, і де це записано.", // nieuw, nalezen
-    'c.mealtime.a.why': "Питають, чи йому можна: ні, чому, і куди дивитися.", // nieuw, nalezen
-    'c.naptime.a.why': "Питають, чи вона спить: так, з якого часу, і що ти перевіряєш.", // nieuw, nalezen
-    'c.playtime.a.why': "Питають, чи дитині можна гратися: так, де, і що потім.", // nieuw, nalezen
-    'c.pickup.a.why': "Питають, хто забирає: людина, і що вона є в списку.", // nieuw, nalezen
-    'c.childsafety.a.why': "Питають, чи вона впала: так, що в неї, і кому ти дзвониш.", // nieuw, nalezen
-    'c.sickchild.a.why': "Питають, як він: що ти бачиш, і що ти робиш.", // nieuw, nalezen
-    'c.grouprules.a.why': "Питають, чи можна без колег: так, але спершу сказати колезі.", // nieuw, nalezen
+    'c.mowing.a.why': "Питають, чи можна взяти: так, і що зробити спершу.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.a.why': "Питають, які гілки: лише сухі.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.a.why': "Питають, якої висоти: до мотузки, не нижче.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.a.why': "Питають, чи можна: ще ні, і що спершу.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.a.why': "Питають, чи це бур’ян: ні, і що з ним робити.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.a.why': "Питають, куди: місце на клумбі.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.a.why': "Питають, чи можна перейти: ні, зачекати, і чому.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.a.why': "Мешканець питає, коли: ти не знаєш, і хто знає.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.a.why': "У відвідувача зустріч: хвилинку, ти дзвониш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.a.why': "Питають, куди пальто: місце, і де воно.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.a.why': "Питають, для кого: відділ і поверх.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.a.why': "Питають, о котрій: година, і що треба зробити.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.a.why': "Питають, чому холодно: що зламалося, і коли прийде допомога.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.a.why': "Питають, чи пищить: так, і чому.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.a.why': "Питають, куди: кімната, і куди дивитися.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.a.why': "Питають, чи хтось усередині: ні, і що ти робиш зараз.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.a.why': "Питають, чи щось було видно: так, що і де.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.a.why': "Просять зайти без картки: вибачте, без картки не можна.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.a.why': "Питають, що видно: хто, де, і що ти робиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.a.why': "Питають, що писати у звіті: що, де і коли.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.a.why': "Питають, чи всі вийшли: ні, скількох бракує.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.a.why': "Питають, де дефібрилятор: місце, і що поруч.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.a.why': "Питають, чи можна обшукати сумку: ні, і хто це робить.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.a.why': "Питають, чому не можна: причина, сказана спокійно.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.a.why': "Питають про годинник: ні, і правило за цим.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.a.why': "Питають, чи можна разом: ні, і чому.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.a.why': "Питають, чому пищить: причина, і що робити.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.a.why': "Питають, що робити: кому це показати.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.a.why': "Питають, скільки: вага, і куди дивитися.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.a.why': "Питають, яку дату: коли, і куди дивитися.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.a.why': "Питають, чи чисто: ще ні, і що залишилося.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.a.why': "Питають, навіщо: щоб знати, що їжа безпечна.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.a.why': "Питають, чи можна їхати ззаду: ні, і де їхати.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.a.why': "Просять допомогти: так, де ти стоїш, і що робити.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.a.why': "Питають, куди: бак, і чому.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.a.why': "Питають, що робити після порізу: промити й сказати.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.a.why': "Питають, куди: контейнер, і де він.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.a.why': "Питають, що всередині: ти не знаєш, тож відстав окремо.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.a.why': "Питають, чи можна подивитися: ні, і що спершу.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.a.why': "Питають, чи можна пройти: лише коли водій тебе бачить.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.a.why': "Питають, коли: час, і де це записано.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.a.why': "Питають, чи йому можна: ні, чому, і куди дивитися.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.a.why': "Питають, чи вона спить: так, з якого часу, і що ти перевіряєш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.a.why': "Питають, чи дитині можна гратися: так, де, і що потім.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.a.why': "Питають, хто забирає: людина, і що вона є в списку.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.a.why': "Питають, чи вона впала: так, що в неї, і кому ти дзвониш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.a.why': "Питають, як він: що ти бачиш, і що ти робиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.a.why': "Питають, чи можна без колег: так, але спершу сказати колезі.", // nieuw, nalezen // nagelezen AI 28 nov
     // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
-    'c.sanitary.a.why': "Питають, чи все готово: ще ні, і чому.", // nieuw, nalezen
-    'c.hotelroom.a.why': "Питають, скільки лишилося: число, і коли кінець.", // nieuw, nalezen
-    'c.dosing.a.why': "Кажуть налити більше: ні, більше не означає краще, і чим міряють.", // nieuw, nalezen
-    'c.officenight.a.why': "Питають, чи робота наодинці: так, і буде повідомлення.", // nieuw, nalezen
-    'c.knives.a.why': "Просять нарізати: так, шефе, і запитання, як саме.", // nieuw, nalezen
-    'c.rawcooked.a.why': "Питають, чи без глютену: точно невідомо, тому перевіряють список.", // nieuw, nalezen
-    'c.pass.a.why': "Питають, де їжа: на роздачі, і її вже несуть.", // nieuw, nalezen
-    'c.bill.a.why': "Просять заплатити окремо: так, і термінал уже несуть.", // nieuw, nalezen
-    'c.washing.a.why': "Клієнт каже ні: це нормально, і пропозиція чогось іншого.", // nieuw, nalezen
-    'c.observing.a.why': "Питають, чи є щось особливе: так, і що саме.", // nieuw, nalezen
-    'c.homecare.a.why': "Питають, хто там: привітання, хто прийшов, і чи можна зайти.", // nieuw, nalezen
-    'c.liftaids.a.why': "Питають, чи можна без допомоги: так, з ковзним простирадлом, і його вже несуть.", // nieuw, nalezen
-    'c.returns.a.why': "Хочуть повернути товар: можна, і запитання про чек.", // nieuw, nalezen
-    'c.facing.a.why': "Питають, чи все готово: майже, і що ще лишилося.", // nieuw, nalezen
-    'c.shrink.a.why': "Просять заглянути в сумку: так, і показують чек.", // nieuw, nalezen
-    'c.shopclose.a.why': "Просять зайти: вибачте, зачинено, і коли знову відчиняться.", // nieuw, nalezen
-    'c.hirer.a.why': "Пропонують почати на новому місці: так, і запитання про час.", // nieuw, nalezen
-    'c.phases.a.why': "Кажуть, що робота закінчується: гаразд, і прохання про іншу роботу.", // nieuw, nalezen
-    'c.deductions.a.why': "Кажуть про утримання: запитання, чи це дозволено, і перевірка.", // nieuw, nalezen
-    'c.agencyhome.a.why': "Кажуть скоро виїхати: це мало часу, і спершу порада.", // nieuw, nalezen
+    'c.sanitary.a.why': "Питають, чи все готово: ще ні, і чому.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.a.why': "Питають, скільки лишилося: число, і коли кінець.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.a.why': "Кажуть налити більше: ні, більше не означає краще, і чим ти міряєш.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.officenight.a.why': "Питають, чи ти працюєш наодинці: так, і ти напишеш повідомлення.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.knives.a.why': "Просять нарізати: так, шефе, і запитання, як саме.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.a.why': "Питають, чи без глютену: точно невідомо, тому ти перевіряєш список.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.pass.a.why': "Питають, де їжа: на роздачі, і ти її вже несеш.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.bill.a.why': "Просять заплатити окремо: так, і ти несеш термінал.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.washing.a.why': "Клієнт каже ні: це нормально, і пропозиція чогось іншого.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.a.why': "Питають, чи є щось особливе: так, і що саме.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.a.why': "Питають, хто там: привітання, хто прийшов, і чи можна зайти.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.a.why': "Питають, чи можна без допомоги: так, з ковзним простирадлом, і ти його принесеш.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.returns.a.why': "Хочуть повернути товар: можна, і запитання про чек.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.a.why': "Питають, чи все готово: майже, і що ще лишилося.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.a.why': "Просять заглянути в сумку: так, і ти показуєш чек.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.shopclose.a.why': "Просять зайти: вибачте, зачинено, і коли магазин знову відчиниться.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.hirer.a.why': "Пропонують почати на новому місці: так, і запитання про час.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.a.why': "Кажуть, що робота закінчується: гаразд, і прохання про іншу роботу.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.a.why': "Кажуть про утримання: запитання, чи це дозволено, і перевірка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.a.why': "Кажуть скоро виїхати: це мало часу, і спершу порада.", // nieuw, nalezen // nagelezen AI 28 nov
     // The basis units at four lessons (23 November 2026).
-    'c.roster.a.why': "Графік змінився: добре, і питання, який день.", // nieuw, nalezen
-    'c.breaks.a.why': "Питають про обідню перерву: час і скільки вона триває.", // nieuw, nalezen
-    'c.wound.a.why': "Колега ось-ось знепритомніє: хай полежить, а ти кличеш допомогу.", // nieuw, nalezen
-    'c.callhelp.a.why': "Питають, чи він реагує: ні, не реагує.", // nieuw, nalezen
-    'c.vacancy.a.why': "Питають, чому ти дзвониш: вакансія і чи вона ще відкрита.", // nieuw, nalezen
-    'c.result.a.why': "Відмова: спокійна відповідь і питання чому.", // nieuw, nalezen
-    'c.residence.a.why': "Дозвіл майже закінчився: ти одразу подаєш заяву на новий.", // nieuw, nalezen
-    'c.newhome.a.why': "Питають, де ти живеш: нове житло і нова адреса.", // nieuw, nalezen
-    'c.payparts.a.why': "Питають табельний номер: де він у розрахунковому листі.", // nieuw, nalezen
-    'c.latepay.a.why': "Гроші прийдуть пізніше: ти хочеш це письмово.", // nieuw, nalezen
-    'c.holiday.a.why': "Пропонують відпустку в травні: ти хочеш у липні й кажеш чому.", // nieuw, nalezen
-    'c.special.a.why': "Питають про відпустку у зв’язку з народженням дитини: так, і коли.", // nieuw, nalezen
-    'c.unwell.a.why': "Питають, чи все гаразд: ні, і чи можна піти додому.", // nieuw, nalezen
-    'c.injury.a.why': "Просять написати пояснення: так, і копію для тебе.", // nieuw, nalezen
-    'c.debt.a.why': "Кажуть залишатися, поки борг не сплачено: так не можна, шукай допомоги.", // nieuw, nalezen
-    'c.inspection.a.why': "Пропонують поговорити: так, але там, де начальник не чує.", // nieuw, nalezen
-    'c.carpool.a.why': "Питають, хто за кермом: ти, і коли ти їх забираєш.", // nieuw, nalezen
-    'c.train.a.why': "Питають, чому ти пізно: потяг, і повідомлення вже надіслане.", // nieuw, nalezen
-    'c.checklist.a.why': "Питають, чи нічого не забуто: ще один погляд у список.", // nieuw, nalezen
-    'c.leavesite.a.why': "Питають, чи ти йдеш після всіх: так, усе вимкнено й двері замкнені.", // nieuw, nalezen
-    'c.stagedays.a.why': "Питають, чому тебе не було: хвороба, і дзвінок і школі, і фірмі.", // nieuw, nalezen
-    'c.stageend.a.why': "Питають про плани: спершу диплом, потім робота.", // nieuw, nalezen
-    'c.neighbours.a.why': "Нова сусідка вітається: приємно познайомитися, і твоє ім’я.", // nieuw, nalezen
-    'c.join.a.why': "Запрошують прийти: так, і ти хочеш поговорити з учителем.", // nieuw, nalezen
-    'c.workphotos.a.why': "Просять фото для інтернету: ввічливе «ні».", // nieuw, nalezen
-    'c.device.a.why': "Питають про новий застосунок: спершу запитай IT-відділ.", // nieuw, nalezen
+    'c.roster.a.why': "Графік змінився: добре, і питання, який день.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.a.why': "Питають про обідню перерву: час і скільки вона триває.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.a.why': "Колега ось-ось знепритомніє: хай полежить, і поклич допомогу.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.callhelp.a.why': "Питають, чи він реагує: ні, не реагує.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.a.why': "Питають, чому ти дзвониш: вакансія і чи вона ще відкрита.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.a.why': "Відмова: спокійна відповідь і питання чому.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.a.why': "Дозвіл майже закінчився: ти одразу подаєш заяву на новий.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.a.why': "Питають, де ти живеш: нове житло і нова адреса.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.a.why': "Питають табельний номер: де він у розрахунковому листі.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.a.why': "Гроші прийдуть пізніше: ти хочеш це письмово.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.a.why': "Пропонують відпустку в травні: ти хочеш у липні й кажеш чому.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.a.why': "Питають про відпустку у зв’язку з народженням дитини: так, і коли.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.a.why': "Питають, чи все гаразд: ні, і чи можна піти додому.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.a.why': "Просять написати пояснення: так, і копію для тебе.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.a.why': "Кажуть залишатися, поки борг не сплачено: так не можна, шукай допомоги.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.a.why': "Пропонують поговорити: так, але там, де начальник не чує.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.a.why': "Питають, хто за кермом: ти, і коли ти їх забираєш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.a.why': "Питають, чому ти пізно: потяг, і повідомлення вже надіслане.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.a.why': "Питають, чи нічого не забуто: ще один погляд у список.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.a.why': "Питають, чи ти йдеш після всіх: так, усе вимкнено й двері замкнені.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.a.why': "Питають, чому тебе не було: хвороба, і дзвінок і школі, і фірмі.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.a.why': "Питають про плани: спершу диплом, потім робота.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.a.why': "Нова сусідка вітається: приємно познайомитися, і твоє ім’я.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.a.why': "Запрошують прийти: так, і ти хочеш поговорити з учителем.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.a.why': "Просять фото для інтернету: ввічливе «ні».", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.a.why': "Питають про новий застосунок: спершу запитай IT-відділ.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Veiligheid op het werk" and the VOG (23 November 2026).
-    'c.safetysigns.a.why': "Питають, що означає знак: обережно, і який це знак.", // nieuw, nalezen
-    'c.substances.a.why': "Питають, чи це отруйне: ти не вгадуєш, а перевіряєш.", // nieuw, nalezen
-    'c.firefight.a.why': "Кажуть про пожежу: вона невелика, тож ти береш вогнегасник.", // nieuw, nalezen
-    'c.permitwork.a.why': "Питають, хто залишається зовні: ти, і твоє завдання.", // nieuw, nalezen
-    'c.vog.a.why': "Питають про твій VOG: ще ні, і на що ти чекаєш.", // nieuw, nalezen
+    'c.safetysigns.a.why': "Питають, що означає знак: обережно, і який це знак.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.a.why': "Питають, чи це отруйне: ти не вгадуєш, а перевіряєш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.a.why': "Кажуть про пожежу: вона невелика, тож ти береш вогнегасник.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.a.why': "Питають, хто залишається зовні: ти, і твоє завдання.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.a.why': "Питають про твій VOG: ще ні, і на що ти чекаєш.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Operator in de procesindustrie" (23 November 2026).
-    'c.plantround.a.why': "Питають про тривогу: що занадто високе і де.", // nieuw, nalezen
-    'c.plantfault.a.why': "Питають, чи можна запускати: ні, ще висить замок.", // nieuw, nalezen
-    'c.shiftwork.a.why': "Питають, що сталося: несправність, і де це записано.", // nieuw, nalezen
-    'c.heatdust.a.why': "Питають про телефон: ні, через небезпеку тут.", // nieuw, nalezen
+    'c.plantround.a.why': "Питають про тривогу: що занадто високе і де.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.a.why': "Питають, чи можна запускати: ні, ще висить замок.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.a.why': "Питають, що сталося: несправність, і де це записано.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.a.why': "Питають про телефон: ні, через небезпеку тут.", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (26 November 2026).
-    'c.debthelp.a.why': "Кажуть, що рахунок не сплачено: так, і прохання про розстрочку.", // nieuw, nalezen
-    'c.taxes.a.why': "Кажуть про синій конверт: подяка, і його відкриють одразу.", // nieuw, nalezen
-    'c.discrimination.a.why': "Питають, чи все гаразд: ні, і про це повідомлять.", // nieuw, nalezen
-    'c.union.a.why': "Питають, чому ти в профспілці: там заступаються за тебе.", // nieuw, nalezen
-    'c.kiln.a.why': "Питають, чи можна збирати уламки рукою: ні, щіткою й совком.", // nieuw, nalezen
-    'c.mixlab.a.why': "Питають, чи схвалили партію: ще ні, лабораторія її перевіряє.", // nieuw, nalezen
-    'c.firstweeks.a.why': "Питають про екскурсію: майже все, і одне питання.", // nieuw, nalezen
-    'c.orderpick.a.why': "Просять поїздити на річтраку: ні, немає навчання.", // nieuw, nalezen
+    'c.debthelp.a.why': "Кажуть, що рахунок не сплачено: так, і прохання про розстрочку.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.a.why': "Кажуть про синій конверт: подяка, і ти одразу його відкриваєш.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.discrimination.a.why': "Питають, чи все гаразд: ні, і ти про це повідомиш.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.union.a.why': "Питають, чому ти в профспілці: там заступаються за тебе.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.a.why': "Питають, чи можна збирати уламки рукою: ні, щіткою й совком.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.a.why': "Питають, чи схвалили партію: ще ні, лабораторія її перевіряє.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.a.why': "Питають про екскурсію: майже все, і одне питання.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.a.why': "Просять сісти за кермо річтрака: ні, мене цього не навчали.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    // four new lessons (27 November 2026).
+    'd.appraisal.a.why': "Питають про мету: одна чітка річ, якої хочеш навчитися.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.a.why': "Питають про форму: майже, і де підписатися.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.a.why': "Просять імʼя й номер: імʼя і прохання передзвонити.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.a.why': "Питають про останній візит: коли, і прохання про огляд.", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 

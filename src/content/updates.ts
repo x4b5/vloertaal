@@ -17,6 +17,12 @@ export interface Update {
 
 export const UPDATES: Update[] = [
   {
+    date: '2026-11-27',
+    items: [
+      'Vier nieuwe lessen in bestaande onderwerpen. Feedback en overleg: het functioneringsgesprek. Getallen en gegevens: een formulier invullen (en je BSN alleen waar het hoort). Bellen en appen met je werk: de voicemail en terugbellen. Gezondheid: de tandarts. Bij elke les een tip van "Zo werkt het hier". De vertalingen, de stemmen en de tekeningen volgen. De lessen over het formulier en de tandarts gaan over Nederland: in België staat daar dat het er anders is.',
+    ],
+  },
+  {
     date: '2026-11-26',
     items: [
       'Acht nieuwe lessen in bestaande onderwerpen. Geld en post: schulden en hulp, en belasting en toeslagen. Regels en rechten: discriminatie en intimidatie, en de vakbond en de ondernemingsraad. Operator in de procesindustrie: oven, glas en keramiek, en de menghal en het laboratorium. Eerste werkdag: inwerken. In het magazijn: orderpicken en de reachtruck. Bij elke les een tip van "Zo werkt het hier". De vertalingen, de stemmen en de tekeningen volgen. De vier lessen over geld en rechten gaan over Nederland: in België staat daar dat het er anders is.',
