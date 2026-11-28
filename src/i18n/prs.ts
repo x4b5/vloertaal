@@ -463,9 +463,9 @@ const lang: HelpLanguageSource = {
     checkVia: 'با آزمون', // nieuw, nalezen // nagelezen AI 28 nov
     checkUndo: 'با این هم درس‌ها را انجام دهید', // nieuw, nalezen // nagelezen AI 28 nov
     shareInvite: 'من با Vloertaal هالندی را برای کارم یاد می‌گیرم. رایگان است: {link}', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeWhat: 'Vloertaal یک اپ رایگان برای آموختن هالندیِ کار است.', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeHow: 'درس‌های کوتاه در تیلفون خود، با توضیح به زبان خود. بدون حساب.', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeOpen: 'در تیلفون خود باز کنید:', // nieuw, nalezen // nagelezen AI 28 nov
+    briefjeWhat: 'Vloertaal یک اپ رایگان برای آموختن هالندیِ کار است.', // nieuw, nalezen
+    briefjeHow: 'درس‌های کوتاه در تیلفون خود، با توضیح به زبان خود. بدون حساب.', // nieuw, nalezen
+    briefjeOpen: 'در تیلفون خود باز کنید:', // nieuw, nalezen
     workTry: 'امروز در کار امتحانش کنید', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     workTryWhen: 'وقتی:', // nieuw, nalezen // nagelezen AI 28 nov
     workTryThen: 'آنگاه بگویید:', // nieuw, nalezen // nagelezen AI 28 nov

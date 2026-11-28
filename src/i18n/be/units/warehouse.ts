@@ -8,7 +8,7 @@ export const ar: Gloss = {
     "be.c.direct": "كلمات حذرة ورسالة واضحة", // nieuw, nalezen
     "be.c.direct.b": 'الزملاء الفلامانيون يقولون الأشياء غالباً بحذر، مثل «Zou je die doos daar willen zetten?». هذا غالباً مع ذلك طلب واضح: يجب فعله. بعض الزملاء مباشرون جداً، مثل «Dat is fout». هم عادةً لا يقصدون الوقاحة. يمكن أيضاً قول الرأي، لكن بلطف.', // nieuw, nalezen // nagelezen AI ronde 3
     "be.c.direct.p": "حسناً، كيف يجب أن أفعلها إذن؟", // = c.direct.p
-    "be.c.direct.s": { m: "زميل يقول: «Nee, dat is fout. Die doos moet daar.» ماذا تفعل؟", f: "زميل يقول: «Nee, dat is fout. Die doos moet daar.» ماذا تفعلين؟" }, // = c.direct.s
+    "be.c.direct.s": { m: "زميل يقول: «Nee, dat is fout. Die doos moet daar». ماذا تفعل؟", f: "زميل يقول: «Nee, dat is fout. Die doos moet daar». ماذا تفعلين؟" }, // nieuw, nalezen (AI-correctie 28 nov 2026) = c.direct.s
     "be.c.direct.o1": { m: "اسأل كيف يجب أن تفعلها، وانقل الصندوق.", f: "اسألي كيف يجب أن تفعليها، وانقلي الصندوق." }, // = c.direct.o1
     "be.c.direct.o2": { m: "اعتذر مرات كثيرة: زميلك غاضب.", f: "اعتذري مرات كثيرة: زميلك غاضب." }, // = c.direct.o2
     "be.c.direct.o3": { m: "لا تقل شيئاً واترك الصندوق في مكانه.", f: "لا تقولي شيئاً واتركي الصندوق في مكانه." }, // = c.direct.o3
@@ -30,7 +30,7 @@ export const fa: Gloss = {
     "be.c.direct": "کلمه‌های محتاط، پیام روشن", // nieuw, nalezen
     "be.c.direct.b": "همکاران فلاندری اغلب حرفشان را با احتیاط می‌گویند، مثل «Zou je die doos daar willen zetten?». این اغلب باز هم یک درخواست روشن است: انجامش بده. بعضی همکاران خیلی رک هستند، مثل «Dat is fout». معمولاً قصد بی‌ادبی ندارند. تو هم می‌توانی نظرت را بگویی، به شرطی که مهربان بمانی.", // nieuw, nalezen
     "be.c.direct.p": "باشه، پس چطور باید انجامش داد؟", // = c.direct.p
-    "be.c.direct.s": "یک همکار می‌گوید: «Nee, dat is fout. Die doos moet daar.» چه کار می‌کنی؟", // = c.direct.s
+    "be.c.direct.s": "یک همکار می‌گوید: «Nee, dat is fout. Die doos moet daar». چه کار می‌کنی؟", // nieuw, nalezen (AI-correctie 28 nov 2026) = c.direct.s
     "be.c.direct.o1": "بپرس چطور باید باشد و جعبه را جابه‌جا کن.", // = c.direct.o1
     "be.c.direct.o2": "چند بار عذرخواهی کن: همکارت عصبانی است.", // = c.direct.o2
     "be.c.direct.o3": "چیزی نگو و جعبه را همان‌جا که هست بگذار.", // = c.direct.o3
@@ -41,7 +41,7 @@ export const prs: Gloss = {
     "be.c.direct": "کلمه‌های محتاط، پیام روشن", // nieuw, nalezen
     "be.c.direct.b": "همکاران فلاندری اکثراً گپ خود را با احتیاط می‌گویند، مثل «Zou je die doos daar willen zetten?». این اکثراً باز هم یک خواهش روشن است: آن را انجام بدهید. بعضی همکاران بسیار رک هستند، مثل «Dat is fout». معمولاً قصد بی‌ادبی ندارند. شما هم می‌توانید نظر خود را بگویید، به شرطی که مهربان بمانید.", // nieuw, nalezen
     "be.c.direct.p": "خوب، پس چطور باید شود؟", // = c.direct.p
-    "be.c.direct.s": "یک همکار می‌گوید: «Nee, dat is fout. Die doos moet daar.» شما چه می‌کنید؟", // = c.direct.s
+    "be.c.direct.s": "یک همکار می‌گوید: «Nee, dat is fout. Die doos moet daar». شما چه می‌کنید؟", // nieuw, nalezen (AI-correctie 28 nov 2026) = c.direct.s
     "be.c.direct.o1": "بپرسید که چطور باید شود و قطی را جابه‌جا کنید.", // = c.direct.o1
     "be.c.direct.o2": "چند بار معذرت بخواهید: همکار تان قهر است.", // = c.direct.o2
     "be.c.direct.o3": "چیزی نگویید و قطی را همان جایی که هست بگذارید.", // = c.direct.o3 // nagelezen AI ronde 3
@@ -50,7 +50,7 @@ export const prs: Gloss = {
 
 export const uk: Gloss = {
     "be.c.direct": "Обережні слова, ясне прохання", // nieuw, nalezen
-    "be.c.direct.b": "Фламандські колеги часто говорять обережно, наприклад «Zou je die doos daar willen zetten?» Часто це все одно чітке прохання: зроби це. Деякі колеги дуже прямі, наприклад «Dat is fout». Зазвичай вони не хочуть образити. Ти теж можеш казати, що думаєш, якщо залишаєшся привітним / привітною.", // nieuw, nalezen // nagelezen AI ronde 3
+    "be.c.direct.b": "Фламандські колеги часто говорять обережно, наприклад «Zou je die doos daar willen zetten?» Часто це все одно чітке прохання: зроби це. Деякі колеги дуже прямі, наприклад «Dat is fout». Зазвичай вони не хочуть образити. Ти теж можеш казати, що думаєш, якщо говориш привітно.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     "be.c.direct.p": "Добре, а як тоді треба?", // = c.direct.p
     "be.c.direct.s": "Колега каже: «Nee, dat is fout. Die doos moet daar.» Що ти зробиш?", // = c.direct.s
     "be.c.direct.o1": "Запитаєш, як треба, і переставиш коробку.", // = c.direct.o1
@@ -83,7 +83,7 @@ export const pl: Gloss = {
 
 export const ro: Gloss = {
     "be.c.direct": "Cuvinte prudente, mesaj clar", // nieuw, nalezen
-    "be.c.direct.b": "Colegii flamanzi spun des lucrurile cu grijă, de exemplu „Zou je die doos daar willen zetten?” Asta e des totuși o cerere clară: fă-o. Unii colegi sunt foarte direcți, de exemplu „Dat is fout”. De obicei nu vor să fie nepoliticoși. Și tu poți spune ce crezi, cât timp rămâi prietenos / prietenoasă.", // nieuw, nalezen // nagelezen AI ronde 3
+    "be.c.direct.b": "Colegii flamanzi spun des lucrurile cu grijă, de exemplu „Zou je die doos daar willen zetten?” Asta e des totuși o cerere clară: fă-o. Unii colegi sunt foarte direcți, de exemplu „Dat is fout”. De obicei nu vor să fie nepoliticoși. Și tu poți spune ce crezi, cât timp vorbești prietenos.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     "be.c.direct.p": "Bine, atunci cum trebuie făcut?", // = c.direct.p
     "be.c.direct.s": "Un coleg spune: „Nee, dat is fout. Die doos moet daar.” Ce faci?", // = c.direct.s
     "be.c.direct.o1": "Întrebi cum trebuie făcut și muți cutia.", // = c.direct.o1
@@ -94,7 +94,7 @@ export const ro: Gloss = {
 
 export const bg: Gloss = {
     "be.c.direct": "Внимателни думи, ясно послание", // nieuw, nalezen
-    "be.c.direct.b": "Фламандските колеги често казват нещата внимателно, например „Zou je die doos daar willen zetten?“ Това често все пак е ясна молба: направи го. Някои колеги са много директни, например „Dat is fout“. Обикновено не искат да са груби. И ти можеш да казваш какво мислиш, стига да оставаш любезен / любезна.", // nieuw, nalezen // nagelezen AI ronde 3
+    "be.c.direct.b": "Фламандските колеги често казват нещата внимателно, например „Zou je die doos daar willen zetten?“ Това често все пак е ясна молба: направи го. Някои колеги са много директни, например „Dat is fout“. Обикновено не искат да са груби. И ти можеш да казваш какво мислиш, стига да говориш любезно.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     "be.c.direct.p": "Добре, а как трябва да се направи?", // = c.direct.p
     "be.c.direct.s": "Колега казва: „Nee, dat is fout. Die doos moet daar.“ Какво правиш?", // = c.direct.s
     "be.c.direct.o1": "Питаш как трябва да се направи и преместваш кашона.", // = c.direct.o1
@@ -107,7 +107,7 @@ export const es: Gloss = {
     "be.c.direct": "Palabras suaves, mensaje claro", // nieuw, nalezen
     "be.c.direct.b": "Los compañeros flamencos muchas veces dicen las cosas con cuidado, como «Zou je die doos daar willen zetten?». Muchas veces es igualmente una petición clara: hazlo. Algunos compañeros son muy directos, como «Dat is fout». Normalmente no lo dicen con mala intención. Tú también puedes decir lo que piensas, siempre con amabilidad.", // nieuw, nalezen
     "be.c.direct.p": "De acuerdo, ¿entonces cómo se hace?", // = c.direct.p
-    "be.c.direct.s": "Un compañero dice: “Nee, dat is fout. Die doos moet daar.” ¿Qué haces?", // = c.direct.s
+    "be.c.direct.s": "Un compañero dice: “Nee, dat is fout. Die doos moet daar”. ¿Qué haces?", // nieuw, nalezen (AI-correctie 28 nov 2026) = c.direct.s
     "be.c.direct.o1": "Preguntas cómo se hace y mueves la caja.", // = c.direct.o1
     "be.c.direct.o2": "Pides perdón muchas veces: tu compañero está enfadado.", // = c.direct.o2
     "be.c.direct.o3": "No dices nada y dejas la caja donde está.", // = c.direct.o3

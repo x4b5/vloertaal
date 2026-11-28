@@ -799,7 +799,7 @@ const t: CultureTranslation = {
     'c.insurance.o3': 'Benutz die Versichertenkarte von einem Freund.',
     'c.insurance.w': 'Ohne Versicherung kann ein Arzt oder ein Krankenhaus viel kosten, und du kannst eine Strafe bekommen. Wenn du dich schnell darum kümmerst, schützt du dich. Dein Arbeitgeber oder deine Zeitarbeitsfirma kann dir helfen.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.letters': 'Ignorier keine Briefe',
-    'c.letters.b': 'Ignorier keine Briefe vom Belastingdienst, von der gemeente oder vom UWV. Bitte jemanden, dem du vertraust, dir beim Lesen zu helfen. Die Steuererklärung (aangifte) für das letzte Jahr muss meistens vor dem 1. Mai gemacht sein. Du kannst um mehr Zeit bitten. Zuschüsse (toeslagen) wie zorgtoeslag und huurtoeslag hängen von deinem Einkommen ab. Wenn du zu viel bekommst, musst du es zurückzahlen. Halte deine Angaben zum Einkommen also aktuell. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.',
+    'c.letters.b': 'Ignorier keine Briefe vom Belastingdienst, von der gemeente oder vom UWV. Bitte jemanden, dem du vertraust, dir beim Lesen zu helfen. Die Steuererklärung (aangifte) für das letzte Jahr muss meistens vor dem 1.Mai gemacht sein. Du kannst um mehr Zeit bitten. Zuschüsse (toeslagen) wie zorgtoeslag und huurtoeslag hängen von deinem Einkommen ab. Wenn du zu viel bekommst, musst du es zurückzahlen, also halte deine Angaben zum Einkommen aktuell. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.', // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.letters.p': 'Ich habe einen Brief bekommen. Kannst du mir helfen?',
     'c.letters.s': 'Du bekommst einen Brief vom Belastingdienst. Du verstehst ihn nicht. Was machst du?',
     'c.letters.o1': 'Bitte jemanden, dem du vertraust, dir beim Lesen zu helfen.', // nagelezen (2e lezing) // nagelezen AI 22 nov
@@ -1115,7 +1115,7 @@ const t: CultureTranslation = {
     'c.counting.o3': 'Gang 40.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.counting.w': '„Zevenenveertig“ heißt „sieben und vierzig“: erst die 7, dann die 40. Also ist es Gang 47. Viele Neue hören 74 und gehen in den falschen Gang.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.hours': 'Half acht ist 7:30 Uhr',
-    'c.hours.b': 'Im Niederländischen zählt „half“ zur nächsten Stunde: half acht ist 7:30 Uhr, nicht 8:30 Uhr. Das ist wie „halb acht“ im Deutschen. Kwart over acht ist 8:15 Uhr, und kwart voor acht ist 7:45 Uhr. Prüfe deine Stunden selbst: die Endzeit minus die Anfangszeit, minus die Pause. Eine Pause ist oft nicht bezahlt. Schreib jeden Tag deine Stunden auf.',
+    'c.hours.b': 'Im Niederländischen zählt „half“ zur nächsten Stunde: half acht ist 7:30 Uhr, nicht 8:30 Uhr – wie „halb acht“ im Deutschen. Kwart over acht ist 8:15 Uhr, und kwart voor acht ist 7:45 Uhr. Prüfe deine Stunden selbst: die Endzeit minus die Anfangszeit, minus die Pause. Eine Pause ist oft nicht bezahlt. Schreib jeden Tag deine Stunden auf.', // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.hours.p': 'Half acht? Also eine halbe Stunde vor acht?',
     'c.hours.s': 'Dein Vorgesetzter sagt: „Morgen begin je om half negen.“ Um wie viel Uhr fängst du morgen an?',
     'c.hours.o1': 'Um 8:30 Uhr.',
@@ -1336,13 +1336,13 @@ const t: CultureTranslation = {
     'c.details.o3': "Leg auf und hoffe, dass sie den Fehler später finden.", // nagelezen AI 22 nov
     'c.details.w': "Dein Name muss auf deinem Vertrag, deiner Lohnabrechnung und deinem Ausweis gleich sein. Dann stimmen dein Lohn und deine Steuern. Buchstabieren und vorlesen lassen ist eine schnelle Kontrolle.", // nagelezen AI 22 nov
     'c.dates': "Daten: Der Tag kommt zuerst", // nagelezen AI 22 nov
-    'c.dates.b': "Im Niederländischen kommt der Tag vor dem Monat: 3-6 ist der 3. Juni, nicht der 6. März. „Tot en met“ heißt, dass der letzte Tag mitzählt. Tage und Monate schreibt man klein: maandag, juni. Bei einem Datum nicht sicher? Frag nach und sag es noch einmal.", // nagelezen AI 22 nov
+    'c.dates.b': "Im Niederländischen kommt der Tag vor dem Monat: 3-6 ist der 3.Juni, nicht der 6.März. „Tot en met“ heißt, dass der letzte Tag mitzählt. Tage und Monate schreibt man klein: maandag, juni. Bei einem Datum nicht sicher? Frag nach und sag es noch einmal.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.dates.p': "Meinst du den 3. Juni?", // nagelezen AI 22 nov
     'c.dates.s': "In deinem Dienstplan steht: „Vrij: 3-6 tot en met 5-6“. Wann hast du frei?", // nagelezen AI 22 nov
     'c.dates.o1': "Am 3., 4. und 5. Juni.", // nagelezen AI 22 nov
     'c.dates.o2': "Nur am 3. und 4. Juni.", // nagelezen AI 22 nov
     'c.dates.o3': "Vom 6. März bis zum 6. Mai.", // nagelezen AI 22 nov
-    'c.dates.w': "Zuerst kommt der Tag, dann der Monat: 3-6 ist der 3. Juni. „Tot en met“ heißt, dass der 5. Juni mitzählt. Du hast also drei Tage frei.", // nagelezen AI 22 nov
+    'c.dates.w': "Zuerst kommt der Tag, dann der Monat: 3-6 ist der 3.Juni. „Tot en met“ heißt, dass der 5.Juni mitzählt, du hast also drei Tage frei.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.permit': "Arbeit und Integration", // nagelezen AI 22 nov
     'c.permit.b': "Musst du den Integrationskurs (inburgering) machen? Sag es deinem Arbeitgeber, und sag der gemeente (der Gemeinde), dass du arbeitest. Frag früh, ob deine Sprachkurse zu deinem Dienstplan passen können. Nicht sicher, ob du hier arbeiten darfst? Prüfe es, bevor du anfängst, zum Beispiel beim IND, beim UWV oder bei VluchtelingenWerk. Sollst du dich für diesen Job als Selbstständiger (zzp’er) anmelden? Hol dir zuerst Rat. Allgemeine Informationen. Für deine Situation: Frag deinen Arbeitgeber, die Gewerkschaft oder das Juridisch Loket.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.permit.p': "Ich habe dienstags Sprachkurs. Kann mein Dienstplan darauf Rücksicht nehmen?", // nagelezen AI 22 nov

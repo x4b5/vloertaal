@@ -464,9 +464,9 @@ const lang: HelpLanguageSource = {
     checkVia: 'ብፈተና', // nieuw, nalezen // nagelezen AI 28 nov
     checkUndo: { m: 'ብዘየገድስ ነቶም ትምህርትታት ግበሮም', f: 'ብዘየገድስ ነቶም ትምህርትታት ግበርዮም', x: 'ብዘየገድስ ነቶም ትምህርትታት ግበሩዎም' }, // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     shareInvite: 'ንስራሐይ ሆላንድኛ ብVloertaal እመሃር ኣለኹ። ብነጻ እዩ: {link}', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
-    briefjeWhat: 'Vloertaal ንስራሕ ሆላንድኛ ንምምሃር ኣፕ እዩ። ብነጻ እዩ።', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeHow: 'ሓጸርቲ ትምህርትታት ኣብ ተሌፎን፡ ብትግርኛ ሓገዝ። ኣካውንት የለን።', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeOpen: { m: 'ኣብ ተሌፎንካ ክፈት:', f: 'ኣብ ተሌፎንኪ ክፈቲ:', x: 'ኣብ ተሌፎንኩም ክፈቱ:' }, // nieuw, nalezen // nagelezen AI 28 nov
+    briefjeWhat: 'Vloertaal ንስራሕ ሆላንድኛ ንምምሃር ኣፕ እዩ። ብነጻ እዩ።', // nieuw, nalezen
+    briefjeHow: 'ሓጸርቲ ትምህርትታት ኣብ ተሌፎን፡ ብትግርኛ ሓገዝ። ኣካውንት የለን።', // nieuw, nalezen
+    briefjeOpen: { m: 'ኣብ ተሌፎንካ ክፈት:', f: 'ኣብ ተሌፎንኪ ክፈቲ:', x: 'ኣብ ተሌፎንኩም ክፈቱ:' }, // nieuw, nalezen
     workTry: { m: 'ሎሚ ኣብ ስራሕካ ፈትኖ', f: 'ሎሚ ኣብ ስራሕኪ ፈትንዮ', x: 'ሎሚ ኣብ ስራሕ ፈትንዎ' }, // nieuw, nalezen // nagelezen AI 28 nov
     workTryWhen: 'ኩነታት:', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     workTryThen: { m: 'ሽዑ በል:', f: 'ሽዑ በሊ:', x: 'ሽዑ በሉ:' }, // nieuw, nalezen // nagelezen AI 28 nov

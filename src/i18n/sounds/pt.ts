@@ -16,7 +16,7 @@ const t: CultureTranslation = {
     's.shortlong.2': 'Põe as cebolas no saco.',
     's.shortlong.3': 'A loja abre às nove horas.',
     'c.shortlong.q': 'Queres um ovo?',
-    'c.shortlong.a': { m: 'Não, obrigado. Já comi.', f: 'Não, obrigada. Já comi.', x: 'Não, obrigado / obrigada. Já comi.' },
+    'c.shortlong.a': { m: 'Não, obrigado. Já comi.', f: 'Não, obrigada. Já comi.', x: 'Agradeço, mas não. Já comi.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.shortlong.a.why': 'Oferecem um ovo: um não educado, com uma razão.',
     'l.roundsounds': 'uu, oe e eu',
     'w.kl.muur': 'a parede',

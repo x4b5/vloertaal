@@ -200,7 +200,7 @@ export const pt: Gloss = {
     "be.c.speakup.p": "Há uma coisa que me incomoda. Podemos falar um momento?", // = c.speakup.p
     "be.c.speakup.s": "Um colega deixa sempre o trabalho pesado para ti. Isso incomoda-te. O que fazes?", // = c.speakup.s
     "be.c.speakup.o1": "Dizes ao colega o que te incomoda.", // = c.speakup.o1
-    "be.c.speakup.o2": { m: "Ficas calado e cada vez mais zangado.", f: "Ficas calada e cada vez mais zangada.", x: "Ficas calado/a e cada vez mais zangado/a." }, // = c.speakup.o2
+    "be.c.speakup.o2": { m: "Ficas calado e cada vez mais zangado.", f: "Ficas calada e cada vez mais zangada.", x: "Não dizes nada e a tua raiva vai crescendo." }, // nieuw, nalezen (AI-correctie 28 nov 2026) = c.speakup.o2
     "be.c.speakup.o3": "Queixas-te dele a todos os outros colegas.", // = c.speakup.o3
     "be.c.speakup.w": "Na Flandres as pessoas dizem-no muitas vezes com cuidado, num momento calmo, mas dizem. Dizê-lo cedo e com calma mantém a boa relação.", // nieuw, nalezen
     "be.c.task": "Diz quando está feito, pergunta quando não está claro", // = c.task

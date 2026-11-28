@@ -21,7 +21,7 @@ const t: CultureTranslation = {
   gloss: {
     'c.hello.a.why': "La un salut de rămas-bun se răspunde tot cu un salut de rămas-bun.",
     'c.people.a.why': "Întrebarea cere un nume. Acest răspuns îl dă.",
-    'c.arrive.a.why': "Întrebarea e de ce a venit cineva. Răspunsul spune: e nou și începe azi.",
+    'c.arrive.a.why': "Întrebarea e de ce a venit cineva; răspunsul spune: e nou și începe azi.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.understand.a.why': "Ceva neînțeles? E normal să ceri repetarea.",
     'c.translate.a.why': "Bilețelul încă nu e clar, așa că întâi se traduce.",
     'c.understood.a.why': "Repetarea sarcinii verifică dacă instrucțiunea e clară.",
@@ -86,11 +86,11 @@ const t: CultureTranslation = {
     'c.service.a.why': "Nota de plată cerută: un „da” scurt, și mergi imediat.",
     'c.cleaning.a.why': "Gata? Acest răspuns spune aproape, și câte au rămas.",
     'c.cleansafe.a.why': "O podea udă alunecă: un avertisment ajută.",
-    'c.shelves.a.why': "Întrebarea e „unde”. Răspunsul spune culoarul și oferă ajutor.",
+    'c.shelves.a.why': "Întrebarea e „unde”: răspunsul spune culoarul și oferă ajutor.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.checkout.a.why': "Se întreabă dacă se poate plăti cu cardul: un „da” scurt și prietenos.",
     'c.counting.a.why': "Întrebarea e câte sunt: răspunsul dă numărul și îl verifică cifră cu cifră.", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.hours.a.why': "Întrebarea e despre oră. Răspunsul dă o oră.",
-    'c.measures.a.why': "Întrebarea e despre lungime. Răspunsul dă o lungime.",
+    'c.hours.a.why': "Întrebarea e despre oră: răspunsul dă o oră.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.measures.a.why': "Întrebarea e despre lungime: răspunsul dă o lungime.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.aihelp.a.why': "Te întreabă cine a scris: un „da” sincer, care spune cine a ajutat.",
     'c.aiprivate.a.why': "Ți se cere să pui nume într-un chatbot: răspunsul spune „nu” și de ce.",
     'c.aifake.a.why': "Un număr nou cere bani: răspunsul verifică întâi.",

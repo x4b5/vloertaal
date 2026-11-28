@@ -16,7 +16,7 @@ const t: CultureTranslation = {
     'c.je': '¿“Je” o “u”?',
     'c.je.b': 'En el trabajo, la mayoría de la gente se dice “je”, muchas veces también al jefe. Si tienes dudas, empieza con “u” y escucha lo que hacen los demás. Aquí decir “je” no es de mala educación.',
     'c.je.p': '¿Puedo decirte “je”?',
-    'c.je.s': 'Tu nueva encargada dice: “Zeg maar je, hoor!” ¿Qué quiere decir?',
+    'c.je.s': 'Tu nueva encargada dice: “Zeg maar je, hoor!”. ¿Qué quiere decir?', // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.je.o1': 'Quiere que le digas “je”.',
     'c.je.o2': 'Te pide que digas algo.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.je.o3': 'Quiere que hables con más educación.', // nagelezen (2e lezing) // nagelezen AI 22 nov
@@ -24,7 +24,7 @@ const t: CultureTranslation = {
     'c.names': 'El nombre de pila y un apretón de manos',
     'c.names.b': 'El primer día, da un apretón de manos corto, mira a la persona y di tu nombre. Los compañeros y los jefes normalmente se llaman por el nombre de pila.',
     'c.names.p': 'Hola, soy Ali. Soy nuevo aquí.',
-    'c.names.s': 'Un compañero se acerca a ti: “Hoi, ik ben Mark.” ¿Qué haces?',
+    'c.names.s': 'Un compañero se acerca a ti: “Hoi, ik ben Mark”. ¿Qué haces?', // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.names.o1': 'Le das la mano y dices tu nombre.',
     'c.names.o2': 'Asientes, sonríes y esperas a que te pregunten.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.names.o3': 'Le das la mano y lo llamas “meneer” (señor).', // nagelezen (2e lezing) // nagelezen AI 22 nov
@@ -63,7 +63,7 @@ const t: CultureTranslation = {
     'c.unsafe.w': 'Un casi accidente es un aviso. Contarlo ayuda a evitar un accidente de verdad. Tu empresa no te puede castigar por avisar.',
     'c.alarm': 'Suena la alarma: para y sal fuera', // nieuw, nalezen // nagelezen AI 22 nov
     'c.alarm.b': 'El primer día, pregunta dónde están las salidas de emergencia y el punto de encuentro. Cuando suene la alarma, deja de trabajar enseguida. Deja tus cosas y sal fuera por la ruta de evacuación. Usa la escalera, nunca el ascensor. En el punto de encuentro cuentan quién está fuera, así que quédate allí. Sal también cuando creas que es solo un simulacro.', // nieuw, nalezen // nagelezen AI 22 nov
-    'c.alarm.p': { m: 'Soy nuevo. ¿Dónde está el punto de encuentro?', f: 'Soy nueva. ¿Dónde está el punto de encuentro?', x: 'Soy nuevo/a. ¿Dónde está el punto de encuentro?' }, // nieuw, nalezen // nagelezen AI 22 nov
+    'c.alarm.p': { m: 'Soy nuevo. ¿Dónde está el punto de encuentro?', f: 'Soy nueva. ¿Dónde está el punto de encuentro?', x: 'Acabo de llegar. ¿Dónde está el punto de encuentro?' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.alarm.s': 'Suena la alarma de incendio. Casi has terminado un pedido. ¿Qué haces?', // nieuw, nalezen // nagelezen AI 22 nov
     'c.alarm.o1': 'Paras enseguida y vas al punto de encuentro.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.alarm.o2': 'Primero terminas el pedido, luego sales.', // nieuw, nalezen // nagelezen AI 22 nov
@@ -88,7 +88,7 @@ const t: CultureTranslation = {
     'c.direct': 'Ser directo no es de mala educación',
     'c.direct.b': 'Los compañeros en los Países Bajos muchas veces dicen las cosas de forma muy directa, como “Dat is fout” o “Doe het zo”. Normalmente no lo dicen con mala intención. Tú también puedes hablar de forma directa, siempre que sigas siendo amable.',
     'c.direct.p': 'De acuerdo, ¿entonces cómo se hace?',
-    'c.direct.s': 'Un compañero dice: “Nee, dat is fout. Die doos moet daar.” ¿Qué haces?',
+    'c.direct.s': 'Un compañero dice: “Nee, dat is fout. Die doos moet daar”. ¿Qué haces?', // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.direct.o1': 'Preguntas cómo se hace y mueves la caja.',
     'c.direct.o2': 'Pides perdón muchas veces: tu compañero está enfadado.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.direct.o3': 'No dices nada y dejas la caja donde está.',
@@ -111,7 +111,7 @@ const t: CultureTranslation = {
     'c.time.w': 'Avisar pronto deja que el equipo se organice. Llegar tarde sin avisar se ve mucho peor que el retraso mismo.',
     'c.sick': 'Cómo avisar por enfermedad',
     'c.sick.b': 'Llama tú a tu encargado antes de que empiece tu turno, a no ser que tu empresa tenga otra norma. ¿Trabajas a través de una agencia? Avisa también a la agencia. No tienes que decir qué enfermedad tienes. Es información general. Para tu situación: pregunta a tu empresa, al sindicato o al Juridisch Loket.',
-    'c.sick.p': { m: 'Estoy enfermo. Hoy no puedo ir a trabajar.', f: 'Estoy enferma. Hoy no puedo ir a trabajar.', x: 'Estoy enfermo/a. Hoy no puedo ir a trabajar.' }, // x: nieuw, nalezen // nagelezen AI 22 nov
+    'c.sick.p': { m: 'Estoy enfermo. Hoy no puedo ir a trabajar.', f: 'Estoy enferma. Hoy no puedo ir a trabajar.', x: 'Me encuentro mal. Hoy no puedo ir a trabajar.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.sick.s': 'Te despiertas con fiebre. Tu turno empieza a las 7:00. ¿Qué haces?',
     'c.sick.o1': 'Llamas a tu encargado antes de las 7:00.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.sick.o2': 'Pides a un compañero que se lo diga al jefe más tarde.',
@@ -144,7 +144,7 @@ const t: CultureTranslation = {
     'c.clear': 'Di primero lo más importante', // nieuw, nalezen // nagelezen AI 22 nov
     'c.clear.b': 'En muchos idiomas es educado contar primero toda la historia, y lo importante al final. En el trabajo aquí es al revés. Primero di qué pasa o qué necesitas. Luego da el motivo. Habla con calma y para después de dos o tres frases, para que la otra persona pueda preguntar algo. También en una entrevista de trabajo: primero la respuesta, luego un ejemplo. Hablar despacio aquí no es de mala educación: ayuda a que te entiendan.',
     'c.clear.p': 'Perdón, lo digo otra vez con calma.', // nieuw, nalezen // nagelezen AI 22 nov
-    'c.clear.s': 'Llegas 20 minutos tarde. Tu encargado pregunta: “Wat is er?” ¿Qué haces?', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.clear.s': 'Llegas 20 minutos tarde. Tu encargado pregunta: “Wat is er?”. ¿Qué haces?', // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.clear.o1': 'Primero dices que llegas tarde y que lo sientes. Luego dices por qué.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.clear.o2': 'Cuentas todo lo que pasó esta mañana, desde el principio.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.clear.o3': 'No dices nada y empiezas a trabajar rápido.', // nieuw, nalezen // nagelezen AI 22 nov
@@ -213,7 +213,7 @@ const t: CultureTranslation = {
     'c.newcolleague': "Enséñalo, paso a paso", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.b': "Lo que te costó a ti en tus primeras semanas también le cuesta a un compañero nuevo. Explica el trabajo en pasos pequeños: primero esto, luego aquello. No hables más rápido ni más alto: enséñalo, y deja que lo haga después de ti. No preguntes “Snap je het?”: mucha gente dice que sí, también cuando no lo entiende. Di mejor “Laat eens zien”, y mira. Dile dónde están las cosas, como el baño, el comedor y los guantes. Ten paciencia (geduld): aprender lleva tiempo, para todos.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.p': "¡Muy bien! Ahora el siguiente paso.", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.newcolleague.s': "Le explicas una tarea a un compañero nuevo. Él dice: “Ja, ja, ik snap het.” ¿Qué haces?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.newcolleague.s': "Le explicas una tarea a un compañero nuevo. Él dice: “Ja, ja, ik snap het”. ¿Qué haces?", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.newcolleague.o1': "Dices “Laat eens zien,” y miras cómo lo hace.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.o2': "Dices “Goed zo,” y vuelves a tu propio trabajo.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.o3': "Lo vuelves a explicar todo, más rápido y más alto.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -401,13 +401,13 @@ const t: CultureTranslation = {
     'c.howto': "Comprueba si lo haces bien", // nieuw, nalezen // nagelezen AI 22 nov
     'c.howto.b': "¿No sabes bien cómo hay que hacer una tarea? Pregunta cómo, o pide a un compañero que mire tu trabajo un momento. Comprobar es normal aquí, también después de una semana o un mes. Adivinar cuesta más tiempo que preguntar: si hay un error, hay que hacerlo otra vez. “Doe ik het zo goed?” es una pregunta que a los compañeros les gusta oír.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.howto.p': "¿Miras un momento si está bien?", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.howto.s': { m: "Haces una tarea nueva. No estás seguro de hacerla bien. ¿Qué haces?", f: "Haces una tarea nueva. No estás segura de hacerla bien. ¿Qué haces?", x: "Haces una tarea nueva. No estás seguro/a de hacerla bien. ¿Qué haces?" }, // nieuw, nalezen // nagelezen AI 22 nov
+    'c.howto.s': { m: "Haces una tarea nueva. No estás seguro de hacerla bien. ¿Qué haces?", f: "Haces una tarea nueva. No estás segura de hacerla bien. ¿Qué haces?", x: "Haces una tarea nueva. No sabes si la haces bien. ¿Qué haces?" }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.howto.o1': "Pides a un compañero que la mire.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.howto.o2': "Sigues: a lo mejor está bien.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.howto.o3': "Paras y esperas hasta que venga alguien.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.howto.w': "Una mirada corta de un compañero ahorra mucho trabajo después. Y aprendes la tarea más rápido.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.mayask': "El buen momento para preguntar", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.mayask.b': "¿Es sobre seguridad, o algo puede salir mal ahora mismo? Pregunta enseguida, también cuando tu compañero está ocupado. ¿No es urgente? Espera hasta que tu compañero haya terminado, y entonces pregunta: “Heb je even tijd?” ¿Tienes muchas preguntas pequeñas? Apúntalas y hazlas todas juntas. A nadie le molesta una pregunta. Un error cuesta más tiempo.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mayask.b': "¿Es sobre seguridad, o algo puede salir mal ahora mismo? Pregunta enseguida, también cuando tu compañero está ocupado. ¿No es urgente? Espera hasta que tu compañero haya terminado, y entonces pregunta: “Heb je even tijd?”. ¿Tienes muchas preguntas pequeñas? Apúntalas y hazlas todas juntas. A nadie le molesta una pregunta. Un error cuesta más tiempo.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.mayask.p': "Perdón por molestar. ¿Tienes un momento?", // nieuw, nalezen // nagelezen AI 22 nov
     'c.mayask.s': "Tu compañero está hablando por teléfono. Tienes una pregunta que no es urgente. ¿Qué haces?", // nieuw, nalezen // nagelezen AI 22 nov
     'c.mayask.o1': "Esperas hasta que termine la llamada y luego preguntas.", // nieuw, nalezen // nagelezen AI 22 nov

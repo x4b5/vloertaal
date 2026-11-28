@@ -23,7 +23,7 @@ const t: CultureTranslation = {
     'c.je.w': '“Zeg maar je”, c’est gentil : elle veut moins de distance. Dans beaucoup d’entreprises néerlandaises, c’est normal de dire “je” à un responsable.',
     'c.names': 'Le prénom et une poignée de main',
     'c.names.b': 'Le premier jour, serre la main rapidement, regarde la personne et dis ton prénom. Les collègues et les responsables utilisent en général les prénoms.',
-    'c.names.p': { m: 'Salut, je suis Ali. Je suis nouveau ici.', f: 'Salut, je suis Ali. Je suis nouvelle ici.', x: 'Salut, je suis Ali. Je suis nouveau / nouvelle ici.' },
+    'c.names.p': { m: 'Salut, je suis Ali. Je suis nouveau ici.', f: 'Salut, je suis Ali. Je suis nouvelle ici.', x: 'Salut, je suis Ali. Je viens d’arriver ici.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.names.s': 'Un collègue vient vers toi : “Hoi, ik ben Mark.” Que fais-tu ?',
     'c.names.o1': 'Serre-lui la main et dis ton nom.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.names.o2': 'Fais oui de la tête, souris et attends les questions.', // nagelezen (2e lezing) // nagelezen AI 22 nov
@@ -63,7 +63,7 @@ const t: CultureTranslation = {
     'c.unsafe.w': 'Un presque-accident est un avertissement. Le signaler aide à éviter un vrai accident. Ton employeur n’a pas le droit de te punir parce que tu l’as signalé.',
     'c.alarm': 'L’alarme sonne : arrête-toi et sors', // nieuw, nalezen // nagelezen AI 22 nov
     'c.alarm.b': 'Le premier jour, demande où sont les sorties de secours et le point de rassemblement. Quand l’alarme sonne, arrête tout de suite ton travail. Laisse tes affaires et sors par le chemin d’évacuation. Prends l’escalier, jamais l’ascenseur. Au point de rassemblement, on compte qui est dehors : donc reste là. Sors aussi quand tu penses que c’est seulement un exercice.', // nieuw, nalezen // nagelezen AI 22 nov
-    'c.alarm.p': { m: 'Je suis nouveau. Où est le point de rassemblement ?', f: 'Je suis nouvelle. Où est le point de rassemblement ?', x: 'Je suis nouveau / nouvelle. Où est le point de rassemblement ?' }, // nieuw, nalezen // nagelezen AI 22 nov
+    'c.alarm.p': { m: 'Je suis nouveau. Où est le point de rassemblement ?', f: 'Je suis nouvelle. Où est le point de rassemblement ?', x: 'Je viens d’arriver. Où est le point de rassemblement ?' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.alarm.s': 'L’alarme incendie sonne. Tu as presque fini une commande. Que fais-tu ?', // nieuw, nalezen // nagelezen AI 22 nov
     'c.alarm.o1': 'Arrête-toi tout de suite et va au point de rassemblement.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.alarm.o2': 'Finis d’abord la commande, puis sors.', // nieuw, nalezen // nagelezen AI 22 nov
@@ -103,7 +103,7 @@ const t: CultureTranslation = {
     'c.limits.w': 'Demander de l’aide, c’est le travail d’équipe normal. Un dos blessé coûte bien plus cher qu’une minute d’aide.',
     'c.time': 'À l’heure veut dire un peu en avance',
     'c.time.b': 'Être à l’heure est très important. Beaucoup de gens arrivent cinq ou dix minutes avant le début du service. Si tu vas être en retard, envoie un message ou appelle avant le début de ton service, pas après.',
-    'c.time.p': { m: 'Désolé, le bus a du retard. Je serai là à huit heures.', f: 'Désolée, le bus a du retard. Je serai là à huit heures.', x: 'Désolé / désolée, le bus a du retard. Je serai là à huit heures.' },
+    'c.time.p': { m: 'Désolé, le bus a du retard. Je serai là à huit heures.', f: 'Désolée, le bus a du retard. Je serai là à huit heures.', x: 'Pardon, le bus a du retard. Je serai là à huit heures.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.time.s': 'Ton bus a du retard et tu vas arriver 15 minutes en retard. Que fais-tu ?',
     'c.time.o1': 'Préviens tout de suite ton responsable.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.time.o2': 'Explique-le quand tu arrives.',
@@ -390,7 +390,7 @@ const t: CultureTranslation = {
     'c.picking.o3': "Saute l’article et ne dis rien.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.picking.w': "Un mauvais article revient, et ça prend plus de temps que de demander. Quand tu le signales, quelqu’un peut remplir la case ou changer la commande.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.loading': "Jamais derrière un camion qui recule", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.loading.b': { m: "Le chauffeur ne peut pas tout voir derrière le camion. Ne passe jamais derrière un camion qui recule, et ne reste pas entre le camion et la porte. Attends que le camion soit à l’arrêt et que le chauffeur t’ait vu. Une palette manque ou est cassée quand tu décharges ? Dis-le avant que le chauffeur parte.", f: "Le chauffeur ne peut pas tout voir derrière le camion. Ne passe jamais derrière un camion qui recule, et ne reste pas entre le camion et la porte. Attends que le camion soit à l’arrêt et que le chauffeur t’ait vue. Une palette manque ou est cassée quand tu décharges ? Dis-le avant que le chauffeur parte.", x: "Le chauffeur ne peut pas tout voir derrière le camion. Ne passe jamais derrière un camion qui recule, et ne reste pas entre le camion et la porte. Attends que le camion soit à l’arrêt et que le chauffeur t’ait vu / vue. Une palette manque ou est cassée quand tu décharges ? Dis-le avant que le chauffeur parte." }, // nieuw, nalezen // nagelezen AI 22 nov
+    'c.loading.b': { m: "Le chauffeur ne peut pas tout voir derrière le camion. Ne passe jamais derrière un camion qui recule, et ne reste pas entre le camion et la porte. Attends que le camion soit à l’arrêt et que le chauffeur t’ait vu. Une palette manque ou est cassée quand tu décharges ? Dis-le avant que le chauffeur parte.", f: "Le chauffeur ne peut pas tout voir derrière le camion. Ne passe jamais derrière un camion qui recule, et ne reste pas entre le camion et la porte. Attends que le camion soit à l’arrêt et que le chauffeur t’ait vue. Une palette manque ou est cassée quand tu décharges ? Dis-le avant que le chauffeur parte.", x: "Le chauffeur ne peut pas tout voir derrière le camion. Ne passe jamais derrière un camion qui recule, et ne reste pas entre le camion et la porte. Attends que le camion soit à l’arrêt et que le chauffeur te voie. Une palette manque ou est cassée quand tu décharges ? Dis-le avant que le chauffeur parte." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.loading.p': "Attends un moment. Le camion recule.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.loading.s': "Un camion recule vers la porte. Tu veux vite traverser derrière lui. Que fais-tu ?", // nieuw, nalezen // nagelezen AI 22 nov
     'c.loading.o1': "Attends que le camion soit à l’arrêt.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -401,7 +401,7 @@ const t: CultureTranslation = {
     'c.howto': "Vérifie si tu fais bien", // nieuw, nalezen // nagelezen AI 22 nov
     'c.howto.b': "Tu ne sais pas bien comment faire une tâche ? Demande comment, ou demande à un collègue de regarder ton travail un moment. Vérifier, c’est normal ici, même après une semaine ou un mois. Deviner prend plus de temps que demander : s’il y a une erreur, il faut refaire. “Doe ik het zo goed?” est une question que les collègues aiment entendre.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.howto.p': "Tu peux regarder un moment si c’est bien ?", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.howto.s': { m: "Tu fais une nouvelle tâche. Tu n’es pas sûr de bien la faire. Que fais-tu ?", f: "Tu fais une nouvelle tâche. Tu n’es pas sûre de bien la faire. Que fais-tu ?", x: "Tu fais une nouvelle tâche. Tu n’es pas sûr / sûre de bien la faire. Que fais-tu ?" }, // nieuw, nalezen // nagelezen AI 22 nov
+    'c.howto.s': { m: "Tu fais une nouvelle tâche. Tu n’es pas sûr de bien la faire. Que fais-tu ?", f: "Tu fais une nouvelle tâche. Tu n’es pas sûre de bien la faire. Que fais-tu ?", x: "Tu fais une nouvelle tâche. Tu doutes de bien la faire. Que fais-tu ?" }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.howto.o1': "Demande à un collègue de regarder.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.howto.o2': "Continue : c’est peut-être bien.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.howto.o3': "Arrête et attends que quelqu’un vienne.", // nieuw, nalezen // nagelezen AI 22 nov

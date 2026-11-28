@@ -59,7 +59,7 @@ const t: CultureTranslation = {
     'c.boundaries.a.why': "Einen Witz, der wehtut, darf man klar stoppen.",
     'c.health.a.why': "Eine Pause schützt die Gesundheit, darum nimmt man sie.",
     'c.rights.a.why': "Eine Kündigung unterschreibt man nie sofort. Zuerst kommt eine Beratung.",
-    'c.mustmay.a.why': "Freiwillig heißt: Du darfst wählen. Arbeit am Samstag ist nicht nötig.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mustmay.a.why': "Freiwillig heißt, du darfst wählen: Arbeit am Samstag ist nicht nötig.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.leave.a.why': "Wann? Diese Antwort nennt einen Monat und wie lange.",
     'c.illness.a.why': "Medizinische Details sind für den Betriebsarzt, nicht für den Chef.",
     'c.warning.a.why': "Ein Arbeitgeber darf den Pass kopieren, aber nicht behalten.",
@@ -70,7 +70,7 @@ const t: CultureTranslation = {
     'c.diploma.a.why': "Ja zur Ausbildung sagen und fragen, wer zahlt, ist normal.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.doctor.a.why': "Der Hausarzt-Notdienst muss wissen, wer krank ist und was los ist.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     'c.insurance.a.why': "Der Name der Versicherung steht auf der Krankenversicherungskarte.",
-    'c.letters.a.why': "Die Steuererklärung muss bis zum 1. Mai gemacht sein.",
+    'c.letters.a.why': "Die Steuererklärung muss bis zum 1.Mai gemacht sein.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.scams.a.why': "Eine Bank fragt nie nach der PIN. Auflegen ist richtig.",
     'c.bike.a.why': "Wie? Diese Antwort nennt das Verkehrsmittel und die Zeit.",
     'c.transit.a.why': "Nicht der Zug: Diese Antwort nennt stattdessen den Bus.",

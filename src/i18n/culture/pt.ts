@@ -23,7 +23,7 @@ const t: CultureTranslation = {
     'c.je.w': '"Zeg maar je" é simpático: ela quer menos distância. Em muitos locais de trabalho nos Países Baixos é normal dizer "je" ao chefe.',
     'c.names': 'Nomes próprios e um aperto de mão',
     'c.names.b': 'No primeiro dia, dá um aperto de mão curto, olha para a pessoa e diz o teu primeiro nome. Os colegas e os chefes costumam tratar-se pelo primeiro nome.',
-    'c.names.p': { m: 'Olá, sou Ali. Sou novo aqui.', f: 'Olá, sou Ali. Sou nova aqui.', x: 'Olá, sou Ali. Sou novo / nova aqui.' },
+    'c.names.p': { m: 'Olá, sou Ali. Sou novo aqui.', f: 'Olá, sou Ali. Sou nova aqui.', x: 'Olá, sou Ali. Comecei há pouco tempo aqui.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.names.s': 'Um colega vem ter contigo: "Hoi, ik ben Mark." O que fazes?',
     'c.names.o1': 'Dás-lhe a mão e dizes o teu nome.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.names.o2': 'Acenas com a cabeça, sorris e esperas que te façam perguntas.', // nagelezen (2e lezing) // nagelezen AI 22 nov
@@ -98,7 +98,7 @@ const t: CultureTranslation = {
     'c.limits.p': 'Esta caixa é pesada demais. Podes ajudar um momento?',
     'c.limits.s': 'Tens de levantar uma caixa que é pesada demais para ti. O que fazes?',
     'c.limits.o1': 'Pedes ajuda a um colega ou usas um carrinho.',
-    'c.limits.o2': { m: 'Levantas na mesma, para ninguém pensar que és fraco.', f: 'Levantas na mesma, para ninguém pensar que és fraca.', x: 'Levantas na mesma, para ninguém pensar que és fraco/a.' },
+    'c.limits.o2': { m: 'Levantas na mesma, para ninguém pensar que és fraco.', f: 'Levantas na mesma, para ninguém pensar que és fraca.', x: 'Levantas na mesma, para ninguém pensar que te falta força.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.limits.o3': 'Deixas a caixa ali e não dizes nada.',
     'c.limits.w': 'Pedir ajuda é trabalho de equipa normal. Umas costas magoadas custam muito mais do que um minuto de ajuda.',
     'c.time': 'A horas quer dizer um pouco antes',
@@ -122,7 +122,7 @@ const t: CultureTranslation = {
     'c.speakup.p': 'Há uma coisa que me incomoda. Podemos falar um momento?',
     'c.speakup.s': 'Um colega deixa sempre o trabalho pesado para ti. Isso incomoda-te. O que fazes?',
     'c.speakup.o1': 'Dizes ao colega o que te incomoda.', // nagelezen (2e lezing) // nagelezen AI 22 nov
-    'c.speakup.o2': { m: 'Ficas calado e cada vez mais zangado.', f: 'Ficas calada e cada vez mais zangada.', x: 'Ficas calado/a e cada vez mais zangado/a.' },
+    'c.speakup.o2': { m: 'Ficas calado e cada vez mais zangado.', f: 'Ficas calada e cada vez mais zangada.', x: 'Não dizes nada e a tua raiva vai crescendo.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.speakup.o3': 'Queixas-te dele a todos os outros colegas.',
     'c.speakup.w': 'Os colegas nos Países Baixos costumam preferir ouvir as coisas diretamente. Dizer cedo e com calma mantém a boa relação.',
     'c.no': '"Afspraak is afspraak"',

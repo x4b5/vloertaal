@@ -30,7 +30,7 @@ const t: CultureTranslation = {
     's.roundsounds.3': 'هذا المعطف غالٍ أكثر من اللازم.',
     'c.roundsounds.q': 'هل الباب مفتوح؟',
     'c.roundsounds.a': 'لا، إنه مغلق.',
-    'c.roundsounds.a.why': 'السؤال: هل الباب مفتوح؟ هذا الرد يقول: لا.',
+    'c.roundsounds.a.why': 'السؤال عمّا إذا كان الباب مفتوحاً، وهذا الرد يقول: لا.', // nieuw, nalezen (AI-correctie 28 nov 2026)
     'l.pbgk': "p أو b، g، k أو h", // nagelezen (2e lezing)
     'w.kl.pak': 'البدلة',
     'w.kl.bak': 'الصندوق، السلة',

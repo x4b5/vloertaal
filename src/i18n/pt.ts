@@ -464,9 +464,9 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Fazer as lições mesmo assim', // nieuw, nalezen // nagelezen AI 28 nov
     commLabel: 'Comunicação', // nieuw, nalezen // nagelezen AI 28 nov
     shareInvite: 'Estou a aprender neerlandês para o meu trabalho com o Vloertaal. Grátis: {link}', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeWhat: 'O Vloertaal é uma app grátis para aprender o neerlandês do trabalho.', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeHow: 'Lições curtas no teu telemóvel, com ajuda na tua língua. Sem conta.', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeOpen: 'Abre no teu telemóvel:', // nieuw, nalezen // nagelezen AI 28 nov
+    briefjeWhat: 'O Vloertaal é uma app grátis para aprender o neerlandês do trabalho.', // nieuw, nalezen
+    briefjeHow: 'Lições curtas no teu telemóvel, com ajuda na tua língua. Sem conta.', // nieuw, nalezen
+    briefjeOpen: 'Abre no teu telemóvel:', // nieuw, nalezen
     workTry: 'Experimenta hoje no trabalho', // nieuw, nalezen // nagelezen AI 28 nov
     workTryWhen: 'Quando:', // nieuw, nalezen // nagelezen AI 28 nov
     workTryThen: 'Então diz:', // nieuw, nalezen // nagelezen AI 28 nov
@@ -567,9 +567,9 @@ const lang: HelpLanguageSource = {
     'w.ja': 'sim',
     'w.nee': 'não',
     'w.totmorgen': 'até amanhã',
-    's.hello.1': { m: 'Olá, sou novo.', f: 'Olá, sou nova.', x: 'Olá, sou novo / nova.' },
+    's.hello.1': { m: 'Olá, sou novo.', f: 'Olá, sou nova.', x: 'Olá, comecei há pouco tempo.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     's.hello.2': 'Bom dia, sou o Ali.',
-    's.hello.3': { m: 'Obrigado, até amanhã!', f: 'Obrigada, até amanhã!', x: 'Obrigado / obrigada, até amanhã!' },
+    's.hello.3': { m: 'Obrigado, até amanhã!', f: 'Obrigada, até amanhã!', x: 'Agradeço, até amanhã!' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'l.people': 'Pessoas no trabalho',
     'w.collega': 'o colega / a colega',
     'w.baas': 'o patrão / a patroa',
@@ -579,7 +579,7 @@ const lang: HelpLanguageSource = {
     'w.nieuw': 'novo',
     's.people.1': 'O meu nome é Sara.',
     's.people.2': 'Quem é o patrão?',
-    's.people.3': { m: 'Sou um colega novo.', f: 'Sou uma colega nova.', x: 'Sou um colega novo / uma colega nova.' },
+    's.people.3': { m: 'Sou um colega novo.', f: 'Sou uma colega nova.', x: 'Acabo de entrar na equipa.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
 
     // Unit: Asking for help
     'u.help': 'Pedir ajuda',
@@ -699,7 +699,7 @@ const lang: HelpLanguageSource = {
     's.arrive.2': 'Não consigo encontrar o vestiário.',
     's.arrive.3': 'Quem é o meu buddy hoje?',
     'c.arrive.q': 'Bom dia, o que deseja?',
-    'c.arrive.a': { m: 'Sou novo. Começo hoje.', f: 'Sou nova. Começo hoje.', x: 'Sou novo / nova. Começo hoje.' },
+    'c.arrive.a': { m: 'Sou novo. Começo hoje.', f: 'Sou nova. Começo hoje.', x: 'Acabo de chegar. Começo hoje.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.understand.q': 'Percebes?',
     'c.understand.a': 'Não, mais uma vez, por favor.',
     'c.gear.q': 'Tens o teu capacete?',

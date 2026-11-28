@@ -187,9 +187,9 @@ const t: CultureTranslation = {
     'w.verbeteren': 'melhorar, corrigir',
     's.mistakes.1': 'Desculpa, cometi um erro.',
     's.mistakes.2': 'Podes explicar?',
-    's.mistakes.3': { m: 'Obrigado pelo elogio!', f: 'Obrigada pelo elogio!', x: 'Obrigado / obrigada pelo elogio!' },
+    's.mistakes.3': { m: 'Obrigado pelo elogio!', f: 'Obrigada pelo elogio!', x: 'Agradeço o elogio!' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.mistakes.q': 'Muito bem! Bom trabalho!', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
-    'c.mistakes.a': { m: 'Obrigado, é bom ouvir isso.', f: 'Obrigada, é bom ouvir isso.', x: 'Obrigado / obrigada, é bom ouvir isso.' },
+    'c.mistakes.a': { m: 'Obrigado, é bom ouvir isso.', f: 'Obrigada, é bom ouvir isso.', x: 'Agradeço, é bom ouvir isso.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'l.respect': 'Respeito por todos',
     'w.respect': 'o respeito',
     'w.gelijk': 'igual',
@@ -674,7 +674,7 @@ const t: CultureTranslation = {
     'c.smalltalk.p': 'Parabéns pelo teu aniversário!',
     'c.smalltalk.s': 'Na pausa, os teus colegas estão sentados juntos a uma mesa. Ainda não os conheces bem. O que fazes?',
     'c.smalltalk.o1': 'Perguntas "Mag ik bij jullie zitten?" e juntas-te com uma conversa curta.',
-    'c.smalltalk.o2': { m: 'Comes sozinho lá fora todos os dias, para não os incomodares.', f: 'Comes sozinha lá fora todos os dias, para não os incomodares.', x: 'Comes sozinho/a lá fora todos os dias, para não os incomodares.' },
+    'c.smalltalk.o2': { m: 'Comes sozinho lá fora todos os dias, para não os incomodares.', f: 'Comes sozinha lá fora todos os dias, para não os incomodares.', x: 'Comes lá fora sem companhia todos os dias, para não os incomodares.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.smalltalk.o3': 'Perguntas a cada colega quanto ganha.',
     'c.smalltalk.w': 'Juntares-te à mesa é bem visto e ajuda-te a conhecer a equipa. Uma pergunta simples como "Hoe was je weekend?" é um bom começo.',
     'c.mistakes': 'Os erros são normais',
@@ -2510,7 +2510,7 @@ const t: CultureTranslation = {
     'c.wood.o1': "Medes outra vez, e depois riscas a linha.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wood.o2': "Serras já: deve estar certo.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wood.o3': "Serras a olho, sem linha.", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.wood.w': "Comprido demais, podes serrar outra vez. Curto demais, já não tem conserto. Medir outra vez demora um minuto; uma tábua nova custa muito mais.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.wood.w': "Comprido demais, podes serrar outra vez; curto demais, já não tem conserto. Medir outra vez demora um minuto; uma tábua nova custa muito mais.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'l.square': "Marcar", // nieuw, nalezen // nagelezen AI 28 nov
     'w.winkelhaak': "o esquadro (mostra um ângulo reto)", // nieuw, nalezen // nagelezen AI 28 nov
     'w.verstekhaak': "o esquadro de meia-esquadria (45 graus)", // nieuw, nalezen // nagelezen AI 28 nov

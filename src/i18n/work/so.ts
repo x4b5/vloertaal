@@ -484,7 +484,7 @@ const t: CultureTranslation = {
     'w.beschadigd': "waxyeelloobay", // nieuw, nalezen // nagelezen AI 28 nov
     'w.etiket': "calaamadda (warqadda alaabta ku dheggan)", // nieuw, nalezen // nagelezen AI 28 nov
     'w.lijst': "liiska", // nieuw, nalezen // nagelezen AI 28 nov
-    's.quality.1': "Alaabtani waa waxyeelloobtay.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.quality.1': "Alaabtani way waxyeelloobtay.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     's.quality.2': "Calaamaddu sax ma aha.", // nieuw, nalezen // nagelezen AI 28 nov
     's.quality.3': "Tan ma waa inaan diido?", // nieuw, nalezen // nagelezen AI 28 nov
     'c.quality.q': "Maxaa tan dhinac loo dhigay?", // nieuw, nalezen // nagelezen AI 28 nov
@@ -745,7 +745,7 @@ const t: CultureTranslation = {
     'c.gethelp': "Halka aad caawimaad ka heli karto", // nieuw, nalezen // nagelezen AI 22 nov
     'c.gethelp.b': "Ma aragtaa calaamado ka faa'iideysi xun, adiga ama qof kale? Caawimaad hel. Waxaad u sheegi kartaa Nederlandse Arbeidsinspectie, xataa adigoon magacaaga bixin, ama booliska. Meld Misdaad Anoniem: 0800-7000. Talo sharci oo bilaash ah: Juridisch Loket. Khatar ma ku jirtaa? Wac 112. Qof kasta oo Holland ka shaqeeya wuu heli karaa caawimaad, xataa muhaajiriinta. Macluumaad guud. Xaaladdaada gaarka ah: weydii ururka shaqaalaha, Juridisch Loket ama FairWork.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.gethelp.p': "Caawimaad ayaan u baahanahay. Si xun ayaa la iiga faa'iideysanayaa.", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.gethelp.s': "Saaxiib ayaa maalintii 14 saacadood shaqeeya, ku dhowaad mushahar ma helo, wuxuuna ka baqaa madaxa. Maxaad samayn kartaa?", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.gethelp.s': "Saaxiib ayaa maalintii 14 saacadood shaqeeya, ku dhowaad mushahar ma helo. Wuxuu ka baqaa madaxa. Maxaad samayn kartaa?", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.gethelp.o1': "Ka caawi inuu la xiriiro Arbeidsinspectie ama Juridisch Loket.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.gethelp.o2': "U sheeg in tani caadi u tahay shaqaalaha cusub.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.gethelp.o3': "U sheeg inuu sugo ilaa qandaraaskiisu dhammaado, kadibna ka tago.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2599,7 +2599,7 @@ const t: CultureTranslation = {
     'w.afkeurbak': "weelka alaabta la diiday (alaabta aan fiicnayn)", // nieuw, nalezen // nagelezen AI 28 nov
     'w.teller': "tiriyaha (wuxuu tiriyaa alaabta)", // nieuw, nalezen // nagelezen AI 28 nov
     's.inspect.1': "Alaabta saar miisaanka.", // nieuw, nalezen // nagelezen AI 28 nov
-    's.inspect.2': "Alaabtani waa waxyeelloobtay. Waxay galaysaa weelka alaabta la diiday.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.inspect.2': "Alaabtani way waxyeelloobtay. Waxay galaysaa weelka alaabta la diiday.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     's.inspect.3': "Calaamadda waxaan ku eegayaa muraayadda weyneysa.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.inspect.q': "Intee jeer ayaan muunad qaataa?", // nieuw, nalezen // nagelezen AI 28 nov
     'c.inspect.a': "Saacad kasta hal. Ku qor liiska.", // nieuw, nalezen // nagelezen AI 28 nov
@@ -2644,7 +2644,7 @@ const t: CultureTranslation = {
     'c.upkeep.q': "Goorma ayaan mashiinka giriis marinaa?", // nieuw, nalezen // nagelezen AI 28 nov
     'c.upkeep.a': "Isniin kasta, shiftiga ugu horreeya ka hor.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.upkeep': "Mashiin nadiif ah dhibaatooyinkiisa wuu muujiyaa", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.upkeep.b': "Dayactir yar badanaa waa qayb ka mid ah shaqada: masaxid, saliid marin iyo giriis marin. Samee oo keliya marka mashiinku dansan yahay, iyo marka lagu baray sida loo sameeyo. Mashiin nadiif ah way fududahay in la hubiyo: daadasho ama qayb dabacsan isla markiiba waad aragtaa. Saliidda dhulka ku jirtaa way simbiriirixdaa. Weelka dhibcaha dhig daadashada hoosteeda, dhulka masax, oo u sheeg hoggaamiyaha kooxdaada. Marooyinka saliidda leh ku tuur weelka qashinka ee gaarka ah. Waligaa qoriga hawada ha ku fiiqin qof, waligaana ha ku nadiifin dharkaaga ama maqaarkaaga. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.upkeep.b': "Dayactir yar badanaa waa qayb ka mid ah shaqada: masaxid, saliid marin iyo giriis marin. Samee oo keliya marka mashiinku demsan yahay, iyo marka lagu baray sida loo sameeyo. Mashiin nadiif ah way fududahay in la hubiyo: daadasho ama qayb dabacsan isla markiiba waad aragtaa. Saliidda dhulka ku jirtaa way simbiriirixdaa. Weelka dhibcaha dhig daadashada hoosteeda, dhulka masax, oo u sheeg hoggaamiyaha kooxdaada. Marooyinka saliidda leh ku tuur weelka qashinka ee gaarka ah. Waligaa qoriga hawada ha ku fiiqin qof, waligaana ha ku nadiifin dharkaaga ama maqaarkaaga. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.upkeep.p': "Mashiinka saliid ayaa ka daadanaysa.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.upkeep.s': "Waxaad aragtaa saliid yar oo mashiinka hoostiisa ku taal. Maxaad samaynaysaa?", // nieuw, nalezen // nagelezen AI 22 nov
     'c.upkeep.o1': "Weelka dhibcaha hoos dhig, oo sheeg.", // nieuw, nalezen // nagelezen AI 22 nov

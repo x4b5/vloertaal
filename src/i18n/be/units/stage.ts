@@ -8,7 +8,7 @@ export const ar: Gloss = {
   'be.c.review': { m: 'اطلب ملاحظات، ومثالاً', f: 'اطلبي ملاحظات، ومثالاً', x: 'طلب ملاحظات، ومثال' }, // nieuw, nalezen
   'be.c.review.b': { m: "في التدريب يقول لك الناس ما يسير جيداً وما يمكن أن يكون أفضل: هذه ملاحظات (feedback). هذا طبيعي، ويساعدك على التعلم. لا تفهم؟ اطلب مثالاً. اطلب أنت أيضاً ملاحظات، مثلاً مرة في الأسبوع. هناك مشكلة حقيقية في تدريبك؟ تكلّم أولاً مع المدرّب في الشركة. لا يفيد ذلك؟ اذهب إذن إلى مشرف التدريب في المدرسة.", f: "في التدريب يقول لكِ الناس ما يسير جيداً وما يمكن أن يكون أفضل: هذه ملاحظات (feedback). هذا طبيعي، ويساعدك على التعلم. لا تفهمين؟ اطلبي مثالاً. اطلبي أنتِ أيضاً ملاحظات، مثلاً مرة في الأسبوع. هناك مشكلة حقيقية في تدريبك؟ تكلّمي أولاً مع المدرّب في الشركة. لا يفيد ذلك؟ اذهبي إذن إلى مشرف التدريب في المدرسة.", x: "في التدريب يقول الناس ما يسير جيداً وما يمكن أن يكون أفضل: هذه ملاحظات (feedback). هذا طبيعي، ويساعد على التعلم. شيء غير مفهوم؟ طلب مثال يساعد. طلب الملاحظات مفيد أيضاً، مثلاً مرة في الأسبوع. هناك مشكلة حقيقية في التدريب؟ الكلام أولاً مع المدرّب في الشركة. لا يفيد ذلك؟ الخطوة التالية مشرف التدريب في المدرسة." }, // nieuw, nalezen
   'be.c.review.p': "ما الذي سار جيداً، وما الذي يمكن أن يكون أفضل؟", // nieuw, nalezen
-  'be.c.review.s': { m: "المدرّب يقول لك: «يجب أن تعمل بعناية أكبر.» لا تعرف ماذا يقصد. ماذا تفعل؟", f: "المدرّب يقول لكِ: «يجب أن تعملي بعناية أكبر.» لا تعرفين ماذا يقصد. ماذا تفعلين؟", x: "المدرّب يقول: «المطلوب عمل بعناية أكبر.» المقصود غير واضح. ما التصرف الصحيح؟" }, // nieuw, nalezen
+  'be.c.review.s': { m: "المدرّب يقول لك: «يجب أن تعمل بعناية أكبر». لا تعرف ماذا يقصد. ماذا تفعل؟", f: "المدرّب يقول لكِ: «يجب أن تعملي بعناية أكبر». لا تعرفين ماذا يقصد. ماذا تفعلين؟", x: "المدرّب يقول: «المطلوب عمل بعناية أكبر». المقصود غير واضح. ما التصرف الصحيح؟" }, // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.review.o1': "طلب مثال لما يجب فعله بشكل مختلف.", // nieuw, nalezen
   'be.c.review.o2': "قول نعم، والأمل في الفهم لاحقاً بلا سؤال.", // nieuw, nalezen
   'be.c.review.o3': "العمل من الآن ببطء أكبر بكثير، كي لا يحدث أي خطأ.", // nieuw, nalezen
@@ -48,7 +48,7 @@ export const ti: Gloss = {
   'be.c.placement.b': 'ኣብ ቤት ትምህርቲ ብዙሕ ግዜ ኣብ ትካል ትመሃሩ፡ እዚ ልምምድ ስራሕኩም (stage) እዩ። ኣብ ክልተኣዊ ምምሃር (duaal leren) ኣብ ቤት ትምህርትን ኣብ ትካልን ትመሃሩ። ቅድሚ ምጅማርኩም፡ ንስኹም፡ ቤት ትምህርትን ትካልን ስምምዕ ትፍርሙ፡ stageovereenkomst። ዕድሜኹም ትሕቲ 18 ድዩ? ሽዑ ወለድኹም እውን ይፍርሙ። ኣብቲ ትካል መራሒኹም (mentor) ይሕግዘኩም። ካብ ቤት ትምህርቲ ድማ ተቖጻጻሪ ልምምድ (stagebegeleider) ይሕግዘኩም። ኣብ ቤት ትምህርቲ ወይ ኣብ ቦታ ልምምድ ጸገም ኣሎ ዶ? CLB ንተማሃሮ ብናጻን ብምስጢርን ይሕግዝ። ሓሚምኩም ዶ? ቅድሚ ግዜ ምጅማር ስራሕኩም ናብቲ ትካል ደውሉ፡ ንቤት ትምህርቲ እውን ንገሩ። ሕግታት ካብ ቤት ትምህርቲ ናብ ቤት ትምህርቲ ይፈላለ፡ ንተቖጻጻሪ ልምምድኩም ሕተቱ።', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.p': "ውዕል ልምምድ ምስ ተፈርመ ጥራይ እጅምር።", // nieuw, nalezen
   'be.c.placement.s': "እቲ ትካል ጽባሕ ክትጅምሩ ይሓተኩም። stageovereenkomst ገና ኣይተፈረመን። እንታይ ትገብሩ?", // nieuw, nalezen
-  'be.c.placement.o1': "ንተቖጻጻሪ ልምምድ ቅድም እቲ ስምምዕ ከዳልዎ ሕተቱ።", // nieuw, nalezen
+  'be.c.placement.o1': "ንተቖጻጻሪ ልምምድኩም (stagebegeleider) ቅድም እቲ ስምምዕ ከዳልዎ ሕተቱ።", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.placement.o2': 'ጽባሕ ጀምሩ፡ ግዜ ምስ ረኸብኩም ድማ ነቲ ስምምዕ ፈርምዎ።', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.o3': 'ጀምሩ፡ ግን ንቤት ትምህርቲ ገና ገለ ኣይትበሉ።', // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.w': "stageovereenkomst እንታይ ከም እትመሃሩን መን ከም ዝሕግዘኩምን ይገልጽ። ብዘይ ዝተፈረመ ስምምዕ፡ ልምምድኩም ዘይጸድቕ ይኽእል። ስለዚ ቅድሚ ምጅማርኩም ትፍርምዎ።", // nieuw, nalezen
@@ -58,7 +58,7 @@ export const fa: Gloss = {
   'be.c.review': "بازخورد بخواه، و یک مثال", // nieuw, nalezen
   'be.c.review.b': "در کارآموزی، دیگران به تو می‌گویند چه چیزی خوب پیش می‌رود و چه چیزی می‌تواند بهتر شود: بازخورد (feedback). این عادی است و به یادگیری‌ات کمک می‌کند. متوجه نمی‌شوی؟ یک مثال بخواه. خودت هم بازخورد بخواه، مثلاً هفته‌ای یک بار. در کارآموزی واقعاً مشکلی هست؟ اول با مربی کارآموزی در شرکت حرف بزن. فایده ندارد؟ آن وقت پیش مسئول کارآموزی در مدرسه برو.", // nieuw, nalezen
   'be.c.review.p': "چه چیزی خوب پیش رفت، و چه چیزی می‌تواند بهتر شود؟", // nieuw, nalezen
-  'be.c.review.s': "مربی کارآموزی‌ات می‌گوید: «باید با دقت بیشتری کار کنی.» نمی‌دانی منظورش چیست. چه کار می‌کنی؟", // nieuw, nalezen
+  'be.c.review.s': "مربی کارآموزی‌ات می‌گوید: «باید با دقت بیشتری کار کنی». نمی‌دانی منظورش چیست. چه کار می‌کنی؟", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.review.o1': "یک مثال می‌خواهی از اینکه چه چیزی را باید جور دیگری انجام بدهی.", // nieuw, nalezen
   'be.c.review.o2': "می‌گویی باشد و امیدواری خودت سر دربیاوری.", // nieuw, nalezen
   'be.c.review.o3': "از حالا خیلی آهسته‌تر کار می‌کنی تا هیچ چیزی خراب نشود.", // nieuw, nalezen
@@ -72,7 +72,7 @@ export const fa: Gloss = {
   'be.c.placement': "اول امضا، بعد شروع", // nieuw, nalezen
   'be.c.placement.b': "در مدرسه اغلب در یک شرکت یاد می‌گیری: این کارآموزی توست (stage). در یادگیری دوگانه (duaal leren) هم در مدرسه یاد می‌گیری هم در شرکت. پیش از شروع، تو، مدرسه و شرکت یک توافق امضا می‌کنید: stageovereenkomst. زیر ۱۸ سال داری؟ پس پدر و مادرت هم امضا می‌کنند. در شرکت، مربی‌ات (mentor) کمکت می‌کند. از طرف مدرسه، راهنمای کارآموزی (stagebegeleider) کمکت می‌کند. در مدرسه یا محل کارآموزی مشکل داری؟ CLB رایگان و محرمانه به دانش‌آموزان کمک می‌کند. بیماری؟ پیش از ساعت شروع کار به شرکت زنگ بزن، و به مدرسه هم خبر بده. قانون‌ها در هر مدرسه فرق دارد: از راهنمای کارآموزی‌ات بپرس.", // nieuw, nalezen
   'be.c.placement.p': "فقط وقتی شروع می‌کنم که قرارداد کارآموزی امضا شده باشد.", // nieuw, nalezen
-  'be.c.placement.s': "شرکت از تو می‌خواهد فردا شروع کنی. stageovereenkomst هنوز امضا نشده. چه کار می‌کنی؟", // nieuw, nalezen
+  'be.c.placement.s': "شرکت از تو می‌خواهد فردا شروع کنی. قرارداد کارآموزی (stageovereenkomst) هنوز امضا نشده. چه کار می‌کنی؟", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.placement.o1': "از راهنمای کارآموزی بخواه اول توافق را درست کند.", // nieuw, nalezen
   'be.c.placement.o2': "فردا شروع کن، و هر وقت وقت داشتی توافق را امضا کن.", // nieuw, nalezen
   'be.c.placement.o3': "شروع کن، ولی فعلاً به مدرسه چیزی نگو.", // nieuw, nalezen // nagelezen AI ronde 3
@@ -83,7 +83,7 @@ export const prs: Gloss = {
   'be.c.review': "نظر بخواهید، و یک مثال", // nieuw, nalezen
   'be.c.review.b': "در کارآموزی، دیگران به شما می‌گویند که چه خوب پیش می‌رود و چه بهتر شده می‌تواند: نظر (feedback). این عادی است و به یادگیری تان کمک می‌کند. نمی‌فهمید؟ یک مثال بخواهید. خود تان هم نظر بخواهید، مثلاً هفته‌ای یک بار. در کارآموزی واقعاً مشکلی است؟ اول با مربی کارآموزی در کمپنی گپ بزنید. فایده ندارد؟ بعد پیش مسئول کارآموزی در مکتب بروید.", // nieuw, nalezen
   'be.c.review.p': "چه خوب پیش رفت، و چه بهتر شده می‌تواند؟", // nieuw, nalezen
-  'be.c.review.s': "مربی کارآموزی تان می‌گوید: «باید با دقت بیشتر کار کنید.» نمی‌دانید منظورش چیست. چه می‌کنید؟", // nieuw, nalezen
+  'be.c.review.s': "مربی کارآموزی تان می‌گوید: «باید با دقت بیشتر کار کنید». نمی‌دانید منظورش چیست. چه می‌کنید؟", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.review.o1': "یک مثال بخواهید که چه چیز را باید طور دیگر انجام بدهید.", // nieuw, nalezen
   'be.c.review.o2': "بگویید خوب است و امیدوار باشید که خود تان بفهمید.", // nieuw, nalezen
   'be.c.review.o3': "از حالا خیلی آهسته‌تر کار کنید تا هیچ چیز خراب نشود.", // nieuw, nalezen
@@ -97,7 +97,7 @@ export const prs: Gloss = {
   'be.c.placement': "اول امضا، بعد شروع", // nieuw, nalezen
   'be.c.placement.b': "در مکتب اکثراً در یک کمپنی یاد می‌گیرید: این کارآموزی شماست (stage). در آموزش دوگانه (duaal leren) هم در مکتب و هم در کمپنی یاد می‌گیرید. پیش از شروع، شما، مکتب و کمپنی یک موافقت‌نامه امضا می‌کنید: stageovereenkomst. کمتر از ۱۸ سال دارید؟ پس والدین تان هم امضا می‌کنند. در کمپنی، رهنمای تان (mentor) کمک تان می‌کند. از طرف مکتب، رهنمای کارآموزی (stagebegeleider) کمک تان می‌کند. در مکتب یا جای کارآموزی مشکل دارید؟ CLB رایگان و محرمانه به شاگردان کمک می‌کند. مریض هستید؟ پیش از وقت شروع کار به کمپنی زنگ بزنید، و به مکتب هم خبر بدهید. مقررات در هر مکتب فرق می‌کند: از رهنمای کارآموزی تان بپرسید.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.p': "تنها وقتی شروع می‌کنم که قرارداد کارآموزی امضا شده باشد.", // nieuw, nalezen
-  'be.c.placement.s': "کمپنی از شما می‌خواهد فردا شروع کنید. stageovereenkomst هنوز امضا نشده. چه می‌کنید؟", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.placement.s': "کمپنی از شما می‌خواهد فردا شروع کنید. قرارداد کارآموزی (stageovereenkomst) هنوز امضا نشده. چه می‌کنید؟", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.placement.o1': "از رهنمای کارآموزی بخواهید اول موافقت‌نامه را جور کند.", // nieuw, nalezen
   'be.c.placement.o2': "فردا شروع کنید، و هر وقت وقت داشتید موافقت‌نامه را امضا کنید.", // nieuw, nalezen
   'be.c.placement.o3': "شروع کنید، ولی فعلاً به مکتب چیزی نگویید.", // nieuw, nalezen
@@ -106,11 +106,11 @@ export const prs: Gloss = {
 
 export const uk: Gloss = {
   'be.c.review': "Проси відгук і приклад", // nieuw, nalezen
-  'be.c.review.b': { m: "На практиці люди кажуть тобі, що виходить добре, а що можна краще: це відгук (feedback). Це нормально, і це допомагає тобі вчитися. Не розумієш? Попроси приклад. Сам теж проси відгук, наприклад раз на тиждень. На практиці щось справді не так? Спершу поговори з наставником на підприємстві. Це не допомагає? Тоді звернися до керівника практики в школі.", f: "На практиці люди кажуть тобі, що виходить добре, а що можна краще: це відгук (feedback). Це нормально, і це допомагає тобі вчитися. Не розумієш? Попроси приклад. Сама теж проси відгук, наприклад раз на тиждень. На практиці щось справді не так? Спершу поговори з наставником на підприємстві. Це не допомагає? Тоді звернися до керівника практики в школі.", x: "На практиці люди кажуть тобі, що виходить добре, а що можна краще: це відгук (feedback). Це нормально, і це допомагає тобі вчитися. Не розумієш? Попроси приклад. Сам / Сама теж проси відгук, наприклад раз на тиждень. На практиці щось справді не так? Спершу поговори з наставником на підприємстві. Це не допомагає? Тоді звернися до керівника практики в школі." }, // nieuw, nalezen
+  'be.c.review.b': { m: "На практиці люди кажуть тобі, що виходить добре, а що можна краще: це відгук (feedback). Це нормально, і це допомагає тобі вчитися. Не розумієш? Попроси приклад. Сам теж проси відгук, наприклад раз на тиждень. На практиці щось справді не так? Спершу поговори з наставником на підприємстві. Це не допомагає? Тоді звернися до керівника практики в школі.", f: "На практиці люди кажуть тобі, що виходить добре, а що можна краще: це відгук (feedback). Це нормально, і це допомагає тобі вчитися. Не розумієш? Попроси приклад. Сама теж проси відгук, наприклад раз на тиждень. На практиці щось справді не так? Спершу поговори з наставником на підприємстві. Це не допомагає? Тоді звернися до керівника практики в школі.", x: "На практиці люди кажуть тобі, що виходить добре, а що можна краще: це відгук (feedback). Це нормально, і це допомагає тобі вчитися. Не розумієш? Попроси приклад. З власної ініціативи теж проси відгук, наприклад раз на тиждень. На практиці щось справді не так? Спершу поговори з наставником на підприємстві. Це не допомагає? Тоді звернися до керівника практики в школі." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.review.p': "Що вийшло добре, а що можна краще?", // nieuw, nalezen
   'be.c.review.s': "Наставник каже: «Тобі треба працювати уважніше». Ти не знаєш, що він має на увазі. Що ти зробиш?", // nieuw, nalezen
   'be.c.review.o1': "Попросиш приклад, що саме робити інакше.", // nieuw, nalezen
-  'be.c.review.o2': { m: "Скажеш «так» і сподіватимешся, що сам зрозумієш.", f: "Скажеш «так» і сподіватимешся, що сама зрозумієш.", x: "Скажеш «так» і сподіватимешся, що сам / сама зрозумієш." }, // nieuw, nalezen
+  'be.c.review.o2': { m: "Скажеш «так» і сподіватимешся, що сам зрозумієш.", f: "Скажеш «так» і сподіватимешся, що сама зрозумієш.", x: "Скажеш «так» і сподіватимешся, що все зрозумієш без пояснень." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.review.o3': "Відтепер працюватимеш набагато повільніше, щоб нічого не зіпсувати.", // nieuw, nalezen
   'be.c.review.w': "З прикладом ти знаєш, що змінити. Запитання показує, що ти хочеш учитися. Наставникам це подобається.", // nieuw, nalezen
   'be.w.praktijkopleider': "наставник (mentor, той, хто веде тебе на фірмі)", // nieuw, nalezen
@@ -131,13 +131,13 @@ export const uk: Gloss = {
 
 export const tr: Gloss = {
   'be.c.review': "Geri bildirim iste, bir de örnek", // nieuw, nalezen
-  'be.c.review.b': "Stajda insanlar sana neyin iyi gittiğini ve neyin daha iyi olabileceğini söyler: geri bildirim (feedback). Bu normaldir ve öğrenmene yardım eder. Anlamadın mı? Bir örnek iste. Sen de geri bildirim iste, örneğin haftada bir. Stajında gerçekten bir sorun mu var? Önce işyeri eğitmeninle konuş. İşe yaramıyor mu? O zaman okuldaki staj danışmanına git.", // nieuw, nalezen
+  'be.c.review.b': "Stajda insanlar sana neyin iyi gittiğini ve neyin daha iyi olabileceğini söyler: geri bildirim (feedback). Bu normaldir ve öğrenmene yardım eder. Anlamadın mı? Bir örnek iste. Sen de geri bildirim iste, örneğin haftada bir. Stajında gerçekten bir sorun mu var? Önce işyerindeki mentorunla konuş. İşe yaramıyor mu? O zaman okuldaki staj danışmanına git.", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.review.p': "Ne iyi gitti, ne daha iyi olabilir?", // nieuw, nalezen
-  'be.c.review.s': "İşyeri eğitmenin diyor ki: “Daha dikkatli çalışman lazım.” Ne demek istediğini bilmiyorsun. Ne yaparsın?", // nieuw, nalezen
+  'be.c.review.s': "Mentorun diyor ki: “Daha dikkatli çalışman lazım.” Ne demek istediğini bilmiyorsun. Ne yaparsın?", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.review.o1': "Neyi farklı yapman gerektiğine dair bir örnek istersin.", // nieuw, nalezen
   'be.c.review.o2': "Evet dersin ve kendin anlayacağını umarsın.", // nieuw, nalezen
   'be.c.review.o3': "Hiçbir şey ters gitmesin diye bundan sonra çok daha yavaş çalışırsın.", // nieuw, nalezen
-  'be.c.review.w': "Bir örnekle neyi değiştireceğini bilirsin. Sormak, öğrenmek istediğini gösterir. Eğitmenler bunu sever.", // nieuw, nalezen
+  'be.c.review.w': "Bir örnekle neyi değiştireceğini bilirsin. Sormak, öğrenmek istediğini gösterir. Mentorlar bunu sever.", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.w.praktijkopleider': "mentor (şirketteki rehberin)", // nieuw, nalezen
   'be.w.pok': "staj sözleşmesi (sen, okul ve şirket imzalar)", // nieuw, nalezen
   'be.w.leerbedrijf': "CLB (öğrencilere ücretsiz yardım eden merkez)", // nieuw, nalezen
@@ -147,7 +147,7 @@ export const tr: Gloss = {
   'be.c.placement': "Önce imzala, sonra başla", // nieuw, nalezen
   'be.c.placement.b': "Okulda çoğu zaman bir şirkette öğrenirsin: bu senin stajın (stage). İkili eğitimde (duaal leren) hem okulda hem bir şirkette öğrenirsin. Başlamadan önce sen, okul ve şirket bir anlaşma imzalarsınız: stageovereenkomst. 18 yaşından küçük müsün? O zaman ailen de imzalar. Şirkette mentorun (mentor) sana yardım eder. Okul tarafından staj danışmanın (stagebegeleider) yardım eder. Okulda ya da stajda sorun mu var? CLB öğrencilere ücretsiz ve gizli olarak yardım eder. Hasta mısın? Başlama saatinden önce şirketi ara, okula da haber ver. Kurallar okuldan okula değişir: staj danışmanına sor.", // nieuw, nalezen
   'be.c.placement.p': "Ancak staj sözleşmesi imzalanınca başlarım.", // nieuw, nalezen // nagelezen AI ronde 3
-  'be.c.placement.s': "Şirket yarın başlamanı istiyor. stageovereenkomst henüz imzalanmadı. Ne yaparsın?", // nieuw, nalezen
+  'be.c.placement.s': "Şirket yarın başlamanı istiyor. Staj sözleşmesi (stageovereenkomst) henüz imzalanmadı. Ne yaparsın?", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.placement.o1': "Staj danışmanından önce anlaşmayı ayarlamasını istersin.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.o2': "Yarın başlar, anlaşmayı da vaktin olunca imzalarsın.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.o3': "Başlarsın, ama şimdilik okula bir şey söylemezsin.", // nieuw, nalezen
@@ -156,11 +156,11 @@ export const tr: Gloss = {
 
 export const pl: Gloss = {
   'be.c.review': "Proś o informację zwrotną i o przykład", // nieuw, nalezen
-  'be.c.review.b': { m: "Na praktyce ludzie mówią ci, co idzie dobrze, a co może być lepiej: to informacja zwrotna (feedback). To normalne i pomaga ci się uczyć. Nie rozumiesz? Poproś o przykład. Sam też proś o informację zwrotną, na przykład raz w tygodniu. Na praktyce dzieje się coś naprawdę złego? Najpierw porozmawiaj z opiekunem praktyki w firmie. To nie pomaga? Wtedy idź do opiekuna praktyki w szkole.", f: "Na praktyce ludzie mówią ci, co idzie dobrze, a co może być lepiej: to informacja zwrotna (feedback). To normalne i pomaga ci się uczyć. Nie rozumiesz? Poproś o przykład. Sama też proś o informację zwrotną, na przykład raz w tygodniu. Na praktyce dzieje się coś naprawdę złego? Najpierw porozmawiaj z opiekunem praktyki w firmie. To nie pomaga? Wtedy idź do opiekuna praktyki w szkole.", x: "Na praktyce ludzie mówią ci, co idzie dobrze, a co może być lepiej: to informacja zwrotna (feedback). To normalne i pomaga ci się uczyć. Nie rozumiesz? Poproś o przykład. Sam / sama też proś o informację zwrotną, na przykład raz w tygodniu. Na praktyce dzieje się coś naprawdę złego? Najpierw porozmawiaj z opiekunem praktyki w firmie. To nie pomaga? Wtedy idź do opiekuna praktyki w szkole." }, // nieuw, nalezen
+  'be.c.review.b': { m: "Na praktyce ludzie mówią ci, co idzie dobrze, a co może być lepiej: to informacja zwrotna (feedback). To normalne i pomaga ci się uczyć. Nie rozumiesz? Poproś o przykład. Sam też proś o informację zwrotną, na przykład raz w tygodniu. Na praktyce dzieje się coś naprawdę złego? Najpierw porozmawiaj z opiekunem praktyki w firmie. To nie pomaga? Wtedy idź do opiekuna praktyki w szkole.", f: "Na praktyce ludzie mówią ci, co idzie dobrze, a co może być lepiej: to informacja zwrotna (feedback). To normalne i pomaga ci się uczyć. Nie rozumiesz? Poproś o przykład. Sama też proś o informację zwrotną, na przykład raz w tygodniu. Na praktyce dzieje się coś naprawdę złego? Najpierw porozmawiaj z opiekunem praktyki w firmie. To nie pomaga? Wtedy idź do opiekuna praktyki w szkole.", x: "Na praktyce ludzie mówią ci, co idzie dobrze, a co może być lepiej: to informacja zwrotna (feedback). To normalne i pomaga ci się uczyć. Nie rozumiesz? Poproś o przykład. Z własnej inicjatywy też proś o informację zwrotną, na przykład raz w tygodniu. Na praktyce dzieje się coś naprawdę złego? Najpierw porozmawiaj z opiekunem praktyki w firmie. To nie pomaga? Wtedy idź do opiekuna praktyki w szkole." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.review.p': "Co poszło dobrze, a co może być lepiej?", // nieuw, nalezen
   'be.c.review.s': "Opiekun praktyki mówi: „Musisz pracować staranniej”. Nie wiesz, o co mu chodzi. Co robisz?", // nieuw, nalezen
   'be.c.review.o1': "Prosisz o przykład, co masz robić inaczej.", // nieuw, nalezen
-  'be.c.review.o2': { m: "Mówisz „tak” i masz nadzieję, że sam zrozumiesz.", f: "Mówisz „tak” i masz nadzieję, że sama zrozumiesz.", x: "Mówisz „tak” i masz nadzieję, że sam / sama zrozumiesz." }, // nieuw, nalezen
+  'be.c.review.o2': { m: "Mówisz „tak” i masz nadzieję, że sam zrozumiesz.", f: "Mówisz „tak” i masz nadzieję, że sama zrozumiesz.", x: "Mówisz „tak” i masz nadzieję, że zrozumiesz bez pomocy." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.review.o3': "Od teraz pracujesz dużo wolniej, żeby nic nie poszło źle.", // nieuw, nalezen
   'be.c.review.w': "Z przykładem wiesz, co zmienić. Pytanie pokazuje, że chcesz się uczyć. Opiekunowie to lubią.", // nieuw, nalezen
   'be.w.praktijkopleider': "mentor (twój opiekun w firmie)", // nieuw, nalezen
@@ -185,7 +185,7 @@ export const ro: Gloss = {
   'be.c.review.p': "Ce a mers bine și ce poate fi mai bine?", // nieuw, nalezen
   'be.c.review.s': "Îndrumătorul îți spune: „Trebuie să lucrezi mai atent.” Nu știi ce vrea să spună. Ce faci?", // nieuw, nalezen
   'be.c.review.o1': "Ceri un exemplu de ce trebuie să faci altfel.", // nieuw, nalezen
-  'be.c.review.o2': { m: "Zici da și speri că o să-ți dai seama singur.", f: "Zici da și speri că o să-ți dai seama singură.", x: "Zici da și speri că o să-ți dai seama singur / singură." }, // nieuw, nalezen
+  'be.c.review.o2': { m: "Zici da și speri că o să-ți dai seama singur.", f: "Zici da și speri că o să-ți dai seama singură.", x: "Zici da și speri că o să-ți dai seama fără ajutor." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.review.o3': "De acum lucrezi mult mai încet, ca să nu greșești nimic.", // nieuw, nalezen
   'be.c.review.w': "Cu un exemplu știi ce să schimbi. Când întrebi, arăți că vrei să înveți. Îndrumătorilor le place asta.", // nieuw, nalezen
   'be.w.praktijkopleider': "mentorul (îndrumătorul tău la firmă)", // nieuw, nalezen
@@ -206,11 +206,11 @@ export const ro: Gloss = {
 
 export const bg: Gloss = {
   'be.c.review': "Искай обратна връзка и пример", // nieuw, nalezen
-  'be.c.review.b': { m: "На стажа хората ти казват какво върви добре и какво може да е по-добре: обратна връзка (feedback). Това е нормално и ти помага да учиш. Не разбираш? Поискай пример. Сам също искай обратна връзка, например веднъж седмично. Нещо наистина не е наред на стажа? Първо говори с наставника във фирмата. Не помага? Тогава иди при ръководителя на стажа в училището.", f: "На стажа хората ти казват какво върви добре и какво може да е по-добре: обратна връзка (feedback). Това е нормално и ти помага да учиш. Не разбираш? Поискай пример. Сама също искай обратна връзка, например веднъж седмично. Нещо наистина не е наред на стажа? Първо говори с наставника във фирмата. Не помага? Тогава иди при ръководителя на стажа в училището.", x: "На стажа хората ти казват какво върви добре и какво може да е по-добре: обратна връзка (feedback). Това е нормално и ти помага да учиш. Не разбираш? Поискай пример. Сам / Сама също искай обратна връзка, например веднъж седмично. Нещо наистина не е наред на стажа? Първо говори с наставника във фирмата. Не помага? Тогава иди при ръководителя на стажа в училището." }, // nieuw, nalezen
+  'be.c.review.b': { m: "На стажа хората ти казват какво върви добре и какво може да е по-добре: обратна връзка (feedback). Това е нормално и ти помага да учиш. Не разбираш? Поискай пример. Сам също искай обратна връзка, например веднъж седмично. Нещо наистина не е наред на стажа? Първо говори с наставника във фирмата. Не помага? Тогава иди при ръководителя на стажа в училището.", f: "На стажа хората ти казват какво върви добре и какво може да е по-добре: обратна връзка (feedback). Това е нормално и ти помага да учиш. Не разбираш? Поискай пример. Сама също искай обратна връзка, например веднъж седмично. Нещо наистина не е наред на стажа? Първо говори с наставника във фирмата. Не помага? Тогава иди при ръководителя на стажа в училището.", x: "На стажа хората ти казват какво върви добре и какво може да е по-добре: обратна връзка (feedback). Това е нормално и ти помага да учиш. Не разбираш? Поискай пример. По своя инициатива също искай обратна връзка, например веднъж седмично. Нещо наистина не е наред на стажа? Първо говори с наставника във фирмата. Не помага? Тогава иди при ръководителя на стажа в училището." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.review.p': "Какво мина добре и какво може да е по-добре?", // nieuw, nalezen
   'be.c.review.s': "Наставникът ти казва: „Трябва да работиш по-внимателно.“ Не знаеш какво има предвид. Какво правиш?", // nieuw, nalezen
   'be.c.review.o1': "Искаш пример какво трябва да правиш по различен начин.", // nieuw, nalezen
-  'be.c.review.o2': { m: "Казваш „да“ и се надяваш да разбереш сам.", f: "Казваш „да“ и се надяваш да разбереш сама.", x: "Казваш „да“ и се надяваш да разбереш сам / сама." }, // nieuw, nalezen
+  'be.c.review.o2': { m: "Казваш „да“ и се надяваш да разбереш сам.", f: "Казваш „да“ и се надяваш да разбереш сама.", x: "Казваш „да“ и се надяваш да разбереш без помощ." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.review.o3': "Отсега работиш много по-бавно, за да не сбъркаш нищо.", // nieuw, nalezen
   'be.c.review.w': "С пример знаеш какво да промениш. Когато питаш, показваш, че искаш да учиш. Наставниците харесват това.", // nieuw, nalezen
   'be.w.praktijkopleider': "менторът (твоят наставник във фирмата)", // nieuw, nalezen
@@ -235,7 +235,7 @@ export const es: Gloss = {
   'be.c.review.p': "¿Qué salió bien y qué puede mejorar?", // nieuw, nalezen
   'be.c.review.s': "Tu tutor de empresa dice: “Tienes que trabajar con más cuidado”. No sabes qué quiere decir. ¿Qué haces?", // nieuw, nalezen
   'be.c.review.o1': "Pides un ejemplo de lo que tienes que hacer distinto.", // nieuw, nalezen
-  'be.c.review.o2': { m: "Dices que sí y esperas entenderlo tú solo.", f: "Dices que sí y esperas entenderlo tú sola.", x: "Dices que sí y esperas entenderlo tú solo/a." }, // nieuw, nalezen
+  'be.c.review.o2': { m: "Dices que sí y esperas entenderlo tú solo.", f: "Dices que sí y esperas entenderlo tú sola.", x: "Dices que sí y esperas entenderlo sin ayuda." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.review.o3': "A partir de ahora trabajas mucho más despacio, para que nada salga mal.", // nieuw, nalezen
   'be.c.review.w': "Con un ejemplo sabes qué cambiar. Preguntar demuestra que quieres aprender. A los tutores les gusta.", // nieuw, nalezen
   'be.w.praktijkopleider': "el mentor (tu guía en la empresa)", // nieuw, nalezen
@@ -245,11 +245,11 @@ export const es: Gloss = {
   'be.s.placement.3': "Todavía no he firmado el convenio de prácticas.", // nieuw, nalezen
   'be.c.placement.a': "El lunes. Primero firmamos el convenio de prácticas.", // nieuw, nalezen
   'be.c.placement': "Primero firma, luego empieza", // nieuw, nalezen
-  'be.c.placement.b': "En la escuela aprendes muchas veces en una empresa: son tus prácticas (stage). En la formación dual (duaal leren) aprendes en la escuela y en una empresa. Antes de empezar, tú, la escuela y la empresa firman un acuerdo: el stageovereenkomst. ¿Tienes menos de 18 años? Entonces firman también tus padres. En la empresa te ayuda tu mentor (mentor). Desde la escuela te ayuda tu tutor de prácticas (stagebegeleider). ¿Problemas en la escuela o en las prácticas? El CLB ayuda a los alumnos gratis y con confidencialidad. ¿Enfermedad? Llama a la empresa antes de tu hora de entrada, y avisa también a la escuela. Las reglas cambian según la escuela: pregunta a tu tutor de prácticas.", // nieuw, nalezen // nagelezen AI ronde 3
+  'be.c.placement.b': "En la escuela aprendes muchas veces en una empresa: son tus prácticas (stage). En la formación dual (duaal leren) aprendes en la escuela y en una empresa. Antes de empezar, tú, la escuela y la empresa firman un acuerdo: el stageovereenkomst. ¿Tienes menos de 18 años? Entonces firman también tus padres. En la empresa te ayuda tu mentor (mentor). Desde la escuela te ayuda tu tutor de prácticas (stagebegeleider). ¿Problemas en la escuela o en las prácticas? El CLB ayuda a los alumnos gratis y con confidencialidad. ¿Enfermedad? Llama a la empresa antes de tu hora de entrada, y avisa también a la escuela. Las normas cambian de una escuela a otra: pregunta a tu tutor de prácticas.", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.placement.p': "Solo empiezo cuando el convenio de prácticas esté firmado.", // nieuw, nalezen
   'be.c.placement.s': "La empresa te pide empezar mañana. El stageovereenkomst todavía no está firmado. ¿Qué haces?", // nieuw, nalezen
-  'be.c.placement.o1': "Pide a tu tutor de prácticas que arregle primero el acuerdo.", // nieuw, nalezen
-  'be.c.placement.o2': "Empieza mañana, y firma el acuerdo cuando tengas tiempo.", // nieuw, nalezen
+  'be.c.placement.o1': "Pides a tu tutor de prácticas que arregle primero el acuerdo.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+  'be.c.placement.o2': "Empiezas mañana, y firmas el acuerdo cuando tengas tiempo.", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.placement.o3': "Empieza, pero de momento no se lo digas a la escuela.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.w': "El stageovereenkomst dice qué aprendes y quién te ayuda. Sin un acuerdo firmado, tus prácticas pueden no contar. Por eso lo firmas antes de empezar.", // nieuw, nalezen
 };
@@ -260,7 +260,7 @@ export const pt: Gloss = {
   'be.c.review.p': "O que correu bem, e o que pode ser melhor?", // nieuw, nalezen
   'be.c.review.s': "O teu orientador diz: \"Tens de trabalhar com mais cuidado.\" Não sabes o que ele quer dizer. O que fazes?", // nieuw, nalezen
   'be.c.review.o1': "Pedes um exemplo do que tens de fazer de outra forma.", // nieuw, nalezen
-  'be.c.review.o2': { m: "Dizes que sim e esperas perceber sozinho.", f: "Dizes que sim e esperas perceber sozinha.", x: "Dizes que sim e esperas perceber sozinho / sozinha." }, // nieuw, nalezen
+  'be.c.review.o2': { m: "Dizes que sim e esperas perceber sozinho.", f: "Dizes que sim e esperas perceber sozinha.", x: "Dizes que sim e esperas perceber sem ajuda." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.review.o3': "A partir de agora trabalhas muito mais devagar, para nada correr mal.", // nieuw, nalezen
   'be.c.review.w': "Com um exemplo, sabes o que mudar. Perguntar mostra que queres aprender. Os orientadores gostam disso.", // nieuw, nalezen
   'be.w.praktijkopleider': "o mentor (o teu orientador na empresa)", // nieuw, nalezen
@@ -273,8 +273,8 @@ export const pt: Gloss = {
   'be.c.placement.b': "Na escola aprendes muitas vezes numa empresa: é o teu estágio (stage). Na formação dual (duaal leren) aprendes na escola e numa empresa. Antes de começares, tu, a escola e a empresa assinam um acordo: o stageovereenkomst. Tens menos de 18 anos? Então os teus pais também assinam. Na empresa, o teu mentor (mentor) ajuda-te. Da escola, o teu orientador de estágio (stagebegeleider) ajuda-te. Problemas na escola ou no estágio? O CLB ajuda os alunos de graça e com confidencialidade. Doença? Liga para a empresa antes da hora de início, e avisa também a escola. As regras mudam de escola para escola: pergunta ao teu orientador de estágio.", // nieuw, nalezen
   'be.c.placement.p': "Só começo quando o contrato de estágio estiver assinado.", // nieuw, nalezen
   'be.c.placement.s': "A empresa pede-te para começares amanhã. O stageovereenkomst ainda não está assinado. O que fazes?", // nieuw, nalezen
-  'be.c.placement.o1': "Pede ao teu orientador de estágio para tratar primeiro do acordo.", // nieuw, nalezen
-  'be.c.placement.o2': "Começa amanhã, e assina o acordo quando tiveres tempo.", // nieuw, nalezen
+  'be.c.placement.o1': "Pedes ao teu orientador de estágio para tratar primeiro do acordo.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+  'be.c.placement.o2': "Começas amanhã, e assinas o acordo quando tiveres tempo.", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.placement.o3': "Começa, mas por agora não digas nada à escola.", // nieuw, nalezen // nagelezen AI ronde 3
   'be.c.placement.w': "O stageovereenkomst diz o que aprendes e quem te ajuda. Sem um acordo assinado, o teu estágio pode não contar. Por isso assinas antes de começar.", // nieuw, nalezen
 };
@@ -285,7 +285,7 @@ export const fr: Gloss = {
   'be.c.review.p': "Qu’est-ce qui s’est bien passé, et qu’est-ce qui peut être mieux ?", // nieuw, nalezen
   'be.c.review.s': "Ton tuteur te dit : “Tu dois travailler plus soigneusement.” Tu ne sais pas ce qu’il veut dire. Qu’est-ce que tu fais ?", // nieuw, nalezen
   'be.c.review.o1': "Tu demandes un exemple de ce que tu dois faire autrement.", // nieuw, nalezen
-  'be.c.review.o2': { m: "Tu dis oui, et tu espères comprendre seul.", f: "Tu dis oui, et tu espères comprendre seule.", x: "Tu dis oui, et tu espères comprendre seul / seule." }, // nieuw, nalezen
+  'be.c.review.o2': { m: "Tu dis oui, et tu espères comprendre seul.", f: "Tu dis oui, et tu espères comprendre seule.", x: "Tu dis oui, et tu espères comprendre sans aide." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.review.o3': "Désormais, tu travailles beaucoup plus lentement, pour ne rien rater.", // nieuw, nalezen
   'be.c.review.w': "Avec un exemple, tu sais quoi changer. Demander montre que tu veux apprendre. Les tuteurs aiment ça.", // nieuw, nalezen
   'be.w.praktijkopleider': "le tuteur (mentor : ton guide dans l’entreprise)", // nieuw, nalezen
@@ -306,8 +306,8 @@ export const fr: Gloss = {
 
 export const de: Gloss = {
   'be.c.review': "Frag nach Feedback und nach einem Beispiel", // nieuw, nalezen
-  'be.c.review.b': "Im Praktikum sagen dir Leute, was gut läuft und was besser geht: Feedback. Das ist normal, und es hilft dir beim Lernen. Du verstehst es nicht? Frag nach einem Beispiel. Frag auch selbst nach Feedback, zum Beispiel einmal pro Woche. Läuft im Praktikum wirklich etwas schief? Sprich zuerst mit deinem Ausbilder im Betrieb. Hilft das nicht? Dann geh zu deiner Praktikumsbetreuung in der Schule.", // nieuw, nalezen
-  'be.c.review.p': "Was lief gut, und was geht besser?", // nieuw, nalezen
+  'be.c.review.b': "Im Praktikum sagen dir Leute, was gut läuft und was besser werden kann: Feedback. Das ist normal, und es hilft dir beim Lernen. Du verstehst es nicht? Frag nach einem Beispiel. Frag auch selbst nach Feedback, zum Beispiel einmal pro Woche. Läuft im Praktikum wirklich etwas schief? Sprich zuerst mit deinem Ausbilder im Betrieb. Hilft das nicht? Dann geh zu deiner Praktikumsbetreuung in der Schule.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+  'be.c.review.p': "Was lief gut, und was kann besser werden?", // nieuw, nalezen (AI-correctie 28 nov 2026)
   'be.c.review.s': "Dein Ausbilder sagt: „Du musst sorgfältiger arbeiten.“ Du weißt nicht, was er meint. Was machst du?", // nieuw, nalezen
   'be.c.review.o1': "Du fragst nach einem Beispiel, was du anders machen sollst.", // nieuw, nalezen
   'be.c.review.o2': "Du sagst Ja und hoffst, dass du es selbst herausfindest.", // nieuw, nalezen

@@ -43,7 +43,7 @@ const t: CultureTranslation = {
     'w.hart': 'des mots gentils qui donnent du courage',
     'w.hart.lit': 'un cœur sous la ceinture',
     's.plain.1': 'Préviens quand ce n’est pas sûr.',
-    's.plain.2': { m: 'Je suis vraiment très fatigué.', f: 'Je suis vraiment très fatiguée.', x: 'Je suis vraiment très fatigué / fatiguée.' },
+    's.plain.2': { m: 'Je suis vraiment très fatigué.', f: 'Je suis vraiment très fatiguée.', x: 'Je suis vraiment à bout de forces.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     's.plain.3': 'Je vais droit au but.',
     'c.plain.q': 'Il pleut très fort !',
     'c.plain.a': 'Alors aujourd’hui, je prends le bus.',
@@ -95,7 +95,7 @@ const t: CultureTranslation = {
     'zg.oefening.lit': 'La pratique donne naissance à l’art.',
     'zg.oefening.m': 'Plus on pratique, plus on devient bon.',
     'zg.oefening.s': 'Tu trouves le cours difficile. Ta professeure dit : “Oefening baart kunst.” Qu’est-ce qu’elle veut dire ?',
-    'zg.oefening.o1': { m: 'Continue à pratiquer, alors tu deviendras bon.', f: 'Continue à pratiquer, alors tu deviendras bonne.', x: 'Continue à pratiquer, alors tu deviendras bon / bonne.' },
+    'zg.oefening.o1': { m: 'Continue à pratiquer, alors tu deviendras bon.', f: 'Continue à pratiquer, alors tu deviendras bonne.', x: 'Continue à pratiquer, alors tu feras des progrès.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'zg.oefening.o2': 'Tu dois aller à un cours d’art.',
     'zg.oefening.o3': 'Arrête, c’est trop difficile pour toi.',
     'zg.oefening.w': 'C’est un proverbe : avec la pratique, on devient meilleur. C’est vrai aussi pour apprendre le néerlandais.',

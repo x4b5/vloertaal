@@ -6,9 +6,9 @@ import type { Gloss } from '../types';
 
 export const ar: Gloss = {
     "be.c.plain": "قول الأشياء مباشرة", // = c.plain
-    "be.c.plain.b": "الزملاء الفلامانيون يقولون رأيهم غالباً بحذر. أحياناً يبدؤون بمثل: «Ik neem geen blad voor de mond.» معناه: سأقول بصراحة ما أفكر فيه. بعدها يأتي رأي مباشر، لكن ليس بقصد الوقاحة. يمكن أيضاً قول الرأي بصراحة وبهدوء.", // nieuw, nalezen
+    "be.c.plain.b": "الزملاء الفلامانيون يقولون رأيهم غالباً بحذر. أحياناً يبدؤون بمثل: «Ik neem geen blad voor de mond». معناه: سأقول بصراحة ما أفكر فيه. بعدها يأتي رأي مباشر، لكن ليس بقصد الوقاحة. يمكن أيضاً قول الرأي بصراحة وبهدوء.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     "be.c.plain.p": "هل يمكنني أن أقول بصراحة ما أفكر فيه؟", // = c.plain.p
-    "be.c.plain.s": "مشرفتك تقول: «Ik neem geen blad voor de mond.» ماذا تقصد؟", // = c.plain.s
+    "be.c.plain.s": "مشرفتك تقول: «Ik neem geen blad voor de mond». ماذا تقصد؟", // nieuw, nalezen (AI-correctie 28 nov 2026) = c.plain.s
     "be.c.plain.o1": "ستقول بصراحة ما تفكر فيه.", // = c.plain.o1
     "be.c.plain.o2": "هي لا تريد أن تتكلم عن ذلك.", // nieuw, nalezen
     "be.c.plain.o3": "هي تأكل ورقة شجر.", // = c.plain.o3
@@ -28,9 +28,9 @@ export const ti: Gloss = {
 
 export const fa: Gloss = {
     "be.c.plain": "رک و راست گفتن", // = c.plain
-    "be.c.plain.b": "همکاران فلاندری اغلب با احتیاط می‌گویند چه فکر می‌کنند. گاهی با یک ضرب‌المثل شروع می‌کنند: «Ik neem geen blad voor de mond.» یعنی: صادقانه می‌گویم چه فکر می‌کنم. بعد یک نظر رک می‌آید، ولی قصد بی‌ادبی ندارند. تو هم می‌توانی صادقانه و آرام بگویی چه فکر می‌کنی.", // nieuw, nalezen
+    "be.c.plain.b": "همکاران فلاندری اغلب با احتیاط می‌گویند چه فکر می‌کنند. گاهی با یک ضرب‌المثل شروع می‌کنند: «Ik neem geen blad voor de mond». یعنی: صادقانه می‌گویم چه فکر می‌کنم. بعد یک نظر رک می‌آید، ولی قصد بی‌ادبی ندارند. تو هم می‌توانی صادقانه و آرام بگویی چه فکر می‌کنی.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     "be.c.plain.p": "می‌توانم صادقانه بگویم چه فکر می‌کنم؟", // = c.plain.p
-    "be.c.plain.s": "سرپرستت می‌گوید: «Ik neem geen blad voor de mond.» منظورش چیست؟", // = c.plain.s
+    "be.c.plain.s": "سرپرستت می‌گوید: «Ik neem geen blad voor de mond». منظورش چیست؟", // nieuw, nalezen (AI-correctie 28 nov 2026) = c.plain.s
     "be.c.plain.o1": "صادقانه می‌گوید چه فکر می‌کند.", // = c.plain.o1
     "be.c.plain.o2": "او نمی‌خواهد دربارهٔ آن حرف بزند.", // nieuw, nalezen
     "be.c.plain.o3": "دارد یک برگ می‌خورد.", // = c.plain.o3
@@ -39,9 +39,9 @@ export const fa: Gloss = {
 
 export const prs: Gloss = {
     "be.c.plain": "گپ را مستقیم گفتن", // = c.plain
-    "be.c.plain.b": "همکاران فلاندری اکثراً با احتیاط می‌گویند چه فکر می‌کنند. گاهی با یک ضرب‌المثل شروع می‌کنند: «Ik neem geen blad voor de mond.» یعنی: صادقانه می‌گویم چه فکر می‌کنم. بعد یک نظر رک می‌آید، ولی قصد بی‌ادبی ندارند. شما هم می‌توانید صادقانه و آرام بگویید چه فکر می‌کنید.", // nieuw, nalezen
+    "be.c.plain.b": "همکاران فلاندری اکثراً با احتیاط می‌گویند چه فکر می‌کنند. گاهی با یک ضرب‌المثل شروع می‌کنند: «Ik neem geen blad voor de mond». یعنی: صادقانه می‌گویم چه فکر می‌کنم. بعد یک نظر رک می‌آید، ولی قصد بی‌ادبی ندارند. شما هم می‌توانید صادقانه و آرام بگویید چه فکر می‌کنید.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     "be.c.plain.p": "می‌توانم با صداقت بگویم که چه فکر می‌کنم؟", // = c.plain.p
-    "be.c.plain.s": "سرپرست شما می‌گوید: «Ik neem geen blad voor de mond.» منظورش چیست؟", // = c.plain.s
+    "be.c.plain.s": "سرپرست شما می‌گوید: «Ik neem geen blad voor de mond». منظورش چیست؟", // nieuw, nalezen (AI-correctie 28 nov 2026) = c.plain.s
     "be.c.plain.o1": "او با صداقت می‌گوید که چه فکر می‌کند.", // = c.plain.o1
     "be.c.plain.o2": "او نمی‌خواهد در این باره گپ بزند.", // nieuw, nalezen
     "be.c.plain.o3": "او یک برگ می‌خورد.", // = c.plain.o3
@@ -107,7 +107,7 @@ export const es: Gloss = {
     "be.c.plain": "Decirlo claro", // = c.plain
     "be.c.plain.b": "Los compañeros flamencos muchas veces dicen con cuidado lo que piensan. A veces empiezan con un dicho: «Ik neem geen blad voor de mond.» Quiere decir: voy a decir con sinceridad lo que pienso. Luego viene una opinión directa, pero no es para ser maleducado. Tú también puedes decir con sinceridad lo que piensas, con calma.", // nieuw, nalezen
     "be.c.plain.p": "¿Puedo decir sinceramente lo que pienso?", // = c.plain.p
-    "be.c.plain.s": "Tu encargada dice: “Ik neem geen blad voor de mond.” ¿Qué quiere decir?", // = c.plain.s
+    "be.c.plain.s": "Tu encargada dice: “Ik neem geen blad voor de mond”. ¿Qué quiere decir?", // nieuw, nalezen (AI-correctie 28 nov 2026) = c.plain.s
     "be.c.plain.o1": "Va a decir sinceramente lo que piensa.", // = c.plain.o1
     "be.c.plain.o2": "No quiere hablar de eso.", // nieuw, nalezen
     "be.c.plain.o3": "Se está comiendo una hoja.", // = c.plain.o3

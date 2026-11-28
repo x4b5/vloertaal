@@ -464,9 +464,9 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Faire quand même les leçons', // nieuw, nalezen // nagelezen AI 28 nov
     commLabel: 'Communication', // nieuw, nalezen // nagelezen AI 28 nov
     shareInvite: 'J’apprends le néerlandais pour mon travail avec Vloertaal. Gratuit : {link}', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeWhat: 'Vloertaal est une appli gratuite pour apprendre le néerlandais du travail.', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeHow: 'Des leçons courtes sur ton téléphone, avec de l’aide dans ta langue. Sans compte.', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeOpen: 'Ouvre sur ton téléphone :', // nieuw, nalezen // nagelezen AI 28 nov
+    briefjeWhat: 'Vloertaal est une appli gratuite pour apprendre le néerlandais du travail.', // nieuw, nalezen
+    briefjeHow: 'Des leçons courtes sur ton téléphone, avec de l’aide dans ta langue. Sans compte.', // nieuw, nalezen
+    briefjeOpen: 'Ouvre sur ton téléphone :', // nieuw, nalezen
     workTry: 'Essaie aujourd’hui au travail', // nieuw, nalezen // nagelezen AI 28 nov
     workTryWhen: 'Quand :', // nieuw, nalezen // nagelezen AI 28 nov
     workTryThen: 'Alors dis :', // nieuw, nalezen // nagelezen AI 28 nov
@@ -567,7 +567,7 @@ const lang: HelpLanguageSource = {
     'w.ja': 'oui',
     'w.nee': 'non',
     'w.totmorgen': 'à demain',
-    's.hello.1': { m: 'Bonjour, je suis nouveau.', f: 'Bonjour, je suis nouvelle.', x: 'Bonjour, je suis nouveau / nouvelle.' },
+    's.hello.1': { m: 'Bonjour, je suis nouveau.', f: 'Bonjour, je suis nouvelle.', x: 'Bonjour, je viens d’arriver.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     's.hello.2': 'Bonjour, je suis Ali.',
     's.hello.3': 'Merci, à demain !',
     'l.people': 'Les gens au travail',
@@ -579,7 +579,7 @@ const lang: HelpLanguageSource = {
     'w.nieuw': 'nouveau',
     's.people.1': 'Je m’appelle Sara.',
     's.people.2': 'Qui est le patron ?',
-    's.people.3': { m: 'Je suis un nouveau collègue.', f: 'Je suis une nouvelle collègue.', x: 'Je suis un nouveau collègue / une nouvelle collègue.' },
+    's.people.3': { m: 'Je suis un nouveau collègue.', f: 'Je suis une nouvelle collègue.', x: 'Je viens d’arriver dans l’équipe.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
 
     // Unit: Asking for help
     'u.help': 'Demander de l’aide',
@@ -635,7 +635,7 @@ const lang: HelpLanguageSource = {
     'w.ziekenhuis': 'l’hôpital',
     'w.gebeuren': 'se passer, arriver',
     's.accident.1': 'Mon collègue est tombé.',
-    's.accident.2': { m: 'Je me suis coupé.', f: 'Je me suis coupée.', x: 'Je me suis coupé / coupée.' },
+    's.accident.2': { m: 'Je me suis coupé.', f: 'Je me suis coupée.', x: 'J’ai une coupure.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     's.accident.3': 'Je veux signaler un accident.',
 
     // Unit: In the warehouse
@@ -672,7 +672,7 @@ const lang: HelpLanguageSource = {
     'w.morgen': 'demain',
     's.shift.1': 'Mon service commence à sept heures.',
     's.shift.2': 'C’est quand, la pause ?',
-    's.shift.3': { m: 'Désolé, je suis en retard.', f: 'Désolée, je suis en retard.', x: 'Désolé / désolée, je suis en retard.' },
+    's.shift.3': { m: 'Désolé, je suis en retard.', f: 'Désolée, je suis en retard.', x: 'Pardon, je suis en retard.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'l.sick': 'Se déclarer malade',
     'w.ziek': 'malade',
     'w.bellen': 'appeler (au téléphone)',
@@ -699,7 +699,7 @@ const lang: HelpLanguageSource = {
     's.arrive.2': 'Je ne trouve pas le vestiaire.',
     's.arrive.3': 'Qui est mon parrain aujourd’hui ?',
     'c.arrive.q': 'Bonjour, vous venez pour quoi ?',
-    'c.arrive.a': { m: 'Je suis nouveau. Je commence aujourd’hui.', f: 'Je suis nouvelle. Je commence aujourd’hui.', x: 'Je suis nouveau / nouvelle. Je commence aujourd’hui.' },
+    'c.arrive.a': { m: 'Je suis nouveau. Je commence aujourd’hui.', f: 'Je suis nouvelle. Je commence aujourd’hui.', x: 'Je viens d’arriver. Je commence aujourd’hui.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.understand.q': 'Tu comprends ?',
     'c.understand.a': 'Non, encore une fois, s’il te plaît.',
     'c.gear.q': 'Tu as ton casque ?',
@@ -719,7 +719,7 @@ const lang: HelpLanguageSource = {
     'w.uitleg': 'l’explication',
     's.notyet.1': 'Je n’ai pas encore appris ça.',
     's.notyet.2': 'On ne m’a pas encore expliqué.',
-    's.notyet.3': { m: 'J’ai déjà le droit de le faire seul ?', f: 'J’ai déjà le droit de le faire seule ?', x: 'J’ai déjà le droit de le faire seul / seule ?' },
+    's.notyet.3': { m: 'J’ai déjà le droit de le faire seul ?', f: 'J’ai déjà le droit de le faire seule ?', x: 'J’ai déjà le droit de le faire sans aide ?' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.notyet.q': 'Essaie, c’est facile.',
     'c.notyet.a': 'Tu peux d’abord me montrer ?',
     'c.things.q': 'Le carton va où ?',

@@ -464,9 +464,9 @@ const lang: HelpLanguageSource = {
     checkUndo: "Si kastaba samee casharrada", // nieuw, nalezen // nagelezen AI 28 nov
     commLabel: "Isgaarsiin", // nieuw, nalezen // nagelezen AI 28 nov
     shareInvite: "Waxaan Af-Holandiis u baranayaa shaqadayda anigoo isticmaalaya Vloertaal. Waa bilaash: {link}", // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeWhat: "Vloertaal waa app bilaash ah oo lagu barto Af-Holandiiska shaqada.", // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeHow: "Casharro gaagaaban oo taleefankaaga ku jira, iyo caawimaad luqaddaada ah. Akoon looma baahna.", // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeOpen: "Ku fur taleefankaaga:", // nieuw, nalezen // nagelezen AI 28 nov
+    briefjeWhat: "Vloertaal waa app bilaash ah oo lagu barto Af-Holandiiska shaqada.", // nieuw, nalezen
+    briefjeHow: "Casharro gaagaaban oo taleefankaaga ku jira, iyo caawimaad luqaddaada ah. Akoon looma baahna.", // nieuw, nalezen
+    briefjeOpen: "Ku fur taleefankaaga:", // nieuw, nalezen
     workTry: "Maanta shaqada ku tijaabi", // nieuw, nalezen // nagelezen AI 28 nov
     workTryWhen: "Goorma:", // nieuw, nalezen // nagelezen AI 28 nov
     workTryThen: "Markaas dheh:", // nieuw, nalezen // nagelezen AI 28 nov

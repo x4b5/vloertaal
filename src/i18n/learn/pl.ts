@@ -86,11 +86,11 @@ const t: CultureTranslation = {
     'c.service.a.why': "Prośba o rachunek: krótkie „tak” i już się idzie.",
     'c.cleaning.a.why': "Gotowe? Ta odpowiedź mówi „prawie” i ile zostało.",
     'c.cleansafe.a.why': "Mokra podłoga jest śliska: ostrzeżenie pomaga.",
-    'c.shelves.a.why': "Pytanie brzmi „gdzie”. Ta odpowiedź podaje alejkę i oferuje pomoc.",
+    'c.shelves.a.why': "Pytanie brzmi „gdzie”: ta odpowiedź podaje alejkę i oferuje pomoc.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.checkout.a.why': "Pytanie o płatność kartą: krótkie, miłe „tak”.",
     'c.counting.a.why': "Pytanie, ile: ta odpowiedź podaje liczbę i sprawdza ją cyfra po cyfrze.", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.hours.a.why': "Pytanie o godzinę. Ta odpowiedź podaje godzinę.",
-    'c.measures.a.why': "Pytanie o długość. Ta odpowiedź podaje długość.",
+    'c.hours.a.why': "Pytanie o godzinę: ta odpowiedź podaje godzinę.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.measures.a.why': "Pytanie o długość: ta odpowiedź podaje długość.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.aihelp.a.why': "Pytanie, kto to napisał: szczere „tak”, które mówi, kto pomógł.",
     'c.aiprivate.a.why': "Prośba o wpisanie nazwisk do chatbota: ta odpowiedź mówi „nie” i dlaczego.",
     'c.aifake.a.why': "Nowy numer prosi o pieniądze: ta odpowiedź najpierw to sprawdza.",

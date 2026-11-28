@@ -21,15 +21,15 @@ const t: CultureTranslation = {
   gloss: {
     'c.hello.a.why': "يُرَدّ على الوداع بالوداع.",
     'c.people.a.why': "السؤال عن الاسم. هذا الرد يذكر اسماً.",
-    'c.arrive.a.why': "السؤال عن سبب المجيء. هذا الرد يقول إن اليوم أول يوم عمل.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.arrive.a.why': "السؤال عن سبب المجيء: هذا الرد يقول إن اليوم أول يوم عمل.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.understand.a.why': "شيء غير مفهوم؟ طلب التكرار أمر عادي.",
     'c.translate.a.why': "الورقة غير واضحة بعد، لذلك تُترجم أولاً.",
     'c.understood.a.why': "بإعادة قول المهمة يُتأكَّد من أن التعليمات واضحة.",
     'c.keeplearning.a.why': "طلب الهولندية لا بأس به: التمرين يساعد.",
     'c.gear.a.why': "السؤال عن الخوذة: نعم، هي على الرأس.",
     'c.danger.a.why': "عند وقوع حادث يُتصل بالرقم 112 أولاً.",
-    'c.alarm.a.why': "السؤال: هل خرج الجميع؟ هذا الرد يقول من لا يزال غائباً.", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.accident.a.why': "السؤال: ماذا حدث؟ هذا الرد يقول ما حدث وكيف حاله.",
+    'c.alarm.a.why': "السؤال عن خروج الجميع: هذا الرد يقول من لا يزال غائباً.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.accident.a.why': "السؤال عمّا حدث: هذا الرد يقول ما حدث وكيف حاله.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.notyet.a.why': "عند «جرّب فقط»، الرد الآمن هو طلبُ أن يُعرَض العمل أولاً.",
     'c.things.a.why': "السؤال «إلى أين». هذا الرد يذكر مكاناً.",
     'c.directions.a.why': "يسار أم يمين؟ هذا الرد يختار واحداً ويقول أين.",
@@ -86,11 +86,11 @@ const t: CultureTranslation = {
     'c.service.a.why': "طُلبت الفاتورة: موافقة قصيرة، ثم إحضارها.",
     'c.cleaning.a.why': "انتهى؟ هذا الرد يقول تقريباً، وكم بقي.",
     'c.cleansafe.a.why': "الأرضية المبللة زلقة: التحذير يساعد.",
-    'c.shelves.a.why': "السؤال «أين». هذا الرد يذكر الممر ويعرض المساعدة.",
+    'c.shelves.a.why': "السؤال «أين»: هذا الرد يذكر الممر ويعرض المساعدة.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.checkout.a.why': "السؤال عن الدفع بالبطاقة: «نعم» قصيرة ولطيفة.",
-    'c.counting.a.why': "السؤال: كم؟ هذا الرد يعطي العدد، ويتحقق منه رقماً رقماً.", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.hours.a.why': "السؤال عن الوقت. هذا الرد يذكر وقتاً.",
-    'c.measures.a.why': "السؤال عن الطول. هذا الرد يذكر طولاً.",
+    'c.counting.a.why': "السؤال عن العدد: هذا الرد يعطي العدد، ويتحقق منه رقماً رقماً.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.hours.a.why': "السؤال عن الوقت: هذا الرد يذكر وقتاً.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.measures.a.why': "السؤال عن الطول: هذا الرد يذكر طولاً.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.aihelp.a.why': "السؤال عمّن كتبه: «نعم» صادقة تذكر المساعدة.",
     'c.aiprivate.a.why': "يُطلب وضع أسماء في روبوت دردشة: هذا الرد يقول «لا» ويذكر السبب.",
     'c.aifake.a.why': "رقم جديد يطلب مالاً: هذا الرد يتحقق أولاً.",
@@ -162,9 +162,9 @@ const t: CultureTranslation = {
     'c.vancheck.a.why': "السؤال هل الشاحنة بخير: لا، وما هو المكسور.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.delay.a.why': "السؤال عن المكان: المكان، ومدة التأخير.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Hulp vragen" at four lessons (14 November 2026).
-    'c.howto.a.why': "السؤال: هل الطريقة معروفة؟ هذا الرد يقول بصدق: لا، ليس بعد.", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.mayask.a.why': "السؤال: هل هناك سؤال؟ هذا الرد يقول نعم، ويسأل أولاً إن كان هناك وقت.", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.whereis.a.why': "السؤال: هل يمكن إيجاده؟ هذا الرد يقول لا، ويطلب الإشارة إليه.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.howto.a.why': "السؤال عن معرفة الطريقة، وهذا الرد يقول بصدق: لا، ليس بعد.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.mayask.a.why': "السؤال عن وجود سؤال: هذا الرد يقول نعم، ويسأل أولاً إن كان هناك وقت.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.whereis.a.why': "السؤال عن إمكانية إيجاده: هذا الرد يقول لا، ويطلب الإشارة إليه.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     // "Instructies", a new basis unit (u.do, 14 November 2026).
     'c.putdown.a.why': "طلب الإمساك بشيء: نعم، وأين يوضع.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.onoff.a.why': "السؤال هل الباب مغلق: لا، وإغلاقه الآن.", // nieuw, nalezen // nagelezen AI 22 nov

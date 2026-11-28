@@ -464,9 +464,9 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Yine de dersleri yap', // nieuw, nalezen // nagelezen AI 28 nov
     commLabel: "İletişim", // nieuw, nalezen // nagelezen AI 28 nov
     shareInvite: 'Vloertaal ile işim için Hollandaca öğreniyorum. Ücretsiz: {link}', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeWhat: 'Vloertaal, iş için Hollandaca öğreten ücretsiz bir uygulamadır.', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeHow: 'Kendi telefonunda kısa dersler, kendi dilinde yardımla. Hesap yok.', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeOpen: 'Telefonunda aç:', // nieuw, nalezen // nagelezen AI 28 nov
+    briefjeWhat: 'Vloertaal, iş için Hollandaca öğreten ücretsiz bir uygulamadır.', // nieuw, nalezen
+    briefjeHow: 'Kendi telefonunda kısa dersler, kendi dilinde yardımla. Hesap yok.', // nieuw, nalezen
+    briefjeOpen: 'Telefonunda aç:', // nieuw, nalezen
     workTry: 'Bugün işte dene', // nieuw, nalezen // nagelezen AI 28 nov
     workTryWhen: 'Şu durumda:', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     workTryThen: 'O zaman şunu söyle:', // nieuw, nalezen // nagelezen AI 28 nov

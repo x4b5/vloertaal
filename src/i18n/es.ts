@@ -343,7 +343,7 @@ const lang: HelpLanguageSource = {
     chatWhichQuestion: '¿Qué pregunta va con esta respuesta?',
     reviewWaiting: 'Esperan {n} palabras más. Vuelven en los próximos días.',
     factTitle: '¿Sabías que…?',
-    fact3: { m: 'No estás solo: más de 3 millones de adultos en los Países Bajos tienen dificultades para leer, hacer cuentas o usar la computadora. Practicar ayuda.', f: 'No estás sola: más de 3 millones de adultos en los Países Bajos tienen dificultades para leer, hacer cuentas o usar la computadora. Practicar ayuda.', x: 'No estás solo/a: más de 3 millones de adultos en los Países Bajos tienen dificultades para leer, hacer cuentas o usar la computadora. Practicar ayuda.' },
+    fact3: { m: 'No estás solo: más de 3 millones de adultos en los Países Bajos tienen dificultades para leer, hacer cuentas o usar la computadora. Practicar ayuda.', f: 'No estás sola: más de 3 millones de adultos en los Países Bajos tienen dificultades para leer, hacer cuentas o usar la computadora. Practicar ayuda.', x: 'No es solo tu caso: más de 3 millones de adultos en los Países Bajos tienen dificultades para leer, hacer cuentas o usar la computadora. Practicar ayuda.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     fact7: 'De los migrantes que hablan muy bien neerlandés, 69 de cada 100 tienen un trabajo pagado.',
     fact14: 'Muchas bibliotecas tienen un Taalhuis: ayuda gratis para seguir aprendiendo neerlandés.',
     fact30: 'Practicar un poco cada día funciona mejor que mucho de vez en cuando. ¡Lo has hecho durante 30 días!',
@@ -464,9 +464,9 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Hacer las lecciones igualmente', // nieuw, nalezen // nagelezen AI 28 nov
     commLabel: 'Comunicación', // nieuw, nalezen // nagelezen AI 28 nov
     shareInvite: 'Aprendo neerlandés para mi trabajo con Vloertaal. Gratis: {link}', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeWhat: 'Vloertaal es una app gratis para aprender el neerlandés del trabajo.', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeHow: 'Lecciones cortas en tu propio teléfono, con ayuda en tu idioma. Sin cuenta.', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeOpen: 'Ábrelo en tu teléfono:', // nieuw, nalezen // nagelezen AI 28 nov
+    briefjeWhat: 'Vloertaal es una app gratis para aprender el neerlandés del trabajo.', // nieuw, nalezen
+    briefjeHow: 'Lecciones cortas en tu propio teléfono, con ayuda en tu idioma. Sin cuenta.', // nieuw, nalezen
+    briefjeOpen: 'Ábrelo en tu teléfono:', // nieuw, nalezen
     workTry: 'Pruébalo hoy en el trabajo', // nieuw, nalezen // nagelezen AI 28 nov
     workTryWhen: 'Cuando:', // nieuw, nalezen // nagelezen AI 28 nov
     workTryThen: 'Entonces di:', // nieuw, nalezen // nagelezen AI 28 nov
@@ -567,7 +567,7 @@ const lang: HelpLanguageSource = {
     'w.ja': 'sí',
     'w.nee': 'no',
     'w.totmorgen': 'hasta mañana',
-    's.hello.1': { m: 'Hola, soy nuevo.', f: 'Hola, soy nueva.', x: 'Hola, soy nuevo/a.' },
+    's.hello.1': { m: 'Hola, soy nuevo.', f: 'Hola, soy nueva.', x: 'Hola, acabo de llegar.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     's.hello.2': 'Buenos días, soy Ali.',
     's.hello.3': 'Gracias, ¡hasta mañana!',
     'l.people': 'Personas en el trabajo',
@@ -719,7 +719,7 @@ const lang: HelpLanguageSource = {
     'w.uitleg': 'la explicación',
     's.notyet.1': 'Esto todavía no lo he aprendido.',
     's.notyet.2': 'Todavía no me lo han explicado.',
-    's.notyet.3': { m: '¿Ya puedo hacer esto solo?', f: '¿Ya puedo hacer esto sola?', x: '¿Ya puedo hacer esto solo/a?' },
+    's.notyet.3': { m: '¿Ya puedo hacer esto solo?', f: '¿Ya puedo hacer esto sola?', x: '¿Ya puedo hacer esto sin ayuda?' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.notyet.q': 'Pruébalo, es fácil.',
     'c.notyet.a': '¿Me puedes enseñar primero cómo se hace?',
     'c.things.q': '¿Adónde va la caja?',
@@ -732,7 +732,7 @@ const lang: HelpLanguageSource = {
     'c.sick.a': 'Sí, hoy me quedo en casa.',
     // Emergency phrases (phrasebook only)
     'p.call112': '¡Llama al 112!',
-    'p.hurt': { m: 'Estoy herido.', f: 'Estoy herida.', x: 'Estoy herido/a.' },
+    'p.hurt': { m: 'Estoy herido.', f: 'Estoy herida.', x: 'Tengo una herida.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     // Logistiek at four lessons per unit (14 November 2026).
     'l.picking': "Preparar pedidos", // nieuw, nalezen // nagelezen AI 28 nov
     'w.artikel': "el artículo (un producto)", // nieuw, nalezen // nagelezen AI 28 nov

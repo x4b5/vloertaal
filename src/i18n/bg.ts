@@ -464,9 +464,9 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Все пак направи уроците', // nieuw, nalezen // nagelezen AI 28 nov
     commLabel: 'Комуникация', // nieuw, nalezen // nagelezen AI 28 nov
     shareInvite: 'Уча нидерландски за работата си с Vloertaal. Безплатно е: {link}', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeWhat: 'Vloertaal е безплатно приложение за учене на нидерландски за работа.', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeHow: 'Кратки уроци на твоя телефон, с помощ на твоя език. Без акаунт.', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeOpen: 'Отвори на телефона си:', // nieuw, nalezen // nagelezen AI 28 nov
+    briefjeWhat: 'Vloertaal е безплатно приложение за учене на нидерландски за работа.', // nieuw, nalezen
+    briefjeHow: 'Кратки уроци на твоя телефон, с помощ на твоя език. Без акаунт.', // nieuw, nalezen
+    briefjeOpen: 'Отвори на телефона си:', // nieuw, nalezen
     workTry: 'Опитай днес на работа', // nieuw, nalezen // nagelezen AI 28 nov
     workTryWhen: 'Кога:', // nieuw, nalezen // nagelezen AI 28 nov
     workTryThen: 'Тогава кажи:', // nieuw, nalezen // nagelezen AI 28 nov

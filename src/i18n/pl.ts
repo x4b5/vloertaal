@@ -464,9 +464,9 @@ const lang: HelpLanguageSource = {
     checkUndo: 'Jednak zrób lekcje', // nieuw, nalezen // nagelezen AI 28 nov
     commLabel: 'Komunikacja', // nieuw, nalezen // nagelezen AI 28 nov
     shareInvite: 'Uczę się niderlandzkiego do pracy z Vloertaal. Za darmo: {link}', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeWhat: 'Vloertaal to darmowa aplikacja do nauki niderlandzkiego do pracy.', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeHow: 'Krótkie lekcje na własnym telefonie, z pomocą w twoim języku. Bez konta.', // nieuw, nalezen // nagelezen AI 28 nov
-    briefjeOpen: 'Otwórz na telefonie:', // nieuw, nalezen // nagelezen AI 28 nov
+    briefjeWhat: 'Vloertaal to darmowa aplikacja do nauki niderlandzkiego do pracy.', // nieuw, nalezen
+    briefjeHow: 'Krótkie lekcje na własnym telefonie, z pomocą w twoim języku. Bez konta.', // nieuw, nalezen
+    briefjeOpen: 'Otwórz na telefonie:', // nieuw, nalezen
     workTry: 'Spróbuj dziś w pracy', // nieuw, nalezen // nagelezen AI 28 nov
     workTryWhen: 'Kiedy:', // nieuw, nalezen // nagelezen AI 28 nov
     workTryThen: 'Wtedy powiedz:', // nieuw, nalezen // nagelezen AI 28 nov
@@ -732,7 +732,7 @@ const lang: HelpLanguageSource = {
     'c.sick.a': 'Tak, dziś zostaję w domu.',
     // Emergency phrases (phrasebook only)
     'p.call112': 'Dzwoń pod 112!',
-    'p.hurt': { m: 'Jestem ranny.', f: 'Jestem ranna.', x: 'Jestem ranny / ranna.' },
+    'p.hurt': { m: 'Jestem ranny.', f: 'Jestem ranna.', x: 'Mam uraz.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     // Logistiek at four lessons per unit (14 November 2026).
     'l.picking': "Zbieranie zamówień", // nieuw, nalezen // nagelezen AI 28 nov
     'w.artikel': "artykuł (jeden produkt)", // nieuw, nalezen // nagelezen AI 28 nov

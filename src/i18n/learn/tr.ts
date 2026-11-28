@@ -21,7 +21,7 @@ const t: CultureTranslation = {
   gloss: {
     'c.hello.a.why': "Vedalaşmaya vedayla karşılık verilir.",
     'c.people.a.why': "Soru bir isim soruyor. Bu cevap bir isim veriyor.",
-    'c.arrive.a.why': "Soru neden gelindiğini soruyor. Bu cevap yeni olduğunu ve bugün başladığını söylüyor.",
+    'c.arrive.a.why': "Soru neden gelindiğini soruyor: bu cevap yeni olduğunu ve bugün başladığını söylüyor.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.understand.a.why': "Anlaşılmadı mı? Tekrar söylenmesini istemek normaldir.",
     'c.translate.a.why': "Not henüz anlaşılmadı, bu yüzden önce çevrilir.",
     'c.understood.a.why': "Görevi tekrar söylemek, sıranın doğru anlaşıldığını kontrol eder.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
@@ -64,7 +64,7 @@ const t: CultureTranslation = {
     'c.illness.a.why': "Tıbbi ayrıntılar patron için değil, işyeri hekimi içindir.",
     'c.warning.a.why': "İşveren pasaportun kopyasını alabilir, pasaportu tutamaz.",
     'c.gethelp.a.why': "Neyin yanlış olduğunu açıkça söylemek yardım etmelerini sağlar.",
-    'c.callin.a.why': "Ne zaman döneceğin soruluyor: bu cevap bir gün veriyor.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
+    'c.callin.a.why': "Ne zaman döneceğin soruluyor. Bu cevap bir gün veriyor.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.texting.a.why': "Uygulamada hızlı cevap planlamaya yardımcı olur.",
     'c.certs.a.why': "Dürüst bir \"hayır\" ve öğrenme isteği: iyi bir cevap.",
     'c.diploma.a.why': "Eğitime \"evet\" demek ve kimin ödediğini sormak normaldir.",
@@ -86,11 +86,11 @@ const t: CultureTranslation = {
     'c.service.a.why': "Hesap istendi: kısa bir \"evet\" ve hemen gidilir.",
     'c.cleaning.a.why': "Bitti mi? Bu cevap \"neredeyse\" diyor ve kaç tane kaldığını söylüyor.",
     'c.cleansafe.a.why': "Islak zemin kaygandır: uyarı yardımcı olur.",
-    'c.shelves.a.why': "Soru \"nerede\" diye soruyor. Bu cevap koridoru söylüyor ve yardım ediyor.",
+    'c.shelves.a.why': "Soru \"nerede\" diye soruyor: bu cevap koridoru söylüyor ve yardım ediyor.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.checkout.a.why': "Kartla ödeme soruluyor: kısa ve nazik bir \"evet\".",
     'c.counting.a.why': "Kaç tane olduğu soruluyor: bu cevap sayıyı veriyor ve rakam rakam kontrol ediyor.", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.hours.a.why': "Soru saati soruyor. Bu cevap bir saat söylüyor.",
-    'c.measures.a.why': "Soru uzunluğu soruyor. Bu cevap bir uzunluk söylüyor.",
+    'c.hours.a.why': "Soru saati soruyor: bu cevap bir saat söylüyor.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.measures.a.why': "Soru uzunluğu soruyor: bu cevap bir uzunluk söylüyor.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.aihelp.a.why': "Kimin yazdığı soruluyor: yardımı da söyleyen dürüst bir “evet”.",
     'c.aiprivate.a.why': "Sohbet robotuna isim yazman isteniyor: bu cevap “hayır” diyor ve nedenini söylüyor.",
     'c.aifake.a.why': "Yeni bir numara para istiyor: bu cevap önce kontrol ediyor.",

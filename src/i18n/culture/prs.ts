@@ -16,7 +16,7 @@ const t: CultureTranslation = {
     'c.je': '«je» یا «u»؟',
     'c.je.b': 'در کار بیشتر مردم به یکدیگر «je» (تو، غیررسمی) می‌گویند، اکثراً به آمر هم. اگر مطمئن نیستید، با «u» (شما، رسمی) شروع کنید و ببینید دیگران چه می‌کنند. «je» گفتن اینجا بی‌ادبی نیست.',
     'c.je.p': 'می‌توانم به شما «je» بگویم؟',
-    'c.je.s': 'سرپرست نو شما می‌گوید: «Zeg maar je, hoor!» منظورش چیست؟',
+    'c.je.s': 'سرپرست نو شما می‌گوید: «Zeg maar je, hoor!». منظورش چیست؟', // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.je.o1': 'او می‌خواهد که به او «je» بگویید.',
     'c.je.o2': 'او از شما می‌خواهد که چیزی بگویید.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.je.o3': 'او می‌خواهد که مؤدبانه‌تر گپ بزنید.', // nagelezen (2e lezing) // nagelezen AI 22 nov
@@ -24,7 +24,7 @@ const t: CultureTranslation = {
     'c.names': 'نام اول و دست دادن',
     'c.names.b': 'در روز اول، کوتاه دست بدهید، به طرف نگاه کنید و نام اول خود را بگویید. همکاران و آمرها معمولاً یکدیگر را به نام اول صدا می‌کنند.',
     'c.names.p': 'سلام، من علی هستم. من اینجا نو هستم.',
-    'c.names.s': 'یک همکار پیش شما می‌آید: «Hoi, ik ben Mark.» شما چه می‌کنید؟',
+    'c.names.s': 'یک همکار پیش شما می‌آید: «Hoi, ik ben Mark». شما چه می‌کنید؟', // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.names.o1': 'دست بدهید و نام خود را بگویید.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.names.o2': 'سر خود را تکان بدهید، لبخند بزنید و منتظر سوال بمانید.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.names.o3': 'دست بدهید و او را «meneer» (آقا) صدا کنید.', // nagelezen (2e lezing) // nagelezen AI 22 nov
@@ -80,7 +80,7 @@ const t: CultureTranslation = {
     'c.notyet': 'هنوز یاد نگرفته‌اید؟ بگویید',
     'c.notyet.b': 'کمپنی‌ای که در آن کار می‌کنید باید برای شما توضیح بدهد که کار خود را چطور مصئون انجام بدهید. با ماشین یا فورک‌لیفتی که کسی کار با آن را به شما یاد نداده، کار نکنید. گفتن «Dit heb ik nog niet geleerd» اینجا عادی است: نشان می‌دهد که شما مصئون کار می‌کنید.',
     'c.notyet.p': 'این را هنوز یاد نگرفته‌ام. می‌توانید برایم نشان بدهید؟',
-    'c.notyet.s': 'یک صبح پرکار. سرپرست شما می‌گوید: «Pak jij even de heftruck? Het is makkelijk.» شما هیچ وقت فورک‌لیفت نرانده‌اید. چه می‌کنید؟',
+    'c.notyet.s': 'یک صبح پرکار. سرپرست شما می‌گوید: «Pak jij even de heftruck? Het is makkelijk». شما هیچ وقت فورک‌لیفت نرانده‌اید. چه می‌کنید؟', // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.notyet.o1': 'بگویید که آن را یاد نگرفته‌اید. آموزش بخواهید.',
     'c.notyet.o2': 'فقط همین یک بار، آهسته و با احتیاط برانید.',
     'c.notyet.o3': 'بگویید «ja» و امیدوار باشید که خوب بگذرد.',
@@ -88,7 +88,7 @@ const t: CultureTranslation = {
     'c.direct': 'گپ مستقیم بی‌ادبی نیست',
     'c.direct.b': 'همکاران هالندی اکثراً گپ را خیلی مستقیم می‌گویند، مثل «Dat is fout» یا «Doe het zo». معمولاً منظور بد ندارند. شما هم می‌توانید مستقیم باشید، به شرطی که مهربان بمانید.',
     'c.direct.p': 'خوب، پس چطور باید شود؟',
-    'c.direct.s': 'یک همکار می‌گوید: «Nee, dat is fout. Die doos moet daar.» شما چه می‌کنید؟',
+    'c.direct.s': 'یک همکار می‌گوید: «Nee, dat is fout. Die doos moet daar». شما چه می‌کنید؟', // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.direct.o1': 'بپرسید که چطور باید شود و قطی را جابه‌جا کنید.',
     'c.direct.o2': 'چند بار معذرت بخواهید: همکار تان قهر است.', // nagelezen (2e lezing) // nagelezen AI 22 nov
     'c.direct.o3': 'چیزی نگویید و جعبه را همان جایی که هست بگذارید.',
@@ -144,7 +144,7 @@ const t: CultureTranslation = {
     'c.clear': 'اول مهم‌ترین چیز را بگویید', // nieuw, nalezen // nagelezen AI 22 nov
     'c.clear.b': 'در بسیاری از زبان‌ها مؤدبانه است که اول تمام قصه را بگویید و گپ اصلی را در آخر. در کار اینجا برعکس است. اول بگویید که چه مشکلی است یا به چه چیز ضرورت دارید. بعد دلیل آن را بگویید. آرام گپ بزنید و بعد از دو یا سه جمله بس کنید، تا طرف مقابل بتواند چیزی بپرسد. در مصاحبهٔ کاری هم: اول جواب، بعد یک مثال. آهسته گپ زدن اینجا بی‌ادبی نیست: به مردم کمک می‌کند که گپ شما را بفهمند.',
     'c.clear.p': 'ببخشید، یک بار دیگر آرام می‌گویم.', // nieuw, nalezen // nagelezen AI 22 nov
-    'c.clear.s': 'شما ۲۰ دقیقه ناوقت به کار می‌رسید. سرپرست شما می‌پرسد: «Wat is er?» چه می‌کنید؟', // nieuw, nalezen // nagelezen AI 22 nov
+    'c.clear.s': 'شما ۲۰ دقیقه ناوقت به کار می‌رسید. سرپرست شما می‌پرسد: «Wat is er?». چه می‌کنید؟', // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.clear.o1': 'اول بگویید که ناوقت شده‌اید و معذرت بخواهید. بعد بگویید چرا.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.clear.o2': 'هر چیزی را که امروز صبح پیش آمد، از اول قصه کنید.', // nieuw, nalezen // nagelezen AI 22 nov
     'c.clear.o3': 'چیزی نگویید و زود کار را شروع کنید.', // nieuw, nalezen // nagelezen AI 22 nov
@@ -213,7 +213,7 @@ const t: CultureTranslation = {
     'c.newcolleague': "نشان بدهید، قدم به قدم", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.b': "چیزی که در هفته‌های اول برای شما سخت بود، برای یک همکار نو هم سخت است. کار را در قدم‌های کوچک توضیح بدهید: اول این، بعد آن. تیزتر یا بلندتر گپ نزنید: نشان بدهید، و بگذارید که بعد از شما همان کار را بکند. نپرسید «Snap je het?»: بسیاری از مردم بلی می‌گویند، حتی وقتی نفهمیده‌اند. به جای آن بگویید «Laat eens zien» و ببینید. بگویید که چیزها کجاست، مثل تشناب، غذاخوری و دستکش‌ها. صبر داشته باشید (geduld): یاد گرفتن برای همه وقت می‌گیرد.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.p': "آفرین! حالا قدم بعدی.", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.newcolleague.s': "شما یک کار را برای یک همکار نو توضیح می‌دهید. او می‌گوید: «Ja, ja, ik snap het.» چه می‌کنید؟", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.newcolleague.s': "شما یک کار را برای یک همکار نو توضیح می‌دهید. او می‌گوید: «Ja, ja, ik snap het». چه می‌کنید؟", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.newcolleague.o1': "بگویید «Laat eens zien,» و ببینید که او چطور آن را انجام می‌دهد.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.o2': "بگویید «Goed zo,» و به کار خود برگردید.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.o3': "همه را دوباره توضیح بدهید، تیزتر و بلندتر.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -360,7 +360,7 @@ const t: CultureTranslation = {
     'c.getfeedback': "نظر دربارهٔ کار، به کار شما مربوط است", // nieuw, nalezen // nagelezen AI 22 nov
     'c.getfeedback.b': "نظر دربارهٔ کار (feedback) چیزی است که کسی دربارهٔ کار شما می‌گوید: چه خوب پیش می‌رود، و چه می‌تواند بهتر شود. دربارهٔ کار شما است، نه دربارهٔ خود شما. در کار اینجا، این نظر عادی است و برای کمک است. واضح نیست که چه چیز را باید طور دیگر انجام بدهید؟ یک مثال بخواهید. اول گوش بدهید، و فوراً از خود دفاع نکنید. بعد تشکر کنید، و آن را امتحان کنید. خود تان هم می‌توانید نظر بخواهید: «Wat kan ik beter doen?»", // nieuw, nalezen // nagelezen AI 22 nov
     'c.getfeedback.p': "تشکر. می‌توانید یک مثال بدهید؟", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.getfeedback.s': "سرپرست شما به کار شما می‌بیند و می‌گوید: «Dit kan beter.» شما نمی‌دانید منظور او چیست. چه می‌کنید؟", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.getfeedback.s': "سرپرست شما به کار شما می‌بیند و می‌گوید: «Dit kan beter». شما نمی‌دانید منظور او چیست. چه می‌کنید؟", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.getfeedback.o1': "تشکر کنید، و یک مثال بخواهید.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.getfeedback.o2': "بگویید که واقعاً تمام کوشش خود را کردید.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.getfeedback.o3': "سر تکان بدهید، و دوباره به همان شکل انجام بدهید.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -408,7 +408,7 @@ const t: CultureTranslation = {
     'c.howto.o3': "کار را بس کنید و منتظر بمانید تا کسی بیاید.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.howto.w': "یک نگاه کوتاه همکار، بعدتر کار زیادی را کم می‌کند. و کار را زودتر یاد می‌گیرید.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.mayask': "وقت درست برای پرسیدن", // nieuw, nalezen // nagelezen AI 22 nov
-    'c.mayask.b': "دربارهٔ مصئونیت است، یا همین حالا چیزی می‌تواند خراب شود؟ فوراً بپرسید، حتی وقتی همکار شما مصروف است. عاجل نیست؟ صبر کنید تا همکار شما کار خود را خلاص کند، و بعد بپرسید: «Heb je even tijd?» سوال‌های خرد زیاد دارید؟ آنها را نوشته کنید و یکجا بپرسید. هیچ کس از سوال ناراحت نمی‌شود. یک غلطی بیشتر وقت می‌گیرد.", // nieuw, nalezen // nagelezen AI 22 nov
+    'c.mayask.b': "دربارهٔ مصئونیت است، یا همین حالا چیزی می‌تواند خراب شود؟ فوراً بپرسید، حتی وقتی همکار شما مصروف است. عاجل نیست؟ صبر کنید تا همکار شما کار خود را خلاص کند، و بعد بپرسید: «Heb je even tijd?». سوال‌های خرد زیاد دارید؟ آنها را نوشته کنید و یکجا بپرسید. هیچ کس از سوال ناراحت نمی‌شود. یک غلطی بیشتر وقت می‌گیرد.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.mayask.p': "ببخشید که مزاحم می‌شوم. یک لحظه وقت دارید؟", // nieuw, nalezen // nagelezen AI 22 nov
     'c.mayask.s': "همکار شما در تیلفون گپ می‌زند. یک سوال دارید که عاجل نیست. چه می‌کنید؟", // nieuw, nalezen // nagelezen AI 22 nov
     'c.mayask.o1': "صبر کنید تا گپ تیلفون خلاص شود، بعد بپرسید.", // nieuw, nalezen // nagelezen AI 22 nov
