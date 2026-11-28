@@ -6,7 +6,7 @@ const t: CultureTranslation = {
     sayAloud: "Не е нужен микрофон. Кажи го на глас, после продължи.",
     micRetry: "Опитай микрофона отново",
     micFailed: "Микрофонът не проработи. Кажи го на глас, после продължи.",
-    micRefused: "Приложението не може да използва микрофона ти. Можеш да го включиш.", // nieuw, nalezen
+    micRefused: "Приложението няма разрешение да използва микрофона ти. Можеш да го включиш.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     micTurnOn: "Включи микрофона", // nieuw, nalezen
     micStepsIos: "Докосни „•••“ или „aA“ в адресната лента › Настройки на уебсайт › Микрофон › Разрешаване. Или: Настройки › Приложения › Safari › Микрофон. После докосни бутона отдолу.", // nieuw, nalezen
     micStepsIosOther: "Докосни иконата вляво от уеб адреса › Разрешения › Микрофон › Разрешаване. Или: Настройки › Приложения › {app} › Микрофон. После докосни бутона отдолу.", // nieuw, nalezen
@@ -262,7 +262,7 @@ const t: CultureTranslation = {
     'c.sanitary.a.why': "Питат дали е готово: още не, и защо.", // nieuw, nalezen
     'c.hotelroom.a.why': "Питат колко остават: броят, и кога свършваш.", // nieuw, nalezen
     'c.dosing.a.why': "Казват да се сложи повече: не, повече не е по-добре, и с какво се мери.", // nieuw, nalezen
-    'c.officenight.a.why': "Питат дали се работи без друг човек в сградата: да, и ще има съобщение.", // nieuw, nalezen
+    'c.officenight.a.why': "Питат дали в сградата няма никой друг освен теб: да, и ще пратиш съобщение.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.knives.a.why': "Молят да се нареже: да, шефе, и въпрос как.", // nieuw, nalezen
     'c.rawcooked.a.why': "Питат дали е без глутен: не е сигурно, затова се проверява списъкът.", // nieuw, nalezen
     'c.pass.a.why': "Питат къде е храната: на паса, и вече се носи.", // nieuw, nalezen
@@ -278,7 +278,7 @@ const t: CultureTranslation = {
     'c.hirer.a.why': "Питат за начало на ново място: да, и въпрос за часа.", // nieuw, nalezen
     'c.phases.a.why': "Казват, че работата спира: добре, и молба за друга работа.", // nieuw, nalezen
     'c.deductions.a.why': "Казват за удръжка: въпрос дали е разрешено, и проверка.", // nieuw, nalezen
-    'c.agencyhome.a.why': "Казват да се напусне скоро: това е кратко, и първо съвет.", // nieuw, nalezen
+    'c.agencyhome.a.why': "Казват ти да напуснеш скоро: срокът е кратък и първо търсиш съвет.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     // The basis units at four lessons (23 November 2026).
     'c.roster.a.why': "Графикът се промени: добре, и въпрос кой ден.", // nieuw, nalezen
     'c.breaks.a.why': "Питат за обедната почивка: часът и колко трае.", // nieuw, nalezen
@@ -320,12 +320,12 @@ const t: CultureTranslation = {
     // eight new lessons (26 November 2026).
     'c.debthelp.a.why': "Казват, че сметката не е платена: да, и молба за разсрочено плащане.", // nieuw, nalezen
     'c.taxes.a.why': "Казват, че има син плик: благодарност и веднага отваряне.", // nieuw, nalezen
-    'c.discrimination.a.why': "Питат дали си добре: не, и ще има сигнал за това.", // nieuw, nalezen
+    'c.discrimination.a.why': "Питат дали си добре: не, и ще съобщиш за това.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.union.a.why': "Питат защо членуваш: застъпват се за теб.", // nieuw, nalezen
     'c.kiln.a.why': "Питат за събиране на парчета с ръка: не, с метличка и лопатка.", // nieuw, nalezen
     'c.mixlab.a.why': "Питат дали партидата е одобрена: още не, лабораторията я изпитва.", // nieuw, nalezen
     'c.firstweeks.a.why': "Питат за обиколката: почти всичко и един въпрос.", // nieuw, nalezen
-    'c.orderpick.a.why': "Молят да караш ричтрака: не, няма обучение.", // nieuw, nalezen
+    'c.orderpick.a.why': "Молят те да караш ричтрака: не, нямаш обучение.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     // four new lessons (27 November 2026).
     'd.appraisal.a.why': "Питат за целта: едно ясно нещо, което искаш да научиш.", // nieuw, nalezen
     'c.forms.a.why': "Питат за формуляра: почти, и къде е мястото за подпис.", // nieuw, nalezen

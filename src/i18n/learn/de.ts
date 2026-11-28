@@ -6,13 +6,13 @@ const t: CultureTranslation = {
     sayAloud: "Kein Mikrofon nötig. Sag es laut, dann mach weiter.",
     micRetry: "Mikrofon noch einmal versuchen",
     micFailed: "Das Mikrofon hat nicht funktioniert. Sag es laut, dann mach weiter.",
-    micRefused: "Die App darf dein Mikrofon nicht benutzen. Du kannst es einschalten.", // nieuw, nalezen
-    micTurnOn: "Mikrofon einschalten", // nieuw, nalezen
-    micStepsIos: "Tippe in der Adressleiste auf „•••“ oder „aA“ › Website-Einstellungen › Mikrofon › Erlauben. Oder: Einstellungen › Apps › Safari › Mikrofon. Tippe dann unten auf den Knopf.", // nieuw, nalezen
-    micStepsIosOther: "Tippe auf das Symbol links neben der Webadresse › Berechtigungen › Mikrofon › Zulassen. Oder: Einstellungen › Apps › {app} › Mikrofon. Tippe dann unten auf den Knopf.", // nieuw, nalezen
-    micStepsAndroid: "Tippe auf das Symbol links neben der Webadresse › Berechtigungen › Mikrofon › Zulassen. Tippe dann unten auf den Knopf.", // nieuw, nalezen
-    micStepsAndroidApp: "Halte das Vloertaal-Symbol auf deinem Startbildschirm gedrückt › App-Info › Berechtigungen › Mikrofon › Zulassen. Tippe dann unten auf den Knopf.", // nieuw, nalezen
-    micStepsDesktop: "Klicke auf das Symbol links neben der Webadresse › Mikrofon › Zulassen. Klicke dann unten auf den Knopf.", // nieuw, nalezen
+    micRefused: "Die App darf dein Mikrofon nicht benutzen. Du kannst es einschalten.", // nieuw, nalezen // nagelezen AI 28 nov
+    micTurnOn: "Mikrofon einschalten", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsIos: "Tippe in der Adressleiste auf „•••“ oder „aA“ › Website-Einstellungen › Mikrofon › Erlauben. Oder: Einstellungen › Apps › Safari › Mikrofon. Tippe dann unten auf den Knopf.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsIosOther: "Tippe auf das Symbol links neben der Webadresse › Berechtigungen › Mikrofon › Zulassen. Oder: Einstellungen › Apps › {app} › Mikrofon. Tippe dann unten auf den Knopf.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsAndroid: "Tippe auf das Symbol links neben der Webadresse › Berechtigungen › Mikrofon › Zulassen. Tippe dann unten auf den Knopf.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsAndroidApp: "Halte das Vloertaal-Symbol auf deinem Startbildschirm gedrückt › App-Info › Berechtigungen › Mikrofon › Zulassen. Tippe dann unten auf den Knopf.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsDesktop: "Klicke auf das Symbol links neben der Webadresse › Mikrofon › Zulassen. Klicke dann unten auf den Knopf.", // nieuw, nalezen // nagelezen AI 28 nov
     whichPicture: "Welches Bild ist es?",
     sayAloudInstead: "Sag es stattdessen laut",
     wordsPractised: "Geübte Wörter",
@@ -209,127 +209,127 @@ const t: CultureTranslation = {
     'c.brakes.a.why': "Gefragt, ob sie neu muss: Ja, und warum.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "Gefragt, was gemacht werden muss: auf den Arbeitsauftrag schauen.", // nieuw, nalezen // nagelezen AI 22 nov
     // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
-    'c.mowing.a.why': "Gefragt, ob man ihn nehmen darf: Ja, und was man zuerst tun muss.", // nieuw, nalezen
-    'c.pruning.a.why': "Gefragt, welche Äste: nur die toten.", // nieuw, nalezen
-    'c.hedge.a.why': "Gefragt, wie hoch: bis zur Schnur, nicht tiefer.", // nieuw, nalezen
-    'c.chainsaw.a.why': "Gefragt, ob man darf: noch nicht, und was zuerst kommt.", // nieuw, nalezen
-    'c.weeding.a.why': "Gefragt, ob es Unkraut ist: Nein, und was man damit macht.", // nieuw, nalezen
-    'c.planting.a.why': "Gefragt, wohin sie kommt: der Platz im Beet.", // nieuw, nalezen
-    'c.roadside.a.why': "Gefragt, ob man rübergehen kann: Nein, warten, und warum.", // nieuw, nalezen
-    'c.litter.a.why': "Ein Anwohner fragt, wann: Du weißt es nicht, aber wer es weiß.", // nieuw, nalezen
-    'c.reception.a.why': "Ein Besucher hat einen Termin: einen Moment, du rufst an.", // nieuw, nalezen
-    'c.visitors.a.why': "Gefragt, wohin die Jacke kommt: der Ort, und wo er ist.", // nieuw, nalezen
-    'c.mailroom.a.why': "Gefragt, für wen es ist: die Abteilung, und der Stock.", // nieuw, nalezen
-    'c.meetingroom.a.why': "Gefragt, um wie viel Uhr: die Uhrzeit, und was getan werden muss.", // nieuw, nalezen
-    'c.faults.a.why': "Gefragt, warum es kalt ist: was kaputt ist, und wann Hilfe kommt.", // nieuw, nalezen
-    'c.repairs.a.why': "Gefragt, ob er piept: Ja, und warum.", // nieuw, nalezen
-    'c.moving.a.why': "Gefragt, wohin er kommt: der Raum, und wo man nachschaut.", // nieuw, nalezen
-    'c.closing.a.why': "Gefragt, ob noch jemand drinnen ist: Nein, und was du jetzt machst.", // nieuw, nalezen
-    'c.patrol.a.why': "Gefragt, ob du etwas gesehen hast: Ja, was, und wo.", // nieuw, nalezen
-    'c.access.a.why': "Gebeten, ohne Karte hereinzukommen: Tut mir leid, nicht ohne Karte.", // nieuw, nalezen
-    'c.cameras.a.why': "Gefragt, was du siehst: wer, wo, und was du tust.", // nieuw, nalezen
-    'c.report.a.why': "Gefragt, was in den Bericht kommt: was, wo und wann.", // nieuw, nalezen
-    'c.evacuation.a.why': "Gefragt, ob alle draußen sind: Nein, und wie viele fehlen.", // nieuw, nalezen
-    'c.firstaid.a.why': "Gefragt, wo der AED ist: der Ort, und was daneben ist.", // nieuw, nalezen
-    'c.shoplifting.a.why': "Gefragt, ob man eine Tasche durchsuchen darf: Nein, und wer das macht.", // nieuw, nalezen
-    'c.aggression.a.why': "Gefragt, warum nicht: der Grund, ruhig gesagt.", // nieuw, nalezen
-    'c.hygienelock.a.why': "Gefragt nach einer Uhr: Nein, und die Regel dahinter.", // nieuw, nalezen
-    'c.allergens.a.why': "Gefragt, ob es zusammen darf: Nein, und warum.", // nieuw, nalezen
-    'c.coldroom.a.why': "Gefragt, warum er piept: der Grund, und was man tun muss.", // nieuw, nalezen
-    'c.foreignbody.a.why': "Gefragt, was man tun soll: wem man es zeigt.", // nieuw, nalezen
-    'c.cutting.a.why': "Gefragt, wie viel: das Gewicht, und wo man nachschaut.", // nieuw, nalezen
-    'c.labels.a.why': "Gefragt, welches Datum: wann, und wo man nachschaut.", // nieuw, nalezen
-    'c.linecleaning.a.why': "Gefragt, ob es sauber ist: noch nicht, und was noch fehlt.", // nieuw, nalezen
-    'c.haccp.a.why': "Gefragt, warum: damit wir wissen, dass das Essen sicher ist.", // nieuw, nalezen
-    'c.binlorry.a.why': "Gefragt, ob man hinten mitfahren darf: Nein, und wo man mitfährt.", // nieuw, nalezen
-    'c.reversing.a.why': "Um Hilfe gebeten: Ja, wo du stehst, und was der andere tun soll.", // nieuw, nalezen
-    'c.wastesorting.a.why': "Gefragt, wohin es kommt: die Tonne, und warum.", // nieuw, nalezen
-    'c.wastesafety.a.why': "Gefragt, was man nach einem Schnitt tut: auswaschen, und es sagen.", // nieuw, nalezen
-    'c.yard.a.why': "Gefragt, wohin sie kommt: der Container, und wo er ist.", // nieuw, nalezen
-    'c.hazardous.a.why': "Gefragt, was drin ist: Du weißt es nicht, also zur Seite damit.", // nieuw, nalezen
-    'c.baler.a.why': "Gefragt, ob man nachschauen darf: Nein, und was zuerst kommt.", // nieuw, nalezen
-    'c.shovel.a.why': "Gefragt, ob man vorbeigehen darf: nur, wenn der Fahrer dich sieht.", // nieuw, nalezen
-    'c.nappies.a.why': "Gefragt, wann: die Uhrzeit, und wo es steht.", // nieuw, nalezen
-    'c.mealtime.a.why': "Gefragt, ob er ihn haben darf: Nein, warum, und wo man nachschaut.", // nieuw, nalezen
-    'c.naptime.a.why': "Gefragt, ob sie schläft: Ja, seit wann, und dass du nachschaust.", // nieuw, nalezen
-    'c.playtime.a.why': "Gefragt, ob ein Kind spielen darf: Ja, wo, und was danach kommt.", // nieuw, nalezen
-    'c.pickup.a.why': "Gefragt, wer abholt: die Person, und dass sie auf der Liste steht.", // nieuw, nalezen
-    'c.childsafety.a.why': "Gefragt, ob sie hingefallen ist: Ja, was sie hat, und wen du anrufst.", // nieuw, nalezen
-    'c.sickchild.a.why': "Gefragt, wie es ihm geht: was du siehst, und was du tust.", // nieuw, nalezen
-    'c.grouprules.a.why': "Gefragt, ob man allein gehen darf: Ja, aber zuerst einem Kollegen Bescheid sagen.", // nieuw, nalezen
+    'c.mowing.a.why': "Gefragt, ob man ihn nehmen darf: Ja, und was man zuerst tun muss.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.a.why': "Gefragt, welche Äste: nur die toten.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.a.why': "Gefragt, wie hoch: bis zur Schnur, nicht tiefer.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.a.why': "Gefragt, ob man darf: noch nicht, und was zuerst kommt.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.a.why': "Gefragt, ob es Unkraut ist: Nein, und was man damit macht.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.a.why': "Gefragt, wohin sie kommt: der Platz im Beet.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.a.why': "Gefragt, ob man rübergehen kann: Nein, warten, und warum.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.a.why': "Ein Anwohner fragt, wann: Du weißt es nicht, aber wer es weiß.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.a.why': "Ein Besucher hat einen Termin: einen Moment, du rufst an.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.a.why': "Gefragt, wohin die Jacke kommt: der Ort, und wo er ist.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.a.why': "Gefragt, für wen es ist: die Abteilung, und der Stock.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.a.why': "Gefragt, um wie viel Uhr: die Uhrzeit, und was getan werden muss.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.a.why': "Gefragt, warum es kalt ist: was kaputt ist, und wann Hilfe kommt.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.a.why': "Gefragt, ob er piept: Ja, und warum.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.a.why': "Gefragt, wohin er kommt: der Raum, und wo man nachschaut.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.a.why': "Gefragt, ob noch jemand drinnen ist: Nein, und was du jetzt machst.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.a.why': "Gefragt, ob du etwas gesehen hast: Ja, was, und wo.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.a.why': "Gebeten, ohne Karte hereinzukommen: Tut mir leid, nicht ohne Karte.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.a.why': "Gefragt, was du siehst: wer, wo, und was du tust.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.a.why': "Gefragt, was in den Bericht kommt: was, wo und wann.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.a.why': "Gefragt, ob alle draußen sind: Nein, und wie viele fehlen.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.a.why': "Gefragt, wo der AED ist: der Ort, und was daneben ist.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.a.why': "Gefragt, ob man eine Tasche durchsuchen darf: Nein, und wer das macht.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.a.why': "Gefragt, warum nicht: der Grund, ruhig gesagt.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.a.why': "Gefragt nach einer Uhr: Nein, und die Regel dahinter.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.a.why': "Gefragt, ob es zusammen darf: Nein, und warum.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.a.why': "Gefragt, warum er piept: der Grund, und was man tun muss.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.a.why': "Gefragt, was man tun soll: wem man es zeigt.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.a.why': "Gefragt, wie viel: das Gewicht, und wo man nachschaut.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.a.why': "Gefragt, welches Datum: wann, und wo man nachschaut.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.a.why': "Gefragt, ob es sauber ist: noch nicht, und was noch fehlt.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.a.why': "Gefragt, warum: damit wir wissen, dass das Essen sicher ist.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.a.why': "Gefragt, ob man hinten mitfahren darf: Nein, und wo man mitfährt.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.a.why': "Um Hilfe gebeten: Ja, wo du stehst, und was der andere tun soll.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.a.why': "Gefragt, wohin es kommt: die Tonne, und warum.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.a.why': "Gefragt, was man nach einem Schnitt tut: auswaschen, und es sagen.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.a.why': "Gefragt, wohin sie kommt: der Container, und wo er ist.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.a.why': "Gefragt, was drin ist: Du weißt es nicht, also zur Seite damit.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.a.why': "Gefragt, ob man nachschauen darf: Nein, und was zuerst kommt.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.a.why': "Gefragt, ob du vorbeigehen darfst: nur, wenn der Fahrer dich sieht.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.nappies.a.why': "Gefragt, wann: die Uhrzeit, und wo es steht.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.a.why': "Gefragt, ob er ihn haben darf: Nein, warum, und wo man nachschaut.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.a.why': "Gefragt, ob sie schläft: Ja, seit wann, und dass du nachschaust.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.a.why': "Gefragt, ob ein Kind spielen darf: Ja, wo, und was danach kommt.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.a.why': "Gefragt, wer abholt: die Person, und dass sie auf der Liste steht.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.a.why': "Gefragt, ob sie hingefallen ist: Ja, was sie hat, und wen du anrufst.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.a.why': "Gefragt, wie es ihm geht: was du siehst, und was du tust.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.a.why': "Gefragt, ob man allein gehen darf: Ja, aber zuerst einem Kollegen Bescheid sagen.", // nieuw, nalezen // nagelezen AI 28 nov
     // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
-    'c.sanitary.a.why': "Gefragt, ob sie fertig sind: noch nicht, und warum.", // nieuw, nalezen
-    'c.hotelroom.a.why': "Gefragt, wie viele noch übrig sind: die Zahl, und wann du fertig bist.", // nieuw, nalezen
-    'c.dosing.a.why': "Gesagt, mehr zu nehmen: nein, mehr ist nicht besser, und was du nimmst.", // nieuw, nalezen
-    'c.officenight.a.why': "Gefragt, ob du allein arbeitest: ja, und du schickst eine Nachricht.", // nieuw, nalezen
-    'c.knives.a.why': "Gebeten zu schneiden: ja, Chef, und eine Frage, wie.", // nieuw, nalezen
-    'c.rawcooked.a.why': "Gefragt, ob es glutenfrei ist: nicht sicher, also schaust du auf die Liste.", // nieuw, nalezen
-    'c.pass.a.why': "Gefragt, wo das Essen ist: auf dem Pass, und du bringst es jetzt.", // nieuw, nalezen
-    'c.bill.a.why': "Gefragt, ob man getrennt zahlen kann: ja, und du holst das Kartenterminal.", // nieuw, nalezen
-    'c.washing.a.why': "Der Klient sagt nein: Das ist in Ordnung, und du bietest etwas anderes an.", // nieuw, nalezen
-    'c.observing.a.why': "Gefragt, ob es etwas Besonderes gibt: ja, und genau was.", // nieuw, nalezen
-    'c.homecare.a.why': "Gefragt, wer da ist: ein Gruß, wer du bist, und darf ich hereinkommen.", // nieuw, nalezen
-    'c.liftaids.a.why': "Gefragt, ob man es allein macht: ja, mit dem Gleittuch, und du holst es.", // nieuw, nalezen
-    'c.returns.a.why': "Gefragt, ob man es zurückbringen kann: ja, und eine Frage nach dem Kassenbon.", // nieuw, nalezen
-    'c.facing.a.why': "Gefragt, ob du fertig bist: fast, und was noch fehlt.", // nieuw, nalezen
-    'c.shrink.a.why': "Gefragt, ob man in deine Tasche schauen darf: ja, und du zeigst den Kassenbon.", // nieuw, nalezen
-    'c.shopclose.a.why': "Gefragt, ob man hereinkommen darf: Tut mir leid, geschlossen, und wann wieder geöffnet ist.", // nieuw, nalezen
-    'c.hirer.a.why': "Gefragt, ob du woanders neu anfängst: ja, und eine Frage nach der Uhrzeit.", // nieuw, nalezen
-    'c.phases.a.why': "Gesagt, dass der Einsatz endet: okay, und du fragst nach anderer Arbeit.", // nieuw, nalezen
-    'c.deductions.a.why': "Von einem Abzug gehört: Du fragst, ob er erlaubt ist, und prüfst es.", // nieuw, nalezen
-    'c.agencyhome.a.why': "Gesagt, bald auszuziehen: Das ist kurz, und du holst dir zuerst Rat.", // nieuw, nalezen
+    'c.sanitary.a.why': "Gefragt, ob sie fertig sind: noch nicht, und warum.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.a.why': "Gefragt, wie viele noch übrig sind: die Zahl, und wann du fertig bist.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.a.why': "Gesagt, mehr zu nehmen: nein, mehr ist nicht besser, und was du nimmst.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.a.why': "Gefragt, ob du allein arbeitest: ja, und du schickst eine Nachricht.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.a.why': "Gebeten zu schneiden: ja, Chef, und eine Frage, wie.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.a.why': "Gefragt, ob es glutenfrei ist: nicht sicher, also schaust du auf die Liste.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.a.why': "Gefragt, wo das Essen ist: auf dem Pass, und du bringst es jetzt.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.a.why': "Gefragt, ob man getrennt zahlen kann: ja, und du holst das Kartenterminal.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.a.why': "Der Klient sagt nein: Das ist in Ordnung, und du bietest etwas anderes an.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.a.why': "Gefragt, ob es etwas Besonderes gibt: ja, und genau was.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.a.why': "Gefragt, wer da ist: ein Gruß, wer du bist, und darf ich hereinkommen.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.a.why': "Gefragt, ob man es allein macht: ja, mit dem Gleittuch, und du holst es.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.a.why': "Gefragt, ob man es zurückbringen kann: ja, und eine Frage nach dem Kassenbon.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.a.why': "Gefragt, ob du fertig bist: fast, und was noch fehlt.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.a.why': "Gefragt, ob man in deine Tasche schauen darf: ja, und du zeigst den Kassenbon.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.a.why': "Gefragt, ob man hereinkommen darf: Tut mir leid, geschlossen, und wann wieder geöffnet ist.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.a.why': "Gefragt, ob du woanders neu anfängst: ja, und eine Frage nach der Uhrzeit.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.a.why': "Gesagt, dass der Einsatz endet: okay, und du fragst nach anderer Arbeit.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.a.why': "Von einem Abzug gehört: Du fragst, ob er erlaubt ist, und prüfst es.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.a.why': "Gesagt, bald auszuziehen: Das ist kurz, und du holst dir zuerst Rat.", // nieuw, nalezen // nagelezen AI 28 nov
     // The basis units at four lessons (23 November 2026).
-    'c.roster.a.why': "Gesagt, dass sich der Dienstplan geändert hat: okay, und welcher Tag.", // nieuw, nalezen
-    'c.breaks.a.why': "Nach der Mittagspause gefragt: die Uhrzeit, und wie lange.", // nieuw, nalezen
-    'c.wound.a.why': "Fast ohnmächtig: ihn liegen lassen, und Hilfe holen.", // nieuw, nalezen
-    'c.callhelp.a.why': "Gefragt, ob er reagiert: nein, er reagiert nicht.", // nieuw, nalezen
-    'c.vacancy.a.why': "Gefragt, warum du anrufst: die offene Stelle, und ob sie noch frei ist.", // nieuw, nalezen
-    'c.result.a.why': "Ein Nein bekommen: eine ruhige Antwort, und du fragst nach dem Grund.", // nieuw, nalezen
-    'c.residence.a.why': "Gesagt, dass die Erlaubnis fast abgelaufen ist: Du beantragst sofort eine neue.", // nieuw, nalezen
-    'c.newhome.a.why': "Gefragt, wo du wohnst: eine neue Wohnung, und die neue Adresse.", // nieuw, nalezen
-    'c.payparts.a.why': "Nach der Personalnummer gefragt: wo sie auf der Lohnabrechnung steht.", // nieuw, nalezen
-    'c.latepay.a.why': "Gesagt, dass das Geld später kommt: Du willst das schriftlich.", // nieuw, nalezen
-    'c.holiday.a.why': "Gefragt, ob du im Mai gehst: lieber im Juli, und warum.", // nieuw, nalezen
-    'c.special.a.why': "Nach dem Geburtsurlaub gefragt: ja, und wann.", // nieuw, nalezen
-    'c.unwell.a.why': "Gefragt, ob es dir gut geht: nein, und ob du nach Hause darfst.", // nieuw, nalezen
-    'c.injury.a.why': "Um eine Aussage gebeten: ja, und eine Kopie für dich.", // nieuw, nalezen
-    'c.debt.a.why': "Gesagt, du sollst bleiben, bis die Schulden bezahlt sind: nicht erlaubt, Hilfe holen.", // nieuw, nalezen
-    'c.inspection.a.why': "Gefragt, ob du sprechen willst: ja, aber nicht da, wo der Chef es hört.", // nieuw, nalezen
-    'c.carpool.a.why': "Gefragt, wer fährt: du, und wann du abholst.", // nieuw, nalezen
-    'c.train.a.why': "Gefragt, warum du zu spät bist: der Zug, und du hast eine Nachricht geschickt.", // nieuw, nalezen
-    'c.checklist.a.why': "Gefragt, ob du etwas vergessen hast: noch ein Blick auf die Liste.", // nieuw, nalezen
-    'c.leavesite.a.why': "Gefragt, ob du als Letzter gehst: ja, alles aus und die Tür abgeschlossen.", // nieuw, nalezen
-    'c.stagedays.a.why': "Gefragt, warum du weg warst: krank, und du hast beide angerufen.", // nieuw, nalezen
-    'c.stageend.a.why': "Nach deinen Plänen gefragt: zuerst das Diplom, dann Arbeit.", // nieuw, nalezen
-    'c.neighbours.a.why': "Eine neue Nachbarin grüßt: schön, sie kennenzulernen, und dein Name.", // nieuw, nalezen
-    'c.join.a.why': "Gefragt, ob du kommst: ja, und du willst mit dem Lehrer sprechen.", // nieuw, nalezen
-    'c.workphotos.a.why': "Um ein Foto für das Internet gebeten: ein höfliches Nein.", // nieuw, nalezen
-    'c.device.a.why': "Nach einer neuen App gefragt: zuerst die IT-Abteilung fragen.", // nieuw, nalezen
+    'c.roster.a.why': "Gesagt, dass sich der Dienstplan geändert hat: okay, und welcher Tag.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.a.why': "Nach der Mittagspause gefragt: die Uhrzeit, und wie lange.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.a.why': "Fast ohnmächtig: ihn liegen lassen, und Hilfe holen.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.a.why': "Gefragt, ob er reagiert: nein, er reagiert nicht.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.a.why': "Gefragt, warum du anrufst: die offene Stelle, und ob sie noch frei ist.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.a.why': "Ein Nein bekommen: eine ruhige Antwort, und du fragst nach dem Grund.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.a.why': "Gesagt, dass die Erlaubnis fast abgelaufen ist: Du beantragst sofort eine neue.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.a.why': "Gefragt, wo du wohnst: eine neue Wohnung, und die neue Adresse.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.a.why': "Nach der Personalnummer gefragt: wo sie auf der Lohnabrechnung steht.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.a.why': "Gesagt, dass das Geld später kommt: Du willst das schriftlich.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.a.why': "Gefragt, ob du im Mai gehst: lieber im Juli, und warum.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.a.why': "Nach dem Geburtsurlaub gefragt: ja, und wann.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.a.why': "Gefragt, ob es dir gut geht: nein, und ob du nach Hause darfst.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.a.why': "Um eine Aussage gebeten: ja, und eine Kopie für dich.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.a.why': "Gesagt, du sollst bleiben, bis die Schulden bezahlt sind: nicht erlaubt, Hilfe holen.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.a.why': "Gefragt, ob du sprechen willst: ja, aber nicht da, wo der Chef es hört.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.a.why': "Gefragt, wer fährt: du, und wann du sie abholst.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.train.a.why': "Gefragt, warum du zu spät bist: der Zug, und du hast eine Nachricht geschickt.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.a.why': "Gefragt, ob du etwas vergessen hast: noch ein Blick auf die Liste.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.a.why': "Gefragt, ob du als Letzter gehst: ja, alles aus und die Tür abgeschlossen.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.a.why': "Gefragt, warum du weg warst: krank, und du hast beide angerufen.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.a.why': "Nach deinen Plänen gefragt: zuerst das Diplom, dann Arbeit.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.a.why': "Eine neue Nachbarin grüßt: schön, sie kennenzulernen, und dein Name.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.a.why': "Gefragt, ob du kommst: ja, und du willst mit dem Lehrer sprechen.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.a.why': "Um ein Foto für das Internet gebeten: ein höfliches Nein.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.a.why': "Nach einer neuen App gefragt: zuerst die IT-Abteilung fragen.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Veiligheid op het werk" and the VOG (23 November 2026).
-    'c.safetysigns.a.why': "Gefragt, was ein Schild bedeutet: Vorsicht, und welches Schild es ist.", // nieuw, nalezen
-    'c.substances.a.why': "Gefragt, ob es giftig ist: nicht raten, sondern nachschauen.", // nieuw, nalezen
-    'c.firefight.a.why': "Gesagt, dass es brennt: Es ist klein, also den Feuerlöscher holen.", // nieuw, nalezen
-    'c.permitwork.a.why': "Gefragt, wer draußen bleibt: man selbst, und die eigene Aufgabe.", // nieuw, nalezen
-    'c.vog.a.why': "Nach dem VOG gefragt: noch nicht, und worauf man wartet.", // nieuw, nalezen
+    'c.safetysigns.a.why': "Gefragt, was ein Schild bedeutet: Vorsicht, und welches Schild es ist.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.a.why': "Gefragt, ob es giftig ist: nicht raten, sondern nachschauen.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.a.why': "Gesagt, dass es brennt: Es ist klein, also den Feuerlöscher holen.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.a.why': "Gefragt, wer draußen bleibt: du, und deine Aufgabe.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.vog.a.why': "Nach dem VOG gefragt: noch nicht, und worauf du wartest.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     // "Operator in de procesindustrie" (23 November 2026).
-    'c.plantround.a.why': "Nach dem Alarm gefragt: was zu hoch ist, und wo.", // nieuw, nalezen
-    'c.plantfault.a.why': "Gefragt, ob man starten darf: nein, es ist noch ein Schloss dran.", // nieuw, nalezen
-    'c.shiftwork.a.why': "Gefragt, was passiert ist: die Störung, und wo sie aufgeschrieben ist.", // nieuw, nalezen
-    'c.heatdust.a.why': "Nach dem Handy gefragt: nein, wegen der Gefahr hier.", // nieuw, nalezen
+    'c.plantround.a.why': "Nach dem Alarm gefragt: was zu hoch ist, und wo.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.a.why': "Gefragt, ob man starten darf: nein, es ist noch ein Schloss dran.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.a.why': "Gefragt, was passiert ist: die Störung, und wo sie aufgeschrieben ist.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.a.why': "Nach dem Handy gefragt: nein, wegen der Gefahr hier.", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (26 November 2026).
-    'c.debthelp.a.why': "Gesagt, dass die Rechnung nicht bezahlt ist: ja, und die Bitte um eine Ratenzahlung.", // nieuw, nalezen
-    'c.taxes.a.why': "Gesagt, dass ein blauer Umschlag da ist: danke, und sofort aufmachen.", // nieuw, nalezen
-    'c.discrimination.a.why': "Gefragt, ob es dir gut geht: nein, und du meldest es.", // nieuw, nalezen
-    'c.union.a.why': "Gefragt, warum du Mitglied bist: Sie setzen sich für dich ein.", // nieuw, nalezen
-    'c.kiln.a.why': "Nach Scherben mit der Hand gefragt: nein, Handfeger und Kehrblech.", // nieuw, nalezen
-    'c.mixlab.a.why': "Gefragt, ob die Charge freigegeben ist: noch nicht, das Labor testet sie.", // nieuw, nalezen
-    'c.firstweeks.a.why': "Nach dem Rundgang gefragt: fast alles, und eine Frage.", // nieuw, nalezen
-    'c.orderpick.a.why': "Gebeten, den Schubmaststapler zu fahren: nein, keine Schulung dafür.", // nieuw, nalezen
+    'c.debthelp.a.why': "Gesagt, dass die Rechnung nicht bezahlt ist: ja, und die Bitte um eine Ratenzahlung.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.a.why': "Gesagt, dass ein blauer Umschlag da ist: danke, und sofort aufmachen.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.a.why': "Gefragt, ob es dir gut geht: nein, und du meldest es.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.a.why': "Gefragt, warum du Mitglied bist: Sie setzen sich für dich ein.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.a.why': "Nach Scherben mit der Hand gefragt: nein, Handfeger und Kehrblech.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.a.why': "Gefragt, ob die Charge freigegeben ist: noch nicht, das Labor testet sie.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.a.why': "Nach dem Rundgang gefragt: fast alles, und eine Frage.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.a.why': "Gebeten, den Schubmaststapler zu fahren: nein, keine Schulung dafür.", // nieuw, nalezen // nagelezen AI 28 nov
     // four new lessons (27 November 2026).
-    'd.appraisal.a.why': "Nach dem Ziel gefragt: eine klare Sache, die man lernen will.", // nieuw, nalezen
-    'c.forms.a.why': "Nach dem Formular gefragt: fast fertig, und wo man unterschreibt.", // nieuw, nalezen
-    'c.voicemail.a.why': "Um Name und Nummer gebeten: der Name, und die Bitte um Rückruf.", // nieuw, nalezen
-    'c.dentist.a.why': "Nach dem letzten Besuch gefragt: wann, und die Bitte um eine Kontrolle.", // nieuw, nalezen
+    'd.appraisal.a.why': "Nach dem Ziel gefragt: eine klare Sache, die du lernen willst.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.forms.a.why': "Nach dem Formular gefragt: fast fertig, und wo man unterschreibt.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.a.why': "Um Name und Nummer gebeten: der Name, und die Bitte um Rückruf.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.a.why': "Nach dem letzten Besuch gefragt: wann, und die Bitte um eine Kontrolle.", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 

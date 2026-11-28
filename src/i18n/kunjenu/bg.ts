@@ -52,7 +52,7 @@ const t: CultureTranslation = {
     'kjn.u.sick.1': "Мога да съобщя за болест и за връщане на работа.", // nieuw, nalezen
     'kjn.u.sick.2': "Мога да кажа какво още не мога.", // nieuw, nalezen
     'kjn.u.sick.3': "Мога да кажа, че отначало работя половин ден.", // nieuw, nalezen
-    'kjn.u.contact.1': "Мога да се обадя и да кажа кой съм.", // nieuw, nalezen
+    'kjn.u.contact.1': "Мога да се обадя и да се представя.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'kjn.u.contact.2': "Мога да помоля някого да ми се обади.", // nieuw, nalezen
     'kjn.u.contact.3': "Мога да напиша кратко съобщение до работата.", // nieuw, nalezen
     'kjn.u.house.1': "Мога да прочета правила като „Roken verboden“.", // nieuw, nalezen
@@ -90,7 +90,7 @@ const t: CultureTranslation = {
     'kjn.u.money.2': "Мога да откажа на измамник по телефона.", // nieuw, nalezen
     'kjn.u.travel.1': "Мога да кажа как стигам до работа.", // nieuw, nalezen
     'kjn.u.travel.2': "Мога да попитам къде е автобусната спирка.", // nieuw, nalezen
-    'kjn.u.society.1': "Мога да попитам дали мога да гласувам.", // nieuw, nalezen
+    'kjn.u.society.1': "Мога да попитам дали имам право да гласувам.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'kjn.u.society.2': "Мога да кажа, че искам да подам възражение.", // nieuw, nalezen
     'kjn.u.warehouse.1': "Мога да разбера кратки указания в склада.", // nieuw, nalezen
     'kjn.u.warehouse.2': "Мога да кажа къде е нещо: отляво или отдясно.", // nieuw, nalezen
@@ -99,7 +99,7 @@ const t: CultureTranslation = {
     'kjn.u.factory.1': "Мога да кажа, че има повреда.", // nieuw, nalezen
     'kjn.u.factory.2': "Мога да кажа какво не е наред с един продукт.", // nieuw, nalezen
     'kjn.u.factory.3': "Мога да съобщя, че имам малко порязване.", // nieuw, nalezen
-    'kjn.u.care.1': "Мога да попитам клиент дали мога да помогна.", // nieuw, nalezen
+    'kjn.u.care.1': "Мога да попитам клиент дали може да му помогна.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'kjn.u.care.2': "Мога да предам нещо на медицинската сестра.", // nieuw, nalezen
     'kjn.u.horeca.1': "Мога да попитам гостите какво ще пият.", // nieuw, nalezen
     'kjn.u.horeca.2': "Мога да кажа, че ще попитам главния готвач.", // nieuw, nalezen

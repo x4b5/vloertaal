@@ -96,7 +96,7 @@ const lang: HelpLanguageSource = {
     chooseSector: 'Къде работиш?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: 'В коя държава работиш?',
-    countryHint: 'Ще получиш думите и съветите за нея.', // nieuw, nalezen (taal: woorden en tips, 9 nov 2026)
+    countryHint: 'Ще получиш думите и съветите за тази страна.', // nieuw, nalezen (AI-correctie 28 nov 2026)
     onePhoneTitle: 'Това, което учиш, е само на този телефон.', // nieuw, nalezen (één telefoon, 20 nov 2026)
     onePhoneText: 'Използвай винаги този телефон.', // nieuw, nalezen (één telefoon, 20 nov 2026)
     countryNl: 'Нидерландия',
@@ -254,7 +254,7 @@ const lang: HelpLanguageSource = {
     chorusHint: "Казвай го едновременно с гласа. Нищо не се записва.", // nieuw, nalezen
     chorusAlone: "Сега само ти", // nieuw, nalezen
     speakBrave: "Грешките са част от ученето. Не те разбраха? Кажи го още веднъж.", // nieuw, nalezen
-    speakBrave2: "Притеснен ли си? Това е нормално. Кажи го въпреки това.", // nieuw, nalezen
+    speakBrave2: "Притесняваш ли се? Това е нормално. Кажи го въпреки това.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     speakBrave3: "Не е нужно да го казваш перфектно. Просто опитай.", // nieuw, nalezen
     reasonTitle: "Защо учиш нидерландски?", // nieuw, nalezen
     reasonHint: "Избери едно или две.", // nieuw, nalezen
@@ -262,7 +262,7 @@ const lang: HelpLanguageSource = {
     reasonWork: "Да върша добре работата си", // nieuw, nalezen
     reasonKids: "Децата ми", // nieuw, nalezen
     reasonColleagues: "Да говоря с колегите", // nieuw, nalezen
-    reasonArrange: "Сам да уреждам нещата", // nieuw, nalezen
+    reasonArrange: "Да уреждам нещата самостоятелно", // nieuw, nalezen (AI-correctie 28 nov 2026)
     reasonJob: "По-добра работа", // nieuw, nalezen
     reasonHome: "Да се чувствам у дома в Нидерландия", // nieuw, nalezen
     speakMe: 'Аз',
@@ -678,7 +678,7 @@ const lang: HelpLanguageSource = {
     's.shift.1': 'Смяната ми започва в седем часа.',
     's.shift.2': 'Кога е почивката?',
     's.shift.3': 'Извинете, закъснях.',
-    's.sick.1': { m: 'Днес съм болен.', f: 'Днес съм болна.', x: 'Днес съм болен / болна.' }, // x: nieuw, nalezen
+    's.sick.1': { m: 'Днес съм болен.', f: 'Днес съм болна.', x: 'Днес се разболях.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     's.sick.2': 'Боли ме гърбът.',
     's.sick.3': 'Обаждам се на лекаря.',
     'c.hello.q': 'Приятна вечер!',
