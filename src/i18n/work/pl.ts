@@ -4379,7 +4379,7 @@ const t: CultureTranslation = {
     'w.proefdag': "dzień próbny (jeden dzień pracy na próbę)", // nieuw, nalezen // nagelezen AI 28 nov
     'w.nabellen': "zadzwonić ponownie (zapytać, jak wygląda sprawa)", // nieuw, nalezen // nagelezen AI 28 nov
     'w.teleurgesteld': "rozczarowany", // nieuw, nalezen // nagelezen AI 28 nov
-    's.result.1': { m: "Został pan przyjęty!", f: "Została pani przyjęta!", x: "Przyjmujemy pana / panią do pracy!" }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.result.1': { m: "Został pan przyjęty!", f: "Została pani przyjęta!", x: "Gratulujemy przyjęcia do pracy!" }, // nieuw, nalezen // nagelezen AI 28 nov // x: nieuw, nalezen (was "pana / panią", tests/genderSlash.test.ts, 28 nov 2026)
     's.result.2': { m: "Dostałem odmowę.", f: "Dostałam odmowę.", x: "Przyszła do mnie odmowa." }, // nieuw, nalezen // nagelezen AI 28 nov
     's.result.3': "Czy dzień próbny jest płatny?", // nieuw, nalezen // nagelezen AI 28 nov
     'c.result.q': "Niestety wybieramy kogoś innego.", // nieuw, nalezen // nagelezen AI 28 nov

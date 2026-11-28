@@ -147,5 +147,26 @@ export const REGIONS_LIVE: boolean = true;   // was: false
 ## Na elke merge naar main
 
 statichost bouwt en publiceert de site uit `main`. Lukt dat niet, kijk dan in het dashboard van statichost.
+
+### Staat het live?
+
+Na elke push naar `main` kijkt de GitHub-actie **Live** (`.github/workflows/live.yml`) of
+vloertaal.nl echt de nieuwe versie draait. De bouw schrijft `version.txt` met de commit
+(`vite.config.ts` versionFile); de actie wacht tot https://vloertaal.nl/version.txt die commit noemt.
+Lukt dat niet binnen ongeveer 30 minuten, dan wordt de run rood en mailt GitHub degene die pushte.
+Kijk dan in het dashboard van statichost naar het bouwlog. Aanleiding: van 23 tot 26 november 2026
+mislukten de builds bij statichost vier dagen zonder dat iemand het merkte.
+
+### Alleen groen naar main (eenmalig instellen)
+
+statichost bouwt zonder tests (sinds 23 november 2026), dus de tests op GitHub zijn de enige
+poort. Zet daarom in GitHub: **Settings → Rules → Rulesets → New branch ruleset** (of **Settings →
+Branches → Add branch protection rule**) voor `main`:
+- **Require status checks to pass**, met de checks **test** (workflow Test) en de flowtests
+  (workflow Flows);
+- **Require a pull request before merging**.
+
+Dan kan een PR met een rode test niet meer naar `main`. Dat gebeurde op 26 november met #404 (een
+te grote stemmenlijst): de test was rood, maar de site bouwde gewoon.
 Nieuwe of gewijzigde Nederlandse zinnen: draai in GitHub **Actions → Record ElevenLabs voices**.
 De stappen (ook zonder GitHub, en wat er nog ontbreekt) staan in `opnames.md`.

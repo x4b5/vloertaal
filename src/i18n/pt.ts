@@ -563,7 +563,7 @@ const lang: HelpLanguageSource = {
     'l.hello': 'Cumprimentar',
     'w.hallo': 'olá',
     'w.goedemorgen': 'bom dia',
-    'w.dankjewel': 'obrigado / obrigada',
+    'w.dankjewel': { m: 'obrigado', f: 'obrigada', x: 'agradeço' }, // nieuw, nalezen (was 'obrigado / obrigada' for everyone, tests/genderSlash.test.ts, 28 nov 2026)
     'w.ja': 'sim',
     'w.nee': 'não',
     'w.totmorgen': 'até amanhã',
