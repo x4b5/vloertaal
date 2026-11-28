@@ -3,41 +3,41 @@ import type { CultureTranslation } from '../culture/types';
 /** The regions in Somali (src/content/regio): the Settings row "Waar woon je?", the Sociale kaart (its categories; the rows themselves stay Dutch), and the unit "Jouw regio: Zuid-Limburg" with its tips. "Zuid-Limburg" is a name: it is not translated. */
 const t: CultureTranslation = {
   ui: {
-    regionTitle: "Xaggee ku nooshahay?", // nieuw, nalezen
-    regionHint: "Ma ku nooshahay ama ma ka shaqaysaa Zuid-Limburg? Markaas waxaad helaysaa casharro dheeraad ah oo ku saabsan gobolkaaga.", // nieuw, nalezen
-    regionOther: "Meel kale / ma rabo inaan sheego", // nieuw, nalezen
-    regionNone: "Lama dooran", // nieuw, nalezen
-    socialMap: "Halka aad caawimo ka heli karto", // nieuw, nalezen
-    socialMapHint: "Meesha aad u tagayso iyo waxa loo tago. Riix saf si aad u wacdo ama u furto bogga internetka.", // nieuw, nalezen
-    socialMapNote: "Macluumaad guud, ma aha talo. Magacyada, lambarrada iyo bogagga internetka way isbeddeli karaan.", // nieuw, nalezen
-    socialMapWrong: "Wax ma khaldan yihiin? U dir iimayl hoi@vloertaal.nl.", // nieuw, nalezen
+    regionTitle: "Xaggee ku nooshahay?", // nieuw, nalezen // nagelezen AI 28 nov
+    regionHint: "Ma ku nooshahay ama ma ka shaqaysaa Zuid-Limburg? Markaas waxaad helaysaa casharro dheeraad ah oo ku saabsan gobolkaaga.", // nieuw, nalezen // nagelezen AI 28 nov
+    regionOther: "Meel kale / ma rabo inaan sheego", // nieuw, nalezen // nagelezen AI 28 nov
+    regionNone: "Lama dooran", // nieuw, nalezen // nagelezen AI 28 nov
+    socialMap: "Halka aad caawimo ka heli karto", // nieuw, nalezen // nagelezen AI 28 nov
+    socialMapHint: "Meesha aad u tagayso iyo waxa loo tago. Riix saf si aad u wacdo ama u furto bogga internetka.", // nieuw, nalezen // nagelezen AI 28 nov
+    socialMapNote: "Macluumaad guud, ma aha talo. Magacyada, lambarrada iyo bogagga internetka way isbeddeli karaan.", // nieuw, nalezen // nagelezen AI 28 nov
+    socialMapWrong: "Wax ma khaldan yihiin? U dir iimayl hoi@vloertaal.nl.", // nieuw, nalezen // nagelezen AI 28 nov
   },
   gloss: {
-    'rg.zl.u': "Gobolkaaga: Zuid-Limburg", // nieuw, nalezen
-    'rg.zl.l.1': "Xarunta dowladda hoose iyo gurigaaga", // nieuw, nalezen
-    'rg.zl.w.gemeentehuis': "xarunta dowladda hoose (dhismaha)", // nieuw, nalezen
-    'rg.zl.w.loket': "miiska adeegga, shubbaakka", // nieuw, nalezen
-    'rg.zl.w.verhuizing': "guuritaanka (guri cusub)", // nieuw, nalezen
-    'rg.zl.w.woningcorporatie': "shirkadda guryaha (kiro bulsho)", // nieuw, nalezen
-    'rg.zl.w.wachtlijst': "liiska sugitaanka", // nieuw, nalezen
-    'rg.zl.w.buurt': "xaafadda", // nieuw, nalezen
-    'rg.zl.s.1.1': "Waxaan rabaa inaan iska diiwaangeliyo xarunta dowladda hoose.", // nieuw, nalezen
-    'rg.zl.s.1.2': "Ballan baan leeyahay saacadda tobanka.", // nieuw, nalezen
-    'rg.zl.s.1.3': "Waxaan ku jiraa liiska sugitaanka guri.", // nieuw, nalezen
-    'rg.zl.c.1.q': "Xaggee ku nooshahay?", // nieuw, nalezen
-    'rg.zl.c.1.a': "Heerlen. Hadda ayaan u guuray.", // nieuw, nalezen
-    'rg.zl.l.2': "Xadka, karnifaalka iyo lahjadda", // nieuw, nalezen
-    'rg.zl.w.grens': "xadka (u dhexeeya laba dal)", // nieuw, nalezen
-    'rg.zl.w.buitenland': "dibadda, dal kale", // nieuw, nalezen
-    'rg.zl.w.carnaval': "karnifaalka (dabaaldeg weyn oo waddooyinka ah, bisha February ama March)", // nieuw, nalezen
-    'rg.zl.w.dialect': "lahjadda (habka deegaanka loogu hadlo)", // nieuw, nalezen
-    'rg.zl.w.verstaan': "fahmid (waxa qof sheegayo)", // nieuw, nalezen
-    'rg.zl.w.langzaam': "si tartiib ah", // nieuw, nalezen
-    'rg.zl.s.2.1': "Waxaan ku noolahay Holland, waxaanan ka shaqeeyaa Jarmalka.", // nieuw, nalezen
-    'rg.zl.s.2.2': "Af-Holandiis ma ku hadli kartaa? Lahjadda ma fahmo.", // nieuw, nalezen
-    'rg.zl.s.2.3': "Fasax ma qaadan karaa karnifaalka?", // nieuw, nalezen
-    'rg.zl.c.2.q': "Waan ka xumahay, aad baan u dhakhso u hadlayaa.", // nieuw, nalezen
-    'rg.zl.c.2.a': "Haa, wax yar si tartiib ah, fadlan.", // nieuw, nalezen
+    'rg.zl.u': "Gobolkaaga: Zuid-Limburg", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.l.1': "Xarunta dowladda hoose iyo gurigaaga", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.w.gemeentehuis': "xarunta dowladda hoose (dhismaha)", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.w.loket': "miiska adeegga, shubbaakka", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.w.verhuizing': "guuritaanka (guri cusub)", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.w.woningcorporatie': "shirkadda guryaha (kiro bulsho)", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.w.wachtlijst': "liiska sugitaanka", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.w.buurt': "xaafadda", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.s.1.1': "Waxaan rabaa inaan iska diiwaangeliyo xarunta dowladda hoose.", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.s.1.2': "Ballan baan leeyahay saacadda tobanka.", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.s.1.3': "Waxaan ku jiraa liiska sugitaanka guri.", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.c.1.q': "Xaggee ku nooshahay?", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.c.1.a': "Heerlen. Hadda ayaan u guuray.", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.l.2': "Xadka, karnifaalka iyo lahjadda", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.w.grens': "xadka (u dhexeeya laba dal)", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.w.buitenland': "dibadda, dal kale", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.w.carnaval': "karnifaalka (dabaaldeg weyn oo waddooyinka ah, bisha February ama March)", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.w.dialect': "lahjadda (habka deegaanka loogu hadlo)", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.w.verstaan': "fahmid (waxa qof sheegayo)", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.w.langzaam': "si tartiib ah", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.s.2.1': "Waxaan ku noolahay Holland, waxaanan ka shaqeeyaa Jarmalka.", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.s.2.2': "Af-Holandiis ma ku hadli kartaa? Lahjadda ma fahmo.", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.s.2.3': "Fasax ma qaadan karaa karnifaalka?", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.c.2.q': "Waan ka xumahay, aad baan u dhakhso u hadlayaa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.zl.c.2.a': "Haa, wax yar si tartiib ah, fadlan.", // nieuw, nalezen // nagelezen AI 28 nov
     'rg.zl.c.1': "Diiwaangeli cinwaankaaga, oo raadi guri", // nieuw, nalezen // nagelezen AI 22 nov
     'rg.zl.c.1.b': "Marka aad guurto, u sheeg gemeente-gaaga cusub (xarunta dowladda hoose) muddo 5 maalmood gudahood. Gemeente-yada intooda badan waxay ku shaqeeyaan ballan: marka hore eeg bogga internetkooda. Haddii aad dibadda ka timid, adigu tag, adigoo wata baasaboorkaaga ama aqoonsigaaga iyo qandaraaska kirada. Kirada bulshada, si bilaash ah isu diiwaangeli thuisinlimburg.nl oo cusboonaysii sannad kasta. Weligaa lacag ha ku bixin guri aadan arag. Macluumaad guud. Xaaladdaada gaarka ah: weydii loo-shaqeeyahaaga, ururka shaqaalaha ama Juridisch Loket.", // nieuw, nalezen // nagelezen AI 22 nov
     'rg.zl.c.1.p': "Ballan ma qabsan karaa?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -54,20 +54,20 @@ const t: CultureTranslation = {
     'rg.zl.c.2.o2': "Madaxa ruxo oo iska qiyaas waxa la samaynayo.", // nieuw, nalezen // nagelezen AI 22 nov
     'rg.zl.c.2.o3': "U sheeg in lahjaddu edeb darro tahay.", // nieuw, nalezen // nagelezen AI 22 nov
     'rg.zl.c.2.w': "Dad badan lahjaddu waa luqaddooda, ma aha edeb darro. Saaxiibada shaqada intooda badan way ku faraxsan yihiin inay u beddelaan Af-Holandiis. Qiyaasidu waxay keeni kartaa khaladaad, ammaanka marka la eegona waa inaad had iyo jeer fahantaa.", // nieuw, nalezen // nagelezen AI 22 nov
-    'rg.cat.gemeente': "Xarunta dowladda hoose (gemeente)", // nieuw, nalezen
-    'rg.cat.juridisch': "Talo sharci", // nieuw, nalezen
-    'rg.cat.werk': "Shaqo", // nieuw, nalezen
-    'rg.cat.bijstand': "Kaalmada bulshada (bijstand)", // nieuw, nalezen
-    'rg.cat.uitzend': "Xafiisyada shaqo-qorista", // nieuw, nalezen
-    'rg.cat.buurt': "Xaafadda iyo daryeelka bulshada", // nieuw, nalezen
-    'rg.cat.schulden': "Deymaha", // nieuw, nalezen
-    'rg.cat.taal': "Barashada luqadda", // nieuw, nalezen
-    'rg.cat.zorg': "Daryeelka caafimaadka", // nieuw, nalezen
-    'rg.cat.grens': "Xadka", // nieuw, nalezen
-    'rg.cat.vakbond': "Ururka shaqaalaha", // nieuw, nalezen
-    'rg.cat.nieuwkomers': "Dadka cusub ee haysta sharci deganaansho", // nieuw, nalezen
-    'rg.cat.veilig': "Rabshadaha qoyska dhexdiisa", // nieuw, nalezen
-    'rg.cat.wonen': "Guryaha", // nieuw, nalezen
+    'rg.cat.gemeente': "Xarunta dowladda hoose (gemeente)", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.cat.juridisch': "Talo sharci", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.cat.werk': "Shaqo", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.cat.bijstand': "Kaalmada bulshada (bijstand)", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.cat.uitzend': "Xafiisyada shaqo-qorista", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.cat.buurt': "Xaafadda iyo daryeelka bulshada", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.cat.schulden': "Deymaha", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.cat.taal': "Barashada luqadda", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.cat.zorg': "Daryeelka caafimaadka", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.cat.grens': "Xadka", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.cat.vakbond': "Ururka shaqaalaha", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.cat.nieuwkomers': "Dadka cusub ee haysta sharci deganaansho", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.cat.veilig': "Rabshadaha qoyska dhexdiisa", // nieuw, nalezen // nagelezen AI 28 nov
+    'rg.cat.wonen': "Guryaha", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 export default t;

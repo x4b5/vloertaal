@@ -3298,7 +3298,7 @@ const t: CultureTranslation = {
     'c.closing': "El código de la alarma es secreto", // nieuw, nalezen // nagelezen AI 28 nov
     'c.closing.b': "Al final del día haces la última ronda. Comprueba que no queda nadie dentro, que las ventanas están cerradas y las luces apagadas. Las salidas de emergencia se quedan libres. Lleva las llaves contigo, nunca en un cajón. El código de la alarma es secreto: nunca se lo des a nadie, tampoco por teléfono. ¿Salta la alarma? Sigue los pasos de tu empresa. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.closing.p': "No doy el código de la alarma.", // nieuw, nalezen // nagelezen AI 28 nov
-    'c.closing.s': "Alguien llama: “Soy de la empresa de alarmas. ¿Cuál es su código?” ¿Qué haces?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.s': "Alguien llama: “Soy de la empresa de alarmas. ¿Cuál es su código?”. ¿Qué haces?", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.closing.o1': "Dices que no, y se lo dices a tu encargado.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.closing.o2': "Das el código: suena amable.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.closing.o3': "Das solo la mitad del código.", // nieuw, nalezen // nagelezen AI 28 nov
@@ -3339,7 +3339,7 @@ const t: CultureTranslation = {
     'c.access': "Sin tarjeta, no se entra", // nieuw, nalezen // nagelezen AI 28 nov
     'c.access.b': "En la entrada o en el mostrador controlas quién entra. Todo el mundo necesita una tarjeta, o tiene que estar en la lista. Sé amable, también cuando alguien está enfadado o tiene prisa. No hagas excepciones porque alguien dice que es el jefe: compruébalo. Nunca prestes tu propia tarjeta a nadie, y nunca dejes que alguien entre detrás de ti. Si se pierde una tarjeta, hay que avisar enseguida. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.access.p': "¿Puedo ver su tarjeta?", // nieuw, nalezen // nagelezen AI 28 nov
-    'c.access.s': "Un hombre de traje dice: “Soy el nuevo director. Todavía no tengo tarjeta.” ¿Qué haces?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.s': "Un hombre de traje dice: “Soy el nuevo director. Todavía no tengo tarjeta”. ¿Qué haces?", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.access.o1': "Lo compruebas, antes de dejarle entrar.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.access.o2': "Le dejas entrar: parece importante.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.access.o3': "Le das tu propia tarjeta.", // nieuw, nalezen // nagelezen AI 28 nov
@@ -3481,7 +3481,7 @@ const t: CultureTranslation = {
     'c.hygienelock': { m: "Entra limpio, cada vez", f: "Entra limpia, cada vez", x: "Higiene al entrar, cada vez" }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.hygienelock.b': "En una fábrica de alimentos, tú eres el mayor peligro para la comida: los gérmenes vienen de tus manos, tu pelo y tu ropa. Por eso pasa por la esclusa de higiene cada vez que entras, también después de una pausa o de ir al váter. Redecilla puesta, cubrebarbas si tienes barba, ropa de trabajo limpia, todas las joyas fuera. Lávate las manos con jabón, sécalas y desinféctalas. ¿Te encuentras mal, con diarrea o vómitos? Díselo a tu encargado antes de empezar. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.hygienelock.p': "Tengo diarrea. ¿Puedo trabajar hoy?", // nieuw, nalezen // nagelezen AI 28 nov
-    'c.hygienelock.s': "Vuelves del váter. Tu compañero dice: “Sáltate la esclusa, hay mucho trabajo.” ¿Qué haces?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.s': "Vuelves del váter. Tu compañero dice: “Sáltate la esclusa, hay mucho trabajo”. ¿Qué haces?", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.hygienelock.o1': "Pasas por la esclusa de todas formas.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.hygienelock.o2': "Te la saltas, solo esta vez.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.hygienelock.o3': "Solo te pones guantes nuevos.", // nieuw, nalezen // nagelezen AI 28 nov
@@ -3501,7 +3501,7 @@ const t: CultureTranslation = {
     'c.allergens': "Basta con una traza", // nieuw, nalezen // nagelezen AI 28 nov
     'c.allergens.b': "Para algunas personas, una cantidad muy pequeña de frutos secos, cacahuete, leche, huevo, gluten o sésamo puede poner su vida en peligro. Por eso la etiqueta tiene que decir exactamente qué lleva un producto. Mantén los alérgenos aparte: sus propias tarrinas, herramientas y colores. Después de un producto con un alérgeno, se limpia la línea antes del producto siguiente. Nunca cambies un ingrediente por otro, tampoco cuando parece igual. ¿Tienes dudas? Pregunta. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.allergens.p': "¿Esto lleva frutos secos?", // nieuw, nalezen // nagelezen AI 28 nov
-    'c.allergens.s': "Se han acabado las almendras. Un compañero dice: “Usa avellanas, nadie se va a dar cuenta.” ¿Qué haces?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.s': "Se han acabado las almendras. Un compañero dice: “Usa avellanas, nadie se va a dar cuenta”. ¿Qué haces?", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.allergens.o1': "Dices que no, y se lo dices a tu encargado.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.allergens.o2': "Las usas: frutos secos son frutos secos.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.allergens.o3': "Las usas, y no cambias nada en la etiqueta.", // nieuw, nalezen // nagelezen AI 28 nov
@@ -3622,7 +3622,7 @@ const t: CultureTranslation = {
     'c.haccp': "HACCP: revisa, apunta, avisa", // nieuw, nalezen // nagelezen AI 28 nov
     'c.haccp.b': "Toda empresa de alimentos trabaja con un plan de seguridad alimentaria (HACCP). Dice en qué pasos tienes que revisar algo, como la temperatura de la cámara frigorífica o la temperatura interna de la carne cocinada. Tú revisas, lo apuntas y firmas. Apunta lo que has medido de verdad, también cuando está mal. Un número malo no es culpa tuya, pero esconderlo es peligroso. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.haccp.p': "La temperatura está demasiado alta.", // nieuw, nalezen // nagelezen AI 28 nov
-    'c.haccp.s': "Se te ha olvidado medir a las diez. Tu compañero dice: “Apunta un número bueno y ya está.” ¿Qué haces?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.s': "Se te ha olvidado medir a las diez. Tu compañero dice: “Apunta un número bueno y ya está”. ¿Qué haces?", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.haccp.o1': "Mides ahora, y apuntas la hora real.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.haccp.o2': "Apuntas un número bueno para las diez.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.haccp.o3': "Dejas la casilla vacía.", // nieuw, nalezen // nagelezen AI 28 nov
@@ -3643,7 +3643,7 @@ const t: CultureTranslation = {
     'c.binlorry': "Que te vean, y viaja dentro", // nieuw, nalezen // nagelezen AI 28 nov
     'c.binlorry.b': "Ponte la ropa de alta visibilidad en cada ronda. Sube y baja por el lado de la acera, nunca por el lado del tráfico. Viaja en la cabina, no detrás en el camión: eso solo cuando tu empresa lo permite claramente, y nunca cuando va marcha atrás o rápido. Aléjate del elevador mientras se mueve. ¿Un contenedor pesa demasiado, o sale algo de él? Déjalo, y avísalo. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.binlorry.p': "Este contenedor con ruedas pesa demasiado.", // nieuw, nalezen // nagelezen AI 28 nov
-    'c.binlorry.s': "La calle siguiente está muy cerca. El conductor dice: “Súbete al estribo de atrás.” ¿Qué haces?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.s': "La calle siguiente está muy cerca. El conductor dice: “Súbete al estribo de atrás”. ¿Qué haces?", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.binlorry.o1': "Te subes a la cabina de todas formas.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.binlorry.o2': "Te subes al estribo: está cerca.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.binlorry.o3': "Vas andando detrás del camión.", // nieuw, nalezen // nagelezen AI 28 nov
@@ -4008,7 +4008,7 @@ const t: CultureTranslation = {
     'c.dosing': "La dosis correcta, no más", // nieuw, nalezen // nagelezen AI 28 nov
     'c.dosing.b': "Más producto no limpia mejor. Demasiado deja una capa pegajosa, así que el suelo se ensucia antes y puede resbalar. También es peor para tu piel y tus pulmones. Usa el vaso medidor o la bomba dosificadora, y sigue la etiqueta. Primero el agua, luego el producto: así no salpica. Antes de usar la fregadora, comprueba que está cargada, con agua limpia en el depósito. Al final, vacía y enjuaga el depósito del agua sucia. Las normas cambian de una empresa a otra: pregunta a tu encargado cuáles son las normas en tu trabajo.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.dosing.p': "¿Cuánto tengo que echar?", // nieuw, nalezen // nagelezen AI 28 nov
-    'c.dosing.s': "El suelo sigue pegajoso. Un compañero dice: “Echa el doble de producto.” ¿Qué haces?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.s': "El suelo sigue pegajoso. Un compañero dice: “Echa el doble de producto”. ¿Qué haces?", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.dosing.o1': "Usas la dosis de la etiqueta, y preguntas.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.dosing.o2': "Echas el doble: así queda limpio.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.dosing.o3': "Echas el producto directamente en el suelo.", // nieuw, nalezen // nagelezen AI 28 nov

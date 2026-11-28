@@ -3,20 +3,20 @@ import type { CultureTranslation } from '../culture/types';
 /** Somali (so): learning mechanics: speaking without a microphone, picture choice, build feedback, and why a chat reply fits (src/content/chatWhy.ts). */
 const t: CultureTranslation = {
   ui: {
-    sayAloud: "Makarafoon looma baahna. Kor u dheh, kadib sii wad.", // nieuw, nalezen
-    micRetry: "Makarafoonka mar kale isku day", // nieuw, nalezen
-    micFailed: "Makarafoonku ma shaqayn. Kor u dheh, kadib sii wad.", // nieuw, nalezen
-    micRefused: "Abka looma oggola inuu isticmaalo makarafoonkaaga. Waad shidi kartaa.", // nieuw, nalezen
-    micTurnOn: "Shid makarafoonka", // nieuw, nalezen
-    micStepsIos: "Riix “•••” ama “aA” ee ku yaal sadarka cinwaanka › Website Settings › Microphone › Allow. Ama: Settings › Apps › Safari › Microphone. Kadib riix badhanka hoose.", // nieuw, nalezen
-    micStepsIosOther: "Riix astaanta ku taal bidixda cinwaanka bogga › Permissions › Microphone › Allow. Ama: Settings › Apps › {app} › Microphone. Kadib riix badhanka hoose.", // nieuw, nalezen
-    micStepsAndroid: "Riix astaanta ku taal bidixda cinwaanka bogga › Permissions › Microphone › Allow. Kadib riix badhanka hoose.", // nieuw, nalezen
-    micStepsAndroidApp: "Ku hay astaanta Vloertaal ee shaashadda hore › App info › Permissions › Microphone › Allow. Kadib riix badhanka hoose.", // nieuw, nalezen
-    micStepsDesktop: "Guji astaanta ku taal bidixda cinwaanka bogga › Microphone › Allow. Kadib guji badhanka hoose.", // nieuw, nalezen
-    whichPicture: "Waa sawirkee?", // nieuw, nalezen
-    sayAloudInstead: "Kor u dheh beddelkeeda", // nieuw, nalezen
-    wordsPractised: "Ereyada lagu tababaray", // nieuw, nalezen
-    reviewComplete: "Dib-u-eegistu way dhammaatay!", // nieuw, nalezen
+    sayAloud: "Makarafoon looma baahna. Kor u dheh, kadib sii wad.", // nieuw, nalezen // nagelezen AI 28 nov
+    micRetry: "Makarafoonka mar kale isku day", // nieuw, nalezen // nagelezen AI 28 nov
+    micFailed: "Makarafoonku ma shaqayn. Kor u dheh, kadib sii wad.", // nieuw, nalezen // nagelezen AI 28 nov
+    micRefused: "App-ka looma oggola inuu isticmaalo makarafoonkaaga. Waad shidi kartaa.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    micTurnOn: "Shid makarafoonka", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsIos: "Riix “•••” ama “aA” ee ku yaal sadarka cinwaanka › Website Settings › Microphone › Allow. Ama: Settings › Apps › Safari › Microphone. Kadib riix badhanka hoose.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsIosOther: "Riix astaanta ku taal bidixda cinwaanka bogga › Permissions › Microphone › Allow. Ama: Settings › Apps › {app} › Microphone. Kadib riix badhanka hoose.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsAndroid: "Riix astaanta ku taal bidixda cinwaanka bogga › Permissions › Microphone › Allow. Kadib riix badhanka hoose.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsAndroidApp: "Ku hay astaanta Vloertaal ee shaashadda hore › App info › Permissions › Microphone › Allow. Kadib riix badhanka hoose.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsDesktop: "Guji astaanta ku taal bidixda cinwaanka bogga › Microphone › Allow. Kadib guji badhanka hoose.", // nieuw, nalezen // nagelezen AI 28 nov
+    whichPicture: "Waa sawirkee?", // nieuw, nalezen // nagelezen AI 28 nov
+    sayAloudInstead: "Kor u dheh beddelkeeda", // nieuw, nalezen // nagelezen AI 28 nov
+    wordsPractised: "Ereyada lagu tababaray", // nieuw, nalezen // nagelezen AI 28 nov
+    reviewComplete: "Dib-u-eegistu way dhammaatay!", // nieuw, nalezen // nagelezen AI 28 nov
   },
   gloss: {
     'c.hello.a.why': "Nabadgelyo waxaa looga jawaabaa nabadgelyo.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -205,127 +205,127 @@ const t: CultureTranslation = {
     'c.brakes.a.why': "Waxaa la weydiiyay in mid cusub loo baahan yahay: haa, iyo sababta.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "Waxaa la weydiiyay waxa la qabanayo: eeg kaarka shaqada.", // nieuw, nalezen // nagelezen AI 22 nov
     // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
-    'c.mowing.a.why': "Waxaa la weydiiyay in la qaadan karo: haa, iyo waxa marka hore la sameeyo.", // nieuw, nalezen
-    'c.pruning.a.why': "Waxaa la weydiiyay laamahee: kuwa dhintay oo keliya.", // nieuw, nalezen
-    'c.hedge.a.why': "Waxaa la weydiiyay intee dherer le'eg: ilaa xarigga, oo ka hooseysiin maya.", // nieuw, nalezen
-    'c.chainsaw.a.why': "Waxaa la weydiiyay in la oggol yahay: weli maya, iyo waxa marka hore imanaya.", // nieuw, nalezen
-    'c.weeding.a.why': "Waxaa la weydiiyay inuu haramo yahay: maya, iyo waxa lagu sameeyo.", // nieuw, nalezen
-    'c.planting.a.why': "Waxaa la weydiiyay meesha uu galayo: meesha beerta ubaxa.", // nieuw, nalezen
-    'c.roadside.a.why': "Waxaa la weydiiyay in la tallaabi karo: maya, sug, iyo sababta.", // nieuw, nalezen
-    'c.litter.a.why': "Deggane ayaa weydiiyay goorma: ma garanaysid, iyo cidda garanaysa.", // nieuw, nalezen
-    'c.reception.a.why': "Booqde ballan ayuu leeyahay: daqiiqad, waad u yeeraysaa.", // nieuw, nalezen
-    'c.visitors.a.why': "Waxaa la weydiiyay meesha jaakaddu aado: meesha, iyo halka ay ku taal.", // nieuw, nalezen
-    'c.mailroom.a.why': "Waxaa la weydiiyay cidda iska leh: qaybta, iyo dabaqa.", // nieuw, nalezen
-    'c.meetingroom.a.why': "Waxaa la weydiiyay saacadda: waqtiga, iyo waxa la samaynayo.", // nieuw, nalezen
-    'c.faults.a.why': "Waxaa la weydiiyay sababta ay u qabow tahay: waxa jaban, iyo goorta caawimaaddu imanayso.", // nieuw, nalezen
-    'c.repairs.a.why': "Waxaa la weydiiyay inuu dhawaaqayo: haa, iyo sababta.", // nieuw, nalezen
-    'c.moving.a.why': "Waxaa la weydiiyay meesha uu aado: qolka, iyo meesha la eego.", // nieuw, nalezen
-    'c.closing.a.why': "Waxaa la weydiiyay in qof gudaha joogo: maya, iyo waxa aad hadda samaynayso.", // nieuw, nalezen
-    'c.patrol.a.why': "Waxaa la weydiiyay inaad wax aragtay: haa, waxa, iyo meesha.", // nieuw, nalezen
-    'c.access.a.why': "Waxaa la weydiiyay in la galo kaar la'aan: waan ka xumahay, kaar la'aan maya.", // nieuw, nalezen
-    'c.cameras.a.why': "Waxaa la weydiiyay waxa aad aragto: cidda, meesha, iyo waxa aad samaynayso.", // nieuw, nalezen
-    'c.report.a.why': "Waxaa la weydiiyay waxa warbixinta galaya: waxa, meesha iyo goorta.", // nieuw, nalezen
-    'c.evacuation.a.why': "Waxaa la weydiiyay in qof walba baxay: maya, iyo immisa ayaa maqan.", // nieuw, nalezen
-    'c.firstaid.a.why': "Waxaa la weydiiyay meesha AED-gu yaal: meesha, iyo waxa agtiisa ah.", // nieuw, nalezen
-    'c.shoplifting.a.why': "Waxaa la weydiiyay in bac la baari karo: maya, iyo cidda taas samaysa.", // nieuw, nalezen
-    'c.aggression.a.why': "Waxaa la weydiiyay sababta maya: sababta, oo si deggan loo sheegay.", // nieuw, nalezen
-    'c.hygienelock.a.why': "Waxaa la weydiiyay saacad: maya, iyo xeerka ka dambeeya.", // nieuw, nalezen
-    'c.allergens.a.why': "Waxaa la weydiiyay in la wada dhigi karo: maya, iyo sababta.", // nieuw, nalezen
-    'c.coldroom.a.why': "Waxaa la weydiiyay sababta uu u dhawaaqayo: sababta, iyo waxa la sameeyo.", // nieuw, nalezen
-    'c.foreignbody.a.why': "Waxaa la weydiiyay waxa la sameeyo: cidda la tusayo.", // nieuw, nalezen
-    'c.cutting.a.why': "Waxaa la weydiiyay immisa: miisaanka, iyo meesha la eego.", // nieuw, nalezen
-    'c.labels.a.why': "Waxaa la weydiiyay taariikhdee: goorta, iyo meesha la eego.", // nieuw, nalezen
-    'c.linecleaning.a.why': "Waxaa la weydiiyay inuu nadiif yahay: weli maya, iyo waxa haray.", // nieuw, nalezen
-    'c.haccp.a.why': "Waxaa la weydiiyay sababta: si aan u ogaano in cuntadu ammaan tahay.", // nieuw, nalezen
-    'c.binlorry.a.why': "Waxaa la weydiiyay in gadaasha lagu raaci karo: maya, iyo meesha lagu raaco.", // nieuw, nalezen
-    'c.reversing.a.why': "Waxaa la weydiiyay caawimaad: haa, meesha aad taagan tahay, iyo waxa la sameeyo.", // nieuw, nalezen
-    'c.wastesorting.a.why': "Waxaa la weydiiyay meesha uu galo: weelka, iyo sababta.", // nieuw, nalezen
-    'c.wastesafety.a.why': "Waxaa la weydiiyay waxa la sameeyo goyn kadib: dhaq, oo sheeg.", // nieuw, nalezen
-    'c.yard.a.why': "Waxaa la weydiiyay meesha uu galayo: konteenarka, iyo halka uu yaal.", // nieuw, nalezen
-    'c.hazardous.a.why': "Waxaa la weydiiyay waxa ku jira: ma garanaysid, sidaas darteed dhinac dhig.", // nieuw, nalezen
-    'c.baler.a.why': "Waxaa la weydiiyay in la eegi karo: maya, iyo waxa marka hore imanaya.", // nieuw, nalezen
-    'c.shovel.a.why': "Waxaa la weydiiyay in la dhaafi karo: oo keliya marka darawalku ku arko.", // nieuw, nalezen
-    'c.nappies.a.why': "Waxaa la weydiiyay goorma: waqtiga, iyo meesha lagu qoray.", // nieuw, nalezen
-    'c.mealtime.a.why': "Waxaa la weydiiyay in la siin karo: maya, sababta, iyo meesha la eego.", // nieuw, nalezen
-    'c.naptime.a.why': "Waxaa la weydiiyay inay hurudo: haa, tan iyo goorma, iyo inaad hubinayso.", // nieuw, nalezen
-    'c.playtime.a.why': "Waxaa la weydiiyay in ilmuhu ciyaari karo: haa, meesha, iyo waxa xiga.", // nieuw, nalezen
-    'c.pickup.a.why': "Waxaa la weydiiyay cidda qaadaysa: qofka, iyo inay liiska ku jirto.", // nieuw, nalezen
-    'c.childsafety.a.why': "Waxaa la weydiiyay inay dhacday: haa, waxa ay leedahay, iyo cidda aad wacayso.", // nieuw, nalezen
-    'c.sickchild.a.why': "Waxaa la weydiiyay sida uu yahay: waxa aad aragto, iyo waxa aad samaynayso.", // nieuw, nalezen
-    'c.grouprules.a.why': "Waxaa la weydiiyay in keligaa la bixi karo: haa, laakiin marka hore u sheeg saaxiib shaqo.", // nieuw, nalezen
+    'c.mowing.a.why': "Waxaa la weydiiyay in la qaadan karo: haa, iyo waxa marka hore la sameeyo.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.a.why': "Waxaa la weydiiyay laamahee: kuwa dhintay oo keliya.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.a.why': "Waxaa la weydiiyay intee dherer le'eg: ilaa xarigga, oo ka hooseysiin maya.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.a.why': "Waxaa la weydiiyay in la oggol yahay: weli maya, iyo waxa marka hore imanaya.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.a.why': "Waxaa la weydiiyay inuu haramo yahay: maya, iyo waxa lagu sameeyo.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.a.why': "Waxaa la weydiiyay meesha uu galayo: meesha beerta ubaxa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.a.why': "Waxaa la weydiiyay in la tallaabi karo: maya, sug, iyo sababta.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.a.why': "Deggane ayaa weydiiyay goorma: ma garanaysid, iyo cidda garanaysa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.a.why': "Booqde ballan ayuu leeyahay: daqiiqad, waad u yeeraysaa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.a.why': "Waxaa la weydiiyay meesha jaakaddu aado: meesha, iyo halka ay ku taal.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.a.why': "Waxaa la weydiiyay cidda iska leh: qaybta, iyo dabaqa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.a.why': "Waxaa la weydiiyay saacadda: waqtiga, iyo waxa la samaynayo.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.a.why': "Waxaa la weydiiyay sababta ay u qabow tahay: waxa jaban, iyo goorta caawimaaddu imanayso.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.a.why': "Waxaa la weydiiyay inuu dhawaaqayo: haa, iyo sababta.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.a.why': "Waxaa la weydiiyay meesha uu aado: qolka, iyo meesha la eego.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.a.why': "Waxaa la weydiiyay in qof gudaha joogo: maya, iyo waxa aad hadda samaynayso.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.a.why': "Waxaa la weydiiyay inaad wax aragtay: haa, waxa, iyo meesha.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.a.why': "Waxaa la weydiiyay in la galo kaar la'aan: waan ka xumahay, kaar la'aan maya.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.a.why': "Waxaa la weydiiyay waxa aad aragto: cidda, meesha, iyo waxa aad samaynayso.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.a.why': "Waxaa la weydiiyay waxa warbixinta galaya: waxa, meesha iyo goorta.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.a.why': "Waxaa la weydiiyay in qof walba baxay: maya, iyo immisa ayaa maqan.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.a.why': "Waxaa la weydiiyay meesha AED-gu yaal: meesha, iyo waxa agtiisa ah.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.a.why': "Waxaa la weydiiyay in bac la baari karo: maya, iyo cidda taas samaysa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.a.why': "Waxaa la weydiiyay sababta maya: sababta, oo si deggan loo sheegay.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.a.why': "Waxaa la weydiiyay saacad: maya, iyo xeerka ka dambeeya.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.a.why': "Waxaa la weydiiyay in la wada dhigi karo: maya, iyo sababta.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.a.why': "Waxaa la weydiiyay sababta uu u dhawaaqayo: sababta, iyo waxa la sameeyo.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.a.why': "Waxaa la weydiiyay waxa la sameeyo: cidda la tusayo.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.a.why': "Waxaa la weydiiyay immisa: miisaanka, iyo meesha la eego.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.a.why': "Waxaa la weydiiyay taariikhdee: goorta, iyo meesha la eego.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.a.why': "Waxaa la weydiiyay inuu nadiif yahay: weli maya, iyo waxa haray.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.a.why': "Waxaa la weydiiyay sababta: si aan u ogaano in cuntadu ammaan tahay.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.a.why': "Waxaa la weydiiyay in gadaasha lagu raaci karo: maya, iyo meesha lagu raaco.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.a.why': "Waxaa la weydiiyay caawimaad: haa, meesha aad taagan tahay, iyo waxa la sameeyo.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.a.why': "Waxaa la weydiiyay meesha uu galo: weelka, iyo sababta.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.a.why': "Waxaa la weydiiyay waxa la sameeyo goyn kadib: dhaq, oo sheeg.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.a.why': "Waxaa la weydiiyay meesha uu galayo: konteenarka, iyo halka uu yaal.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.a.why': "Waxaa la weydiiyay waxa ku jira: ma garanaysid, sidaas darteed dhinac dhig.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.a.why': "Waxaa la weydiiyay in la eegi karo: maya, iyo waxa marka hore imanaya.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.a.why': "Waxaa la weydiiyay in la dhaafi karo: oo keliya marka darawalku ku arko.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.a.why': "Waxaa la weydiiyay goorma: waqtiga, iyo meesha lagu qoray.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.a.why': "Waxaa la weydiiyay in la siin karo: maya, sababta, iyo meesha la eego.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.a.why': "Waxaa la weydiiyay inay hurudo: haa, tan iyo goorma, iyo inaad hubinayso.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.a.why': "Waxaa la weydiiyay in ilmuhu ciyaari karo: haa, meesha, iyo waxa xiga.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.a.why': "Waxaa la weydiiyay cidda qaadaysa: qofka, iyo inay liiska ku jirto.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.a.why': "Waxaa la weydiiyay inay dhacday: haa, waxa ay leedahay, iyo cidda aad wacayso.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.a.why': "Waxaa la weydiiyay sida uu yahay: waxa aad aragto, iyo waxa aad samaynayso.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.a.why': "Waxaa la weydiiyay in keligaa la bixi karo: haa, laakiin marka hore u sheeg saaxiib shaqo.", // nieuw, nalezen // nagelezen AI 28 nov
     // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
-    'c.sanitary.a.why': "Waxaa la weydiiyay in la dhammeeyay: weli maya, iyo sababta.", // nieuw, nalezen
-    'c.hotelroom.a.why': "Waxaa la weydiiyay inta harsan: tirada, iyo goorta aad dhammaynayso.", // nieuw, nalezen
-    'c.dosing.a.why': "Waxaa la yiri wax badan isticmaal: maya, badan ma fiicna, iyo waxa aad isticmaasho.", // nieuw, nalezen
-    'c.officenight.a.why': "Waxaa la weydiiyay inaad keligaa shaqaynayso: haa, oo fariin ayaad diraysaa.", // nieuw, nalezen
-    'c.knives.a.why': "Waxaa la weydiistay inaad wax jarto: haa shef, iyo su'aal ku saabsan sida.", // nieuw, nalezen
-    'c.rawcooked.a.why': "Waxaa la weydiiyay inay gluten la'aan tahay: lama hubo, sidaas darteed liiska ayaad eegaysaa.", // nieuw, nalezen
-    'c.pass.a.why': "Waxaa la weydiiyay meesha cuntadu taal: miiska cuntada, oo hadda ayaad keenaysaa.", // nieuw, nalezen
-    'c.bill.a.why': "Waxaa la weydiiyay in gooni loo bixin karo: haa, oo mashiinka kaarka ayaad keenaysaa.", // nieuw, nalezen
-    'c.washing.a.why': "Macmiilku wuxuu yiri maya: waa hagaag, oo wax kale ayaad u bandhigaysaa.", // nieuw, nalezen
-    'c.observing.a.why': "Waxaa la weydiiyay in wax gaar ah jiraan: haa, iyo waxa saxda ah.", // nieuw, nalezen
-    'c.homecare.a.why': "Waxaa la weydiiyay cidda joogta: salaan, cidda aad tahay, iyo ma soo geli karaa.", // nieuw, nalezen
-    'c.liftaids.a.why': "Waxaa la weydiiyay in keligaa la sameeyo: haa, go'a simbiriirixa, oo waad keenaysaa.", // nieuw, nalezen
-    'c.returns.a.why': "Waxaa la weydiiyay in la soo celin karo: haa, iyo su'aal ku saabsan rasiidhka.", // nieuw, nalezen
-    'c.facing.a.why': "Waxaa la weydiiyay inaad dhammaysay: ku dhowaad, iyo waxa weli haray.", // nieuw, nalezen
-    'c.shrink.a.why': "Waxaa la weydiiyay in boorsadaada la eegi karo: haa, oo rasiidhka ayaad tusaysaa.", // nieuw, nalezen
-    'c.shopclose.a.why': "Waxaa la weydiiyay in la soo geli karo: waan ka xumahay, waa xiran yahay, iyo goorta mar kale la furayo.", // nieuw, nalezen
-    'c.hirer.a.why': "Waxaa la weydiiyay inaad meel cusub ka bilowdo: haa, iyo su'aal ku saabsan waqtiga.", // nieuw, nalezen
-    'c.phases.a.why': "Waxaa la sheegay in shaqadu joogsanayso: hagaag, oo shaqo kale ayaad weydiinaysaa.", // nieuw, nalezen
-    'c.deductions.a.why': "Waxaa lagu sheegay jarid: waxaad weydiinaysaa in la oggol yahay, oo waad hubinaysaa.", // nieuw, nalezen
-    'c.agencyhome.a.why': "Waxaa la yiri dhowaan ka bax: taasi waa gaaban tahay, oo marka hore talo ayaad weydiinaysaa.", // nieuw, nalezen
+    'c.sanitary.a.why': "Waxaa la weydiiyay in la dhammeeyay: weli maya, iyo sababta.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.a.why': "Waxaa la weydiiyay inta harsan: tirada, iyo goorta aad dhammaynayso.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.a.why': "Waxaa la yiri wax badan isticmaal: maya, badan ma fiicna, iyo waxa aad isticmaasho.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.a.why': "Waxaa la weydiiyay inaad keligaa shaqaynayso: haa, oo fariin ayaad diraysaa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.a.why': "Waxaa la weydiistay inaad wax jarto: haa shef, iyo su'aal ku saabsan sida.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.a.why': "Waxaa la weydiiyay inay gluten la'aan tahay: lama hubo, sidaas darteed liiska ayaad eegaysaa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.a.why': "Waxaa la weydiiyay meesha cuntadu taal: miiska cuntada, oo hadda ayaad keenaysaa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.a.why': "Waxaa la weydiiyay in gooni loo bixin karo: haa, oo mashiinka kaarka ayaad keenaysaa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.a.why': "Macmiilku wuxuu yiri maya: waa hagaag, oo wax kale ayaad u bandhigaysaa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.a.why': "Waxaa la weydiiyay in wax gaar ah jiraan: haa, iyo waxa saxda ah.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.a.why': "Waxaa la weydiiyay cidda joogta: salaan, cidda aad tahay, iyo ma soo geli karaa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.a.why': "Waxaa la weydiiyay in keligaa la sameeyo: haa, go'a simbiriirixa, oo waad keenaysaa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.a.why': "Waxaa la weydiiyay in la soo celin karo: haa, iyo su'aal ku saabsan rasiidhka.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.a.why': "Waxaa la weydiiyay inaad dhammaysay: ku dhowaad, iyo waxa weli haray.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.a.why': "Waxaa la weydiiyay in boorsadaada la eegi karo: haa, oo rasiidhka ayaad tusaysaa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.a.why': "Waxaa la weydiiyay in la soo geli karo: waan ka xumahay, waa xiran yahay, iyo goorta mar kale la furayo.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.a.why': "Waxaa la weydiiyay inaad meel cusub ka bilowdo: haa, iyo su'aal ku saabsan waqtiga.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.a.why': "Waxaa la sheegay in shaqadu joogsanayso: hagaag, oo shaqo kale ayaad weydiinaysaa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.a.why': "Waxaa lagu sheegay jarid: waxaad weydiinaysaa in la oggol yahay, oo waad hubinaysaa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.a.why': "Waxaa la yiri dhowaan ka bax: taasi waa gaaban tahay, oo marka hore talo ayaad weydiinaysaa.", // nieuw, nalezen // nagelezen AI 28 nov
     // The basis units at four lessons (23 November 2026).
-    'c.roster.a.why': "Waxaa la sheegay in jadwalku isbeddelay: hagaag, iyo maalintee.", // nieuw, nalezen
-    'c.breaks.a.why': "Waxaa la weydiiyay nasashada qadada: waqtiga, iyo inta ay qaadato.", // nieuw, nalezen
-    'c.wound.a.why': "Wuu suuxi gaadhay: ha jiifo, oo caawimaad keen.", // nieuw, nalezen
-    'c.callhelp.a.why': "Waxaa la weydiiyay inuu jawaabayo: maya, ma jawaabayo.", // nieuw, nalezen
-    'c.vacancy.a.why': "Waxaa la weydiiyay sababta aad u wacdo: shaqada bannaan, oo weli ma furan tahay?", // nieuw, nalezen
-    'c.result.a.why': "Maya ayaa la yiri: jawaab deggan, oo waxaad weydiinaysaa sababta.", // nieuw, nalezen
-    'c.residence.a.why': "Waxaa la sheegay in sharcigu dhici gaadhay: isla markiiba ayaad codsanaysaa.", // nieuw, nalezen
-    'c.newhome.a.why': "Waxaa la weydiiyay meesha aad ku nooshahay: guri cusub, iyo cinwaanka cusub.", // nieuw, nalezen
-    'c.payparts.a.why': "Waxaa la weydiiyay lambarka shaqaalaha: meesha uu ku qoran yahay warqadda mushaharka.", // nieuw, nalezen
-    'c.latepay.a.why': "Waxaa la sheegay in lacagtu goor dambe imanayso: waxaad rabtaa in taas la qoro.", // nieuw, nalezen
-    'c.holiday.a.why': "Waxaa la weydiiyay inaad May aaddo: waxaad door bidaysaa July, iyo sababta.", // nieuw, nalezen
-    'c.special.a.why': "Waxaa la weydiiyay fasaxa dhalashada: haa, iyo goorta.", // nieuw, nalezen
-    'c.unwell.a.why': "Waxaa la weydiiyay inaad fiican tahay: maya, oo ma aadi kartaa guriga?", // nieuw, nalezen
-    'c.injury.a.why': "Waxaa la weydiiyay warbixin: haa, iyo nuqul adiga kuu ah.", // nieuw, nalezen
-    'c.debt.a.why': "Waxaa la yiri joog ilaa deynta la bixiyo: lama oggola, caawimaad raadso.", // nieuw, nalezen
-    'c.inspection.a.why': "Waxaa la weydiiyay inaad hadasho: haa, laakiin meel aanu madaxu maqlayn.", // nieuw, nalezen
-    'c.carpool.a.why': "Waxaa la weydiiyay cidda wadaysa: adiga, iyo goorta aad soo qaadayso.", // nieuw, nalezen
-    'c.train.a.why': "Waxaa la weydiiyay sababta aad u soo daahday: tareenka, oo fariin ayaad dirtay.", // nieuw, nalezen
-    'c.checklist.a.why': "Waxaa la weydiiyay inaad wax illowday: mar kale ayaad liiska eegaysaa.", // nieuw, nalezen
-    'c.leavesite.a.why': "Waxaa la weydiiyay inaad ugu dambeyn baxayso: haa, wax walba waa dansan yihiin oo albaabku waa qufulan yahay.", // nieuw, nalezen
-    'c.stagedays.a.why': "Waxaa la weydiiyay sababta aad u maqnayd: xanuun, oo labadaba waad wacday.", // nieuw, nalezen
-    'c.stageend.a.why': "Waxaa la weydiiyay qorshayaashaada: marka hore shahaadada, kadib shaqo.", // nieuw, nalezen
-    'c.neighbours.a.why': "Deris cusub ayaa salaamay: ku faraxsanahay inaan ku barto, iyo magacaaga.", // nieuw, nalezen
-    'c.join.a.why': "Waxaa lagu weydiiyay inaad timaado: haa, oo waxaad rabtaa inaad la hadasho macallinka.", // nieuw, nalezen
-    'c.workphotos.a.why': "Sawir internetka loogu talagalay ayaa la weydiiyay: maya edeb leh.", // nieuw, nalezen
-    'c.device.a.why': "Waxaa la weydiiyay app cusub: marka hore weydii waaxda IT-ga.", // nieuw, nalezen
+    'c.roster.a.why': "Waxaa la sheegay in jadwalku isbeddelay: hagaag, iyo maalintee.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.a.why': "Waxaa la weydiiyay nasashada qadada: waqtiga, iyo inta ay qaadato.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.a.why': "Wuu suuxi gaadhay: ha jiifo, oo caawimaad keen.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.a.why': "Waxaa la weydiiyay inuu jawaabayo: maya, ma jawaabayo.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.a.why': "Waxaa la weydiiyay sababta aad u wacdo: shaqada bannaan, oo weli ma furan tahay?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.a.why': "Maya ayaa la yiri: jawaab deggan, oo waxaad weydiinaysaa sababta.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.a.why': "Waxaa la sheegay in sharcigu dhici gaadhay: isla markiiba ayaad codsanaysaa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.a.why': "Waxaa la weydiiyay meesha aad ku nooshahay: guri cusub, iyo cinwaanka cusub.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.a.why': "Waxaa la weydiiyay lambarka shaqaalaha: meesha uu ku qoran yahay warqadda mushaharka.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.a.why': "Waxaa la sheegay in lacagtu goor dambe imanayso: waxaad rabtaa in taas la qoro.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.a.why': "Waxaa la weydiiyay inaad May aaddo: waxaad door bidaysaa July, iyo sababta.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.a.why': "Waxaa la weydiiyay fasaxa dhalashada: haa, iyo goorta.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.a.why': "Waxaa la weydiiyay inaad fiican tahay: maya, oo ma aadi kartaa guriga?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.a.why': "Waxaa la weydiiyay warbixin: haa, iyo nuqul adiga kuu ah.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.a.why': "Waxaa la yiri joog ilaa deynta la bixiyo: lama oggola, caawimaad raadso.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.a.why': "Waxaa la weydiiyay inaad hadasho: haa, laakiin meel aanu madaxu maqlayn.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.a.why': "Waxaa la weydiiyay cidda wadaysa: adiga, iyo goorta aad soo qaadayso.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.a.why': "Waxaa la weydiiyay sababta aad u soo daahday: tareenka, oo fariin ayaad dirtay.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.a.why': "Waxaa la weydiiyay inaad wax illowday: mar kale ayaad liiska eegaysaa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.a.why': "Waxaa la weydiiyay inaad ugu dambeyn baxayso: haa, wax walba waa demsan yihiin oo albaabku waa qufulan yahay.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.stagedays.a.why': "Waxaa la weydiiyay sababta aad u maqnayd: xanuun, oo labadaba waad wacday.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.a.why': "Waxaa la weydiiyay qorshayaashaada: marka hore shahaadada, kadib shaqo.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.a.why': "Deris cusub ayaa salaamay: ku faraxsanahay inaan ku barto, iyo magacaaga.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.a.why': "Waxaa lagu weydiiyay inaad timaado: haa, oo waxaad rabtaa inaad la hadasho macallinka.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.a.why': "Sawir internetka loogu talagalay ayaa la weydiiyay: maya edeb leh.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.a.why': "Waxaa la weydiiyay app cusub: marka hore weydii waaxda IT-ga.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Veiligheid op het werk" and the VOG (23 November 2026).
-    'c.safetysigns.a.why': "Waxaa la weydiiyay waxa calaamad ka dhigan tahay: taxaddar, iyo calaamadda ay tahay.", // nieuw, nalezen
-    'c.substances.a.why': "Waxaa la weydiiyay in ay sun tahay: lama qiyaaso, waa la eegaa.", // nieuw, nalezen
-    'c.firefight.a.why': "Waxaa la sheegay in dab jiro: waa yar yahay, sidaas darteed qalabka dab-demiska ayaa la keenaa.", // nieuw, nalezen
-    'c.permitwork.a.why': "Waxaa la weydiiyay cidda bannaanka ku haraysa: qofka laftiisa, iyo hawshiisa.", // nieuw, nalezen
-    'c.vog.a.why': "Waxaa la weydiiyay VOG-ga: weli maya, iyo waxa la sugayo.", // nieuw, nalezen
+    'c.safetysigns.a.why': "Waxaa la weydiiyay waxa calaamad ka dhigan tahay: taxaddar, iyo calaamadda ay tahay.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.a.why': "Waxaa la weydiiyay in ay sun tahay: lama qiyaaso, waa la eegaa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.a.why': "Waxaa la sheegay in dab jiro: waa yar yahay, sidaas darteed qalabka dab-demiska ayaa la keenaa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.a.why': "Waxaa la weydiiyay cidda bannaanka ku haraysa: qofka laftiisa, iyo hawshiisa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.a.why': "Waxaa la weydiiyay VOG-ga: weli maya, iyo waxa la sugayo.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Operator in de procesindustrie" (23 November 2026).
-    'c.plantround.a.why': "Waxaa la weydiiyay alaarmiga: waxa xad-dhaafay, iyo meesha.", // nieuw, nalezen
-    'c.plantfault.a.why': "Waxaa la weydiiyay in la shidi karo: maya, quful ayaa weli saaran.", // nieuw, nalezen
-    'c.shiftwork.a.why': "Waxaa la weydiiyay waxa dhacay: cilladda, iyo meesha lagu qoray.", // nieuw, nalezen
-    'c.heatdust.a.why': "Waxaa la weydiiyay taleefanka: maya, khatarta halkan jirta awgeed.", // nieuw, nalezen
+    'c.plantround.a.why': "Waxaa la weydiiyay alaarmiga: waxa xad-dhaafay, iyo meesha.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.a.why': "Waxaa la weydiiyay in la shidi karo: maya, quful ayaa weli saaran.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.a.why': "Waxaa la weydiiyay waxa dhacay: cilladda, iyo meesha lagu qoray.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.a.why': "Waxaa la weydiiyay taleefanka: maya, khatarta halkan jirta awgeed.", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (26 November 2026).
-    'c.debthelp.a.why': "Waxaa la sheegay in biilka aan la bixin: haa, oo qorshe lacag-bixineed ayaa la weydiistay.", // nieuw, nalezen
-    'c.taxes.a.why': "Waxaa la sheegay in baqshad buluug ah jirto: mahadsanid, oo isla markiiba waa la furayaa.", // nieuw, nalezen
-    'c.discrimination.a.why': "Waxaa la weydiiyay in wax walba fiican yihiin: maya, oo waa la soo sheegi doonaa.", // nieuw, nalezen
-    'c.union.a.why': "Waxaa la weydiiyay sababta xubinnimada: way u doodaan qofka.", // nieuw, nalezen
-    'c.kiln.a.why': "Waxaa la weydiiyay in jajabka gacanta lagu soo qaadi karo: maya, xaaqin iyo majarafad.", // nieuw, nalezen
-    'c.mixlab.a.why': "Waxaa la weydiiyay in dufcadda la oggolaaday: weli maya, shaybaarka ayaa tijaabinaya.", // nieuw, nalezen
-    'c.firstweeks.a.why': "Waxaa la weydiiyay wareegga tusidda: ku dhowaad wax walba, iyo hal su'aal.", // nieuw, nalezen
-    'c.orderpick.a.why': "Waxaa la weydiistay in reachtruck-ga la kaxeeyo: maya, tababar looma helin.", // nieuw, nalezen
+    'c.debthelp.a.why': "Waxaa la sheegay in biilka aan la bixin: haa, oo qorshe lacag-bixineed ayaa la weydiistay.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.a.why': "Waxaa la sheegay in baqshad buluug ah jirto: mahadsanid, oo isla markiiba waa la furayaa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.a.why': "Waxaa la weydiiyay in wax walba fiican yihiin: maya, oo waa la soo sheegi doonaa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.a.why': "Waxaa la weydiiyay sababta xubinnimada: way u doodaan qofka.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.a.why': "Waxaa la weydiiyay in jajabka gacanta lagu soo qaadi karo: maya, xaaqin iyo majarafad.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.a.why': "Waxaa la weydiiyay in dufcadda la oggolaaday: weli maya, shaybaarka ayaa tijaabinaya.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.a.why': "Waxaa la weydiiyay wareegga tusidda: ku dhowaad wax walba, iyo hal su'aal.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.a.why': "Waxaa la weydiistay in reachtruck-ga la kaxeeyo: maya, tababar looma helin.", // nieuw, nalezen // nagelezen AI 28 nov
     // four new lessons (27 November 2026).
-    'd.appraisal.a.why': "Waxaa la weydiiyay hadafka: hal shay oo cad oo la rabo in la barto.", // nieuw, nalezen
-    'c.forms.a.why': "Waxaa la weydiiyay foomka: ku dhowaad, iyo halka la saxiixayo.", // nieuw, nalezen
-    'c.voicemail.a.why': "Waxaa la weydiistay magaca iyo lambarka: magaca, iyo codsi dib loogu soo waco.", // nieuw, nalezen
-    'c.dentist.a.why': "Waxaa la weydiiyay booqashadii ugu dambeysay: goorta, iyo codsi baaritaan.", // nieuw, nalezen
+    'd.appraisal.a.why': "Waxaa la weydiiyay hadafka: hal shay oo cad oo la rabo in la barto.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.a.why': "Waxaa la weydiiyay foomka: ku dhowaad, iyo halka la saxiixayo.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.a.why': "Waxaa la weydiistay magaca iyo lambarka: magaca, iyo codsi dib loogu soo waco.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.a.why': "Waxaa la weydiiyay booqashadii ugu dambeysay: goorta, iyo codsi baaritaan.", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 export default t;
