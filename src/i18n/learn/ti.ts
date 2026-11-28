@@ -298,7 +298,7 @@ const t: CultureTranslation = {
     'c.inspection.a.why': "ክዛረብ ተሓቲቱ: እወ፡ ግን ሓላፊ ኣብ ዘይሰምዓሉ።", // nieuw, nalezen // nagelezen AI 28 nov
     'c.carpool.a.why': "መን ከም ዝዝውር ተሓቲቱ: ኣነ፡ ሰዓት ምውሳድ ድማ።", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.train.a.why': "ስለምንታይ ከም ዝደንጎየ ተሓቲቱ: ባቡር፡ መልእኽቲ ድማ ተሰዲዱ።", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.checklist.a.why': "ዝረስዖ ነገር እንተ ሃልዩ ተሓቲቱ: ሓንሳእ ደጊምካ ነቲ ዝርዝር ምርኣይ።", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.checklist.a.why': "ዝረስዖ ነገር እንተ ሃልዩ ተሓቲቱ: ሓንሳእ ደጊሙ ነቲ ዝርዝር ምርኣይ።", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.leavesite.a.why': "ናይ መወዳእታ ይወጽእ ድዩ ተሓቲቱ: እወ፡ ኩሉ ጠፊኡ ማዕጾ ድማ ተዓጽዩ።", // nieuw, nalezen // nagelezen AI 28 nov
     'c.stagedays.a.why': "ስለምንታይ ከም ዘይመጸ ተሓቲቱ: ሕማም፡ ንኽልቲኦም ድማ ምድዋል።", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.stageend.a.why': "ብዛዕባ መደባት ተሓቲቱ: ቅድም ዲፕሎማ፡ ድሕሪኡ ስራሕ።", // nieuw, nalezen (AI-correctie 28 nov 2026)

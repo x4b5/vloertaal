@@ -3191,7 +3191,7 @@ const t: CultureTranslation = {
     'w.postkar': "gaariga boostada", // nieuw, nalezen // nagelezen AI 28 nov
     's.mailroom.1': "Qaybiyuhu baakad ayuu keenayaa.", // nieuw, nalezen // nagelezen AI 28 nov
     's.mailroom.2': "Waraaqaha geli khaanadda boostada ee saxda ah.", // nieuw, nalezen // nagelezen AI 28 nov
-    's.mailroom.3': "Baakaddani waa waxyeelloobtay.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    's.mailroom.3': "Baakaddani way waxyeelloobtay.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.mailroom.q': "Baakaddani yaa iska leh?", // nieuw, nalezen // nagelezen AI 28 nov
     'c.mailroom.a': "Qaybta Maaliyadda, dabaqa labaad.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.mailroom': "Boostadu waa sir", // nieuw, nalezen // nagelezen AI 28 nov
@@ -4883,7 +4883,7 @@ const t: CultureTranslation = {
     'c.substances.o1': "Dheh waa khatar: qof ayaa cabbi kara.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.substances.o2': "Waxba: waa dhaladiisa.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.substances.o3': "Dhalada ku dheji calaamad yar oo dheg ah.", // nieuw, nalezen // nagelezen AI 28 nov
-    'c.substances.w': "Dhalo cabbitaan gudaheed, alaabtu waxay u ekaataa biyo ama cabbitaan macaan. Qof ayaa si qalad ah u cabbi kara. Alaabtu waa inay ku sii jirtaa baakadkeeda, calaamaddana la leh.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.substances.w': "Dhalo cabbitaan gudaheed, alaabtu waxay u ekaataa biyo ama cabbitaan macaan. Qof ayaa si qalad ah u cabbi kara. Alaabtu waa inay ku sii jirto baakaddeeda, calaamaddeedana la leh.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.firefight': "Dab yar mise dab weyn?", // nieuw, nalezen // nagelezen AI 28 nov
     'c.firefight.b': "Dabku wuxuu u baahan yahay saddex shay: shidaal, hawo iyo kulayl. Tani waa saddex-xagalka dabka. Mid ka qaad, dabkuna wuu demayaa. Bustaha dab-demisku wuxuu qaadaa hawada. Biyuhu waxay qaadaan kulaylka, laakiin weligaa biyo ha ku isticmaalin saliid ama subag gubanaya, ama qalab koronto. Eeg qalabka dab-demiska: wuxuu sheegaa waxa loogu talagalay. Xumbada iyo budadu waxay ku shaqeeyaan dab badan; CO2 wuxuu u fiican yahay dabka korontada. Dhimbiilaha iyo dabka furan ka fogee alaabta si fudud u gubata. Dab yar oo keliya adigu demi, oo keliya marka ay ammaan tahay. Ma ka weyn yahay? Bax, albaabka xir markaad dhaafto, oo alaarmiga bixi. Xeerarku way ku kala duwan yihiin shirkad kasta: weydii madaxaaga waxa ay yihiin xeerarka meesha aad ka shaqeyso.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.firefight.p': "Xagee ku sudhan yahay bustaha dab-demisku?", // nieuw, nalezen // nagelezen AI 28 nov

@@ -326,7 +326,7 @@ const t: CultureTranslation = {
     'c.firstweeks.a.why': "Nach dem Rundgang gefragt: fast alles, und eine Frage.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.orderpick.a.why': "Gebeten, den Schubmaststapler zu fahren: nein, keine Schulung dafür.", // nieuw, nalezen // nagelezen AI 28 nov
     // four new lessons (27 November 2026).
-    'd.appraisal.a.why': "Nach dem Ziel gefragt: eine klare Sache, die du lernen willst.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'd.appraisal.a.why': "Nach deinem Ziel gefragt: eine klare Sache, die du lernen willst.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.forms.a.why': "Nach dem Formular gefragt: fast fertig, und wo man unterschreibt.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.voicemail.a.why': "Um Name und Nummer gebeten: der Name, und die Bitte um Rückruf.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.dentist.a.why': "Nach dem letzten Besuch gefragt: wann, und die Bitte um eine Kontrolle.", // nieuw, nalezen // nagelezen AI 28 nov

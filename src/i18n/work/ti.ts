@@ -2255,7 +2255,7 @@ const t: CultureTranslation = {
     'w.leegmaken': "ባዶ ምግባር", // nieuw, nalezen // nagelezen AI 28 nov
     'w.schoonmaken': "ምጽራይ", // nieuw, nalezen // nagelezen AI 28 nov
     'w.vol': "ምሉእ", // nieuw, nalezen // nagelezen AI 28 nov
-    's.fillempty.1': { m: "ኣይትድፍእ፡ ስሓብ።", f: "ኣይትድፍኢ፡ ስሓቢ።", x: "ኣይትድፍኡ፡ ስሓቡ።" }, // nieuw, nalezen (AI-correctie 28 nov 2026)
+    's.fillempty.1': { m: "ኣይትድፋእ፡ ስሓብ።", f: "ኣይትድፍኢ፡ ስሓቢ።", x: "ኣይትድፍኡ፡ ስሓቡ።" }, // nieuw, nalezen // nagelezen AI 28 nov
     's.fillempty.2': { m: "እዚ ምሉእ እዩ። ባዶ ግበሮ።", f: "እዚ ምሉእ እዩ። ባዶ ግበርዮ።", x: "እዚ ምሉእ እዩ። ባዶ ግበርዎ።" }, // nieuw, nalezen // nagelezen AI 28 nov
     's.fillempty.3': { m: "ነዚ ሓንሳብ ኣጽርዮ።", f: "ነዚ ሓንሳብ ኣጽርይዮ።", x: "ነዚ ሓንሳብ ኣጽርይዎ።" }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.fillempty.q': "ድሮ መሊኡ ድዩ?", // nieuw, nalezen // nagelezen AI 28 nov

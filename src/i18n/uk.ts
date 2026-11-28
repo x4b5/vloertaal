@@ -579,7 +579,7 @@ const lang: HelpLanguageSource = {
     'w.nieuw': 'новий',
     's.people.1': 'Мене звати Сара.',
     's.people.2': 'Хто тут начальник?',
-    's.people.3': { m: 'Я новий колега.', f: 'Я нова колега.', x: 'Я тепер працюю разом з вами.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
+    's.people.3': { m: 'Я новий колега.', f: 'Я нова колега.', x: 'Я нова людина в колективі.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
 
     // Unit: Asking for help
     'u.help': 'Як попросити про допомогу',
