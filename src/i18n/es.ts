@@ -9,9 +9,9 @@ const lang: HelpLanguageSource = {
   ui: {
     theme: 'Apariencia',
     themeAuto: 'Automático',
-    themeSand: 'Arena', // nieuw, nalezen
-    themeHarbour: 'Puerto', // nieuw, nalezen
-    themeWorkwear: 'Chaqueta de trabajo', // nieuw, nalezen
+    themeSand: 'Arena', // nieuw, nalezen // nagelezen AI 28 nov
+    themeHarbour: 'Puerto', // nieuw, nalezen // nagelezen AI 28 nov
+    themeWorkwear: 'Chaqueta de trabajo', // nieuw, nalezen // nagelezen AI 28 nov
     themeDark: 'Oscuro',
     voice: 'Voz en neerlandés',
     voiceAuto: 'Automática',
@@ -20,7 +20,7 @@ const lang: HelpLanguageSource = {
     appTagline: 'Neerlandés para el trabajo',
     chooseLanguage: 'Elige tu idioma de ayuda',
     englishOnly: 'Solo inglés',
-    beta: 'Traducción aún sin revisar', // nieuw, nalezen
+    beta: 'Traducción aún sin revisar', // nieuw, nalezen // nagelezen AI 28 nov
     dayStreak: { one: 'día seguido', many: 'días seguidos', other: 'días seguidos' },
     streakStarted: '¡Empezaste una racha de días! Vuelve mañana.',
     streakGrew: { one: '¡{n} día seguido! Sigue así.', many: '¡{n} días seguidos! Sigue así.', other: '¡{n} días seguidos! Sigue así.' },
@@ -29,14 +29,14 @@ const lang: HelpLanguageSource = {
     locked: 'Primero termina la lección anterior',
     newWord: 'Palabra nueva',
     tapToHear: 'Toca para escuchar',
-    sayItAloud: 'Dilo en voz alta.', // nieuw, nalezen
-    sayItQuietly: 'Dilo bajito o en tu cabeza.', // nieuw, nalezen
+    sayItAloud: 'Dilo en voz alta.', // nieuw, nalezen // nagelezen AI 28 nov
+    sayItQuietly: 'Dilo bajito o en tu cabeza.', // nieuw, nalezen // nagelezen AI 28 nov
     whatDoesThisMean: '¿Qué significa esto?',
-    snapQuestion: '¿Lo entiendes?', // nieuw, nalezen
-    snapYes: 'Sí, vale.', // nieuw, nalezen
-    snapGoodAsk: '¡Bien que lo preguntes!', // nieuw, nalezen
-    snapRight: '¡Bien entendido!', // nieuw, nalezen
-    snapAskBetter: '¿Ves? Era mejor preguntar.', // nieuw, nalezen
+    snapQuestion: '¿Lo entiendes?', // nieuw, nalezen // nagelezen AI 28 nov
+    snapYes: 'Sí, vale.', // nieuw, nalezen // nagelezen AI 28 nov
+    snapGoodAsk: '¡Haces bien en preguntar!', // nieuw, nalezen (AI-correctie 28 nov 2026)
+    snapRight: '¡Bien entendido!', // nieuw, nalezen // nagelezen AI 28 nov
+    snapAskBetter: '¿Ves? Era mejor preguntar.', // nieuw, nalezen // nagelezen AI 28 nov
     whichOneIs: '¿Cuál es “{word}”?',
     mixLesson: 'Repaso mixto',
     whatDoYouHear: '¿Qué oyes?',
@@ -48,25 +48,25 @@ const lang: HelpLanguageSource = {
     almost: 'Correcto, pero cuidado con la ortografía',
     incorrect: 'No del todo',
     correctAnswer: 'Respuesta correcta',
-    rightAnswerIs: 'La respuesta correcta es:', // nieuw, nalezen
-    bestAnswerIs: 'La mejor respuesta es:', // nieuw, nalezen
+    rightAnswerIs: 'La respuesta correcta es:', // nieuw, nalezen // nagelezen AI 28 nov
+    bestAnswerIs: 'La mejor respuesta es:', // nieuw, nalezen // nagelezen AI 28 nov
     yourAnswer: 'Tu respuesta',
     inARow: '{n} seguidas',
     cantListen: 'Ahora no puedo escuchar',
     learnWriting: 'También quiero aprender a escribir',
     learnWritingHint: 'Activado: escribe con letras las palabras que oyes. Desactivado: elige la palabra escrita que oyes.',
     tagRepeat: 'Otra vez',
-    readAloud: 'Leer en voz alta', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    readAloud: 'Leer en voz alta', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     lessonComplete: '¡Lección terminada!',
     phrasebook: 'Frases de emergencia',
     phrasebookHint: 'Toca una frase para escucharla. También puedes mostrar la pantalla a un compañero.',
     whoToCall: '¿Problemas en el trabajo? Quién puede ayudar',
-    who112: 'Emergencia: peligro de muerte, incendio o un delito que está pasando ahora.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    who112: 'Emergencia: peligro de muerte, incendio o un delito que está pasando ahora.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     whoLegal: 'Consejo gratis sobre tu contrato, tu sueldo o un despido.',
     whoInspection: 'Denuncia trabajo peligroso, un sueldo demasiado bajo o explotación. Puedes hacerlo de forma anónima.',
     whoFairwork: 'Te explotan en el trabajo, o crees que te explotan.',
-    who113: 'Piensas en quitarte la vida o te preocupa alguien. Gratis, de día y de noche.', // nieuw, nalezen
-    whoVeiligThuis: 'Violencia o abuso en casa, contra ti o contra otra persona. Gratis, también sin dar tu nombre.', // nieuw, nalezen
+    who113: 'Piensas en quitarte la vida o te preocupa alguien. Gratis, de día y de noche.', // nieuw, nalezen // nagelezen AI 28 nov
+    whoVeiligThuis: 'Violencia o abuso en casa, contra ti o contra otra persona. Gratis, también sin dar tu nombre.', // nieuw, nalezen // nagelezen AI 28 nov
     settings: 'Ajustes',
     helpLanguage: 'Idioma de ayuda',
     resetProgress: 'Borrar mi progreso',
@@ -96,9 +96,9 @@ const lang: HelpLanguageSource = {
     chooseSector: '¿Dónde trabajas?',
     // nagelezen (2e lezing) (land: Nederland of België)
     countryTitle: '¿En qué país trabajas?',
-    countryHint: 'Así recibes las palabras y los consejos de ese país.', // nieuw, nalezen (taal: woorden en tips, 9 nov 2026)
-    onePhoneTitle: 'Lo que aprendes solo está en este teléfono.', // nieuw, nalezen (één telefoon, 20 nov 2026)
-    onePhoneText: 'Usa siempre este teléfono.', // nieuw, nalezen (één telefoon, 20 nov 2026)
+    countryHint: 'Así recibes las palabras y los consejos de ese país.', // nieuw, nalezen (taal: woorden en tips, 9 nov 2026) // nagelezen AI 28 nov
+    onePhoneTitle: 'Lo que aprendes solo está en este teléfono.', // nieuw, nalezen (één telefoon, 20 nov 2026) // nagelezen AI 28 nov
+    onePhoneText: 'Usa siempre este teléfono.', // nieuw, nalezen (één telefoon, 20 nov 2026) // nagelezen AI 28 nov
     countryNl: 'Países Bajos',
     countryBe: 'Bélgica (Flandes)',
     tipsNote: 'Estos consejos son sobre el trabajo en los Países Bajos. Información general, no asesoramiento legal.',
@@ -112,17 +112,17 @@ const lang: HelpLanguageSource = {
     sectorProduction: 'Producción',
     sectorCare: 'Cuidados',
     sectorHospitality: 'Hostelería',
-    sectorRetail: 'Tienda y supermercado', // nieuw, nalezen
+    sectorRetail: 'Tienda y supermercado', // nieuw, nalezen // nagelezen AI 28 nov
     sectorCleaning: 'Limpieza',
     sectorHorticulture: 'Horticultura', // nieuw (30 okt 2026), nagelezen (2e lezing)
-    sectorTechnical: 'Técnica', // nieuw (30 okt 2026), nalezen
-    sectorGarage: 'Taller mecánico', // nieuw (30 okt 2026), nalezen
+    sectorTechnical: 'Técnica', // nieuw (30 okt 2026), nalezen // nagelezen AI 28 nov
+    sectorGarage: 'Taller mecánico', // nieuw (30 okt 2026), nalezen // nagelezen AI 28 nov
     sound: 'Sonido',
     soundOn: 'Con sonido',
     withoutSound: 'Sin sonido',
     quietHint: 'Sin sonido, las lecciones no tienen preguntas de escuchar y nada suena solo. Toca 🔊 para oír una palabra, por ejemplo con auriculares.',
     soundOffToast: 'Sin sonido. Puedes activar el sonido en Ajustes.',
-    noInternetSound: 'Sin internet: el sonido no funciona ahora.', // nieuw, nalezen
+    noInternetSound: 'Sin internet: el sonido no funciona ahora.', // nieuw, nalezen // nagelezen AI 28 nov
     stillToDo: 'Pendiente para hoy',
     streakStopped: { one: 'Tu racha terminó en {n} día. Empieza otra vez hoy.', many: 'Tu racha terminó en {n} días. Empieza otra vez hoy.', other: 'Tu racha terminó en {n} días. Empieza otra vez hoy.' },
     recordN: { one: 'Tu récord: {n} día', many: 'Tu récord: {n} días', other: 'Tu récord: {n} días' },
@@ -137,8 +137,8 @@ const lang: HelpLanguageSource = {
     tomorrowN: { one: 'Mañana: {n} palabra', many: 'Mañana: {n} palabras', other: 'Mañana: {n} palabras' },
     firstWordsTomorrow: 'Mañana vuelven tus primeras palabras',
     extraRound: 'Ronda extra',
-    reviewFirstHint: 'Primero repasa. Así recuerdas más.', // nieuw, nalezen
-    wordsStrongerN: { one: '{n} palabra mejor aprendida', many: '{n} palabras mejor aprendidas', other: '{n} palabras mejor aprendidas' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    reviewFirstHint: 'Primero repasa. Así recuerdas más.', // nieuw, nalezen // nagelezen AI 28 nov
+    wordsStrongerN: { one: '{n} palabra mejor aprendida', many: '{n} palabras mejor aprendidas', other: '{n} palabras mejor aprendidas' }, // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     noMistakes: 'Sin errores',
     nextUp: 'Siguiente',
     installTitle: 'Pon Vloertaal en tu pantalla de inicio',
@@ -166,7 +166,7 @@ const lang: HelpLanguageSource = {
     remindOwn: 'Otra hora',
     remindAdd: 'Añadir a mi calendario',
     remindAdded: 'Abre el archivo para añadirlo a tu calendario.',
-    remindAddedAsk: '¿Añadido? Entonces lo verás en tu calendario.', // nieuw, nalezen
+    remindAddedAsk: '¿Añadido? Entonces lo verás en tu calendario.', // nieuw, nalezen // nagelezen AI 28 nov
     navAbout: 'Sobre la app',
     tagMeaning: 'Significado',
     tagPick: 'Elige',
@@ -174,7 +174,7 @@ const lang: HelpLanguageSource = {
     tagType: 'Escribe',
     tagMatch: 'Parejas',
     tagBuild: 'Frase',
-    tagChat: 'Conversación', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    tagChat: 'Conversación', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     tagSituation: 'Situación',
     tagTip: 'Consejo',
     more: 'Más',
@@ -182,7 +182,7 @@ const lang: HelpLanguageSource = {
     daysUnit: { one: 'día', many: 'días', other: 'días' },
     wordsUnit: { one: 'palabra', many: 'palabras', other: 'palabras' },
     countTitle: 'Contar de forma anónima',
-    countHint: 'La app cuenta cuántas veces se hacen las lecciones y, más o menos, cuánto tiempo duran. Y si la app tiene algún error. Sin nombre, sin cuenta, sin seguimiento.', // fout-zin nieuw, nalezen
+    countHint: 'La app cuenta cuántas veces se hacen las lecciones y, más o menos, cuánto tiempo duran. Y si la app tiene algún error. Sin nombre, sin cuenta, sin seguimiento.', // fout-zin nieuw, nalezen // nagelezen AI 28 nov
     certificate: 'Certificado',
     myCertificates: 'Mis certificados',
     certsEmpty: 'Termina todas las lecciones de una unidad. Entonces recibes un certificado.',
@@ -206,32 +206,32 @@ const lang: HelpLanguageSource = {
     wordsUnitOne: 'palabra',
     wordsLearnedOne: '{n} palabra aprendida',
     tomorrowOne: 'Mañana: {n} palabra',
-    wordsStrongerOne: '{n} palabra mejor aprendida', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    wordsStrongerOne: '{n} palabra mejor aprendida', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     recordOne: 'Tu récord: {n} día',
     streakStoppedOne: 'Tu racha terminó en {n} día. Empieza otra vez hoy.',
     letterTiles: 'Letras',
     useKeyboard: 'Teclado',
     skippedN: { one: '{n} saltada, no cuenta', many: '{n} saltadas, no cuentan', other: '{n} saltadas, no cuentan' },
-    stampLater: 'Volverá más tarde', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    stampLater: 'Volverá más tarde', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     stampDone: 'Hecho',
     chooseNext: 'Elige tu próximo tema',
     recommended: 'Recomendado',
     allTopics: 'Todos los temas',
     topicsOrder: 'Mostrar los temas',
-    privacyLink: 'Leer la declaración de privacidad (en neerlandés)', // nieuw, nalezen
-    routeTitle: '¿Qué quieres aprender?', // nieuw, nalezen
-    routeLearn: 'Aprender neerlandés para el trabajo, y cómo funciona el trabajo aquí', // nieuw, nalezen
-    routeRules: 'Ya hablo neerlandés: solo las reglas del trabajo', // nieuw, nalezen
-    routeLearnShort: 'Aprender neerlandés', // nieuw, nalezen
-    switchTitle: '¿Cambiar a Werkregels?', // nieuw, nalezen
-    switchDutch: 'Todo estará en neerlandés. Tu idioma de ayuda se apaga.', // nieuw, nalezen
-    switchReview: 'Hasta que vuelvas, repasas reglas, no palabras.', // nieuw, nalezen
-    switchKept: 'Tu progreso se queda guardado. Puedes volver desde aquí.', // nieuw, nalezen
-    switchGo: 'Sí, ir a Werkregels', // nieuw, nalezen
+    privacyLink: 'Leer la declaración de privacidad (en neerlandés)', // nieuw, nalezen // nagelezen AI 28 nov
+    routeTitle: '¿Qué quieres aprender?', // nieuw, nalezen // nagelezen AI 28 nov
+    routeLearn: 'Aprender neerlandés para el trabajo, y cómo funciona el trabajo aquí', // nieuw, nalezen // nagelezen AI 28 nov
+    routeRules: 'Ya hablo neerlandés: solo las reglas del trabajo', // nieuw, nalezen // nagelezen AI 28 nov
+    routeLearnShort: 'Aprender neerlandés', // nieuw, nalezen // nagelezen AI 28 nov
+    switchTitle: '¿Cambiar a Werkregels?', // nieuw, nalezen // nagelezen AI 28 nov
+    switchDutch: 'Todo estará en neerlandés. Tu idioma de ayuda se desactiva.', // nieuw, nalezen (AI-correctie 28 nov 2026)
+    switchReview: 'Hasta que vuelvas, repasas reglas, no palabras.', // nieuw, nalezen // nagelezen AI 28 nov
+    switchKept: 'Tu progreso se queda guardado. Puedes volver desde aquí.', // nieuw, nalezen // nagelezen AI 28 nov
+    switchGo: 'Sí, ir a Werkregels', // nieuw, nalezen // nagelezen AI 28 nov
     byTheme: 'Por tema',
     inOrder: 'En orden',
-    searchTopics: 'Buscar un tema', // nieuw, nalezen
-    searchNone: 'No hay ningún tema con esta palabra.', // nieuw, nalezen
+    searchTopics: 'Buscar un tema', // nieuw, nalezen // nagelezen AI 28 nov
+    searchNone: 'No hay ningún tema con esta palabra.', // nieuw, nalezen // nagelezen AI 28 nov
     lessonsUnit: { one: 'lección', many: 'lecciones', other: 'lecciones' },
     lessonsUnitOne: 'lección',
     topicsUnit: { one: 'tema', many: 'temas', other: 'temas' },
@@ -242,32 +242,32 @@ const lang: HelpLanguageSource = {
     speakPrompt: 'Escucha y luego dilo',
     tapToSpeak: 'Toca y habla',
     stopRecording: 'Parar',
-    micPrivacy: "Nadie más te oye. No se envía nada.", // nieuw, nalezen
+    micPrivacy: "Nadie más te oye. No se envía nada.", // nieuw, nalezen // nagelezen AI 28 nov
     micUnavailable: 'Micrófono apagado. Dilo ahora en voz alta y luego sigue.',
     cantSpeak: 'Ahora no puedo hablar',
     soundsSame: 'Suena igual',
     sayAgain: 'Dilo otra vez',
-    hearMine: 'Escúchate', // nieuw, nalezen
-    thenNow: 'Antes y ahora', // nieuw, nalezen
-    thenNowFirst: 'Tu primer intento: {date}', // nieuw, nalezen
-    sayTogether: "Dilo a la vez", // nieuw, nalezen
-    chorusHint: "Dilo al mismo tiempo que la voz. No se graba nada.", // nieuw, nalezen
-    chorusAlone: "Ahora solo tú", // nieuw, nalezen
-    speakBrave: "Los errores son parte de aprender. ¿No te entienden? Dilo otra vez.", // nieuw, nalezen
-    speakBrave2: "¿Nervioso? Es normal. Dilo de todos modos.", // nieuw, nalezen
-    speakBrave3: "No tienes que decirlo perfecto. Solo inténtalo.", // nieuw, nalezen
-    reasonTitle: "¿Por qué aprendes neerlandés?", // nieuw, nalezen
-    reasonHint: "Elige uno o dos.", // nieuw, nalezen
-    reasonDone: "Listo", // nieuw, nalezen
-    reasonWork: "Hacer bien mi trabajo", // nieuw, nalezen
-    reasonKids: "Mis hijos", // nieuw, nalezen
-    reasonColleagues: "Hablar con mis compañeros", // nieuw, nalezen
-    reasonArrange: "Arreglar las cosas yo mismo", // nieuw, nalezen
-    reasonJob: "Un trabajo mejor", // nieuw, nalezen
-    reasonHome: "Sentirme en casa en los Países Bajos", // nieuw, nalezen
+    hearMine: 'Escúchate', // nieuw, nalezen // nagelezen AI 28 nov
+    thenNow: 'Antes y ahora', // nieuw, nalezen // nagelezen AI 28 nov
+    thenNowFirst: 'Tu primer intento: {date}', // nieuw, nalezen // nagelezen AI 28 nov
+    sayTogether: "Dilo a la vez", // nieuw, nalezen // nagelezen AI 28 nov
+    chorusHint: "Dilo al mismo tiempo que la voz. No se graba nada.", // nieuw, nalezen // nagelezen AI 28 nov
+    chorusAlone: "Ahora solo tú", // nieuw, nalezen // nagelezen AI 28 nov
+    speakBrave: "Los errores son parte de aprender. ¿No te entienden? Dilo otra vez.", // nieuw, nalezen // nagelezen AI 28 nov
+    speakBrave2: "¿Te dan nervios? Es normal. Dilo de todos modos.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    speakBrave3: "No tienes que decirlo perfecto. Solo inténtalo.", // nieuw, nalezen // nagelezen AI 28 nov
+    reasonTitle: "¿Por qué aprendes neerlandés?", // nieuw, nalezen // nagelezen AI 28 nov
+    reasonHint: "Elige uno o dos.", // nieuw, nalezen // nagelezen AI 28 nov
+    reasonDone: "Listo", // nieuw, nalezen // nagelezen AI 28 nov
+    reasonWork: "Hacer bien mi trabajo", // nieuw, nalezen // nagelezen AI 28 nov
+    reasonKids: "Mis hijos", // nieuw, nalezen // nagelezen AI 28 nov
+    reasonColleagues: "Hablar con mis compañeros", // nieuw, nalezen // nagelezen AI 28 nov
+    reasonArrange: "Arreglar las cosas por mi cuenta", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    reasonJob: "Un trabajo mejor", // nieuw, nalezen // nagelezen AI 28 nov
+    reasonHome: "Sentirme en casa en los Países Bajos", // nieuw, nalezen // nagelezen AI 28 nov
     speakMe: 'Yo',
     speakingPractice: 'Práctica de hablar',
-    speakingHint: "Di palabras en voz alta y compara. Nadie más te oye: no se envía nada. Tu primera grabación de una frase se queda en tu teléfono, para comparar más tarde.", // nieuw, nalezen
+    speakingHint: "Di palabras en voz alta y compara. Nadie más te oye: no se envía nada. Tu primera grabación de una frase se queda en tu teléfono, para comparar más tarde.", // nieuw, nalezen // nagelezen AI 28 nov
     savingOffline: 'Guardando…',
     savedOffline: 'Guardado sin conexión',
     offlineNoSpace: 'No hay espacio suficiente en este teléfono. Quita un tema guardado o libera espacio.',
@@ -292,15 +292,15 @@ const lang: HelpLanguageSource = {
     settingOn: 'Activado',
     settingOff: 'Desactivado',
     sectorGroupMake: 'Producir y mover',
-    sectorGroupCare: "Cuidados y niños", // nieuw, nalezen
-    sectorGroupShop: 'Comercio y hostelería', // nieuw, nalezen
-    sectorGroupBuild: 'Construcción y técnica', // nieuw (30 okt 2026), nalezen
+    sectorGroupCare: "Cuidados y niños", // nieuw, nalezen // nagelezen AI 28 nov
+    sectorGroupShop: 'Comercio y hostelería', // nieuw, nalezen // nagelezen AI 28 nov
+    sectorGroupBuild: 'Construcción y técnica', // nieuw (30 okt 2026), nalezen // nagelezen AI 28 nov
     voiceWoman: 'Voz de mujer',
     voiceMan: 'Voz de hombre',
     writingPick: 'Elige la palabra',
     settingWriting: 'Escribir',
     settingKeepLessons: 'Guardar las lecciones en este teléfono',
-    settingKeepLessonsHint: 'El tema que aprendes ahora se guarda en este teléfono, así también funciona sin internet. Cuando terminas un tema, se borra del teléfono.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    settingKeepLessonsHint: 'El tema que aprendes ahora se guarda en este teléfono, así también funciona sin internet. Cuando terminas un tema, se borra del teléfono.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     otherTopicLink: 'Otro tema',
     remindAsk: '¿Te lo recordamos cada día?',
     remindYes: 'Sí, después del trabajo',
@@ -327,7 +327,7 @@ const lang: HelpLanguageSource = {
     bramRested: 'Ayer fue tu día libre. Tu racha sigue.',
     bramDueN: { one: 'Hoy toca repetir {n} palabra.', many: 'Hoy toca repetir {n} palabras.', other: 'Hoy toca repetir {n} palabras.' },
     bramDueOne: 'Hoy toca repetir {n} palabra.',
-    bramDayN: 'Día {n} de tu racha.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    bramDayN: 'Día {n} de tu racha.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     bramDone: 'Listo por hoy. Hasta mañana.',
     bramPerfect: 'Muy bien. Conoces estas palabras.',
     bramGood: 'Buen trabajo. Paso a paso.',
@@ -336,7 +336,7 @@ const lang: HelpLanguageSource = {
     bramIntro: 'Soy Bram, tu compañero.',
     bramIntroHello: 'Hola, soy Bram.',
     showDutch: 'Ver en neerlandés',
-    showAnswers: 'Mostrar las respuestas', // nieuw, nalezen
+    showAnswers: 'Mostrar las respuestas', // nieuw, nalezen // nagelezen AI 28 nov
     lastUpdated: 'Última actualización: {date}',
     /* G4 b3 */
     buildListen: 'Escucha y forma la frase',
@@ -359,194 +359,194 @@ const lang: HelpLanguageSource = {
     remindStop: 'Quitar el recordatorio',
     remindStopped: 'Abre el archivo para quitar el recordatorio de tu calendario.',
     remindStoppedAndroid: 'Borra tú el recordatorio en Google Calendar.',
-    resetKeeps: 'Se borran tus lecciones, palabras, racha y certificados. Tu idioma y tus ajustes se quedan.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    resetKeeps: 'Se borran tus lecciones, palabras, racha y certificados. Tu idioma y tus ajustes se quedan.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     /* The start screen when a file of the app did not load (src/components/Splash.tsx). */
     loadFailed: 'No se ha cargado. ¿Tienes internet?',
     retry: 'Intentar de nuevo',
     /* The start screen when the app cannot start (src/components/Splash.tsx BootFailed). */
-    bootFailed: 'Vloertaal no puede arrancar.', // nieuw, nalezen
-    bootFailedHint: 'Primero guarda tu progreso. Después empieza de nuevo.', // nieuw, nalezen
-    startOver: 'Empezar de nuevo', // nieuw, nalezen
-    crashed: 'Algo ha salido mal. Tu progreso está guardado.', // nieuw, nalezen
+    bootFailed: 'Vloertaal no puede arrancar.', // nieuw, nalezen // nagelezen AI 28 nov
+    bootFailedHint: 'Primero guarda tu progreso. Después empieza de nuevo.', // nieuw, nalezen // nagelezen AI 28 nov
+    startOver: 'Empezar de nuevo', // nieuw, nalezen // nagelezen AI 28 nov
+    crashed: 'Algo ha salido mal. Tu progreso está guardado.', // nieuw, nalezen // nagelezen AI 28 nov
     /* "Wat ken je al?" (src/components/Toets.tsx) */
-    toetsTitle: '¿Qué sabes ya?', // nieuw, nalezen
-    toetsOffer: 'Unos 10 minutos. No hay notas. Es solo para ti.', // nieuw, nalezen
-    toetsEndOffer: 'Has aprendido mucho. Haz la prueba otra vez y mira lo que sabes ahora.', // nieuw, nalezen
-    toetsPartListen: 'Escuchar', // nieuw, nalezen
-    toetsPartWords: 'Palabras', // nieuw, nalezen
-    toetsPartSentences: 'Frases', // nieuw, nalezen
-    toetsListenAsk: 'Escucha. ¿Qué significa?', // nieuw, nalezen
-    toetsNotSure: '¿No lo sabes? Toca «No lo sé». No pasa nada.', // nieuw, nalezen
-    toetsMicKeep: 'Tu grabación se queda solo en este teléfono. Después podrás escucharte otra vez.', // nieuw, nalezen
-    toetsStartDone: '¡Buen comienzo! Esto ya lo sabes.', // nieuw, nalezen
-    toetsEndDone: '¡Muy bien! Mira lo que sabes ahora.', // nieuw, nalezen
-    toetsYouThen: 'Tú antes', // nieuw, nalezen
-    toetsYouNow: 'Tú ahora', // nieuw, nalezen
-    toetsKeepGoing: 'Practica un poco cada día. Así aprendes cada vez más.', // nieuw, nalezen
-    toetsStart: 'Hacer la prueba', // nieuw, nalezen
-    toetsIdk: 'No lo sé', // nieuw, nalezen
-    toetsMore: 'Más que antes', // nieuw, nalezen
-    toetsSame: 'Más o menos igual', // nieuw, nalezen
-    toetsMoreAll: 'En total: ahora sabes más que antes.', // nieuw, nalezen
-    toetsSameAll: 'En total: más o menos igual que antes.', // nieuw, nalezen
+    toetsTitle: '¿Qué sabes ya?', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsOffer: 'Unos 10 minutos. No hay notas. Es solo para ti.', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsEndOffer: 'Has aprendido mucho. Haz la prueba otra vez y mira lo que sabes ahora.', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsPartListen: 'Escuchar', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsPartWords: 'Palabras', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsPartSentences: 'Frases', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsListenAsk: 'Escucha. ¿Qué significa?', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsNotSure: '¿No lo sabes? Toca «No lo sé». No pasa nada.', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsMicKeep: 'Tu grabación se queda solo en este teléfono. Después podrás escucharte otra vez.', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsStartDone: '¡Buen comienzo! Esto ya lo sabes.', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsEndDone: '¡Muy bien! Mira lo que sabes ahora.', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsYouThen: 'Tú antes', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsYouNow: 'Tú ahora', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsKeepGoing: 'Practica un poco cada día. Así aprendes cada vez más.', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsStart: 'Hacer la prueba', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsIdk: 'No lo sé', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsMore: 'Más que antes', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsSame: 'Más o menos igual', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsMoreAll: 'En total: ahora sabes más que antes.', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsSameAll: 'En total: más o menos igual que antes.', // nieuw, nalezen // nagelezen AI 28 nov
     /* "Durf je dit?" (src/components/Toets.tsx DurfQuestion) */
-    toetsDurfIntro: 'Primero, 5 preguntas sobre ti. No hay respuestas buenas ni malas.', // nieuw, nalezen
-    toetsDurfAsk: '¿Te atreves a hacerlo?', // nieuw, nalezen
-    toetsDurfUnderstand: 'Decir que no entiendes algo', // nieuw, nalezen
-    toetsDurfBoss: 'Preguntar algo a tu responsable', // nieuw, nalezen
-    toetsDurfHelp: 'Pedir ayuda', // nieuw, nalezen
-    toetsDurfUnsafe: 'Decir que algo no es seguro', // nieuw, nalezen
-    toetsDurfBreak: 'Charlar un rato con alguien del trabajo en el descanso', // nieuw, nalezen
-    toetsDurfNotYet: 'Todavía no', // nieuw, nalezen
-    toetsDurfABit: 'Un poco', // nieuw, nalezen
-    toetsDurfYes: 'Sí', // nieuw, nalezen
-    toetsDurfAgain: 'Dentro de unas semanas te lo preguntamos otra vez.', // nieuw, nalezen
-    tempo: 'Velocidad', // nieuw, nalezen
-    tempoCalm: 'Despacio', // nieuw, nalezen
-    tempoNormal: 'Normal', // nieuw, nalezen
-    tempoHint: 'Despacio es lento y claro. Normal es como hablan los compañeros. Elige «Normal» si ya entiendes mucho.', // nieuw, nalezen
+    toetsDurfIntro: 'Primero, 5 preguntas sobre ti. No hay respuestas buenas ni malas.', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsDurfAsk: '¿Te atreves a hacerlo?', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsDurfUnderstand: 'Decir que no entiendes algo', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsDurfBoss: 'Preguntar algo a tu encargado', // nieuw, nalezen (AI-correctie 28 nov 2026)
+    toetsDurfHelp: 'Pedir ayuda', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsDurfUnsafe: 'Decir que algo no es seguro', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsDurfBreak: 'Charlar un rato con alguien del trabajo en el descanso', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsDurfNotYet: 'Todavía no', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsDurfABit: 'Un poco', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsDurfYes: 'Sí', // nieuw, nalezen // nagelezen AI 28 nov
+    toetsDurfAgain: 'Dentro de unas semanas te lo preguntamos otra vez.', // nieuw, nalezen // nagelezen AI 28 nov
+    tempo: 'Velocidad', // nieuw, nalezen // nagelezen AI 28 nov
+    tempoCalm: 'Despacio', // nieuw, nalezen // nagelezen AI 28 nov
+    tempoNormal: 'Normal', // nieuw, nalezen // nagelezen AI 28 nov
+    tempoHint: 'Despacio es lento y claro. Normal es como hablan los compañeros. Elige «Normal» si ya entiendes mucho.', // nieuw, nalezen // nagelezen AI 28 nov
     /* "Laat zien hoe het gaat" (src/lib/kaart.ts) */
-    coachCard: 'Muestra cómo te va', // nieuw, nalezen
-    coachCardIntro: 'Esta tarjeta muestra tu progreso. Enséñasela a tu profesor, orientador o jefe. Tú decides.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    coachCardNo: 'También puedes decir que no.', // nieuw, nalezen
-    coachCardKeep: 'Tu teléfono hace la tarjeta. No se envía nada. Vloertaal no guarda nada.', // nieuw, nalezen
-    coachCardWhat: 'En la tarjeta, en neerlandés:', // nieuw, nalezen
-    coachTopics: 'Temas terminados', // nieuw, nalezen
-    coachDays: 'Días de práctica en las últimas 4 semanas', // nieuw, nalezen
-    coachLast: 'Última lección, con la fecha', // nieuw, nalezen
-    coachCode: 'Código: los mismos números, en versión corta, para un resumen del grupo. Sin nombre.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    coachCard: 'Muestra cómo te va', // nieuw, nalezen // nagelezen AI 28 nov
+    coachCardIntro: 'Esta tarjeta muestra tu progreso. Enséñasela a tu profesor, orientador o jefe. Tú decides.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    coachCardNo: 'También puedes decir que no.', // nieuw, nalezen // nagelezen AI 28 nov
+    coachCardKeep: 'Tu teléfono hace la tarjeta. No se envía nada. Vloertaal no guarda nada.', // nieuw, nalezen // nagelezen AI 28 nov
+    coachCardWhat: 'En la tarjeta, en neerlandés:', // nieuw, nalezen // nagelezen AI 28 nov
+    coachTopics: 'Temas terminados', // nieuw, nalezen // nagelezen AI 28 nov
+    coachDays: 'Días de práctica en las últimas 4 semanas', // nieuw, nalezen // nagelezen AI 28 nov
+    coachLast: 'Última lección, con la fecha', // nieuw, nalezen // nagelezen AI 28 nov
+    coachCode: 'Código: los mismos números, en versión corta, para un resumen del grupo. Sin nombre.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     // "Laat de telefoon luisteren (proef)": on-device recognition (src/lib/listen.ts).
     listenTrial: 'Que el teléfono escuche (experimental)', // nieuw, nalezen // nagelezen AI 31 okt
-    listenHint: 'Después de hablar, el teléfono dice si te ha entendido. Esto pasa en el mismo teléfono. No se envía nada, ni a nosotros ni a nadie más.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    listenNeedsPack: 'Primero el teléfono necesita el neerlandés. Es una descarga grande: usa wifi.', // nieuw, nalezen
-    listenDownload: 'Descargar neerlandés', // nieuw, nalezen
-    listenNotNow: 'Ahora no', // nieuw, nalezen
-    listenDownloading: 'El neerlandés se está descargando. Prueba más tarde.', // nieuw, nalezen
-    listenFailed: 'No ha funcionado. Prueba más tarde, con wifi.', // nieuw, nalezen
-    listenPrivacy: 'Solo escucha el teléfono. No se envía nada.', // nieuw, nalezen
-    heardWait: 'El teléfono escucha…', // nieuw, nalezen
-    heardOk: 'Entendido', // nieuw, nalezen
-    heardAlmost: 'Casi: di {word} otra vez', // nieuw, nalezen
-    heardNotYet: 'Todavía no se entiende', // nieuw, nalezen
-    goOnAnyway: 'Seguir igualmente', // nieuw, nalezen
-    fasterAsk: '¿Quieres ir más rápido?', // nieuw, nalezen
-    fasterHint: 'Menos explicación en las lecciones nuevas. El neerlandés a velocidad normal.', // nieuw, nalezen
-    fasterYes: 'Sí', // nieuw, nalezen
-    fasterNo: 'No', // nieuw, nalezen
-    easierNext: 'La próxima lección es un poco más corta.', // nieuw, nalezen
-    fasterSetting: 'Aprender más rápido', // nieuw, nalezen
-    fasterSettingHint: 'Activado: menos explicación en las lecciones nuevas y el neerlandés a velocidad normal. Desactivado: como antes.', // nieuw, nalezen
-    feelAsk: '¿Qué te parece Vloertaal?', // nieuw, nalezen
-    feelGood: 'Bien', // nieuw, nalezen
-    feelOk: 'Regular', // nieuw, nalezen
-    feelBad: 'Mal', // nieuw, nalezen
-    feelThanks: '¡Gracias! Esto nos ayuda a mejorar Vloertaal.', // nieuw, nalezen
-    tempoFasterHint: 'Aprender más rápido: menos explicación en las lecciones nuevas y el neerlandés a velocidad normal.', // nieuw, nalezen
-    samenTitle: 'Practicar en pareja', // nieuw, nalezen
-    samenRowHint: 'Dos personas, un teléfono', // nieuw, nalezen
-    samenIntro: 'Practica con un compañero, un amigo o un profesor. Cada uno lee una parte, por turnos.', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    samenHow: 'La persona 1 es el compañero. La persona 2 responde.', // nieuw, nalezen
-    samenNoScore: 'No se graba nada. No hay puntuación.', // nieuw, nalezen
-    samenPerson: 'Persona {n}', // nieuw, nalezen
-    samenAnswer: 'Respuesta', // nieuw, nalezen
-    samenHear: 'Escuchar', // nieuw, nalezen
-    samenNext: 'Siguiente', // nieuw, nalezen
-    samenTranslation: 'Traducción', // nieuw, nalezen
-    samenEnd: '¡Muy bien! ¿Cambiar los papeles y hacerlo otra vez?', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    samenSwap: 'Cambiar los papeles', // nieuw, nalezen
-    samenStop: 'Terminar', // nieuw, nalezen
-    checkStart: 'Ya lo sé: prueba corta', // nieuw, nalezen
-    checkPassed: 'Ya conoces esto. ¿Marcar este tema como hecho?', // nieuw, nalezen
-    checkNoCert: 'Entonces todavía no hay certificado. Lo recibes después de las lecciones.', // nieuw, nalezen
-    checkNotYet: 'Las lecciones te ayudan con este tema.', // nieuw, nalezen
-    checkMark: 'Marcar', // nieuw, nalezen
-    checkVia: 'con prueba', // nieuw, nalezen
-    checkUndo: 'Hacer las lecciones igualmente', // nieuw, nalezen
-    commLabel: 'Comunicación', // nieuw, nalezen
-    shareInvite: 'Aprendo neerlandés para mi trabajo con Vloertaal. Gratis: {link}', // nieuw, nalezen
-    briefjeWhat: 'Vloertaal es una app gratis para aprender el neerlandés del trabajo.', // nieuw, nalezen
-    briefjeHow: 'Lecciones cortas en tu propio teléfono, con ayuda en tu idioma. Sin cuenta.', // nieuw, nalezen
-    briefjeOpen: 'Ábrelo en tu teléfono:', // nieuw, nalezen
-    workTry: 'Pruébalo hoy en el trabajo', // nieuw, nalezen
-    workTryWhen: 'Cuando:', // nieuw, nalezen
-    workTryThen: 'Entonces di:', // nieuw, nalezen
-    colleagueCard: 'Para tus compañeros', // nieuw, nalezen
-    colleagueCardHint: 'Enséñaselo a un compañero que habla neerlandés. Dice cómo puede ayudarte a practicar.', // nieuw, nalezen
-    colleagueShare: 'Envíaselo a tu compañero', // nieuw, nalezen
-    forCoach: 'Para tu tutor', // nieuw, nalezen
-    rulesInDutch: 'Cómo funciona el trabajo aquí, en neerlandés sencillo. El teléfono lo lee en voz alta.', // nieuw, nalezen
-    bridgeTextOne: 'Ya sabes mucho neerlandés. En cada tema también puedes leer cómo funciona el trabajo aquí, en neerlandés sencillo.', // nieuw, nalezen
-    noHelpLanguage: 'Ninguno: hablo neerlandés', // nieuw, nalezen
-    kaartSaid: 'Frases dichas en el trabajo', // nieuw, nalezen
-    kaartHard: 'Palabras que todavía cuestan', // nieuw, nalezen
-    kaartRules: 'Lecciones sobre cómo funciona el trabajo aquí', // nieuw, nalezen
-    coachCardRights: 'Mostrar por su nombre los temas sobre tus derechos', // nieuw, nalezen
-    speakFromMemory: 'Ahora de memoria: ¿cómo era en neerlandés?', // nieuw, nalezen
-    keptNofM: 'Palabras de hace 2 semanas o más: todavía sabías {n} de {m}.', // nieuw, nalezen
-    verbSecond: 'El verbo va en el lugar 2.', // nieuw, nalezen
-    playPoints: 'Puntos', // nieuw, nalezen
-    playTotal: 'Todos tus puntos', // nieuw, nalezen
-    sfeer: 'Ambiente', // nieuw, nalezen
-    sfeerCalm: 'Calma', // nieuw, nalezen
-    sfeerGame: 'Juego', // nieuw, nalezen
-    sfeerHint: 'Calma: nada se mueve, sin celebraciones. Juego: puntos, sonidos y mucho movimiento.', // nieuw, nalezen
-    sectorGroupService: "Servicios y seguridad", // nieuw, nalezen
-    sectorGroupOutdoor: "Trabajar al aire libre", // nieuw, nalezen
-    sectorChildcare: "Cuidado infantil", // nieuw, nalezen
-    sectorWaste: "Residuos y reciclaje", // nieuw, nalezen
-    sectorFood: "Industria alimentaria", // nieuw, nalezen
-    sectorSecurity: "Seguridad", // nieuw, nalezen
-    sectorFacility: "Servicios generales", // nieuw, nalezen
-    sectorGreen: "Jardinería y zonas verdes", // nieuw, nalezen
-    playLevel: 'Nivel', // nieuw, nalezen
-    playLevel1: 'Principiante', // nieuw, nalezen
-    playLevel2: 'Aprendiz', // nieuw, nalezen
-    playLevel3: 'Colega', // nieuw, nalezen
-    playLevel4: 'Profesional', // nieuw, nalezen
-    playLevel5: 'Con experiencia', // nieuw, nalezen
-    playLevel6: 'Especialista', // nieuw, nalezen
-    playLevelUp: 'Nuevo nivel:', // nieuw, nalezen
-    playPerfect: 'Sin errores:', // nieuw, nalezen
-    playDayGoal: 'Meta de hoy', // nieuw, nalezen
-    playDayGoalDone: '¡Meta de hoy cumplida!', // nieuw, nalezen
-    playNewTool: 'Nuevo en tu caja de herramientas:', // nieuw, nalezen
-    playToolbox: 'Mi caja de herramientas', // nieuw, nalezen
-    playToolboxEmpty: 'Termina una lección con juego. Así recibes tu primera herramienta.', // nieuw, nalezen
-    infoMore: 'Más explicación', // nieuw, nalezen
-    tipsAbout: 'Sobre estos consejos', // nieuw, nalezen
-    tipsNotChecked: 'Un experto todavía no ha revisado esta explicación.', // nieuw, nalezen
-    lawStale: 'Fecha de esta explicación: {month}. Para ver las reglas más nuevas, consulta el Juridisch Loket o Work in NL.', // nieuw, nalezen
-    lawStaleBe: 'Fecha de esta explicación: {month}. Para ver las reglas más nuevas, consulta el justitiehuis o werk.belgie.be.', // nieuw, nalezen
-    aboutMore: 'Leer más sobre Vloertaal', // nieuw, nalezen
-    geluktAsk: '¿Lo dijiste en el trabajo?', // nieuw, nalezen
-    geluktYes: 'Sí, funcionó', // nieuw, nalezen
-    geluktNotYet: 'Todavía no', // nieuw, nalezen
-    geluktDoneN: { one: '¡Muy bien! Ya te salió {n} frase en el trabajo.', many: '¡Muy bien! Ya te salieron {n} frases en el trabajo.', other: '¡Muy bien! Ya te salieron {n} frases en el trabajo.' }, // nieuw, nalezen
-    geluktDoneOne: '¡Muy bien! Tu primera frase en el trabajo salió bien.', // nieuw, nalezen
-    geluktWhere: 'Las encuentras en Ajustes.', // nieuw, nalezen
-    geluktTitle: 'Logrado en el trabajo', // nieuw, nalezen
-    geluktListHint: 'Dijiste estas frases en el trabajo.', // nieuw, nalezen
-    nextMinutesN: 'unos {n} min', // nieuw, nalezen
-    saveFailed: 'Tu progreso no se ha guardado. ¿Tu teléfono está lleno? Libera un poco de espacio. O ve a Ajustes: «Guarda tu progreso».', // nieuw, nalezen
-    bewaarNudge: 'Tu teléfono a veces puede borrar tu progreso. Por eso, guarda una copia.', // nieuw, nalezen
-    bewaarGo: 'Guardar ahora', // nieuw, nalezen
-    backupShare: 'Envíatelo', // nieuw, nalezen
-    backupShareHint: 'Envíate el archivo, por ejemplo por WhatsApp o por correo electrónico.', // nieuw, nalezen
-    backupMade: 'Listo. Guarda bien este archivo. Con él recuperas tu progreso más tarde.', // nieuw, nalezen
-    speakTurnPrompt: '¿Qué dices?', // nieuw, nalezen
-    speakTurnExample: 'Ejemplo', // nieuw, nalezen
-    speakTurnReveal: 'Escucha la respuesta', // nieuw, nalezen
-    sceneTitle: 'Escucha en el trabajo', // nieuw, nalezen
-    sceneIntro: 'Hay ruido, como en el trabajo. Escucha. Después vienen las preguntas.', // nieuw, nalezen
-    buildFront: 'Pon la palabra marcada al principio', // nieuw, nalezen
-    bridgeTitle: 'Las normas del trabajo', // nieuw, nalezen
-    bridgeText: 'Ya sabes mucho neerlandés. ¿Quieres aprender también las normas del trabajo? Entonces todo está en neerlandés.', // nieuw, nalezen
-    bridgeGo: 'Sí, enséñame', // nieuw, nalezen
-    klankTitle: '¿Cómo se dice?', // nieuw, nalezen
-    klankHint: 'Toca un sonido. Mira cómo lo hace la boca.', // nieuw, nalezen
-    klankSpeed: 'Velocidad', // nieuw, nalezen
-    klankScrub: 'La palabra, sonido a sonido', // nieuw, nalezen
-    tagSound: 'Sonido', // nieuw, nalezen
+    listenHint: 'Después de hablar, el teléfono dice si te ha entendido. Esto pasa en el mismo teléfono. No se envía nada, ni a nosotros ni a nadie más.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    listenNeedsPack: 'Primero el teléfono necesita el neerlandés. Es una descarga grande: usa wifi.', // nieuw, nalezen // nagelezen AI 28 nov
+    listenDownload: 'Descargar neerlandés', // nieuw, nalezen // nagelezen AI 28 nov
+    listenNotNow: 'Ahora no', // nieuw, nalezen // nagelezen AI 28 nov
+    listenDownloading: 'El neerlandés se está descargando. Prueba más tarde.', // nieuw, nalezen // nagelezen AI 28 nov
+    listenFailed: 'No ha funcionado. Prueba más tarde, con wifi.', // nieuw, nalezen // nagelezen AI 28 nov
+    listenPrivacy: 'El teléfono escucha por sí solo. No se envía nada.', // nieuw, nalezen (AI-correctie 28 nov 2026)
+    heardWait: 'El teléfono escucha…', // nieuw, nalezen // nagelezen AI 28 nov
+    heardOk: 'Entendido', // nieuw, nalezen // nagelezen AI 28 nov
+    heardAlmost: 'Casi: di {word} otra vez', // nieuw, nalezen // nagelezen AI 28 nov
+    heardNotYet: 'Todavía no se entiende', // nieuw, nalezen // nagelezen AI 28 nov
+    goOnAnyway: 'Seguir igualmente', // nieuw, nalezen // nagelezen AI 28 nov
+    fasterAsk: '¿Quieres ir más rápido?', // nieuw, nalezen // nagelezen AI 28 nov
+    fasterHint: 'Menos explicación en las lecciones nuevas. El neerlandés a velocidad normal.', // nieuw, nalezen // nagelezen AI 28 nov
+    fasterYes: 'Sí', // nieuw, nalezen // nagelezen AI 28 nov
+    fasterNo: 'No', // nieuw, nalezen // nagelezen AI 28 nov
+    easierNext: 'La próxima lección es un poco más corta.', // nieuw, nalezen // nagelezen AI 28 nov
+    fasterSetting: 'Aprender más rápido', // nieuw, nalezen // nagelezen AI 28 nov
+    fasterSettingHint: 'Activado: menos explicación en las lecciones nuevas y el neerlandés a velocidad normal. Desactivado: como antes.', // nieuw, nalezen // nagelezen AI 28 nov
+    feelAsk: '¿Qué te parece Vloertaal?', // nieuw, nalezen // nagelezen AI 28 nov
+    feelGood: 'Bien', // nieuw, nalezen // nagelezen AI 28 nov
+    feelOk: 'Regular', // nieuw, nalezen // nagelezen AI 28 nov
+    feelBad: 'Mal', // nieuw, nalezen // nagelezen AI 28 nov
+    feelThanks: '¡Gracias! Esto nos ayuda a mejorar Vloertaal.', // nieuw, nalezen // nagelezen AI 28 nov
+    tempoFasterHint: 'Aprender más rápido: menos explicación en las lecciones nuevas y el neerlandés a velocidad normal.', // nieuw, nalezen // nagelezen AI 28 nov
+    samenTitle: 'Practicar en pareja', // nieuw, nalezen // nagelezen AI 28 nov
+    samenRowHint: 'Dos personas, un teléfono', // nieuw, nalezen // nagelezen AI 28 nov
+    samenIntro: 'Practica con un compañero, un amigo o un profesor. Cada uno lee una parte, por turnos.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    samenHow: 'La persona 1 es el compañero. La persona 2 responde.', // nieuw, nalezen // nagelezen AI 28 nov
+    samenNoScore: 'No se graba nada. No hay puntuación.', // nieuw, nalezen // nagelezen AI 28 nov
+    samenPerson: 'Persona {n}', // nieuw, nalezen // nagelezen AI 28 nov
+    samenAnswer: 'Respuesta', // nieuw, nalezen // nagelezen AI 28 nov
+    samenHear: 'Escuchar', // nieuw, nalezen // nagelezen AI 28 nov
+    samenNext: 'Siguiente', // nieuw, nalezen // nagelezen AI 28 nov
+    samenTranslation: 'Traducción', // nieuw, nalezen // nagelezen AI 28 nov
+    samenEnd: '¡Muy bien! ¿Cambiar los papeles y hacerlo otra vez?', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    samenSwap: 'Cambiar los papeles', // nieuw, nalezen // nagelezen AI 28 nov
+    samenStop: 'Terminar', // nieuw, nalezen // nagelezen AI 28 nov
+    checkStart: 'Ya lo sé: prueba corta', // nieuw, nalezen // nagelezen AI 28 nov
+    checkPassed: 'Ya conoces esto. ¿Marcar este tema como hecho?', // nieuw, nalezen // nagelezen AI 28 nov
+    checkNoCert: 'Entonces todavía no hay certificado. Lo recibes después de las lecciones.', // nieuw, nalezen // nagelezen AI 28 nov
+    checkNotYet: 'Las lecciones te ayudan con este tema.', // nieuw, nalezen // nagelezen AI 28 nov
+    checkMark: 'Marcar', // nieuw, nalezen // nagelezen AI 28 nov
+    checkVia: 'con prueba', // nieuw, nalezen // nagelezen AI 28 nov
+    checkUndo: 'Hacer las lecciones igualmente', // nieuw, nalezen // nagelezen AI 28 nov
+    commLabel: 'Comunicación', // nieuw, nalezen // nagelezen AI 28 nov
+    shareInvite: 'Aprendo neerlandés para mi trabajo con Vloertaal. Gratis: {link}', // nieuw, nalezen // nagelezen AI 28 nov
+    briefjeWhat: 'Vloertaal es una app gratis para aprender el neerlandés del trabajo.', // nieuw, nalezen // nagelezen AI 28 nov
+    briefjeHow: 'Lecciones cortas en tu propio teléfono, con ayuda en tu idioma. Sin cuenta.', // nieuw, nalezen // nagelezen AI 28 nov
+    briefjeOpen: 'Ábrelo en tu teléfono:', // nieuw, nalezen // nagelezen AI 28 nov
+    workTry: 'Pruébalo hoy en el trabajo', // nieuw, nalezen // nagelezen AI 28 nov
+    workTryWhen: 'Cuando:', // nieuw, nalezen // nagelezen AI 28 nov
+    workTryThen: 'Entonces di:', // nieuw, nalezen // nagelezen AI 28 nov
+    colleagueCard: 'Para tus compañeros', // nieuw, nalezen // nagelezen AI 28 nov
+    colleagueCardHint: 'Enséñaselo a un compañero que habla neerlandés. Dice cómo puede ayudarte a practicar.', // nieuw, nalezen // nagelezen AI 28 nov
+    colleagueShare: 'Envíaselo a tu compañero', // nieuw, nalezen // nagelezen AI 28 nov
+    forCoach: 'Para tu orientador', // nieuw, nalezen (AI-correctie 28 nov 2026)
+    rulesInDutch: 'Cómo funciona el trabajo aquí, en neerlandés sencillo. El teléfono lo lee en voz alta.', // nieuw, nalezen // nagelezen AI 28 nov
+    bridgeTextOne: 'Ya sabes mucho neerlandés. En cada tema también puedes leer cómo funciona el trabajo aquí, en neerlandés sencillo.', // nieuw, nalezen // nagelezen AI 28 nov
+    noHelpLanguage: 'Ninguno: hablo neerlandés', // nieuw, nalezen // nagelezen AI 28 nov
+    kaartSaid: 'Frases dichas en el trabajo', // nieuw, nalezen // nagelezen AI 28 nov
+    kaartHard: 'Palabras que todavía cuestan', // nieuw, nalezen // nagelezen AI 28 nov
+    kaartRules: 'Lecciones sobre cómo funciona el trabajo aquí', // nieuw, nalezen // nagelezen AI 28 nov
+    coachCardRights: 'Mostrar por su nombre los temas sobre tus derechos', // nieuw, nalezen // nagelezen AI 28 nov
+    speakFromMemory: 'Ahora de memoria: ¿cómo era en neerlandés?', // nieuw, nalezen // nagelezen AI 28 nov
+    keptNofM: 'Palabras de hace 2 semanas o más: todavía sabías {n} de {m}.', // nieuw, nalezen // nagelezen AI 28 nov
+    verbSecond: 'El verbo va en el lugar 2.', // nieuw, nalezen // nagelezen AI 28 nov
+    playPoints: 'Puntos', // nieuw, nalezen // nagelezen AI 28 nov
+    playTotal: 'Todos tus puntos', // nieuw, nalezen // nagelezen AI 28 nov
+    sfeer: 'Ambiente', // nieuw, nalezen // nagelezen AI 28 nov
+    sfeerCalm: 'Calma', // nieuw, nalezen // nagelezen AI 28 nov
+    sfeerGame: 'Juego', // nieuw, nalezen // nagelezen AI 28 nov
+    sfeerHint: 'Calma: nada se mueve, sin celebraciones. Juego: puntos, sonidos y mucho movimiento.', // nieuw, nalezen // nagelezen AI 28 nov
+    sectorGroupService: "Servicios y seguridad", // nieuw, nalezen // nagelezen AI 28 nov
+    sectorGroupOutdoor: "Trabajar al aire libre", // nieuw, nalezen // nagelezen AI 28 nov
+    sectorChildcare: "Cuidado infantil", // nieuw, nalezen // nagelezen AI 28 nov
+    sectorWaste: "Residuos y reciclaje", // nieuw, nalezen // nagelezen AI 28 nov
+    sectorFood: "Industria alimentaria", // nieuw, nalezen // nagelezen AI 28 nov
+    sectorSecurity: "Seguridad", // nieuw, nalezen // nagelezen AI 28 nov
+    sectorFacility: "Servicios generales", // nieuw, nalezen // nagelezen AI 28 nov
+    sectorGreen: "Jardinería y zonas verdes", // nieuw, nalezen // nagelezen AI 28 nov
+    playLevel: 'Nivel', // nieuw, nalezen // nagelezen AI 28 nov
+    playLevel1: 'Principiante', // nieuw, nalezen // nagelezen AI 28 nov
+    playLevel2: 'Aprendiz', // nieuw, nalezen // nagelezen AI 28 nov
+    playLevel3: 'Colega', // nieuw, nalezen // nagelezen AI 28 nov
+    playLevel4: 'Profesional', // nieuw, nalezen // nagelezen AI 28 nov
+    playLevel5: 'Con experiencia', // nieuw, nalezen // nagelezen AI 28 nov
+    playLevel6: 'Especialista', // nieuw, nalezen // nagelezen AI 28 nov
+    playLevelUp: 'Nuevo nivel:', // nieuw, nalezen // nagelezen AI 28 nov
+    playPerfect: 'Sin errores:', // nieuw, nalezen // nagelezen AI 28 nov
+    playDayGoal: 'Meta de hoy', // nieuw, nalezen // nagelezen AI 28 nov
+    playDayGoalDone: '¡Meta de hoy cumplida!', // nieuw, nalezen // nagelezen AI 28 nov
+    playNewTool: 'Nuevo en tu caja de herramientas:', // nieuw, nalezen // nagelezen AI 28 nov
+    playToolbox: 'Mi caja de herramientas', // nieuw, nalezen // nagelezen AI 28 nov
+    playToolboxEmpty: 'Termina una lección con juego. Así recibes tu primera herramienta.', // nieuw, nalezen // nagelezen AI 28 nov
+    infoMore: 'Más explicación', // nieuw, nalezen // nagelezen AI 28 nov
+    tipsAbout: 'Sobre estos consejos', // nieuw, nalezen // nagelezen AI 28 nov
+    tipsNotChecked: 'Un experto todavía no ha revisado esta explicación.', // nieuw, nalezen // nagelezen AI 28 nov
+    lawStale: 'Fecha de esta explicación: {month}. Para ver las reglas más nuevas, consulta el Juridisch Loket o Work in NL.', // nieuw, nalezen // nagelezen AI 28 nov
+    lawStaleBe: 'Fecha de esta explicación: {month}. Para ver las reglas más nuevas, consulta el justitiehuis o werk.belgie.be.', // nieuw, nalezen // nagelezen AI 28 nov
+    aboutMore: 'Leer más sobre Vloertaal', // nieuw, nalezen // nagelezen AI 28 nov
+    geluktAsk: '¿Lo dijiste en el trabajo?', // nieuw, nalezen // nagelezen AI 28 nov
+    geluktYes: 'Sí, funcionó', // nieuw, nalezen // nagelezen AI 28 nov
+    geluktNotYet: 'Todavía no', // nieuw, nalezen // nagelezen AI 28 nov
+    geluktDoneN: { one: '¡Muy bien! Ya te salió {n} frase en el trabajo.', many: '¡Muy bien! Ya te salieron {n} frases en el trabajo.', other: '¡Muy bien! Ya te salieron {n} frases en el trabajo.' }, // nieuw, nalezen // nagelezen AI 28 nov
+    geluktDoneOne: '¡Muy bien! Tu primera frase en el trabajo salió bien.', // nieuw, nalezen // nagelezen AI 28 nov
+    geluktWhere: 'Las encuentras en Ajustes.', // nieuw, nalezen // nagelezen AI 28 nov
+    geluktTitle: 'Logrado en el trabajo', // nieuw, nalezen // nagelezen AI 28 nov
+    geluktListHint: 'Dijiste estas frases en el trabajo.', // nieuw, nalezen // nagelezen AI 28 nov
+    nextMinutesN: 'unos {n} min', // nieuw, nalezen // nagelezen AI 28 nov
+    saveFailed: 'Tu progreso no se ha guardado. ¿Tu teléfono está lleno? Libera un poco de espacio. O ve a Ajustes: «Guarda tu progreso».', // nieuw, nalezen // nagelezen AI 28 nov
+    bewaarNudge: 'Tu teléfono a veces puede borrar tu progreso. Por eso, guarda una copia.', // nieuw, nalezen // nagelezen AI 28 nov
+    bewaarGo: 'Guardar ahora', // nieuw, nalezen // nagelezen AI 28 nov
+    backupShare: 'Envíatelo', // nieuw, nalezen // nagelezen AI 28 nov
+    backupShareHint: 'Envíate el archivo, por ejemplo por WhatsApp o por correo electrónico.', // nieuw, nalezen // nagelezen AI 28 nov
+    backupMade: 'Listo. Guarda bien este archivo. Con él recuperas tu progreso más tarde.', // nieuw, nalezen // nagelezen AI 28 nov
+    speakTurnPrompt: '¿Qué dices?', // nieuw, nalezen // nagelezen AI 28 nov
+    speakTurnExample: 'Ejemplo', // nieuw, nalezen // nagelezen AI 28 nov
+    speakTurnReveal: 'Escucha la respuesta', // nieuw, nalezen // nagelezen AI 28 nov
+    sceneTitle: 'Escucha en el trabajo', // nieuw, nalezen // nagelezen AI 28 nov
+    sceneIntro: 'Hay ruido, como en el trabajo. Escucha. Después vienen las preguntas.', // nieuw, nalezen // nagelezen AI 28 nov
+    buildFront: 'Pon la palabra marcada al principio', // nieuw, nalezen // nagelezen AI 28 nov
+    bridgeTitle: 'Las normas del trabajo', // nieuw, nalezen // nagelezen AI 28 nov
+    bridgeText: 'Ya sabes mucho neerlandés. ¿Quieres aprender también las normas del trabajo? Entonces todo está en neerlandés.', // nieuw, nalezen // nagelezen AI 28 nov
+    bridgeGo: 'Sí, enséñame', // nieuw, nalezen // nagelezen AI 28 nov
+    klankTitle: '¿Cómo se dice?', // nieuw, nalezen // nagelezen AI 28 nov
+    klankHint: 'Toca un sonido. Mira cómo lo hace la boca.', // nieuw, nalezen // nagelezen AI 28 nov
+    klankSpeed: 'Velocidad', // nieuw, nalezen // nagelezen AI 28 nov
+    klankScrub: 'La palabra, sonido a sonido', // nieuw, nalezen // nagelezen AI 28 nov
+    tagSound: 'Sonido', // nieuw, nalezen // nagelezen AI 28 nov
   },
   gloss: {
     // Themes ("hoofdstukken"): groups of topics (src/content/themes.ts)
@@ -579,7 +579,7 @@ const lang: HelpLanguageSource = {
     'w.nieuw': 'nuevo',
     's.people.1': 'Me llamo Sara.',
     's.people.2': '¿Quién es el jefe?',
-    's.people.3': { m: 'Soy un compañero nuevo.', f: 'Soy una compañera nueva.', x: 'Acabo de empezar en el equipo.' }, // x: nieuw, nalezen
+    's.people.3': { m: 'Soy un compañero nuevo.', f: 'Soy una compañera nueva.', x: 'Acabo de empezar en el equipo.' }, // x: nieuw, nalezen // nagelezen AI 28 nov
 
     // Unit: Asking for help
     'u.help': 'Pedir ayuda',
@@ -643,7 +643,7 @@ const lang: HelpLanguageSource = {
     'l.things': 'Cosas del almacén',
     'w.doos': 'la caja',
     'w.pallet': 'el palé',
-    'w.heftruck': 'la carretilla elevadora, el montacargas', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'w.heftruck': 'la carretilla elevadora', // nieuw, nalezen (AI-correctie 28 nov 2026)
     'w.kar': 'el carro (de mano)',
     'w.stelling': 'la estantería',
     'w.scanner': 'el escáner',
@@ -680,7 +680,7 @@ const lang: HelpLanguageSource = {
     'w.pijn': 'el dolor',
     'w.vandaag': 'hoy',
     'w.beter': 'mejor',
-    's.sick.1': { m: 'Hoy estoy enfermo.', f: 'Hoy estoy enferma.', x: 'Hoy estoy enfermo/a.' }, // x: nieuw, nalezen
+    's.sick.1': { m: 'Hoy estoy enfermo.', f: 'Hoy estoy enferma.', x: 'Hoy me encuentro mal.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     's.sick.2': 'Me duele la espalda.',
     's.sick.3': 'Llamo al médico.',
 
@@ -699,7 +699,7 @@ const lang: HelpLanguageSource = {
     's.arrive.2': 'No encuentro el vestuario.',
     's.arrive.3': '¿Quién es mi buddy hoy?',
     'c.arrive.q': 'Buenos días, ¿a qué viene?',
-    'c.arrive.a': { m: 'Soy nuevo. Empiezo hoy.', f: 'Soy nueva. Empiezo hoy.', x: 'Soy nuevo/a. Empiezo hoy.' }, // x: nieuw, nalezen
+    'c.arrive.a': { m: 'Soy nuevo. Empiezo hoy.', f: 'Soy nueva. Empiezo hoy.', x: 'Acabo de llegar. Empiezo hoy.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.understand.q': '¿Lo entiendes?',
     'c.understand.a': 'No, otra vez, por favor.',
     'c.gear.q': '¿Tienes tu casco?',
@@ -728,147 +728,147 @@ const lang: HelpLanguageSource = {
     'c.directions.a': 'A la derecha, junto a la estantería.',
     'c.shift.q': '¿Cuándo empieza tu turno?',
     'c.shift.a': 'Mañana a las siete.',
-    'c.sick.q': { m: '¿Estás enfermo?', f: '¿Estás enferma?', x: '¿Te encuentras mal?' }, // x: nieuw, nalezen
+    'c.sick.q': { m: '¿Estás enfermo?', f: '¿Estás enferma?', x: '¿Te encuentras mal?' }, // x: nieuw, nalezen // nagelezen AI 28 nov
     'c.sick.a': 'Sí, hoy me quedo en casa.',
     // Emergency phrases (phrasebook only)
     'p.call112': '¡Llama al 112!',
     'p.hurt': { m: 'Estoy herido.', f: 'Estoy herida.', x: 'Estoy herido/a.' },
     // Logistiek at four lessons per unit (14 November 2026).
-    'l.picking': "Preparar pedidos", // nieuw, nalezen
-    'w.artikel': "el artículo (un producto)", // nieuw, nalezen
-    'w.vak': "el hueco (un sitio en la estantería)", // nieuw, nalezen
-    'w.sticker': "la pegatina, la etiqueta", // nieuw, nalezen
-    'w.verzamelen': "recoger, reunir", // nieuw, nalezen
-    'w.ontbreken': "faltar (no está)", // nieuw, nalezen
-    'w.locatie': "la ubicación (el código del sitio, como A-12)", // nieuw, nalezen
-    's.picking.1': "Recojo los artículos de este pedido.", // nieuw, nalezen
-    's.picking.2': "Falta este artículo. El hueco está vacío.", // nieuw, nalezen
-    's.picking.3': "La pegatina tiene que ir en la caja.", // nieuw, nalezen
-    'c.picking.q': "¿Qué ubicación es?", // nieuw, nalezen
-    'c.picking.a': "Pasillo tres, hueco doce.", // nieuw, nalezen
-    'l.loading': "Cargar y descargar", // nieuw, nalezen
-    'w.vrachtwagen': "el camión", // nieuw, nalezen
-    'w.chauffeur': "el conductor", // nieuw, nalezen
-    'w.lossen': "descargar (sacar las cosas del camión)", // nieuw, nalezen
-    'w.pompwagen': "la transpaleta (un carro de mano que levanta un palé)", // nieuw, nalezen
-    'w.folie': "el film (plástico fino alrededor de un palé)", // nieuw, nalezen
-    'w.vrachtbrief': "el albarán (el papel que dice qué hay en el camión)", // nieuw, nalezen
-    's.loading.1': "El camión está en la puerta cuatro.", // nieuw, nalezen
-    's.loading.2': "Primero descargamos estos palés.", // nieuw, nalezen
-    's.loading.3': "El conductor espera el albarán.", // nieuw, nalezen
-    'c.loading.q': "¿Este palé está listo?", // nieuw, nalezen
-    'c.loading.a': "No, todavía hay que ponerle film.", // nieuw, nalezen
+    'l.picking': "Preparar pedidos", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.artikel': "el artículo (un producto)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vak': "el hueco (un sitio en la estantería)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sticker': "la pegatina, la etiqueta", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verzamelen': "recoger, reunir", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ontbreken': "faltar (no está)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.locatie': "la ubicación (el código del sitio, como A-12)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.picking.1': "Recojo los artículos de este pedido.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.picking.2': "Falta este artículo. El hueco está vacío.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.picking.3': "La pegatina tiene que ir en la caja.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.picking.q': "¿Qué ubicación es?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.picking.a': "Pasillo tres, hueco doce.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.loading': "Cargar y descargar", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vrachtwagen': "el camión", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.chauffeur': "el conductor", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lossen': "descargar (sacar las cosas del camión)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pompwagen': "la transpaleta (un carro de mano que levanta un palé)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.folie': "el film (plástico fino alrededor de un palé)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vrachtbrief': "el albarán (el papel que dice qué hay en el camión)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.loading.1': "El camión está en la puerta cuatro.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.loading.2': "Primero descargamos estos palés.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.loading.3': "El conductor espera el albarán.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.loading.q': "¿Este palé está listo?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.loading.a': "No, todavía hay que ponerle film.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Hulp vragen" at four lessons (14 November 2026).
-    'l.howto': "¿Cómo se hace esto?", // nieuw, nalezen
-    'w.hoe': "cómo", // nieuw, nalezen
-    'w.zo': "así, de esta manera", // nieuw, nalezen
-    'w.moeilijk': "difícil", // nieuw, nalezen
-    'w.makkelijk': "fácil", // nieuw, nalezen
-    'w.weten': "saber", // nieuw, nalezen
-    'w.klopt': "eso es correcto", // nieuw, nalezen
-    's.howto.1': "¿Cómo se hace esto?", // nieuw, nalezen
-    's.howto.2': "Esto es difícil para mí.", // nieuw, nalezen
-    's.howto.3': "¿Lo hago bien así?", // nieuw, nalezen
-    'c.howto.q': "¿Sabes cómo se hace esto?", // nieuw, nalezen
-    'c.howto.a': "No, eso todavía no lo sé.", // nieuw, nalezen
-    'l.mayask': "¿Puedo preguntar algo?", // nieuw, nalezen
-    'w.vragen': "preguntar", // nieuw, nalezen
-    'w.wie': "quién", // nieuw, nalezen
-    'w.even': "un momento", // nieuw, nalezen
-    'w.tijd': "el tiempo", // nieuw, nalezen
-    'w.storen': "molestar (a alguien que está ocupado)", // nieuw, nalezen
-    'w.twijfelen': "dudar (no lo sabes seguro)", // nieuw, nalezen
-    's.mayask.1': "¿Puedo preguntar algo?", // nieuw, nalezen
-    's.mayask.2': "Perdón por molestar.", // nieuw, nalezen
-    's.mayask.3': "¿Quién me puede ayudar?", // nieuw, nalezen
-    'c.mayask.q': "¿Tienes una pregunta?", // nieuw, nalezen
-    'c.mayask.a': "Sí. ¿Tienes un momento?", // nieuw, nalezen
-    'l.whereis': "¿Dónde está?", // nieuw, nalezen
-    'w.hier': "aquí", // nieuw, nalezen
-    'w.daar': "ahí, allí", // nieuw, nalezen
-    'w.kwijt': "perdido (no lo encuentras)", // nieuw, nalezen
-    'w.uitgang': "la salida", // nieuw, nalezen
-    'w.aanwijzen': "señalar (mostrar dónde está)", // nieuw, nalezen
-    'w.naast': "al lado de", // nieuw, nalezen
-    's.whereis.1': "Me he perdido.", // nieuw, nalezen
-    's.whereis.2': "¿Dónde está la salida?", // nieuw, nalezen
-    's.whereis.3': "El baño está ahí, al lado del comedor.", // nieuw, nalezen
-    'c.whereis.q': "¿Lo encuentras?", // nieuw, nalezen
-    'c.whereis.a': "No. ¿Puedes señalarlo?", // nieuw, nalezen
+    'l.howto': "¿Cómo se hace esto?", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hoe': "cómo", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zo': "así, de esta manera", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.moeilijk': "difícil", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.makkelijk': "fácil", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.weten': "saber", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.klopt': "eso es correcto", // nieuw, nalezen // nagelezen AI 28 nov
+    's.howto.1': "¿Cómo se hace esto?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.howto.2': "Esto es difícil para mí.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.howto.3': "¿Lo hago bien así?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.howto.q': "¿Sabes cómo se hace esto?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.howto.a': "No, eso todavía no lo sé.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.mayask': "¿Puedo preguntar algo?", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vragen': "preguntar", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wie': "quién", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.even': "un momento", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tijd': "el tiempo", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.storen': "molestar (a alguien que está ocupado)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.twijfelen': "dudar (no lo sabes seguro)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mayask.1': "¿Puedo preguntar algo?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mayask.2': "Perdón por molestar.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mayask.3': "¿Quién me puede ayudar?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mayask.q': "¿Tienes una pregunta?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mayask.a': "Sí. ¿Tienes un momento?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.whereis': "¿Dónde está?", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hier': "aquí", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.daar': "ahí, allí", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kwijt': "perdido (no lo encuentras)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitgang': "la salida", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanwijzen': "señalar (mostrar dónde está)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.naast': "al lado de", // nieuw, nalezen // nagelezen AI 28 nov
+    's.whereis.1': "Me he perdido.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.whereis.2': "¿Dónde está la salida?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.whereis.3': "El baño está ahí, al lado del comedor.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.whereis.q': "¿Lo encuentras?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.whereis.a': "No. ¿Puedes señalarlo?", // nieuw, nalezen // nagelezen AI 28 nov
     // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): l.roster, l.breaks, l.wound and l.callhelp.
-    'l.wound': "Heridas pequeñas y quemaduras", // nieuw, nalezen
-    'w.wond': "la herida", // nieuw, nalezen
-    'w.verband': "la venda", // nieuw, nalezen
-    'w.koelen': "enfriar (con agua fría)", // nieuw, nalezen
-    'w.snee': "el corte (una herida pequeña de un cuchillo o de algo afilado)", // nieuw, nalezen
-    'w.flauwvallen': "desmayarse", // nieuw, nalezen
-    'w.oogdouche': "la ducha lavaojos (agua para aclararte los ojos)", // nieuw, nalezen
-    's.wound.1': "Enfría la quemadura con agua.", // nieuw, nalezen
-    's.wound.2': "Es un corte pequeño. Aprieta sobre la herida.", // nieuw, nalezen
-    's.wound.3': "¿Dónde está la ducha lavaojos?", // nieuw, nalezen
-    'c.wound.q': "Mi compañero se va a desmayar.", // nieuw, nalezen
-    'c.wound.a': "Déjalo tumbado un momento. Voy a buscar ayuda.", // nieuw, nalezen
-    'l.callhelp': "Llamar al 112", // nieuw, nalezen
-    'w.hulpdiensten': "los servicios de emergencia (ambulancia, bomberos, policía)", // nieuw, nalezen
-    'w.straatnaam': "el nombre de la calle", // nieuw, nalezen
-    'w.huisnummer': "el número de la casa", // nieuw, nalezen
-    'w.aanspreekbaar': "consciente (la persona reacciona cuando le hablas)", // nieuw, nalezen
-    'w.opwachten': "esperar y recibir (a alguien en la puerta)", // nieuw, nalezen
-    'w.aandelijn': "no colgar (te quedas al teléfono)", // nieuw, nalezen
-    's.callhelp.1': "Llamo al 112. Necesito una ambulancia.", // nieuw, nalezen
-    's.callhelp.2': "¿Cuál es el nombre de la calle y el número?", // nieuw, nalezen
-    's.callhelp.3': "Espero a la ambulancia en la entrada.", // nieuw, nalezen
-    'c.callhelp.q': "¿Reacciona cuando le hablas?", // nieuw, nalezen
-    'c.callhelp.a': "No. No reacciona.", // nieuw, nalezen
-    'l.roster': "Tu horario", // nieuw, nalezen
-    'w.weekrooster': "el horario semanal (quién trabaja cuándo esta semana)", // nieuw, nalezen
-    'w.roosterapp': "la app del horario (tus turnos en el móvil)", // nieuw, nalezen
-    'w.beschikbaar': "disponible (puedes trabajar ese día)", // nieuw, nalezen
-    'w.wijziging': "el cambio", // nieuw, nalezen
-    'w.invallen': "sustituir (trabajar por alguien que no está)", // nieuw, nalezen
-    'w.vrijedag': "el día libre", // nieuw, nalezen
-    's.roster.1': "El horario nuevo está en la app.", // nieuw, nalezen
-    's.roster.2': "¿Estás disponible el sábado?", // nieuw, nalezen
-    's.roster.3': "¿Puedes sustituir mañana a Sara?", // nieuw, nalezen
-    'c.roster.q': "Hay un cambio en tu horario.", // nieuw, nalezen
-    'c.roster.a': "Vale. ¿Qué día tengo que trabajar?", // nieuw, nalezen
-    'l.breaks': "Horas y pausas", // nieuw, nalezen
-    'w.lunchpauze': "la pausa para comer", // nieuw, nalezen
-    'w.rusttijd': "el descanso (tiempo libre entre dos turnos)", // nieuw, nalezen
-    'w.werkdag': "el día de trabajo", // nieuw, nalezen
-    'w.urenlijst': "la hoja de horas (donde apuntas las horas que has trabajado)", // nieuw, nalezen
-    'w.eerderweg': "irse antes", // nieuw, nalezen
-    'w.achterelkaar': "seguidos (uno detrás de otro)", // nieuw, nalezen
-    's.breaks.1': "Apunto mis horas en la hoja de horas.", // nieuw, nalezen
-    's.breaks.2': "¿Me puedo ir hoy una hora antes?", // nieuw, nalezen
-    's.breaks.3': "He trabajado seis días seguidos.", // nieuw, nalezen
-    'c.breaks.q': "¿Cuándo es tu pausa para comer?", // nieuw, nalezen
-    'c.breaks.a': "A las doce, media hora.", // nieuw, nalezen
+    'l.wound': "Heridas pequeñas y quemaduras", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wond': "la herida", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verband': "la venda", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koelen': "enfriar (con agua fría)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snee': "el corte (una herida pequeña de un cuchillo o de algo afilado)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.flauwvallen': "desmayarse", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oogdouche': "la ducha lavaojos (agua para aclararte los ojos)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wound.1': "Enfría la quemadura con agua.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wound.2': "Es un corte pequeño. Aprieta sobre la herida.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wound.3': "¿Dónde está la ducha lavaojos?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.q': "Mi compañero se va a desmayar.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.a': "Déjalo tumbado un momento. Voy a buscar ayuda.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.callhelp': "Llamar al 112", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hulpdiensten': "los servicios de emergencia (ambulancia, bomberos, policía)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.straatnaam': "el nombre de la calle", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huisnummer': "el número de la casa", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanspreekbaar': "consciente (la persona reacciona cuando le hablas)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opwachten': "esperar y recibir (a alguien en la puerta)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aandelijn': "no colgar (te quedas al teléfono)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.callhelp.1': "Llamo al 112. Necesito una ambulancia.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.callhelp.2': "¿Cuál es el nombre de la calle y el número?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.callhelp.3': "Espero a la ambulancia en la entrada.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.q': "¿Reacciona cuando le hablas?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.a': "No. No reacciona.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.roster': "Tu horario", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.weekrooster': "el horario semanal (quién trabaja cuándo esta semana)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.roosterapp': "la app del horario (tus turnos en el móvil)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beschikbaar': "disponible (puedes trabajar ese día)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wijziging': "el cambio", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.invallen': "sustituir (trabajar por alguien que no está)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vrijedag': "el día libre", // nieuw, nalezen // nagelezen AI 28 nov
+    's.roster.1': "El horario nuevo está en la app.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.roster.2': "¿Estás disponible el sábado?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.roster.3': "¿Puedes sustituir mañana a Sara?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.q': "Hay un cambio en tu horario.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.a': "Vale. ¿Qué día tengo que trabajar?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.breaks': "Horas y pausas", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lunchpauze': "la pausa para comer", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rusttijd': "el descanso (tiempo libre entre dos turnos)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkdag': "el día de trabajo", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.urenlijst': "la hoja de horas (donde apuntas las horas que has trabajado)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.eerderweg': "irse antes", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.achterelkaar': "seguidos (uno detrás de otro)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.breaks.1': "Apunto mis horas en la hoja de horas.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.breaks.2': "¿Me puedo ir hoy una hora antes?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.breaks.3': "He trabajado seis días seguidos.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.q': "¿Cuándo es tu pausa para comer?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.a': "A las doce, media hora.", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (26 November 2026).
-    'l.firstweeks': "Tus primeras semanas", // nieuw, nalezen
-    'w.rondleiding': "la visita guiada (alguien te enseña el edificio)", // nieuw, nalezen
-    'w.begeleider': "el tutor, la tutora (el compañero que te ayuda en tus primeras semanas)", // nieuw, nalezen
-    'w.notitieboekje': "la libreta", // nieuw, nalezen
-    'w.meelopen': "acompañar a un compañero (y mirar cómo trabaja)", // nieuw, nalezen
-    'w.onthouden': "recordar, acordarse", // nieuw, nalezen
-    'w.zelfstandig': "por tu cuenta (sin ayuda)", // nieuw, nalezen
-    's.firstweeks.1': "¿Me lo enseñas otra vez?", // nieuw, nalezen
-    's.firstweeks.2': "Hoy acompaño a Sara.", // nieuw, nalezen
-    's.firstweeks.3': "Lo apunto en mi libreta.", // nieuw, nalezen
-    'c.firstweeks.q': "¿Te acuerdas de todo de la visita guiada?", // nieuw, nalezen
-    'c.firstweeks.a': "De casi todo. ¿Dónde estaba el comedor?", // nieuw, nalezen
-    'l.orderpick': "Preparar pedidos y la carretilla retráctil", // nieuw, nalezen
-    'w.orderpicker': "el preparador de pedidos (el trabajador que recoge los pedidos; también la pequeña máquina en la que vas de pie para coger cosas en alto)", // nieuw, nalezen
-    'w.reachtruck': "la carretilla retráctil (una carretilla elevadora para estanterías muy altas; sus horquillas se mueven hacia delante)", // nieuw, nalezen
-    'w.picklijst': "la lista de picking (la lista de artículos que tienes que recoger)", // nieuw, nalezen
-    'w.scannen': "escanear", // nieuw, nalezen
-    'w.voetganger': "el peatón (una persona a pie)", // nieuw, nalezen
-    'w.opwarmen': "calentarse (en un sitio caliente, después de trabajar en el frío)", // nieuw, nalezen
-    's.orderpick.1': "Escaneo cada artículo de la lista de picking.", // nieuw, nalezen
-    's.orderpick.2': "Los peatones van por el pasillo peatonal.", // nieuw, nalezen
-    's.orderpick.3': "En la cámara de congelación llevo ropa térmica.", // nieuw, nalezen
-    'c.orderpick.q': "¿Puedes llevar un momento la carretilla retráctil?", // nieuw, nalezen
-    'c.orderpick.a': "No, no me está permitido. No tengo formación para eso.", // nieuw, nalezen
+    'l.firstweeks': "Tus primeras semanas", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rondleiding': "la visita guiada (alguien te enseña el edificio)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.begeleider': "el tutor, la tutora (el compañero que te ayuda en tus primeras semanas)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.notitieboekje': "la libreta", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meelopen': "acompañar a un compañero (y mirar cómo trabaja)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onthouden': "recordar, acordarse", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zelfstandig': "por tu cuenta (sin ayuda)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.firstweeks.1': "¿Me lo enseñas otra vez?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.firstweeks.2': "Hoy acompaño a Sara.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.firstweeks.3': "Lo apunto en mi libreta.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.q': "¿Te acuerdas de todo de la visita guiada?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.a': "De casi todo. ¿Dónde estaba el comedor?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.orderpick': "Preparar pedidos y la carretilla retráctil", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.orderpicker': "el preparador de pedidos (el trabajador que recoge los pedidos; también la pequeña máquina en la que vas de pie para coger cosas en alto)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.reachtruck': "la carretilla retráctil (una carretilla elevadora para estanterías muy altas; sus horquillas se mueven hacia delante)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.picklijst': "la lista de picking (la lista de artículos que tienes que recoger)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scannen': "escanear", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voetganger': "el peatón (una persona a pie)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opwarmen': "calentarse (en un sitio caliente, después de trabajar en el frío)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.orderpick.1': "Escaneo cada artículo de la lista de picking.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.orderpick.2': "Los peatones van por el pasillo peatonal.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.orderpick.3': "En la cámara de congelación llevo ropa térmica.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.q': "¿Puedes llevar un momento la carretilla retráctil?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.a': "No, no me está permitido. No tengo formación para eso.", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 

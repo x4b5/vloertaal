@@ -165,12 +165,12 @@ const t: CultureTranslation = {
     'l.agree': 'Уговорки и как да кажеш „не“',
     'w.afspraak': 'уговорката',
     'w.lukken': 'успявам, справям се',
-    'w.oneens': { m: 'не съм съгласен', f: 'не съм съгласна', x: 'не съм на същото мнение' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'w.oneens': { m: 'не съм съгласен', f: 'не съм съгласна', x: 'не съм на същото мнение' }, // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     'w.zaterdag': 'събота',
     'w.overwerken': 'работя извънредно',
     'w.misschien': 'може би',
     's.agree.1': 'Не, днес не става.',
-    's.agree.2': { m: 'Не съм съгласен с теб.', f: 'Не съм съгласна с теб.', x: 'Не съм на твоето мнение.' }, // x: nieuw, nalezen
+    's.agree.2': { m: 'Не съм съгласен с теб.', f: 'Не съм съгласна с теб.', x: 'Не съм на твоето мнение.' }, // x: nieuw, nalezen // nagelezen AI 28 nov
     's.agree.3': 'Уговорката си е уговорка.',
     'd.agree.q': 'Можеш ли да работиш извънредно в събота?',
     'd.agree.a': 'Не, не става. В неделя мога.',
@@ -186,31 +186,31 @@ const t: CultureTranslation = {
     's.task.3': 'Може ли да ми го покажете още веднъж?',
     'd.task.q': 'Приключи ли?',
     'd.task.a': 'Почти. Още пет минути.',
-    'l.clear': 'Кратко и ясно', // nieuw, nalezen
-    'w.kort': 'кратък, кратко', // nieuw, nalezen
-    'w.duidelijk': 'ясен, ясно', // nieuw, nalezen
-    'w.belangrijkste': 'най-важното', // nieuw, nalezen
-    'w.rustig': 'спокоен, спокойно', // nieuw, nalezen
-    'w.teveel': 'твърде много', // nieuw, nalezen
-    'w.vraag': 'въпросът', // nieuw, nalezen
-    's.clear.1': 'Ще кажа накратко: машината е развалена.', // nieuw, nalezen
+    'l.clear': 'Кратко и ясно', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kort': 'кратък, кратко', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.duidelijk': 'ясен, ясно', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.belangrijkste': 'най-важното', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rustig': 'спокоен, спокойно', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teveel': 'твърде много', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vraag': 'въпросът', // nieuw, nalezen // nagelezen AI 28 nov
+    's.clear.1': 'Ще кажа накратко: машината е развалена.', // nieuw, nalezen // nagelezen AI 28 nov
     's.clear.2': { m: 'Първо най-важното: болен съм.', f: 'Първо най-важното: болна съм.', x: 'Първо най-важното: разболях се.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    's.clear.3': 'Извинявай, говоря твърде бързо и твърде много.', // nieuw, nalezen
-    'd.clear.q': 'Ясно ли е?', // nieuw, nalezen
-    'd.clear.a': 'Да. Имам още един въпрос.', // nieuw, nalezen
+    's.clear.3': 'Извинявай, говоря твърде бързо и твърде много.', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.clear.q': 'Ясно ли е?', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.clear.a': 'Да. Имам още един въпрос.', // nieuw, nalezen // nagelezen AI 28 nov
     // Vertaalronde 5 november 2026: l.newcolleague en c.newcolleague.
-    'l.newcolleague': "Помощ за нов колега", // nieuw, nalezen
-    'w.welkom': "добре дошли", // nieuw, nalezen
-    'w.inwerken': "въвеждам в работата (показвам работата на нов колега в първите дни)", // nieuw, nalezen
-    'w.stap': "стъпката (една малка част от задача)", // nieuw, nalezen
-    'w.nadoen': "повтарям след някого (правя това, което са ми показали)", // nieuw, nalezen
-    'w.geduld': "търпението", // nieuw, nalezen
-    'w.kast': "шкафът", // nieuw, nalezen
-    's.newcolleague.1': "Добре дошъл! Днес ще те въведа в работата.", // nieuw, nalezen
-    's.newcolleague.2': "Първо гледай. После повтори след мен.", // nieuw, nalezen
-    's.newcolleague.3': "Ръкавиците са в онзи шкаф.", // nieuw, nalezen
-    'd.newcolleague.q': "Мисля, че разбрах.", // nieuw, nalezen
-    'd.newcolleague.a': "Добре. Покажи ми.", // nieuw, nalezen
+    'l.newcolleague': "Помощ за нов колега", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.welkom': "добре дошли", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inwerken': "въвеждам в работата (показвам работата на нов колега в първите дни)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stap': "стъпката (една малка част от задача)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nadoen': "повтарям след някого (правя това, което са ми показали)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geduld': "търпението", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kast': "шкафът", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.1': "Добре дошъл! Днес ще те въведа в работата.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.2': "Първо гледай. После повтори след мен.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.3': "Ръкавиците са в онзи шкаф.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.newcolleague.q': "Мисля, че разбрах.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.newcolleague.a': "Добре. Покажи ми.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.newcolleague': "Покажи го, стъпка по стъпка", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.b': "Това, което ти е било трудно в първите седмици, е трудно и за новия колега. Обяснявай работата на малки стъпки: първо това, после онова. Не говори по-бързо или по-силно: покажи и го остави да повтори след теб. Не питай „Snap je het?“: много хора казват „да“, и когато не разбират. Вместо това кажи „Laat eens zien“ и гледай. Кажи му къде какво има, например тоалетната, столовата и ръкавиците. Имай търпение (geduld): ученето отнема време, за всеки.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.p': "Браво! Сега следващата стъпка.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -220,67 +220,67 @@ const t: CultureTranslation = {
     'c.newcolleague.o3': "Обясняваш всичко още веднъж, по-бързо и по-силно.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.w': "Много хора казват „ja“, и когато не са разбрали. Когато той го покаже, и двамата виждате дали става. Това е по-бързо, отколкото да поправяте грешка после.", // nieuw, nalezen // nagelezen AI 22 nov
     // Vertaalronde 5 november 2026: Goed communiceren (u.communicate).
-    'u.communicate': "Добра комуникация", // nieuw, nalezen
-    'l.explain': "Да кажеш какво не е наред", // nieuw, nalezen
-    'w.ietsmis': "нещо не е наред", // nieuw, nalezen
-    'w.stilstaan': "стои, спряла е (машина, лента)", // nieuw, nalezen
-    'w.lampje': "лампичката (предупредителна)", // nieuw, nalezen
-    'w.komen': "идвам", // nieuw, nalezen
-    'w.nodighebben': "имам нужда от, трябва ми", // nieuw, nalezen
-    'w.meteen': "веднага", // nieuw, nalezen
-    's.explain.1': "Лентата спря. На линия две. Можеш ли да дойдеш?", // nieuw, nalezen
-    's.explain.2': "На машината свети червена лампичка.", // nieuw, nalezen
-    's.explain.3': "Опасно е. Можеш ли да дойдеш веднага?", // nieuw, nalezen
-    'd.explain.q': "Какво не е наред?", // nieuw, nalezen
-    'd.explain.a': "Скенерът не работи. Трябва ми нов.", // nieuw, nalezen
-    'l.listen': "Да слушаш добре", // nieuw, nalezen
-    'w.uitpraten': "доизказвам се (оставям някого да довърши)", // nieuw, nalezen
-    'w.onderbreken': "прекъсвам", // nieuw, nalezen
-    'w.aankijken': "гледам (някого)", // nieuw, nalezen
-    'w.bedoelen': "имам предвид", // nieuw, nalezen
-    'w.dus': "значи (за да провериш какво чуваш)", // nieuw, nalezen
-    'w.doorvragen': "питам още (докато стане ясно)", // nieuw, nalezen
-    's.listen.1': "Значи първо броя кашоните, и после опаковам?", // nieuw, nalezen
-    's.listen.2': "Какво имаш предвид с тази дума?", // nieuw, nalezen
-    's.listen.3': "Извинявай, довърши, моля.", // nieuw, nalezen
-    'd.listen.q': "Утре започваш още в четири.", // nieuw, nalezen
-    'd.listen.a': "Наистина ли? Или беше шега?", // nieuw, nalezen
-    'l.calm': "Да запазиш спокойствие", // nieuw, nalezen
-    'w.nadenken': "помислям, обмислям (нещо)", // nieuw, nalezen
-    'w.ademhalen': "дишам", // nieuw, nalezen
-    'w.oplossen': "решавам, оправям", // nieuw, nalezen
-    'w.druk': "натоварено (много работа)", // nieuw, nalezen
-    'w.straks': "по-късно (днес), след малко", // nieuw, nalezen
-    'w.misverstand': "недоразумението", // nieuw, nalezen
-    's.calm.1': "Искам да го решим спокойно.", // nieuw, nalezen
-    's.calm.2': "Може ли да помисля малко?", // nieuw, nalezen
-    's.calm.3': "Може ли да поговорим по-късно?", // nieuw, nalezen
-    'd.calm.q': "Защо това още не е готово?", // nieuw, nalezen
-    'd.calm.a': "Извинявай, много е натоварено. Кое трябва да е първо?", // nieuw, nalezen
-    'l.talkintime': "Говори за това навреме", // nieuw, nalezen
-    'w.gesprek': "разговорът", // nieuw, nalezen
-    'w.bespreken': "обсъждам", // nieuw, nalezen
-    'w.zorgenmaken': "тревожа се", // nieuw, nalezen
-    'w.oplossing': "решението", // nieuw, nalezen
-    'w.ineens': "изведнъж", // nieuw, nalezen
-    'w.wegblijven': "не идвам (на работа), отсъствам", // nieuw, nalezen
-    's.talkintime.1': "Нещо ме притеснява. Имаш ли минутка?", // nieuw, nalezen
-    's.talkintime.2': "Искам да обсъдя нещо с теб.", // nieuw, nalezen
-    's.talkintime.3': "Мисля да напусна. Може ли първо да поговорим?", // nieuw, nalezen
-    'd.talkintime.q': "Имаш ли минутка? Нещо ме притеснява.", // nieuw, nalezen
-    'd.talkintime.a': "Разбира се. Какво има?", // nieuw, nalezen
-    'l.reachable': "Да си на разположение по телефона", // nieuw, nalezen
-    'w.opnemen': "вдигам (телефона), отговарям", // nieuw, nalezen
-    'w.gemisteoproep': "пропуснатото обаждане", // nieuw, nalezen
-    'w.voicemail': "гласовата поща", // nieuw, nalezen
-    'w.beltegoed': "кредитът (на предплатен телефон)", // nieuw, nalezen
-    'w.bereik': "обхватът (на телефона)", // nieuw, nalezen
-    'w.onbekend': "непознат (непознат номер)", // nieuw, nalezen
-    's.reachable.1': "Нидерландският ми още не е добър. Може ли да говорите бавно?", // nieuw, nalezen
-    's.reachable.2': "Може ли да ми го пратите и като съобщение?", // nieuw, nalezen
-    's.reachable.3': "Имам нов номер.", // nieuw, nalezen
-    'd.reachable.q': "Добро утро, обажда се отдел планиране.", // nieuw, nalezen
-    'd.reachable.a': "Добро утро. Търсили сте ме? Извинявайте, пропуснах обаждането.", // nieuw, nalezen
+    'u.communicate': "Добра комуникация", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.explain': "Да кажеш какво не е наред", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ietsmis': "нещо не е наред", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stilstaan': "стои, спряла е (машина, лента)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lampje': "лампичката (предупредителна)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.komen': "идвам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nodighebben': "имам нужда от, трябва ми", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meteen': "веднага", // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.1': "Лентата спря. На линия две. Можеш ли да дойдеш?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.2': "На машината свети червена лампичка.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.3': "Опасно е. Можеш ли да дойдеш веднага?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.explain.q': "Какво не е наред?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.explain.a': "Скенерът не работи. Трябва ми нов.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.listen': "Да слушаш добре", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitpraten': "доизказвам се (оставям някого да довърши)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderbreken': "прекъсвам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aankijken': "гледам (някого)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedoelen': "имам предвид", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dus': "значи (за да провериш какво чуваш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doorvragen': "питам още (докато стане ясно)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.1': "Значи първо броя кашоните, и после опаковам?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.2': "Какво имаш предвид с тази дума?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.3': "Извинявай, довърши, моля.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.listen.q': "Утре започваш още в четири.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.listen.a': "Наистина ли? Или беше шега?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.calm': "Да запазиш спокойствие", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nadenken': "помислям, обмислям (нещо)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ademhalen': "дишам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oplossen': "решавам, оправям", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.druk': "натоварено (много работа)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.straks': "по-късно (днес), след малко", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.misverstand': "недоразумението", // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.1': "Искам да го решим спокойно.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.2': "Може ли да помисля малко?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.3': "Може ли да поговорим по-късно?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.calm.q': "Защо това още не е готово?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.calm.a': "Извинявай, много е натоварено. Кое трябва да е първо?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.talkintime': "Говори за това навреме", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gesprek': "разговорът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bespreken': "обсъждам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zorgenmaken': "тревожа се", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oplossing': "решението", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ineens': "изведнъж", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wegblijven': "не идвам (на работа), отсъствам", // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.1': "Нещо ме притеснява. Имаш ли минутка?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.2': "Искам да обсъдя нещо с теб.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.3': "Мисля да напусна. Може ли първо да поговорим?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.talkintime.q': "Имаш ли минутка? Нещо ме притеснява.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.talkintime.a': "Разбира се. Какво има?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.reachable': "Да си на разположение по телефона", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opnemen': "вдигам (телефона), отговарям", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gemisteoproep': "пропуснатото обаждане", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voicemail': "гласовата поща", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beltegoed': "кредитът (на предплатен телефон)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bereik': "обхватът (на телефона)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onbekend': "непознат (непознат номер)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.1': "Нидерландският ми още не е добър. Може ли да говорите бавно?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.2': "Може ли да ми го пратите и като съобщение?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.3': "Имам нов номер.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.reachable.q': "Добро утро, обажда се отдел планиране.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.reachable.a': "Добро утро. Търсили сте ме? Извинявайте, пропуснах обаждането.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.explain': "Какво, къде, от какво имаш нужда", // nieuw, nalezen // nagelezen AI 22 nov
     'c.explain.b': "Когато на работа нещо не е наред, кажи го в три стъпки. Първо какво не е наред: „De band staat stil.“ После къде: „Bij lijn twee.“ После от какво имаш нужда: „Kun je komen?“ Така другият знае какво да направи, без много въпроси. Не знаеш думата? Посочи го. Опасно ли е? Кажи го първо: „Het is gevaarlijk.“ Злополука? Първо повикай помощ (повече в урока „Как да съобщиш за злополука“).", // nieuw, nalezen // nagelezen AI 22 nov
     'c.explain.p': "Можеш ли да дойдеш да погледнеш?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -322,43 +322,43 @@ const t: CultureTranslation = {
     'c.reachable.o3': "Обаждаш се следващата седмица, когато имаш време.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.reachable.w': "Агенциите често се обаждат, когато има работа. Когато се обадиш обратно същия ден, показваш, че искаш работата, и може би ще я получиш.", // nieuw, nalezen // nagelezen AI 22 nov
     // Vertaalronde 5 november 2026: Feedback en overleg (u.feedback).
-    'u.feedback': "Обратна връзка и екипни срещи", // nieuw, nalezen
-    'l.getfeedback': "Да получиш обратна връзка", // nieuw, nalezen
-    'w.tip': "съветът (кратък съвет)", // nieuw, nalezen
-    'w.verbeterpunt': "нещо за подобряване (какво може да е по-добре)", // nieuw, nalezen
-    'w.goedbedoeld': "с добро намерение (за да ти помогне)", // nieuw, nalezen
-    'w.kritiek': "критиката (какво някой смята, че не е добре)", // nieuw, nalezen
-    'w.normaal': "нормален, нормално", // nieuw, nalezen
-    'w.positief': "положителен (за това, което върви добре)", // nieuw, nalezen
-    's.getfeedback.1': "Благодаря, добре е да го знам.", // nieuw, nalezen
-    's.getfeedback.2': "Можеш ли да дадеш пример?", // nieuw, nalezen
-    's.getfeedback.3': "Какво мога да правя по-добре?", // nieuw, nalezen
-    'd.getfeedback.q': "Може ли да ти дам малко обратна връзка?", // nieuw, nalezen
-    'd.getfeedback.a': "Да, моля. Искам да го правя добре.", // nieuw, nalezen
-    'l.givefeedback': "Да дадеш обратна връзка", // nieuw, nalezen
-    'w.dichtplakken': "залепвам (с тиксо)", // nieuw, nalezen
-    'w.netjes': "спретнато, подредено", // nieuw, nalezen
-    'w.scheef': "накриво, криво", // nieuw, nalezen
-    'w.vriendelijk': "любезен, приветлив", // nieuw, nalezen
-    'w.concreet': "конкретен (с ясен пример)", // nieuw, nalezen
-    'w.ondervierogen': "на четири очи (само двамата)", // nieuw, nalezen
-    's.givefeedback.1': "Добре го правиш.", // nieuw, nalezen
-    's.givefeedback.2': "Можеш ли да залепиш и кашоните?", // nieuw, nalezen
-    's.givefeedback.3': "Виждам, че кашоните са накриво.", // nieuw, nalezen
-    'd.givefeedback.q': "Как ти се струва работата ми?", // nieuw, nalezen
-    'd.givefeedback.a': "Спретнато! Само кашоните са накриво.", // nieuw, nalezen
-    'l.meeting': "Да говориш на екипна среща", // nieuw, nalezen
-    'w.werkoverleg': "екипната среща (за работата)", // nieuw, nalezen
-    'w.beurt': "редът (твоят момент да говориш)", // nieuw, nalezen
-    'w.idee': "идеята", // nieuw, nalezen
-    'w.mening': "мнението (какво мислиш за това)", // nieuw, nalezen
-    'w.handopsteken': "вдигам ръка", // nieuw, nalezen
-    'w.agenda': "дневният ред (списъкът с точки за срещата)", // nieuw, nalezen
-    's.meeting.1': "Може ли да кажа нещо?", // nieuw, nalezen
-    's.meeting.2': "Имам въпрос за графика.", // nieuw, nalezen
-    's.meeting.3': "Имам идея.", // nieuw, nalezen
-    'd.meeting.q': "Някой има ли още въпрос?", // nieuw, nalezen
-    'd.meeting.a': "Да. Кога ще излезе новият график?", // nieuw, nalezen
+    'u.feedback': "Обратна връзка и екипни срещи", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.getfeedback': "Да получиш обратна връзка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tip': "съветът (кратък съвет)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verbeterpunt': "нещо за подобряване (какво може да е по-добре)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedbedoeld': "с добро намерение (за да ти помогне)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kritiek': "критиката (какво някой смята, че не е добре)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.normaal': "нормален, нормално", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.positief': "положителен (за това, което върви добре)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.1': "Благодаря, добре е да го знам.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.2': "Можеш ли да дадеш пример?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.3': "Какво мога да правя по-добре?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.getfeedback.q': "Може ли да ти дам малко обратна връзка?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.getfeedback.a': "Да, моля. Искам да го правя добре.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.givefeedback': "Да дадеш обратна връзка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dichtplakken': "залепвам (с тиксо)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.netjes': "спретнато, подредено", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scheef': "накриво, криво", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vriendelijk': "любезен, приветлив", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.concreet': "конкретен (с ясен пример)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ondervierogen': "на четири очи (само двамата)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.1': "Добре го правиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.2': "Можеш ли да залепиш и кашоните?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.3': "Виждам, че кашоните са накриво.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.givefeedback.q': "Как ти се струва работата ми?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.givefeedback.a': "Спретнато! Само кашоните са накриво.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.meeting': "Да говориш на екипна среща", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkoverleg': "екипната среща (за работата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beurt': "редът (твоят момент да говориш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.idee': "идеята", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mening': "мнението (какво мислиш за това)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handopsteken': "вдигам ръка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.agenda': "дневният ред (списъкът с точки за срещата)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.1': "Може ли да кажа нещо?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.2': "Имам въпрос за графика.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.3': "Имам идея.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.meeting.q': "Някой има ли още въпрос?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.meeting.a': "Да. Кога ще излезе новият график?", // nieuw, nalezen // nagelezen AI 28 nov
     'c.getfeedback': "Обратната връзка е за работата ти", // nieuw, nalezen // nagelezen AI 22 nov
     'c.getfeedback.b': "Обратната връзка (feedback) е това, което някой казва за работата ти: какво върви добре и какво може да е по-добре. Тя е за работата ти, не за теб. На работа тук обратната връзка е нормална и има за цел да помогне. Не е ясно какво да направиш различно? Помоли за пример. Първо слушай и не се защитавай веднага. После благодари и опитай. Можеш и ти да поискаш обратна връзка: „Wat kan ik beter doen?“", // nieuw, nalezen // nagelezen AI 22 nov
     'c.getfeedback.p': "Благодаря. Можеш ли да дадеш пример?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -426,76 +426,76 @@ const t: CultureTranslation = {
     'c.whereis.o3': "Започваш работа със собствените си дрехи.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.w': "Да питаш отнема десет секунди. Ако търсиш без помощ, може да закъснееш. Колегите знаят, че на ново място е трудно да се ориентираш.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): the tips of l.roster, l.breaks, l.wound and l.callhelp.
-    'c.wound': "Изгаряне? Охлади с вода", // nieuw, nalezen
+    'c.wound': "Изгаряне? Охлади с вода", // nieuw, nalezen // nagelezen AI 28 nov
     'c.wound.b': "Малко порязване: притисни го с чиста кърпа или превръзка и кажи на служителя за първа помощ. Изгаряне: веднага го охлаждай с хладка течаща вода, поне 10 минути. Нещо в окото? Изплакни го с вода или на душа за очи. Сериозно ли е? Обади се на 112. В първия ден попитай къде са аптечката и душът за очи.", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.wound.p': "Изгорих се. Къде има чешма?", // nieuw, nalezen
-    'c.wound.s': "Колега си изгаря ръката на гореща машина. Какво правиш?", // nieuw, nalezen
-    'c.wound.o1': "Охлаждай с хладка течаща вода.", // nieuw, nalezen
-    'c.wound.o2': "Веднага сложи масло или крем.", // nieuw, nalezen
-    'c.wound.o3': "Сложи лед направо на кожата и чакай.", // nieuw, nalezen
-    'c.wound.w': "Водата изважда топлината от кожата, така изгарянето става по-малко дълбоко. Ледът, маслото и кремът могат да го влошат.", // nieuw, nalezen
-    'c.callhelp': "Обаждаш се на 112: първо кажи къде", // nieuw, nalezen
-    'c.callhelp.b': "Обади се на 112, когато има опасност за живота или когато всяка минута е важна. Първо кажи къде си: улицата, номера и града. После кажи какво се е случило. Остани на линията и отговаряй на въпросите. Помоли колега да посрещне линейката на входа. Не знаеш адреса на работата си? Провери го днес.", // nieuw, nalezen
-    'c.callhelp.p': "Обаждам се на 112. Ще посрещнеш ли линейката?", // nieuw, nalezen
-    'c.callhelp.s': "Обаждаш се на 112. Операторът задава много въпроси, а ти искаш да помогнеш на колегата си. Какво правиш?", // nieuw, nalezen
-    'c.callhelp.o1': "Остани на линията и отговаряй.", // nieuw, nalezen
-    'c.callhelp.o2': "Затвори и иди при колегата си.", // nieuw, nalezen
-    'c.callhelp.o3': "Кажи „елате бързо“ и затвори.", // nieuw, nalezen
-    'c.callhelp.w': "Операторът изпраща помощ, докато говориш, и ти казва какво да правиш. Ако затвориш твърде рано, помощта може да отиде на грешно място.", // nieuw, nalezen
-    'c.roster': "Гледай графика си всеки ден", // nieuw, nalezen
-    'c.roster.b': "Графикът може да се промени, и в последния момент. Гледай го всеки ден, в приложението или на таблото. Виждаш промяна? Провери дали можеш да дойдеш. Не можеш да работиш някой ден? Кажи го рано, не в самия ден. Искаш да смениш смяна с някого? Първо питай началника си: много фирми имат правило за това. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.roster.p': "В събота не мога. Може ли да се сменя с някого?", // nieuw, nalezen
-    'c.roster.s': "Графикът ти се промени. Сега трябва да работиш в събота, но не можеш. Какво правиш?", // nieuw, nalezen
-    'c.roster.o1': "Кажи на началника си днес и помоли да се смениш.", // nieuw, nalezen
-    'c.roster.o2': "Не казвай нищо и си остани вкъщи в събота.", // nieuw, nalezen
-    'c.roster.o3': "Помоли колега да отиде и не казвай на никого.", // nieuw, nalezen
-    'c.roster.w': "Когато го кажеш рано, началникът може да намери някой друг. Отсъствието без дума се смята за много сериозно.", // nieuw, nalezen
-    'c.breaks': "Записвай часовете си", // nieuw, nalezen
-    'c.breaks.b': "Всеки ден записвай кога започваш, кога спираш и колко дълга е почивката ти. Собственият ти списък помага, когато заплатата не е вярна. Трябва да си тръгнеш по-рано, например за лекар? Попитай началника си навреме. Работата продължи по-дълго от планираното? Запиши и това. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.breaks.p': "Утре трябва да ходя на лекар. Може ли да си тръгна по-рано?", // nieuw, nalezen
-    'c.breaks.s': "Утре в три трябва да отидеш на лекар. Смяната ти свършва в пет. Какво правиш?", // nieuw, nalezen
-    'c.breaks.o1': "Попитай началника си днес дали можеш да си тръгнеш по-рано.", // nieuw, nalezen
-    'c.breaks.o2': "Тръгни си в три и обясни на следващия ден.", // nieuw, nalezen
-    'c.breaks.o3': "Пропусни лекаря и довърши смяната си.", // nieuw, nalezen
-    'c.breaks.w': "Когато питаш навреме, началникът може да планира работата. Да си тръгнеш, без да питаш, се смята за ненадеждно.", // nieuw, nalezen
+    'c.wound.p': "Изгорих се. Къде има чешма?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.s': "Колега си изгаря ръката на гореща машина. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o1': "Охлаждай с хладка течаща вода.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o2': "Веднага сложи масло или крем.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o3': "Сложи лед направо на кожата и чакай.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.w': "Водата изважда топлината от кожата, така изгарянето става по-малко дълбоко. Ледът, маслото и кремът могат да го влошат.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp': "Обаждаш се на 112: първо кажи къде", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.b': "Обади се на 112, когато има опасност за живота или когато всяка минута е важна. Първо кажи къде си: улицата, номера и града. После кажи какво се е случило. Остани на линията и отговаряй на въпросите. Помоли колега да посрещне линейката на входа. Не знаеш адреса на работата си? Провери го днес.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.p': "Обаждам се на 112. Ще посрещнеш ли линейката?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.s': "Обаждаш се на 112. Операторът задава много въпроси, а ти искаш да помогнеш на колегата си. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o1': "Остани на линията и отговаряй.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o2': "Затвори и иди при колегата си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o3': "Кажи „елате бързо“ и затвори.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.w': "Операторът изпраща помощ, докато говориш, и ти казва какво да правиш. Ако затвориш твърде рано, помощта може да отиде на грешно място.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster': "Гледай графика си всеки ден", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.b': "Графикът може да се промени, и в последния момент. Гледай го всеки ден, в приложението или на таблото. Виждаш промяна? Провери дали можеш да дойдеш. Не можеш да работиш някой ден? Кажи го рано, не в самия ден. Искаш да смениш смяна с някого? Първо питай началника си: много фирми имат правило за това. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.p': "В събота не мога. Може ли да се сменя с някого?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.s': "Графикът ти се промени. Сега трябва да работиш в събота, но не можеш. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o1': "Кажи на началника си днес и помоли да се смениш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o2': "Не казвай нищо и си остани вкъщи в събота.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o3': "Помоли колега да отиде и не казвай на никого.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.w': "Когато го кажеш рано, началникът може да намери някой друг. Отсъствието без дума се смята за много сериозно.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks': "Записвай часовете си", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.b': "Всеки ден записвай кога започваш, кога спираш и колко дълга е почивката ти. Собственият ти списък помага, когато заплатата не е вярна. Трябва да си тръгнеш по-рано, например за лекар? Попитай началника си навреме. Работата продължи по-дълго от планираното? Запиши и това. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.p': "Утре трябва да ходя на лекар. Може ли да си тръгна по-рано?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.s': "Утре в три трябва да отидеш на лекар. Смяната ти свършва в пет. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o1': "Попитай началника си днес дали можеш да си тръгнеш по-рано.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o2': "Тръгни си в три и обясни на следващия ден.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o3': "Пропусни лекаря и довърши смяната си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.w': "Когато питаш навреме, началникът може да планира работата. Да си тръгнеш, без да питаш, се смята за ненадеждно.", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (26 November 2026).
-    'c.firstweeks': "Питай отново: това е нормално", // nieuw, nalezen
-    'c.firstweeks.b': "През първите седмици никой не очаква да знаеш всичко. Често те развеждат из фирмата (rondleiding) и получаваш колега, който те напътства. Първо гледай, после го направи самостоятелно, докато колегата гледа. Забрави ли нещо? Питай отново: „Wil je het nog een keer laten zien?“ Това е по-добре, отколкото да гадаеш. Записвай новите думи и стъпки в малко тефтерче. Някои договори започват с изпитателен срок (proeftijd): тогава ти или работодателят можете бързо да прекратите работата. Попитай дали в твоя договор има такъв. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.firstweeks.p': "Забравих го. Ще ми го покажеш ли още веднъж?", // nieuw, nalezen
-    'c.firstweeks.s': "Вчера колегата ти показа как се пуска машината. Днес не помниш третата стъпка. Какво правиш?", // nieuw, nalezen
-    'c.firstweeks.o1': "Помоли колегата да ти го покаже още веднъж.", // nieuw, nalezen
+    'c.firstweeks': "Питай отново: това е нормално", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.b': "През първите седмици никой не очаква да знаеш всичко. Често те развеждат из фирмата (rondleiding) и получаваш колега, който те напътства. Първо гледай, после го направи самостоятелно, докато колегата гледа. Забрави ли нещо? Питай отново: „Wil je het nog een keer laten zien?“ Това е по-добре, отколкото да гадаеш. Записвай новите думи и стъпки в малко тефтерче. Някои договори започват с изпитателен срок (proeftijd): тогава ти или работодателят можете бързо да прекратите работата. Попитай дали в твоя договор има такъв. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.p': "Забравих го. Ще ми го покажеш ли още веднъж?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.s': "Вчера колегата ти показа как се пуска машината. Днес не помниш третата стъпка. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.o1': "Помоли колегата да ти го покаже още веднъж.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.firstweeks.o2': "Опитай наслуки.", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.firstweeks.o3': "Чакай някой друг да я пусне.", // nieuw, nalezen
-    'c.firstweeks.w': "През първите седмици е нормално да питаш отново. Гадаенето при машина може да е опасно и отнема повече време.", // nieuw, nalezen
-    'c.orderpick': "Ходи по пешеходната пътека", // nieuw, nalezen
-    'c.orderpick.b': "В голям склад комплектоваш поръчки с лист за комплектоване и скенер: сканираш всеки артикул, за да отидат правилните продукти при правилния клиент. Много комплектовчици карат малка машина, която ги вдига нагоре, или ричтрак (reachtruck) за високите стелажи. Карай такава машина само когато имаш обучение за нея, често със сертификат. Ходи по пешеходните пътеки и стой далеч от движещите се машини: шофьорът не винаги те вижда. В хладилната или фризерната камера носи топлите дрехи, ръкавиците и шапката, които получаваш от работата. Прави почивките си за стопляне и казвай на някого, когато влизаш. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.orderpick.p': "Отивам да се стопля малко в стола.", // nieuw, nalezen
-    'c.orderpick.s': "Трябва да стигнеш до другия коридор. Пешеходната пътека заобикаля; направо, между машините, е по-бързо. Какво правиш?", // nieuw, nalezen
-    'c.orderpick.o1': "Мини по пешеходната пътека, дори ако е по-дълга.", // nieuw, nalezen
-    'c.orderpick.o2': "Претичай бързо между машините.", // nieuw, nalezen
-    'c.orderpick.o3': "Мини направо и помахай на шофьорите.", // nieuw, nalezen
-    'c.orderpick.w': "Шофьорът на машината често не те вижда, например зад висок товар. На пешеходната пътека хората се очакват и са в безопасност.", // nieuw, nalezen
+    'c.firstweeks.o3': "Чакай някой друг да я пусне.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.w': "През първите седмици е нормално да питаш отново. Гадаенето при машина може да е опасно и отнема повече време.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick': "Ходи по пешеходната пътека", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.b': "В голям склад комплектоваш поръчки с лист за комплектоване и скенер: сканираш всеки артикул, за да отидат правилните продукти при правилния клиент. Много комплектовчици карат малка машина, която ги вдига нагоре, или ричтрак (reachtruck) за високите стелажи. Карай такава машина само когато имаш обучение за нея, често със сертификат. Ходи по пешеходните пътеки и стой далеч от движещите се машини: шофьорът не винаги те вижда. В хладилната или фризерната камера носи топлите дрехи, ръкавиците и шапката, които получаваш от работата. Прави почивките си за стопляне и казвай на някого, когато влизаш. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.p': "Отивам да се стопля малко в стола.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.s': "Трябва да стигнеш до другия коридор. Пешеходната пътека заобикаля; направо, между машините, е по-бързо. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o1': "Мини по пешеходната пътека, дори ако е по-дълга.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o2': "Претичай бързо между машините.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o3': "Мини направо и помахай на шофьорите.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.w': "Шофьорът на машината често не те вижда, например зад висок товар. На пешеходната пътека хората се очакват и са в безопасност.", // nieuw, nalezen // nagelezen AI 28 nov
     // four new lessons (27 November 2026).
-    'l.appraisal': "Разговор за работата ти", // nieuw, nalezen
-    'w.functioneringsgesprek': "разговорът за работата (разговор с началника ти за това как върви работата ти и какво искаш да научиш)", // nieuw, nalezen
-    'w.beoordelingsgesprek': "разговорът за оценка (разговор, в който началникът ти дава оценка за работата ти)", // nieuw, nalezen
-    'w.voorbereiden': "подготвям се (приготвям се за нещо)", // nieuw, nalezen
-    'w.goedgaan': "върви добре, получава се", // nieuw, nalezen
-    'w.doel': "целта (това, което искаш да постигнеш)", // nieuw, nalezen
-    'w.voorgezien': "подписвам „за запознаване“ (значи: прочетено е; не значи, че приемаш)", // nieuw, nalezen
-    's.appraisal.1': "Подготвям се добре за разговора.", // nieuw, nalezen
-    's.appraisal.2': "Искам да науча нещо ново.", // nieuw, nalezen
-    's.appraisal.3': "Може ли първо да прочета доклада?", // nieuw, nalezen
-    'd.appraisal.q': "Каква е целта ти за следващата година?", // nieuw, nalezen
-    'd.appraisal.a': "Искам да взема сертификат за мотокар.", // nieuw, nalezen
-    'c.appraisal': "Разговорът за работата: подготви се, прочети", // nieuw, nalezen
-    'c.appraisal.b': "В много фирми веднъж или два пъти в годината има разговор за работата ти. В разговора за работата (functioneringsgesprek) говорите заедно: какво върви добре, какво може да е по-добре и какво искаш да научиш. В разговора за оценка (beoordelingsgesprek) началникът ти дава оценка. Тя може да има значение за заплатата ти или за нов договор. Подготви се за разговора: запиши какво върви добре, какво е трудно и какво искаш да научиш. Можеш да поискаш курс или обучение. Накрая правите уговорки (afspraken), често в кратък доклад. Прочети го внимателно, преди да го подпишеш, и поискай копие. Не си на същото мнение? Подпиши „voor gezien“ (за запознаване), а не „voor akkoord“ (за съгласие), и запиши своето мнение. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen
-    'c.appraisal.p': "Подписвам само за запознаване, не за съгласие.", // nieuw, nalezen
-    'c.appraisal.s': "След разговора за оценка получаваш доклада за подпис. Според теб една точка в него не е вярна. Какво правиш?", // nieuw, nalezen
-    'c.appraisal.o1': "Подпиши „voor gezien“ и запиши мнението си.", // nieuw, nalezen
-    'c.appraisal.o2': "Бързо подпиши „voor akkoord“, за да приключи.", // nieuw, nalezen
-    'c.appraisal.o3': "Не казвай нищо и изобщо не подписвай.", // nieuw, nalezen
-    'c.appraisal.w': "„Voor gezien“ значи, че текстът е прочетен, а не че го приемаш. Когато го кажеш и запишеш своето мнение, началникът ти знае какво мислиш.", // nieuw, nalezen
+    'l.appraisal': "Разговор за работата ти", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.functioneringsgesprek': "разговорът за работата (разговор с началника ти за това как върви работата ти и какво искаш да научиш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beoordelingsgesprek': "разговорът за оценка (разговор, в който началникът ти дава оценка за работата ти)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorbereiden': "подготвям се (приготвям се за нещо)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedgaan': "върви добре, получава се", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doel': "целта (това, което искаш да постигнеш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorgezien': "подписвам „за запознаване“ (значи: прочетено е; не значи, че приемаш)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.1': "Подготвям се добре за разговора.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.2': "Искам да науча нещо ново.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.3': "Може ли първо да прочета доклада?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.appraisal.q': "Каква е целта ти за следващата година?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.appraisal.a': "Искам да взема сертификат за мотокар.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal': "Разговорът за работата: подготви се, прочети", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.b': "В много фирми веднъж или два пъти в годината има разговор за работата ти. В разговора за работата (functioneringsgesprek) говорите заедно: какво върви добре, какво може да е по-добре и какво искаш да научиш. В разговора за оценка (beoordelingsgesprek) началникът ти дава оценка. Тя може да има значение за заплатата ти или за нов договор. Подготви се за разговора: запиши какво върви добре, какво е трудно и какво искаш да научиш. Можеш да поискаш курс или обучение. Накрая правите уговорки (afspraken), често в кратък доклад. Прочети го внимателно, преди да го подпишеш, и поискай копие. Не си на същото мнение? Подпиши „voor gezien“ (за запознаване), а не „voor akkoord“ (за съгласие), и запиши своето мнение. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.p': "Подписвам само за запознаване, не за съгласие.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.s': "След разговора за оценка получаваш доклада за подпис. Според теб една точка в него не е вярна. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o1': "Подпиши „voor gezien“ и запиши мнението си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o2': "Бързо подпиши „voor akkoord“, за да приключи.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o3': "Не казвай нищо и изобщо не подписвай.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.w': "„Voor gezien“ значи, че текстът е прочетен, а не че го приемаш. Когато го кажеш и запишеш своето мнение, началникът ти знае какво мислиш.", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 

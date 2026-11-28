@@ -181,7 +181,7 @@ const t: CultureTranslation = {
     'l.mistakes': 'Обратна връзка и грешки',
     'w.fout': 'грешка',
     'w.compliment': 'комплимент, похвала',
-    'w.feedback': "обратната връзка (какво някой казва за работата ти)", // nieuw, nalezen
+    'w.feedback': "обратната връзка (какво някой казва за работата ти)", // nieuw, nalezen // nagelezen AI 28 nov
     'w.uitleggen': 'обяснявам',
     'w.leren': 'уча',
     'w.verbeteren': 'подобрявам, поправям',
@@ -200,7 +200,7 @@ const t: CultureTranslation = {
     's.respect.1': 'Тук всички са равни.',
     's.respect.2': 'Това не е приемливо за мен.',
     's.respect.3': 'Стоп, това е моята граница.',
-    'c.respect.q': { m: 'Какво има? Изглеждаш тъжен.', f: 'Какво има? Изглеждаш тъжна.', x: 'Какво има? Личи си, че ти е тъжно.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.respect.q': { m: 'Какво има? Изглеждаш тъжен.', f: 'Какво има? Изглеждаш тъжна.', x: 'Какво има? Личи си, че ти е тъжно.' }, // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     'c.respect.a': 'Един колега ме тормози.',
     'u.rights': 'Правила и права',
     'l.health': 'Безопасна и здравословна работа',
@@ -326,7 +326,7 @@ const t: CultureTranslation = {
     's.certs.2': 'Искам да изкарам курс.',
     's.certs.3': 'Работодателят плаща ли курса?',
     'c.certs.q': 'Имаш ли сертификат за мотокар?',
-    'c.certs.a': { m: 'Не, но бих искал да го взема.', f: 'Не, но бих искала да го взема.', x: 'Не, но ще се радвам да го взема.' }, // x: nieuw, nalezen
+    'c.certs.a': { m: 'Не, но бих искал да го взема.', f: 'Не, но бих искала да го взема.', x: 'Не, но ще се радвам да го взема.' }, // x: nieuw, nalezen // nagelezen AI 28 nov
     'l.diploma': 'Твоята диплома и обучение',
     'w.diploma': 'диплома',
     'w.waarderen': 'давам (диплома) за оценка и признаване',
@@ -489,7 +489,7 @@ const t: CultureTranslation = {
     's.quality.3': 'Трябва ли да бракувам това?',
     'c.quality.q': 'Защо това е оставено настрана?',
     'c.quality.a': 'Етикетът е залепен накриво.',
-    'u.care': 'В грижата за хора', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'u.care': 'В грижата за хора', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     'l.client': 'Клиентът и ежедневните грижи',
     'w.client': 'клиент (човекът, за когото се грижиш)',
     'w.wassen': 'мия, къпя',
@@ -502,7 +502,7 @@ const t: CultureTranslation = {
     's.client.3': 'Искате ли още нещо за ядене?',
     'c.client.q': 'Ще ми помогнете ли с палтото?',
     'c.client.a': 'Разбира се, ще ви помогна.',
-    'l.privacy': 'Поверителност и безопасност в грижата за хора', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'l.privacy': 'Поверителност и безопасност в грижата за хора', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     'w.privacy': 'лично пространство, поверителност',
     'w.hygiene': 'хигиена',
     'w.doorgeven': 'предавам (информация)',
@@ -550,7 +550,7 @@ const t: CultureTranslation = {
     's.cleaning.1': 'Къде е кофата?',
     's.cleaning.2': 'Ще изчистя коридора с прахосмукачката.',
     's.cleaning.3': 'Изпразни кошчето.',
-    'c.cleaning.q': { m: 'Готов ли си с тоалетните?', f: 'Готова ли си с тоалетните?', x: 'Тоалетните готови ли са?' }, // x: nieuw, nalezen
+    'c.cleaning.q': { m: 'Готов ли си с тоалетните?', f: 'Готова ли си с тоалетните?', x: 'Тоалетните готови ли са?' }, // x: nieuw, nalezen // nagelezen AI 28 nov
     'c.cleaning.a': 'Почти, още две.',
     'l.cleansafe': 'Безопасно почистване',
     'w.glad': 'хлъзгав',
@@ -1007,7 +1007,7 @@ const t: CultureTranslation = {
     'w.intimidatie': "тормозът, сплашването",
     'w.getuige': "свидетелят",
     'w.grapje': "шегата",
-    's.boundaries.1': "Не ме докосвай.", // nieuw, nalezen ("Blijf van me af.", 4 nov 2026)
+    's.boundaries.1': "Не ме докосвай.", // nieuw, nalezen ("Blijf van me af.", 4 nov 2026) // nagelezen AI 28 nov
     's.boundaries.2': "Тази забележка не ми е смешна.",
     's.boundaries.3': "Искам да съобщя нещо на довереното лице.",
     'c.boundaries.q': "Не преувеличавай, беше само шега.",
@@ -1054,18 +1054,18 @@ const t: CultureTranslation = {
     'c.checkout.q': 'Може ли да платя с карта тук?',
     'c.checkout.a': 'Да, разбира се, може.',
     'u.numbers': 'Време, пари и мерки',
-    'l.counting': 'Числата', // nieuw, nalezen
-    'w.dertien': 'тринайсет (13)', // nieuw, nalezen
-    'w.dertig': 'трийсет (30)', // nieuw, nalezen
-    'w.zeventien': 'седемнайсет (17)', // nieuw, nalezen
-    'w.zeventig': 'седемдесет (70)', // nieuw, nalezen
-    'w.zevenenveertig': 'четирийсет и седем (47)', // nieuw, nalezen
-    'w.vierenzeventig': 'седемдесет и четири (74)', // nieuw, nalezen
-    's.counting.1': 'Имам тринайсет кашона, не трийсет.', // nieuw, nalezen
-    's.counting.2': 'Локация седемдесет и четири е празна.', // nieuw, nalezen
-    's.counting.3': 'Може ли да го кажете цифра по цифра?', // nieuw, nalezen
-    'c.counting.q': 'Колко кашона остават?', // nieuw, nalezen
-    'c.counting.a': 'Седемдесет. Седем, нула.', // nieuw, nalezen
+    'l.counting': 'Числата', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dertien': 'тринайсет (13)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dertig': 'трийсет (30)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zeventien': 'седемнайсет (17)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zeventig': 'седемдесет (70)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zevenenveertig': 'четирийсет и седем (47)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vierenzeventig': 'седемдесет и четири (74)', // nieuw, nalezen // nagelezen AI 28 nov
+    's.counting.1': 'Имам тринайсет кашона, не трийсет.', // nieuw, nalezen // nagelezen AI 28 nov
+    's.counting.2': 'Локация седемдесет и четири е празна.', // nieuw, nalezen // nagelezen AI 28 nov
+    's.counting.3': 'Може ли да го кажете цифра по цифра?', // nieuw, nalezen // nagelezen AI 28 nov
+    'c.counting.q': 'Колко кашона остават?', // nieuw, nalezen // nagelezen AI 28 nov
+    'c.counting.a': 'Седемдесет. Седем, нула.', // nieuw, nalezen // nagelezen AI 28 nov
     'l.hours': 'Часове и време',
     'w.uur': 'час',
     'w.minuut': 'минута',
@@ -1141,7 +1141,7 @@ const t: CultureTranslation = {
     's.aihelp.1': 'Можеш ли да обясниш това писмо?',
     's.aihelp.2': 'Верен ли е този отговор?',
     's.aihelp.3': 'Може ли да погледнете заедно с мен?',
-    'c.aihelp.q': { m: 'Сам ли го написа?', f: 'Сама ли го написа?', x: 'Ти лично ли го написа?' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.aihelp.q': { m: 'Сам ли го написа?', f: 'Сама ли го написа?', x: 'Ти лично ли го написа?' }, // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     'c.aihelp.a': 'Да, с помощта на ИИ.',
     'l.aiprivate': 'Какво не споделяш',
     'w.persoonlijk': 'личен',
@@ -1264,7 +1264,7 @@ const t: CultureTranslation = {
     'w.formulier': "формулярът (лист или страница за попълване)",
     's.details.1': "Можете ли да го кажете буква по буква?",
     's.details.2': "Съобщавам новия си телефонен номер.",
-    's.details.3': "Този формуляр е за данъчната служба (Belastingdienst).", // nieuw, nalezen (AI-correctie 2 nov 2026)
+    's.details.3': "Този формуляр е за данъчната служба (Belastingdienst).", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     'c.details.q': "Каква е фамилията ти?",
     'c.details.a': "Haddad. Да я кажа ли буква по буква?",
     'l.dates': "Дни и дати",
@@ -1376,204 +1376,204 @@ const t: CultureTranslation = {
     'c.jobends.o3': "Чакаш да се разболееш и тогава я уреждаш.", // nagelezen AI 22 nov
     'c.jobends.w': "Застраховката чрез агенцията често спира, когато спре работата. Когато живееш или работиш в Нидерландия, обикновено трябва да имаш здравна застраховка. Ако я уредиш навреме, няма да останеш без застраховка.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 22 nov
     // Entree in the Taal track (30 October 2026): nieuw, nalezen.
-    'u.finish': "Да завършиш работата", // nieuw, nalezen
-    'l.workorder': "Работната поръчка", // nieuw, nalezen
-    'w.werkbon': "работната поръчка (лист или приложение с твоята задача)", // nieuw, nalezen
-    'w.lezen': "чета", // nieuw, nalezen
-    'w.aantal': "броят (колко са)", // nieuw, nalezen
-    'w.materiaal': "материалите (това, което ти трябва за работата)", // nieuw, nalezen
-    'w.klaarleggen': "подготвям (слагам наблизо това, което ти трябва)", // nieuw, nalezen
-    'w.handtekening': "подписът", // nieuw, nalezen
-    's.workorder.1': "Първо чета работната поръчка.", // nieuw, nalezen
-    's.workorder.2': "Този брой правилен ли е?", // nieuw, nalezen
-    's.workorder.3': "Подготвям материалите.", // nieuw, nalezen
-    'c.workorder.q': "Знаеш ли какво трябва да направиш?", // nieuw, nalezen
-    'c.workorder.a': "Почти. Какво означава тази дума в поръчката?", // nieuw, nalezen
-    'l.handover': "Готово ли е, или още не?", // nieuw, nalezen
-    'w.opruimen': "подреждам, прибирам нещата", // nieuw, nalezen
-    'w.nakijken': "проверявам (поглеждам работата още веднъж)", // nieuw, nalezen
-    'w.afmelden': "докладвам, че приключвам (казваш, че работата е готова, и тръгваш)", // nieuw, nalezen
-    'w.kapot': "счупен, повреден", // nieuw, nalezen
-    'w.opslot': "заключен", // nieuw, nalezen
-    'w.bijzonderheid': "вратата", // nieuw, nalezen
-    's.handover.1': "Подреждам мястото си.", // nieuw, nalezen
-    's.handover.2': "Може ли да проверите работата ми?", // nieuw, nalezen
-    's.handover.3': "Казвам на ръководителя, че приключвам.", // nieuw, nalezen
-    'c.handover.q': "Всичко готово ли е?", // nieuw, nalezen
-    'c.handover.a': "Почти. Стая четири беше заключена.", // nieuw, nalezen
-    'u.tech': "В работилницата", // nieuw, nalezen
-    'l.workshop': "Инструменти в работилницата", // nieuw, nalezen
-    'w.gereedschap': "инструментите", // nieuw, nalezen
-    'w.zagen': "режа с трион", // nieuw, nalezen
-    'w.slijpen': "шлайфам (изглаждам или режа метал с машина)", // nieuw, nalezen
-    'w.vonk': "искрата", // nieuw, nalezen
-    'w.gehoorbescherming': "антифоните (защита за ушите)", // nieuw, nalezen
-    'w.lawaai': "шумът (много силен звук)", // nieuw, nalezen
-    's.workshop.1': "Къде са инструментите?", // nieuw, nalezen
-    's.workshop.2': "Когато шлайфам, нося антифони.", // nieuw, nalezen
-    's.workshop.3': "Внимавай с искрите!", // nieuw, nalezen
-    'c.workshop.q': "Защо носиш очила?", // nieuw, nalezen
-    'c.workshop.a': "Когато режа с трион, в окото ми може да влязат парченца.", // nieuw, nalezen
-    'l.power': "Първо спри тока", // nieuw, nalezen
-    'w.stroom': "токът, електричеството", // nieuw, nalezen
-    'w.kabel': "кабелът", // nieuw, nalezen
-    'w.stekker': "щепселът", // nieuw, nalezen
-    'w.onderspanning': "под напрежение (има ток в него)", // nieuw, nalezen
-    'w.spanningsloos': "без напрежение, безопасен (няма ток в него)", // nieuw, nalezen
-    'w.elektricien': "електротехникът", // nieuw, nalezen
-    's.power.1': "Тук още има ли ток?", // nieuw, nalezen
-    's.power.2': "Този кабел е повреден.", // nieuw, nalezen
-    's.power.3': "Чакам, докато напрежението бъде изключено.", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.power.q': "Можеш ли да смениш онази лампа?", // nieuw, nalezen
-    'c.power.a': "Токът спрян ли е? Ако не, ще изчакам електротехника.", // nieuw, nalezen
-    'u.garage': "В автосервиза", // nieuw, nalezen
-    'l.garage': "Гуми, масло и подемникът", // nieuw, nalezen
-    'w.band': "гумата", // nieuw, nalezen
-    'w.olie': "маслото", // nieuw, nalezen
-    'w.accu': "акумулаторът (на колата)", // nieuw, nalezen
-    'w.monteur': "монтьорът", // nieuw, nalezen
-    'w.hefbrug': "автоподемникът (вдига колата нагоре)", // nieuw, nalezen
-    'w.lek': "спукан, тече (излиза въздух или вода)", // nieuw, nalezen
-    's.garage.1': "Гумата е спукана.", // nieuw, nalezen
-    's.garage.2': "Къде е новото масло?", // nieuw, nalezen
-    's.garage.3': "Колата е на подемника.", // nieuw, nalezen
-    'c.garage.q': "Можеш ли да смениш гумите на тази кола?", // nieuw, nalezen
-    'c.garage.a': "Да. Къде са зимните гуми?", // nieuw, nalezen
-    'l.carjob': "Клиентът решава", // nieuw, nalezen
-    'w.proefrit': "пробното каране", // nieuw, nalezen
-    'w.rijbewijs': "шофьорската книжка", // nieuw, nalezen
-    'w.akkoord': "съгласен, наред (казваш „да“ на нещо)", // nieuw, nalezen
-    'w.kosten': "разходите (това, което трябва да се плати)", // nieuw, nalezen
-    'w.repareren': "поправям, ремонтирам", // nieuw, nalezen
-    'w.onderdeel': "частта (на кола или машина)", // nieuw, nalezen
-    's.carjob.1': "Клиентът съгласен ли е с разходите?", // nieuw, nalezen
-    's.carjob.2': "Тази част е повредена.", // nieuw, nalezen
-    's.carjob.3': "Може ли да направя пробно каране?", // nieuw, nalezen
-    'c.carjob.q': "И спирачките са лоши. Ще ги направиш ли веднага?", // nieuw, nalezen
-    'c.carjob.a': "Първо ще питам шефа. Клиентът трябва да е съгласен.", // nieuw, nalezen
-    'u.stage': "Стаж", // nieuw, nalezen
-    'l.placement': "Твоят стаж", // nieuw, nalezen
-    'w.stage': "стажът (учиш във фирма)", // nieuw, nalezen
-    'w.praktijkopleider': "наставникът във фирмата (води те във фирмата)", // nieuw, nalezen
-    'w.stagebegeleider': "ръководителят на стажа от училището (води те от училището)", // nieuw, nalezen
-    'w.pok': "договорът за стаж (подписваш го ти, училището и фирмата)", // nieuw, nalezen
-    'w.school': "училището", // nieuw, nalezen
-    'w.leerbedrijf': "обучаващата фирма (фирма, в която учениците могат да учат)", // nieuw, nalezen
-    's.placement.1': "Карам стажа си в склад.", // nieuw, nalezen
-    's.placement.2': "Кой е моят наставник във фирмата?", // nieuw, nalezen
-    's.placement.3': { m: "Още не съм подписал договора за стаж.", f: "Още не съм подписала договора за стаж.", x: "Подписът ми още липсва в договора за стаж." }, // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.placement.q': "Кога започваш стажа?", // nieuw, nalezen
-    'c.placement.a': "В понеделник. Първо подписваме договора за стаж.", // nieuw, nalezen
-    'l.review': "Обратна връзка за стажа", // nieuw, nalezen
-    'w.beoordeling': "оценката (колко добре се справяш)", // nieuw, nalezen
-    'w.leerdoel': "учебната цел (какво искаш да научиш)", // nieuw, nalezen
-    'w.voorbeeld': "примерът", // nieuw, nalezen
-    'w.portfolio': "портфолиото (папка с работата ти и доказателства)", // nieuw, nalezen
-    'w.cijfer': "оценката (числото)", // nieuw, nalezen
-    'w.verslag': "докладът (текст за работата ти)", // nieuw, nalezen
-    's.review.1': "Какво мога да правя по-добре?", // nieuw, nalezen
-    's.review.2': "Може ли да дадете пример?", // nieuw, nalezen
-    's.review.3': "Оценяването ми е следващата седмица.", // nieuw, nalezen
-    'c.review.q': "Трябва да работиш по-бързо.", // nieuw, nalezen
-    'c.review.a': "Добре. Може ли да ми покажете как става по-бързо?", // nieuw, nalezen
-    'u.society': "Да участваш в живота в Нидерландия", // nieuw, nalezen
-    'l.council': "Общината и гласуването", // nieuw, nalezen
-    'w.stemmen': "гласувам", // nieuw, nalezen
-    'w.verkiezing': "изборите", // nieuw, nalezen
-    'w.gemeenteraad': "общинският съвет (решава за твоя град)", // nieuw, nalezen
-    'w.parlement': "парламентът (създава законите)", // nieuw, nalezen
-    'w.stempas': "картата за гласуване (картата, която ти трябва, за да гласуваш)", // nieuw, nalezen
-    'w.burgemeester': "кметът", // nieuw, nalezen
+    'u.finish': "Да завършиш работата", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.workorder': "Работната поръчка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkbon': "работната поръчка (лист или приложение с твоята задача)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lezen': "чета", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aantal': "броят (колко са)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.materiaal': "материалите (това, което ти трябва за работата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.klaarleggen': "подготвям (слагам наблизо това, което ти трябва)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handtekening': "подписът", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workorder.1': "Първо чета работната поръчка.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workorder.2': "Този брой правилен ли е?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workorder.3': "Подготвям материалите.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workorder.q': "Знаеш ли какво трябва да направиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workorder.a': "Почти. Какво означава тази дума в поръчката?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.handover': "Готово ли е, или още не?", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opruimen': "подреждам, прибирам нещата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nakijken': "проверявам (поглеждам работата още веднъж)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afmelden': "докладвам, че приключвам (казваш, че работата е готова, и тръгваш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kapot': "счупен, повреден", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opslot': "заключен", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijzonderheid': "вратата", // nieuw, nalezen // nagelezen AI 28 nov
+    's.handover.1': "Подреждам мястото си.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.handover.2': "Може ли да проверите работата ми?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.handover.3': "Казвам на ръководителя, че приключвам.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.handover.q': "Всичко готово ли е?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.handover.a': "Почти. Стая четири беше заключена.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.tech': "В работилницата", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.workshop': "Инструменти в работилницата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gereedschap': "инструментите", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zagen': "режа с трион", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.slijpen': "шлайфам (изглаждам или режа метал с машина)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vonk': "искрата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gehoorbescherming': "антифоните (защита за ушите)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lawaai': "шумът (много силен звук)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workshop.1': "Къде са инструментите?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workshop.2': "Когато шлайфам, нося антифони.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workshop.3': "Внимавай с искрите!", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workshop.q': "Защо носиш очила?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workshop.a': "Когато режа с трион, в окото ми може да влязат парченца.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.power': "Първо спри тока", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stroom': "токът, електричеството", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kabel': "кабелът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stekker': "щепселът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderspanning': "под напрежение (има ток в него)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spanningsloos': "без напрежение, безопасен (няма ток в него)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.elektricien': "електротехникът", // nieuw, nalezen // nagelezen AI 28 nov
+    's.power.1': "Тук още има ли ток?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.power.2': "Този кабел е повреден.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.power.3': "Чакам, докато напрежението бъде изключено.", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'c.power.q': "Можеш ли да смениш онази лампа?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.power.a': "Токът спрян ли е? Ако не, ще изчакам електротехника.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.garage': "В автосервиза", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.garage': "Гуми, масло и подемникът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.band': "гумата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.olie': "маслото", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.accu': "акумулаторът (на колата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.monteur': "монтьорът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hefbrug': "автоподемникът (вдига колата нагоре)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lek': "спукан, тече (излиза въздух или вода)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.garage.1': "Гумата е спукана.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.garage.2': "Къде е новото масло?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.garage.3': "Колата е на подемника.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.garage.q': "Можеш ли да смениш гумите на тази кола?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.garage.a': "Да. Къде са зимните гуми?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.carjob': "Клиентът решава", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.proefrit': "пробното каране", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rijbewijs': "шофьорската книжка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.akkoord': "съгласен, наред (казваш „да“ на нещо)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kosten': "разходите (това, което трябва да се плати)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.repareren': "поправям, ремонтирам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderdeel': "частта (на кола или машина)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carjob.1': "Клиентът съгласен ли е с разходите?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carjob.2': "Тази част е повредена.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carjob.3': "Може ли да направя пробно каране?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carjob.q': "И спирачките са лоши. Ще ги направиш ли веднага?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carjob.a': "Първо ще питам шефа. Клиентът трябва да е съгласен.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.stage': "Стаж", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.placement': "Твоят стаж", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stage': "стажът (учиш във фирма)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.praktijkopleider': "наставникът във фирмата (води те във фирмата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stagebegeleider': "ръководителят на стажа от училището (води те от училището)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pok': "договорът за стаж (подписваш го ти, училището и фирмата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.school': "училището", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.leerbedrijf': "обучаващата фирма (фирма, в която учениците могат да учат)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.placement.1': "Карам стажа си в склад.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.placement.2': "Кой е моят наставник във фирмата?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.placement.3': { m: "Още не съм подписал договора за стаж.", f: "Още не съм подписала договора за стаж.", x: "Подписът ми още липсва в договора за стаж." }, // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'c.placement.q': "Кога започваш стажа?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.placement.a': "В понеделник. Първо подписваме договора за стаж.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.review': "Обратна връзка за стажа", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beoordeling': "оценката (колко добре се справяш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.leerdoel': "учебната цел (какво искаш да научиш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorbeeld': "примерът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.portfolio': "портфолиото (папка с работата ти и доказателства)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.cijfer': "оценката (числото)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verslag': "докладът (текст за работата ти)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.review.1': "Какво мога да правя по-добре?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.review.2': "Може ли да дадете пример?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.review.3': "Оценяването ми е следващата седмица.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.review.q': "Трябва да работиш по-бързо.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.review.a': "Добре. Може ли да ми покажете как става по-бързо?", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.society': "Да участваш в живота в Нидерландия", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.council': "Общината и гласуването", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stemmen': "гласувам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verkiezing': "изборите", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gemeenteraad': "общинският съвет (решава за твоя град)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.parlement': "парламентът (създава законите)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stempas': "картата за гласуване (картата, която ти трябва, за да гласуваш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.burgemeester': "кметът", // nieuw, nalezen // nagelezen AI 28 nov
     's.council.1': "Имам ли право да гласувам?", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    's.council.2': "Картата ми за гласуване дойде по пощата.", // nieuw, nalezen
-    's.council.3': "Общинският съвет решава за моя квартал.", // nieuw, nalezen
-    'c.council.q': "Ще ходиш ли в сряда да гласуваш?", // nieuw, nalezen
-    'c.council.a': "Да. Имам картата за гласуване и документа си.", // nieuw, nalezen
-    'l.police': "Полицията и твоите права", // nieuw, nalezen
-    'w.agent': "полицаят", // nieuw, nalezen
-    'w.boete': "глобата (пари, които трябва да платиш като наказание)", // nieuw, nalezen
-    'w.bezwaar': "възражението (казваш писмено, че не приемаш нещо)", // nieuw, nalezen
-    'w.rechter': "съдията", // nieuw, nalezen
-    'w.advocaat': "адвокатът", // nieuw, nalezen
-    'w.wet': "законът", // nieuw, nalezen
-    's.police.1': "Получих глоба.", // nieuw, nalezen
-    's.police.2': "Искам да подам възражение.", // nieuw, nalezen
-    's.police.3': "Искам да говоря с адвокат.", // nieuw, nalezen
+    's.council.2': "Картата ми за гласуване дойде по пощата.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.council.3': "Общинският съвет решава за моя квартал.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.council.q': "Ще ходиш ли в сряда да гласуваш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.council.a': "Да. Имам картата за гласуване и документа си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.police': "Полицията и твоите права", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.agent': "полицаят", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.boete': "глобата (пари, които трябва да платиш като наказание)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bezwaar': "възражението (казваш писмено, че не приемаш нещо)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rechter': "съдията", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.advocaat': "адвокатът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wet': "законът", // nieuw, nalezen // nagelezen AI 28 nov
+    's.police.1': "Получих глоба.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.police.2': "Искам да подам възражение.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.police.3': "Искам да говоря с адвокат.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.police.q': "Може ли да видя документа ви за самоличност?", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.police.a': "Да, ето го. Какво става?", // nieuw, nalezen
-    'u.online': "Онлайн на работа", // nieuw, nalezen
-    'l.login': "Влизане в профила", // nieuw, nalezen
-    'w.uitloggen': "излизам (от профила)", // nieuw, nalezen
-    'w.account': "профилът, акаунтът", // nieuw, nalezen
-    'w.scherm': "екранът", // nieuw, nalezen
-    'w.vergrendelen': "заключвам (екрана или телефона)", // nieuw, nalezen
-    'w.gebruikersnaam': "потребителското име", // nieuw, nalezen
-    'w.inlogcode': "кодът за вход (код по SMS или в приложение)", // nieuw, nalezen
-    's.login.1': "Забравих паролата си.", // nieuw, nalezen
-    's.login.2': "Винаги излизам от профила.", // nieuw, nalezen
-    's.login.3': "Не давам на никого моето DigiD.", // nieuw, nalezen
-    'c.login.q': "Можеш ли да влезеш в профила?", // nieuw, nalezen
-    'c.login.a': "Не, паролата ми не работи.", // nieuw, nalezen
-    'l.phish': "Фалшиви имейли", // nieuw, nalezen
-    'w.afzender': "подателят", // nieuw, nalezen
-    'w.klikken': "кликвам", // nieuw, nalezen
-    'w.bijlage': "прикаченият файл", // nieuw, nalezen
-    'w.verdacht': "подозрителен", // nieuw, nalezen
-    'w.ictafdeling': "IT отделът", // nieuw, nalezen
-    'w.wijzigen': "променям", // nieuw, nalezen
-    's.phish.1': "Този имейл е подозрителен.", // nieuw, nalezen
-    's.phish.2': "Не отварям прикачения файл.", // nieuw, nalezen
-    's.phish.3': "Веднага сменям паролата си.", // nieuw, nalezen
-    'c.phish.q': "Кликна ли на линка?", // nieuw, nalezen
-    'c.phish.a': "Да. Обаждам се на IT отдела.", // nieuw, nalezen
-    'l.mychoice': "В какво ме бива", // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'w.goedin': "добър в (нещо)", // nieuw, nalezen
-    'w.kiezen': "избирам", // nieuw, nalezen
-    'w.beroep': "професията, видът работа", // nieuw, nalezen
-    'w.bijbaan': "работата покрай училището (малка работа)", // nieuw, nalezen
-    'w.nauwkeurig': "внимателен и точен", // nieuw, nalezen
-    'w.meeloopdag': "денят за наблюдение (ден, в който придружаваш някого на работа)", // nieuw, nalezen
-    's.mychoice.1': "Мога да работя добре с ръцете си.", // nieuw, nalezen
-    's.mychoice.2': "Обичам да работя с хора.", // nieuw, nalezen
-    's.mychoice.3': "Може ли един ден да ви придружа, за да видя работата?", // nieuw, nalezen
-    'c.mychoice.q': { m: "В какво си добър?", f: "В какво си добра?", x: "В какво те бива?" }, // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'c.mychoice.a': "Умея да се грижа за хора. Вкъщи се грижа за майка си.", // nieuw, nalezen
-    'l.nextstep': "След Entree", // nieuw, nalezen
-    'w.niveau2': "ниво 2 (следващото ниво в mbo)", // nieuw, nalezen
-    'w.startkwalificatie': "базовата квалификация (диплома от mbo ниво 2 или по-високо)", // nieuw, nalezen
-    'w.bbl': "bbl (работиш във фирма и ходиш на училище около един ден в седмицата)", // nieuw, nalezen
-    'w.doorstromen': "продължавам (към по-високо ниво)", // nieuw, nalezen
-    'w.aanmelden': "записвам се (в училище или на курс)", // nieuw, nalezen
-    'w.opendag': "денят на отворените врати (можеш да посетиш училище)", // nieuw, nalezen
-    's.nextstep.1': "След Entree искам да отида на ниво 2.", // nieuw, nalezen
-    's.nextstep.2': "Искам да работя и да уча едновременно.", // nieuw, nalezen
-    's.nextstep.3': "Кога е денят на отворените врати?", // nieuw, nalezen
-    'c.nextstep.q': "Какво ще правиш след Entree?", // nieuw, nalezen
-    'c.nextstep.a': "Искам да уча по bbl. Тогава работя и уча.", // nieuw, nalezen
-    'l.email': "Да пишеш до работа", // nieuw, nalezen
-    'w.mail': "имейлът", // nieuw, nalezen
-    'w.onderwerp': "темата (на имейл)", // nieuw, nalezen
-    'w.beste': "уважаеми, скъпи (в началото на писмо или имейл)", // nieuw, nalezen
-    'w.beleefd': "учтив", // nieuw, nalezen
-    'w.nalezen': "прочитам отново (проверявам, преди да изпратя)", // nieuw, nalezen
-    'w.versturen': "изпращам", // nieuw, nalezen
-    's.email.1': "Какво да напиша в темата?", // nieuw, nalezen
-    's.email.2': "Прочитам имейла си още веднъж.", // nieuw, nalezen
-    's.email.3': "Ще изпратя имейла утре.", // nieuw, nalezen
-    'c.email.q': "Изпрати ли имейла за свободния си ден?", // nieuw, nalezen
-    'c.email.a': "Още не. Първо ще го прочета отново.", // nieuw, nalezen
-    'l.budget': "Твоите пари всеки месец", // nieuw, nalezen
-    'w.vastelasten': "постоянните разходи (наем, застраховка, телефон: всеки месец)", // nieuw, nalezen
-    'w.sparen': "спестявам (пари)", // nieuw, nalezen
-    'w.abonnement': "абонаментът (плащаш го всеки месец)", // nieuw, nalezen
-    'w.achterafbetalen': "плащам по-късно (купи сега, плати после)", // nieuw, nalezen
-    'w.bedenktijd': "срокът за размисъл (време да се откажеш)", // nieuw, nalezen
-    'w.garantie': "гаранцията (трябва да работи, иначе ти го поправят)", // nieuw, nalezen
-    's.budget.1': "Първо плащам постоянните разходи.", // nieuw, nalezen
-    's.budget.2': "Всеки месец спестявам по малко.", // nieuw, nalezen
-    's.budget.3': "Прекратявам този абонамент.", // nieuw, nalezen
-    'c.budget.q': "Купи телефона сега и плати по-късно!", // nieuw, nalezen
-    'c.budget.a': "Не, благодаря. Да плащаш по-късно също е дълг.", // nieuw, nalezen
+    'c.police.a': "Да, ето го. Какво става?", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.online': "Онлайн на работа", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.login': "Влизане в профила", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitloggen': "излизам (от профила)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.account': "профилът, акаунтът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scherm': "екранът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vergrendelen': "заключвам (екрана или телефона)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gebruikersnaam': "потребителското име", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inlogcode': "кодът за вход (код по SMS или в приложение)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.login.1': "Забравих паролата си.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.login.2': "Винаги излизам от профила.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.login.3': "Не давам на никого моето DigiD.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.login.q': "Можеш ли да влезеш в профила?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.login.a': "Не, паролата ми не работи.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.phish': "Фалшиви имейли", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afzender': "подателят", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.klikken': "кликвам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijlage': "прикаченият файл", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verdacht': "подозрителен", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ictafdeling': "IT отделът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wijzigen': "променям", // nieuw, nalezen // nagelezen AI 28 nov
+    's.phish.1': "Този имейл е подозрителен.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.phish.2': "Не отварям прикачения файл.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.phish.3': "Веднага сменям паролата си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phish.q': "Кликна ли на линка?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phish.a': "Да. Обаждам се на IT отдела.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.mychoice': "В какво ме бива", // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'w.goedin': "добър в (нещо)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kiezen': "избирам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beroep': "професията, видът работа", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijbaan': "работата покрай училището (малка работа)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nauwkeurig': "внимателен и точен", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meeloopdag': "денят за наблюдение (ден, в който придружаваш някого на работа)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mychoice.1': "Мога да работя добре с ръцете си.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mychoice.2': "Обичам да работя с хора.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mychoice.3': "Може ли един ден да ви придружа, за да видя работата?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mychoice.q': { m: "В какво си добър?", f: "В какво си добра?", x: "В какво те бива?" }, // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'c.mychoice.a': "Умея да се грижа за хора. Вкъщи се грижа за майка си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.nextstep': "След Entree", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.niveau2': "ниво 2 (следващото ниво в mbo)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.startkwalificatie': "базовата квалификация (диплома от mbo ниво 2 или по-високо)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bbl': "bbl (работиш във фирма и ходиш на училище около един ден в седмицата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doorstromen': "продължавам (към по-високо ниво)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanmelden': "записвам се (в училище или на курс)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opendag': "денят на отворените врати (можеш да посетиш училище)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.nextstep.1': "След Entree искам да отида на ниво 2.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.nextstep.2': "Искам да работя и да уча едновременно.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.nextstep.3': "Кога е денят на отворените врати?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nextstep.q': "Какво ще правиш след Entree?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nextstep.a': "Искам да уча по bbl. Тогава работя и уча.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.email': "Да пишеш до работа", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mail': "имейлът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderwerp': "темата (на имейл)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beste': "уважаеми, скъпи (в началото на писмо или имейл)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beleefd': "учтив", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nalezen': "прочитам отново (проверявам, преди да изпратя)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.versturen': "изпращам", // nieuw, nalezen // nagelezen AI 28 nov
+    's.email.1': "Какво да напиша в темата?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.email.2': "Прочитам имейла си още веднъж.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.email.3': "Ще изпратя имейла утре.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.email.q': "Изпрати ли имейла за свободния си ден?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.email.a': "Още не. Първо ще го прочета отново.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.budget': "Твоите пари всеки месец", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vastelasten': "постоянните разходи (наем, застраховка, телефон: всеки месец)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sparen': "спестявам (пари)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.abonnement': "абонаментът (плащаш го всеки месец)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.achterafbetalen': "плащам по-късно (купи сега, плати после)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedenktijd': "срокът за размисъл (време да се откажеш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.garantie': "гаранцията (трябва да работи, иначе ти го поправят)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.budget.1': "Първо плащам постоянните разходи.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.budget.2': "Всеки месец спестявам по малко.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.budget.3': "Прекратявам този абонамент.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.budget.q': "Купи телефона сега и плати по-късно!", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.budget.a': "Не, благодаря. Да плащаш по-късно също е дълг.", // nieuw, nalezen // nagelezen AI 28 nov
     'l.healthy': "Във форма за работа", // nieuw, nalezen // nagelezen AI 22 nov
     'w.slapen': "спя", // nieuw, nalezen // nagelezen AI 22 nov
     'w.ontbijt': "закуската", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1764,18 +1764,18 @@ const t: CultureTranslation = {
     'c.feelwell.o2': "Не казваш нищо и работиш повече и по-бързо.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.feelwell.o3': "Оставаш вкъщи и не казваш на никого защо.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.feelwell.w': "Да го кажеш рано не е слабост. Тогава можете заедно да търсите изход, например други смени. Не е нужно да се справяш без помощ.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.food': "Работа с храни", // nieuw, nalezen
-    'w.mes': "ножът", // nieuw, nalezen
-    'w.snijhandschoen': "ръкавицата против порязване (пази ръката от порязване)", // nieuw, nalezen
-    'w.vriescel': "фризерната камера (много студено помещение)", // nieuw, nalezen
-    'w.sieraden': "бижутата (пръстен, часовник, обеци)", // nieuw, nalezen
-    'w.pleister': "лепенката (за малко порязване)", // nieuw, nalezen
-    'w.vlees': "месото", // nieuw, nalezen
-    's.food.1': "Свалям бижутата си.", // nieuw, nalezen
-    's.food.2': "Къде са ръкавиците против порязване?", // nieuw, nalezen
-    's.food.3': "Във фризерната камера нося топло яке.", // nieuw, nalezen
-    'c.food.q': "Защо сега чистим линията?", // nieuw, nalezen
-    'c.food.a': "После идва продукт без ядки.", // nieuw, nalezen
+    'l.food': "Работа с храни", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mes': "ножът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snijhandschoen': "ръкавицата против порязване (пази ръката от порязване)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vriescel': "фризерната камера (много студено помещение)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sieraden': "бижутата (пръстен, часовник, обеци)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pleister': "лепенката (за малко порязване)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vlees': "месото", // nieuw, nalezen // nagelezen AI 28 nov
+    's.food.1': "Свалям бижутата си.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.food.2': "Къде са ръкавиците против порязване?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.food.3': "Във фризерната камера нося топло яке.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.food.q': "Защо сега чистим линията?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.food.a': "После идва продукт без ядки.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.food': "Чисти ръце, безопасна храна", // nieuw, nalezen // nagelezen AI 22 nov
     'c.food.b': "Работата с храни има строги хигиенни правила: мрежичка за коса, чисти работни дрехи, измити ръце и никакви бижута. Тези правила са еднакви за всички. Те не казват нищо за теб: пазят храната безопасна за хората, които я ядат. Когато работиш с нож, винаги носи ръкавицата против порязване. В хладилно помещение или във фризерна камера носи топлите дрехи, които получаваш, и се стопляй в почивката. Не се чувстваш добре, или имаш рана на ръката? Съобщи за това, преди да започнеш. Тогава можеш да получиш специална лепенка или за известно време друга работа. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.food.p': "Имам малко порязване на ръката. Може ли лепенка?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1784,31 +1784,31 @@ const t: CultureTranslation = {
     'c.food.o2': "Не казваш нищо: това е само малко порязване.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.food.o3': "Слагаш ръкавица отгоре, за да не го види никой.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.food.w': "Малка рана може да внесе микроби в храната. Когато съобщиш, можеш да получиш специална лепенка или за известно време друга работа. Нормално е да съобщиш: никой не те обвинява за това.", // nieuw, nalezen // nagelezen AI 22 nov
-    'u.delivery': "Транспорт и доставки", // nieuw, nalezen
-    'l.parcel': "Доставка на пратки", // nieuw, nalezen
-    'w.pakket': "пратката, колетът", // nieuw, nalezen
-    'w.bestelbus': "бусът за доставки", // nieuw, nalezen
-    'w.bezorgen': "доставям (занасям на клиента)", // nieuw, nalezen
-    'w.inladen': "товаря (слагам нещата в буса)", // nieuw, nalezen
-    'w.aanbellen': "звъня на вратата", // nieuw, nalezen
-    'w.bewijs': "доказателството (нещо, което показва какво е станало)", // nieuw, nalezen
-    's.parcel.1': "Сканирам всяка пратка.", // nieuw, nalezen
-    's.parcel.2': "Клиентът не е вкъщи.", // nieuw, nalezen
-    's.parcel.3': "Бихте ли приели пратка за съседите?", // nieuw, nalezen
-    'c.parcel.q': "Тази пратка за мен ли е?", // nieuw, nalezen
-    'c.parcel.a': "Да. Подпишете тук, моля.", // nieuw, nalezen
-    'l.road': "Безопасно и честно на пътя", // nieuw, nalezen
-    'w.rijden': "карам (кола, бус)", // nieuw, nalezen
-    'w.zwaar': "тежък", // nieuw, nalezen
-    'w.steekwagen': "ръчната количка (количка за тежки кашони)", // nieuw, nalezen
-    'w.route': "маршрутът (пътят, по който караш)", // nieuw, nalezen
-    'w.loondienst': "на трудов договор (работиш за работодател и получаваш заплата)", // nieuw, nalezen
-    'w.bepalen': "решавам (казвам как трябва да стане)", // nieuw, nalezen
-    's.road.1': "Тази пратка е твърде тежка. Взимам количката.", // nieuw, nalezen
-    's.road.2': "Хлъзгаво е. Карам бавно.", // nieuw, nalezen
-    's.road.3': "Кой решава маршрута и часовете ми?", // nieuw, nalezen
-    'c.road.q': "Можеш ли днес да направиш още един курс?", // nieuw, nalezen
-    'c.road.a': "Не, тогава няма да имам време за почивка.", // nieuw, nalezen
+    'u.delivery': "Транспорт и доставки", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.parcel': "Доставка на пратки", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pakket': "пратката, колетът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bestelbus': "бусът за доставки", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bezorgen': "доставям (занасям на клиента)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inladen': "товаря (слагам нещата в буса)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanbellen': "звъня на вратата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bewijs': "доказателството (нещо, което показва какво е станало)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.parcel.1': "Сканирам всяка пратка.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.parcel.2': "Клиентът не е вкъщи.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.parcel.3': "Бихте ли приели пратка за съседите?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.parcel.q': "Тази пратка за мен ли е?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.parcel.a': "Да. Подпишете тук, моля.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.road': "Безопасно и честно на пътя", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rijden': "карам (кола, бус)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zwaar': "тежък", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.steekwagen': "ръчната количка (количка за тежки кашони)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.route': "маршрутът (пътят, по който караш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.loondienst': "на трудов договор (работиш за работодател и получаваш заплата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bepalen': "решавам (казвам как трябва да стане)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.road.1': "Тази пратка е твърде тежка. Взимам количката.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.road.2': "Хлъзгаво е. Карам бавно.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.road.3': "Кой решава маршрута и часовете ми?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.road.q': "Можеш ли днес да направиш още един курс?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.road.a': "Не, тогава няма да имам време за почивка.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.parcel': "Няма никой вкъщи, или пратката е повредена", // nieuw, nalezen // nagelezen AI 22 nov
     'c.parcel.b': "Клиентът не е вкъщи? Следвай правилата на фирмата си: опитай при съседите или върни пратката. Не я оставяй просто пред вратата, освен ако клиентът не е поискал това. Пратката е повредена или мокра? Не я доставяй, сякаш всичко е наред. Снимай я като доказателство и съобщи за това в скенера или в приложението. Да кажеш честно за проблем винаги е по-добре, отколкото да го скриеш. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.parcel.p': "Тази пратка е повредена. Ето снимка.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1825,18 +1825,18 @@ const t: CultureTranslation = {
     'c.road.o2': "Нищо: в договора пише „самонаето лице“, значи е така.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.road.o3': "Работиш повече часове, за да изкарваш същото.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.road.w': "Важно е как работиш в действителност, а не само думата в договора. Ако фирмата решава как, кога и къде работиш, често си на трудов договор. Тогава имаш повече права.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.measure': "Мерене", // nieuw, nalezen
-    'w.rolmaat': "ролетката", // nieuw, nalezen
-    'w.waterpas': "нивелирът (показва дали нещо е право)", // nieuw, nalezen
-    'w.meten': "меря", // nieuw, nalezen
-    'w.rechtlijn': "прав (не крив)", // nieuw, nalezen
-    'w.plank': "дъската", // nieuw, nalezen
-    'w.schroef': "винтът", // nieuw, nalezen
-    's.measure.1': "Колко е дълга тази дъска?", // nieuw, nalezen
-    's.measure.2': "Стената не е права.", // nieuw, nalezen
-    's.measure.3': "Меря го два пъти.", // nieuw, nalezen
-    'c.measure.q': "Колко широко трябва да е?", // nieuw, nalezen
-    'c.measure.a': "Деветдесет сантиметра. Записвам го.", // nieuw, nalezen
+    'l.measure': "Мерене", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rolmaat': "ролетката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.waterpas': "нивелирът (показва дали нещо е право)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meten': "меря", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rechtlijn': "прав (не крив)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plank': "дъската", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schroef': "винтът", // nieuw, nalezen // nagelezen AI 28 nov
+    's.measure.1': "Колко е дълга тази дъска?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.measure.2': "Стената не е права.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.measure.3': "Меря го два пъти.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.measure.q': "Колко широко трябва да е?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.measure.a': "Деветдесет сантиметра. Записвам го.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.measure': "Два пъти мери, веднъж режи", // nieuw, nalezen // nagelezen AI 22 nov
     'c.measure.b': "На строежа размерите често са в милиметри. Затова „деветстотин“ може да значи 90 сантиметра. Имаш съмнение? Попитай: „Това милиметри ли са, или сантиметри?“ Повтори числото и го запиши. Мери два пъти, преди да режеш или пробиваш: дъска, която е твърде къса, си остава твърде къса. Сгреши ли? Кажи веднага. Тогава екипът още може да го поправи и излиза по-евтино.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.measure.p': "Това в милиметри ли е, или в сантиметри?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1845,18 +1845,18 @@ const t: CultureTranslation = {
     'c.measure.o2': "Режеш дъската по това, което мислиш, че чу.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.measure.o3': "Чакаш той сам да дойде да види.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.measure.w': "Грешен размер струва материал и време. Да повториш числото отнема две секунди и на строежа всички го правят.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.siteday': "Подреден строеж", // nieuw, nalezen
-    'w.bouwplaats': "строежът, строителната площадка", // nieuw, nalezen
-    'w.uitvoerder': "ръководителят на обекта (шефът на строежа)", // nieuw, nalezen
-    'w.keet': "фургонът (за почивки и срещи)", // nieuw, nalezen
-    'w.afval': "отпадъците, боклукът", // nieuw, nalezen
-    'w.container': "контейнерът (много голяма кофа за отпадъци)", // nieuw, nalezen
-    'w.struikelen': "спъвам се (падам заради нещо)", // nieuw, nalezen
-    's.siteday.1': "Отпадъците отиват в контейнера.", // nieuw, nalezen
-    's.siteday.2': "Ръководителят на обекта е във фургона.", // nieuw, nalezen
-    's.siteday.3': "Внимавай, тук можеш да се спънеш.", // nieuw, nalezen
-    'c.siteday.q': "Къде да сложа това дърво?", // nieuw, nalezen
-    'c.siteday.a': "В контейнера на входа.", // nieuw, nalezen
+    'l.siteday': "Подреден строеж", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bouwplaats': "строежът, строителната площадка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitvoerder': "ръководителят на обекта (шефът на строежа)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.keet': "фургонът (за почивки и срещи)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afval': "отпадъците, боклукът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.container': "контейнерът (много голяма кофа за отпадъци)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.struikelen': "спъвам се (падам заради нещо)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.siteday.1': "Отпадъците отиват в контейнера.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.siteday.2': "Ръководителят на обекта е във фургона.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.siteday.3': "Внимавай, тук можеш да се спънеш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.siteday.q': "Къде да сложа това дърво?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.siteday.a': "В контейнера на входа.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.siteday': "Подреденият строеж е безопасен строеж", // nieuw, nalezen // nagelezen AI 22 nov
     'c.siteday.b': "На строежа подреждането е част от работата, за всички. Разхвърляни дъски, кабели и отпадъци карат хората да се спъват и да падат. Затова разчиствай мястото си през деня, а не само накрая. Отпадъците се разделят: дърво, камък и метал често отиват в различни контейнери. Не знаеш в кой? Попитай. Виждаш стърчащ пирон или дупка без капак? Оправи го, ако можеш да го направиш безопасно, или кажи на ръководителя на обекта (de uitvoerder). Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.siteday.p': "Ще разчистя това. Така никой няма да се спъне.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1865,18 +1865,18 @@ const t: CultureTranslation = {
     'c.siteday.o2': "Прекрачваш ги: не са твои дъски.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.siteday.o3': "Чакаш: някой друг ще ги разчисти.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.siteday.w': "Всички минават по едни и същи пътеки. Който види опасност, прави нещо: това е нормално на строежа.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.shifts': "Предаване на смяната", // nieuw, nalezen
-    'w.vroegedienst': "ранната смяна", // nieuw, nalezen
-    'w.latedienst': "късната смяна", // nieuw, nalezen
-    'w.nachtdienst': "нощната смяна", // nieuw, nalezen
-    'w.overdracht': "предаването на смяната (казваш на следващата смяна какво е станало)", // nieuw, nalezen
-    'w.aflossen': "сменям (идва следващият човек и ти можеш да си тръгнеш)", // nieuw, nalezen
-    'w.teamleider': "ръководителят на екипа", // nieuw, nalezen
+    'l.shifts': "Предаване на смяната", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vroegedienst': "ранната смяна", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.latedienst': "късната смяна", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nachtdienst': "нощната смяна", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.overdracht': "предаването на смяната (казваш на следващата смяна какво е станало)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aflossen': "сменям (идва следващият човек и ти можеш да си тръгнеш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teamleider': "ръководителят на екипа", // nieuw, nalezen // nagelezen AI 28 nov
     's.shifts.1': "Тази седмица съм на късна смяна.", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    's.shifts.2': "Кой ме сменя?", // nieuw, nalezen
-    's.shifts.3': "Машина две имаше повреда.", // nieuw, nalezen
-    'c.shifts.q': "Стана ли нещо през смяната ти?", // nieuw, nalezen
-    'c.shifts.a': "Да. Линията стоя спряна половин час.", // nieuw, nalezen
+    's.shifts.2': "Кой ме сменя?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shifts.3': "Машина две имаше повреда.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shifts.q': "Стана ли нещо през смяната ти?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shifts.a': "Да. Линията стоя спряна половин час.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.shifts': "Кажи на следващата смяна", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shifts.b': "Фабриката често работи денем и нощем, на смени. В края на смяната ти колега заема мястото ти. Не си тръгвай просто така: изчакай колегата да дойде. Кажи с няколко думи какво е станало: повреда, сгрешен продукт, нещо, което не е довършено. Много фирми имат и списък или екран за това. Проблем, за който не кажеш, се връща в следващата смяна и тогава никой не знае защо. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shifts.p': "Машината имаше повреда. Сега пак работи.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1885,18 +1885,18 @@ const t: CultureTranslation = {
     'c.shifts.o2': "Отиваш си вкъщи: смяната ти свърши.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shifts.o3': "Спираш машината и си тръгваш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shifts.w': "Работеща машина не бива да остава без човек. Когато чакаш и съобщиш, работата продължава безопасно и ръководителят на екипа може да го реши.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.signals': "Кажи какво виждаш", // nieuw, nalezen
-    'w.duizelig': "замаян (вие ти се свят)", // nieuw, nalezen
-    'w.misselijk': "гади ми се (чувстваш, че ще повърнеш)", // nieuw, nalezen
-    'w.benauwd': "със задух (не ти стига въздух)", // nieuw, nalezen
-    'w.koorts': "високата температура, треската", // nieuw, nalezen
-    'w.verward': "объркан (човекът не знае къде се намира)", // nieuw, nalezen
-    'w.anders': "различен (не както обикновено)", // nieuw, nalezen
-    's.signals.1': "На госпожата ѝ се вие свят.", // nieuw, nalezen
-    's.signals.2': "Господинът не яде днес.", // nieuw, nalezen
-    's.signals.3': "Можеш ли да дойдеш да погледнеш?", // nieuw, nalezen
-    'c.signals.q': "Как е господин Jansen?", // nieuw, nalezen
-    'c.signals.a': "Объркан е. Вчера не беше така.", // nieuw, nalezen
+    'l.signals': "Кажи какво виждаш", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.duizelig': "замаян (вие ти се свят)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.misselijk': "гади ми се (чувстваш, че ще повърнеш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.benauwd': "със задух (не ти стига въздух)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koorts': "високата температура, треската", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verward': "объркан (човекът не знае къде се намира)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.anders': "различен (не както обикновено)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.signals.1': "На госпожата ѝ се вие свят.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.signals.2': "Господинът не яде днес.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.signals.3': "Можеш ли да дойдеш да погледнеш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.signals.q': "Как е господин Jansen?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.signals.a': "Объркан е. Вчера не беше така.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.signals': "Ти виждаш клиента всеки ден", // nieuw, nalezen // nagelezen AI 22 nov
     'c.signals.b': "Често ти си човекът, който вижда клиента най-много. Затова ти забелязваш най-рано, когато нещо е различно: яде по-малко, има повече болка, объркан е, не му стига въздух. Не е нужно да знаеш какво е. Кажи какво виждаш и кажи кога го видя. Кажи на медицинската сестра още същия ден и го запиши, ако това е твоя задача. Изглежда сериозно? Не чакай: веднага повикай медицинската сестра. По-добре един път повече, отколкото един път по-малко.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.signals.p': "Госпожата не яде и ѝ се вие свят. Обикновено не е така.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1905,18 +1905,18 @@ const t: CultureTranslation = {
     'c.signals.o2': "Чакаш няколко дни: може да мине.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.signals.o3': "Даваш ѝ хапче от шкафа.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.signals.w': "Малка промяна може да е първият знак за болест. Не ти решаваш какво е: това прави медицинската сестра. Но тя може да направи нещо само ако ѝ кажеш.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.transfer': "Да помогнеш на някого да стане", // nieuw, nalezen
-    'w.tillift': "подемникът за хора (машина, която вдига човек)", // nieuw, nalezen
-    'w.rollator': "ролаторът (проходилка с колела)", // nieuw, nalezen
-    'w.bed': "леглото", // nieuw, nalezen
-    'w.opstaan': "ставам, изправям се", // nieuw, nalezen
-    'w.gaanzitten': "сядам", // nieuw, nalezen
-    'w.voorzichtig': "внимателно, леко", // nieuw, nalezen
-    's.transfer.1': "Ще ви помогна да станете.", // nieuw, nalezen
-    's.transfer.2': "Искате ли да седнете за малко?", // nieuw, nalezen
-    's.transfer.3': "Първо ще донеса подемника.", // nieuw, nalezen
-    'c.transfer.q': "Можеш ли да вдигнеш госпожата от леглото?", // nieuw, nalezen
-    'c.transfer.a': { m: "Сам не мога. Ще донеса подемника.", f: "Сама не мога. Ще донеса подемника.", x: "Не мога без помощ. Ще донеса подемника." }, // nieuw, nalezen
+    'l.transfer': "Да помогнеш на някого да стане", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tillift': "подемникът за хора (машина, която вдига човек)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rollator': "ролаторът (проходилка с колела)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bed': "леглото", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opstaan': "ставам, изправям се", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gaanzitten': "сядам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorzichtig': "внимателно, леко", // nieuw, nalezen // nagelezen AI 28 nov
+    's.transfer.1': "Ще ви помогна да станете.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.transfer.2': "Искате ли да седнете за малко?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.transfer.3': "Първо ще донеса подемника.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.transfer.q': "Можеш ли да вдигнеш госпожата от леглото?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.transfer.a': { m: "Сам не мога. Ще донеса подемника.", f: "Сама не мога. Ще донеса подемника.", x: "Не мога без помощ. Ще донеса подемника." }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.transfer': "Първо кажи, после помогни", // nieuw, nalezen // nagelezen AI 22 nov
     'c.transfer.b': "Преди да докоснеш клиент, кажи какво ще правиш: „Ik help u nu met opstaan.“ Така клиентът не се стряска и може да помага. Остави клиента да прави това, което още може: така остава силен. Не вдигай човек без помощ. Използвай помощните средства, които има, например подемника, и работи така, както са ти показали. Още не са ти показали? Първо попитай. Гърбът ти трябва да издържи цял трудов живот. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.transfer.p': "Сега ще ви помогна да станете. Готови ли сте?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1925,18 +1925,18 @@ const t: CultureTranslation = {
     'c.transfer.o2': "Вдигаш я на ръце: тя не е тежка.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.transfer.o3': "Пробваш подемника: едва ли е трудно.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.transfer.w': "Ако вдигнеш човек по грешен начин, може да пострада клиентът, а и твоят гръб. Да попиташ колега отнема няколко минути. Едно падане може да отнеме месеци.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.dishes': "Миене на съдове", // nieuw, nalezen
-    'w.afwas': "мръсните съдове, миенето на съдове", // nieuw, nalezen
-    'w.vaatwasser': "съдомиялната", // nieuw, nalezen
-    'w.bord': "чинията", // nieuw, nalezen
-    'w.glas': "чашата (от стъкло)", // nieuw, nalezen
-    'w.bestek': "приборите (нож, вилица и лъжица)", // nieuw, nalezen
-    'w.afdrogen': "подсушавам (с кърпа)", // nieuw, nalezen
-    's.dishes.1': "Съдомиялната е готова.", // nieuw, nalezen
-    's.dishes.2': "Внимавай, счупи се чаша.", // nieuw, nalezen
-    's.dishes.3': "Няма повече чисти прибори.", // nieuw, nalezen
-    'c.dishes.q': "Има ли още чисти чаши?", // nieuw, nalezen
-    'c.dishes.a': "Да, веднага ги нося.", // nieuw, nalezen
+    'l.dishes': "Миене на съдове", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afwas': "мръсните съдове, миенето на съдове", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vaatwasser': "съдомиялната", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bord': "чинията", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.glas': "чашата (от стъкло)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bestek': "приборите (нож, вилица и лъжица)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afdrogen': "подсушавам (с кърпа)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dishes.1': "Съдомиялната е готова.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dishes.2': "Внимавай, счупи се чаша.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dishes.3': "Няма повече чисти прибори.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dishes.q': "Има ли още чисти чаши?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dishes.a': "Да, веднага ги нося.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.dishes': "Счупено стъкло: кажи веднага", // nieuw, nalezen // nagelezen AI 22 nov
     'c.dishes.b': "В кухнята се чупи стъкло. Това е нормално и никой не се сърди за това. Но кажи веднага, силно и ясно: „Glas!“ Не събирай парчетата с голи ръце: използвай четка. Падна ли стъкло близо до храна или в леда? Тогава тази храна или този лед трябва да се изхвърли, изцяло. Малко парче стъкло в ястие е много опасно за госта. Стъклото отива в отделна кофа, а не в торба, която някой вдига. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.dishes.p': "Внимание, стъкло! Веднага ще го почистя.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1945,18 +1945,18 @@ const t: CultureTranslation = {
     'c.dishes.o2': "Изваждаш парчетата, които виждаш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.dishes.o3': "Не казваш нищо: сега е твърде натоварено.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.dishes.w': "Малките парчета стъкло не се виждат в леда. Новият лед струва малко. Гост със стъкло в напитката може да пострада тежко.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.rush': "Когато е натоварено", // nieuw, nalezen
-    'w.heet': "горещ", // nieuw, nalezen
-    'w.chef': "главният готвач (шефът на кухнята)", // nieuw, nalezen
-    'w.terras': "терасата (маси навън)", // nieuw, nalezen
-    'w.tafel': "масата", // nieuw, nalezen
-    'w.dienblad': "подносът", // nieuw, nalezen
-    'w.wachten': "чакам", // nieuw, nalezen
-    's.rush.1': "Горещо! Минавам зад теб.", // nieuw, nalezen
-    's.rush.2': "Маса шест чака храната.", // nieuw, nalezen
-    's.rush.3': "Нося това на терасата.", // nieuw, nalezen
-    'c.rush.q': "Можеш ли да поемеш маса четири?", // nieuw, nalezen
-    'c.rush.a': "Да, шефе. Идвам.", // nieuw, nalezen
+    'l.rush': "Когато е натоварено", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.heet': "горещ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.chef': "главният готвач (шефът на кухнята)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.terras': "терасата (маси навън)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tafel': "масата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dienblad': "подносът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wachten': "чакам", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rush.1': "Горещо! Минавам зад теб.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rush.2': "Маса шест чака храната.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rush.3': "Нося това на терасата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rush.q': "Можеш ли да поемеш маса четири?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rush.a': "Да, шефе. Идвам.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.rush': "Кратки думи, когато е натоварено", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rush.b': "Когато е натоварено, хората в кухнята говорят с кратки думи: „Heet!“, „Achter!“, „Tafel zes!“ Това не е грубо. Бързо е и безопасно: всеки знае къде са горещите тигани и ножовете. И ти викай „Heet!“ или „Achter!“, когато минаваш зад някого. Чу ли какво трябва да направиш? Повтори: „Ja, chef.“ Така главният готвач знае, че думите му са стигнали до теб. Някой ти говори рязко в натовареното време? Често това минава след смяната. Остава ли неприятно? Тогава поговорете за това в спокоен момент.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rush.p': "Зад теб съм! Нося горещ тиган.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1965,18 +1965,18 @@ const t: CultureTranslation = {
     'c.rush.o2': "Спираш и казваш, че е груб.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rush.o3': "Правиш го, но не отговаряш нищо.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rush.w': "В натовареното време краткото говорене е нормално и не е лично. Като повториш, показваш, че чуваш. Така кухнята остава бърза и безопасна.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.rounds': "Твоята обиколка", // nieuw, nalezen
-    'w.kantoor': "офисът", // nieuw, nalezen
+    'l.rounds': "Твоята обиколка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kantoor': "офисът", // nieuw, nalezen // nagelezen AI 28 nov
     'w.verdieping': "етажът (1-вият или 2-рият етаж на сграда)", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'w.gang': "коридорът", // nieuw, nalezen
-    'w.toiletpapier': "тоалетната хартия", // nieuw, nalezen
-    'w.zeep': "сапунът", // nieuw, nalezen
-    'w.bijvullen': "доливам, зареждам (слагам ново)", // nieuw, nalezen
-    's.rounds.1': "Започвам от втория етаж.", // nieuw, nalezen
-    's.rounds.2': "Тоалетната хартия свърши.", // nieuw, nalezen
-    's.rounds.3': "Доливам сапуна.", // nieuw, nalezen
-    'c.rounds.q': "Почисти ли вече офис три?", // nieuw, nalezen
-    'c.rounds.a': "Не, там още работи някой.", // nieuw, nalezen
+    'w.gang': "коридорът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toiletpapier': "тоалетната хартия", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zeep': "сапунът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijvullen': "доливам, зареждам (слагам ново)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rounds.1': "Започвам от втория етаж.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rounds.2': "Тоалетната хартия свърши.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rounds.3': "Доливам сапуна.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rounds.q': "Почисти ли вече офис три?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rounds.a': "Не, там още работи някой.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.rounds': "Чистене там, където хората работят", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rounds.b': "Често чистиш, докато други хора още са на работа. Поздрави ги и попитай: „Mag ik hier even schoonmaken?“ Повечето хора казват „да“. Някой е на среща или говори по телефона? Тогава ела по-късно. Не мести листовете по бюрото и не ги чети: чисти около тях. Имаш определено време за обиколката си. Времето е твърде малко, за да я направиш добре? Не прескачай стаи мълчаливо. Кажи на началника си какво не успя да направиш и защо.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rounds.p': "Добър ден. Може ли да почистя тук за малко?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1985,18 +1985,18 @@ const t: CultureTranslation = {
     'c.rounds.o2': "Отиваш си вкъщи и се надяваш никой да не види.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rounds.o3': "Минаваш ги много бързо, без подовете.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rounds.w': "Клиент, който намери мръсен офис, се оплаква. Началник, който знае за това, може да го обясни или да ти даде повече време. Да кажеш не е провал.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.colours': "Цветове и кърпи", // nieuw, nalezen
-    'w.doek': "кърпата", // nieuw, nalezen
-    'w.spons': "гъбата", // nieuw, nalezen
-    'w.rood': "червен", // nieuw, nalezen
-    'w.blauw': "син", // nieuw, nalezen
-    'w.geel': "жълт", // nieuw, nalezen
-    'w.groen': "зелен", // nieuw, nalezen
-    's.colours.1': "Червената кърпа е за тоалетната.", // nieuw, nalezen
-    's.colours.2': "Вземи чиста кърпа.", // nieuw, nalezen
-    's.colours.3': "Кой цвят използвам тук?", // nieuw, nalezen
-    'c.colours.q': "Може ли да използвам тази кърпа за бюрото?", // nieuw, nalezen
-    'c.colours.a': "Не, червената е само за тоалетната.", // nieuw, nalezen
+    'l.colours': "Цветове и кърпи", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doek': "кърпата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spons': "гъбата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rood': "червен", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.blauw': "син", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geel': "жълт", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.groen': "зелен", // nieuw, nalezen // nagelezen AI 28 nov
+    's.colours.1': "Червената кърпа е за тоалетната.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.colours.2': "Вземи чиста кърпа.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.colours.3': "Кой цвят използвам тук?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.colours.q': "Може ли да използвам тази кърпа за бюрото?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.colours.a': "Не, червената е само за тоалетната.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.colours': "Всеки цвят си има място", // nieuw, nalezen // nagelezen AI 22 nov
     'c.colours.b': "Много фирми за почистване работят с цветове. Всеки цвят кърпа, гъба и кофа е за едно място. Често червеното е за тоалетната, а синьото е за бюра и маси. Така мръсотията от тоалетната не стига до бюро или до кухня. Цветовете може да са различни във всяка фирма, затова попитай още първия ден. Кърпата е мръсна или е паднала на пода? Вземи чиста. Използваните кърпи отиват в торбата за пране, а не обратно на количката. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.colours.p': "Кой цвят тук е за тоалетната?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2005,18 +2005,18 @@ const t: CultureTranslation = {
     'c.colours.o2': "Използваш червена кърпа: чистото си е чисто.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.colours.o3': "Използваш една синя кърпа отново за трите.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.colours.w': "Система с цветове работи само когато всички винаги я спазват. Тогава никой не се чуди къде е била една кърпа.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.shophelp': "Да помогнеш на клиент", // nieuw, nalezen
-    'w.aanbieding': "промоцията (по-евтино за кратко време)", // nieuw, nalezen
-    'w.korting': "отстъпката (плащаш по-малко)", // nieuw, nalezen
-    'w.uitverkocht': "изчерпан, свършил", // nieuw, nalezen
-    'w.magazijn': "складът", // nieuw, nalezen
-    'w.tas': "торбичката, чантата", // nieuw, nalezen
-    'w.bestellen': "поръчвам", // nieuw, nalezen
-    's.shophelp.1': "Съжалявам, това свърши.", // nieuw, nalezen
-    's.shophelp.2': "Искате ли торбичка?", // nieuw, nalezen
-    's.shophelp.3': "Това кафе е в промоция.", // nieuw, nalezen
-    'c.shophelp.q': "Имате ли още мляко?", // nieuw, nalezen
-    'c.shophelp.a': "Ще погледна в склада за вас.", // nieuw, nalezen
+    'l.shophelp': "Да помогнеш на клиент", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanbieding': "промоцията (по-евтино за кратко време)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.korting': "отстъпката (плащаш по-малко)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitverkocht': "изчерпан, свършил", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.magazijn': "складът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tas': "торбичката, чантата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bestellen': "поръчвам", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shophelp.1': "Съжалявам, това свърши.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shophelp.2': "Искате ли торбичка?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shophelp.3': "Това кафе е в промоция.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shophelp.q': "Имате ли още мляко?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shophelp.a': "Ще погледна в склада за вас.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.shophelp': "„Не знам“ не е краят", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shophelp.b': "Клиент пита нещо, а ти не знаеш отговора. Няма нищо: никой не знае всичко. Но не казвай само „nee“ или „weet ik niet“ и не си тръгвай. Кажи: „Ik vraag het even voor u“ и повикай колега. Продуктът е свършил? Кажи кога ще има пак или покажи нещо подобно. Гледай клиента и го поздравявай, и когато имаш много работа по рафтовете. Не разбра въпроса? Помоли клиента да го каже пак, бавно.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shophelp.p': "Това не го знам. Ще попитам за вас.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2025,18 +2025,18 @@ const t: CultureTranslation = {
     'c.shophelp.o2': "Казваш „nee“ и продължаваш да работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shophelp.o3': "Посочваш някъде, за да си тръгне.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shophelp.w': "Клиентът няма нищо против, че си отскоро тук или още учиш нидерландски. Клиентът има против да остане без помощ. Да повикаш колега е добро обслужване.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.shoptrouble': "Трудни моменти", // nieuw, nalezen
-    'w.bedrijfsleider': "управителят на магазина", // nieuw, nalezen
-    'w.beveiliger': "охранителят", // nieuw, nalezen
-    'w.dief': "крадецът", // nieuw, nalezen
-    'w.stelen': "крада", // nieuw, nalezen
-    'w.schreeuwen': "викам, крещя", // nieuw, nalezen
-    'w.geldterug': "парите обратно (връщат ти парите)", // nieuw, nalezen
-    's.shoptrouble.1': "Ще повикам управителя.", // nieuw, nalezen
-    's.shoptrouble.2': "Моля, не викайте.", // nieuw, nalezen
-    's.shoptrouble.3': "Мисля, че някой краде нещо.", // nieuw, nalezen
-    'c.shoptrouble.q': "Искам си парите обратно, сега!", // nieuw, nalezen
-    'c.shoptrouble.a': "Разбирам. Ще повикам колегата си.", // nieuw, nalezen
+    'l.shoptrouble': "Трудни моменти", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedrijfsleider': "управителят на магазина", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beveiliger': "охранителят", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dief': "крадецът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stelen': "крада", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schreeuwen': "викам, крещя", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geldterug': "парите обратно (връщат ти парите)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shoptrouble.1': "Ще повикам управителя.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shoptrouble.2': "Моля, не викайте.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shoptrouble.3': "Мисля, че някой краде нещо.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoptrouble.q': "Искам си парите обратно, сега!", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoptrouble.a': "Разбирам. Ще повикам колегата си.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.shoptrouble': "Ядосан клиент или крадец: ти си на първо място", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shoptrouble.b': "Понякога клиент се ядосва или виждаш някой да краде. Твоята безопасност е на първо място, винаги. При ядосан клиент: запази спокойствие, не викай в отговор и повикай управителя на магазина. Не е нужно да се справяш без помощ. Виждаш крадец? Не тичай след него, не го дръж и не заставай на вратата. Гледай добре какво виждаш и веднага кажи на управителя или на охранителя. Вещите могат да се заменят. Ти не можеш. След това още те е страх? Поговори за това с началника си. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shoptrouble.p': "Виждам някой, който слага нещо в чантата си.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2045,18 +2045,18 @@ const t: CultureTranslation = {
     'c.shoptrouble.o2': "Тичаш след него и го хващаш за ръката.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shoptrouble.o3': "Заставаш пред вратата.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shoptrouble.w': "Крадец, когото спират, може да стане агресивен. Управителят и охранителят знаят какво да правят. Никоя стока не си струва да пострадаш заради нея.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.plantcare': "Грижа за растението", // nieuw, nalezen
-    'w.plantblad': "листото", // nieuw, nalezen
-    'w.stengel': "стъблото", // nieuw, nalezen
-    'w.bloem': "цветето", // nieuw, nalezen
-    'w.knippen': "режа (с ножица)", // nieuw, nalezen
-    'w.tomaat': "доматът", // nieuw, nalezen
-    'w.rijp': "узрял (готов за бране)", // nieuw, nalezen
-    's.plantcare.1': "Този домат още не е узрял.", // nieuw, nalezen
-    's.plantcare.2': "Отрязвам листото.", // nieuw, nalezen
-    's.plantcare.3': "Стъблото е счупено.", // nieuw, nalezen
-    'c.plantcare.q': "Кои домати да бера?", // nieuw, nalezen
-    'c.plantcare.a': "Само червените. Зелените още не са узрели.", // nieuw, nalezen
+    'l.plantcare': "Грижа за растението", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plantblad': "листото", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stengel': "стъблото", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bloem': "цветето", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.knippen': "режа (с ножица)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tomaat': "доматът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rijp': "узрял (готов за бране)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantcare.1': "Този домат още не е узрял.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantcare.2': "Отрязвам листото.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantcare.3': "Стъблото е счупено.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantcare.q': "Кои домати да бера?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantcare.a': "Само червените. Зелените още не са узрели.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.plantcare': "Чисти ръце, здрави растения", // nieuw, nalezen // nagelezen AI 22 nov
     'c.plantcare.b': "И растенията могат да се разболеят. Вирусът минава от растение на растение по ръцете, ръкавиците, ножовете и дрехите. В оранжерия едно болно растение може да значи, че трябва да се махнат хиляди растения. Затова на вратата има строги правила: измий си ръцете, носи работните дрехи на фирмата и мини през ваната за дезинфекция на обувките. В много оранжерии не е позволено да носиш свои домати, чушки или краставици в обяда си. Виждаш растение, което изглежда странно? Не го пипай. Кажи на началника си в кой ред е. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.plantcare.p': "В ред дванайсет има болно растение.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2065,18 +2065,18 @@ const t: CultureTranslation = {
     'c.plantcare.o2': "Изскубваш го и го взимаш със себе си.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.plantcare.o3': "Отрязваш листата с петна.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.plantcare.w': "Когато пипнеш болно растение, вирусът тръгва с теб към следващите растения. Началникът ти знае как да го махне безопасно.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.outdoors': "Работа навън", // nieuw, nalezen
-    'w.land': "полето, нивата (където растенията растат навън)", // nieuw, nalezen
-    'w.regen': "дъждът", // nieuw, nalezen
-    'w.zon': "слънцето", // nieuw, nalezen
-    'w.laarzen': "ботушите", // nieuw, nalezen
-    'w.regenpak': "дъждобранът (яке и панталон против дъжд)", // nieuw, nalezen
-    'w.onweer': "гръмотевичната буря", // nieuw, nalezen
-    's.outdoors.1': "Вали. Обличам дъждобрана си.", // nieuw, nalezen
-    's.outdoors.2': "Ботушите ми са мокри.", // nieuw, nalezen
-    's.outdoors.3': "Слънцето е силно днес.", // nieuw, nalezen
-    'c.outdoors.q': "Идва буря с гръмотевици. Какво правим?", // nieuw, nalezen
-    'c.outdoors.a': "Спираме и влизаме вътре.", // nieuw, nalezen
+    'l.outdoors': "Работа навън", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.land': "полето, нивата (където растенията растат навън)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.regen': "дъждът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zon': "слънцето", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.laarzen': "ботушите", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.regenpak': "дъждобранът (яке и панталон против дъжд)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onweer': "гръмотевичната буря", // nieuw, nalezen // nagelezen AI 28 nov
+    's.outdoors.1': "Вали. Обличам дъждобрана си.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.outdoors.2': "Ботушите ми са мокри.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.outdoors.3': "Слънцето е силно днес.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.outdoors.q': "Идва буря с гръмотевици. Какво правим?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.outdoors.a': "Спираме и влизаме вътре.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.outdoors': "Слънце, дъжд и гръмотевици", // nieuw, nalezen // nagelezen AI 22 nov
     'c.outdoors.b': "Навън работиш във всякакво време. На слънце: покрий главата и кожата си, използвай слънцезащитен крем и пий вода често. В дъжд: носи дъждобрана и ботушите си и облечи сухи дрехи в почивката. От мокро и студено се разболяваш и работиш по-бавно. Гърми? Тогава спри и влез вътре, или в кола или бус. Не под дърво и не на открито поле. Трябват ти дрехи за дъжд или ботуши за работата? Питай работодателя си за тях, преди да ги купиш със свои пари.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.outdoors.p': "Ще има гръмотевици. Да влезем ли вътре?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2085,18 +2085,18 @@ const t: CultureTranslation = {
     'c.outdoors.o2': "Първо бързо довършваш реда.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.outdoors.o3': "Чакаш под голямото дърво.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.outdoors.w': "Мълнията удря най-високата точка, а на равно поле това си ти. Редът може да почака четвърт час.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.drawing': "Чертежът и размерът", // nieuw, nalezen
-    'w.tekening': "чертежът (показва каква трябва да е частта)", // nieuw, nalezen
-    'w.maat': "размерът", // nieuw, nalezen
-    'w.millimeter': "милиметърът", // nieuw, nalezen
-    'w.schuifmaat': "шублерът (мери много точно)", // nieuw, nalezen
-    'w.passen': "пасвам (частта влиза точно)", // nieuw, nalezen
-    'w.bout': "болтът", // nieuw, nalezen
-    's.drawing.1': "Какъв е размерът на чертежа?", // nieuw, nalezen
-    's.drawing.2': "Тази част не пасва.", // nieuw, nalezen
-    's.drawing.3': "По-голяма е с два милиметра.", // nieuw, nalezen
-    'c.drawing.q': "Болтът пасва ли?", // nieuw, nalezen
-    'c.drawing.a': "Не. Ще го измеря още веднъж.", // nieuw, nalezen
+    'l.drawing': "Чертежът и размерът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tekening': "чертежът (показва каква трябва да е частта)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.maat': "размерът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.millimeter': "милиметърът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schuifmaat': "шублерът (мери много точно)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.passen': "пасвам (частта влиза точно)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bout': "болтът", // nieuw, nalezen // nagelezen AI 28 nov
+    's.drawing.1': "Какъв е размерът на чертежа?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.drawing.2': "Тази част не пасва.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.drawing.3': "По-голяма е с два милиметра.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.drawing.q': "Болтът пасва ли?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.drawing.a': "Не. Ще го измеря още веднъж.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.drawing': "Чертежът решава", // nieuw, nalezen // nagelezen AI 22 nov
     'c.drawing.b': "В работилницата правиш това, което пише на чертежа, а не това, което изглежда горе-долу добре. Размерите са в милиметри и един милиметър може да е твърде много. Една част не пасва? Не я насилвай и не прави дупката по-голяма „само малко“. Измери пак и погледни чертежа. Не можеш да разчетеш чертежа или липсва размер? Попитай, преди да започнеш. Един въпрос струва една минута. Сгрешена част струва материал и часове.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.drawing.p': "Не мога да разчета този размер. Можеш ли да погледнеш?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2105,18 +2105,18 @@ const t: CultureTranslation = {
     'c.drawing.o2': "Набиваш я с чука.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.drawing.o3': "Шлайфаш малко и не казваш нищо.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.drawing.w': "Част, която влиза насила, може да се счупи по-късно, при клиента. Когато съобщиш, може да се намери причината.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.weld': "Заваряване и работа с горещо", // nieuw, nalezen
-    'w.lassen': "заварявам (съединявам метал с много силна топлина)", // nieuw, nalezen
-    'w.laskap': "заваръчната маска", // nieuw, nalezen
-    'w.rook': "димът", // nieuw, nalezen
-    'w.afzuiging': "аспирацията (отвежда дима)", // nieuw, nalezen
-    'w.afkoelen': "изстивам", // nieuw, nalezen
-    'w.brandwond': "изгарянето (рана от горещо)", // nieuw, nalezen
-    's.weld.1': "Слагам си заваръчната маска.", // nieuw, nalezen
-    's.weld.2': "Пусни аспирацията.", // nieuw, nalezen
-    's.weld.3': "Внимавай, металът още е горещ.", // nieuw, nalezen
-    'c.weld.q': "Може ли вече да го взема?", // nieuw, nalezen
-    'c.weld.a': "Не, чакай. Първо трябва да изстине.", // nieuw, nalezen
+    'l.weld': "Заваряване и работа с горещо", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lassen': "заварявам (съединявам метал с много силна топлина)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.laskap': "заваръчната маска", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rook': "димът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afzuiging': "аспирацията (отвежда дима)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afkoelen': "изстивам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brandwond': "изгарянето (рана от горещо)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.weld.1': "Слагам си заваръчната маска.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.weld.2': "Пусни аспирацията.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.weld.3': "Внимавай, металът още е горещ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weld.q': "Може ли вече да го взема?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weld.a': "Не, чакай. Първо трябва да изстине.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.weld': "Горещият метал изглежда студен", // nieuw, nalezen // nagelezen AI 22 nov
     'c.weld.b': "Заваряването дава много ярка светлина. Не гледай в нея без заваръчна маска, и отдалече не: очите ти могат да изгорят, а го усещаш чак часове по-късно. Колега заварява близо до теб? Гледай настрани или застани зад паравана. Метал, който току-що е заваряван или шлайфан, изглежда нормално, но е много горещ. Не го взимай с голи ръце. Димът от заваряване е вреден за белите дробове: пусни аспирацията. Изгаряне? Охлаждай го веднага с вода, поне десет минути, и съобщи за това. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.weld.p': "Това изстина ли вече?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2125,18 +2125,18 @@ const t: CultureTranslation = {
     'c.weld.o2': "Гледаш за малко: може да научиш нещо.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.weld.o3': "Притваряш очи наполовина.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.weld.w': "Светлината от заваряването изгаря очите, и отстрани, и отдалече. Болката усещаш чак по-късно, често през нощта.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.carparts': "Части на колата", // nieuw, nalezen
-    'w.motor': "двигателят", // nieuw, nalezen
-    'w.motorkap': "предният капак (капакът над двигателя)", // nieuw, nalezen
-    'w.rem': "спирачката", // nieuw, nalezen
-    'w.lamp': "фарът, лампата", // nieuw, nalezen
-    'w.ruitenwisser': "чистачката", // nieuw, nalezen
-    'w.stoel': "седалката, столът", // nieuw, nalezen
-    's.carparts.1': "Отвори предния капак.", // nieuw, nalezen
-    's.carparts.2': "Предният ляв фар не работи.", // nieuw, nalezen
-    's.carparts.3': "Спирачките издават шум.", // nieuw, nalezen
-    'c.carparts.q': "Какво чуваш?", // nieuw, nalezen
-    'c.carparts.a': "Двигателят издава странен звук.", // nieuw, nalezen
+    'l.carparts': "Части на колата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.motor': "двигателят", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.motorkap': "предният капак (капакът над двигателя)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rem': "спирачката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lamp': "фарът, лампата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ruitenwisser': "чистачката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stoel': "седалката, столът", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carparts.1': "Отвори предния капак.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carparts.2': "Предният ляв фар не работи.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carparts.3': "Спирачките издават шум.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carparts.q': "Какво чуваш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carparts.a': "Двигателят издава странен звук.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.carparts': "Колата е на клиента", // nieuw, nalezen // nagelezen AI 22 nov
     'c.carparts.b': "Колата в сервиза не е твоя: тя е на клиента. Сложи калъф на седалката и на волана, преди да влезеш, и вътре работи с чисти ръце. Остави седалката, огледалата и радиото така, както са били. Наложи ли се да преместиш седалката? Върни я обратно. Не пипай личните вещи в колата. Направи ли драскотина или петно? Кажи веднага на началника си. Клиент, който го открие вкъщи, не идва пак.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.carparts.p': "Направих драскотина. Съжалявам.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2145,18 +2145,18 @@ const t: CultureTranslation = {
     'c.carparts.o2': "Не казваш нищо: много е малка.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.carparts.o3': "Търкаш я с кърпа и се надяваш да изчезне.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.carparts.w': "Всеки греши понякога. Сервизът може да поправи драскотина или да каже честно на клиента. Скрита драскотина струва на сервиза доброто му име.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.carsafe': "Бензин, газ и ток", // nieuw, nalezen
-    'w.krik': "крикът (вдига едната страна на колата)", // nieuw, nalezen
-    'w.benzine': "бензинът", // nieuw, nalezen
-    'w.elektrischeauto': "електрическата кола", // nieuw, nalezen
-    'w.oranje': "оранжев", // nieuw, nalezen
-    'w.morsen': "разливам", // nieuw, nalezen
-    'w.lap': "парцалът (кърпа за мръсна работа)", // nieuw, nalezen
-    's.carsafe.1': "Мирише ми на бензин.", // nieuw, nalezen
-    's.carsafe.2': "Разляло се е масло. Отивам за парцал.", // nieuw, nalezen
-    's.carsafe.3': "Не пипам оранжевите кабели.", // nieuw, nalezen
-    'c.carsafe.q': "Може ли да работя по тази кола?", // nieuw, nalezen
-    'c.carsafe.a': "Още не. Това е електрическа кола.", // nieuw, nalezen
+    'l.carsafe': "Бензин, газ и ток", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.krik': "крикът (вдига едната страна на колата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.benzine': "бензинът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.elektrischeauto': "електрическата кола", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oranje': "оранжев", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.morsen': "разливам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lap': "парцалът (кърпа за мръсна работа)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carsafe.1': "Мирише ми на бензин.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carsafe.2': "Разляло се е масло. Отивам за парцал.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carsafe.3': "Не пипам оранжевите кабели.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carsafe.q': "Може ли да работя по тази кола?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carsafe.a': "Още не. Това е електрическа кола.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.carsafe': "Оранжеви кабели и работещи двигатели", // nieuw, nalezen // nagelezen AI 22 nov
     'c.carsafe.b': "Електрическата или хибридната кола има батерия с много високо напрежение. Кабелите за нея са оранжеви. Не ги пипай и не ги разкачай: първо монтьор със специално обучение трябва да направи колата безопасна. Има табела или конус до колата? Тогава стой настрана. Двигател, който работи на закрито, прави газ, който не се подушва и не се вижда, а може да убие. Затова: сложи маркуча за изгорелите газове или отвори вратите. Мирише ти на бензин? Никакви искри и никакво пушене. Кажи веднага на началника си. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.carsafe.p': "Тази кола обезопасена ли е вече?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2166,18 +2166,18 @@ const t: CultureTranslation = {
     'c.carsafe.o3': "Буташ го обратно със суха кърпа.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.carsafe.w': "Батерията на електрическа кола има достатъчно ток, за да убие, и когато колата е изключена. Само човек с нужното обучение има право да пипа тези части.", // nieuw, nalezen // nagelezen AI 22 nov
     // Logistiek at four lessons per unit (14 November 2026).
-    'l.vancheck': "Проверка на буса", // nieuw, nalezen
-    'w.schade': "повредата, щетата", // nieuw, nalezen
-    'w.deuk': "вдлъбнатината", // nieuw, nalezen
-    'w.spiegel': "огледалото", // nieuw, nalezen
-    'w.tanken': "зареждам гориво (слагам гориво в буса)", // nieuw, nalezen
-    'w.opladen': "зареждам (електрически бус, телефон)", // nieuw, nalezen
-    'w.parkeren': "паркирам", // nieuw, nalezen
-    's.vancheck.1': "Има вдлъбнатина на вратата.", // nieuw, nalezen
-    's.vancheck.2': "Тази повреда вече я имаше.", // nieuw, nalezen
-    's.vancheck.3': "Първо трябва още да заредя гориво.", // nieuw, nalezen
-    'c.vancheck.q': "Всичко наред ли е с буса?", // nieuw, nalezen
-    'c.vancheck.a': "Не, огледалото е счупено.", // nieuw, nalezen
+    'l.vancheck': "Проверка на буса", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schade': "повредата, щетата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.deuk': "вдлъбнатината", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spiegel': "огледалото", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tanken': "зареждам гориво (слагам гориво в буса)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opladen': "зареждам (електрически бус, телефон)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.parkeren': "паркирам", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vancheck.1': "Има вдлъбнатина на вратата.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vancheck.2': "Тази повреда вече я имаше.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vancheck.3': "Първо трябва още да заредя гориво.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vancheck.q': "Всичко наред ли е с буса?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vancheck.a': "Не, огледалото е счупено.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.vancheck': "Огледай, преди да тръгнеш", // nieuw, nalezen // nagelezen AI 22 nov
     'c.vancheck.b': "Обиколи буса преди първия си курс. Виждаш вдлъбнатина, драскотина или счупено огледало? Направи снимка и съобщи, преди да тръгнеш. Тогава всички знаят, че повредата вече я е имало. Случи ли се нещо по време на курса ти? Съобщи още същия ден, и когато е нещо малко. Скриването на повреда носи по-големи проблеми по-късно. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.vancheck.p': "Има повреда по буса. Ето снимка.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2186,18 +2186,18 @@ const t: CultureTranslation = {
     'c.vancheck.o2': "Не казваш нищо: вдлъбнатината не е твоя.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.vancheck.o3': "Чакаш да видиш дали някой ще попита.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.vancheck.w': { m: "Когато съобщиш, преди да тръгнеш, никой не може да мисли, че ти си го направил. Снимка с часа е ясна за всички.", f: "Когато съобщиш, преди да тръгнеш, никой не може да мисли, че ти си го направила. Снимка с часа е ясна за всички.", x: "Когато съобщиш, преди да тръгнеш, никой не може да мисли, че е заради теб. Снимка с часа е ясна за всички." }, // nieuw, nalezen // nagelezen AI 22 nov
-    'l.delay': "Закъснения на пътя", // nieuw, nalezen
-    'w.file': "задръстването", // nieuw, nalezen
-    'w.vertraging': "закъснението (по-късно си от планираното)", // nieuw, nalezen
-    'w.omleiding': "обходният път (друг път, защото пътят е затворен)", // nieuw, nalezen
-    'w.navigatie': "навигацията (приложението, което показва пътя)", // nieuw, nalezen
-    'w.planner': "диспечерът (човекът, който прави маршрутите)", // nieuw, nalezen
-    'w.retour': "връщането (пратка, която се връща)", // nieuw, nalezen
-    's.delay.1': "В задръстване съм.", // nieuw, nalezen
-    's.delay.2': "Имам половин час закъснение.", // nieuw, nalezen
-    's.delay.3': "Тази пратка се връща.", // nieuw, nalezen
-    'c.delay.q': "Къде си сега?", // nieuw, nalezen
-    'c.delay.a': "При обходния път. Ще закъснея с десет минути.", // nieuw, nalezen
+    'l.delay': "Закъснения на пътя", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.file': "задръстването", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vertraging': "закъснението (по-късно си от планираното)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.omleiding': "обходният път (друг път, защото пътят е затворен)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.navigatie': "навигацията (приложението, което показва пътя)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.planner': "диспечерът (човекът, който прави маршрутите)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.retour': "връщането (пратка, която се връща)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.delay.1': "В задръстване съм.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.delay.2': "Имам половин час закъснение.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.delay.3': "Тази пратка се връща.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.delay.q': "Къде си сега?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.delay.a': "При обходния път. Ще закъснея с десет минути.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.delay': "Закъсняваш? Кажи навреме", // nieuw, nalezen // nagelezen AI 22 nov
     'c.delay.b': "Задръстване или затворен път не е твоя вина. Но кажи на диспечера веднага щом знаеш, че ще закъснееш. Тогава диспечерът може да каже на клиентите или да промени маршрута. Първо спри на безопасно място: не се обаждай с телефона в ръка, докато караш. И не карай по-бързо, за да наваксаш времето. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.delay.p': "В задръстване съм. Ще закъснея с половин час.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2207,19 +2207,19 @@ const t: CultureTranslation = {
     'c.delay.o3': "Не казваш нищо: може никой да не забележи.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.delay.w': "Когато диспечерът знае рано, клиентите научават и никой не чака напразно. Да караш по-бързо е опасно и почти не печели време.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Instructies", a new basis unit (u.do, 14 November 2026).
-    'u.do': "Указания", // nieuw, nalezen
-    'l.putdown': "Сложи го там", // nieuw, nalezen
-    'w.zetten': "слагам, поставям (нещо, което стои: кашон, кофа)", // nieuw, nalezen
-    'w.leggen': "слагам, полагам (нещо, което лежи)", // nieuw, nalezen
-    'w.brengen': "нося, занасям (до място или до човек)", // nieuw, nalezen
-    'w.geven': "давам", // nieuw, nalezen
-    'w.vasthouden': "държа", // nieuw, nalezen
-    'w.loslaten': "пускам", // nieuw, nalezen
-    's.putdown.1': "Сложи го там.", // nieuw, nalezen
-    's.putdown.2': "Занеси това в стола.", // nieuw, nalezen
-    's.putdown.3': "Подръж това за малко.", // nieuw, nalezen
-    'c.putdown.q': "Можеш ли да подържиш това за малко?", // nieuw, nalezen
-    'c.putdown.a': "Да. Къде да го сложа?", // nieuw, nalezen
+    'u.do': "Указания", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.putdown': "Сложи го там", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zetten': "слагам, поставям (нещо, което стои: кашон, кофа)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.leggen': "слагам, полагам (нещо, което лежи)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brengen': "нося, занасям (до място или до човек)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geven': "давам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vasthouden': "държа", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.loslaten': "пускам", // nieuw, nalezen // nagelezen AI 28 nov
+    's.putdown.1': "Сложи го там.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.putdown.2': "Занеси това в стола.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.putdown.3': "Подръж това за малко.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.putdown.q': "Можеш ли да подържиш това за малко?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.putdown.a': "Да. Къде да го сложа?", // nieuw, nalezen // nagelezen AI 28 nov
     'c.putdown': "Кажи, че го държиш", // nieuw, nalezen // nagelezen AI 22 nov
     'c.putdown.b': "Носите нещо заедно или колега ти подава нещо тежко? Кажи „Ik heb hem“, когато го държиш добре. Тогава колегата знае, че е безопасно да пусне. А ако ти искаш да пуснеш? Първо попитай: „Heb je hem?“ И изчакай отговора. Това е нормално на всяко работно място. Така нищо не пада върху крака и ръце.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.putdown.p': "Държа го. Можеш да пуснеш.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2228,18 +2228,18 @@ const t: CultureTranslation = {
     'c.putdown.o2': "Не казваш нищо: той ще види.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.putdown.o3': "Взимаш го бързо, за да не чака.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.putdown.w': "Колегата пуска, когато мисли, че вече го държиш. Една дума ти дава време да го хванеш добре.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.onoff': "Включено и изключено, отворено и затворено", // nieuw, nalezen
-    'w.aanzetten': "включвам", // nieuw, nalezen
-    'w.opendoen': "отварям", // nieuw, nalezen
-    'w.dichtdoen': "затварям", // nieuw, nalezen
-    'w.drukken': "натискам (бутон)", // nieuw, nalezen
-    'w.draaien': "въртя, завъртам", // nieuw, nalezen
-    'w.stoppen': "спирам", // nieuw, nalezen
-    's.onoff.1': "Затвори вратата.", // nieuw, nalezen
-    's.onoff.2': "Натисни бутона.", // nieuw, nalezen
-    's.onoff.3': "Стоп! Изключи го.", // nieuw, nalezen
-    'c.onoff.q': "Затворена ли е вратата?", // nieuw, nalezen
-    'c.onoff.a': "Не. Сега я затварям.", // nieuw, nalezen
+    'l.onoff': "Включено и изключено, отворено и затворено", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanzetten': "включвам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opendoen': "отварям", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dichtdoen': "затварям", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.drukken': "натискам (бутон)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.draaien': "въртя, завъртам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stoppen': "спирам", // nieuw, nalezen // nagelezen AI 28 nov
+    's.onoff.1': "Затвори вратата.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.onoff.2': "Натисни бутона.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.onoff.3': "Стоп! Изключи го.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.onoff.q': "Затворена ли е вратата?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.onoff.a': "Не. Сега я затварям.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.onoff': "Стоп значи стоп", // nieuw, nalezen // nagelezen AI 22 nov
     'c.onoff.b': "Някой вика „Stop!“? Спри веднага, дори да не знаеш защо. Питай след това. Кратка, силна дума тук не е гняв: така колегите се пазят един друг. А ако ти видиш нещо опасно? Извикай и ти „Stop!“, дори на човек, който работи тук от години. Никой не намира това за странно.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.onoff.p': "Стоп! Изчакай малко.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2248,18 +2248,18 @@ const t: CultureTranslation = {
     'c.onoff.o2': "Продължаваш: не виждаш проблем.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.onoff.o3': "Първо питаш защо трябва да спреш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.onoff.w': "Колегата може да вижда нещо, което ти не виждаш. Първо спри, после говори: така всички са в безопасност.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.fillempty': "Бутай, дърпай, пълни", // nieuw, nalezen
-    'w.duwen': "бутам", // nieuw, nalezen
-    'w.trekken': "дърпам", // nieuw, nalezen
-    'w.vullen': "пълня", // nieuw, nalezen
-    'w.leegmaken': "изпразвам", // nieuw, nalezen
-    'w.schoonmaken': "почиствам, чистя", // nieuw, nalezen
-    'w.vol': "пълен", // nieuw, nalezen
-    's.fillempty.1': "Не бутай, а дърпай.", // nieuw, nalezen
-    's.fillempty.2': "Този е пълен. Изпразни го.", // nieuw, nalezen
-    's.fillempty.3': "Почисти това, моля.", // nieuw, nalezen
-    'c.fillempty.q': "Пълен ли е вече?", // nieuw, nalezen
-    'c.fillempty.a': "Да. Изпразвам го.", // nieuw, nalezen
+    'l.fillempty': "Бутай, дърпай, пълни", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.duwen': "бутам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.trekken': "дърпам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vullen': "пълня", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.leegmaken': "изпразвам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schoonmaken': "почиствам, чистя", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vol': "пълен", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fillempty.1': "Не бутай, а дърпай.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fillempty.2': "Този е пълен. Изпразни го.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fillempty.3': "Почисти това, моля.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.fillempty.q': "Пълен ли е вече?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.fillempty.a': "Да. Изпразвам го.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.fillempty': "Готово? Кажи го", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fillempty.b': "Приключи ли със задача? Кажи го: „Ik ben klaar.“ И попитай какво можеш да правиш след това. Ако чакаш тихо, докато някой те види, може да изглежда, че не искаш да работиш, дори това да не е вярно. Колеги, които питат за следващата задача, след време често получават по-интересна работа. Искаш ли да научиш нещо ново? Попитай и за това: „Mag ik dat ook leren?“", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fillempty.p': "Приключих. Какво още мога да направя?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2268,18 +2268,18 @@ const t: CultureTranslation = {
     'c.fillempty.o2': "Чакаш, докато началникът те види.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fillempty.o3': "Взимаш почивка: работата ти е свършена.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fillempty.w': { m: "Началникът не може да види всичко. Когато кажеш, че си приключил, работата продължава и показваш, че искаш да правиш повече.", f: "Началникът не може да види всичко. Когато кажеш, че си приключила, работата продължава и показваш, че искаш да правиш повече.", x: "Началникът не може да види всичко. Когато кажеш, че задачата е готова, работата продължава и показваш, че искаш да правиш повече." }, // nieuw, nalezen // nagelezen AI 22 nov
-    'l.order': "Първо това, после онова", // nieuw, nalezen
-    'w.nu': "сега", // nieuw, nalezen
-    'w.dan': "после", // nieuw, nalezen
-    'w.altijd': "винаги", // nieuw, nalezen
-    'w.genoeg': "достатъчно", // nieuw, nalezen
-    'w.meer': "повече", // nieuw, nalezen
-    'w.alles': "всичко", // nieuw, nalezen
-    's.order.1': "Първо това, после онова.", // nieuw, nalezen
-    's.order.2': "Това е достатъчно.", // nieuw, nalezen
-    's.order.3': "Винаги прави това така.", // nieuw, nalezen
-    'c.order.q': "Можеш ли да направиш това сега?", // nieuw, nalezen
-    'c.order.a': "Да. Първо това, а после?", // nieuw, nalezen
+    'l.order': "Първо това, после онова", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nu': "сега", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dan': "после", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.altijd': "винаги", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.genoeg': "достатъчно", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meer': "повече", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alles': "всичко", // nieuw, nalezen // nagelezen AI 28 nov
+    's.order.1': "Първо това, после онова.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.order.2': "Това е достатъчно.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.order.3': "Винаги прави това така.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.order.q': "Можеш ли да направиш това сега?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.order.a': "Да. Първо това, а после?", // nieuw, nalezen // nagelezen AI 28 nov
     'c.order': "Много задачи наведнъж? Попитай коя е първа", // nieuw, nalezen // nagelezen AI 22 nov
     'c.order.b': "Понякога получаваш три задачи в едно изречение. Това е трудно за запомняне, и за хора, които говорят добре нидерландски. Попитай коя е първа: „Wat moet ik eerst doen?“ Можеш и да запишеш задачите, или да ги преброиш на пръсти и да ги повториш. Забрави ли някоя? Върни се и попитай. Това е по-добре, отколкото да гадаеш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.order.p': "Това е много. Какво да направя първо?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2288,19 +2288,19 @@ const t: CultureTranslation = {
     'c.order.o2': "Правиш първата и се надяваш да си спомниш останалите.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.order.o3': "Не правиш нищо: не знаеш и трите.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.order.w': "Да попиташ веднага отнема десет секунди. По-късно началникът може да го няма и тогава чакаш или гадаеш.", // nieuw, nalezen // nagelezen AI 22 nov
-    'u.afbouw': "Плочки, мазилка и боя", // nieuw, nalezen
-    'l.tiletools': "Инструментите на плочкаджията", // nieuw, nalezen
-    'w.lijmkam': "назъбената маламашка (разстила лепилото за плочки на равни ивици)", // nieuw, nalezen
-    'w.troffel': "мистрията", // nieuw, nalezen
-    'w.tegelsnijder': "машинката за рязане на плочки", // nieuw, nalezen
-    'w.nijptang': "клещите за плочки (за да отчупваш малки парченца от плочката)", // nieuw, nalezen
-    'w.mixer': "миксерът (разбърква лепило или мазилка в кофа)", // nieuw, nalezen
-    'w.duimstok': "сгъваемият метър", // nieuw, nalezen
-    's.tiletools.1': "Дай ми за малко назъбената маламашка.", // nieuw, nalezen
-    's.tiletools.2': "Режа плочката с машинката за рязане.", // nieuw, nalezen
-    's.tiletools.3': "Първо мери със сгъваемия метър.", // nieuw, nalezen
-    'c.tiletools.q': "Къде е миксерът?", // nieuw, nalezen
-    'c.tiletools.a': "При кофата, до вратата.", // nieuw, nalezen
+    'u.afbouw': "Плочки, мазилка и боя", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.tiletools': "Инструментите на плочкаджията", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lijmkam': "назъбената маламашка (разстила лепилото за плочки на равни ивици)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.troffel': "мистрията", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tegelsnijder': "машинката за рязане на плочки", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nijptang': "клещите за плочки (за да отчупваш малки парченца от плочката)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mixer': "миксерът (разбърква лепило или мазилка в кофа)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.duimstok': "сгъваемият метър", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tiletools.1': "Дай ми за малко назъбената маламашка.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tiletools.2': "Режа плочката с машинката за рязане.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tiletools.3': "Първо мери със сгъваемия метър.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.tiletools.q': "Къде е миксерът?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.tiletools.a': "При кофата, до вратата.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.tiletools': "Почисти инструментите, преди лепилото да се втвърди", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiletools.b': "Лепилото за плочки и мазилката се втвърдяват бързо, и по инструментите също. Затова измий назъбената маламашка, мистрията и миксера в кофа с вода веднага, и преди почивката също. Втвърденото лепило не се маха, а назъбена маламашка с твърдо лепило прави лоши ивици. Не изливай мръсната вода в мивка или в канал: запушва се. Попитай къде може да се излее водата. Миксера дръж с две ръце и го пускай бавно. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiletools.p': "Само да измия назъбената маламашка.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2309,18 +2309,18 @@ const t: CultureTranslation = {
     'c.tiletools.o2': "Оставяш я: ще я измиеш след работа.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiletools.o3': "Слагаш я в кофата с лепило.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiletools.w': "Лепилото за плочки се втвърдява и през почивката. Чистата назъбена маламашка прави хубави ивици и плочките лепнат добре. Твърдо лепило по нея значи много работа или нов инструмент.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.tiling': "Плочки, лепило и централната линия", // nieuw, nalezen
-    'w.tegel': "плочката", // nieuw, nalezen
-    'w.tegellijm': "лепилото за плочки", // nieuw, nalezen
-    'w.tegelkruisje': "кръстчето за фуги (малко кръстче между плочките)", // nieuw, nalezen
-    'w.hartlijn': "централната линия (от нея започваш да редиш плочки)", // nieuw, nalezen
-    'w.tegelplaat': "плочата за упражнения (на нея се учиш да редиш плочки)", // nieuw, nalezen
-    'w.potlood': "моливът", // nieuw, nalezen
-    's.tiling.1': "Лепилото за плочки е още мокро.", // nieuw, nalezen
-    's.tiling.2': "Сложи кръстче между плочките.", // nieuw, nalezen
-    's.tiling.3': "Първо начертай централната линия с молива.", // nieuw, nalezen
-    'c.tiling.q': "Откъде да започна с плочките?", // nieuw, nalezen
-    'c.tiling.a': "От средата, на централната линия.", // nieuw, nalezen
+    'l.tiling': "Плочки, лепило и централната линия", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tegel': "плочката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tegellijm': "лепилото за плочки", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tegelkruisje': "кръстчето за фуги (малко кръстче между плочките)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hartlijn': "централната линия (от нея започваш да редиш плочки)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tegelplaat': "плочата за упражнения (на нея се учиш да редиш плочки)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.potlood': "моливът", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tiling.1': "Лепилото за плочки е още мокро.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tiling.2': "Сложи кръстче между плочките.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tiling.3': "Първо начертай централната линия с молива.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.tiling.q': "Откъде да започна с плочките?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.tiling.a': "От средата, на централната линия.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.tiling': "Започни от централната линия, с малко лепило", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiling.b': "Плочкаджията не започва от ъгъла. Първо чертаеш централната линия с молив и нивелир и започваш оттам. Тогава отрязаните плочки в двата края са еднакво големи. Мажи само толкова лепило, колкото можеш бързо да покриеш с плочки. Лепило, което стои твърде дълго, хваща суха коричка и тогава плочките не лепнат добре. Слагай кръстче на всяко пресичане, за да са всички фуги еднакви. Проверявай често с нивелира: крива плочка лесно се оправя сега и трудно утре.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiling.p': "Не мажа твърде много лепило наведнъж.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2329,18 +2329,18 @@ const t: CultureTranslation = {
     'c.tiling.o2': "Все пак натискаш плочките в него.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiling.o3': "Намокряш го с гъба и продължаваш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiling.w': "Лепило със суха коричка не държи добре плочката. После плочката може да падне и тогава работата трябва да се направи отново.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.plaster': "Мазане", // nieuw, nalezen
-    'w.stucspaan': "стоманената маламашка (плоска, за изглаждане на мазилката)", // nieuw, nalezen
-    'w.oplegspaan': "дъската за мазилка (плоска дъска, на която държиш мазилката)", // nieuw, nalezen
-    'w.spackmes': "шпаклата (широк плосък нож)", // nieuw, nalezen
-    'w.rei': "мастарът (дълга права летва за изравняване на мазилката)", // nieuw, nalezen
-    'w.sponsspaan': "маламашката с гъба", // nieuw, nalezen
-    'w.hoekprofiel': "ъгловият профил (метална лента за прав ъгъл)", // nieuw, nalezen
-    's.plaster.1': "Първо сложи ъгловия профил на ъгъла.", // nieuw, nalezen
-    's.plaster.2': "Изглади стената със стоманената маламашка.", // nieuw, nalezen
-    's.plaster.3': "Изтегли мастара по стената.", // nieuw, nalezen
-    'c.plaster.q': "Суха ли е вече стената?", // nieuw, nalezen
-    'c.plaster.a': "Не, изчакай още един ден.", // nieuw, nalezen
+    'l.plaster': "Мазане", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stucspaan': "стоманената маламашка (плоска, за изглаждане на мазилката)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oplegspaan': "дъската за мазилка (плоска дъска, на която държиш мазилката)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spackmes': "шпаклата (широк плосък нож)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rei': "мастарът (дълга права летва за изравняване на мазилката)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sponsspaan': "маламашката с гъба", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hoekprofiel': "ъгловият профил (метална лента за прав ъгъл)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plaster.1': "Първо сложи ъгловия профил на ъгъла.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plaster.2': "Изглади стената със стоманената маламашка.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plaster.3': "Изтегли мастара по стената.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plaster.q': "Суха ли е вече стената?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plaster.a': "Не, изчакай още един ден.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.plaster': "Мазилката има нужда от време, за да изсъхне", // nieuw, nalezen // nagelezen AI 22 nov
     'c.plaster.b': "Прясната мазилка дълго остава мокра. Мократа стена е по-тъмна от сухата. Бояджията може да започне чак когато стената е суха навсякъде, а това може да отнеме дни или седмици. Не я суши по-бързо с калорифер: тогава мазилката може да се напука. Някой иска да боядисва твърде рано? Кажи, че стената още не е суха. И преди да започнеш, покрий пода, прозорците и контактите: мазилката трудно се маха.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.plaster.p': "Стената е още мокра. Още не можеш да боядисваш.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2350,20 +2350,20 @@ const t: CultureTranslation = {
     'c.plaster.o3': "Не казваш нищо: бояджията ще види сам.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.plaster.w': "Тъмните петна значат, че мазилката е още мокра. Боята на мокра стена може да се отлепи, а калориферът може да направи пукнатини. Чакането струва по-малко от правенето наново.", // nieuw, nalezen // nagelezen AI 22 nov
     // l.paint and l.prep (u.afbouw), "Metselen, hout en vastmaken" (u.ruwbouw), three lessons of Rekenen (u.numbers) and "Machines en gereedschap" (u.machines), 20-21 November 2026.
-    'u.ruwbouw': "Зидане, дърво и закрепване", // nieuw, nalezen
-    'u.machines': "Машини и инструменти", // nieuw, nalezen
-    'l.shapes': "Форми", // nieuw, nalezen
-    'w.vierkant': "квадратът", // nieuw, nalezen
-    'w.rechthoek': "правоъгълникът", // nieuw, nalezen
-    'w.driehoek': "триъгълникът", // nieuw, nalezen
-    'w.cirkel': "кръгът", // nieuw, nalezen
-    'w.kubus': "кубът", // nieuw, nalezen
-    'w.balk': "паралелепипедът (дълга форма като кутия)", // nieuw, nalezen
-    's.shapes.1': "Плочката е квадрат.", // nieuw, nalezen
-    's.shapes.2': "Тази стая е правоъгълник.", // nieuw, nalezen
-    's.shapes.3': "Тухлата има формата на паралелепипед.", // nieuw, nalezen
-    'c.shapes.q': "Квадрат ли е?", // nieuw, nalezen
-    'c.shapes.a': "Не, правоъгълник. По-дълъг е, отколкото широк.", // nieuw, nalezen
+    'u.ruwbouw': "Зидане, дърво и закрепване", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.machines': "Машини и инструменти", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.shapes': "Форми", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vierkant': "квадратът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rechthoek': "правоъгълникът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.driehoek': "триъгълникът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.cirkel': "кръгът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kubus': "кубът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.balk': "паралелепипедът (дълга форма като кутия)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shapes.1': "Плочката е квадрат.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shapes.2': "Тази стая е правоъгълник.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shapes.3': "Тухлата има формата на паралелепипед.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shapes.q': "Квадрат ли е?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shapes.a': "Не, правоъгълник. По-дълъг е, отколкото широк.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.shapes': "Провери правоъгълника с два диагонала", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shapes.b': "Стая, под или рамка често са правоъгълник. Но ъглите наистина ли са прави? Има лесна проверка. Мери от единия ъгъл до срещуположния ъгъл. После мери между другите два ъгъла. Двете дължини еднакви ли са? Тогава ъглите са прави. Не са еднакви? Тогава формата е малко изкривена и плочките или подът няма да паснат добре. Кажи на началника си, преди да започнеш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shapes.p': "Тези два размера не са еднакви.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2372,18 +2372,18 @@ const t: CultureTranslation = {
     'c.shapes.o2': "Започваш от един ъгъл, ще стане.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shapes.o3': "Мериш отново само едната страна.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shapes.w': "Две различни дължини значат, че ъглите не са прави. Тогава плочките или дъските не пасват. По-добре е да го знаеш, преди да започнеш.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.angles': "Ъгли и кръгли форми", // nieuw, nalezen
-    'w.hoek': "ъгълът", // nieuw, nalezen
-    'w.graad': "градусът (°)", // nieuw, nalezen
-    'w.geodriehoek': "триъгълникът с транспортир", // nieuw, nalezen
-    'w.boog': "дъгата, извивката", // nieuw, nalezen
-    'w.cilinder': "цилиндърът", // nieuw, nalezen
-    'w.parallellogram': "успоредникът", // nieuw, nalezen
-    's.angles.1': "Този ъгъл е деветдесет градуса.", // nieuw, nalezen
-    's.angles.2': "Измери ъгъла с триъгълника.", // nieuw, nalezen
-    's.angles.3': "Тръбата има формата на цилиндър.", // nieuw, nalezen
-    'c.angles.q': "Колко градуса е този ъгъл?", // nieuw, nalezen
-    'c.angles.a': "Четиридесет и пет. Половината от прав ъгъл.", // nieuw, nalezen
+    'l.angles': "Ъгли и кръгли форми", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hoek': "ъгълът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.graad': "градусът (°)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geodriehoek': "триъгълникът с транспортир", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.boog': "дъгата, извивката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.cilinder': "цилиндърът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.parallellogram': "успоредникът", // nieuw, nalezen // nagelezen AI 28 nov
+    's.angles.1': "Този ъгъл е деветдесет градуса.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.angles.2': "Измери ъгъла с триъгълника.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.angles.3': "Тръбата има формата на цилиндър.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.angles.q': "Колко градуса е този ъгъл?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.angles.a': "Четиридесет и пет. Половината от прав ъгъл.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.angles': "Провери голям ъгъл с 3, 4 и 5", // nieuw, nalezen // nagelezen AI 22 nov
     'c.angles.b': "На строежа често проверяваш прав ъгъл: стена върху под, ъгъл на стая. Малък ъгъл проверяваш с ъгълник или с триъгълник. За голям ъгъл има стар трик. Измери 3 метра по едната страна и 4 метра по другата страна и сложи знак и на двете места. Точно 5 метра ли е от знак до знак? Тогава ъгълът е 90 градуса. Става и по-малко: 30, 40 и 50 сантиметра.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.angles.p': "Този ъгъл не е прав.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2392,18 +2392,18 @@ const t: CultureTranslation = {
     'c.angles.o2': "Гледаш го отдалеч.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.angles.o3': "Все пак използваш малкия ъгълник.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.angles.w': "С 3, 4 и 5 можеш да провериш голям ъгъл точно, само с ролетка. На око ъгълът може да изглежда прав, а пак да е грешен.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.size': "Дължина, площ и обем", // nieuw, nalezen
-    'w.lengte': "дължината", // nieuw, nalezen
-    'w.breedte': "ширината", // nieuw, nalezen
-    'w.hoogte': "височината", // nieuw, nalezen
-    'w.oppervlakte': "площта (дължината по ширината, в квадратни метри)", // nieuw, nalezen
-    'w.inhoud': "обемът (дължината по ширината по височината)", // nieuw, nalezen
-    'w.centimeter': "сантиметърът", // nieuw, nalezen
-    's.size.1': "Площта е дължината по ширината.", // nieuw, nalezen
-    's.size.2': "Обемът е дължината по ширината по височината.", // nieuw, nalezen
-    's.size.3': "Десет милиметра са един сантиметър.", // nieuw, nalezen
-    'c.size.q': "Колко квадратни метра е подът?", // nieuw, nalezen
-    'c.size.a': "Четири на пет метра, значи двадесет квадратни метра.", // nieuw, nalezen
+    'l.size': "Дължина, площ и обем", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lengte': "дължината", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.breedte': "ширината", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hoogte': "височината", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oppervlakte': "площта (дължината по ширината, в квадратни метри)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inhoud': "обемът (дължината по ширината по височината)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.centimeter': "сантиметърът", // nieuw, nalezen // nagelezen AI 28 nov
+    's.size.1': "Площта е дължината по ширината.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.size.2': "Обемът е дължината по ширината по височината.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.size.3': "Десет милиметра са един сантиметър.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.size.q': "Колко квадратни метра е подът?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.size.a': "Четири на пет метра, значи двадесет квадратни метра.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.size': "Сметни колко ти трябва и добави малко", // nieuw, nalezen // nagelezen AI 22 nov
     'c.size.b': "Колко плочки, колко боя, колко пясък? Смяташ го с площта или с обема. Площ: дължината по ширината, в квадратни метри. Обем: дължината по ширината по височината, в кубични метри. Мери всичко в една и съща мярка: всичко в метри или всичко в сантиметри. Записвай размерите, не ги дръж в главата си. После добави малко повече, за отрязаните парчета и за грешки. Имаш съмнение? Помоли колега да провери сметката ти.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.size.p': "Записвам размерите.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2412,18 +2412,18 @@ const t: CultureTranslation = {
     'c.size.o2': "Поръчваш точно площта, нито една плочка повече.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.size.o3': "Гадаеш: нали видя пода.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.size.w': "Винаги режеш някои плочки, а някои се чупят. С малко повече не се налага да спираш по средата и да поръчваш отново.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.paint': "Боядисване", // nieuw, nalezen
-    'w.verf': "боята", // nieuw, nalezen
-    'w.kwast': "четката за боядисване (широка четка)", // nieuw, nalezen
-    'w.penseel': "малката четка (за ъгли и ръбове)", // nieuw, nalezen
-    'w.roerstok': "бъркалката", // nieuw, nalezen
-    'w.tape': "малярската лента", // nieuw, nalezen
-    'w.strijkvaatje': "кофичката за боя (малък съд, който държиш, докато боядисваш)", // nieuw, nalezen
-    's.paint.1': "Първо разбъркай добре боята.", // nieuw, nalezen
-    's.paint.2': "Облепи ръба с лента.", // nieuw, nalezen
-    's.paint.3': "Сипи малко боя в кофичката.", // nieuw, nalezen
-    'c.paint.q': "Коя четка да взема?", // nieuw, nalezen
-    'c.paint.a': "Широката за стената, малката четка за ъглите.", // nieuw, nalezen
+    'l.paint': "Боядисване", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verf': "боята", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kwast': "четката за боядисване (широка четка)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.penseel': "малката четка (за ъгли и ръбове)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.roerstok': "бъркалката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tape': "малярската лента", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.strijkvaatje': "кофичката за боя (малък съд, който държиш, докато боядисваш)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.paint.1': "Първо разбъркай добре боята.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.paint.2': "Облепи ръба с лента.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.paint.3': "Сипи малко боя в кофичката.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.paint.q': "Коя четка да взема?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.paint.a': "Широката за стената, малката четка за ъглите.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.paint': "Разбъркай добре и боядисвай отгоре надолу", // nieuw, nalezen // nagelezen AI 22 nov
     'c.paint.b': "Боя, която е стояла известно време, е гъста на дъното на кутията. Затова първо я разбъркай добре с бъркалка, докато цветът стане еднакъв навсякъде. Не боядисвай от голямата кутия: сипи малко боя в кофичката и пак затвори кутията. Така боята остава добра. Боядисвай отгоре надолу, така капките падат върху мокра боя и още можеш да ги размажеш с четката. Използвай широката четка за стената и малката четка за ъглите. Накрая веднага измий четките.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.paint.p': "Първо разбърквам добре боята.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2432,18 +2432,18 @@ const t: CultureTranslation = {
     'c.paint.o2': "Боядисваш с рядката боя отгоре.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.paint.o3': "Добавяш вода, докато стане рядка навсякъде.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.paint.w': "Част от цвета е на дъното на кутията. Без разбъркване по стената остават петна и ивици.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.prep': "Подготовка за боядисване", // nieuw, nalezen
-    'w.plamuurmes': "шпакловъчният нож (за запълване на дупки)", // nieuw, nalezen
-    'w.schuurpapier': "шкурката", // nieuw, nalezen
-    'w.verfkrabber': "стъргалката за боя", // nieuw, nalezen
-    'w.stoffertje': "малката метличка (за измитане на прах)", // nieuw, nalezen
-    'w.schuren': "шкуркам", // nieuw, nalezen
-    'w.afplakken': "облепвам (покриваш ръб с лента)", // nieuw, nalezen
-    's.prep.1': "Първо изстържи старата боя.", // nieuw, nalezen
-    's.prep.2': "Изшкуркай дървото, докато стане гладко.", // nieuw, nalezen
-    's.prep.3': "Измети праха с малката метличка.", // nieuw, nalezen
-    'c.prep.q': "Мога ли вече да боядисвам?", // nieuw, nalezen
-    'c.prep.a': "Не, първо шкуркаш и запълваш дупката.", // nieuw, nalezen
+    'l.prep': "Подготовка за боядисване", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plamuurmes': "шпакловъчният нож (за запълване на дупки)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schuurpapier': "шкурката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verfkrabber': "стъргалката за боя", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stoffertje': "малката метличка (за измитане на прах)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schuren': "шкуркам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afplakken': "облепвам (покриваш ръб с лента)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.prep.1': "Първо изстържи старата боя.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.prep.2': "Изшкуркай дървото, докато стане гладко.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.prep.3': "Измети праха с малката метличка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.prep.q': "Мога ли вече да боядисвам?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.prep.a': "Не, първо шкуркаш и запълваш дупката.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.prep': "Хубавото боядисване започва преди боята", // nieuw, nalezen // nagelezen AI 22 nov
     'c.prep.b': "Боята не лепне добре върху мръсотия, прах или стара боя, която се лющи. Затова първо изстържи боята, която се лющи, със стъргалката. Запълни дупките с шпакловка и шпакловъчния нож и остави шпакловката да изсъхне. После я изшкуркай, докато стане гладка. След шкуркането измети праха с малката метличка, и от ръбовете също. Накрая облепи това, което трябва да остане чисто, например прозорци и контакти. Шкуркането прави фин прах: носи маска за прах и попитай коя. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.prep.p': "Първо шкуркам, после боядисвам.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2452,18 +2452,18 @@ const t: CultureTranslation = {
     'c.prep.o2': "Оставяш колегата да боядисва: боята покрива праха.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.prep.o3': "Избърсваш праха с ръка.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.prep.w': "Боя върху прах не лепне добре. По-късно се лющи на люспи и тогава цялата работа трябва да се направи отново.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.brick': "Зидане", // nieuw, nalezen
-    'w.speciekuip': "коритото за хоросан", // nieuw, nalezen
-    'w.metseltroffel': "зидарската мистрия", // nieuw, nalezen
-    'w.baksteen': "тухлата", // nieuw, nalezen
-    'w.cement': "циментът", // nieuw, nalezen
-    'w.voegijzer': "фугировачът (за изглаждане на фугите между тухлите)", // nieuw, nalezen
-    'w.handveger': "ръчната четка", // nieuw, nalezen
-    's.brick.1': "В коритото за хоросан още има цимент.", // nieuw, nalezen
-    's.brick.2': "Изглади фугата с фугировача.", // nieuw, nalezen
-    's.brick.3': "Почисти стената с ръчната четка.", // nieuw, nalezen
-    'c.brick.q': "Колко тухли ти останаха?", // nieuw, nalezen
-    'c.brick.a': "Още един палет. Стига за днес.", // nieuw, nalezen
+    'l.brick': "Зидане", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.speciekuip': "коритото за хоросан", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.metseltroffel': "зидарската мистрия", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.baksteen': "тухлата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.cement': "циментът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voegijzer': "фугировачът (за изглаждане на фугите между тухлите)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handveger': "ръчната четка", // nieuw, nalezen // nagelezen AI 28 nov
+    's.brick.1': "В коритото за хоросан още има цимент.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.brick.2': "Изглади фугата с фугировача.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.brick.3': "Почисти стената с ръчната четка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.brick.q': "Колко тухли ти останаха?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.brick.a': "Още един палет. Стига за днес.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.brick': "Дръж стената чиста, докато работиш", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brick.b': "Хоросанът е мокър, когато редиш тухлите, и се втвърдява за няколко часа. Затова работи чисто. Хоросана, който излиза от фугата, веднага го изстържи с мистрията. Изглаждай фугите с фугировача, когато хоросанът е малко стегнат, а не когато е още мокър. После изчисти стената с ръчната четка. Твърд хоросан по лицето на тухлата се маха много трудно. В края на деня покрий горната част на стената, за да не измие дъждът хоросана.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brick.p': "Изглаждам фугите.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2472,18 +2472,18 @@ const t: CultureTranslation = {
     'c.brick.o2': "Оставяш го: ще го почистиш следващата седмица.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brick.o3': "Миеш стената с много вода.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brick.w': "Пресният хоросан лесно се маха с четка. Твърдият хоросан остава по тухлата и тогава стената не изглежда хубаво.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.wall': "Права стена", // nieuw, nalezen
-    'w.metseltouw': "зидарският канап (връв за права редица)", // nieuw, nalezen
-    'w.klos': "държачът за канапа (държи връвта на ъгъла)", // nieuw, nalezen
-    'w.lagenmaatlat': "летвата за редовете (показва височината на всяка редица)", // nieuw, nalezen
-    'w.profiel': "профилът (прав стълб в края на стената)", // nieuw, nalezen
-    'w.kop': "тичокът (късата страна на тухлата)", // nieuw, nalezen
-    'w.strek': "ложокът (дългата страна на тухлата)", // nieuw, nalezen
-    's.wall.1': "Опъни добре зидарския канап.", // nieuw, nalezen
-    's.wall.2': "Профилът трябва да стои прав.", // nieuw, nalezen
-    's.wall.3': "Сложи тухлата с дългата страна навън.", // nieuw, nalezen
-    'c.wall.q': "Колко висока трябва да е тази редица?", // nieuw, nalezen
-    'c.wall.a': "Погледни на летвата за редовете.", // nieuw, nalezen
+    'l.wall': "Права стена", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.metseltouw': "зидарският канап (връв за права редица)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.klos': "държачът за канапа (държи връвта на ъгъла)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lagenmaatlat': "летвата за редовете (показва височината на всяка редица)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.profiel': "профилът (прав стълб в края на стената)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kop': "тичокът (късата страна на тухлата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.strek': "ложокът (дългата страна на тухлата)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wall.1': "Опъни добре зидарския канап.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wall.2': "Профилът трябва да стои прав.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wall.3': "Сложи тухлата с дългата страна навън.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wall.q': "Колко висока трябва да е тази редица?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wall.a': "Погледни на летвата за редовете.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.wall': "Канапът държи стената права", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wall.b': "Зидарят не строи на око. Първо профилите стоят прави в двата края на стената. Между тях опъваш зидарския канап, на височината на следващата редица. Слагай всяка тухла по канапа, но не бутай канапа. Летвата за редовете показва колко висока трябва да е всяка редица. Проверявай често с нивелира. Крива тухла лесно се оправя, докато хоросанът е мокър, и много трудно утре.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wall.p': "Опънат ли е зидарският канап?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2492,18 +2492,18 @@ const t: CultureTranslation = {
     'c.wall.o2': "Все пак редиш тухлите под него.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wall.o3': "Редиш тухлите на око.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wall.w': "Хлабавият канап виси в средата, затова и редицата виси. Опънатият канап дава права редица.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.wood': "Работа с дърво", // nieuw, nalezen
-    'w.handzaag': "ръчният трион", // nieuw, nalezen
-    'w.kapzaag': "гърбовият трион (малък трион с твърд гръб)", // nieuw, nalezen
-    'w.houtbeitel': "длетото за дърво", // nieuw, nalezen
-    'w.handschaaf': "ръчното ренде", // nieuw, nalezen
-    'w.timmermanshamer': "дърводелският чук", // nieuw, nalezen
-    'w.houtenhamer': "дървеният чук (чук от дърво)", // nieuw, nalezen
-    's.wood.1': "Отрежи дъската по размер.", // nieuw, nalezen
-    's.wood.2': "Изрендосай ръба, докато стане гладък.", // nieuw, nalezen
-    's.wood.3': "Удари длетото с дървения чук.", // nieuw, nalezen
-    'c.wood.q': "Кой трион ми трябва?", // nieuw, nalezen
-    'c.wood.a': "Гърбовият трион, за това малко парче.", // nieuw, nalezen
+    'l.wood': "Работа с дърво", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handzaag': "ръчният трион", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kapzaag': "гърбовият трион (малък трион с твърд гръб)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.houtbeitel': "длетото за дърво", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handschaaf': "ръчното ренде", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.timmermanshamer': "дърводелският чук", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.houtenhamer': "дървеният чук (чук от дърво)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wood.1': "Отрежи дъската по размер.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wood.2': "Изрендосай ръба, докато стане гладък.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wood.3': "Удари длетото с дървения чук.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wood.q': "Кой трион ми трябва?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wood.a': "Гърбовият трион, за това малко парче.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.wood': "Твърде късото не се поправя", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wood.b': "Дърво, което е отрязано твърде късо, не може пак да стане дълго. Затова мери два пъти и начертай линията, преди да режеш. Режи до линията, от страната на парчето, което не ти трябва. Дръж дървото неподвижно: на работна маса или със стяга, а не на коляното си. Остави трионът да върши работата, с дълги, спокойни движения. Бутай длетото далеч от тялото си и от другата си ръка. И дръж длетото и рендето остри: тъп инструмент се изплъзва по-лесно.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wood.p': "Ще го премеря още веднъж.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2512,18 +2512,18 @@ const t: CultureTranslation = {
     'c.wood.o2': "Режеш сега: сигурно е вярно.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wood.o3': "Режеш на око, без линия.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wood.w': "Твърде дълго можеш да отрежеш пак, твърде късо не можеш да оправиш. Да премериш отново отнема минута, нова дъска струва много повече.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.square': "Очертаване", // nieuw, nalezen
-    'w.winkelhaak': "ъгълникът (показва прав ъгъл)", // nieuw, nalezen
-    'w.verstekhaak': "ъгълникът за срез (45 градуса)", // nieuw, nalezen
+    'l.square': "Очертаване", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.winkelhaak': "ъгълникът (показва прав ъгъл)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verstekhaak': "ъгълникът за срез (45 градуса)", // nieuw, nalezen // nagelezen AI 28 nov
     'w.zwaaihaak': "подвижният ъгълник (нагласяш ъгъла както ти трябва)", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'w.kruishout': "рейсмусът (чертае линия по ръба)", // nieuw, nalezen
-    'w.passer': "пергелът (чертае кръг)", // nieuw, nalezen
-    'w.aftekenen': "очертавам (чертаеш къде ще режеш)", // nieuw, nalezen
-    's.square.1': "Очертай линията с ъгълника.", // nieuw, nalezen
-    's.square.2': "Нагласи подвижния ъгълник на правилния ъгъл.", // nieuw, nalezen
-    's.square.3': "Начертай кръг с пергела.", // nieuw, nalezen
-    'c.square.q': "Прав ли е ъгълът?", // nieuw, nalezen
-    'c.square.a': "Да, ъгълникът пасва точно.", // nieuw, nalezen
+    'w.kruishout': "рейсмусът (чертае линия по ръба)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.passer': "пергелът (чертае кръг)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aftekenen': "очертавам (чертаеш къде ще режеш)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.square.1': "Очертай линията с ъгълника.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.square.2': "Нагласи подвижния ъгълник на правилния ъгъл.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.square.3': "Начертай кръг с пергела.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.square.q': "Прав ли е ъгълът?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.square.a': "Да, ъгълникът пасва точно.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.square': "Очертавай от един прав ръб", // nieuw, nalezen // nagelezen AI 22 nov
     'c.square.b': "Преди да режеш или пробиваш, очертаваш къде. Използвай остър молив: дебелата линия не е точна. Избери един прав ръб на дървото и мери всичко от този ръб. Притисни здраво дебелата част на ъгълника към него и чертай линията по металната част. Начертай малък кръст на парчето, което няма да използваш. После режеш до линията, от страната на кръста.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.square.p': "Първо го очертавам.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2532,18 +2532,18 @@ const t: CultureTranslation = {
     'c.square.o2': "Все пак чертаеш линията, ще стане.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.square.o3': "Отбелязваш с нокътя си.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.square.w': "Дебелата линия е широка няколко милиметра. Тогава не знаеш къде да режеш и парчето не е точно.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.screw': "Бормашини и винтове", // nieuw, nalezen
-    'w.accuboor': "акумулаторният винтоверт", // nieuw, nalezen
-    'w.boormachine': "бормашината (с кабел)", // nieuw, nalezen
-    'w.bitje': "накрайникът за отвертка", // nieuw, nalezen
-    'w.plug': "дюбелът", // nieuw, nalezen
-    'w.schroevendraaier': "отвертката", // nieuw, nalezen
-    'w.spijker': "пиронът", // nieuw, nalezen
-    's.screw.1': "Пробий дупка и сложи дюбел в нея.", // nieuw, nalezen
-    's.screw.2': "Кой накрайник е за този винт?", // nieuw, nalezen
-    's.screw.3': "Забий пирона в дървото.", // nieuw, nalezen
-    'c.screw.q': "Къде е акумулаторният винтоверт?", // nieuw, nalezen
-    'c.screw.a': "На зарядното, почти е зареден.", // nieuw, nalezen
+    'l.screw': "Бормашини и винтове", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.accuboor': "акумулаторният винтоверт", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.boormachine': "бормашината (с кабел)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bitje': "накрайникът за отвертка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plug': "дюбелът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schroevendraaier': "отвертката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spijker': "пиронът", // nieuw, nalezen // nagelezen AI 28 nov
+    's.screw.1': "Пробий дупка и сложи дюбел в нея.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.screw.2': "Кой накрайник е за този винт?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.screw.3': "Забий пирона в дървото.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.screw.q': "Къде е акумулаторният винтоверт?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.screw.a': "На зарядното, почти е зареден.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.screw': "Погледни, преди да пробиеш", // nieuw, nalezen // nagelezen AI 22 nov
     'c.screw.b': "Преди да пробиеш стена, помисли какво има зад нея. Тръбите и кабелите често вървят право нагоре, надолу или настрани от контакт или ключ за лампа. Попитай къде са или провери с детектор. Избери свредло със същия размер като дюбела и пробий дупката малко по-дълбоко от дюбела. Използвай правилния накрайник за винта: грешният накрайник се изплъзва и разваля главата на винта. Носи предпазни очила, когато пробиваш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.screw.p': "Мога ли да пробия тук?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2552,18 +2552,18 @@ const t: CultureTranslation = {
     'c.screw.o2': "Пробиваш: там никога няма кабел.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.screw.o3': "Пробиваш бавно, тогава е безопасно.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.screw.w': "Кабелът често върви право нагоре от контакта. Да пробиеш в него е опасно, а ремонтът е много работа.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.fix': "Закрепване", // nieuw, nalezen
-    'w.bevestigen': "закрепвам (закрепваш нещо здраво за стена)", // nieuw, nalezen
-    'w.vastzetten': "затягам (въртиш, докато се стегне)", // nieuw, nalezen
-    'w.lijmen': "лепя", // nieuw, nalezen
-    'w.inbussleutel': "имбусният ключ (шестостенен ключ)", // nieuw, nalezen
-    'w.kruisschroevendraaier': "кръстатата отвертка (с връх като кръст)", // nieuw, nalezen
-    'w.platteschroevendraaier': "плоската отвертка", // nieuw, nalezen
-    's.fix.1': "Закрепи рафта за стената.", // nieuw, nalezen
-    's.fix.2': "Затегни болта с имбусния ключ.", // nieuw, nalezen
-    's.fix.3': "Вземи плоската отвертка, не кръстатата.", // nieuw, nalezen
-    'c.fix.q': "Как да закрепя този рафт?", // nieuw, nalezen
-    'c.fix.a': "С два дюбела и два винта.", // nieuw, nalezen
+    'l.fix': "Закрепване", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bevestigen': "закрепвам (закрепваш нещо здраво за стена)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vastzetten': "затягам (въртиш, докато се стегне)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lijmen': "лепя", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inbussleutel': "имбусният ключ (шестостенен ключ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kruisschroevendraaier': "кръстатата отвертка (с връх като кръст)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.platteschroevendraaier': "плоската отвертка", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fix.1': "Закрепи рафта за стената.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fix.2': "Затегни болта с имбусния ключ.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fix.3': "Вземи плоската отвертка, не кръстатата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.fix.q': "Как да закрепя този рафт?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.fix.a': "С два дюбела и два винта.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.fix': "Здраво, но не прекалено", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fix.b': "Винтът или болтът трябва да е здраво затегнат, но не прекалено. Ако въртиш твърде силно, резбата се скъсва или дървото се цепи. Въртиш, докато спре да се мърда, и тогава спираш. На акумулаторния винтоверт първо завърти пръстена с числата на ниско число. Рафтът на стената има нужда от дюбели, които пасват на стената: за камък трябват други дюбели, отколкото за тънка стена от плоскости. Лепилото има нужда от време: притисни частите една към друга, задръж ги със стяга и чакай, докато лепилото изсъхне.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fix.p': "Добре ли е закрепен рафтът?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2572,18 +2572,18 @@ const t: CultureTranslation = {
     'c.fix.o2': "Оставяш колегата да ги използва: лепилото е бързо.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fix.o3': "Държиш ги в ръцете си една минута.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fix.w': "Мокрото лепило още не държи. Ако го използваш твърде рано, частите пак се разлепват. Тогава трябва да започнеш отначало.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.atmachine': "При машината", // nieuw, nalezen
-    'w.bedieningspaneel': "контролният панел (бутоните и екранът на машината)", // nieuw, nalezen
-    'w.startknop': "бутонът за старт (зелен)", // nieuw, nalezen
-    'w.hendel': "лостът", // nieuw, nalezen
-    'w.afscherming': "предпазният капак (капак върху движещите се части)", // nieuw, nalezen
-    'w.sensor': "сензорът (вижда дали нещо е там)", // nieuw, nalezen
-    'w.signaallamp': "сигналната лампа (цветни лампи отгоре на машината)", // nieuw, nalezen
-    's.atmachine.1': "Натисни зеления бутон за старт.", // nieuw, nalezen
-    's.atmachine.2': "Сигналната лампа свети червено. Има повреда.", // nieuw, nalezen
-    's.atmachine.3': "Никога не махай предпазния капак.", // nieuw, nalezen
-    'c.atmachine.q': "Защо машината постоянно спира?", // nieuw, nalezen
-    'c.atmachine.a': "Сензорът не вижда добре кашона.", // nieuw, nalezen
+    'l.atmachine': "При машината", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedieningspaneel': "контролният панел (бутоните и екранът на машината)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.startknop': "бутонът за старт (зелен)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hendel': "лостът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afscherming': "предпазният капак (капак върху движещите се части)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sensor': "сензорът (вижда дали нещо е там)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.signaallamp': "сигналната лампа (цветни лампи отгоре на машината)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.atmachine.1': "Натисни зеления бутон за старт.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.atmachine.2': "Сигналната лампа свети червено. Има повреда.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.atmachine.3': "Никога не махай предпазния капак.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.atmachine.q': "Защо машината постоянно спира?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.atmachine.a': "Сензорът не вижда добре кашона.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.atmachine': "Предпазният капак остава на мястото си", // nieuw, nalezen // nagelezen AI 22 nov
     'c.atmachine.b': "Движещите се части на машината могат да дръпнат ръка, ръкав или коса за по-малко от секунда. Предпазният капак е там точно за това. Никога не го махай и никога не бъркай зад него, докато машината работи. Предпазният капак или сензорът не работи? Тогава машината не е безопасна: спри я и кажи на ръководителя на екипа. Нещо е заседнало? Първо спри машината и се погрижи никой да не може да я пусне, докато работиш. Как става това, е различно във всяка фирма: поискай обяснение, преди да започнеш. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.atmachine.p': "Предпазният капак е счупен.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2592,18 +2592,18 @@ const t: CultureTranslation = {
     'c.atmachine.o2': "Бързо бъркаш и издърпваш кашона.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.atmachine.o3': "Отваряш капака, докато машината работи.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.atmachine.w': "Работещата машина може да дръпне ръката ти, преди да успееш да реагираш. Да я спреш отнема миг, наранената ръка се лекува месеци.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.inspect': "Мерене и проверка", // nieuw, nalezen
-    'w.weegschaal': "везната", // nieuw, nalezen
-    'w.meetklok': "индикаторният часовник (мери много малки разлики)", // nieuw, nalezen
-    'w.loep': "лупата", // nieuw, nalezen
-    'w.monster': "пробата (един продукт, който вадиш за проверка)", // nieuw, nalezen
-    'w.afkeurbak': "кутията за брак (за продукти, които не са добри)", // nieuw, nalezen
-    'w.teller': "броячът (брои продуктите)", // nieuw, nalezen
-    's.inspect.1': "Сложи продукта на везната.", // nieuw, nalezen
-    's.inspect.2': "Този продукт е повреден. Отива в кутията за брак.", // nieuw, nalezen
-    's.inspect.3': "Гледам етикета с лупата.", // nieuw, nalezen
-    'c.inspect.q': "Колко често да взимам проба?", // nieuw, nalezen
-    'c.inspect.a': "По една на всеки час. Запиши я в списъка.", // nieuw, nalezen
+    'l.inspect': "Мерене и проверка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.weegschaal': "везната", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meetklok': "индикаторният часовник (мери много малки разлики)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.loep': "лупата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.monster': "пробата (един продукт, който вадиш за проверка)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afkeurbak': "кутията за брак (за продукти, които не са добри)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teller': "броячът (брои продуктите)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.inspect.1': "Сложи продукта на везната.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.inspect.2': "Този продукт е повреден. Отива в кутията за брак.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.inspect.3': "Гледам етикета с лупата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspect.q': "Колко често да взимам проба?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspect.a': "По една на всеки час. Запиши я в списъка.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.inspect': "Записвай какво проверяваш", // nieuw, nalezen // nagelezen AI 22 nov
     'c.inspect.b': "Във фабриката проверяваш продуктите по време на работа: претегляш ги, мериш ги или ги гледаш отблизо. Записвай всяка проверка в списъка веднага, с часа. Не по-късно, по памет. Един продукт не е наред? Сложи го в кутията за брак и гледай внимателно следващите. Още продукти са грешни? Тогава нещо не е наред с машината. Кажи веднага на ръководителя на екипа. Проблем, открит рано, спестява много продукти. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.inspect.p': "Още продукти са грешни.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2612,18 +2612,18 @@ const t: CultureTranslation = {
     'c.inspect.o2': "Връщаш ги обратно на линията.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.inspect.o3': "Не казваш нищо: случва се.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.inspect.w': "Три грешни продукта един след друг показват проблем в машината. Колкото по-рано кажеш, толкова по-малко продукти отиват на боклука.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.packing': "Опаковане", // nieuw, nalezen
-    'w.verpakking': "опаковката", // nieuw, nalezen
-    'w.krimpfolie': "свиващото се фолио (найлон, който се стяга от топлина)", // nieuw, nalezen
-    'w.sealmachine': "машината за запечатване (затваря опаковка с топлина)", // nieuw, nalezen
-    'w.vulmateriaal': "пълнежът (въздушни възглавнички или хартия в кашона)", // nieuw, nalezen
-    'w.afbreekmes': "макетният нож", // nieuw, nalezen
-    'w.tapepistool': "пистолетът за тиксо", // nieuw, nalezen
-    's.packing.1': "Сложи пълнеж в кашона.", // nieuw, nalezen
-    's.packing.2': "Затвори кашона с пистолета за тиксо.", // nieuw, nalezen
-    's.packing.3': "Машината за запечатване е гореща. Внимавай!", // nieuw, nalezen
-    'c.packing.q': "Колко продукта влизат в един кашон?", // nieuw, nalezen
-    'c.packing.a': "Дванадесет. Пише го в списъка.", // nieuw, nalezen
+    'l.packing': "Опаковане", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verpakking': "опаковката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.krimpfolie': "свиващото се фолио (найлон, който се стяга от топлина)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sealmachine': "машината за запечатване (затваря опаковка с топлина)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vulmateriaal': "пълнежът (въздушни възглавнички или хартия в кашона)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afbreekmes': "макетният нож", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tapepistool': "пистолетът за тиксо", // nieuw, nalezen // nagelezen AI 28 nov
+    's.packing.1': "Сложи пълнеж в кашона.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.packing.2': "Затвори кашона с пистолета за тиксо.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.packing.3': "Машината за запечатване е гореща. Внимавай!", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.packing.q': "Колко продукта влизат в един кашон?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.packing.a': "Дванадесет. Пише го в списъка.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.packing': "Режи в посока далеч от тялото си", // nieuw, nalezen // nagelezen AI 22 nov
     'c.packing.b': "Опаковането е бърза работа, а макетният нож е много остър. Винаги режи в посока далеч от тялото си и далеч от другата си ръка. Прибирай острието след всяко рязане, и когато оставяш ножа за малко. Тъпото парче отчупвай внимателно и го хвърляй в кутията за стари остриета, а не в обикновената кофа за боклук. Машината за запечатване и пистолетът за горещ въздух за свиващото се фолио стават много горещи: не пипай горещите части. И проверявай всеки кашон: правилният продукт, правилният брой и етикетът залепен право. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.packing.p': "Първо прибирам острието.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2632,18 +2632,18 @@ const t: CultureTranslation = {
     'c.packing.o2': "Оставяш го: скоро пак ще ти трябва.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.packing.o3': "Слагаш го в джоба си така.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.packing.w': "Отворено острие на масата или в джоба може да среже теб или колега. Да го прибереш отнема една секунда.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.upkeep': "Поддръжка", // nieuw, nalezen
-    'w.persluchtpistool': "пистолетът за сгъстен въздух", // nieuw, nalezen
-    'w.steeksleutel': "гаечният ключ", // nieuw, nalezen
-    'w.oliekannetje': "масльонката", // nieuw, nalezen
-    'w.smeerpistool': "гресьорът", // nieuw, nalezen
-    'w.lekbak': "тавичката за течове (събира изтичащото масло)", // nieuw, nalezen
-    'w.poetsdoek': "парцалът за почистване", // nieuw, nalezen
-    's.upkeep.1': "Тече масло. Сложи тавичката отдолу.", // nieuw, nalezen
-    's.upkeep.2': "Избърши маслото с парцал.", // nieuw, nalezen
-    's.upkeep.3': "Никога не насочвай пистолета за сгъстен въздух към човек.", // nieuw, nalezen
-    'c.upkeep.q': "Кога гресираме машината?", // nieuw, nalezen
-    'c.upkeep.a': "Всеки понеделник, преди първата смяна.", // nieuw, nalezen
+    'l.upkeep': "Поддръжка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.persluchtpistool': "пистолетът за сгъстен въздух", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.steeksleutel': "гаечният ключ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oliekannetje': "масльонката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.smeerpistool': "гресьорът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lekbak': "тавичката за течове (събира изтичащото масло)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.poetsdoek': "парцалът за почистване", // nieuw, nalezen // nagelezen AI 28 nov
+    's.upkeep.1': "Тече масло. Сложи тавичката отдолу.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.upkeep.2': "Избърши маслото с парцал.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.upkeep.3': "Никога не насочвай пистолета за сгъстен въздух към човек.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.upkeep.q': "Кога гресираме машината?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.upkeep.a': "Всеки понеделник, преди първата смяна.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.upkeep': "Чистата машина показва проблемите си", // nieuw, nalezen // nagelezen AI 22 nov
     'c.upkeep.b': "Малката поддръжка често е част от работата: бърсане, смазване с масло и гресиране. Прави го само когато машината е изключена и когато знаеш как. Чистата машина лесно се проверява: веднага виждаш теч или разхлабена част. Маслото на пода е хлъзгаво. Сложи тавичка под теча, избърши пода и кажи на ръководителя на екипа. Хвърляй мазните парцали в специалната кофа. Никога не насочвай пистолета за сгъстен въздух към човек и никога не чисти дрехите или кожата си с него. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.upkeep.p': "От машината тече масло.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2653,19 +2653,19 @@ const t: CultureTranslation = {
     'c.upkeep.o3': "Слагаш хартия отгоре и продължаваш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.upkeep.w': "Течът става по-голям, а маслото на пода кара хората да се подхлъзват. Открит рано, той е малък ремонт.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
-    'u.install': "Електричество, тръби и метал", // nieuw, nalezen
-    'l.wiring': "Окабеляване", // nieuw, nalezen
-    'w.draad': "жицата (един проводник вътре в кабела)", // nieuw, nalezen
-    'w.stopcontact': "контактът (в стената)", // nieuw, nalezen
-    'w.schakelaar': "ключът (за лампата)", // nieuw, nalezen
-    'w.lasklem': "бързата клема (съединява жици)", // nieuw, nalezen
-    'w.striptang': "клещите за оголване на жици", // nieuw, nalezen
-    'w.kabelgoot': "кабелният канал (канал за кабели)", // nieuw, nalezen
-    's.wiring.1': "Оголи жицата един сантиметър.", // nieuw, nalezen
-    's.wiring.2': "Закрепи жиците в бързата клема.", // nieuw, nalezen
-    's.wiring.3': "Кабелите влизат в кабелния канал.", // nieuw, nalezen
-    'c.wiring.q': "Коя жица къде отива?", // nieuw, nalezen
-    'c.wiring.a': "Кафява с кафява, синя със синя.", // nieuw, nalezen
+    'u.install': "Електричество, тръби и метал", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.wiring': "Окабеляване", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.draad': "жицата (един проводник вътре в кабела)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stopcontact': "контактът (в стената)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schakelaar': "ключът (за лампата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lasklem': "бързата клема (съединява жици)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.striptang': "клещите за оголване на жици", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kabelgoot': "кабелният канал (канал за кабели)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wiring.1': "Оголи жицата един сантиметър.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wiring.2': "Закрепи жиците в бързата клема.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wiring.3': "Кабелите влизат в кабелния канал.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wiring.q': "Коя жица къде отива?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wiring.a': "Кафява с кафява, синя със синя.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.wiring': "Цветовете показват какво прави жицата", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wiring.b': "В сградата жиците имат определени цветове. Кафявата (понякога черна или сива) носи тока. Синята връща обратно. Жълто-зелената е заземяването: тя пази хората и никога не се използва за нищо друго. Свързвай еднакъв цвят с еднакъв цвят. Оголвай само толкова, колкото влиза в клемата: не бива да стърчи гола мед. Пъхни жицата навътре, после я дръпни леко, за да провериш, че е закрепена. Не знаеш точно коя жица коя е? Спри и попитай.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wiring.p': "Кой цвят е заземяването?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2674,18 +2674,18 @@ const t: CultureTranslation = {
     'c.wiring.o2': "Оставяш я така: лампата работи.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wiring.o3': "Увиваш парче тиксо около нея.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wiring.w': "Голата мед извън клемата може да докосне нещо. Това може да удари с ток или да даде късо съединение, дори месеци по-късно.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.testing': "Мерене и безопасна работа", // nieuw, nalezen
-    'w.multimeter': "мултиметърът (мери тока)", // nieuw, nalezen
-    'w.spanningzoeker': "фазомерът (отвертка с малка лампичка)", // nieuw, nalezen
-    'w.meterkast': "електрическото табло", // nieuw, nalezen
-    'w.zekering': "предпазителят (спира тока, когато нещо не е наред)", // nieuw, nalezen
-    'w.hangslot': "катинарът", // nieuw, nalezen
-    'w.aardedraad': "заземителният проводник (жълто-зелен)", // nieuw, nalezen
-    's.testing.1': "Предпазителят е паднал.", // nieuw, nalezen
-    's.testing.2': "Сложи катинар на ключа.", // nieuw, nalezen
-    's.testing.3': "Първо измери с мултиметъра.", // nieuw, nalezen
-    'c.testing.q': "Може ли да отворя електрическото табло?", // nieuw, nalezen
-    'c.testing.a': "Не, това го прави електротехникът.", // nieuw, nalezen
+    'l.testing': "Мерене и безопасна работа", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.multimeter': "мултиметърът (мери тока)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spanningzoeker': "фазомерът (отвертка с малка лампичка)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meterkast': "електрическото табло", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zekering': "предпазителят (спира тока, когато нещо не е наред)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hangslot': "катинарът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aardedraad': "заземителният проводник (жълто-зелен)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.testing.1': "Предпазителят е паднал.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.testing.2': "Сложи катинар на ключа.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.testing.3': "Първо измери с мултиметъра.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.testing.q': "Може ли да отворя електрическото табло?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.testing.a': "Не, това го прави електротехникът.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.testing': "Изключено, заключено, измерено", // nieuw, nalezen // nagelezen AI 22 nov
     'c.testing.b': "Преди да работиш по електричеството, направи три стъпки. Изключи: правилния предпазител в електрическото табло, а не само ключа на стената. Заключи: сложи своя катинар и дръж ключето от него у себе си, за да не може никой да го включи отново. Измери: провери с фазомер или мултиметър, че наистина няма ток. Едва тогава започваш. Предпазителят пада пак и пак? Не го включвай отново и отново: кажи на началника си. Работи по електричеството само когато са ти казали, че може. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.testing.p': "По него вече няма ток.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2694,18 +2694,18 @@ const t: CultureTranslation = {
     'c.testing.o2': "Започваш: колегата ти знае.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.testing.o3': "Докосваш бързо жицата, за да провериш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.testing.w': "Понякога е изключен грешният предпазител или някой го включва отново. Катинарът и измерването показват, че наистина е безопасно.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.pipes': "Тръби и вода", // nieuw, nalezen
-    'w.buis': "тръбата", // nieuw, nalezen
-    'w.koppeling': "връзката, фитингът (съединява две тръби)", // nieuw, nalezen
-    'w.pijpsnijder': "тръборезът", // nieuw, nalezen
-    'w.waterpomptang': "раздвижните клещи (водопроводни клещи)", // nieuw, nalezen
-    'w.afsluiter': "спирателният кран (спира водата)", // nieuw, nalezen
-    'w.teflontape': "тефлоновата лента (бяла лента за резбата на тръба)", // nieuw, nalezen
-    's.pipes.1': "Затвори спирателния кран.", // nieuw, nalezen
-    's.pipes.2': "Срежи тръбата с тръбореза.", // nieuw, nalezen
-    's.pipes.3': "Увий тефлонова лента около резбата.", // nieuw, nalezen
-    'c.pipes.q': "Връзката още ли тече?", // nieuw, nalezen
-    'c.pipes.a': "Малко. Ще я затегна още малко.", // nieuw, nalezen
+    'l.pipes': "Тръби и вода", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.buis': "тръбата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koppeling': "връзката, фитингът (съединява две тръби)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pijpsnijder': "тръборезът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.waterpomptang': "раздвижните клещи (водопроводни клещи)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afsluiter': "спирателният кран (спира водата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teflontape': "тефлоновата лента (бяла лента за резбата на тръба)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pipes.1': "Затвори спирателния кран.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pipes.2': "Срежи тръбата с тръбореза.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pipes.3': "Увий тефлонова лента около резбата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pipes.q': "Връзката още ли тече?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pipes.a': "Малко. Ще я затегна още малко.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.pipes': "Първо спри водата и приготви кофа", // nieuw, nalezen // nagelezen AI 22 nov
     'c.pipes.b': "Преди да отвориш водопроводна тръба, затвори спирателния кран. После отвори някой кран по-надолу, за да се изпразни тръбата. Сложи кофа и парцал под мястото, където работиш. Режи медна тръба с тръборез, а не с трион: краят остава кръгъл и чист. Затягай връзката здраво, но не прекалено. Когато свършиш, пускай водата бавно и търси капки. Малък теч, който оставиш, става щета от вода.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.pipes.p': "Водата спряна ли е?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2714,18 +2714,18 @@ const t: CultureTranslation = {
     'c.pipes.o2': "Оставяш я: само една капка е.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.pipes.o3': "Слагаш кофа отдолу и си отиваш вкъщи.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.pipes.w': "Една капка в минута са много литри на седмица. Водата може да повреди пода или тавана отдолу.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.metalwork': "Обработка на метал", // nieuw, nalezen
-    'w.bankschroef': "менгемето (държи частта здраво на работната маса)", // nieuw, nalezen
-    'w.vijl': "пилата (за изглаждане на метал на ръка)", // nieuw, nalezen
-    'w.ijzerzaag': "ножовката за метал (трион за метал)", // nieuw, nalezen
-    'w.kolomboormachine': "колонната бормашина (голяма бормашина на стойка)", // nieuw, nalezen
-    'w.draadtap': "метчикът (нарязва резба в дупка)", // nieuw, nalezen
-    'w.braam': "чапакът (остър ръб след рязане на метал)", // nieuw, nalezen
-    's.metalwork.1': "Стегни метала в менгемето.", // nieuw, nalezen
-    's.metalwork.2': "Изпили чапака.", // nieuw, nalezen
-    's.metalwork.3': "Дръж ръцете си далеч от свредлото.", // nieuw, nalezen
-    'c.metalwork.q': "Защо ръбът е толкова остър?", // nieuw, nalezen
-    'c.metalwork.a': "Още има чапак.", // nieuw, nalezen
+    'l.metalwork': "Обработка на метал", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bankschroef': "менгемето (държи частта здраво на работната маса)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vijl': "пилата (за изглаждане на метал на ръка)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ijzerzaag': "ножовката за метал (трион за метал)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kolomboormachine': "колонната бормашина (голяма бормашина на стойка)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.draadtap': "метчикът (нарязва резба в дупка)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.braam': "чапакът (остър ръб след рязане на метал)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.metalwork.1': "Стегни метала в менгемето.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.metalwork.2': "Изпили чапака.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.metalwork.3': "Дръж ръцете си далеч от свредлото.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.metalwork.q': "Защо ръбът е толкова остър?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.metalwork.a': "Още има чапак.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.metalwork': "Стегни я, никога не я дръж в ръка", // nieuw, nalezen // nagelezen AI 22 nov
     'c.metalwork.b': "При колонната бормашина никога не дръж малка част в ръка. Свредлото може да я захване и да я завърти много бързо. Стегни я в менгемето. Вържи дългата коса назад и не носи ръкавици при въртящо се свредло: то може да издърпа ръкавицата навътре. Носи предпазни очила. След рязане или пробиване металът има чапак: остър ръб. Изпили го, преди да вземеш частта в ръка или да я подадеш на друг. Мети металните стърготини с четка, а не с ръка.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.metalwork.p': "Първо ще я стегна.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2735,19 +2735,19 @@ const t: CultureTranslation = {
     'c.metalwork.o3': "Слагаш ръкавици и го държиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.metalwork.w': "Свредлото може да захване малка част и да я завърти. Тогава тя удря ръката ти. В менгемето тя стои неподвижно.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Assemblage en montage" (u.montage, 21 November 2026).
-    'u.montage': "Сглобяване и монтаж", // nieuw, nalezen
-    'l.assembly': "На монтажната линия", // nieuw, nalezen
-    'w.werkinstructie': "работната инструкция (лист със стъпките)", // nieuw, nalezen
-    'w.onderdelenbak': "кутията за части", // nieuw, nalezen
-    'w.mal': "шаблонът (държи частта на правилното място)", // nieuw, nalezen
-    'w.rolbaan': "ролковият конвейер", // nieuw, nalezen
-    'w.montagetafel': "монтажната маса", // nieuw, nalezen
-    'w.voetpedaal': "педалът (ключ, който натискаш с крак)", // nieuw, nalezen
-    's.assembly.1': "Първо прочети работната инструкция.", // nieuw, nalezen
-    's.assembly.2': "Кутията за части е почти празна.", // nieuw, nalezen
-    's.assembly.3': "Сложи частта в шаблона.", // nieuw, nalezen
-    'c.assembly.q': "Коя стъпка е сега?", // nieuw, nalezen
-    'c.assembly.a': "Стъпка четири. Погледни работната инструкция.", // nieuw, nalezen
+    'u.montage': "Сглобяване и монтаж", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.assembly': "На монтажната линия", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkinstructie': "работната инструкция (лист със стъпките)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderdelenbak': "кутията за части", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mal': "шаблонът (държи частта на правилното място)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rolbaan': "ролковият конвейер", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.montagetafel': "монтажната маса", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voetpedaal': "педалът (ключ, който натискаш с крак)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.assembly.1': "Първо прочети работната инструкция.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.assembly.2': "Кутията за части е почти празна.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.assembly.3': "Сложи частта в шаблона.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.assembly.q': "Коя стъпка е сега?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.assembly.a': "Стъпка четири. Погледни работната инструкция.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.assembly': "Следвай стъпките в същия ред", // nieuw, nalezen // nagelezen AI 22 nov
     'c.assembly.b': "На монтажната линия всяка стъпка има своето място и своя ред. Работната инструкция ги показва, често със снимки. Прави стъпките всеки път в същия ред, дори когато мислиш, че знаеш по-бърз начин. Друг ред може да даде продукт, който изглежда добре, но не работи. Кутията е почти празна? Кажи навреме, за да не спре линията. Виждаш стъпка, която може да е по-добра? Кажи на ръководителя на екипа: тогава тя може да се промени за всички.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.assembly.p': "Трябват ми нови части.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2756,18 +2756,18 @@ const t: CultureTranslation = {
     'c.assembly.o2': "Отсега нататък го правиш по твоя начин.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.assembly.o3': "Учиш колегите си на твоя начин.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.assembly.w': "Редът често има причина, която не виждаш. Ако твоят начин е по-добър, редът може да се промени за всички.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.fastening': "Затягане", // nieuw, nalezen
-    'w.schroefmachine': "електрическият винтоверт (виси над линията)", // nieuw, nalezen
-    'w.momentsleutel': "динамометричният ключ (щраква, когато болтът е затегнат достатъчно)", // nieuw, nalezen
-    'w.tiewrap': "кабелната връзка", // nieuw, nalezen
-    'w.sluitring': "шайбата", // nieuw, nalezen
-    'w.klinknagel': "нитът", // nieuw, nalezen
-    'w.popnageltang': "нитачката", // nieuw, nalezen
-    's.fastening.1': "Затегни болта с динамометричния ключ.", // nieuw, nalezen
-    's.fastening.2': "Не забравяй шайбата.", // nieuw, nalezen
-    's.fastening.3': "Свържи кабелите с кабелна връзка.", // nieuw, nalezen
-    'c.fastening.q': "Колко здраво трябва да е затегнат този болт?", // nieuw, nalezen
-    'c.fastening.a': "Докато динамометричният ключ щракне.", // nieuw, nalezen
+    'l.fastening': "Затягане", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schroefmachine': "електрическият винтоверт (виси над линията)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.momentsleutel': "динамометричният ключ (щраква, когато болтът е затегнат достатъчно)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tiewrap': "кабелната връзка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sluitring': "шайбата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.klinknagel': "нитът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.popnageltang': "нитачката", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fastening.1': "Затегни болта с динамометричния ключ.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fastening.2': "Не забравяй шайбата.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fastening.3': "Свържи кабелите с кабелна връзка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.fastening.q': "Колко здраво трябва да е затегнат този болт?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.fastening.a': "Докато динамометричният ключ щракне.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.fastening': "Щракването е достатъчно", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fastening.b': "Динамометричният ключ щраква, когато болтът е затегнат достатъчно. Спри при щракването: не въртай повече. Твърде силното затягане може да счупи болта или частта, а твърде хлабавият болт може да падне. Електрическият винтоверт работи по същия начин: спира сам. Слагай всяка шайба на мястото ѝ: липсваща шайба трудно се вижда после. Преброй болтовете си. Остава ли един в повече, или ти трябва още един? Тогава нещо не е наред: кажи на ръководителя на екипа.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fastening.p': "Остана един болт в повече.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2776,18 +2776,18 @@ const t: CultureTranslation = {
     'c.fastening.o2': "Завърташ го още малко на ръка.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fastening.o3': "Използваш по-дълъг ключ.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fastening.w': "Щракването е настроено на правилната сила. Ако нещо ти се струва грешно, може ключът да има нужда от проверка. Ако въртиш още, болтът може да се счупи.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.handling': "Вдигане и преместване", // nieuw, nalezen
-    'w.takel': "телферът (вдига тежки части с верига)", // nieuw, nalezen
-    'w.hijshaak': "куката за повдигане", // nieuw, nalezen
-    'w.tilhulp': "повдигачът (държи частта с вакуум)", // nieuw, nalezen
-    'w.onderdelenkar': "количката за части", // nieuw, nalezen
-    'w.draaitafel': "въртящата се маса (въртиш частта, не себе си)", // nieuw, nalezen
-    'w.rolcontainer': "ролковият контейнер (висока клетка на колелца)", // nieuw, nalezen
-    's.handling.1': "Не вдигай това без помощ. Използвай телфера.", // nieuw, nalezen
-    's.handling.2': "Куката за повдигане затворена ли е добре?", // nieuw, nalezen
-    's.handling.3': "Бутай количката за части, не я дърпай.", // nieuw, nalezen
-    'c.handling.q': "Може ли да стоя под телфера?", // nieuw, nalezen
-    'c.handling.a': "Не, никога под висящ товар.", // nieuw, nalezen
+    'l.handling': "Вдигане и преместване", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.takel': "телферът (вдига тежки части с верига)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hijshaak': "куката за повдигане", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tilhulp': "повдигачът (държи частта с вакуум)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderdelenkar': "количката за части", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.draaitafel': "въртящата се маса (въртиш частта, не себе си)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rolcontainer': "ролковият контейнер (висока клетка на колелца)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.handling.1': "Не вдигай това без помощ. Използвай телфера.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.handling.2': "Куката за повдигане затворена ли е добре?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.handling.3': "Бутай количката за части, не я дърпай.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.handling.q': "Може ли да стоя под телфера?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.handling.a': "Не, никога под висящ товар.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.handling': "Остави телфера да върши тежката работа", // nieuw, nalezen // nagelezen AI 22 nov
     'c.handling.b': "Тежките части се вдигат с телфер или повдигач, а не с гърба ти. Провери куката, преди да вдигнеш: езичето трябва да се затваря. Вдигай бавно и дръж ръцете и краката си далеч от товара. Никога не стой и не минавай под висящ товар. Използвай въртящата се маса, за да обърнеш частта: тогава не трябва да извиваш гърба си. Бутай количката или ролковия контейнер: виждаш накъде вървиш, а гърбът ти работи по-малко. Използвай телфер само когато са те научили как. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.handling.p': "Използвам телфера.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2796,18 +2796,18 @@ const t: CultureTranslation = {
     'c.handling.o2': { m: "Вдигаш я сам, бързо.", f: "Вдигаш я сама, бързо.", x: "Вдигаш я без помощ, бързо." }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.handling.o3': "Влачиш я по пода.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.handling.w': "Тежката част може да нарани гърба ти за една секунда. Десет минути чакане са по-добре от месеци болка.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.finalcheck': "Крайната проверка", // nieuw, nalezen
-    'w.typeplaatje': "табелката (малка метална табелка с типа и номера)", // nieuw, nalezen
-    'w.stempel': "печатът", // nieuw, nalezen
-    'w.testbank': "изпитателният стенд", // nieuw, nalezen
-    'w.goedkeursticker': "стикерът за одобрение (зелен стикер: продуктът е добър)", // nieuw, nalezen
-    'w.kras': "драскотината", // nieuw, nalezen
-    'w.barst': "пукнатината", // nieuw, nalezen
-    's.finalcheck.1': "Табелката е накриво.", // nieuw, nalezen
-    's.finalcheck.2': "Този продукт има драскотина.", // nieuw, nalezen
-    's.finalcheck.3': "Без стикер за одобрение не излиза.", // nieuw, nalezen
-    'c.finalcheck.q': "Добър ли е този продукт?", // nieuw, nalezen
-    'c.finalcheck.a': "Не, има пукнатина.", // nieuw, nalezen
+    'l.finalcheck': "Крайната проверка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.typeplaatje': "табелката (малка метална табелка с типа и номера)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stempel': "печатът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.testbank': "изпитателният стенд", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedkeursticker': "стикерът за одобрение (зелен стикер: продуктът е добър)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kras': "драскотината", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.barst': "пукнатината", // nieuw, nalezen // nagelezen AI 28 nov
+    's.finalcheck.1': "Табелката е накриво.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.finalcheck.2': "Този продукт има драскотина.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.finalcheck.3': "Без стикер за одобрение не излиза.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.finalcheck.q': "Добър ли е този продукт?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.finalcheck.a': "Не, има пукнатина.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.finalcheck': "Само добрите продукти получават стикера", // nieuw, nalezen // nagelezen AI 22 nov
     'c.finalcheck.b': "Крайната проверка е последният шанс да намериш грешка, преди клиентът да я намери. Проверявай всяка точка от списъка, дори когато е натоварено. Малка драскотина или пукнатина лесно се пропуска: гледай на добра светлина и от повече от една страна. Слагай стикера за одобрение или печата само когато всяка точка е наред. Имаш съмнение? Остави продукта настрана и питай. Грешка, открита тук, струва малко, а грешка при клиента струва много. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.finalcheck.p': "Този продукт отива настрана.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2817,19 +2817,19 @@ const t: CultureTranslation = {
     'c.finalcheck.o3': "Преместваш етикета върху драскотината.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.finalcheck.w': "Малката драскотина може да е знак за проблем в линията. Ако я скриеш, само преместваш проблема при клиента.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
-    'u.kweek': "Отглеждане, сортиране и оранжерията", // nieuw, nalezen
-    'l.sowing': "Сеитба и резници", // nieuw, nalezen
-    'w.zaad': "семената", // nieuw, nalezen
-    'w.zaaibak': "табличката за сеене", // nieuw, nalezen
-    'w.stek': "резникът (парче от растение, което пуска нови корени)", // nieuw, nalezen
-    'w.potgrond': "пръстта за саксии", // nieuw, nalezen
-    'w.kweekpot': "саксийката за разсад", // nieuw, nalezen
-    'w.gieter': "лейката", // nieuw, nalezen
-    's.sowing.1': "Сложи по две семена във всяко гнездо.", // nieuw, nalezen
-    's.sowing.2': "Сложи резника в пръстта за саксии.", // nieuw, nalezen
-    's.sowing.3': "Дай на младите растения малко вода.", // nieuw, nalezen
-    'c.sowing.q': "Колко дълбоко трябва да е семето?", // nieuw, nalezen
-    'c.sowing.a': "Половин сантиметър. Не по-дълбоко.", // nieuw, nalezen
+    'u.kweek': "Отглеждане, сортиране и оранжерията", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.sowing': "Сеитба и резници", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zaad': "семената", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zaaibak': "табличката за сеене", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stek': "резникът (парче от растение, което пуска нови корени)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.potgrond': "пръстта за саксии", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kweekpot': "саксийката за разсад", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gieter': "лейката", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sowing.1': "Сложи по две семена във всяко гнездо.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sowing.2': "Сложи резника в пръстта за саксии.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sowing.3': "Дай на младите растения малко вода.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sowing.q': "Колко дълбоко трябва да е семето?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sowing.a': "Половин сантиметър. Не по-дълбоко.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.sowing': "Малките растения искат нежна ръка", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sowing.b': "Младите растения са слаби. Дръж резника или разсада за листо, а не за стъблото: листото пак пораства, а счупеното стъбло не. Притискай пръстта леко, не силно. Поливай бавно, с фина струя, за да не се отмият семената. Работи с чисти ръце и чисти таблички: младите растения лесно се разболяват. Пиши датата и вида на растението на всяка табличка, за да знаят всички какво има в нея.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sowing.p': "Държа го за листото.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2838,18 +2838,18 @@ const t: CultureTranslation = {
     'c.sowing.o2': "Издърпваш го за стъблото.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sowing.o3': "Изстискваш го навън заедно с пръстта.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sowing.w': "Листото може да порасне пак. Счупеното стъбло не може и тогава растението умира.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.sorting': "Сортиране и опаковане", // nieuw, nalezen
-    'w.tros': "китката (няколко домата на едно стъбло)", // nieuw, nalezen
-    'w.bakje': "кутийката (малка кутия за плодове)", // nieuw, nalezen
-    'w.sorteermachine': "сортиращата машина", // nieuw, nalezen
-    'w.etiketpistool': "пистолетът за етикети", // nieuw, nalezen
-    'w.kleurenkaart': "цветната скала (показва колко узрял трябва да е плодът)", // nieuw, nalezen
-    'w.tomatenschaar': "ножицата за бране", // nieuw, nalezen
-    's.sorting.1': "Сложи китките внимателно в касетката.", // nieuw, nalezen
-    's.sorting.2': "Този домат е презрял. Той отива настрана.", // nieuw, nalezen
-    's.sorting.3': "Погледни цветната скала.", // nieuw, nalezen
-    'c.sorting.q': "Достатъчно узрял ли е този домат?", // nieuw, nalezen
-    'c.sorting.a': "Не, още е твърде зелен. Остави го на растението.", // nieuw, nalezen
+    'l.sorting': "Сортиране и опаковане", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tros': "китката (няколко домата на едно стъбло)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bakje': "кутийката (малка кутия за плодове)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sorteermachine': "сортиращата машина", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.etiketpistool': "пистолетът за етикети", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kleurenkaart': "цветната скала (показва колко узрял трябва да е плодът)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tomatenschaar': "ножицата за бране", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sorting.1': "Сложи китките внимателно в касетката.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sorting.2': "Този домат е презрял. Той отива настрана.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sorting.3': "Погледни цветната скала.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sorting.q': "Достатъчно узрял ли е този домат?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sorting.a': "Не, още е твърде зелен. Остави го на растението.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.sorting': "Всеки плод е важен", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sorting.b': "Плодовете и зеленчуците лесно се натъртват. Оставяй ги внимателно, не ги изпускай и не ги хвърляй. Днес не виждаш натъртването, но утре плодът е мек и кафяв. Гледай цветната скала, за да знаеш кой цвят къде отива. Слагай повредения или гнилия плод настрана: един лош плод в кутийката може да развали другите. Пази кутийките и касетките чисти и никога не ги слагай на пода.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sorting.p': "Този е повреден.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2858,18 +2858,18 @@ const t: CultureTranslation = {
     'c.sorting.o2': "Скриваш го на дъното.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sorting.o3': "Слагаш го в кутийката въпреки това.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sorting.w': "Гнилият домат кара другите да гният по-бързо. Клиентът го намира и цялата кутийка се връща.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.greenhouse': "Оранжерията и климатът в нея", // nieuw, nalezen
-    'w.buisrailkar': "количката на тръбни релси (движи се по отоплителните тръби)", // nieuw, nalezen
-    'w.druppelaar': "капкачът (дава вода капка по капка)", // nieuw, nalezen
-    'w.luchtraam': "вентилационният прозорец (прозорец в покрива)", // nieuw, nalezen
-    'w.kasscherm': "завесата на оранжерията (плат под покрива)", // nieuw, nalezen
-    'w.ventilator': "вентилаторът", // nieuw, nalezen
-    'w.thermometer': "термометърът", // nieuw, nalezen
-    's.greenhouse.1': "Карай количката на тръбни релси до края на реда.", // nieuw, nalezen
-    's.greenhouse.2': "Капкачът се е откачил.", // nieuw, nalezen
-    's.greenhouse.3': "Топло е. Вентилационните прозорци се отварят.", // nieuw, nalezen
-    'c.greenhouse.q': "Защо е толкова топло в оранжерията?", // nieuw, nalezen
-    'c.greenhouse.a': "Завесата е затворена, и прозорците също.", // nieuw, nalezen
+    'l.greenhouse': "Оранжерията и климатът в нея", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.buisrailkar': "количката на тръбни релси (движи се по отоплителните тръби)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.druppelaar': "капкачът (дава вода капка по капка)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.luchtraam': "вентилационният прозорец (прозорец в покрива)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kasscherm': "завесата на оранжерията (плат под покрива)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ventilator': "вентилаторът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.thermometer': "термометърът", // nieuw, nalezen // nagelezen AI 28 nov
+    's.greenhouse.1': "Карай количката на тръбни релси до края на реда.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.greenhouse.2': "Капкачът се е откачил.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.greenhouse.3': "Топло е. Вентилационните прозорци се отварят.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.greenhouse.q': "Защо е толкова топло в оранжерията?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.greenhouse.a': "Завесата е затворена, и прозорците също.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.greenhouse': "Остави климата на компютъра", // nieuw, nalezen // nagelezen AI 22 nov
     'c.greenhouse.b': "В оранжерията компютър управлява климата: прозорците, завесата, отоплението и водата. Не отваряй сам прозорец и не променяй настройки. Виждаш ли нещо странно, например капкач, който тече, или прозорец, който не се затваря? Кажи на началника си. Количката на тръбни релси се движи по отоплителните тръби: използвай я само когато знаеш как. Дръж краката си на платформата и никога не пипай тръбите: може да са горещи. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.greenhouse.p': "Този капкач тече.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2878,18 +2878,18 @@ const t: CultureTranslation = {
     'c.greenhouse.o2': "Оставяш го: това е само вода.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.greenhouse.o3': "Спираш водата за целия ред.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.greenhouse.w': "Откаченият капкач хаби вода, растението получава твърде малко, а мокрият под е хлъзгав.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.pests': "Вредители и чиста работа", // nieuw, nalezen
-    'w.luis': "листната въшка (малко зелено насекомо по растенията)", // nieuw, nalezen
-    'w.vangplaat': "лепливият капан (жълта карта, която лови насекоми)", // nieuw, nalezen
-    'w.rups': "гъсеницата", // nieuw, nalezen
-    'w.sluipwesp': "паразитната оса (малка оса, която убива вредителите)", // nieuw, nalezen
-    'w.schimmel': "плесента", // nieuw, nalezen
-    'w.ontsmettingsmat': "дезинфекционната постелка (стъпваш на нея при вратата)", // nieuw, nalezen
-    's.pests.1': "По това листо има въшки.", // nieuw, nalezen
-    's.pests.2': "Закачи лепливия капан над растенията.", // nieuw, nalezen
-    's.pests.3': "Мини по дезинфекционната постелка.", // nieuw, nalezen
-    'c.pests.q': "Може ли да убия тази оса?", // nieuw, nalezen
-    'c.pests.a': "Не, това е паразитна оса. Тя ни помага.", // nieuw, nalezen
+    'l.pests': "Вредители и чиста работа", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.luis': "листната въшка (малко зелено насекомо по растенията)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vangplaat': "лепливият капан (жълта карта, която лови насекоми)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rups': "гъсеницата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sluipwesp': "паразитната оса (малка оса, която убива вредителите)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schimmel': "плесента", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ontsmettingsmat': "дезинфекционната постелка (стъпваш на нея при вратата)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pests.1': "По това листо има въшки.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pests.2': "Закачи лепливия капан над растенията.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pests.3': "Мини по дезинфекционната постелка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pests.q': "Може ли да убия тази оса?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pests.a': "Не, това е паразитна оса. Тя ни помага.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.pests': "Не пренасяй болести от ред на ред", // nieuw, nalezen // nagelezen AI 22 nov
     'c.pests.b': "Болест или вредител се разпространява бързо в оранжерията. Можеш да го пренесеш на ръцете, дрехите и инструментите си. Затова минавай по дезинфекционната постелка при всяка врата и си мий ръцете, когато отиваш в друга част на оранжерията. Започвай работа в здравите редове и завършвай в болните. Виждаш ли насекоми, петна или плесен по растение? Не го пипай, а кажи на началника си къде е. Някои насекоми в оранжерията са помощници: остави ги на мира. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.pests.p': "Тук има плесен.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2898,19 +2898,19 @@ const t: CultureTranslation = {
     'c.pests.o2': "Откъсваш лошите листа и продължаваш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.pests.o3': "Не казваш нищо: само няколко растения са.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.pests.w': "Плесента се разпространява бързо. Началникът ти знае какво да се прави и откъде да се започне.", // nieuw, nalezen // nagelezen AI 22 nov
-    'u.carservice': "Гуми, масло и спирачки", // nieuw, nalezen
-    'l.tyres': "Смяна на гуми", // nieuw, nalezen
-    'w.wielbout': "болтът на колелото", // nieuw, nalezen
-    'w.slagmoersleutel': "ударният гайковерт", // nieuw, nalezen
-    'w.bandenspanningsmeter': "манометърът за гуми", // nieuw, nalezen
-    'w.bandenprofiel': "протекторът на гумата (каналите в гумата)", // nieuw, nalezen
-    'w.velg': "джантата", // nieuw, nalezen
-    'w.bandenwisselaar': "машината за гуми (машина, която сваля гумата от джантата)", // nieuw, nalezen
-    's.tyres.1': "Затегни болтовете на колелото на кръст.", // nieuw, nalezen
-    's.tyres.2': "Протекторът на гумата е твърде нисък.", // nieuw, nalezen
-    's.tyres.3': "Измери налягането с манометъра за гуми.", // nieuw, nalezen
-    'c.tyres.q': "Трябва ли да се свалят тези гуми?", // nieuw, nalezen
-    'c.tyres.a': "Да, протекторът почти го няма.", // nieuw, nalezen
+    'u.carservice': "Гуми, масло и спирачки", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.tyres': "Смяна на гуми", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wielbout': "болтът на колелото", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.slagmoersleutel': "ударният гайковерт", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bandenspanningsmeter': "манометърът за гуми", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bandenprofiel': "протекторът на гумата (каналите в гумата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.velg': "джантата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bandenwisselaar': "машината за гуми (машина, която сваля гумата от джантата)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tyres.1': "Затегни болтовете на колелото на кръст.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tyres.2': "Протекторът на гумата е твърде нисък.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tyres.3': "Измери налягането с манометъра за гуми.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.tyres.q': "Трябва ли да се свалят тези гуми?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.tyres.a': "Да, протекторът почти го няма.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.tyres': "Завий на ръка, затегни с динамометричния ключ", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tyres.b': "Ударният гайковерт е бърз и много силен. Използвай го, за да развиваш болтовете на колелото, но не и за да ги затягаш здраво. Първо завий болтовете на ръка. После ги затегни на кръст с динамометричен ключ, със силата за тази кола. Колело, което не е затегнато, може да падне по време на движение. Проверявай протектора и налягането на всяка гума, която вземеш в ръцете си. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tyres.p': "Първо ги завивам на ръка.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2919,18 +2919,18 @@ const t: CultureTranslation = {
     'c.tyres.o2': "Затягаш ги здраво с ударния гайковерт.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tyres.o3': "Завиваш ги на ръка и толкова.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tyres.w': "Ударният гайковерт може да затегне болта твърде силно или недостатъчно. Само динамометричният ключ дава правилната сила.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.oilchange': "Смяна на маслото", // nieuw, nalezen
-    'w.oliefilter': "масленият филтър", // nieuw, nalezen
-    'w.oliepeilstok': "щеката за масло (показва колко масло има)", // nieuw, nalezen
-    'w.opvangbak': "тавичката за масло (събира старото масло)", // nieuw, nalezen
-    'w.trechter': "фунията", // nieuw, nalezen
-    'w.aftapplug': "пробката за източване", // nieuw, nalezen
-    'w.olievat': "варелът за масло", // nieuw, nalezen
-    's.oilchange.1': "Сложи тавичката за масло под двигателя.", // nieuw, nalezen
-    's.oilchange.2': "Развий пробката за източване.", // nieuw, nalezen
-    's.oilchange.3': "Погледни щеката за масло.", // nieuw, nalezen
-    'c.oilchange.q': "Колко масло трябва да се сложи?", // nieuw, nalezen
-    'c.oilchange.a': "Четири литра. После погледни щеката.", // nieuw, nalezen
+    'l.oilchange': "Смяна на маслото", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oliefilter': "масленият филтър", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oliepeilstok': "щеката за масло (показва колко масло има)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opvangbak': "тавичката за масло (събира старото масло)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.trechter': "фунията", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aftapplug': "пробката за източване", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.olievat': "варелът за масло", // nieuw, nalezen // nagelezen AI 28 nov
+    's.oilchange.1': "Сложи тавичката за масло под двигателя.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.oilchange.2': "Развий пробката за източване.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.oilchange.3': "Погледни щеката за масло.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.oilchange.q': "Колко масло трябва да се сложи?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.oilchange.a': "Четири литра. После погледни щеката.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.oilchange': "Старото масло отива във варела, не в канала", // nieuw, nalezen // nagelezen AI 22 nov
     'c.oilchange.b': "Старото масло е вредно за водата и почвата. Малко масло може да замърси много вода. Затова събирай цялото старо масло в тавичката и го изсипвай във варела за старо масло. Никога не го изливай в канал или в мивка. Старите филтри и мазните парцали отиват в своя отделна кофа. Горещото масло може да изгори кожата ти: първо остави двигателя да изстине малко и носи ръкавици. Почиствай разлятото масло веднага: маслото на пода е хлъзгаво. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.oilchange.p': "Къде отива старото масло?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2939,18 +2939,18 @@ const t: CultureTranslation = {
     'c.oilchange.o2': "Изсипваш я в канала навън.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.oilchange.o3': "Оставяш я под колата за по-късно.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.oilchange.w': "Старото масло в канала замърсява водата. Пълната тавичка под колата лесно се ритва и се разлива.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.brakes': "Спирачки и светлини", // nieuw, nalezen
-    'w.remschijf': "спирачният диск", // nieuw, nalezen
-    'w.remblok': "спирачната накладка", // nieuw, nalezen
-    'w.koplamp': "фарът", // nieuw, nalezen
-    'w.remvloeistof': "спирачната течност", // nieuw, nalezen
-    'w.remklauw': "спирачният апарат", // nieuw, nalezen
-    'w.achterlamp': "задната лампа", // nieuw, nalezen
-    's.brakes.1': "Спирачните накладки са износени.", // nieuw, nalezen
-    's.brakes.2': "Провери спирачната течност.", // nieuw, nalezen
-    's.brakes.3': "Лявата задна лампа не работи.", // nieuw, nalezen
-    'c.brakes.q': "И спирачният диск ли трябва да е нов?", // nieuw, nalezen
-    'c.brakes.a': "Да, твърде тънък е.", // nieuw, nalezen
+    'l.brakes': "Спирачки и светлини", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.remschijf': "спирачният диск", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.remblok': "спирачната накладка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koplamp': "фарът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.remvloeistof': "спирачната течност", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.remklauw': "спирачният апарат", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.achterlamp': "задната лампа", // nieuw, nalezen // nagelezen AI 28 nov
+    's.brakes.1': "Спирачните накладки са износени.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.brakes.2': "Провери спирачната течност.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.brakes.3': "Лявата задна лампа не работи.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.brakes.q': "И спирачният диск ли трябва да е нов?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.brakes.a': "Да, твърде тънък е.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.brakes': "Спирачки: провери два пъти", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.b': "Спирачките пазят хората живи. Затова работи спокойно и проверявай работата си два пъти. След нови накладки или дискове натисни спирачния педал няколко пъти, преди колата да тръгне: първото натискане често отива твърде дълбоко. Спирачната течност е вредна за кожата и за боята: носи ръкавици и веднага избърсвай капките. Не издухвай спирачния прах със сгъстен въздух: почисти го с препарат за спирачки и кърпа. Преди колата да тръгне, провери всяка светлина, и стоповете.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.p': "Натискам спирачния педал няколко пъти.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2959,18 +2959,18 @@ const t: CultureTranslation = {
     'c.brakes.o2': "Изкарваш я веднага навън.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.o3': "Избутваш я навън без проверка.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.w': "След нови накладки педалът може да отиде твърде дълбоко първия път. Тогава колата не спира.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.diagnosis': "Четене на грешки и работната поръчка", // nieuw, nalezen
-    'w.diagnosecomputer': "диагностичният уред (чете грешките на колата)", // nieuw, nalezen
-    'w.waarschuwingslampje': "предупредителната лампичка (на таблото)", // nieuw, nalezen
-    'w.werkorder': "работната поръчка (какво трябва да се направи по колата)", // nieuw, nalezen
-    'w.kentekenplaat': "регистрационната табела", // nieuw, nalezen
-    'w.autosleutel': "ключът на колата", // nieuw, nalezen
-    'w.stoelhoes': "калъфът за седалка (пази седалката чиста)", // nieuw, nalezen
-    's.diagnosis.1': "Свържи диагностичния уред.", // nieuw, nalezen
-    's.diagnosis.2': "Предупредителната лампичка свети.", // nieuw, nalezen
-    's.diagnosis.3': "Сложи калъф на седалката.", // nieuw, nalezen
-    'c.diagnosis.q': "Какво трябва да се направи по тази кола?", // nieuw, nalezen
-    'c.diagnosis.a': "Погледни работната поръчка.", // nieuw, nalezen
+    'l.diagnosis': "Четене на грешки и работната поръчка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.diagnosecomputer': "диагностичният уред (чете грешките на колата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.waarschuwingslampje': "предупредителната лампичка (на таблото)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkorder': "работната поръчка (какво трябва да се направи по колата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kentekenplaat': "регистрационната табела", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.autosleutel': "ключът на колата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stoelhoes': "калъфът за седалка (пази седалката чиста)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.diagnosis.1': "Свържи диагностичния уред.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.diagnosis.2': "Предупредителната лампичка свети.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.diagnosis.3': "Сложи калъф на седалката.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.diagnosis.q': "Какво трябва да се направи по тази кола?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.diagnosis.a': "Погледни работната поръчка.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.diagnosis': "Пази колата, все едно е твоя", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.b': "Клиентът ти дава колата и ключа си. Пази и двете. Сложи калъф на седалката и стелка на пода, преди да влезеш. Прави само това, което пише в работната поръчка. Намираш ли още нещо, което не е наред? Запиши го и кажи на началника си: клиентът решава. Дръж ключа на мястото му, с етикета му. Не използвай радиото, телефона или нещата в колата. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.p': "Това го няма в работната поръчка.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2980,2191 +2980,2191 @@ const t: CultureTranslation = {
     'c.diagnosis.o3': "Не казваш нищо: това не е твоя работа.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.w': "Клиентът решава какво се прави и какво се плаща. Но той трябва да знае, че гумата е опасна.", // nieuw, nalezen // nagelezen AI 22 nov
     // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang, two units each (23 November 2026).
-    'u.mowing': "Косене и подрязване", // nieuw, nalezen
-    'l.mowing': "Косене на тревата", // nieuw, nalezen
-    'w.gras': "тревата", // nieuw, nalezen
-    'w.maaien': "кося (режа трева)", // nieuw, nalezen
-    'w.grasmaaier': "косачката", // nieuw, nalezen
-    'w.zitmaaier': "тракторната косачка (косачка, на която седиш)", // nieuw, nalezen
-    'w.bosmaaier': "моторната коса (косачка на дълъг прът)", // nieuw, nalezen
+    'u.mowing': "Косене и подрязване", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.mowing': "Косене на тревата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gras': "тревата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.maaien': "кося (режа трева)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.grasmaaier': "косачката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zitmaaier': "тракторната косачка (косачка, на която седиш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bosmaaier': "моторната коса (косачка на дълъг прът)", // nieuw, nalezen // nagelezen AI 28 nov
     'w.gelaatsscherm': "предпазният щит за лице", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    's.mowing.1': "Първо окоси тревата покрай края.", // nieuw, nalezen
-    's.mowing.2': "Тревата е твърде мокра. Ще косим утре.", // nieuw, nalezen
+    's.mowing.1': "Първо окоси тревата покрай края.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mowing.2': "Тревата е твърде мокра. Ще косим утре.", // nieuw, nalezen // nagelezen AI 28 nov
     's.mowing.3': "Сложи си предпазния щит за лице.", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.mowing.q': "Може ли да взема тракторната косачка?", // nieuw, nalezen
-    'c.mowing.a': "Да, но първо махни камъните.", // nieuw, nalezen
-    'c.mowing': "Камъните летят далеч", // nieuw, nalezen
+    'c.mowing.q': "Може ли да взема тракторната косачка?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.a': "Да, но първо махни камъните.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing': "Камъните летят далеч", // nieuw, nalezen // nagelezen AI 28 nov
     'c.mowing.b': "Косачката или моторната коса може да хвърли камък много далеч и много силно. Затова първо мини по тревата и махни камъните, стъклата и клоните. Носи предпазния щит за лице или предпазни очила, антифони и предпазни обувки. Дръж другите хора далеч. Някой се приближава? Спри машината. Никога не бъркай с ръка под косачката, докато двигателят работи: изключи го и изчакай ножът да спре. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.mowing.p': "Моля, стойте на разстояние.", // nieuw, nalezen
-    'c.mowing.s': "Работиш с моторната коса. Към теб идва мъж с куче. Какво правиш?", // nieuw, nalezen
-    'c.mowing.o1': "Спираш машината, докато той мине.", // nieuw, nalezen
-    'c.mowing.o2': "Продължаваш: той те вижда.", // nieuw, nalezen
-    'c.mowing.o3': "Обръщаш се на другата страна и продължаваш.", // nieuw, nalezen
-    'c.mowing.w': "Камък от моторната коса може да нарани някого тежко, дори отдалеч.", // nieuw, nalezen
-    'l.pruning': "Подрязване", // nieuw, nalezen
-    'w.snoeien': "подрязвам (режа клони от растение)", // nieuw, nalezen
-    'w.snoeischaar': "лозарската ножица", // nieuw, nalezen
-    'w.tak': "клонът", // nieuw, nalezen
-    'w.struik': "храстът", // nieuw, nalezen
-    'w.boom': "дървото", // nieuw, nalezen
-    'w.snoeizaag': "градинският трион", // nieuw, nalezen
-    's.pruning.1': "Подрежи храстите покрай пътеката.", // nieuw, nalezen
-    's.pruning.2': "Този клон е сух. Отрежи го с трион.", // nieuw, nalezen
-    's.pruning.3': "Сложи клоните на купчина.", // nieuw, nalezen
-    'c.pruning.q': "Кои клони трябва да се махнат?", // nieuw, nalezen
-    'c.pruning.a': "Само сухите клони.", // nieuw, nalezen
-    'c.pruning': "Чистият срез зараства най-добре", // nieuw, nalezen
-    'c.pruning.b': "Подрязвай с остра и чиста ножица. Чистият срез зараства бързо; разкъсаният клон се разболява. Режи точно над пъпка или страничен клон и не оставяй дълго парче. Първо махни сухите и счупените клони. Дръж другата си ръка далеч от остриетата. Носи ръкавици: някои растения имат бодли или зачервяват кожата. След работа почисти ножицата.", // nieuw, nalezen
-    'c.pruning.p': "Къде трябва да режа?", // nieuw, nalezen
-    'c.pruning.s': "Лозарската ти ножица е тъпа. Тя къса клоните. Какво правиш?", // nieuw, nalezen
-    'c.pruning.o1': "Искаш остра ножица.", // nieuw, nalezen
-    'c.pruning.o2': "Дърпаш клона по-силно.", // nieuw, nalezen
-    'c.pruning.o3': "Продължаваш: това е само храст.", // nieuw, nalezen
-    'c.pruning.w': "Тъпата ножица къса клона. Растението се разболява, а ти работиш по-тежко.", // nieuw, nalezen
-    'l.hedge': "Подрязване на жив плет", // nieuw, nalezen
-    'w.heg': "живият плет", // nieuw, nalezen
-    'w.heggenschaar': "ножицата за жив плет (машина, която реже жив плет)", // nieuw, nalezen
-    'w.kruiwagen': "ръчната количка", // nieuw, nalezen
-    'w.hark': "греблото", // nieuw, nalezen
-    'w.snoeiafval': "зелените отпадъци (отрязани клони и листа)", // nieuw, nalezen
-    'w.zeil': "брезентът (голямо найлоново платно)", // nieuw, nalezen
-    's.hedge.1': "Сложи брезента под живия плет.", // nieuw, nalezen
-    's.hedge.2': "Подрежи живия плет хубаво и право.", // nieuw, nalezen
-    's.hedge.3': "Изкарай зелените отпадъци с ръчната количка.", // nieuw, nalezen
-    'c.hedge.q': "Колко висок трябва да остане живият плет?", // nieuw, nalezen
-    'c.hedge.a': "До въжето. Не по-ниско.", // nieuw, nalezen
-    'c.hedge': "Първо търси гнезда", // nieuw, nalezen
-    'c.hedge.b': "През пролетта и лятото птиците правят гнезда в живия плет и храстите. Гнездата, които птиците използват, са защитени. Затова погледни в живия плет, преди да режеш. Виждаш гнездо с яйца или малки птички? Не режи там и кажи на началника си. Дръж ножицата за жив плет с двете ръце. Стой стабилно на земята или на добра стълба, никога на стол или кофа. Дръж кабела зад себе си.", // nieuw, nalezen
-    'c.hedge.p': "Тук има гнездо.", // nieuw, nalezen
-    'c.hedge.s': "Подрязваш жив плет през май. Виждаш гнездо с малки птички. Какво правиш?", // nieuw, nalezen
-    'c.hedge.o1': "Спираш там и казваш на началника си.", // nieuw, nalezen
-    'c.hedge.o2': "Режеш внимателно около него.", // nieuw, nalezen
-    'c.hedge.o3': "Махаш гнездото и продължаваш.", // nieuw, nalezen
-    'c.hedge.w': "Гнездата, които птиците използват, са защитени. Началникът ти решава какво става с тази част от живия плет.", // nieuw, nalezen
-    'l.chainsaw': "Моторният трион и листосъбирачът", // nieuw, nalezen
-    'w.kettingzaag': "моторният трион", // nieuw, nalezen
-    'w.stam': "стволът (на дърво)", // nieuw, nalezen
-    'w.zaagbroek': "защитният панталон (спира веригата)", // nieuw, nalezen
-    'w.bladblazer': "листосъбирачът (духалка за листа)", // nieuw, nalezen
-    'w.bladeren': "листата", // nieuw, nalezen
-    'w.jerrycan': "тубата (съд за гориво)", // nieuw, nalezen
-    's.chainsaw.1': "Облечи защитния си панталон.", // nieuw, nalezen
-    's.chainsaw.2': "Издухай листата на купчина.", // nieuw, nalezen
-    's.chainsaw.3': "Зареждай гориво само когато двигателят е студен.", // nieuw, nalezen
-    'c.chainsaw.q': "Може ли да работя с моторния трион?", // nieuw, nalezen
-    'c.chainsaw.a': "Още не. Първо ще минеш курс.", // nieuw, nalezen
-    'c.chainsaw': "Моторен трион само с обучение", // nieuw, nalezen
+    'c.mowing.p': "Моля, стойте на разстояние.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.s': "Работиш с моторната коса. Към теб идва мъж с куче. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.o1': "Спираш машината, докато той мине.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.o2': "Продължаваш: той те вижда.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.o3': "Обръщаш се на другата страна и продължаваш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.w': "Камък от моторната коса може да нарани някого тежко, дори отдалеч.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.pruning': "Подрязване", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snoeien': "подрязвам (режа клони от растение)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snoeischaar': "лозарската ножица", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tak': "клонът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.struik': "храстът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.boom': "дървото", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snoeizaag': "градинският трион", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pruning.1': "Подрежи храстите покрай пътеката.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pruning.2': "Този клон е сух. Отрежи го с трион.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pruning.3': "Сложи клоните на купчина.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.q': "Кои клони трябва да се махнат?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.a': "Само сухите клони.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning': "Чистият срез зараства най-добре", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.b': "Подрязвай с остра и чиста ножица. Чистият срез зараства бързо; разкъсаният клон се разболява. Режи точно над пъпка или страничен клон и не оставяй дълго парче. Първо махни сухите и счупените клони. Дръж другата си ръка далеч от остриетата. Носи ръкавици: някои растения имат бодли или зачервяват кожата. След работа почисти ножицата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.p': "Къде трябва да режа?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.s': "Лозарската ти ножица е тъпа. Тя къса клоните. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.o1': "Искаш остра ножица.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.o2': "Дърпаш клона по-силно.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.o3': "Продължаваш: това е само храст.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.w': "Тъпата ножица къса клона. Растението се разболява, а ти работиш по-тежко.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.hedge': "Подрязване на жив плет", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.heg': "живият плет", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.heggenschaar': "ножицата за жив плет (машина, която реже жив плет)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kruiwagen': "ръчната количка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hark': "греблото", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snoeiafval': "зелените отпадъци (отрязани клони и листа)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zeil': "брезентът (голямо найлоново платно)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hedge.1': "Сложи брезента под живия плет.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hedge.2': "Подрежи живия плет хубаво и право.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hedge.3': "Изкарай зелените отпадъци с ръчната количка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.q': "Колко висок трябва да остане живият плет?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.a': "До въжето. Не по-ниско.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge': "Първо търси гнезда", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.b': "През пролетта и лятото птиците правят гнезда в живия плет и храстите. Гнездата, които птиците използват, са защитени. Затова погледни в живия плет, преди да режеш. Виждаш гнездо с яйца или малки птички? Не режи там и кажи на началника си. Дръж ножицата за жив плет с двете ръце. Стой стабилно на земята или на добра стълба, никога на стол или кофа. Дръж кабела зад себе си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.p': "Тук има гнездо.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.s': "Подрязваш жив плет през май. Виждаш гнездо с малки птички. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.o1': "Спираш там и казваш на началника си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.o2': "Режеш внимателно около него.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.o3': "Махаш гнездото и продължаваш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.w': "Гнездата, които птиците използват, са защитени. Началникът ти решава какво става с тази част от живия плет.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.chainsaw': "Моторният трион и листосъбирачът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kettingzaag': "моторният трион", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stam': "стволът (на дърво)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zaagbroek': "защитният панталон (спира веригата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bladblazer': "листосъбирачът (духалка за листа)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bladeren': "листата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.jerrycan': "тубата (съд за гориво)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.chainsaw.1': "Облечи защитния си панталон.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.chainsaw.2': "Издухай листата на купчина.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.chainsaw.3': "Зареждай гориво само когато двигателят е студен.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.q': "Може ли да работя с моторния трион?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.a': "Още не. Първо ще минеш курс.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw': "Моторен трион само с обучение", // nieuw, nalezen // nagelezen AI 28 nov
     'c.chainsaw.b': { m: "Моторният трион е един от най-опасните инструменти в работата със зеленина. Работи с него само когато си минал курс и началникът ти казва, че може. Винаги носи защитен панталон, каска с предпазен щит за лице и антифони, ръкавици и защитни ботуши. Никога не работи сам с моторен трион. Дръж го с двете ръце и никога не режи над раменете си. С листосъбирача: никога не духай към хора, коли или отворени прозорци. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "Моторният трион е един от най-опасните инструменти в работата със зеленина. Работи с него само когато си минала курс и началникът ти казва, че може. Винаги носи защитен панталон, каска с предпазен щит за лице и антифони, ръкавици и защитни ботуши. Никога не работи сама с моторен трион. Дръж го с двете ръце и никога не режи над раменете си. С листосъбирача: никога не духай към хора, коли или отворени прозорци. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "Моторният трион е един от най-опасните инструменти в работата със зеленина. Работи с него само след курс и когато началникът ти казва, че може. Винаги носи защитен панталон, каска с предпазен щит за лице и антифони, ръкавици и защитни ботуши. Никога не работи без друг човек до теб, когато използваш моторен трион. Дръж го с двете ръце и никога не режи над раменете си. С листосъбирача: никога не духай към хора, коли или отворени прозорци. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.chainsaw.p': { m: "Още не съм минал курс за това.", f: "Още не съм минала курс за това.", x: "Още нямам курс за това." }, // nieuw, nalezen
-    'c.chainsaw.s': { m: "Колега казва: „Вземи моторния трион, лесно е.“ Никога не си минавал курс. Какво правиш?", f: "Колега казва: „Вземи моторния трион, лесно е.“ Никога не си минавала курс. Какво правиш?", x: "Колега казва: „Вземи моторния трион, лесно е.“ Нямаш курс за него. Какво правиш?" }, // nieuw, nalezen
-    'c.chainsaw.o1': { m: "Казваш, че още не си минал курс.", f: "Казваш, че още не си минала курс.", x: "Казваш, че още нямаш курс." }, // nieuw, nalezen
-    'c.chainsaw.o2': "Пробваш внимателно, само веднъж.", // nieuw, nalezen
-    'c.chainsaw.o3': "Вземаш го и първо гледаш видео.", // nieuw, nalezen
-    'c.chainsaw.w': "Моторният трион може да среже крака ти за секунда. Без обучение не знаеш как може да отскочи назад.", // nieuw, nalezen
-    'u.planting': "Засаждане, плевели и улицата", // nieuw, nalezen
-    'l.weeding': "Плевене", // nieuw, nalezen
-    'w.onkruid': "плевелите (растения, които трябва да се махнат)", // nieuw, nalezen
-    'w.wieden': "плевя (скубя плевели)", // nieuw, nalezen
-    'w.schoffel': "мотиката", // nieuw, nalezen
-    'w.perk': "лехата с цветя", // nieuw, nalezen
-    'w.onkruidbrander': "горелката за плевели (убива плевелите с топлина)", // nieuw, nalezen
-    'w.wortel': "коренът (на растение)", // nieuw, nalezen
-    's.weeding.1': "Изскубни плевелите с корена.", // nieuw, nalezen
-    's.weeding.2': "Окопай лехата с цветя до входа.", // nieuw, nalezen
-    's.weeding.3': "Внимавай: горелката за плевели е гореща.", // nieuw, nalezen
-    'c.weeding.q': "Това плевел ли е?", // nieuw, nalezen
-    'c.weeding.a': "Не, това е растение. Остави го.", // nieuw, nalezen
-    'c.weeding': "Плевели: коренът трябва да излезе", // nieuw, nalezen
-    'c.weeding.b': { m: "Плевелът пак пораства, когато коренът остане в земята. Затова го изскубвай с корена или окопавай точно под повърхността. Работи, когато почвата е малко мокра: тогава коренът излиза лесно. Не използвай спрейове срещу плевели, освен ако си научил как и началникът ти казва така. Горелката за плевели е много гореща: дръж я далеч от суха трева, листа, жив плет, коли и кофи за боклук. Никога не я оставяй, докато гори. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "Плевелът пак пораства, когато коренът остане в земята. Затова го изскубвай с корена или окопавай точно под повърхността. Работи, когато почвата е малко мокра: тогава коренът излиза лесно. Не използвай спрейове срещу плевели, освен ако си научила как и началникът ти казва така. Горелката за плевели е много гореща: дръж я далеч от суха трева, листа, жив плет, коли и кофи за боклук. Никога не я оставяй, докато гори. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "Плевелът пак пораства, когато коренът остане в земята. Затова го изскубвай с корена или окопавай точно под повърхността. Работи, когато почвата е малко мокра: тогава коренът излиза лесно. Не използвай спрейове срещу плевели, освен ако знаеш как и началникът ти казва така. Горелката за плевели е много гореща: дръж я далеч от суха трева, листа, жив плет, коли и кофи за боклук. Никога не я оставяй, докато гори. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen
-    'c.weeding.p': "Това плевел ли е или растение?", // nieuw, nalezen
-    'c.weeding.s': "Работиш с горелката за плевели. До пътеката има сух жив плет. Какво правиш?", // nieuw, nalezen
-    'c.weeding.o1': "Скубеш плевелите там на ръка.", // nieuw, nalezen
-    'c.weeding.o2': "Гориш бързо и продължаваш.", // nieuw, nalezen
-    'c.weeding.o3': "Гориш и поглеждаш назад веднъж.", // nieuw, nalezen
-    'c.weeding.w': "Сухият жив плет се запалва бързо. Пожар до къщи или коли е много опасен.", // nieuw, nalezen
-    'l.planting': "Засаждане", // nieuw, nalezen
-    'w.planten': "засаждам", // nieuw, nalezen
-    'w.schep': "лопатата", // nieuw, nalezen
-    'w.plantgat': "дупката за засаждане", // nieuw, nalezen
-    'w.kluit': "буцата пръст (пръстта около корените)", // nieuw, nalezen
-    'w.compost': "компостът", // nieuw, nalezen
-    'w.boompaal': "колът за дърво (кол, който държи младо дърво)", // nieuw, nalezen
-    's.planting.1': "Изкопай дупка за дървото.", // nieuw, nalezen
-    's.planting.2': "Сложи дървото право, до кола.", // nieuw, nalezen
-    's.planting.3': "Дай на новите растения много вода.", // nieuw, nalezen
-    'c.planting.q': "Къде отива това растение?", // nieuw, nalezen
-    'c.planting.a': "Отзад в лехата, до стената.", // nieuw, nalezen
-    'c.planting': "Под земята: кабели и тръби", // nieuw, nalezen
-    'c.planting.b': "Под тревата и тротоара често има кабели и тръби: за ток, газ, вода и интернет. Затова копай внимателно. Виждаш цветна лента или пластмасова плоча в земята, или удряш нещо твърдо? Спри да копаеш и кажи на началника си. Никога не копай нататък със сила. Вдигайте тежко дърво или голяма буца пръст заедно, със свити колене. Дай вода на новото растение още същия ден. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.planting.p': "Удрям нещо твърдо.", // nieuw, nalezen
-    'c.planting.s': "Копаеш дупка за засаждане. Лопатата ти удря червена пластмасова лента. Какво правиш?", // nieuw, nalezen
-    'c.planting.o1': "Спираш да копаеш и казваш на началника си.", // nieuw, nalezen
-    'c.planting.o2': "Копаеш внимателно нататък, до лентата.", // nieuw, nalezen
-    'c.planting.o3': "Издърпваш лентата и продължаваш.", // nieuw, nalezen
-    'c.planting.w': "Лентата в земята предупреждава, че под нея има кабел или тръба. Газова тръба или кабел за ток е много опасен.", // nieuw, nalezen
-    'l.roadside': "Работа до пътя", // nieuw, nalezen
-    'w.pion': "конусът (пътен конус)", // nieuw, nalezen
-    'w.verkeer': "движението (колите по пътя)", // nieuw, nalezen
-    'w.stoep': "тротоарът (пътеката до пътя)", // nieuw, nalezen
-    'w.fietser': "колоездачът", // nieuw, nalezen
-    'w.pijlwagen': "ремаркето със стрелка (ремарке с голяма стрелка, което предупреждава шофьорите)", // nieuw, nalezen
-    'w.berm': "банкетът (тревата до пътя)", // nieuw, nalezen
-    's.roadside.1': "Облечи жилетката си. Работим до пътя.", // nieuw, nalezen
-    's.roadside.2': "Сложи конусите зад буса.", // nieuw, nalezen
-    's.roadside.3': "Внимавай за колоездачите.", // nieuw, nalezen
-    'c.roadside.q': "Мога ли да пресека сега?", // nieuw, nalezen
-    'c.roadside.a': "Не, чакай. Идва камион.", // nieuw, nalezen
-    'c.roadside': "До пътя: нека те виждат, стой зад конусите", // nieuw, nalezen
-    'c.roadside.b': "Работата до пътя е опасна: шофьорите гледат телефона си или карат твърде бързо. Затова винаги носи светлоотразителната си жилетка, дори за кратка работа. Сложи конусите и знаците, преди да започнеш, и ги прибери последни. Паркирай буса като щит между теб и движението. Стой зад конусите. Никога не отстъпвай назад, без да погледнеш, и работи с лице към движението, когато можеш. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.roadside.p': "Първо слагам конусите.", // nieuw, nalezen
-    'c.roadside.s': "Трябва да подрежеш един малък храст до пътя. Отнема пет минути. Какво правиш?", // nieuw, nalezen
-    'c.roadside.o1': "Обличаш жилетката и слагаш конусите.", // nieuw, nalezen
-    'c.roadside.o2': "Правиш го бързо, без конусите.", // nieuw, nalezen
-    'c.roadside.o3': "Молиш колега да гледа колите.", // nieuw, nalezen
-    'c.roadside.w': "Злополуката отнема само една секунда. Пет минути без конуси са пет минути без защита.", // nieuw, nalezen
-    'l.litter': "Боклукът и кварталът", // nieuw, nalezen
-    'w.zwerfafval': "боклукът на улицата (разхвърлян боклук)", // nieuw, nalezen
-    'w.grijper': "щипката за боклук (пръчка, която хваща боклука)", // nieuw, nalezen
-    'w.vuilniszak': "чувалът за боклук", // nieuw, nalezen
-    'w.scherven': "счупените стъкла (остри парчета)", // nieuw, nalezen
-    'w.aanhanger': "ремаркето", // nieuw, nalezen
-    'w.bewoner': "живущият (човек, който живее тук)", // nieuw, nalezen
-    's.litter.1': "Събери боклука с щипката.", // nieuw, nalezen
-    's.litter.2': "Внимавай, тук има счупени стъкла.", // nieuw, nalezen
-    's.litter.3': "Сложи чувалите за боклук до ремаркето.", // nieuw, nalezen
-    'c.litter.q': "Кога ще подрежат това дърво?", // nieuw, nalezen
-    'c.litter.a': "Не знам. Попитайте общината.", // nieuw, nalezen
-    'c.litter': "Никога не пипай игла", // nieuw, nalezen
-    'c.litter.b': "В парковете и храстите понякога намираш игла от спринцовка. Никога не я вдигай с ръка, дори с ръкавици. Използвай щипката и сложи иглата в твърда кутия или бутилка с капачка, никога в чувал за боклук. Кажи на началника си. Убоде ли те игла? Измий раната с много вода и веднага се обади на лекар. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.litter.p': "Тук има игла.", // nieuw, nalezen
-    'c.litter.s': "Виждаш игла в тревата, до една пейка. Какво правиш?", // nieuw, nalezen
-    'c.litter.o1': "Вдигаш я с щипката.", // nieuw, nalezen
-    'c.litter.o2': "Вдигаш я с ръкавиците.", // nieuw, nalezen
-    'c.litter.o3': "Слагаш я в чувала за боклук.", // nieuw, nalezen
-    'c.litter.w': "Иглата може да пренесе болест. Ръкавиците не спират иглата, а твърдата кутия пази другите.", // nieuw, nalezen
-    'u.frontdesk': "Рецепция, поща и срещи", // nieuw, nalezen
-    'l.reception': "На рецепцията", // nieuw, nalezen
-    'w.balie': "рецепцията, гишето", // nieuw, nalezen
-    'w.bezoeker': "посетителят", // nieuw, nalezen
-    'w.intercom': "домофонът (говориш с някого на вратата)", // nieuw, nalezen
-    'w.doorverbinden': "свързвам (телефонен разговор с друг човек)", // nieuw, nalezen
-    'w.toestel': "вътрешният номер (телефонен номер в сградата)", // nieuw, nalezen
-    'w.wachtruimte': "чакалнята", // nieuw, nalezen
-    's.reception.1': "Добро утро, мога ли да ви помогна?", // nieuw, nalezen
-    's.reception.2': "Ще ви свържа.", // nieuw, nalezen
-    's.reception.3': "Моля, седнете в чакалнята.", // nieuw, nalezen
-    'c.reception.q': "Имам среща с госпожа Янсен.", // nieuw, nalezen
-    'c.reception.a': "Един момент. Ще ѝ се обадя.", // nieuw, nalezen
-    'c.reception': "Ти си първото лице", // nieuw, nalezen
-    'c.reception.b': { m: "На рецепцията ти си първият човек, когото посетителят среща. Вдигни поглед, усмихни се и поздрави, дори когато си зает с телефона. Говори на посетителите на „u“ (на Вие). Отговаряй на телефона с името на фирмата и със собственото си име. Не знаеш отговора? Кажи го и намери някой, който знае. Никога не давай имена, телефонни номера или стаи на служители на хора, които не познаваш.", f: "На рецепцията ти си първият човек, когото посетителят среща. Вдигни поглед, усмихни се и поздрави, дори когато си заета с телефона. Говори на посетителите на „u“ (на Вие). Отговаряй на телефона с името на фирмата и със собственото си име. Не знаеш отговора? Кажи го и намери някой, който знае. Никога не давай имена, телефонни номера или стаи на служители на хора, които не познаваш.", x: "На рецепцията ти си първият човек, когото посетителят среща. Вдигни поглед, усмихни се и поздрави, дори когато говориш по телефона. Говори на посетителите на „u“ (на Вие). Отговаряй на телефона с името на фирмата и със собственото си име. Не знаеш отговора? Кажи го и намери някой, който знае. Никога не давай имена, телефонни номера или стаи на служители на хора, които не познаваш." }, // nieuw, nalezen
-    'c.reception.p': "Добро утро, с какво мога да ви помогна?", // nieuw, nalezen
-    'c.reception.s': "Говориш по телефона. Посетител идва до рецепцията и чака. Какво правиш?", // nieuw, nalezen
-    'c.reception.o1': "Вдигаш поглед и показваш, че идваш скоро.", // nieuw, nalezen
-    'c.reception.o2': "Довършваш разговора, без да вдигаш поглед.", // nieuw, nalezen
-    'c.reception.o3': "Веднага затваряш телефона.", // nieuw, nalezen
-    'c.reception.w': "Посетител, когото са забелязали, чака спокойно. Посетител, когото не са забелязали, се чувства нежелан.", // nieuw, nalezen
-    'l.visitors': "Посрещане на посетители", // nieuw, nalezen
-    'w.bezoekerspasje': "пропускът за посетители", // nieuw, nalezen
-    'w.lift': "асансьорът", // nieuw, nalezen
-    'w.garderobe': "гардеробът (където закачаш палтото си)", // nieuw, nalezen
-    'w.parkeerplaats': "мястото за паркиране", // nieuw, nalezen
-    'w.hal': "фоайето (голямото помещение при входа)", // nieuw, nalezen
-    'w.begeleiden': "придружавам (водя някого някъде, вървя с него)", // nieuw, nalezen
-    's.visitors.1': "Ще напишете ли името си тук?", // nieuw, nalezen
-    's.visitors.2': "Ето вашия пропуск за посетители.", // nieuw, nalezen
-    's.visitors.3': "Ще ви заведа до асансьора.", // nieuw, nalezen
-    'c.visitors.q': "Къде мога да оставя палтото си?", // nieuw, nalezen
-    'c.visitors.a': "В гардероба, до асансьора.", // nieuw, nalezen
-    'c.visitors': "Всеки посетител се записва", // nieuw, nalezen
-    'c.visitors.b': "Всеки посетител пише името си в списъка или се записва на екрана и получава пропуск за посетители. Така знаеш кой е в сградата. Това е важно при пожар: всички трябва да излязат и някой проверява списъка. В края на посещението посетителят връща пропуска. Не пускай след себе си хора, които не познаваш: попитай любезно при кого идват. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.visitors.p': "При кого идвате?", // nieuw, nalezen
-    'c.visitors.s': "Мъж влиза след един колега. Няма пропуск. Какво правиш?", // nieuw, nalezen
-    'c.visitors.o1': "Питаш го любезно при кого идва.", // nieuw, nalezen
-    'c.visitors.o2': "Пускаш го: влезе със служител.", // nieuw, nalezen
-    'c.visitors.o3': "Веднага се обаждаш на полицията.", // nieuw, nalezen
-    'c.visitors.w': "При спешен случай трябва да знаеш кой е вътре. И не всеки, който влиза, има причина да е там.", // nieuw, nalezen
-    'l.mailroom': "Поща и колети", // nieuw, nalezen
-    'w.postkamer': "пощенската стая", // nieuw, nalezen
-    'w.koerier': "куриерът (човек, който носи колети)", // nieuw, nalezen
-    'w.postvak': "пощенската кутийка (кутия за поща, по една за всеки човек)", // nieuw, nalezen
-    'w.envelop': "пликът", // nieuw, nalezen
-    'w.afdeling': "отделът", // nieuw, nalezen
-    'w.postkar': "количката за поща", // nieuw, nalezen
-    's.mailroom.1': "Куриерът носи колет.", // nieuw, nalezen
-    's.mailroom.2': "Сложи писмата в правилната пощенска кутийка.", // nieuw, nalezen
-    's.mailroom.3': "Този колет е повреден.", // nieuw, nalezen
-    'c.mailroom.q': "За кого е този колет?", // nieuw, nalezen
-    'c.mailroom.a': "За Финанси, на втория етаж.", // nieuw, nalezen
-    'c.mailroom': "Пощата е лична", // nieuw, nalezen
-    'c.mailroom.b': "Писмата и колетите са лични. Никога не отваряй писмо или колет за друг човек. Провери името и отдела на всяка пратка и я сложи в правилната пощенска кутийка. Когато куриер носи колет, погледни го, преди да подпишеш: повреден ли е? Запиши това. Колетът е странен: мирише, тече или няма подател? Не го отваряй и кажи на началника си. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.mailroom.p': "Кашонът е мокър и скъсан.", // nieuw, nalezen
-    'c.mailroom.s': "Куриер носи колет. Единият ъгъл е мокър и скъсан. Какво правиш?", // nieuw, nalezen
-    'c.mailroom.o1': "Записваш повредата, преди да подпишеш.", // nieuw, nalezen
-    'c.mailroom.o2': "Подписваш и не казваш на никого.", // nieuw, nalezen
-    'c.mailroom.o3': "Отваряш го, за да видиш дали всичко е там.", // nieuw, nalezen
-    'c.mailroom.w': "След като подпишеш, изглежда, че колетът е бил наред. Тогава никой не плаща за повредата.", // nieuw, nalezen
-    'l.meetingroom': "Подготовка на заседателна зала", // nieuw, nalezen
-    'w.vergaderzaal': "заседателната зала", // nieuw, nalezen
-    'w.beamer': "проекторът", // nieuw, nalezen
-    'w.whiteboard': "бялата дъска", // nieuw, nalezen
-    'w.thermoskan': "термосът (държи кафето горещо)", // nieuw, nalezen
-    'w.kopje': "чашката", // nieuw, nalezen
-    'w.koffieautomaat': "кафемашината", // nieuw, nalezen
-    's.meetingroom.1': "Сложи десет стола около масата.", // nieuw, nalezen
-    's.meetingroom.2': "Приготви кафе и чай.", // nieuw, nalezen
-    's.meetingroom.3': "Проекторът не работи.", // nieuw, nalezen
-    'c.meetingroom.q': "В колко часа започва срещата?", // nieuw, nalezen
-    'c.meetingroom.a': "В десет. Погрижи се всичко да е готово.", // nieuw, nalezen
-    'c.meetingroom': "Готово преди първия гост", // nieuw, nalezen
-    'c.meetingroom.b': "Заседателната зала трябва да е готова, преди да влезе първият човек. Провери столовете, масата, проектора и кабелите. Сложи кафе, чай и вода, с чашки и мляко. Носи горещите напитки внимателно и никога над хората. След срещата почисти масата и прибери всичко. Каквото чуеш в заседателната зала, го пазиш за себе си.", // nieuw, nalezen
-    'c.meetingroom.p': "Залата е готова.", // nieuw, nalezen
-    'c.meetingroom.s': "Срещата започва след пет минути. Проекторът не работи. Какво правиш?", // nieuw, nalezen
-    'c.meetingroom.o1': "Веднага казваш на организатора.", // nieuw, nalezen
-    'c.meetingroom.o2': "Чакаш: може би никой няма нужда от него.", // nieuw, nalezen
-    'c.meetingroom.o3': "Оставяш бележка на масата.", // nieuw, nalezen
-    'c.meetingroom.w': "Пет минути все още са време да се поправи или да се намери друга зала. По-късно всички чакат.", // nieuw, nalezen
-    'u.maintenance': "Повреди, ремонти и преместване", // nieuw, nalezen
-    'l.faults': "Съобщаване за повреда", // nieuw, nalezen
-    'w.melding': "сигналът (казваш, че нещо не е наред)", // nieuw, nalezen
-    'w.lekkage': "течът (изтича вода)", // nieuw, nalezen
-    'w.verwarming': "отоплението", // nieuw, nalezen
-    'w.airco': "климатикът", // nieuw, nalezen
-    'w.afvoer': "канализацията (оттокът)", // nieuw, nalezen
-    'w.verstopt': "запушен (нищо не минава)", // nieuw, nalezen
-    's.faults.1': "Подавам сигнал за повредата.", // nieuw, nalezen
-    's.faults.2': "В кухнята има теч.", // nieuw, nalezen
-    's.faults.3': "Оттокът на тоалетната е запушен.", // nieuw, nalezen
-    'c.faults.q': "Защо е толкова студено тук?", // nieuw, nalezen
-    'c.faults.a': "Отоплението е развалено. Техникът идва утре.", // nieuw, nalezen
-    'c.faults': "Съобщи, не поправяй самостоятелно", // nieuw, nalezen
-    'c.faults.b': { m: "Виждаш нещо развалено, например теч, лампа, която не свети, или врата, която не се затваря? Съобщи, дори когато е нещо малко: в системата или на началника си. Кажи къде е, какво виждаш и от кога. Не поправяй сам ток, газ или отопление. Мирише ли на газ? Не пипай ключ за лампа и не използвай телефон наблизо, отвори прозорците, изведи хората навън и повикай помощ отвън. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "Виждаш нещо развалено, например теч, лампа, която не свети, или врата, която не се затваря? Съобщи, дори когато е нещо малко: в системата или на началника си. Кажи къде е, какво виждаш и от кога. Не поправяй сама ток, газ или отопление. Мирише ли на газ? Не пипай ключ за лампа и не използвай телефон наблизо, отвори прозорците, изведи хората навън и повикай помощ отвън. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "Виждаш нещо развалено, например теч, лампа, която не свети, или врата, която не се затваря? Съобщи, дори когато е нещо малко: в системата или на началника си. Кажи къде е, какво виждаш и от кога. Не поправяй ток, газ или отопление на своя глава. Мирише ли на газ? Не пипай ключ за лампа и не използвай телефон наблизо, отвори прозорците, изведи хората навън и повикай помощ отвън. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen
-    'c.faults.p': "Искам да съобщя за повреда.", // nieuw, nalezen
-    'c.faults.s': "В коридора капе вода от тавана. Какво правиш?", // nieuw, nalezen
-    'c.faults.o1': "Съобщаваш и слагаш кофа отдолу.", // nieuw, nalezen
-    'c.faults.o2': "Чакаш: може би ще спре от само себе си.", // nieuw, nalezen
-    'c.faults.o3': "Отваряш тавана, за да погледнеш.", // nieuw, nalezen
-    'c.faults.w': "Малкият теч може да стане голяма щета. Кофата пази пода сух, за да не се подхлъзне никой.", // nieuw, nalezen
-    'l.repairs': "Малки ремонти", // nieuw, nalezen
-    'w.vervangen': "сменям (слагам нов)", // nieuw, nalezen
-    'w.deurklink': "дръжката на вратата", // nieuw, nalezen
-    'w.scharnier': "пантата", // nieuw, nalezen
-    'w.gereedschapskist': "кутията с инструменти", // nieuw, nalezen
-    'w.rookmelder': "детекторът за дим", // nieuw, nalezen
-    'w.batterij': "батерията", // nieuw, nalezen
-    's.repairs.1': "Смени лампата в коридора.", // nieuw, nalezen
-    's.repairs.2': "Дръжката на вратата е разхлабена.", // nieuw, nalezen
-    's.repairs.3': "Вземи стълбата, не стол.", // nieuw, nalezen
-    'c.repairs.q': "Пиука ли детекторът за дим?", // nieuw, nalezen
-    'c.repairs.a': "Да, батерията е почти празна.", // nieuw, nalezen
-    'c.repairs': "Стълба, никога стол", // nieuw, nalezen
-    'c.repairs.b': { m: "За лампа или висок рафт използвай стълба, никога стол, маса или кашон. Сложи я на равен под, отвори я докрай и не стъпвай на най-горното стъпало. Изключи лампата, преди да я смениш, и остави старата лампа да изстине. Прави само ремонтите, които си научил. Прибери инструментите си в кутията, когато свършиш, за да не се спъне никой в тях. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "За лампа или висок рафт използвай стълба, никога стол, маса или кашон. Сложи я на равен под, отвори я докрай и не стъпвай на най-горното стъпало. Изключи лампата, преди да я смениш, и остави старата лампа да изстине. Прави само ремонтите, които си научила. Прибери инструментите си в кутията, когато свършиш, за да не се спъне никой в тях. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "За лампа или висок рафт използвай стълба, никога стол, маса или кашон. Сложи я на равен под, отвори я докрай и не стъпвай на най-горното стъпало. Изключи лампата, преди да я смениш, и остави старата лампа да изстине. Прави само ремонтите, които знаеш как се правят. Прибери инструментите си в кутията, когато свършиш, за да не се спъне никой в тях. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen
-    'c.repairs.p': "Ще донеса стълбата.", // nieuw, nalezen
-    'c.repairs.s': "Една лампа в офиса не работи. Стълбата е на друг етаж. Какво правиш?", // nieuw, nalezen
-    'c.repairs.o1': "Донасяш стълбата.", // nieuw, nalezen
-    'c.repairs.o2': "Качваш се на офис стол.", // nieuw, nalezen
-    'c.repairs.o3': "Качваш се на бюрото.", // nieuw, nalezen
-    'c.repairs.w': "Столът може да се завърти или да се преобърне. Падане от стол може да те нарани тежко.", // nieuw, nalezen
-    'l.moving': "Преместване на работно място", // nieuw, nalezen
-    'w.verhuisdoos': "кашонът за преместване", // nieuw, nalezen
-    'w.bureau': "бюрото", // nieuw, nalezen
-    'w.bureaustoel': "офис столът", // nieuw, nalezen
-    'w.werkplek': "работното място (бюрото, където някой работи)", // nieuw, nalezen
-    'w.kamernummer': "номерът на стаята", // nieuw, nalezen
-    'w.plattegrond': "планът на сградата (карта на сградата)", // nieuw, nalezen
-    's.moving.1': "Напиши номера на стаята на всеки кашон.", // nieuw, nalezen
-    's.moving.2': "Сложи кашоните на ръчната количка.", // nieuw, nalezen
-    's.moving.3': "Опразни работното място.", // nieuw, nalezen
-    'c.moving.q': "Къде трябва да отиде това бюро?", // nieuw, nalezen
-    'c.moving.a': "В стая дванадесет. Погледни плана на сградата.", // nieuw, nalezen
-    'c.moving': "Преместване: вдигай умно, надписвай всичко", // nieuw, nalezen
-    'c.moving.b': "Преместването е тежка работа. Не пълни кашона твърде много: книгите и папките са тежки. Вдигай със свити колене и изправен гръб, близо до тялото. Използвай ръчната количка за повече кашони и вдигайте бюро заедно. Напиши новия номер на стаята на всеки кашон, стол и компютър. Първо извади кабелите. Никога не оставяй кашони в коридора или пред авариен изход.", // nieuw, nalezen
-    'c.moving.p': "Можеш ли да ми помогнеш да вдигна това?", // nieuw, nalezen
-    'c.moving.s': "Трябва да преместиш тежко бюро. Колегата ти е в почивка. Какво правиш?", // nieuw, nalezen
-    'c.moving.o1': "Чакаш помощ и го вдигате заедно.", // nieuw, nalezen
-    'c.moving.o2': { m: "Влачиш го сам.", f: "Влачиш го сама.", x: "Влачиш го без помощ." }, // nieuw, nalezen
-    'c.moving.o3': { m: "Вдигаш го сам, много внимателно.", f: "Вдигаш го сама, много внимателно.", x: "Вдигаш го без помощ, много внимателно." }, // nieuw, nalezen
-    'c.moving.w': { m: "Тежко бюро може да ти нарани гърба, когато го вдигаш сам. Заедно е лесно и безопасно.", f: "Тежко бюро може да ти нарани гърба, когато го вдигаш сама. Заедно е лесно и безопасно.", x: "Тежко бюро може да ти нарани гърба, когато го вдигаш без помощ. Заедно е лесно и безопасно." }, // nieuw, nalezen
-    'l.closing': "Отваряне и затваряне на сградата", // nieuw, nalezen
-    'w.sleutelbos': "връзката ключове", // nieuw, nalezen
-    'w.afsluiten': "заключвам", // nieuw, nalezen
-    'w.ronde': "обиколката (минаваш покрай всяка стая)", // nieuw, nalezen
-    'w.raam': "прозорецът", // nieuw, nalezen
-    'w.alarmcode': "кодът на алармата", // nieuw, nalezen
-    'w.nachtslot': "нощната ключалка (допълнителната ключалка за през нощта)", // nieuw, nalezen
-    's.closing.1': "Правя последната обиколка на сградата.", // nieuw, nalezen
-    's.closing.2': "Всички прозорци затворени ли са?", // nieuw, nalezen
-    's.closing.3': "Заключи вратата с нощната ключалка.", // nieuw, nalezen
-    'c.closing.q': "Има ли още някой вътре?", // nieuw, nalezen
-    'c.closing.a': "Не, всички си тръгнаха. Заключвам.", // nieuw, nalezen
-    'c.closing': "Кодът на алармата е таен", // nieuw, nalezen
-    'c.closing.b': "В края на деня правиш последната обиколка. Провери дали няма останал никой вътре, дали прозорците са затворени и лампите изгасени. Аварийните изходи остават свободни. Дръж ключовете у себе си, никога в чекмедже. Кодът на алармата е таен: никога не го давай на никого, дори по телефона. Алармата се включва? Следвай стъпките на твоята фирма. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.closing.p': "Не давам кода на алармата.", // nieuw, nalezen
-    'c.closing.s': "Някой се обажда: „От фирмата за аларми съм. Какъв е кодът ви?“ Какво правиш?", // nieuw, nalezen
-    'c.closing.o1': "Отказваш и казваш на началника си.", // nieuw, nalezen
-    'c.closing.o2': "Даваш кода: звучи любезно.", // nieuw, nalezen
-    'c.closing.o3': "Даваш само половината от кода.", // nieuw, nalezen
-    'c.closing.w': "Истинската фирма за аларми не иска кода ти по телефона. Крадецът може би иска.", // nieuw, nalezen
-    'u.guarding': "Обиколки и достъп", // nieuw, nalezen
-    'l.patrol': "Обиколката", // nieuw, nalezen
-    'w.surveilleren': "патрулирам (обикалям и наблюдавам)", // nieuw, nalezen
-    'w.zaklamp': "фенерчето", // nieuw, nalezen
-    'w.terrein': "територията (земята около сградата)", // nieuw, nalezen
-    'w.hek': "оградата, портата", // nieuw, nalezen
-    'w.inbraak': "взломът (някой влиза, за да краде)", // nieuw, nalezen
-    'w.openstaan': "отворен е (врата или прозорец, които трябва да са затворени)", // nieuw, nalezen
-    's.patrol.1': "Правя обиколка на всеки два часа.", // nieuw, nalezen
-    's.patrol.2': "Портата зад халето е отворена.", // nieuw, nalezen
-    's.patrol.3': "Вземи си фенерчето.", // nieuw, nalezen
-    'c.patrol.q': "Видя ли нещо по време на обиколката?", // nieuw, nalezen
-    'c.patrol.a': "Да. Един прозорец до задната врата беше отворен.", // nieuw, nalezen
-    'c.patrol': "Гледай и съобщавай, не се прави на герой", // nieuw, nalezen
-    'c.patrol.b': { m: "По време на обиколката гледаш: затворени ли са вратите и прозорците, цяла ли е оградата, има ли някой, който не трябва да е там? Записвай какво виждаш, с часа. Виждаш нещо странно, например счупен прозорец или човек през нощта? Не влизай сам. Обади се на диспечерския център или на полицията по радиостанцията или по телефона и чакай на безопасно място. Твоята безопасност е на първо място. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "По време на обиколката гледаш: затворени ли са вратите и прозорците, цяла ли е оградата, има ли някой, който не трябва да е там? Записвай какво виждаш, с часа. Виждаш нещо странно, например счупен прозорец или човек през нощта? Не влизай сама. Обади се на диспечерския център или на полицията по радиостанцията или по телефона и чакай на безопасно място. Твоята безопасност е на първо място. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "По време на обиколката гледаш: затворени ли са вратите и прозорците, цяла ли е оградата, има ли някой, който не трябва да е там? Записвай какво виждаш, с часа. Виждаш нещо странно, например счупен прозорец или човек през нощта? Не влизай без друг човек до теб. Обади се на диспечерския център или на полицията по радиостанцията или по телефона и чакай на безопасно място. Твоята безопасност е на първо място. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen
-    'c.patrol.p': "Виждам някого до оградата.", // nieuw, nalezen
-    'c.patrol.s': "През нощта виждаш разбита врата. Чуваш шум вътре. Какво правиш?", // nieuw, nalezen
-    'c.patrol.o1': "Оставаш навън и викаш помощ.", // nieuw, nalezen
-    'c.patrol.o2': "Влизаш бързо и гледаш.", // nieuw, nalezen
-    'c.patrol.o3': "Викаш вътре, че идваш.", // nieuw, nalezen
-    'c.patrol.w': "Крадецът вътре може да е опасен. Полицията знае какво да прави; твоята работа е да видиш и да съобщиш.", // nieuw, nalezen
-    'l.access': "Контрол на достъпа", // nieuw, nalezen
-    'w.slagboom': "бариерата (летва през пътя, която се вдига)", // nieuw, nalezen
-    'w.toegangspas': "картата за достъп (карта, която отваря вратата)", // nieuw, nalezen
-    'w.legitimatie': "документът за самоличност (паспорт или лична карта)", // nieuw, nalezen
-    'w.draaihek': "турникетът (въртяща се преграда, за един човек наведнъж)", // nieuw, nalezen
-    'w.kenteken': "регистрационният номер (буквите и цифрите на колата)", // nieuw, nalezen
-    'w.toegang': "достъпът (може да влезеш)", // nieuw, nalezen
-    's.access.1': "Може ли да видя документа ви за самоличност?", // nieuw, nalezen
-    's.access.2': "Картата ви не работи. Ще се обадя.", // nieuw, nalezen
-    's.access.3': "Ще вдигна бариерата.", // nieuw, nalezen
-    'c.access.q': "Може ли да вляза? Забравих си картата.", // nieuw, nalezen
-    'c.access.a': "Съжалявам, без карта не може да влезете.", // nieuw, nalezen
-    'c.access': "Без пропуск няма влизане", // nieuw, nalezen
-    'c.access.b': { m: "На портата или на гишето проверяваш кой влиза. Всеки трябва да има пропуск или да е в списъка. Бъди любезен, дори когато някой е ядосан или бърза. Не прави изключения, защото някой казва, че е шефът: провери го. Никога не давай своя пропуск на никого и никога не пускай някого да влезе след теб. Изгубен пропуск трябва да се съобщи веднага. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "На портата или на гишето проверяваш кой влиза. Всеки трябва да има пропуск или да е в списъка. Бъди любезна, дори когато някой е ядосан или бърза. Не прави изключения, защото някой казва, че е шефът: провери го. Никога не давай своя пропуск на никого и никога не пускай някого да влезе след теб. Изгубен пропуск трябва да се съобщи веднага. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "На портата или на гишето проверяваш кой влиза. Всеки трябва да има пропуск или да е в списъка. Отнасяй се любезно, дори когато някой е ядосан или бърза. Не прави изключения, защото някой казва, че е шефът: провери го. Никога не давай своя пропуск на никого и никога не пускай някого да влезе след теб. Изгубен пропуск трябва да се съобщи веднага. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen
-    'c.access.p': "Може ли да видя картата ви?", // nieuw, nalezen
-    'c.access.s': "Мъж с костюм казва: „Аз съм новият директор. Още нямам пропуск.“ Какво правиш?", // nieuw, nalezen
-    'c.access.o1': "Проверяваш, преди да го пуснеш.", // nieuw, nalezen
-    'c.access.o2': "Пускаш го: изглежда важен.", // nieuw, nalezen
-    'c.access.o3': "Даваш му своя пропуск.", // nieuw, nalezen
-    'c.access.w': "Всеки може да каже, че е директорът. Кратката проверка пази сградата, а истинският директор ще разбере.", // nieuw, nalezen
-    'l.cameras': "Камерите и диспечерският център", // nieuw, nalezen
-    'w.meldkamer': "диспечерският център (там хората гледат камерите и приемат обаждания)", // nieuw, nalezen
-    'w.beeldscherm': "мониторът, екранът", // nieuw, nalezen
-    'w.camerabeelden': "записите от камерите (каквото е заснела камерата)", // nieuw, nalezen
-    'w.inzoomen': "увеличавам образа (приближавам)", // nieuw, nalezen
-    'w.bewegingsmelder': "датчикът за движение (вижда, когато нещо се движи)", // nieuw, nalezen
-    'w.verdachte': "заподозреният", // nieuw, nalezen
-    's.cameras.1': "На камера три виждам някого до оградата.", // nieuw, nalezen
-    's.cameras.2': "Ще увелича образа.", // nieuw, nalezen
-    's.cameras.3': "Диспечерският център се обажда на полицията.", // nieuw, nalezen
-    'c.cameras.q': "Какво виждаш на екрана?", // nieuw, nalezen
-    'c.cameras.a': "Мъж до оградата. Пращам колега.", // nieuw, nalezen
-    'c.cameras': "Записите от камерите са лични", // nieuw, nalezen
-    'c.cameras.b': "Камерите снимат хора: служители, посетители и минувачи. Каквото виждаш на екраните, е лично. Гледай само за работата си и никога не снимай екрана с телефона си. Никога не пращай записи на приятели и не ги качвай в интернет. Има ли инцидент? Запиши камерата и часа и кажи на началника си. Само фирмата ти решава кой получава записите, например полицията. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.cameras.p': "Нямам право да показвам това.", // nieuw, nalezen
-    'c.cameras.s': "Колега те моли да му пратиш смешно клипче от камерите. Какво правиш?", // nieuw, nalezen
-    'c.cameras.o1': "Отказваш: записите са лични.", // nieuw, nalezen
-    'c.cameras.o2': "Пращаш го, само на него.", // nieuw, nalezen
-    'c.cameras.o3': "Снимаш екрана с телефона си.", // nieuw, nalezen
-    'c.cameras.w': "Хората на записа не са се съгласили да бъдат споделяни. Ако го пратиш, може да загубиш работата си.", // nieuw, nalezen
-    'l.report': "Радиостанцията и докладът", // nieuw, nalezen
-    'w.portofoon': "радиостанцията (уоки-токи)", // nieuw, nalezen
-    'w.rapport': "докладът (какво се е случило, записано)", // nieuw, nalezen
-    'w.incident': "инцидентът (нещо, което се е объркало)", // nieuw, nalezen
-    'w.tijdstip': "часът (кога се е случило нещо)", // nieuw, nalezen
-    'w.logboek': "дневникът (тетрадка или приложение, където записваш всичко)", // nieuw, nalezen
-    'w.oproepen': "викам (по радиостанцията)", // nieuw, nalezen
-    's.report.1': "Пиша доклад за инцидента.", // nieuw, nalezen
-    's.report.2': "Колко точно беше часът?", // nieuw, nalezen
-    's.report.3': "Не те чувам добре. Кажи го пак.", // nieuw, nalezen
-    'c.report.q': "Какво трябва да пише в доклада?", // nieuw, nalezen
-    'c.report.a': "Какво се е случило, къде и в колко часа.", // nieuw, nalezen
-    'c.report': "Запиши го веднага", // nieuw, nalezen
-    'c.report.b': { m: "Пиши доклад веднага след инцидента, докато още го помниш добре. Пиши какво си видял и чул самият ти: какво се е случило, къде, в колко часа и кой е бил там. Пиши факти, а не какво мислиш. По радиостанцията говори кратко и ясно и чакай другият да свърши. Кажи кой си и къде си. Добрият доклад помага на полицията, на фирмата ти и на теб.", f: "Пиши доклад веднага след инцидента, докато още го помниш добре. Пиши какво си видяла и чула самата ти: какво се е случило, къде, в колко часа и кой е бил там. Пиши факти, а не какво мислиш. По радиостанцията говори кратко и ясно и чакай другият да свърши. Кажи коя си и къде си. Добрият доклад помага на полицията, на фирмата ти и на теб.", x: "Пиши доклад веднага след инцидента, докато още го помниш добре. Пиши какво лично ти видя и чу: какво се е случило, къде, в колко часа и кой е бил там. Пиши факти, а не какво мислиш. По радиостанцията говори кратко и ясно и чакай другият да свърши. Кажи името си и къде си. Добрият доклад помага на полицията, на фирмата ти и на теб." }, // nieuw, nalezen
-    'c.report.p': "Ще го запиша веднага.", // nieuw, nalezen
-    'c.report.s': { m: "След натоварена нощ си много уморен. Имаше един малък инцидент. Какво правиш?", f: "След натоварена нощ си много уморена. Имаше един малък инцидент. Какво правиш?", x: "След натоварена нощ умората ти е голяма. Имаше един малък инцидент. Какво правиш?" }, // nieuw, nalezen
-    'c.report.o1': "Пишеш доклада, преди да си тръгнеш.", // nieuw, nalezen
-    'c.report.o2': "Пишеш го утре, след като се наспиш.", // nieuw, nalezen
-    'c.report.o3': "Пропускаш го: беше нещо малко.", // nieuw, nalezen
-    'c.report.w': "Утре ще забравиш подробности. Доклад без час или място не помага на никого.", // nieuw, nalezen
-    'u.incidents': "Спешни случаи и магазинът", // nieuw, nalezen
-    'l.evacuation': "Пожар и евакуация", // nieuw, nalezen
-    'w.brandmelder': "бутонът за пожарна аларма (червена кутия, която натискаш при пожар)", // nieuw, nalezen
-    'w.brandweer': "пожарната", // nieuw, nalezen
-    'w.branddeur': "противопожарната врата (спира огъня и дима)", // nieuw, nalezen
-    'w.brandmeldcentrale': "пожароизвестителното табло (показва къде е алармата)", // nieuw, nalezen
-    'w.ontruimingsplan': "планът за евакуация (кой какво прави, когато всички трябва да излязат)", // nieuw, nalezen
-    'w.sirene': "сирената", // nieuw, nalezen
-    's.evacuation.1': "Има пожарна аларма в хале две.", // nieuw, nalezen
-    's.evacuation.2': "Дръж противопожарните врати затворени.", // nieuw, nalezen
-    's.evacuation.3': "Чакам пожарната на входа.", // nieuw, nalezen
-    'c.evacuation.q': "Всички навън ли са?", // nieuw, nalezen
-    'c.evacuation.a': "Не, още двама души от списъка липсват.", // nieuw, nalezen
-    'c.evacuation': "Пожар: първо алармата, после навън", // nieuw, nalezen
-    'c.evacuation.b': { m: "Виждаш огън или дим? Натисни бутона за пожарна аларма или се обади на 112. После помогни на хората да излязат по евакуационните пътища, никога с асансьора. Затваряй вратите след себе си, но не ги заключвай. Гаси пожар само когато е малък и си научил как. Отиди на мястото за събиране и преброй кой е там. Посрещни пожарната на входа и кажи какво знаеш. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "Виждаш огън или дим? Натисни бутона за пожарна аларма или се обади на 112. После помогни на хората да излязат по евакуационните пътища, никога с асансьора. Затваряй вратите след себе си, но не ги заключвай. Гаси пожар само когато е малък и си научила как. Отиди на мястото за събиране и преброй кой е там. Посрещни пожарната на входа и кажи какво знаеш. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "Виждаш огън или дим? Натисни бутона за пожарна аларма или се обади на 112. После помогни на хората да излязат по евакуационните пътища, никога с асансьора. Затваряй вратите след себе си, но не ги заключвай. Гаси пожар само когато е малък и знаеш как. Отиди на мястото за събиране и преброй кой е там. Посрещни пожарната на входа и кажи какво знаеш. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen
-    'c.evacuation.p': "Всички навън, към мястото за събиране.", // nieuw, nalezen
-    'c.evacuation.s': "Пожарната аларма се включва. Един мъж иска да вземе асансьора. Какво правиш?", // nieuw, nalezen
-    'c.evacuation.o1': "Пращаш го към стълбите.", // nieuw, nalezen
-    'c.evacuation.o2': "Оставяш го: асансьорът е по-бърз.", // nieuw, nalezen
-    'c.evacuation.o3': "Качваш се с него в асансьора.", // nieuw, nalezen
-    'c.evacuation.w': "При пожар асансьорът може да спре или да се напълни с дим. Стълбите са безопасният път навън.", // nieuw, nalezen
-    'l.firstaid': "Първа помощ и 112", // nieuw, nalezen
-    'w.ehbo': "първата помощ", // nieuw, nalezen
-    'w.aed': "дефибрилаторът (AED, уред, който помага на спряло сърце)", // nieuw, nalezen
-    'w.reanimeren': "правя реанимация (натискам гръдния кош, за да спася живот)", // nieuw, nalezen
-    'w.bewusteloos': "в безсъзнание (човекът не се събужда)", // nieuw, nalezen
-    'w.ademen': "дишам", // nieuw, nalezen
-    'w.alarmnummer': "номерът за спешни случаи (112)", // nieuw, nalezen
-    's.firstaid.1': "Обади се на 112. Поискай линейка.", // nieuw, nalezen
-    's.firstaid.2': "Донеси дефибрилатора от рецепцията.", // nieuw, nalezen
-    's.firstaid.3': "Той не диша. Ще започна реанимация.", // nieuw, nalezen
-    'c.firstaid.q': "Къде е дефибрилаторът?", // nieuw, nalezen
-    'c.firstaid.a': "На входа, до асансьора.", // nieuw, nalezen
-    'c.firstaid': "Обади се на 112, започни реанимация, донеси дефибрилатора", // nieuw, nalezen
-    'c.firstaid.b': "Някой пада и не реагира? Веднага се обади на 112 или накарай някой друг да се обади. Провери дали човекът диша нормално. Ако не: започни реанимация и накарай някого да донесе дефибрилатора. Дефибрилаторът говори и ти казва какво да правиш; не можеш да сбъркаш. Продължавай, докато линейката поеме. Имаш ли курс по първа помощ? Кажи на колегите си, за да знаят кого да повикат.", // nieuw, nalezen
-    'c.firstaid.p': "Обади се на 112 и донеси дефибрилатора.", // nieuw, nalezen
-    'c.firstaid.s': "Мъж пада във фоайето. Не се движи и не диша. Какво правиш?", // nieuw, nalezen
-    'c.firstaid.o1': "Обаждаш се на 112 и започваш реанимация.", // nieuw, nalezen
-    'c.firstaid.o2': "Чакаш да видиш дали ще се събуди.", // nieuw, nalezen
-    'c.firstaid.o3': "Вдигаш го и го слагаш на стол.", // nieuw, nalezen
-    'c.firstaid.w': "Когато сърцето спре, всяка минута е важна. Реанимацията и дефибрилаторът могат да спасят живот, преди да дойде линейката.", // nieuw, nalezen
-    'l.shoplifting': "Кражба от магазин", // nieuw, nalezen
-    'w.winkeldiefstal': "кражбата от магазин", // nieuw, nalezen
-    'w.heterdaad': "на местопрестъплението (виждаш как става)", // nieuw, nalezen
-    'w.aanhouden': "задържам някого (докато дойде полицията)", // nieuw, nalezen
-    'w.detectiepoortje': "защитната рамка (пиука на вратата)", // nieuw, nalezen
-    'w.alarmlabel': "защитният етикет (кара рамката да пиука)", // nieuw, nalezen
-    'w.verstoppen': "крия", // nieuw, nalezen
-    's.shoplifting.1': "Рамката пиука на изхода.", // nieuw, nalezen
-    's.shoplifting.2': "Видях как стана.", // nieuw, nalezen
-    's.shoplifting.3': "Задържам го, докато дойде полицията.", // nieuw, nalezen
-    'c.shoplifting.q': "Може ли да претърся чантата му?", // nieuw, nalezen
-    'c.shoplifting.a': "Не. Това го прави полицията.", // nieuw, nalezen
-    'c.shoplifting': "Кражба от магазин: гледай, съобщи, без груба сила", // nieuw, nalezen
-    'c.shoplifting.b': { m: "Видял си някой да краде? Остани спокоен и веднага се обади на полицията. Някои магазини позволяват на охранителя да задържи крадеца, докато дойде полицията; други казват: само гледай, съобщи и запомни как изглежда човекът. Никога не удряй и не ритай и никога не хващай някого за врата. Никога не претърсвай човек, джобовете му или чантата му: това е работа на полицията. Запиши какво си видял и запази записите от камерите. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "Видяла си някой да краде? Остани спокойна и веднага се обади на полицията. Някои магазини позволяват на охранителя да задържи крадеца, докато дойде полицията; други казват: само гледай, съобщи и запомни как изглежда човекът. Никога не удряй и не ритай и никога не хващай някого за врата. Никога не претърсвай човек, джобовете му или чантата му: това е работа на полицията. Запиши какво си видяла и запази записите от камерите. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "Виждаш някой да краде? Запази спокойствие и веднага се обади на полицията. Някои магазини позволяват на охранителя да задържи крадеца, докато дойде полицията; други казват: само гледай, съобщи и запомни как изглежда човекът. Никога не удряй и не ритай и никога не хващай някого за врата. Никога не претърсвай човек, джобовете му или чантата му: това е работа на полицията. Запиши какво се е случило и запази записите от камерите. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen
-    'c.shoplifting.p': "Моля, елате с мен.", // nieuw, nalezen
-    'c.shoplifting.s': { m: "Видял си една жена да слага бутилка в чантата си. Тя излиза. Какво правиш?", f: "Видяла си една жена да слага бутилка в чантата си. Тя излиза. Какво правиш?", x: "Виждаш една жена да слага бутилка в чантата си. Тя излиза. Какво правиш?" }, // nieuw, nalezen
-    'c.shoplifting.o1': "Спираш я спокойно и се обаждаш на полицията.", // nieuw, nalezen
-    'c.shoplifting.o2': "Претърсваш бързо чантата ѝ на вратата.", // nieuw, nalezen
-    'c.shoplifting.o3': "Буташ я силно на земята.", // nieuw, nalezen
-    'c.shoplifting.w': "Претърсването на човек е работа на полицията, а грубата сила може да нарани някого и да ти създаде проблеми.", // nieuw, nalezen
-    'l.aggression': "Трудни хора", // nieuw, nalezen
-    'w.agressie': "агресията (ядосано, насилствено поведение)", // nieuw, nalezen
-    'w.schelden': "обиждам някого (ругая)", // nieuw, nalezen
-    'w.kalmeren': "успокоявам се", // nieuw, nalezen
-    'w.afstand': "разстоянието", // nieuw, nalezen
-    'w.huisverbod': "забраната за влизане (не може повече да влизаш тук)", // nieuw, nalezen
-    'w.bodycam': "нагръдната камера (малка камера на униформата)", // nieuw, nalezen
-    's.aggression.1': "Успокойте се, господине. Искам да ви помогна.", // nieuw, nalezen
-    's.aggression.2': { m: "Пази разстояние и остани спокоен.", f: "Пази разстояние и остани спокойна.", x: "Пази разстояние и запази спокойствие." }, // nieuw, nalezen
-    's.aggression.3': "Имате забрана за влизане. Трябва да си тръгнете сега.", // nieuw, nalezen
-    'c.aggression.q': "Защо не може да вляза?", // nieuw, nalezen
-    'c.aggression.a': "Имате забрана за влизане тук.", // nieuw, nalezen
-    'c.aggression': { m: "Остани спокоен, пази разстояние", f: "Остани спокойна, пази разстояние", x: "Запази спокойствие, пази разстояние" }, // nieuw, nalezen
-    'c.aggression.b': { m: "Ядосаният човек се успокоява по-бързо, когато ти останеш спокоен. Говори бавно и тихо и говори на човека на „u“ (на Вие). Дръж разстояние от една ръка или повече между вас и дръж път за излизане зад себе си. Не докосвай човека и не викай в отговор. Става ли опасно? Отстъпи назад и повикай колега или полицията. После го запиши. След лош инцидент говори за него с някого. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "Ядосаният човек се успокоява по-бързо, когато ти останеш спокойна. Говори бавно и тихо и говори на човека на „u“ (на Вие). Дръж разстояние от една ръка или повече между вас и дръж път за излизане зад себе си. Не докосвай човека и не викай в отговор. Става ли опасно? Отстъпи назад и повикай колега или полицията. После го запиши. След лош инцидент говори за него с някого. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "Ядосаният човек се успокоява по-бързо, когато ти запазиш спокойствие. Говори бавно и тихо и говори на човека на „u“ (на Вие). Дръж разстояние от една ръка или повече между вас и дръж път за излизане зад себе си. Не докосвай човека и не викай в отговор. Става ли опасно? Отстъпи назад и повикай колега или полицията. После го запиши. След лош инцидент говори за него с някого. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen
-    'c.aggression.p': "Успокойте се. Искам да ви помогна.", // nieuw, nalezen
-    'c.aggression.s': "Един мъж ти крещи и идва много близо. Какво правиш?", // nieuw, nalezen
-    'c.aggression.o1': "Отстъпваш назад и говориш спокойно.", // nieuw, nalezen
-    'c.aggression.o2': "Крещиш в отговор, по-силно от него.", // nieuw, nalezen
-    'c.aggression.o3': "Бутваш го от себе си.", // nieuw, nalezen
-    'c.aggression.w': "Спокойните думи и пространството охлаждат нещата. Крясъците и бутането влошават всичко.", // nieuw, nalezen
-    'u.foodhygiene': "Хигиена и студ", // nieuw, nalezen
-    'l.hygienelock': "Хигиенният шлюз", // nieuw, nalezen
-    'w.hygienesluis': "хигиенният шлюз (помещението, където се почистваш, преди да влезеш)", // nieuw, nalezen
-    'w.baardnetje': "мрежичката за брада", // nieuw, nalezen
-    'w.laarzenwasser': "машината за миене на ботуши (четки, които чистят ботушите ти)", // nieuw, nalezen
-    'w.desinfecteren': "дезинфекцирам (убивам микробите)", // nieuw, nalezen
-    'w.werkjas': "работната престилка", // nieuw, nalezen
-    'w.bacterie': "микробът, бактерията", // nieuw, nalezen
-    's.hygienelock.1': "Измий си ръцете и ги дезинфекцирай.", // nieuw, nalezen
-    's.hygienelock.2': "Сложи си мрежичката за коса и мрежичката за брада.", // nieuw, nalezen
-    's.hygienelock.3': "Мини през машината за миене на ботуши.", // nieuw, nalezen
-    'c.hygienelock.q': "Може ли да остана с часовника?", // nieuw, nalezen
-    'c.hygienelock.a': "Не, всички бижута се свалят.", // nieuw, nalezen
-    'c.hygienelock': "Чист влизаш, всеки път", // nieuw, nalezen
-    'c.hygienelock.b': { m: "Във фабрика за храни ти си най-голямата опасност за храната: микробите идват от ръцете, косата и дрехите ти. Затова минавай през хигиенния шлюз всеки път, когато влизаш, и след почивка или тоалетна. Мрежичка за коса, мрежичка за брада, ако имаш брада, чисто работно облекло, никакви бижута. Измий ръцете си със сапун, подсуши ги и ги дезинфекцирай. Болен ли си, с диария или повръщане? Кажи на началника си, преди да започнеш. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "Във фабрика за храни ти си най-голямата опасност за храната: микробите идват от ръцете, косата и дрехите ти. Затова минавай през хигиенния шлюз всеки път, когато влизаш, и след почивка или тоалетна. Мрежичка за коса, мрежичка за брада, ако имаш брада, чисто работно облекло, никакви бижута. Измий ръцете си със сапун, подсуши ги и ги дезинфекцирай. Болна ли си, с диария или повръщане? Кажи на началника си, преди да започнеш. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "Във фабрика за храни ти си най-голямата опасност за храната: микробите идват от ръцете, косата и дрехите ти. Затова минавай през хигиенния шлюз всеки път, когато влизаш, и след почивка или тоалетна. Мрежичка за коса, мрежичка за брада, ако имаш брада, чисто работно облекло, никакви бижута. Измий ръцете си със сапун, подсуши ги и ги дезинфекцирай. Имаш ли диария или повръщане? Кажи на началника си, преди да започнеш. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen
-    'c.hygienelock.p': "Имам диария. Може ли да работя днес?", // nieuw, nalezen
-    'c.hygienelock.s': "Връщаш се от тоалетната. Колегата ти казва: „Пропусни шлюза, имаме много работа.“ Какво правиш?", // nieuw, nalezen
-    'c.hygienelock.o1': "Минаваш през шлюза въпреки това.", // nieuw, nalezen
-    'c.hygienelock.o2': "Пропускаш го, само този път.", // nieuw, nalezen
-    'c.hygienelock.o3': "Само слагаш нови ръкавици.", // nieuw, nalezen
-    'c.hygienelock.w': "Микробите от тоалетната могат да разболеят много клиенти. Няколко минути в шлюза предотвратяват това.", // nieuw, nalezen
-    'l.allergens': "Алергени", // nieuw, nalezen
-    'w.allergeen': "алергенът (храна, от която някои хора стават много болни)", // nieuw, nalezen
-    'w.noten': "ядките", // nieuw, nalezen
-    'w.pinda': "фъстъкът", // nieuw, nalezen
-    'w.gluten': "глутенът (в пшеницата, значи в хляба и сладкишите)", // nieuw, nalezen
-    'w.sesam': "сусамът (малки семена, например на хляба)", // nieuw, nalezen
-    'w.kruisbesmetting': "кръстосаното замърсяване (нещо попада в храна, където не трябва да е)", // nieuw, nalezen
-    's.allergens.1': "Този продукт съдържа ядки.", // nieuw, nalezen
-    's.allergens.2': "Виж на етикета какви алергени има в него.", // nieuw, nalezen
-    's.allergens.3': "Почисти всичко добре след фъстъците.", // nieuw, nalezen
-    'c.allergens.q': "Може ли тази кутийка да е при другите?", // nieuw, nalezen
-    'c.allergens.a': "Не, в нея има ядки.", // nieuw, nalezen
-    'c.allergens': "И следа е достатъчна", // nieuw, nalezen
-    'c.allergens.b': { m: "За някои хора съвсем малко ядки, фъстъци, мляко, яйца, глутен или сусам може да е опасно за живота. Затова етикетът трябва да казва точно какво има в продукта. Дръж алергените отделно: със собствени кутии, инструменти и цветове. След продукт с алерген линията се почиства преди следващия продукт. Никога не сменяй съставка, дори когато изглежда същата. Не си сигурен? Питай. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "За някои хора съвсем малко ядки, фъстъци, мляко, яйца, глутен или сусам може да е опасно за живота. Затова етикетът трябва да казва точно какво има в продукта. Дръж алергените отделно: със собствени кутии, инструменти и цветове. След продукт с алерген линията се почиства преди следващия продукт. Никога не сменяй съставка, дори когато изглежда същата. Не си сигурна? Питай. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "За някои хора съвсем малко ядки, фъстъци, мляко, яйца, глутен или сусам може да е опасно за живота. Затова етикетът трябва да казва точно какво има в продукта. Дръж алергените отделно: със собствени кутии, инструменти и цветове. След продукт с алерген линията се почиства преди следващия продукт. Никога не сменяй съставка, дори когато изглежда същата. Имаш съмнение? Питай. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen
-    'c.allergens.p': "Има ли ядки в това?", // nieuw, nalezen
-    'c.allergens.s': "Бадемите свършиха. Колега казва: „Използвай лешници, никой няма да забележи.“ Какво правиш?", // nieuw, nalezen
-    'c.allergens.o1': "Отказваш и казваш на началника си.", // nieuw, nalezen
-    'c.allergens.o2': "Използваш ги: ядките са си ядки.", // nieuw, nalezen
-    'c.allergens.o3': "Използваш ги и не променяш нищо на етикета.", // nieuw, nalezen
+    'c.chainsaw.p': { m: "Още не съм минал курс за това.", f: "Още не съм минала курс за това.", x: "Още нямам курс за това." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.s': { m: "Колега казва: „Вземи моторния трион, лесно е.“ Никога не си минавал курс. Какво правиш?", f: "Колега казва: „Вземи моторния трион, лесно е.“ Никога не си минавала курс. Какво правиш?", x: "Колега казва: „Вземи моторния трион, лесно е.“ Нямаш курс за него. Какво правиш?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.o1': { m: "Казваш, че още не си минал курс.", f: "Казваш, че още не си минала курс.", x: "Казваш, че още нямаш курс." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.o2': "Пробваш внимателно, само веднъж.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.o3': "Вземаш го и първо гледаш видео.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.w': "Моторният трион може да среже крака ти за секунда. Без обучение не знаеш как може да отскочи назад.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.planting': "Засаждане, плевели и улицата", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.weeding': "Плевене", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onkruid': "плевелите (растения, които трябва да се махнат)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wieden': "плевя (скубя плевели)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schoffel': "мотиката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.perk': "лехата с цветя", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onkruidbrander': "горелката за плевели (убива плевелите с топлина)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wortel': "коренът (на растение)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.weeding.1': "Изскубни плевелите с корена.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.weeding.2': "Окопай лехата с цветя до входа.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.weeding.3': "Внимавай: горелката за плевели е гореща.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.q': "Това плевел ли е?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.a': "Не, това е растение. Остави го.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding': "Плевели: коренът трябва да излезе", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.b': { m: "Плевелът пак пораства, когато коренът остане в земята. Затова го изскубвай с корена или окопавай точно под повърхността. Работи, когато почвата е малко мокра: тогава коренът излиза лесно. Не използвай спрейове срещу плевели, освен ако си научил как и началникът ти казва така. Горелката за плевели е много гореща: дръж я далеч от суха трева, листа, жив плет, коли и кофи за боклук. Никога не я оставяй, докато гори. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "Плевелът пак пораства, когато коренът остане в земята. Затова го изскубвай с корена или окопавай точно под повърхността. Работи, когато почвата е малко мокра: тогава коренът излиза лесно. Не използвай спрейове срещу плевели, освен ако си научила как и началникът ти казва така. Горелката за плевели е много гореща: дръж я далеч от суха трева, листа, жив плет, коли и кофи за боклук. Никога не я оставяй, докато гори. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "Плевелът пак пораства, когато коренът остане в земята. Затова го изскубвай с корена или окопавай точно под повърхността. Работи, когато почвата е малко мокра: тогава коренът излиза лесно. Не използвай спрейове срещу плевели, освен ако знаеш как и началникът ти казва така. Горелката за плевели е много гореща: дръж я далеч от суха трева, листа, жив плет, коли и кофи за боклук. Никога не я оставяй, докато гори. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.p': "Това плевел ли е или растение?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.s': "Работиш с горелката за плевели. До пътеката има сух жив плет. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.o1': "Скубеш плевелите там на ръка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.o2': "Гориш бързо и продължаваш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.o3': "Гориш и поглеждаш назад веднъж.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.w': "Сухият жив плет се запалва бързо. Пожар до къщи или коли е много опасен.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.planting': "Засаждане", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.planten': "засаждам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schep': "лопатата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plantgat': "дупката за засаждане", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kluit': "буцата пръст (пръстта около корените)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.compost': "компостът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.boompaal': "колът за дърво (кол, който държи младо дърво)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.planting.1': "Изкопай дупка за дървото.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.planting.2': "Сложи дървото право, до кола.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.planting.3': "Дай на новите растения много вода.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.q': "Къде отива това растение?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.a': "Отзад в лехата, до стената.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting': "Под земята: кабели и тръби", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.b': "Под тревата и тротоара често има кабели и тръби: за ток, газ, вода и интернет. Затова копай внимателно. Виждаш цветна лента или пластмасова плоча в земята, или удряш нещо твърдо? Спри да копаеш и кажи на началника си. Никога не копай нататък със сила. Вдигайте тежко дърво или голяма буца пръст заедно, със свити колене. Дай вода на новото растение още същия ден. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.p': "Удрям нещо твърдо.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.s': "Копаеш дупка за засаждане. Лопатата ти удря червена пластмасова лента. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.o1': "Спираш да копаеш и казваш на началника си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.o2': "Копаеш внимателно нататък, до лентата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.o3': "Издърпваш лентата и продължаваш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.w': "Лентата в земята предупреждава, че под нея има кабел или тръба. Газова тръба или кабел за ток е много опасен.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.roadside': "Работа до пътя", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pion': "конусът (пътен конус)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verkeer': "движението (колите по пътя)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stoep': "тротоарът (пътеката до пътя)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.fietser': "колоездачът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pijlwagen': "ремаркето със стрелка (ремарке с голяма стрелка, което предупреждава шофьорите)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.berm': "банкетът (тревата до пътя)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.roadside.1': "Облечи жилетката си. Работим до пътя.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.roadside.2': "Сложи конусите зад буса.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.roadside.3': "Внимавай за колоездачите.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.q': "Мога ли да пресека сега?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.a': "Не, чакай. Идва камион.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside': "До пътя: нека те виждат, стой зад конусите", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.b': "Работата до пътя е опасна: шофьорите гледат телефона си или карат твърде бързо. Затова винаги носи светлоотразителната си жилетка, дори за кратка работа. Сложи конусите и знаците, преди да започнеш, и ги прибери последни. Паркирай буса като щит между теб и движението. Стой зад конусите. Никога не отстъпвай назад, без да погледнеш, и работи с лице към движението, когато можеш. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.p': "Първо слагам конусите.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.s': "Трябва да подрежеш един малък храст до пътя. Отнема пет минути. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.o1': "Обличаш жилетката и слагаш конусите.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.o2': "Правиш го бързо, без конусите.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.o3': "Молиш колега да гледа колите.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.w': "Злополуката отнема само една секунда. Пет минути без конуси са пет минути без защита.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.litter': "Боклукът и кварталът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zwerfafval': "боклукът на улицата (разхвърлян боклук)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.grijper': "щипката за боклук (пръчка, която хваща боклука)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vuilniszak': "чувалът за боклук", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scherven': "счупените стъкла (остри парчета)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanhanger': "ремаркето", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bewoner': "живущият (човек, който живее тук)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.litter.1': "Събери боклука с щипката.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.litter.2': "Внимавай, тук има счупени стъкла.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.litter.3': "Сложи чувалите за боклук до ремаркето.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.q': "Кога ще подрежат това дърво?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.a': "Не знам. Попитайте общината.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter': "Никога не пипай игла", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.b': "В парковете и храстите понякога намираш игла от спринцовка. Никога не я вдигай с ръка, дори с ръкавици. Използвай щипката и сложи иглата в твърда кутия или бутилка с капачка, никога в чувал за боклук. Кажи на началника си. Убоде ли те игла? Измий раната с много вода и веднага се обади на лекар. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.p': "Тук има игла.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.s': "Виждаш игла в тревата, до една пейка. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.o1': "Вдигаш я с щипката.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.o2': "Вдигаш я с ръкавиците.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.o3': "Слагаш я в чувала за боклук.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.w': "Иглата може да пренесе болест. Ръкавиците не спират иглата, а твърдата кутия пази другите.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.frontdesk': "Рецепция, поща и срещи", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.reception': "На рецепцията", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.balie': "рецепцията, гишето", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bezoeker': "посетителят", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.intercom': "домофонът (говориш с някого на вратата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doorverbinden': "свързвам (телефонен разговор с друг човек)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toestel': "вътрешният номер (телефонен номер в сградата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wachtruimte': "чакалнята", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reception.1': "Добро утро, мога ли да ви помогна?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reception.2': "Ще ви свържа.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reception.3': "Моля, седнете в чакалнята.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.q': "Имам среща с госпожа Янсен.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.a': "Един момент. Ще ѝ се обадя.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception': "Ти си първото лице", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.b': { m: "На рецепцията ти си първият човек, когото посетителят среща. Вдигни поглед, усмихни се и поздрави, дори когато си зает с телефона. Говори на посетителите на „u“ (на Вие). Отговаряй на телефона с името на фирмата и със собственото си име. Не знаеш отговора? Кажи го и намери някой, който знае. Никога не давай имена, телефонни номера или стаи на служители на хора, които не познаваш.", f: "На рецепцията ти си първият човек, когото посетителят среща. Вдигни поглед, усмихни се и поздрави, дори когато си заета с телефона. Говори на посетителите на „u“ (на Вие). Отговаряй на телефона с името на фирмата и със собственото си име. Не знаеш отговора? Кажи го и намери някой, който знае. Никога не давай имена, телефонни номера или стаи на служители на хора, които не познаваш.", x: "На рецепцията ти си първият човек, когото посетителят среща. Вдигни поглед, усмихни се и поздрави, дори когато говориш по телефона. Говори на посетителите на „u“ (на Вие). Отговаряй на телефона с името на фирмата и със собственото си име. Не знаеш отговора? Кажи го и намери някой, който знае. Никога не давай имена, телефонни номера или стаи на служители на хора, които не познаваш." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.p': "Добро утро, с какво мога да ви помогна?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.s': "Говориш по телефона. Посетител идва до рецепцията и чака. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.o1': "Вдигаш поглед и показваш, че идваш скоро.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.o2': "Довършваш разговора, без да вдигаш поглед.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.o3': "Веднага затваряш телефона.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.w': "Посетител, когото са забелязали, чака спокойно. Посетител, когото не са забелязали, се чувства нежелан.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.visitors': "Посрещане на посетители", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bezoekerspasje': "пропускът за посетители", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lift': "асансьорът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.garderobe': "гардеробът (където закачаш палтото си)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.parkeerplaats': "мястото за паркиране", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hal': "фоайето (голямото помещение при входа)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.begeleiden': "придружавам (водя някого някъде, вървя с него)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.visitors.1': "Ще напишете ли името си тук?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.visitors.2': "Ето вашия пропуск за посетители.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.visitors.3': "Ще ви заведа до асансьора.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.q': "Къде мога да оставя палтото си?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.a': "В гардероба, до асансьора.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors': "Всеки посетител се записва", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.b': "Всеки посетител пише името си в списъка или се записва на екрана и получава пропуск за посетители. Така знаеш кой е в сградата. Това е важно при пожар: всички трябва да излязат и някой проверява списъка. В края на посещението посетителят връща пропуска. Не пускай след себе си хора, които не познаваш: попитай любезно при кого идват. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.p': "При кого идвате?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.s': "Мъж влиза след един колега. Няма пропуск. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.o1': "Питаш го любезно при кого идва.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.o2': "Пускаш го: влезе със служител.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.o3': "Веднага се обаждаш на полицията.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.w': "При спешен случай трябва да знаеш кой е вътре. И не всеки, който влиза, има причина да е там.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.mailroom': "Поща и колети", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.postkamer': "пощенската стая", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koerier': "куриерът (човек, който носи колети)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.postvak': "пощенската кутийка (кутия за поща, по една за всеки човек)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.envelop': "пликът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afdeling': "отделът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.postkar': "количката за поща", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mailroom.1': "Куриерът носи колет.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mailroom.2': "Сложи писмата в правилната пощенска кутийка.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mailroom.3': "Този колет е повреден.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.q': "За кого е този колет?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.a': "За Финанси, на втория етаж.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom': "Пощата е лична", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.b': "Писмата и колетите са лични. Никога не отваряй писмо или колет за друг човек. Провери името и отдела на всяка пратка и я сложи в правилната пощенска кутийка. Когато куриер носи колет, погледни го, преди да подпишеш: повреден ли е? Запиши това. Колетът е странен: мирише, тече или няма подател? Не го отваряй и кажи на началника си. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.p': "Кашонът е мокър и скъсан.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.s': "Куриер носи колет. Единият ъгъл е мокър и скъсан. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.o1': "Записваш повредата, преди да подпишеш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.o2': "Подписваш и не казваш на никого.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.o3': "Отваряш го, за да видиш дали всичко е там.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.w': "След като подпишеш, изглежда, че колетът е бил наред. Тогава никой не плаща за повредата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.meetingroom': "Подготовка на заседателна зала", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vergaderzaal': "заседателната зала", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beamer': "проекторът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.whiteboard': "бялата дъска", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.thermoskan': "термосът (държи кафето горещо)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kopje': "чашката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koffieautomaat': "кафемашината", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meetingroom.1': "Сложи десет стола около масата.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meetingroom.2': "Приготви кафе и чай.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meetingroom.3': "Проекторът не работи.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.q': "В колко часа започва срещата?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.a': "В десет. Погрижи се всичко да е готово.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom': "Готово преди първия гост", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.b': "Заседателната зала трябва да е готова, преди да влезе първият човек. Провери столовете, масата, проектора и кабелите. Сложи кафе, чай и вода, с чашки и мляко. Носи горещите напитки внимателно и никога над хората. След срещата почисти масата и прибери всичко. Каквото чуеш в заседателната зала, го пазиш за себе си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.p': "Залата е готова.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.s': "Срещата започва след пет минути. Проекторът не работи. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.o1': "Веднага казваш на организатора.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.o2': "Чакаш: може би никой няма нужда от него.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.o3': "Оставяш бележка на масата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.w': "Пет минути все още са време да се поправи или да се намери друга зала. По-късно всички чакат.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.maintenance': "Повреди, ремонти и преместване", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.faults': "Съобщаване за повреда", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.melding': "сигналът (казваш, че нещо не е наред)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lekkage': "течът (изтича вода)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verwarming': "отоплението", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.airco': "климатикът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afvoer': "канализацията (оттокът)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verstopt': "запушен (нищо не минава)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.faults.1': "Подавам сигнал за повредата.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.faults.2': "В кухнята има теч.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.faults.3': "Оттокът на тоалетната е запушен.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.q': "Защо е толкова студено тук?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.a': "Отоплението е развалено. Техникът идва утре.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults': "Съобщи, не поправяй самостоятелно", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.b': { m: "Виждаш нещо развалено, например теч, лампа, която не свети, или врата, която не се затваря? Съобщи, дори когато е нещо малко: в системата или на началника си. Кажи къде е, какво виждаш и от кога. Не поправяй сам ток, газ или отопление. Мирише ли на газ? Не пипай ключ за лампа и не използвай телефон наблизо, отвори прозорците, изведи хората навън и повикай помощ отвън. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "Виждаш нещо развалено, например теч, лампа, която не свети, или врата, която не се затваря? Съобщи, дори когато е нещо малко: в системата или на началника си. Кажи къде е, какво виждаш и от кога. Не поправяй сама ток, газ или отопление. Мирише ли на газ? Не пипай ключ за лампа и не използвай телефон наблизо, отвори прозорците, изведи хората навън и повикай помощ отвън. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "Виждаш нещо развалено, например теч, лампа, която не свети, или врата, която не се затваря? Съобщи, дори когато е нещо малко: в системата или на началника си. Кажи къде е, какво виждаш и от кога. Не поправяй ток, газ или отопление на своя глава. Мирише ли на газ? Не пипай ключ за лампа и не използвай телефон наблизо, отвори прозорците, изведи хората навън и повикай помощ отвън. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.p': "Искам да съобщя за повреда.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.s': "В коридора капе вода от тавана. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.o1': "Съобщаваш и слагаш кофа отдолу.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.o2': "Чакаш: може би ще спре от само себе си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.o3': "Отваряш тавана, за да погледнеш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.w': "Малкият теч може да стане голяма щета. Кофата пази пода сух, за да не се подхлъзне никой.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.repairs': "Малки ремонти", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vervangen': "сменям (слагам нов)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.deurklink': "дръжката на вратата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scharnier': "пантата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gereedschapskist': "кутията с инструменти", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rookmelder': "детекторът за дим", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.batterij': "батерията", // nieuw, nalezen // nagelezen AI 28 nov
+    's.repairs.1': "Смени лампата в коридора.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.repairs.2': "Дръжката на вратата е разхлабена.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.repairs.3': "Вземи стълбата, не стол.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.q': "Пиука ли детекторът за дим?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.a': "Да, батерията е почти празна.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs': "Стълба, никога стол", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.b': { m: "За лампа или висок рафт използвай стълба, никога стол, маса или кашон. Сложи я на равен под, отвори я докрай и не стъпвай на най-горното стъпало. Изключи лампата, преди да я смениш, и остави старата лампа да изстине. Прави само ремонтите, които си научил. Прибери инструментите си в кутията, когато свършиш, за да не се спъне никой в тях. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "За лампа или висок рафт използвай стълба, никога стол, маса или кашон. Сложи я на равен под, отвори я докрай и не стъпвай на най-горното стъпало. Изключи лампата, преди да я смениш, и остави старата лампа да изстине. Прави само ремонтите, които си научила. Прибери инструментите си в кутията, когато свършиш, за да не се спъне никой в тях. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "За лампа или висок рафт използвай стълба, никога стол, маса или кашон. Сложи я на равен под, отвори я докрай и не стъпвай на най-горното стъпало. Изключи лампата, преди да я смениш, и остави старата лампа да изстине. Прави само ремонтите, които знаеш как се правят. Прибери инструментите си в кутията, когато свършиш, за да не се спъне никой в тях. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.p': "Ще донеса стълбата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.s': "Една лампа в офиса не работи. Стълбата е на друг етаж. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.o1': "Донасяш стълбата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.o2': "Качваш се на офис стол.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.o3': "Качваш се на бюрото.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.w': "Столът може да се завърти или да се преобърне. Падане от стол може да те нарани тежко.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.moving': "Преместване на работно място", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verhuisdoos': "кашонът за преместване", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bureau': "бюрото", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bureaustoel': "офис столът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkplek': "работното място (бюрото, където някой работи)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kamernummer': "номерът на стаята", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plattegrond': "планът на сградата (карта на сградата)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.moving.1': "Напиши номера на стаята на всеки кашон.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.moving.2': "Сложи кашоните на ръчната количка.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.moving.3': "Опразни работното място.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.q': "Къде трябва да отиде това бюро?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.a': "В стая дванадесет. Погледни плана на сградата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving': "Преместване: вдигай умно, надписвай всичко", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.b': "Преместването е тежка работа. Не пълни кашона твърде много: книгите и папките са тежки. Вдигай със свити колене и изправен гръб, близо до тялото. Използвай ръчната количка за повече кашони и вдигайте бюро заедно. Напиши новия номер на стаята на всеки кашон, стол и компютър. Първо извади кабелите. Никога не оставяй кашони в коридора или пред авариен изход.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.p': "Можеш ли да ми помогнеш да вдигна това?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.s': "Трябва да преместиш тежко бюро. Колегата ти е в почивка. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.o1': "Чакаш помощ и го вдигате заедно.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.o2': { m: "Влачиш го сам.", f: "Влачиш го сама.", x: "Влачиш го без помощ." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.o3': { m: "Вдигаш го сам, много внимателно.", f: "Вдигаш го сама, много внимателно.", x: "Вдигаш го без помощ, много внимателно." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.w': { m: "Тежко бюро може да ти нарани гърба, когато го вдигаш сам. Заедно е лесно и безопасно.", f: "Тежко бюро може да ти нарани гърба, когато го вдигаш сама. Заедно е лесно и безопасно.", x: "Тежко бюро може да ти нарани гърба, когато го вдигаш без помощ. Заедно е лесно и безопасно." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'l.closing': "Отваряне и затваряне на сградата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sleutelbos': "връзката ключове", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afsluiten': "заключвам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ronde': "обиколката (минаваш покрай всяка стая)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.raam': "прозорецът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alarmcode': "кодът на алармата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nachtslot': "нощната ключалка (допълнителната ключалка за през нощта)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.closing.1': "Правя последната обиколка на сградата.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.closing.2': "Всички прозорци затворени ли са?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.closing.3': "Заключи вратата с нощната ключалка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.q': "Има ли още някой вътре?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.a': "Не, всички си тръгнаха. Заключвам.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing': "Кодът на алармата е таен", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.b': "В края на деня правиш последната обиколка. Провери дали няма останал никой вътре, дали прозорците са затворени и лампите изгасени. Аварийните изходи остават свободни. Дръж ключовете у себе си, никога в чекмедже. Кодът на алармата е таен: никога не го давай на никого, дори по телефона. Алармата се включва? Следвай стъпките на твоята фирма. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.p': "Не давам кода на алармата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.s': "Някой се обажда: „От фирмата за аларми съм. Какъв е кодът ви?“ Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.o1': "Отказваш и казваш на началника си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.o2': "Даваш кода: звучи любезно.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.o3': "Даваш само половината от кода.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.w': "Истинската фирма за аларми не иска кода ти по телефона. Крадецът може би иска.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.guarding': "Обиколки и достъп", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.patrol': "Обиколката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.surveilleren': "патрулирам (обикалям и наблюдавам)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zaklamp': "фенерчето", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.terrein': "територията (земята около сградата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hek': "оградата, портата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inbraak': "взломът (някой влиза, за да краде)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.openstaan': "отворен е (врата или прозорец, които трябва да са затворени)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.patrol.1': "Правя обиколка на всеки два часа.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.patrol.2': "Портата зад халето е отворена.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.patrol.3': "Вземи си фенерчето.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.q': "Видя ли нещо по време на обиколката?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.a': "Да. Един прозорец до задната врата беше отворен.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol': "Гледай и съобщавай, не се прави на герой", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.b': { m: "По време на обиколката гледаш: затворени ли са вратите и прозорците, цяла ли е оградата, има ли някой, който не трябва да е там? Записвай какво виждаш, с часа. Виждаш нещо странно, например счупен прозорец или човек през нощта? Не влизай сам. Обади се на диспечерския център или на полицията по радиостанцията или по телефона и чакай на безопасно място. Твоята безопасност е на първо място. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "По време на обиколката гледаш: затворени ли са вратите и прозорците, цяла ли е оградата, има ли някой, който не трябва да е там? Записвай какво виждаш, с часа. Виждаш нещо странно, например счупен прозорец или човек през нощта? Не влизай сама. Обади се на диспечерския център или на полицията по радиостанцията или по телефона и чакай на безопасно място. Твоята безопасност е на първо място. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "По време на обиколката гледаш: затворени ли са вратите и прозорците, цяла ли е оградата, има ли някой, който не трябва да е там? Записвай какво виждаш, с часа. Виждаш нещо странно, например счупен прозорец или човек през нощта? Не влизай без друг човек до теб. Обади се на диспечерския център или на полицията по радиостанцията или по телефона и чакай на безопасно място. Твоята безопасност е на първо място. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.p': "Виждам някого до оградата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.s': "През нощта виждаш разбита врата. Чуваш шум вътре. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.o1': "Оставаш навън и викаш помощ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.o2': "Влизаш бързо и гледаш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.o3': "Викаш вътре, че идваш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.w': "Крадецът вътре може да е опасен. Полицията знае какво да прави; твоята работа е да видиш и да съобщиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.access': "Контрол на достъпа", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.slagboom': "бариерата (летва през пътя, която се вдига)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toegangspas': "картата за достъп (карта, която отваря вратата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.legitimatie': "документът за самоличност (паспорт или лична карта)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.draaihek': "турникетът (въртяща се преграда, за един човек наведнъж)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kenteken': "регистрационният номер (буквите и цифрите на колата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toegang': "достъпът (може да влезеш)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.access.1': "Може ли да видя документа ви за самоличност?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.access.2': "Картата ви не работи. Ще се обадя.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.access.3': "Ще вдигна бариерата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.q': "Може ли да вляза? Забравих си картата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.a': "Съжалявам, без карта не може да влезете.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access': "Без пропуск няма влизане", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.b': { m: "На портата или на гишето проверяваш кой влиза. Всеки трябва да има пропуск или да е в списъка. Бъди любезен, дори когато някой е ядосан или бърза. Не прави изключения, защото някой казва, че е шефът: провери го. Никога не давай своя пропуск на никого и никога не пускай някого да влезе след теб. Изгубен пропуск трябва да се съобщи веднага. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "На портата или на гишето проверяваш кой влиза. Всеки трябва да има пропуск или да е в списъка. Бъди любезна, дори когато някой е ядосан или бърза. Не прави изключения, защото някой казва, че е шефът: провери го. Никога не давай своя пропуск на никого и никога не пускай някого да влезе след теб. Изгубен пропуск трябва да се съобщи веднага. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "На портата или на гишето проверяваш кой влиза. Всеки трябва да има пропуск или да е в списъка. Отнасяй се любезно, дори когато някой е ядосан или бърза. Не прави изключения, защото някой казва, че е шефът: провери го. Никога не давай своя пропуск на никого и никога не пускай някого да влезе след теб. Изгубен пропуск трябва да се съобщи веднага. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.p': "Може ли да видя картата ви?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.s': "Мъж с костюм казва: „Аз съм новият директор. Още нямам пропуск.“ Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.o1': "Проверяваш, преди да го пуснеш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.o2': "Пускаш го: изглежда важен.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.o3': "Даваш му своя пропуск.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.w': "Всеки може да каже, че е директорът. Кратката проверка пази сградата, а истинският директор ще разбере.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.cameras': "Камерите и диспечерският център", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meldkamer': "диспечерският център (там хората гледат камерите и приемат обаждания)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beeldscherm': "мониторът, екранът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.camerabeelden': "записите от камерите (каквото е заснела камерата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inzoomen': "увеличавам образа (приближавам)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bewegingsmelder': "датчикът за движение (вижда, когато нещо се движи)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verdachte': "заподозреният", // nieuw, nalezen // nagelezen AI 28 nov
+    's.cameras.1': "На камера три виждам някого до оградата.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.cameras.2': "Ще увелича образа.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.cameras.3': "Диспечерският център се обажда на полицията.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.q': "Какво виждаш на екрана?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.a': "Мъж до оградата. Пращам колега.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras': "Записите от камерите са лични", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.b': "Камерите снимат хора: служители, посетители и минувачи. Каквото виждаш на екраните, е лично. Гледай само за работата си и никога не снимай екрана с телефона си. Никога не пращай записи на приятели и не ги качвай в интернет. Има ли инцидент? Запиши камерата и часа и кажи на началника си. Само фирмата ти решава кой получава записите, например полицията. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.p': "Нямам право да показвам това.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.s': "Колега те моли да му пратиш смешно клипче от камерите. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.o1': "Отказваш: записите са лични.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.o2': "Пращаш го, само на него.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.o3': "Снимаш екрана с телефона си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.w': "Хората на записа не са се съгласили да бъдат споделяни. Ако го пратиш, може да загубиш работата си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.report': "Радиостанцията и докладът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.portofoon': "радиостанцията (уоки-токи)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rapport': "докладът (какво се е случило, записано)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.incident': "инцидентът (нещо, което се е объркало)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tijdstip': "часът (кога се е случило нещо)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.logboek': "дневникът (тетрадка или приложение, където записваш всичко)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oproepen': "викам (по радиостанцията)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.report.1': "Пиша доклад за инцидента.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.report.2': "Колко точно беше часът?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.report.3': "Не те чувам добре. Кажи го пак.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.q': "Какво трябва да пише в доклада?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.a': "Какво се е случило, къде и в колко часа.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report': "Запиши го веднага", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.b': { m: "Пиши доклад веднага след инцидента, докато още го помниш добре. Пиши какво си видял и чул самият ти: какво се е случило, къде, в колко часа и кой е бил там. Пиши факти, а не какво мислиш. По радиостанцията говори кратко и ясно и чакай другият да свърши. Кажи кой си и къде си. Добрият доклад помага на полицията, на фирмата ти и на теб.", f: "Пиши доклад веднага след инцидента, докато още го помниш добре. Пиши какво си видяла и чула самата ти: какво се е случило, къде, в колко часа и кой е бил там. Пиши факти, а не какво мислиш. По радиостанцията говори кратко и ясно и чакай другият да свърши. Кажи коя си и къде си. Добрият доклад помага на полицията, на фирмата ти и на теб.", x: "Пиши доклад веднага след инцидента, докато още го помниш добре. Пиши какво лично ти видя и чу: какво се е случило, къде, в колко часа и кой е бил там. Пиши факти, а не какво мислиш. По радиостанцията говори кратко и ясно и чакай другият да свърши. Кажи името си и къде си. Добрият доклад помага на полицията, на фирмата ти и на теб." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.p': "Ще го запиша веднага.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.s': { m: "След натоварена нощ си много уморен. Имаше един малък инцидент. Какво правиш?", f: "След натоварена нощ си много уморена. Имаше един малък инцидент. Какво правиш?", x: "След натоварена нощ умората ти е голяма. Имаше един малък инцидент. Какво правиш?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.o1': "Пишеш доклада, преди да си тръгнеш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.o2': "Пишеш го утре, след като се наспиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.o3': "Пропускаш го: беше нещо малко.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.w': "Утре ще забравиш подробности. Доклад без час или място не помага на никого.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.incidents': "Спешни случаи и магазинът", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.evacuation': "Пожар и евакуация", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brandmelder': "бутонът за пожарна аларма (червена кутия, която натискаш при пожар)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brandweer': "пожарната", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.branddeur': "противопожарната врата (спира огъня и дима)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brandmeldcentrale': "пожароизвестителното табло (показва къде е алармата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ontruimingsplan': "планът за евакуация (кой какво прави, когато всички трябва да излязат)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sirene': "сирената", // nieuw, nalezen // nagelezen AI 28 nov
+    's.evacuation.1': "Има пожарна аларма в хале две.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.evacuation.2': "Дръж противопожарните врати затворени.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.evacuation.3': "Чакам пожарната на входа.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.q': "Всички навън ли са?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.a': "Не, още двама души от списъка липсват.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation': "Пожар: първо алармата, после навън", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.b': { m: "Виждаш огън или дим? Натисни бутона за пожарна аларма или се обади на 112. После помогни на хората да излязат по евакуационните пътища, никога с асансьора. Затваряй вратите след себе си, но не ги заключвай. Гаси пожар само когато е малък и си научил как. Отиди на мястото за събиране и преброй кой е там. Посрещни пожарната на входа и кажи какво знаеш. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "Виждаш огън или дим? Натисни бутона за пожарна аларма или се обади на 112. После помогни на хората да излязат по евакуационните пътища, никога с асансьора. Затваряй вратите след себе си, но не ги заключвай. Гаси пожар само когато е малък и си научила как. Отиди на мястото за събиране и преброй кой е там. Посрещни пожарната на входа и кажи какво знаеш. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "Виждаш огън или дим? Натисни бутона за пожарна аларма или се обади на 112. После помогни на хората да излязат по евакуационните пътища, никога с асансьора. Затваряй вратите след себе си, но не ги заключвай. Гаси пожар само когато е малък и знаеш как. Отиди на мястото за събиране и преброй кой е там. Посрещни пожарната на входа и кажи какво знаеш. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.p': "Всички навън, към мястото за събиране.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.s': "Пожарната аларма се включва. Един мъж иска да вземе асансьора. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.o1': "Пращаш го към стълбите.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.o2': "Оставяш го: асансьорът е по-бърз.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.o3': "Качваш се с него в асансьора.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.w': "При пожар асансьорът може да спре или да се напълни с дим. Стълбите са безопасният път навън.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.firstaid': "Първа помощ и 112", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ehbo': "първата помощ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aed': "дефибрилаторът (AED, уред, който помага на спряло сърце)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.reanimeren': "правя реанимация (натискам гръдния кош, за да спася живот)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bewusteloos': "в безсъзнание (човекът не се събужда)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ademen': "дишам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alarmnummer': "номерът за спешни случаи (112)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.firstaid.1': "Обади се на 112. Поискай линейка.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.firstaid.2': "Донеси дефибрилатора от рецепцията.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.firstaid.3': "Той не диша. Ще започна реанимация.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.q': "Къде е дефибрилаторът?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.a': "На входа, до асансьора.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid': "Обади се на 112, започни реанимация, донеси дефибрилатора", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.b': "Някой пада и не реагира? Веднага се обади на 112 или накарай някой друг да се обади. Провери дали човекът диша нормално. Ако не: започни реанимация и накарай някого да донесе дефибрилатора. Дефибрилаторът говори и ти казва какво да правиш; не можеш да сбъркаш. Продължавай, докато линейката поеме. Имаш ли курс по първа помощ? Кажи на колегите си, за да знаят кого да повикат.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.p': "Обади се на 112 и донеси дефибрилатора.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.s': "Мъж пада във фоайето. Не се движи и не диша. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.o1': "Обаждаш се на 112 и започваш реанимация.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.o2': "Чакаш да видиш дали ще се събуди.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.o3': "Вдигаш го и го слагаш на стол.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.w': "Когато сърцето спре, всяка минута е важна. Реанимацията и дефибрилаторът могат да спасят живот, преди да дойде линейката.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.shoplifting': "Кражба от магазин", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.winkeldiefstal': "кражбата от магазин", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.heterdaad': "на местопрестъплението (виждаш как става)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanhouden': "задържам някого (докато дойде полицията)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.detectiepoortje': "защитната рамка (пиука на вратата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alarmlabel': "защитният етикет (кара рамката да пиука)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verstoppen': "крия", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shoplifting.1': "Рамката пиука на изхода.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shoplifting.2': "Видях как стана.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shoplifting.3': "Задържам го, докато дойде полицията.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.q': "Може ли да претърся чантата му?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.a': "Не. Това го прави полицията.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting': "Кражба от магазин: гледай, съобщи, без груба сила", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.b': { m: "Видял си някой да краде? Остани спокоен и веднага се обади на полицията. Някои магазини позволяват на охранителя да задържи крадеца, докато дойде полицията; други казват: само гледай, съобщи и запомни как изглежда човекът. Никога не удряй и не ритай и никога не хващай някого за врата. Никога не претърсвай човек, джобовете му или чантата му: това е работа на полицията. Запиши какво си видял и запази записите от камерите. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "Видяла си някой да краде? Остани спокойна и веднага се обади на полицията. Някои магазини позволяват на охранителя да задържи крадеца, докато дойде полицията; други казват: само гледай, съобщи и запомни как изглежда човекът. Никога не удряй и не ритай и никога не хващай някого за врата. Никога не претърсвай човек, джобовете му или чантата му: това е работа на полицията. Запиши какво си видяла и запази записите от камерите. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "Виждаш някой да краде? Запази спокойствие и веднага се обади на полицията. Някои магазини позволяват на охранителя да задържи крадеца, докато дойде полицията; други казват: само гледай, съобщи и запомни как изглежда човекът. Никога не удряй и не ритай и никога не хващай някого за врата. Никога не претърсвай човек, джобовете му или чантата му: това е работа на полицията. Запиши какво се е случило и запази записите от камерите. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.p': "Моля, елате с мен.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.s': { m: "Видял си една жена да слага бутилка в чантата си. Тя излиза. Какво правиш?", f: "Видяла си една жена да слага бутилка в чантата си. Тя излиза. Какво правиш?", x: "Виждаш една жена да слага бутилка в чантата си. Тя излиза. Какво правиш?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.o1': "Спираш я спокойно и се обаждаш на полицията.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.o2': "Претърсваш бързо чантата ѝ на вратата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.o3': "Буташ я силно на земята.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.w': "Претърсването на човек е работа на полицията, а грубата сила може да нарани някого и да ти създаде проблеми.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.aggression': "Трудни хора", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.agressie': "агресията (ядосано, насилствено поведение)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schelden': "обиждам някого (ругая)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kalmeren': "успокоявам се", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afstand': "разстоянието", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huisverbod': "забраната за влизане (не може повече да влизаш тук)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bodycam': "нагръдната камера (малка камера на униформата)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.aggression.1': "Успокойте се, господине. Искам да ви помогна.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.aggression.2': { m: "Пази разстояние и остани спокоен.", f: "Пази разстояние и остани спокойна.", x: "Пази разстояние и запази спокойствие." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.aggression.3': "Имате забрана за влизане. Трябва да си тръгнете сега.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.q': "Защо не може да вляза?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.a': "Имате забрана за влизане тук.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression': { m: "Остани спокоен, пази разстояние", f: "Остани спокойна, пази разстояние", x: "Запази спокойствие, пази разстояние" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.b': { m: "Ядосаният човек се успокоява по-бързо, когато ти останеш спокоен. Говори бавно и тихо и говори на човека на „u“ (на Вие). Дръж разстояние от една ръка или повече между вас и дръж път за излизане зад себе си. Не докосвай човека и не викай в отговор. Става ли опасно? Отстъпи назад и повикай колега или полицията. После го запиши. След лош инцидент говори за него с някого. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "Ядосаният човек се успокоява по-бързо, когато ти останеш спокойна. Говори бавно и тихо и говори на човека на „u“ (на Вие). Дръж разстояние от една ръка или повече между вас и дръж път за излизане зад себе си. Не докосвай човека и не викай в отговор. Става ли опасно? Отстъпи назад и повикай колега или полицията. После го запиши. След лош инцидент говори за него с някого. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "Ядосаният човек се успокоява по-бързо, когато ти запазиш спокойствие. Говори бавно и тихо и говори на човека на „u“ (на Вие). Дръж разстояние от една ръка или повече между вас и дръж път за излизане зад себе си. Не докосвай човека и не викай в отговор. Става ли опасно? Отстъпи назад и повикай колега или полицията. После го запиши. След лош инцидент говори за него с някого. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.p': "Успокойте се. Искам да ви помогна.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.s': "Един мъж ти крещи и идва много близо. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.o1': "Отстъпваш назад и говориш спокойно.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.o2': "Крещиш в отговор, по-силно от него.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.o3': "Бутваш го от себе си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.w': "Спокойните думи и пространството охлаждат нещата. Крясъците и бутането влошават всичко.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.foodhygiene': "Хигиена и студ", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.hygienelock': "Хигиенният шлюз", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hygienesluis': "хигиенният шлюз (помещението, където се почистваш, преди да влезеш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.baardnetje': "мрежичката за брада", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.laarzenwasser': "машината за миене на ботуши (четки, които чистят ботушите ти)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.desinfecteren': "дезинфекцирам (убивам микробите)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkjas': "работната престилка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bacterie': "микробът, бактерията", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hygienelock.1': "Измий си ръцете и ги дезинфекцирай.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hygienelock.2': "Сложи си мрежичката за коса и мрежичката за брада.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hygienelock.3': "Мини през машината за миене на ботуши.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.q': "Може ли да остана с часовника?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.a': "Не, всички бижута се свалят.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock': "Чист влизаш, всеки път", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.b': { m: "Във фабрика за храни ти си най-голямата опасност за храната: микробите идват от ръцете, косата и дрехите ти. Затова минавай през хигиенния шлюз всеки път, когато влизаш, и след почивка или тоалетна. Мрежичка за коса, мрежичка за брада, ако имаш брада, чисто работно облекло, никакви бижута. Измий ръцете си със сапун, подсуши ги и ги дезинфекцирай. Болен ли си, с диария или повръщане? Кажи на началника си, преди да започнеш. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "Във фабрика за храни ти си най-голямата опасност за храната: микробите идват от ръцете, косата и дрехите ти. Затова минавай през хигиенния шлюз всеки път, когато влизаш, и след почивка или тоалетна. Мрежичка за коса, мрежичка за брада, ако имаш брада, чисто работно облекло, никакви бижута. Измий ръцете си със сапун, подсуши ги и ги дезинфекцирай. Болна ли си, с диария или повръщане? Кажи на началника си, преди да започнеш. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "Във фабрика за храни ти си най-голямата опасност за храната: микробите идват от ръцете, косата и дрехите ти. Затова минавай през хигиенния шлюз всеки път, когато влизаш, и след почивка или тоалетна. Мрежичка за коса, мрежичка за брада, ако имаш брада, чисто работно облекло, никакви бижута. Измий ръцете си със сапун, подсуши ги и ги дезинфекцирай. Имаш ли диария или повръщане? Кажи на началника си, преди да започнеш. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.p': "Имам диария. Може ли да работя днес?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.s': "Връщаш се от тоалетната. Колегата ти казва: „Пропусни шлюза, имаме много работа.“ Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.o1': "Минаваш през шлюза въпреки това.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.o2': "Пропускаш го, само този път.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.o3': "Само слагаш нови ръкавици.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.w': "Микробите от тоалетната могат да разболеят много клиенти. Няколко минути в шлюза предотвратяват това.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.allergens': "Алергени", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.allergeen': "алергенът (храна, от която някои хора стават много болни)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.noten': "ядките", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pinda': "фъстъкът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gluten': "глутенът (в пшеницата, значи в хляба и сладкишите)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sesam': "сусамът (малки семена, например на хляба)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kruisbesmetting': "кръстосаното замърсяване (нещо попада в храна, където не трябва да е)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.allergens.1': "Този продукт съдържа ядки.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.allergens.2': "Виж на етикета какви алергени има в него.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.allergens.3': "Почисти всичко добре след фъстъците.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.q': "Може ли тази кутийка да е при другите?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.a': "Не, в нея има ядки.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens': "И следа е достатъчна", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.b': { m: "За някои хора съвсем малко ядки, фъстъци, мляко, яйца, глутен или сусам може да е опасно за живота. Затова етикетът трябва да казва точно какво има в продукта. Дръж алергените отделно: със собствени кутии, инструменти и цветове. След продукт с алерген линията се почиства преди следващия продукт. Никога не сменяй съставка, дори когато изглежда същата. Не си сигурен? Питай. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "За някои хора съвсем малко ядки, фъстъци, мляко, яйца, глутен или сусам може да е опасно за живота. Затова етикетът трябва да казва точно какво има в продукта. Дръж алергените отделно: със собствени кутии, инструменти и цветове. След продукт с алерген линията се почиства преди следващия продукт. Никога не сменяй съставка, дори когато изглежда същата. Не си сигурна? Питай. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "За някои хора съвсем малко ядки, фъстъци, мляко, яйца, глутен или сусам може да е опасно за живота. Затова етикетът трябва да казва точно какво има в продукта. Дръж алергените отделно: със собствени кутии, инструменти и цветове. След продукт с алерген линията се почиства преди следващия продукт. Никога не сменяй съставка, дори когато изглежда същата. Имаш съмнение? Питай. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.p': "Има ли ядки в това?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.s': "Бадемите свършиха. Колега казва: „Използвай лешници, никой няма да забележи.“ Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.o1': "Отказваш и казваш на началника си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.o2': "Използваш ги: ядките са си ядки.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.o3': "Използваш ги и не променяш нищо на етикета.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.allergens.w': "Етикетът трябва да казва какво има вътре. Грешна ядка може тежко да разболее човек с алергия.", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'l.coldroom': "Хладилната и фризерната камера", // nieuw, nalezen
-    'w.temperatuur': "температурата", // nieuw, nalezen
-    'w.graden': "градусите (°C)", // nieuw, nalezen
-    'w.bevroren': "замразен", // nieuw, nalezen
-    'w.ontdooien': "размразявам", // nieuw, nalezen
-    'w.koelketen': "студената верига (храната остава студена през целия път)", // nieuw, nalezen
-    'w.thermokleding': "термо облеклото (топли дрехи за студа)", // nieuw, nalezen
-    's.coldroom.1': "Във фризерната камера е минус осемнадесет градуса.", // nieuw, nalezen
-    's.coldroom.2': "Сложи месото веднага в хладилната камера.", // nieuw, nalezen
-    's.coldroom.3': "Запиши температурата в списъка.", // nieuw, nalezen
-    'c.coldroom.q': "Защо пиука хладилната камера?", // nieuw, nalezen
-    'c.coldroom.a': "Вратата е отворена. Затвори я бързо.", // nieuw, nalezen
-    'c.coldroom': "Работа на студено: облечи се топло, пази храната студена", // nieuw, nalezen
-    'c.coldroom.b': "Храната трябва да остане студена през целия път: от камиона до хладилната камера до магазина. Затова прибирай студените продукти веднага и дръж вратите на хладилната и фризерната камера затворени. Проверявай температурата и я записвай. Във фризерната камера носи термо облеклото си, ръкавици и шапка и си вземи топла почивка навреме. Погрижи се винаги да можеш да отвориш вратата отвътре. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.coldroom.p': "Тук е твърде топло. Охлаждането не работи.", // nieuw, nalezen
-    'c.coldroom.s': "Термометърът на хладилната камера показва много по-високо число от нормалното. Какво правиш?", // nieuw, nalezen
-    'c.coldroom.o1': "Веднага казваш на началника си.", // nieuw, nalezen
-    'c.coldroom.o2': "Чакаш: пак ще се охлади.", // nieuw, nalezen
-    'c.coldroom.o3': "Записваш нормалното число в списъка.", // nieuw, nalezen
-    'c.coldroom.w': "Твърде топло означава, че микробите растат. Началникът ти решава дали храната е още безопасна.", // nieuw, nalezen
-    'l.foreignbody': "Стъкло, метал и пластмаса в храната", // nieuw, nalezen
-    'w.metaaldetector': "металдетекторът", // nieuw, nalezen
-    'w.glasbreuk': "счупеното стъкло (стъкло, което се е счупило)", // nieuw, nalezen
-    'w.splinter': "отломката (малко остро парче)", // nieuw, nalezen
-    'w.vreemdvoorwerp': "чуждото тяло (нещо в храната, което не трябва да е там)", // nieuw, nalezen
-    'w.vervuild': "замърсен (нещо мръсно е попаднало вътре)", // nieuw, nalezen
-    'w.ploegleider': "ръководителят на смяната", // nieuw, nalezen
-    's.foreignbody.1': "Металдетекторът пиука. Спри лентата.", // nieuw, nalezen
-    's.foreignbody.2': "На линия две се счупи стъкло.", // nieuw, nalezen
-    's.foreignbody.3': "Сложи продукта в кутията за брак.", // nieuw, nalezen
-    'c.foreignbody.q': "Какво да правя с това парченце пластмаса?", // nieuw, nalezen
-    'c.foreignbody.a': "Покажи го на ръководителя на смяната.", // nieuw, nalezen
-    'c.foreignbody': "Нещо в храната? Спри и съобщи", // nieuw, nalezen
-    'c.foreignbody.b': "Стъкло, метал, пластмаса, лепенка или косъм никога не трябва да попадат в храната. Металдетекторът пиука или намираш нещо странно? Остави продукта настрана и кажи на ръководителя на смяната. Счупило се е стъкло? Спри линията наблизо: ръководителят на смяната решава какво трябва да се изхвърли. Използвай само сини лепенки, за да се виждат лесно. Никога не внасяй стъкло, химикалки или незакрепени неща в работното помещение. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.foreignbody.p': "Намерих нещо в продукта.", // nieuw, nalezen
-    'c.foreignbody.s': "Стъклена лампа се чупи над линията. Продуктите продължават да се движат. Какво правиш?", // nieuw, nalezen
-    'c.foreignbody.o1': "Спираш линията и викаш ръководителя на смяната.", // nieuw, nalezen
-    'c.foreignbody.o2': "Махаш стъклото, което виждаш.", // nieuw, nalezen
-    'c.foreignbody.o3': "Продължаваш: детекторът намира стъкло.", // nieuw, nalezen
-    'c.foreignbody.w': "Металдетекторът не намира стъкло. Малки парчета, които не виждаш, могат да наранят тежко клиент.", // nieuw, nalezen
-    'u.foodline': "Производствената линия", // nieuw, nalezen
-    'l.cutting': "Рязане и теглене", // nieuw, nalezen
-    'w.uitbenen': "обезкостявам (изрязвам костите от месото)", // nieuw, nalezen
-    'w.fileren': "филетирам (режа риба или месо на плоски парчета)", // nieuw, nalezen
-    'w.portie': "порцията", // nieuw, nalezen
-    'w.wegen': "тегля (на везна)", // nieuw, nalezen
-    'w.gewicht': "теглото", // nieuw, nalezen
-    'w.snijplank': "дъската за рязане", // nieuw, nalezen
-    's.cutting.1': "Претегляй всяка порция.", // nieuw, nalezen
-    's.cutting.2': "Теглото е твърде малко.", // nieuw, nalezen
-    's.cutting.3': "Наточи ножа си, преди да започнеш.", // nieuw, nalezen
-    'c.cutting.q': "Колко трябва да има в една кутийка?", // nieuw, nalezen
-    'c.cutting.a': "Петстотин грама. Погледни везната.", // nieuw, nalezen
-    'c.cutting': "Остър нож, защитена ръка", // nieuw, nalezen
-    'c.cutting.b': "Острият нож е по-безопасен от тъпия: трябва ти по-малко сила, затова се изплъзва по-рядко. Винаги носи ръкавицата против порязване на другата ръка. Режи в посока от тялото си. Оставяй ножа легнал на дъската, никога в мивка или под месо. Не се опитвай да хванеш падащ нож: отстъпи назад. Носи ножа с върха надолу, близо до крака си. Дори малко порязване трябва да се покрие и да се съобщи.", // nieuw, nalezen
-    'c.cutting.p': "Ножът ми е тъп.", // nieuw, nalezen
-    'c.cutting.s': "Ножът се изплъзва от ръката ти и пада. Какво правиш?", // nieuw, nalezen
-    'c.cutting.o1': "Отстъпваш назад и го оставяш да падне.", // nieuw, nalezen
-    'c.cutting.o2': "Хващаш го бързо.", // nieuw, nalezen
-    'c.cutting.o3': "Спираш го с крак.", // nieuw, nalezen
-    'c.cutting.w': "Падащ нож реже дълбоко, когато го хванеш. На пода не може да навреди.", // nieuw, nalezen
-    'l.labels': "Опаковане и етикети", // nieuw, nalezen
-    'w.etiketteren': "етикетирам (слагам етикети)", // nieuw, nalezen
-    'w.lotnummer': "партидният номер (един номер за една партида продукти)", // nieuw, nalezen
-    'w.vacuum': "вакуумиран (целият въздух е изкаран)", // nieuw, nalezen
-    'w.schaal': "тавичката (плосък съд за храна)", // nieuw, nalezen
-    'w.printer': "принтерът", // nieuw, nalezen
-    'w.omdoos': "външният кашон (големият кашон около малките опаковки)", // nieuw, nalezen
-    's.labels.1': "Провери дали датата на етикета е вярна.", // nieuw, nalezen
-    's.labels.2': "Тази опаковка не е вакуумирана. Опаковай я пак.", // nieuw, nalezen
-    's.labels.3': "Запиши партидния номер в списъка.", // nieuw, nalezen
-    'c.labels.q': "Каква дата трябва да има на него?", // nieuw, nalezen
-    'c.labels.a': "След десет дни. Погледни списъка.", // nieuw, nalezen
-    'c.labels': "Грешният етикет е опасен", // nieuw, nalezen
-    'c.labels.b': "Етикетът казва на клиента какво има вътре, колко тежи и до кога е годно. Грешна дата или грешен етикет може да разболее хората, например когато липсва алерген. Затова проверявай първите етикети на всяка нова партида: продукта, датата и партидния номер. Нещо не е наред? Спри и кажи на началника си. Продуктите с грешен етикет се оставят настрана, никога не се продават. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.labels.p': "Етикетът не е верен.", // nieuw, nalezen
-    'c.labels.s': "Виждаш, че датата на етикетите е с една седмица по-късна. Какво правиш?", // nieuw, nalezen
-    'c.labels.o1': "Спираш да опаковаш и казваш на началника си.", // nieuw, nalezen
-    'c.labels.o2': "Продължаваш: една седмица няма значение.", // nieuw, nalezen
-    'c.labels.o3': "Поправяш датата с химикалка.", // nieuw, nalezen
-    'c.labels.w': "Грешната дата може да накара хората да ядат храна, която вече не е безопасна. По-добре да се спре сега, отколкото да се изтегля по-късно.", // nieuw, nalezen
-    'l.linecleaning': "Почистване на линията", // nieuw, nalezen
-    'w.schuim': "пяната", // nieuw, nalezen
-    'w.hogedrukspuit': "водоструйката (машина за миене под налягане)", // nieuw, nalezen
-    'w.naspoelen': "изплаквам (измивам с чиста вода)", // nieuw, nalezen
-    'w.demonteren': "разглобявам", // nieuw, nalezen
-    'w.borstel': "четката", // nieuw, nalezen
-    'w.restjes': "остатъците (малки парченца храна)", // nieuw, nalezen
-    's.linecleaning.1': "Първо изключи машината.", // nieuw, nalezen
-    's.linecleaning.2': "Напръскай пяната върху лентата.", // nieuw, nalezen
-    's.linecleaning.3': "После изплакни всичко с чиста вода.", // nieuw, nalezen
-    'c.linecleaning.q': "Лентата чиста ли е вече?", // nieuw, nalezen
-    'c.linecleaning.a': "Още не. Трябва още да я изплакна.", // nieuw, nalezen
-    'c.linecleaning': "Изключи тока, преди да чистиш", // nieuw, nalezen
-    'c.linecleaning.b': "Никога не чисти машина, която работи. Изключи я и се погрижи никой да не може да я пусне пак: следвай стъпките на твоята фирма. Носи правилните ръкавици, очила и ботуши: почистващите препарати могат да изгорят кожата и очите ти. Никога не смесвай препарати. Първо махни остатъците, после пяна, търкане и изплакване. Не пръскай вода по електрически табла или контакти. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.linecleaning.p': "Изключена ли е машината?", // nieuw, nalezen
-    'c.linecleaning.s': "Парче месо е заседнало в лентата. Машината още работи. Какво правиш?", // nieuw, nalezen
-    'c.linecleaning.o1': "Първо я изключваш, после го махаш.", // nieuw, nalezen
-    'c.linecleaning.o2': "Издърпваш го бързо с ръка.", // nieuw, nalezen
-    'c.linecleaning.o3': "Избутваш го с нож.", // nieuw, nalezen
-    'c.linecleaning.w': "Работещата лента може да дръпне ръката ти за секунда. Изключването отнема само миг.", // nieuw, nalezen
-    'l.haccp': "Проверка и записване (HACCP)", // nieuw, nalezen
-    'w.controlepunt': "контролната точка (стъпка, на която трябва да провериш нещо)", // nieuw, nalezen
-    'w.kerntemperatuur': "температурата в средата (температурата вътре в храната)", // nieuw, nalezen
-    'w.prikthermometer': "термометърът с игла (забиваш го в храната)", // nieuw, nalezen
-    'w.afwijking': "отклонението (нещо не е както трябва)", // nieuw, nalezen
-    'w.steekproef': "проверката на случаен принцип (тестваш няколко продукта)", // nieuw, nalezen
-    'w.kwaliteitsdienst': "отделът по качеството (QA)", // nieuw, nalezen
-    's.haccp.1': "Измери температурата в средата с термометъра с игла.", // nieuw, nalezen
-    's.haccp.2': "Запиши всичко в списъка.", // nieuw, nalezen
-    's.haccp.3': "Нещо не е наред? Съобщи веднага.", // nieuw, nalezen
-    'c.haccp.q': "Защо трябва да записвам всичко?", // nieuw, nalezen
-    'c.haccp.a': "Така знаем, че храната е безопасна.", // nieuw, nalezen
-    'c.haccp': "HACCP: провери, запиши, съобщи", // nieuw, nalezen
-    'c.haccp.b': { m: "Всяка фирма за храни работи с план за безопасност на храните (HACCP). В него пише на кои стъпки трябва да провериш нещо, например температурата на хладилната камера или температурата в средата на сготвеното месо. Проверяваш, записваш и се подписваш. Записвай това, което наистина си измерил, дори когато е грешно. Грешното число не е твоя вина, но да го скриеш е опасно. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "Всяка фирма за храни работи с план за безопасност на храните (HACCP). В него пише на кои стъпки трябва да провериш нещо, например температурата на хладилната камера или температурата в средата на сготвеното месо. Проверяваш, записваш и се подписваш. Записвай това, което наистина си измерила, дори когато е грешно. Грешното число не е твоя вина, но да го скриеш е опасно. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "Всяка фирма за храни работи с план за безопасност на храните (HACCP). В него пише на кои стъпки трябва да провериш нещо, например температурата на хладилната камера или температурата в средата на сготвеното месо. Проверяваш, записваш и се подписваш. Записвай това, което наистина показва измерването, дори когато е грешно. Грешното число не е твоя вина, но да го скриеш е опасно. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen
-    'c.haccp.p': "Температурата е твърде висока.", // nieuw, nalezen
-    'c.haccp.s': { m: "Забравил си да измериш в десет. Колегата ти казва: „Просто запиши добро число.“ Какво правиш?", f: "Забравила си да измериш в десет. Колегата ти казва: „Просто запиши добро число.“ Какво правиш?", x: "Забрави да измериш в десет. Колегата ти казва: „Просто запиши добро число.“ Какво правиш?" }, // nieuw, nalezen
-    'c.haccp.o1': "Измерваш сега и записваш истинския час.", // nieuw, nalezen
-    'c.haccp.o2': "Записваш добро число за десет часа.", // nieuw, nalezen
-    'c.haccp.o3': "Оставяш реда празен.", // nieuw, nalezen
-    'c.haccp.w': "Списъкът трябва да показва какво наистина се е случило. Измисленото число крие проблем, който може да разболее хората.", // nieuw, nalezen
-    'u.collection': "Събиране на отпадъци", // nieuw, nalezen
-    'l.binlorry': "Сметовозът", // nieuw, nalezen
-    'w.vuilniswagen': "сметовозът (камионът за боклук)", // nieuw, nalezen
-    'w.kliko': "кофата на колела (кофа за боклук с колела)", // nieuw, nalezen
-    'w.kieplift': "повдигачът за кофи (вдига кофата и я изсипва)", // nieuw, nalezen
-    'w.treeplank': "задното стъпало (стъпало отзад на камиона)", // nieuw, nalezen
-    'w.bijplaatsing': "допълнителният боклук (чували, оставени до кофата)", // nieuw, nalezen
-    'w.ophaaldag': "денят за извозване", // nieuw, nalezen
-    's.binlorry.1': "Сложи кофата на колела на повдигача.", // nieuw, nalezen
-    's.binlorry.2': "До контейнера има чували.", // nieuw, nalezen
-    's.binlorry.3': "Кофата на колела е твърде тежка. Остави я.", // nieuw, nalezen
-    'c.binlorry.q': "Може ли да се возя отзад?", // nieuw, nalezen
-    'c.binlorry.a': "Не, качваш се в кабината.", // nieuw, nalezen
-    'c.binlorry': "Нека те виждат и се вози в кабината", // nieuw, nalezen
-    'c.binlorry.b': "Носи светлоотразителното си облекло на всяка обиколка. Качвай се и слизай откъм тротоара, никога откъм движението. Вози се в кабината, не отзад на камиона: само когато фирмата ти ясно го позволява и никога, когато камионът дава на заден ход или кара бързо. Стой далеч от повдигача за кофи, докато се движи. Кофата е твърде тежка или нещо стърчи от нея? Остави я и съобщи. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.binlorry.p': "Тази кофа на колела е твърде тежка.", // nieuw, nalezen
-    'c.binlorry.s': "Следващата улица е много близо. Шофьорът казва: „Застани на задното стъпало.“ Какво правиш?", // nieuw, nalezen
-    'c.binlorry.o1': "Качваш се в кабината въпреки това.", // nieuw, nalezen
-    'c.binlorry.o2': "Заставаш на стъпалото: близо е.", // nieuw, nalezen
-    'c.binlorry.o3': "Вървиш зад камиона.", // nieuw, nalezen
-    'c.binlorry.w': "Падането от движещ се камион е една от най-големите опасности в тази работа. В кабината си в безопасност.", // nieuw, nalezen
-    'l.reversing': "Безопасен заден ход", // nieuw, nalezen
-    'w.achteruitrijden': "давам на заден ход (карам назад)", // nieuw, nalezen
-    'w.dodehoek': "мъртвата зона (където шофьорът не те вижда)", // nieuw, nalezen
-    'w.aanwijzer': "сигналистът (човекът, който насочва шофьора)", // nieuw, nalezen
-    'w.oogcontact': "зрителният контакт", // nieuw, nalezen
-    'w.piepen': "пиукам", // nieuw, nalezen
-    'w.cabine': "кабината (където седи шофьорът)", // nieuw, nalezen
-    's.reversing.1': "Никога не заставай зад камиона.", // nieuw, nalezen
-    's.reversing.2': "Не те виждам в огледалото.", // nieuw, nalezen
-    's.reversing.3': "Осъществи зрителен контакт с шофьора.", // nieuw, nalezen
-    'c.reversing.q': "Можеш ли да ми помогнеш да дам на заден ход?", // nieuw, nalezen
-    'c.reversing.a': "Да, отляво съм. Гледай в огледалото.", // nieuw, nalezen
-    'c.reversing': "Никога зад камион на заден ход", // nieuw, nalezen
-    'c.reversing.b': "Много злополуки със сметовози стават, когато карат назад. Шофьорът не вижда точно зад камиона: мъртвата зона. Затова никога не стой и не минавай зад камион, който може да даде на заден ход. Насочвай шофьора отстрани, където се виждате един друг в огледалото. Изгубихте зрителен контакт? Шофьорът спира. Уговорете ясни знаци, преди да започнете. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.reversing.p': "Спри! Вече не те виждам.", // nieuw, nalezen
-    'c.reversing.s': "Камионът дава на заден ход. Минаваш зад него, за да вземеш чувал. Какво правиш?", // nieuw, nalezen
-    'c.reversing.o1': "Чакаш, докато камионът спре.", // nieuw, nalezen
-    'c.reversing.o2': "Минаваш бързо: само една секунда е.", // nieuw, nalezen
-    'c.reversing.o3': "Махваш на шофьора и минаваш.", // nieuw, nalezen
-    'c.reversing.w': "Шофьорът не може да те види зад камиона. Една секунда е достатъчна за злополука.", // nieuw, nalezen
-    'l.wastesorting': "Разделяне на отпадъците", // nieuw, nalezen
-    'w.papier': "хартията", // nieuw, nalezen
-    'w.plastic': "пластмасата", // nieuw, nalezen
-    'w.gft': "биоотпадъците (плодове, зеленчуци и растения)", // nieuw, nalezen
-    'w.restafval': "смесените отпадъци (каквото не може да се раздели)", // nieuw, nalezen
-    'w.karton': "картонът", // nieuw, nalezen
-    'w.blik': "кутийката (метална консерва)", // nieuw, nalezen
-    's.wastesorting.1': "Стъклото отива в контейнера за стъкло.", // nieuw, nalezen
-    's.wastesorting.2': "Това е за смесените отпадъци.", // nieuw, nalezen
-    's.wastesorting.3': "Сгъни картона на плоско.", // nieuw, nalezen
-    'c.wastesorting.q': "Къде отива кутия от пица?", // nieuw, nalezen
-    'c.wastesorting.a': "При смесените отпадъци. Има мазнина по нея.", // nieuw, nalezen
-    'c.wastesorting': "Доброто разделяне спестява работа", // nieuw, nalezen
-    'c.wastesorting.b': "Разделените отпадъци могат да се използват пак: хартията става хартия, стъклото става стъкло. Но едно грешно нещо може да развали цял товар. Затова погледни в кофата, преди да я изпразниш. Нещо не е на мястото си, например чувал със смесени отпадъци в хартията? Остави я или следвай правилата на фирмата си. Кои отпадъци къде отиват, е различно във всеки град: научи правилата в твоя район. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.wastesorting.p': "Това не е за тук.", // nieuw, nalezen
-    'c.wastesorting.s': "Една кофа за хартия е пълна с черни чували за боклук. Какво правиш?", // nieuw, nalezen
-    'c.wastesorting.o1': "Оставяш я и съобщаваш.", // nieuw, nalezen
-    'c.wastesorting.o2': "Изсипваш я при хартията.", // nieuw, nalezen
-    'c.wastesorting.o3': "Изваждаш чувалите на ръка.", // nieuw, nalezen
-    'c.wastesorting.w': "Боклукът в хартията разваля целия товар. В чувалите може да има и остри или мръсни неща.", // nieuw, nalezen
-    'l.wastesafety': "Остри предмети и вдигане", // nieuw, nalezen
-    'w.snijwond': "порязването (рана от нещо остро)", // nieuw, nalezen
-    'w.prikken': "убождам (остър връх влиза в кожата)", // nieuw, nalezen
-    'w.naald': "иглата", // nieuw, nalezen
-    'w.scherp': "остър", // nieuw, nalezen
-    'w.rugpijn': "болката в гърба", // nieuw, nalezen
-    'w.tetanusprik': "ваксината против тетанус (инжекция срещу болест от мръсотия в рана)", // nieuw, nalezen
-    's.wastesafety.1': "Никога не хващай чувал отдолу.", // nieuw, nalezen
-    's.wastesafety.2': "Внимавай, в този чувал има стъкло.", // nieuw, nalezen
-    's.wastesafety.3': "Убодох се на игла.", // nieuw, nalezen
-    'c.wastesafety.q': "Порязах се. Какво трябва да направя?", // nieuw, nalezen
-    'c.wastesafety.a': "Измий раната добре. И ми кажи.", // nieuw, nalezen
-    'c.wastesafety': "Никога не стискай чувал", // nieuw, nalezen
-    'c.wastesafety.b': "В чувал за боклук може да има стъкло, ножове или игли. Затова никога не притискай чувал до тялото си, никога не го стискай и никога не го носи опрян на крака си: хващай го отгоре, далеч от себе си. Носи ръкавиците си. Вдигай със свити колене и изправен гръб и бутай кофата, не я носи. Убоде или поряза ли те нещо? Измий раната добре с вода и кажи на началника си още същия ден.", // nieuw, nalezen
-    'c.wastesafety.p': "Убодох се.", // nieuw, nalezen
-    'c.wastesafety.s': "Един чувал се скъсва. Виждаш игла в него. Какво правиш?", // nieuw, nalezen
-    'c.wastesafety.o1': "Не я пипаш и съобщаваш.", // nieuw, nalezen
-    'c.wastesafety.o2': "Вдигаш я с ръкавиците.", // nieuw, nalezen
-    'c.wastesafety.o3': "Бутваш я обратно в чувала.", // nieuw, nalezen
-    'c.wastesafety.w': "Ръкавиците не спират иглата. Иглата може да пренесе болест.", // nieuw, nalezen
-    'u.recycling': "Площадката за отпадъци", // nieuw, nalezen
-    'l.yard': "На площадката за отпадъци", // nieuw, nalezen
-    'w.milieustraat': "площадката за отпадъци (където хората носят големи или специални отпадъци)", // nieuw, nalezen
-    'w.grofvuil': "едрогабаритните отпадъци (големи неща, например диван)", // nieuw, nalezen
-    'w.puin': "строителните отпадъци (натрошени камъни и тухли)", // nieuw, nalezen
-    'w.matras': "матракът", // nieuw, nalezen
-    'w.weegbrug': "кантарът (везна за коли и камиони)", // nieuw, nalezen
-    'w.afvalpas': "картата за отпадъци (живущите я показват на входа)", // nieuw, nalezen
-    's.yard.1': "Строителните отпадъци отиват в контейнер четири.", // nieuw, nalezen
-    's.yard.2': "Може ли да видя картата ви за отпадъци?", // nieuw, nalezen
-    's.yard.3': "Първо минете през кантара.", // nieuw, nalezen
-    'c.yard.q': "Къде отива този матрак?", // nieuw, nalezen
-    'c.yard.a': "В контейнера за едрогабаритни отпадъци, отзад.", // nieuw, nalezen
-    'c.yard': "Помагай, но пази площадката безопасна", // nieuw, nalezen
-    'c.yard.b': { m: "На площадката за отпадъци казваш на посетителите къде отиват отпадъците им и проверяваш дали са добре разделени. Бъди любезен: много хора идват само няколко пъти в годината и не знаят правилата. Дръж децата и посетителите далеч от машините и от ръба на високите контейнери. Вдигайте тежките неща заедно или остави посетителя сам да носи своите. Някой носи нещо, което не познаваш? Питай, преди да влезе в контейнера. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "На площадката за отпадъци казваш на посетителите къде отиват отпадъците им и проверяваш дали са добре разделени. Бъди любезна: много хора идват само няколко пъти в годината и не знаят правилата. Дръж децата и посетителите далеч от машините и от ръба на високите контейнери. Вдигайте тежките неща заедно или остави посетителя сам да носи своите. Някой носи нещо, което не познаваш? Питай, преди да влезе в контейнера. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "На площадката за отпадъци казваш на посетителите къде отиват отпадъците им и проверяваш дали са добре разделени. Отнасяй се любезно: много хора идват само няколко пъти в годината и не знаят правилата. Дръж децата и посетителите далеч от машините и от ръба на високите контейнери. Вдигайте тежките неща заедно или остави посетителя сам да носи своите. Някой носи нещо, което не познаваш? Питай, преди да влезе в контейнера. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen
-    'c.yard.p': "Това отива в контейнер четири.", // nieuw, nalezen
-    'c.yard.s': "Един мъж иска да хвърли пълен чувал в контейнера за дърво. Какво правиш?", // nieuw, nalezen
-    'c.yard.o1': "Питаш какво има в чувала.", // nieuw, nalezen
-    'c.yard.o2': "Оставяш го: това са неговите отпадъци.", // nieuw, nalezen
-    'c.yard.o3': "Хвърляш го вместо него.", // nieuw, nalezen
-    'c.yard.w': "Едно грешно нещо може да развали пълен контейнер. Един любезен въпрос пази отпадъците чисти.", // nieuw, nalezen
-    'l.hazardous': "Опасни отпадъци", // nieuw, nalezen
-    'w.chemischafval': "опасните отпадъци (химически отпадъци, например боя и масло)", // nieuw, nalezen
-    'w.spuitbus': "спреят (флакон под налягане)", // nieuw, nalezen
-    'w.asbest': "азбестът (опасен материал в стари сгради)", // nieuw, nalezen
-    'w.lekken': "тека (изтича течност)", // nieuw, nalezen
-    'w.gevarensymbool': "знакът за опасност (картинка, която предупреждава за опасност)", // nieuw, nalezen
-    'w.vat': "варелът, бъчвата", // nieuw, nalezen
-    's.hazardous.1': "Сложи боята при опасните отпадъци.", // nieuw, nalezen
-    's.hazardous.2': "Тази бутилка тече. Хвани я с ръкавици.", // nieuw, nalezen
-    's.hazardous.3': "Азбестът трябва да е добре опакован.", // nieuw, nalezen
-    'c.hazardous.q': "Какво има в тази бутилка?", // nieuw, nalezen
-    'c.hazardous.a': "Не знам. Остави я настрана.", // nieuw, nalezen
-    'c.hazardous': "Непознато? Не отваряй, не мирисай", // nieuw, nalezen
-    'c.hazardous.b': "Опасните отпадъци, например боя, масло, почистващи препарати, батерии и спрейове, могат да изгорят, да отровят или да експлодират. Търси знаците за опасност. Носи ръкавици и предпазни очила. Никога не отваряй бутилка, за да помиришеш какво има вътре, и никога не смесвай препарати. Дръж бутилката, която тече, изправена и я сложи в тава. Азбестът може да влезе само ако е добре опакован: никога не го чупи и не го изваждай от опаковката. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.hazardous.p': "Какво има тук вътре?", // nieuw, nalezen
-    'c.hazardous.s': "Една жена носи бутилка без етикет. Мирише силно. Какво правиш?", // nieuw, nalezen
-    'c.hazardous.o1': "Оставяш я настрана и казваш на началника си.", // nieuw, nalezen
-    'c.hazardous.o2': "Отваряш я и помирисваш какво е.", // nieuw, nalezen
-    'c.hazardous.o3': "Изсипваш я във варела за боя.", // nieuw, nalezen
-    'c.hazardous.w': "Непознатите продукти могат да реагират с други. Началникът ти знае къде може да отиде безопасно.", // nieuw, nalezen
-    'l.baler': "Пресата за бали", // nieuw, nalezen
-    'w.balenpers': "пресата за бали (машина, която пресова отпадъци на блокове)", // nieuw, nalezen
-    'w.baal': "балата (пресован блок хартия или пластмаса)", // nieuw, nalezen
-    'w.persen': "пресовам", // nieuw, nalezen
-    'w.vastlopen': "засядам, блокирам", // nieuw, nalezen
-    'w.binddraad': "телта за бали", // nieuw, nalezen
-    'w.vulopening': "отворът за пълнене (откъдето влизат отпадъците)", // nieuw, nalezen
-    's.baler.1': "Пресата заседна. Натисни аварийния стоп.", // nieuw, nalezen
-    's.baler.2': "Никога не пъхай ръката си в пресата.", // nieuw, nalezen
-    's.baler.3': "Вържи балата добре.", // nieuw, nalezen
-    'c.baler.q': "Пресата засяда. Може ли да погледна?", // nieuw, nalezen
-    'c.baler.a': "Не. Първо се изключва токът.", // nieuw, nalezen
-    'c.baler': "Никога не бъркай в пресата", // nieuw, nalezen
-    'c.baler.b': { m: "Пресата за бали натиска с огромна сила. Използвай я само когато си научил как. Никога не пъхай длан, ръка или крак в отвора за пълнене, дори когато машината изглежда спряла. Блокира ли? Натисни аварийния стоп, изключи я и се погрижи никой да не може да я включи: следвай стъпките на твоята фирма. Едва тогава погледни. Никога не се качвай в преса за бали или в контейнер. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "Пресата за бали натиска с огромна сила. Използвай я само когато си научила как. Никога не пъхай длан, ръка или крак в отвора за пълнене, дори когато машината изглежда спряла. Блокира ли? Натисни аварийния стоп, изключи я и се погрижи никой да не може да я включи: следвай стъпките на твоята фирма. Едва тогава погледни. Никога не се качвай в преса за бали или в контейнер. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "Пресата за бали натиска с огромна сила. Използвай я само когато знаеш как. Никога не пъхай длан, ръка или крак в отвора за пълнене, дори когато машината изглежда спряла. Блокира ли? Натисни аварийния стоп, изключи я и се погрижи никой да не може да я включи: следвай стъпките на твоята фирма. Едва тогава погледни. Никога не се качвай в преса за бали или в контейнер. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen
-    'c.baler.p': "Пресата заседна.", // nieuw, nalezen
-    'c.baler.s': "Парче картон е заседнало в отвора. Машината стои. Какво правиш?", // nieuw, nalezen
-    'c.baler.o1': "Изключваш я напълно, после го изваждаш.", // nieuw, nalezen
-    'c.baler.o2': "Издърпваш го бързо с ръка.", // nieuw, nalezen
-    'c.baler.o3': "Набутваш го с крак.", // nieuw, nalezen
-    'c.baler.w': "Машина, която стои, може да тръгне пак. Без изключен ток ръката ти е в опасност.", // nieuw, nalezen
-    'l.shovel': "Челният товарач на площадката", // nieuw, nalezen
-    'w.shovel': "челният товарач (голяма машина с кофа отпред)", // nieuw, nalezen
-    'w.zwaailamp': "сигналната лампа (оранжева лампа отгоре на машината)", // nieuw, nalezen
-    'w.bunker': "клетката (голямо бетонно място за един вид отпадъци)", // nieuw, nalezen
-    'w.looppad': "пешеходната пътека (пътека само за хора)", // nieuw, nalezen
-    'w.toeteren': "натискам клаксона", // nieuw, nalezen
-    'w.opscheppen': "загребвам", // nieuw, nalezen
-    's.shovel.1': "Стой на пешеходната пътека.", // nieuw, nalezen
-    's.shovel.2': "Товарачът дава на заден ход. Внимавай!", // nieuw, nalezen
-    's.shovel.3': "Сигналната лампа свети. Машината се движи.", // nieuw, nalezen
-    'c.shovel.q': "Може ли да мина покрай товарача?", // nieuw, nalezen
-    'c.shovel.a': "Само ако шофьорът те вижда.", // nieuw, nalezen
-    'c.shovel': "Не заставай на пътя на товарача", // nieuw, nalezen
-    'c.shovel.b': "Челният товарач е голям и шофьорът му вижда малко около него, особено отзад. Затова стой на пешеходните пътеки и носи светлоотразителното си облекло. Никога не минавай зад машина, която се движи. Искаш да минеш? Изчакай шофьорът да те види и да ти даде знак. Сигналната лампа означава: тази машина работи. Дръж посетителите далеч от нея. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.shovel.p': "Видя ли ме?", // nieuw, nalezen
-    'c.shovel.s': "Трябва да минеш покрай работещ челен товарач. Шофьорът гледа на другата страна. Какво правиш?", // nieuw, nalezen
-    'c.shovel.o1': "Чакаш, докато те види.", // nieuw, nalezen
-    'c.shovel.o2': "Минаваш бързо покрай него.", // nieuw, nalezen
-    'c.shovel.o3': "Минаваш зад машината.", // nieuw, nalezen
-    'c.shovel.w': "Шофьор, който не те е видял, не може да спре заради теб.", // nieuw, nalezen
-    'u.toddlers': "Децата", // nieuw, nalezen
-    'l.nappies': "Смяна на памперси", // nieuw, nalezen
-    'w.luier': "памперсът (пелената)", // nieuw, nalezen
-    'w.verschonen': "сменям памперса (на дете)", // nieuw, nalezen
-    'w.commode': "масата за повиване", // nieuw, nalezen
-    'w.billendoekje': "мократа кърпичка (за бебе)", // nieuw, nalezen
-    'w.potje': "гърнето", // nieuw, nalezen
-    'w.zindelijk': "без памперс (детето може да ходи до тоалетна)", // nieuw, nalezen
-    's.nappies.1': "Ще сменя памперса на Сем.", // nieuw, nalezen
-    's.nappies.2': "Измий си ръцете, след като смениш памперс.", // nieuw, nalezen
-    's.nappies.3': "Никога не оставяй дете само на масата за повиване.", // nieuw, nalezen
-    'c.nappies.q': "Кога смени памперса на Ноор?", // nieuw, nalezen
-    'c.nappies.a': "В десет. Записано е в приложението.", // nieuw, nalezen
-    'c.nappies': "Едната ръка винаги на детето", // nieuw, nalezen
-    'c.nappies.b': { m: "Приготви всичко, преди да сложиш детето на масата за повиване: чист памперс, мокри кърпички и дрехи. После дръж едната си ръка на детето през цялото време. Никога не се отдалечавай, дори за секунда. Измивай ръцете си след всяка смяна и почиствай масата. Записвай кога си сменил памперса, за да знаят родителите. Виждаш обрив или рана? Запиши го и кажи на колега. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "Приготви всичко, преди да сложиш детето на масата за повиване: чист памперс, мокри кърпички и дрехи. После дръж едната си ръка на детето през цялото време. Никога не се отдалечавай, дори за секунда. Измивай ръцете си след всяка смяна и почиствай масата. Записвай кога си сменила памперса, за да знаят родителите. Виждаш обрив или рана? Запиши го и кажи на колега. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "Приготви всичко, преди да сложиш детето на масата за повиване: чист памперс, мокри кърпички и дрехи. После дръж едната си ръка на детето през цялото време. Никога не се отдалечавай, дори за секунда. Измивай ръцете си след всяка смяна и почиствай масата. Записвай часа на смяната на памперса, за да знаят родителите. Виждаш обрив или рана? Запиши го и кажи на колега. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen
-    'c.nappies.p': "Тъкмо му сменям памперса.", // nieuw, nalezen
-    'c.nappies.s': "Сменяш памперса на бебе. Забрави мокрите кърпички; те са в другия край на стаята. Какво правиш?", // nieuw, nalezen
-    'c.nappies.o1': "Взимаш бебето със себе си.", // nieuw, nalezen
-    'c.nappies.o2': "Отиваш бързо за тях: близо е.", // nieuw, nalezen
-    'c.nappies.o3': "Оставяш бебето и викаш някого.", // nieuw, nalezen
-    'c.nappies.w': "Бебето може да се търкулне от масата за повиване за една секунда. Никога не оставяй дете само там горе.", // nieuw, nalezen
-    'l.mealtime': "Ядене и пиене", // nieuw, nalezen
-    'w.fles': "шишето (за бебе)", // nieuw, nalezen
-    'w.slabbetje': "лигавникът", // nieuw, nalezen
-    'w.beker': "чашата (с дръжка)", // nieuw, nalezen
-    'w.kinderstoel': "столчето за хранене", // nieuw, nalezen
-    'w.fruithap': "плодовото пюре", // nieuw, nalezen
-    'w.boertje': "оригването (на бебе)", // nieuw, nalezen
-    's.mealtime.1': "Измий си ръцете преди ядене.", // nieuw, nalezen
-    's.mealtime.2': "Дай на Лиза шишето ѝ в дванадесет.", // nieuw, nalezen
-    's.mealtime.3': "Всички седят на масата.", // nieuw, nalezen
-    'c.mealtime.q': "Може ли Даан да получи бисквитка?", // nieuw, nalezen
-    'c.mealtime.a': "Не, той има алергия. Погледни списъка.", // nieuw, nalezen
-    'c.mealtime': "Провери списъка, преди да дадеш храна", // nieuw, nalezen
-    'c.mealtime.b': "Преди да дадеш на дете храна или напитка, провери списъка: някои деца имат алергия, други не може да ядат определена храна заради здравето или вярата си. Измий своите ръце и ръцете на децата преди ядене. Нека децата седят, докато ядат и пият, никога да не вървят или тичат. Режи храната на малки парчета за малките деца, например гроздето на парченца. Никога не давай на дете нещо от дома на друго дете. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.mealtime.p': "Може ли той да яде това?", // nieuw, nalezen
-    'c.mealtime.s': "Дете плаче за бисквитка. Не познаваш добре това дете. Какво правиш?", // nieuw, nalezen
-    'c.mealtime.o1': "Първо проверяваш списъка.", // nieuw, nalezen
-    'c.mealtime.o2': "Даваш я: това е само бисквитка.", // nieuw, nalezen
-    'c.mealtime.o3': "Даваш половин бисквитка.", // nieuw, nalezen
-    'c.mealtime.w': "В бисквитката може да има ядки, мляко или яйца. За дете с алергия това може да е много опасно.", // nieuw, nalezen
-    'l.naptime': "Спане", // nieuw, nalezen
-    'w.bedje': "креватчето (малко легло за бебе)", // nieuw, nalezen
-    'w.slaapkamer': "спалнята", // nieuw, nalezen
-    'w.knuffel': "плюшената играчка", // nieuw, nalezen
-    'w.speen': "залъгалката (биберонът)", // nieuw, nalezen
-    'w.babyfoon': "бебефонът", // nieuw, nalezen
-    'w.slaapzak': "бебешкият спален чувал", // nieuw, nalezen
-    's.naptime.1': "Сложи бебето да легне по гръб.", // nieuw, nalezen
-    's.naptime.2': "Често поглеждам в спалнята.", // nieuw, nalezen
-    's.naptime.3': "Ето ти плюшената играчка. Сладки сънища.", // nieuw, nalezen
-    'c.naptime.q': "Мила заспа ли вече?", // nieuw, nalezen
-    'c.naptime.a': "Да, от един часа. Скоро пак ще погледна.", // nieuw, nalezen
-    'c.naptime': "Бебетата спят по гръб", // nieuw, nalezen
-    'c.naptime.b': "Бебето спи най-безопасно по гръб, в спален чувал, в собственото си креватче. Без възглавница, без свободно одеяло и без големи играчки в креватчето. Дръж стаята прохладна и проветрена. Проверявай често спящите деца: гледай и слушай, дори когато бебефонът е включен. Родител те моли да оставиш бебето му да спи по друг начин? Първо кажи на началника си. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.naptime.p': "Ще отида да погледна в спалнята.", // nieuw, nalezen
-    'c.naptime.s': "Едно бебе е заспало по корем в креватчето. Какво правиш?", // nieuw, nalezen
-    'c.naptime.o1': "Внимателно го обръщаш по гръб.", // nieuw, nalezen
-    'c.naptime.o2': "Оставяш го да спи: вече е заспало.", // nieuw, nalezen
-    'c.naptime.o3': "Слагаш възглавница до него.", // nieuw, nalezen
-    'c.naptime.w': "По гръб бебето може да диша свободно. Възглавницата може да покрие лицето му.", // nieuw, nalezen
-    'l.playtime': "Игра", // nieuw, nalezen
-    'w.spelen': "играя", // nieuw, nalezen
-    'w.speelgoed': "играчките", // nieuw, nalezen
-    'w.zandbak': "пясъчникът", // nieuw, nalezen
-    'w.glijbaan': "пързалката", // nieuw, nalezen
-    'w.puzzel': "пъзелът", // nieuw, nalezen
-    'w.buitenspelen': "играя навън", // nieuw, nalezen
-    's.playtime.1': "Отиваме да играем навън. Обличайте якетата!", // nieuw, nalezen
-    's.playtime.2': "Прибери играчките.", // nieuw, nalezen
-    's.playtime.3': "По едно дете на пързалката.", // nieuw, nalezen
-    'c.playtime.q': "Може ли да играя с пъзела?", // nieuw, nalezen
-    'c.playtime.a': "Да, на масата. После го прибираш.", // nieuw, nalezen
-    'c.playtime': "Безопасна игра: гледай, брой, проверявай", // nieuw, nalezen
-    'c.playtime.b': "Децата учат, като играят, затова ги оставяй да пробват неща. Но винаги ги дръж пред очите си, и навън. Брой децата, когато излизате и когато се връщате вътре. Първо провери площадката: затворена ли е портата, има ли стъкло или боклук? Играчките с малки части не са за деца под три години: може да се задавят с тях. Почиствай често играчките, които влизат в устата. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.playtime.p': "Всички тук ли са?", // nieuw, nalezen
-    'c.playtime.s': "Връщате се вътре от площадката. Преброяваш с едно дете по-малко. Какво правиш?", // nieuw, nalezen
-    'c.playtime.o1': "Казваш на колега и веднага търсиш.", // nieuw, nalezen
-    'c.playtime.o2': "Чакаш: детето ще влезе само.", // nieuw, nalezen
-    'c.playtime.o3': "Броиш пак утре.", // nieuw, nalezen
-    'c.playtime.w': "Дете само навън може да се нарани или да се загуби. Всяка минута е важна.", // nieuw, nalezen
-    'u.daycare': "Родители, безопасност и групата", // nieuw, nalezen
-    'l.pickup': "Довеждане и взимане", // nieuw, nalezen
-    'w.ouder': "родителят", // nieuw, nalezen
-    'w.afscheid': "сбогуването", // nieuw, nalezen
-    'w.oppas': "детегледачката", // nieuw, nalezen
-    'w.schriftje': "тетрадката (за бележки между родителите и персонала)", // nieuw, nalezen
-    'w.ouderapp': "приложението за родители (за снимки и съобщения до родителите)", // nieuw, nalezen
-    'w.wennen': "свиквам (свиквам с ново място)", // nieuw, nalezen
-    's.pickup.1': "Ще го запиша в тетрадката.", // nieuw, nalezen
-    's.pickup.2': "Кажи чао на татко.", // nieuw, nalezen
-    's.pickup.3': "Слагам снимка в приложението за родители.", // nieuw, nalezen
-    'c.pickup.q': "Кой ще вземе Сем днес?", // nieuw, nalezen
-    'c.pickup.a': "Баба му. Тя е в списъка.", // nieuw, nalezen
-    'c.pickup': "Само на хора от списъка", // nieuw, nalezen
-    'c.pickup.b': "Давай детето само на родител или на човек, за когото родителите са ти казали. Не познаваш човека? Попитай кой е, погледни документа му за самоличност и провери при родителите или при началника си. При взимането кажи на родителя как е минал денят: яденето, спането, играта и всичко особено. Записвай важните неща в тетрадката или в приложението. Говори за други деца само с техните родители. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.pickup.p': "Кой сте вие? Ще се обадя на родителите.", // nieuw, nalezen
-    'c.pickup.s': "Непознат мъж идва да вземе Сем. Той не е в списъка. Какво правиш?", // nieuw, nalezen
-    'c.pickup.o1': "Обаждаш се на родителите, преди Сем да тръгне.", // nieuw, nalezen
-    'c.pickup.o2': "Пускаш Сем: мъжът знае името.", // nieuw, nalezen
-    'c.pickup.o3': "Питаш Сем дали го познава.", // nieuw, nalezen
-    'c.pickup.w': "Ти отговаряш за детето, докато не го поеме човек, когото родителите са избрали.", // nieuw, nalezen
-    'l.childsafety': "Безопасност в групата", // nieuw, nalezen
-    'w.traphekje': "преградата за стълби", // nieuw, nalezen
-    'w.vingerstrip': "предпазителят за пръсти (на вратата, за да не се прищипват пръсти)", // nieuw, nalezen
-    'w.verslikken': "задавям се (храната влиза в грешната тръба)", // nieuw, nalezen
-    'w.bult': "цицината (на главата)", // nieuw, nalezen
-    'w.schaafwond': "ожулването (кожата е одрана)", // nieuw, nalezen
-    'w.toezicht': "надзорът (наблюдаваш децата)", // nieuw, nalezen
-    's.childsafety.1': "Винаги затваряй преградата за стълби.", // nieuw, nalezen
-    's.childsafety.2': "Слагам малко лед на цицината.", // nieuw, nalezen
-    's.childsafety.3': "Сем се задави. Помагам му.", // nieuw, nalezen
-    'c.childsafety.q': "Падна ли Бо?", // nieuw, nalezen
-    'c.childsafety.a': "Да, има цицина. Обаждам се на майка ѝ.", // nieuw, nalezen
-    'c.childsafety': "Огледай се с очите на дете", // nieuw, nalezen
-    'c.childsafety.b': "Малките деца слагат всичко в устата си и се катерят навсякъде. Затова дръж преградата за стълби затворена, слагай почистващите препарати и лекарствата там, където децата не могат да стигнат, и дръж горещите напитки далеч от децата. Проверявай стаята всеки ден. Дете се нарани? Дай първа помощ, утеши детето, кажи на родителите и го запиши. Сериозно ли е? Обади се на 112. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.childsafety.p': "Преградата за стълби е отворена.", // nieuw, nalezen
-    'c.childsafety.s': "Оставяш горещото си кафе на ниска масичка. Малко дете отива към него. Какво правиш?", // nieuw, nalezen
-    'c.childsafety.o1': "Веднага слагаш кафето високо.", // nieuw, nalezen
-    'c.childsafety.o2': "Казваш на детето да не го пипа.", // nieuw, nalezen
-    'c.childsafety.o3': "Изпиваш го бързо.", // nieuw, nalezen
-    'c.childsafety.w': "Горещото кафе може тежко да изгори малко дете. Мястото, до което детето не стига, е единственото безопасно място.", // nieuw, nalezen
-    'l.sickchild': "Болно дете и алергии", // nieuw, nalezen
-    'w.huiduitslag': "обривът (червени петна по кожата)", // nieuw, nalezen
-    'w.diarree': "диарията", // nieuw, nalezen
-    'w.overgeven': "повръщам", // nieuw, nalezen
-    'w.allergielijst': "списъкът с алергии", // nieuw, nalezen
-    'w.adrenalinepen': "адреналиновата писалка (писалка с лекарство при силна алергия)", // nieuw, nalezen
-    'w.temperaturen': "меря температура", // nieuw, nalezen
-    's.sickchild.1': "Сем има температура. Обаждам се на баща му.", // nieuw, nalezen
-    's.sickchild.2': "Погледни списъка с алергии преди яденето.", // nieuw, nalezen
-    's.sickchild.3': "Никога не давай лекарство без разрешение.", // nieuw, nalezen
-    'c.sickchild.q': "Как е Йип?", // nieuw, nalezen
-    'c.sickchild.a': "Много е горещ. Ще му измеря температурата.", // nieuw, nalezen
-    'c.sickchild': "Болно дете: кажи, не гадай", // nieuw, nalezen
-    'c.sickchild.b': { m: "Следи как са децата. Детето е горещо, много уморено, повръща или има обрив? Измери му температурата, кажи на колегата си и се обади на родителите. Давай лекарство само с писмено разрешение от родителите и записвай какво си дал и кога. Знай кои деца имат алергия и къде е лекарството им. Дете със силна алергична реакция: дай адреналиновата писалка, ако си научил как, и се обади на 112. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "Следи как са децата. Детето е горещо, много уморено, повръща или има обрив? Измери му температурата, кажи на колегата си и се обади на родителите. Давай лекарство само с писмено разрешение от родителите и записвай какво си дала и кога. Знай кои деца имат алергия и къде е лекарството им. Дете със силна алергична реакция: дай адреналиновата писалка, ако си научила как, и се обади на 112. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "Следи как са децата. Детето е горещо, много уморено, повръща или има обрив? Измери му температурата, кажи на колегата си и се обади на родителите. Давай лекарство само с писмено разрешение от родителите и записвай какво лекарство е дадено и кога. Знай кои деца имат алергия и къде е лекарството им. Дете със силна алергична реакция: дай адреналиновата писалка, ако знаеш как, и се обади на 112. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen
-    'c.sickchild.p': "Детето ви е болно. Можете ли да дойдете да го вземете?", // nieuw, nalezen
-    'c.sickchild.s': "Една майка казва: „Дай му сироп против температура в два.“ Няма формуляр. Какво правиш?", // nieuw, nalezen
-    'c.sickchild.o1': "Молиш я първо да подпише формуляра.", // nieuw, nalezen
-    'c.sickchild.o2': "Даваш го: майката помоли.", // nieuw, nalezen
-    'c.sickchild.o3': "Даваш половината, за всеки случай.", // nieuw, nalezen
-    'c.sickchild.w': "Без писмено разрешение не може да даваш лекарство. Формулярът пази детето и теб.", // nieuw, nalezen
-    'l.grouprules': "Групата и правилата", // nieuw, nalezen
-    'w.pedagogischmedewerker': "детският възпитател (служител в детско заведение)", // nieuw, nalezen
-    'w.mentor': "менторът (служителят, който следи отблизо едно дете)", // nieuw, nalezen
-    'w.vierogenprincipe': "правилото за четирите очи (друг възрастен винаги може да те види или чуе)", // nieuw, nalezen
-    'w.observeren': "наблюдавам (гледам внимателно и го записвам)", // nieuw, nalezen
-    'w.peuter': "малкото дете (дете на две или три години)", // nieuw, nalezen
-    'w.groep': "групата (децата, които са заедно всеки ден)", // nieuw, nalezen
-    's.grouprules.1': "Аз съм менторът на Лиза.", // nieuw, nalezen
-    's.grouprules.2': "Колега винаги може да ни види или чуе.", // nieuw, nalezen
-    's.grouprules.3': "Тревожа се за Даан.", // nieuw, nalezen
-    'c.grouprules.q': { m: "Може ли да изляза сам с групата навън?", f: "Може ли да изляза сама с групата навън?", x: "Може ли да изляза с групата навън без колега?" }, // nieuw, nalezen
-    'c.grouprules.a': "Да, но първо кажи на колега.", // nieuw, nalezen
-    'c.grouprules': "Винаги пред очите на друг възрастен", // nieuw, nalezen
-    'c.grouprules.b': "В детското заведение друг възрастен винаги трябва да може да те види или чуе, когато си с децата. Това пази децата и теб. Всяко дете има ментор: един служител, който следи детето отблизо и говори с родителите. Тревожиш се за дете заради нещо вкъщи, например синини или страх? Не задавай на детето твърде много въпроси: кажи на началника си, той знае стъпките. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.grouprules.p': "Тревожа се за това дете.", // nieuw, nalezen
-    'c.grouprules.s': "Пак виждаш синини по едно дете. Детето е тихо. Какво правиш?", // nieuw, nalezen
-    'c.grouprules.o1': "Казваш на началника си още същия ден.", // nieuw, nalezen
-    'c.grouprules.o2': "Задаваш на детето много въпроси.", // nieuw, nalezen
-    'c.grouprules.o3': "Обаждаш се на родителите и питаш защо.", // nieuw, nalezen
-    'c.grouprules.w': "Началникът ти знае стъпките при тревога за дете. Многото въпроси могат да изплашат детето.", // nieuw, nalezen
+    'l.coldroom': "Хладилната и фризерната камера", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.temperatuur': "температурата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.graden': "градусите (°C)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bevroren': "замразен", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ontdooien': "размразявам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koelketen': "студената верига (храната остава студена през целия път)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.thermokleding': "термо облеклото (топли дрехи за студа)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.coldroom.1': "Във фризерната камера е минус осемнадесет градуса.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.coldroom.2': "Сложи месото веднага в хладилната камера.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.coldroom.3': "Запиши температурата в списъка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.q': "Защо пиука хладилната камера?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.a': "Вратата е отворена. Затвори я бързо.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom': "Работа на студено: облечи се топло, пази храната студена", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.b': "Храната трябва да остане студена през целия път: от камиона до хладилната камера до магазина. Затова прибирай студените продукти веднага и дръж вратите на хладилната и фризерната камера затворени. Проверявай температурата и я записвай. Във фризерната камера носи термо облеклото си, ръкавици и шапка и си вземи топла почивка навреме. Погрижи се винаги да можеш да отвориш вратата отвътре. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.p': "Тук е твърде топло. Охлаждането не работи.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.s': "Термометърът на хладилната камера показва много по-високо число от нормалното. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.o1': "Веднага казваш на началника си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.o2': "Чакаш: пак ще се охлади.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.o3': "Записваш нормалното число в списъка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.w': "Твърде топло означава, че микробите растат. Началникът ти решава дали храната е още безопасна.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.foreignbody': "Стъкло, метал и пластмаса в храната", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.metaaldetector': "металдетекторът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.glasbreuk': "счупеното стъкло (стъкло, което се е счупило)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.splinter': "отломката (малко остро парче)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vreemdvoorwerp': "чуждото тяло (нещо в храната, което не трябва да е там)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vervuild': "замърсен (нещо мръсно е попаднало вътре)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ploegleider': "ръководителят на смяната", // nieuw, nalezen // nagelezen AI 28 nov
+    's.foreignbody.1': "Металдетекторът пиука. Спри лентата.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.foreignbody.2': "На линия две се счупи стъкло.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.foreignbody.3': "Сложи продукта в кутията за брак.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.q': "Какво да правя с това парченце пластмаса?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.a': "Покажи го на ръководителя на смяната.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody': "Нещо в храната? Спри и съобщи", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.b': "Стъкло, метал, пластмаса, лепенка или косъм никога не трябва да попадат в храната. Металдетекторът пиука или намираш нещо странно? Остави продукта настрана и кажи на ръководителя на смяната. Счупило се е стъкло? Спри линията наблизо: ръководителят на смяната решава какво трябва да се изхвърли. Използвай само сини лепенки, за да се виждат лесно. Никога не внасяй стъкло, химикалки или незакрепени неща в работното помещение. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.p': "Намерих нещо в продукта.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.s': "Стъклена лампа се чупи над линията. Продуктите продължават да се движат. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.o1': "Спираш линията и викаш ръководителя на смяната.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.o2': "Махаш стъклото, което виждаш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.o3': "Продължаваш: детекторът намира стъкло.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.w': "Металдетекторът не намира стъкло. Малки парчета, които не виждаш, могат да наранят тежко клиент.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.foodline': "Производствената линия", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.cutting': "Рязане и теглене", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitbenen': "обезкостявам (изрязвам костите от месото)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.fileren': "филетирам (режа риба или месо на плоски парчета)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.portie': "порцията", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wegen': "тегля (на везна)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gewicht': "теглото", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snijplank': "дъската за рязане", // nieuw, nalezen // nagelezen AI 28 nov
+    's.cutting.1': "Претегляй всяка порция.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.cutting.2': "Теглото е твърде малко.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.cutting.3': "Наточи ножа си, преди да започнеш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.q': "Колко трябва да има в една кутийка?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.a': "Петстотин грама. Погледни везната.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting': "Остър нож, защитена ръка", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.b': "Острият нож е по-безопасен от тъпия: трябва ти по-малко сила, затова се изплъзва по-рядко. Винаги носи ръкавицата против порязване на другата ръка. Режи в посока от тялото си. Оставяй ножа легнал на дъската, никога в мивка или под месо. Не се опитвай да хванеш падащ нож: отстъпи назад. Носи ножа с върха надолу, близо до крака си. Дори малко порязване трябва да се покрие и да се съобщи.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.p': "Ножът ми е тъп.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.s': "Ножът се изплъзва от ръката ти и пада. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.o1': "Отстъпваш назад и го оставяш да падне.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.o2': "Хващаш го бързо.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.o3': "Спираш го с крак.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.w': "Падащ нож реже дълбоко, когато го хванеш. На пода не може да навреди.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.labels': "Опаковане и етикети", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.etiketteren': "етикетирам (слагам етикети)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lotnummer': "партидният номер (един номер за една партида продукти)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vacuum': "вакуумиран (целият въздух е изкаран)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schaal': "тавичката (плосък съд за храна)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.printer': "принтерът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.omdoos': "външният кашон (големият кашон около малките опаковки)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.labels.1': "Провери дали датата на етикета е вярна.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.labels.2': "Тази опаковка не е вакуумирана. Опаковай я пак.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.labels.3': "Запиши партидния номер в списъка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.q': "Каква дата трябва да има на него?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.a': "След десет дни. Погледни списъка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels': "Грешният етикет е опасен", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.b': "Етикетът казва на клиента какво има вътре, колко тежи и до кога е годно. Грешна дата или грешен етикет може да разболее хората, например когато липсва алерген. Затова проверявай първите етикети на всяка нова партида: продукта, датата и партидния номер. Нещо не е наред? Спри и кажи на началника си. Продуктите с грешен етикет се оставят настрана, никога не се продават. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.p': "Етикетът не е верен.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.s': "Виждаш, че датата на етикетите е с една седмица по-късна. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.o1': "Спираш да опаковаш и казваш на началника си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.o2': "Продължаваш: една седмица няма значение.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.o3': "Поправяш датата с химикалка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.w': "Грешната дата може да накара хората да ядат храна, която вече не е безопасна. По-добре да се спре сега, отколкото да се изтегля по-късно.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.linecleaning': "Почистване на линията", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schuim': "пяната", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hogedrukspuit': "водоструйката (машина за миене под налягане)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.naspoelen': "изплаквам (измивам с чиста вода)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.demonteren': "разглобявам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.borstel': "четката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.restjes': "остатъците (малки парченца храна)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.linecleaning.1': "Първо изключи машината.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.linecleaning.2': "Напръскай пяната върху лентата.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.linecleaning.3': "После изплакни всичко с чиста вода.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.q': "Лентата чиста ли е вече?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.a': "Още не. Трябва още да я изплакна.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning': "Изключи тока, преди да чистиш", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.b': "Никога не чисти машина, която работи. Изключи я и се погрижи никой да не може да я пусне пак: следвай стъпките на твоята фирма. Носи правилните ръкавици, очила и ботуши: почистващите препарати могат да изгорят кожата и очите ти. Никога не смесвай препарати. Първо махни остатъците, после пяна, търкане и изплакване. Не пръскай вода по електрически табла или контакти. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.p': "Изключена ли е машината?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.s': "Парче месо е заседнало в лентата. Машината още работи. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.o1': "Първо я изключваш, после го махаш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.o2': "Издърпваш го бързо с ръка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.o3': "Избутваш го с нож.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.w': "Работещата лента може да дръпне ръката ти за секунда. Изключването отнема само миг.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.haccp': "Проверка и записване (HACCP)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.controlepunt': "контролната точка (стъпка, на която трябва да провериш нещо)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kerntemperatuur': "температурата в средата (температурата вътре в храната)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.prikthermometer': "термометърът с игла (забиваш го в храната)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afwijking': "отклонението (нещо не е както трябва)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.steekproef': "проверката на случаен принцип (тестваш няколко продукта)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kwaliteitsdienst': "отделът по качеството (QA)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.haccp.1': "Измери температурата в средата с термометъра с игла.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.haccp.2': "Запиши всичко в списъка.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.haccp.3': "Нещо не е наред? Съобщи веднага.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.q': "Защо трябва да записвам всичко?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.a': "Така знаем, че храната е безопасна.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp': "HACCP: провери, запиши, съобщи", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.b': { m: "Всяка фирма за храни работи с план за безопасност на храните (HACCP). В него пише на кои стъпки трябва да провериш нещо, например температурата на хладилната камера или температурата в средата на сготвеното месо. Проверяваш, записваш и се подписваш. Записвай това, което наистина си измерил, дори когато е грешно. Грешното число не е твоя вина, но да го скриеш е опасно. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "Всяка фирма за храни работи с план за безопасност на храните (HACCP). В него пише на кои стъпки трябва да провериш нещо, например температурата на хладилната камера или температурата в средата на сготвеното месо. Проверяваш, записваш и се подписваш. Записвай това, което наистина си измерила, дори когато е грешно. Грешното число не е твоя вина, но да го скриеш е опасно. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "Всяка фирма за храни работи с план за безопасност на храните (HACCP). В него пише на кои стъпки трябва да провериш нещо, например температурата на хладилната камера или температурата в средата на сготвеното месо. Проверяваш, записваш и се подписваш. Записвай това, което наистина показва измерването, дори когато е грешно. Грешното число не е твоя вина, но да го скриеш е опасно. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.p': "Температурата е твърде висока.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.s': { m: "Забравил си да измериш в десет. Колегата ти казва: „Просто запиши добро число.“ Какво правиш?", f: "Забравила си да измериш в десет. Колегата ти казва: „Просто запиши добро число.“ Какво правиш?", x: "Забрави да измериш в десет. Колегата ти казва: „Просто запиши добро число.“ Какво правиш?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.o1': "Измерваш сега и записваш истинския час.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.o2': "Записваш добро число за десет часа.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.o3': "Оставяш реда празен.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.w': "Списъкът трябва да показва какво наистина се е случило. Измисленото число крие проблем, който може да разболее хората.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.collection': "Събиране на отпадъци", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.binlorry': "Сметовозът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vuilniswagen': "сметовозът (камионът за боклук)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kliko': "кофата на колела (кофа за боклук с колела)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kieplift': "повдигачът за кофи (вдига кофата и я изсипва)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.treeplank': "задното стъпало (стъпало отзад на камиона)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijplaatsing': "допълнителният боклук (чували, оставени до кофата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ophaaldag': "денят за извозване", // nieuw, nalezen // nagelezen AI 28 nov
+    's.binlorry.1': "Сложи кофата на колела на повдигача.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.binlorry.2': "До контейнера има чували.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.binlorry.3': "Кофата на колела е твърде тежка. Остави я.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.q': "Може ли да се возя отзад?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.a': "Не, качваш се в кабината.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry': "Нека те виждат и се вози в кабината", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.b': "Носи светлоотразителното си облекло на всяка обиколка. Качвай се и слизай откъм тротоара, никога откъм движението. Вози се в кабината, не отзад на камиона: само когато фирмата ти ясно го позволява и никога, когато камионът дава на заден ход или кара бързо. Стой далеч от повдигача за кофи, докато се движи. Кофата е твърде тежка или нещо стърчи от нея? Остави я и съобщи. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.p': "Тази кофа на колела е твърде тежка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.s': "Следващата улица е много близо. Шофьорът казва: „Застани на задното стъпало.“ Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.o1': "Качваш се в кабината въпреки това.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.o2': "Заставаш на стъпалото: близо е.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.o3': "Вървиш зад камиона.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.w': "Падането от движещ се камион е една от най-големите опасности в тази работа. В кабината си в безопасност.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.reversing': "Безопасен заден ход", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.achteruitrijden': "давам на заден ход (карам назад)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dodehoek': "мъртвата зона (където шофьорът не те вижда)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanwijzer': "сигналистът (човекът, който насочва шофьора)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oogcontact': "зрителният контакт", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.piepen': "пиукам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.cabine': "кабината (където седи шофьорът)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reversing.1': "Никога не заставай зад камиона.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reversing.2': "Не те виждам в огледалото.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reversing.3': "Осъществи зрителен контакт с шофьора.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.q': "Можеш ли да ми помогнеш да дам на заден ход?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.a': "Да, отляво съм. Гледай в огледалото.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing': "Никога зад камион на заден ход", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.b': "Много злополуки със сметовози стават, когато карат назад. Шофьорът не вижда точно зад камиона: мъртвата зона. Затова никога не стой и не минавай зад камион, който може да даде на заден ход. Насочвай шофьора отстрани, където се виждате един друг в огледалото. Изгубихте зрителен контакт? Шофьорът спира. Уговорете ясни знаци, преди да започнете. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.p': "Спри! Вече не те виждам.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.s': "Камионът дава на заден ход. Минаваш зад него, за да вземеш чувал. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.o1': "Чакаш, докато камионът спре.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.o2': "Минаваш бързо: само една секунда е.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.o3': "Махваш на шофьора и минаваш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.w': "Шофьорът не може да те види зад камиона. Една секунда е достатъчна за злополука.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.wastesorting': "Разделяне на отпадъците", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.papier': "хартията", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plastic': "пластмасата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gft': "биоотпадъците (плодове, зеленчуци и растения)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.restafval': "смесените отпадъци (каквото не може да се раздели)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.karton': "картонът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.blik': "кутийката (метална консерва)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wastesorting.1': "Стъклото отива в контейнера за стъкло.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wastesorting.2': "Това е за смесените отпадъци.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wastesorting.3': "Сгъни картона на плоско.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.q': "Къде отива кутия от пица?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.a': "При смесените отпадъци. Има мазнина по нея.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting': "Доброто разделяне спестява работа", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.b': "Разделените отпадъци могат да се използват пак: хартията става хартия, стъклото става стъкло. Но едно грешно нещо може да развали цял товар. Затова погледни в кофата, преди да я изпразниш. Нещо не е на мястото си, например чувал със смесени отпадъци в хартията? Остави я или следвай правилата на фирмата си. Кои отпадъци къде отиват, е различно във всеки град: научи правилата в твоя район. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.p': "Това не е за тук.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.s': "Една кофа за хартия е пълна с черни чували за боклук. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.o1': "Оставяш я и съобщаваш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.o2': "Изсипваш я при хартията.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.o3': "Изваждаш чувалите на ръка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.w': "Боклукът в хартията разваля целия товар. В чувалите може да има и остри или мръсни неща.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.wastesafety': "Остри предмети и вдигане", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snijwond': "порязването (рана от нещо остро)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.prikken': "убождам (остър връх влиза в кожата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.naald': "иглата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scherp': "остър", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rugpijn': "болката в гърба", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tetanusprik': "ваксината против тетанус (инжекция срещу болест от мръсотия в рана)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wastesafety.1': "Никога не хващай чувал отдолу.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wastesafety.2': "Внимавай, в този чувал има стъкло.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wastesafety.3': "Убодох се на игла.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.q': "Порязах се. Какво трябва да направя?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.a': "Измий раната добре. И ми кажи.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety': "Никога не стискай чувал", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.b': "В чувал за боклук може да има стъкло, ножове или игли. Затова никога не притискай чувал до тялото си, никога не го стискай и никога не го носи опрян на крака си: хващай го отгоре, далеч от себе си. Носи ръкавиците си. Вдигай със свити колене и изправен гръб и бутай кофата, не я носи. Убоде или поряза ли те нещо? Измий раната добре с вода и кажи на началника си още същия ден.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.p': "Убодох се.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.s': "Един чувал се скъсва. Виждаш игла в него. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.o1': "Не я пипаш и съобщаваш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.o2': "Вдигаш я с ръкавиците.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.o3': "Бутваш я обратно в чувала.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.w': "Ръкавиците не спират иглата. Иглата може да пренесе болест.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.recycling': "Площадката за отпадъци", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.yard': "На площадката за отпадъци", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.milieustraat': "площадката за отпадъци (където хората носят големи или специални отпадъци)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.grofvuil': "едрогабаритните отпадъци (големи неща, например диван)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.puin': "строителните отпадъци (натрошени камъни и тухли)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.matras': "матракът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.weegbrug': "кантарът (везна за коли и камиони)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afvalpas': "картата за отпадъци (живущите я показват на входа)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.yard.1': "Строителните отпадъци отиват в контейнер четири.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.yard.2': "Може ли да видя картата ви за отпадъци?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.yard.3': "Първо минете през кантара.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.q': "Къде отива този матрак?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.a': "В контейнера за едрогабаритни отпадъци, отзад.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard': "Помагай, но пази площадката безопасна", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.b': { m: "На площадката за отпадъци казваш на посетителите къде отиват отпадъците им и проверяваш дали са добре разделени. Бъди любезен: много хора идват само няколко пъти в годината и не знаят правилата. Дръж децата и посетителите далеч от машините и от ръба на високите контейнери. Вдигайте тежките неща заедно или остави посетителя сам да носи своите. Някой носи нещо, което не познаваш? Питай, преди да влезе в контейнера. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "На площадката за отпадъци казваш на посетителите къде отиват отпадъците им и проверяваш дали са добре разделени. Бъди любезна: много хора идват само няколко пъти в годината и не знаят правилата. Дръж децата и посетителите далеч от машините и от ръба на високите контейнери. Вдигайте тежките неща заедно или остави посетителя сам да носи своите. Някой носи нещо, което не познаваш? Питай, преди да влезе в контейнера. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "На площадката за отпадъци казваш на посетителите къде отиват отпадъците им и проверяваш дали са добре разделени. Отнасяй се любезно: много хора идват само няколко пъти в годината и не знаят правилата. Дръж децата и посетителите далеч от машините и от ръба на високите контейнери. Вдигайте тежките неща заедно или остави посетителя сам да носи своите. Някой носи нещо, което не познаваш? Питай, преди да влезе в контейнера. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.p': "Това отива в контейнер четири.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.s': "Един мъж иска да хвърли пълен чувал в контейнера за дърво. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.o1': "Питаш какво има в чувала.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.o2': "Оставяш го: това са неговите отпадъци.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.o3': "Хвърляш го вместо него.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.w': "Едно грешно нещо може да развали пълен контейнер. Един любезен въпрос пази отпадъците чисти.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.hazardous': "Опасни отпадъци", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.chemischafval': "опасните отпадъци (химически отпадъци, например боя и масло)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spuitbus': "спреят (флакон под налягане)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.asbest': "азбестът (опасен материал в стари сгради)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lekken': "тека (изтича течност)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gevarensymbool': "знакът за опасност (картинка, която предупреждава за опасност)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vat': "варелът, бъчвата", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hazardous.1': "Сложи боята при опасните отпадъци.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hazardous.2': "Тази бутилка тече. Хвани я с ръкавици.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hazardous.3': "Азбестът трябва да е добре опакован.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.q': "Какво има в тази бутилка?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.a': "Не знам. Остави я настрана.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous': "Непознато? Не отваряй, не мирисай", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.b': "Опасните отпадъци, например боя, масло, почистващи препарати, батерии и спрейове, могат да изгорят, да отровят или да експлодират. Търси знаците за опасност. Носи ръкавици и предпазни очила. Никога не отваряй бутилка, за да помиришеш какво има вътре, и никога не смесвай препарати. Дръж бутилката, която тече, изправена и я сложи в тава. Азбестът може да влезе само ако е добре опакован: никога не го чупи и не го изваждай от опаковката. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.p': "Какво има тук вътре?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.s': "Една жена носи бутилка без етикет. Мирише силно. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.o1': "Оставяш я настрана и казваш на началника си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.o2': "Отваряш я и помирисваш какво е.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.o3': "Изсипваш я във варела за боя.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.w': "Непознатите продукти могат да реагират с други. Началникът ти знае къде може да отиде безопасно.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.baler': "Пресата за бали", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.balenpers': "пресата за бали (машина, която пресова отпадъци на блокове)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.baal': "балата (пресован блок хартия или пластмаса)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.persen': "пресовам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vastlopen': "засядам, блокирам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.binddraad': "телта за бали", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vulopening': "отворът за пълнене (откъдето влизат отпадъците)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.baler.1': "Пресата заседна. Натисни аварийния стоп.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.baler.2': "Никога не пъхай ръката си в пресата.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.baler.3': "Вържи балата добре.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.q': "Пресата засяда. Може ли да погледна?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.a': "Не. Първо се изключва токът.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler': "Никога не бъркай в пресата", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.b': { m: "Пресата за бали натиска с огромна сила. Използвай я само когато си научил как. Никога не пъхай длан, ръка или крак в отвора за пълнене, дори когато машината изглежда спряла. Блокира ли? Натисни аварийния стоп, изключи я и се погрижи никой да не може да я включи: следвай стъпките на твоята фирма. Едва тогава погледни. Никога не се качвай в преса за бали или в контейнер. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "Пресата за бали натиска с огромна сила. Използвай я само когато си научила как. Никога не пъхай длан, ръка или крак в отвора за пълнене, дори когато машината изглежда спряла. Блокира ли? Натисни аварийния стоп, изключи я и се погрижи никой да не може да я включи: следвай стъпките на твоята фирма. Едва тогава погледни. Никога не се качвай в преса за бали или в контейнер. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "Пресата за бали натиска с огромна сила. Използвай я само когато знаеш как. Никога не пъхай длан, ръка или крак в отвора за пълнене, дори когато машината изглежда спряла. Блокира ли? Натисни аварийния стоп, изключи я и се погрижи никой да не може да я включи: следвай стъпките на твоята фирма. Едва тогава погледни. Никога не се качвай в преса за бали или в контейнер. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.p': "Пресата заседна.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.s': "Парче картон е заседнало в отвора. Машината стои. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.o1': "Изключваш я напълно, после го изваждаш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.o2': "Издърпваш го бързо с ръка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.o3': "Набутваш го с крак.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.w': "Машина, която стои, може да тръгне пак. Без изключен ток ръката ти е в опасност.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.shovel': "Челният товарач на площадката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.shovel': "челният товарач (голяма машина с кофа отпред)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zwaailamp': "сигналната лампа (оранжева лампа отгоре на машината)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bunker': "клетката (голямо бетонно място за един вид отпадъци)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.looppad': "пешеходната пътека (пътека само за хора)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toeteren': "натискам клаксона", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opscheppen': "загребвам", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shovel.1': "Стой на пешеходната пътека.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shovel.2': "Товарачът дава на заден ход. Внимавай!", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shovel.3': "Сигналната лампа свети. Машината се движи.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.q': "Може ли да мина покрай товарача?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.a': "Само ако шофьорът те вижда.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel': "Не заставай на пътя на товарача", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.b': "Челният товарач е голям и шофьорът му вижда малко около него, особено отзад. Затова стой на пешеходните пътеки и носи светлоотразителното си облекло. Никога не минавай зад машина, която се движи. Искаш да минеш? Изчакай шофьорът да те види и да ти даде знак. Сигналната лампа означава: тази машина работи. Дръж посетителите далеч от нея. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.p': "Видя ли ме?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.s': "Трябва да минеш покрай работещ челен товарач. Шофьорът гледа на другата страна. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.o1': "Чакаш, докато те види.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.o2': "Минаваш бързо покрай него.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.o3': "Минаваш зад машината.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.w': "Шофьор, който не те е видял, не може да спре заради теб.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.toddlers': "Децата", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.nappies': "Смяна на памперси", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.luier': "памперсът (пелената)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verschonen': "сменям памперса (на дете)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.commode': "масата за повиване", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.billendoekje': "мократа кърпичка (за бебе)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.potje': "гърнето", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zindelijk': "без памперс (детето може да ходи до тоалетна)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.nappies.1': "Ще сменя памперса на Сем.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.nappies.2': "Измий си ръцете, след като смениш памперс.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.nappies.3': "Никога не оставяй дете само на масата за повиване.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.q': "Кога смени памперса на Ноор?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.a': "В десет. Записано е в приложението.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies': "Едната ръка винаги на детето", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.b': { m: "Приготви всичко, преди да сложиш детето на масата за повиване: чист памперс, мокри кърпички и дрехи. После дръж едната си ръка на детето през цялото време. Никога не се отдалечавай, дори за секунда. Измивай ръцете си след всяка смяна и почиствай масата. Записвай кога си сменил памперса, за да знаят родителите. Виждаш обрив или рана? Запиши го и кажи на колега. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "Приготви всичко, преди да сложиш детето на масата за повиване: чист памперс, мокри кърпички и дрехи. После дръж едната си ръка на детето през цялото време. Никога не се отдалечавай, дори за секунда. Измивай ръцете си след всяка смяна и почиствай масата. Записвай кога си сменила памперса, за да знаят родителите. Виждаш обрив или рана? Запиши го и кажи на колега. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "Приготви всичко, преди да сложиш детето на масата за повиване: чист памперс, мокри кърпички и дрехи. После дръж едната си ръка на детето през цялото време. Никога не се отдалечавай, дори за секунда. Измивай ръцете си след всяка смяна и почиствай масата. Записвай часа на смяната на памперса, за да знаят родителите. Виждаш обрив или рана? Запиши го и кажи на колега. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.p': "Тъкмо му сменям памперса.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.s': "Сменяш памперса на бебе. Забрави мокрите кърпички; те са в другия край на стаята. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.o1': "Взимаш бебето със себе си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.o2': "Отиваш бързо за тях: близо е.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.o3': "Оставяш бебето и викаш някого.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.w': "Бебето може да се търкулне от масата за повиване за една секунда. Никога не оставяй дете само там горе.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.mealtime': "Ядене и пиене", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.fles': "шишето (за бебе)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.slabbetje': "лигавникът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beker': "чашата (с дръжка)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kinderstoel': "столчето за хранене", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.fruithap': "плодовото пюре", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.boertje': "оригването (на бебе)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mealtime.1': "Измий си ръцете преди ядене.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mealtime.2': "Дай на Лиза шишето ѝ в дванадесет.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mealtime.3': "Всички седят на масата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.q': "Може ли Даан да получи бисквитка?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.a': "Не, той има алергия. Погледни списъка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime': "Провери списъка, преди да дадеш храна", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.b': "Преди да дадеш на дете храна или напитка, провери списъка: някои деца имат алергия, други не може да ядат определена храна заради здравето или вярата си. Измий своите ръце и ръцете на децата преди ядене. Нека децата седят, докато ядат и пият, никога да не вървят или тичат. Режи храната на малки парчета за малките деца, например гроздето на парченца. Никога не давай на дете нещо от дома на друго дете. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.p': "Може ли той да яде това?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.s': "Дете плаче за бисквитка. Не познаваш добре това дете. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.o1': "Първо проверяваш списъка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.o2': "Даваш я: това е само бисквитка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.o3': "Даваш половин бисквитка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.w': "В бисквитката може да има ядки, мляко или яйца. За дете с алергия това може да е много опасно.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.naptime': "Спане", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedje': "креватчето (малко легло за бебе)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.slaapkamer': "спалнята", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.knuffel': "плюшената играчка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.speen': "залъгалката (биберонът)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.babyfoon': "бебефонът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.slaapzak': "бебешкият спален чувал", // nieuw, nalezen // nagelezen AI 28 nov
+    's.naptime.1': "Сложи бебето да легне по гръб.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.naptime.2': "Често поглеждам в спалнята.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.naptime.3': "Ето ти плюшената играчка. Сладки сънища.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.q': "Мила заспа ли вече?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.a': "Да, от един часа. Скоро пак ще погледна.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime': "Бебетата спят по гръб", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.b': "Бебето спи най-безопасно по гръб, в спален чувал, в собственото си креватче. Без възглавница, без свободно одеяло и без големи играчки в креватчето. Дръж стаята прохладна и проветрена. Проверявай често спящите деца: гледай и слушай, дори когато бебефонът е включен. Родител те моли да оставиш бебето му да спи по друг начин? Първо кажи на началника си. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.p': "Ще отида да погледна в спалнята.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.s': "Едно бебе е заспало по корем в креватчето. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.o1': "Внимателно го обръщаш по гръб.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.o2': "Оставяш го да спи: вече е заспало.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.o3': "Слагаш възглавница до него.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.w': "По гръб бебето може да диша свободно. Възглавницата може да покрие лицето му.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.playtime': "Игра", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spelen': "играя", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.speelgoed': "играчките", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zandbak': "пясъчникът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.glijbaan': "пързалката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.puzzel': "пъзелът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.buitenspelen': "играя навън", // nieuw, nalezen // nagelezen AI 28 nov
+    's.playtime.1': "Отиваме да играем навън. Обличайте якетата!", // nieuw, nalezen // nagelezen AI 28 nov
+    's.playtime.2': "Прибери играчките.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.playtime.3': "По едно дете на пързалката.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.q': "Може ли да играя с пъзела?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.a': "Да, на масата. После го прибираш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime': "Безопасна игра: гледай, брой, проверявай", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.b': "Децата учат, като играят, затова ги оставяй да пробват неща. Но винаги ги дръж пред очите си, и навън. Брой децата, когато излизате и когато се връщате вътре. Първо провери площадката: затворена ли е портата, има ли стъкло или боклук? Играчките с малки части не са за деца под три години: може да се задавят с тях. Почиствай често играчките, които влизат в устата. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.p': "Всички тук ли са?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.s': "Връщате се вътре от площадката. Преброяваш с едно дете по-малко. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.o1': "Казваш на колега и веднага търсиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.o2': "Чакаш: детето ще влезе само.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.o3': "Броиш пак утре.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.w': "Дете само навън може да се нарани или да се загуби. Всяка минута е важна.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.daycare': "Родители, безопасност и групата", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.pickup': "Довеждане и взимане", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ouder': "родителят", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afscheid': "сбогуването", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oppas': "детегледачката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schriftje': "тетрадката (за бележки между родителите и персонала)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ouderapp': "приложението за родители (за снимки и съобщения до родителите)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wennen': "свиквам (свиквам с ново място)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pickup.1': "Ще го запиша в тетрадката.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pickup.2': "Кажи чао на татко.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pickup.3': "Слагам снимка в приложението за родители.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.q': "Кой ще вземе Сем днес?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.a': "Баба му. Тя е в списъка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup': "Само на хора от списъка", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.b': "Давай детето само на родител или на човек, за когото родителите са ти казали. Не познаваш човека? Попитай кой е, погледни документа му за самоличност и провери при родителите или при началника си. При взимането кажи на родителя как е минал денят: яденето, спането, играта и всичко особено. Записвай важните неща в тетрадката или в приложението. Говори за други деца само с техните родители. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.p': "Кой сте вие? Ще се обадя на родителите.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.s': "Непознат мъж идва да вземе Сем. Той не е в списъка. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.o1': "Обаждаш се на родителите, преди Сем да тръгне.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.o2': "Пускаш Сем: мъжът знае името.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.o3': "Питаш Сем дали го познава.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.w': "Ти отговаряш за детето, докато не го поеме човек, когото родителите са избрали.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.childsafety': "Безопасност в групата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.traphekje': "преградата за стълби", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vingerstrip': "предпазителят за пръсти (на вратата, за да не се прищипват пръсти)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verslikken': "задавям се (храната влиза в грешната тръба)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bult': "цицината (на главата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schaafwond': "ожулването (кожата е одрана)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toezicht': "надзорът (наблюдаваш децата)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.childsafety.1': "Винаги затваряй преградата за стълби.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.childsafety.2': "Слагам малко лед на цицината.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.childsafety.3': "Сем се задави. Помагам му.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.q': "Падна ли Бо?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.a': "Да, има цицина. Обаждам се на майка ѝ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety': "Огледай се с очите на дете", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.b': "Малките деца слагат всичко в устата си и се катерят навсякъде. Затова дръж преградата за стълби затворена, слагай почистващите препарати и лекарствата там, където децата не могат да стигнат, и дръж горещите напитки далеч от децата. Проверявай стаята всеки ден. Дете се нарани? Дай първа помощ, утеши детето, кажи на родителите и го запиши. Сериозно ли е? Обади се на 112. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.p': "Преградата за стълби е отворена.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.s': "Оставяш горещото си кафе на ниска масичка. Малко дете отива към него. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.o1': "Веднага слагаш кафето високо.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.o2': "Казваш на детето да не го пипа.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.o3': "Изпиваш го бързо.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.w': "Горещото кафе може тежко да изгори малко дете. Мястото, до което детето не стига, е единственото безопасно място.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.sickchild': "Болно дете и алергии", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huiduitslag': "обривът (червени петна по кожата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.diarree': "диарията", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.overgeven': "повръщам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.allergielijst': "списъкът с алергии", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.adrenalinepen': "адреналиновата писалка (писалка с лекарство при силна алергия)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.temperaturen': "меря температура", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sickchild.1': "Сем има температура. Обаждам се на баща му.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sickchild.2': "Погледни списъка с алергии преди яденето.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sickchild.3': "Никога не давай лекарство без разрешение.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.q': "Как е Йип?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.a': "Много е горещ. Ще му измеря температурата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild': "Болно дете: кажи, не гадай", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.b': { m: "Следи как са децата. Детето е горещо, много уморено, повръща или има обрив? Измери му температурата, кажи на колегата си и се обади на родителите. Давай лекарство само с писмено разрешение от родителите и записвай какво си дал и кога. Знай кои деца имат алергия и къде е лекарството им. Дете със силна алергична реакция: дай адреналиновата писалка, ако си научил как, и се обади на 112. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", f: "Следи как са децата. Детето е горещо, много уморено, повръща или има обрив? Измери му температурата, кажи на колегата си и се обади на родителите. Давай лекарство само с писмено разрешение от родителите и записвай какво си дала и кога. Знай кои деца имат алергия и къде е лекарството им. Дете със силна алергична реакция: дай адреналиновата писалка, ако си научила как, и се обади на 112. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", x: "Следи как са децата. Детето е горещо, много уморено, повръща или има обрив? Измери му температурата, кажи на колегата си и се обади на родителите. Давай лекарство само с писмено разрешение от родителите и записвай какво лекарство е дадено и кога. Знай кои деца имат алергия и къде е лекарството им. Дете със силна алергична реакция: дай адреналиновата писалка, ако знаеш как, и се обади на 112. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.p': "Детето ви е болно. Можете ли да дойдете да го вземете?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.s': "Една майка казва: „Дай му сироп против температура в два.“ Няма формуляр. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.o1': "Молиш я първо да подпише формуляра.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.o2': "Даваш го: майката помоли.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.o3': "Даваш половината, за всеки случай.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.w': "Без писмено разрешение не може да даваш лекарство. Формулярът пази детето и теб.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.grouprules': "Групата и правилата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pedagogischmedewerker': "детският възпитател (служител в детско заведение)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mentor': "менторът (служителят, който следи отблизо едно дете)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vierogenprincipe': "правилото за четирите очи (друг възрастен винаги може да те види или чуе)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.observeren': "наблюдавам (гледам внимателно и го записвам)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.peuter': "малкото дете (дете на две или три години)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.groep': "групата (децата, които са заедно всеки ден)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.grouprules.1': "Аз съм менторът на Лиза.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.grouprules.2': "Колега винаги може да ни види или чуе.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.grouprules.3': "Тревожа се за Даан.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.q': { m: "Може ли да изляза сам с групата навън?", f: "Може ли да изляза сама с групата навън?", x: "Може ли да изляза с групата навън без колега?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.a': "Да, но първо кажи на колега.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules': "Винаги пред очите на друг възрастен", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.b': "В детското заведение друг възрастен винаги трябва да може да те види или чуе, когато си с децата. Това пази децата и теб. Всяко дете има ментор: един служител, който следи детето отблизо и говори с родителите. Тревожиш се за дете заради нещо вкъщи, например синини или страх? Не задавай на детето твърде много въпроси: кажи на началника си, той знае стъпките. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.p': "Тревожа се за това дете.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.s': "Пак виждаш синини по едно дете. Детето е тихо. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.o1': "Казваш на началника си още същия ден.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.o2': "Задаваш на детето много въпроси.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.o3': "Обаждаш се на родителите и питаш защо.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.w': "Началникът ти знае стъпките при тревога за дете. Многото въпроси могат да изплашат детето.", // nieuw, nalezen // nagelezen AI 28 nov
     // Second units for Schoonmaak, Horeca, Zorg and Winkel, and "Werken via een uitzendbureau" (23 November 2026).
-    'u.housekeeping': "Тоалетни, хотел и машини", // nieuw, nalezen
-    'l.sanitary': "Тоалетни и мивки", // nieuw, nalezen
-    'w.wastafel': "мивката (умивалникът в баня или тоалетна)", // nieuw, nalezen
-    'w.toiletpot': "тоалетната чиния", // nieuw, nalezen
-    'w.toiletborstel': "четката за тоалетна", // nieuw, nalezen
-    'w.urinoir': "писоарът", // nieuw, nalezen
-    'w.kalk': "варовикът (бял налеп от водата по крановете и плочките)", // nieuw, nalezen
-    'w.ontstopper': "вендузата (уред за запушена тоалетна или канал)", // nieuw, nalezen
-    's.sanitary.1': "Първо почиствам мивките, после тоалетните.", // nieuw, nalezen
-    's.sanitary.2': "Има варовик по крана.", // nieuw, nalezen
-    's.sanitary.3': "Тоалетната на първия етаж е запушена.", // nieuw, nalezen
-    'c.sanitary.q': "Готови ли са тоалетните?", // nieuw, nalezen
-    'c.sanitary.a': "Още не. Една тоалетна е запушена.", // nieuw, nalezen
-    'c.sanitary': "От чистото към мръсното", // nieuw, nalezen
-    'c.sanitary.b': "В санитарното помещение работиш от чистото към мръсното: първо огледалата и мивките, после тоалетните, а подът накрая. Така не пренасяш мръсотия от тоалетната към мивката. Използвай кърпите с цвета за тоалетната и носи ръкавици. Почисти и четката за тоалетна и я остави да изсъхне. Тоалетна е запушена или повредена? Сложи табела на вратата и съобщи за това. Измий си ръцете, когато свършиш, дори след работа с ръкавици. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.sanitary.p': "Тази тоалетна е запушена. Слагам табела.", // nieuw, nalezen
-    'c.sanitary.s': "Ти почисти една тоалетна. Сега е ред на мивката. Още държиш същата кърпа. Какво правиш?", // nieuw, nalezen
-    'c.sanitary.o1': "Взимаш кърпа с цвета за мивката.", // nieuw, nalezen
-    'c.sanitary.o2': "Използваш същата кърпа: още изглежда чиста.", // nieuw, nalezen
-    'c.sanitary.o3': "Първо изплакваш кърпата в тоалетната.", // nieuw, nalezen
-    'c.sanitary.w': "По кърпата има микроби от тоалетната, дори да не ги виждаш. Новата кърпа ги държи далеч от ръцете и лицата.", // nieuw, nalezen
-    'l.hotelroom': "Хотелски стаи", // nieuw, nalezen
-    'w.laken': "чаршафът (на леглото)", // nieuw, nalezen
-    'w.kussensloop': "калъфката за възглавница", // nieuw, nalezen
-    'w.dekbed': "завивката", // nieuw, nalezen
-    'w.handdoek': "кърпата за баня", // nieuw, nalezen
-    'w.kamerlijst': "списъкът със стаи (стаите, които трябва да направиш днес)", // nieuw, nalezen
-    'w.opmaken': "оправям (леглото)", // nieuw, nalezen
-    's.hotelroom.1': "Оправям леглото с чисти чаршафи.", // nieuw, nalezen
-    's.hotelroom.2': "Сложи две чисти кърпи в банята.", // nieuw, nalezen
-    's.hotelroom.3': "Стая дванайсет е готова. Отивам в тринайсет.", // nieuw, nalezen
-    'c.hotelroom.q': "Колко стаи ти остават?", // nieuw, nalezen
-    'c.hotelroom.a': "Още четири. Тогава списъкът ми е готов.", // nieuw, nalezen
+    'u.housekeeping': "Тоалетни, хотел и машини", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.sanitary': "Тоалетни и мивки", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wastafel': "мивката (умивалникът в баня или тоалетна)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toiletpot': "тоалетната чиния", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toiletborstel': "четката за тоалетна", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.urinoir': "писоарът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kalk': "варовикът (бял налеп от водата по крановете и плочките)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ontstopper': "вендузата (уред за запушена тоалетна или канал)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sanitary.1': "Първо почиствам мивките, после тоалетните.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sanitary.2': "Има варовик по крана.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sanitary.3': "Тоалетната на първия етаж е запушена.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.q': "Готови ли са тоалетните?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.a': "Още не. Една тоалетна е запушена.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary': "От чистото към мръсното", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.b': "В санитарното помещение работиш от чистото към мръсното: първо огледалата и мивките, после тоалетните, а подът накрая. Така не пренасяш мръсотия от тоалетната към мивката. Използвай кърпите с цвета за тоалетната и носи ръкавици. Почисти и четката за тоалетна и я остави да изсъхне. Тоалетна е запушена или повредена? Сложи табела на вратата и съобщи за това. Измий си ръцете, когато свършиш, дори след работа с ръкавици. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.p': "Тази тоалетна е запушена. Слагам табела.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.s': "Ти почисти една тоалетна. Сега е ред на мивката. Още държиш същата кърпа. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.o1': "Взимаш кърпа с цвета за мивката.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.o2': "Използваш същата кърпа: още изглежда чиста.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.o3': "Първо изплакваш кърпата в тоалетната.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.w': "По кърпата има микроби от тоалетната, дори да не ги виждаш. Новата кърпа ги държи далеч от ръцете и лицата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.hotelroom': "Хотелски стаи", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.laken': "чаршафът (на леглото)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kussensloop': "калъфката за възглавница", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dekbed': "завивката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handdoek': "кърпата за баня", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kamerlijst': "списъкът със стаи (стаите, които трябва да направиш днес)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opmaken': "оправям (леглото)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hotelroom.1': "Оправям леглото с чисти чаршафи.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hotelroom.2': "Сложи две чисти кърпи в банята.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hotelroom.3': "Стая дванайсет е готова. Отивам в тринайсет.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.q': "Колко стаи ти остават?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.a': "Още четири. Тогава списъкът ми е готов.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.hotelroom': "Почукай, представи се и изчакай", // nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.hotelroom.b': "Преди да влезеш в хотелска стая, почукай и се представи, например „Housekeeping!“. Изчакай малко и почукай пак. На вратата има табела „Niet storen“? Тогава не влизай и го запиши в списъка със стаи. Гостът е в стаята? Попитай дали може да почистиш сега, или ела по-късно. Нещата на госта остават там, където са. Гост е забравил нещо? Занеси го на рецепцията. Никога не задържай нищо за себе си, дори нещо дребно. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.hotelroom.p': "Добро утро. Може ли да почистя стаята сега?", // nieuw, nalezen
-    'c.hotelroom.s': "В празна стая намираш телефон под леглото. Гостът си е тръгнал. Какво правиш?", // nieuw, nalezen
-    'c.hotelroom.o1': "Занасяш го на рецепцията.", // nieuw, nalezen
-    'c.hotelroom.o2': "Задържаш го: гостът го няма.", // nieuw, nalezen
-    'c.hotelroom.o3': "Оставяш го под леглото.", // nieuw, nalezen
-    'c.hotelroom.w': "Загубените вещи пак са на госта. Рецепцията може да ги върне. Да ги задържиш е кражба и може да ти струва работата.", // nieuw, nalezen
-    'l.dosing': "Препарати и машини", // nieuw, nalezen
-    'w.doseren': "дозирам (използвам точното количество препарат)", // nieuw, nalezen
-    'w.maatbeker': "мерителната чашка", // nieuw, nalezen
-    'w.sprayflacon': "бутилката с пулверизатор", // nieuw, nalezen
-    'w.concentraat': "концентратът (силен препарат, който смесваш с вода)", // nieuw, nalezen
-    'w.veiligheidsblad': "информационният лист за безопасност (пише какви са опасностите на препарата и какво да правиш)", // nieuw, nalezen
-    'w.schrobzuigmachine': "машината за миене на под (търка пода и го попива до сухо)", // nieuw, nalezen
-    's.dosing.1': "Сложи една капачка в кофа вода.", // nieuw, nalezen
-    's.dosing.2': "Първо прочети етикета.", // nieuw, nalezen
-    's.dosing.3': "Машината за миене на под трябва да се включи на зарядното.", // nieuw, nalezen
-    'c.dosing.q': "Сложи още малко препарат. Така става по-чисто.", // nieuw, nalezen
-    'c.dosing.a': "Не, повече не е по-добре. Използвам мерителната чашка.", // nieuw, nalezen
-    'c.dosing': "Точната доза, не повече", // nieuw, nalezen
-    'c.dosing.b': "Повече препарат не чисти по-добре. Твърде много оставя лепкав слой, затова подът се цапа по-бързо и може да стане хлъзгав. Освен това е по-вредно за кожата и белите ти дробове. Използвай мерителната чашка или дозиращата помпа и спазвай етикета. Първо водата, после препарата: така не пръска. Преди да използваш машината за миене на под, провери дали е заредена и има чиста вода в резервоара. Накрая изпразни и изплакни резервоара с мръсната вода. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.dosing.p': "Колко трябва да сложа?", // nieuw, nalezen
-    'c.dosing.s': "Подът остава лепкав. Колега казва: „Сложи двойно повече препарат.“ Какво правиш?", // nieuw, nalezen
-    'c.dosing.o1': "Използваш дозата от етикета и питаш.", // nieuw, nalezen
-    'c.dosing.o2': "Слагаш двойно: така ще стане чисто.", // nieuw, nalezen
-    'c.dosing.o3': "Изсипваш препарата направо на пода.", // nieuw, nalezen
-    'c.dosing.w': "Лепкав под често значи твърде много препарат, а не твърде малко. Точната доза чисти най-добре и е най-безопасна.", // nieuw, nalezen
-    'l.officenight': "Офиси, рано или късно", // nieuw, nalezen
-    'w.toetsenbord': "клавиатурата", // nieuw, nalezen
-    'w.papierbak': "кошчето за хартия (за стара хартия)", // nieuw, nalezen
-    'w.lichtschakelaar': "ключът за осветлението", // nieuw, nalezen
-    'w.pantry': "кухненският бокс (малката кухня в офиса)", // nieuw, nalezen
-    'w.deurmat': "изтривалката (постелката на входа)", // nieuw, nalezen
-    'w.alleenwerken': "работя сам, сама (никой друг не е в сградата)", // nieuw, nalezen
-    's.officenight.1': "Изпразвам кошчетата и кошчето за хартия.", // nieuw, nalezen
-    's.officenight.2': "Не пипам документите на бюрото.", // nieuw, nalezen
-    's.officenight.3': "Гася лампата, когато свърша.", // nieuw, nalezen
-    'c.officenight.q': { m: "Сам ли работиш в сградата довечера?", f: "Сама ли работиш в сградата довечера?", x: "Довечера има ли още някой в сградата освен теб?" }, // nieuw, nalezen
-    'c.officenight.a': "Да. Ще ти пиша, когато свърша.", // nieuw, nalezen
-    'c.officenight': "Никой друг в сградата", // nieuw, nalezen
-    'c.officenight.b': "Рано сутрин или късно вечер често чистиш офиса, без там да има някой друг. Знай какво да правиш, ако нещо се случи: на кого се обаждаш и къде е аптечката? Дръж телефона си у теб. Разбери се с началника си или с колега, че пишеш съобщение, когато започваш и когато свършваш. Не пускай вътре никого, когото не познаваш. Не пипай документи, екрани или клавиатури повече, отколкото трябва за почистването, и никога не чети какво пише на тях. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.officenight.p': "Свърших и вече си тръгвам за вкъщи.", // nieuw, nalezen
-    'c.officenight.s': "През нощта мъж чука на стъклената врата. Казва, че работи тук и е забравил ключа си. Какво правиш?", // nieuw, nalezen
-    'c.officenight.o1': "Не отваряш. Обаждаш се на началника си.", // nieuw, nalezen
-    'c.officenight.o2': "Пускаш го: изглежда приятелски.", // nieuw, nalezen
-    'c.officenight.o3': "Даваш му своя ключ.", // nieuw, nalezen
-    'c.officenight.w': "Всеки може да каже, че работи там. Началникът ти може да го провери. Твоята безопасност и сградата са на първо място.", // nieuw, nalezen
-    'u.cooking': "Кухнята и обслужването", // nieuw, nalezen
-    'l.knives': "Ножове и рязане", // nieuw, nalezen
-    'w.koksmes': "готварският нож (голям кухненски нож)", // nieuw, nalezen
-    'w.dunschiller': "белачката за зеленчуци", // nieuw, nalezen
-    'w.schillen': "беля", // nieuw, nalezen
-    'w.hakken': "кълцам (режа много ситно)", // nieuw, nalezen
-    'w.raspen': "настъргвам", // nieuw, nalezen
-    'w.blokjes': "кубчетата (малки квадратни парчета)", // nieuw, nalezen
-    's.knives.1': "Нарежи морковите на кубчета.", // nieuw, nalezen
-    's.knives.2': "Не слагай ножа в мивката.", // nieuw, nalezen
-    's.knives.3': "Накълцай магданоза на ситно.", // nieuw, nalezen
-    'c.knives.q': "Можеш ли да нарежеш лука?", // nieuw, nalezen
-    'c.knives.a': "Да, шефе. На кръгчета или на кубчета?", // nieuw, nalezen
-    'c.knives': "Ножът е инструмент, не играчка", // nieuw, nalezen
-    'c.knives.b': "Дръж ножа си остър: тъпият нож се изплъзва по-лесно. Режи на дъска, която не мърда: сложи мокра кърпа под нея. Свий пръстите си навътре, като нокти. Ходи с върха надолу, близо до крака си, и казвай „Mes!“ когато минаваш покрай някого. Никога не слагай нож в мивка, пълна с вода: някой може да го хване, без да го види. Нож пада? Отстъпи назад, не го хващай. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.knives.p': "Нож! Минавам зад теб.", // nieuw, nalezen
-    'c.knives.s': "Режеш. Ножът ти се изплъзва от дъската и пада. Какво правиш?", // nieuw, nalezen
-    'c.knives.o1': "Отстъпваш назад и го оставяш да падне.", // nieuw, nalezen
-    'c.knives.o2': "Бързо го хващаш с ръка.", // nieuw, nalezen
-    'c.knives.o3': "Спираш го с крак.", // nieuw, nalezen
-    'c.knives.w': "Падащ нож може дълбоко да среже ръката или крака ти. Нож на пода трябва само да се измие.", // nieuw, nalezen
-    'l.rawcooked': "Сурово, сготвено и алергени", // nieuw, nalezen
-    'w.rauw': "суров (несготвен)", // nieuw, nalezen
-    'w.gaar': "сготвен, готов (може да се яде)", // nieuw, nalezen
-    'w.afdekken': "покривам (с капак или фолио)", // nieuw, nalezen
-    'w.kleurcode': "цветовият код (един цвят дъска и нож за всеки вид храна)", // nieuw, nalezen
-    'w.allergenenlijst': "списъкът с алергени (пише какво има във всяко ястие)", // nieuw, nalezen
-    'w.glutenvrij': "без глутен", // nieuw, nalezen
-    's.rawcooked.1': "Суровото месо се слага най-долу в хладилника.", // nieuw, nalezen
-    's.rawcooked.2': "Готово ли е вече пилето?", // nieuw, nalezen
-    's.rawcooked.3': "Покрий съдовете в хладилната камера.", // nieuw, nalezen
-    'c.rawcooked.q': "Този сос без глутен ли е?", // nieuw, nalezen
-    'c.rawcooked.a': "Не знам със сигурност. Ще проверя в списъка с алергени.", // nieuw, nalezen
-    'c.rawcooked': "Суровото и готовото никога не се допират", // nieuw, nalezen
-    'c.rawcooked.b': "Суровото месо, рибата и яйцата може да носят микроби. Дръж ги далеч от храната, която е готова за ядене. Използвай отделна дъска и нож или цветовия код на твоята кухня и си мий ръцете, след като пипнеш сурова храна. Суровото месо се слага най-долу в хладилника, за да не капе нищо върху другата храна. Покривай храната и пиши дата върху нея. При алергии и следа може да е достатъчна: използвай чисти прибори. Ресторантът трябва да може да каже на гостите какви алергени има в ястието: провери списъка с алергени. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.rawcooked.p': "Коя дъска е за сурово месо?", // nieuw, nalezen
-    'c.rawcooked.s': "Режеш сурово пиле. След това трябва да нарежеш домати за салата. Какво правиш?", // nieuw, nalezen
-    'c.rawcooked.o1': "Взимаш чиста дъска и чист нож.", // nieuw, nalezen
-    'c.rawcooked.o2': "Избърсваш дъската с кърпа и продължаваш.", // nieuw, nalezen
-    'c.rawcooked.o3': "Режеш доматите на същата дъска.", // nieuw, nalezen
-    'c.rawcooked.w': "Микробите от суровото пиле минават на доматите, а салатата не се готви повече. Чистата дъска спира това.", // nieuw, nalezen
-    'l.pass': "Миялното и пасът", // nieuw, nalezen
-    'w.pass': "пасът (плотът, където чиниите чакат сервитьора)", // nieuw, nalezen
-    'w.bon': "бележката с поръчката (поръчката от сервитьора към кухнята)", // nieuw, nalezen
-    'w.spoelkeuken': "миялното помещение (където се мият съдовете)", // nieuw, nalezen
-    'w.vaatwaskorf': "кошът за съдомиялната (кошът, който влиза в съдомиялната машина)", // nieuw, nalezen
-    'w.voorspoelen': "изплаквам предварително (изплаквам преди машината)", // nieuw, nalezen
-    'w.warmhoudlamp': "затоплящата лампа (държи чиниите топли)", // nieuw, nalezen
-    's.pass.1': "Маса осем е на паса.", // nieuw, nalezen
-    's.pass.2': "Идват две нови поръчки.", // nieuw, nalezen
-    's.pass.3': "Първо изплакни чиниите.", // nieuw, nalezen
-    'c.pass.q': "Къде е маса дванайсет?", // nieuw, nalezen
-    'c.pass.a': "На паса е. Нося я сега.", // nieuw, nalezen
-    'c.pass': "Пасът: чиниите не чакат", // nieuw, nalezen
-    'c.pass.b': "На паса кухнята оставя чиниите за сервитьора. Топлата храна трябва бързо да стигне до госта, затова чинията не чака дълго на паса. Провери бележката: правилната маса, правилните ястия, чист ръб на чинията? Тогава я вземи. В миялното: изплакни, сложи всичко в кошовете и остави машината да свърши останалото. Не отваряй машината, докато работи: парата е много гореща. Носи ръкавици, когато доливаш препаратите на машината. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.pass.p': "За коя маса е това?", // nieuw, nalezen
-    'c.pass.s': "На паса има две чинии. Не знаеш за коя маса са. Какво правиш?", // nieuw, nalezen
-    'c.pass.o1': "Поглеждаш бележката или питаш главния готвач.", // nieuw, nalezen
-    'c.pass.o2': "Занасяш ги на маса, която чака.", // nieuw, nalezen
-    'c.pass.o3': "Чакаш някой друг да ги вземе.", // nieuw, nalezen
-    'c.pass.w': "Чиния на грешна маса означава двама чакащи гости и изстинала храна. Един кратък въпрос е по-бърз.", // nieuw, nalezen
-    'l.bill': "Ястия и сметка", // nieuw, nalezen
-    'w.voorgerecht': "предястието (първото ястие)", // nieuw, nalezen
-    'w.hoofdgerecht': "основното ястие", // nieuw, nalezen
-    'w.nagerecht': "десертът", // nieuw, nalezen
-    'w.reservering': "резервацията (маса, запазена предварително)", // nieuw, nalezen
-    'w.pinapparaat': "терминалът за карти", // nieuw, nalezen
-    'w.apartbetalen': "плащам поотделно (всеки плаща за себе си)", // nieuw, nalezen
-    's.bill.1': "Имате ли резервация?", // nieuw, nalezen
-    's.bill.2': "Заедно ли ще платите или поотделно?", // nieuw, nalezen
-    's.bill.3': "Да донеса ли основното ястие сега?", // nieuw, nalezen
-    'c.bill.q': "Може ли да платим поотделно?", // nieuw, nalezen
-    'c.bill.a': "Да, разбира се. Ще донеса терминала.", // nieuw, nalezen
-    'c.bill': "Парите на масата: брой два пъти", // nieuw, nalezen
-    'c.bill.b': "Когато гост плаща, кажи ясно сумата и остави госта да вижда терминала. При плащане в брой преброй парите, когато ги получиш, и пак, когато връщаш рестото. Парите отиват в касата или в портфейла ти за сервитьор, никога в собствения ти джоб. Бакшишът (fooi) отива там, където казва фирмата, например в кутията за бакшиши. Гост си е тръгнал, без да плати? Не тичай след него: кажи на управителя. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.bill.p': "Четирийсет и пет евро, моля.", // nieuw, nalezen
-    'c.bill.s': "Гост ти дава пари и казва: „Точно е.“ Ти не ги преброи. Какво правиш?", // nieuw, nalezen
-    'c.bill.o1': "Преброяваш ги, докато гостът е там.", // nieuw, nalezen
-    'c.bill.o2': "Прибираш ги и ги броиш по-късно.", // nieuw, nalezen
-    'c.bill.o3': "Вярваш на госта: казваш благодаря.", // nieuw, nalezen
-    'c.bill.w': "Ако броиш по-късно и липсват пари, никой не може да провери какво е станало. Броенето на масата пази госта и теб.", // nieuw, nalezen
-    'u.carework': "Лични грижи и грижи вкъщи", // nieuw, nalezen
-    'l.washing': "Миене и обличане", // nieuw, nalezen
-    'w.washandje': "ръкавицата за миене (малка кърпа като ръкавица)", // nieuw, nalezen
-    'w.douchestoel': "столът за душ", // nieuw, nalezen
-    'w.tandenpoetsen': "мия си зъбите", // nieuw, nalezen
-    'w.kammen': "реша", // nieuw, nalezen
-    'w.scheren': "бръсна", // nieuw, nalezen
-    'w.steunkous': "компресивният чорап (стегнат чорап за краката)", // nieuw, nalezen
-    's.washing.1': "Достатъчно топла ли е водата?", // nieuw, nalezen
-    's.washing.2': "Искате ли сами да си измиете лицето?", // nieuw, nalezen
-    's.washing.3': "Сега ще ви сложа компресивните чорапи.", // nieuw, nalezen
-    'c.washing.q': "Днес не искам да се къпя под душа.", // nieuw, nalezen
-    'c.washing.a': "Добре. Да ви помогна ли на мивката?", // nieuw, nalezen
-    'c.washing': "Първо питай, покривай и остави избора", // nieuw, nalezen
-    'c.washing.b': "Да миеш някого е нещо много лично. Казвай какво ще правиш и първо питай. Покривай с кърпа частите на тялото, които не миеш. Затвори вратата или завесата. Остави клиента да избира: душ или миене на мивката и какви дрехи да облече. Остави клиента да прави това, което още може, дори да е по-бавно. Клиентът казва не? Не го насилвай. Опитай по-късно, предложи нещо друго и кажи на медицинската сестра.", // nieuw, nalezen
-    'c.washing.p': "Какво искате да облечете днес?", // nieuw, nalezen
-    'c.washing.s': "Клиентка казва, че днес не иска да я къпят. Какво правиш?", // nieuw, nalezen
-    'c.washing.o1': "Приемаш го и казваш на медицинската сестра.", // nieuw, nalezen
-    'c.washing.o2': "Въпреки това я къпеш: в списъка е.", // nieuw, nalezen
-    'c.washing.o3': "Пропускаш го и не казваш нищо.", // nieuw, nalezen
-    'c.washing.w': "Клиентът има право да каже не. Насилствената грижа разваля доверието. Медицинската сестра може да види защо и какво може да се направи.", // nieuw, nalezen
-    'l.observing': "Наблюдавам и докладвам", // nieuw, nalezen
-    'w.rapporteren': "докладвам (записвам в картона за грижи какво виждаш)", // nieuw, nalezen
-    'w.zorgdossier': "картонът за грижи (всичко за грижите за един клиент)", // nieuw, nalezen
-    'w.drukplek': "декубитусът (червено място от дълго лежане или седене)", // nieuw, nalezen
-    'w.huid': "кожата", // nieuw, nalezen
-    'w.plassen': "пишкам", // nieuw, nalezen
-    'w.vochtlijst': "листът за течности (колко пие клиентът)", // nieuw, nalezen
-    's.observing.1': "Госпожата има червено петно на петата.", // nieuw, nalezen
-    's.observing.2': "Господинът е пил малко днес.", // nieuw, nalezen
-    's.observing.3': "Записвам го в картона за грижи.", // nieuw, nalezen
-    'c.observing.q': "Има ли нещо особено с госпожа Янсен?", // nieuw, nalezen
-    'c.observing.a': "Да. Днес почти не е пишкала.", // nieuw, nalezen
-    'c.observing': "Пиши какво виждаш, а не какво мислиш", // nieuw, nalezen
-    'c.observing.b': "Това, което пишеш в картона за грижи, го чете следващият колега. Пиши факти: какво видя, чу или измери и кога. Не „Mevrouw is lastig“, а „Mevrouw wilde niet eten en duwde het bord weg.“ Пиши го същия ден, с кратки изречения. Не знаеш как да го напишеш на нидерландски? Кажи на медицинската сестра и го напишете заедно. Гледай кожата, когато миеш някого: червено място, което не изчезва, може да е началото на декубитус. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.observing.p': "Записвам какво видях.", // nieuw, nalezen
-    'c.observing.s': "Клиентка беше ядосана по време на миенето. Трябва да го запишеш в картона. Какво правиш?", // nieuw, nalezen
-    'c.observing.o1': "Записваш какво каза и направи тя и кога.", // nieuw, nalezen
-    'c.observing.o2': "Пишеш: „Трудна госпожа, както винаги.“", // nieuw, nalezen
-    'c.observing.o3': "Не пишеш нищо: нормално е.", // nieuw, nalezen
-    'c.observing.w': "Фактите помагат на следващия колега и на медицинската сестра да действат. Мнението не казва какво е станало.", // nieuw, nalezen
-    'l.homecare': "Грижи в дома", // nieuw, nalezen
-    'w.thuiszorg': "грижите в дома (грижи в собствения дом на клиента)", // nieuw, nalezen
-    'w.sleutelkluis': "кутията за ключ (малка кутия с код, в която е ключът от къщата)", // nieuw, nalezen
-    'w.zorgplan': "планът за грижи (какви грижи получава клиентът и как)", // nieuw, nalezen
-    'w.wijkverpleegkundige': "районната медицинска сестра (медицинската сестра на екипа за грижи в дома)", // nieuw, nalezen
-    'w.mantelzorger': "близкият, който се грижи (роднина или приятел, който се грижи за клиента)", // nieuw, nalezen
-    'w.alarmknop': "алармения бутон (клиентът го носи, за да повика помощ)", // nieuw, nalezen
-    's.homecare.1': "Първо звъня на вратата. После взимам ключа.", // nieuw, nalezen
-    's.homecare.2': "Какво пише в плана за грижи?", // nieuw, nalezen
-    's.homecare.3': "Днес ще закъснея с четвърт час.", // nieuw, nalezen
-    'c.homecare.q': "Кой е?", // nieuw, nalezen
-    'c.homecare.a': "Добро утро, от грижите в дома. Може ли да вляза?", // nieuw, nalezen
-    'c.homecare': "Гост в чужд дом", // nieuw, nalezen
+    'c.hotelroom.p': "Добро утро. Може ли да почистя стаята сега?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.s': "В празна стая намираш телефон под леглото. Гостът си е тръгнал. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.o1': "Занасяш го на рецепцията.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.o2': "Задържаш го: гостът го няма.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.o3': "Оставяш го под леглото.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.w': "Загубените вещи пак са на госта. Рецепцията може да ги върне. Да ги задържиш е кражба и може да ти струва работата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.dosing': "Препарати и машини", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doseren': "дозирам (използвам точното количество препарат)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.maatbeker': "мерителната чашка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sprayflacon': "бутилката с пулверизатор", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.concentraat': "концентратът (силен препарат, който смесваш с вода)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.veiligheidsblad': "информационният лист за безопасност (пише какви са опасностите на препарата и какво да правиш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schrobzuigmachine': "машината за миене на под (търка пода и го попива до сухо)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dosing.1': "Сложи една капачка в кофа вода.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dosing.2': "Първо прочети етикета.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dosing.3': "Машината за миене на под трябва да се включи на зарядното.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.q': "Сложи още малко препарат. Така става по-чисто.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.a': "Не, повече не е по-добре. Използвам мерителната чашка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing': "Точната доза, не повече", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.b': "Повече препарат не чисти по-добре. Твърде много оставя лепкав слой, затова подът се цапа по-бързо и може да стане хлъзгав. Освен това е по-вредно за кожата и белите ти дробове. Използвай мерителната чашка или дозиращата помпа и спазвай етикета. Първо водата, после препарата: така не пръска. Преди да използваш машината за миене на под, провери дали е заредена и има чиста вода в резервоара. Накрая изпразни и изплакни резервоара с мръсната вода. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.p': "Колко трябва да сложа?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.s': "Подът остава лепкав. Колега казва: „Сложи двойно повече препарат.“ Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.o1': "Използваш дозата от етикета и питаш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.o2': "Слагаш двойно: така ще стане чисто.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.o3': "Изсипваш препарата направо на пода.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.w': "Лепкав под често значи твърде много препарат, а не твърде малко. Точната доза чисти най-добре и е най-безопасна.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.officenight': "Офиси, рано или късно", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toetsenbord': "клавиатурата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.papierbak': "кошчето за хартия (за стара хартия)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lichtschakelaar': "ключът за осветлението", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pantry': "кухненският бокс (малката кухня в офиса)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.deurmat': "изтривалката (постелката на входа)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alleenwerken': "работя сам, сама (никой друг не е в сградата)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.officenight.1': "Изпразвам кошчетата и кошчето за хартия.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.officenight.2': "Не пипам документите на бюрото.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.officenight.3': "Гася лампата, когато свърша.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.q': { m: "Сам ли работиш в сградата довечера?", f: "Сама ли работиш в сградата довечера?", x: "Довечера има ли още някой в сградата освен теб?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.a': "Да. Ще ти пиша, когато свърша.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight': "Никой друг в сградата", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.b': "Рано сутрин или късно вечер често чистиш офиса, без там да има някой друг. Знай какво да правиш, ако нещо се случи: на кого се обаждаш и къде е аптечката? Дръж телефона си у теб. Разбери се с началника си или с колега, че пишеш съобщение, когато започваш и когато свършваш. Не пускай вътре никого, когото не познаваш. Не пипай документи, екрани или клавиатури повече, отколкото трябва за почистването, и никога не чети какво пише на тях. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.p': "Свърших и вече си тръгвам за вкъщи.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.s': "През нощта мъж чука на стъклената врата. Казва, че работи тук и е забравил ключа си. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.o1': "Не отваряш. Обаждаш се на началника си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.o2': "Пускаш го: изглежда приятелски.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.o3': "Даваш му своя ключ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.w': "Всеки може да каже, че работи там. Началникът ти може да го провери. Твоята безопасност и сградата са на първо място.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.cooking': "Кухнята и обслужването", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.knives': "Ножове и рязане", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koksmes': "готварският нож (голям кухненски нож)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dunschiller': "белачката за зеленчуци", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schillen': "беля", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hakken': "кълцам (режа много ситно)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.raspen': "настъргвам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.blokjes': "кубчетата (малки квадратни парчета)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.knives.1': "Нарежи морковите на кубчета.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.knives.2': "Не слагай ножа в мивката.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.knives.3': "Накълцай магданоза на ситно.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.q': "Можеш ли да нарежеш лука?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.a': "Да, шефе. На кръгчета или на кубчета?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives': "Ножът е инструмент, не играчка", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.b': "Дръж ножа си остър: тъпият нож се изплъзва по-лесно. Режи на дъска, която не мърда: сложи мокра кърпа под нея. Свий пръстите си навътре, като нокти. Ходи с върха надолу, близо до крака си, и казвай „Mes!“ когато минаваш покрай някого. Никога не слагай нож в мивка, пълна с вода: някой може да го хване, без да го види. Нож пада? Отстъпи назад, не го хващай. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.p': "Нож! Минавам зад теб.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.s': "Режеш. Ножът ти се изплъзва от дъската и пада. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.o1': "Отстъпваш назад и го оставяш да падне.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.o2': "Бързо го хващаш с ръка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.o3': "Спираш го с крак.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.w': "Падащ нож може дълбоко да среже ръката или крака ти. Нож на пода трябва само да се измие.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.rawcooked': "Сурово, сготвено и алергени", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rauw': "суров (несготвен)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gaar': "сготвен, готов (може да се яде)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afdekken': "покривам (с капак или фолио)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kleurcode': "цветовият код (един цвят дъска и нож за всеки вид храна)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.allergenenlijst': "списъкът с алергени (пише какво има във всяко ястие)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.glutenvrij': "без глутен", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rawcooked.1': "Суровото месо се слага най-долу в хладилника.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rawcooked.2': "Готово ли е вече пилето?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rawcooked.3': "Покрий съдовете в хладилната камера.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.q': "Този сос без глутен ли е?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.a': "Не знам със сигурност. Ще проверя в списъка с алергени.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked': "Суровото и готовото никога не се допират", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.b': "Суровото месо, рибата и яйцата може да носят микроби. Дръж ги далеч от храната, която е готова за ядене. Използвай отделна дъска и нож или цветовия код на твоята кухня и си мий ръцете, след като пипнеш сурова храна. Суровото месо се слага най-долу в хладилника, за да не капе нищо върху другата храна. Покривай храната и пиши дата върху нея. При алергии и следа може да е достатъчна: използвай чисти прибори. Ресторантът трябва да може да каже на гостите какви алергени има в ястието: провери списъка с алергени. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.p': "Коя дъска е за сурово месо?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.s': "Режеш сурово пиле. След това трябва да нарежеш домати за салата. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.o1': "Взимаш чиста дъска и чист нож.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.o2': "Избърсваш дъската с кърпа и продължаваш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.o3': "Режеш доматите на същата дъска.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.w': "Микробите от суровото пиле минават на доматите, а салатата не се готви повече. Чистата дъска спира това.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.pass': "Миялното и пасът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pass': "пасът (плотът, където чиниите чакат сервитьора)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bon': "бележката с поръчката (поръчката от сервитьора към кухнята)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spoelkeuken': "миялното помещение (където се мият съдовете)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vaatwaskorf': "кошът за съдомиялната (кошът, който влиза в съдомиялната машина)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorspoelen': "изплаквам предварително (изплаквам преди машината)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.warmhoudlamp': "затоплящата лампа (държи чиниите топли)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pass.1': "Маса осем е на паса.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pass.2': "Идват две нови поръчки.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pass.3': "Първо изплакни чиниите.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.q': "Къде е маса дванайсет?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.a': "На паса е. Нося я сега.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass': "Пасът: чиниите не чакат", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.b': "На паса кухнята оставя чиниите за сервитьора. Топлата храна трябва бързо да стигне до госта, затова чинията не чака дълго на паса. Провери бележката: правилната маса, правилните ястия, чист ръб на чинията? Тогава я вземи. В миялното: изплакни, сложи всичко в кошовете и остави машината да свърши останалото. Не отваряй машината, докато работи: парата е много гореща. Носи ръкавици, когато доливаш препаратите на машината. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.p': "За коя маса е това?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.s': "На паса има две чинии. Не знаеш за коя маса са. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.o1': "Поглеждаш бележката или питаш главния готвач.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.o2': "Занасяш ги на маса, която чака.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.o3': "Чакаш някой друг да ги вземе.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.w': "Чиния на грешна маса означава двама чакащи гости и изстинала храна. Един кратък въпрос е по-бърз.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.bill': "Ястия и сметка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorgerecht': "предястието (първото ястие)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hoofdgerecht': "основното ястие", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nagerecht': "десертът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.reservering': "резервацията (маса, запазена предварително)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pinapparaat': "терминалът за карти", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.apartbetalen': "плащам поотделно (всеки плаща за себе си)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.bill.1': "Имате ли резервация?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.bill.2': "Заедно ли ще платите или поотделно?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.bill.3': "Да донеса ли основното ястие сега?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.q': "Може ли да платим поотделно?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.a': "Да, разбира се. Ще донеса терминала.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill': "Парите на масата: брой два пъти", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.b': "Когато гост плаща, кажи ясно сумата и остави госта да вижда терминала. При плащане в брой преброй парите, когато ги получиш, и пак, когато връщаш рестото. Парите отиват в касата или в портфейла ти за сервитьор, никога в собствения ти джоб. Бакшишът (fooi) отива там, където казва фирмата, например в кутията за бакшиши. Гост си е тръгнал, без да плати? Не тичай след него: кажи на управителя. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.p': "Четирийсет и пет евро, моля.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.s': "Гост ти дава пари и казва: „Точно е.“ Ти не ги преброи. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.o1': "Преброяваш ги, докато гостът е там.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.o2': "Прибираш ги и ги броиш по-късно.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.o3': "Вярваш на госта: казваш благодаря.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.w': "Ако броиш по-късно и липсват пари, никой не може да провери какво е станало. Броенето на масата пази госта и теб.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.carework': "Лични грижи и грижи вкъщи", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.washing': "Миене и обличане", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.washandje': "ръкавицата за миене (малка кърпа като ръкавица)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.douchestoel': "столът за душ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tandenpoetsen': "мия си зъбите", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kammen': "реша", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scheren': "бръсна", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.steunkous': "компресивният чорап (стегнат чорап за краката)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.washing.1': "Достатъчно топла ли е водата?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.washing.2': "Искате ли сами да си измиете лицето?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.washing.3': "Сега ще ви сложа компресивните чорапи.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.q': "Днес не искам да се къпя под душа.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.a': "Добре. Да ви помогна ли на мивката?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing': "Първо питай, покривай и остави избора", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.b': "Да миеш някого е нещо много лично. Казвай какво ще правиш и първо питай. Покривай с кърпа частите на тялото, които не миеш. Затвори вратата или завесата. Остави клиента да избира: душ или миене на мивката и какви дрехи да облече. Остави клиента да прави това, което още може, дори да е по-бавно. Клиентът казва не? Не го насилвай. Опитай по-късно, предложи нещо друго и кажи на медицинската сестра.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.p': "Какво искате да облечете днес?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.s': "Клиентка казва, че днес не иска да я къпят. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.o1': "Приемаш го и казваш на медицинската сестра.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.o2': "Въпреки това я къпеш: в списъка е.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.o3': "Пропускаш го и не казваш нищо.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.w': "Клиентът има право да каже не. Насилствената грижа разваля доверието. Медицинската сестра може да види защо и какво може да се направи.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.observing': "Наблюдавам и докладвам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rapporteren': "докладвам (записвам в картона за грижи какво виждаш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zorgdossier': "картонът за грижи (всичко за грижите за един клиент)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.drukplek': "декубитусът (червено място от дълго лежане или седене)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huid': "кожата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plassen': "пишкам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vochtlijst': "листът за течности (колко пие клиентът)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.observing.1': "Госпожата има червено петно на петата.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.observing.2': "Господинът е пил малко днес.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.observing.3': "Записвам го в картона за грижи.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.q': "Има ли нещо особено с госпожа Янсен?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.a': "Да. Днес почти не е пишкала.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing': "Пиши какво виждаш, а не какво мислиш", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.b': "Това, което пишеш в картона за грижи, го чете следващият колега. Пиши факти: какво видя, чу или измери и кога. Не „Mevrouw is lastig“, а „Mevrouw wilde niet eten en duwde het bord weg.“ Пиши го същия ден, с кратки изречения. Не знаеш как да го напишеш на нидерландски? Кажи на медицинската сестра и го напишете заедно. Гледай кожата, когато миеш някого: червено място, което не изчезва, може да е началото на декубитус. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.p': "Записвам какво видях.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.s': "Клиентка беше ядосана по време на миенето. Трябва да го запишеш в картона. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.o1': "Записваш какво каза и направи тя и кога.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.o2': "Пишеш: „Трудна госпожа, както винаги.“", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.o3': "Не пишеш нищо: нормално е.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.w': "Фактите помагат на следващия колега и на медицинската сестра да действат. Мнението не казва какво е станало.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.homecare': "Грижи в дома", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.thuiszorg': "грижите в дома (грижи в собствения дом на клиента)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sleutelkluis': "кутията за ключ (малка кутия с код, в която е ключът от къщата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zorgplan': "планът за грижи (какви грижи получава клиентът и как)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wijkverpleegkundige': "районната медицинска сестра (медицинската сестра на екипа за грижи в дома)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mantelzorger': "близкият, който се грижи (роднина или приятел, който се грижи за клиента)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alarmknop': "алармения бутон (клиентът го носи, за да повика помощ)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.homecare.1': "Първо звъня на вратата. После взимам ключа.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.homecare.2': "Какво пише в плана за грижи?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.homecare.3': "Днес ще закъснея с четвърт час.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.q': "Кой е?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.a': "Добро утро, от грижите в дома. Може ли да вляза?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare': "Гост в чужд дом", // nieuw, nalezen // nagelezen AI 28 nov
     'c.homecare.b': "В грижите в дома работиш в собствения дом на клиента. Там си гост: звънни на вратата и се представи, дори да имаш ключ. Кодът на кутията за ключ е таен. Никога не го записвай там, където други могат да го видят, и винаги затваряй кутията отново. Спазвай плана за грижи: в него пише какво правиш. Нещо е различно или клиентът не отваря вратата? Не си тръгвай просто така. Обади се на екипа си или на районната медицинска сестра. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.homecare.p': "Добро утро, аз съм от грижите в дома.", // nieuw, nalezen
-    'c.homecare.s': "Звъниш на вратата. Клиентката не отваря. Колата ѝ е там. Какво правиш?", // nieuw, nalezen
-    'c.homecare.o1': "Обаждаш се на екипа си и чакаш.", // nieuw, nalezen
-    'c.homecare.o2': "Продължаваш към следващия клиент.", // nieuw, nalezen
-    'c.homecare.o3': "Звъниш още веднъж и си тръгваш.", // nieuw, nalezen
-    'c.homecare.w': "Клиентката може да е паднала или да е болна. Екипът ти знае какво да прави и кой има ключ.", // nieuw, nalezen
-    'l.liftaids': "Помощни средства за повдигане и безопасност", // nieuw, nalezen
-    'w.glijlaken': "плъзгащият чаршаф (гладък чаршаф за преместване на клиента в леглото)", // nieuw, nalezen
-    'w.tilband': "коланът за подемника (слага се под клиента, за подемника)", // nieuw, nalezen
-    'w.stalift': "подемникът за изправяне (помага на клиента да стане)", // nieuw, nalezen
-    'w.werkhoogte': "работната височина (леглото на височината на ханша ти)", // nieuw, nalezen
-    'w.bedhek': "преградата на леглото", // nieuw, nalezen
-    'w.transferplank': "дъската за преместване (дъска за плъзгане от леглото на стол)", // nieuw, nalezen
-    's.liftaids.1': "Вдигни леглото на работна височина.", // nieuw, nalezen
-    's.liftaids.2': "Количката на спирачка ли е?", // nieuw, nalezen
-    's.liftaids.3': "Правим го двама.", // nieuw, nalezen
-    'c.liftaids.q': "Можеш ли да обърнеш госпожата без помощ?", // nieuw, nalezen
-    'c.liftaids.a': "С плъзгащия чаршаф мога. Ще го донеса.", // nieuw, nalezen
-    'c.liftaids': "Нека помощното средство вдига", // nieuw, nalezen
-    'c.liftaids.b': "Преди да използваш подемник, провери го: заредена ли е батерията, коланът с правилния размер ли е и не е ли скъсан? Сложи спирачките на леглото и на количката. Вдигни леглото до височината на ханша си, за да не се навеждаш. Казвай на клиента всяка стъпка. В плана за грижи пише от какво помощно средство има нужда клиентът. Помощното средство е повредено или липсва? Не го заобикаляй: съобщи за това и помоли колега за помощ. Не са ти показали как работи помощното средство? Питай, преди да започнеш. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.liftaids.p': "Коланът е скъсан. Ще донеса друг.", // nieuw, nalezen
-    'c.liftaids.s': "Искаш да използваш подемника. Коланът има малко скъсване. Какво правиш?", // nieuw, nalezen
-    'c.liftaids.o1': "Взимаш друг колан и съобщаваш за скъсването.", // nieuw, nalezen
-    'c.liftaids.o2': "Използваш го: скъсването е много малко.", // nieuw, nalezen
-    'c.liftaids.o3': "Връзваш възел на колана.", // nieuw, nalezen
-    'c.liftaids.w': "Малкото скъсване може да стане по-голямо под тежестта на човек. Падане от подемник може тежко да нарани клиента.", // nieuw, nalezen
-    'u.shopfloor': "Каса, стока и затваряне", // nieuw, nalezen
-    'l.returns': "Връщане на стока и касата", // nieuw, nalezen
-    'w.terugbrengen': "връщам (продукт в магазина)", // nieuw, nalezen
-    'w.klantenkaart': "клиентската карта (карта за събиране на точки)", // nieuw, nalezen
-    'w.statiegeld': "депозитът за амбалаж (пари обратно за празна бутилка или кен)", // nieuw, nalezen
-    'w.kassalade': "чекмеджето на касата (чекмеджето с парите)", // nieuw, nalezen
-    'w.streepjescode': "баркодът", // nieuw, nalezen
-    'w.tegoedbon': "ваучерът (бележка, с която пазаруваш в магазина по-късно)", // nieuw, nalezen
-    's.returns.1': "Събирате ли точки с клиентската карта?", // nieuw, nalezen
-    's.returns.2': "Баркодът не работи.", // nieuw, nalezen
-    's.returns.3': "Искате ли парите обратно или ваучер?", // nieuw, nalezen
-    'c.returns.q': "Искам да върна този пуловер.", // nieuw, nalezen
-    'c.returns.a': "Може. Пазите ли още касовата бележка?", // nieuw, nalezen
-    'c.returns': "Връщане: спазвай правилата на магазина", // nieuw, nalezen
-    'c.returns.b': "Всеки магазин има свои правила за връщане: колко дни, със или без касова бележка, пари обратно или ваучер. Научи ги и ги спазвай с всеки клиент. Не знаеш със сигурност? Питай колега или управителя и не решавай на своя глава. В края на смяната преброй чекмеджето на касата, с колега, ако в твоя магазин се прави така. Никога не взимай пари от касата за себе си, дори да ги заемеш за малко. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.returns.p': "Само ще попитам управителя на магазина.", // nieuw, nalezen
-    'c.returns.s': "Клиентка иска парите обратно за обувки. Няма касова бележка. Не знаеш правилото. Какво правиш?", // nieuw, nalezen
-    'c.returns.o1': "Питаш управителя какво да правиш.", // nieuw, nalezen
-    'c.returns.o2': "Връщаш парите: тя е мила.", // nieuw, nalezen
-    'c.returns.o3': "Казваш не и я отпращаш.", // nieuw, nalezen
-    'c.returns.w': "Управителят знае правилата и може да реши. Тогава клиентката получава честен отговор, а теб никой не може да обвини.", // nieuw, nalezen
-    'l.facing': "Подреждане и охладени продукти", // nieuw, nalezen
-    'w.facen': "подреждам отпред (издърпвам продуктите напред, с етикета към клиента)", // nieuw, nalezen
-    'w.afprijzen': "намалявам цената (давам по-ниска цена)", // nieuw, nalezen
-    'w.koelvak': "хладилната витрина (студеният рафт в магазина)", // nieuw, nalezen
-    'w.diepvries': "фризерът", // nieuw, nalezen
-    'w.uitpakken': "разопаковам", // nieuw, nalezen
-    'w.schapkaartje': "етикетът с цената (картичката с цената на рафта)", // nieuw, nalezen
-    's.facing.1': "Първо хладилната витрина, после останалото.", // nieuw, nalezen
-    's.facing.2': "Издърпай всичко спретнато напред.", // nieuw, nalezen
-    's.facing.3': "Намали цената на днешните продукти.", // nieuw, nalezen
-    'c.facing.q': { m: "Готов ли си с хладилната витрина?", f: "Готова ли си с хладилната витрина?", x: "Хладилната витрина готова ли е?" }, // nieuw, nalezen
-    'c.facing.a': "Почти. Трябва още да подредя отпред.", // nieuw, nalezen
-    'c.facing': "Първо студеното, и рафтът изглежда пълен", // nieuw, nalezen
-    'c.facing.b': "Охладените и замразените продукти отиват първи в хладилника или фризера, преди всичко друго. Не бива да стоят дълго на топло. После останалото. Подреждане отпред значи: издърпваш продуктите напред, с етикета към клиента. Тогава рафтът изглежда пълен и подреден. Провери етикета с цената: правилна ли е цената за този продукт? Когато отваряш кашони, режи в посока от тялото си и не много дълбоко: може да повредиш продукта. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.facing.p': "Първо охладените продукти, после останалото.", // nieuw, nalezen
-    'c.facing.s': "Пристигат палет с мляко и палет с чипс. Няма никой друг освен теб. Какво правиш?", // nieuw, nalezen
-    'c.facing.o1': "Първо слагаш млякото в хладилника.", // nieuw, nalezen
-    'c.facing.o2': "Започваш с чипса: по-лек е.", // nieuw, nalezen
-    'c.facing.o3': "Оставяш и двата, докато дойде колега.", // nieuw, nalezen
-    'c.facing.w': "Мляко, което стои твърде дълго на топло, може да разболее клиентите и трябва да се изхвърли. Чипсът може да почака.", // nieuw, nalezen
-    'l.shrink': "Повреди и кражби", // nieuw, nalezen
-    'w.derving': "фирата (каквото губи магазинът: счупени, стари или откраднати продукти)", // nieuw, nalezen
-    'w.afschrijven': "отписвам (регистрирам продукт като загубен)", // nieuw, nalezen
-    'w.personeelsaankoop': "покупката на служител (това, което купуваш в собствения си магазин)", // nieuw, nalezen
-    'w.tassencontrole': "проверката на чантите", // nieuw, nalezen
-    'w.kassamedewerker': "касиерът, касиерката", // nieuw, nalezen
-    'w.winkelwagen': "количката за пазаруване", // nieuw, nalezen
-    's.shrink.1': "Този буркан е счупен. Отписвам го.", // nieuw, nalezen
-    's.shrink.2': "Плащам покупките си на касата при колега.", // nieuw, nalezen
-    's.shrink.3': "До изхода има пълна количка.", // nieuw, nalezen
-    'c.shrink.q': "Може ли да погледна в чантата ти?", // nieuw, nalezen
-    'c.shrink.a': "Да, разбира се. Ето касовата ми бележка.", // nieuw, nalezen
-    'c.shrink': "Твоите покупки: плащай като клиент", // nieuw, nalezen
-    'c.shrink.b': "Магазинът губи много заради счупени продукти, стари продукти и кражби. Помагай загубите да са малко. Счупен или повреден продукт? Не го връщай на рафта: отпиши го така, както се прави в твоя магазин. Твоите покупки: плащай на касата като всеки клиент и пази касовата бележка. В много магазини не може да маркираш собствените си покупки: прави го колега. Никога не яж и не взимай продукт, без да платиш, дори малък. Някои магазини проверяват чантите: това е правило на магазина, а не знак на недоверие към теб. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.shrink.p': "Първо плащам и пазя касовата бележка.", // nieuw, nalezen
-    'c.shrink.s': "В края на смяната ти се яде. Срокът на един сандвич изтича днес. Какво правиш?", // nieuw, nalezen
-    'c.shrink.o1': "Питаш управителя какво е правилото.", // nieuw, nalezen
-    'c.shrink.o2': "Изяждаш го: и без това ще се изхвърли.", // nieuw, nalezen
-    'c.shrink.o3': "Взимаш го вкъщи в чантата си.", // nieuw, nalezen
-    'c.shrink.w': "В много магазини да вземеш продукт, без да платиш, е кражба, дори да е стар. Ако първо попиташ, си в безопасност.", // nieuw, nalezen
-    'l.shopclose': "Затваряне на магазина", // nieuw, nalezen
-    'w.sluitingstijd': "часът на затваряне", // nieuw, nalezen
+    'c.homecare.p': "Добро утро, аз съм от грижите в дома.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.s': "Звъниш на вратата. Клиентката не отваря. Колата ѝ е там. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.o1': "Обаждаш се на екипа си и чакаш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.o2': "Продължаваш към следващия клиент.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.o3': "Звъниш още веднъж и си тръгваш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.w': "Клиентката може да е паднала или да е болна. Екипът ти знае какво да прави и кой има ключ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.liftaids': "Помощни средства за повдигане и безопасност", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.glijlaken': "плъзгащият чаршаф (гладък чаршаф за преместване на клиента в леглото)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tilband': "коланът за подемника (слага се под клиента, за подемника)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stalift': "подемникът за изправяне (помага на клиента да стане)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkhoogte': "работната височина (леглото на височината на ханша ти)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedhek': "преградата на леглото", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.transferplank': "дъската за преместване (дъска за плъзгане от леглото на стол)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.liftaids.1': "Вдигни леглото на работна височина.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.liftaids.2': "Количката на спирачка ли е?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.liftaids.3': "Правим го двама.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.q': "Можеш ли да обърнеш госпожата без помощ?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.a': "С плъзгащия чаршаф мога. Ще го донеса.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids': "Нека помощното средство вдига", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.b': "Преди да използваш подемник, провери го: заредена ли е батерията, коланът с правилния размер ли е и не е ли скъсан? Сложи спирачките на леглото и на количката. Вдигни леглото до височината на ханша си, за да не се навеждаш. Казвай на клиента всяка стъпка. В плана за грижи пише от какво помощно средство има нужда клиентът. Помощното средство е повредено или липсва? Не го заобикаляй: съобщи за това и помоли колега за помощ. Не са ти показали как работи помощното средство? Питай, преди да започнеш. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.p': "Коланът е скъсан. Ще донеса друг.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.s': "Искаш да използваш подемника. Коланът има малко скъсване. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.o1': "Взимаш друг колан и съобщаваш за скъсването.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.o2': "Използваш го: скъсването е много малко.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.o3': "Връзваш възел на колана.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.w': "Малкото скъсване може да стане по-голямо под тежестта на човек. Падане от подемник може тежко да нарани клиента.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.shopfloor': "Каса, стока и затваряне", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.returns': "Връщане на стока и касата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.terugbrengen': "връщам (продукт в магазина)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.klantenkaart': "клиентската карта (карта за събиране на точки)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.statiegeld': "депозитът за амбалаж (пари обратно за празна бутилка или кен)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kassalade': "чекмеджето на касата (чекмеджето с парите)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.streepjescode': "баркодът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tegoedbon': "ваучерът (бележка, с която пазаруваш в магазина по-късно)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.returns.1': "Събирате ли точки с клиентската карта?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.returns.2': "Баркодът не работи.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.returns.3': "Искате ли парите обратно или ваучер?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.q': "Искам да върна този пуловер.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.a': "Може. Пазите ли още касовата бележка?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns': "Връщане: спазвай правилата на магазина", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.b': "Всеки магазин има свои правила за връщане: колко дни, със или без касова бележка, пари обратно или ваучер. Научи ги и ги спазвай с всеки клиент. Не знаеш със сигурност? Питай колега или управителя и не решавай на своя глава. В края на смяната преброй чекмеджето на касата, с колега, ако в твоя магазин се прави така. Никога не взимай пари от касата за себе си, дори да ги заемеш за малко. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.p': "Само ще попитам управителя на магазина.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.s': "Клиентка иска парите обратно за обувки. Няма касова бележка. Не знаеш правилото. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.o1': "Питаш управителя какво да правиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.o2': "Връщаш парите: тя е мила.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.o3': "Казваш не и я отпращаш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.w': "Управителят знае правилата и може да реши. Тогава клиентката получава честен отговор, а теб никой не може да обвини.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.facing': "Подреждане и охладени продукти", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.facen': "подреждам отпред (издърпвам продуктите напред, с етикета към клиента)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afprijzen': "намалявам цената (давам по-ниска цена)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koelvak': "хладилната витрина (студеният рафт в магазина)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.diepvries': "фризерът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitpakken': "разопаковам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schapkaartje': "етикетът с цената (картичката с цената на рафта)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.facing.1': "Първо хладилната витрина, после останалото.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.facing.2': "Издърпай всичко спретнато напред.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.facing.3': "Намали цената на днешните продукти.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.q': { m: "Готов ли си с хладилната витрина?", f: "Готова ли си с хладилната витрина?", x: "Хладилната витрина готова ли е?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.a': "Почти. Трябва още да подредя отпред.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing': "Първо студеното, и рафтът изглежда пълен", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.b': "Охладените и замразените продукти отиват първи в хладилника или фризера, преди всичко друго. Не бива да стоят дълго на топло. После останалото. Подреждане отпред значи: издърпваш продуктите напред, с етикета към клиента. Тогава рафтът изглежда пълен и подреден. Провери етикета с цената: правилна ли е цената за този продукт? Когато отваряш кашони, режи в посока от тялото си и не много дълбоко: може да повредиш продукта. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.p': "Първо охладените продукти, после останалото.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.s': "Пристигат палет с мляко и палет с чипс. Няма никой друг освен теб. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.o1': "Първо слагаш млякото в хладилника.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.o2': "Започваш с чипса: по-лек е.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.o3': "Оставяш и двата, докато дойде колега.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.w': "Мляко, което стои твърде дълго на топло, може да разболее клиентите и трябва да се изхвърли. Чипсът може да почака.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.shrink': "Повреди и кражби", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.derving': "фирата (каквото губи магазинът: счупени, стари или откраднати продукти)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afschrijven': "отписвам (регистрирам продукт като загубен)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.personeelsaankoop': "покупката на служител (това, което купуваш в собствения си магазин)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tassencontrole': "проверката на чантите", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kassamedewerker': "касиерът, касиерката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.winkelwagen': "количката за пазаруване", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shrink.1': "Този буркан е счупен. Отписвам го.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shrink.2': "Плащам покупките си на касата при колега.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shrink.3': "До изхода има пълна количка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.q': "Може ли да погледна в чантата ти?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.a': "Да, разбира се. Ето касовата ми бележка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink': "Твоите покупки: плащай като клиент", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.b': "Магазинът губи много заради счупени продукти, стари продукти и кражби. Помагай загубите да са малко. Счупен или повреден продукт? Не го връщай на рафта: отпиши го така, както се прави в твоя магазин. Твоите покупки: плащай на касата като всеки клиент и пази касовата бележка. В много магазини не може да маркираш собствените си покупки: прави го колега. Никога не яж и не взимай продукт, без да платиш, дори малък. Някои магазини проверяват чантите: това е правило на магазина, а не знак на недоверие към теб. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.p': "Първо плащам и пазя касовата бележка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.s': "В края на смяната ти се яде. Срокът на един сандвич изтича днес. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.o1': "Питаш управителя какво е правилото.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.o2': "Изяждаш го: и без това ще се изхвърли.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.o3': "Взимаш го вкъщи в чантата си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.w': "В много магазини да вземеш продукт, без да платиш, е кражба, дори да е стар. Ако първо попиташ, си в безопасност.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.shopclose': "Затваряне на магазина", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sluitingstijd': "часът на затваряне", // nieuw, nalezen // nagelezen AI 28 nov
     'w.rolluik': "ролетната щора (металната щора на витрината)", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'w.kasverschil': "касовата разлика (повече или по-малко пари в касата, отколкото трябва)", // nieuw, nalezen
-    'w.kluis': "сейфът (здрава каса за пари)", // nieuw, nalezen
-    'w.overval': "обирът (някой взима пари със заплахи)", // nieuw, nalezen
-    'w.achterdeur': "задната врата", // nieuw, nalezen
-    's.shopclose.1': "Затваряме след десет минути.", // nieuw, nalezen
-    's.shopclose.2': "Броим касата двама.", // nieuw, nalezen
-    's.shopclose.3': "Заключена ли е задната врата?", // nieuw, nalezen
-    'c.shopclose.q': "Може ли да вляза още набързо?", // nieuw, nalezen
-    'c.shopclose.a': "Съжалявам, затворено е. Утре отваряме в осем.", // nieuw, nalezen
-    'c.shopclose': "Обир: дай парите и се пази", // nieuw, nalezen
-    'c.shopclose.b': "При затваряне в касата има много пари, затова магазините имат правила: брой ги двама, занеси парите в сейфа и първо заключи задната врата. Обир (overval)? Животът ти струва повече от парите. Запази спокойствие, прави каквото казват и не се бий с тях и не тичай след тях. Запомни каквото можеш: дрехи, ръст, глас. Когато си тръгнат: заключи вратата, обади се на 112 и не пипай нищо. След това поговори за случилото се с управителя или с човек, на когото имаш доверие. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.shopclose.p': "Затваряме. Заключвам вратата.", // nieuw, nalezen
-    'c.shopclose.s': "Мъж с нож иска парите от твоята каса. Какво правиш?", // nieuw, nalezen
-    'c.shopclose.o1': "Запазваш спокойствие и му даваш парите.", // nieuw, nalezen
-    'c.shopclose.o2': "Биеш се с него: парите не са негови.", // nieuw, nalezen
-    'c.shopclose.o3': "Бягаш отзад и се заключваш.", // nieuw, nalezen
+    'w.kasverschil': "касовата разлика (повече или по-малко пари в касата, отколкото трябва)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kluis': "сейфът (здрава каса за пари)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.overval': "обирът (някой взима пари със заплахи)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.achterdeur': "задната врата", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shopclose.1': "Затваряме след десет минути.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shopclose.2': "Броим касата двама.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shopclose.3': "Заключена ли е задната врата?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.q': "Може ли да вляза още набързо?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.a': "Съжалявам, затворено е. Утре отваряме в осем.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose': "Обир: дай парите и се пази", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.b': "При затваряне в касата има много пари, затова магазините имат правила: брой ги двама, занеси парите в сейфа и първо заключи задната врата. Обир (overval)? Животът ти струва повече от парите. Запази спокойствие, прави каквото казват и не се бий с тях и не тичай след тях. Запомни каквото можеш: дрехи, ръст, глас. Когато си тръгнат: заключи вратата, обади се на 112 и не пипай нищо. След това поговори за случилото се с управителя или с човек, на когото имаш доверие. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.p': "Затваряме. Заключвам вратата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.s': "Мъж с нож иска парите от твоята каса. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.o1': "Запазваш спокойствие и му даваш парите.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.o2': "Биеш се с него: парите не са негови.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.o3': "Бягаш отзад и се заключваш.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.shopclose.w': "Боят или бягството правят обирджията нервен и по-опасен. Парите могат да се заменят. Теб — не.", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'u.uitzend': "Работа чрез агенция за временна работа", // nieuw, nalezen
-    'l.hirer': "Агенцията и предприятието ползвател", // nieuw, nalezen
-    'w.inlener': "предприятието ползвател (фирмата, в която агенцията те праща да работиш)", // nieuw, nalezen
-    'w.vestiging': "офисът (офисът на агенцията в твоя град)", // nieuw, nalezen
-    'w.intakegesprek': "встъпителният разговор (първият разговор в агенцията)", // nieuw, nalezen
-    'w.opstapplaats': "мястото за качване (където те взима бусът на агенцията)", // nieuw, nalezen
-    'w.bedrijfsregels': "правилата на фирмата (правилата на предприятието ползвател)", // nieuw, nalezen
-    'w.aanspreekpunt': "лицето за контакт (човекът, при когото отиваш с въпроси)", // nieuw, nalezen
-    's.hirer.1': "Утре работиш в ново предприятие ползвател.", // nieuw, nalezen
-    's.hirer.2': "Кой е моето лице за контакт тук?", // nieuw, nalezen
-    's.hirer.3': "Бусът тръгва от мястото за качване в шест.", // nieuw, nalezen
-    'c.hirer.q': "Можеш ли утре да започнеш в ново предприятие ползвател?", // nieuw, nalezen
-    'c.hirer.a': "Да. В колко часа трябва да съм там?", // nieuw, nalezen
-    'c.hirer': "Две фирми: кой какво прави?", // nieuw, nalezen
-    'c.hirer.b': "Работиш чрез агенция за временна работа (uitzendbureau), но вършиш работата в друга фирма: предприятието ползвател (inlener). Агенцията е твоят работодател: договорът, заплатата, фишът за заплата и почивните ти дни са от агенцията. Предприятието ползвател ти казва какво да правиш на работното място и трябва да пази работата ти безопасна, точно както за своите служители. Съобщавай за болест така, както казва агенцията: често на агенцията и на предприятието ползвател. Пази в телефона си името и телефона на лицето си за контакт в агенцията. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen
-    'c.hirer.p': "Кой е моето лице за контакт в агенцията?", // nieuw, nalezen
-    'c.hirer.s': "В предприятието ползвател трябва да работиш с машина. Никой не ти е показал как. Какво правиш?", // nieuw, nalezen
-    'c.hirer.o1': "Молиш предприятието ползвател първо да ти покаже.", // nieuw, nalezen
-    'c.hirer.o2': "Опитваш: агенцията носи отговорност.", // nieuw, nalezen
-    'c.hirer.o3': "Прибираш се вкъщи и не казваш нищо.", // nieuw, nalezen
-    'c.hirer.w': "Предприятието ползвател трябва да ти покаже как да работиш безопасно, както на своите служители. Да го поискаш е твое право.", // nieuw, nalezen
-    'l.phases': "Договорът ти и фазите", // nieuw, nalezen
-    'w.fase': "фазата (етап в договора ти с агенцията: A, B или C)", // nieuw, nalezen
-    'w.uitzendbeding': "клаузата за временна работа (работата ти може да спре, когато предприятието ползвател вече не се нуждае от теб)", // nieuw, nalezen
-    'w.aflopen': "изтичам, свършвам (за договор)", // nieuw, nalezen
-    'w.doorwerken': "продължавам да работя (на същото място)", // nieuw, nalezen
-    'w.vastecontract': "безсрочният договор (договор без крайна дата)", // nieuw, nalezen
-    'w.onderbreking': "прекъсването (време без работа между два договора)", // nieuw, nalezen
-    's.phases.1': "В коя фаза съм сега?", // nieuw, nalezen
-    's.phases.2': "Договорът ми изтича следващата седмица.", // nieuw, nalezen
-    's.phases.3': "Мога ли да продължа да работя тук?", // nieuw, nalezen
+    'u.uitzend': "Работа чрез агенция за временна работа", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.hirer': "Агенцията и предприятието ползвател", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inlener': "предприятието ползвател (фирмата, в която агенцията те праща да работиш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vestiging': "офисът (офисът на агенцията в твоя град)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.intakegesprek': "встъпителният разговор (първият разговор в агенцията)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opstapplaats': "мястото за качване (където те взима бусът на агенцията)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedrijfsregels': "правилата на фирмата (правилата на предприятието ползвател)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanspreekpunt': "лицето за контакт (човекът, при когото отиваш с въпроси)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hirer.1': "Утре работиш в ново предприятие ползвател.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hirer.2': "Кой е моето лице за контакт тук?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hirer.3': "Бусът тръгва от мястото за качване в шест.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.q': "Можеш ли утре да започнеш в ново предприятие ползвател?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.a': "Да. В колко часа трябва да съм там?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer': "Две фирми: кой какво прави?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.b': "Работиш чрез агенция за временна работа (uitzendbureau), но вършиш работата в друга фирма: предприятието ползвател (inlener). Агенцията е твоят работодател: договорът, заплатата, фишът за заплата и почивните ти дни са от агенцията. Предприятието ползвател ти казва какво да правиш на работното място и трябва да пази работата ти безопасна, точно както за своите служители. Съобщавай за болест така, както казва агенцията: често на агенцията и на предприятието ползвател. Пази в телефона си името и телефона на лицето си за контакт в агенцията. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.p': "Кой е моето лице за контакт в агенцията?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.s': "В предприятието ползвател трябва да работиш с машина. Никой не ти е показал как. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.o1': "Молиш предприятието ползвател първо да ти покаже.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.o2': "Опитваш: агенцията носи отговорност.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.o3': "Прибираш се вкъщи и не казваш нищо.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.w': "Предприятието ползвател трябва да ти покаже как да работиш безопасно, както на своите служители. Да го поискаш е твое право.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.phases': "Договорът ти и фазите", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.fase': "фазата (етап в договора ти с агенцията: A, B или C)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitzendbeding': "клаузата за временна работа (работата ти може да спре, когато предприятието ползвател вече не се нуждае от теб)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aflopen': "изтичам, свършвам (за договор)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doorwerken': "продължавам да работя (на същото място)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vastecontract': "безсрочният договор (договор без крайна дата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderbreking': "прекъсването (време без работа между два договора)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.phases.1': "В коя фаза съм сега?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.phases.2': "Договорът ми изтича следващата седмица.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.phases.3': "Мога ли да продължа да работя тук?", // nieuw, nalezen // nagelezen AI 28 nov
     'c.phases.q': "Назначението ти свършва в петък.", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.phases.a': "Добре. Имате ли друга работа за мен?", // nieuw, nalezen
-    'c.phases': "Фази A, B и C", // nieuw, nalezen
-    'c.phases.b': "Повечето работници от агенции работят по колективен трудов договор за временните работници (uitzend-cao). В него има фази. Във фаза A работата ти обикновено може да спре, когато предприятието ползвател вече не се нуждае от теб (uitzendbeding). Във фаза B получаваш срочни договори. Във фаза C получаваш безсрочен договор с агенцията. Колко дълго трае всяка фаза, пише в твоя cao. Питай агенцията в коя фаза си и пази всичките си договори. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen
-    'c.phases.p': "Колко дълго трае фаза A за мен?", // nieuw, nalezen
-    'c.phases.s': "Отдавна работиш за същата агенция. Още получаваш кратки договори. Какво правиш?", // nieuw, nalezen
-    'c.phases.o1': "Питаш агенцията в коя фаза си.", // nieuw, nalezen
-    'c.phases.o2': "Нищо: работата чрез агенция винаги е кратка.", // nieuw, nalezen
-    'c.phases.o3': "Спираш и търсиш друга агенция.", // nieuw, nalezen
-    'c.phases.w': "След достатъчно време cao ти дава повече сигурност. Агенцията може да ти каже къде си, а синдикатът може да го провери заедно с теб.", // nieuw, nalezen
-    'l.deductions': "Заплата и удръжки", // nieuw, nalezen
-    'w.inhouding': "удръжката (пари, които се взимат от заплатата ти)", // nieuw, nalezen
-    'w.vastekracht': "постоянният служител (служител, нает от самото предприятие ползвател)", // nieuw, nalezen
-    'w.vervoer': "транспортът (автобусът или бусът до работата)", // nieuw, nalezen
-    'w.schriftelijk': "писмено (на хартия или по имейл)", // nieuw, nalezen
-    'w.navragen': "проверявам, питам (разбирам дали нещо е вярно)", // nieuw, nalezen
-    'w.brutoloon': "брутната заплата (заплатата ти преди данъци и удръжки)", // nieuw, nalezen
-    's.deductions.1': "Каква е тази удръжка във фиша ми за заплата?", // nieuw, nalezen
-    's.deductions.2': "Получавам ли същото като постоянните служители?", // nieuw, nalezen
-    's.deductions.3': "Първо искам да го видя на хартия.", // nieuw, nalezen
-    'c.deductions.q': "Удържаме разходите за буса от заплатата ти.", // nieuw, nalezen
-    'c.deductions.a': "Разрешено ли е това? Първо ще проверя.", // nieuw, nalezen
-    'c.deductions': "Какво може да се удържа от заплатата ти?", // nieuw, nalezen
-    'c.deductions.b': "Имаш право поне на същото заплащане като служителите на предприятието ползвател, които вършат същата работа. Парите, които се взимат от заплатата ти (inhouding), трябва да са във фиша за заплата. Данъците и вноските се удържат по закон. Освен тях агенцията може да удържа от минималната заплата само два разхода: наема за жилището ти и вноската за здравната застраховка, и само с твое писмено съгласие. Други разходи, като транспорт, работно облекло, глоби или такса за намиране на работа, не може да се удържат от минималната заплата. Не разбираш някоя удръжка? Помоли агенцията да ти я обясни писмено. Това е обща информация. За твоя случай питай синдиката, Juridisch Loket или FairWork.", // nieuw, nalezen
-    'c.deductions.p': "За какво е тази удръжка?", // nieuw, nalezen
-    'c.deductions.s': "Агенцията ти удържа пари от заплатата за буса до работата. Получаваш минималната заплата. Какво правиш?", // nieuw, nalezen
-    'c.deductions.o1': "Питаш за това: не е разрешено.", // nieuw, nalezen
-    'c.deductions.o2': "Нищо: нали всеки ден пътуваш с буса.", // nieuw, nalezen
-    'c.deductions.o3': "Спираш да пътуваш с буса и ходиш пеша.", // nieuw, nalezen
-    'c.deductions.w': "От минималната заплата може да се удържат само наемът и здравната застраховка, и само с твое писмено съгласие. Синдикатът или Juridisch Loket могат да ти помогнат.", // nieuw, nalezen
-    'l.agencyhome': "Жилище и помощ", // nieuw, nalezen
-    'w.huisvesting': "жилището (място за живеене, уредено от агенцията)", // nieuw, nalezen
-    'w.huisgenoot': "съквартирантът (човек, който живее в същата къща)", // nieuw, nalezen
-    'w.huisregels': "правилата на къщата (правилата на къщата, в която живееш)", // nieuw, nalezen
-    'w.huismeester': "домакинът (човекът, който се грижи за къщата)", // nieuw, nalezen
-    'w.meldpunt': "пунктът за сигнали (място, където можеш да съобщиш за проблем)", // nieuw, nalezen
-    'w.advies': "съветът", // nieuw, nalezen
-    's.agencyhome.1': "Искам собствен договор за наем.", // nieuw, nalezen
-    's.agencyhome.2': "В банята има мухъл.", // nieuw, nalezen
-    's.agencyhome.3': "Обаждам се на синдиката за съвет.", // nieuw, nalezen
-    'c.agencyhome.q': "В петък трябва да напуснеш жилището.", // nieuw, nalezen
-    'c.agencyhome.a': "Това е много скоро. Първо ще потърся съвет.", // nieuw, nalezen
-    'c.agencyhome': "Жилището ти и къде да намериш помощ", // nieuw, nalezen
-    'c.agencyhome.b': "Агенцията ти урежда жилище? Тогава получаваш собствен договор за наем, писмено, отделно от трудовия договор. Пази копие. В него пише колко плащаш и как и кога свършва наемът. Работата ти спира? Жилището ти не винаги свършва същия ден: потърси съвет, преди да напуснеш. Опасно или пренаселено жилище, заплахи или твърде ниска заплата? Потърси помощ: синдиката, Juridisch Loket (безплатен правен съвет), FairWork или Nederlandse Arbeidsinspectie, където можеш да подадеш сигнал и анонимно. Това е обща информация. За твоя случай питай синдиката, Juridisch Loket или FairWork.", // nieuw, nalezen
-    'c.agencyhome.p': "Може ли копие от договора ми за наем?", // nieuw, nalezen
-    'c.agencyhome.s': "Работата ти спира. Домакинът казва, че трябва да напуснеш къщата днес. Какво правиш?", // nieuw, nalezen
-    'c.agencyhome.o1': "Първо питаш синдиката или Juridisch Loket.", // nieuw, nalezen
-    'c.agencyhome.o2': "Напускаш днес и спиш при приятел.", // nieuw, nalezen
-    'c.agencyhome.o3': "Събираш си чантата и спиш навън.", // nieuw, nalezen
-    'c.agencyhome.w': "Договорът ти за наем има свои правила, отделно от работата. Съветът ти помага да знаеш кога наистина трябва да напуснеш.", // nieuw, nalezen
+    'c.phases.a': "Добре. Имате ли друга работа за мен?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases': "Фази A, B и C", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.b': "Повечето работници от агенции работят по колективен трудов договор за временните работници (uitzend-cao). В него има фази. Във фаза A работата ти обикновено може да спре, когато предприятието ползвател вече не се нуждае от теб (uitzendbeding). Във фаза B получаваш срочни договори. Във фаза C получаваш безсрочен договор с агенцията. Колко дълго трае всяка фаза, пише в твоя cao. Питай агенцията в коя фаза си и пази всичките си договори. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.p': "Колко дълго трае фаза A за мен?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.s': "Отдавна работиш за същата агенция. Още получаваш кратки договори. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.o1': "Питаш агенцията в коя фаза си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.o2': "Нищо: работата чрез агенция винаги е кратка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.o3': "Спираш и търсиш друга агенция.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.w': "След достатъчно време cao ти дава повече сигурност. Агенцията може да ти каже къде си, а синдикатът може да го провери заедно с теб.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.deductions': "Заплата и удръжки", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inhouding': "удръжката (пари, които се взимат от заплатата ти)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vastekracht': "постоянният служител (служител, нает от самото предприятие ползвател)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vervoer': "транспортът (автобусът или бусът до работата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schriftelijk': "писмено (на хартия или по имейл)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.navragen': "проверявам, питам (разбирам дали нещо е вярно)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brutoloon': "брутната заплата (заплатата ти преди данъци и удръжки)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.deductions.1': "Каква е тази удръжка във фиша ми за заплата?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.deductions.2': "Получавам ли същото като постоянните служители?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.deductions.3': "Първо искам да го видя на хартия.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.q': "Удържаме разходите за буса от заплатата ти.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.a': "Разрешено ли е това? Първо ще проверя.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions': "Какво може да се удържа от заплатата ти?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.b': "Имаш право поне на същото заплащане като служителите на предприятието ползвател, които вършат същата работа. Парите, които се взимат от заплатата ти (inhouding), трябва да са във фиша за заплата. Данъците и вноските се удържат по закон. Освен тях агенцията може да удържа от минималната заплата само два разхода: наема за жилището ти и вноската за здравната застраховка, и само с твое писмено съгласие. Други разходи, като транспорт, работно облекло, глоби или такса за намиране на работа, не може да се удържат от минималната заплата. Не разбираш някоя удръжка? Помоли агенцията да ти я обясни писмено. Това е обща информация. За твоя случай питай синдиката, Juridisch Loket или FairWork.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.p': "За какво е тази удръжка?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.s': "Агенцията ти удържа пари от заплатата за буса до работата. Получаваш минималната заплата. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.o1': "Питаш за това: не е разрешено.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.o2': "Нищо: нали всеки ден пътуваш с буса.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.o3': "Спираш да пътуваш с буса и ходиш пеша.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.w': "От минималната заплата може да се удържат само наемът и здравната застраховка, и само с твое писмено съгласие. Синдикатът или Juridisch Loket могат да ти помогнат.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.agencyhome': "Жилище и помощ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huisvesting': "жилището (място за живеене, уредено от агенцията)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huisgenoot': "съквартирантът (човек, който живее в същата къща)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huisregels': "правилата на къщата (правилата на къщата, в която живееш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huismeester': "домакинът (човекът, който се грижи за къщата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meldpunt': "пунктът за сигнали (място, където можеш да съобщиш за проблем)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.advies': "съветът", // nieuw, nalezen // nagelezen AI 28 nov
+    's.agencyhome.1': "Искам собствен договор за наем.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.agencyhome.2': "В банята има мухъл.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.agencyhome.3': "Обаждам се на синдиката за съвет.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.q': "В петък трябва да напуснеш жилището.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.a': "Това е много скоро. Първо ще потърся съвет.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome': "Жилището ти и къде да намериш помощ", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.b': "Агенцията ти урежда жилище? Тогава получаваш собствен договор за наем, писмено, отделно от трудовия договор. Пази копие. В него пише колко плащаш и как и кога свършва наемът. Работата ти спира? Жилището ти не винаги свършва същия ден: потърси съвет, преди да напуснеш. Опасно или пренаселено жилище, заплахи или твърде ниска заплата? Потърси помощ: синдиката, Juridisch Loket (безплатен правен съвет), FairWork или Nederlandse Arbeidsinspectie, където можеш да подадеш сигнал и анонимно. Това е обща информация. За твоя случай питай синдиката, Juridisch Loket или FairWork.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.p': "Може ли копие от договора ми за наем?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.s': "Работата ти спира. Домакинът казва, че трябва да напуснеш къщата днес. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.o1': "Първо питаш синдиката или Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.o2': "Напускаш днес и спиш при приятел.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.o3': "Събираш си чантата и спиш навън.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.w': "Договорът ти за наем има свои правила, отделно от работата. Съветът ти помага да знаеш кога наистина трябва да напуснеш.", // nieuw, nalezen // nagelezen AI 28 nov
     // The basis units at four lessons (23 November 2026): two new lessons each in Solliciteren, Wonen en papieren, Loon, Verlof, Ziekte, Uitbuiting herkennen, Naar je werk, Je werk afronden, Stage lopen, Meedoen in Nederland and Online op je werk.
-    'l.vacancy': "Как да прочетеш обява за работа", // nieuw, nalezen
-    'w.advertentie': "обявата (текст, който предлага работа или някаква вещ)", // nieuw, nalezen
-    'w.eis': "изискването (какво трябва да имаш или да можеш)", // nieuw, nalezen
-    'w.parttime': "непълен работен ден (по-малко часове седмично)", // nieuw, nalezen
-    'w.fulltime': "пълен работен ден (цяла работна седмица)", // nieuw, nalezen
-    'w.sollicitatiebrief': "мотивационното писмо", // nieuw, nalezen
-    'w.contactpersoon': "лицето за контакт (човекът, на когото можеш да се обадиш или да пишеш)", // nieuw, nalezen
-    's.vacancy.1': "Видях обявата ви в интернет.", // nieuw, nalezen
-    's.vacancy.2': "На непълен или на пълен работен ден е работата?", // nieuw, nalezen
-    's.vacancy.3': "Какви са изискванията?", // nieuw, nalezen
-    'c.vacancy.q': "Защо се обаждате?", // nieuw, nalezen
-    'c.vacancy.a': "Обаждам се за обявата ви за работа. Мястото още ли е свободно?", // nieuw, nalezen
-    'l.result': "След интервюто", // nieuw, nalezen
-    'w.aangenomen': "нает (работата е твоя)", // nieuw, nalezen
-    'w.afwijzing': "отказът (не получаваш работата)", // nieuw, nalezen
-    'w.aanbod': "предложението (предлагат ти работата)", // nieuw, nalezen
-    'w.proefdag': "пробният ден (един ден работа за проба)", // nieuw, nalezen
-    'w.nabellen': "обаждам се отново (за да питам как върви)", // nieuw, nalezen
-    'w.teleurgesteld': "разочарован", // nieuw, nalezen
-    's.result.1': "Работата е ваша!", // nieuw, nalezen
-    's.result.2': "Получих отказ.", // nieuw, nalezen
-    's.result.3': "Платен ли е пробният ден?", // nieuw, nalezen
-    'c.result.q': "За съжаление избираме някой друг.", // nieuw, nalezen
-    'c.result.a': "Жалко. Може ли да попитам защо?", // nieuw, nalezen
-    'l.residence': "Документите ти за пребиваване", // nieuw, nalezen
-    'w.verblijfsvergunning': "разрешението за пребиваване", // nieuw, nalezen
-    'w.pasfoto': "снимката за документи", // nieuw, nalezen
-    'w.vingerafdruk': "пръстовият отпечатък", // nieuw, nalezen
-    'w.geldig': "валиден (още може да се използва)", // nieuw, nalezen
-    'w.verloopdatum': "датата на изтичане (последният ден, в който документът е валиден)", // nieuw, nalezen
-    'w.volgnummer': "номерът за опашката (билетчето с твоя ред)", // nieuw, nalezen
-    's.residence.1': "Разрешението ми за пребиваване е валидно още една година.", // nieuw, nalezen
-    's.residence.2': "Каква е датата на изтичане на паспорта ти?", // nieuw, nalezen
-    's.residence.3': "Имам час в общината.", // nieuw, nalezen
-    'c.residence.q': "Разрешението ви за пребиваване почти изтече.", // nieuw, nalezen
-    'c.residence.a': "Тогава веднага ще подам заявление за ново.", // nieuw, nalezen
-    'l.newhome': "Преместване", // nieuw, nalezen
-    'w.brievenbus': "пощенската кутия", // nieuw, nalezen
-    'w.meterstand': "показанието на уреда (числата на уреда за газ, ток или вода)", // nieuw, nalezen
-    'w.naambordje': "табелката с името (името ти на вратата)", // nieuw, nalezen
-    'w.woning': "жилището (къща или апартамент)", // nieuw, nalezen
-    'w.doorsturen': "препращам (изпращам на новия адрес)", // nieuw, nalezen
-    'w.verhuisdag': "денят на преместването", // nieuw, nalezen
-    's.newhome.1': "Следващата седмица се местя.", // nieuw, nalezen
-    's.newhome.2': "Името ми го няма на пощенската кутия.", // nieuw, nalezen
-    's.newhome.3': "Съобщавам новия си адрес.", // nieuw, nalezen
-    'c.newhome.q': "Къде живееш сега?", // nieuw, nalezen
-    'c.newhome.a': "В ново жилище. Ето новия ми адрес.", // nieuw, nalezen
-    'l.payparts': "Какво пише във фиша за заплата", // nieuw, nalezen
-    'w.pensioen': "пенсията (пари за старостта)", // nieuw, nalezen
-    'w.periode': "периодът (седмиците или месецът на тази заплата)", // nieuw, nalezen
-    'w.bedrag': "сумата (пари)", // nieuw, nalezen
-    'w.totaal': "общата сума", // nieuw, nalezen
-    'w.afkorting': "съкращението (кратка форма на дума)", // nieuw, nalezen
-    'w.personeelsnummer': "служебният номер (твоят номер във фирмата)", // nieuw, nalezen
-    's.payparts.1': "Какво означава това съкращение?", // nieuw, nalezen
-    's.payparts.2': "Тази сума отива за пенсията ми.", // nieuw, nalezen
-    's.payparts.3': "За кой период е тази заплата?", // nieuw, nalezen
-    'c.payparts.q': "Какъв е служебният ти номер?", // nieuw, nalezen
-    'c.payparts.a': "Горе е, до името ми.", // nieuw, nalezen
-    'l.latepay': "Заплата със закъснение, непълна или в брой", // nieuw, nalezen
-    'w.zwartwerken': "работя на черно (без договор, без данъци, без права на хартия)", // nieuw, nalezen
-    'w.voorschot': "авансът (част от заплатата преди деня за заплата)", // nieuw, nalezen
-    'w.nabetaling': "доплащането (пари, които получаваш по-късно, за да се поправи заплатата)", // nieuw, nalezen
-    'w.tekort': "липсата (пари, които липсват)", // nieuw, nalezen
-    'w.betaaldag': "денят за заплата", // nieuw, nalezen
-    'w.bankafschrift': "банковото извлечение (списък на входящите и изходящите пари)", // nieuw, nalezen
-    's.latepay.1': "Заплатата ми закъснява.", // nieuw, nalezen
-    's.latepay.2': "Не работя на черно.", // nieuw, nalezen
-    's.latepay.3': "Може ли да получа аванс?", // nieuw, nalezen
-    'c.latepay.q': "Липсващите пари ще ги получиш следващия месец.", // nieuw, nalezen
-    'c.latepay.a': "Може ли да го получа писмено?", // nieuw, nalezen
-    'l.holiday': "Планиране на отпуската", // nieuw, nalezen
-    'w.saldo': "остатъкът (колко дни още имаш)", // nieuw, nalezen
-    'w.goedkeuren': "одобрявам (казвам „да“ на нещо)", // nieuw, nalezen
-    'w.verlopen': "изтича (вече не е валидно)", // nieuw, nalezen
-    'w.zomervakantie': "лятната ваканция", // nieuw, nalezen
-    'w.drukte': "натовареният период (много работа)", // nieuw, nalezen
-    'w.aanvraag': "молбата (искаш нещо, често с формуляр)", // nieuw, nalezen
-    's.holiday.1': "Колко дни отпуск ми остават?", // nieuw, nalezen
-    's.holiday.2': "Отпуската ми е одобрена.", // nieuw, nalezen
-    's.holiday.3': "Попълвам формуляра.", // nieuw, nalezen
-    'c.holiday.q': "През лятото е натоварено. Можеш ли да излезеш в отпуск през май?", // nieuw, nalezen
-    'c.holiday.a': "По-добре през юли. Тогава семейството ми е вкъщи.", // nieuw, nalezen
-    'l.special': "Специални почивни дни", // nieuw, nalezen
-    'w.bruiloft': "сватбата", // nieuw, nalezen
-    'w.begrafenis': "погребението", // nieuw, nalezen
-    'w.geboorteverlof': "отпускът при раждане (за партньора, когато се роди бебе)", // nieuw, nalezen
-    'w.bijzonderverlof': "специалният отпуск (например за сватба или погребение)", // nieuw, nalezen
-    'w.kerstdagen': "Коледа (двата коледни дни)", // nieuw, nalezen
-    'w.vrijvragen': "искам почивен ден", // nieuw, nalezen
-    's.special.1': "Брат ми се жени. Може ли да поискам почивен ден?", // nieuw, nalezen
-    's.special.2': "Чичо ми почина. Погребението е в петък.", // nieuw, nalezen
-    's.special.3': "Трябва ли да работя по Коледа?", // nieuw, nalezen
-    'c.special.q': "Честито бебе! Ще вземеш ли отпуск при раждане?", // nieuw, nalezen
-    'c.special.a': "Да, първата седмица съм вкъщи.", // nieuw, nalezen
-    'l.unwell': "Неразположение", // nieuw, nalezen
-    'w.hoofdpijn': "главоболието", // nieuw, nalezen
-    'w.griep': "грипът", // nieuw, nalezen
-    'w.verkouden': "настинал (имаш настинка)", // nieuw, nalezen
-    'w.nietlekker': "неразположен (чувстваш се малко зле)", // nieuw, nalezen
-    'w.naarhuis': "прибирам се вкъщи", // nieuw, nalezen
-    'w.uitzieken': "оставам вкъщи, докато оздравея", // nieuw, nalezen
-    's.unwell.1': "Не се чувствам добре.", // nieuw, nalezen
-    's.unwell.2': "Боли ме главата и имам настинка.", // nieuw, nalezen
-    's.unwell.3': { m: "Прибирам се вкъщи. Болен съм.", f: "Прибирам се вкъщи. Болна съм.", x: "Прибирам се вкъщи. Разболях се." }, // nieuw, nalezen
-    'c.unwell.q': { m: "Блед си. Добре ли си?", f: "Бледа си. Добре ли си?", x: "Изглеждаш бледо. Добре ли си?" }, // nieuw, nalezen
-    'c.unwell.a': "Не, не се чувствам добре. Може ли да си отида вкъщи?", // nieuw, nalezen
-    'l.injury': "Наранявания от работата", // nieuw, nalezen
-    'w.bedrijfsongeval': "трудовата злополука", // nieuw, nalezen
-    'w.verzekering': "застраховката", // nieuw, nalezen
-    'w.schadevergoeding': "обезщетението (пари за вредата)", // nieuw, nalezen
-    'w.oorzaak': "причината (защо се е случило)", // nieuw, nalezen
-    'w.letsel': "нараняването (вреда за тялото)", // nieuw, nalezen
-    'w.verklaring': "обяснението, декларацията (какво пишеш или казваш за случилото се)", // nieuw, nalezen
-    's.injury.1': "Имах трудова злополука.", // nieuw, nalezen
-    's.injury.2': "Каква беше причината?", // nieuw, nalezen
-    's.injury.3': "Колегата ми го видя.", // nieuw, nalezen
-    'c.injury.q': "Ще напишеш ли тук обяснението си?", // nieuw, nalezen
-    'c.injury.a': "Да. Може ли копие?", // nieuw, nalezen
-    'l.debt': "Дълг към шефа или агенцията", // nieuw, nalezen
-    'w.lening': "заемът", // nieuw, nalezen
-    'w.lenen': "заемам (вземам или давам на заем)", // nieuw, nalezen
-    'w.vastzitten': "в капан съм (не можеш да си тръгнеш)", // nieuw, nalezen
-    'w.tussenpersoon': "посредникът (някой, който урежда работа срещу пари)", // nieuw, nalezen
-    'w.rente': "лихвата (допълнителни пари, които плащаш по заем)", // nieuw, nalezen
-    'w.belofte': "обещанието", // nieuw, nalezen
-    's.debt.1': "Трябваше да платя за тази работа.", // nieuw, nalezen
-    's.debt.2': "Дългът ми расте всеки месец.", // nieuw, nalezen
-    's.debt.3': "Посредникът държи паспорта ми.", // nieuw, nalezen
-    'c.debt.q': "Можеш да си тръгнеш чак когато си платиш дълга.", // nieuw, nalezen
-    'c.debt.a': "Това не е позволено. Ще потърся помощ.", // nieuw, nalezen
-    'l.inspection': "Инспекцията и друга помощ", // nieuw, nalezen
-    'w.inspectie': "инспекцията (хора, които проверяват дали работата е честна и безопасна)", // nieuw, nalezen
-    'w.controle': "проверката", // nieuw, nalezen
-    'w.slachtoffer': "жертвата", // nieuw, nalezen
-    'w.mensenhandel': "трафикът на хора (хора се използват и продават за работа или секс)", // nieuw, nalezen
-    'w.vertrouwen': "доверявам се", // nieuw, nalezen
-    'w.tolk': "преводачът (устен)", // nieuw, nalezen
-    's.inspection.1': "Утре идва инспекцията.", // nieuw, nalezen
-    's.inspection.2': "Може ли преводач?", // nieuw, nalezen
-    's.inspection.3': "Нямам доверие на този човек.", // nieuw, nalezen
-    'c.inspection.q': "Искаш ли да говориш с инспекцията?", // nieuw, nalezen
-    'c.inspection.a': "Да, но шефът ми не бива да чуе.", // nieuw, nalezen
-    'l.carpool': "Споделено пътуване и работният бус", // nieuw, nalezen
-    'w.carpoolen': "пътуваме заедно (отиваме на работа заедно с една кола)", // nieuw, nalezen
-    'w.meerijden': "возя се с някого (в чужда кола)", // nieuw, nalezen
-    'w.gordel': "предпазният колан", // nieuw, nalezen
-    'w.instappen': "качвам се (в кола, автобус или влак)", // nieuw, nalezen
-    'w.uitstappen': "слизам (от кола, автобус или влак)", // nieuw, nalezen
-    'w.bijrijder': "пътникът (до шофьора)", // nieuw, nalezen
-    's.carpool.1': "Може ли да се возя с теб?", // nieuw, nalezen
-    's.carpool.2': "Сложи си колана.", // nieuw, nalezen
-    's.carpool.3': "Слизам на гарата.", // nieuw, nalezen
-    'c.carpool.q': "Кой кара утре?", // nieuw, nalezen
-    'c.carpool.a': "Аз карам. В шест ще те взема.", // nieuw, nalezen
-    'l.train': "Влак, закъснения и закъсняване", // nieuw, nalezen
-    'w.station': "гарата", // nieuw, nalezen
-    'w.perron': "перонът (където се качваш на влака)", // nieuw, nalezen
-    'w.overstappen': "прекачвам се (на друг влак или автобус)", // nieuw, nalezen
-    'w.uitvallen': "отменен е (влакът не тръгва)", // nieuw, nalezen
-    'w.kaartje': "билетът", // nieuw, nalezen
-    'w.reisplanner': "планерът за пътуване (приложение, което показва влакове и автобуси)", // nieuw, nalezen
-    's.train.1': "Влакът ми е отменен.", // nieuw, nalezen
-    's.train.2': "Трябва да се прекача веднъж.", // nieuw, nalezen
-    's.train.3': "От кой перон тръгва влакът?", // nieuw, nalezen
-    'c.train.q': "Защо закъсня толкова?", // nieuw, nalezen
-    'c.train.a': "Влакът ми беше отменен. Изпратих ти съобщение.", // nieuw, nalezen
-    'l.checklist': "Провери, преди да приключиш", // nieuw, nalezen
-    'w.checklist': "списъкът за проверка (списък с неща за проверяване)", // nieuw, nalezen
-    'w.afvinken': "отмятам (слагам отметка до задача)", // nieuw, nalezen
-    'w.overdoen': "правя отново", // nieuw, nalezen
-    'w.compleet': "пълен (нищо не липсва)", // nieuw, nalezen
-    'w.vergeten': "забравям", // nieuw, nalezen
-    'w.resultaat': "резултатът", // nieuw, nalezen
-    's.checklist.1': "Отмятам всичко в списъка за проверка.", // nieuw, nalezen
-    's.checklist.2': "Пълна ли е поръчката?", // nieuw, nalezen
-    's.checklist.3': "Трябва да направя това отново.", // nieuw, nalezen
-    'c.checklist.q': "Нищо ли не забрави?", // nieuw, nalezen
-    'c.checklist.a': "Ще погледна списъка още веднъж.", // nieuw, nalezen
-    'l.leavesite': "Как оставяш работното място", // nieuw, nalezen
-    'w.terugzetten': "връщам (на мястото му)", // nieuw, nalezen
-    'w.vegen': "мета", // nieuw, nalezen
-    'w.vloer': "подът", // nieuw, nalezen
-    'w.uitdoen': "изключвам (лампата, машина)", // nieuw, nalezen
-    'w.alslaatste': "последен (след всички)", // nieuw, nalezen
-    'w.achterlaten': "оставям (в какъв вид оставяш мястото си)", // nieuw, nalezen
-    's.leavesite.1': "Оставям мястото си подредено.", // nieuw, nalezen
-    's.leavesite.2': "Кой си тръгва последен?", // nieuw, nalezen
-    's.leavesite.3': "Изгаси лампата и затвори вратата.", // nieuw, nalezen
-    'c.leavesite.q': { m: "Ти ли си тръгваш последен днес?", f: "Ти ли си тръгваш последна днес?", x: "Ти ли си тръгваш днес след всички?" }, // nieuw, nalezen
-    'c.leavesite.a': "Да. Изключвам всичко и заключвам вратата.", // nieuw, nalezen
-    'l.stagedays': "Всеки ден на стажа", // nieuw, nalezen
-    'w.stageplek': "мястото за стаж (фирмата, където караш стажа си)", // nieuw, nalezen
-    'w.afwezig': "отсъстващ (не си там)", // nieuw, nalezen
-    'w.aanwezig': "присъстващ (там си)", // nieuw, nalezen
-    'w.stagevergoeding': "възнаграждението за стажа (пари, които може да получаваш на стажа)", // nieuw, nalezen
-    'w.begeleiding': "подкрепата (помощ от ръководителя ти)", // nieuw, nalezen
-    'w.leerling': "ученикът (в училище)", // nieuw, nalezen
-    's.stagedays.1': { m: "Утре отсъствам. Болен съм.", f: "Утре отсъствам. Болна съм.", x: "Утре отсъствам. Разболях се." }, // nieuw, nalezen
-    's.stagedays.2': "Ще получавам ли възнаграждение за стажа?", // nieuw, nalezen
-    's.stagedays.3': "На мястото за стаж работя четири дни.", // nieuw, nalezen
-    'c.stagedays.q': "Защо отсъства вчера?", // nieuw, nalezen
-    'c.stagedays.a': { m: "Бях болен. Обадих се на училището и на фирмата.", f: "Бях болна. Обадих се на училището и на фирмата.", x: "Разболях се. Обадих се на училището и на фирмата." }, // nieuw, nalezen
-    'l.stageend': "Краят на стажа", // nieuw, nalezen
-    'w.eindgesprek': "заключителният разговор (в края на стажа)", // nieuw, nalezen
-    'w.geslaagd': "издържал (справил си се достатъчно добре)", // nieuw, nalezen
-    'w.gezakt': "скъсан (този път не е достатъчно добре)", // nieuw, nalezen
-    'w.herkansing': "поправката (нов шанс)", // nieuw, nalezen
-    'w.bedanken': "благодаря", // nieuw, nalezen
-    'w.trakteren': "черпя (нося нещо вкусно за всички)", // nieuw, nalezen
-    's.stageend.1': "Утре имам заключителен разговор.", // nieuw, nalezen
-    's.stageend.2': "Издържах стажа си.", // nieuw, nalezen
-    's.stageend.3': "Искам да благодаря на всички.", // nieuw, nalezen
-    'c.stageend.q': "Последният ти ден! Какво ще правиш сега?", // nieuw, nalezen
-    'c.stageend.a': "Първо ще си взема дипломата. После ще търся работа.", // nieuw, nalezen
-    'l.neighbours': "Твоят квартал", // nieuw, nalezen
-    'w.buurt': "кварталът", // nieuw, nalezen
-    'w.buurthuis': "кварталният център (сграда за занимания в квартала ти)", // nieuw, nalezen
-    'w.straat': "улицата", // nieuw, nalezen
-    'w.kennismaken': "запознавам се (срещам някого за първи път)", // nieuw, nalezen
-    'w.overlast': "безпокойството (шум или неприятности за другите)", // nieuw, nalezen
-    'w.buurvrouw': "съседката (жена)", // nieuw, nalezen
-    's.neighbours.1': "Отскоро живея на тази улица.", // nieuw, nalezen
-    's.neighbours.2': "В библиотеката упражнявам нидерландски.", // nieuw, nalezen
-    's.neighbours.3': "Извинете за безпокойството.", // nieuw, nalezen
-    'c.neighbours.q': "Здравей, аз съм новата ти съседка.", // nieuw, nalezen
-    'c.neighbours.a': "Приятно ми е да се запознаем! Аз съм Али.", // nieuw, nalezen
-    'l.join': "Училище, спорт и доброволчество", // nieuw, nalezen
-    'w.vrijwilliger': "доброволецът (някой, който помага без заплащане)", // nieuw, nalezen
-    'w.vrijwilligerswerk': "доброволческата работа", // nieuw, nalezen
-    'w.sportclub': "спортният клуб", // nieuw, nalezen
-    'w.ouderavond': "родителската среща (в училище)", // nieuw, nalezen
-    'w.leraar': "учителят", // nieuw, nalezen
-    'w.basisschool': "основното училище", // nieuw, nalezen
-    's.join.1': "Синът ми ходи на основно училище.", // nieuw, nalezen
-    's.join.2': "Играя футбол в спортен клуб.", // nieuw, nalezen
-    's.join.3': "В събота върша доброволческа работа.", // nieuw, nalezen
-    'c.join.q': "Ще дойдеш ли на родителската среща?", // nieuw, nalezen
-    'c.join.a': "Да. Искам да говоря с учителя.", // nieuw, nalezen
-    'l.workphotos': "Снимки и данни", // nieuw, nalezen
-    'w.gezicht': "лицето", // nieuw, nalezen
-    'w.klantgegevens': "данните на клиента (име, адрес, телефон на клиент)", // nieuw, nalezen
-    'w.onlinezetten': "публикувам в интернет", // nieuw, nalezen
-    'w.wissen': "изтривам", // nieuw, nalezen
-    'w.werktelefoon': "служебният телефон", // nieuw, nalezen
-    'w.bestand': "файлът (на компютър)", // nieuw, nalezen
-    's.workphotos.1': "Не публикувам в интернет снимки от работата.", // nieuw, nalezen
-    's.workphotos.2': "Веднага изтривам снимката.", // nieuw, nalezen
-    's.workphotos.3': "Лицето му е на снимката.", // nieuw, nalezen
-    'c.workphotos.q': "Може ли да те снимам? За интернет.", // nieuw, nalezen
-    'c.workphotos.a': "Не, предпочитам не. Не искам да съм в интернет.", // nieuw, nalezen
-    'l.device': "Безопасен телефон и компютър", // nieuw, nalezen
-    'w.update': "актуализацията (нова версия на приложение или програма)", // nieuw, nalezen
-    'w.virus': "вирусът (програма, която вреди на компютъра ти)", // nieuw, nalezen
-    'w.wifi': "уайфаят", // nieuw, nalezen
-    'w.usbstick': "флашката", // nieuw, nalezen
-    'w.installeren': "инсталирам", // nieuw, nalezen
-    'w.openbaar': "обществен (за всички)", // nieuw, nalezen
-    's.device.1': "Довечера инсталирам актуализацията.", // nieuw, nalezen
-    's.device.2': "Тази флашка беше на пода.", // nieuw, nalezen
-    's.device.3': "Безопасен ли е този уайфай?", // nieuw, nalezen
-    'c.device.q': "Може ли да сложа това приложение на служебния телефон?", // nieuw, nalezen
-    'c.device.a': "Първо питай IT отдела.", // nieuw, nalezen
-    'c.vacancy': "Обади се или изпрати кратко съобщение", // nieuw, nalezen
-    'c.vacancy.b': "Прочети обявата внимателно: часовете, мястото и какво трябва да имаш, например шофьорска книжка или сертификат. Не е нужно да имаш всичко: ако имаш повечето, пак опитай. Обади се или напиши кратко съобщение: кажи името си, за коя работа става дума и защо я искаш. Никога не плащай пари, за да получиш работа, и никога не изпращай данните си за вход заради обява.", // nieuw, nalezen
-    'c.vacancy.p': "Нямам диплома, но имам голям опит.", // nieuw, nalezen
-    'c.vacancy.s': "Една обява иска 3 години опит. Ти имаш 2 години. Какво правиш?", // nieuw, nalezen
-    'c.vacancy.o1': "Кандидатствай все пак и кажи какво можеш.", // nieuw, nalezen
-    'c.vacancy.o2': "Не кандидатствай: имаш твърде малко.", // nieuw, nalezen
-    'c.vacancy.o3': "Напиши 3 години: никой не проверява.", // nieuw, nalezen
-    'c.vacancy.w': "Обявата често иска повече, отколкото работата наистина изисква. Честността за това, което можеш, работи по-добре от лъжата.", // nieuw, nalezen
-    'c.result': "Отказът не е краят", // nieuw, nalezen
-    'c.result.b': "Няма отговор след седмица? Можеш да се обадиш отново и учтиво да попиташ. Получи отказ? Попитай какво можеш да направиш по-добре следващия път: много работодатели ще ти кажат. После опитай пак: повечето хора първо получават няколко отказа. Получи „да“? Попитай кога започваш и поискай договора си, преди да започнеш. Канят те на пробен ден? Попитай предварително колко трае и дали е платен.", // nieuw, nalezen
-    'c.result.p': "Какво мога да направя по-добре следващия път?", // nieuw, nalezen
-    'c.result.s': "След интервю за работа получаваш отказ по имейл. Какво правиш?", // nieuw, nalezen
-    'c.result.o1': "Попитай учтиво какво можеш да направиш по-добре.", // nieuw, nalezen
-    'c.result.o2': "Отговори им, че са сгрешили.", // nieuw, nalezen
-    'c.result.o3': "Спри да кандидатстваш: не се получава.", // nieuw, nalezen
-    'c.result.w': "Обратната връзка ти помага на следващото интервю. Учтивият въпрос оставя и добро впечатление за теб.", // nieuw, nalezen
-    'c.residence': "Документите ти: провери датата", // nieuw, nalezen
-    'c.residence.b': "От ЕС ли си? Тогава можеш да живееш и работиш тук с валиден паспорт или лична карта: не ти трябва разрешение. Не си от ЕС? Тогава ти трябва валидно разрешение за пребиваване. На картата пише дали можеш да работиш. Провери датата на изтичане на документите си. Подай навреме заявление за ново разрешение в IND: месеци преди датата, не в последната седмица. Пази копие от всяко писмо. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen
-    'c.residence.p': "Разрешението ми скоро изтича. Какво трябва да направя?", // nieuw, nalezen
-    'c.residence.s': "Разрешението ти за пребиваване изтича след два месеца. В работата имаш много задачи. Какво правиш?", // nieuw, nalezen
-    'c.residence.o1': "Подай заявление за ново сега.", // nieuw, nalezen
-    'c.residence.o2': "Изчакай до последната седмица.", // nieuw, nalezen
-    'c.residence.o3': "Не прави нищо: работата е на първо място.", // nieuw, nalezen
-    'c.residence.w': "Без валидно разрешение може да нямаш право да работиш. Новото разрешение отнема време, затова започваш рано.", // nieuw, nalezen
-    'c.newhome': "Нов адрес? Кажи на всички", // nieuw, nalezen
-    'c.newhome.b': "Местиш се? Съобщи бързо новия си адрес в gemeente: това е задължително. Кажи и на работодателя, банката, застрахователя и лекаря си. Сложи името си на пощенската кутия, иначе писмата няма да стигат до теб. В деня на преместването запиши показанията на уредите и ги снимай. Тогава плащаш само за своето потребление.", // nieuw, nalezen
-    'c.newhome.p': "Преместих се. Това е новият ми адрес.", // nieuw, nalezen
-    'c.newhome.s': "Премести се преди две седмици. Писмата ти още отиват на стария адрес. Какво правиш?", // nieuw, nalezen
-    'c.newhome.o1': "Съобщи сега новия си адрес в gemeente.", // nieuw, nalezen
-    'c.newhome.o2': "Чакай: пощата ще те намери.", // nieuw, nalezen
-    'c.newhome.o3': "Помоли стария си съсед да ти пази писмата.", // nieuw, nalezen
-    'c.newhome.w': "Важните писма, например глоби или писма за данъци, имат срокове. Когато отиват на грешен адрес, можеш да ги пропуснеш.", // nieuw, nalezen
-    'c.payparts': "Прочети всеки ред", // nieuw, nalezen
-    'c.payparts.b': "Фишът ти за заплата има много редове и къси думи. Горе: името ти, служебният ти номер и периодът. После брутната ти заплата, часовете ти и евентуалните добавки. После какво се удържа: данък и вноски. В много работи ти и работодателят заедно плащате за пенсията ти: своята част виждаш във фиша за заплата. Долу: нетната ти заплата. Не разбираш някой ред? Помоли работодателя да ти го обясни. Пази всичките си фишове за заплата. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen
-    'c.payparts.p': "Какво означава този ред във фиша ми за заплата?", // nieuw, nalezen
-    'c.payparts.s': "Във фиша ти за заплата пари отиват за „pensioen“. Не знаеш защо. Какво правиш?", // nieuw, nalezen
-    'c.payparts.o1': "Помоли работодателя да го обясни.", // nieuw, nalezen
-    'c.payparts.o2': "Поискай да го спрат, за да получаваш повече пари сега.", // nieuw, nalezen
-    'c.payparts.o3': "Не обръщай внимание: няма да останеш толкова дълго.", // nieuw, nalezen
-    'c.payparts.w': "Парите за пенсия се спестяват за теб, за по-късно. Обикновено ги запазваш, когато смениш работата. Въпросът ти помага да знаеш кое е твое.", // nieuw, nalezen
-    'c.latepay': "Заплатата закъснява или е в брой? Действай навреме", // nieuw, nalezen
-    'c.latepay.b': "Заплатата ти трябва да дойде в деня, посочен в договора ти или в cao. Закъснява ли, или липсват пари? Питай за това писмено, например с имейл. Пази банковите си извлечения и собствения си списък с часове. Плащат ти в брой, без фиш за заплата? Тогава често е работа на черно (zwart): часовете ти не са регистрирани и после е трудно да докажеш работата си или да получиш обезщетение. Поискай фиш за заплата. Това е обща информация. За твоя случай питай синдиката, Juridisch Loket или FairWork.", // nieuw, nalezen
-    'c.latepay.p': "Заплатата ми още не е дошла. Кога ще дойде?", // nieuw, nalezen
-    'c.latepay.s': "Шефът ти казва: „Отсега ще ти плащам в брой. Без фиш за заплата, така е по-лесно.“ Какво правиш?", // nieuw, nalezen
-    'c.latepay.o1': "Кажи „не“ и поискай фиш за заплата.", // nieuw, nalezen
-    'c.latepay.o2': "Кажи „да“: в брой е повече пари.", // nieuw, nalezen
-    'c.latepay.o3': "Кажи „да“, но само този месец.", // nieuw, nalezen
-    'c.latepay.w': "Без фиш за заплата работата ти я няма на хартия. Тогава можеш да загубиш права, например на обезщетение, когато загубиш работата си.", // nieuw, nalezen
-    'c.holiday': "Почивните ти дни: използвай ги навреме", // nieuw, nalezen
-    'c.holiday.b': "Провери колко дни отпуск ти остават: често това пише във фиша за заплата или в приложението. Планирай отпуската си рано и я поискай писмено. Законните ти дни отпуск изтичат 6 месеца след края на годината, освен ако не е било възможно да ги вземеш. Допълнителните дни от cao или от договора важат по-дълго, обикновено 5 години. Работата ти приключва? Тогава получаваш пари за неизползваните дни. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen
-    'c.holiday.p': "Искам да взема дните си отпуск още тази година.", // nieuw, nalezen
-    'c.holiday.s': "Ноември е. Имаш още 12 дни отпуск от тази година. Началникът ти не казва нищо за това. Какво правиш?", // nieuw, nalezen
-    'c.holiday.o1': "Попитай кога можеш да ги вземеш.", // nieuw, nalezen
-    'c.holiday.o2': "Не прави нищо: остават завинаги.", // nieuw, nalezen
-    'c.holiday.o3': "Забрави ги: вече ги няма.", // nieuw, nalezen
-    'c.holiday.w': "Почивните дни са за почивка и могат да изтекат. Когато питаш навреме, още можеш да ги планираш.", // nieuw, nalezen
-    'c.special': "Сватба, погребение, бебе", // nieuw, nalezen
-    'c.special.b': "Роди се бебето ти, а ти си партньорът или партньорката на майката? Тогава получаваш 1 седмица платен отпуск при раждане, в първите 4 седмици. Колективният трудов договор (cao) често дава специален отпуск (bijzonder verlof) за сватбата ти или за погребение в семейството ти. Официалните празници, като Коледа: никой закон не казва, че почиваш. Договорът ти или cao казва дали почиваш, или получаваш допълнително заплащане. Искай почивните си дни навреме. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen
-    'c.special.p': "Жена ми ще ражда. Как да поискам отпуск при раждане?", // nieuw, nalezen
-    'c.special.s': "Баща ти почина в чужбина. Искаш да отидеш на погребението. Какво правиш?", // nieuw, nalezen
-    'c.special.o1': "Кажи на работодателя и попитай какъв отпуск можеш да получиш.", // nieuw, nalezen
-    'c.special.o2': "Просто тръгни и им кажи, когато се върнеш.", // nieuw, nalezen
-    'c.special.o3': "Не ходи: нямаш повече почивни дни.", // nieuw, nalezen
-    'c.special.w': "Работодателят разбира, че това е много важно. Много колективни трудови договори дават специален отпуск, а можеш да използваш и почивните си дни.", // nieuw, nalezen
-    'c.unwell': "Болест на работа или в отпуска", // nieuw, nalezen
-    'c.unwell.b': "Чувстваш се зле на работа? Кажи на началника, преди да си тръгнеш: това е съобщението ти за болест. Не си тръгвай просто така. Разболя ли се в отпуската? Съобщи на работодателя по същия начин като у дома, и от чужбина. Тогава дните на болест обикновено не се броят за дни отпуск. Може да ти трябва бележка от тамошен лекар. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen
-    'c.unwell.p': "Разболях се в отпуската.", // nieuw, nalezen
-    'c.unwell.s': "В отпуска си в родината си. Хващаш грип и 5 дни лежиш на легло. Какво правиш?", // nieuw, nalezen
-    'c.unwell.o1': "Съобщи веднага на работодателя.", // nieuw, nalezen
-    'c.unwell.o2': "Нищо: така или иначе си в отпуска.", // nieuw, nalezen
-    'c.unwell.o3': "Кажи на работодателя, когато се върнеш.", // nieuw, nalezen
-    'c.unwell.w': "Когато съобщиш навреме, дните на болест обикновено не се броят за дни отпуск. Тогава можеш да използваш тези дни по-късно.", // nieuw, nalezen
-    'c.injury': "Нараняване на работа: запиши го", // nieuw, nalezen
-    'c.injury.b': "Нарани ли се на работа? Запиши какво стана, кога и къде, и кой го видя. Направи снимки и пази всички документи от лекаря. Поискай копие от доклада за злополуката. Нарани ли се, защото работата не беше безопасна? Тогава работодателят обикновено трябва да плати за вредата ти. Не е нужно да доказваш, че е по негова вина: работодателят трябва да покаже, че е направил достатъчно за безопасността ти. Поискай съвет, преди да подпишеш каквото и да е. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen
-    'c.injury.p': "Може ли копие от доклада?", // nieuw, nalezen
-    'c.injury.s': "Нараняваш си ръката на машина без предпазител. По-късно шефът ти иска да подпишеш лист: „Вината беше моя.“ Какво правиш?", // nieuw, nalezen
-    'c.injury.o1': "Не го подписвай. Първо поискай съвет.", // nieuw, nalezen
-    'c.injury.o2': "Подпиши го, за да няма проблеми.", // nieuw, nalezen
-    'c.injury.o3': "Подпиши го, но запази снимка от него.", // nieuw, nalezen
-    'c.injury.w': "Това, което подпишеш, може да има значение по-късно, например когато поискаш обезщетение. Първо поискай съвет от синдиката или от Juridisch Loket.", // nieuw, nalezen
-    'c.debt': "Дълг, който никога не свършва", // nieuw, nalezen
-    'c.debt.b': "В Нидерландия агенция няма право да ти иска пари, за да ти намери работа. Трябваше ли да заемеш пари за пътя или за работата и дългът продължава да расте? Трябва ли да останеш, докато не го изплатиш? Това е признак на експлоатация. Дългът никога не означава, че трябва да продължиш да работиш: можеш да спреш. Пази всеки документ и всяко съобщение за дълга. Това е обща информация. За твоя случай питай синдиката, Juridisch Loket или FairWork.", // nieuw, nalezen
-    'c.debt.p': "Колко още трябва да платя? Искам го писмено.", // nieuw, nalezen
-    'c.debt.s': "Агенцията плати автобусния ти билет. Сега всяка седмица ти удържа пари от заплатата, а дългът не намалява. Какво правиш?", // nieuw, nalezen
-    'c.debt.o1': "Поискай списък на хартия и потърси помощ.", // nieuw, nalezen
-    'c.debt.o2': "Работи повече часове, за да платиш по-бързо.", // nieuw, nalezen
-    'c.debt.o3': "Не казвай нищо: агенцията ти помогна.", // nieuw, nalezen
-    'c.debt.w': "Дълг, който не намалява, те държи в капан. Със списъка синдикатът или FairWork могат да проверят дали е честно.", // nieuw, nalezen
-    'c.inspection': "Инспекцията е там за теб", // nieuw, nalezen
-    'c.inspection.b': "Nederlandse Arbeidsinspectie проверява дали работата е безопасна и честна: заплата, часове и експлоатация. Инспекторите могат да дойдат на работата ти и да говорят с работниците. Можеш да им кажеш истината: те не казват на шефа ти кой е съобщил нещо. Трябва ти помощ на твоя език? Поискай преводач. FairWork помага безплатно на жертви на експлоатация, и на хора без валидни документи. Това е обща информация. За твоя случай питай синдиката, Juridisch Loket или FairWork.", // nieuw, nalezen
-    'c.inspection.p': "Искам да разкажа нещо, но без шефа ми наоколо.", // nieuw, nalezen
-    'c.inspection.s': "Инспектор пита за часовете ти. Шефът ти каза да казваш 8 часа. Работиш 12. Какво правиш?", // nieuw, nalezen
-    'c.inspection.o1': "Кажи истината на инспектора.", // nieuw, nalezen
-    'c.inspection.o2': "Кажи 8 часа, както каза шефът.", // nieuw, nalezen
-    'c.inspection.o3': "Не казвай нищо и си тръгни.", // nieuw, nalezen
-    'c.inspection.w': "Инспекторът може да помогне само когато знае истината. Това, което казваш, помага на теб, а и на колегите ти.", // nieuw, nalezen
-    'c.carpool': "В колата: колан и уговорка за разходите", // nieuw, nalezen
-    'c.carpool.b': "Всички в колата слагат колан, и отзад. Шофьорът трябва да има валидна шофьорска книжка и не бива да пие алкохол преди шофиране. Твърде много хора в буса или шофьорът кара опасно? Кажи го и не се качвай. Пътуваш заедно с колеги? Първо се разберете как делите разходите за гориво. Пътуваш с работния бус на агенцията? Попитай колко ти струва и го поискай писмено.", // nieuw, nalezen
-    'c.carpool.p': "В буса има твърде много хора. Няма да се кача.", // nieuw, nalezen
-    'c.carpool.s': "Работният бус има 9 места. Тази сутрин 11 души искат да се качат. Какво правиш?", // nieuw, nalezen
-    'c.carpool.o1': "Не се качвай и се обади на началника.", // nieuw, nalezen
-    'c.carpool.o2': "Седни на пода отзад.", // nieuw, nalezen
-    'c.carpool.o3': "Набутай се: само 20 минути е.", // nieuw, nalezen
-    'c.carpool.w': "Без седалка и колан дори малка катастрофа може да е много тежка. Работодателят или агенцията могат да намерят друг начин.", // nieuw, nalezen
-    'c.train': "Влакът закъснява? Веднага изпрати съобщение", // nieuw, nalezen
-    'c.train.b': "Провери планера за пътуване, преди да тръгнеш: влаковете и автобусите могат да закъснеят или да бъдат отменени. Влакът ти закъснява? Веднага изпрати съобщение на началника си с часа, в който ще пристигнеш. В дни с буря или ремонт на линията хвани по-ранен влак. След голямо закъснение често можеш да получиш пари обратно: виж на сайта на железопътната компания.", // nieuw, nalezen
-    'c.train.p': "Влакът ми закъснява. Ще съм там в девет.", // nieuw, nalezen
-    'c.train.s': "Влакът ти е отменен. Следващият тръгва след 30 минути. Смяната ти започва след 40 минути. Какво правиш?", // nieuw, nalezen
-    'c.train.o1': "Изпрати сега съобщение, че ще закъснееш.", // nieuw, nalezen
-    'c.train.o2': "Изчакай и обясни, когато пристигнеш.", // nieuw, nalezen
-    'c.train.o3': "Прибери се вкъщи: не е по твоя вина.", // nieuw, nalezen
-    'c.train.w': "Началникът може да планира по-добре, когато знае рано. Закъснението не е по твоя вина, но да съобщиш за него е твоя работа.", // nieuw, nalezen
-    'c.checklist': "Първо провери работата си", // nieuw, nalezen
-    'c.checklist.b': "Преди да кажеш „klaar“, провери собствената си работа. Използвай списъка за проверка, ако има такъв, и отмятай всяка стъпка. Погледни работата си през очите на клиента. Нещо не е наред? Направи го отново сега: така е по-бързо, отколкото после. Имаш съмнения? Помоли колега да погледне. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.checklist.p': "Готово. Ще го провериш ли набързо?", // nieuw, nalezen
-    'c.checklist.s': "Свърши работата. В списъка за проверка една стъпка не е отметната. Мислиш, че тя е направена. Какво правиш?", // nieuw, nalezen
-    'c.checklist.o1': "Провери тази стъпка отново, после я отметни.", // nieuw, nalezen
-    'c.checklist.o2': "Отметни я: сигурно е направена.", // nieuw, nalezen
-    'c.checklist.o3': "Остави я: никой не чете списъка.", // nieuw, nalezen
-    'c.checklist.w': "Списъкът за проверка помага само когато е верен. Още един поглед отнема минута. Грешката може да отнеме часове.", // nieuw, nalezen
-    'c.leavesite': "Остави го така, както искаш да го намериш", // nieuw, nalezen
-    'c.leavesite.b': "В края на работата остави мястото си чисто и безопасно. Върни инструментите и материалите по местата им и измети пода. Изключи машините и лампите след себе си. Тръгваш си след всички? Провери прозорците и вратите и заключи така, както казва фирмата ти. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.leavesite.p': "Тръгвам си след всички. Трябва ли да заключа вратата?", // nieuw, nalezen
-    'c.leavesite.s': "Тръгваш си от работа след всички. Не знаеш как да включиш алармата. Какво правиш?", // nieuw, nalezen
-    'c.leavesite.o1': "Обади се на началника и попитай.", // nieuw, nalezen
-    'c.leavesite.o2': "Тръгни без алармата: късно е.", // nieuw, nalezen
-    'c.leavesite.o3': "Натискай бутони, докато не изпиука.", // nieuw, nalezen
-    'c.leavesite.w': "Сграда без аларма не е в безопасност. Началникът предпочита да получи обаждане, отколкото утре да открие проблем.", // nieuw, nalezen
-    'c.stagedays': "Ученик и колега", // nieuw, nalezen
-    'c.stagedays.b': "На стажа си там, за да учиш, но работиш като колега: навреме, по правилата на фирмата, и се обаждаш, когато се разболееш. Можеш да задаваш много въпроси: затова си там. Работата ти трябва да ти помага да учиш, а не само да чистиш или да носиш неща цял ден. Не е така? Говори с ръководителя на стажа в училището. Възнаграждение за стажа не се дава винаги: попитай за него, преди да започнеш. Правилата са различни във всяко училище: питай ръководителя на стажа.", // nieuw, nalezen
-    'c.stagedays.p': "Искам и това да науча. Може ли да гледам?", // nieuw, nalezen
-    'c.stagedays.s': "На стажа три седмици всеки ден само чистиш столовата. Какво правиш?", // nieuw, nalezen
-    'c.stagedays.o1': "Говори за това с ръководителя на стажа.", // nieuw, nalezen
-    'c.stagedays.o2': "Прави го и мълчи: нали е само стаж.", // nieuw, nalezen
-    'c.stagedays.o3': "Стой вкъщи, докато не ти дадат друга работа.", // nieuw, nalezen
-    'c.stagedays.w': "Стажът е, за да научиш професията си. Ръководителят на стажа може да поговори с фирмата за по-добри задачи.", // nieuw, nalezen
-    'c.stageend': "Завърши добре и поискай препоръка", // nieuw, nalezen
-    'c.stageend.b': "На заключителния разговор чуваш какво е вървяло добре и какво може да е по-добре. Поискай примери и ги запиши за следващата си работа. Мина ли добре? Попитай дали можеш да ги посочваш за препоръка. В последния ден благодари на колегите си: много хора тук носят нещо малко за ядене, например торта или бонбони. Правилата са различни във всяко училище: питай ръководителя на стажа.", // nieuw, nalezen
-    'c.stageend.p': "Може ли да ви посоча за препоръка?", // nieuw, nalezen
-    'c.stageend.s': "Последният ден на стажа ти е. Какво правиш?", // nieuw, nalezen
-    'c.stageend.o1': "Благодари на колегите си и се сбогувай.", // nieuw, nalezen
-    'c.stageend.o2': "Тръгни си тихо, без да казваш нищо.", // nieuw, nalezen
-    'c.stageend.o3': "Поискай подарък от фирмата.", // nieuw, nalezen
-    'c.stageend.w': "Доброто сбогуване оставя добро впечатление. Може би по-късно ще искаш да работиш там или ще ти трябват за препоръка.", // nieuw, nalezen
-    'c.neighbours': "Поздрави съседите си", // nieuw, nalezen
-    'c.neighbours.b': "Отскоро живееш на нова улица? Поздрави съседите си и им кажи името си. Така по-късно проблемите се решават по-лесно. Работиш нощем или живееш с много хора? Пази тишина късно вечер и през нощта. Изнасяй боклука в правилния ден. В библиотеката и в кварталния център често можеш да упражняваш нидерландски, понякога безплатно.", // nieuw, nalezen
-    'c.neighbours.p': "Здравейте, аз съм Али. Живея в съседство.", // nieuw, nalezen
-    'c.neighbours.s': "Живееш с петима колеги. Съсед казва, че нощем често е шумно. Какво правиш?", // nieuw, nalezen
-    'c.neighbours.o1': "Извини се и се разберете да е по-тихо.", // nieuw, nalezen
-    'c.neighbours.o2': "Кажи, че всички работите и трябва да си почивате.", // nieuw, nalezen
-    'c.neighbours.o3': "Не казвай нищо и затвори вратата.", // nieuw, nalezen
-    'c.neighbours.w': "Един добър разговор рано спира по-големи проблеми. Съседите, които те познават, често са по-дружелюбни и по-услужливи.", // nieuw, nalezen
-    'c.join': "Включи се: така учиш нидерландски по-бързо", // nieuw, nalezen
-    'c.join.b': "Извън работата учиш нидерландски най-бързо, като правиш неща с хора: спорт, клуб или доброволческа работа. Детето ти е на училище? Иди на родителската среща, дори ако нидерландският ти не е перфектен: учителят иска да се запознае с теб. Можеш да помолиш да говорят по-бавно или да използваш приложение за превод. Доброволческата работа изглежда добре и в автобиографията.", // nieuw, nalezen
-    'c.join.p': "Бихте ли говорили малко по-бавно?", // nieuw, nalezen
-    'c.join.s': "Канят те на родителска среща. Нидерландският ти още не е добър. Какво правиш?", // nieuw, nalezen
-    'c.join.o1': "Иди и говори на прост нидерландски или използвай приложение.", // nieuw, nalezen
-    'c.join.o2': "Не ходи: учителят няма да те разбере.", // nieuw, nalezen
-    'c.join.o3': "Изпрати кратко съобщение, че нямаш време.", // nieuw, nalezen
-    'c.join.w': "Учителят иска да говори за детето ти, не за нидерландския ти. Като дойдеш, показваш, че ти е грижа.", // nieuw, nalezen
-    'c.workphotos': "Първо питай, после публикувай", // nieuw, nalezen
-    'c.workphotos.b': "Снимка на работа може да покаже повече, отколкото мислиш: купувач, клиент, екран или лист с имена. Не публикувай снимки от работата в интернет без разрешение от работодателя и никога снимки на хора без тяхното съгласие. Данните на клиентите остават на работа: не ги изпращай на своя телефон или имейл. Изпрати ли нещо по погрешка? Веднага кажи на началника си. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.workphotos.p': "Първо ще поискам разрешение.", // nieuw, nalezen
-    'c.workphotos.s': "Колега слага смешна снимка на клиент в приложението на екипа. Какво правиш?", // nieuw, nalezen
-    'c.workphotos.o1': "Кажи, че това не е наред, и не я споделяй.", // nieuw, nalezen
-    'c.workphotos.o2': "Сподели я: само в приложението на екипа е.", // nieuw, nalezen
-    'c.workphotos.o3': "Харесай я, но не я споделяй.", // nieuw, nalezen
-    'c.workphotos.w': "Клиентът не е казал „да“ за тази снимка. Снимките в приложение могат бързо да стигнат навсякъде. Когато го кажеш любезно, пазиш клиента и колегата си.", // nieuw, nalezen
-    'c.device': "Актуализации да, странни флашки не", // nieuw, nalezen
-    'c.device.b': "Инсталирай актуализациите на телефона и компютъра си: те затварят пробиви, които хакерите използват. Намери ли флашка? Не я слагай в компютъра си: дай я на IT отдела. На служебен телефон или компютър инсталирай само приложения, които работата ти позволява. В обществен уайфай не влизай в банката си или в системите на работата. Заключвай телефона си с код. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.device.p': "Намерих флашка. Какво да правя с нея?", // nieuw, nalezen
-    'c.device.s': "Намираш флашка на паркинга. На нея пише „Salaris“. Какво правиш?", // nieuw, nalezen
-    'c.device.o1': "Дай я на IT отдела.", // nieuw, nalezen
-    'c.device.o2': "Сложи я в компютъра си, за да видиш чия е.", // nieuw, nalezen
-    'c.device.o3': "Вземи я вкъщи и я разгледай там.", // nieuw, nalezen
-    'c.device.w': "На флашката може да има вирус, дори когато изглежда интересна. IT отделът може да я провери безопасно.", // nieuw, nalezen
+    'l.vacancy': "Как да прочетеш обява за работа", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.advertentie': "обявата (текст, който предлага работа или някаква вещ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.eis': "изискването (какво трябва да имаш или да можеш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.parttime': "непълен работен ден (по-малко часове седмично)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.fulltime': "пълен работен ден (цяла работна седмица)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sollicitatiebrief': "мотивационното писмо", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.contactpersoon': "лицето за контакт (човекът, на когото можеш да се обадиш или да пишеш)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vacancy.1': "Видях обявата ви в интернет.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vacancy.2': "На непълен или на пълен работен ден е работата?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vacancy.3': "Какви са изискванията?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.q': "Защо се обаждате?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.a': "Обаждам се за обявата ви за работа. Мястото още ли е свободно?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.result': "След интервюто", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aangenomen': "нает (работата е твоя)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afwijzing': "отказът (не получаваш работата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanbod': "предложението (предлагат ти работата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.proefdag': "пробният ден (един ден работа за проба)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nabellen': "обаждам се отново (за да питам как върви)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teleurgesteld': "разочарован", // nieuw, nalezen // nagelezen AI 28 nov
+    's.result.1': "Работата е ваша!", // nieuw, nalezen // nagelezen AI 28 nov
+    's.result.2': "Получих отказ.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.result.3': "Платен ли е пробният ден?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.q': "За съжаление избираме някой друг.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.a': "Жалко. Може ли да попитам защо?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.residence': "Документите ти за пребиваване", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verblijfsvergunning': "разрешението за пребиваване", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pasfoto': "снимката за документи", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vingerafdruk': "пръстовият отпечатък", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geldig': "валиден (още може да се използва)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verloopdatum': "датата на изтичане (последният ден, в който документът е валиден)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.volgnummer': "номерът за опашката (билетчето с твоя ред)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.residence.1': "Разрешението ми за пребиваване е валидно още една година.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.residence.2': "Каква е датата на изтичане на паспорта ти?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.residence.3': "Имам час в общината.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.q': "Разрешението ви за пребиваване почти изтече.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.a': "Тогава веднага ще подам заявление за ново.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.newhome': "Преместване", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brievenbus': "пощенската кутия", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meterstand': "показанието на уреда (числата на уреда за газ, ток или вода)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.naambordje': "табелката с името (името ти на вратата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.woning': "жилището (къща или апартамент)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doorsturen': "препращам (изпращам на новия адрес)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verhuisdag': "денят на преместването", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newhome.1': "Следващата седмица се местя.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newhome.2': "Името ми го няма на пощенската кутия.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newhome.3': "Съобщавам новия си адрес.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.q': "Къде живееш сега?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.a': "В ново жилище. Ето новия ми адрес.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.payparts': "Какво пише във фиша за заплата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pensioen': "пенсията (пари за старостта)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.periode': "периодът (седмиците или месецът на тази заплата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedrag': "сумата (пари)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.totaal': "общата сума", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afkorting': "съкращението (кратка форма на дума)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.personeelsnummer': "служебният номер (твоят номер във фирмата)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.payparts.1': "Какво означава това съкращение?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.payparts.2': "Тази сума отива за пенсията ми.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.payparts.3': "За кой период е тази заплата?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.q': "Какъв е служебният ти номер?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.a': "Горе е, до името ми.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.latepay': "Заплата със закъснение, непълна или в брой", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zwartwerken': "работя на черно (без договор, без данъци, без права на хартия)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorschot': "авансът (част от заплатата преди деня за заплата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nabetaling': "доплащането (пари, които получаваш по-късно, за да се поправи заплатата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tekort': "липсата (пари, които липсват)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.betaaldag': "денят за заплата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bankafschrift': "банковото извлечение (списък на входящите и изходящите пари)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.latepay.1': "Заплатата ми закъснява.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.latepay.2': "Не работя на черно.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.latepay.3': "Може ли да получа аванс?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.q': "Липсващите пари ще ги получиш следващия месец.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.a': "Може ли да го получа писмено?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.holiday': "Планиране на отпуската", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.saldo': "остатъкът (колко дни още имаш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedkeuren': "одобрявам (казвам „да“ на нещо)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verlopen': "изтича (вече не е валидно)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zomervakantie': "лятната ваканция", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.drukte': "натовареният период (много работа)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanvraag': "молбата (искаш нещо, често с формуляр)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.holiday.1': "Колко дни отпуск ми остават?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.holiday.2': "Отпуската ми е одобрена.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.holiday.3': "Попълвам формуляра.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.q': "През лятото е натоварено. Можеш ли да излезеш в отпуск през май?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.a': "По-добре през юли. Тогава семейството ми е вкъщи.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.special': "Специални почивни дни", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bruiloft': "сватбата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.begrafenis': "погребението", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geboorteverlof': "отпускът при раждане (за партньора, когато се роди бебе)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijzonderverlof': "специалният отпуск (например за сватба или погребение)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kerstdagen': "Коледа (двата коледни дни)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vrijvragen': "искам почивен ден", // nieuw, nalezen // nagelezen AI 28 nov
+    's.special.1': "Брат ми се жени. Може ли да поискам почивен ден?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.special.2': "Чичо ми почина. Погребението е в петък.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.special.3': "Трябва ли да работя по Коледа?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.q': "Честито бебе! Ще вземеш ли отпуск при раждане?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.a': "Да, първата седмица съм вкъщи.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.unwell': "Неразположение", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hoofdpijn': "главоболието", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.griep': "грипът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verkouden': "настинал (имаш настинка)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nietlekker': "неразположен (чувстваш се малко зле)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.naarhuis': "прибирам се вкъщи", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitzieken': "оставам вкъщи, докато оздравея", // nieuw, nalezen // nagelezen AI 28 nov
+    's.unwell.1': "Не се чувствам добре.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.unwell.2': "Боли ме главата и имам настинка.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.unwell.3': { m: "Прибирам се вкъщи. Болен съм.", f: "Прибирам се вкъщи. Болна съм.", x: "Прибирам се вкъщи. Разболях се." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.q': { m: "Блед си. Добре ли си?", f: "Бледа си. Добре ли си?", x: "Изглеждаш бледо. Добре ли си?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.a': "Не, не се чувствам добре. Може ли да си отида вкъщи?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.injury': "Наранявания от работата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedrijfsongeval': "трудовата злополука", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verzekering': "застраховката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schadevergoeding': "обезщетението (пари за вредата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oorzaak': "причината (защо се е случило)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.letsel': "нараняването (вреда за тялото)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verklaring': "обяснението, декларацията (какво пишеш или казваш за случилото се)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.injury.1': "Имах трудова злополука.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.injury.2': "Каква беше причината?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.injury.3': "Колегата ми го видя.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.q': "Ще напишеш ли тук обяснението си?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.a': "Да. Може ли копие?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.debt': "Дълг към шефа или агенцията", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lening': "заемът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lenen': "заемам (вземам или давам на заем)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vastzitten': "в капан съм (не можеш да си тръгнеш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tussenpersoon': "посредникът (някой, който урежда работа срещу пари)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rente': "лихвата (допълнителни пари, които плащаш по заем)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.belofte': "обещанието", // nieuw, nalezen // nagelezen AI 28 nov
+    's.debt.1': "Трябваше да платя за тази работа.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.debt.2': "Дългът ми расте всеки месец.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.debt.3': "Посредникът държи паспорта ми.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.q': "Можеш да си тръгнеш чак когато си платиш дълга.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.a': "Това не е позволено. Ще потърся помощ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.inspection': "Инспекцията и друга помощ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inspectie': "инспекцията (хора, които проверяват дали работата е честна и безопасна)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.controle': "проверката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.slachtoffer': "жертвата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mensenhandel': "трафикът на хора (хора се използват и продават за работа или секс)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vertrouwen': "доверявам се", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tolk': "преводачът (устен)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.inspection.1': "Утре идва инспекцията.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.inspection.2': "Може ли преводач?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.inspection.3': "Нямам доверие на този човек.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.q': "Искаш ли да говориш с инспекцията?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.a': "Да, но шефът ми не бива да чуе.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.carpool': "Споделено пътуване и работният бус", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.carpoolen': "пътуваме заедно (отиваме на работа заедно с една кола)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meerijden': "возя се с някого (в чужда кола)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gordel': "предпазният колан", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.instappen': "качвам се (в кола, автобус или влак)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitstappen': "слизам (от кола, автобус или влак)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijrijder': "пътникът (до шофьора)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carpool.1': "Може ли да се возя с теб?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carpool.2': "Сложи си колана.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carpool.3': "Слизам на гарата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.q': "Кой кара утре?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.a': "Аз карам. В шест ще те взема.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.train': "Влак, закъснения и закъсняване", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.station': "гарата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.perron': "перонът (където се качваш на влака)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.overstappen': "прекачвам се (на друг влак или автобус)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitvallen': "отменен е (влакът не тръгва)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kaartje': "билетът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.reisplanner': "планерът за пътуване (приложение, което показва влакове и автобуси)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.train.1': "Влакът ми е отменен.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.train.2': "Трябва да се прекача веднъж.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.train.3': "От кой перон тръгва влакът?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.q': "Защо закъсня толкова?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.a': "Влакът ми беше отменен. Изпратих ти съобщение.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.checklist': "Провери, преди да приключиш", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.checklist': "списъкът за проверка (списък с неща за проверяване)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afvinken': "отмятам (слагам отметка до задача)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.overdoen': "правя отново", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.compleet': "пълен (нищо не липсва)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vergeten': "забравям", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.resultaat': "резултатът", // nieuw, nalezen // nagelezen AI 28 nov
+    's.checklist.1': "Отмятам всичко в списъка за проверка.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.checklist.2': "Пълна ли е поръчката?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.checklist.3': "Трябва да направя това отново.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.q': "Нищо ли не забрави?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.a': "Ще погледна списъка още веднъж.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.leavesite': "Как оставяш работното място", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.terugzetten': "връщам (на мястото му)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vegen': "мета", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vloer': "подът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitdoen': "изключвам (лампата, машина)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alslaatste': "последен (след всички)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.achterlaten': "оставям (в какъв вид оставяш мястото си)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.leavesite.1': "Оставям мястото си подредено.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.leavesite.2': "Кой си тръгва последен?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.leavesite.3': "Изгаси лампата и затвори вратата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.q': { m: "Ти ли си тръгваш последен днес?", f: "Ти ли си тръгваш последна днес?", x: "Ти ли си тръгваш днес след всички?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.a': "Да. Изключвам всичко и заключвам вратата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.stagedays': "Всеки ден на стажа", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stageplek': "мястото за стаж (фирмата, където караш стажа си)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afwezig': "отсъстващ (не си там)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanwezig': "присъстващ (там си)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stagevergoeding': "възнаграждението за стажа (пари, които може да получаваш на стажа)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.begeleiding': "подкрепата (помощ от ръководителя ти)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.leerling': "ученикът (в училище)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.stagedays.1': { m: "Утре отсъствам. Болен съм.", f: "Утре отсъствам. Болна съм.", x: "Утре отсъствам. Разболях се." }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.stagedays.2': "Ще получавам ли възнаграждение за стажа?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.stagedays.3': "На мястото за стаж работя четири дни.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.q': "Защо отсъства вчера?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.a': { m: "Бях болен. Обадих се на училището и на фирмата.", f: "Бях болна. Обадих се на училището и на фирмата.", x: "Разболях се. Обадих се на училището и на фирмата." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'l.stageend': "Краят на стажа", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.eindgesprek': "заключителният разговор (в края на стажа)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geslaagd': "издържал (справил си се достатъчно добре)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gezakt': "скъсан (този път не е достатъчно добре)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.herkansing': "поправката (нов шанс)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedanken': "благодаря", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.trakteren': "черпя (нося нещо вкусно за всички)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.stageend.1': "Утре имам заключителен разговор.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.stageend.2': "Издържах стажа си.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.stageend.3': "Искам да благодаря на всички.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.q': "Последният ти ден! Какво ще правиш сега?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.a': "Първо ще си взема дипломата. После ще търся работа.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.neighbours': "Твоят квартал", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.buurt': "кварталът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.buurthuis': "кварталният център (сграда за занимания в квартала ти)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.straat': "улицата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kennismaken': "запознавам се (срещам някого за първи път)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.overlast': "безпокойството (шум или неприятности за другите)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.buurvrouw': "съседката (жена)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.neighbours.1': "Отскоро живея на тази улица.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.neighbours.2': "В библиотеката упражнявам нидерландски.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.neighbours.3': "Извинете за безпокойството.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.q': "Здравей, аз съм новата ти съседка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.a': "Приятно ми е да се запознаем! Аз съм Али.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.join': "Училище, спорт и доброволчество", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vrijwilliger': "доброволецът (някой, който помага без заплащане)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vrijwilligerswerk': "доброволческата работа", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sportclub': "спортният клуб", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ouderavond': "родителската среща (в училище)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.leraar': "учителят", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.basisschool': "основното училище", // nieuw, nalezen // nagelezen AI 28 nov
+    's.join.1': "Синът ми ходи на основно училище.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.join.2': "Играя футбол в спортен клуб.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.join.3': "В събота върша доброволческа работа.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.q': "Ще дойдеш ли на родителската среща?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.a': "Да. Искам да говоря с учителя.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.workphotos': "Снимки и данни", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gezicht': "лицето", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.klantgegevens': "данните на клиента (име, адрес, телефон на клиент)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onlinezetten': "публикувам в интернет", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wissen': "изтривам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werktelefoon': "служебният телефон", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bestand': "файлът (на компютър)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workphotos.1': "Не публикувам в интернет снимки от работата.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workphotos.2': "Веднага изтривам снимката.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workphotos.3': "Лицето му е на снимката.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.q': "Може ли да те снимам? За интернет.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.a': "Не, предпочитам не. Не искам да съм в интернет.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.device': "Безопасен телефон и компютър", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.update': "актуализацията (нова версия на приложение или програма)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.virus': "вирусът (програма, която вреди на компютъра ти)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wifi': "уайфаят", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.usbstick': "флашката", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.installeren': "инсталирам", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.openbaar': "обществен (за всички)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.device.1': "Довечера инсталирам актуализацията.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.device.2': "Тази флашка беше на пода.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.device.3': "Безопасен ли е този уайфай?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.q': "Може ли да сложа това приложение на служебния телефон?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.a': "Първо питай IT отдела.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy': "Обади се или изпрати кратко съобщение", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.b': "Прочети обявата внимателно: часовете, мястото и какво трябва да имаш, например шофьорска книжка или сертификат. Не е нужно да имаш всичко: ако имаш повечето, пак опитай. Обади се или напиши кратко съобщение: кажи името си, за коя работа става дума и защо я искаш. Никога не плащай пари, за да получиш работа, и никога не изпращай данните си за вход заради обява.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.p': "Нямам диплома, но имам голям опит.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.s': "Една обява иска 3 години опит. Ти имаш 2 години. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.o1': "Кандидатствай все пак и кажи какво можеш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.o2': "Не кандидатствай: имаш твърде малко.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.o3': "Напиши 3 години: никой не проверява.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.w': "Обявата често иска повече, отколкото работата наистина изисква. Честността за това, което можеш, работи по-добре от лъжата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result': "Отказът не е краят", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.b': "Няма отговор след седмица? Можеш да се обадиш отново и учтиво да попиташ. Получи отказ? Попитай какво можеш да направиш по-добре следващия път: много работодатели ще ти кажат. После опитай пак: повечето хора първо получават няколко отказа. Получи „да“? Попитай кога започваш и поискай договора си, преди да започнеш. Канят те на пробен ден? Попитай предварително колко трае и дали е платен.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.p': "Какво мога да направя по-добре следващия път?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.s': "След интервю за работа получаваш отказ по имейл. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.o1': "Попитай учтиво какво можеш да направиш по-добре.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.o2': "Отговори им, че са сгрешили.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.o3': "Спри да кандидатстваш: не се получава.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.w': "Обратната връзка ти помага на следващото интервю. Учтивият въпрос оставя и добро впечатление за теб.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence': "Документите ти: провери датата", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.b': "От ЕС ли си? Тогава можеш да живееш и работиш тук с валиден паспорт или лична карта: не ти трябва разрешение. Не си от ЕС? Тогава ти трябва валидно разрешение за пребиваване. На картата пише дали можеш да работиш. Провери датата на изтичане на документите си. Подай навреме заявление за ново разрешение в IND: месеци преди датата, не в последната седмица. Пази копие от всяко писмо. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.p': "Разрешението ми скоро изтича. Какво трябва да направя?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.s': "Разрешението ти за пребиваване изтича след два месеца. В работата имаш много задачи. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.o1': "Подай заявление за ново сега.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.o2': "Изчакай до последната седмица.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.o3': "Не прави нищо: работата е на първо място.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.w': "Без валидно разрешение може да нямаш право да работиш. Новото разрешение отнема време, затова започваш рано.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome': "Нов адрес? Кажи на всички", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.b': "Местиш се? Съобщи бързо новия си адрес в gemeente: това е задължително. Кажи и на работодателя, банката, застрахователя и лекаря си. Сложи името си на пощенската кутия, иначе писмата няма да стигат до теб. В деня на преместването запиши показанията на уредите и ги снимай. Тогава плащаш само за своето потребление.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.p': "Преместих се. Това е новият ми адрес.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.s': "Премести се преди две седмици. Писмата ти още отиват на стария адрес. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.o1': "Съобщи сега новия си адрес в gemeente.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.o2': "Чакай: пощата ще те намери.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.o3': "Помоли стария си съсед да ти пази писмата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.w': "Важните писма, например глоби или писма за данъци, имат срокове. Когато отиват на грешен адрес, можеш да ги пропуснеш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts': "Прочети всеки ред", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.b': "Фишът ти за заплата има много редове и къси думи. Горе: името ти, служебният ти номер и периодът. После брутната ти заплата, часовете ти и евентуалните добавки. После какво се удържа: данък и вноски. В много работи ти и работодателят заедно плащате за пенсията ти: своята част виждаш във фиша за заплата. Долу: нетната ти заплата. Не разбираш някой ред? Помоли работодателя да ти го обясни. Пази всичките си фишове за заплата. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.p': "Какво означава този ред във фиша ми за заплата?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.s': "Във фиша ти за заплата пари отиват за „pensioen“. Не знаеш защо. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.o1': "Помоли работодателя да го обясни.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.o2': "Поискай да го спрат, за да получаваш повече пари сега.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.o3': "Не обръщай внимание: няма да останеш толкова дълго.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.w': "Парите за пенсия се спестяват за теб, за по-късно. Обикновено ги запазваш, когато смениш работата. Въпросът ти помага да знаеш кое е твое.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay': "Заплатата закъснява или е в брой? Действай навреме", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.b': "Заплатата ти трябва да дойде в деня, посочен в договора ти или в cao. Закъснява ли, или липсват пари? Питай за това писмено, например с имейл. Пази банковите си извлечения и собствения си списък с часове. Плащат ти в брой, без фиш за заплата? Тогава често е работа на черно (zwart): часовете ти не са регистрирани и после е трудно да докажеш работата си или да получиш обезщетение. Поискай фиш за заплата. Това е обща информация. За твоя случай питай синдиката, Juridisch Loket или FairWork.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.p': "Заплатата ми още не е дошла. Кога ще дойде?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.s': "Шефът ти казва: „Отсега ще ти плащам в брой. Без фиш за заплата, така е по-лесно.“ Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.o1': "Кажи „не“ и поискай фиш за заплата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.o2': "Кажи „да“: в брой е повече пари.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.o3': "Кажи „да“, но само този месец.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.w': "Без фиш за заплата работата ти я няма на хартия. Тогава можеш да загубиш права, например на обезщетение, когато загубиш работата си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday': "Почивните ти дни: използвай ги навреме", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.b': "Провери колко дни отпуск ти остават: често това пише във фиша за заплата или в приложението. Планирай отпуската си рано и я поискай писмено. Законните ти дни отпуск изтичат 6 месеца след края на годината, освен ако не е било възможно да ги вземеш. Допълнителните дни от cao или от договора важат по-дълго, обикновено 5 години. Работата ти приключва? Тогава получаваш пари за неизползваните дни. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.p': "Искам да взема дните си отпуск още тази година.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.s': "Ноември е. Имаш още 12 дни отпуск от тази година. Началникът ти не казва нищо за това. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.o1': "Попитай кога можеш да ги вземеш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.o2': "Не прави нищо: остават завинаги.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.o3': "Забрави ги: вече ги няма.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.w': "Почивните дни са за почивка и могат да изтекат. Когато питаш навреме, още можеш да ги планираш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special': "Сватба, погребение, бебе", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.b': "Роди се бебето ти, а ти си партньорът или партньорката на майката? Тогава получаваш 1 седмица платен отпуск при раждане, в първите 4 седмици. Колективният трудов договор (cao) често дава специален отпуск (bijzonder verlof) за сватбата ти или за погребение в семейството ти. Официалните празници, като Коледа: никой закон не казва, че почиваш. Договорът ти или cao казва дали почиваш, или получаваш допълнително заплащане. Искай почивните си дни навреме. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.p': "Жена ми ще ражда. Как да поискам отпуск при раждане?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.s': "Баща ти почина в чужбина. Искаш да отидеш на погребението. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.o1': "Кажи на работодателя и попитай какъв отпуск можеш да получиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.o2': "Просто тръгни и им кажи, когато се върнеш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.o3': "Не ходи: нямаш повече почивни дни.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.w': "Работодателят разбира, че това е много важно. Много колективни трудови договори дават специален отпуск, а можеш да използваш и почивните си дни.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell': "Болест на работа или в отпуска", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.b': "Чувстваш се зле на работа? Кажи на началника, преди да си тръгнеш: това е съобщението ти за болест. Не си тръгвай просто така. Разболя ли се в отпуската? Съобщи на работодателя по същия начин като у дома, и от чужбина. Тогава дните на болест обикновено не се броят за дни отпуск. Може да ти трябва бележка от тамошен лекар. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.p': "Разболях се в отпуската.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.s': "В отпуска си в родината си. Хващаш грип и 5 дни лежиш на легло. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.o1': "Съобщи веднага на работодателя.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.o2': "Нищо: така или иначе си в отпуска.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.o3': "Кажи на работодателя, когато се върнеш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.w': "Когато съобщиш навреме, дните на болест обикновено не се броят за дни отпуск. Тогава можеш да използваш тези дни по-късно.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury': "Нараняване на работа: запиши го", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.b': "Нарани ли се на работа? Запиши какво стана, кога и къде, и кой го видя. Направи снимки и пази всички документи от лекаря. Поискай копие от доклада за злополуката. Нарани ли се, защото работата не беше безопасна? Тогава работодателят обикновено трябва да плати за вредата ти. Не е нужно да доказваш, че е по негова вина: работодателят трябва да покаже, че е направил достатъчно за безопасността ти. Поискай съвет, преди да подпишеш каквото и да е. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.p': "Може ли копие от доклада?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.s': "Нараняваш си ръката на машина без предпазител. По-късно шефът ти иска да подпишеш лист: „Вината беше моя.“ Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.o1': "Не го подписвай. Първо поискай съвет.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.o2': "Подпиши го, за да няма проблеми.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.o3': "Подпиши го, но запази снимка от него.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.w': "Това, което подпишеш, може да има значение по-късно, например когато поискаш обезщетение. Първо поискай съвет от синдиката или от Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt': "Дълг, който никога не свършва", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.b': "В Нидерландия агенция няма право да ти иска пари, за да ти намери работа. Трябваше ли да заемеш пари за пътя или за работата и дългът продължава да расте? Трябва ли да останеш, докато не го изплатиш? Това е признак на експлоатация. Дългът никога не означава, че трябва да продължиш да работиш: можеш да спреш. Пази всеки документ и всяко съобщение за дълга. Това е обща информация. За твоя случай питай синдиката, Juridisch Loket или FairWork.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.p': "Колко още трябва да платя? Искам го писмено.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.s': "Агенцията плати автобусния ти билет. Сега всяка седмица ти удържа пари от заплатата, а дългът не намалява. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.o1': "Поискай списък на хартия и потърси помощ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.o2': "Работи повече часове, за да платиш по-бързо.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.o3': "Не казвай нищо: агенцията ти помогна.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.w': "Дълг, който не намалява, те държи в капан. Със списъка синдикатът или FairWork могат да проверят дали е честно.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection': "Инспекцията е там за теб", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.b': "Nederlandse Arbeidsinspectie проверява дали работата е безопасна и честна: заплата, часове и експлоатация. Инспекторите могат да дойдат на работата ти и да говорят с работниците. Можеш да им кажеш истината: те не казват на шефа ти кой е съобщил нещо. Трябва ти помощ на твоя език? Поискай преводач. FairWork помага безплатно на жертви на експлоатация, и на хора без валидни документи. Това е обща информация. За твоя случай питай синдиката, Juridisch Loket или FairWork.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.p': "Искам да разкажа нещо, но без шефа ми наоколо.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.s': "Инспектор пита за часовете ти. Шефът ти каза да казваш 8 часа. Работиш 12. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.o1': "Кажи истината на инспектора.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.o2': "Кажи 8 часа, както каза шефът.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.o3': "Не казвай нищо и си тръгни.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.w': "Инспекторът може да помогне само когато знае истината. Това, което казваш, помага на теб, а и на колегите ти.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool': "В колата: колан и уговорка за разходите", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.b': "Всички в колата слагат колан, и отзад. Шофьорът трябва да има валидна шофьорска книжка и не бива да пие алкохол преди шофиране. Твърде много хора в буса или шофьорът кара опасно? Кажи го и не се качвай. Пътуваш заедно с колеги? Първо се разберете как делите разходите за гориво. Пътуваш с работния бус на агенцията? Попитай колко ти струва и го поискай писмено.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.p': "В буса има твърде много хора. Няма да се кача.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.s': "Работният бус има 9 места. Тази сутрин 11 души искат да се качат. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.o1': "Не се качвай и се обади на началника.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.o2': "Седни на пода отзад.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.o3': "Набутай се: само 20 минути е.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.w': "Без седалка и колан дори малка катастрофа може да е много тежка. Работодателят или агенцията могат да намерят друг начин.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train': "Влакът закъснява? Веднага изпрати съобщение", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.b': "Провери планера за пътуване, преди да тръгнеш: влаковете и автобусите могат да закъснеят или да бъдат отменени. Влакът ти закъснява? Веднага изпрати съобщение на началника си с часа, в който ще пристигнеш. В дни с буря или ремонт на линията хвани по-ранен влак. След голямо закъснение често можеш да получиш пари обратно: виж на сайта на железопътната компания.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.p': "Влакът ми закъснява. Ще съм там в девет.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.s': "Влакът ти е отменен. Следващият тръгва след 30 минути. Смяната ти започва след 40 минути. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.o1': "Изпрати сега съобщение, че ще закъснееш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.o2': "Изчакай и обясни, когато пристигнеш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.o3': "Прибери се вкъщи: не е по твоя вина.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.w': "Началникът може да планира по-добре, когато знае рано. Закъснението не е по твоя вина, но да съобщиш за него е твоя работа.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist': "Първо провери работата си", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.b': "Преди да кажеш „klaar“, провери собствената си работа. Използвай списъка за проверка, ако има такъв, и отмятай всяка стъпка. Погледни работата си през очите на клиента. Нещо не е наред? Направи го отново сега: така е по-бързо, отколкото после. Имаш съмнения? Помоли колега да погледне. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.p': "Готово. Ще го провериш ли набързо?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.s': "Свърши работата. В списъка за проверка една стъпка не е отметната. Мислиш, че тя е направена. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.o1': "Провери тази стъпка отново, после я отметни.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.o2': "Отметни я: сигурно е направена.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.o3': "Остави я: никой не чете списъка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.w': "Списъкът за проверка помага само когато е верен. Още един поглед отнема минута. Грешката може да отнеме часове.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite': "Остави го така, както искаш да го намериш", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.b': "В края на работата остави мястото си чисто и безопасно. Върни инструментите и материалите по местата им и измети пода. Изключи машините и лампите след себе си. Тръгваш си след всички? Провери прозорците и вратите и заключи така, както казва фирмата ти. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.p': "Тръгвам си след всички. Трябва ли да заключа вратата?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.s': "Тръгваш си от работа след всички. Не знаеш как да включиш алармата. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.o1': "Обади се на началника и попитай.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.o2': "Тръгни без алармата: късно е.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.o3': "Натискай бутони, докато не изпиука.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.w': "Сграда без аларма не е в безопасност. Началникът предпочита да получи обаждане, отколкото утре да открие проблем.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays': "Ученик и колега", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.b': "На стажа си там, за да учиш, но работиш като колега: навреме, по правилата на фирмата, и се обаждаш, когато се разболееш. Можеш да задаваш много въпроси: затова си там. Работата ти трябва да ти помага да учиш, а не само да чистиш или да носиш неща цял ден. Не е така? Говори с ръководителя на стажа в училището. Възнаграждение за стажа не се дава винаги: попитай за него, преди да започнеш. Правилата са различни във всяко училище: питай ръководителя на стажа.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.p': "Искам и това да науча. Може ли да гледам?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.s': "На стажа три седмици всеки ден само чистиш столовата. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.o1': "Говори за това с ръководителя на стажа.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.o2': "Прави го и мълчи: нали е само стаж.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.o3': "Стой вкъщи, докато не ти дадат друга работа.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.w': "Стажът е, за да научиш професията си. Ръководителят на стажа може да поговори с фирмата за по-добри задачи.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend': "Завърши добре и поискай препоръка", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.b': "На заключителния разговор чуваш какво е вървяло добре и какво може да е по-добре. Поискай примери и ги запиши за следващата си работа. Мина ли добре? Попитай дали можеш да ги посочваш за препоръка. В последния ден благодари на колегите си: много хора тук носят нещо малко за ядене, например торта или бонбони. Правилата са различни във всяко училище: питай ръководителя на стажа.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.p': "Може ли да ви посоча за препоръка?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.s': "Последният ден на стажа ти е. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.o1': "Благодари на колегите си и се сбогувай.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.o2': "Тръгни си тихо, без да казваш нищо.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.o3': "Поискай подарък от фирмата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.w': "Доброто сбогуване оставя добро впечатление. Може би по-късно ще искаш да работиш там или ще ти трябват за препоръка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours': "Поздрави съседите си", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.b': "Отскоро живееш на нова улица? Поздрави съседите си и им кажи името си. Така по-късно проблемите се решават по-лесно. Работиш нощем или живееш с много хора? Пази тишина късно вечер и през нощта. Изнасяй боклука в правилния ден. В библиотеката и в кварталния център често можеш да упражняваш нидерландски, понякога безплатно.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.p': "Здравейте, аз съм Али. Живея в съседство.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.s': "Живееш с петима колеги. Съсед казва, че нощем често е шумно. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.o1': "Извини се и се разберете да е по-тихо.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.o2': "Кажи, че всички работите и трябва да си почивате.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.o3': "Не казвай нищо и затвори вратата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.w': "Един добър разговор рано спира по-големи проблеми. Съседите, които те познават, често са по-дружелюбни и по-услужливи.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join': "Включи се: така учиш нидерландски по-бързо", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.b': "Извън работата учиш нидерландски най-бързо, като правиш неща с хора: спорт, клуб или доброволческа работа. Детето ти е на училище? Иди на родителската среща, дори ако нидерландският ти не е перфектен: учителят иска да се запознае с теб. Можеш да помолиш да говорят по-бавно или да използваш приложение за превод. Доброволческата работа изглежда добре и в автобиографията.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.p': "Бихте ли говорили малко по-бавно?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.s': "Канят те на родителска среща. Нидерландският ти още не е добър. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.o1': "Иди и говори на прост нидерландски или използвай приложение.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.o2': "Не ходи: учителят няма да те разбере.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.o3': "Изпрати кратко съобщение, че нямаш време.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.w': "Учителят иска да говори за детето ти, не за нидерландския ти. Като дойдеш, показваш, че ти е грижа.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos': "Първо питай, после публикувай", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.b': "Снимка на работа може да покаже повече, отколкото мислиш: купувач, клиент, екран или лист с имена. Не публикувай снимки от работата в интернет без разрешение от работодателя и никога снимки на хора без тяхното съгласие. Данните на клиентите остават на работа: не ги изпращай на своя телефон или имейл. Изпрати ли нещо по погрешка? Веднага кажи на началника си. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.p': "Първо ще поискам разрешение.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.s': "Колега слага смешна снимка на клиент в приложението на екипа. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.o1': "Кажи, че това не е наред, и не я споделяй.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.o2': "Сподели я: само в приложението на екипа е.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.o3': "Харесай я, но не я споделяй.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.w': "Клиентът не е казал „да“ за тази снимка. Снимките в приложение могат бързо да стигнат навсякъде. Когато го кажеш любезно, пазиш клиента и колегата си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device': "Актуализации да, странни флашки не", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.b': "Инсталирай актуализациите на телефона и компютъра си: те затварят пробиви, които хакерите използват. Намери ли флашка? Не я слагай в компютъра си: дай я на IT отдела. На служебен телефон или компютър инсталирай само приложения, които работата ти позволява. В обществен уайфай не влизай в банката си или в системите на работата. Заключвай телефона си с код. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.p': "Намерих флашка. Какво да правя с нея?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.s': "Намираш флашка на паркинга. На нея пише „Salaris“. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.o1': "Дай я на IT отдела.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.o2': "Сложи я в компютъра си, за да видиш чия е.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.o3': "Вземи я вкъщи и я разгледай там.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.w': "На флашката може да има вирус, дори когато изглежда интересна. IT отделът може да я провери безопасно.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Veiligheid op het werk" (four lessons) and the VOG lesson of "Werken via een uitzendbureau" (23 November 2026).
-    'u.safework': "Безопасност на работа", // nieuw, nalezen
-    'l.vog': "Миналото ти: VOG", // nieuw, nalezen
-    'w.vog': "свидетелството за съдимост (VOG: документ от държавата, в който пише, че миналото ти не е проблем за тази работа)", // nieuw, nalezen
-    'w.strafblad': "съдимостта (престъпленията, за които съдът те е осъдил)", // nieuw, nalezen
-    'w.screening': "проверката на миналото (проверка на миналото ти, преди да започнеш)", // nieuw, nalezen
-    'w.personenregister': "регистърът за грижа за деца (всеки, който работи в грижата за деца, трябва да е в него)", // nieuw, nalezen
-    'w.beveiligerspas': "картата на охранител (картата, която ти трябва, за да работиш като охрана)", // nieuw, nalezen
-    'w.verleden': "миналото", // nieuw, nalezen
-    's.vog.1': "В сферата на грижите почти винаги искат VOG.", // nieuw, nalezen
-    's.vog.2': "Имам VOG и съм в регистъра за грижа за деца.", // nieuw, nalezen
-    's.vog.3': "Картата на охранител ще я получа след проверката на миналото.", // nieuw, nalezen
-    'c.vog.q': "Агенцията иска VOG. Имаш ли вече?", // nieuw, nalezen
-    'c.vog.a': "Не. Още чакам имейла от Justis.", // nieuw, nalezen
-    'l.safetysigns': "Знаци за безопасност", // nieuw, nalezen
-    'w.verbodsbord': "забранителният знак (червен кръг с черта през него: това не бива да го правиш)", // nieuw, nalezen
-    'w.gebodsbord': "задължителният знак (син кръг с бяла картинка: това трябва да го правиш)", // nieuw, nalezen
-    'w.waarschuwingsbord': "предупредителният знак (жълт триъгълник с черен ръб: внимание, опасност)", // nieuw, nalezen
-    'w.reddingsbord': "евакуационният знак (зелен правоъгълник: пътят навън или първа помощ)", // nieuw, nalezen
-    'w.brandbord': "знакът за пожарна безопасност (червен квадрат: тук има пожарогасител или пожарен маркуч)", // nieuw, nalezen
-    'w.pictogram': "пиктограмата (проста картинка, която казва нещо без думи)", // nieuw, nalezen
-    's.safetysigns.1': "Червен кръгъл знак означава: това е забранено.", // nieuw, nalezen
-    's.safetysigns.2': "Синият знак казва какво трябва да правиш.", // nieuw, nalezen
-    's.safetysigns.3': "Следвай зелените знаци до аварийния изход.", // nieuw, nalezen
-    'c.safetysigns.q': "Какво означава този жълт знак?", // nieuw, nalezen
-    'c.safetysigns.a': "Внимание, опасност. Това е предупредителен знак.", // nieuw, nalezen
-    'l.substances': "Опасни вещества", // nieuw, nalezen
-    'w.stofmasker': "противопрашната маска (покрива носа и устата)", // nieuw, nalezen
-    'w.giftig': "отровен, токсичен", // nieuw, nalezen
-    'w.bijtend': "разяждащ (изгаря кожата или разяжда метал)", // nieuw, nalezen
-    'w.drinkfles': "бутилката за пиене", // nieuw, nalezen
-    'w.opbergen': "прибирам (на собственото му място, например в шкаф, който се заключва)", // nieuw, nalezen
-    'w.dop': "капачката (на бутилка или туба)", // nieuw, nalezen
-    's.substances.1': "Първо погледни знака за опасност на етикета.", // nieuw, nalezen
-    's.substances.2': "Никога не го наливай в бутилка за пиене.", // nieuw, nalezen
-    's.substances.3': "Тук трябва да носиш противопрашна маска.", // nieuw, nalezen
-    'c.substances.q': "Този препарат отровен ли е?", // nieuw, nalezen
-    'c.substances.a': "Това пише в информационния лист за безопасност. Ще проверя.", // nieuw, nalezen
-    'l.firefight': "Пожар", // nieuw, nalezen
-    'w.branddriehoek': "триъгълникът на горенето (огънят има нужда от гориво, въздух и топлина; махнеш ли едното, огънят угасва)", // nieuw, nalezen
-    'w.zuurstof': "кислородът (във въздуха; огънят има нужда от него)", // nieuw, nalezen
-    'w.blussen': "гася (пожар)", // nieuw, nalezen
-    'w.blusdeken': "противопожарното одеяло", // nieuw, nalezen
-    'w.openvuur': "откритият огън (пламък, например от запалка или газова горелка)", // nieuw, nalezen
-    'w.brandslang': "пожарният маркуч (на макара в стената)", // nieuw, nalezen
-    's.firefight.1': "Никога не хвърляй вода върху горящо олио.", // nieuw, nalezen
-    's.firefight.2': "Само малък пожар гасиш самостоятелно.", // nieuw, nalezen
-    's.firefight.3': "Сложи противопожарното одеяло върху тигана.", // nieuw, nalezen
-    'c.firefight.q': "В кошчето има пожар!", // nieuw, nalezen
-    'c.firefight.a': "Малък е. Ще взема пожарогасителя.", // nieuw, nalezen
-    'l.permitwork': "Наряд-допуск, затворени пространства и вдигане на товари", // nieuw, nalezen
-    'w.werkvergunningveilig': "нарядът-допуск (документ за безопасност при опасна работа: какво, къде и какви опасности; това не са документите ти за пребиваване или за работа)", // nieuw, nalezen
-    'w.beslotenruimte': "затвореното пространство (резервоар, яма или канализация: тясно, с малко чист въздух)", // nieuw, nalezen
-    'w.gasmeting': "измерването на газове (измерваш въздуха, преди да влезеш)", // nieuw, nalezen
-    'w.mangatwacht': "наблюдаващият при люка (човекът, който остава отвън при отвора, поддържа връзка и вдига тревога)", // nieuw, nalezen
-    'w.signaalgever': "сигналистът (човекът, който показва знаци с ръце на крановиста)", // nieuw, nalezen
-    'w.hijsen': "вдигам (товар с кран)", // nieuw, nalezen
-    's.permitwork.1': "Без наряд-допуск не започваме.", // nieuw, nalezen
-    's.permitwork.2': "Първо измерване на газове, едва после в затвореното пространство.", // nieuw, nalezen
-    's.permitwork.3': "Гледай сигналиста: вдигай, спускай, стоп.", // nieuw, nalezen
-    'c.permitwork.q': "Кой остава отвън при резервоара?", // nieuw, nalezen
-    'c.permitwork.a': "Аз. Аз пазя при люка.", // nieuw, nalezen
-    'c.vog': "VOG: проверка на миналото ти", // nieuw, nalezen
-    'c.vog.b': "За някои работи агенцията или работодателят иска VOG (Verklaring Omtrent het Gedrag). Това е документ от държавата: в него пише, че миналото ти не е проблем за тази работа. В грижите, грижата за деца и охраната почти винаги ти трябва. Обикновено работодателят започва заявлението онлайн. Получаваш имейл от Justis, довършваш заявлението с DigiD и плащаш. Първо питай кой плаща: често работодателят ти връща парите. За доброволци, които работят с деца или уязвими хора, често е безплатно. Имаш ли съдимост? Това не винаги значи, че няма да получиш VOG: Justis гледа какво е важно за тази работа. Имаш съмнения? Питай Juridisch Loket. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen
-    'c.vog.p': "Аз ли трябва да платя за VOG?", // nieuw, nalezen
-    'c.vog.s': "Новата ти работа в дом за грижи иска VOG. Преди години имаше проблем с полицията. Какво правиш?", // nieuw, nalezen
-    'c.vog.o1': "Подай заявление и питай Juridisch Loket, ако се притесняваш.", // nieuw, nalezen
-    'c.vog.o2': "Не подавай заявление: никога няма да го получиш.", // nieuw, nalezen
-    'c.vog.o3': "Кажи, че нямаш време, и си търси друга работа.", // nieuw, nalezen
-    'c.vog.w': "Justis гледа само какво е важно за работата. Много хора с нещо в миналото все пак получават VOG. Съветът помага, ако имаш съмнения.", // nieuw, nalezen
-    'c.safetysigns': "Какво е VCA?", // nieuw, nalezen
-    'c.safetysigns.b': "VCA е сертификат за безопасност. Много фирми, също и чрез агенция, го искат, например в строителството и индустрията. Повечето работници правят B-VCA (VCA Basis); ръководителят прави VOL-VCA. Минаваш курс и изпит с въпроси с избор на отговор в признат изпитен център. Изпитът често може да се държи на няколко езика, например на английски или полски: питай изпитния център. Дипломата е валидна 10 години. Често плаща работодателят или агенцията: питай, преди да платиш от джоба си. Агенцията не може да ти удържа от заплатата какви ли не разходи (виж темата за работата чрез агенция). В тези уроци учиш някои думи, които срещаш при безопасната работа и във VCA. За VCA минаваш курс и изпит. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen
-    'c.safetysigns.p': "Кой плаща курса за VCA?", // nieuw, nalezen
-    'c.safetysigns.s': "Агенция казва: „Трябва ти VCA. Ти плащаш курса или ще го удържим от заплатата ти.“ Какво правиш?", // nieuw, nalezen
-    'c.safetysigns.o1': "Питай кой плаща и го поискай писмено.", // nieuw, nalezen
-    'c.safetysigns.o2': "Плати веднага, за да получиш работата.", // nieuw, nalezen
-    'c.safetysigns.o3': "Не казвай нищо и подпиши.", // nieuw, nalezen
-    'c.safetysigns.w': "Често работодателят или агенцията плаща за VCA. Ако трябва да платиш нещо, искаш да го знаеш предварително, на хартия.", // nieuw, nalezen
-    'c.substances': "Прочети етикета, после работи", // nieuw, nalezen
-    'c.substances.b': "Опасният препарат има на етикета червен ромб с черна картинка в него: знакът за опасност. Картинката показва опасността, например огън, отрова или препарат, който изгаря кожата. Етикетът и информационният лист за безопасност (veiligheidsblad) казват как да работиш с него безопасно и какво да правиш, ако нещо се обърка. Носи това, което пише там: ръкавици, предпазни очила или маска. Затвори капачката и прибери препарата на собственото му място. Никога не го наливай в бутилка за пиене: някой може да го изпие. Не яж, не пий и не пуши, докато работиш с него, и после си измий ръцете. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.substances.p': "Къде е информационният лист за безопасност на този препарат?", // nieuw, nalezen
-    'c.substances.s': "Колега налива почистващ препарат в празна бутилка от вода, за да го вземе със себе си. Какво правиш?", // nieuw, nalezen
-    'c.substances.o1': "Кажи, че е опасно: някой може да го изпие.", // nieuw, nalezen
-    'c.substances.o2': "Нищо: това е неговата бутилка.", // nieuw, nalezen
-    'c.substances.o3': "Сложи малък стикер на бутилката.", // nieuw, nalezen
-    'c.substances.w': "В бутилка за пиене препаратът изглежда като вода или лимонада. Някой може да го изпие по погрешка. Препаратът остава в собствената си опаковка, с етикета.", // nieuw, nalezen
-    'c.firefight': "Малък или голям пожар?", // nieuw, nalezen
-    'c.firefight.b': "Огънят има нужда от три неща: гориво, въздух и топлина. Това е триъгълникът на горенето. Махни едното и огънят угасва. Противопожарното одеяло спира въздуха. Водата отнема топлината, но никога не използвай вода върху горящо олио или мазнина, или върху електрически уреди. Погледни пожарогасителя: на него пише за какво е. Пяната и прахът действат при много пожари; CO2 е добър при пожари в електрически уреди. Дръж искрите и открития огън далеч от препарати, които лесно горят. Гаси самостоятелно само малък пожар и само когато е безопасно. По-голям е? Излез, затвори вратата след себе си и вдигни тревога. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.firefight.p': "Къде е противопожарното одеяло?", // nieuw, nalezen
-    'c.firefight.s': "В столовата олио в тиган се запалва. Пламъците още са малки. Какво правиш?", // nieuw, nalezen
-    'c.firefight.o1': "Сложи противопожарното одеяло върху тигана.", // nieuw, nalezen
-    'c.firefight.o2': "Хвърли чаша вода върху него.", // nieuw, nalezen
-    'c.firefight.o3': "Изнеси тигана навън.", // nieuw, nalezen
-    'c.firefight.w': "Вода върху горящо олио прави голямо огнено кълбо. Одеялото спира въздуха и огънят угасва. Изключи нагряването, ако можеш.", // nieuw, nalezen
-    'c.permitwork': "Опасна работа: първо нарядът-допуск", // nieuw, nalezen
-    'c.permitwork.b': "За опасна работа, например заваряване близо до неща, които горят, или работа в резервоар или яма, фирмата често използва наряд-допуск (werkvergunning). Това е документ за безопасност, а не документите ти за пребиваване или за работа. В него пише какво правиш, къде, какви опасности има и какво да правиш срещу тях. Прочети го и започвай само когато е подписан. В затворено пространство може да има твърде малко въздух или опасен газ: първо измерване на газове, а наблюдаващият при люка остава отвън. Някой вътре е в беда? Вдигни тревога: никога не влизай без защита. При работа с кран знаците ги дава един човек: сигналистът. Никога не стой под висящ товар. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.permitwork.p': "Подписан ли е вече нарядът-допуск?", // nieuw, nalezen
-    'c.permitwork.s': "Колегата ти в резервоара не отговаря. Ти пазиш при люка. Какво правиш?", // nieuw, nalezen
-    'c.permitwork.o1': "Вдигни тревога и остани отвън.", // nieuw, nalezen
-    'c.permitwork.o2': "Влез бързо вътре, за да му помогнеш.", // nieuw, nalezen
-    'c.permitwork.o3': "Изчакай няколко минути, после погледни.", // nieuw, nalezen
-    'c.permitwork.w': "Газът, който е навредил на колегата ти, може да навреди и на теб. Много от жертвите в резервоари са били хора, които са влезли да помагат. След тревогата идва помощ със защита.", // nieuw, nalezen
+    'u.safework': "Безопасност на работа", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.vog': "Миналото ти: VOG", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vog': "свидетелството за съдимост (VOG: документ от държавата, в който пише, че миналото ти не е проблем за тази работа)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.strafblad': "съдимостта (престъпленията, за които съдът те е осъдил)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.screening': "проверката на миналото (проверка на миналото ти, преди да започнеш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.personenregister': "регистърът за грижа за деца (всеки, който работи в грижата за деца, трябва да е в него)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beveiligerspas': "картата на охранител (картата, която ти трябва, за да работиш като охрана)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verleden': "миналото", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vog.1': "В сферата на грижите почти винаги искат VOG.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vog.2': "Имам VOG и съм в регистъра за грижа за деца.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vog.3': "Картата на охранител ще я получа след проверката на миналото.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.q': "Агенцията иска VOG. Имаш ли вече?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.a': "Не. Още чакам имейла от Justis.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.safetysigns': "Знаци за безопасност", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verbodsbord': "забранителният знак (червен кръг с черта през него: това не бива да го правиш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gebodsbord': "задължителният знак (син кръг с бяла картинка: това трябва да го правиш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.waarschuwingsbord': "предупредителният знак (жълт триъгълник с черен ръб: внимание, опасност)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.reddingsbord': "евакуационният знак (зелен правоъгълник: пътят навън или първа помощ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brandbord': "знакът за пожарна безопасност (червен квадрат: тук има пожарогасител или пожарен маркуч)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pictogram': "пиктограмата (проста картинка, която казва нещо без думи)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.safetysigns.1': "Червен кръгъл знак означава: това е забранено.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.safetysigns.2': "Синият знак казва какво трябва да правиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.safetysigns.3': "Следвай зелените знаци до аварийния изход.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.q': "Какво означава този жълт знак?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.a': "Внимание, опасност. Това е предупредителен знак.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.substances': "Опасни вещества", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stofmasker': "противопрашната маска (покрива носа и устата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.giftig': "отровен, токсичен", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijtend': "разяждащ (изгаря кожата или разяжда метал)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.drinkfles': "бутилката за пиене", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opbergen': "прибирам (на собственото му място, например в шкаф, който се заключва)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dop': "капачката (на бутилка или туба)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.substances.1': "Първо погледни знака за опасност на етикета.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.substances.2': "Никога не го наливай в бутилка за пиене.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.substances.3': "Тук трябва да носиш противопрашна маска.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.q': "Този препарат отровен ли е?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.a': "Това пише в информационния лист за безопасност. Ще проверя.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.firefight': "Пожар", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.branddriehoek': "триъгълникът на горенето (огънят има нужда от гориво, въздух и топлина; махнеш ли едното, огънят угасва)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zuurstof': "кислородът (във въздуха; огънят има нужда от него)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.blussen': "гася (пожар)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.blusdeken': "противопожарното одеяло", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.openvuur': "откритият огън (пламък, например от запалка или газова горелка)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brandslang': "пожарният маркуч (на макара в стената)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.firefight.1': "Никога не хвърляй вода върху горящо олио.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.firefight.2': "Само малък пожар гасиш самостоятелно.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.firefight.3': "Сложи противопожарното одеяло върху тигана.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.q': "В кошчето има пожар!", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.a': "Малък е. Ще взема пожарогасителя.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.permitwork': "Наряд-допуск, затворени пространства и вдигане на товари", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkvergunningveilig': "нарядът-допуск (документ за безопасност при опасна работа: какво, къде и какви опасности; това не са документите ти за пребиваване или за работа)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beslotenruimte': "затвореното пространство (резервоар, яма или канализация: тясно, с малко чист въздух)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gasmeting': "измерването на газове (измерваш въздуха, преди да влезеш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mangatwacht': "наблюдаващият при люка (човекът, който остава отвън при отвора, поддържа връзка и вдига тревога)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.signaalgever': "сигналистът (човекът, който показва знаци с ръце на крановиста)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hijsen': "вдигам (товар с кран)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.permitwork.1': "Без наряд-допуск не започваме.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.permitwork.2': "Първо измерване на газове, едва после в затвореното пространство.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.permitwork.3': "Гледай сигналиста: вдигай, спускай, стоп.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.q': "Кой остава отвън при резервоара?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.a': "Аз. Аз пазя при люка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog': "VOG: проверка на миналото ти", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.b': "За някои работи агенцията или работодателят иска VOG (Verklaring Omtrent het Gedrag). Това е документ от държавата: в него пише, че миналото ти не е проблем за тази работа. В грижите, грижата за деца и охраната почти винаги ти трябва. Обикновено работодателят започва заявлението онлайн. Получаваш имейл от Justis, довършваш заявлението с DigiD и плащаш. Първо питай кой плаща: често работодателят ти връща парите. За доброволци, които работят с деца или уязвими хора, често е безплатно. Имаш ли съдимост? Това не винаги значи, че няма да получиш VOG: Justis гледа какво е важно за тази работа. Имаш съмнения? Питай Juridisch Loket. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.p': "Аз ли трябва да платя за VOG?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.s': "Новата ти работа в дом за грижи иска VOG. Преди години имаше проблем с полицията. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.o1': "Подай заявление и питай Juridisch Loket, ако се притесняваш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.o2': "Не подавай заявление: никога няма да го получиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.o3': "Кажи, че нямаш време, и си търси друга работа.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.w': "Justis гледа само какво е важно за работата. Много хора с нещо в миналото все пак получават VOG. Съветът помага, ако имаш съмнения.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns': "Какво е VCA?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.b': "VCA е сертификат за безопасност. Много фирми, също и чрез агенция, го искат, например в строителството и индустрията. Повечето работници правят B-VCA (VCA Basis); ръководителят прави VOL-VCA. Минаваш курс и изпит с въпроси с избор на отговор в признат изпитен център. Изпитът често може да се държи на няколко езика, например на английски или полски: питай изпитния център. Дипломата е валидна 10 години. Често плаща работодателят или агенцията: питай, преди да платиш от джоба си. Агенцията не може да ти удържа от заплатата какви ли не разходи (виж темата за работата чрез агенция). В тези уроци учиш някои думи, които срещаш при безопасната работа и във VCA. За VCA минаваш курс и изпит. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.p': "Кой плаща курса за VCA?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.s': "Агенция казва: „Трябва ти VCA. Ти плащаш курса или ще го удържим от заплатата ти.“ Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.o1': "Питай кой плаща и го поискай писмено.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.o2': "Плати веднага, за да получиш работата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.o3': "Не казвай нищо и подпиши.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.w': "Често работодателят или агенцията плаща за VCA. Ако трябва да платиш нещо, искаш да го знаеш предварително, на хартия.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances': "Прочети етикета, после работи", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.b': "Опасният препарат има на етикета червен ромб с черна картинка в него: знакът за опасност. Картинката показва опасността, например огън, отрова или препарат, който изгаря кожата. Етикетът и информационният лист за безопасност (veiligheidsblad) казват как да работиш с него безопасно и какво да правиш, ако нещо се обърка. Носи това, което пише там: ръкавици, предпазни очила или маска. Затвори капачката и прибери препарата на собственото му място. Никога не го наливай в бутилка за пиене: някой може да го изпие. Не яж, не пий и не пуши, докато работиш с него, и после си измий ръцете. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.p': "Къде е информационният лист за безопасност на този препарат?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.s': "Колега налива почистващ препарат в празна бутилка от вода, за да го вземе със себе си. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.o1': "Кажи, че е опасно: някой може да го изпие.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.o2': "Нищо: това е неговата бутилка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.o3': "Сложи малък стикер на бутилката.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.w': "В бутилка за пиене препаратът изглежда като вода или лимонада. Някой може да го изпие по погрешка. Препаратът остава в собствената си опаковка, с етикета.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight': "Малък или голям пожар?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.b': "Огънят има нужда от три неща: гориво, въздух и топлина. Това е триъгълникът на горенето. Махни едното и огънят угасва. Противопожарното одеяло спира въздуха. Водата отнема топлината, но никога не използвай вода върху горящо олио или мазнина, или върху електрически уреди. Погледни пожарогасителя: на него пише за какво е. Пяната и прахът действат при много пожари; CO2 е добър при пожари в електрически уреди. Дръж искрите и открития огън далеч от препарати, които лесно горят. Гаси самостоятелно само малък пожар и само когато е безопасно. По-голям е? Излез, затвори вратата след себе си и вдигни тревога. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.p': "Къде е противопожарното одеяло?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.s': "В столовата олио в тиган се запалва. Пламъците още са малки. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.o1': "Сложи противопожарното одеяло върху тигана.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.o2': "Хвърли чаша вода върху него.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.o3': "Изнеси тигана навън.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.w': "Вода върху горящо олио прави голямо огнено кълбо. Одеялото спира въздуха и огънят угасва. Изключи нагряването, ако можеш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork': "Опасна работа: първо нарядът-допуск", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.b': "За опасна работа, например заваряване близо до неща, които горят, или работа в резервоар или яма, фирмата често използва наряд-допуск (werkvergunning). Това е документ за безопасност, а не документите ти за пребиваване или за работа. В него пише какво правиш, къде, какви опасности има и какво да правиш срещу тях. Прочети го и започвай само когато е подписан. В затворено пространство може да има твърде малко въздух или опасен газ: първо измерване на газове, а наблюдаващият при люка остава отвън. Някой вътре е в беда? Вдигни тревога: никога не влизай без защита. При работа с кран знаците ги дава един човек: сигналистът. Никога не стой под висящ товар. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.p': "Подписан ли е вече нарядът-допуск?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.s': "Колегата ти в резервоара не отговаря. Ти пазиш при люка. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.o1': "Вдигни тревога и остани отвън.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.o2': "Влез бързо вътре, за да му помогнеш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.o3': "Изчакай няколко минути, после погледни.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.w': "Газът, който е навредил на колегата ти, може да навреди и на теб. Много от жертвите в резервоари са били хора, които са влезли да помагат. След тревогата идва помощ със защита.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Operator in de procesindustrie", the fourth own unit of Productie (23 November 2026).
-    'u.process': "Оператор в процесната промишленост", // nieuw, nalezen
-    'l.plantround': "Обиколката и контролната зала", // nieuw, nalezen
-    'w.controlekamer': "контролната зала (откъдето операторите следят целия завод на екрани)", // nieuw, nalezen
-    'w.operator': "операторът (човекът, който управлява и наблюдава машините в завода)", // nieuw, nalezen
-    'w.drukmeter': "манометърът (кръгъл уред със стрелка)", // nieuw, nalezen
-    'w.niveau': "нивото (колко пълен е резервоарът или силозът)", // nieuw, nalezen
-    'w.snelheid': "скоростта (колко бързо работи линията или машината)", // nieuw, nalezen
-    'w.alarmmelding': "аварийното съобщение (предупреждение на екрана, че нещо не е наред)", // nieuw, nalezen
-    's.plantround.1': "Правя обиколката си.", // nieuw, nalezen
-    's.plantround.2': "Налягането е твърде високо.", // nieuw, nalezen
-    's.plantround.3': "Записвам стойността.", // nieuw, nalezen
-    'c.plantround.q': "Защо има аларма на екрана?", // nieuw, nalezen
-    'c.plantround.a': "Нивото в резервоар номер две е твърде високо.", // nieuw, nalezen
-    'l.plantfault': "Повреда", // nieuw, nalezen
-    'w.stilstand': "престоят (линията стои и нищо не се произвежда)", // nieuw, nalezen
-    'w.opstarten': "пускам (машина или линия, стъпка по стъпка)", // nieuw, nalezen
-    'w.stilzetten': "спирам (спирам машината по правилния начин)", // nieuw, nalezen
-    'w.technischedienst': "отделът по поддръжка (TD: те поправят машините)", // nieuw, nalezen
-    'w.onderhoudsmonteur': "техникът по поддръжка", // nieuw, nalezen
-    'w.resetten': "нулирам (изчиствам грешка на екрана или на панела)", // nieuw, nalezen
-    's.plantfault.1': "При повреда звъня на ръководителя на смяната.", // nieuw, nalezen
-    's.plantfault.2': "Никога не бъркай в работеща машина.", // nieuw, nalezen
-    's.plantfault.3': "Отделът по поддръжка идва.", // nieuw, nalezen
-    'c.plantfault.q': "Може ли да пусна линията отново?", // nieuw, nalezen
-    'c.plantfault.a': "Не, чакай. Катинарът на техника още е на нея.", // nieuw, nalezen
-    'l.shiftwork': "Смени и нощи", // nieuw, nalezen
-    'w.ploeg': "бригадата (групата, която работи в едни и същи смени)", // nieuw, nalezen
-    'w.ploegwissel': "смяната на бригадите (едната бригада си отива, следващата започва)", // nieuw, nalezen
-    'w.volcontinu': "денонощно (заводът работи ден и нощ, всеки ден от седмицата)", // nieuw, nalezen
-    'w.overdagslapen': "спя през деня (след нощна смяна)", // nieuw, nalezen
-    'w.broodtrommel': "кутията за храна", // nieuw, nalezen
-    'w.aflosser': "сменникът (колегата, който поема мястото ти)", // nieuw, nalezen
-    's.shiftwork.1': "Нашият завод работи денонощно.", // nieuw, nalezen
-    's.shiftwork.2': "Запиши го в дневника за следващата бригада.", // nieuw, nalezen
-    's.shiftwork.3': "Идвам навреме за предаването на смяната.", // nieuw, nalezen
-    'c.shiftwork.q': "Какво стана през нощта?", // nieuw, nalezen
-    'c.shiftwork.a': "Помпа номер три спря. Записано е в дневника.", // nieuw, nalezen
-    'l.heatdust': "Горещина, пара и прах", // nieuw, nalezen
-    'w.smeltoven': "стопилната пещ (много гореща пещ, която топи стъкло или метал)", // nieuw, nalezen
-    'w.stoom': "парата (много гореща водна пара)", // nieuw, nalezen
-    'w.stoomleiding': "паропроводът (горещ е, дори когато не виждаш пара)", // nieuw, nalezen
-    'w.hittekleding': "топлозащитното облекло", // nieuw, nalezen
-    'w.kwartsstof': "кварцовият прах (много фин прах от глина, пясък или камък; уврежда белите дробове)", // nieuw, nalezen
-    'w.explosiegevaar': "опасността от експлозия (прах или пари във въздуха могат да експлодират; жълт знак с EX)", // nieuw, nalezen
-    's.heatdust.1': "Пий често вода до стопилната пещ.", // nieuw, nalezen
-    's.heatdust.2': "Кварцовия прах не го виждаш. Сложи си противопрашната маска.", // nieuw, nalezen
-    's.heatdust.3': "Тук има опасност от експлозия: никакви искри.", // nieuw, nalezen
-    'c.heatdust.q': "Може ли телефонът ми да влезе в тази зона?", // nieuw, nalezen
-    'c.heatdust.a': "Не. Тук има опасност от експлозия.", // nieuw, nalezen
-    'c.plantround': "Прави обиколката, записвай", // nieuw, nalezen
-    'c.plantround.b': "Завод, който работи ден и нощ, има нужда от очи и уши. На обиколката гледаш, слушаш и миришеш: нов шум, теч или странна миризма може да е първият знак за проблем. Отчиташ уредите: температурата, налягането, скоростта и нивото. Записвай всяка стойност веднага, с часа, в списъка или в системата. Не по-късно, по памет. Стойността е твърде висока или твърде ниска? Кажи веднага на контролната зала или на ръководителя на смяната. Алармата на екрана никога не е „просто аларма“: не я изключвай, преди да знаеш защо се е включила. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.plantround.p': "Температурата е твърде висока.", // nieuw, nalezen
-    'c.plantround.s': "На обиколката налягането е малко по-високо, отколкото трябва. Смяната ти почти свършва. Какво правиш?", // nieuw, nalezen
-    'c.plantround.o1': "Кажи веднага на контролната зала.", // nieuw, nalezen
-    'c.plantround.o2': "Запиши го и не казвай на никого.", // nieuw, nalezen
-    'c.plantround.o3': "Остави го за следващата смяна.", // nieuw, nalezen
-    'c.plantround.w': "В завода малка промяна може бързо да нарасне. Когато контролната зала разбере рано, може да действа, преди нещо да се обърка.", // nieuw, nalezen
-    'c.plantfault': "Спри, заключи, после поправяй", // nieuw, nalezen
-    'c.plantfault.b': "При повреда линията спира и всички искат бързо да тръгне отново. Но точно тогава стават много злополуки. Никога не бъркай в работеща машина, дори „само за момент“. Обади се на ръководителя на смяната или на отдела по поддръжка. Преди някой да работи по машината, тя се спира и заключва, за да не може никой да я пусне. Често всеки, който работи по нея, слага свой собствен катинар. Пускай отново само когато всички катинари са махнати и ръководителят на смяната каже, че е безопасно. Пускай стъпка по стъпка, както са те научили. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.plantfault.p': "Още има катинар на нея.", // nieuw, nalezen
-    'c.plantfault.s': "Продукт е заседнал в машината. Машината още работи. Колега казва: „Извади го бързо.“ Какво правиш?", // nieuw, nalezen
-    'c.plantfault.o1': "Не бъркай вътре: обади се на ръководителя на смяната.", // nieuw, nalezen
-    'c.plantfault.o2': "Извади го бързо с ръка.", // nieuw, nalezen
-    'c.plantfault.o3': "Избутай го с пръчка, докато машината работи.", // nieuw, nalezen
-    'c.plantfault.w': "Машина, която още работи, може да се задвижи всеки момент. Спряна и заключена машина не може да те нарани.", // nieuw, nalezen
-    'c.shiftwork': "Нощи: спи, яж, бъди навреме", // nieuw, nalezen
-    'c.shiftwork.b': "Много заводи работят ден и нощ, всеки ден от седмицата. Работиш поред ранни, късни и нощни смени, често в три или пет бригади. След нощна смяна спи в тъмна и тиха стая и кажи на семейството си кога спиш. Яж в определени часове и си носи собствена храна: през нощта столовата често е затворена. Бъди навреме за предаването на смяната: колегата ти чака, а заводът не може да остане без хора. За нощните смени има допълнителни правила, в закона и често в колективния трудов договор (cao), например за почивката след нощите. Питай какви са правилата там, където работиш. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen
-    'c.shiftwork.p': "Какви са правилата за нощните смени?", // nieuw, nalezen
-    'c.shiftwork.s': { m: "След четири нощи ръководителят на смяната те моли да работиш още една нощ. Много си уморен. Какво правиш?", f: "След четири нощи ръководителят на смяната те моли да работиш още една нощ. Много си уморена. Какво правиш?", x: "След четири нощи ръководителят на смяната те моли да работиш още една нощ. Чувстваш силна умора. Какво правиш?" }, // nieuw, nalezen
-    'c.shiftwork.o1': { m: "Кажи, че си много уморен, и попитай за правилата.", f: "Кажи, че си много уморена, и попитай за правилата.", x: "Кажи, че чувстваш силна умора, и попитай за правилата." }, // nieuw, nalezen
-    'c.shiftwork.o2': "Кажи „да“ и пий много кафе.", // nieuw, nalezen
-    'c.shiftwork.o3': "Кажи „да“ и поспи малко в почивката.", // nieuw, nalezen
-    'c.shiftwork.w': "Уморените хора правят повече грешки, а в завода една грешка може да е опасна. Има правила за почивката след нощни смени.", // nieuw, nalezen
-    'c.heatdust': "Горещина, прах и искри", // nieuw, nalezen
-    'c.heatdust.b': "Близо до стопилна пещ, пещ за изпичане или пара е много горещо. Пий често вода, още преди да усетиш жажда. Носи топлозащитното облекло и не пипай тръби или части без ръкавици: парата и горещият метал изгарят, дори когато не ги виждаш. Вие ли ти се свят или ти е лошо? Спри, отиди на хладно място и кажи на някого. Прахът от глина, пясък или камък може да съдържа кварцов прах (kwartsstof). Не го виждаш, но уврежда белите ти дробове. Използвай аспирацията, носи противопрашната маска и никога не издухвай праха със сгъстен въздух. В някои зони прах или пари могат да експлодират: това го показва жълт знак с EX. Там: никакви искри, никакъв огън и често никакъв обикновен телефон. Питай какво е позволено във всяка зона. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.heatdust.p': "Не се чувствам добре. Отивам на хладно място.", // nieuw, nalezen
-    'c.heatdust.s': "На машината ти има фин прах от глина. Колега казва: „Издухай го с пистолета за въздух.“ Какво правиш?", // nieuw, nalezen
-    'c.heatdust.o1': "Почисти го мокро или с прахосмукачката.", // nieuw, nalezen
-    'c.heatdust.o2': "Издухай го: по-бързо е.", // nieuw, nalezen
-    'c.heatdust.o3': "Остави го за следващата смяна.", // nieuw, nalezen
-    'c.heatdust.w': "Издухването вдига праха нагоре, във въздуха и в белите ти дробове. Мокра кърпа или прахосмукачка държат праха долу.", // nieuw, nalezen
+    'u.process': "Оператор в процесната промишленост", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.plantround': "Обиколката и контролната зала", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.controlekamer': "контролната зала (откъдето операторите следят целия завод на екрани)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.operator': "операторът (човекът, който управлява и наблюдава машините в завода)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.drukmeter': "манометърът (кръгъл уред със стрелка)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.niveau': "нивото (колко пълен е резервоарът или силозът)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snelheid': "скоростта (колко бързо работи линията или машината)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alarmmelding': "аварийното съобщение (предупреждение на екрана, че нещо не е наред)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantround.1': "Правя обиколката си.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantround.2': "Налягането е твърде високо.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantround.3': "Записвам стойността.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.q': "Защо има аларма на екрана?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.a': "Нивото в резервоар номер две е твърде високо.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.plantfault': "Повреда", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stilstand': "престоят (линията стои и нищо не се произвежда)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opstarten': "пускам (машина или линия, стъпка по стъпка)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stilzetten': "спирам (спирам машината по правилния начин)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.technischedienst': "отделът по поддръжка (TD: те поправят машините)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderhoudsmonteur': "техникът по поддръжка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.resetten': "нулирам (изчиствам грешка на екрана или на панела)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantfault.1': "При повреда звъня на ръководителя на смяната.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantfault.2': "Никога не бъркай в работеща машина.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantfault.3': "Отделът по поддръжка идва.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.q': "Може ли да пусна линията отново?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.a': "Не, чакай. Катинарът на техника още е на нея.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.shiftwork': "Смени и нощи", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ploeg': "бригадата (групата, която работи в едни и същи смени)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ploegwissel': "смяната на бригадите (едната бригада си отива, следващата започва)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.volcontinu': "денонощно (заводът работи ден и нощ, всеки ден от седмицата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.overdagslapen': "спя през деня (след нощна смяна)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.broodtrommel': "кутията за храна", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aflosser': "сменникът (колегата, който поема мястото ти)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shiftwork.1': "Нашият завод работи денонощно.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shiftwork.2': "Запиши го в дневника за следващата бригада.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shiftwork.3': "Идвам навреме за предаването на смяната.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.q': "Какво стана през нощта?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.a': "Помпа номер три спря. Записано е в дневника.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.heatdust': "Горещина, пара и прах", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.smeltoven': "стопилната пещ (много гореща пещ, която топи стъкло или метал)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stoom': "парата (много гореща водна пара)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stoomleiding': "паропроводът (горещ е, дори когато не виждаш пара)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hittekleding': "топлозащитното облекло", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kwartsstof': "кварцовият прах (много фин прах от глина, пясък или камък; уврежда белите дробове)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.explosiegevaar': "опасността от експлозия (прах или пари във въздуха могат да експлодират; жълт знак с EX)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.heatdust.1': "Пий често вода до стопилната пещ.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.heatdust.2': "Кварцовия прах не го виждаш. Сложи си противопрашната маска.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.heatdust.3': "Тук има опасност от експлозия: никакви искри.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.q': "Може ли телефонът ми да влезе в тази зона?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.a': "Не. Тук има опасност от експлозия.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround': "Прави обиколката, записвай", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.b': "Завод, който работи ден и нощ, има нужда от очи и уши. На обиколката гледаш, слушаш и миришеш: нов шум, теч или странна миризма може да е първият знак за проблем. Отчиташ уредите: температурата, налягането, скоростта и нивото. Записвай всяка стойност веднага, с часа, в списъка или в системата. Не по-късно, по памет. Стойността е твърде висока или твърде ниска? Кажи веднага на контролната зала или на ръководителя на смяната. Алармата на екрана никога не е „просто аларма“: не я изключвай, преди да знаеш защо се е включила. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.p': "Температурата е твърде висока.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.s': "На обиколката налягането е малко по-високо, отколкото трябва. Смяната ти почти свършва. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.o1': "Кажи веднага на контролната зала.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.o2': "Запиши го и не казвай на никого.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.o3': "Остави го за следващата смяна.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.w': "В завода малка промяна може бързо да нарасне. Когато контролната зала разбере рано, може да действа, преди нещо да се обърка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault': "Спри, заключи, после поправяй", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.b': "При повреда линията спира и всички искат бързо да тръгне отново. Но точно тогава стават много злополуки. Никога не бъркай в работеща машина, дори „само за момент“. Обади се на ръководителя на смяната или на отдела по поддръжка. Преди някой да работи по машината, тя се спира и заключва, за да не може никой да я пусне. Често всеки, който работи по нея, слага свой собствен катинар. Пускай отново само когато всички катинари са махнати и ръководителят на смяната каже, че е безопасно. Пускай стъпка по стъпка, както са те научили. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.p': "Още има катинар на нея.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.s': "Продукт е заседнал в машината. Машината още работи. Колега казва: „Извади го бързо.“ Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.o1': "Не бъркай вътре: обади се на ръководителя на смяната.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.o2': "Извади го бързо с ръка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.o3': "Избутай го с пръчка, докато машината работи.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.w': "Машина, която още работи, може да се задвижи всеки момент. Спряна и заключена машина не може да те нарани.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork': "Нощи: спи, яж, бъди навреме", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.b': "Много заводи работят ден и нощ, всеки ден от седмицата. Работиш поред ранни, късни и нощни смени, често в три или пет бригади. След нощна смяна спи в тъмна и тиха стая и кажи на семейството си кога спиш. Яж в определени часове и си носи собствена храна: през нощта столовата често е затворена. Бъди навреме за предаването на смяната: колегата ти чака, а заводът не може да остане без хора. За нощните смени има допълнителни правила, в закона и често в колективния трудов договор (cao), например за почивката след нощите. Питай какви са правилата там, където работиш. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.p': "Какви са правилата за нощните смени?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.s': { m: "След четири нощи ръководителят на смяната те моли да работиш още една нощ. Много си уморен. Какво правиш?", f: "След четири нощи ръководителят на смяната те моли да работиш още една нощ. Много си уморена. Какво правиш?", x: "След четири нощи ръководителят на смяната те моли да работиш още една нощ. Чувстваш силна умора. Какво правиш?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.o1': { m: "Кажи, че си много уморен, и попитай за правилата.", f: "Кажи, че си много уморена, и попитай за правилата.", x: "Кажи, че чувстваш силна умора, и попитай за правилата." }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.o2': "Кажи „да“ и пий много кафе.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.o3': "Кажи „да“ и поспи малко в почивката.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.w': "Уморените хора правят повече грешки, а в завода една грешка може да е опасна. Има правила за почивката след нощни смени.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust': "Горещина, прах и искри", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.b': "Близо до стопилна пещ, пещ за изпичане или пара е много горещо. Пий често вода, още преди да усетиш жажда. Носи топлозащитното облекло и не пипай тръби или части без ръкавици: парата и горещият метал изгарят, дори когато не ги виждаш. Вие ли ти се свят или ти е лошо? Спри, отиди на хладно място и кажи на някого. Прахът от глина, пясък или камък може да съдържа кварцов прах (kwartsstof). Не го виждаш, но уврежда белите ти дробове. Използвай аспирацията, носи противопрашната маска и никога не издухвай праха със сгъстен въздух. В някои зони прах или пари могат да експлодират: това го показва жълт знак с EX. Там: никакви искри, никакъв огън и често никакъв обикновен телефон. Питай какво е позволено във всяка зона. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.p': "Не се чувствам добре. Отивам на хладно място.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.s': "На машината ти има фин прах от глина. Колега казва: „Издухай го с пистолета за въздух.“ Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.o1': "Почисти го мокро или с прахосмукачката.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.o2': "Издухай го: по-бързо е.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.o3': "Остави го за следващата смяна.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.w': "Издухването вдига праха нагоре, във въздуха и в белите ти дробове. Мокра кърпа или прахосмукачка държат праха долу.", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (debts, taxes, discrimination, the union, kiln, mixing lab, first weeks, order picking) (26 November 2026).
-    'l.discrimination': "Дискриминация и тормоз", // nieuw, nalezen
-    'w.andersbehandelen': "третирам различно (по-лошо от другите)", // nieuw, nalezen
-    'w.afkomst': "произходът (страната или групата, от която идваш ти или семейството ти)", // nieuw, nalezen
-    'w.geloof': "религията, вярата", // nieuw, nalezen
-    'w.uitschelden': "обиждам (казвам на някого грозни думи)", // nieuw, nalezen
-    'w.bedreigen': "заплашвам (казвам, че ще нараня някого)", // nieuw, nalezen
-    'w.geweld': "насилието", // nieuw, nalezen
-    's.discrimination.1': "Отнасят се с мен различно заради вярата ми.", // nieuw, nalezen
-    's.discrimination.2': "Той ме заплашва. Не се чувствам в безопасност.", // nieuw, nalezen
+    'l.discrimination': "Дискриминация и тормоз", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.andersbehandelen': "третирам различно (по-лошо от другите)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afkomst': "произходът (страната или групата, от която идваш ти или семейството ти)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geloof': "религията, вярата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitschelden': "обиждам (казвам на някого грозни думи)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedreigen': "заплашвам (казвам, че ще нараня някого)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geweld': "насилието", // nieuw, nalezen // nagelezen AI 28 nov
+    's.discrimination.1': "Отнасят се с мен различно заради вярата ми.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.discrimination.2': "Той ме заплашва. Не се чувствам в безопасност.", // nieuw, nalezen // nagelezen AI 28 nov
     's.discrimination.3': "Имам право да кажа „не“, дори на шефа си.", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.discrimination.q': "Добре ли си? Постоянно те обиждат.", // nieuw, nalezen
-    'c.discrimination.a': "Не, не съм добре. Ще съобщя за това.", // nieuw, nalezen
-    'l.union': "Синдикатът и работническият съвет", // nieuw, nalezen
-    'w.lidworden': "ставам член, присъединявам се", // nieuw, nalezen
-    'w.contributie': "членският внос (плащаш го всеки месец)", // nieuw, nalezen
-    'w.opkomenvoor': "застъпвам се за (защитавам нечии интереси)", // nieuw, nalezen
-    'w.onderhandelen': "преговарям (говоря, докато двете страни се съгласят)", // nieuw, nalezen
-    'w.loonsverhoging': "увеличението на заплатата", // nieuw, nalezen
-    'w.ondernemingsraad': "работническият съвет (OR: колеги, избрани да говорят с директора)", // nieuw, nalezen
-    's.union.1': "Ставам член на синдиката.", // nieuw, nalezen
-    's.union.2': "Синдикатът преговаря за колективния трудов договор (cao).", // nieuw, nalezen
-    's.union.3': "Кой е в работническия съвет?", // nieuw, nalezen
-    'c.union.q': "Защо членуваш в синдиката?", // nieuw, nalezen
-    'c.union.a': "Застъпват се за мен, когато има проблем.", // nieuw, nalezen
-    'l.debthelp': "Дългове и помощ", // nieuw, nalezen
-    'w.herinnering': "напомнянето (писмо: сметката още не е платена)", // nieuw, nalezen
-    'w.aanmaning': "последното предупреждение (плати до определена дата, иначе може да има допълнителни разходи)", // nieuw, nalezen
-    'w.betalingsregeling': "разсроченото плащане (плащаш дълга на малки части)", // nieuw, nalezen
-    'w.deurwaarder': "съдебният изпълнител (длъжностно лице, което събира дълг, често след решение на съдия)", // nieuw, nalezen
-    'w.schuldhulp': "помощта при дългове (безплатна помощ за дълговете ти от общината)", // nieuw, nalezen
-    'w.achterstand': "просрочието (пари, които вече е трябвало да платиш)", // nieuw, nalezen
-    's.debthelp.1': "Получих последно предупреждение.", // nieuw, nalezen
-    's.debthelp.2': "Може ли да платя на части?", // nieuw, nalezen
-    's.debthelp.3': "Искам помощ за дълговете си.", // nieuw, nalezen
-    'c.debthelp.q': "Още не сте платили сметката.", // nieuw, nalezen
-    'c.debthelp.a': "Така е. Може ли разсрочено плащане?", // nieuw, nalezen
-    'l.taxes': "Данъци и помощи", // nieuw, nalezen
-    'w.jaaropgave': "годишната справка (документ от работодателя със заплатата ти за цялата година)", // nieuw, nalezen
-    'w.blauweenvelop': "синият плик (в него идват писмата от Belastingdienst)", // nieuw, nalezen
-    'w.teruggave': "възстановяването (данъчни пари, които получаваш обратно)", // nieuw, nalezen
-    'w.uitstel': "отсрочката (можеш да го направиш по-късно)", // nieuw, nalezen
-    'w.huurtoeslag': "помощта за наем (пари от държавата, които ти помагат да плащаш наема)", // nieuw, nalezen
-    'w.belastingtelefoon': "безплатната телефонна линия на Belastingdienst", // nieuw, nalezen
-    's.taxes.1': "Трябва ми годишната справка за данъчната декларация.", // nieuw, nalezen
-    's.taxes.2': "Сега печеля повече. Веднага го съобщавам.", // nieuw, nalezen
-    's.taxes.3': "Получавам пари обратно от Belastingdienst.", // nieuw, nalezen
-    'c.taxes.q': "Има син плик за теб.", // nieuw, nalezen
-    'c.taxes.a': "Благодаря. Веднага ще го отворя.", // nieuw, nalezen
-    'l.kiln': "Пещ, стъкло и керамика", // nieuw, nalezen
-    'w.pers': "пресата (машина, която пресова глина или прах във форма)", // nieuw, nalezen
-    'w.glazuur': "глазурата (лъскав, стъклен слой върху плочка или чаша)", // nieuw, nalezen
-    'w.tunneloven': "тунелната пещ (дълга пещ; продуктите минават бавно през нея)", // nieuw, nalezen
-    'w.scherf': "парчето (остро парче от счупено стъкло или плочка)", // nieuw, nalezen
-    'w.gloeiend': "нажежен (толкова горещ, че свети в червено)", // nieuw, nalezen
-    'w.armbeschermer': "защитният ръкав (ръкав, който пази ръката от порязване)", // nieuw, nalezen
-    's.kiln.1': "Плочките минават бавно през тунелната пещ.", // nieuw, nalezen
-    's.kiln.2': "Тази плочка има пукнатина. Тя е брак.", // nieuw, nalezen
-    's.kiln.3': "Носи защитните ръкави до стъклото.", // nieuw, nalezen
-    'c.kiln.q': "Може ли да събера парчетата с ръка?", // nieuw, nalezen
-    'c.kiln.a': "Не. Използвай метличка и лопатка.", // nieuw, nalezen
-    'l.mixlab': "Смесителният цех и лабораторията", // nieuw, nalezen
-    'w.batch': "партидата (едно количество, направено наведнъж по една рецепта)", // nieuw, nalezen
-    'w.afwegen': "отмервам (претеглям точно толкова, колкото казва рецептата)", // nieuw, nalezen
-    'w.mengvat': "смесителният съд (голям съд с бъркалка вътре)", // nieuw, nalezen
-    'w.labjas': "лабораторната престилка", // nieuw, nalezen
-    'w.laboratorium': "лабораторията (тук изпитват продукта)", // nieuw, nalezen
-    'w.grondstof': "суровината (това, от което се прави продуктът)", // nieuw, nalezen
-    's.mixlab.1': "Претегли суровините точно.", // nieuw, nalezen
-    's.mixlab.2': "Взимам проба за лабораторията.", // nieuw, nalezen
-    's.mixlab.3': "Коя партида е това? Виж етикета.", // nieuw, nalezen
-    'c.mixlab.q': "Одобрена ли е партидата?", // nieuw, nalezen
-    'c.mixlab.a': "Още не. Лабораторията изпитва пробата.", // nieuw, nalezen
-    'c.discrimination': "Несправедливо отношение? Не е по твоя вина", // nieuw, nalezen
+    'c.discrimination.q': "Добре ли си? Постоянно те обиждат.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.a': "Не, не съм добре. Ще съобщя за това.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.union': "Синдикатът и работническият съвет", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lidworden': "ставам член, присъединявам се", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.contributie': "членският внос (плащаш го всеки месец)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opkomenvoor': "застъпвам се за (защитавам нечии интереси)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderhandelen': "преговарям (говоря, докато двете страни се съгласят)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.loonsverhoging': "увеличението на заплатата", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ondernemingsraad': "работническият съвет (OR: колеги, избрани да говорят с директора)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.union.1': "Ставам член на синдиката.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.union.2': "Синдикатът преговаря за колективния трудов договор (cao).", // nieuw, nalezen // nagelezen AI 28 nov
+    's.union.3': "Кой е в работническия съвет?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.q': "Защо членуваш в синдиката?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.a': "Застъпват се за мен, когато има проблем.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.debthelp': "Дългове и помощ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.herinnering': "напомнянето (писмо: сметката още не е платена)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanmaning': "последното предупреждение (плати до определена дата, иначе може да има допълнителни разходи)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.betalingsregeling': "разсроченото плащане (плащаш дълга на малки части)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.deurwaarder': "съдебният изпълнител (длъжностно лице, което събира дълг, често след решение на съдия)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schuldhulp': "помощта при дългове (безплатна помощ за дълговете ти от общината)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.achterstand': "просрочието (пари, които вече е трябвало да платиш)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.debthelp.1': "Получих последно предупреждение.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.debthelp.2': "Може ли да платя на части?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.debthelp.3': "Искам помощ за дълговете си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.q': "Още не сте платили сметката.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.a': "Така е. Може ли разсрочено плащане?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.taxes': "Данъци и помощи", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.jaaropgave': "годишната справка (документ от работодателя със заплатата ти за цялата година)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.blauweenvelop': "синият плик (в него идват писмата от Belastingdienst)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teruggave': "възстановяването (данъчни пари, които получаваш обратно)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitstel': "отсрочката (можеш да го направиш по-късно)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huurtoeslag': "помощта за наем (пари от държавата, които ти помагат да плащаш наема)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.belastingtelefoon': "безплатната телефонна линия на Belastingdienst", // nieuw, nalezen // nagelezen AI 28 nov
+    's.taxes.1': "Трябва ми годишната справка за данъчната декларация.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.taxes.2': "Сега печеля повече. Веднага го съобщавам.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.taxes.3': "Получавам пари обратно от Belastingdienst.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.q': "Има син плик за теб.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.a': "Благодаря. Веднага ще го отворя.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.kiln': "Пещ, стъкло и керамика", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pers': "пресата (машина, която пресова глина или прах във форма)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.glazuur': "глазурата (лъскав, стъклен слой върху плочка или чаша)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tunneloven': "тунелната пещ (дълга пещ; продуктите минават бавно през нея)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scherf': "парчето (остро парче от счупено стъкло или плочка)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gloeiend': "нажежен (толкова горещ, че свети в червено)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.armbeschermer': "защитният ръкав (ръкав, който пази ръката от порязване)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.kiln.1': "Плочките минават бавно през тунелната пещ.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.kiln.2': "Тази плочка има пукнатина. Тя е брак.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.kiln.3': "Носи защитните ръкави до стъклото.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.q': "Може ли да събера парчетата с ръка?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.a': "Не. Използвай метличка и лопатка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.mixlab': "Смесителният цех и лабораторията", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.batch': "партидата (едно количество, направено наведнъж по една рецепта)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afwegen': "отмервам (претеглям точно толкова, колкото казва рецептата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mengvat': "смесителният съд (голям съд с бъркалка вътре)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.labjas': "лабораторната престилка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.laboratorium': "лабораторията (тук изпитват продукта)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.grondstof': "суровината (това, от което се прави продуктът)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mixlab.1': "Претегли суровините точно.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mixlab.2': "Взимам проба за лабораторията.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mixlab.3': "Коя партида е това? Виж етикета.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.q': "Одобрена ли е партидата?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.a': "Още не. Лабораторията изпитва пробата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination': "Несправедливо отношение? Не е по твоя вина", // nieuw, nalezen // nagelezen AI 28 nov
     'c.discrimination.b': "Дискриминация е, когато се отнасят с теб различно или по-лошо заради това кой си: заради произхода, цвета на кожата, религията, пола, възрастта, увреждане или заради това кого обичаш. Тормоз и сплашване (intimidatie) са например нежелано докосване, сексуални забележки, заплахи или когато те обиждат. И двете са забранени на работа и никога не е по твоя вина. Имаш право да кажеш „не“, дори на шефа си. Запиши какво се е случило, кога и кой го е видял. Говори с началника си или с довереното лице (vertrouwenspersoon), ако във фирмата ти има такова. Извън работата безплатно помага службата срещу дискриминация в твоя град (discriminatie.nl). College voor de Rechten van de Mens може да даде становище, също безплатно. Насилие или заплаха? Отиди в полицията. При опасност се обади на 112. Това е обща информация. За твоя случай питай синдиката, Juridisch Loket или FairWork.", // nieuw, nalezen (AI-correctie 28 nov 2026)
-    'c.discrimination.p': "Искам да съобщя за нещо. Мога ли да говоря с вас поверително?", // nieuw, nalezen
-    'c.discrimination.s': "Колега често те обижда заради това откъде идваш. Другите се смеят. Какво правиш?", // nieuw, nalezen
-    'c.discrimination.o1': "Запиши го и кажи на човек, на когото имаш доверие.", // nieuw, nalezen
-    'c.discrimination.o2': "Не казвай нищо: това е част от работата.", // nieuw, nalezen
-    'c.discrimination.o3': "Напусни и не казвай на никого защо.", // nieuw, nalezen
-    'c.discrimination.w': "Обидите заради произхода са дискриминация и са забранени. Когато ги запишеш и говориш за тях, някой може да ти помогне да ги спреш.", // nieuw, nalezen
-    'c.union': "Заедно сте по-силни", // nieuw, nalezen
-    'c.union.b': "Синдикатът (vakbond), например FNV или CNV, защитава интересите на работниците. Той се договаря с работодателите за заплатите и работата: това е колективният трудов договор (cao). Много колективни трудови договори важат за всички в един сектор, дори когато не членуваш в синдиката. Членовете плащат всеки месец членски внос (contributie) и получават съвети и помощ, например при проблем със заплатата или уволнение. Присъедини се навреме: често синдикатът помага само при проблем, който е започнал след присъединяването ти. Членството е твой собствен избор и работодателят няма право да те наказва за това. Фирма с 50 или повече работници трябва да има работнически съвет (ondernemingsraad, OR): колеги, избрани от работниците. OR говори с директора например за работното време и безопасността. По-малка фирма може да има представителство на персонала (personeelsvertegenwoordiging). Имаш въпроси? Попитай колега от OR. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen
-    'c.union.p': "Имам въпрос за новите графици. Може ли OR да направи нещо по въпроса?", // nieuw, nalezen
-    'c.union.s': "Фирмата ти планира много повече вечерни смени. Много колеги са недоволни. Какво можеш да направиш?", // nieuw, nalezen
-    'c.union.o1': "Попитай колега от OR за това.", // nieuw, nalezen
-    'c.union.o2': "Спри да идваш вечер.", // nieuw, nalezen
-    'c.union.o3': "Не казвай нищо: нищо не може да се промени.", // nieuw, nalezen
-    'c.union.w': "OR има думата при правилата за работното време. Той може да говори за тях с директора, за всички работници заедно.", // nieuw, nalezen
-    'c.debthelp': "Отваряй всяко писмо и търси помощ рано", // nieuw, nalezen
-    'c.debthelp.b': "Не плати ли някоя сметка навреме? Тогава първо получаваш напомняне (herinnering), а по-късно последно предупреждение (aanmaning). Преди фирмата да има право да ти начисли допълнителни разходи за това, тя трябва да ти даде 14 дни да платиш. Затова отваряй всяко писмо, дори когато се страхуваш от него. Не можеш да платиш всичко наведнъж? Обади се или пиши и поискай разсрочено плащане (betalingsregeling). Deurwaarder (съдебен изпълнител) е длъжностно лице, което събира дългове, често след решение на съдия. Той може например да взема част от заплатата ти, но винаги трябва да ти оставя достатъчно, за да живееш. Дългове? Търси помощ рано, докато са още малки. Gemeente дава безплатна помощ при дългове (schuldhulp). На geldfit.nl можеш да направиш безплатен тест и да намериш помощ близо до теб. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen
-    'c.debthelp.p': "Не мога да платя всичко наведнъж. Може ли да платя на части?", // nieuw, nalezen
-    'c.debthelp.s': "Получаваш последно предупреждение за сметката за телефона. Този месец нямаш пари. Какво правиш?", // nieuw, nalezen
-    'c.debthelp.o1': "Обади се на фирмата и поискай разсрочено плащане.", // nieuw, nalezen
-    'c.debthelp.o2': "Прибери писмото и чакай.", // nieuw, nalezen
-    'c.debthelp.o3': "Бързо вземи пари назаем с „купи сега, плати после“.", // nieuw, nalezen
-    'c.debthelp.w': "Когато кажеш навреме, фирмата често може да се съгласи на малки плащания. Прибраното писмо не изчезва: разходите само растат.", // nieuw, nalezen
-    'c.taxes': "Данъчната ти декларация и помощите ти", // nieuw, nalezen
-    'c.taxes.b': "Данъчната декларация (aangifte) за миналата година трябва да се подаде преди 1 май. Получи ли писмо, в което те молят да я подадеш? Тогава трябва да го направиш. Понякога получаваш пари обратно. Трябва ти годишната справка (jaaropgave) от работодателя. Нямаш време? Можеш да поискаш повече време (uitstel). Помощите (toeslagen) като zorgtoeslag и huurtoeslag са аванс: зависят от това колко ще спечелиш тази година. Печелиш повече или се променя нещо друго? Съобщи го веднага в Mijn toeslagen. Ако не го направиш, по-късно може да се наложи да върнеш много пари. Трябва да върнеш пари? Можеш да поискаш разсрочено плащане. Безплатна помощ: BelastingTelefoon, офис на Belastingdienst (първо си запиши час) или библиотеката. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen
-    'c.taxes.p': "Доходът ми се промени. Как да го съобщя?", // nieuw, nalezen
-    'c.taxes.s': "Започваш нова работа и печелиш повече всеки месец. Получаваш huurtoeslag. Какво правиш?", // nieuw, nalezen
-    'c.taxes.o1': "Съобщи новия си доход в Mijn toeslagen.", // nieuw, nalezen
-    'c.taxes.o2': "Чакай, докато Belastingdienst попита.", // nieuw, nalezen
-    'c.taxes.o3': "Спри да плащаш наема.", // nieuw, nalezen
-    'c.taxes.w': "Помощта ти зависи от това колко печелиш. Когато съобщиш промяната навреме, получаваш правилната сума и по-късно не трябва да връщаш много пари.", // nieuw, nalezen
-    'c.kiln': "Остро, горещо и тежко", // nieuw, nalezen
-    'c.kiln.b': "Във фабрика за плочки или стъкло продуктите се пресоват във форма, получават глазура и минават бавно през дълга пещ. След пещта те трябва да изстинат: не ги пипай, докато са горещи, или носи топлоустойчиви ръкавици. Стъклото и счупените плочки са много остри. Носи ръкавици против порязване, защитни ръкави и предпазни очила. Никога не хващай падаща стъклена плоскост: отстъпи назад. Събирай парчетата с метличка и лопатка, никога с ръце, и ги изхвърляй в правилния контейнер. Глазурата и прахът може да съдържат вредни вещества: мий си ръцете, преди да ядеш или пиеш. При пресата никога не бъркай вътре, докато работи. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.kiln.p': "Внимание, парчета! Ще донеса метличка и лопатка.", // nieuw, nalezen
-    'c.kiln.s': "Стъклена плоскост се изплъзва от стелажа и започва да пада. Какво правиш?", // nieuw, nalezen
-    'c.kiln.o1': "Отстъпи назад и я остави да падне.", // nieuw, nalezen
-    'c.kiln.o2': "Хвани я с ръце.", // nieuw, nalezen
-    'c.kiln.o3': "Спри я с крак.", // nieuw, nalezen
-    'c.kiln.w': "Падаща плоскост може да пореже много дълбоко, дори през ръкавици. Счупената плоскост струва само пари.", // nieuw, nalezen
-    'c.mixlab': "Следвай рецептата точно", // nieuw, nalezen
-    'c.mixlab.b': "В смесителния цех правиш партида по рецепта: кои суровини, колко и в какъв ред. Претегляй всичко точно и записвай какво добавяш, с номера на партидата. Имаш съмнение? Питай, не гадай. Преди да използваш варел или чувал, прочети етикета: какво има вътре, номера на партидата и знаците за опасност. Никога не слагай във варел или чувал нещо, на което не му е мястото там. За проба използвай чиста лъжичка и чисто бурканче и веднага сложи етикет на него. Прахът и парите може да са вредни: използвай аспирацията и носи каквото трябва, например лабораторна престилка, защитни очила, ръкавици или маска. В хранителната промишленост носиш и мрежичка за коса и често си миеш ръцете. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.mixlab.p': "Не знам със сигурност. Колко трябва да се сложи?", // nieuw, nalezen
-    'c.mixlab.s': "В рецептата пише 25 кило. По погрешка слагаш 26 кило и те вече са в смесителния съд. Какво правиш?", // nieuw, nalezen
-    'c.mixlab.o1': "Кажи на ръководителя на смяната и го запиши.", // nieuw, nalezen
-    'c.mixlab.o2': "Не казвай нищо: един килограм не е много.", // nieuw, nalezen
-    'c.mixlab.o3': "Извади малко с ръка.", // nieuw, nalezen
-    'c.mixlab.w': "Едно грешно количество може да развали цялата партида. Когато ръководителят на смяната разбере навреме, лабораторията може да провери, преди партидата да продължи нататък.", // nieuw, nalezen
+    'c.discrimination.p': "Искам да съобщя за нещо. Мога ли да говоря с вас поверително?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.s': "Колега често те обижда заради това откъде идваш. Другите се смеят. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.o1': "Запиши го и кажи на човек, на когото имаш доверие.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.o2': "Не казвай нищо: това е част от работата.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.o3': "Напусни и не казвай на никого защо.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.w': "Обидите заради произхода са дискриминация и са забранени. Когато ги запишеш и говориш за тях, някой може да ти помогне да ги спреш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union': "Заедно сте по-силни", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.b': "Синдикатът (vakbond), например FNV или CNV, защитава интересите на работниците. Той се договаря с работодателите за заплатите и работата: това е колективният трудов договор (cao). Много колективни трудови договори важат за всички в един сектор, дори когато не членуваш в синдиката. Членовете плащат всеки месец членски внос (contributie) и получават съвети и помощ, например при проблем със заплатата или уволнение. Присъедини се навреме: често синдикатът помага само при проблем, който е започнал след присъединяването ти. Членството е твой собствен избор и работодателят няма право да те наказва за това. Фирма с 50 или повече работници трябва да има работнически съвет (ondernemingsraad, OR): колеги, избрани от работниците. OR говори с директора например за работното време и безопасността. По-малка фирма може да има представителство на персонала (personeelsvertegenwoordiging). Имаш въпроси? Попитай колега от OR. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.p': "Имам въпрос за новите графици. Може ли OR да направи нещо по въпроса?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.s': "Фирмата ти планира много повече вечерни смени. Много колеги са недоволни. Какво можеш да направиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.o1': "Попитай колега от OR за това.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.o2': "Спри да идваш вечер.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.o3': "Не казвай нищо: нищо не може да се промени.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.w': "OR има думата при правилата за работното време. Той може да говори за тях с директора, за всички работници заедно.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp': "Отваряй всяко писмо и търси помощ рано", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.b': "Не плати ли някоя сметка навреме? Тогава първо получаваш напомняне (herinnering), а по-късно последно предупреждение (aanmaning). Преди фирмата да има право да ти начисли допълнителни разходи за това, тя трябва да ти даде 14 дни да платиш. Затова отваряй всяко писмо, дори когато се страхуваш от него. Не можеш да платиш всичко наведнъж? Обади се или пиши и поискай разсрочено плащане (betalingsregeling). Deurwaarder (съдебен изпълнител) е длъжностно лице, което събира дългове, често след решение на съдия. Той може например да взема част от заплатата ти, но винаги трябва да ти оставя достатъчно, за да живееш. Дългове? Търси помощ рано, докато са още малки. Gemeente дава безплатна помощ при дългове (schuldhulp). На geldfit.nl можеш да направиш безплатен тест и да намериш помощ близо до теб. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.p': "Не мога да платя всичко наведнъж. Може ли да платя на части?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.s': "Получаваш последно предупреждение за сметката за телефона. Този месец нямаш пари. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.o1': "Обади се на фирмата и поискай разсрочено плащане.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.o2': "Прибери писмото и чакай.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.o3': "Бързо вземи пари назаем с „купи сега, плати после“.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.w': "Когато кажеш навреме, фирмата често може да се съгласи на малки плащания. Прибраното писмо не изчезва: разходите само растат.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes': "Данъчната ти декларация и помощите ти", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.b': "Данъчната декларация (aangifte) за миналата година трябва да се подаде преди 1 май. Получи ли писмо, в което те молят да я подадеш? Тогава трябва да го направиш. Понякога получаваш пари обратно. Трябва ти годишната справка (jaaropgave) от работодателя. Нямаш време? Можеш да поискаш повече време (uitstel). Помощите (toeslagen) като zorgtoeslag и huurtoeslag са аванс: зависят от това колко ще спечелиш тази година. Печелиш повече или се променя нещо друго? Съобщи го веднага в Mijn toeslagen. Ако не го направиш, по-късно може да се наложи да върнеш много пари. Трябва да върнеш пари? Можеш да поискаш разсрочено плащане. Безплатна помощ: BelastingTelefoon, офис на Belastingdienst (първо си запиши час) или библиотеката. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.p': "Доходът ми се промени. Как да го съобщя?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.s': "Започваш нова работа и печелиш повече всеки месец. Получаваш huurtoeslag. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.o1': "Съобщи новия си доход в Mijn toeslagen.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.o2': "Чакай, докато Belastingdienst попита.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.o3': "Спри да плащаш наема.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.w': "Помощта ти зависи от това колко печелиш. Когато съобщиш промяната навреме, получаваш правилната сума и по-късно не трябва да връщаш много пари.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln': "Остро, горещо и тежко", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.b': "Във фабрика за плочки или стъкло продуктите се пресоват във форма, получават глазура и минават бавно през дълга пещ. След пещта те трябва да изстинат: не ги пипай, докато са горещи, или носи топлоустойчиви ръкавици. Стъклото и счупените плочки са много остри. Носи ръкавици против порязване, защитни ръкави и предпазни очила. Никога не хващай падаща стъклена плоскост: отстъпи назад. Събирай парчетата с метличка и лопатка, никога с ръце, и ги изхвърляй в правилния контейнер. Глазурата и прахът може да съдържат вредни вещества: мий си ръцете, преди да ядеш или пиеш. При пресата никога не бъркай вътре, докато работи. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.p': "Внимание, парчета! Ще донеса метличка и лопатка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.s': "Стъклена плоскост се изплъзва от стелажа и започва да пада. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.o1': "Отстъпи назад и я остави да падне.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.o2': "Хвани я с ръце.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.o3': "Спри я с крак.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.w': "Падаща плоскост може да пореже много дълбоко, дори през ръкавици. Счупената плоскост струва само пари.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab': "Следвай рецептата точно", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.b': "В смесителния цех правиш партида по рецепта: кои суровини, колко и в какъв ред. Претегляй всичко точно и записвай какво добавяш, с номера на партидата. Имаш съмнение? Питай, не гадай. Преди да използваш варел или чувал, прочети етикета: какво има вътре, номера на партидата и знаците за опасност. Никога не слагай във варел или чувал нещо, на което не му е мястото там. За проба използвай чиста лъжичка и чисто бурканче и веднага сложи етикет на него. Прахът и парите може да са вредни: използвай аспирацията и носи каквото трябва, например лабораторна престилка, защитни очила, ръкавици или маска. В хранителната промишленост носиш и мрежичка за коса и често си миеш ръцете. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.p': "Не знам със сигурност. Колко трябва да се сложи?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.s': "В рецептата пише 25 кило. По погрешка слагаш 26 кило и те вече са в смесителния съд. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.o1': "Кажи на ръководителя на смяната и го запиши.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.o2': "Не казвай нищо: един килограм не е много.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.o3': "Извади малко с ръка.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.w': "Едно грешно количество може да развали цялата партида. Когато ръководителят на смяната разбере навреме, лабораторията може да провери, преди партидата да продължи нататък.", // nieuw, nalezen // nagelezen AI 28 nov
     // four new lessons (performance review, forms, voicemail, the dentist) (27 November 2026).
-    'l.forms': "Да попълниш формуляр", // nieuw, nalezen
-    'w.invullen': "попълвам (формуляр)", // nieuw, nalezen
-    'w.vakje': "квадратчето (малко квадратче във формуляра)", // nieuw, nalezen
-    'w.aankruisen': "отбелязвам с кръстче (слагам кръстче в квадратчето)", // nieuw, nalezen
-    'w.verplichtveld': "задължителното поле (трябва да го попълниш; често е отбелязано със *)", // nieuw, nalezen
-    'w.postcode': "пощенският код (кратък код за улицата или града ти, част от адреса)", // nieuw, nalezen
-    'w.hoofdletters': "главните букви (A, B, C)", // nieuw, nalezen
-    's.forms.1': "Напиши името си с главни букви.", // nieuw, nalezen
-    's.forms.2': "Отбележи правилното квадратче.", // nieuw, nalezen
-    's.forms.3': "Можете ли да ми помогнете с този формуляр?", // nieuw, nalezen
-    'c.forms.q': { m: "Попълнил ли си вече формуляра?", f: "Попълнила ли си вече формуляра?", x: "Формулярът попълнен ли е вече?" }, // nieuw, nalezen
-    'c.forms.a': "Почти. Къде да се подпиша?", // nieuw, nalezen
-    'l.voicemail': "Гласова поща и обаждане обратно", // nieuw, nalezen
-    'w.piep': "сигналът (краткият звук; след него казваш съобщението си)", // nieuw, nalezen
-    'w.beluisteren': "изслушвам (съобщение)", // nieuw, nalezen
-    'w.boodschap': "съобщението (това, което казваш на нечия гласова поща)", // nieuw, nalezen
-    'w.noemen': "казвам, назовавам (името си, номера си)", // nieuw, nalezen
-    'w.zosnelmogelijk': "възможно най-скоро", // nieuw, nalezen
-    'w.opnieuw': "пак, още веднъж", // nieuw, nalezen
-    's.voicemail.1': "Али Хадад се обажда. Звъня за графика си.", // nieuw, nalezen
-    's.voicemail.2': "Всеки ден слушам гласовата си поща.", // nieuw, nalezen
-    's.voicemail.3': "Ще се обадя пак по-късно.", // nieuw, nalezen
-    'c.voicemail.q': "Оставете името и номера си след сигнала.", // nieuw, nalezen
-    'c.voicemail.a': "Али се обажда. Бихте ли ми се обадили възможно най-скоро?", // nieuw, nalezen
-    'l.dentist': "При зъболекаря", // nieuw, nalezen
-    'w.tandarts': "зъболекарят", // nieuw, nalezen
-    'w.kiespijn': "зъбоболът", // nieuw, nalezen
-    'w.gaatje': "кариесът (малка дупка в зъба)", // nieuw, nalezen
-    'w.vulling': "пломбата (с нея зъболекарят затваря дупката в зъба)", // nieuw, nalezen
-    'w.gebit': "зъбите (всичките ти зъби заедно)", // nieuw, nalezen
-    'w.aanvullendeverzekering': "допълнителната застраховка (можеш да я избереш в допълнение към основната здравна застраховка)", // nieuw, nalezen
-    's.dentist.1': "От два дни ме боли зъб.", // nieuw, nalezen
-    's.dentist.2': "Имам кариес. Ще ми сложат пломба.", // nieuw, nalezen
-    's.dentist.3': "Колко струва една пломба?", // nieuw, nalezen
-    'c.dentist.q': "Кога за последно беше на зъболекар?", // nieuw, nalezen
-    'c.dentist.a': "Преди година. Искам да си направя преглед.", // nieuw, nalezen
-    'c.forms': "Формуляр: пиши четливо и пази своя BSN", // nieuw, nalezen
-    'c.forms.b': "Формулярът често пита за името ти, датата на раждане, адреса и пощенския код. Пиши четливо, често с главни букви. Поле със звездичка (*) е задължително: трябва да го попълниш. Отбележи правилното квадратче. Не разбираш някой въпрос? Помоли за помощ, преди да подпишеш. Никога не подписвай нещо, което не разбираш. Твоят BSN: само някои организации могат да го искат, като работодателя ти, gemeente, Belastingdienst, здравния ти застраховател, личния ти лекар и банката ти. Магазин или спортен клуб нямат право. Никога не давай BSN на непознат, в приложение или по телефона. Имаш съмнения? Питай защо им трябва. Много библиотеки помагат безплатно с формуляри, често в часове за свободно посещение. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen
-    'c.forms.p': "Задължителен ли е тук моят BSN?", // nieuw, nalezen
-    'c.forms.s': "Записваш се в спортен клуб. Във формуляра питат за твоя BSN. Какво правиш?", // nieuw, nalezen
-    'c.forms.o1': "Остави полето празно и попитай защо им трябва.", // nieuw, nalezen
-    'c.forms.o2': "Попълни го: всеки формуляр може да го иска.", // nieuw, nalezen
-    'c.forms.o3': "Дай вместо това данните си за DigiD.", // nieuw, nalezen
-    'c.forms.w': "Спортният клуб няма право да използва твоя BSN. Само някои организации могат, като работодателя ти, gemeente и здравния ти застраховател. Когато питаш защо, пазиш номера си.", // nieuw, nalezen
-    'c.voicemail': "Съобщение: кой, защо, твоят номер", // nieuw, nalezen
-    'c.voicemail.b': "Никой не вдига? Остави кратко съобщение (boodschap) след сигнала (piep). Кажи името си, защо се обаждаш и телефонния си номер. Говори бавно и кажи номера си два пъти. Пропуснато обаждане? Първо изслушай гласовата си поща, после се обади обратно възможно най-скоро. Не разбираш някое съобщение? Изслушай го пак или помоли колега да го чуе с теб. Настрой гласовата си поща и я слушай всеки ден. Обаждаш се заради болест? В много фирми съобщението не е достатъчно: обаждай се пак, докато не говориш с някого. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen
-    'c.voicemail.p': "Мога ли да оставя съобщение?", // nieuw, nalezen
-    'c.voicemail.s': "Ще закъснееш и се обаждаш на началничката си. Чуваш гласовата ѝ поща. Какво казваш след сигнала?", // nieuw, nalezen
-    'c.voicemail.o1': "Името си, защо се обаждаш, и номера си.", // nieuw, nalezen
-    'c.voicemail.o2': "Само „Bel me terug“ и затвори.", // nieuw, nalezen
-    'c.voicemail.o3': "Нищо: затвори и чакай.", // nieuw, nalezen
-    'c.voicemail.w': "С името ти, причината и номера ти началничката знае какво става и може веднага да ти се обади.", // nieuw, nalezen
-    'c.dentist': "Зъболекарят: преглед и питай за цената", // nieuw, nalezen
-    'c.dentist.b': "Регистрирай се при зъболекар (tandarts) близо до дома си и ходи редовно на преглед (controle), често веднъж в годината. Боли те зъб? Обади се на зъболекаря си и кажи, че много боли: тогава често бързо получаваш час. През нощта или през уикенда се обади на своя зъболекар: съобщението по телефона ти казва кой зъболекар помага в момента. За възрастни основната здравна застраховка плаща много малко при зъболекаря: обикновено не плаща нито прегледа, нито пломбата. Можеш да избереш допълнителна застраховка (aanvullende verzekering) за зъболекар: провери какво плаща. За деца под 18 години основната застраховка плаща повечето грижи за зъбите. Питай колко струва лечението, преди да започне. При голямо лечение зъболекарят трябва първо да ти даде цената на хартия. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen
-    'c.dentist.p': "Много ме боли. Може ли да дойда още днес?", // nieuw, nalezen
-    'c.dentist.s': "Събота вечер е. Силно те боли зъб и болкоуспокояващото не помага. Какво правиш?", // nieuw, nalezen
-    'c.dentist.o1': "Обади се на зъболекаря си: съобщението казва кой помага сега.", // nieuw, nalezen
-    'c.dentist.o2': "Обади се на 112: спешен случай е.", // nieuw, nalezen
-    'c.dentist.o3': "Чакай до понеделник и вземай още болкоуспокояващи.", // nieuw, nalezen
-    'c.dentist.w': "Извън работното време дежурен зъболекар помага при силна болка. 112 е само за спешен случай, като опасност за живота.", // nieuw, nalezen
+    'l.forms': "Да попълниш формуляр", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.invullen': "попълвам (формуляр)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vakje': "квадратчето (малко квадратче във формуляра)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aankruisen': "отбелязвам с кръстче (слагам кръстче в квадратчето)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verplichtveld': "задължителното поле (трябва да го попълниш; често е отбелязано със *)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.postcode': "пощенският код (кратък код за улицата или града ти, част от адреса)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hoofdletters': "главните букви (A, B, C)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.forms.1': "Напиши името си с главни букви.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.forms.2': "Отбележи правилното квадратче.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.forms.3': "Можете ли да ми помогнете с този формуляр?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.q': { m: "Попълнил ли си вече формуляра?", f: "Попълнила ли си вече формуляра?", x: "Формулярът попълнен ли е вече?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.a': "Почти. Къде да се подпиша?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.voicemail': "Гласова поща и обаждане обратно", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.piep': "сигналът (краткият звук; след него казваш съобщението си)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beluisteren': "изслушвам (съобщение)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.boodschap': "съобщението (това, което казваш на нечия гласова поща)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.noemen': "казвам, назовавам (името си, номера си)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zosnelmogelijk': "възможно най-скоро", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opnieuw': "пак, още веднъж", // nieuw, nalezen // nagelezen AI 28 nov
+    's.voicemail.1': "Али Хадад се обажда. Звъня за графика си.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.voicemail.2': "Всеки ден слушам гласовата си поща.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.voicemail.3': "Ще се обадя пак по-късно.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.q': "Оставете името и номера си след сигнала.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.a': "Али се обажда. Бихте ли ми се обадили възможно най-скоро?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.dentist': "При зъболекаря", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tandarts': "зъболекарят", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kiespijn': "зъбоболът", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gaatje': "кариесът (малка дупка в зъба)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vulling': "пломбата (с нея зъболекарят затваря дупката в зъба)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gebit': "зъбите (всичките ти зъби заедно)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanvullendeverzekering': "допълнителната застраховка (можеш да я избереш в допълнение към основната здравна застраховка)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dentist.1': "От два дни ме боли зъб.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dentist.2': "Имам кариес. Ще ми сложат пломба.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dentist.3': "Колко струва една пломба?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.q': "Кога за последно беше на зъболекар?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.a': "Преди година. Искам да си направя преглед.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms': "Формуляр: пиши четливо и пази своя BSN", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.b': "Формулярът често пита за името ти, датата на раждане, адреса и пощенския код. Пиши четливо, често с главни букви. Поле със звездичка (*) е задължително: трябва да го попълниш. Отбележи правилното квадратче. Не разбираш някой въпрос? Помоли за помощ, преди да подпишеш. Никога не подписвай нещо, което не разбираш. Твоят BSN: само някои организации могат да го искат, като работодателя ти, gemeente, Belastingdienst, здравния ти застраховател, личния ти лекар и банката ти. Магазин или спортен клуб нямат право. Никога не давай BSN на непознат, в приложение или по телефона. Имаш съмнения? Питай защо им трябва. Много библиотеки помагат безплатно с формуляри, често в часове за свободно посещение. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.p': "Задължителен ли е тук моят BSN?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.s': "Записваш се в спортен клуб. Във формуляра питат за твоя BSN. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.o1': "Остави полето празно и попитай защо им трябва.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.o2': "Попълни го: всеки формуляр може да го иска.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.o3': "Дай вместо това данните си за DigiD.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.w': "Спортният клуб няма право да използва твоя BSN. Само някои организации могат, като работодателя ти, gemeente и здравния ти застраховател. Когато питаш защо, пазиш номера си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail': "Съобщение: кой, защо, твоят номер", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.b': "Никой не вдига? Остави кратко съобщение (boodschap) след сигнала (piep). Кажи името си, защо се обаждаш и телефонния си номер. Говори бавно и кажи номера си два пъти. Пропуснато обаждане? Първо изслушай гласовата си поща, после се обади обратно възможно най-скоро. Не разбираш някое съобщение? Изслушай го пак или помоли колега да го чуе с теб. Настрой гласовата си поща и я слушай всеки ден. Обаждаш се заради болест? В много фирми съобщението не е достатъчно: обаждай се пак, докато не говориш с някого. Правилата са различни във всяка фирма: питай началника си какви са правилата там, където работиш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.p': "Мога ли да оставя съобщение?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.s': "Ще закъснееш и се обаждаш на началничката си. Чуваш гласовата ѝ поща. Какво казваш след сигнала?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.o1': "Името си, защо се обаждаш, и номера си.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.o2': "Само „Bel me terug“ и затвори.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.o3': "Нищо: затвори и чакай.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.w': "С името ти, причината и номера ти началничката знае какво става и може веднага да ти се обади.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist': "Зъболекарят: преглед и питай за цената", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.b': "Регистрирай се при зъболекар (tandarts) близо до дома си и ходи редовно на преглед (controle), често веднъж в годината. Боли те зъб? Обади се на зъболекаря си и кажи, че много боли: тогава често бързо получаваш час. През нощта или през уикенда се обади на своя зъболекар: съобщението по телефона ти казва кой зъболекар помага в момента. За възрастни основната здравна застраховка плаща много малко при зъболекаря: обикновено не плаща нито прегледа, нито пломбата. Можеш да избереш допълнителна застраховка (aanvullende verzekering) за зъболекар: провери какво плаща. За деца под 18 години основната застраховка плаща повечето грижи за зъбите. Питай колко струва лечението, преди да започне. При голямо лечение зъболекарят трябва първо да ти даде цената на хартия. Това е обща информация. За твоя случай питай работодателя, синдиката или Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.p': "Много ме боли. Може ли да дойда още днес?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.s': "Събота вечер е. Силно те боли зъб и болкоуспокояващото не помага. Какво правиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.o1': "Обади се на зъболекаря си: съобщението казва кой помага сега.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.o2': "Обади се на 112: спешен случай е.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.o3': "Чакай до понеделник и вземай още болкоуспокояващи.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.w': "Извън работното време дежурен зъболекар помага при силна болка. 112 е само за спешен случай, като опасност за живота.", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 

@@ -43,7 +43,7 @@ const t: CultureTranslation = {
     'w.hart': 'palabras amables que dan ánimo',
     'w.hart.lit': 'un corazón bajo el cinturón',
     's.plain.1': 'Avisa cuando no es seguro.',
-    's.plain.2': { m: 'Estoy muy, muy cansado.', f: 'Estoy muy, muy cansada.', x: 'Estoy muy, muy cansado/a.' }, // x: nieuw, nalezen
+    's.plain.2': { m: 'Estoy muy, muy cansado.', f: 'Estoy muy, muy cansada.', x: 'No puedo más de cansancio.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     's.plain.3': 'Voy directo al grano.',
     'c.plain.q': '¡Está lloviendo muchísimo!',
     'c.plain.a': 'Entonces hoy tomo el autobús.',
