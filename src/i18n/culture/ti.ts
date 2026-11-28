@@ -3,8 +3,8 @@ import type { CultureTranslation } from './types';
 const t: CultureTranslation = {
   ui: {
     cultureBadge: 'ኣብዚ ከምዚ እዩ ዝሰርሕ',
-    whatDoYouDo: { m: 'እንታይ ትገብር?', f: 'እንታይ ትገብሪ?', x: 'እንታይ ትገብሩ?' }, // x: nieuw, nalezen
-    whatDoYouSay: { m: 'እንታይ ትብል?', f: 'እንታይ ትብሊ?', x: 'እንታይ ትብሉ?' }, // x: nieuw, nalezen
+    whatDoYouDo: { m: 'እንታይ ትገብር?', f: 'እንታይ ትገብሪ?', x: 'እንታይ ትገብሩ?' }, // x: nieuw, nalezen // nagelezen AI 28 nov
+    whatDoYouSay: { m: 'እንታይ ትብል?', f: 'እንታይ ትብሊ?', x: 'እንታይ ትብሉ?' }, // x: nieuw, nalezen // nagelezen AI 28 nov
     whatIsRight: 'ኣየናይ ቅኑዕ እዩ?',
     sayThis: { m: 'ከምዚ በሎ', f: 'ከምዚ በልዮ' },
     goodChoice: 'ጽቡቕ ምርጫ!',
@@ -155,7 +155,7 @@ const t: CultureTranslation = {
     'w.praten': 'ምዝራብ',
     'w.nietfijn': 'ዘየሐጉስ',
     'w.eerlijk': 'ፍትሓዊ፡ ቅኑዕ',
-    'w.boos': { m: 'ሕሩቕ', f: 'ሕርቕቲ', x: 'ሕሩቓት' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'w.boos': { m: 'ሕሩቕ', f: 'ሕርቕቲ', x: 'ሕሩቓት' }, // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     'w.samen': 'ብሓባር',
     's.speakup.1': 'ገለ ነገር የሸግረኒ ኣሎ።',
     's.speakup.2': 'ንሓጺር ግዜ ክንዘራረብ ንኽእል ዶ?',
@@ -172,8 +172,8 @@ const t: CultureTranslation = {
     's.agree.1': 'ኣይፋል፡ ሎሚ ኣይኽእልን እየ።',
     's.agree.2': 'ምሳኻ ኣይሰማማዕን እየ።',
     's.agree.3': 'ስምምዕ ስምምዕ እዩ።',
-    'd.agree.q': { m: 'ቀዳም ተወሳኺ ሰዓት ክትሰርሕ ትኽእል ዶ?', f: 'ቀዳም ተወሳኺ ሰዓት ክትሰርሒ ትኽእሊ ዶ?', x: 'ቀዳም ተወሳኺ ሰዓት ክትሰርሑ ትኽእሉ ዶ?' }, // x: nieuw, nalezen
-    'd.agree.a': 'ኣይፋል፡ ኣይኽእልን እየ። ሰንበት ግን እኽእል እየ።', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'd.agree.q': { m: 'ቀዳም ተወሳኺ ሰዓት ክትሰርሕ ትኽእል ዶ?', f: 'ቀዳም ተወሳኺ ሰዓት ክትሰርሒ ትኽእሊ ዶ?', x: 'ቀዳም ተወሳኺ ሰዓት ክትሰርሑ ትኽእሉ ዶ?' }, // x: nieuw, nalezen // nagelezen AI 28 nov
+    'd.agree.a': 'ኣይፋል፡ ኣይኽእልን እየ። ሰንበት ግን እኽእል እየ።', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     'l.task': 'መምርሒታት ካብ ተቖጻጻሪ',
     'w.taak': 'ዕማም',
     'w.eerst': 'ቅድም',
@@ -183,34 +183,34 @@ const t: CultureTranslation = {
     'w.bijna': 'ዳርጋ',
     's.task.1': 'ቅድም እንታይ ክገብር ኣለኒ?',
     's.task.2': 'ነዚ ዕማም እዚ ወዲአዮ።',
-    's.task.3': 'ሓንሳብ ደጊምኩም ከተርእዩኒ ትኽእሉ ዶ?', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    'd.task.q': { m: 'ወዲእካ ዲኻ?', f: 'ወዲእኪ ዲኺ?', x: 'ወዲእኩም ዲኹም?' }, // x: nieuw, nalezen
+    's.task.3': 'ሓንሳብ ደጊምኩም ከተርእዩኒ ትኽእሉ ዶ?', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
+    'd.task.q': { m: 'ወዲእካ ዲኻ?', f: 'ወዲእኪ ዲኺ?', x: 'ወዲእኩም ዲኹም?' }, // x: nieuw, nalezen // nagelezen AI 28 nov
     'd.task.a': 'ዳርጋ። ሓሙሽተ ደቒቕ ተሪፉ።',
-    'l.clear': 'ሓጺርን ንጹርን', // nieuw, nalezen
-    'w.kort': 'ሓጺር', // nieuw, nalezen
-    'w.duidelijk': 'ንጹር', // nieuw, nalezen
-    'w.belangrijkste': 'እቲ ኣዝዩ ኣገዳሲ', // nieuw, nalezen
-    'w.rustig': 'ህዱእ፡ ብህድኣት', // nieuw, nalezen
-    'w.teveel': 'ልዕሊ ዓቐን፡ ኣዝዩ ብዙሕ', // nieuw, nalezen
-    'w.vraag': 'ሕቶ', // nieuw, nalezen
-    's.clear.1': 'ብሓጺሩ እብል፡ እቲ ማሽን ተበላሽዩ ኣሎ።', // nieuw, nalezen
-    's.clear.2': { m: 'ቅድም እቲ ኣገዳሲ፡ ሕሙም እየ።', f: 'ቅድም እቲ ኣገዳሲ፡ ሕምምቲ እየ።', x: 'ቅድም እቲ ኣገዳሲ፡ ሓሚመ ኣለኹ።' }, // nieuw, nalezen
-    's.clear.3': 'ይቕሬታ፡ ኣዝየ ቀልጢፈ እዛረብ ኣለኹ፡ ብዙሕ ድማ እዛረብ።', // nieuw, nalezen
-    'd.clear.q': 'ንጹር ድዩ?', // nieuw, nalezen
-    'd.clear.a': 'እወ። ገና ሓንቲ ሕቶ ኣላትኒ።', // nieuw, nalezen
+    'l.clear': 'ሓጺርን ንጹርን', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kort': 'ሓጺር', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.duidelijk': 'ንጹር', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.belangrijkste': 'እቲ ኣዝዩ ኣገዳሲ', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rustig': 'ህዱእ፡ ብህድኣት', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teveel': 'ልዕሊ ዓቐን፡ ኣዝዩ ብዙሕ', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vraag': 'ሕቶ', // nieuw, nalezen // nagelezen AI 28 nov
+    's.clear.1': 'ብሓጺሩ እብል፡ እቲ ማሽን ተበላሽዩ ኣሎ።', // nieuw, nalezen // nagelezen AI 28 nov
+    's.clear.2': { m: 'ቅድም እቲ ኣገዳሲ፡ ሕሙም እየ።', f: 'ቅድም እቲ ኣገዳሲ፡ ሕምምቲ እየ።', x: 'ቅድም እቲ ኣገዳሲ፡ ሓሚመ ኣለኹ።' }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.clear.3': 'ይቕሬታ፡ ኣዝየ ቀልጢፈ እዛረብ ኣለኹ፡ ብዙሕ ድማ እዛረብ።', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.clear.q': 'ንጹር ድዩ?', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.clear.a': 'እወ። ገና ሓንቲ ሕቶ ኣላትኒ።', // nieuw, nalezen // nagelezen AI 28 nov
     // Een nieuwe collega helpen (5 nov 2026)
-    'l.newcolleague': "ንሓድሽ መሳርሕቲ ምሕጋዝ", // nieuw, nalezen
-    'w.welkom': "እንቋዕ ብደሓን መጻእኩም", // nieuw, nalezen
-    'w.inwerken': "ንሓድሽ መሳርሕቲ ስራሕ ምርኣይ (ኣብ ቀዳሞት መዓልትታት)", // nieuw, nalezen
-    'w.stap': "ስጉምቲ (ንእሽቶ ክፋል ናይ ሓደ ዕማም)", // nieuw, nalezen
-    'w.nadoen': "ምድጋም (ሓደ ሰብ ዘርኣዮ ምግባር)", // nieuw, nalezen
-    'w.geduld': "ትዕግስቲ", // nieuw, nalezen
-    'w.kast': "ቁምሳጥን", // nieuw, nalezen
-    's.newcolleague.1': "እንቋዕ ብደሓን መጻእካ! ሎሚ ነቲ ስራሕ ከርእየካ እየ።", // nieuw, nalezen
-    's.newcolleague.2': "ቅድም ርአ። ድሕሪኡ ከማይ ግበሮ።", // nieuw, nalezen
-    's.newcolleague.3': "ጓንትታት ኣብቲ ቁምሳጥን ኣለዉ።", // nieuw, nalezen
-    'd.newcolleague.q': "ተረዲኡኒ፡ ይመስለኒ።", // nieuw, nalezen
-    'd.newcolleague.a': "ጽቡቕ። እስኪ ኣርእየኒ።", // nieuw, nalezen
+    'l.newcolleague': "ንሓድሽ መሳርሕቲ ምሕጋዝ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.welkom': "እንቋዕ ብደሓን መጻእኩም", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inwerken': "ንሓድሽ መሳርሕቲ ስራሕ ምርኣይ (ኣብ ቀዳሞት መዓልትታት)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stap': "ስጉምቲ (ንእሽቶ ክፋል ናይ ሓደ ዕማም)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nadoen': "ምድጋም (ሓደ ሰብ ዘርኣዮ ምግባር)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geduld': "ትዕግስቲ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kast': "ቁምሳጥን", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.1': "እንቋዕ ብደሓን መጻእካ! ሎሚ ነቲ ስራሕ ከርእየካ እየ።", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.2': "ቅድም ርአ። ድሕሪኡ ከማይ ግበሮ።", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.3': "ጓንትታት ኣብቲ ቁምሳጥን ኣለዉ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.newcolleague.q': "ተረዲኡኒ፡ ይመስለኒ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.newcolleague.a': "ጽቡቕ። እስኪ ኣርእየኒ።", // nieuw, nalezen // nagelezen AI 28 nov
     'c.newcolleague': { m: "ስጉምቲ ብስጉምቲ ኣርእዮ", f: "ስጉምቲ ብስጉምቲ ኣርእይዮ", x: "ስጉምቲ ብስጉምቲ ኣርእይዎ" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.b': { m: "ኣብ ቀዳሞት ሰሙናትካ ንዓኻ ዘሸገረካ፡ ንሓድሽ መሳርሕቲ እውን የሸግሮ እዩ። ነቲ ስራሕ ብንኣሽቱ ስጉምትታት ግለጾ፡ ቅድም እዚ፡ ድሕሪኡ እቲ። ብቕልጡፍ ወይ ብዓው ኢልካ ኣይትዛረብ፡ ኣርእዮ፡ ድሕሪኡ ባዕሉ ክገብሮ ግደፎ። «Snap je het?» ኢልካ ኣይትሕተት፡ ብዙሓት ሰባት ዋላ እንተ ዘይተረድኦም «እወ» ይብሉ። ኣብ ክንዳኡ «Laat eens zien» በል፡ ተዓዘብ ድማ። ነገራት ኣበይ ከም ዘለዉ ንገሮ፡ ከም ሽቓቕ፡ ካንቲናን ጓንትታትን። ተዓገስ (geduld)፡ ምምሃር ንኹሉ ሰብ ግዜ ይወስድ።", f: "ኣብ ቀዳሞት ሰሙናትኪ ንዓኺ ዘሸገረኪ፡ ንሓድሽ መሳርሕቲ እውን የሸግሮ እዩ። ነቲ ስራሕ ብንኣሽቱ ስጉምትታት ግለጽዮ፡ ቅድም እዚ፡ ድሕሪኡ እቲ። ብቕልጡፍ ወይ ብዓው ኢልኪ ኣይትዛረቢ፡ ኣርእይዮ፡ ድሕሪኡ ባዕሉ ክገብሮ ግደፍዮ። «Snap je het?» ኢልኪ ኣይትሕተቲ፡ ብዙሓት ሰባት ዋላ እንተ ዘይተረድኦም «እወ» ይብሉ። ኣብ ክንዳኡ «Laat eens zien» በሊ፡ ተዓዘቢ ድማ። ነገራት ኣበይ ከም ዘለዉ ንገርዮ፡ ከም ሽቓቕ፡ ካንቲናን ጓንትታትን። ተዓገሲ (geduld)፡ ምምሃር ንኹሉ ሰብ ግዜ ይወስድ።", x: "ኣብ ቀዳሞት ሰሙናትኩም ንዓኹም ዘሸገረኩም፡ ንሓድሽ መሳርሕቲ እውን የሸግሮ እዩ። ነቲ ስራሕ ብንኣሽቱ ስጉምትታት ግለጽዎ፡ ቅድም እዚ፡ ድሕሪኡ እቲ። ብቕልጡፍ ወይ ብዓው ኢልኩም ኣይትዛረቡ፡ ኣርእይዎ፡ ድሕሪኡ ባዕሉ ክገብሮ ግደፍዎ። «Snap je het?» ኢልኩም ኣይትሕተቱ፡ ብዙሓት ሰባት ዋላ እንተ ዘይተረድኦም «እወ» ይብሉ። ኣብ ክንዳኡ «Laat eens zien» በሉ፡ ተዓዘቡ ድማ። ነገራት ኣበይ ከም ዘለዉ ንገርዎ፡ ከም ሽቓቕ፡ ካንቲናን ጓንትታትን። ተዓገሱ (geduld)፡ ምምሃር ንኹሉ ሰብ ግዜ ይወስድ።" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.p': "ጽቡቕ! ሕጂ እቲ ዝቕጽል ስጉምቲ።", // nieuw, nalezen // nagelezen AI 22 nov
@@ -220,104 +220,104 @@ const t: CultureTranslation = {
     'c.newcolleague.o3': { m: "ኩሉ ደጊምካ ግለጽ፡ ብቕልጡፍን ብዓውን።", f: "ኩሉ ደጊምኪ ግለጺ፡ ብቕልጡፍን ብዓውን።", x: "ኩሉ ደጊምኩም ግለጹ፡ ብቕልጡፍን ብዓውን።" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.w': "ብዙሓት ሰባት ዋላ እንተ ዘይተረድኦም «ja» ይብሉ። ንሱ ምስ ዘርኢ፡ ክልቴኹም ይሰርሕ እንተ ኾይኑ ትርእዩ። እዚ ደሓር ጌጋ ካብ ምእራም ይቀልጥፍ።", // nieuw, nalezen // nagelezen AI 22 nov
     // Goed communiceren en Feedback en overleg (5 nov 2026)
-    'u.communicate': "ጽቡቕ ምዝርራብ", // nieuw, nalezen
-    'u.feedback': "ርእይቶን ኣኼባ ጉጅለን", // nieuw, nalezen
-    'l.explain': "እንታይ ጸገም ከም ዘሎ ምንጋር", // nieuw, nalezen
-    'w.ietsmis': "ገለ ጸገም ኣሎ", // nieuw, nalezen
-    'w.stilstaan': "ደው ምባል (ማሽን፡ ባንድ)", // nieuw, nalezen
-    'w.lampje': "መብራህቲ (ናይ መጠንቀቕታ)", // nieuw, nalezen
-    'w.komen': "ምምጻእ", // nieuw, nalezen
-    'w.nodighebben': "ምድላይ (የድሊ)", // nieuw, nalezen
-    'w.meteen': "ብቕጽበት፡ ሕጂ ንሕጂ", // nieuw, nalezen
-    's.explain.1': "እቲ ባንድ ደው ኢሉ። ኣብ መስመር ክልተ። ክትመጽእ ትኽእል ዶ?", // nieuw, nalezen
-    's.explain.2': "ኣብቲ ማሽን ቀይሕ መብራህቲ ይበርህ ኣሎ።", // nieuw, nalezen
-    's.explain.3': "ሓደገኛ እዩ። ሕጂ ንሕጂ ክትመጽእ ትኽእል ዶ?", // nieuw, nalezen
-    'd.explain.q': "እንታይ ጸገም ኣሎ?", // nieuw, nalezen
-    'd.explain.a': "እቲ ስካነር ኣይሰርሕን እዩ። ሓድሽ የድልየኒ።", // nieuw, nalezen
-    'l.listen': "ብጽቡቕ ምስማዕ", // nieuw, nalezen
-    'w.uitpraten': "ዘረባ ምውዳእ (ሓደ ሰብ ክውድእ ምግዳፍ)", // nieuw, nalezen
-    'w.onderbreken': "ዘረባ ምቁራጽ", // nieuw, nalezen
-    'w.aankijken': "ናብ ሓደ ሰብ ምጥማት", // nieuw, nalezen
-    'w.bedoelen': "ማለት (እንታይ ማለት እዩ)", // nieuw, nalezen
-    'w.dus': "ስለዚ (ዝተሰምዐ ንምርግጋጽ)", // nieuw, nalezen
-    'w.doorvragen': "ብዝያዳ ምሕታት (ክሳዕ ዝበርህ)", // nieuw, nalezen
-    's.listen.1': "ስለዚ ቅድም ሳጹናት ምቑጻር፡ ድሕሪኡ ምጥቕላል?", // nieuw, nalezen
-    's.listen.2': "በዚ ቃል እንታይ ማለትካ እዩ?", // nieuw, nalezen
-    's.listen.3': "ይቕሬታ፡ ዘረባኻ ወድእ።", // nieuw, nalezen
-    'd.listen.q': { m: "ጽባሕ ኣብ ሰዓት ኣርባዕተ ኢኻ ትጅምር።", f: "ጽባሕ ኣብ ሰዓት ኣርባዕተ ኢኺ ትጅምሪ።", x: "ጽባሕ ኣብ ሰዓት ኣርባዕተ ኢኹም ትጅምሩ።" }, // nieuw, nalezen
-    'd.listen.a': "ብሓቂ? ወይስ ቀልዲ ድዩ ነይሩ?", // nieuw, nalezen
-    'l.calm': "ህዱእ ምዃን", // nieuw, nalezen
-    'w.nadenken': "ምሕሳብ (ብዛዕባ ገለ ነገር)", // nieuw, nalezen
-    'w.ademhalen': "ምስትንፋስ", // nieuw, nalezen
-    'w.oplossen': "ምፍታሕ", // nieuw, nalezen
-    'w.druk': "ጽዑቕ (ብዙሕ ስራሕ)", // nieuw, nalezen
-    'w.straks': "ድሕሪ ቁሩብ፡ ደሓር (ሎሚ)", // nieuw, nalezen
-    'w.misverstand': "ዘይምርድዳእ", // nieuw, nalezen
-    's.calm.1': "ብህድኣት ክፈትሖ እደሊ።", // nieuw, nalezen
-    's.calm.2': "ቁሩብ ክሓስብ ይፍቀደለይ ዶ?", // nieuw, nalezen
-    's.calm.3': "ድሕሪ ቁሩብ ክንዛረብ ንኽእል ዶ?", // nieuw, nalezen
-    'd.calm.q': "እዚ ስለምንታይ ገና ኣይተወድአን?", // nieuw, nalezen
-    'd.calm.a': "ይቕሬታ፡ ብዙሕ ስራሕ ኣሎ። እንታይ ቅድም ክኸውን ኣለዎ?", // nieuw, nalezen
-    'l.talkintime': "ብግዜኡ ምዝራብ", // nieuw, nalezen
-    'w.gesprek': "ዘተ፡ ምዝርራብ", // nieuw, nalezen
-    'w.bespreken': "ምዝታይ (ብዛዕባ ገለ ምዝራብ)", // nieuw, nalezen
-    'w.zorgenmaken': "ምጭናቕ", // nieuw, nalezen
-    'w.oplossing': "ፍታሕ", // nieuw, nalezen
-    'w.ineens': "ብሃንደበት", // nieuw, nalezen
-    'w.wegblijven': "ምትራፍ (ናብ ስራሕ ዘይምምጻእ)", // nieuw, nalezen
-    's.talkintime.1': "ገለ ዘሸግረኒ ነገር ኣሎ። ቁሩብ ግዜ ኣለካ ዶ?", // nieuw, nalezen
-    's.talkintime.2': "ምሳኻ ገለ ነገር ክዛተ እደሊ።", // nieuw, nalezen
-    's.talkintime.3': "ስራሕ ከቋርጽ እሓስብ ኣለኹ። ቅድም ክንዛረብ ንኽእል ዶ?", // nieuw, nalezen
-    'd.talkintime.q': { m: "ቁሩብ ግዜ ኣለካ ዶ? ገለ ዘሸግረኒ ነገር ኣሎ።", f: "ቁሩብ ግዜ ኣለኪ ዶ? ገለ ዘሸግረኒ ነገር ኣሎ።", x: "ቁሩብ ግዜ ኣለኩም ዶ? ገለ ዘሸግረኒ ነገር ኣሎ።" }, // nieuw, nalezen
-    'd.talkintime.a': "እወ ደኣ። እንታይ ኣሎ?", // nieuw, nalezen
-    'l.reachable': "ብተሌፎን ተረኻቢ ምዃን", // nieuw, nalezen
-    'w.opnemen': "ተሌፎን ምልዓል (ምምላስ)", // nieuw, nalezen
-    'w.gemisteoproep': "ዘይተመለሰ ጻውዒት", // nieuw, nalezen
-    'w.voicemail': "ናይ ድምጺ መልእኽቲ (ቮይስሜይል)", // nieuw, nalezen
-    'w.beltegoed': "ባላንስ ተሌፎን (ቅድመ-ክፍሊት)", // nieuw, nalezen
-    'w.bereik': "ኔትዎርክ (ኣብ ተሌፎን)", // nieuw, nalezen
-    'w.onbekend': "ዘይፍለጥ (ዘይፍለጥ ቁጽሪ)", // nieuw, nalezen
-    's.reachable.1': "ሆላንድኛይ ገና ጽቡቕ ኣይኮነን። ቀስ ኢልኩም ክትዛረቡ ትኽእሉ ዶ?", // nieuw, nalezen
-    's.reachable.2': "ብመልእኽቲ እውን ክትሰድዎ ትኽእሉ ዶ?", // nieuw, nalezen
-    's.reachable.3': "ሓድሽ ቁጽሪ ኣለኒ።", // nieuw, nalezen
-    'd.reachable.q': "ደሓን ሓደርኩም፡ ካብ ክፍሊ መደብ ስራሕ ኢና።", // nieuw, nalezen
-    'd.reachable.a': "ደሓን ሓደርኩም። ደዊልኩምለይ ነይርኩም? ይቕሬታ፡ ኣምሊጡኒ።", // nieuw, nalezen
-    'l.getfeedback': "ርእይቶ ምቕባል", // nieuw, nalezen
-    'w.tip': "ምኽሪ (ሓጺር ምኽሪ)", // nieuw, nalezen
-    'w.verbeterpunt': "ዝመሓየሽ ነጥቢ (ክሓይሽ ዝኽእል)", // nieuw, nalezen
-    'w.goedbedoeld': "ብጽቡቕ ሓሳብ (ንምሕጋዝ)", // nieuw, nalezen
-    'w.kritiek': "ነቐፌታ (ሓደ ሰብ ጽቡቕ ኣይኮነን ዝብሎ)", // nieuw, nalezen
-    'w.normaal': "ልሙድ", // nieuw, nalezen
-    'w.positief': "ኣወንታዊ (ብዛዕባ እቲ ጽቡቕ ዝኸይድ)", // nieuw, nalezen
-    's.getfeedback.1': "የቐንየለይ፡ ምፍላጡ ጽቡቕ እዩ።", // nieuw, nalezen
-    's.getfeedback.2': "ኣብነት ክትህበኒ ትኽእል ዶ?", // nieuw, nalezen
-    's.getfeedback.3': "እንታይ ከመሓይሽ እኽእል?", // nieuw, nalezen
-    'd.getfeedback.q': { m: "ገለ ርእይቶ ክህበካ ይኽእል ዶ?", f: "ገለ ርእይቶ ክህበኪ ይኽእል ዶ?", x: "ገለ ርእይቶ ክህበኩም ይኽእል ዶ?" }, // nieuw, nalezen
-    'd.getfeedback.a': "እወ፡ ብደስታ። ብጽቡቕ ክገብሮ እደሊ።", // nieuw, nalezen
-    'l.givefeedback': "ርእይቶ ምሃብ", // nieuw, nalezen
-    'w.dichtplakken': "ብተፕ ምዕጻው", // nieuw, nalezen
-    'w.netjes': "ጽፉፍ፡ ስሩዕ", // nieuw, nalezen
-    'w.scheef': "ዝዘንበለ፡ ዘይቀጥታ", // nieuw, nalezen
-    'w.vriendelijk': "ሕያዋይ፡ ፍሽኹ", // nieuw, nalezen
-    'w.concreet': "ንጹር (ምስ ንጹር ኣብነት)", // nieuw, nalezen
-    'w.ondervierogen': "ብብሕቲ (ክልተ ሰባት ጥራይ)", // nieuw, nalezen
-    's.givefeedback.1': "እዚ ብጽቡቕ ትገብሮ ኣለኻ።", // nieuw, nalezen
-    's.givefeedback.2': "ነቶም ሳጹናት እውን ብተፕ ክትዓጽዎም ትኽእል ዶ?", // nieuw, nalezen
-    's.givefeedback.3': "እቶም ሳጹናት ዘንቢሎም ከም ዘለዉ እርኢ ኣለኹ።", // nieuw, nalezen
-    'd.givefeedback.q': { m: "ስራሐይ ከመይ ትርእዮ?", f: "ስራሐይ ከመይ ትርእይዮ?", x: "ስራሐይ ከመይ ትርእይዎ?" }, // nieuw, nalezen
-    'd.givefeedback.a': "ጽፉፍ! እቶም ሳጹናት ጥራይ ዘንቢሎም ኣለዉ።", // nieuw, nalezen
-    'l.meeting': "ኣብ ኣኼባ ጉጅለ ምዝራብ", // nieuw, nalezen
-    'w.werkoverleg': "ኣኼባ ጉጅለ (ብዛዕባ ስራሕ)", // nieuw, nalezen
-    'w.beurt': "ተራ (ግዜ ምዝራብ)", // nieuw, nalezen
-    'w.idee': "ሓሳብ", // nieuw, nalezen
-    'w.mening': "ርእይቶ (ብዛዕባ ገለ ነገር ዝሕሰብ)", // nieuw, nalezen
-    'w.handopsteken': "ኢድ ምልዓል", // nieuw, nalezen
-    'w.agenda': "ኣጀንዳ (ዝርዝር ነጥብታት ናይቲ ኣኼባ)", // nieuw, nalezen
-    's.meeting.1': "ገለ ክብል ይፍቀደለይ ዶ?", // nieuw, nalezen
-    's.meeting.2': "ብዛዕባ መደብ ስራሕ ሕቶ ኣለኒ።", // nieuw, nalezen
-    's.meeting.3': "ሓሳብ ኣለኒ።", // nieuw, nalezen
-    'd.meeting.q': "ዝኾነ ሰብ ሕቶ ኣለዎ ዶ?", // nieuw, nalezen
-    'd.meeting.a': "እወ። እቲ ሓድሽ መደብ ስራሕ መዓስ ይመጽእ?", // nieuw, nalezen
+    'u.communicate': "ጽቡቕ ምዝርራብ", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.feedback': "ርእይቶን ኣኼባ ጉጅለን", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.explain': "እንታይ ጸገም ከም ዘሎ ምንጋር", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ietsmis': "ገለ ጸገም ኣሎ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stilstaan': "ደው ምባል (ማሽን፡ ባንድ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lampje': "መብራህቲ (ናይ መጠንቀቕታ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.komen': "ምምጻእ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nodighebben': "ምድላይ (የድሊ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meteen': "ብቕጽበት፡ ሕጂ ንሕጂ", // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.1': "እቲ ባንድ ደው ኢሉ። ኣብ መስመር ክልተ። ክትመጽእ ትኽእል ዶ?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.2': "ኣብቲ ማሽን ቀይሕ መብራህቲ ይበርህ ኣሎ።", // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.3': "ሓደገኛ እዩ። ሕጂ ንሕጂ ክትመጽእ ትኽእል ዶ?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.explain.q': "እንታይ ጸገም ኣሎ?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.explain.a': "እቲ ስካነር ኣይሰርሕን እዩ። ሓድሽ የድልየኒ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.listen': "ብጽቡቕ ምስማዕ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitpraten': "ዘረባ ምውዳእ (ሓደ ሰብ ክውድእ ምግዳፍ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderbreken': "ዘረባ ምቁራጽ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aankijken': "ናብ ሓደ ሰብ ምጥማት", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedoelen': "ማለት (እንታይ ማለት እዩ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dus': "ስለዚ (ዝተሰምዐ ንምርግጋጽ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doorvragen': "ብዝያዳ ምሕታት (ክሳዕ ዝበርህ)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.1': "ስለዚ ቅድም ሳጹናት ምቑጻር፡ ድሕሪኡ ምጥቕላል?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.2': "በዚ ቃል እንታይ ማለትካ እዩ?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.3': "ይቕሬታ፡ ዘረባኻ ወድእ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.listen.q': { m: "ጽባሕ ኣብ ሰዓት ኣርባዕተ ኢኻ ትጅምር።", f: "ጽባሕ ኣብ ሰዓት ኣርባዕተ ኢኺ ትጅምሪ።", x: "ጽባሕ ኣብ ሰዓት ኣርባዕተ ኢኹም ትጅምሩ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'd.listen.a': "ብሓቂ? ወይስ ቀልዲ ድዩ ነይሩ?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.calm': "ህዱእ ምዃን", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nadenken': "ምሕሳብ (ብዛዕባ ገለ ነገር)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ademhalen': "ምስትንፋስ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oplossen': "ምፍታሕ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.druk': "ጽዑቕ (ብዙሕ ስራሕ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.straks': "ድሕሪ ቁሩብ፡ ደሓር (ሎሚ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.misverstand': "ዘይምርድዳእ", // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.1': "ብህድኣት ክፈትሖ እደሊ።", // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.2': "ቁሩብ ክሓስብ ይፍቀደለይ ዶ?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.3': "ድሕሪ ቁሩብ ክንዛረብ ንኽእል ዶ?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.calm.q': "እዚ ስለምንታይ ገና ኣይተወድአን?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.calm.a': "ይቕሬታ፡ ብዙሕ ስራሕ ኣሎ። እንታይ ቅድም ክኸውን ኣለዎ?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.talkintime': "ብግዜኡ ምዝራብ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gesprek': "ዘተ፡ ምዝርራብ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bespreken': "ምዝታይ (ብዛዕባ ገለ ምዝራብ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zorgenmaken': "ምጭናቕ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oplossing': "ፍታሕ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ineens': "ብሃንደበት", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wegblijven': "ምትራፍ (ናብ ስራሕ ዘይምምጻእ)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.1': "ገለ ዘሸግረኒ ነገር ኣሎ። ቁሩብ ግዜ ኣለካ ዶ?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.2': "ምሳኻ ገለ ነገር ክዛተ እደሊ።", // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.3': "ስራሕ ከቋርጽ እሓስብ ኣለኹ። ቅድም ክንዛረብ ንኽእል ዶ?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.talkintime.q': { m: "ቁሩብ ግዜ ኣለካ ዶ? ገለ ዘሸግረኒ ነገር ኣሎ።", f: "ቁሩብ ግዜ ኣለኪ ዶ? ገለ ዘሸግረኒ ነገር ኣሎ።", x: "ቁሩብ ግዜ ኣለኩም ዶ? ገለ ዘሸግረኒ ነገር ኣሎ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'd.talkintime.a': "እወ ደኣ። እንታይ ኣሎ?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.reachable': "ብተሌፎን ተረኻቢ ምዃን", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opnemen': "ተሌፎን ምልዓል (ምምላስ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gemisteoproep': "ዘይተመለሰ ጻውዒት", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voicemail': "ናይ ድምጺ መልእኽቲ (ቮይስሜይል)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beltegoed': "ባላንስ ተሌፎን (ቅድመ-ክፍሊት)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bereik': "ኔትዎርክ (ኣብ ተሌፎን)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onbekend': "ዘይፍለጥ (ዘይፍለጥ ቁጽሪ)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.1': "ሆላንድኛይ ገና ጽቡቕ ኣይኮነን። ቀስ ኢልኩም ክትዛረቡ ትኽእሉ ዶ?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.2': "ብመልእኽቲ እውን ክትሰድዎ ትኽእሉ ዶ?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.3': "ሓድሽ ቁጽሪ ኣለኒ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.reachable.q': "ደሓን ሓደርኩም፡ ካብ ክፍሊ መደብ ስራሕ ኢና።", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.reachable.a': "ደሓን ሓደርኩም። ደዊልኩምለይ ነይርኩም? ይቕሬታ፡ ኣምሊጡኒ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.getfeedback': "ርእይቶ ምቕባል", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tip': "ምኽሪ (ሓጺር ምኽሪ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verbeterpunt': "ዝመሓየሽ ነጥቢ (ክሓይሽ ዝኽእል)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedbedoeld': "ብጽቡቕ ሓሳብ (ንምሕጋዝ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kritiek': "ነቐፌታ (ሓደ ሰብ ጽቡቕ ኣይኮነን ዝብሎ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.normaal': "ልሙድ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.positief': "ኣወንታዊ (ብዛዕባ እቲ ጽቡቕ ዝኸይድ)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.1': "የቐንየለይ፡ ምፍላጡ ጽቡቕ እዩ።", // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.2': "ኣብነት ክትህበኒ ትኽእል ዶ?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.3': "እንታይ ከመሓይሽ እኽእል?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.getfeedback.q': { m: "ገለ ርእይቶ ክህበካ ይኽእል ዶ?", f: "ገለ ርእይቶ ክህበኪ ይኽእል ዶ?", x: "ገለ ርእይቶ ክህበኩም ይኽእል ዶ?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'd.getfeedback.a': "እወ፡ ብደስታ። ብጽቡቕ ክገብሮ እደሊ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.givefeedback': "ርእይቶ ምሃብ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dichtplakken': "ብተፕ ምዕጻው", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.netjes': "ጽፉፍ፡ ስሩዕ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scheef': "ዝዘንበለ፡ ዘይቀጥታ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vriendelijk': "ሕያዋይ፡ ፍሽኹ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.concreet': "ንጹር (ምስ ንጹር ኣብነት)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ondervierogen': "ብብሕቲ (ክልተ ሰባት ጥራይ)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.1': "እዚ ብጽቡቕ ትገብሮ ኣለኻ።", // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.2': "ነቶም ሳጹናት እውን ብተፕ ክትዓጽዎም ትኽእል ዶ?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.3': "እቶም ሳጹናት ዘንቢሎም ከም ዘለዉ እርኢ ኣለኹ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.givefeedback.q': { m: "ስራሐይ ከመይ ትርእዮ?", f: "ስራሐይ ከመይ ትርእይዮ?", x: "ስራሐይ ከመይ ትርእይዎ?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'd.givefeedback.a': "ጽፉፍ! እቶም ሳጹናት ጥራይ ዘንቢሎም ኣለዉ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.meeting': "ኣብ ኣኼባ ጉጅለ ምዝራብ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkoverleg': "ኣኼባ ጉጅለ (ብዛዕባ ስራሕ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beurt': "ተራ (ግዜ ምዝራብ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.idee': "ሓሳብ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mening': "ርእይቶ (ብዛዕባ ገለ ነገር ዝሕሰብ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handopsteken': "ኢድ ምልዓል", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.agenda': "ኣጀንዳ (ዝርዝር ነጥብታት ናይቲ ኣኼባ)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.1': "ገለ ክብል ይፍቀደለይ ዶ?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.2': "ብዛዕባ መደብ ስራሕ ሕቶ ኣለኒ።", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.3': "ሓሳብ ኣለኒ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.meeting.q': "ዝኾነ ሰብ ሕቶ ኣለዎ ዶ?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.meeting.a': "እወ። እቲ ሓድሽ መደብ ስራሕ መዓስ ይመጽእ?", // nieuw, nalezen // nagelezen AI 28 nov
     'c.explain': { m: "እንታይ፡ ኣበይ፡ እንታይ የድልየካ", f: "እንታይ፡ ኣበይ፡ እንታይ የድልየኪ", x: "እንታይ፡ ኣበይ፡ እንታይ የድልየኩም" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.explain.b': { m: "ኣብ ስራሕ ገለ ጸገም ምስ ዘጋጥም፡ ብሰለስተ ስጉምትታት ንገሮ። ቅድም እንታይ ጸገም ከም ዘሎ፡ «De band staat stil.»። ድሕሪኡ ኣበይ፡ «Bij lijn twee.»። ድሕሪኡ እንታይ ከም ዘድልየካ፡ «Kun je komen?»። ሕጂ እቲ ካልእ ሰብ ብዘይ ብዙሕ ሕቶ እንታይ ክገብር ከም ዘለዎ ይፈልጥ። ነቲ ቃል ኣይትፈልጦን ዲኻ? ናብኡ ኣመልክት። ሓደገኛ ድዩ? ቅድም ንሱ ንገር፡ «Het is gevaarlijk.»። ሓደጋ? ቅድም ሓገዝ ጸውዕ (ዝያዳ ኣብቲ ትምህርቲ «ሓደጋ ምሕባር»)።", f: "ኣብ ስራሕ ገለ ጸገም ምስ ዘጋጥም፡ ብሰለስተ ስጉምትታት ንገርዮ። ቅድም እንታይ ጸገም ከም ዘሎ፡ «De band staat stil.»። ድሕሪኡ ኣበይ፡ «Bij lijn twee.»። ድሕሪኡ እንታይ ከም ዘድልየኪ፡ «Kun je komen?»። ሕጂ እቲ ካልእ ሰብ ብዘይ ብዙሕ ሕቶ እንታይ ክገብር ከም ዘለዎ ይፈልጥ። ነቲ ቃል ኣይትፈልጥዮን ዲኺ? ናብኡ ኣመልክቲ። ሓደገኛ ድዩ? ቅድም ንሱ ንገሪ፡ «Het is gevaarlijk.»። ሓደጋ? ቅድም ሓገዝ ጸውዒ (ዝያዳ ኣብቲ ትምህርቲ «ሓደጋ ምሕባር»)።", x: "ኣብ ስራሕ ገለ ጸገም ምስ ዘጋጥም፡ ብሰለስተ ስጉምትታት ንገርዎ። ቅድም እንታይ ጸገም ከም ዘሎ፡ «De band staat stil.»። ድሕሪኡ ኣበይ፡ «Bij lijn twee.»። ድሕሪኡ እንታይ ከም ዘድልየኩም፡ «Kun je komen?»። ሕጂ እቲ ካልእ ሰብ ብዘይ ብዙሕ ሕቶ እንታይ ክገብር ከም ዘለዎ ይፈልጥ። ነቲ ቃል ኣይትፈልጥዎን ዲኹም? ናብኡ ኣመልክቱ። ሓደገኛ ድዩ? ቅድም ንሱ ንገሩ፡ «Het is gevaarlijk.»። ሓደጋ? ቅድም ሓገዝ ጸውዑ (ዝያዳ ኣብቲ ትምህርቲ «ሓደጋ ምሕባር»)።" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.explain.p': "መጺእካ ክትርእዮ ትኽእል ዶ?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -425,76 +425,76 @@ const t: CultureTranslation = {
     'c.whereis.o3': { m: "ብናይ ገዛእ ርእስኻ ክዳን ስራሕ ጀምር።", f: "ብናይ ገዛእ ርእስኺ ክዳን ስራሕ ጀምሪ።", x: "ብናይ ገዛእ ርእስኹም ክዳን ስራሕ ጀምሩ።" }, // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.w': { m: "ምሕታት ዓሰርተ ካልኢት ይወስድ። በይንኻ ምድላይ ከደንጉየካ ይኽእል። ብጾት ስራሕ ኣብ ሓድሽ ቦታ መገዲ ምርካብ ኣጸጋሚ ምዃኑ ይፈልጡ እዮም።", f: "ምሕታት ዓሰርተ ካልኢት ይወስድ። በይንኺ ምድላይ ከደንጉየኪ ይኽእል። ብጾት ስራሕ ኣብ ሓድሽ ቦታ መገዲ ምርካብ ኣጸጋሚ ምዃኑ ይፈልጡ እዮም።", x: "ምሕታት ዓሰርተ ካልኢት ይወስድ። በይንኹም ምድላይ ከደንጉየኩም ይኽእል። ብጾት ስራሕ ኣብ ሓድሽ ቦታ መገዲ ምርካብ ኣጸጋሚ ምዃኑ ይፈልጡ እዮም።" }, // nieuw, nalezen // nagelezen AI 22 nov
     // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): the tips of l.roster, l.breaks, l.wound and l.callhelp.
-    'c.wound': { m: "ቃጸሎ? ብማይ ኣዝሕሎ", f: "ቃጸሎ? ብማይ ኣዝሕልዮ", x: "ቃጸሎ? ብማይ ኣዝሕልዎ" }, // nieuw, nalezen
-    'c.wound.b': { m: "ንእሽቶ መቑሰሊ፡ ብጽሩይ ጨርቂ ወይ መሸፈኒ ቁስሊ ጸቅጦ፡ ንሰብ ቀዳማይ ረዲኤት ድማ ንገሮ። ቃጸሎ፡ ብቕጽበት ብዝውሕዝ ለበጥ ዝበለ ማይ ኣዝሕሎ፡ እንተ ወሓደ ን10 ደቒቕ። ኣብ ዓይኒኻ ገለ ኣትዩ? ብማይ ሓጽቦ፡ ወይ ኣብ መሕጸቢ ዓይኒ። ከቢድ ድዩ? ናብ 112 ደውል። ኣብ ቀዳመይቲ መዓልቲኻ፡ ሳጹን ቀዳማይ ረዲኤትን መሕጸቢ ዓይንን ኣበይ ከም ዘለዉ ሕተት።", f: "ንእሽቶ መቑሰሊ፡ ብጽሩይ ጨርቂ ወይ መሸፈኒ ቁስሊ ጸቅጥዮ፡ ንሰብ ቀዳማይ ረዲኤት ድማ ንገርዮ። ቃጸሎ፡ ብቕጽበት ብዝውሕዝ ለበጥ ዝበለ ማይ ኣዝሕልዮ፡ እንተ ወሓደ ን10 ደቒቕ። ኣብ ዓይኒኺ ገለ ኣትዩ? ብማይ ሓጽብዮ፡ ወይ ኣብ መሕጸቢ ዓይኒ። ከቢድ ድዩ? ናብ 112 ደውሊ። ኣብ ቀዳመይቲ መዓልቲኺ፡ ሳጹን ቀዳማይ ረዲኤትን መሕጸቢ ዓይንን ኣበይ ከም ዘለዉ ሕተቲ።", x: "ንእሽቶ መቑሰሊ፡ ብጽሩይ ጨርቂ ወይ መሸፈኒ ቁስሊ ጸቅጥዎ፡ ንሰብ ቀዳማይ ረዲኤት ድማ ንገርዎ። ቃጸሎ፡ ብቕጽበት ብዝውሕዝ ለበጥ ዝበለ ማይ ኣዝሕልዎ፡ እንተ ወሓደ ን10 ደቒቕ። ኣብ ዓይኒኹም ገለ ኣትዩ? ብማይ ሓጽብዎ፡ ወይ ኣብ መሕጸቢ ዓይኒ። ከቢድ ድዩ? ናብ 112 ደውሉ። ኣብ ቀዳመይቲ መዓልቲኹም፡ ሳጹን ቀዳማይ ረዲኤትን መሕጸቢ ዓይንን ኣበይ ከም ዘለዉ ሕተቱ።" }, // nieuw, nalezen
-    'c.wound.p': "ተቓጺለ። ቡምባ ማይ ኣበይ ኣሎ?", // nieuw, nalezen
-    'c.wound.s': { m: "ሓደ ብጻይ ስራሕ ኣብ ውዑይ ማሽን ኢዱ ይቃጸል። እንታይ ትገብር?", f: "ሓደ ብጻይ ስራሕ ኣብ ውዑይ ማሽን ኢዱ ይቃጸል። እንታይ ትገብሪ?", x: "ሓደ ብጻይ ስራሕ ኣብ ውዑይ ማሽን ኢዱ ይቃጸል። እንታይ ትገብሩ?" }, // nieuw, nalezen
-    'c.wound.o1': { m: "ብዝውሕዝ ለበጥ ዝበለ ማይ ኣዝሕሎ።", f: "ብዝውሕዝ ለበጥ ዝበለ ማይ ኣዝሕልዮ።", x: "ብዝውሕዝ ለበጥ ዝበለ ማይ ኣዝሕልዎ።" }, // nieuw, nalezen
-    'c.wound.o2': { m: "ብቕጽበት ጠስሚ ወይ ክሬም ግበረሉ።", f: "ብቕጽበት ጠስሚ ወይ ክሬም ግበርሉ።", x: "ብቕጽበት ጠስሚ ወይ ክሬም ግበሩሉ።" }, // nieuw, nalezen
-    'c.wound.o3': { m: "በረድ ብቐጥታ ኣብ ቆርበት ግበር፡ ተጸበ ድማ።", f: "በረድ ብቐጥታ ኣብ ቆርበት ግበሪ፡ ተጸበዪ ድማ።", x: "በረድ ብቐጥታ ኣብ ቆርበት ግበሩ፡ ተጸበዩ ድማ።" }, // nieuw, nalezen
-    'c.wound.w': "ማይ ነቲ ሙቐት ካብ ቆርበት የውጽኦ፡ ስለዚ እቲ ቃጸሎ ብዙሕ ኣይዓሙቕን። በረድ፡ ጠስምን ክሬምን ከጋድድዎ ይኽእሉ።", // nieuw, nalezen
-    'c.callhelp': { m: "ናብ 112 ምድዋል፡ ቅድም ኣበይ ከም ዘለኻ ንገር", f: "ናብ 112 ምድዋል፡ ቅድም ኣበይ ከም ዘለኺ ንገሪ", x: "ናብ 112 ምድዋል፡ ቅድም ኣበይ ከም ዘለኹም ንገሩ" }, // nieuw, nalezen
-    'c.callhelp.b': { m: "ህይወት ኣብ ሓደጋ ክህሉ ከሎ፡ ወይ ነፍሲ ወከፍ ደቒቕ ኣገዳሲ ክትከውን ከላ፡ ናብ 112 ደውል። ቅድም ኣበይ ከም ዘለኻ ንገር፡ ጎደና፡ ቁጽሪ ገዛን ከተማን። ድሕሪኡ እንታይ ከም ዘጋጠመ ንገር። ኣብ መስመር ጽናሕ፡ ንሕቶታት ድማ መልስ። ንሓደ ብጻይ ስራሕ ኣብ መእተዊ ንኣምቡላንስ ክጽበ ሕተቶ። ኣድራሻ ስራሕካ ኣይትፈልጥን ዲኻ? ሎሚ ድለዮ።", f: "ህይወት ኣብ ሓደጋ ክህሉ ከሎ፡ ወይ ነፍሲ ወከፍ ደቒቕ ኣገዳሲ ክትከውን ከላ፡ ናብ 112 ደውሊ። ቅድም ኣበይ ከም ዘለኺ ንገሪ፡ ጎደና፡ ቁጽሪ ገዛን ከተማን። ድሕሪኡ እንታይ ከም ዘጋጠመ ንገሪ። ኣብ መስመር ጽንሒ፡ ንሕቶታት ድማ መልሲ። ንሓደ ብጻይ ስራሕ ኣብ መእተዊ ንኣምቡላንስ ክጽበ ሕተትዮ። ኣድራሻ ስራሕኪ ኣይትፈልጥን ዲኺ? ሎሚ ድለይዮ።", x: "ህይወት ኣብ ሓደጋ ክህሉ ከሎ፡ ወይ ነፍሲ ወከፍ ደቒቕ ኣገዳሲ ክትከውን ከላ፡ ናብ 112 ደውሉ። ቅድም ኣበይ ከም ዘለኹም ንገሩ፡ ጎደና፡ ቁጽሪ ገዛን ከተማን። ድሕሪኡ እንታይ ከም ዘጋጠመ ንገሩ። ኣብ መስመር ጽንሑ፡ ንሕቶታት ድማ መልሱ። ንሓደ ብጻይ ስራሕ ኣብ መእተዊ ንኣምቡላንስ ክጽበ ሕተትዎ። ኣድራሻ ስራሕኩም ኣይትፈልጡን ዲኹም? ሎሚ ድለይዎ።" }, // nieuw, nalezen
-    'c.callhelp.p': "ናብ 112 እድውል ኣለኹ። ንኣምቡላንስ ክትጽበይዎ ትኽእሉ ዶ?", // nieuw, nalezen
-    'c.callhelp.s': { m: "ናብ 112 ትድውል። እቲ ዝምልስ ሰብ ብዙሕ ሕቶታት ይሓተካ፡ ንስኻ ግን ንብጻይ ስራሕካ ክትሕግዝ ትደሊ። እንታይ ትገብር?", f: "ናብ 112 ትድውሊ። እቲ ዝምልስ ሰብ ብዙሕ ሕቶታት ይሓተኪ፡ ንስኺ ግን ንብጻይ ስራሕኪ ክትሕግዚ ትደልዪ። እንታይ ትገብሪ?", x: "ናብ 112 ትድውሉ። እቲ ዝምልስ ሰብ ብዙሕ ሕቶታት ይሓተኩም፡ ንስኹም ግን ንብጻይ ስራሕኩም ክትሕግዙ ትደልዩ። እንታይ ትገብሩ?" }, // nieuw, nalezen
-    'c.callhelp.o1': { m: "ኣብ መስመር ጽናሕ፡ መልስ ድማ።", f: "ኣብ መስመር ጽንሒ፡ መልሲ ድማ።", x: "ኣብ መስመር ጽንሑ፡ መልሱ ድማ።" }, // nieuw, nalezen
-    'c.callhelp.o2': { m: "ተሌፎን ዕጸው፡ ናብ ብጻይ ስራሕካ ኪድ።", f: "ተሌፎን ዕጸዊ፡ ናብ ብጻይ ስራሕኪ ኪዲ።", x: "ተሌፎን ዕጸዉ፡ ናብ ብጻይ ስራሕኩም ኪዱ።" }, // nieuw, nalezen
-    'c.callhelp.o3': { m: "«ቀልጢፍኩም ምጹ» በል፡ ተሌፎን ድማ ዕጸው።", f: "«ቀልጢፍኩም ምጹ» በሊ፡ ተሌፎን ድማ ዕጸዊ።", x: "«ቀልጢፍኩም ምጹ» በሉ፡ ተሌፎን ድማ ዕጸዉ።" }, // nieuw, nalezen
-    'c.callhelp.w': { m: "እቲ ዝምልስ ሰብ ክትዛረብ ከለኻ ሓገዝ ይሰድድ፡ እንታይ ክትገብር ከም ዘለካ ድማ ይነግረካ። ቀልጢፍካ ተሌፎን ምስ ዓጸኻ፡ ሓገዝ ናብ ጌጋ ቦታ ክኸይድ ይኽእል።", f: "እቲ ዝምልስ ሰብ ክትዛረቢ ከለኺ ሓገዝ ይሰድድ፡ እንታይ ክትገብሪ ከም ዘለኪ ድማ ይነግረኪ። ቀልጢፍኪ ተሌፎን ምስ ዓጸኺ፡ ሓገዝ ናብ ጌጋ ቦታ ክኸይድ ይኽእል።", x: "እቲ ዝምልስ ሰብ ክትዛረቡ ከለኹም ሓገዝ ይሰድድ፡ እንታይ ክትገብሩ ከም ዘለኩም ድማ ይነግረኩም። ቀልጢፍኩም ተሌፎን ምስ ዓጸኹም፡ ሓገዝ ናብ ጌጋ ቦታ ክኸይድ ይኽእል።" }, // nieuw, nalezen
-    'c.roster': { m: "መዓልታዊ መደብ ስራሕካ ርአ", f: "መዓልታዊ መደብ ስራሕኪ ርአዪ", x: "መዓልታዊ መደብ ስራሕኩም ርአዩ" }, // nieuw, nalezen
-    'c.roster.b': { m: "መደብ ስራሕ ክቕየር ይኽእል፡ ብሓጺር ግዜ እውን። መዓልታዊ ርአዮ፡ ኣብቲ ኣፕ ወይ ኣብ ሰሌዳ። ለውጢ ትርኢ ዶ? ክትመጽእ ከም እትኽእል ኣረጋግጽ። ሓንቲ መዓልቲ ክትሰርሕ ኣይትኽእልን? ኣቐዲምካ ንገር፡ በታ መዓልቲ እቲኣ ኣይኮነን። ፈረቓ ስራሕ ክትቕይር ትደሊ? ቅድም ንተቖጻጻሪኻ ሕተት፡ ብዙሓት ትካላት ንዕኡ ሕጊ ኣለዎም። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕካ እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኻ ሕተት።", f: "መደብ ስራሕ ክቕየር ይኽእል፡ ብሓጺር ግዜ እውን። መዓልታዊ ርአይዮ፡ ኣብቲ ኣፕ ወይ ኣብ ሰሌዳ። ለውጢ ትርእዪ ዶ? ክትመጽኢ ከም እትኽእሊ ኣረጋግጺ። ሓንቲ መዓልቲ ክትሰርሒ ኣይትኽእልን? ኣቐዲምኪ ንገሪ፡ በታ መዓልቲ እቲኣ ኣይኮነን። ፈረቓ ስራሕ ክትቕይሪ ትደልዪ? ቅድም ንተቖጻጻሪኺ ሕተቲ፡ ብዙሓት ትካላት ንዕኡ ሕጊ ኣለዎም። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕኪ እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኺ ሕተቲ።", x: "መደብ ስራሕ ክቕየር ይኽእል፡ ብሓጺር ግዜ እውን። መዓልታዊ ርአይዎ፡ ኣብቲ ኣፕ ወይ ኣብ ሰሌዳ። ለውጢ ትርእዩ ዶ? ክትመጽኡ ከም እትኽእሉ ኣረጋግጹ። ሓንቲ መዓልቲ ክትሰርሑ ኣይትኽእሉን? ኣቐዲምኩም ንገሩ፡ በታ መዓልቲ እቲኣ ኣይኮነን። ፈረቓ ስራሕ ክትቕይሩ ትደልዩ? ቅድም ንተቖጻጻሪኹም ሕተቱ፡ ብዙሓት ትካላት ንዕኡ ሕጊ ኣለዎም። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕኩም እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኹም ሕተቱ።" }, // nieuw, nalezen
-    'c.roster.p': "ቀዳም ክሰርሕ ኣይክእልን እየ። ክቕይር ይኽእል ዶ?", // nieuw, nalezen
-    'c.roster.s': { m: "መደብ ስራሕካ ተቐይሩ። ሕጂ ቀዳም ክትሰርሕ ኣለካ፡ ግን ኣይትኽእልን። እንታይ ትገብር?", f: "መደብ ስራሕኪ ተቐይሩ። ሕጂ ቀዳም ክትሰርሒ ኣለኪ፡ ግን ኣይትኽእልን። እንታይ ትገብሪ?", x: "መደብ ስራሕኩም ተቐይሩ። ሕጂ ቀዳም ክትሰርሑ ኣለኩም፡ ግን ኣይትኽእሉን። እንታይ ትገብሩ?" }, // nieuw, nalezen
-    'c.roster.o1': { m: "ሎሚ ንተቖጻጻሪኻ ንገሮ፡ ክትቕይር ድማ ሕተት።", f: "ሎሚ ንተቖጻጻሪኺ ንገርዮ፡ ክትቕይሪ ድማ ሕተቲ።", x: "ሎሚ ንተቖጻጻሪኹም ንገርዎ፡ ክትቕይሩ ድማ ሕተቱ።" }, // nieuw, nalezen
-    'c.roster.o2': { m: "ገለ ኣይትበል፡ ቀዳም ኣብ ገዛ ጽናሕ።", f: "ገለ ኣይትበሊ፡ ቀዳም ኣብ ገዛ ጽንሒ።", x: "ገለ ኣይትበሉ፡ ቀዳም ኣብ ገዛ ጽንሑ።" }, // nieuw, nalezen
-    'c.roster.o3': { m: "ንብጻይ ስራሕ ክኸይድ ሕተቶ፡ ንሓደ እውን ኣይትንገር።", f: "ንብጻይ ስራሕ ክኸይድ ሕተትዮ፡ ንሓደ እውን ኣይትንገሪ።", x: "ንብጻይ ስራሕ ክኸይድ ሕተትዎ፡ ንሓደ እውን ኣይትንገሩ።" }, // nieuw, nalezen
-    'c.roster.w': { m: "ኣቐዲምካ ምስ ነገርካ፡ ተቖጻጻሪኻ ካልእ ሰብ ክረክብ ይኽእል። ብዘይ ቃል ምትራፍ ከም ኣዝዩ ከቢድ ነገር እዩ ዝርአ።", f: "ኣቐዲምኪ ምስ ነገርኪ፡ ተቖጻጻሪኺ ካልእ ሰብ ክረክብ ይኽእል። ብዘይ ቃል ምትራፍ ከም ኣዝዩ ከቢድ ነገር እዩ ዝርአ።", x: "ኣቐዲምኩም ምስ ነገርኩም፡ ተቖጻጻሪኹም ካልእ ሰብ ክረክብ ይኽእል። ብዘይ ቃል ምትራፍ ከም ኣዝዩ ከቢድ ነገር እዩ ዝርአ።" }, // nieuw, nalezen
-    'c.breaks': { m: "ሰዓታትካ ጽሓፍ", f: "ሰዓታትኪ ጽሓፊ", x: "ሰዓታትኩም ጽሓፉ" }, // nieuw, nalezen
-    'c.breaks.b': { m: "መዓልታዊ መዓስ ከም እትጅምር፡ መዓስ ከም እትውድእን ዕረፍቲኻ ክንደይ ከም ዝወስድን ጽሓፍ። ደሞዝካ ቅኑዕ ምስ ዘይከውን፡ ናይ ባዕልካ ዝርዝር ይሕግዝ። ኣቐዲምካ ክትከይድ ኣለካ ድዩ፡ ንኣብነት ናብ ሓኪም? ብግዜኡ ንተቖጻጻሪኻ ሕተቶ። ካብቲ ዝተመደበ ንላዕሊ ሰሪሕካ? ንሱ እውን ጽሓፎ። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕካ እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኻ ሕተት።", f: "መዓልታዊ መዓስ ከም እትጅምሪ፡ መዓስ ከም እትውድኢን ዕረፍቲኺ ክንደይ ከም ዝወስድን ጽሓፊ። ደሞዝኪ ቅኑዕ ምስ ዘይከውን፡ ናይ ባዕልኪ ዝርዝር ይሕግዝ። ኣቐዲምኪ ክትከዲ ኣለኪ ድዩ፡ ንኣብነት ናብ ሓኪም? ብግዜኡ ንተቖጻጻሪኺ ሕተትዮ። ካብቲ ዝተመደበ ንላዕሊ ሰሪሕኪ? ንሱ እውን ጽሓፍዮ። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕኪ እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኺ ሕተቲ።", x: "መዓልታዊ መዓስ ከም እትጅምሩ፡ መዓስ ከም እትውድኡን ዕረፍቲኹም ክንደይ ከም ዝወስድን ጽሓፉ። ደሞዝኩም ቅኑዕ ምስ ዘይከውን፡ ናይ ባዕልኩም ዝርዝር ይሕግዝ። ኣቐዲምኩም ክትከዱ ኣለኩም ድዩ፡ ንኣብነት ናብ ሓኪም? ብግዜኡ ንተቖጻጻሪኹም ሕተትዎ። ካብቲ ዝተመደበ ንላዕሊ ሰሪሕኩም? ንሱ እውን ጽሓፍዎ። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕኩም እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኹም ሕተቱ።" }, // nieuw, nalezen
-    'c.breaks.p': "ጽባሕ ናብ ሓኪም ክኸይድ ኣለኒ። ኣቐዲመ ክኸይድ ይኽእል ዶ?", // nieuw, nalezen
-    'c.breaks.s': { m: "ጽባሕ ሰዓት ሰለስተ ናብ ሓኪም ክትከይድ ኣለካ። ፈረቓ ስራሕካ ሰዓት ሓሙሽተ ይውዳእ። እንታይ ትገብር?", f: "ጽባሕ ሰዓት ሰለስተ ናብ ሓኪም ክትከዲ ኣለኪ። ፈረቓ ስራሕኪ ሰዓት ሓሙሽተ ይውዳእ። እንታይ ትገብሪ?", x: "ጽባሕ ሰዓት ሰለስተ ናብ ሓኪም ክትከዱ ኣለኩም። ፈረቓ ስራሕኩም ሰዓት ሓሙሽተ ይውዳእ። እንታይ ትገብሩ?" }, // nieuw, nalezen
-    'c.breaks.o1': { m: "ኣቐዲምካ ክትከይድ ይፍቀደልካ እንተ ኾይኑ ሎሚ ንተቖጻጻሪኻ ሕተቶ።", f: "ኣቐዲምኪ ክትከዲ ይፍቀደልኪ እንተ ኾይኑ ሎሚ ንተቖጻጻሪኺ ሕተትዮ።", x: "ኣቐዲምኩም ክትከዱ ይፍቀደልኩም እንተ ኾይኑ ሎሚ ንተቖጻጻሪኹም ሕተትዎ።" }, // nieuw, nalezen
-    'c.breaks.o2': { m: "ሰዓት ሰለስተ ኪድ፡ ንጽባሒቱ ድማ ግለጾ።", f: "ሰዓት ሰለስተ ኪዲ፡ ንጽባሒቱ ድማ ግለጽዮ።", x: "ሰዓት ሰለስተ ኪዱ፡ ንጽባሒቱ ድማ ግለጽዎ።" }, // nieuw, nalezen
-    'c.breaks.o3': { m: "ሓኪም ሕደጎ፡ ፈረቓ ስራሕካ ድማ ወድእ።", f: "ሓኪም ሕደግዮ፡ ፈረቓ ስራሕኪ ድማ ወድኢ።", x: "ሓኪም ሕደግዎ፡ ፈረቓ ስራሕኩም ድማ ወድኡ።" }, // nieuw, nalezen
-    'c.breaks.w': { m: "ብግዜኡ ምሕታት ንተቖጻጻሪኻ ስራሕ ከውጽን የኽእሎ። ከይሓተትካ ምኻድ ከም ዘይእሙን ምዃን እዩ ዝርአ።", f: "ብግዜኡ ምሕታት ንተቖጻጻሪኺ ስራሕ ከውጽን የኽእሎ። ከይሓተትኪ ምኻድ ከም ዘይእሙን ምዃን እዩ ዝርአ።", x: "ብግዜኡ ምሕታት ንተቖጻጻሪኹም ስራሕ ከውጽን የኽእሎ። ከይሓተትኩም ምኻድ ከም ዘይእሙን ምዃን እዩ ዝርአ።" }, // nieuw, nalezen
+    'c.wound': { m: "ቃጸሎ? ብማይ ኣዝሕሎ", f: "ቃጸሎ? ብማይ ኣዝሕልዮ", x: "ቃጸሎ? ብማይ ኣዝሕልዎ" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.b': { m: "ንእሽቶ መቑሰሊ፡ ብጽሩይ ጨርቂ ወይ መሸፈኒ ቁስሊ ጸቅጦ፡ ንሰብ ቀዳማይ ረዲኤት ድማ ንገሮ። ቃጸሎ፡ ብቕጽበት ብዝውሕዝ ለበጥ ዝበለ ማይ ኣዝሕሎ፡ እንተ ወሓደ ን10 ደቒቕ። ኣብ ዓይኒኻ ገለ ኣትዩ? ብማይ ሓጽቦ፡ ወይ ኣብ መሕጸቢ ዓይኒ። ከቢድ ድዩ? ናብ 112 ደውል። ኣብ ቀዳመይቲ መዓልቲኻ፡ ሳጹን ቀዳማይ ረዲኤትን መሕጸቢ ዓይንን ኣበይ ከም ዘለዉ ሕተት።", f: "ንእሽቶ መቑሰሊ፡ ብጽሩይ ጨርቂ ወይ መሸፈኒ ቁስሊ ጸቅጥዮ፡ ንሰብ ቀዳማይ ረዲኤት ድማ ንገርዮ። ቃጸሎ፡ ብቕጽበት ብዝውሕዝ ለበጥ ዝበለ ማይ ኣዝሕልዮ፡ እንተ ወሓደ ን10 ደቒቕ። ኣብ ዓይኒኺ ገለ ኣትዩ? ብማይ ሓጽብዮ፡ ወይ ኣብ መሕጸቢ ዓይኒ። ከቢድ ድዩ? ናብ 112 ደውሊ። ኣብ ቀዳመይቲ መዓልቲኺ፡ ሳጹን ቀዳማይ ረዲኤትን መሕጸቢ ዓይንን ኣበይ ከም ዘለዉ ሕተቲ።", x: "ንእሽቶ መቑሰሊ፡ ብጽሩይ ጨርቂ ወይ መሸፈኒ ቁስሊ ጸቅጥዎ፡ ንሰብ ቀዳማይ ረዲኤት ድማ ንገርዎ። ቃጸሎ፡ ብቕጽበት ብዝውሕዝ ለበጥ ዝበለ ማይ ኣዝሕልዎ፡ እንተ ወሓደ ን10 ደቒቕ። ኣብ ዓይኒኹም ገለ ኣትዩ? ብማይ ሓጽብዎ፡ ወይ ኣብ መሕጸቢ ዓይኒ። ከቢድ ድዩ? ናብ 112 ደውሉ። ኣብ ቀዳመይቲ መዓልቲኹም፡ ሳጹን ቀዳማይ ረዲኤትን መሕጸቢ ዓይንን ኣበይ ከም ዘለዉ ሕተቱ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.p': "ተቓጺለ። ቡምባ ማይ ኣበይ ኣሎ?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.s': { m: "ሓደ ብጻይ ስራሕ ኣብ ውዑይ ማሽን ኢዱ ይቃጸል። እንታይ ትገብር?", f: "ሓደ ብጻይ ስራሕ ኣብ ውዑይ ማሽን ኢዱ ይቃጸል። እንታይ ትገብሪ?", x: "ሓደ ብጻይ ስራሕ ኣብ ውዑይ ማሽን ኢዱ ይቃጸል። እንታይ ትገብሩ?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o1': { m: "ብዝውሕዝ ለበጥ ዝበለ ማይ ኣዝሕሎ።", f: "ብዝውሕዝ ለበጥ ዝበለ ማይ ኣዝሕልዮ።", x: "ብዝውሕዝ ለበጥ ዝበለ ማይ ኣዝሕልዎ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o2': { m: "ብቕጽበት ጠስሚ ወይ ክሬም ግበረሉ።", f: "ብቕጽበት ጠስሚ ወይ ክሬም ግበርሉ።", x: "ብቕጽበት ጠስሚ ወይ ክሬም ግበሩሉ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o3': { m: "በረድ ብቐጥታ ኣብ ቆርበት ግበር፡ ተጸበ ድማ።", f: "በረድ ብቐጥታ ኣብ ቆርበት ግበሪ፡ ተጸበዪ ድማ።", x: "በረድ ብቐጥታ ኣብ ቆርበት ግበሩ፡ ተጸበዩ ድማ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.w': "ማይ ነቲ ሙቐት ካብ ቆርበት የውጽኦ፡ ስለዚ እቲ ቃጸሎ ብዙሕ ኣይዓሙቕን። በረድ፡ ጠስምን ክሬምን ከጋድድዎ ይኽእሉ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp': { m: "ናብ 112 ምድዋል፡ ቅድም ኣበይ ከም ዘለኻ ንገር", f: "ናብ 112 ምድዋል፡ ቅድም ኣበይ ከም ዘለኺ ንገሪ", x: "ናብ 112 ምድዋል፡ ቅድም ኣበይ ከም ዘለኹም ንገሩ" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.b': { m: "ህይወት ኣብ ሓደጋ ክህሉ ከሎ፡ ወይ ነፍሲ ወከፍ ደቒቕ ኣገዳሲ ክትከውን ከላ፡ ናብ 112 ደውል። ቅድም ኣበይ ከም ዘለኻ ንገር፡ ጎደና፡ ቁጽሪ ገዛን ከተማን። ድሕሪኡ እንታይ ከም ዘጋጠመ ንገር። ኣብ መስመር ጽናሕ፡ ንሕቶታት ድማ መልስ። ንሓደ ብጻይ ስራሕ ኣብ መእተዊ ንኣምቡላንስ ክጽበ ሕተቶ። ኣድራሻ ስራሕካ ኣይትፈልጥን ዲኻ? ሎሚ ድለዮ።", f: "ህይወት ኣብ ሓደጋ ክህሉ ከሎ፡ ወይ ነፍሲ ወከፍ ደቒቕ ኣገዳሲ ክትከውን ከላ፡ ናብ 112 ደውሊ። ቅድም ኣበይ ከም ዘለኺ ንገሪ፡ ጎደና፡ ቁጽሪ ገዛን ከተማን። ድሕሪኡ እንታይ ከም ዘጋጠመ ንገሪ። ኣብ መስመር ጽንሒ፡ ንሕቶታት ድማ መልሲ። ንሓደ ብጻይ ስራሕ ኣብ መእተዊ ንኣምቡላንስ ክጽበ ሕተትዮ። ኣድራሻ ስራሕኪ ኣይትፈልጢን ዲኺ? ሎሚ ድለይዮ።", x: "ህይወት ኣብ ሓደጋ ክህሉ ከሎ፡ ወይ ነፍሲ ወከፍ ደቒቕ ኣገዳሲ ክትከውን ከላ፡ ናብ 112 ደውሉ። ቅድም ኣበይ ከም ዘለኹም ንገሩ፡ ጎደና፡ ቁጽሪ ገዛን ከተማን። ድሕሪኡ እንታይ ከም ዘጋጠመ ንገሩ። ኣብ መስመር ጽንሑ፡ ንሕቶታት ድማ መልሱ። ንሓደ ብጻይ ስራሕ ኣብ መእተዊ ንኣምቡላንስ ክጽበ ሕተትዎ። ኣድራሻ ስራሕኩም ኣይትፈልጡን ዲኹም? ሎሚ ድለይዎ።" }, // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.callhelp.p': "ናብ 112 እድውል ኣለኹ። ንኣምቡላንስ ክትጽበይዎ ትኽእሉ ዶ?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.s': { m: "ናብ 112 ትድውል። እቲ ዝምልስ ሰብ ብዙሕ ሕቶታት ይሓተካ፡ ንስኻ ግን ንብጻይ ስራሕካ ክትሕግዝ ትደሊ። እንታይ ትገብር?", f: "ናብ 112 ትድውሊ። እቲ ዝምልስ ሰብ ብዙሕ ሕቶታት ይሓተኪ፡ ንስኺ ግን ንብጻይ ስራሕኪ ክትሕግዚ ትደልዪ። እንታይ ትገብሪ?", x: "ናብ 112 ትድውሉ። እቲ ዝምልስ ሰብ ብዙሕ ሕቶታት ይሓተኩም፡ ንስኹም ግን ንብጻይ ስራሕኩም ክትሕግዙ ትደልዩ። እንታይ ትገብሩ?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o1': { m: "ኣብ መስመር ጽናሕ፡ መልስ ድማ።", f: "ኣብ መስመር ጽንሒ፡ መልሲ ድማ።", x: "ኣብ መስመር ጽንሑ፡ መልሱ ድማ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o2': { m: "ተሌፎን ዕጸው፡ ናብ ብጻይ ስራሕካ ኪድ።", f: "ተሌፎን ዕጸዊ፡ ናብ ብጻይ ስራሕኪ ኪዲ።", x: "ተሌፎን ዕጸዉ፡ ናብ ብጻይ ስራሕኩም ኪዱ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o3': { m: "«ቀልጢፍኩም ምጹ» በል፡ ተሌፎን ድማ ዕጸው።", f: "«ቀልጢፍኩም ምጹ» በሊ፡ ተሌፎን ድማ ዕጸዊ።", x: "«ቀልጢፍኩም ምጹ» በሉ፡ ተሌፎን ድማ ዕጸዉ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.w': { m: "እቲ ዝምልስ ሰብ ክትዛረብ ከለኻ ሓገዝ ይሰድድ፡ እንታይ ክትገብር ከም ዘለካ ድማ ይነግረካ። ቀልጢፍካ ተሌፎን ምስ ዓጸኻ፡ ሓገዝ ናብ ጌጋ ቦታ ክኸይድ ይኽእል።", f: "እቲ ዝምልስ ሰብ ክትዛረቢ ከለኺ ሓገዝ ይሰድድ፡ እንታይ ክትገብሪ ከም ዘለኪ ድማ ይነግረኪ። ቀልጢፍኪ ተሌፎን ምስ ዓጸኺ፡ ሓገዝ ናብ ጌጋ ቦታ ክኸይድ ይኽእል።", x: "እቲ ዝምልስ ሰብ ክትዛረቡ ከለኹም ሓገዝ ይሰድድ፡ እንታይ ክትገብሩ ከም ዘለኩም ድማ ይነግረኩም። ቀልጢፍኩም ተሌፎን ምስ ዓጸኹም፡ ሓገዝ ናብ ጌጋ ቦታ ክኸይድ ይኽእል።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster': { m: "መዓልታዊ መደብ ስራሕካ ርአ", f: "መዓልታዊ መደብ ስራሕኪ ርአዪ", x: "መዓልታዊ መደብ ስራሕኩም ርአዩ" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.b': { m: "መደብ ስራሕ ክቕየር ይኽእል፡ ብሓጺር ግዜ እውን። መዓልታዊ ርአዮ፡ ኣብቲ ኣፕ ወይ ኣብ ሰሌዳ። ለውጢ ትርኢ ዶ? ክትመጽእ ከም እትኽእል ኣረጋግጽ። ሓንቲ መዓልቲ ክትሰርሕ ኣይትኽእልን? ኣቐዲምካ ንገር፡ በታ መዓልቲ እቲኣ ኣይኮነን። ፈረቓ ስራሕ ክትቕይር ትደሊ? ቅድም ንተቖጻጻሪኻ ሕተት፡ ብዙሓት ትካላት ንዕኡ ሕጊ ኣለዎም። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕካ እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኻ ሕተት።", f: "መደብ ስራሕ ክቕየር ይኽእል፡ ብሓጺር ግዜ እውን። መዓልታዊ ርአይዮ፡ ኣብቲ ኣፕ ወይ ኣብ ሰሌዳ። ለውጢ ትርእዪ ዶ? ክትመጽኢ ከም እትኽእሊ ኣረጋግጺ። ሓንቲ መዓልቲ ክትሰርሒ ኣይትኽእሊን? ኣቐዲምኪ ንገሪ፡ በታ መዓልቲ እቲኣ ኣይኮነን። ፈረቓ ስራሕ ክትቕይሪ ትደልዪ? ቅድም ንተቖጻጻሪኺ ሕተቲ፡ ብዙሓት ትካላት ንዕኡ ሕጊ ኣለዎም። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕኪ እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኺ ሕተቲ።", x: "መደብ ስራሕ ክቕየር ይኽእል፡ ብሓጺር ግዜ እውን። መዓልታዊ ርአይዎ፡ ኣብቲ ኣፕ ወይ ኣብ ሰሌዳ። ለውጢ ትርእዩ ዶ? ክትመጽኡ ከም እትኽእሉ ኣረጋግጹ። ሓንቲ መዓልቲ ክትሰርሑ ኣይትኽእሉን? ኣቐዲምኩም ንገሩ፡ በታ መዓልቲ እቲኣ ኣይኮነን። ፈረቓ ስራሕ ክትቕይሩ ትደልዩ? ቅድም ንተቖጻጻሪኹም ሕተቱ፡ ብዙሓት ትካላት ንዕኡ ሕጊ ኣለዎም። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕኩም እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኹም ሕተቱ።" }, // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.roster.p': "ቀዳም ክሰርሕ ኣይክእልን እየ። ክቕይር ይኽእል ዶ?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.s': { m: "መደብ ስራሕካ ተቐይሩ። ሕጂ ቀዳም ክትሰርሕ ኣለካ፡ ግን ኣይትኽእልን። እንታይ ትገብር?", f: "መደብ ስራሕኪ ተቐይሩ። ሕጂ ቀዳም ክትሰርሒ ኣለኪ፡ ግን ኣይትኽእሊን። እንታይ ትገብሪ?", x: "መደብ ስራሕኩም ተቐይሩ። ሕጂ ቀዳም ክትሰርሑ ኣለኩም፡ ግን ኣይትኽእሉን። እንታይ ትገብሩ?" }, // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.roster.o1': { m: "ሎሚ ንተቖጻጻሪኻ ንገሮ፡ ክትቕይር ድማ ሕተት።", f: "ሎሚ ንተቖጻጻሪኺ ንገርዮ፡ ክትቕይሪ ድማ ሕተቲ።", x: "ሎሚ ንተቖጻጻሪኹም ንገርዎ፡ ክትቕይሩ ድማ ሕተቱ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o2': { m: "ገለ ኣይትበል፡ ቀዳም ኣብ ገዛ ጽናሕ።", f: "ገለ ኣይትበሊ፡ ቀዳም ኣብ ገዛ ጽንሒ።", x: "ገለ ኣይትበሉ፡ ቀዳም ኣብ ገዛ ጽንሑ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o3': { m: "ንብጻይ ስራሕ ክኸይድ ሕተቶ፡ ንሓደ እውን ኣይትንገር።", f: "ንብጻይ ስራሕ ክኸይድ ሕተትዮ፡ ንሓደ እውን ኣይትንገሪ።", x: "ንብጻይ ስራሕ ክኸይድ ሕተትዎ፡ ንሓደ እውን ኣይትንገሩ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.w': { m: "ኣቐዲምካ ምስ ነገርካ፡ ተቖጻጻሪኻ ካልእ ሰብ ክረክብ ይኽእል። ብዘይ ቃል ምትራፍ ከም ኣዝዩ ከቢድ ነገር እዩ ዝርአ።", f: "ኣቐዲምኪ ምስ ነገርኪ፡ ተቖጻጻሪኺ ካልእ ሰብ ክረክብ ይኽእል። ብዘይ ቃል ምትራፍ ከም ኣዝዩ ከቢድ ነገር እዩ ዝርአ።", x: "ኣቐዲምኩም ምስ ነገርኩም፡ ተቖጻጻሪኹም ካልእ ሰብ ክረክብ ይኽእል። ብዘይ ቃል ምትራፍ ከም ኣዝዩ ከቢድ ነገር እዩ ዝርአ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks': { m: "ሰዓታትካ ጽሓፍ", f: "ሰዓታትኪ ጽሓፊ", x: "ሰዓታትኩም ጽሓፉ" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.b': { m: "መዓልታዊ መዓስ ከም እትጅምር፡ መዓስ ከም እትውድእን ዕረፍቲኻ ክንደይ ከም ዝወስድን ጽሓፍ። ደሞዝካ ቅኑዕ ምስ ዘይከውን፡ ናይ ባዕልካ ዝርዝር ይሕግዝ። ኣቐዲምካ ክትከይድ ኣለካ ድዩ፡ ንኣብነት ናብ ሓኪም? ብግዜኡ ንተቖጻጻሪኻ ሕተቶ። ካብቲ ዝተመደበ ንላዕሊ ሰሪሕካ? ንሱ እውን ጽሓፎ። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕካ እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኻ ሕተት።", f: "መዓልታዊ መዓስ ከም እትጅምሪ፡ መዓስ ከም እትውድኢን ዕረፍቲኺ ክንደይ ከም ዝወስድን ጽሓፊ። ደሞዝኪ ቅኑዕ ምስ ዘይከውን፡ ናይ ባዕልኪ ዝርዝር ይሕግዝ። ኣቐዲምኪ ክትከዲ ኣለኪ ድዩ፡ ንኣብነት ናብ ሓኪም? ብግዜኡ ንተቖጻጻሪኺ ሕተትዮ። ካብቲ ዝተመደበ ንላዕሊ ሰሪሕኪ? ንሱ እውን ጽሓፍዮ። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕኪ እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኺ ሕተቲ።", x: "መዓልታዊ መዓስ ከም እትጅምሩ፡ መዓስ ከም እትውድኡን ዕረፍቲኹም ክንደይ ከም ዝወስድን ጽሓፉ። ደሞዝኩም ቅኑዕ ምስ ዘይከውን፡ ናይ ባዕልኩም ዝርዝር ይሕግዝ። ኣቐዲምኩም ክትከዱ ኣለኩም ድዩ፡ ንኣብነት ናብ ሓኪም? ብግዜኡ ንተቖጻጻሪኹም ሕተትዎ። ካብቲ ዝተመደበ ንላዕሊ ሰሪሕኩም? ንሱ እውን ጽሓፍዎ። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕኩም እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኹም ሕተቱ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.p': "ጽባሕ ናብ ሓኪም ክኸይድ ኣለኒ። ኣቐዲመ ክኸይድ ይኽእል ዶ?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.s': { m: "ጽባሕ ሰዓት ሰለስተ ናብ ሓኪም ክትከይድ ኣለካ። ፈረቓ ስራሕካ ሰዓት ሓሙሽተ ይውዳእ። እንታይ ትገብር?", f: "ጽባሕ ሰዓት ሰለስተ ናብ ሓኪም ክትከዲ ኣለኪ። ፈረቓ ስራሕኪ ሰዓት ሓሙሽተ ይውዳእ። እንታይ ትገብሪ?", x: "ጽባሕ ሰዓት ሰለስተ ናብ ሓኪም ክትከዱ ኣለኩም። ፈረቓ ስራሕኩም ሰዓት ሓሙሽተ ይውዳእ። እንታይ ትገብሩ?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o1': { m: "ኣቐዲምካ ክትከይድ ይፍቀደልካ እንተ ኾይኑ ሎሚ ንተቖጻጻሪኻ ሕተቶ።", f: "ኣቐዲምኪ ክትከዲ ይፍቀደልኪ እንተ ኾይኑ ሎሚ ንተቖጻጻሪኺ ሕተትዮ።", x: "ኣቐዲምኩም ክትከዱ ይፍቀደልኩም እንተ ኾይኑ ሎሚ ንተቖጻጻሪኹም ሕተትዎ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o2': { m: "ሰዓት ሰለስተ ኪድ፡ ንጽባሒቱ ድማ ግለጾ።", f: "ሰዓት ሰለስተ ኪዲ፡ ንጽባሒቱ ድማ ግለጽዮ።", x: "ሰዓት ሰለስተ ኪዱ፡ ንጽባሒቱ ድማ ግለጽዎ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o3': { m: "ሓኪም ሕደጎ፡ ፈረቓ ስራሕካ ድማ ወድእ።", f: "ሓኪም ሕደግዮ፡ ፈረቓ ስራሕኪ ድማ ወድኢ።", x: "ሓኪም ሕደግዎ፡ ፈረቓ ስራሕኩም ድማ ወድኡ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.w': { m: "ብግዜኡ ምሕታት ንተቖጻጻሪኻ ስራሕ ከውጽን የኽእሎ። ከይሓተትካ ምኻድ ከም ዘይእሙን ምዃን እዩ ዝርአ።", f: "ብግዜኡ ምሕታት ንተቖጻጻሪኺ ስራሕ ከውጽን የኽእሎ። ከይሓተትኪ ምኻድ ከም ዘይእሙን ምዃን እዩ ዝርአ።", x: "ብግዜኡ ምሕታት ንተቖጻጻሪኹም ስራሕ ከውጽን የኽእሎ። ከይሓተትኩም ምኻድ ከም ዘይእሙን ምዃን እዩ ዝርአ።" }, // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (26 November 2026).
-    'c.firstweeks': { m: "ደጊምካ ሕተት፡ እዚ ልሙድ እዩ", f: "ደጊምኪ ሕተቲ፡ እዚ ልሙድ እዩ", x: "ደጊምኩም ሕተቱ፡ እዚ ልሙድ እዩ" }, // nieuw, nalezen
-    'c.firstweeks.b': { m: "ኣብ ቀዳሞት ሰሙናትካ፡ ኩሉ ከም እትፈልጥ ዝጽበ ሰብ የለን። መብዛሕትኡ ግዜ ዙረት ምልላይ (rondleiding) ይግበረልካ፡ ዝመርሓካ ብጻይ ስራሕ ድማ ይወሃበካ። ቅድም ተዓዘብ፡ ድሕሪኡ ብጻይ ስራሕካ እናተዓዘበ ባዕልካ ግበሮ። ገለ ነገር ረሲዕካ ዲኻ? «Wil je het nog een keer laten zien?» ኢልካ ደጊምካ ሕተት። እዚ ካብ ምግማት ይሓይሽ። ሓደሽቲ ቃላትን ስጉምትታትን ኣብ ንእሽቶ መጽሓፍ ማስታወሻ ጽሓፍ። ገለ ውዕላት ብግዜ ፈተነ (proeftijd) ይጅምሩ፡ ሽዑ ንስኻ ወይ ኣስራሒኻ ነቲ ስራሕ ብቕልጡፍ ከተቋርጽዎ ትኽእሉ ኢኹም። ውዕልካ ግዜ ፈተነ እንተ ኣለዎ ሕተት። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕካ እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኻ ሕተት።", f: "ኣብ ቀዳሞት ሰሙናትኪ፡ ኩሉ ከም እትፈልጢ ዝጽበ ሰብ የለን። መብዛሕትኡ ግዜ ዙረት ምልላይ (rondleiding) ይግበረልኪ፡ ዝመርሓኪ ብጻይ ስራሕ ድማ ይወሃበኪ። ቅድም ተዓዘቢ፡ ድሕሪኡ ብጻይ ስራሕኪ እናተዓዘበ ባዕልኺ ግበርዮ። ገለ ነገር ረሲዕኪ ዲኺ? «Wil je het nog een keer laten zien?» ኢልኪ ደጊምኪ ሕተቲ። እዚ ካብ ምግማት ይሓይሽ። ሓደሽቲ ቃላትን ስጉምትታትን ኣብ ንእሽቶ መጽሓፍ ማስታወሻ ጽሓፊ። ገለ ውዕላት ብግዜ ፈተነ (proeftijd) ይጅምሩ፡ ሽዑ ንስኺ ወይ ኣስራሒኺ ነቲ ስራሕ ብቕልጡፍ ከተቋርጽዎ ትኽእሉ ኢኹም። ውዕልኪ ግዜ ፈተነ እንተ ኣለዎ ሕተቲ። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕኪ እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኺ ሕተቲ።", x: "ኣብ ቀዳሞት ሰሙናትኩም፡ ኩሉ ከም እትፈልጡ ዝጽበ ሰብ የለን። መብዛሕትኡ ግዜ ዙረት ምልላይ (rondleiding) ይግበረልኩም፡ ዝመርሓኩም ብጻይ ስራሕ ድማ ይወሃበኩም። ቅድም ተዓዘቡ፡ ድሕሪኡ ብጻይ ስራሕኩም እናተዓዘበ ባዕልኹም ግበርዎ። ገለ ነገር ረሲዕኩም ዲኹም? «Wil je het nog een keer laten zien?» ኢልኩም ደጊምኩም ሕተቱ። እዚ ካብ ምግማት ይሓይሽ። ሓደሽቲ ቃላትን ስጉምትታትን ኣብ ንእሽቶ መጽሓፍ ማስታወሻ ጽሓፉ። ገለ ውዕላት ብግዜ ፈተነ (proeftijd) ይጅምሩ፡ ሽዑ ንስኹም ወይ ኣስራሒኹም ነቲ ስራሕ ብቕልጡፍ ከተቋርጽዎ ትኽእሉ ኢኹም። ውዕልኩም ግዜ ፈተነ እንተ ኣለዎ ሕተቱ። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕኩም እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኹም ሕተቱ።" }, // nieuw, nalezen
-    'c.firstweeks.p': "ረሲዐዮ። ሓንሳብ ደጊምካ ከተርእየኒ ትኽእል ዶ?", // nieuw, nalezen
-    'c.firstweeks.s': { m: "ትማሊ ብጻይ ስራሕካ ነቲ ማሽን ብኸመይ ከም ዝብገስ ኣርእዩካ። ሎሚ ነቲ ሳልሳይ ስጉምቲ ኣይትዝክሮን። እንታይ ትገብር?", f: "ትማሊ ብጻይ ስራሕኪ ነቲ ማሽን ብኸመይ ከም ዝብገስ ኣርእዩኪ። ሎሚ ነቲ ሳልሳይ ስጉምቲ ኣይትዝክርዮን። እንታይ ትገብሪ?", x: "ትማሊ ብጻይ ስራሕኩም ነቲ ማሽን ብኸመይ ከም ዝብገስ ኣርእዩኩም። ሎሚ ነቲ ሳልሳይ ስጉምቲ ኣይትዝክርዎን። እንታይ ትገብሩ?" }, // nieuw, nalezen
-    'c.firstweeks.o1': { m: "ብጻይ ስራሕካ ሓንሳብ ደጊሙ ከርእየካ ሕተቶ።", f: "ብጻይ ስራሕኪ ሓንሳብ ደጊሙ ከርእየኪ ሕተትዮ።", x: "ብጻይ ስራሕኩም ሓንሳብ ደጊሙ ከርእየኩም ሕተትዎ።" }, // nieuw, nalezen
-    'c.firstweeks.o2': { m: "ገምት፡ ፈትን ድማ።", f: "ገምቲ፡ ፈትኒ ድማ።", x: "ገምቱ፡ ፈትኑ ድማ።" }, // nieuw, nalezen
-    'c.firstweeks.o3': { m: "ካልእ ሰብ ክሳብ ዘበግሶ ተጸበ።", f: "ካልእ ሰብ ክሳብ ዘበግሶ ተጸበዪ።", x: "ካልእ ሰብ ክሳብ ዘበግሶ ተጸበዩ።" }, // nieuw, nalezen
-    'c.firstweeks.w': "ኣብ ቀዳሞት ሰሙናት ዳግማይ ምሕታት ልሙድ እዩ። ኣብ ማሽን ምግማት ሓደገኛ ክኸውን ይኽእል፡ ዝያዳ ግዜ ድማ ይወስድ።", // nieuw, nalezen
-    'c.orderpick': { m: "ኣብ መንገዲ እግሪ ተጓዓዝ", f: "ኣብ መንገዲ እግሪ ተጓዓዚ", x: "ኣብ መንገዲ እግሪ ተጓዓዙ" }, // nieuw, nalezen
-    'c.orderpick.b': { m: "ኣብ ዓቢ መኽዘን፡ ብዝርዝር ምእካብን ስካነርን ትእዛዛት ትእክብ፡ ነፍሲ ወከፍ ኣቕሓ ስካን ትገብር፡ ከምኡ ትኽክለኛ ፍርያት ናብ ትኽክለኛ ዓሚል ይኸይድ። ብዙሓት ኣኻባት ትእዛዝ ናብ ላዕሊ ዘልዕሎም ንእሽቶ መኪና፡ ወይ ንነዋሕቲ መደርደሪታት ሪች ትራክ ይዝውሩ። ስልጠናኡ ምስ ወሰድካ ጥራይ ዘውሮ፡ መብዛሕትኡ ግዜ ምስ ሰርቲፊኬት። ኣብ መንገድታት እግሪ ተጓዓዝ፡ ካብ ዝንቀሳቐሳ መካይን ድማ ርሓቕ፡ ዘዋሪ ኩሉ ግዜ ክርእየካ ኣይክእልን እዩ። ኣብ ዝሑል ክፍሊ ወይ ፍሪዘር፡ ካብ ስራሕ ዝወሃበካ ውዑይ ክዳን፡ ጓንትን ቆብዕን ኽደን። ናይ ምውዓይ ዕረፍትታትካ ውሰድ፡ ክትኣቱ ከለኻ ድማ ንሓደ ሰብ ንገር። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕካ እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኻ ሕተት።", f: "ኣብ ዓቢ መኽዘን፡ ብዝርዝር ምእካብን ስካነርን ትእዛዛት ትእክቢ፡ ነፍሲ ወከፍ ኣቕሓ ስካን ትገብሪ፡ ከምኡ ትኽክለኛ ፍርያት ናብ ትኽክለኛ ዓሚል ይኸይድ። ብዙሓት ኣኻባት ትእዛዝ ናብ ላዕሊ ዘልዕሎም ንእሽቶ መኪና፡ ወይ ንነዋሕቲ መደርደሪታት ሪች ትራክ ይዝውሩ። ስልጠናኡ ምስ ወሰድኪ ጥራይ ዘውርዮ፡ መብዛሕትኡ ግዜ ምስ ሰርቲፊኬት። ኣብ መንገድታት እግሪ ተጓዓዚ፡ ካብ ዝንቀሳቐሳ መካይን ድማ ርሓቒ፡ ዘዋሪ ኩሉ ግዜ ክርእየኪ ኣይክእልን እዩ። ኣብ ዝሑል ክፍሊ ወይ ፍሪዘር፡ ካብ ስራሕ ዝወሃበኪ ውዑይ ክዳን፡ ጓንትን ቆብዕን ኽደኒ። ናይ ምውዓይ ዕረፍትታትኪ ውሰዲ፡ ክትኣትዊ ከለኺ ድማ ንሓደ ሰብ ንገሪ። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕኪ እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኺ ሕተቲ።", x: "ኣብ ዓቢ መኽዘን፡ ብዝርዝር ምእካብን ስካነርን ትእዛዛት ትእክቡ፡ ነፍሲ ወከፍ ኣቕሓ ስካን ትገብሩ፡ ከምኡ ትኽክለኛ ፍርያት ናብ ትኽክለኛ ዓሚል ይኸይድ። ብዙሓት ኣኻባት ትእዛዝ ናብ ላዕሊ ዘልዕሎም ንእሽቶ መኪና፡ ወይ ንነዋሕቲ መደርደሪታት ሪች ትራክ ይዝውሩ። ስልጠናኡ ምስ ወሰድኩም ጥራይ ዘውርዎ፡ መብዛሕትኡ ግዜ ምስ ሰርቲፊኬት። ኣብ መንገድታት እግሪ ተጓዓዙ፡ ካብ ዝንቀሳቐሳ መካይን ድማ ርሓቑ፡ ዘዋሪ ኩሉ ግዜ ክርእየኩም ኣይክእልን እዩ። ኣብ ዝሑል ክፍሊ ወይ ፍሪዘር፡ ካብ ስራሕ ዝወሃበኩም ውዑይ ክዳን፡ ጓንትን ቆብዕን ኽደኑ። ናይ ምውዓይ ዕረፍትታትኩም ውሰዱ፡ ክትኣትዉ ከለኹም ድማ ንሓደ ሰብ ንገሩ። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕኩም እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኹም ሕተቱ።" }, // nieuw, nalezen
-    'c.orderpick.p': "ኣብ ካንቲን ቁሩብ ክውዕይ እየ።", // nieuw, nalezen
-    'c.orderpick.s': { m: "ናብቲ ካልእ መተሓላለፊ ክትከይድ ኣለካ። እቲ መንገዲ እግሪ ይዞር፡ ብማእከል መካይን ትኽ ኢልካ ምስጋር ይቐልጥፍ። እንታይ ትገብር?", f: "ናብቲ ካልእ መተሓላለፊ ክትከዲ ኣለኪ። እቲ መንገዲ እግሪ ይዞር፡ ብማእከል መካይን ትኽ ኢልኪ ምስጋር ይቐልጥፍ። እንታይ ትገብሪ?", x: "ናብቲ ካልእ መተሓላለፊ ክትከዱ ኣለኩም። እቲ መንገዲ እግሪ ይዞር፡ ብማእከል መካይን ትኽ ኢልኩም ምስጋር ይቐልጥፍ። እንታይ ትገብሩ?" }, // nieuw, nalezen
-    'c.orderpick.o1': { m: "ነዊሕ እንተ ኾነ እውን፡ ነቲ መንገዲ እግሪ ተጠቐም።", f: "ነዊሕ እንተ ኾነ እውን፡ ነቲ መንገዲ እግሪ ተጠቐሚ።", x: "ነዊሕ እንተ ኾነ እውን፡ ነቲ መንገዲ እግሪ ተጠቐሙ።" }, // nieuw, nalezen
-    'c.orderpick.o2': { m: "ብማእከል መካይን ቀልጢፍካ ጉየ።", f: "ብማእከል መካይን ቀልጢፍኪ ጉየዪ።", x: "ብማእከል መካይን ቀልጢፍኩም ጉየዩ።" }, // nieuw, nalezen
-    'c.orderpick.o3': { m: "ብእግርኻ ሕለፍ፡ ንዘወርቲ ድማ ኢድካ ወዝውዘሎም።", f: "ብእግርኺ ሕለፊ፡ ንዘወርቲ ድማ ኢድኪ ወዝውዝሎም።", x: "ብእግርኹም ሕለፉ፡ ንዘወርቲ ድማ ኢድኩም ወዝውዙሎም።" }, // nieuw, nalezen
-    'c.orderpick.w': { m: "ዘዋሪ መኪና መብዛሕትኡ ግዜ ክርእየካ ኣይክእልን፡ ንኣብነት ድሕሪ ነዊሕ ጽዕነት። ኣብ መንገዲ እግሪ፡ ሰባት ከም ዝህልዉ ይፍለጥ፡ ውሑሳት ድማ እዮም።", f: "ዘዋሪ መኪና መብዛሕትኡ ግዜ ክርእየኪ ኣይክእልን፡ ንኣብነት ድሕሪ ነዊሕ ጽዕነት። ኣብ መንገዲ እግሪ፡ ሰባት ከም ዝህልዉ ይፍለጥ፡ ውሑሳት ድማ እዮም።", x: "ዘዋሪ መኪና መብዛሕትኡ ግዜ ክርእየኩም ኣይክእልን፡ ንኣብነት ድሕሪ ነዊሕ ጽዕነት። ኣብ መንገዲ እግሪ፡ ሰባት ከም ዝህልዉ ይፍለጥ፡ ውሑሳት ድማ እዮም።" }, // nieuw, nalezen
+    'c.firstweeks': { m: "ደጊምካ ሕተት፡ እዚ ልሙድ እዩ", f: "ደጊምኪ ሕተቲ፡ እዚ ልሙድ እዩ", x: "ደጊምኩም ሕተቱ፡ እዚ ልሙድ እዩ" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.b': { m: "ኣብ ቀዳሞት ሰሙናትካ፡ ኩሉ ከም እትፈልጥ ዝጽበ ሰብ የለን። መብዛሕትኡ ግዜ ዙረት ምልላይ (rondleiding) ይግበረልካ፡ ዝመርሓካ ብጻይ ስራሕ ድማ ይወሃበካ። ቅድም ተዓዘብ፡ ድሕሪኡ ብጻይ ስራሕካ እናተዓዘበ ባዕልካ ግበሮ። ገለ ነገር ረሲዕካ ዲኻ? «Wil je het nog een keer laten zien?» ኢልካ ደጊምካ ሕተት። እዚ ካብ ምግማት ይሓይሽ። ሓደሽቲ ቃላትን ስጉምትታትን ኣብ ንእሽቶ መጽሓፍ ማስታወሻ ጽሓፍ። ገለ ውዕላት ብግዜ ፈተነ (proeftijd) ይጅምሩ፡ ሽዑ ንስኻ ወይ ኣስራሒኻ ነቲ ስራሕ ብቕልጡፍ ከተቋርጽዎ ትኽእሉ ኢኹም። ውዕልካ ግዜ ፈተነ እንተ ኣለዎ ሕተት። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕካ እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኻ ሕተት።", f: "ኣብ ቀዳሞት ሰሙናትኪ፡ ኩሉ ከም እትፈልጢ ዝጽበ ሰብ የለን። መብዛሕትኡ ግዜ ዙረት ምልላይ (rondleiding) ይግበረልኪ፡ ዝመርሓኪ ብጻይ ስራሕ ድማ ይወሃበኪ። ቅድም ተዓዘቢ፡ ድሕሪኡ ብጻይ ስራሕኪ እናተዓዘበ ባዕልኺ ግበርዮ። ገለ ነገር ረሲዕኪ ዲኺ? «Wil je het nog een keer laten zien?» ኢልኪ ደጊምኪ ሕተቲ። እዚ ካብ ምግማት ይሓይሽ። ሓደሽቲ ቃላትን ስጉምትታትን ኣብ ንእሽቶ መጽሓፍ ማስታወሻ ጽሓፊ። ገለ ውዕላት ብግዜ ፈተነ (proeftijd) ይጅምሩ፡ ሽዑ ንስኺ ወይ ኣስራሒኺ ነቲ ስራሕ ብቕልጡፍ ከተቋርጽዎ ትኽእሉ ኢኹም። ውዕልኪ ግዜ ፈተነ እንተ ኣለዎ ሕተቲ። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕኪ እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኺ ሕተቲ።", x: "ኣብ ቀዳሞት ሰሙናትኩም፡ ኩሉ ከም እትፈልጡ ዝጽበ ሰብ የለን። መብዛሕትኡ ግዜ ዙረት ምልላይ (rondleiding) ይግበረልኩም፡ ዝመርሓኩም ብጻይ ስራሕ ድማ ይወሃበኩም። ቅድም ተዓዘቡ፡ ድሕሪኡ ብጻይ ስራሕኩም እናተዓዘበ ባዕልኹም ግበርዎ። ገለ ነገር ረሲዕኩም ዲኹም? «Wil je het nog een keer laten zien?» ኢልኩም ደጊምኩም ሕተቱ። እዚ ካብ ምግማት ይሓይሽ። ሓደሽቲ ቃላትን ስጉምትታትን ኣብ ንእሽቶ መጽሓፍ ማስታወሻ ጽሓፉ። ገለ ውዕላት ብግዜ ፈተነ (proeftijd) ይጅምሩ፡ ሽዑ ንስኹም ወይ ኣስራሒኹም ነቲ ስራሕ ብቕልጡፍ ከተቋርጽዎ ትኽእሉ ኢኹም። ውዕልኩም ግዜ ፈተነ እንተ ኣለዎ ሕተቱ። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕኩም እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኹም ሕተቱ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.p': "ረሲዐዮ። ሓንሳብ ደጊምካ ከተርእየኒ ትኽእል ዶ?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.s': { m: "ትማሊ ብጻይ ስራሕካ ነቲ ማሽን ብኸመይ ከም ዝብገስ ኣርእዩካ። ሎሚ ነቲ ሳልሳይ ስጉምቲ ኣይትዝክሮን። እንታይ ትገብር?", f: "ትማሊ ብጻይ ስራሕኪ ነቲ ማሽን ብኸመይ ከም ዝብገስ ኣርእዩኪ። ሎሚ ነቲ ሳልሳይ ስጉምቲ ኣይትዝክርዮን። እንታይ ትገብሪ?", x: "ትማሊ ብጻይ ስራሕኩም ነቲ ማሽን ብኸመይ ከም ዝብገስ ኣርእዩኩም። ሎሚ ነቲ ሳልሳይ ስጉምቲ ኣይትዝክርዎን። እንታይ ትገብሩ?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.o1': { m: "ብጻይ ስራሕካ ሓንሳብ ደጊሙ ከርእየካ ሕተቶ።", f: "ብጻይ ስራሕኪ ሓንሳብ ደጊሙ ከርእየኪ ሕተትዮ።", x: "ብጻይ ስራሕኩም ሓንሳብ ደጊሙ ከርእየኩም ሕተትዎ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.o2': { m: "ገምት፡ ፈትን ድማ።", f: "ገምቲ፡ ፈትኒ ድማ።", x: "ገምቱ፡ ፈትኑ ድማ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.o3': { m: "ካልእ ሰብ ክሳብ ዘበግሶ ተጸበ።", f: "ካልእ ሰብ ክሳብ ዘበግሶ ተጸበዪ።", x: "ካልእ ሰብ ክሳብ ዘበግሶ ተጸበዩ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.w': "ኣብ ቀዳሞት ሰሙናት ዳግማይ ምሕታት ልሙድ እዩ። ኣብ ማሽን ምግማት ሓደገኛ ክኸውን ይኽእል፡ ዝያዳ ግዜ ድማ ይወስድ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick': { m: "ኣብ መንገዲ እግሪ ተጓዓዝ", f: "ኣብ መንገዲ እግሪ ተጓዓዚ", x: "ኣብ መንገዲ እግሪ ተጓዓዙ" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.b': { m: "ኣብ ዓቢ መኽዘን፡ ብዝርዝር ምእካብን ስካነርን ትእዛዛት ትእክብ፡ ነፍሲ ወከፍ ኣቕሓ ስካን ትገብር፡ ከምኡ ትኽክለኛ ፍርያት ናብ ትኽክለኛ ዓሚል ይኸይድ። ብዙሓት ኣኻባት ትእዛዝ ናብ ላዕሊ ዘልዕሎም ንእሽቶ መኪና፡ ወይ ንነዋሕቲ መደርደሪታት ሪች ትራክ ይዝውሩ። ስልጠናኡ ምስ ወሰድካ ጥራይ ዘውሮ፡ መብዛሕትኡ ግዜ ምስ ሰርቲፊኬት። ኣብ መንገድታት እግሪ ተጓዓዝ፡ ካብ ዝንቀሳቐሳ መካይን ድማ ርሓቕ፡ ዘዋሪ ኩሉ ግዜ ክርእየካ ኣይክእልን እዩ። ኣብ ዝሑል ክፍሊ ወይ ፍሪዘር፡ ካብ ስራሕ ዝወሃበካ ውዑይ ክዳን፡ ጓንትን ቆብዕን ኽደን። ናይ ምውዓይ ዕረፍትታትካ ውሰድ፡ ክትኣቱ ከለኻ ድማ ንሓደ ሰብ ንገር። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕካ እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኻ ሕተት።", f: "ኣብ ዓቢ መኽዘን፡ ብዝርዝር ምእካብን ስካነርን ትእዛዛት ትእክቢ፡ ነፍሲ ወከፍ ኣቕሓ ስካን ትገብሪ፡ ከምኡ ትኽክለኛ ፍርያት ናብ ትኽክለኛ ዓሚል ይኸይድ። ብዙሓት ኣኻባት ትእዛዝ ናብ ላዕሊ ዘልዕሎም ንእሽቶ መኪና፡ ወይ ንነዋሕቲ መደርደሪታት ሪች ትራክ ይዝውሩ። ስልጠናኡ ምስ ወሰድኪ ጥራይ ዘውርዮ፡ መብዛሕትኡ ግዜ ምስ ሰርቲፊኬት። ኣብ መንገድታት እግሪ ተጓዓዚ፡ ካብ ዝንቀሳቐሳ መካይን ድማ ርሓቒ፡ ዘዋሪ ኩሉ ግዜ ክርእየኪ ኣይክእልን እዩ። ኣብ ዝሑል ክፍሊ ወይ ፍሪዘር፡ ካብ ስራሕ ዝወሃበኪ ውዑይ ክዳን፡ ጓንትን ቆብዕን ኽደኒ። ናይ ምውዓይ ዕረፍትታትኪ ውሰዲ፡ ክትኣትዊ ከለኺ ድማ ንሓደ ሰብ ንገሪ። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕኪ እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኺ ሕተቲ።", x: "ኣብ ዓቢ መኽዘን፡ ብዝርዝር ምእካብን ስካነርን ትእዛዛት ትእክቡ፡ ነፍሲ ወከፍ ኣቕሓ ስካን ትገብሩ፡ ከምኡ ትኽክለኛ ፍርያት ናብ ትኽክለኛ ዓሚል ይኸይድ። ብዙሓት ኣኻባት ትእዛዝ ናብ ላዕሊ ዘልዕሎም ንእሽቶ መኪና፡ ወይ ንነዋሕቲ መደርደሪታት ሪች ትራክ ይዝውሩ። ስልጠናኡ ምስ ወሰድኩም ጥራይ ዘውርዎ፡ መብዛሕትኡ ግዜ ምስ ሰርቲፊኬት። ኣብ መንገድታት እግሪ ተጓዓዙ፡ ካብ ዝንቀሳቐሳ መካይን ድማ ርሓቑ፡ ዘዋሪ ኩሉ ግዜ ክርእየኩም ኣይክእልን እዩ። ኣብ ዝሑል ክፍሊ ወይ ፍሪዘር፡ ካብ ስራሕ ዝወሃበኩም ውዑይ ክዳን፡ ጓንትን ቆብዕን ኽደኑ። ናይ ምውዓይ ዕረፍትታትኩም ውሰዱ፡ ክትኣትዉ ከለኹም ድማ ንሓደ ሰብ ንገሩ። ሕግታት ካብ ትካል ናብ ትካል ይፈላለ፡ ኣብ ቦታ ስራሕኩም እንታይ ሕግታት ከም ዘለዉ ንተቖጻጻሪኹም ሕተቱ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.p': "ኣብ ካንቲን ቁሩብ ክውዕይ እየ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.s': { m: "ናብቲ ካልእ መተሓላለፊ ክትከይድ ኣለካ። እቲ መንገዲ እግሪ ይዞር፡ ብማእከል መካይን ትኽ ኢልካ ምስጋር ይቐልጥፍ። እንታይ ትገብር?", f: "ናብቲ ካልእ መተሓላለፊ ክትከዲ ኣለኪ። እቲ መንገዲ እግሪ ይዞር፡ ብማእከል መካይን ትኽ ኢልኪ ምስጋር ይቐልጥፍ። እንታይ ትገብሪ?", x: "ናብቲ ካልእ መተሓላለፊ ክትከዱ ኣለኩም። እቲ መንገዲ እግሪ ይዞር፡ ብማእከል መካይን ትኽ ኢልኩም ምስጋር ይቐልጥፍ። እንታይ ትገብሩ?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o1': { m: "ነዊሕ እንተ ኾነ እውን፡ ነቲ መንገዲ እግሪ ተጠቐም።", f: "ነዊሕ እንተ ኾነ እውን፡ ነቲ መንገዲ እግሪ ተጠቐሚ።", x: "ነዊሕ እንተ ኾነ እውን፡ ነቲ መንገዲ እግሪ ተጠቐሙ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o2': { m: "ብማእከል መካይን ቀልጢፍካ ጉየ።", f: "ብማእከል መካይን ቀልጢፍኪ ጉየዪ።", x: "ብማእከል መካይን ቀልጢፍኩም ጉየዩ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o3': { m: "ብእግርኻ ሕለፍ፡ ንዘወርቲ ድማ ኢድካ ወዝውዘሎም።", f: "ብእግርኺ ሕለፊ፡ ንዘወርቲ ድማ ኢድኪ ወዝውዝሎም።", x: "ብእግርኹም ሕለፉ፡ ንዘወርቲ ድማ ኢድኩም ወዝውዙሎም።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.w': { m: "ዘዋሪ መኪና መብዛሕትኡ ግዜ ክርእየካ ኣይክእልን፡ ንኣብነት ድሕሪ ነዊሕ ጽዕነት። ኣብ መንገዲ እግሪ፡ ሰባት ከም ዝህልዉ ይፍለጥ፡ ውሑሳት ድማ እዮም።", f: "ዘዋሪ መኪና መብዛሕትኡ ግዜ ክርእየኪ ኣይክእልን፡ ንኣብነት ድሕሪ ነዊሕ ጽዕነት። ኣብ መንገዲ እግሪ፡ ሰባት ከም ዝህልዉ ይፍለጥ፡ ውሑሳት ድማ እዮም።", x: "ዘዋሪ መኪና መብዛሕትኡ ግዜ ክርእየኩም ኣይክእልን፡ ንኣብነት ድሕሪ ነዊሕ ጽዕነት። ኣብ መንገዲ እግሪ፡ ሰባት ከም ዝህልዉ ይፍለጥ፡ ውሑሳት ድማ እዮም።" }, // nieuw, nalezen // nagelezen AI 28 nov
     // four new lessons (27 November 2026).
-    'l.appraisal': "ዘተ ብዛዕባ ኣፈጻጽማ ስራሕ", // nieuw, nalezen
-    'w.functioneringsgesprek': { m: "ዘተ ኣፈጻጽማ (ምስ ተቖጻጻሪኻ ብዛዕባ ከመይ ይኸይድ ከም ዘሎ ስራሕካን እንታይ ክትመሃር ከም እትደልን ዝግበር ዘተ)", f: "ዘተ ኣፈጻጽማ (ምስ ተቖጻጻሪኺ ብዛዕባ ከመይ ይኸይድ ከም ዘሎ ስራሕኪን እንታይ ክትመሃሪ ከም እትደልዪን ዝግበር ዘተ)", x: "ዘተ ኣፈጻጽማ (ምስ ተቖጻጻሪኹም ብዛዕባ ከመይ ይኸይድ ከም ዘሎ ስራሕኩምን እንታይ ክትመሃሩ ከም እትደልዩን ዝግበር ዘተ)" }, // nieuw, nalezen
-    'w.beoordelingsgesprek': { m: "ዘተ ገምጋም (ተቖጻጻሪኻ ብዛዕባ ስራሕካ ፍርዲ ዝህበሉ ዘተ)", f: "ዘተ ገምጋም (ተቖጻጻሪኺ ብዛዕባ ስራሕኪ ፍርዲ ዝህበሉ ዘተ)", x: "ዘተ ገምጋም (ተቖጻጻሪኹም ብዛዕባ ስራሕኩም ፍርዲ ዝህበሉ ዘተ)" }, // nieuw, nalezen
-    'w.voorbereiden': "ምድላው (ንሓደ ነገር ድሉው ምዃን)", // nieuw, nalezen
-    'w.goedgaan': "ጽቡቕ ምኻድ", // nieuw, nalezen
-    'w.doel': { m: "ዕላማ (ክትበጽሖ እትደሊ)", f: "ዕላማ (ክትበጽሕዮ እትደልዪ)", x: "ዕላማ (ክትበጽሕዎ እትደልዩ)" }, // nieuw, nalezen
-    'w.voorgezien': { m: "«ተራእዩ» ኢልካ ምፍራም (ኣንቢብካዮ ኣለኻ፡ ትሰማማዕ ኣለኻ ማለት ኣይኮነን)", f: "«ተራእዩ» ኢልኪ ምፍራም (ኣንቢብክዮ ኣለኺ፡ ትሰማምዒ ኣለኺ ማለት ኣይኮነን)", x: "«ተራእዩ» ኢልኩም ምፍራም (ኣንቢብኩምዎ ኣለኹም፡ ትሰማምዑ ኣለኹም ማለት ኣይኮነን)" }, // nieuw, nalezen
-    's.appraisal.1': "ነቲ ዘተ ብጽቡቕ እዳሉ።", // nieuw, nalezen
-    's.appraisal.2': "ገለ ሓድሽ ነገር ክመሃር እደሊ።", // nieuw, nalezen
-    's.appraisal.3': "ነቲ ጸብጻብ ቅድም ከንብቦ ይፍቀደለይ ዶ?", // nieuw, nalezen
-    'd.appraisal.q': { m: "ንዝመጽእ ዓመት ዕላማኻ እንታይ እዩ?", f: "ንዝመጽእ ዓመት ዕላማኺ እንታይ እዩ?", x: "ንዝመጽእ ዓመት ዕላማኹም እንታይ እዩ?" }, // nieuw, nalezen
-    'd.appraisal.a': "ሰርቲፊኬት ፎርክሊፍት ክረክብ እደሊ።", // nieuw, nalezen
-    'c.appraisal': { m: "ዘተኻ፡ ኣዳልዎ፡ ኣንብቦ", f: "ዘተኺ፡ ኣዳልውዮ፡ ኣንብብዮ", x: "ዘተኹም፡ ኣዳልውዎ፡ ኣንብብዎ" }, // nieuw, nalezen
-    'c.appraisal.b': { m: "ብዙሓት ትካላት ኣብ ዓመት ሓንሳብ ወይ ክልተ ግዜ ብዛዕባ ስራሕካ ዘተ ይገብሩ። ኣብ ዘተ ኣፈጻጽማ (functioneringsgesprek) ብሓባር ትዘራረቡ፡ እንታይ ጽቡቕ ይኸይድ፡ እንታይ ክመሓየሽ ይኽእል፡ እንታይ ክትመሃር ከም እትደሊ ድማ። ኣብ ዘተ ገምጋም (beoordelingsgesprek) ተቖጻጻሪኻ ፍርዲ ይህብ። እዚ ኣብ ደሞዝካ ወይ ኣብ ሓድሽ ውዕል ክጸሉ ይኽእል። ነቲ ዘተ ኣዳልዎ፡ እንታይ ጽቡቕ ከም ዝኸይድ፡ እንታይ ከቢድ ከም ዝኾነ፡ እንታይ ክትመሃር ከም እትደሊ ድማ ጽሓፍ። ኮርስ ወይ ስልጠና ክትሓትት ይፍቀደልካ እዩ። ኣብ መወዳእታ ስምምዓት (afspraken) ትገብሩ፡ መብዛሕትኡ ግዜ ኣብ ሓጺር ጸብጻብ። ቅድሚ ምፍራምካ ብጽቡቕ ኣንብቦ፡ ቅዳሕ ድማ ሕተት። ኣይትሰማማዕን ዲኻ? «voor gezien» (ተራእዩ) ፈርም፡ «voor akkoord» (ተሰማሚዐ) ኣይኮነን፡ ናይ ገዛእ ርእስኻ ርእይቶ ድማ ጽሓፍ። ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትካ፡ ንኣስራሒኻ፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተት።", f: "ብዙሓት ትካላት ኣብ ዓመት ሓንሳብ ወይ ክልተ ግዜ ብዛዕባ ስራሕኪ ዘተ ይገብሩ። ኣብ ዘተ ኣፈጻጽማ (functioneringsgesprek) ብሓባር ትዘራረቡ፡ እንታይ ጽቡቕ ይኸይድ፡ እንታይ ክመሓየሽ ይኽእል፡ እንታይ ክትመሃሪ ከም እትደልዪ ድማ። ኣብ ዘተ ገምጋም (beoordelingsgesprek) ተቖጻጻሪኺ ፍርዲ ይህብ። እዚ ኣብ ደሞዝኪ ወይ ኣብ ሓድሽ ውዕል ክጸሉ ይኽእል። ነቲ ዘተ ኣዳልውዮ፡ እንታይ ጽቡቕ ከም ዝኸይድ፡ እንታይ ከቢድ ከም ዝኾነ፡ እንታይ ክትመሃሪ ከም እትደልዪ ድማ ጽሓፊ። ኮርስ ወይ ስልጠና ክትሓትቲ ይፍቀደልኪ እዩ። ኣብ መወዳእታ ስምምዓት (afspraken) ትገብሩ፡ መብዛሕትኡ ግዜ ኣብ ሓጺር ጸብጻብ። ቅድሚ ምፍራምኪ ብጽቡቕ ኣንብብዮ፡ ቅዳሕ ድማ ሕተቲ። ኣይትሰማምዒን ዲኺ? «voor gezien» (ተራእዩ) ፈርሚ፡ «voor akkoord» (ተሰማሚዐ) ኣይኮነን፡ ናይ ገዛእ ርእስኺ ርእይቶ ድማ ጽሓፊ። ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትኪ፡ ንኣስራሒኺ፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተቲ።", x: "ብዙሓት ትካላት ኣብ ዓመት ሓንሳብ ወይ ክልተ ግዜ ብዛዕባ ስራሕኩም ዘተ ይገብሩ። ኣብ ዘተ ኣፈጻጽማ (functioneringsgesprek) ብሓባር ትዘራረቡ፡ እንታይ ጽቡቕ ይኸይድ፡ እንታይ ክመሓየሽ ይኽእል፡ እንታይ ክትመሃሩ ከም እትደልዩ ድማ። ኣብ ዘተ ገምጋም (beoordelingsgesprek) ተቖጻጻሪኹም ፍርዲ ይህብ። እዚ ኣብ ደሞዝኩም ወይ ኣብ ሓድሽ ውዕል ክጸሉ ይኽእል። ነቲ ዘተ ኣዳልውዎ፡ እንታይ ጽቡቕ ከም ዝኸይድ፡ እንታይ ከቢድ ከም ዝኾነ፡ እንታይ ክትመሃሩ ከም እትደልዩ ድማ ጽሓፉ። ኮርስ ወይ ስልጠና ክትሓትቱ ይፍቀደልኩም እዩ። ኣብ መወዳእታ ስምምዓት (afspraken) ትገብሩ፡ መብዛሕትኡ ግዜ ኣብ ሓጺር ጸብጻብ። ቅድሚ ምፍራምኩም ብጽቡቕ ኣንብብዎ፡ ቅዳሕ ድማ ሕተቱ። ኣይትሰማምዑን ዲኹም? «voor gezien» (ተራእዩ) ፈርሙ፡ «voor akkoord» (ተሰማሚዐ) ኣይኮነን፡ ናይ ገዛእ ርእስኹም ርእይቶ ድማ ጽሓፉ። ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትኩም፡ ንኣስራሒኹም፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተቱ።" }, // nieuw, nalezen
-    'c.appraisal.p': "«ተራእዩ» ኢለ እፍርም፡ «ተሰማሚዐ» ኣይኮነን።", // nieuw, nalezen
-    'c.appraisal.s': { m: "ድሕሪ ዘተ ገምጋምካ ነቲ ጸብጻብ ክትፍርመሉ ይወሃበካ። ሓደ ነጥቢ ኣብኡ ሓቂ ኣይኮነን ይመስለካ። እንታይ ትገብር?", f: "ድሕሪ ዘተ ገምጋምኪ ነቲ ጸብጻብ ክትፍርምሉ ይወሃበኪ። ሓደ ነጥቢ ኣብኡ ሓቂ ኣይኮነን ይመስለኪ። እንታይ ትገብሪ?", x: "ድሕሪ ዘተ ገምጋምኩም ነቲ ጸብጻብ ክትፍርሙሉ ይወሃበኩም። ሓደ ነጥቢ ኣብኡ ሓቂ ኣይኮነን ይመስለኩም። እንታይ ትገብሩ?" }, // nieuw, nalezen
-    'c.appraisal.o1': { m: "«voor gezien» ፈርም፡ ርእይቶኻ ድማ ጽሓፍ።", f: "«voor gezien» ፈርሚ፡ ርእይቶኺ ድማ ጽሓፊ።", x: "«voor gezien» ፈርሙ፡ ርእይቶኹም ድማ ጽሓፉ።" }, // nieuw, nalezen
-    'c.appraisal.o2': { m: "ክውዳእ ኢልካ ቀልጢፍካ «voor akkoord» ፈርም።", f: "ክውዳእ ኢልኪ ቀልጢፍኪ «voor akkoord» ፈርሚ።", x: "ክውዳእ ኢልኩም ቀልጢፍኩም «voor akkoord» ፈርሙ።" }, // nieuw, nalezen
-    'c.appraisal.o3': { m: "ገለ ኣይትበል፡ ፈጺምካ ድማ ኣይትፈርም።", f: "ገለ ኣይትበሊ፡ ፈጺምኪ ድማ ኣይትፈርሚ።", x: "ገለ ኣይትበሉ፡ ፈጺምኩም ድማ ኣይትፈርሙ።" }, // nieuw, nalezen
-    'c.appraisal.w': { m: "«Voor gezien» ማለት ኣንቢብካዮ ኣለኻ ማለት እዩ፡ ትሰማማዕ ኣለኻ ማለት ኣይኮነን። እዚ ምስ እትብልን ናይ ገዛእ ርእስኻ ርእይቶ ምስ እትጽሕፍን፡ ተቖጻጻሪኻ እንታይ ከም እትሓስብ ይፈልጥ።", f: "«Voor gezien» ማለት ኣንቢብክዮ ኣለኺ ማለት እዩ፡ ትሰማምዒ ኣለኺ ማለት ኣይኮነን። እዚ ምስ እትብሊን ናይ ገዛእ ርእስኺ ርእይቶ ምስ እትጽሕፊን፡ ተቖጻጻሪኺ እንታይ ከም እትሓስቢ ይፈልጥ።", x: "«Voor gezien» ማለት ኣንቢብኩምዎ ኣለኹም ማለት እዩ፡ ትሰማምዑ ኣለኹም ማለት ኣይኮነን። እዚ ምስ እትብሉን ናይ ገዛእ ርእስኹም ርእይቶ ምስ እትጽሕፉን፡ ተቖጻጻሪኹም እንታይ ከም እትሓስቡ ይፈልጥ።" }, // nieuw, nalezen
+    'l.appraisal': "ዘተ ብዛዕባ ኣፈጻጽማ ስራሕ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.functioneringsgesprek': { m: "ዘተ ኣፈጻጽማ (ምስ ተቖጻጻሪኻ ብዛዕባ ከመይ ይኸይድ ከም ዘሎ ስራሕካን እንታይ ክትመሃር ከም እትደልን ዝግበር ዘተ)", f: "ዘተ ኣፈጻጽማ (ምስ ተቖጻጻሪኺ ብዛዕባ ከመይ ይኸይድ ከም ዘሎ ስራሕኪን እንታይ ክትመሃሪ ከም እትደልዪን ዝግበር ዘተ)", x: "ዘተ ኣፈጻጽማ (ምስ ተቖጻጻሪኹም ብዛዕባ ከመይ ይኸይድ ከም ዘሎ ስራሕኩምን እንታይ ክትመሃሩ ከም እትደልዩን ዝግበር ዘተ)" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beoordelingsgesprek': { m: "ዘተ ገምጋም (ተቖጻጻሪኻ ብዛዕባ ስራሕካ ፍርዲ ዝህበሉ ዘተ)", f: "ዘተ ገምጋም (ተቖጻጻሪኺ ብዛዕባ ስራሕኪ ፍርዲ ዝህበሉ ዘተ)", x: "ዘተ ገምጋም (ተቖጻጻሪኹም ብዛዕባ ስራሕኩም ፍርዲ ዝህበሉ ዘተ)" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorbereiden': "ምድላው (ንሓደ ነገር ድሉው ምዃን)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedgaan': "ጽቡቕ ምኻድ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doel': { m: "ዕላማ (ክትበጽሖ እትደሊ)", f: "ዕላማ (ክትበጽሕዮ እትደልዪ)", x: "ዕላማ (ክትበጽሕዎ እትደልዩ)" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorgezien': { m: "«ተራእዩ» ኢልካ ምፍራም (ኣንቢብካዮ ኣለኻ፡ ትሰማማዕ ኣለኻ ማለት ኣይኮነን)", f: "«ተራእዩ» ኢልኪ ምፍራም (ኣንቢብክዮ ኣለኺ፡ ትሰማምዒ ኣለኺ ማለት ኣይኮነን)", x: "«ተራእዩ» ኢልኩም ምፍራም (ኣንቢብኩምዎ ኣለኹም፡ ትሰማምዑ ኣለኹም ማለት ኣይኮነን)" }, // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.1': "ነቲ ዘተ ብጽቡቕ እዳሉ።", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.2': "ገለ ሓድሽ ነገር ክመሃር እደሊ።", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.3': "ነቲ ጸብጻብ ቅድም ከንብቦ ይፍቀደለይ ዶ?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.appraisal.q': { m: "ንዝመጽእ ዓመት ዕላማኻ እንታይ እዩ?", f: "ንዝመጽእ ዓመት ዕላማኺ እንታይ እዩ?", x: "ንዝመጽእ ዓመት ዕላማኹም እንታይ እዩ?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'd.appraisal.a': "ሰርቲፊኬት ፎርክሊፍት ክረክብ እደሊ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal': { m: "ዘተኻ፡ ኣዳልዎ፡ ኣንብቦ", f: "ዘተኺ፡ ኣዳልውዮ፡ ኣንብብዮ", x: "ዘተኹም፡ ኣዳልውዎ፡ ኣንብብዎ" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.b': { m: "ብዙሓት ትካላት ኣብ ዓመት ሓንሳብ ወይ ክልተ ግዜ ብዛዕባ ስራሕካ ዘተ ይገብሩ። ኣብ ዘተ ኣፈጻጽማ (functioneringsgesprek) ብሓባር ትዘራረቡ፡ እንታይ ጽቡቕ ይኸይድ፡ እንታይ ክመሓየሽ ይኽእል፡ እንታይ ክትመሃር ከም እትደሊ ድማ። ኣብ ዘተ ገምጋም (beoordelingsgesprek) ተቖጻጻሪኻ ፍርዲ ይህብ። እዚ ኣብ ደሞዝካ ወይ ኣብ ሓድሽ ውዕል ክጸሉ ይኽእል። ነቲ ዘተ ኣዳልዎ፡ እንታይ ጽቡቕ ከም ዝኸይድ፡ እንታይ ከቢድ ከም ዝኾነ፡ እንታይ ክትመሃር ከም እትደሊ ድማ ጽሓፍ። ኮርስ ወይ ስልጠና ክትሓትት ይፍቀደልካ እዩ። ኣብ መወዳእታ ስምምዓት (afspraken) ትገብሩ፡ መብዛሕትኡ ግዜ ኣብ ሓጺር ጸብጻብ። ቅድሚ ምፍራምካ ብጽቡቕ ኣንብቦ፡ ቅዳሕ ድማ ሕተት። ኣይትሰማማዕን ዲኻ? «voor gezien» (ተራእዩ) ፈርም፡ «voor akkoord» (ተሰማሚዐ) ኣይኮነን፡ ናይ ገዛእ ርእስኻ ርእይቶ ድማ ጽሓፍ። ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትካ፡ ንኣስራሒኻ፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተት።", f: "ብዙሓት ትካላት ኣብ ዓመት ሓንሳብ ወይ ክልተ ግዜ ብዛዕባ ስራሕኪ ዘተ ይገብሩ። ኣብ ዘተ ኣፈጻጽማ (functioneringsgesprek) ብሓባር ትዘራረቡ፡ እንታይ ጽቡቕ ይኸይድ፡ እንታይ ክመሓየሽ ይኽእል፡ እንታይ ክትመሃሪ ከም እትደልዪ ድማ። ኣብ ዘተ ገምጋም (beoordelingsgesprek) ተቖጻጻሪኺ ፍርዲ ይህብ። እዚ ኣብ ደሞዝኪ ወይ ኣብ ሓድሽ ውዕል ክጸሉ ይኽእል። ነቲ ዘተ ኣዳልውዮ፡ እንታይ ጽቡቕ ከም ዝኸይድ፡ እንታይ ከቢድ ከም ዝኾነ፡ እንታይ ክትመሃሪ ከም እትደልዪ ድማ ጽሓፊ። ኮርስ ወይ ስልጠና ክትሓትቲ ይፍቀደልኪ እዩ። ኣብ መወዳእታ ስምምዓት (afspraken) ትገብሩ፡ መብዛሕትኡ ግዜ ኣብ ሓጺር ጸብጻብ። ቅድሚ ምፍራምኪ ብጽቡቕ ኣንብብዮ፡ ቅዳሕ ድማ ሕተቲ። ኣይትሰማምዒን ዲኺ? «voor gezien» (ተራእዩ) ፈርሚ፡ «voor akkoord» (ተሰማሚዐ) ኣይኮነን፡ ናይ ገዛእ ርእስኺ ርእይቶ ድማ ጽሓፊ። ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትኪ፡ ንኣስራሒኺ፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተቲ።", x: "ብዙሓት ትካላት ኣብ ዓመት ሓንሳብ ወይ ክልተ ግዜ ብዛዕባ ስራሕኩም ዘተ ይገብሩ። ኣብ ዘተ ኣፈጻጽማ (functioneringsgesprek) ብሓባር ትዘራረቡ፡ እንታይ ጽቡቕ ይኸይድ፡ እንታይ ክመሓየሽ ይኽእል፡ እንታይ ክትመሃሩ ከም እትደልዩ ድማ። ኣብ ዘተ ገምጋም (beoordelingsgesprek) ተቖጻጻሪኹም ፍርዲ ይህብ። እዚ ኣብ ደሞዝኩም ወይ ኣብ ሓድሽ ውዕል ክጸሉ ይኽእል። ነቲ ዘተ ኣዳልውዎ፡ እንታይ ጽቡቕ ከም ዝኸይድ፡ እንታይ ከቢድ ከም ዝኾነ፡ እንታይ ክትመሃሩ ከም እትደልዩ ድማ ጽሓፉ። ኮርስ ወይ ስልጠና ክትሓትቱ ይፍቀደልኩም እዩ። ኣብ መወዳእታ ስምምዓት (afspraken) ትገብሩ፡ መብዛሕትኡ ግዜ ኣብ ሓጺር ጸብጻብ። ቅድሚ ምፍራምኩም ብጽቡቕ ኣንብብዎ፡ ቅዳሕ ድማ ሕተቱ። ኣይትሰማምዑን ዲኹም? «voor gezien» (ተራእዩ) ፈርሙ፡ «voor akkoord» (ተሰማሚዐ) ኣይኮነን፡ ናይ ገዛእ ርእስኹም ርእይቶ ድማ ጽሓፉ። ሓፈሻዊ ሓበሬታ እዩ። ብዛዕባ ኩነታትኩም፡ ንኣስራሒኹም፡ ንማሕበር ሰራሕተኛታት ወይ ንJuridisch Loket ሕተቱ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.p': "«ተራእዩ» ኢለ እፍርም፡ «ተሰማሚዐ» ኣይኮነን።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.s': { m: "ድሕሪ ዘተ ገምጋምካ ነቲ ጸብጻብ ክትፍርመሉ ይወሃበካ። ሓደ ነጥቢ ኣብኡ ሓቂ ኣይኮነን ይመስለካ። እንታይ ትገብር?", f: "ድሕሪ ዘተ ገምጋምኪ ነቲ ጸብጻብ ክትፍርምሉ ይወሃበኪ። ሓደ ነጥቢ ኣብኡ ሓቂ ኣይኮነን ይመስለኪ። እንታይ ትገብሪ?", x: "ድሕሪ ዘተ ገምጋምኩም ነቲ ጸብጻብ ክትፍርሙሉ ይወሃበኩም። ሓደ ነጥቢ ኣብኡ ሓቂ ኣይኮነን ይመስለኩም። እንታይ ትገብሩ?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o1': { m: "«voor gezien» ፈርም፡ ርእይቶኻ ድማ ጽሓፍ።", f: "«voor gezien» ፈርሚ፡ ርእይቶኺ ድማ ጽሓፊ።", x: "«voor gezien» ፈርሙ፡ ርእይቶኹም ድማ ጽሓፉ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o2': { m: "ክውዳእ ኢልካ ቀልጢፍካ «voor akkoord» ፈርም።", f: "ክውዳእ ኢልኪ ቀልጢፍኪ «voor akkoord» ፈርሚ።", x: "ክውዳእ ኢልኩም ቀልጢፍኩም «voor akkoord» ፈርሙ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o3': { m: "ገለ ኣይትበል፡ ፈጺምካ ድማ ኣይትፈርም።", f: "ገለ ኣይትበሊ፡ ፈጺምኪ ድማ ኣይትፈርሚ።", x: "ገለ ኣይትበሉ፡ ፈጺምኩም ድማ ኣይትፈርሙ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.w': { m: "«Voor gezien» ማለት ኣንቢብካዮ ኣለኻ ማለት እዩ፡ ትሰማማዕ ኣለኻ ማለት ኣይኮነን። እዚ ምስ እትብልን ናይ ገዛእ ርእስኻ ርእይቶ ምስ እትጽሕፍን፡ ተቖጻጻሪኻ እንታይ ከም እትሓስብ ይፈልጥ።", f: "«Voor gezien» ማለት ኣንቢብክዮ ኣለኺ ማለት እዩ፡ ትሰማምዒ ኣለኺ ማለት ኣይኮነን። እዚ ምስ እትብሊን ናይ ገዛእ ርእስኺ ርእይቶ ምስ እትጽሕፊን፡ ተቖጻጻሪኺ እንታይ ከም እትሓስቢ ይፈልጥ።", x: "«Voor gezien» ማለት ኣንቢብኩምዎ ኣለኹም ማለት እዩ፡ ትሰማምዑ ኣለኹም ማለት ኣይኮነን። እዚ ምስ እትብሉን ናይ ገዛእ ርእስኹም ርእይቶ ምስ እትጽሕፉን፡ ተቖጻጻሪኹም እንታይ ከም እትሓስቡ ይፈልጥ።" }, // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 

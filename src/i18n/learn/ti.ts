@@ -4,15 +4,15 @@ import type { CultureTranslation } from '../culture/types';
 const t: CultureTranslation = {
   ui: {
     sayAloud: { m: "ማይክሮፎን ኣየድልን። ብዓው ኢልካ በሎ፡ ድሕሪኡ ቀጽል።", f: "ማይክሮፎን ኣየድልን። ብዓው ኢልኪ በልዮ፡ ድሕሪኡ ቀጽሊ።" },
-    micRetry: { m: "ማይክሮፎን ደጊምካ ፈትን", f: "ማይክሮፎን ደጊምኪ ፈትኒ", x: 'ማይክሮፎን ደጊምኩም ፈትኑ' }, // x: nieuw, nalezen
+    micRetry: { m: "ማይክሮፎን ደጊምካ ፈትን", f: "ማይክሮፎን ደጊምኪ ፈትኒ", x: 'ማይክሮፎን ደጊምኩም ፈትኑ' }, // x: nieuw, nalezen // nagelezen AI 28 nov
     micFailed: { m: "ማይክሮፎን ኣይሰርሐን። ብዓው ኢልካ በሎ፡ ድሕሪኡ ቀጽል።", f: "ማይክሮፎን ኣይሰርሐን። ብዓው ኢልኪ በልዮ፡ ድሕሪኡ ቀጽሊ።" },
-    micRefused: { m: "እታ ኣፕ ማይክሮፎንካ ክትጥቀም ኣይተፈቕደላን። ክትከፍቶ ትኽእል ኢኻ።", f: "እታ ኣፕ ማይክሮፎንኪ ክትጥቀም ኣይተፈቕደላን። ክትከፍትዮ ትኽእሊ ኢኺ።", x: "እታ ኣፕ ማይክሮፎንኩም ክትጥቀም ኣይተፈቕደላን። ክትከፍትዎ ትኽእሉ ኢኹም።" }, // nieuw, nalezen
-    micTurnOn: { m: "ማይክሮፎን ክፈት", f: "ማይክሮፎን ክፈቲ", x: "ማይክሮፎን ክፈቱ" }, // nieuw, nalezen
-    micStepsIos: { m: "ኣብ መስመር ኣድራሻ “•••” ወይ “aA” ጠውቕ › “Website Settings” › “Microphone” › “Allow”። ወይ: “Settings” › “Apps” › “Safari” › “Microphone”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቕ።", f: "ኣብ መስመር ኣድራሻ “•••” ወይ “aA” ጠውቒ › “Website Settings” › “Microphone” › “Allow”። ወይ: “Settings” › “Apps” › “Safari” › “Microphone”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቒ።", x: "ኣብ መስመር ኣድራሻ “•••” ወይ “aA” ጠውቑ › “Website Settings” › “Microphone” › “Allow”። ወይ: “Settings” › “Apps” › “Safari” › “Microphone”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቑ።" }, // nieuw, nalezen
-    micStepsIosOther: { m: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቕ › “Permissions” › “Microphone” › “Allow”። ወይ: “Settings” › “Apps” › “{app}” › “Microphone”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቕ።", f: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቒ › “Permissions” › “Microphone” › “Allow”። ወይ: “Settings” › “Apps” › “{app}” › “Microphone”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቒ።", x: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቑ › “Permissions” › “Microphone” › “Allow”። ወይ: “Settings” › “Apps” › “{app}” › “Microphone”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቑ።" }, // nieuw, nalezen
-    micStepsAndroid: { m: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቕ › “Permissions” › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቕ።", f: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቒ › “Permissions” › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቒ።", x: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቑ › “Permissions” › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቑ።" }, // nieuw, nalezen
-    micStepsAndroidApp: { m: "ምልክት Vloertaal ኣብ ቀንዲ ስክሪን ጠዊቕካ ሓዝ › “App info” › “Permissions” › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቕ።", f: "ምልክት Vloertaal ኣብ ቀንዲ ስክሪን ጠዊቕኪ ሓዝዮ › “App info” › “Permissions” › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቒ።", x: "ምልክት Vloertaal ኣብ ቀንዲ ስክሪን ጠዊቕኩም ሓዙ › “App info” › “Permissions” › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቑ።" }, // nieuw, nalezen
-    micStepsDesktop: { m: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቕ › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቕ።", f: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቒ › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቒ።", x: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቑ › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቑ።" }, // nieuw, nalezen
+    micRefused: { m: "እታ ኣፕ ማይክሮፎንካ ክትጥቀም ኣይተፈቕደላን። ክትከፍቶ ትኽእል ኢኻ።", f: "እታ ኣፕ ማይክሮፎንኪ ክትጥቀም ኣይተፈቕደላን። ክትከፍትዮ ትኽእሊ ኢኺ።", x: "እታ ኣፕ ማይክሮፎንኩም ክትጥቀም ኣይተፈቕደላን። ክትከፍትዎ ትኽእሉ ኢኹም።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    micTurnOn: { m: "ማይክሮፎን ክፈት", f: "ማይክሮፎን ክፈቲ", x: "ማይክሮፎን ክፈቱ" }, // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsIos: { m: "ኣብ መስመር ኣድራሻ “•••” ወይ “aA” ጠውቕ › “Website Settings” › “Microphone” › “Allow”። ወይ: “Settings” › “Apps” › “Safari” › “Microphone”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቕ።", f: "ኣብ መስመር ኣድራሻ “•••” ወይ “aA” ጠውቒ › “Website Settings” › “Microphone” › “Allow”። ወይ: “Settings” › “Apps” › “Safari” › “Microphone”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቒ።", x: "ኣብ መስመር ኣድራሻ “•••” ወይ “aA” ጠውቑ › “Website Settings” › “Microphone” › “Allow”። ወይ: “Settings” › “Apps” › “Safari” › “Microphone”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቑ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsIosOther: { m: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቕ › “Permissions” › “Microphone” › “Allow”። ወይ: “Settings” › “Apps” › “{app}” › “Microphone”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቕ።", f: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቒ › “Permissions” › “Microphone” › “Allow”። ወይ: “Settings” › “Apps” › “{app}” › “Microphone”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቒ።", x: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቑ › “Permissions” › “Microphone” › “Allow”። ወይ: “Settings” › “Apps” › “{app}” › “Microphone”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቑ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsAndroid: { m: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቕ › “Permissions” › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቕ።", f: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቒ › “Permissions” › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቒ።", x: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቑ › “Permissions” › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቑ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsAndroidApp: { m: "ምልክት Vloertaal ኣብ ቀንዲ ስክሪን ጠዊቕካ ሓዝ › “App info” › “Permissions” › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቕ።", f: "ምልክት Vloertaal ኣብ ቀንዲ ስክሪን ጠዊቕኪ ሓዝዮ › “App info” › “Permissions” › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቒ።", x: "ምልክት Vloertaal ኣብ ቀንዲ ስክሪን ጠዊቕኩም ሓዙ › “App info” › “Permissions” › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቑ።" }, // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsDesktop: { m: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቕ › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቕ።", f: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቒ › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቒ።", x: "ኣብ ጸጋም እቲ ኣድራሻ ዘሎ ምልክት ጠውቑ › “Microphone” › “Allow”። ድሕሪኡ ኣብ ታሕቲ ዘሎ መልጎም ጠውቑ።" }, // nieuw, nalezen // nagelezen AI 28 nov
     whichPicture: "ኣየናይ ስእሊ እዩ?",
     sayAloudInstead: { m: "ኣብ ክንድኡ ብዓው ኢልካ በሎ", f: "ኣብ ክንድኡ ብዓው ኢልኪ በልዮ" },
     wordsPractised: "ዝተደገሙ ቃላት",
@@ -210,127 +210,127 @@ const t: CultureTranslation = {
     'c.brakes.a.why': "ሓድሽ ክኸውን ኣለዎ ድዩ ተሓቲቱ: እወ፡ ምኽንያቱ ድማ።", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "እንታይ ክግበር ከም ዘለዎ ተሓቲቱ: ኣብቲ ትእዛዝ ስራሕ ምርኣይ።", // nieuw, nalezen // nagelezen AI 22 nov
     // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
-    'c.mowing.a.why': "ክወስዶ ይፍቀድ ድዩ ተሓቲቱ: እወ፡ ቅድም እንታይ ከም ዝግበር ድማ።", // nieuw, nalezen
-    'c.pruning.a.why': "ኣየኖት ጨናፍር ተሓቲቱ: እቶም ዝነቐጹ ጥራይ።", // nieuw, nalezen
-    'c.hedge.a.why': "ክሳዕ ክንደይ ቁመት ተሓቲቱ: ክሳዕ እቲ ገመድ፡ ካብኡ ዝሓጸረ ኣይኮነን።", // nieuw, nalezen
-    'c.chainsaw.a.why': "ይፍቀድ ድዩ ተሓቲቱ: ገና ኣይኮነን፡ ቅድም እንታይ ከም ዝመጽእ ድማ።", // nieuw, nalezen
-    'c.weeding.a.why': "ዘይድለ ሳዕሪ ድዩ ተሓቲቱ: ኣይፋል፡ እንታይ ከም ዝግበረሉ ድማ።", // nieuw, nalezen
-    'c.planting.a.why': "ናበይ ከም ዝኸይድ ተሓቲቱ: ኣብቲ ቦታ ዕምባባ ዘሎ ቦታኡ።", // nieuw, nalezen
-    'c.roadside.a.why': "ክሰግር ይኽእል ድዩ ተሓቲቱ: ኣይፋል፡ ምጽባይ፡ ምኽንያቱ ድማ።", // nieuw, nalezen
-    'c.litter.a.why': "ነባሪ መዓስ ኢሉ ይሓትት: ኣይፍለጥን፡ መን ከም ዝፈልጥ ድማ።", // nieuw, nalezen
-    'c.reception.a.why': "በጻሒ ቆጸራ ኣለዎ: ሓንሳእ፡ ጻውዒት ይግበር።", // nieuw, nalezen
-    'c.visitors.a.why': "ጃኬት ናበይ ከም ዝኸይድ ተሓቲቱ: እቲ ቦታ፡ ኣበይ ከም ዘሎ ድማ።", // nieuw, nalezen
-    'c.mailroom.a.why': "ንመን ምዃኑ ተሓቲቱ: እቲ ክፍሊ፡ እቲ ደርቢ ድማ።", // nieuw, nalezen
-    'c.meetingroom.a.why': "ሰዓት ክንደይ ተሓቲቱ: እቲ ሰዓት፡ እንታይ ክግበር ከም ዘለዎ ድማ።", // nieuw, nalezen
-    'c.faults.a.why': "ስለምንታይ ዝሑል ምዃኑ ተሓቲቱ: እንታይ ከም ዝተበላሸወ፡ ሓገዝ መዓስ ከም ዝመጽእ ድማ።", // nieuw, nalezen
-    'c.repairs.a.why': "ቢፕ ይብል ድዩ ተሓቲቱ: እወ፡ ምኽንያቱ ድማ።", // nieuw, nalezen
-    'c.moving.a.why': "ናበይ ከም ዝኸይድ ተሓቲቱ: እቲ ክፍሊ፡ ኣበይ ከም ዝርአ ድማ።", // nieuw, nalezen
-    'c.closing.a.why': "ኣብ ውሽጢ ሰብ ኣሎ ድዩ ተሓቲቱ: ኣይፋል፡ ሕጂ እንታይ ከም ዝግበር ድማ።", // nieuw, nalezen
-    'c.patrol.a.why': "ገለ ነገር ተራእዩ ድዩ ተሓቲቱ: እወ፡ እንታይን ኣበይን።", // nieuw, nalezen
-    'c.access.a.why': "ብዘይ ካርድ ክኣቱ ተሓቲቱ: ይቕሬታ፡ ብዘይ ካርድ ኣይከኣልን።", // nieuw, nalezen
-    'c.cameras.a.why': "እንታይ ከም ዝርአ ተሓቲቱ: መን፡ ኣበይ፡ እንታይ ከም ዝግበር ድማ።", // nieuw, nalezen
-    'c.report.a.why': "ኣብ ጸብጻብ እንታይ ከም ዝኣቱ ተሓቲቱ: እንታይ፡ ኣበይን መዓስን።", // nieuw, nalezen
-    'c.evacuation.a.why': "ኩሉ ኣብ ደገ ድዩ ተሓቲቱ: ኣይፋል፡ ክንደይ ከም ዝጎድሉ።", // nieuw, nalezen
-    'c.firstaid.a.why': "AED ኣበይ ከም ዘሎ ተሓቲቱ: እቲ ቦታ፡ ኣብ ጎኑ እንታይ ከም ዘሎ ድማ።", // nieuw, nalezen
-    'c.shoplifting.a.why': "ቦርሳ ክፍተሽ ይፍቀድ ድዩ ተሓቲቱ: ኣይፋል፡ መን ከም ዝገብሮ ድማ።", // nieuw, nalezen
-    'c.aggression.a.why': "ስለምንታይ ዘይፍቀድ ተሓቲቱ: እቲ ምኽንያት፡ ብህድኣት ዝተባህለ።", // nieuw, nalezen
-    'c.hygienelock.a.why': "ብዛዕባ ሰዓት ኢድ ተሓቲቱ: ኣይፋል፡ እቲ ሕጊ ድማ።", // nieuw, nalezen
-    'c.allergens.a.why': "ብሓባር ክኸይድ ይኽእል ድዩ ተሓቲቱ: ኣይፋል፡ ምኽንያቱ ድማ።", // nieuw, nalezen
-    'c.coldroom.a.why': "ስለምንታይ ቢፕ ከም ዝብል ተሓቲቱ: እቲ ምኽንያት፡ እንታይ ከም ዝግበር ድማ።", // nieuw, nalezen
-    'c.foreignbody.a.why': "እንታይ ከም ዝግበር ተሓቲቱ: ንመን ክርአ ከም ዘለዎ።", // nieuw, nalezen
-    'c.cutting.a.why': "ክንደይ ተሓቲቱ: እቲ ክብደት፡ ኣበይ ከም ዝርአ ድማ።", // nieuw, nalezen
-    'c.labels.a.why': "ኣየናይ ዕለት ተሓቲቱ: መዓስ፡ ኣበይ ከም ዝርአ ድማ።", // nieuw, nalezen
-    'c.linecleaning.a.why': "ጽሩይ ድዩ ተሓቲቱ: ገና፡ እንታይ ከም ዝተረፈ ድማ።", // nieuw, nalezen
-    'c.haccp.a.why': "ስለምንታይ ተሓቲቱ: እቲ መግቢ ውሑስ ምዃኑ ንምፍላጥ።", // nieuw, nalezen
-    'c.binlorry.a.why': "ኣብ ድሕሪት ክጓዓዝ ይፍቀድ ድዩ ተሓቲቱ: ኣይፋል፡ ኣበይ ከም ዝጓዓዝ ድማ።", // nieuw, nalezen
-    'c.reversing.a.why': "ሓገዝ ተሓቲቱ: እወ፡ ኣበይ ደው ከም ዝበለ፡ እንታይ ከም ዝግበር ድማ።", // nieuw, nalezen
-    'c.wastesorting.a.why': "ናበይ ከም ዝኸይድ ተሓቲቱ: እቲ መጕሓፊ፡ ምኽንያቱ ድማ።", // nieuw, nalezen
-    'c.wastesafety.a.why': "ድሕሪ ምቑራጽ እንታይ ከም ዝግበር ተሓቲቱ: ምሕጻብ፡ ምንጋር ድማ።", // nieuw, nalezen
-    'c.yard.a.why': "ናበይ ከም ዝኸይድ ተሓቲቱ: እቲ ኮንተይነር፡ ኣበይ ከም ዘሎ ድማ።", // nieuw, nalezen
-    'c.hazardous.a.why': "ኣብ ውሽጢ እንታይ ከም ዘሎ ተሓቲቱ: ኣይፍለጥን፡ ስለዚ ኣብ ጎኒ ይቕመጥ።", // nieuw, nalezen
-    'c.baler.a.why': "ክርአ ይፍቀድ ድዩ ተሓቲቱ: ኣይፋል፡ ቅድም እንታይ ከም ዝመጽእ ድማ።", // nieuw, nalezen
-    'c.shovel.a.why': "ክሓልፍ ይፍቀድ ድዩ ተሓቲቱ: እቲ መራሒ ምስ ዝርኢ ጥራይ።", // nieuw, nalezen
-    'c.nappies.a.why': "መዓስ ተሓቲቱ: እቲ ሰዓት፡ ኣበይ ከም ዝተጻሕፈ ድማ።", // nieuw, nalezen
-    'c.mealtime.a.why': "ክወስድ ይፍቀደሉ ድዩ ተሓቲቱ: ኣይፋል፡ ምኽንያቱ፡ ኣበይ ከም ዝርአ ድማ።", // nieuw, nalezen
-    'c.naptime.a.why': "ደቂሳ ድያ ተሓቲቱ: እወ፡ ካብ መዓስ፡ ከም ብሓድሽ ከም እትፍተሽ ድማ።", // nieuw, nalezen
-    'c.playtime.a.why': "ቈልዓ ክጻወት ይፍቀድ ድዩ ተሓቲቱ: እወ፡ ኣበይ፡ ድሕሪኡ እንታይ ድማ።", // nieuw, nalezen
-    'c.pickup.a.why': "መን ከም ዝወስድ ተሓቲቱ: እቲ ሰብ፡ ኣብቲ ዝርዝር ከም ዘላ ድማ።", // nieuw, nalezen
-    'c.childsafety.a.why': "ወዲቓ ድያ ተሓቲቱ: እወ፡ እንታይ ከም ዘለዋ፡ መን ከም ዝድወለሉ ድማ።", // nieuw, nalezen
-    'c.sickchild.a.why': "ከመይ ኣሎ ተሓቲቱ: እንታይ ከም ዝርአ፡ እንታይ ከም ዝግበር ድማ።", // nieuw, nalezen
-    'c.grouprules.a.why': "በይኑ ምኻድ ይፍቀድ ድዩ ተሓቲቱ: እወ፡ ግን ቅድም ንብጻይ ስራሕ ምንጋር።", // nieuw, nalezen
+    'c.mowing.a.why': "ክወስዶ ይፍቀድ ድዩ ተሓቲቱ: እወ፡ ቅድም እንታይ ከም ዝግበር ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.a.why': "ኣየኖት ጨናፍር ተሓቲቱ: እቶም ዝነቐጹ ጥራይ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.a.why': "ክሳዕ ክንደይ ቁመት ተሓቲቱ: ክሳዕ እቲ ገመድ፡ ካብኡ ዝሓጸረ ኣይኮነን።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.a.why': "ይፍቀድ ድዩ ተሓቲቱ: ገና ኣይኮነን፡ ቅድም እንታይ ከም ዝመጽእ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.a.why': "ዘይድለ ሳዕሪ ድዩ ተሓቲቱ: ኣይፋል፡ እንታይ ከም ዝግበረሉ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.a.why': "ናበይ ከም ዝኸይድ ተሓቲቱ: ኣብቲ ቦታ ዕምባባ ዘሎ ቦታኡ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.a.why': "ክሰግር ይኽእል ድዩ ተሓቲቱ: ኣይፋል፡ ምጽባይ፡ ምኽንያቱ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.a.why': "ነባሪ መዓስ ኢሉ ይሓትት: ኣይፍለጥን፡ መን ከም ዝፈልጥ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.a.why': "በጻሒ ቆጸራ ኣለዎ: ሓንሳእ፡ ጻውዒት ይግበር።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.a.why': "ጃኬት ናበይ ከም ዝኸይድ ተሓቲቱ: እቲ ቦታ፡ ኣበይ ከም ዘሎ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.a.why': "ንመን ምዃኑ ተሓቲቱ: እቲ ክፍሊ፡ እቲ ደርቢ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.a.why': "ሰዓት ክንደይ ተሓቲቱ: እቲ ሰዓት፡ እንታይ ክግበር ከም ዘለዎ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.a.why': "ስለምንታይ ዝሑል ምዃኑ ተሓቲቱ: እንታይ ከም ዝተበላሸወ፡ ሓገዝ መዓስ ከም ዝመጽእ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.a.why': "ቢፕ ይብል ድዩ ተሓቲቱ: እወ፡ ምኽንያቱ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.a.why': "ናበይ ከም ዝኸይድ ተሓቲቱ: እቲ ክፍሊ፡ ኣበይ ከም ዝርአ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.a.why': "ኣብ ውሽጢ ሰብ ኣሎ ድዩ ተሓቲቱ: ኣይፋል፡ ሕጂ እንታይ ከም ዝግበር ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.a.why': "ገለ ነገር ተራእዩ ድዩ ተሓቲቱ: እወ፡ እንታይን ኣበይን።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.a.why': "ብዘይ ካርድ ክኣቱ ተሓቲቱ: ይቕሬታ፡ ብዘይ ካርድ ኣይከኣልን።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.a.why': "እንታይ ከም ዝርአ ተሓቲቱ: መን፡ ኣበይ፡ እንታይ ከም ዝግበር ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.a.why': "ኣብ ጸብጻብ እንታይ ከም ዝኣቱ ተሓቲቱ: እንታይ፡ ኣበይን መዓስን።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.a.why': "ኩሉ ኣብ ደገ ድዩ ተሓቲቱ: ኣይፋል፡ ክንደይ ከም ዝጎድሉ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.a.why': "AED ኣበይ ከም ዘሎ ተሓቲቱ: እቲ ቦታ፡ ኣብ ጎኑ እንታይ ከም ዘሎ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.a.why': "ቦርሳ ክፍተሽ ይፍቀድ ድዩ ተሓቲቱ: ኣይፋል፡ መን ከም ዝገብሮ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.a.why': "ስለምንታይ ዘይፍቀድ ተሓቲቱ: እቲ ምኽንያት፡ ብህድኣት ዝተባህለ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.a.why': "ብዛዕባ ሰዓት ኢድ ተሓቲቱ: ኣይፋል፡ እቲ ሕጊ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.a.why': "ብሓባር ክኸይድ ይኽእል ድዩ ተሓቲቱ: ኣይፋል፡ ምኽንያቱ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.a.why': "ስለምንታይ ቢፕ ከም ዝብል ተሓቲቱ: እቲ ምኽንያት፡ እንታይ ከም ዝግበር ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.a.why': "እንታይ ከም ዝግበር ተሓቲቱ: ንመን ክርአ ከም ዘለዎ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.a.why': "ክንደይ ተሓቲቱ: እቲ ክብደት፡ ኣበይ ከም ዝርአ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.a.why': "ኣየናይ ዕለት ተሓቲቱ: መዓስ፡ ኣበይ ከም ዝርአ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.a.why': "ጽሩይ ድዩ ተሓቲቱ: ገና፡ እንታይ ከም ዝተረፈ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.a.why': "ስለምንታይ ተሓቲቱ: እቲ መግቢ ውሑስ ምዃኑ ንምፍላጥ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.a.why': "ኣብ ድሕሪት ክጓዓዝ ይፍቀድ ድዩ ተሓቲቱ: ኣይፋል፡ ኣበይ ከም ዝጓዓዝ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.a.why': "ሓገዝ ተሓቲቱ: እወ፡ ኣበይ ደው ከም ዝበለ፡ እንታይ ከም ዝግበር ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.a.why': "ናበይ ከም ዝኸይድ ተሓቲቱ: እቲ መጕሓፊ፡ ምኽንያቱ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.a.why': "ድሕሪ ምቑራጽ እንታይ ከም ዝግበር ተሓቲቱ: ምሕጻብ፡ ምንጋር ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.a.why': "ናበይ ከም ዝኸይድ ተሓቲቱ: እቲ ኮንተይነር፡ ኣበይ ከም ዘሎ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.a.why': "ኣብ ውሽጢ እንታይ ከም ዘሎ ተሓቲቱ: ኣይፍለጥን፡ ስለዚ ኣብ ጎኒ ይቕመጥ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.a.why': "ክርአ ይፍቀድ ድዩ ተሓቲቱ: ኣይፋል፡ ቅድም እንታይ ከም ዝመጽእ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.a.why': "ክሓልፍ ይፍቀድ ድዩ ተሓቲቱ: እቲ መራሒ ምስ ዝርኢ ጥራይ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.a.why': "መዓስ ተሓቲቱ: እቲ ሰዓት፡ ኣበይ ከም ዝተጻሕፈ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.a.why': "ክወስድ ይፍቀደሉ ድዩ ተሓቲቱ: ኣይፋል፡ ምኽንያቱ፡ ኣበይ ከም ዝርአ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.a.why': "ደቂሳ ድያ ተሓቲቱ: እወ፡ ካብ መዓስ፡ ከም ብሓድሽ ከም እትፍተሽ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.a.why': "ቈልዓ ክጻወት ይፍቀድ ድዩ ተሓቲቱ: እወ፡ ኣበይ፡ ድሕሪኡ እንታይ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.a.why': "መን ከም ዝወስድ ተሓቲቱ: እቲ ሰብ፡ ኣብቲ ዝርዝር ከም ዘላ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.a.why': "ወዲቓ ድያ ተሓቲቱ: እወ፡ እንታይ ከም ዘለዋ፡ መን ከም ዝድወለሉ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.a.why': "ከመይ ኣሎ ተሓቲቱ: እንታይ ከም ዝርአ፡ እንታይ ከም ዝግበር ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.a.why': "በይኑ ምኻድ ይፍቀድ ድዩ ተሓቲቱ: እወ፡ ግን ቅድም ንብጻይ ስራሕ ምንጋር።", // nieuw, nalezen // nagelezen AI 28 nov
     // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
-    'c.sanitary.a.why': "ተወዲኡ ድዩ ተሓቲቱ: ገና፡ ስለምንታይ ድማ።", // nieuw, nalezen
-    'c.hotelroom.a.why': "ክንደይ ተሪፉ ተሓቲቱ: እቲ ቁጽሪ፡ መዓስ ከም ዝውዳእ ድማ።", // nieuw, nalezen
-    'c.dosing.a.why': "ዝያዳ ክጥቀም ተባሂሉ: ኣይፋልን፡ ብዙሕ ዝሓሸ ኣይኮነን፡ እንታይ ከም ዝጥቀም ድማ።", // nieuw, nalezen
-    'c.officenight.a.why': "በይኑ ድዩ ዝሰርሕ ተሓቲቱ: እወ፡ መልእኽቲ ከም ዝሰድድ ድማ።", // nieuw, nalezen
-    'c.knives.a.why': "ክቖርጽ ተሓቲቱ: እወ ሸፍ፡ ብኸመይ ዝብል ሕቶ ድማ።", // nieuw, nalezen
-    'c.rawcooked.a.why': "ብዘይ ግሉተን ድዩ ተሓቲቱ: ርግጸኛ ኣይኮነን፡ ስለዚ ነቲ ዝርዝር ይርኢ።", // nieuw, nalezen
-    'c.pass.a.why': "መግቢ ኣበይ ኣሎ ተሓቲቱ: ኣብ ፓስ፡ ሕጂ ድማ የምጽኦ።", // nieuw, nalezen
-    'c.bill.a.why': "በበይኖም ክኸፍሉ ተሓቲቱ: እወ፡ ማሽን ካርድ ድማ የምጽእ።", // nieuw, nalezen
-    'c.washing.a.why': "ተገልጋሊ ኣይፋልን ይብል: ጽቡቕ፡ ካልእ ነገር ድማ የቕርብ።", // nieuw, nalezen
-    'c.observing.a.why': "ፍሉይ ነገር ኣሎ ድዩ ተሓቲቱ: እወ፡ እንታይ ምዃኑ ብልክዕ ድማ።", // nieuw, nalezen
-    'c.homecare.a.why': "መን ኢዩ ተሓቲቱ: ሰላምታ፡ መን ምዃኑ፡ ክኣቱ ይኽእል ዶ ድማ።", // nieuw, nalezen
-    'c.liftaids.a.why': "በይኑ ክገብሮ ተሓቲቱ: እወ፡ ብመሸርተቲ ኣንሶላ፡ ከምጽኦ ድማ።", // nieuw, nalezen
-    'c.returns.a.why': "ክመልሶ ተሓቲቱ: እወ፡ ብዛዕባ ቅብሊት ሕቶ ድማ።", // nieuw, nalezen
-    'c.facing.a.why': "ወዲኡ ድዩ ተሓቲቱ: ዳርጋ፡ እንታይ ከም ዝተረፈ ድማ።", // nieuw, nalezen
-    'c.shrink.a.why': "ቦርሳ ክርአ ተሓቲቱ: እወ፡ ቅብሊት ድማ የርኢ።", // nieuw, nalezen
-    'c.shopclose.a.why': "ክኣቱ ተሓቲቱ: ይቕሬታ፡ ተዓጽዩ፡ መዓስ ከም ዝኽፈት ድማ።", // nieuw, nalezen
-    'c.hirer.a.why': "ኣብ ሓድሽ ቦታ ክጅምር ተሓቲቱ: እወ፡ ብዛዕባ ሰዓት ሕቶ ድማ።", // nieuw, nalezen
-    'c.phases.a.why': "ስራሕ ከም ዝውዳእ ተነጊሩ: ሕራይ፡ ካልእ ስራሕ ድማ ይሓትት።", // nieuw, nalezen
-    'c.deductions.a.why': "ብዛዕባ ቁርጸት ተነጊሩ: ይፍቀድ ድዩ ኢሉ ይሓትት፡ የረጋግጽ ድማ።", // nieuw, nalezen
-    'c.agencyhome.a.why': "ቀልጢፉ ክወጽእ ተነጊሩ: እዚ ሓጺር እዩ፡ ቅድም ድማ ምኽሪ ይደሊ።", // nieuw, nalezen
+    'c.sanitary.a.why': "ተወዲኡ ድዩ ተሓቲቱ: ገና፡ ስለምንታይ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.a.why': "ክንደይ ተሪፉ ተሓቲቱ: እቲ ቁጽሪ፡ መዓስ ከም ዝውዳእ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.a.why': "ዝያዳ ክጥቀም ተባሂሉ: ኣይፋልን፡ ብዙሕ ዝሓሸ ኣይኮነን፡ እንታይ ከም ዝጥቀም ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.a.why': "በይኑ ድዩ ዝሰርሕ ተሓቲቱ: እወ፡ መልእኽቲ ከም ዝሰድድ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.a.why': "ክቖርጽ ተሓቲቱ: እወ ሸፍ፡ ብኸመይ ዝብል ሕቶ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.a.why': "ብዘይ ግሉተን ድዩ ተሓቲቱ: ርግጸኛ ዘይምዃን፡ ስለዚ ነቲ ዝርዝር ምርኣይ።", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.pass.a.why': "መግቢ ኣበይ ኣሎ ተሓቲቱ: ኣብ ፓስ፡ ሕጂ ድማ ምምጻኡ።", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.bill.a.why': "በበይኖም ክኸፍሉ ተሓቲቱ: እወ፡ ማሽን ካርድ ድማ ምምጻእ።", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.washing.a.why': "ተገልጋሊ ኣይፋልን ይብል: ጽቡቕ፡ ካልእ ነገር ድማ ምቕራብ።", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.observing.a.why': "ፍሉይ ነገር ኣሎ ድዩ ተሓቲቱ: እወ፡ እንታይ ምዃኑ ብልክዕ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.a.why': "መን ኢዩ ተሓቲቱ: ሰላምታ፡ መን ምዃኑ፡ ክኣቱ ይኽእል ዶ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.a.why': "በይኑ ክገብሮ ተሓቲቱ: እወ፡ ብመሸርተቲ ኣንሶላ፡ ከምጽኦ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.a.why': "ክመልሶ ተሓቲቱ: እወ፡ ብዛዕባ ቅብሊት ሕቶ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.a.why': "ወዲኡ ድዩ ተሓቲቱ: ዳርጋ፡ እንታይ ከም ዝተረፈ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.a.why': "ቦርሳ ክርአ ተሓቲቱ: እወ፡ ቅብሊት ድማ ምርኣይ።", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.shopclose.a.why': "ክኣቱ ተሓቲቱ: ይቕሬታ፡ ተዓጽዩ፡ መዓስ ከም ዝኽፈት ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.a.why': "ኣብ ሓድሽ ቦታ ክጅምር ተሓቲቱ: እወ፡ ብዛዕባ ሰዓት ሕቶ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.a.why': "ስራሕ ከም ዝውዳእ ተነጊሩ: ሕራይ፡ ካልእ ስራሕ ድማ ምሕታት።", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.deductions.a.why': "ብዛዕባ ቁርጸት ተነጊሩ: ይፍቀድ ድዩ ምሕታት፡ ምርግጋጽ ድማ።", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.agencyhome.a.why': "ቀልጢፉ ክወጽእ ተነጊሩ: እዚ ሓጺር እዩ፡ ቅድም ድማ ምኽሪ ምድላይ።", // nieuw, nalezen (AI-correctie 28 nov 2026)
     // The basis units at four lessons (23 November 2026).
-    'c.roster.a.why': "መደብ ስራሕ ከም ዝተቐየረ ተነጊሩ: ሕራይ፡ ኣየናይ መዓልቲ ድማ።", // nieuw, nalezen
-    'c.breaks.a.why': "ብዛዕባ ዕረፍቲ ምሳሕ ተሓቲቱ: ሰዓቱ፡ ክንደይ ከም ዝወስድ ድማ።", // nieuw, nalezen
-    'c.wound.a.why': "ክወድቕ ቀሪቡ: ይደቅስ፡ ሓገዝ ድማ ይመጽእ።", // nieuw, nalezen
-    'c.callhelp.a.why': "ይምልስ ድዩ ተሓቲቱ: ኣይፋል፡ ኣይምልስን።", // nieuw, nalezen
-    'c.vacancy.a.why': "ስለምንታይ ከም ዝድውል ተሓቲቱ: እቲ ክፉት ቦታ ስራሕ፡ ገና ክፉት ድዩ ድማ።", // nieuw, nalezen
-    'c.result.a.why': "ኣይፋል ተባሂሉ: ህዱእ መልሲ፡ ምኽንያቱ ድማ ይሓትት።", // nieuw, nalezen
-    'c.residence.a.why': "ፍቓድ ግዜኡ ክሓልፍ ከም ዝቐረበ ተነጊሩ: ብቕጽበት ይሓትት።", // nieuw, nalezen
-    'c.newhome.a.why': "ኣበይ ከም ዝነብር ተሓቲቱ: ሓድሽ ገዛ፡ ሓድሽ ኣድራሻ ድማ።", // nieuw, nalezen
-    'c.payparts.a.why': "ቁጽሪ ሰራሕተኛ ተሓቲቱ: ኣብ ወረቐት ደሞዝ ኣበይ ከም ዘሎ።", // nieuw, nalezen
-    'c.latepay.a.why': "ገንዘብ ደሓር ከም ዝመጽእ ተነጊሩ: ብጽሑፍ ይደሊ።", // nieuw, nalezen
-    'c.holiday.a.why': "ኣብ ግንቦት ክኸይድ ተሓቲቱ: ሓምለ ይሓይሽ፡ ምኽንያቱ ድማ።", // nieuw, nalezen
-    'c.special.a.why': "ብዛዕባ ፍቓድ ሕርሲ ተሓቲቱ: እወ፡ መዓስ ድማ።", // nieuw, nalezen
-    'c.unwell.a.why': "ደሓን ድዩ ተሓቲቱ: ኣይፋል፡ ናብ ገዛ ክኸይድ ይኽእል ድዩ ድማ።", // nieuw, nalezen
-    'c.injury.a.why': "ቃል ተሓቲቱ: እወ፡ ንዕኡ ቅዳሕ ድማ።", // nieuw, nalezen
-    'c.debt.a.why': "ክሳብ ዕዳ ዝኽፈል ክጸንሕ ተነጊሩ: ኣይፍቀድን፡ ሓገዝ ይደሊ።", // nieuw, nalezen
-    'c.inspection.a.why': "ክዛረብ ተሓቲቱ: እወ፡ ግን ሓላፊ ኣብ ዘይሰምዓሉ።", // nieuw, nalezen
-    'c.carpool.a.why': "መን ከም ዝዝውር ተሓቲቱ: ንሱ፡ መዓስ ከም ዝወስዶም ድማ።", // nieuw, nalezen
-    'c.train.a.why': "ስለምንታይ ከም ዝደንጎየ ተሓቲቱ: ባቡር፡ መልእኽቲ ድማ ሰዲዱ።", // nieuw, nalezen
-    'c.checklist.a.why': "ዝረስዖ ነገር እንተ ሃልዩ ተሓቲቱ: ሓንሳእ ደጊሙ ነቲ ዝርዝር ይርኢ።", // nieuw, nalezen
-    'c.leavesite.a.why': "ናይ መወዳእታ ይወጽእ ድዩ ተሓቲቱ: እወ፡ ኩሉ ጠፊኡ ማዕጾ ድማ ተዓጽዩ።", // nieuw, nalezen
-    'c.stagedays.a.why': "ስለምንታይ ከም ዘይመጸ ተሓቲቱ: ሓሚሙ፡ ንኽልቲኦም ድማ ደዊሉ።", // nieuw, nalezen
-    'c.stageend.a.why': "ብዛዕባ መደባቱ ተሓቲቱ: ቅድም ዲፕሎማ፡ ድሕሪኡ ስራሕ።", // nieuw, nalezen
-    'c.neighbours.a.why': "ሓዳስ ጎረቤት ሰላም ትብል: ብምፍላጣ ሕጉስ፡ ስሙ ድማ።", // nieuw, nalezen
-    'c.join.a.why': "ክመጽእ ተሓቲቱ: እወ፡ ምስ መምህር ክዛረብ ድማ ይደሊ።", // nieuw, nalezen
-    'c.workphotos.a.why': "ንኢንተርነት ስእሊ ተሓቲቱ: ብትሕትና ኣይፋል።", // nieuw, nalezen
-    'c.device.a.why': "ብዛዕባ ሓድሽ ኣፕ ተሓቲቱ: ቅድም ንክፍሊ IT ምሕታት።", // nieuw, nalezen
+    'c.roster.a.why': "መደብ ስራሕ ከም ዝተቐየረ ተነጊሩ: ሕራይ፡ ኣየናይ መዓልቲ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.a.why': "ብዛዕባ ዕረፍቲ ምሳሕ ተሓቲቱ: ሰዓቱ፡ ክንደይ ከም ዝወስድ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.a.why': "ክወድቕ ቀሪቡ: ይደቅስ፡ ሓገዝ ድማ ምምጻእ።", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.callhelp.a.why': "ይምልስ ድዩ ተሓቲቱ: ኣይፋል፡ ኣይምልስን።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.a.why': "ስለምንታይ ከም ዝድውል ተሓቲቱ: እቲ ክፉት ቦታ ስራሕ፡ ገና ክፉት ድዩ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.a.why': "ኣይፋል ተባሂሉ: ህዱእ መልሲ፡ ምኽንያቱ ድማ ምሕታት።", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.residence.a.why': "ፍቓድ ግዜኡ ክሓልፍ ከም ዝቐረበ ተነጊሩ: ብቕጽበት ሓድሽ ምሕታት።", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.newhome.a.why': "ኣበይ ከም ዝነብር ተሓቲቱ: ሓድሽ ገዛ፡ ሓድሽ ኣድራሻ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.a.why': "ቁጽሪ ሰራሕተኛ ተሓቲቱ: ኣብ ወረቐት ደሞዝ ኣበይ ከም ዘሎ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.a.why': "ገንዘብ ደሓር ከም ዝመጽእ ተነጊሩ: ብጽሑፍ ክወሃብ ምሕታት።", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.holiday.a.why': "ኣብ ግንቦት ክኸይድ ተሓቲቱ: ሓምለ ይሓይሽ፡ ምኽንያቱ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.a.why': "ብዛዕባ ፍቓድ ሕርሲ ተሓቲቱ: እወ፡ መዓስ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.a.why': "ደሓን ድዩ ተሓቲቱ: ኣይፋል፡ ናብ ገዛ ክኸይድ ይኽእል ድዩ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.a.why': "ቃል ተሓቲቱ: እወ፡ ቅዳሕ ድማ ምሕታት።", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.debt.a.why': "ክሳብ ዕዳ ዝኽፈል ክጸንሕ ተነጊሩ: ኣይፍቀድን፡ ሓገዝ ምድላይ።", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.inspection.a.why': "ክዛረብ ተሓቲቱ: እወ፡ ግን ሓላፊ ኣብ ዘይሰምዓሉ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.a.why': "መን ከም ዝዝውር ተሓቲቱ: ኣነ፡ ሰዓት ምውሳድ ድማ።", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.train.a.why': "ስለምንታይ ከም ዝደንጎየ ተሓቲቱ: ባቡር፡ መልእኽቲ ድማ ተሰዲዱ።", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.checklist.a.why': "ዝረስዖ ነገር እንተ ሃልዩ ተሓቲቱ: ሓንሳእ ደጊምካ ነቲ ዝርዝር ምርኣይ።", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.leavesite.a.why': "ናይ መወዳእታ ይወጽእ ድዩ ተሓቲቱ: እወ፡ ኩሉ ጠፊኡ ማዕጾ ድማ ተዓጽዩ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.a.why': "ስለምንታይ ከም ዘይመጸ ተሓቲቱ: ሕማም፡ ንኽልቲኦም ድማ ምድዋል።", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.stageend.a.why': "ብዛዕባ መደባት ተሓቲቱ: ቅድም ዲፕሎማ፡ ድሕሪኡ ስራሕ።", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.neighbours.a.why': "ሓዳስ ጎረቤት ሰላም ትብል: ብምፍላጣ ሕጉስ፡ ስም ድማ።", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.join.a.why': "ክመጽእ ተሓቲቱ: እወ፡ ምስ መምህር ምዝራብ ድማ።", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.workphotos.a.why': "ንኢንተርነት ስእሊ ተሓቲቱ: ብትሕትና ኣይፋል።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.a.why': "ብዛዕባ ሓድሽ ኣፕ ተሓቲቱ: ቅድም ንክፍሊ IT ምሕታት።", // nieuw, nalezen // nagelezen AI 28 nov
     // "Veiligheid op het werk" and the VOG (23 November 2026).
-    'c.safetysigns.a.why': "ሰሌዳ እንታይ ማለት ምዃኑ ተሓቲቱ: ጥንቃቐ፡ ኣየናይ ሰሌዳ ምዃኑ ድማ።", // nieuw, nalezen
-    'c.substances.a.why': "መርዛም ምዃኑ ተሓቲቱ: ምግማት ዘይኮነ፡ ምርኣይ።", // nieuw, nalezen
-    'c.firefight.a.why': "ሓዊ ከም ዘሎ ተነጊሩ: ንእሽቶ እዩ፡ ስለዚ መጥፍኢ ሓዊ ምምጻእ።", // nieuw, nalezen
-    'c.permitwork.a.why': "መን ኣብ ደገ ከም ዝጸንሕ ተሓቲቱ: ኣነ፡ ዕማመይ ድማ።", // nieuw, nalezen
-    'c.vog.a.why': "ብዛዕባ VOG ተሓቲቱ: ገና ኣይኮነን፡ እንታይ ይጽበ ከም ዘሎ ድማ።", // nieuw, nalezen
+    'c.safetysigns.a.why': "ሰሌዳ እንታይ ማለት ምዃኑ ተሓቲቱ: ጥንቃቐ፡ ኣየናይ ሰሌዳ ምዃኑ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.a.why': "መርዛም ምዃኑ ተሓቲቱ: ምግማት ዘይኮነ፡ ምርኣይ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.a.why': "ሓዊ ከም ዘሎ ተነጊሩ: ንእሽቶ እዩ፡ ስለዚ መጥፍኢ ሓዊ ምምጻእ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.a.why': "መን ኣብ ደገ ከም ዝጸንሕ ተሓቲቱ: ኣነ፡ ዕማመይ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.a.why': "ብዛዕባ VOG ተሓቲቱ: ገና ኣይኮነን፡ እንታይ ይጽበ ከም ዘሎ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
     // "Operator in de procesindustrie" (23 November 2026).
-    'c.plantround.a.why': "ብዛዕባ እቲ ኣላርም ተሓቲቱ: እንታይ ካብ ዓቐኑ ንላዕሊ ምዃኑ፡ ኣበይ ድማ።", // nieuw, nalezen
-    'c.plantfault.a.why': "ክብገስ ይኽእል እንተ ኾይኑ ተሓቲቱ: ኣይፋል፡ ገና ቁልፊ ኣብኡ ኣሎ።", // nieuw, nalezen
-    'c.shiftwork.a.why': "እንታይ ከም ዘጋጠመ ተሓቲቱ: እቲ ብልሽት፡ ኣበይ ከም ዝተጻሕፈ ድማ።", // nieuw, nalezen
-    'c.heatdust.a.why': "ብዛዕባ ተሌፎን ተሓቲቱ: ኣይፋል፡ ብሰንኪ ኣብዚ ዘሎ ሓደጋ።", // nieuw, nalezen
+    'c.plantround.a.why': "ብዛዕባ እቲ ኣላርም ተሓቲቱ: እንታይ ካብ ዓቐኑ ንላዕሊ ምዃኑ፡ ኣበይ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.a.why': "ክብገስ ይኽእል እንተ ኾይኑ ተሓቲቱ: ኣይፋል፡ ገና ቁልፊ ኣብኡ ኣሎ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.a.why': "እንታይ ከም ዘጋጠመ ተሓቲቱ: እቲ ብልሽት፡ ኣበይ ከም ዝተጻሕፈ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.a.why': "ብዛዕባ ተሌፎን ተሓቲቱ: ኣይፋል፡ ብሰንኪ ኣብዚ ዘሎ ሓደጋ።", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (26 November 2026).
-    'c.debthelp.a.why': "እቲ ሕሳብ ከም ዘይተኸፍለ ተነጊሩ: እወ፡ ውጥን ክፍሊት ድማ ይሕተት።", // nieuw, nalezen
-    'c.taxes.a.why': "ሰማያዊ ፖስታ ከም ዘሎ ተነጊሩ: የቐንየለይ፡ ብቕጽበት ድማ ምኽፋቱ።", // nieuw, nalezen
-    'c.discrimination.a.why': "ደሓን ምዃኑ ተሓቲቱ: ኣይፋል፡ ክሕበር ድማ እዩ።", // nieuw, nalezen
-    'c.union.a.why': "ስለምንታይ ኣባል ምዃኑ ተሓቲቱ: ይጣበቑ እዮም።", // nieuw, nalezen
-    'c.kiln.a.why': "ስባራት ብኢድ ምእካብ ተሓቲቱ: ኣይፋል፡ መጥረግን መእከቢ ጎሓፍን።", // nieuw, nalezen
-    'c.mixlab.a.why': "እቲ ባች ጸዲቑ እንተ ኾይኑ ተሓቲቱ: ገና፡ እቲ ላብ ይፍትኖ ኣሎ።", // nieuw, nalezen
-    'c.firstweeks.a.why': "ብዛዕባ ዙረት ምልላይ ተሓቲቱ: ዳርጋ ኩሉ፡ ሓደ ሕቶ ድማ።", // nieuw, nalezen
-    'c.orderpick.a.why': "ሪች ትራክ ክዝውር ተሓቲቱ: ኣይፋል፡ ስልጠና የለን።", // nieuw, nalezen
+    'c.debthelp.a.why': "እቲ ሕሳብ ከም ዘይተኸፍለ ተነጊሩ: እወ፡ ውጥን ክፍሊት ድማ ይሕተት።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.a.why': "ሰማያዊ ፖስታ ከም ዘሎ ተነጊሩ: የቐንየለይ፡ ብቕጽበት ድማ ምኽፋቱ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.a.why': "ደሓን ምዃኑ ተሓቲቱ: ኣይፋል፡ ክሕበር ድማ እዩ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.a.why': "ስለምንታይ ኣባል ምዃኑ ተሓቲቱ: ይጣበቑ እዮም።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.a.why': "ስባራት ብኢድ ምእካብ ተሓቲቱ: ኣይፋል፡ መጥረግን መእከቢ ጎሓፍን።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.a.why': "እቲ ባች ጸዲቑ እንተ ኾይኑ ተሓቲቱ: ገና፡ እቲ ላብ ይፍትኖ ኣሎ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.a.why': "ብዛዕባ ዙረት ምልላይ ተሓቲቱ: ዳርጋ ኩሉ፡ ሓደ ሕቶ ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.a.why': "ሪች ትራክ ክዝውር ተሓቲቱ: ኣይፋል፡ ስልጠና የለን።", // nieuw, nalezen // nagelezen AI 28 nov
     // four new lessons (27 November 2026).
-    'd.appraisal.a.why': "ብዛዕባ ዕላማ ተሓቲቱ: ክመሃር ዝድለ ሓደ ንጹር ነገር።", // nieuw, nalezen
-    'c.forms.a.why': "ብዛዕባ እቲ ቅጥዒ ተሓቲቱ: ዳርጋ፡ ኣበይ ከም ዝፍረም ድማ።", // nieuw, nalezen
-    'c.voicemail.a.why': "ስምን ቁጽርን ተሓቲቱ: ስም፡ ተመሊሱ ክድወል ድማ ይሕተት።", // nieuw, nalezen
-    'c.dentist.a.why': "ብዛዕባ ናይ መወዳእታ ምብጻሕ ተሓቲቱ: መዓስ፡ ፍተሻ ድማ ይሕተት።", // nieuw, nalezen
+    'd.appraisal.a.why': "ብዛዕባ ዕላማ ተሓቲቱ: ክመሃር ዝድለ ሓደ ንጹር ነገር።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.a.why': "ብዛዕባ እቲ ቅጥዒ ተሓቲቱ: ዳርጋ፡ ኣበይ ከም ዝፍረም ድማ።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.a.why': "ስምን ቁጽርን ተሓቲቱ: ስም፡ ተመሊሱ ክድወል ድማ ይሕተት።", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.a.why': "ብዛዕባ ናይ መወዳእታ ምብጻሕ ተሓቲቱ: መዓስ፡ ፍተሻ ድማ ይሕተት።", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 

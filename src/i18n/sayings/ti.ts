@@ -26,7 +26,7 @@ const t: CultureTranslation = {
     's.easy.1': 'እዚ ንእሽቶ ስራሕ ኣዝዩ ቀሊል እዩ።',
     's.easy.2': 'እቲ ስራሕ ኣዝዩ ጽቡቕ ይኸይድ ኣሎ።',
     's.easy.3': 'ንዑ እሞ ንስራሕ።',
-    'c.easy.q': { m: 'ንሓጺር ግዜ ክትሕግዘኒ ትኽእል ዶ?', f: 'ንሓጺር ግዜ ክትሕግዝኒ ትኽእሊ ዶ?', x: 'ንሓጺር ግዜ ክትሕግዙኒ ትኽእሉ ዶ?' }, // x: nieuw, nalezen
+    'c.easy.q': { m: 'ንሓጺር ግዜ ክትሕግዘኒ ትኽእል ዶ?', f: 'ንሓጺር ግዜ ክትሕግዝኒ ትኽእሊ ዶ?', x: 'ንሓጺር ግዜ ክትሕግዙኒ ትኽእሉ ዶ?' }, // x: nieuw, nalezen // nagelezen AI 28 nov
     'c.easy.a': 'እወ፡ ብርግጽ፡ ሕጂ እመጽእ ኣለኹ።',
     'c.easy.a.why': '«Een handje helpen» ሓገዝ ምሕታት እዩ፡ «እወ» ምባልን ምምጻእን።',
     'l.plain': 'ከም ዘሎ ምዝራብ',
@@ -99,8 +99,8 @@ const t: CultureTranslation = {
     'zg.oefening.o2': { m: 'ናብ ትምህርቲ ስነ-ጥበብ ክትከይድ ኣለካ።', f: 'ናብ ትምህርቲ ስነ-ጥበብ ክትከዲ ኣለኪ።' },
     'zg.oefening.o3': { m: 'ደው በል፡ ንዓኻ ኣዝዩ ከቢድ እዩ።', f: 'ደው በሊ፡ ንዓኺ ኣዝዩ ከቢድ እዩ።', x: 'ደው በሉ፡ ንዓኹም ኣዝዩ ከቢድ እዩ።' }, // x: nieuw, nalezen // nagelezen AI 22 nov
     'zg.oefening.w': 'እዚ ምስላ እዩ፡ ብልምምድ ኩሉ ይመሓየሽ። ንምምሃር ሆላንድኛ እውን ሓቂ እዩ።',
-    'zg.zwartwit.lit': { m: 'ብጸሊም ኣብ ጻዕዳ ክህልወካ ኣረጋግጽ።', f: 'ብጸሊም ኣብ ጻዕዳ ክህልወኪ ኣረጋግጺ።', x: 'ብጸሊም ኣብ ጻዕዳ ክህልወኩም ኣረጋግጹ።' }, // nagelezen (2e lezing) // x: nieuw, nalezen
-    'zg.zwartwit.m': { m: 'ኣብ ወረቐት፡ ብጽሑፍ ክህልወካ ኣረጋግጽ።', f: 'ኣብ ወረቐት፡ ብጽሑፍ ክህልወኪ ኣረጋግጺ።', x: 'ኣብ ወረቐት፡ ብጽሑፍ ክህልወኩም ኣረጋግጹ።' }, // nagelezen (2e lezing) // x: nieuw, nalezen
+    'zg.zwartwit.lit': { m: 'ብጸሊም ኣብ ጻዕዳ ክህልወካ ኣረጋግጽ።', f: 'ብጸሊም ኣብ ጻዕዳ ክህልወኪ ኣረጋግጺ።', x: 'ብጸሊም ኣብ ጻዕዳ ክህልወኩም ኣረጋግጹ።' }, // nagelezen (2e lezing) // x: nieuw, nalezen // nagelezen AI 28 nov
+    'zg.zwartwit.m': { m: 'ኣብ ወረቐት፡ ብጽሑፍ ክህልወካ ኣረጋግጽ።', f: 'ኣብ ወረቐት፡ ብጽሑፍ ክህልወኪ ኣረጋግጺ።', x: 'ኣብ ወረቐት፡ ብጽሑፍ ክህልወኩም ኣረጋግጹ።' }, // nagelezen (2e lezing) // x: nieuw, nalezen // nagelezen AI 28 nov
     'zg.zwartwit.s': { m: 'ሓላፊኻ ዝያዳ ደሞዝ ክህበካ ቃል ይኣትወልካ። ብጸይቲ ስራሕካ «Zorg dat je het zwart op wit hebt.» ትብል። እንታይ ማለታ እያ?', f: 'ሓላፊኺ ዝያዳ ደሞዝ ክህበኪ ቃል ይኣትወልኪ። ብጸይቲ ስራሕኪ «Zorg dat je het zwart op wit hebt.» ትብል። እንታይ ማለታ እያ?', x: 'ሓላፊኹም ዝያዳ ደሞዝ ክህበኩም ቃል ይኣትወልኩም። ብጸይቲ ስራሕኩም «Zorg dat je het zwart op wit hebt.» ትብል። እንታይ ማለታ እያ?' }, // x: nieuw, nalezen // nagelezen AI 22 nov
     'zg.zwartwit.o1': { m: 'እቲ ቃል ብጽሑፍ ሕተቶ።', f: 'እቲ ቃል ብጽሑፍ ሕተትዮ።' },
     'zg.zwartwit.o2': { m: 'ጸሊምን ጻዕዳን ወረቐት ሕተት።', f: 'ጸሊምን ጻዕዳን ወረቐት ሕተቲ።', x: 'ጸሊምን ጻዕዳን ወረቐት ሕተቱ።' }, // x: nieuw, nalezen // nagelezen AI 22 nov
