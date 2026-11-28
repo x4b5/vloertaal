@@ -6,13 +6,13 @@ const t: CultureTranslation = {
     sayAloud: "Não precisas de microfone. Diz em voz alta e depois continua.",
     micRetry: "Tentar outra vez com o microfone",
     micFailed: "O microfone não funcionou. Diz em voz alta e depois continua.",
-    micRefused: "A app não pode usar o teu microfone. Podes ativá-lo.", // nieuw, nalezen
-    micTurnOn: "Ativa o microfone", // nieuw, nalezen
-    micStepsIos: "Toca em “•••” ou “aA” na barra de endereço › Definições do site › Microfone › Permitir. Ou: Definições › Apps › Safari › Microfone. Depois toca no botão abaixo.", // nieuw, nalezen
-    micStepsIosOther: "Toca no ícone à esquerda do endereço web › Autorizações › Microfone › Permitir. Ou: Definições › Apps › {app} › Microfone. Depois toca no botão abaixo.", // nieuw, nalezen
-    micStepsAndroid: "Toca no ícone à esquerda do endereço web › Autorizações › Microfone › Permitir. Depois toca no botão abaixo.", // nieuw, nalezen
-    micStepsAndroidApp: "Mantém premido o ícone do Vloertaal no ecrã principal › Informações da app › Autorizações › Microfone › Permitir. Depois toca no botão abaixo.", // nieuw, nalezen
-    micStepsDesktop: "Clica no ícone à esquerda do endereço web › Microfone › Permitir. Depois clica no botão abaixo.", // nieuw, nalezen
+    micRefused: "A app não pode usar o teu microfone. Podes ativá-lo.", // nieuw, nalezen // nagelezen AI 28 nov
+    micTurnOn: "Ativa o microfone", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsIos: "Toca em “•••” ou “aA” na barra de endereço › Definições do site › Microfone › Permitir. Ou: Definições › Apps › Safari › Microfone. Depois toca no botão abaixo.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsIosOther: "Toca no ícone à esquerda do endereço web › Autorizações › Microfone › Permitir. Ou: Definições › Apps › {app} › Microfone. Depois toca no botão abaixo.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsAndroid: "Toca no ícone à esquerda do endereço web › Autorizações › Microfone › Permitir. Depois toca no botão abaixo.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsAndroidApp: "Mantém premido o ícone do Vloertaal no ecrã principal › Informações da app › Autorizações › Microfone › Permitir. Depois toca no botão abaixo.", // nieuw, nalezen // nagelezen AI 28 nov
+    micStepsDesktop: "Clica no ícone à esquerda do endereço web › Microfone › Permitir. Depois clica no botão abaixo.", // nieuw, nalezen // nagelezen AI 28 nov
     whichPicture: "Qual é a imagem?",
     sayAloudInstead: "Em vez disso, diz em voz alta",
     wordsPractised: "Palavras praticadas",
@@ -208,127 +208,127 @@ const t: CultureTranslation = {
     'c.brakes.a.why': "Perguntam se tem de ser novo: sim, e porquê.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.a.why': "Perguntam o que é preciso fazer: ver na ordem de trabalho.", // nieuw, nalezen // nagelezen AI 22 nov
     // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang (23 November 2026).
-    'c.mowing.a.why': "Perguntam se se pode levar: sim, e o que fazer primeiro.", // nieuw, nalezen
-    'c.pruning.a.why': "Perguntam que ramos: só os secos.", // nieuw, nalezen
-    'c.hedge.a.why': "Perguntam a que altura: até à linha, não mais baixo.", // nieuw, nalezen
-    'c.chainsaw.a.why': "Perguntam se se pode: ainda não, e o que vem primeiro.", // nieuw, nalezen
-    'c.weeding.a.why': "Perguntam se é erva daninha: não, e o que fazer com ela.", // nieuw, nalezen
-    'c.planting.a.why': "Perguntam onde vai: o sítio no canteiro.", // nieuw, nalezen
-    'c.roadside.a.why': "Perguntam se se pode atravessar: não, esperar, e porquê.", // nieuw, nalezen
-    'c.litter.a.why': "Um morador pergunta quando: não se sabe, e quem sabe.", // nieuw, nalezen
-    'c.reception.a.why': "Um visitante tem uma reunião marcada: um momento, e um telefonema.", // nieuw, nalezen
-    'c.visitors.a.why': "Perguntam onde fica o casaco: o sítio, e onde é.", // nieuw, nalezen
-    'c.mailroom.a.why': "Perguntam para quem é: o departamento, e o piso.", // nieuw, nalezen
-    'c.meetingroom.a.why': "Perguntam a que horas: a hora, e o que tem de ser feito.", // nieuw, nalezen
-    'c.faults.a.why': "Perguntam porque está frio: o que está avariado, e quando vem ajuda.", // nieuw, nalezen
-    'c.repairs.a.why': "Perguntam se apita: sim, e porquê.", // nieuw, nalezen
-    'c.moving.a.why': "Perguntam para onde vai: a sala, e onde ver.", // nieuw, nalezen
-    'c.closing.a.why': "Perguntam se está alguém lá dentro: não, e o que se faz agora.", // nieuw, nalezen
-    'c.patrol.a.why': "Perguntam se se viu alguma coisa: sim, o quê, e onde.", // nieuw, nalezen
-    'c.access.a.why': "Pedem para entrar sem cartão: desculpe, sem cartão não.", // nieuw, nalezen
-    'c.cameras.a.why': "Perguntam o que se vê: quem, onde, e o que se faz.", // nieuw, nalezen
-    'c.report.a.why': "Perguntam o que vai no relatório: o quê, onde e quando.", // nieuw, nalezen
-    'c.evacuation.a.why': "Perguntam se já saíram todos: não, e quantos faltam.", // nieuw, nalezen
-    'c.firstaid.a.why': "Perguntam onde está o desfibrilhador: o sítio, e o que está ao lado.", // nieuw, nalezen
-    'c.shoplifting.a.why': "Perguntam se se pode revistar uma mala: não, e quem faz isso.", // nieuw, nalezen
-    'c.aggression.a.why': "Perguntam porque não: a razão, dita com calma.", // nieuw, nalezen
-    'c.hygienelock.a.why': "Perguntam por um relógio: não, e a regra por trás.", // nieuw, nalezen
-    'c.allergens.a.why': "Perguntam se pode ir junto: não, e porquê.", // nieuw, nalezen
-    'c.coldroom.a.why': "Perguntam porque apita: a causa, e o que fazer.", // nieuw, nalezen
-    'c.foreignbody.a.why': "Perguntam o que fazer: a quem mostrar.", // nieuw, nalezen
-    'c.cutting.a.why': "Perguntam quanto: o peso, e onde ver.", // nieuw, nalezen
-    'c.labels.a.why': "Perguntam que data: quando, e onde ver.", // nieuw, nalezen
-    'c.linecleaning.a.why': "Perguntam se está limpo: ainda não, e o que falta.", // nieuw, nalezen
-    'c.haccp.a.why': "Perguntam porquê: para saber que a comida é segura.", // nieuw, nalezen
-    'c.binlorry.a.why': "Perguntam se se pode ir atrás, pendurado: não, e onde ir.", // nieuw, nalezen
-    'c.reversing.a.why': "Pedem ajuda: sim, onde se fica, e o que se faz.", // nieuw, nalezen
-    'c.wastesorting.a.why': "Perguntam para onde vai: o contentor, e porquê.", // nieuw, nalezen
-    'c.wastesafety.a.why': "Perguntam o que fazer depois de um corte: lavar, e avisar.", // nieuw, nalezen
-    'c.yard.a.why': "Perguntam para onde vai: o contentor, e onde está.", // nieuw, nalezen
-    'c.hazardous.a.why': "Perguntam o que tem dentro: não se sabe, por isso fica de lado.", // nieuw, nalezen
-    'c.baler.a.why': "Perguntam se se pode ver: não, e o que vem primeiro.", // nieuw, nalezen
-    'c.shovel.a.why': "Perguntam se se pode passar: só quando o condutor vê.", // nieuw, nalezen
-    'c.nappies.a.why': "Perguntam quando: a hora, e onde está escrita.", // nieuw, nalezen
-    'c.mealtime.a.why': "Perguntam se ele pode comer: não, porquê, e onde ver.", // nieuw, nalezen
-    'c.naptime.a.why': "Perguntam se ela dorme: sim, desde quando, e que se vai ver.", // nieuw, nalezen
-    'c.playtime.a.why': "Perguntam se uma criança pode brincar: sim, onde, e o que depois.", // nieuw, nalezen
-    'c.pickup.a.why': "Perguntam quem vem buscar: a pessoa, e que ela está na lista.", // nieuw, nalezen
-    'c.childsafety.a.why': "Perguntam se ela caiu: sim, o que tem, e a quem se liga.", // nieuw, nalezen
-    'c.sickchild.a.why': "Perguntam como ele está: o que se vê, e o que se faz.", // nieuw, nalezen
-    'c.grouprules.a.why': "Perguntam se se pode ir sem outro adulto: sim, mas avisar primeiro um colega.", // nieuw, nalezen
+    'c.mowing.a.why': "Perguntam se se pode levar: sim, e o que fazer primeiro.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.a.why': "Perguntam que ramos: só os secos.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.a.why': "Perguntam a que altura: até à corda, não mais baixo.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.chainsaw.a.why': "Perguntam se se pode: ainda não, e o que vem primeiro.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.a.why': "Perguntam se é erva daninha: não, e o que fazer com ela.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.a.why': "Perguntam onde vai: o sítio no canteiro.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.a.why': "Perguntam se se pode atravessar: não, esperar, e porquê.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.a.why': "Um morador pergunta quando: não se sabe, e quem sabe.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.a.why': "Um visitante tem uma reunião marcada: um momento, e um telefonema.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.a.why': "Perguntam onde fica o casaco: o sítio, e onde é.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.a.why': "Perguntam para quem é: o departamento, e o piso.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.a.why': "Perguntam a que horas: a hora, e o que tem de ser feito.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.a.why': "Perguntam porque está frio: o que está avariado, e quando vem ajuda.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.a.why': "Perguntam se apita: sim, e porquê.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.a.why': "Perguntam para onde vai: a sala, e onde ver.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.a.why': "Perguntam se está alguém lá dentro: não, e o que se faz agora.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.a.why': "Perguntam se se viu alguma coisa: sim, o quê, e onde.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.a.why': "Pedem para entrar sem cartão: desculpe, sem cartão não.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.a.why': "Perguntam o que se vê: quem, onde, e o que se faz.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.a.why': "Perguntam o que vai no relatório: o quê, onde e quando.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.a.why': "Perguntam se já saíram todos: não, e quantos faltam.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.a.why': "Perguntam onde está o desfibrilhador: o sítio, e o que está ao lado.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.a.why': "Perguntam se se pode revistar uma mala: não, e quem faz isso.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.a.why': "Perguntam porque não: a razão, dita com calma.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.a.why': "Perguntam por um relógio: não, e a regra por trás.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.a.why': "Perguntam se pode ir junto: não, e porquê.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.a.why': "Perguntam porque apita: a causa, e o que fazer.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.a.why': "Perguntam o que fazer: a quem mostrar.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.a.why': "Perguntam quanto: o peso, e onde ver.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.a.why': "Perguntam que data: quando, e onde ver.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.a.why': "Perguntam se está limpo: ainda não, e o que falta.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.a.why': "Perguntam porquê: para saber que a comida é segura.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.a.why': "Perguntam se se pode ir atrás, pendurado: não, e onde ir.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.a.why': "Pedem ajuda: sim, onde se fica, e o que se faz.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.a.why': "Perguntam para onde vai: o contentor, e porquê.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.a.why': "Perguntam o que fazer depois de um corte: lavar, e avisar.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.a.why': "Perguntam para onde vai: o contentor, e onde está.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.a.why': "Perguntam o que tem dentro: não se sabe, por isso fica de lado.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.a.why': "Perguntam se se pode ver: não, e o que vem primeiro.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.a.why': "Perguntam se se pode passar: só quando o condutor vê.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.a.why': "Perguntam quando: a hora, e onde está escrita.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.a.why': "Perguntam se ele pode comer: não, porquê, e onde ver.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.a.why': "Perguntam se ela dorme: sim, desde quando, e que se vai ver.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.a.why': "Perguntam se uma criança pode brincar: sim, onde, e o que depois.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.a.why': "Perguntam quem vem buscar: a pessoa, e que ela está na lista.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.a.why': "Perguntam se ela caiu: sim, o que tem, e a quem se liga.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.a.why': "Perguntam como ele está: o que se vê, e o que se faz.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.a.why': "Perguntam se se pode ir sem outro adulto: sim, mas avisar primeiro um colega.", // nieuw, nalezen // nagelezen AI 28 nov
     // Second units for Schoonmaak, Horeca, Zorg and Winkel, and the uitzendbureau (23 November 2026).
-    'c.sanitary.a.why': "Perguntam se está pronto: ainda não, e porquê.", // nieuw, nalezen
-    'c.hotelroom.a.why': "Perguntam quantos faltam: o número, e quando acabas.", // nieuw, nalezen
-    'c.dosing.a.why': "Dizem para pôr mais: não, mais não é melhor, e o que usas.", // nieuw, nalezen
-    'c.officenight.a.why': "Perguntam se trabalhas sem mais ninguém: sim, e vais mandar uma mensagem.", // nieuw, nalezen
-    'c.knives.a.why': "Pedem para cortar: sim, chefe, e uma pergunta sobre como.", // nieuw, nalezen
-    'c.rawcooked.a.why': "Perguntam se é sem glúten: não se tem a certeza, por isso vê-se a lista.", // nieuw, nalezen
-    'c.pass.a.why': "Perguntam onde está a comida: no passe, e vais levá-la agora.", // nieuw, nalezen
-    'c.bill.a.why': "Pedem para pagar em separado: sim, e vais buscar o terminal.", // nieuw, nalezen
-    'c.washing.a.why': "O cliente diz que não: está bem, e ofereces outra coisa.", // nieuw, nalezen
-    'c.observing.a.why': "Perguntam se há alguma coisa de especial: sim, e o quê exatamente.", // nieuw, nalezen
-    'c.homecare.a.why': "Perguntam quem é: um cumprimento, quem és, e se podes entrar.", // nieuw, nalezen
-    'c.liftaids.a.why': "Pedem para fazer sem ajuda: sim, com o lençol deslizante, e vais buscá-lo.", // nieuw, nalezen
-    'c.returns.a.why': "Pedem para devolver: sim, e uma pergunta sobre o talão.", // nieuw, nalezen
-    'c.facing.a.why': "Perguntam se já acabaste: quase, e o que ainda falta.", // nieuw, nalezen
-    'c.shrink.a.why': "Pedem para ver a tua mala: sim, e mostras o talão.", // nieuw, nalezen
-    'c.shopclose.a.why': "Pedem para entrar: desculpe, está fechado, e quando abre outra vez.", // nieuw, nalezen
-    'c.hirer.a.why': "Pedem para começar num sítio novo: sim, e uma pergunta sobre a hora.", // nieuw, nalezen
-    'c.phases.a.why': "Dizem que o trabalho acaba: está bem, e pedes outro trabalho.", // nieuw, nalezen
-    'c.deductions.a.why': "Falam de um desconto: perguntas se é permitido, e confirmas.", // nieuw, nalezen
-    'c.agencyhome.a.why': "Dizem para sair em breve: é pouco tempo, e primeiro pedes conselho.", // nieuw, nalezen
+    'c.sanitary.a.why': "Perguntam se já estão prontas: ainda não, e porquê.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.hotelroom.a.why': "Perguntam quantos faltam: o número, e quando acabas.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.a.why': "Dizem para pôr mais: não, mais não é melhor, e o que usas.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.a.why': "Perguntam se trabalhas sem mais ninguém: sim, e vais mandar uma mensagem.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.a.why': "Pedem para cortar: sim, chefe, e uma pergunta sobre como.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.a.why': "Perguntam se é sem glúten: não se tem a certeza, por isso vê-se a lista.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.a.why': "Perguntam onde está a comida: no passe, e vais levá-la agora.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.a.why': "Pedem para pagar em separado: sim, e vais buscar o terminal.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.a.why': "O cliente diz que não: está bem, e ofereces outra coisa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.a.why': "Perguntam se há alguma coisa de especial: sim, e o quê exatamente.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.a.why': "Perguntam quem é: um cumprimento, quem és, e se podes entrar.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.a.why': "Pedem para fazer sem ajuda: sim, com o lençol deslizante, e vais buscá-lo.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.a.why': "Pedem para devolver: sim, e uma pergunta sobre o talão.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.a.why': "Perguntam se já acabaste: quase, e o que ainda falta.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.a.why': "Pedem para ver a tua mala: sim, e mostras o talão.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.a.why': "Pedem para entrar: desculpe, está fechado, e quando abre outra vez.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.a.why': "Pedem para começar num sítio novo: sim, e uma pergunta sobre a hora.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.a.why': "Dizem que o trabalho acaba: está bem, e pedes outro trabalho.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.a.why': "Falam de um desconto: perguntas se é permitido, e confirmas.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.a.why': "Dizem para sair em breve: é pouco tempo, e primeiro pedes conselho.", // nieuw, nalezen // nagelezen AI 28 nov
     // The basis units at four lessons (23 November 2026).
-    'c.roster.a.why': "Dizem-te que o horário mudou: está bem, e perguntas que dia.", // nieuw, nalezen
-    'c.breaks.a.why': "Perguntam-te pela pausa para almoço: a hora, e quanto tempo dura.", // nieuw, nalezen
-    'c.wound.a.why': "Alguém está quase a desmaiar: deixas a pessoa deitada, e vais buscar ajuda.", // nieuw, nalezen
-    'c.callhelp.a.why': "Perguntam-te se ele reage: não, não reage.", // nieuw, nalezen
-    'c.vacancy.a.why': "Perguntam-te porque ligas: por causa da vaga, e se ainda está aberta.", // nieuw, nalezen
-    'c.result.a.why': "Dizem-te que não: respondes com calma, e perguntas porquê.", // nieuw, nalezen
-    'c.residence.a.why': "Dizem-te que a autorização está quase a caducar: pedes logo uma nova.", // nieuw, nalezen
-    'c.newhome.a.why': "Perguntam-te onde moras: numa casa nova, e dás a nova morada.", // nieuw, nalezen
-    'c.payparts.a.why': "Pedem-te o número de funcionário: onde está no recibo de vencimento.", // nieuw, nalezen
-    'c.latepay.a.why': "Dizem-te que o dinheiro vem mais tarde: queres isso por escrito.", // nieuw, nalezen
-    'c.holiday.a.why': "Pedem-te para ir em maio: preferes julho, e dizes porquê.", // nieuw, nalezen
-    'c.special.a.why': "Perguntam-te pela licença de nascimento: sim, e quando.", // nieuw, nalezen
-    'c.unwell.a.why': "Perguntam-te se estás bem: não, e se podes ir para casa.", // nieuw, nalezen
-    'c.injury.a.why': "Pedem-te uma declaração: sim, e uma cópia para ti.", // nieuw, nalezen
-    'c.debt.a.why': "Dizem-te para ficares até pagares a dívida: não é permitido, pedes ajuda.", // nieuw, nalezen
-    'c.inspection.a.why': "Pedem-te para falar: sim, mas não onde o patrão pode ouvir.", // nieuw, nalezen
-    'c.carpool.a.why': "Perguntam-te quem conduz: tu, e quando os vais buscar.", // nieuw, nalezen
-    'c.train.a.why': "Perguntam-te porque chegas tarde: o comboio, e mandaste uma mensagem.", // nieuw, nalezen
-    'c.checklist.a.why': "Perguntam-te se te esqueceste de alguma coisa: mais uma vista de olhos à lista.", // nieuw, nalezen
-    'c.leavesite.a.why': "Perguntam-te se és tu quem fecha: sim, tudo desligado e a porta fechada à chave.", // nieuw, nalezen
-    'c.stagedays.a.why': "Perguntam-te porque faltaste: estavas doente, e ligaste para os dois.", // nieuw, nalezen
-    'c.stageend.a.why': "Perguntam-te pelos teus planos: primeiro o diploma, depois o trabalho.", // nieuw, nalezen
-    'c.neighbours.a.why': "Uma vizinha nova cumprimenta-te: muito prazer, e dizes o teu nome.", // nieuw, nalezen
-    'c.join.a.why': "Perguntam-te se vens: sim, e queres falar com o professor.", // nieuw, nalezen
-    'c.workphotos.a.why': "Pedem-te uma fotografia para a internet: um não educado.", // nieuw, nalezen
-    'c.device.a.why': "Perguntam-te por uma app nova: primeiro pergunta ao departamento de informática.", // nieuw, nalezen
+    'c.roster.a.why': "Dizem-te que o horário mudou: está bem, e perguntas que dia.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.a.why': "Perguntam-te pela pausa para almoço: a hora, e quanto tempo dura.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.a.why': "Alguém está quase a desmaiar: deixas a pessoa deitada, e vais buscar ajuda.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.a.why': "Perguntam-te se ele reage: não, não reage.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.a.why': "Perguntam-te porque ligas: por causa da vaga, e se ainda está aberta.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.a.why': "Dizem-te que não: respondes com calma, e perguntas porquê.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.a.why': "Dizem-te que a autorização está quase a caducar: pedes logo uma nova.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.a.why': "Perguntam-te onde moras: numa casa nova, e dás a nova morada.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.a.why': "Pedem-te o número de funcionário: onde está no recibo de vencimento.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.a.why': "Dizem-te que o dinheiro vem mais tarde: queres isso por escrito.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.a.why': "Pedem-te para ir em maio: preferes julho, e dizes porquê.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.a.why': "Perguntam-te pela licença de nascimento: sim, e quando.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.a.why': "Perguntam-te se estás bem: não, e se podes ir para casa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.a.why': "Pedem-te uma declaração: sim, e uma cópia para ti.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.a.why': "Dizem-te para ficares até pagares a dívida: não é permitido, pedes ajuda.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.a.why': "Pedem-te para falar: sim, mas não onde o patrão pode ouvir.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.a.why': "Perguntam-te quem conduz: tu, e quando os vais buscar.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.a.why': "Perguntam-te porque chegas tarde: o comboio, e mandaste uma mensagem.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.a.why': "Perguntam-te se te esqueceste de alguma coisa: mais uma vista de olhos à lista.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.a.why': "Perguntam-te se és tu quem fecha: sim, tudo desligado e a porta fechada à chave.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.a.why': "Perguntam-te porque faltaste: estavas doente, e ligaste para os dois.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.a.why': "Perguntam-te pelos teus planos: primeiro o diploma, depois o trabalho.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.a.why': "Uma vizinha nova cumprimenta-te: muito prazer, e dizes o teu nome.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.a.why': "Perguntam-te se vens: sim, e queres falar com o professor.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.a.why': "Pedem-te uma fotografia para a internet: um não educado.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.a.why': "Perguntam-te por uma app nova: primeiro pergunta ao departamento de informática.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Veiligheid op het werk" and the VOG (23 November 2026).
-    'c.safetysigns.a.why': "Perguntam-te o que quer dizer um sinal: cuidado, e que sinal é.", // nieuw, nalezen
-    'c.substances.a.why': "Perguntam-te se é tóxico: não adivinhas, vais ver.", // nieuw, nalezen
-    'c.firefight.a.why': "Dizem-te que há fogo: é pequeno, por isso vais buscar o extintor.", // nieuw, nalezen
-    'c.permitwork.a.why': "Perguntam-te quem fica cá fora: tu, e a tua tarefa.", // nieuw, nalezen
-    'c.vog.a.why': "Perguntam-te pelo VOG: ainda não, e de que estás à espera.", // nieuw, nalezen
+    'c.safetysigns.a.why': "Perguntam-te o que quer dizer um sinal: cuidado, e que sinal é.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.a.why': "Perguntam-te se é tóxico: não adivinhas, vais ver.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.a.why': "Dizem-te que há fogo: é pequeno, por isso vais buscar o extintor.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.a.why': "Perguntam-te quem fica cá fora: tu, e a tua tarefa.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.a.why': "Perguntam-te pelo VOG: ainda não, e de que estás à espera.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Operator in de procesindustrie" (23 November 2026).
-    'c.plantround.a.why': "Perguntam-te pelo alarme: o que está alto demais, e onde.", // nieuw, nalezen
-    'c.plantfault.a.why': "Perguntam se podem arrancar: não, ainda há um cadeado.", // nieuw, nalezen
-    'c.shiftwork.a.why': "Perguntam-te o que aconteceu: a avaria, e onde está escrita.", // nieuw, nalezen
-    'c.heatdust.a.why': "Perguntam pelo telemóvel: não, por causa do perigo aqui.", // nieuw, nalezen
+    'c.plantround.a.why': "Perguntam-te pelo alarme: o que está alto demais, e onde.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.a.why': "Perguntam se podem arrancar: não, ainda há um cadeado.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.a.why': "Perguntam-te o que aconteceu: a avaria, e onde está escrita.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.a.why': "Perguntam pelo telemóvel: não, por causa do perigo aqui.", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (26 November 2026).
-    'c.debthelp.a.why': "Dizem-te que a conta não está paga: sim, e pedes um plano de pagamentos.", // nieuw, nalezen
-    'c.taxes.a.why': "Dizem-te que há um envelope azul: agradeces, e abres logo.", // nieuw, nalezen
-    'c.discrimination.a.why': "Perguntam-te se estás bem: não, e vais comunicar isso.", // nieuw, nalezen
-    'c.union.a.why': "Perguntam-te porque és membro: defendem-te.", // nieuw, nalezen
-    'c.kiln.a.why': "Perguntam se se pode apanhar os cacos com a mão: não, com a pá e a escova.", // nieuw, nalezen
-    'c.mixlab.a.why': "Perguntam se o lote está aprovado: ainda não, o laboratório está a testar.", // nieuw, nalezen
-    'c.firstweeks.a.why': "Perguntam-te pela visita guiada: quase tudo, e uma pergunta.", // nieuw, nalezen
-    'c.orderpick.a.why': "Pedem-te para conduzir o empilhador retrátil: não, sem formação para isso.", // nieuw, nalezen
+    'c.debthelp.a.why': "Dizem-te que a conta não está paga: sim, e pedes um plano de pagamentos.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.a.why': "Dizem-te que há um envelope azul: agradeces, e abres logo.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.a.why': "Perguntam-te se estás bem: não, e vais comunicar isso.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.a.why': "Perguntam-te porque és membro: defendem-te.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.a.why': "Perguntam se se pode apanhar os cacos com a mão: não, com a pá e a escova.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.a.why': "Perguntam se o lote está aprovado: ainda não, o laboratório está a testar.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.a.why': "Perguntam-te pela visita guiada: quase tudo, e uma pergunta.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.a.why': "Pedem-te para conduzir o empilhador retrátil: não, sem formação para isso.", // nieuw, nalezen // nagelezen AI 28 nov
     // four new lessons (27 November 2026).
-    'd.appraisal.a.why': "Perguntam-te pelo teu objetivo: uma coisa clara que queres aprender.", // nieuw, nalezen
-    'c.forms.a.why': "Perguntam-te pelo formulário: quase, e onde assinar.", // nieuw, nalezen
-    'c.voicemail.a.why': "Pedem o teu nome e número: o teu nome, e um pedido para ligarem de volta.", // nieuw, nalezen
-    'c.dentist.a.why': "Perguntam-te pela última consulta: quando, e pedes uma consulta de controlo.", // nieuw, nalezen
+    'd.appraisal.a.why': "Perguntam-te pelo teu objetivo: uma coisa clara que queres aprender.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.a.why': "Perguntam-te pelo formulário: quase, e onde assinar.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.a.why': "Pedem o teu nome e número: o teu nome, e um pedido para ligarem de volta.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.a.why': "Perguntam-te pela última consulta: quando, e pedes uma consulta de controlo.", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 
