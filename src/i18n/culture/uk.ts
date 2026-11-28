@@ -170,7 +170,7 @@ const t: CultureTranslation = {
     'w.overwerken': 'працювати понаднормово',
     'w.misschien': 'можливо',
     's.agree.1': 'Ні, сьогодні не вийде.',
-    's.agree.2': { m: 'Я з тобою не згоден.', f: 'Я з тобою не згодна.', x: 'Я з тобою не погоджуюся.' }, // x: nieuw, nalezen
+    's.agree.2': { m: 'Я з тобою не згоден.', f: 'Я з тобою не згодна.', x: 'Я з тобою не погоджуюся.' }, // x: nieuw, nalezen // nagelezen AI 28 nov
     's.agree.3': 'Домовленість є домовленість.',
     'd.agree.q': 'Можеш попрацювати понаднормово в суботу?',
     'd.agree.a': 'Ні, не вийде. У неділю можу.',
@@ -182,35 +182,35 @@ const t: CultureTranslation = {
     'w.snel': 'швидко, швидкий',
     'w.bijna': 'майже',
     's.task.1': 'Що мені зробити спочатку?',
-    's.task.2': { m: 'Я закінчив це завдання.', f: 'Я закінчила це завдання.', x: 'Це завдання виконано.' }, // nieuw, nalezen (AI-correctie 2 nov 2026)
+    's.task.2': { m: 'Я закінчив це завдання.', f: 'Я закінчила це завдання.', x: 'Це завдання виконано.' }, // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     's.task.3': 'Можете показати це ще раз?',
-    'd.task.q': { m: 'Ти закінчив?', f: 'Ти закінчила?', x: 'Готово?' }, // x: nieuw, nalezen
+    'd.task.q': { m: 'Ти закінчив?', f: 'Ти закінчила?', x: 'Готово?' }, // x: nieuw, nalezen // nagelezen AI 28 nov
     'd.task.a': 'Майже. Ще п’ять хвилин.',
-    'l.clear': 'Коротко і ясно', // nieuw, nalezen
-    'w.kort': 'короткий, коротко', // nieuw, nalezen
-    'w.duidelijk': 'зрозумілий, ясний', // nieuw, nalezen
-    'w.belangrijkste': 'найголовніше', // nieuw, nalezen
-    'w.rustig': 'спокійний, спокійно', // nieuw, nalezen
-    'w.teveel': 'забагато', // nieuw, nalezen
-    'w.vraag': 'питання', // nieuw, nalezen
-    's.clear.1': 'Скажу коротко: машина зламалася.', // nieuw, nalezen
-    's.clear.2': { m: 'Спершу найголовніше: я хворий.', f: 'Спершу найголовніше: я хвора.', x: 'Спершу найголовніше: я хворий / хвора.' }, // nieuw, nalezen
-    's.clear.3': 'Вибач, я говорю надто швидко й забагато.', // nieuw, nalezen
-    'd.clear.q': 'Зрозуміло?', // nieuw, nalezen
-    'd.clear.a': 'Так. У мене ще одне питання.', // nieuw, nalezen
+    'l.clear': 'Коротко і ясно', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kort': 'короткий, коротко', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.duidelijk': 'зрозумілий, ясний', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.belangrijkste': 'найголовніше', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rustig': 'спокійний, спокійно', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teveel': 'забагато', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vraag': 'питання', // nieuw, nalezen // nagelezen AI 28 nov
+    's.clear.1': 'Скажу коротко: машина зламалася.', // nieuw, nalezen // nagelezen AI 28 nov
+    's.clear.2': { m: 'Спершу найголовніше: я хворий.', f: 'Спершу найголовніше: я хвора.', x: 'Спершу найголовніше: я хворію.' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
+    's.clear.3': 'Вибач, я говорю надто швидко й забагато.', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.clear.q': 'Зрозуміло?', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.clear.a': 'Так. У мене ще одне питання.', // nieuw, nalezen // nagelezen AI 28 nov
     // Vertaalronde 5 november 2026: l.newcolleague en c.newcolleague.
-    'l.newcolleague': "Допомога новому колезі", // nieuw, nalezen
-    'w.welkom': "ласкаво просимо", // nieuw, nalezen
-    'w.inwerken': "вводити в роботу (показувати новому колезі роботу в перші дні)", // nieuw, nalezen
-    'w.stap': "крок (одна маленька частина завдання)", // nieuw, nalezen
-    'w.nadoen': "повторювати за кимось (робити те, що тобі показали)", // nieuw, nalezen
-    'w.geduld': "терпіння", // nieuw, nalezen
-    'w.kast': "шафа", // nieuw, nalezen
-    's.newcolleague.1': "Ласкаво просимо! Сьогодні я покажу тобі роботу.", // nieuw, nalezen
-    's.newcolleague.2': "Спершу дивись. Потім повтори.", // nieuw, nalezen
-    's.newcolleague.3': "Рукавиці лежать у тій шафі.", // nieuw, nalezen
-    'd.newcolleague.q': "Здається, мені все зрозуміло.", // nieuw, nalezen
-    'd.newcolleague.a': "Добре. Покажи.", // nieuw, nalezen
+    'l.newcolleague': "Допомога новому колезі", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.welkom': "ласкаво просимо", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inwerken': "вводити в роботу (показувати новому колезі роботу в перші дні)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stap': "крок (одна маленька частина завдання)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nadoen': "повторювати за кимось (робити те, що тобі показали)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geduld': "терпіння", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kast': "шафа", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.1': "Ласкаво просимо! Сьогодні я покажу тобі роботу.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.2': "Спершу дивись. Потім повтори.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.3': "Рукавиці лежать у тій шафі.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.newcolleague.q': "Здається, мені все зрозуміло.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.newcolleague.a': "Добре. Покажи.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.newcolleague': "Покажи, крок за кроком", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.b': "Те, що було важко тобі в перші тижні, важко й новому колезі. Пояснюй роботу маленькими кроками: спершу це, потім те. Не говори швидше чи голосніше: покажи й дай людині повторити за тобою. Не питай «Snap je het?»: багато людей кажуть «так», навіть коли не розуміють. Натомість скажи «Laat eens zien» і дивись. Скажи, де що є, наприклад туалет, їдальня й рукавиці. Май терпіння (geduld): навчання потребує часу, для всіх.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.p': "Молодець! Тепер наступний крок.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -220,67 +220,67 @@ const t: CultureTranslation = {
     'c.newcolleague.o3': "Поясниш усе ще раз, швидше й голосніше.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.w': "Багато людей кажуть «ja», навіть коли не зрозуміли. Коли він показує, ви обидва бачите, чи все виходить. Це швидше, ніж потім виправляти помилку.", // nieuw, nalezen // nagelezen AI 22 nov
     // Vertaalronde 5 november 2026: u.communicate (Goed communiceren) en u.feedback (Feedback en overleg).
-    'u.communicate': "Добре спілкуватися", // nieuw, nalezen
-    'l.explain': "Сказати, що не так", // nieuw, nalezen
-    'w.ietsmis': "щось не так", // nieuw, nalezen
-    'w.stilstaan': "стояти, зупинитися (машина, стрічка)", // nieuw, nalezen
-    'w.lampje': "(сигнальна) лампочка", // nieuw, nalezen
-    'w.komen': "приходити, підходити", // nieuw, nalezen
-    'w.nodighebben': "потребувати, бути потрібним", // nieuw, nalezen
-    'w.meteen': "одразу, негайно", // nieuw, nalezen
-    's.explain.1': "Стрічка стоїть. На лінії два. Можеш підійти?", // nieuw, nalezen
-    's.explain.2': "На машині горить червона лампочка.", // nieuw, nalezen
-    's.explain.3': "Це небезпечно. Можеш підійти негайно?", // nieuw, nalezen
-    'd.explain.q': "Що не так?", // nieuw, nalezen
-    'd.explain.a': "Сканер не працює. Мені потрібен новий.", // nieuw, nalezen
-    'l.listen': "Уважно слухати", // nieuw, nalezen
-    'w.uitpraten': "договорити (дати людині договорити)", // nieuw, nalezen
-    'w.onderbreken': "перебивати", // nieuw, nalezen
-    'w.aankijken': "дивитися (на когось)", // nieuw, nalezen
-    'w.bedoelen': "мати на увазі", // nieuw, nalezen
-    'w.dus': "отже, тобто (щоб перевірити почуте)", // nieuw, nalezen
-    'w.doorvragen': "розпитувати далі (поки не стане зрозуміло)", // nieuw, nalezen
-    's.listen.1': "Тобто спершу порахувати коробки, а потім пакувати?", // nieuw, nalezen
-    's.listen.2': "Що ти маєш на увазі під цим словом?", // nieuw, nalezen
-    's.listen.3': "Вибач, договорюй.", // nieuw, nalezen
-    'd.listen.q': "Завтра ти починаєш уже о четвертій.", // nieuw, nalezen
-    'd.listen.a': "Справді? Чи це був жарт?", // nieuw, nalezen
-    'l.calm': "Зберігати спокій", // nieuw, nalezen
-    'w.nadenken': "подумати (про щось)", // nieuw, nalezen
-    'w.ademhalen': "дихати", // nieuw, nalezen
-    'w.oplossen': "розвʼязати, владнати", // nieuw, nalezen
-    'w.druk': "напружено (багато роботи)", // nieuw, nalezen
-    'w.straks': "пізніше (сьогодні), згодом", // nieuw, nalezen
-    'w.misverstand': "непорозуміння", // nieuw, nalezen
-    's.calm.1': "Я хочу спокійно це владнати.", // nieuw, nalezen
-    's.calm.2': "Можна я трохи подумаю?", // nieuw, nalezen
-    's.calm.3': "Можемо поговорити пізніше?", // nieuw, nalezen
-    'd.calm.q': "Чому це ще не готово?", // nieuw, nalezen
-    'd.calm.a': "Вибач, зараз дуже багато роботи. Що треба зробити спершу?", // nieuw, nalezen
-    'l.talkintime': "Поговорити вчасно", // nieuw, nalezen
-    'w.gesprek': "розмова", // nieuw, nalezen
-    'w.bespreken': "обговорювати", // nieuw, nalezen
-    'w.zorgenmaken': "хвилюватися", // nieuw, nalezen
-    'w.oplossing': "рішення", // nieuw, nalezen
-    'w.ineens': "раптом, враз", // nieuw, nalezen
-    'w.wegblijven': "не приходити (не зʼявлятися на роботу)", // nieuw, nalezen
-    's.talkintime.1': "Мене дещо турбує. У тебе є хвилинка?", // nieuw, nalezen
-    's.talkintime.2': "Я хочу дещо з тобою обговорити.", // nieuw, nalezen
-    's.talkintime.3': "Я думаю звільнитися. Можемо спершу поговорити?", // nieuw, nalezen
-    'd.talkintime.q': "У тебе є хвилинка? Мене дещо турбує.", // nieuw, nalezen
-    'd.talkintime.a': "Так, звісно. Що сталося?", // nieuw, nalezen
-    'l.reachable': "Бути на звʼязку", // nieuw, nalezen
-    'w.opnemen': "відповісти (на дзвінок), взяти слухавку", // nieuw, nalezen
-    'w.gemisteoproep': "пропущений дзвінок", // nieuw, nalezen
-    'w.voicemail': "голосова пошта", // nieuw, nalezen
-    'w.beltegoed': "гроші на рахунку телефону (передплата)", // nieuw, nalezen
-    'w.bereik': "звʼязок, сигнал (на телефоні)", // nieuw, nalezen
-    'w.onbekend': "невідомий (невідомий номер)", // nieuw, nalezen
-    's.reachable.1': "Моя нідерландська ще не дуже добра. Можете говорити повільно?", // nieuw, nalezen
-    's.reachable.2': "Можете також надіслати це повідомленням?", // nieuw, nalezen
-    's.reachable.3': "У мене новий номер.", // nieuw, nalezen
-    'd.reachable.q': "Доброго ранку, це відділ планування.", // nieuw, nalezen
-    'd.reachable.a': { m: "Доброго ранку. Ви мені дзвонили? Вибачте, я пропустив дзвінок.", f: "Доброго ранку. Ви мені дзвонили? Вибачте, я пропустила дзвінок.", x: "Доброго ранку. Ви мені дзвонили? Вибачте, у мене пропущений дзвінок." }, // nieuw, nalezen
+    'u.communicate': "Добре спілкуватися", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.explain': "Сказати, що не так", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ietsmis': "щось не так", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stilstaan': "стояти, зупинитися (машина, стрічка)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lampje': "(сигнальна) лампочка", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.komen': "приходити, підходити", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nodighebben': "потребувати, бути потрібним", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meteen': "одразу, негайно", // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.1': "Стрічка стоїть. На лінії два. Можеш підійти?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.2': "На машині горить червона лампочка.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.3': "Це небезпечно. Можеш підійти негайно?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.explain.q': "Що не так?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.explain.a': "Сканер не працює. Мені потрібен новий.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.listen': "Уважно слухати", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitpraten': "договорити (дати людині договорити)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderbreken': "перебивати", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aankijken': "дивитися (на когось)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedoelen': "мати на увазі", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dus': "отже, тобто (щоб перевірити почуте)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doorvragen': "розпитувати далі (поки не стане зрозуміло)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.1': "Тобто спершу порахувати коробки, а потім пакувати?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.2': "Що ти маєш на увазі під цим словом?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.3': "Вибач, договорюй.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.listen.q': "Завтра ти починаєш уже о четвертій.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.listen.a': "Справді? Чи це був жарт?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.calm': "Зберігати спокій", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nadenken': "подумати (про щось)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ademhalen': "дихати", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oplossen': "розвʼязати, владнати", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.druk': "напружено (багато роботи)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.straks': "пізніше (сьогодні), згодом", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.misverstand': "непорозуміння", // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.1': "Я хочу спокійно це владнати.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.2': "Можна я трохи подумаю?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.3': "Можемо поговорити пізніше?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.calm.q': "Чому це ще не готово?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.calm.a': "Вибач, зараз дуже багато роботи. Що треба зробити спершу?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.talkintime': "Поговорити вчасно", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gesprek': "розмова", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bespreken': "обговорювати", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zorgenmaken': "хвилюватися", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oplossing': "рішення", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ineens': "раптом, враз", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wegblijven': "не приходити (не зʼявлятися на роботу)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.1': "Мене дещо турбує. У тебе є хвилинка?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.2': "Я хочу дещо з тобою обговорити.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.3': "Я думаю звільнитися. Можемо спершу поговорити?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.talkintime.q': "У тебе є хвилинка? Мене дещо турбує.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.talkintime.a': "Так, звісно. Що сталося?", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.reachable': "Бути на звʼязку", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opnemen': "відповісти (на дзвінок), взяти слухавку", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gemisteoproep': "пропущений дзвінок", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voicemail': "голосова пошта", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beltegoed': "гроші на рахунку телефону (передплата)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bereik': "звʼязок, сигнал (на телефоні)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onbekend': "невідомий (невідомий номер)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.1': "Моя нідерландська ще не дуже добра. Можете говорити повільно?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.2': "Можете також надіслати це повідомленням?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.3': "У мене новий номер.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.reachable.q': "Доброго ранку, це відділ планування.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.reachable.a': { m: "Доброго ранку. Ви мені дзвонили? Вибачте, я пропустив дзвінок.", f: "Доброго ранку. Ви мені дзвонили? Вибачте, я пропустила дзвінок.", x: "Доброго ранку. Ви мені дзвонили? Вибачте, у мене пропущений дзвінок." }, // nieuw, nalezen // nagelezen AI 28 nov
     'c.explain': "Що, де, що тобі потрібно", // nieuw, nalezen // nagelezen AI 22 nov
     'c.explain.b': "Коли на роботі щось не так, скажи це в три кроки. Спершу що не так: «De band staat stil.» Потім де: «Bij lijn twee.» Потім що тобі потрібно: «Kun je komen?» Тепер інша людина знає, що робити, без зайвих запитань. Не знаєш, як це називається? Покажи пальцем. Це небезпечно? Скажи це першим: «Het is gevaarlijk.» Нещасний випадок? Спершу поклич допомогу (більше в уроці «Повідомити про нещасний випадок»).", // nieuw, nalezen // nagelezen AI 22 nov
     'c.explain.p': "Можеш підійти й подивитися?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -321,43 +321,43 @@ const t: CultureTranslation = {
     'c.reachable.o2': "Чекатимеш, поки знову подзвонять.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.reachable.o3': "Передзвониш наступного тижня, коли матимеш час.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.reachable.w': "Агентства часто дзвонять, коли є робота. Коли передзвониш того ж дня, ти показуєш, що хочеш цю роботу, і, можливо, отримаєш її.", // nieuw, nalezen // nagelezen AI 22 nov
-    'u.feedback': "Зворотний звʼязок і наради", // nieuw, nalezen
-    'l.getfeedback': "Отримувати зворотний звʼязок", // nieuw, nalezen
-    'w.tip': "порада (коротка підказка)", // nieuw, nalezen
-    'w.verbeterpunt': "що покращити (що може бути краще)", // nieuw, nalezen
-    'w.goedbedoeld': "з добрими намірами (щоб тобі допомогти)", // nieuw, nalezen
-    'w.kritiek': "критика (те, що комусь здається поганим)", // nieuw, nalezen
-    'w.normaal': "нормальний, нормально", // nieuw, nalezen
-    'w.positief': "позитивний (про те, що добре виходить)", // nieuw, nalezen
-    's.getfeedback.1': "Дякую, це добре знати.", // nieuw, nalezen
-    's.getfeedback.2': "Можеш навести приклад?", // nieuw, nalezen
-    's.getfeedback.3': "Що я можу робити краще?", // nieuw, nalezen
-    'd.getfeedback.q': "Можна я скажу тобі дещо про твою роботу?", // nieuw, nalezen
-    'd.getfeedback.a': "Так, будь ласка. Я хочу робити все добре.", // nieuw, nalezen
-    'l.givefeedback': "Давати зворотний звʼязок", // nieuw, nalezen
-    'w.dichtplakken': "заклеювати", // nieuw, nalezen
-    'w.netjes': "акуратно, охайно", // nieuw, nalezen
-    'w.scheef': "криво, нерівно", // nieuw, nalezen
-    'w.vriendelijk': "привітний, доброзичливий", // nieuw, nalezen
-    'w.concreet': "конкретний (з чітким прикладом)", // nieuw, nalezen
-    'w.ondervierogen': "віч-на-віч (тільки ви вдвох)", // nieuw, nalezen
-    's.givefeedback.1': "У тебе це добре виходить.", // nieuw, nalezen
-    's.givefeedback.2': "Можеш також заклеїти коробки?", // nieuw, nalezen
-    's.givefeedback.3': "Я бачу, що коробки стоять криво.", // nieuw, nalezen
-    'd.givefeedback.q': "Як тобі моя робота?", // nieuw, nalezen
-    'd.givefeedback.a': "Акуратно! Тільки коробки стоять криво.", // nieuw, nalezen
-    'l.meeting': "Говорити на робочій нараді", // nieuw, nalezen
-    'w.werkoverleg': "робоча нарада (про роботу)", // nieuw, nalezen
-    'w.beurt': "черга (твій момент говорити)", // nieuw, nalezen
-    'w.idee': "ідея", // nieuw, nalezen
-    'w.mening': "думка (що ти про це думаєш)", // nieuw, nalezen
-    'w.handopsteken': "підняти руку", // nieuw, nalezen
-    'w.agenda': "порядок денний (список питань для наради)", // nieuw, nalezen
-    's.meeting.1': "Можна мені дещо сказати?", // nieuw, nalezen
-    's.meeting.2': "У мене питання щодо графіка.", // nieuw, nalezen
-    's.meeting.3': "У мене є ідея.", // nieuw, nalezen
-    'd.meeting.q': "У когось є ще питання?", // nieuw, nalezen
-    'd.meeting.a': "Так. Коли буде новий графік?", // nieuw, nalezen
+    'u.feedback': "Зворотний звʼязок і наради", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.getfeedback': "Отримувати зворотний звʼязок", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tip': "порада (коротка підказка)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verbeterpunt': "що покращити (що може бути краще)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedbedoeld': "з добрими намірами (щоб тобі допомогти)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kritiek': "критика (те, що комусь здається поганим)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.normaal': "нормальний, нормально", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.positief': "позитивний (про те, що добре виходить)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.1': "Дякую, це добре знати.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.2': "Можеш навести приклад?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.3': "Що я можу робити краще?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.getfeedback.q': "Можна я скажу тобі дещо про твою роботу?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.getfeedback.a': "Так, будь ласка. Я хочу робити все добре.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.givefeedback': "Давати зворотний звʼязок", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dichtplakken': "заклеювати", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.netjes': "акуратно, охайно", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scheef': "криво, нерівно", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vriendelijk': "привітний, доброзичливий", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.concreet': "конкретний (з чітким прикладом)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ondervierogen': "віч-на-віч (тільки ви вдвох)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.1': "У тебе це добре виходить.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.2': "Можеш також заклеїти коробки?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.3': "Я бачу, що коробки стоять криво.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.givefeedback.q': "Як тобі моя робота?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.givefeedback.a': "Акуратно! Тільки коробки стоять криво.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.meeting': "Говорити на робочій нараді", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkoverleg': "робоча нарада (про роботу)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beurt': "черга (твій момент говорити)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.idee': "ідея", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mening': "думка (що ти про це думаєш)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handopsteken': "підняти руку", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.agenda': "порядок денний (список питань для наради)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.1': "Можна мені дещо сказати?", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.2': "У мене питання щодо графіка.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.3': "У мене є ідея.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.meeting.q': "У когось є ще питання?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.meeting.a': "Так. Коли буде новий графік?", // nieuw, nalezen // nagelezen AI 28 nov
     'c.getfeedback': "Зворотний звʼязок — це про твою роботу", // nieuw, nalezen // nagelezen AI 22 nov
     'c.getfeedback.b': "Зворотний звʼязок — це те, що хтось каже про твою роботу: що виходить добре і що може бути краще. Це про твою роботу, а не про тебе. На роботі тут зворотний звʼязок — це нормально, і він має допомогти. Незрозуміло, що робити інакше? Попроси приклад. Спершу вислухай і не захищайся одразу. Потім подякуй і спробуй. Ти також можеш попросити про зворотний звʼязок: «Wat kan ik beter doen?»", // nieuw, nalezen // nagelezen AI 22 nov
     'c.getfeedback.p': "Дякую. Можеш навести приклад?", // nieuw, nalezen // nagelezen AI 22 nov
@@ -425,76 +425,76 @@ const t: CultureTranslation = {
     'c.whereis.o3': "Почнеш працювати у своєму одязі.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.w': "Запитати — це десять секунд. Якщо шукати без допомоги, можна запізнитися. Колеги знають, що в новому місці важко знайти дорогу.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): the tips of l.roster, l.breaks, l.wound and l.callhelp.
-    'c.wound': "Опік? Охолоди водою", // nieuw, nalezen
-    'c.wound.b': "Невеликий поріз: притисни його чистою тканиною або бинтом і скажи працівнику, який надає першу допомогу (BHV’er). Опік: одразу охолоджуй його теплуватою проточною водою, щонайменше 10 хвилин. Щось потрапило в око? Промий його водою або біля станції для промивання очей. Це серйозно? Дзвони 112. У перший день запитай, де аптечка і станція для промивання очей.", // nieuw, nalezen
-    'c.wound.p': { m: "Я обпікся. Де кран?", f: "Я обпеклася. Де кран?", x: "У мене опік. Де кран?" }, // nieuw, nalezen
-    'c.wound.s': "Колега обпікає руку об гарячу машину. Що ти робиш?", // nieuw, nalezen
-    'c.wound.o1': "Охолоджуй теплуватою проточною водою.", // nieuw, nalezen
-    'c.wound.o2': "Одразу намаж маслом або кремом.", // nieuw, nalezen
-    'c.wound.o3': "Поклади лід прямо на шкіру і чекай.", // nieuw, nalezen
-    'c.wound.w': "Вода забирає жар зі шкіри, тому опік стає менш глибоким. Лід, масло й крем можуть зробити гірше.", // nieuw, nalezen
-    'c.callhelp': "Дзвониш 112: спершу скажи, де ти", // nieuw, nalezen
-    'c.callhelp.b': "Дзвони 112, коли життя в небезпеці або коли важлива кожна хвилина. Спершу скажи, де ти: вулиця, номер і місто. Потім скажи, що сталося. Залишайся на лінії й відповідай на запитання. Попроси колегу зустріти швидку біля входу. Не знаєш адреси своєї роботи? Дізнайся її сьогодні.", // nieuw, nalezen
-    'c.callhelp.p': "Я дзвоню 112. Зустрінеш швидку?", // nieuw, nalezen
-    'c.callhelp.s': "Ти дзвониш 112. Диспетчер ставить багато запитань, а ти хочеш допомогти колезі. Що ти робиш?", // nieuw, nalezen
-    'c.callhelp.o1': "Залишайся на лінії й відповідай.", // nieuw, nalezen
-    'c.callhelp.o2': "Поклади слухавку й іди до колеги.", // nieuw, nalezen
-    'c.callhelp.o3': "Скажи «приїжджайте швидко» і поклади слухавку.", // nieuw, nalezen
-    'c.callhelp.w': "Диспетчер відправляє допомогу, поки ти говориш, і каже тобі, що робити. Коли ти кладеш слухавку зарано, допомога може поїхати не туди.", // nieuw, nalezen
-    'c.roster': "Щодня дивись у свій графік", // nieuw, nalezen
-    'c.roster.b': "Графік може змінитися, навіть в останню хвилину. Дивись у нього щодня, у застосунку або на дошці. Бачиш зміну? Перевір, чи ти можеш прийти. Не можеш працювати якогось дня? Скажи про це заздалегідь, а не того самого дня. Хочеш помінятися зміною? Спершу запитай керівника: у багатьох фірмах є для цього правило. У кожній фірмі свої правила: запитай керівника, які правила там, де ти працюєш.", // nieuw, nalezen
-    'c.roster.p': "У суботу я не можу. Можна помінятися?", // nieuw, nalezen
-    'c.roster.s': "Твій графік змінився. Тепер ти мусиш працювати в суботу, але не можеш. Що ти робиш?", // nieuw, nalezen
-    'c.roster.o1': "Скажи керівнику сьогодні й попроси помінятися.", // nieuw, nalezen
-    'c.roster.o2': "Нічого не кажи й залишся вдома в суботу.", // nieuw, nalezen
-    'c.roster.o3': "Попроси колегу піти замість тебе й нікому не кажи.", // nieuw, nalezen
-    'c.roster.w': "Коли ти кажеш заздалегідь, керівник може знайти когось іншого. Не прийти без жодного слова вважають дуже серйозним порушенням.", // nieuw, nalezen
-    'c.breaks': "Записуй свої години", // nieuw, nalezen
-    'c.breaks.b': "Щодня записуй, коли починаєш, коли закінчуєш і скільки триває твоя перерва. Твій власний список допомагає, коли зарплата неправильна. Тобі треба піти раніше, наприклад до лікаря? Запитай керівника вчасно. Робота тривала довше, ніж планувалося? Запиши й це. У кожній фірмі свої правила: запитай керівника, які правила там, де ти працюєш.", // nieuw, nalezen
-    'c.breaks.p': "Завтра мені треба до лікаря. Можна піти раніше?", // nieuw, nalezen
-    'c.breaks.s': "Завтра о третій тобі треба до лікаря. Твоя зміна закінчується о п’ятій. Що ти робиш?", // nieuw, nalezen
-    'c.breaks.o1': "Запитай керівника сьогодні, чи можна піти раніше.", // nieuw, nalezen
-    'c.breaks.o2': "Піди о третій і поясни це наступного дня.", // nieuw, nalezen
-    'c.breaks.o3': "Пропусти лікаря й допрацюй зміну.", // nieuw, nalezen
-    'c.breaks.w': "Коли ти питаєш вчасно, керівник може спланувати роботу. Піти, не запитавши, вважають ненадійною поведінкою.", // nieuw, nalezen
+    'c.wound': "Опік? Охолоди водою", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.b': "Невеликий поріз: притисни його чистою тканиною або бинтом і скажи працівнику, який надає першу допомогу (BHV’er). Опік: одразу охолоджуй його теплуватою проточною водою, щонайменше 10 хвилин. Щось потрапило в око? Промий його водою або біля станції для промивання очей. Це серйозно? Дзвони 112. У перший день запитай, де аптечка і станція для промивання очей.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.p': { m: "Я обпікся. Де кран?", f: "Я обпеклася. Де кран?", x: "У мене опік. Де кран?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.s': "Колега обпікає руку об гарячу машину. Що ти робиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o1': "Охолоджуй теплуватою проточною водою.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o2': "Одразу намаж маслом або кремом.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o3': "Поклади лід прямо на шкіру і чекай.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.w': "Вода забирає жар зі шкіри, тому опік стає менш глибоким. Лід, масло й крем можуть зробити гірше.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp': "Дзвониш 112: спершу скажи, де ти", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.b': "Дзвони 112, коли життя в небезпеці або коли важлива кожна хвилина. Спершу скажи, де ти: вулиця, номер і місто. Потім скажи, що сталося. Залишайся на лінії й відповідай на запитання. Попроси колегу зустріти швидку біля входу. Не знаєш адреси своєї роботи? Дізнайся її сьогодні.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.p': "Я дзвоню 112. Зустрінеш швидку?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.s': "Ти дзвониш 112. Диспетчер ставить багато запитань, а ти хочеш допомогти колезі. Що ти робиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o1': "Залишайся на лінії й відповідай.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o2': "Поклади слухавку й іди до колеги.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o3': "Скажи «приїжджайте швидко» і поклади слухавку.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.w': "Диспетчер відправляє допомогу, поки ти говориш, і каже тобі, що робити. Коли ти кладеш слухавку зарано, допомога може поїхати не туди.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster': "Щодня дивись у свій графік", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.b': "Графік може змінитися, навіть в останню хвилину. Дивись у нього щодня, у застосунку або на дошці. Бачиш зміну? Перевір, чи ти можеш прийти. Не можеш працювати якогось дня? Скажи про це заздалегідь, а не того самого дня. Хочеш помінятися зміною? Спершу запитай керівника: у багатьох фірмах є для цього правило. У кожній фірмі свої правила: запитай керівника, які правила там, де ти працюєш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.p': "У суботу я не можу. Можна помінятися?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.s': "Твій графік змінився. Тепер ти мусиш працювати в суботу, але не можеш. Що ти робиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o1': "Скажи керівнику сьогодні й попроси помінятися.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o2': "Нічого не кажи й залишся вдома в суботу.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o3': "Попроси колегу піти замість тебе й нікому не кажи.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.w': "Коли ти кажеш заздалегідь, керівник може знайти когось іншого. Не прийти без жодного слова вважають дуже серйозним порушенням.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks': "Записуй свої години", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.b': "Щодня записуй, коли починаєш, коли закінчуєш і скільки триває твоя перерва. Твій власний список допомагає, коли зарплата неправильна. Тобі треба піти раніше, наприклад до лікаря? Запитай керівника вчасно. Робота тривала довше, ніж планувалося? Запиши й це. У кожній фірмі свої правила: запитай керівника, які правила там, де ти працюєш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.p': "Завтра мені треба до лікаря. Можна піти раніше?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.s': "Завтра о третій тобі треба до лікаря. Твоя зміна закінчується о п’ятій. Що ти робиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o1': "Запитай керівника сьогодні, чи можна піти раніше.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o2': "Піди о третій і поясни це наступного дня.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o3': "Пропусти лікаря й допрацюй зміну.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.w': "Коли ти питаєш вчасно, керівник може спланувати роботу. Піти, не запитавши, вважають ненадійною поведінкою.", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (26 November 2026).
-    'c.firstweeks': "Перепитати — це нормально", // nieuw, nalezen
-    'c.firstweeks.b': "У перші тижні ніхто не чекає, що ти все знаєш. Часто тобі проводять ознайомчу екскурсію (rondleiding) і дають колегу, який тебе супроводжує. Спершу дивись, потім роби самостійно, поки колега дивиться. Щось забулося? Перепитай: «Wil je het nog een keer laten zien?» Це краще, ніж вгадувати. Записуй нові слова й кроки в маленький блокнот. Деякі контракти починаються з випробувального строку (proeftijd): тоді ти або роботодавець можете швидко припинити роботу. Запитай, чи є він у твоєму контракті. У кожній фірмі свої правила: запитай керівника, які правила там, де ти працюєш.", // nieuw, nalezen
-    'c.firstweeks.p': { m: "Я забув. Покажеш це ще раз?", f: "Я забула. Покажеш це ще раз?", x: "Я не пам’ятаю. Покажеш це ще раз?" }, // nieuw, nalezen
-    'c.firstweeks.s': "Учора колега показав тобі, як запускати машину. Сьогодні ти не пам’ятаєш третього кроку. Що ти робиш?", // nieuw, nalezen
-    'c.firstweeks.o1': "Попроси колегу показати це ще раз.", // nieuw, nalezen
-    'c.firstweeks.o2': "Вгадай і спробуй.", // nieuw, nalezen
-    'c.firstweeks.o3': "Чекай, поки хтось інший її запустить.", // nieuw, nalezen
-    'c.firstweeks.w': "Перепитувати в перші тижні — це нормально. Вгадувати біля машини може бути небезпечно, і це забирає більше часу.", // nieuw, nalezen
-    'c.orderpick': "Ходи пішохідною доріжкою", // nieuw, nalezen
-    'c.orderpick.b': "На великому складі ти комплектуєш замовлення з листом комплектації та сканером: ти скануєш кожен товар, щоб правильні продукти потрапили до правильного клієнта. Багато комплектувальників їздять на невеликому навантажувачі, який піднімає їх угору, або на річтраку (reachtruck) для високих стелажів. Керуй ними тільки тоді, коли маєш навчання для цього, часто із сертифікатом. Ходи пішохідними доріжками й тримайся подалі від навантажувачів, що їдуть: водій не завжди тебе бачить. У холодильній чи морозильній камері носи теплий одяг, рукавиці й шапку, які тобі дають на роботі. Роби перерви, щоб зігрітися, і кажи комусь, коли заходиш усередину. У кожній фірмі свої правила: запитай керівника, які правила там, де ти працюєш.", // nieuw, nalezen
-    'c.orderpick.p': "Я піду трохи зігріюся в їдальні.", // nieuw, nalezen
-    'c.orderpick.s': "Тобі треба в інший прохід. Пішохідна доріжка йде в обхід; навпростець, між навантажувачами, швидше. Що ти робиш?", // nieuw, nalezen
-    'c.orderpick.o1': "Іди пішохідною доріжкою, навіть якщо вона довша.", // nieuw, nalezen
-    'c.orderpick.o2': "Швидко перебіжи між навантажувачами.", // nieuw, nalezen
-    'c.orderpick.o3': "Перейди навпростець і помахай водіям.", // nieuw, nalezen
-    'c.orderpick.w': "Водій навантажувача часто тебе не бачить, наприклад через високий вантаж. На пішохідній доріжці людей очікують, і там безпечно.", // nieuw, nalezen
+    'c.firstweeks': "Перепитати — це нормально", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.b': "У перші тижні ніхто не чекає, що ти все знаєш. Часто тобі проводять ознайомчу екскурсію (rondleiding) і дають колегу, який тебе супроводжує. Спершу дивись, потім роби самостійно, поки колега дивиться. Щось забулося? Перепитай: «Wil je het nog een keer laten zien?» Це краще, ніж вгадувати. Записуй нові слова й кроки в маленький блокнот. Деякі контракти починаються з випробувального строку (proeftijd): тоді ти або роботодавець можете швидко припинити роботу. Запитай, чи є він у твоєму контракті. У кожній фірмі свої правила: запитай керівника, які правила там, де ти працюєш.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.p': { m: "Я забув. Покажеш це ще раз?", f: "Я забула. Покажеш це ще раз?", x: "Я не пам’ятаю. Покажеш це ще раз?" }, // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.s': "Учора колега показав тобі, як запускати машину. Сьогодні ти не пам’ятаєш третього кроку. Що ти робиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.o1': "Попроси колегу показати це ще раз.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.o2': "Вгадай і спробуй.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.o3': "Чекай, поки хтось інший її запустить.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.w': "Перепитувати в перші тижні — це нормально. Вгадувати біля машини може бути небезпечно, і це забирає більше часу.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick': "Ходи пішохідною доріжкою", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.b': "На великому складі ти комплектуєш замовлення з листом комплектації та сканером: ти скануєш кожен товар, щоб правильні продукти потрапили до правильного клієнта. Багато комплектувальників їздять на невеликому навантажувачі, який піднімає їх угору, або на річтраку (reachtruck) для високих стелажів. Керуй ними тільки після навчання, часто із сертифікатом. Ходи пішохідними доріжками й тримайся подалі від навантажувачів, що їдуть: водій не завжди тебе бачить. У холодильній чи морозильній камері носи теплий одяг, рукавиці й шапку, які тобі дають на роботі. Роби перерви, щоб зігрітися, і кажи комусь, коли заходиш усередину. У кожній фірмі свої правила: запитай керівника, які правила там, де ти працюєш.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.orderpick.p': "Я піду трохи зігріюся в їдальні.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.s': "Тобі треба в інший прохід. Пішохідна доріжка йде в обхід; навпростець, між навантажувачами, швидше. Що ти робиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o1': "Іди пішохідною доріжкою, навіть якщо вона довша.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o2': "Швидко перебіжи між навантажувачами.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o3': "Перейди навпростець і помахай водіям.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.w': "Водій навантажувача часто тебе не бачить, наприклад через високий вантаж. На пішохідній доріжці людей очікують, і там безпечно.", // nieuw, nalezen // nagelezen AI 28 nov
     // four new lessons (27 November 2026).
-    'l.appraisal': "Розмова про роботу з керівником", // nieuw, nalezen
-    'w.functioneringsgesprek': "розмова про роботу (розмова з керівником про те, як іде твоя робота і чого ти хочеш навчитися)", // nieuw, nalezen
-    'w.beoordelingsgesprek': "оцінювальна розмова (розмова, на якій керівник оцінює твою роботу)", // nieuw, nalezen
-    'w.voorbereiden': "готувати, готуватися (готуватися до чогось)", // nieuw, nalezen
-    'w.goedgaan': "іти добре, вдаватися", // nieuw, nalezen
-    'w.doel': "мета (те, чого ти хочеш досягти)", // nieuw, nalezen
-    'w.voorgezien': "підписати «для ознайомлення» (це означає: прочитано; це не означає, що ти погоджуєшся)", // nieuw, nalezen
-    's.appraisal.1': "Я добре готуюся до розмови.", // nieuw, nalezen
-    's.appraisal.2': "Я хочу навчитися чогось нового.", // nieuw, nalezen
-    's.appraisal.3': "Можна мені спершу прочитати звіт?", // nieuw, nalezen
-    'd.appraisal.q': "Яка твоя мета на наступний рік?", // nieuw, nalezen
-    'd.appraisal.a': "Я хочу отримати сертифікат водія навантажувача.", // nieuw, nalezen
-    'c.appraisal': "Твоя розмова: підготуйся, прочитай", // nieuw, nalezen
-    'c.appraisal.b': "У багатьох фірмах раз чи двічі на рік буває розмова про твою роботу. На розмові про роботу (functioneringsgesprek) ви говорите разом: що виходить добре, що може бути краще і чого ти хочеш навчитися. На оцінювальній розмові (beoordelingsgesprek) керівник оцінює твою роботу. Це може впливати на твою зарплату чи на новий контракт. Підготуйся до розмови: запиши, що виходить добре, що важко і чого ти хочеш навчитися. Ти можеш попросити курс або навчання. Наприкінці ви домовляєтеся (afspraken), часто це записують у короткий звіт. Уважно прочитай його, перш ніж підписати, і попроси копію. Ти не погоджуєшся? Підпиши «voor gezien» (для ознайомлення), а не «voor akkoord» (згода), і запиши свою думку. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або Juridisch Loket.", // nieuw, nalezen
-    'c.appraisal.p': "Я підписую тільки для ознайомлення, а не на знак згоди.", // nieuw, nalezen
-    'c.appraisal.s': "Після оцінювальної розмови тобі дають звіт на підпис. Один пункт у ньому, на твою думку, неправдивий. Що ти зробиш?", // nieuw, nalezen
-    'c.appraisal.o1': "Підпиши «voor gezien» і запиши свою думку.", // nieuw, nalezen
-    'c.appraisal.o2': "Швидко підпиши «voor akkoord», щоб усе закінчилося.", // nieuw, nalezen
-    'c.appraisal.o3': "Нічого не кажи й узагалі не підписуй.", // nieuw, nalezen
-    'c.appraisal.w': "«Voor gezien» означає, що текст прочитано, а не що ти погоджуєшся. Коли ти це скажеш і запишеш свою думку, керівник знає, що ти думаєш.", // nieuw, nalezen
+    'l.appraisal': "Розмова про роботу з керівником", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.functioneringsgesprek': "розмова про роботу (розмова з керівником про те, як іде твоя робота і чого ти хочеш навчитися)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beoordelingsgesprek': "оцінювальна розмова (розмова, на якій керівник оцінює твою роботу)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorbereiden': "готувати, готуватися (готуватися до чогось)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedgaan': "іти добре, вдаватися", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doel': "мета (те, чого ти хочеш досягти)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorgezien': "підписати «для ознайомлення» (це означає: прочитано; це не означає, що ти погоджуєшся)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.1': "Я добре готуюся до розмови.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.2': "Я хочу навчитися чогось нового.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.3': "Можна мені спершу прочитати звіт?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.appraisal.q': "Яка твоя мета на наступний рік?", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.appraisal.a': "Я хочу отримати сертифікат водія навантажувача.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal': "Розмова про твою роботу: підготуйся, прочитай", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.appraisal.b': "У багатьох фірмах раз чи двічі на рік буває розмова про твою роботу. На розмові про роботу (functioneringsgesprek) ви говорите разом: що виходить добре, що може бути краще і чого ти хочеш навчитися. На оцінювальній розмові (beoordelingsgesprek) керівник оцінює твою роботу. Це може впливати на твою зарплату чи на новий контракт. Підготуйся до розмови: запиши, що виходить добре, що важко і чого ти хочеш навчитися. Ти можеш попросити курс або навчання. Наприкінці ви домовляєтеся (afspraken), часто це записують у короткий звіт. Уважно прочитай його, перш ніж підписати, і попроси копію. Ти не погоджуєшся? Підпиши «voor gezien» (для ознайомлення), а не «voor akkoord» (згода), і запиши свою думку. Це загальна інформація. Щодо твоєї ситуації запитай роботодавця, профспілку або Juridisch Loket.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.p': "Я підписую тільки для ознайомлення, а не на знак згоди.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.s': "Після оцінювальної розмови тобі дають звіт на підпис. Один пункт у ньому, на твою думку, неправдивий. Що ти зробиш?", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o1': "Підпиши «voor gezien» і запиши свою думку.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o2': "Швидко підпиши «voor akkoord», щоб усе закінчилося.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o3': "Нічого не кажи й узагалі не підписуй.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.w': "«Voor gezien» означає, що текст прочитано, а не що ти погоджуєшся. Коли ти це скажеш і запишеш свою думку, керівник знає, що ти думаєш.", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 

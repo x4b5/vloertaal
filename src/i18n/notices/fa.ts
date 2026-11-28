@@ -7,9 +7,9 @@ import type { CultureTranslation } from '../culture/types';
  */
 const t: CultureTranslation = {
   ui: {
-    noticeTitle: 'چیزی تغییر کرده است', // nieuw, nalezen
-    noticeMore: 'بیشتر بخوانید', // nieuw, nalezen
-    noticeOk: 'باشه', // nieuw, nalezen
+    noticeTitle: 'چیزی تغییر کرده است', // nieuw, nalezen // nagelezen AI 28 nov
+    noticeMore: 'بیشتر بخوانید', // nieuw, nalezen // nagelezen AI 28 nov
+    noticeOk: 'باشه', // nieuw, nalezen // nagelezen AI 28 nov
   },
   gloss: {
     // Nog geen meldingen.

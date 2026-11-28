@@ -42,7 +42,7 @@ const t: CultureTranslation = {
     'w.pijpenstelen.lit': 'دستهٔ پیپ می‌بارد',
     'w.hart': 'حرف‌های مهربان که دل‌گرمی می‌دهند',
     'w.hart.lit': 'یک قلب زیر کمربند',
-    's.plain.1': 'وقتی ایمن نیست، هشدار بده.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    's.plain.1': 'وقتی ایمن نیست، هشدار بده.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     's.plain.2': 'واقعاً خیلی خسته‌ام.',
     's.plain.3': 'یک‌راست می‌روم سر اصل مطلب.',
     'c.plain.q': 'باران خیلی شدید می‌بارد!',

@@ -90,7 +90,7 @@ const t: CultureTranslation = {
     's.housing.2': 'ودیعه را پس می‌گیرم؟',
     's.housing.3': 'یک قرارداد اجارهٔ جدا می‌خواهم.',
     'c.housing.q': 'ما اجاره را از حقوقت کم می‌کنیم.',
-    'c.housing.a': 'پس این را کتبی می‌خواهم.', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.housing.a': 'پس این را کتبی می‌خواهم.', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     'u.pay': 'حقوق',
     'l.payslip': 'فیش حقوقی تو',
     'w.loon': 'حقوق، دستمزد',
@@ -181,7 +181,7 @@ const t: CultureTranslation = {
     'l.mistakes': 'بازخورد و اشتباه',
     'w.fout': 'اشتباه',
     'w.compliment': 'تعریف، تشویق',
-    'w.feedback': "بازخورد (چیزی که کسی دربارهٔ کارت می‌گوید)", // nieuw, nalezen
+    'w.feedback': "بازخورد (چیزی که کسی دربارهٔ کارت می‌گوید)", // nieuw, nalezen // nagelezen AI 28 nov
     'w.uitleggen': 'توضیح دادن',
     'w.leren': 'یاد گرفتن',
     'w.verbeteren': 'بهتر کردن، درست کردن',
@@ -299,7 +299,7 @@ const t: CultureTranslation = {
     'w.inspreken': 'پیام صوتی گذاشتن',
     's.callin.1': 'سلام، علی هستم.',
     's.callin.2': 'فکر کنم پس‌فردا برمی‌گردم.',
-    's.callin.3': 'می‌شود دوباره به من زنگ بزنید؟', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    's.callin.3': 'می‌شود دوباره به من زنگ بزنید؟', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     'c.callin.q': 'کی برمی‌گردی؟',
     'c.callin.a': 'فکر کنم دوشنبه.',
     'l.texting': 'پیام‌ها و اپ برنامهٔ کاری',
@@ -408,7 +408,7 @@ const t: CultureTranslation = {
     'w.inchecken': 'کارت زدن موقع سوار شدن',
     'w.uitchecken': 'کارت زدن موقع پیاده شدن',
     'w.bankpas': 'کارت بانکی',
-    'w.reiskosten': 'کمک‌هزینهٔ رفت‌وآمد', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'w.reiskosten': 'کمک‌هزینهٔ رفت‌وآمد', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     's.transit.1': 'با کارت بانکی‌ام موقع سوار شدن کارت می‌زنم.',
     's.transit.2': 'یادت نرود موقع پیاده شدن کارت بزنی.',
     's.transit.3': 'ایستگاه اتوبوس کجاست؟',
@@ -1007,7 +1007,7 @@ const t: CultureTranslation = {
     'w.intimidatie': "آزار، ارعاب",
     'w.getuige': "شاهد",
     'w.grapje': "شوخی",
-    's.boundaries.1': "به من دست نزن.", // nieuw, nalezen ("Blijf van me af.", 4 nov 2026)
+    's.boundaries.1': "به من دست نزن.", // nieuw, nalezen ("Blijf van me af.", 4 nov 2026) // nagelezen AI 28 nov
     's.boundaries.2': "این حرف به نظرم خنده‌دار نیست.",
     's.boundaries.3': "می‌خواهم چیزی را به مشاور معتمد گزارش بدهم.",
     'c.boundaries.q': "این‌قدر سخت نگیر، فقط یک شوخی بود.",
@@ -1054,18 +1054,18 @@ const t: CultureTranslation = {
     'c.checkout.q': 'اینجا می‌توانم با کارت پرداخت کنم؟',
     'c.checkout.a': 'بله، حتماً، می‌شود.',
     'u.numbers': 'زمان، پول و اندازه‌ها',
-    'l.counting': 'عددها', // nieuw, nalezen
-    'w.dertien': 'سیزده (13)', // nieuw, nalezen
-    'w.dertig': 'سی (30)', // nieuw, nalezen
-    'w.zeventien': 'هفده (17)', // nieuw, nalezen
-    'w.zeventig': 'هفتاد (70)', // nieuw, nalezen
-    'w.zevenenveertig': 'چهل و هفت (47)', // nieuw, nalezen
-    'w.vierenzeventig': 'هفتاد و چهار (74)', // nieuw, nalezen
-    's.counting.1': 'سیزده جعبه دارم، نه سی تا.', // nieuw, nalezen
-    's.counting.2': 'محل هفتاد و چهار خالی است.', // nieuw, nalezen
-    's.counting.3': 'می‌شود آن را رقم به رقم بگویید؟', // nieuw, nalezen
-    'c.counting.q': 'چند جعبه مانده؟', // nieuw, nalezen
-    'c.counting.a': 'هفتاد. هفت، صفر.', // nieuw, nalezen
+    'l.counting': 'عددها', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dertien': 'سیزده (13)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dertig': 'سی (30)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zeventien': 'هفده (17)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zeventig': 'هفتاد (70)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zevenenveertig': 'چهل و هفت (47)', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vierenzeventig': 'هفتاد و چهار (74)', // nieuw, nalezen // nagelezen AI 28 nov
+    's.counting.1': 'سیزده جعبه دارم، نه سی تا.', // nieuw, nalezen // nagelezen AI 28 nov
+    's.counting.2': 'محل هفتاد و چهار خالی است.', // nieuw, nalezen // nagelezen AI 28 nov
+    's.counting.3': 'می‌شود آن را رقم به رقم بگویید؟', // nieuw, nalezen // nagelezen AI 28 nov
+    'c.counting.q': 'چند جعبه مانده؟', // nieuw, nalezen // nagelezen AI 28 nov
+    'c.counting.a': 'هفتاد. هفت، صفر.', // nieuw, nalezen // nagelezen AI 28 nov
     'l.hours': 'ساعت‌ها و زمان‌ها',
     'w.uur': 'ساعت (۶۰ دقیقه)',
     'w.minuut': 'دقیقه',
@@ -1165,7 +1165,7 @@ const t: CultureTranslation = {
     's.aifake.1': 'این واقعی است یا جعلی؟',
     's.aifake.2': 'قطع می‌کنم و خودم دوباره زنگ می‌زنم.',
     's.aifake.3': 'پول نمی‌فرستم.',
-    'c.aifake.q': 'سلام، این شمارهٔ جدید من است. می‌توانی زود پول بفرستی؟', // nieuw, nalezen (AI-correctie 2 nov 2026)
+    'c.aifake.q': 'سلام، این شمارهٔ جدید من است. می‌توانی زود پول بفرستی؟', // nieuw, nalezen (AI-correctie 2 nov 2026) // nagelezen AI 28 nov
     'c.aifake.a': 'اول به شمارهٔ قبلی‌ات زنگ می‌زنم.',
     'l.aiplan': 'وقتی یک اپ تصمیم می‌گیرد',
     'w.planning': 'برنامه‌ریزی، برنامهٔ کاری',
@@ -1376,204 +1376,204 @@ const t: CultureTranslation = {
     'c.jobends.o3': "صبر کن تا مریض شوی، و آن وقت درستش کن.", // nagelezen AI 22 nov
     'c.jobends.w': "بیمه از طریق شرکت کاریابی اغلب با تمام شدن کارت تمام می‌شود. وقتی در هلند زندگی یا کار می‌کنی، معمولاً باید بیمهٔ درمانی داشته باشی. اگر به موقع درستش کنی، بی‌بیمه نمی‌مانی.", // nagelezen AI 22 nov
     // Entree in the Taal track (30 October 2026): nieuw, nalezen.
-    'u.finish': "تمام کردن کارت", // nieuw, nalezen
-    'l.workorder': "برگهٔ کار", // nieuw, nalezen
-    'w.werkbon': "برگهٔ کار (کاغذ یا اپی که کارت در آن نوشته شده)", // nieuw, nalezen
-    'w.lezen': "خواندن", // nieuw, nalezen
-    'w.aantal': "تعداد (چندتا)", // nieuw, nalezen
-    'w.materiaal': "مواد و وسایل (چیزهایی که برای کار لازم داری)", // nieuw, nalezen
-    'w.klaarleggen': "آماده گذاشتن (چیزهای لازم را دمِ دست گذاشتن)", // nieuw, nalezen
-    'w.handtekening': "امضا", // nieuw, nalezen
-    's.workorder.1': "اول برگهٔ کار را می‌خوانم.", // nieuw, nalezen
-    's.workorder.2': "این تعداد درست است؟", // nieuw, nalezen
-    's.workorder.3': "وسایل را آماده می‌گذارم.", // nieuw, nalezen
-    'c.workorder.q': "می‌دانی چه کار باید بکنی؟", // nieuw, nalezen
-    'c.workorder.a': "تقریباً. این کلمه در برگهٔ کار یعنی چه؟", // nieuw, nalezen
-    'l.handover': "تمام شد یا هنوز نه؟", // nieuw, nalezen
-    'w.opruimen': "جمع‌وجور کردن، چیزها را سر جایشان گذاشتن", // nieuw, nalezen
-    'w.nakijken': "بررسی کردن (دوباره به کار نگاه کردن)", // nieuw, nalezen
-    'w.afmelden': "اعلام پایان کار (گفتن که کار تمام است و رفتن)", // nieuw, nalezen
-    'w.kapot': "خراب، شکسته", // nieuw, nalezen
-    'w.opslot': "قفل", // nieuw, nalezen
-    'w.bijzonderheid': "در (درِ خانه)", // nieuw, nalezen
-    's.handover.1': "جای کارم را جمع‌وجور می‌کنم.", // nieuw, nalezen
-    's.handover.2': "می‌شود کارم را بررسی کنید؟", // nieuw, nalezen
-    's.handover.3': "به سرپرست می‌گویم که کارم تمام است.", // nieuw, nalezen
-    'c.handover.q': "همه‌چیز تمام شد؟", // nieuw, nalezen
-    'c.handover.a': "تقریباً. اتاق چهار قفل بود.", // nieuw, nalezen
-    'u.tech': "در کارگاه", // nieuw, nalezen
-    'l.workshop': "ابزار کارگاه", // nieuw, nalezen
-    'w.gereedschap': "ابزار", // nieuw, nalezen
-    'w.zagen': "اره کردن", // nieuw, nalezen
-    'w.slijpen': "سنگ زدن (صاف کردن یا بریدن فلز با دستگاه)", // nieuw, nalezen
-    'w.vonk': "جرقه", // nieuw, nalezen
-    'w.gehoorbescherming': "محافظ گوش", // nieuw, nalezen
-    'w.lawaai': "سروصدا (صدای بلند زیاد)", // nieuw, nalezen
-    's.workshop.1': "ابزار کجاست؟", // nieuw, nalezen
-    's.workshop.2': "موقع سنگ زدن محافظ گوش می‌گذارم.", // nieuw, nalezen
-    's.workshop.3': "مواظب جرقه‌ها باش!", // nieuw, nalezen
-    'c.workshop.q': "چرا عینک زده‌ای؟", // nieuw, nalezen
-    'c.workshop.a': "موقع اره کردن ممکن است تکه‌های ریز توی چشمم برود.", // nieuw, nalezen
-    'l.power': "اول برق را قطع کن", // nieuw, nalezen
-    'w.stroom': "برق، جریان برق", // nieuw, nalezen
-    'w.kabel': "کابل", // nieuw, nalezen
-    'w.stekker': "دوشاخه", // nieuw, nalezen
-    'w.onderspanning': "برق‌دار (برق در آن هست)", // nieuw, nalezen
-    'w.spanningsloos': "بی‌برق، ایمن (برق در آن نیست)", // nieuw, nalezen
-    'w.elektricien': "برقکار", // nieuw, nalezen
-    's.power.1': "اینجا هنوز برق هست؟", // nieuw, nalezen
-    's.power.2': "این کابل خراب است.", // nieuw, nalezen
-    's.power.3': "صبر می‌کنم تا برقش قطع شود.", // nieuw, nalezen
-    'c.power.q': "می‌توانی آن لامپ را عوض کنی؟", // nieuw, nalezen
-    'c.power.a': "برق قطع است؟ اگر نه، منتظر برقکار می‌مانم.", // nieuw, nalezen
-    'u.garage': "در تعمیرگاه ماشین", // nieuw, nalezen
+    'u.finish': "تمام کردن کارت", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.workorder': "برگهٔ کار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkbon': "برگهٔ کار (کاغذ یا اپی که کارت در آن نوشته شده)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lezen': "خواندن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aantal': "تعداد (چندتا)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.materiaal': "مواد و وسایل (چیزهایی که برای کار لازم داری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.klaarleggen': "آماده گذاشتن (چیزهای لازم را دمِ دست گذاشتن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handtekening': "امضا", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workorder.1': "اول برگهٔ کار را می‌خوانم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workorder.2': "این تعداد درست است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workorder.3': "وسایل را آماده می‌گذارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workorder.q': "می‌دانی چه کار باید بکنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workorder.a': "تقریباً. این کلمه در برگهٔ کار یعنی چه؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.handover': "تمام شد یا هنوز نه؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opruimen': "جمع‌وجور کردن، چیزها را سر جایشان گذاشتن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nakijken': "بررسی کردن (دوباره به کار نگاه کردن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afmelden': "اعلام پایان کار (گفتن که کار تمام است و رفتن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kapot': "خراب، شکسته", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opslot': "قفل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijzonderheid': "در (درِ خانه)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.handover.1': "جای کارم را جمع‌وجور می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.handover.2': "می‌شود کارم را بررسی کنید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.handover.3': "به سرپرست می‌گویم که کارم تمام است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.handover.q': "همه‌چیز تمام شد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.handover.a': "تقریباً. اتاق چهار قفل بود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.tech': "در کارگاه", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.workshop': "ابزار کارگاه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gereedschap': "ابزار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zagen': "اره کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.slijpen': "سنگ زدن (صاف کردن یا بریدن فلز با دستگاه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vonk': "جرقه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gehoorbescherming': "محافظ گوش", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lawaai': "سروصدا (صدای بلند زیاد)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workshop.1': "ابزار کجاست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workshop.2': "موقع سنگ زدن محافظ گوش می‌گذارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workshop.3': "مواظب جرقه‌ها باش!", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workshop.q': "چرا عینک زده‌ای؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workshop.a': "موقع اره کردن ممکن است تکه‌های ریز توی چشمم برود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.power': "اول برق را قطع کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stroom': "برق، جریان برق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kabel': "کابل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stekker': "دوشاخه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderspanning': "برق‌دار (برق در آن هست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spanningsloos': "بی‌برق، ایمن (برق در آن نیست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.elektricien': "برقکار", // nieuw, nalezen // nagelezen AI 28 nov
+    's.power.1': "اینجا هنوز برق هست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.power.2': "این کابل خراب است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.power.3': "صبر می‌کنم تا برقش قطع شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.power.q': "می‌توانی آن لامپ را عوض کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.power.a': "برق قطع است؟ اگر نه، منتظر برقکار می‌مانم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.garage': "در تعمیرگاه ماشین", // nieuw, nalezen // nagelezen AI 28 nov
     'l.garage': "لاستیک، روغن و بالابر", // nieuw, nalezen // nagelezen AI 31 okt
-    'w.band': "لاستیک", // nieuw, nalezen
-    'w.olie': "روغن", // nieuw, nalezen
-    'w.accu': "باتری ماشین", // nieuw, nalezen
-    'w.monteur': "مکانیک", // nieuw, nalezen
-    'w.hefbrug': "بالابر ماشین (ماشین را بالا می‌برد)", // nieuw, nalezen
-    'w.lek': "پنچر، نشتی (هوا یا آب بیرون می‌آید)", // nieuw, nalezen
-    's.garage.1': "لاستیک پنچر است.", // nieuw, nalezen
-    's.garage.2': "روغن نو کجاست؟", // nieuw, nalezen
-    's.garage.3': "ماشین روی بالابر است.", // nieuw, nalezen
-    'c.garage.q': "می‌توانی لاستیک‌های این ماشین را عوض کنی؟", // nieuw, nalezen
-    'c.garage.a': "بله. لاستیک‌های زمستانی کجاست؟", // nieuw, nalezen
-    'l.carjob': "مشتری تصمیم می‌گیرد", // nieuw, nalezen
-    'w.proefrit': "رانندگی آزمایشی", // nieuw, nalezen
-    'w.rijbewijs': "گواهی‌نامهٔ رانندگی", // nieuw, nalezen
-    'w.akkoord': "موافق، قبول (به چیزی بله می‌گویی)", // nieuw, nalezen
-    'w.kosten': "هزینه‌ها (پولی که باید داد)", // nieuw, nalezen
-    'w.repareren': "تعمیر کردن", // nieuw, nalezen
-    'w.onderdeel': "قطعه (قطعهٔ ماشین یا دستگاه)", // nieuw, nalezen
-    's.carjob.1': "مشتری با هزینه‌ها موافق است؟", // nieuw, nalezen
-    's.carjob.2': "این قطعه خراب است.", // nieuw, nalezen
-    's.carjob.3': "می‌توانم یک رانندگی آزمایشی بکنم؟", // nieuw, nalezen
-    'c.carjob.q': "ترمزها هم خراب‌اند. همین الان درستشان می‌کنی؟", // nieuw, nalezen
-    'c.carjob.a': "اول از سرپرست می‌پرسم. مشتری باید موافقت کند.", // nieuw, nalezen
-    'u.stage': "کارآموزی", // nieuw, nalezen
-    'l.placement': "کارآموزی تو", // nieuw, nalezen
-    'w.stage': "کارآموزی (در یک شرکت یاد می‌گیری)", // nieuw, nalezen
-    'w.praktijkopleider': "مربی کارآموزی در شرکت (در شرکت راهنمایی‌ات می‌کند)", // nieuw, nalezen
-    'w.stagebegeleider': "مسئول کارآموزی مدرسه (از طرف مدرسه راهنمایی‌ات می‌کند)", // nieuw, nalezen
-    'w.pok': "قرارداد کارآموزی (تو، مدرسه و شرکت امضایش می‌کنید)", // nieuw, nalezen
-    'w.school': "مدرسه", // nieuw, nalezen
-    'w.leerbedrijf': "شرکت آموزش‌دهنده (شرکتی که دانش‌آموزان می‌توانند در آن یاد بگیرند)", // nieuw, nalezen
-    's.placement.1': "کارآموزی‌ام را در یک انبار می‌گذرانم.", // nieuw, nalezen
-    's.placement.2': "مربی کارآموزی من در شرکت کیست؟", // nieuw, nalezen
-    's.placement.3': "هنوز قرارداد کارآموزی را امضا نکرده‌ام.", // nieuw, nalezen
-    'c.placement.q': "کِی کارآموزی‌ات را شروع می‌کنی؟", // nieuw, nalezen
-    'c.placement.a': "دوشنبه. اول قرارداد کارآموزی را امضا می‌کنیم.", // nieuw, nalezen
-    'l.review': "بازخورد در کارآموزی", // nieuw, nalezen
-    'w.beoordeling': "ارزیابی (اینکه چقدر خوب کار می‌کنی)", // nieuw, nalezen
-    'w.leerdoel': "هدف یادگیری (چیزی که می‌خواهی یاد بگیری)", // nieuw, nalezen
-    'w.voorbeeld': "مثال", // nieuw, nalezen
-    'w.portfolio': "پوشهٔ کار (پوشه‌ای با کارها و مدارکت)", // nieuw, nalezen
-    'w.cijfer': "نمره", // nieuw, nalezen
-    'w.verslag': "گزارش (متنی دربارهٔ کارت)", // nieuw, nalezen
-    's.review.1': "چه چیزی را بهتر می‌توانم انجام بدهم؟", // nieuw, nalezen
-    's.review.2': "می‌شود یک مثال بزنید؟", // nieuw, nalezen
-    's.review.3': "ارزیابی‌ام هفتهٔ بعد است.", // nieuw, nalezen
-    'c.review.q': "باید سریع‌تر کار کنی.", // nieuw, nalezen
-    'c.review.a': "باشد. می‌شود نشانم بدهید چطور سریع‌تر انجامش بدهم؟", // nieuw, nalezen
-    'u.society': "مشارکت در هلند", // nieuw, nalezen
-    'l.council': "شهرداری و رأی دادن", // nieuw, nalezen
-    'w.stemmen': "رأی دادن", // nieuw, nalezen
-    'w.verkiezing': "انتخابات", // nieuw, nalezen
-    'w.gemeenteraad': "شورای شهر (دربارهٔ شهر تو تصمیم می‌گیرد)", // nieuw, nalezen
-    'w.parlement': "پارلمان (قانون‌ها را می‌سازد)", // nieuw, nalezen
-    'w.stempas': "کارت رأی (کارتی که برای رأی دادن لازم داری)", // nieuw, nalezen
-    'w.burgemeester': "شهردار", // nieuw, nalezen
-    's.council.1': "اجازه دارم رأی بدهم؟", // nieuw, nalezen
-    's.council.2': "کارت رأی‌ام با پست آمد.", // nieuw, nalezen
-    's.council.3': "شورای شهر دربارهٔ محلهٔ من تصمیم می‌گیرد.", // nieuw, nalezen
-    'c.council.q': "چهارشنبه برای رأی دادن می‌روی؟", // nieuw, nalezen
-    'c.council.a': "بله. کارت رأی و مدرک شناسایی‌ام همراهم است.", // nieuw, nalezen
+    'w.band': "لاستیک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.olie': "روغن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.accu': "باتری ماشین", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.monteur': "مکانیک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hefbrug': "بالابر ماشین (ماشین را بالا می‌برد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lek': "پنچر، نشتی (هوا یا آب بیرون می‌آید)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.garage.1': "لاستیک پنچر است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.garage.2': "روغن نو کجاست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.garage.3': "ماشین روی بالابر است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.garage.q': "می‌توانی لاستیک‌های این ماشین را عوض کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.garage.a': "بله. لاستیک‌های زمستانی کجاست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.carjob': "مشتری تصمیم می‌گیرد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.proefrit': "رانندگی آزمایشی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rijbewijs': "گواهی‌نامهٔ رانندگی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.akkoord': "موافق، قبول (به چیزی بله می‌گویی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kosten': "هزینه‌ها (پولی که باید داد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.repareren': "تعمیر کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderdeel': "قطعه (قطعهٔ ماشین یا دستگاه)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carjob.1': "مشتری با هزینه‌ها موافق است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carjob.2': "این قطعه خراب است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carjob.3': "می‌توانم یک رانندگی آزمایشی بکنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carjob.q': "ترمزها هم خراب‌اند. همین الان درستشان می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carjob.a': "اول از سرپرست می‌پرسم. مشتری باید موافقت کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.stage': "کارآموزی", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.placement': "کارآموزی تو", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stage': "کارآموزی (در یک شرکت یاد می‌گیری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.praktijkopleider': "مربی کارآموزی در شرکت (در شرکت راهنمایی‌ات می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stagebegeleider': "مسئول کارآموزی مدرسه (از طرف مدرسه راهنمایی‌ات می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pok': "قرارداد کارآموزی (تو، مدرسه و شرکت امضایش می‌کنید)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.school': "مدرسه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.leerbedrijf': "شرکت آموزش‌دهنده (شرکتی که دانش‌آموزان می‌توانند در آن یاد بگیرند)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.placement.1': "کارآموزی‌ام را در یک انبار می‌گذرانم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.placement.2': "مربی کارآموزی من در شرکت کیست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.placement.3': "هنوز قرارداد کارآموزی را امضا نکرده‌ام.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.placement.q': "کِی کارآموزی‌ات را شروع می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.placement.a': "دوشنبه. اول قرارداد کارآموزی را امضا می‌کنیم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.review': "بازخورد در کارآموزی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beoordeling': "ارزیابی (اینکه چقدر خوب کار می‌کنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.leerdoel': "هدف یادگیری (چیزی که می‌خواهی یاد بگیری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorbeeld': "مثال", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.portfolio': "پوشهٔ کار (پوشه‌ای با کارها و مدارکت)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.cijfer': "نمره", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verslag': "گزارش (متنی دربارهٔ کارت)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.review.1': "چه چیزی را بهتر می‌توانم انجام بدهم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.review.2': "می‌شود یک مثال بزنید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.review.3': "ارزیابی‌ام هفتهٔ بعد است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.review.q': "باید سریع‌تر کار کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.review.a': "باشد. می‌شود نشانم بدهید چطور سریع‌تر انجامش بدهم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.society': "مشارکت در هلند", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.council': "شهرداری و رأی دادن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stemmen': "رأی دادن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verkiezing': "انتخابات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gemeenteraad': "شورای شهر (دربارهٔ شهر تو تصمیم می‌گیرد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.parlement': "پارلمان (قانون‌ها را می‌سازد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stempas': "کارت رأی (کارتی که برای رأی دادن لازم داری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.burgemeester': "شهردار", // nieuw, nalezen // nagelezen AI 28 nov
+    's.council.1': "اجازه دارم رأی بدهم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.council.2': "کارت رأی‌ام با پست آمد.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.council.3': "شورای شهر دربارهٔ محلهٔ من تصمیم می‌گیرد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.council.q': "چهارشنبه برای رأی دادن می‌روی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.council.a': "بله. کارت رأی و مدرک شناسایی‌ام همراهم است.", // nieuw, nalezen // nagelezen AI 28 nov
     'l.police': "پلیس و حق‌های تو", // nieuw, nalezen // nagelezen AI ronde 3
-    'w.agent': "مأمور پلیس", // nieuw, nalezen
-    'w.boete': "جریمه (پولی که به‌عنوان مجازات باید بدهی)", // nieuw, nalezen
-    'w.bezwaar': "اعتراض (کتبی می‌گویی که موافق نیستی)", // nieuw, nalezen
-    'w.rechter': "قاضی", // nieuw, nalezen
-    'w.advocaat': "وکیل", // nieuw, nalezen
-    'w.wet': "قانون", // nieuw, nalezen
-    's.police.1': "جریمه شده‌ام.", // nieuw, nalezen
-    's.police.2': "می‌خواهم اعتراض کنم.", // nieuw, nalezen
-    's.police.3': "می‌خواهم با یک وکیل صحبت کنم.", // nieuw, nalezen
-    'c.police.q': "می‌توانم مدرک شناسایی‌تان را ببینم؟", // nieuw, nalezen
-    'c.police.a': "بله، بفرمایید. چه شده؟", // nieuw, nalezen
-    'u.online': "آنلاین در محل کار", // nieuw, nalezen
-    'l.login': "وارد حساب شدن", // nieuw, nalezen
-    'w.uitloggen': "از حساب خارج شدن", // nieuw, nalezen
-    'w.account': "حساب کاربری", // nieuw, nalezen
-    'w.scherm': "صفحه‌نمایش", // nieuw, nalezen
-    'w.vergrendelen': "قفل کردن (صفحه یا گوشی)", // nieuw, nalezen
-    'w.gebruikersnaam': "نام کاربری", // nieuw, nalezen
-    'w.inlogcode': "کد ورود (کدی که با پیامک یا در اپ می‌آید)", // nieuw, nalezen
-    's.login.1': "رمز عبورم را فراموش کرده‌ام.", // nieuw, nalezen
-    's.login.2': "همیشه از حسابم خارج می‌شوم.", // nieuw, nalezen
-    's.login.3': "دیجی‌دی (DigiD) خودم را به هیچ‌کس نمی‌دهم.", // nieuw, nalezen
-    'c.login.q': "می‌توانی وارد حساب شوی؟", // nieuw, nalezen
-    'c.login.a': "نه، رمز عبورم کار نمی‌کند.", // nieuw, nalezen
-    'l.phish': "ایمیل‌های جعلی", // nieuw, nalezen
-    'w.afzender': "فرستنده", // nieuw, nalezen
-    'w.klikken': "کلیک کردن", // nieuw, nalezen
-    'w.bijlage': "پیوست", // nieuw, nalezen
-    'w.verdacht': "مشکوک", // nieuw, nalezen
-    'w.ictafdeling': "بخش فناوری اطلاعات (IT)", // nieuw, nalezen
-    'w.wijzigen': "عوض کردن", // nieuw, nalezen
-    's.phish.1': "این ایمیل مشکوک است.", // nieuw, nalezen
-    's.phish.2': "پیوست را باز نمی‌کنم.", // nieuw, nalezen
-    's.phish.3': "فوراً رمز عبورم را عوض می‌کنم.", // nieuw, nalezen
-    'c.phish.q': "روی لینک کلیک کردی؟", // nieuw, nalezen
-    'c.phish.a': "بله. به بخش IT زنگ می‌زنم.", // nieuw, nalezen
-    'l.mychoice': "در چه کاری خوبم", // nieuw, nalezen
-    'w.goedin': "در کاری خوب بودن", // nieuw, nalezen
-    'w.kiezen': "انتخاب کردن", // nieuw, nalezen
-    'w.beroep': "حرفه، نوع کار", // nieuw, nalezen
-    'w.bijbaan': "کار پاره‌وقت (کار کوچکی کنار درس)", // nieuw, nalezen
-    'w.nauwkeurig': "دقیق و باحوصله", // nieuw, nalezen
-    'w.meeloopdag': "روز همراهی (روزی که کنار کسی سر کار می‌روی)", // nieuw, nalezen
-    's.mychoice.1': "می‌توانم با دست‌هایم خوب کار کنم.", // nieuw, nalezen
-    's.mychoice.2': "دوست دارم با آدم‌ها کار کنم.", // nieuw, nalezen
-    's.mychoice.3': "می‌شود یک روز همراهتان باشم تا کار را ببینم؟", // nieuw, nalezen
-    'c.mychoice.q': "در چه کاری خوبی؟", // nieuw, nalezen
-    'c.mychoice.a': "خوب می‌توانم از آدم‌ها مراقبت کنم. در خانه از مادرم مراقبت می‌کنم.", // nieuw, nalezen
-    'l.nextstep': "بعد از Entree", // nieuw, nalezen
-    'w.niveau2': "سطح ۲ (سطح بعدی mbo)", // nieuw, nalezen
-    'w.startkwalificatie': "مدرک پایه (دیپلم mbo سطح ۲ یا بالاتر)", // nieuw, nalezen
-    'w.bbl': "bbl (در یک شرکت کار می‌کنی و تقریباً هفته‌ای یک روز به مدرسه می‌روی)", // nieuw, nalezen
-    'w.doorstromen': "ادامه دادن (به سطح بالاتر)", // nieuw, nalezen
-    'w.aanmelden': "ثبت‌نام کردن (در مدرسه یا دوره)", // nieuw, nalezen
-    'w.opendag': "روز درهای باز (می‌توانی از مدرسه دیدن کنی)", // nieuw, nalezen
-    's.nextstep.1': "بعد از Entree می‌خواهم به سطح ۲ بروم.", // nieuw, nalezen
-    's.nextstep.2': "می‌خواهم هم کار کنم هم درس بخوانم.", // nieuw, nalezen
-    's.nextstep.3': "روز درهای باز کی است؟", // nieuw, nalezen
-    'c.nextstep.q': "بعد از Entree چه کار می‌کنی؟", // nieuw, nalezen
-    'c.nextstep.a': "می‌خواهم bbl بخوانم. اینطوری هم کار می‌کنم هم یاد می‌گیرم.", // nieuw, nalezen
-    'l.email': "نوشتن برای محل کار", // nieuw, nalezen
-    'w.mail': "ایمیل", // nieuw, nalezen
-    'w.onderwerp': "موضوع (ایمیل)", // nieuw, nalezen
-    'w.beste': "عزیز، محترم (اول نامه یا ایمیل)", // nieuw, nalezen
-    'w.beleefd': "مؤدب", // nieuw, nalezen
-    'w.nalezen': "دوباره خواندن (پیش از فرستادن بررسی کردن)", // nieuw, nalezen
-    'w.versturen': "فرستادن", // nieuw, nalezen
-    's.email.1': "در قسمت موضوع چه بنویسم؟", // nieuw, nalezen
-    's.email.2': "ایمیلم را یک بار دیگر می‌خوانم.", // nieuw, nalezen
-    's.email.3': "ایمیل را فردا می‌فرستم.", // nieuw, nalezen
-    'c.email.q': "ایمیل روز مرخصی‌ات را فرستادی؟", // nieuw, nalezen
-    'c.email.a': "هنوز نه. اول دوباره می‌خوانمش.", // nieuw, nalezen
-    'l.budget': "پولت در هر ماه", // nieuw, nalezen
-    'w.vastelasten': "هزینه‌های ثابت (اجاره، بیمه، تلفن: هر ماه)", // nieuw, nalezen
-    'w.sparen': "پس‌انداز کردن (پول)", // nieuw, nalezen
-    'w.abonnement': "اشتراک (هر ماه پولش را می‌دهی)", // nieuw, nalezen
-    'w.achterafbetalen': "بعداً پرداختن (الان بخر، بعداً بپرداز)", // nieuw, nalezen
-    'w.bedenktijd': "مهلت انصراف (وقتی برای پشیمان شدن)", // nieuw, nalezen
-    'w.garantie': "گارانتی، ضمانت (باید کار کند، وگرنه درستش می‌کنند)", // nieuw, nalezen
-    's.budget.1': "اول هزینه‌های ثابت را می‌پردازم.", // nieuw, nalezen
-    's.budget.2': "هر ماه کمی پس‌انداز می‌کنم.", // nieuw, nalezen
-    's.budget.3': "این اشتراک را لغو می‌کنم.", // nieuw, nalezen
-    'c.budget.q': "این گوشی را الان بخر و بعداً پولش را بده!", // nieuw, nalezen
-    'c.budget.a': "نه، ممنون. بعداً پرداختن هم بدهی است.", // nieuw, nalezen
+    'w.agent': "مأمور پلیس", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.boete': "جریمه (پولی که به‌عنوان مجازات باید بدهی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bezwaar': "اعتراض (کتبی می‌گویی که موافق نیستی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rechter': "قاضی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.advocaat': "وکیل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wet': "قانون", // nieuw, nalezen // nagelezen AI 28 nov
+    's.police.1': "جریمه شده‌ام.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.police.2': "می‌خواهم اعتراض کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.police.3': "می‌خواهم با یک وکیل صحبت کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.police.q': "می‌توانم مدرک شناسایی‌تان را ببینم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.police.a': "بله، بفرمایید. چه شده؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.online': "آنلاین در محل کار", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.login': "وارد حساب شدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitloggen': "از حساب خارج شدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.account': "حساب کاربری", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scherm': "صفحه‌نمایش", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vergrendelen': "قفل کردن (صفحه یا گوشی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gebruikersnaam': "نام کاربری", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inlogcode': "کد ورود (کدی که با پیامک یا در اپ می‌آید)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.login.1': "رمز عبورم را فراموش کرده‌ام.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.login.2': "همیشه از حسابم خارج می‌شوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.login.3': "دیجی‌دی (DigiD) خودم را به هیچ‌کس نمی‌دهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.login.q': "می‌توانی وارد حساب شوی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.login.a': "نه، رمز عبورم کار نمی‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.phish': "ایمیل‌های جعلی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afzender': "فرستنده", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.klikken': "کلیک کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijlage': "پیوست", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verdacht': "مشکوک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ictafdeling': "بخش فناوری اطلاعات (IT)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wijzigen': "عوض کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    's.phish.1': "این ایمیل مشکوک است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.phish.2': "پیوست را باز نمی‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.phish.3': "فوراً رمز عبورم را عوض می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phish.q': "روی لینک کلیک کردی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phish.a': "بله. به بخش IT زنگ می‌زنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.mychoice': "در چه کاری خوبم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedin': "در کاری خوب بودن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kiezen': "انتخاب کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beroep': "حرفه، نوع کار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijbaan': "کار پاره‌وقت (کار کوچکی کنار درس)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nauwkeurig': "دقیق و باحوصله", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meeloopdag': "روز همراهی (روزی که کنار کسی سر کار می‌روی)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mychoice.1': "می‌توانم با دست‌هایم خوب کار کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mychoice.2': "دوست دارم با آدم‌ها کار کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mychoice.3': "می‌شود یک روز همراهتان باشم تا کار را ببینم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mychoice.q': "در چه کاری خوبی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mychoice.a': "خوب می‌توانم از آدم‌ها مراقبت کنم. در خانه از مادرم مراقبت می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.nextstep': "بعد از Entree", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.niveau2': "سطح ۲ (سطح بعدی mbo)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.startkwalificatie': "مدرک پایه (دیپلم mbo سطح ۲ یا بالاتر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bbl': "bbl (در یک شرکت کار می‌کنی و تقریباً هفته‌ای یک روز به مدرسه می‌روی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doorstromen': "ادامه دادن (به سطح بالاتر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanmelden': "ثبت‌نام کردن (در مدرسه یا دوره)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opendag': "روز درهای باز (می‌توانی از مدرسه دیدن کنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.nextstep.1': "بعد از Entree می‌خواهم به سطح ۲ بروم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.nextstep.2': "می‌خواهم هم کار کنم هم درس بخوانم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.nextstep.3': "روز درهای باز کی است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nextstep.q': "بعد از Entree چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nextstep.a': "می‌خواهم bbl بخوانم. اینطوری هم کار می‌کنم هم یاد می‌گیرم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.email': "نوشتن برای محل کار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mail': "ایمیل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderwerp': "موضوع (ایمیل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beste': "عزیز، محترم (اول نامه یا ایمیل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beleefd': "مؤدب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nalezen': "دوباره خواندن (پیش از فرستادن بررسی کردن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.versturen': "فرستادن", // nieuw, nalezen // nagelezen AI 28 nov
+    's.email.1': "در قسمت موضوع چه بنویسم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.email.2': "ایمیلم را یک بار دیگر می‌خوانم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.email.3': "ایمیل را فردا می‌فرستم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.email.q': "ایمیل روز مرخصی‌ات را فرستادی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.email.a': "هنوز نه. اول دوباره می‌خوانمش.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.budget': "پولت در هر ماه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vastelasten': "هزینه‌های ثابت (اجاره، بیمه، تلفن: هر ماه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sparen': "پس‌انداز کردن (پول)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.abonnement': "اشتراک (هر ماه پولش را می‌دهی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.achterafbetalen': "بعداً پرداختن (الان بخر، بعداً بپرداز)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedenktijd': "مهلت انصراف (وقتی برای پشیمان شدن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.garantie': "گارانتی، ضمانت (باید کار کند، وگرنه درستش می‌کنند)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.budget.1': "اول هزینه‌های ثابت را می‌پردازم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.budget.2': "هر ماه کمی پس‌انداز می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.budget.3': "این اشتراک را لغو می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.budget.q': "این گوشی را الان بخر و بعداً پولش را بده!", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.budget.a': "نه، ممنون. بعداً پرداختن هم بدهی است.", // nieuw, nalezen // nagelezen AI 28 nov
     'l.healthy': "سرحال برای کار", // nieuw, nalezen // nagelezen AI 22 nov
     'w.slapen': "خوابیدن", // nieuw, nalezen // nagelezen AI 22 nov
     'w.ontbijt': "صبحانه", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1722,18 +1722,18 @@ const t: CultureTranslation = {
     'c.healthy.o2': "نصف قرص را می‌خوری، این خطرناک نیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.healthy.o3': "می‌خوری، ولی سر کار به هیچ‌کس نمی‌گویی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.healthy.w': "قرص از یک همکار ممکن است مواد مخدر باشد. ممکن است مریضت کند یا باعث شود سر کار اشتباه کنی. خواب راه ایمن برای بیدار ماندن است.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.food': "کار با مواد غذایی", // nieuw, nalezen
-    'w.mes': "چاقو", // nieuw, nalezen
-    'w.snijhandschoen': "دستکش ضد برش (دستکشی در برابر بریدگی)", // nieuw, nalezen
-    'w.vriescel': "اتاق انجماد (اتاقی خیلی سرد)", // nieuw, nalezen
-    'w.sieraden': "زیورآلات (انگشتر، ساعت، گوشواره)", // nieuw, nalezen
-    'w.pleister': "چسب زخم (برای بریدگی کوچک)", // nieuw, nalezen
-    'w.vlees': "گوشت", // nieuw, nalezen
-    's.food.1': "زیورآلاتم را درمی‌آورم.", // nieuw, nalezen
-    's.food.2': "دستکش‌های ضد برش کجاست؟", // nieuw, nalezen
-    's.food.3': "در اتاق انجماد یک کاپشن گرم می‌پوشم.", // nieuw, nalezen
-    'c.food.q': "چرا الان خط را تمیز می‌کنیم؟", // nieuw, nalezen
-    'c.food.a': "بعدش یک محصول بدون آجیل می‌آید.", // nieuw, nalezen
+    'l.food': "کار با مواد غذایی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mes': "چاقو", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snijhandschoen': "دستکش ضد برش (دستکشی در برابر بریدگی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vriescel': "اتاق انجماد (اتاقی خیلی سرد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sieraden': "زیورآلات (انگشتر، ساعت، گوشواره)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pleister': "چسب زخم (برای بریدگی کوچک)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vlees': "گوشت", // nieuw, nalezen // nagelezen AI 28 nov
+    's.food.1': "زیورآلاتم را درمی‌آورم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.food.2': "دستکش‌های ضد برش کجاست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.food.3': "در اتاق انجماد یک کاپشن گرم می‌پوشم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.food.q': "چرا الان خط را تمیز می‌کنیم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.food.a': "بعدش یک محصول بدون آجیل می‌آید.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.food': "دست‌های تمیز، غذای ایمن", // nieuw, nalezen // nagelezen AI 22 nov
     'c.food.b': "کار با مواد غذایی قانون‌های سخت بهداشتی دارد: تور مو، لباس کار تمیز، دست‌های شسته و بدون زیورآلات. این قانون‌ها برای همه یکی است. این‌ها چیزی دربارهٔ تو نمی‌گویند: غذا را برای کسانی که آن را می‌خورند ایمن نگه می‌دارند. با چاقو همیشه دستکش ضد برشت را دستت کن. در اتاق سرد یا اتاق انجماد، لباس‌های گرمی را که به تو می‌دهند بپوش، و در وقت استراحت خودت را گرم کن. مریضی، یا روی دستت زخم داری؟ قبل از شروع کار خبر بده. آن وقت می‌توانی یک چسب زخم مخصوص بگیری، یا مدتی کار دیگری. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.food.p': "دستم کمی بریده. می‌توانم یک چسب زخم بگیرم؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1742,31 +1742,31 @@ const t: CultureTranslation = {
     'c.food.o2': "چیزی نمی‌گویی: فقط یک بریدگی کوچک است.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.food.o3': "رویش دستکش می‌پوشی تا کسی آن را نبیند.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.food.w': "یک زخم کوچک می‌تواند میکروب را وارد غذا کند. وقتی خبر بدهی، می‌توانی یک چسب زخم مخصوص یا مدتی کار دیگری بگیری. خبر دادنش عادی است: هیچ‌کس تو را به خاطرش سرزنش نمی‌کند.", // nieuw, nalezen // nagelezen AI 22 nov
-    'u.delivery': "حمل‌ونقل و تحویل", // nieuw, nalezen
-    'l.parcel': "تحویل بسته‌ها", // nieuw, nalezen
-    'w.pakket': "بسته", // nieuw, nalezen
-    'w.bestelbus': "ون باری (ماشین تحویل بسته)", // nieuw, nalezen
-    'w.bezorgen': "تحویل دادن (به مشتری رساندن)", // nieuw, nalezen
-    'w.inladen': "بار زدن (چیزها را داخل ون گذاشتن)", // nieuw, nalezen
-    'w.aanbellen': "زنگ در را زدن", // nieuw, nalezen
-    'w.bewijs': "مدرک (چیزی که نشان می‌دهد چه اتفاقی افتاده)", // nieuw, nalezen
-    's.parcel.1': "هر بسته را اسکن می‌کنم.", // nieuw, nalezen
-    's.parcel.2': "مشتری خانه نیست.", // nieuw, nalezen
-    's.parcel.3': "می‌شود یک بسته را برای همسایه‌ها تحویل بگیرید؟", // nieuw, nalezen
-    'c.parcel.q': "این بسته مال من است؟", // nieuw, nalezen
-    'c.parcel.a': "بله. لطفاً اینجا را امضا می‌کنید؟", // nieuw, nalezen
-    'l.road': "ایمن و منصفانه در جاده", // nieuw, nalezen
-    'w.rijden': "رانندگی کردن", // nieuw, nalezen
-    'w.zwaar': "سنگین", // nieuw, nalezen
-    'w.steekwagen': "چرخ دستی باربری (برای جعبه‌های سنگین)", // nieuw, nalezen
-    'w.route': "مسیر (راهی که می‌رانی)", // nieuw, nalezen
-    'w.loondienst': "حقوق‌بگیر (برای یک رئیس کار می‌کنی و حقوق می‌گیری)", // nieuw, nalezen
-    'w.bepalen': "تعیین کردن (گفتن اینکه چطور باید انجام شود)", // nieuw, nalezen
-    's.road.1': "این بسته خیلی سنگین است. چرخ دستی را می‌آورم.", // nieuw, nalezen
-    's.road.2': "جاده لغزنده است. آهسته رانندگی می‌کنم.", // nieuw, nalezen
-    's.road.3': "چه کسی مسیر و ساعت‌های کارم را تعیین می‌کند؟", // nieuw, nalezen
-    'c.road.q': "امروز می‌توانی یک سرویس دیگر هم بروی؟", // nieuw, nalezen
-    'c.road.a': "نه، آن وقت برای استراحتم وقت ندارم.", // nieuw, nalezen
+    'u.delivery': "حمل‌ونقل و تحویل", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.parcel': "تحویل بسته‌ها", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pakket': "بسته", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bestelbus': "ون باری (ماشین تحویل بسته)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bezorgen': "تحویل دادن (به مشتری رساندن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inladen': "بار زدن (چیزها را داخل ون گذاشتن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanbellen': "زنگ در را زدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bewijs': "مدرک (چیزی که نشان می‌دهد چه اتفاقی افتاده)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.parcel.1': "هر بسته را اسکن می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.parcel.2': "مشتری خانه نیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.parcel.3': "می‌شود یک بسته را برای همسایه‌ها تحویل بگیرید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.parcel.q': "این بسته مال من است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.parcel.a': "بله. لطفاً اینجا را امضا می‌کنید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.road': "ایمن و منصفانه در جاده", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rijden': "رانندگی کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zwaar': "سنگین", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.steekwagen': "چرخ دستی باربری (برای جعبه‌های سنگین)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.route': "مسیر (راهی که می‌رانی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.loondienst': "حقوق‌بگیر (برای یک رئیس کار می‌کنی و حقوق می‌گیری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bepalen': "تعیین کردن (گفتن اینکه چطور باید انجام شود)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.road.1': "این بسته خیلی سنگین است. چرخ دستی را می‌آورم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.road.2': "جاده لغزنده است. آهسته رانندگی می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.road.3': "چه کسی مسیر و ساعت‌های کارم را تعیین می‌کند؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.road.q': "امروز می‌توانی یک سرویس دیگر هم بروی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.road.a': "نه، آن وقت برای استراحتم وقت ندارم.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.parcel': "کسی خانه نیست، یا بسته خراب است", // nieuw, nalezen // nagelezen AI 22 nov
     'c.parcel.b': "مشتری خانه نیست؟ طبق قانون‌های شرکتت عمل کن: سراغ همسایه‌ها برو، یا بسته را برگردان. آن را همین‌طوری دم در نگذار، مگر اینکه مشتری این را خواسته باشد. بسته‌ای خراب یا خیس است؟ آن را طوری تحویل نده که انگار هیچ مشکلی نیست. به عنوان مدرک عکس بگیر، و آن را در اسکنر یا اپ گزارش بده. صادق بودن دربارهٔ یک مشکل همیشه بهتر از پنهان کردنش است. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.parcel.p': "این بسته خراب است. این هم یک عکس.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1824,18 +1824,18 @@ const t: CultureTranslation = {
     'c.backtowork.o2': "با این حال جعبه‌ها را بلند می‌کنی: نمی‌خواهی دردسر درست کنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.backtowork.o3': "بدون یک کلمه به خانه می‌روی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.backtowork.w': "سرپرستت می‌خواهد برگردی، آن هم سالم. وقتی روشن بگویی چه کاری از تو برمی‌آید، او می‌تواند کار را برنامه‌ریزی کند. زود زیاد کار کردن می‌تواند دوباره مریضت کند.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.measure': "اندازه گرفتن", // nieuw, nalezen
-    'w.rolmaat': "متر (متر نواری)", // nieuw, nalezen
-    'w.waterpas': "تراز (نشان می‌دهد چیزی صاف است یا نه)", // nieuw, nalezen
-    'w.meten': "اندازه گرفتن", // nieuw, nalezen
-    'w.rechtlijn': "صاف (نه کج)", // nieuw, nalezen
-    'w.plank': "تخته", // nieuw, nalezen
-    'w.schroef': "پیچ", // nieuw, nalezen
-    's.measure.1': "این تخته چقدر طول دارد؟", // nieuw, nalezen
-    's.measure.2': "دیوار صاف نیست.", // nieuw, nalezen
-    's.measure.3': "دو بار اندازه می‌گیرم.", // nieuw, nalezen
-    'c.measure.q': "پهنایش باید چقدر باشد؟", // nieuw, nalezen
-    'c.measure.a': "نود سانتی‌متر. دارم می‌نویسمش.", // nieuw, nalezen
+    'l.measure': "اندازه گرفتن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rolmaat': "متر (متر نواری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.waterpas': "تراز (نشان می‌دهد چیزی صاف است یا نه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meten': "اندازه گرفتن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rechtlijn': "صاف (نه کج)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plank': "تخته", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schroef': "پیچ", // nieuw, nalezen // nagelezen AI 28 nov
+    's.measure.1': "این تخته چقدر طول دارد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.measure.2': "دیوار صاف نیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.measure.3': "دو بار اندازه می‌گیرم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.measure.q': "پهنایش باید چقدر باشد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.measure.a': "نود سانتی‌متر. دارم می‌نویسمش.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.measure': "دو بار اندازه بگیر، یک بار اره کن", // nieuw, nalezen // nagelezen AI 22 nov
     'c.measure.b': "در کارگاه ساختمانی، اندازه‌ها اغلب به میلی‌متر است. پس «نهصد» می‌تواند یعنی 90 سانتی‌متر. مطمئن نیستی؟ بپرس که میلی‌متر است یا سانتی‌متر. عدد را تکرار کن، و آن را بنویس. قبل از اره کردن یا سوراخ کردن دو بار اندازه بگیر: تخته‌ای که کوتاه بریده شده، کوتاه می‌ماند. اشتباه کردی؟ فوراً بگو. آن وقت تیم هنوز می‌تواند درستش کند، و خرجش کمتر می‌شود.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.measure.p': "این به میلی‌متر است یا به سانتی‌متر؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1844,18 +1844,18 @@ const t: CultureTranslation = {
     'c.measure.o2': "تخته را با همان اندازه‌ای که فکر می‌کنی شنیده‌ای اره می‌کنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.measure.o3': "صبر می‌کنی تا خودش بیاید نگاه کند.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.measure.w': "اندازهٔ اشتباه، مصالح و وقت را هدر می‌دهد. تکرار کردن عدد دو ثانیه طول می‌کشد، و در کارگاه ساختمانی همه این کار را می‌کنند.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.siteday': "کارگاه ساختمانی مرتب", // nieuw, nalezen
-    'w.bouwplaats': "کارگاه ساختمانی", // nieuw, nalezen
-    'w.uitvoerder': "مسئول کارگاه (رئیس در کارگاه ساختمانی)", // nieuw, nalezen
-    'w.keet': "کانکس کارگاه (برای استراحت و جلسه)", // nieuw, nalezen
-    'w.afval': "زباله، آشغال", // nieuw, nalezen
-    'w.container': "کانتینر زباله (یک سطل خیلی بزرگ برای زباله)", // nieuw, nalezen
-    'w.struikelen': "پا گیر کردن (پایت به چیزی می‌خورد و می‌افتی)", // nieuw, nalezen
-    's.siteday.1': "زباله را در کانتینر می‌ریزیم.", // nieuw, nalezen
-    's.siteday.2': "مسئول کارگاه در کانکس است.", // nieuw, nalezen
-    's.siteday.3': "مواظب باش، اینجا ممکن است پایت گیر کند.", // nieuw, nalezen
-    'c.siteday.q': "این چوب‌ها را کجا باید بگذارم؟", // nieuw, nalezen
-    'c.siteday.a': "در کانتینر، کنار ورودی.", // nieuw, nalezen
+    'l.siteday': "کارگاه ساختمانی مرتب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bouwplaats': "کارگاه ساختمانی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitvoerder': "مسئول کارگاه (رئیس در کارگاه ساختمانی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.keet': "کانکس کارگاه (برای استراحت و جلسه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afval': "زباله، آشغال", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.container': "کانتینر زباله (یک سطل خیلی بزرگ برای زباله)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.struikelen': "پا گیر کردن (پایت به چیزی می‌خورد و می‌افتی)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.siteday.1': "زباله را در کانتینر می‌ریزیم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.siteday.2': "مسئول کارگاه در کانکس است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.siteday.3': "مواظب باش، اینجا ممکن است پایت گیر کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.siteday.q': "این چوب‌ها را کجا باید بگذارم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.siteday.a': "در کانتینر، کنار ورودی.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.siteday': "کارگاه مرتب، کارگاه ایمن است", // nieuw, nalezen // nagelezen AI 22 nov
     'c.siteday.b': "در کارگاه ساختمانی، جمع‌وجور کردن بخشی از کار است، برای همه. تخته‌های رهاشده، کابل‌ها و زباله باعث می‌شوند آدم‌ها پایشان گیر کند و بیفتند. پس جای کار خودت را در طول روز مرتب کن، نه فقط آخر روز. زباله را جدا می‌کنند: چوب، سنگ و فلز اغلب در کانتینرهای جدا می‌روند. نمی‌دانی کدام کانتینر؟ بپرس. میخی می‌بینی که بیرون زده، یا سوراخی که درپوش ندارد؟ اگر می‌توانی بی‌خطر درستش کنی، درستش کن، یا به مسئول کارگاه (de uitvoerder) بگو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.siteday.p': "این را جمع می‌کنم. آن وقت پای کسی گیر نمی‌کند.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1864,18 +1864,18 @@ const t: CultureTranslation = {
     'c.siteday.o2': "از رویشان رد می‌شوی: تخته‌های تو نیستند.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.siteday.o3': "صبر می‌کنی: یک نفر دیگر جمعشان می‌کند.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.siteday.w': "همه از همان راه‌ها رد می‌شوند. هر کس خطری می‌بیند، کاری برایش می‌کند: این در کارگاه ساختمانی عادی است.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.shifts': "تحویل دادن شیفت", // nieuw, nalezen
-    'w.vroegedienst': "شیفت صبح", // nieuw, nalezen
-    'w.latedienst': "شیفت عصر", // nieuw, nalezen
-    'w.nachtdienst': "شیفت شب", // nieuw, nalezen
-    'w.overdracht': "تحویل شیفت (به شیفت بعد می‌گویی چه اتفاقی افتاده)", // nieuw, nalezen
-    'w.aflossen': "جای کسی را گرفتن (نفر بعدی می‌آید، و تو می‌توانی بروی)", // nieuw, nalezen
-    'w.teamleider': "سرپرست تیم", // nieuw, nalezen
-    's.shifts.1': "این هفته شیفت عصر هستم.", // nieuw, nalezen
-    's.shifts.2': "چه کسی جای من می‌آید؟", // nieuw, nalezen
-    's.shifts.3': "دستگاه دو خراب شده بود.", // nieuw, nalezen
-    'c.shifts.q': "در شیفتت اتفاقی افتاد؟", // nieuw, nalezen
-    'c.shifts.a': "بله. خط نیم ساعت ایستاده بود.", // nieuw, nalezen
+    'l.shifts': "تحویل دادن شیفت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vroegedienst': "شیفت صبح", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.latedienst': "شیفت عصر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nachtdienst': "شیفت شب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.overdracht': "تحویل شیفت (به شیفت بعد می‌گویی چه اتفاقی افتاده)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aflossen': "جای کسی را گرفتن (نفر بعدی می‌آید، و تو می‌توانی بروی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teamleider': "سرپرست تیم", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shifts.1': "این هفته شیفت عصر هستم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shifts.2': "چه کسی جای من می‌آید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shifts.3': "دستگاه دو خراب شده بود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shifts.q': "در شیفتت اتفاقی افتاد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shifts.a': "بله. خط نیم ساعت ایستاده بود.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.shifts': "به شیفت بعد بگو", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shifts.b': "کارخانه اغلب شب و روز کار می‌کند، با شیفت. آخر شیفتت، یک همکار جای تو را می‌گیرد. همین‌طوری نرو: صبر کن تا همکارت برسد. در چند کلمه بگو چه اتفاقی افتاده: یک خرابی، محصولی که ایراد داشت، کاری که تمام نشده. خیلی از شرکت‌ها برای این کار یک فهرست یا یک صفحهٔ نمایش هم دارند. مشکلی که خبرش را نمی‌دهی در شیفت بعد دوباره پیش می‌آید، و آن وقت هیچ‌کس نمی‌داند چرا. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shifts.p': "دستگاه خراب شده بود. حالا دوباره کار می‌کند.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1884,18 +1884,18 @@ const t: CultureTranslation = {
     'c.shifts.o2': "به خانه می‌روی: شیفتت تمام شده.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shifts.o3': "دستگاه را خاموش می‌کنی و می‌روی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shifts.w': "دستگاهِ روشن نباید تنها بماند. وقتی صبر می‌کنی و خبر می‌دهی، کار بی‌خطر ادامه پیدا می‌کند، و سرپرست تیم می‌تواند مشکل را حل کند.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.signals': "بگو چه می‌بینی", // nieuw, nalezen
-    'w.duizelig': "سرگیجه داشتن (سرت گیج می‌رود)", // nieuw, nalezen
-    'w.misselijk': "حالت تهوع (حس می‌کنی باید بالا بیاوری)", // nieuw, nalezen
-    'w.benauwd': "تنگی نفس (سخت نفس می‌کشی)", // nieuw, nalezen
-    'w.koorts': "تب", // nieuw, nalezen
-    'w.verward': "گیج (نمی‌داند کجاست)", // nieuw, nalezen
-    'w.anders': "متفاوت (نه مثل همیشه)", // nieuw, nalezen
-    's.signals.1': "خانم سرگیجه دارد.", // nieuw, nalezen
-    's.signals.2': "آقا امروز غذا نمی‌خورد.", // nieuw, nalezen
-    's.signals.3': "می‌توانی بیایی یک نگاه بکنی؟", // nieuw, nalezen
-    'c.signals.q': "حال آقای Jansen چطور است؟", // nieuw, nalezen
-    'c.signals.a': "گیج است. با دیروز فرق دارد.", // nieuw, nalezen
+    'l.signals': "بگو چه می‌بینی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.duizelig': "سرگیجه داشتن (سرت گیج می‌رود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.misselijk': "حالت تهوع (حس می‌کنی باید بالا بیاوری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.benauwd': "تنگی نفس (سخت نفس می‌کشی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koorts': "تب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verward': "گیج (نمی‌داند کجاست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.anders': "متفاوت (نه مثل همیشه)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.signals.1': "خانم سرگیجه دارد.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.signals.2': "آقا امروز غذا نمی‌خورد.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.signals.3': "می‌توانی بیایی یک نگاه بکنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.signals.q': "حال آقای Jansen چطور است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.signals.a': "گیج است. با دیروز فرق دارد.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.signals': "تو مراجع را هر روز می‌بینی", // nieuw, nalezen // nagelezen AI 22 nov
     'c.signals.b': "اغلب تو کسی هستی که مراجع را بیشتر از همه می‌بیند. پس تو اول از همه متوجه می‌شوی که چیزی فرق کرده: کمتر غذا می‌خورد، درد بیشتری دارد، گیج است، نفسش تنگ است. لازم نیست بدانی مشکل چیست. بگو چه می‌بینی، و بگو کِی آن را دیدی. همان روز به پرستار بگو، و اگر وظیفهٔ توست، آن را بنویس. به نظر جدی می‌آید؟ صبر نکن: فوراً پرستار را صدا کن. یک بار زیادی گفتن بهتر از یک بار کم گفتن است.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.signals.p': "خانم غذا نمی‌خورد و سرگیجه دارد. مثل همیشه نیست.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1904,18 +1904,18 @@ const t: CultureTranslation = {
     'c.signals.o2': "چند روز صبر می‌کنی: شاید خودش خوب شود.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.signals.o3': "یک قرص از کمد به او می‌دهی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.signals.w': "یک تغییر کوچک می‌تواند اولین نشانهٔ یک بیماری باشد. تو تصمیم نمی‌گیری مشکل چیست: این کار پرستار است. ولی او فقط وقتی می‌تواند کاری بکند که تو به او بگویی.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.transfer': "کمک به بلند شدن", // nieuw, nalezen
-    'w.tillift': "بالابر بیمار (دستگاهی که آدم را بلند می‌کند)", // nieuw, nalezen
-    'w.rollator': "واکر چرخ‌دار", // nieuw, nalezen
-    'w.bed': "تخت", // nieuw, nalezen
-    'w.opstaan': "بلند شدن، ایستادن", // nieuw, nalezen
-    'w.gaanzitten': "نشستن", // nieuw, nalezen
-    'w.voorzichtig': "با احتیاط، آرام", // nieuw, nalezen
-    's.transfer.1': "کمکتان می‌کنم بلند شوید.", // nieuw, nalezen
-    's.transfer.2': "می‌خواهید کمی بنشینید؟", // nieuw, nalezen
-    's.transfer.3': "اول بالابر را می‌آورم.", // nieuw, nalezen
-    'c.transfer.q': "می‌توانی خانم را از تخت بلند کنی؟", // nieuw, nalezen
-    'c.transfer.a': "تنهایی نه. بالابر را می‌آورم.", // nieuw, nalezen
+    'l.transfer': "کمک به بلند شدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tillift': "بالابر بیمار (دستگاهی که آدم را بلند می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rollator': "واکر چرخ‌دار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bed': "تخت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opstaan': "بلند شدن، ایستادن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gaanzitten': "نشستن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorzichtig': "با احتیاط، آرام", // nieuw, nalezen // nagelezen AI 28 nov
+    's.transfer.1': "کمکتان می‌کنم بلند شوید.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.transfer.2': "می‌خواهید کمی بنشینید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.transfer.3': "اول بالابر را می‌آورم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.transfer.q': "می‌توانی خانم را از تخت بلند کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.transfer.a': "تنهایی نه. بالابر را می‌آورم.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.transfer': "اول بگو، بعد کمک کن", // nieuw, nalezen // nagelezen AI 22 nov
     'c.transfer.b': "قبل از اینکه به مراجع دست بزنی، با جملهٔ «Ik help u nu met opstaan.» بگو چه کار می‌خواهی بکنی. آن وقت مراجع جا نمی‌خورد، و می‌تواند خودش هم کمک کند. بگذار مراجع کاری را که هنوز از دستش برمی‌آید خودش بکند: این او را قوی نگه می‌دارد. هیچ‌وقت کسی را تنهایی بلند نکن. از وسیله‌های کمکی که هست، مثل بالابر، استفاده کن و همان‌طور کار کن که به تو نشان داده‌اند. هنوز نشانت نداده‌اند؟ اول بپرس. کمرت باید یک عمر کار دوام بیاورد. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.transfer.p': "حالا کمکتان می‌کنم بلند شوید. آماده‌اید؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1924,18 +1924,18 @@ const t: CultureTranslation = {
     'c.transfer.o2': "خودت بلندش می‌کنی: سنگین نیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.transfer.o3': "بالابر را امتحان می‌کنی: نباید سخت باشد.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.transfer.w': "بلند کردن اشتباه یک آدم می‌تواند به مراجع و به کمر تو آسیب بزند. کمک خواستن از همکار چند دقیقه طول می‌کشد. خوب شدن بعد از یک زمین خوردن می‌تواند ماه‌ها طول بکشد.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.dishes': "ظرف شستن", // nieuw, nalezen
-    'w.afwas': "ظرف‌های کثیف، ظرف‌شویی", // nieuw, nalezen
-    'w.vaatwasser': "ماشین ظرف‌شویی", // nieuw, nalezen
-    'w.bord': "بشقاب", // nieuw, nalezen
-    'w.glas': "لیوان", // nieuw, nalezen
-    'w.bestek': "قاشق و چنگال (کارد، چنگال و قاشق)", // nieuw, nalezen
-    'w.afdrogen': "خشک کردن (با دستمال)", // nieuw, nalezen
-    's.dishes.1': "کار ماشین ظرف‌شویی تمام شده.", // nieuw, nalezen
-    's.dishes.2': "مواظب باش، یک لیوان شکسته.", // nieuw, nalezen
-    's.dishes.3': "قاشق و چنگال تمیز دیگر نداریم.", // nieuw, nalezen
-    'c.dishes.q': "لیوان تمیز هنوز هست؟", // nieuw, nalezen
-    'c.dishes.a': "بله، همین الان می‌آورم.", // nieuw, nalezen
+    'l.dishes': "ظرف شستن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afwas': "ظرف‌های کثیف، ظرف‌شویی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vaatwasser': "ماشین ظرف‌شویی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bord': "بشقاب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.glas': "لیوان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bestek': "قاشق و چنگال (کارد، چنگال و قاشق)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afdrogen': "خشک کردن (با دستمال)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dishes.1': "کار ماشین ظرف‌شویی تمام شده.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dishes.2': "مواظب باش، یک لیوان شکسته.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dishes.3': "قاشق و چنگال تمیز دیگر نداریم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dishes.q': "لیوان تمیز هنوز هست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dishes.a': "بله، همین الان می‌آورم.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.dishes': "شیشهٔ شکسته: فوراً بگو", // nieuw, nalezen // nagelezen AI 22 nov
     'c.dishes.b': "در آشپزخانه، لیوان و شیشه می‌شکند. این عادی است، و کسی از آن عصبانی نمی‌شود. ولی فوراً «Glas!» را بگو، بلند و واضح. تکه‌ها را با دست خالی جمع نکن: از جارو دستی استفاده کن. شیشه نزدیک غذا افتاده، یا توی یخ؟ آن وقت آن غذا یا آن یخ را باید دور ریخت، همه‌اش را. یک تکهٔ کوچک شیشه در غذا برای مهمان خیلی خطرناک است. شیشه را در سطل مخصوص خودش بینداز، نه در کیسه‌ای که کسی آن را بلند می‌کند. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.dishes.p': "مواظب باشید، شیشه! همین الان جمعش می‌کنم.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1944,18 +1944,18 @@ const t: CultureTranslation = {
     'c.dishes.o2': "تکه‌هایی را که می‌بینی برمی‌داری.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.dishes.o3': "چیزی نمی‌گویی: الان خیلی شلوغ است.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.dishes.w': "تکه‌های کوچک شیشه در یخ دیده نمی‌شوند. یخ تازه خرج زیادی ندارد. مهمانی که در نوشیدنی‌اش شیشه باشد ممکن است بد آسیب ببیند.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.rush': "وقتی شلوغ است", // nieuw, nalezen
-    'w.heet': "داغ", // nieuw, nalezen
-    'w.chef': "سرآشپز (رئیس آشپزخانه)", // nieuw, nalezen
-    'w.terras': "تراس (میزهای بیرون)", // nieuw, nalezen
-    'w.tafel': "میز", // nieuw, nalezen
-    'w.dienblad': "سینی", // nieuw, nalezen
-    'w.wachten': "منتظر ماندن، صبر کردن", // nieuw, nalezen
-    's.rush.1': "داغ است! دارم از پشت سرت رد می‌شوم.", // nieuw, nalezen
-    's.rush.2': "میز شش منتظر غذاست.", // nieuw, nalezen
-    's.rush.3': "این را به تراس می‌برم.", // nieuw, nalezen
-    'c.rush.q': "می‌توانی میز چهار را انجام بدهی؟", // nieuw, nalezen
-    'c.rush.a': "بله، سرآشپز. دارم می‌آیم.", // nieuw, nalezen
+    'l.rush': "وقتی شلوغ است", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.heet': "داغ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.chef': "سرآشپز (رئیس آشپزخانه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.terras': "تراس (میزهای بیرون)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tafel': "میز", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dienblad': "سینی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wachten': "منتظر ماندن، صبر کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rush.1': "داغ است! دارم از پشت سرت رد می‌شوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rush.2': "میز شش منتظر غذاست.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rush.3': "این را به تراس می‌برم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rush.q': "می‌توانی میز چهار را انجام بدهی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rush.a': "بله، سرآشپز. دارم می‌آیم.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.rush': "کلمه‌های کوتاه وقتی شلوغ است", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rush.b': "وقتی شلوغ است، آدم‌ها در آشپزخانه با کلمه‌های کوتاهی مثل «Heet!»، «Achter!» و «Tafel zes!» حرف می‌زنند. این بی‌ادبی نیست. سریع و ایمن است: همه می‌دانند قابلمه‌های داغ و چاقوها کجا هستند. وقتی از پشت سر کسی رد می‌شوی، خودت هم «Heet!» یا «Achter!» را بلند بگو. سفارشی شنیدی؟ در جواب «Ja, chef.» را بگو. آن وقت سرآشپز می‌داند که شنیده‌ای. کسی در شلوغی با تو تند حرف زد؟ اغلب بعد از سرویس تمام می‌شود. باز هم ناخوشایند می‌ماند؟ آن وقت در یک وقت آرام درباره‌اش حرف بزن.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rush.p': "پشت سرت! قابلمهٔ داغ دستم است.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1964,18 +1964,18 @@ const t: CultureTranslation = {
     'c.rush.o2': "دست از کار می‌کشی و می‌گویی که بی‌ادب است.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rush.o3': "انجامش می‌دهی، ولی جوابی نمی‌دهی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rush.w': "در شلوغی، کوتاه حرف زدن عادی است و به خود تو ربطی ندارد. تکرار کردن نشان می‌دهد که شنیده‌ای. این آشپزخانه را سریع و ایمن نگه می‌دارد.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.rounds': "دور کاری تو", // nieuw, nalezen
-    'w.kantoor': "دفتر", // nieuw, nalezen
-    'w.verdieping': "طبقه (طبقهٔ اول یا دوم یک ساختمان)", // nieuw, nalezen
-    'w.gang': "راهرو", // nieuw, nalezen
-    'w.toiletpapier': "دستمال توالت", // nieuw, nalezen
-    'w.zeep': "صابون", // nieuw, nalezen
-    'w.bijvullen': "پر کردن دوباره", // nieuw, nalezen
-    's.rounds.1': "از طبقهٔ دوم شروع می‌کنم.", // nieuw, nalezen
-    's.rounds.2': "دستمال توالت تمام شده.", // nieuw, nalezen
-    's.rounds.3': "دارم صابون را پر می‌کنم.", // nieuw, nalezen
-    'c.rounds.q': "دفتر سه را تمیز کرده‌ای؟", // nieuw, nalezen
-    'c.rounds.a': "نه، هنوز کسی آنجا کار می‌کند.", // nieuw, nalezen
+    'l.rounds': "دور کاری تو", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kantoor': "دفتر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verdieping': "طبقه (طبقهٔ اول یا دوم یک ساختمان)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gang': "راهرو", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toiletpapier': "دستمال توالت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zeep': "صابون", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijvullen': "پر کردن دوباره", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rounds.1': "از طبقهٔ دوم شروع می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rounds.2': "دستمال توالت تمام شده.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rounds.3': "دارم صابون را پر می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rounds.q': "دفتر سه را تمیز کرده‌ای؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rounds.a': "نه، هنوز کسی آنجا کار می‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.rounds': "نظافت جایی که آدم‌ها کار می‌کنند", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rounds.b': "اغلب وقتی نظافت می‌کنی که دیگران هنوز سر کارند. سلام کن، و با جملهٔ «Mag ik hier even schoonmaken?» اجازه بگیر. بیشتر آدم‌ها می‌گویند بله. کسی در جلسه است یا با تلفن حرف می‌زند؟ آن وقت بعداً برگرد. کاغذهای روی میز را جابه‌جا نکن، و آن‌ها را نخوان: دور و برشان را تمیز کن. برای دور کاری‌ات وقت مشخصی داری. وقت برای خوب انجام دادن کار کم است؟ بی‌سروصدا از اتاق‌ها نگذر. به سرپرستت بگو چه کاری را نتوانستی بکنی، و چرا.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rounds.p': "عصر به خیر. می‌توانم اینجا را تمیز کنم؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -1984,18 +1984,18 @@ const t: CultureTranslation = {
     'c.rounds.o2': "به خانه می‌روی و امیدواری کسی نبیند.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rounds.o3': "خیلی تند انجامشان می‌دهی، بدون کف زمین.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.rounds.w': "مشتری‌ای که دفتر کثیف ببیند، شکایت می‌کند. سرپرستی که خبر دارد می‌تواند توضیح بدهد، یا به تو وقت بیشتری بدهد. گفتنش شکست نیست.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.colours': "رنگ‌ها و دستمال‌ها", // nieuw, nalezen
-    'w.doek': "دستمال", // nieuw, nalezen
-    'w.spons': "اسفنج", // nieuw, nalezen
-    'w.rood': "قرمز", // nieuw, nalezen
-    'w.blauw': "آبی", // nieuw, nalezen
-    'w.geel': "زرد", // nieuw, nalezen
-    'w.groen': "سبز", // nieuw, nalezen
-    's.colours.1': "دستمال قرمز برای توالت است.", // nieuw, nalezen
-    's.colours.2': "یک دستمال تمیز بردار.", // nieuw, nalezen
-    's.colours.3': "اینجا از کدام رنگ استفاده کنم؟", // nieuw, nalezen
-    'c.colours.q': "می‌توانم این دستمال را برای میز کار استفاده کنم؟", // nieuw, nalezen
-    'c.colours.a': "نه، قرمز فقط برای توالت است.", // nieuw, nalezen
+    'l.colours': "رنگ‌ها و دستمال‌ها", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doek': "دستمال", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spons': "اسفنج", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rood': "قرمز", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.blauw': "آبی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geel': "زرد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.groen': "سبز", // nieuw, nalezen // nagelezen AI 28 nov
+    's.colours.1': "دستمال قرمز برای توالت است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.colours.2': "یک دستمال تمیز بردار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.colours.3': "اینجا از کدام رنگ استفاده کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.colours.q': "می‌توانم این دستمال را برای میز کار استفاده کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.colours.a': "نه، قرمز فقط برای توالت است.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.colours': "هر رنگ جای خودش را دارد", // nieuw, nalezen // nagelezen AI 22 nov
     'c.colours.b': "خیلی از شرکت‌های نظافتی با رنگ کار می‌کنند. هر رنگِ دستمال، اسفنج و سطل برای یک جاست. اغلب قرمز برای توالت است، و آبی برای میز کار و میزهای دیگر. این‌طوری کثیفی توالت به میز کار یا آشپزخانه نمی‌رسد. رنگ‌ها ممکن است در هر شرکت فرق داشته باشد، پس روز اول کارت بپرس. دستمالی کثیف شده، یا روی زمین افتاده؟ یک دستمال تمیز بردار. دستمال‌های استفاده‌شده را در کیسهٔ رخت‌چرک بینداز، نه دوباره روی چرخ نظافت. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.colours.p': "اینجا کدام رنگ برای توالت است؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2004,18 +2004,18 @@ const t: CultureTranslation = {
     'c.colours.o2': "از دستمال قرمز استفاده می‌کنی: تمیز، تمیز است.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.colours.o3': "یک دستمال آبی را دوباره برای هر سه میز استفاده می‌کنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.colours.w': "روش رنگ‌ها فقط وقتی جواب می‌دهد که همه همیشه رعایتش کنند. آن وقت لازم نیست کسی فکر کند یک دستمال قبلاً کجا بوده.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.shophelp': "کمک به مشتری", // nieuw, nalezen
-    'w.aanbieding': "پیشنهاد ویژه (برای مدت کوتاهی ارزان‌تر)", // nieuw, nalezen
-    'w.korting': "تخفیف (کمتر پول می‌دهی)", // nieuw, nalezen
-    'w.uitverkocht': "تمام شده (همه‌اش فروخته شده)", // nieuw, nalezen
-    'w.magazijn': "انبار", // nieuw, nalezen
-    'w.tas': "کیسه، ساک", // nieuw, nalezen
-    'w.bestellen': "سفارش دادن", // nieuw, nalezen
-    's.shophelp.1': "ببخشید، آن تمام شده.", // nieuw, nalezen
-    's.shophelp.2': "کیسه هم می‌خواهید؟", // nieuw, nalezen
-    's.shophelp.3': "این قهوه پیشنهاد ویژه است.", // nieuw, nalezen
-    'c.shophelp.q': "هنوز شیر دارید؟", // nieuw, nalezen
-    'c.shophelp.a': "برایتان در انبار نگاه می‌کنم.", // nieuw, nalezen
+    'l.shophelp': "کمک به مشتری", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanbieding': "پیشنهاد ویژه (برای مدت کوتاهی ارزان‌تر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.korting': "تخفیف (کمتر پول می‌دهی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitverkocht': "تمام شده (همه‌اش فروخته شده)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.magazijn': "انبار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tas': "کیسه، ساک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bestellen': "سفارش دادن", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shophelp.1': "ببخشید، آن تمام شده.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shophelp.2': "کیسه هم می‌خواهید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shophelp.3': "این قهوه پیشنهاد ویژه است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shophelp.q': "هنوز شیر دارید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shophelp.a': "برایتان در انبار نگاه می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.shophelp': "«نمی‌دانم» آخر کار نیست", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shophelp.b': "مشتری چیزی می‌پرسد و تو جوابش را نمی‌دانی. اشکالی ندارد: هیچ‌کس همه‌چیز را نمی‌داند. ولی فقط نگو «nee» یا «weet ik niet»، و راهت را نکش و نرو. بگو: «Ik vraag het even voor u»، و یک همکار را بیاور. محصولی تمام شده؟ بگو کِی دوباره می‌آید، یا چیزی شبیه آن را نشان بده. به مشتری نگاه کن و سلام کن، حتی وقتی سرگرم چیدن قفسه‌ها هستی. سؤال را نفهمیدی؟ از مشتری بخواه دوباره بگوید، آرام‌تر.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shophelp.p': "این را نمی‌دانم. برایتان می‌پرسم.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2024,18 +2024,18 @@ const t: CultureTranslation = {
     'c.shophelp.o2': "می‌گویی «nee» و به کارت ادامه می‌دهی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shophelp.o3': "به یک طرف اشاره می‌کنی تا برود.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shophelp.w': "برای مشتری مهم نیست که تازه‌کاری یا هنوز هلندی یاد می‌گیری. برای مشتری مهم است که کمک نگیرد. آوردن یک همکار، خدمت خوب است.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.shoptrouble': "لحظه‌های سخت", // nieuw, nalezen
-    'w.bedrijfsleider': "مدیر فروشگاه", // nieuw, nalezen
-    'w.beveiliger': "نگهبان", // nieuw, nalezen
-    'w.dief': "دزد", // nieuw, nalezen
-    'w.stelen': "دزدیدن", // nieuw, nalezen
-    'w.schreeuwen': "داد زدن", // nieuw, nalezen
-    'w.geldterug': "پس گرفتن پول", // nieuw, nalezen
-    's.shoptrouble.1': "مدیر فروشگاه را می‌آورم.", // nieuw, nalezen
-    's.shoptrouble.2': "لطفاً داد نزنید.", // nieuw, nalezen
-    's.shoptrouble.3': "فکر می‌کنم کسی دارد چیزی می‌دزدد.", // nieuw, nalezen
-    'c.shoptrouble.q': "همین الان پولم را پس می‌خواهم!", // nieuw, nalezen
-    'c.shoptrouble.a': "می‌فهمم. همکارم را می‌آورم.", // nieuw, nalezen
+    'l.shoptrouble': "لحظه‌های سخت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedrijfsleider': "مدیر فروشگاه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beveiliger': "نگهبان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dief': "دزد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stelen': "دزدیدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schreeuwen': "داد زدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geldterug': "پس گرفتن پول", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shoptrouble.1': "مدیر فروشگاه را می‌آورم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shoptrouble.2': "لطفاً داد نزنید.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shoptrouble.3': "فکر می‌کنم کسی دارد چیزی می‌دزدد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoptrouble.q': "همین الان پولم را پس می‌خواهم!", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoptrouble.a': "می‌فهمم. همکارم را می‌آورم.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.shoptrouble': "مشتری عصبانی یا دزد: اول خودت", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shoptrouble.b': "گاهی یک مشتری عصبانی می‌شود، یا می‌بینی کسی دزدی می‌کند. ایمنی خودت اول است، همیشه. با مشتری عصبانی: آرام بمان، تو هم داد نزن، و مدیر فروشگاه را بیاور. لازم نیست تنهایی حلش کنی. دزد می‌بینی؟ دنبالش ندو، او را نگیر، و جلوی در را نبند. خوب نگاه کن چه می‌بینی، و فوراً به مدیر یا نگهبان بگو. جنس را می‌شود دوباره خرید. تو را نه. بعدش ترسیده بودی؟ با سرپرستت درباره‌اش حرف بزن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shoptrouble.p': "می‌بینم کسی چیزی در کیفش می‌گذارد.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2044,18 +2044,18 @@ const t: CultureTranslation = {
     'c.shoptrouble.o2': "دنبالش می‌دوی و بازویش را می‌گیری.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shoptrouble.o3': "جلوی در می‌ایستی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shoptrouble.w': "دزدی که جلویش را بگیرند ممکن است خشن شود. مدیر و نگهبان می‌دانند چه کار کنند. هیچ جنسی ارزش این را ندارد که تو آسیب ببینی.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.plantcare': "مراقبت از گیاه", // nieuw, nalezen
-    'w.plantblad': "برگ", // nieuw, nalezen
-    'w.stengel': "ساقه", // nieuw, nalezen
-    'w.bloem': "گل", // nieuw, nalezen
-    'w.knippen': "چیدن، بریدن (با قیچی)", // nieuw, nalezen
-    'w.tomaat': "گوجه‌فرنگی", // nieuw, nalezen
-    'w.rijp': "رسیده (آمادهٔ چیدن)", // nieuw, nalezen
-    's.plantcare.1': "این گوجه‌فرنگی هنوز نرسیده.", // nieuw, nalezen
-    's.plantcare.2': "دارم برگ را می‌برم.", // nieuw, nalezen
-    's.plantcare.3': "ساقه شکسته.", // nieuw, nalezen
-    'c.plantcare.q': "کدام گوجه‌فرنگی‌ها را بچینم؟", // nieuw, nalezen
-    'c.plantcare.a': "فقط قرمزها را. سبزها هنوز نرسیده‌اند.", // nieuw, nalezen
+    'l.plantcare': "مراقبت از گیاه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plantblad': "برگ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stengel': "ساقه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bloem': "گل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.knippen': "چیدن، بریدن (با قیچی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tomaat': "گوجه‌فرنگی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rijp': "رسیده (آمادهٔ چیدن)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantcare.1': "این گوجه‌فرنگی هنوز نرسیده.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantcare.2': "دارم برگ را می‌برم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantcare.3': "ساقه شکسته.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantcare.q': "کدام گوجه‌فرنگی‌ها را بچینم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantcare.a': "فقط قرمزها را. سبزها هنوز نرسیده‌اند.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.plantcare': "دست‌های تمیز، گیاه‌های سالم", // nieuw, nalezen // nagelezen AI 22 nov
     'c.plantcare.b': "گیاه‌ها هم مریض می‌شوند. ویروس با دست، دستکش، چاقو و لباس از یک گیاه به گیاه دیگر می‌رود. در گلخانه، یک گیاه مریض می‌تواند باعث شود هزاران گیاه را دور بریزند. برای همین دم در قانون‌های سختی هست: دست‌هایت را بشوی، لباس کار شرکت را بپوش، و از حوضچهٔ ضدعفونی پا رد شو. در خیلی از گلخانه‌ها اجازه نداری در ناهارت گوجه‌فرنگی، فلفل یا خیار خودت را بیاوری. گیاهی می‌بینی که عجیب به نظر می‌آید؟ به آن دست نزن. به سرپرستت بگو در کدام ردیف است. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.plantcare.p': "در ردیف دوازده یک گیاه مریض هست.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2064,18 +2064,18 @@ const t: CultureTranslation = {
     'c.plantcare.o2': "آن را از خاک درمی‌آوری و با خودت می‌بری.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.plantcare.o3': "برگ‌های لکه‌دار را می‌بری.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.plantcare.w': "وقتی به گیاه مریض دست می‌زنی، ویروس با تو به گیاه‌های بعدی می‌رود. سرپرستت می‌داند چطور باید آن را بی‌خطر بیرون برد.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.outdoors': "کار در فضای باز", // nieuw, nalezen
-    'w.land': "زمین کشاورزی (جایی که گیاه‌ها بیرون رشد می‌کنند)", // nieuw, nalezen
-    'w.regen': "باران", // nieuw, nalezen
-    'w.zon': "آفتاب، خورشید", // nieuw, nalezen
-    'w.laarzen': "چکمه", // nieuw, nalezen
-    'w.regenpak': "لباس بارانی (کاپشن و شلوار ضد باران)", // nieuw, nalezen
-    'w.onweer': "رعد و برق", // nieuw, nalezen
-    's.outdoors.1': "باران می‌آید. لباس بارانی‌ام را می‌پوشم.", // nieuw, nalezen
-    's.outdoors.2': "چکمه‌هایم خیس است.", // nieuw, nalezen
-    's.outdoors.3': "امروز آفتاب تند است.", // nieuw, nalezen
-    'c.outdoors.q': "رعد و برق در راه است. چه کار کنیم؟", // nieuw, nalezen
-    'c.outdoors.a': "دست از کار می‌کشیم و می‌رویم داخل.", // nieuw, nalezen
+    'l.outdoors': "کار در فضای باز", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.land': "زمین کشاورزی (جایی که گیاه‌ها بیرون رشد می‌کنند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.regen': "باران", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zon': "آفتاب، خورشید", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.laarzen': "چکمه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.regenpak': "لباس بارانی (کاپشن و شلوار ضد باران)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onweer': "رعد و برق", // nieuw, nalezen // nagelezen AI 28 nov
+    's.outdoors.1': "باران می‌آید. لباس بارانی‌ام را می‌پوشم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.outdoors.2': "چکمه‌هایم خیس است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.outdoors.3': "امروز آفتاب تند است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.outdoors.q': "رعد و برق در راه است. چه کار کنیم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.outdoors.a': "دست از کار می‌کشیم و می‌رویم داخل.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.outdoors': "آفتاب، باران و رعد و برق", // nieuw, nalezen // nagelezen AI 22 nov
     'c.outdoors.b': "بیرون، در هر هوایی کار می‌کنی. در آفتاب: سر و پوستت را بپوشان، کرم ضدآفتاب بزن، و زیاد آب بخور. در باران: لباس بارانی و چکمه‌ات را بپوش، و در وقت استراحت لباس خشک بپوش. خیسی و سرما تو را مریض و کُند می‌کند. رعد و برق است؟ آن وقت دست از کار بکش و برو داخل، یا توی یک ماشین یا ون. نه زیر درخت، و نه در زمین باز. برای کار لباس بارانی یا چکمه لازم داری؟ قبل از اینکه خودت بخری، از کارفرمایت درباره‌اش بپرس.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.outdoors.p': "رعد و برق می‌شود. برویم داخل؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2084,18 +2084,18 @@ const t: CultureTranslation = {
     'c.outdoors.o2': "اول ردیف را زود تمام می‌کنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.outdoors.o3': "زیر درخت بزرگ منتظر می‌مانی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.outdoors.w': "صاعقه به بلندترین نقطه می‌زند، و در زمین صاف آن نقطه تویی. ردیف می‌تواند یک ربع صبر کند.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.drawing': "نقشه و اندازه", // nieuw, nalezen
-    'w.tekening': "نقشه (نشان می‌دهد قطعه باید چطور باشد)", // nieuw, nalezen
-    'w.maat': "اندازه", // nieuw, nalezen
-    'w.millimeter': "میلی‌متر", // nieuw, nalezen
-    'w.schuifmaat': "کولیس (خیلی دقیق اندازه می‌گیرد)", // nieuw, nalezen
-    'w.passen': "جا رفتن، اندازه بودن", // nieuw, nalezen
-    'w.bout': "پیچ مهره‌خور (بولت)", // nieuw, nalezen
-    's.drawing.1': "اندازهٔ روی نقشه چقدر است؟", // nieuw, nalezen
-    's.drawing.2': "این قطعه جا نمی‌رود.", // nieuw, nalezen
-    's.drawing.3': "دو میلی‌متر بزرگ است.", // nieuw, nalezen
-    'c.drawing.q': "پیچ جا می‌رود؟", // nieuw, nalezen
-    'c.drawing.a': "نه. یک بار دیگر اندازه می‌گیرم.", // nieuw, nalezen
+    'l.drawing': "نقشه و اندازه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tekening': "نقشه (نشان می‌دهد قطعه باید چطور باشد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.maat': "اندازه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.millimeter': "میلی‌متر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schuifmaat': "کولیس (خیلی دقیق اندازه می‌گیرد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.passen': "جا رفتن، اندازه بودن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bout': "پیچ مهره‌خور (بولت)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.drawing.1': "اندازهٔ روی نقشه چقدر است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.drawing.2': "این قطعه جا نمی‌رود.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.drawing.3': "دو میلی‌متر بزرگ است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.drawing.q': "پیچ جا می‌رود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.drawing.a': "نه. یک بار دیگر اندازه می‌گیرم.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.drawing': "نقشه تعیین می‌کند", // nieuw, nalezen // nagelezen AI 22 nov
     'c.drawing.b': "در کارگاه چیزی را می‌سازی که نقشه می‌گوید، نه چیزی که تقریباً درست به نظر می‌آید. اندازه‌ها به میلی‌متر است، و یک میلی‌متر هم می‌تواند زیاد باشد. قطعه‌ای جا نمی‌رود؟ زور نزن، و سوراخ را «فقط یک ذره» بزرگ‌تر نکن. دوباره اندازه بگیر، و به نقشه نگاه کن. نمی‌توانی نقشه را بخوانی، یا یک اندازه نوشته نشده؟ قبل از شروع بپرس. یک سؤال یک دقیقه وقت می‌گیرد. یک قطعهٔ اشتباه، مصالح و ساعت‌ها وقت را هدر می‌دهد.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.drawing.p': "این اندازه را نمی‌توانم بخوانم. می‌توانی یک نگاه بکنی؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2104,18 +2104,18 @@ const t: CultureTranslation = {
     'c.drawing.o2': "با چکش آن را جا می‌زنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.drawing.o3': "کمی از آن را سنگ می‌زنی و چیزی نمی‌گویی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.drawing.w': "قطعه‌ای که با زور جا رفته ممکن است بعداً بشکند، پیش مشتری. وقتی خبر می‌دهی، می‌شود علت را پیدا کرد.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.weld': "جوشکاری و کار داغ", // nieuw, nalezen
-    'w.lassen': "جوشکاری کردن (وصل کردن فلز با گرمای خیلی زیاد)", // nieuw, nalezen
-    'w.laskap': "ماسک جوشکاری", // nieuw, nalezen
-    'w.rook': "دود", // nieuw, nalezen
-    'w.afzuiging': "هواکش (دود را بیرون می‌برد)", // nieuw, nalezen
-    'w.afkoelen': "خنک شدن", // nieuw, nalezen
-    'w.brandwond': "سوختگی (زخمی که از گرما است)", // nieuw, nalezen
-    's.weld.1': "ماسک جوشکاری‌ام را می‌زنم.", // nieuw, nalezen
-    's.weld.2': "هواکش را روشن کن.", // nieuw, nalezen
-    's.weld.3': "مواظب باش، فلز هنوز داغ است.", // nieuw, nalezen
-    'c.weld.q': "می‌توانم این را بردارم؟", // nieuw, nalezen
-    'c.weld.a': "نه، صبر کن. اول باید خنک شود.", // nieuw, nalezen
+    'l.weld': "جوشکاری و کار داغ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lassen': "جوشکاری کردن (وصل کردن فلز با گرمای خیلی زیاد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.laskap': "ماسک جوشکاری", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rook': "دود", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afzuiging': "هواکش (دود را بیرون می‌برد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afkoelen': "خنک شدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brandwond': "سوختگی (زخمی که از گرما است)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.weld.1': "ماسک جوشکاری‌ام را می‌زنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.weld.2': "هواکش را روشن کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.weld.3': "مواظب باش، فلز هنوز داغ است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weld.q': "می‌توانم این را بردارم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weld.a': "نه، صبر کن. اول باید خنک شود.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.weld': "فلز داغ، سرد به نظر می‌آید", // nieuw, nalezen // nagelezen AI 22 nov
     'c.weld.b': "جوشکاری نور خیلی تندی دارد. بدون ماسک جوشکاری به آن نگاه نکن، از دور هم نه: چشم‌هایت می‌سوزد، و تازه چند ساعت بعد حسش می‌کنی. همکاری نزدیک تو جوشکاری می‌کند؟ رویت را برگردان، یا پشت پردهٔ محافظ بایست. فلزی که تازه جوش خورده یا سنگ خورده عادی به نظر می‌آید، ولی خیلی داغ است. با دست خالی آن را برندار. دود جوشکاری برای ریه‌هایت بد است: هواکش را روشن کن. سوختگی؟ فوراً با آب خنکش کن، دست‌کم ده دقیقه، و خبر بده. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.weld.p': "این خنک شده؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2124,18 +2124,18 @@ const t: CultureTranslation = {
     'c.weld.o2': "کمی تماشا می‌کنی: می‌شود از آن یاد گرفت.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.weld.o3': "چشم‌هایت را نیمه‌بسته می‌کنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.weld.w': "نور جوشکاری چشم‌هایت را می‌سوزاند، از کنار و از دور هم. درد را تازه بعداً حس می‌کنی، اغلب شب.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.carparts': "قطعه‌های ماشین", // nieuw, nalezen
-    'w.motor': "موتور", // nieuw, nalezen
-    'w.motorkap': "کاپوت (درِ روی موتور)", // nieuw, nalezen
-    'w.rem': "ترمز", // nieuw, nalezen
-    'w.lamp': "چراغ", // nieuw, nalezen
-    'w.ruitenwisser': "برف‌پاک‌کن", // nieuw, nalezen
-    'w.stoel': "صندلی", // nieuw, nalezen
-    's.carparts.1': "کاپوت را باز کن.", // nieuw, nalezen
-    's.carparts.2': "چراغ جلو سمت چپ خراب است.", // nieuw, nalezen
-    's.carparts.3': "ترمزها صدا می‌دهند.", // nieuw, nalezen
-    'c.carparts.q': "چه می‌شنوی؟", // nieuw, nalezen
-    'c.carparts.a': "موتور صدای عجیبی می‌دهد.", // nieuw, nalezen
+    'l.carparts': "قطعه‌های ماشین", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.motor': "موتور", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.motorkap': "کاپوت (درِ روی موتور)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rem': "ترمز", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lamp': "چراغ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ruitenwisser': "برف‌پاک‌کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stoel': "صندلی", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carparts.1': "کاپوت را باز کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carparts.2': "چراغ جلو سمت چپ خراب است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carparts.3': "ترمزها صدا می‌دهند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carparts.q': "چه می‌شنوی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carparts.a': "موتور صدای عجیبی می‌دهد.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.carparts': "ماشین مال مشتری است", // nieuw, nalezen // nagelezen AI 22 nov
     'c.carparts.b': "ماشینی که در تعمیرگاه است مال تو نیست: مال مشتری است. قبل از سوار شدن روی صندلی و فرمان روکش بکش، و داخل ماشین با دست تمیز کار کن. صندلی، آینه‌ها و رادیو را همان‌طور که بودند بگذار. مجبور شدی صندلی را جابه‌جا کنی؟ سر جایش برگردان. به وسایل شخصی داخل ماشین دست نزن. خط یا لکه‌ای انداختی؟ فوراً به سرپرستت بگو. مشتری‌ای که در خانه آن را ببیند، دیگر برنمی‌گردد.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.carparts.p': "یک خط انداختم. ببخشید.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2144,18 +2144,18 @@ const t: CultureTranslation = {
     'c.carparts.o2': "چیزی نمی‌گویی: خیلی کوچک است.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.carparts.o3': "با دستمال رویش می‌کشی و امیدواری پاک شود.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.carparts.w': "هر کسی گاهی اشتباه می‌کند. تعمیرگاه می‌تواند خط را درست کند، یا صادقانه به مشتری بگوید. خطی که پنهان شده، آبروی تعمیرگاه را می‌برد.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.carsafe': "بنزین، گاز و برق", // nieuw, nalezen
-    'w.krik': "جک (یک طرف ماشین را بالا می‌برد)", // nieuw, nalezen
-    'w.benzine': "بنزین", // nieuw, nalezen
-    'w.elektrischeauto': "ماشین برقی", // nieuw, nalezen
-    'w.oranje': "نارنجی", // nieuw, nalezen
-    'w.morsen': "ریختن (چیزی از دستت می‌ریزد)", // nieuw, nalezen
-    'w.lap': "کهنه (پارچه‌ای برای کار کثیف)", // nieuw, nalezen
-    's.carsafe.1': "بوی بنزین می‌آید.", // nieuw, nalezen
-    's.carsafe.2': "روغن ریخته. یک کهنه می‌آورم.", // nieuw, nalezen
-    's.carsafe.3': "به کابل‌های نارنجی دست نمی‌زنم.", // nieuw, nalezen
-    'c.carsafe.q': "می‌توانم روی این ماشین کار کنم؟", // nieuw, nalezen
-    'c.carsafe.a': "هنوز نه. ماشین برقی است.", // nieuw, nalezen
+    'l.carsafe': "بنزین، گاز و برق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.krik': "جک (یک طرف ماشین را بالا می‌برد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.benzine': "بنزین", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.elektrischeauto': "ماشین برقی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oranje': "نارنجی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.morsen': "ریختن (چیزی از دستت می‌ریزد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lap': "کهنه (پارچه‌ای برای کار کثیف)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carsafe.1': "بوی بنزین می‌آید.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carsafe.2': "روغن ریخته. یک کهنه می‌آورم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carsafe.3': "به کابل‌های نارنجی دست نمی‌زنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carsafe.q': "می‌توانم روی این ماشین کار کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carsafe.a': "هنوز نه. ماشین برقی است.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.carsafe': "کابل‌های نارنجی و موتور روشن", // nieuw, nalezen // nagelezen AI 22 nov
     'c.carsafe.b': "ماشین برقی یا هیبریدی باتری‌ای با برق خیلی قوی دارد. کابل‌های آن نارنجی است. به آن‌ها دست نزن و بازشان نکن: اول باید مکانیکی که آموزش مخصوص دیده ماشین را ایمن کند. کنار ماشین تابلو یا مخروط ایمنی هست؟ آن وقت نزدیک نشو. موتوری که در جای بسته روشن است گازی درست می‌کند که نه بو دارد و نه دیده می‌شود، و می‌تواند آدم را بکشد. پس: شلنگ اگزوز را وصل کن، یا درها را باز کن. بوی بنزین می‌آید؟ نه جرقه و نه سیگار. فوراً به سرپرستت بگو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.carsafe.p': "این ماشین ایمن شده؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2165,18 +2165,18 @@ const t: CultureTranslation = {
     'c.carsafe.o3': "با یک دستمال خشک آن را سر جایش هل می‌دهی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.carsafe.w': "باتری ماشین برقی آن‌قدر برق دارد که آدم را بکشد، حتی وقتی ماشین خاموش است. فقط کسی که آموزشش را دیده اجازه دارد به این قطعه‌ها دست بزند.", // nieuw, nalezen // nagelezen AI 22 nov
     // Logistiek at four lessons per unit (14 November 2026).
-    'l.vancheck': "چک کردن ون", // nieuw, nalezen
-    'w.schade': "خسارت", // nieuw, nalezen
-    'w.deuk': "فرورفتگی", // nieuw, nalezen
-    'w.spiegel': "آینه", // nieuw, nalezen
-    'w.tanken': "بنزین زدن (سوخت در ون ریختن)", // nieuw, nalezen
-    'w.opladen': "شارژ کردن (ون برقی، گوشی)", // nieuw, nalezen
-    'w.parkeren': "پارک کردن", // nieuw, nalezen
-    's.vancheck.1': "روی در یک فرورفتگی هست.", // nieuw, nalezen
-    's.vancheck.2': "این خسارت از قبل بود.", // nieuw, nalezen
-    's.vancheck.3': "اول باید بنزین بزنم.", // nieuw, nalezen
-    'c.vancheck.q': "همه‌چیزِ ون خوب است؟", // nieuw, nalezen
-    'c.vancheck.a': "نه، آینه شکسته است.", // nieuw, nalezen
+    'l.vancheck': "چک کردن ون", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schade': "خسارت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.deuk': "فرورفتگی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spiegel': "آینه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tanken': "بنزین زدن (سوخت در ون ریختن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opladen': "شارژ کردن (ون برقی، گوشی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.parkeren': "پارک کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vancheck.1': "روی در یک فرورفتگی هست.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vancheck.2': "این خسارت از قبل بود.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vancheck.3': "اول باید بنزین بزنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vancheck.q': "همه‌چیزِ ون خوب است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vancheck.a': "نه، آینه شکسته است.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.vancheck': "قبل از رانندگی نگاه کن", // nieuw, nalezen // nagelezen AI 22 nov
     'c.vancheck.b': "قبل از اولین سرویست دور ون راه برو. فرورفتگی، خراش یا آینهٔ شکسته می‌بینی؟ عکس بگیر، و قبل از حرکت گزارش بده. آن وقت همه می‌دانند که خسارت از قبل بوده. در طول سرویست اتفاقی افتاد؟ همان روز گزارش بده، حتی اگر کوچک باشد. پنهان کردن خسارت بعداً مشکل‌های بزرگ‌تری درست می‌کند. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.vancheck.p': "ون خسارت دیده. این هم یک عکس.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2185,18 +2185,18 @@ const t: CultureTranslation = {
     'c.vancheck.o2': "چیزی نمی‌گویی: کار تو نیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.vancheck.o3': "صبر می‌کنی ببینی کسی درباره‌اش می‌پرسد یا نه.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.vancheck.w': "وقتی قبل از حرکت گزارش بدهی، هیچ‌کس نمی‌تواند فکر کند کار تو بوده. عکسی که ساعت دارد برای همه روشن است.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.delay': "تأخیر در جاده", // nieuw, nalezen
-    'w.file': "ترافیک، راه‌بندان", // nieuw, nalezen
-    'w.vertraging': "تأخیر (دیرتر از برنامه هستی)", // nieuw, nalezen
-    'w.omleiding': "مسیر انحرافی (راه دیگر، چون جاده بسته است)", // nieuw, nalezen
-    'w.navigatie': "مسیریاب (اپی که راه را نشان می‌دهد)", // nieuw, nalezen
-    'w.planner': "برنامه‌ریز (کسی که مسیرها را می‌چیند)", // nieuw, nalezen
-    'w.retour': "مرجوعی (بسته‌ای که برمی‌گردد)", // nieuw, nalezen
-    's.delay.1': "در ترافیک مانده‌ام.", // nieuw, nalezen
-    's.delay.2': "نیم ساعت تأخیر دارم.", // nieuw, nalezen
-    's.delay.3': "این بسته برمی‌گردد.", // nieuw, nalezen
-    'c.delay.q': "الان کجایی؟", // nieuw, nalezen
-    'c.delay.a': "کنار مسیر انحرافی. ده دقیقه دیرتر می‌رسم.", // nieuw, nalezen
+    'l.delay': "تأخیر در جاده", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.file': "ترافیک، راه‌بندان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vertraging': "تأخیر (دیرتر از برنامه هستی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.omleiding': "مسیر انحرافی (راه دیگر، چون جاده بسته است)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.navigatie': "مسیریاب (اپی که راه را نشان می‌دهد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.planner': "برنامه‌ریز (کسی که مسیرها را می‌چیند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.retour': "مرجوعی (بسته‌ای که برمی‌گردد)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.delay.1': "در ترافیک مانده‌ام.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.delay.2': "نیم ساعت تأخیر دارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.delay.3': "این بسته برمی‌گردد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.delay.q': "الان کجایی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.delay.a': "کنار مسیر انحرافی. ده دقیقه دیرتر می‌رسم.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.delay': "دیر می‌رسی؟ به‌موقع بگو", // nieuw, nalezen // nagelezen AI 22 nov
     'c.delay.b': "ترافیک یا جادهٔ بسته تقصیر تو نیست. ولی همین که فهمیدی دیر می‌رسی، به برنامه‌ریز بگو. آن وقت برنامه‌ریز می‌تواند به مشتری‌ها خبر بدهد، یا مسیر را عوض کند. اول در جای ایمن بایست: موقع رانندگی با گوشیِ در دست زنگ نزن. و برای جبران وقت تندتر نران. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.delay.p': "در ترافیک مانده‌ام. نیم ساعت دیرتر می‌رسم.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2206,19 +2206,19 @@ const t: CultureTranslation = {
     'c.delay.o3': "چیزی نمی‌گویی: شاید کسی نفهمد.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.delay.w': "وقتی برنامه‌ریز زود بداند، مشتری‌ها خبردار می‌شوند و کسی بیخودی منتظر نمی‌ماند. تند راندن خطرناک است، و تقریباً هیچ وقتی هم جبران نمی‌کند.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Instructies", a new basis unit (u.do, 14 November 2026).
-    'u.do': "دستورها", // nieuw, nalezen
-    'l.putdown': "آنجا بگذارش", // nieuw, nalezen
-    'w.zetten': "گذاشتن (چیزی که می‌ایستد: جعبه، سطل)", // nieuw, nalezen
-    'w.leggen': "گذاشتن، خواباندن (چیزی که صاف و خوابیده قرار می‌گیرد)", // nieuw, nalezen
-    'w.brengen': "بردن، آوردن (به یک جا یا پیش کسی)", // nieuw, nalezen
-    'w.geven': "دادن", // nieuw, nalezen
-    'w.vasthouden': "نگه داشتن", // nieuw, nalezen
-    'w.loslaten': "ول کردن، رها کردن", // nieuw, nalezen
-    's.putdown.1': "آن را آنجا بگذار.", // nieuw, nalezen
-    's.putdown.2': "این را به غذاخوری ببر.", // nieuw, nalezen
-    's.putdown.3': "این را یک لحظه نگه دار.", // nieuw, nalezen
-    'c.putdown.q': "می‌توانی این را یک لحظه نگه داری؟", // nieuw, nalezen
-    'c.putdown.a': "بله. کجا باید بگذارمش؟", // nieuw, nalezen
+    'u.do': "دستورها", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.putdown': "آنجا بگذارش", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zetten': "گذاشتن (چیزی که می‌ایستد: جعبه، سطل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.leggen': "گذاشتن، خواباندن (چیزی که صاف و خوابیده قرار می‌گیرد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brengen': "بردن، آوردن (به یک جا یا پیش کسی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geven': "دادن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vasthouden': "نگه داشتن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.loslaten': "ول کردن، رها کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    's.putdown.1': "آن را آنجا بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.putdown.2': "این را به غذاخوری ببر.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.putdown.3': "این را یک لحظه نگه دار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.putdown.q': "می‌توانی این را یک لحظه نگه داری؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.putdown.a': "بله. کجا باید بگذارمش؟", // nieuw, nalezen // nagelezen AI 28 nov
     'c.putdown': "بگو که آن را گرفته‌ای", // nieuw, nalezen // nagelezen AI 22 nov
     'c.putdown.b': "چیزی را با هم حمل می‌کنید، یا همکاری چیز سنگینی به دستت می‌دهد؟ وقتی آن را خوب گرفته‌ای، بگو «Ik heb hem». آن وقت همکارت می‌داند که می‌تواند بی‌خطر ول کند. خودت می‌خواهی ول کنی؟ اول بپرس: «Heb je hem?» و منتظر جواب بمان. این در هر محل کاری عادی است. این‌طور چیزی روی پا و دست کسی نمی‌افتد.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.putdown.p': "گرفتمش. می‌توانی ول کنی.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2227,18 +2227,18 @@ const t: CultureTranslation = {
     'c.putdown.o2': "چیزی نگو: خودش می‌بیند.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.putdown.o3': "زود بگیرش تا منتظر نماند.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.putdown.w': "همکارت وقتی فکر کند آن را گرفته‌ای، ول می‌کند. یک کلمه به تو وقت می‌دهد که آن را خوب بگیری.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.onoff': "روشن و خاموش، باز و بسته", // nieuw, nalezen
-    'w.aanzetten': "روشن کردن", // nieuw, nalezen
-    'w.opendoen': "باز کردن", // nieuw, nalezen
-    'w.dichtdoen': "بستن", // nieuw, nalezen
-    'w.drukken': "فشار دادن (یک دکمه)", // nieuw, nalezen
-    'w.draaien': "چرخاندن", // nieuw, nalezen
-    'w.stoppen': "ایستادن، دست نگه داشتن", // nieuw, nalezen
-    's.onoff.1': "در را ببند.", // nieuw, nalezen
-    's.onoff.2': "دکمه را فشار بده.", // nieuw, nalezen
-    's.onoff.3': "ایست! خاموشش کن.", // nieuw, nalezen
-    'c.onoff.q': "در بسته است؟", // nieuw, nalezen
-    'c.onoff.a': "نه. الان می‌بندمش.", // nieuw, nalezen
+    'l.onoff': "روشن و خاموش، باز و بسته", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanzetten': "روشن کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opendoen': "باز کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dichtdoen': "بستن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.drukken': "فشار دادن (یک دکمه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.draaien': "چرخاندن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stoppen': "ایستادن، دست نگه داشتن", // nieuw, nalezen // nagelezen AI 28 nov
+    's.onoff.1': "در را ببند.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.onoff.2': "دکمه را فشار بده.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.onoff.3': "ایست! خاموشش کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.onoff.q': "در بسته است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.onoff.a': "نه. الان می‌بندمش.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.onoff': "ایست یعنی ایست", // nieuw, nalezen // nagelezen AI 22 nov
     'c.onoff.b': "کسی داد می‌زند «Stop!»؟ فوراً دست نگه دار، حتی وقتی نمی‌دانی چرا. بعداً بپرس. اینجا یک کلمهٔ کوتاه و بلند نشانهٔ عصبانیت نیست: همکارها این‌طور مواظب ایمنی همدیگر هستند. خودت چیز خطرناکی می‌بینی؟ تو هم داد بزن «Stop!»، حتی به کسی که سال‌هاست اینجا کار می‌کند. هیچ‌کس این را عجیب نمی‌داند.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.onoff.p': "ایست! یک لحظه صبر کن.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2247,18 +2247,18 @@ const t: CultureTranslation = {
     'c.onoff.o2': "ادامه بده: مشکلی نمی‌بینی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.onoff.o3': "اول بپرس چرا باید دست نگه داری.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.onoff.w': "شاید همکارت چیزی ببیند که تو نمی‌بینی. اول دست نگه دار، بعد حرف بزن: این‌طور همه ایمن می‌مانند.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.fillempty': "هل دادن، کشیدن، پر کردن", // nieuw, nalezen
-    'w.duwen': "هل دادن", // nieuw, nalezen
-    'w.trekken': "کشیدن", // nieuw, nalezen
-    'w.vullen': "پر کردن", // nieuw, nalezen
-    'w.leegmaken': "خالی کردن", // nieuw, nalezen
-    'w.schoonmaken': "تمیز کردن", // nieuw, nalezen
-    'w.vol': "پر", // nieuw, nalezen
-    's.fillempty.1': "هل نده، بکش.", // nieuw, nalezen
-    's.fillempty.2': "این یکی پر است. خالی‌اش کن.", // nieuw, nalezen
-    's.fillempty.3': "لطفاً این را تمیز کن.", // nieuw, nalezen
-    'c.fillempty.q': "پر شده؟", // nieuw, nalezen
-    'c.fillempty.a': "بله. خالی‌اش می‌کنم.", // nieuw, nalezen
+    'l.fillempty': "هل دادن، کشیدن، پر کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.duwen': "هل دادن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.trekken': "کشیدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vullen': "پر کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.leegmaken': "خالی کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schoonmaken': "تمیز کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vol': "پر", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fillempty.1': "هل نده، بکش.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fillempty.2': "این یکی پر است. خالی‌اش کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fillempty.3': "لطفاً این را تمیز کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.fillempty.q': "پر شده؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.fillempty.a': "بله. خالی‌اش می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.fillempty': "تمام شد؟ بگو", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fillempty.b': "کارت تمام شد؟ بگو: «Ik ben klaar.» و بپرس بعد چه کار می‌توانی بکنی. اگر ساکت منتظر بمانی تا کسی تو را ببیند، ممکن است این‌طور به نظر بیاید که نمی‌خواهی کار کنی، حتی وقتی این درست نیست. همکارهایی که کار بعدی را می‌پرسند، بعد از مدتی اغلب کارهای جالب‌تری می‌گیرند. می‌خواهی چیز تازه‌ای یاد بگیری؟ این را هم بپرس: «Mag ik dat ook leren?»", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fillempty.p': "کارم تمام شد. دیگر چه کار می‌توانم بکنم؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2267,18 +2267,18 @@ const t: CultureTranslation = {
     'c.fillempty.o2': "صبر کن تا سرپرستت تو را ببیند.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fillempty.o3': "استراحت کن: کارت تمام شده.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fillempty.w': "سرپرست نمی‌تواند همه‌چیز را ببیند. وقتی می‌گویی کارت تمام شده، کار ادامه پیدا می‌کند و نشان می‌دهی که می‌خواهی بیشتر کار کنی.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.order': "اول این، بعد آن", // nieuw, nalezen
-    'w.nu': "الان، حالا", // nieuw, nalezen
-    'w.dan': "بعد", // nieuw, nalezen
-    'w.altijd': "همیشه", // nieuw, nalezen
-    'w.genoeg': "کافی، بس", // nieuw, nalezen
-    'w.meer': "بیشتر", // nieuw, nalezen
-    'w.alles': "همه‌چیز", // nieuw, nalezen
-    's.order.1': "اول این، بعد آن.", // nieuw, nalezen
-    's.order.2': "همین کافی است.", // nieuw, nalezen
-    's.order.3': "این را همیشه این‌طور انجام بده.", // nieuw, nalezen
-    'c.order.q': "می‌توانی این را الان انجام بدهی؟", // nieuw, nalezen
-    'c.order.a': "بله. اول این، و بعد؟", // nieuw, nalezen
+    'l.order': "اول این، بعد آن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nu': "الان، حالا", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dan': "بعد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.altijd': "همیشه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.genoeg': "کافی، بس", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meer': "بیشتر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alles': "همه‌چیز", // nieuw, nalezen // nagelezen AI 28 nov
+    's.order.1': "اول این، بعد آن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.order.2': "همین کافی است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.order.3': "این را همیشه این‌طور انجام بده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.order.q': "می‌توانی این را الان انجام بدهی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.order.a': "بله. اول این، و بعد؟", // nieuw, nalezen // nagelezen AI 28 nov
     'c.order': "چند کار با هم؟ بپرس اول کدام", // nieuw, nalezen // nagelezen AI 22 nov
     'c.order.b': "گاهی در یک جمله سه کار به تو می‌دهند. به خاطر سپردنش سخت است، حتی برای کسانی که هلندی را خوب حرف می‌زنند. بپرس کدام اول است: «Wat moet ik eerst doen?» می‌توانی کارها را هم بنویسی، یا با انگشت‌هایت بشماری و دوباره بگویی‌شان. یکی را فراموش کردی؟ برگرد و بپرس. این بهتر از حدس زدن است.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.order.p': "این زیاد است. اول باید چه کار کنم؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2287,19 +2287,19 @@ const t: CultureTranslation = {
     'c.order.o2': "اولی را انجام بده و امیدوار باش بقیه یادت بیاید.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.order.o3': "هیچ کاری نکن: هر سه را نمی‌دانی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.order.w': "همان موقع پرسیدن ده ثانیه وقت می‌گیرد. بعداً شاید سرپرستت رفته باشد، و آن وقت یا منتظر می‌مانی یا حدس می‌زنی.", // nieuw, nalezen // nagelezen AI 22 nov
-    'u.afbouw': "کاشی، گچ و رنگ", // nieuw, nalezen
-    'l.tiletools': "ابزار کاشی‌کار", // nieuw, nalezen
-    'w.lijmkam': "مالهٔ دندانه‌دار (چسب کاشی را شیارشیار پهن می‌کند)", // nieuw, nalezen
-    'w.troffel': "کمچه", // nieuw, nalezen
-    'w.tegelsnijder': "کاشی‌بُر", // nieuw, nalezen
-    'w.nijptang': "انبر کاشی (برای کندن تکه‌های کوچک از کاشی)", // nieuw, nalezen
-    'w.mixer': "همزن (چسب یا گچ را در سطل هم می‌زند)", // nieuw, nalezen
-    'w.duimstok': "متر تاشو", // nieuw, nalezen
-    's.tiletools.1': "مالهٔ دندانه‌دار را یک لحظه به من بده.", // nieuw, nalezen
-    's.tiletools.2': "کاشی را با کاشی‌بُر می‌بُرم.", // nieuw, nalezen
-    's.tiletools.3': "اول با متر تاشو اندازه بگیر.", // nieuw, nalezen
-    'c.tiletools.q': "همزن کجاست؟", // nieuw, nalezen
-    'c.tiletools.a': "کنار سطل، بغل در.", // nieuw, nalezen
+    'u.afbouw': "کاشی، گچ و رنگ", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.tiletools': "ابزار کاشی‌کار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lijmkam': "مالهٔ دندانه‌دار (چسب کاشی را شیارشیار پهن می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.troffel': "کمچه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tegelsnijder': "کاشی‌بُر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nijptang': "انبر کاشی (برای کندن تکه‌های کوچک از کاشی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mixer': "همزن (چسب یا گچ را در سطل هم می‌زند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.duimstok': "متر تاشو", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tiletools.1': "مالهٔ دندانه‌دار را یک لحظه به من بده.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tiletools.2': "کاشی را با کاشی‌بُر می‌بُرم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tiletools.3': "اول با متر تاشو اندازه بگیر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.tiletools.q': "همزن کجاست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.tiletools.a': "کنار سطل، بغل در.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.tiletools': "ابزارت را قبل از سفت شدن چسب تمیز کن", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiletools.b': "چسب کاشی و گچ زود سفت می‌شوند، روی ابزارت هم. پس مالهٔ دندانه‌دار، کمچه و همزن را فوراً در یک سطل آب تمیز کن، قبل از استراحتت هم. چسب سفت‌شده پاک نمی‌شود، و مالهٔ دندانه‌داری که چسب سفت رویش مانده، شیارهای بد درست می‌کند. آب کثیف را در سینک یا آبراه نریز: لوله می‌گیرد. بپرس آب را کجا می‌شود ریخت. همزن: آن را با دو دست بگیر، و آرام روشنش کن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiletools.p': "دارم مالهٔ دندانه‌دار را تمیز می‌کنم.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2308,18 +2308,18 @@ const t: CultureTranslation = {
     'c.tiletools.o2': "ولش می‌کنی: بعد از کار تمیزش می‌کنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiletools.o3': "آن را در سطل چسب می‌گذاری.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiletools.w': "چسب کاشی در وقت استراحت هم سفت می‌شود. مالهٔ دندانه‌دار تمیز شیارهای خوب درست می‌کند، و کاشی‌ها خوب می‌چسبند. چسب سفت روی آن یعنی کار زیاد، یا یک ابزار نو.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.tiling': "کاشی، چسب و خط وسط", // nieuw, nalezen
-    'w.tegel': "کاشی", // nieuw, nalezen
-    'w.tegellijm': "چسب کاشی", // nieuw, nalezen
-    'w.tegelkruisje': "صلیبی کاشی (یک ضربدر کوچک بین کاشی‌ها)", // nieuw, nalezen
-    'w.hartlijn': "خط وسط (کاشی‌کاری را از آن شروع می‌کنی)", // nieuw, nalezen
-    'w.tegelplaat': "تختهٔ تمرین کاشی (تخته‌ای برای تمرین چیدن کاشی)", // nieuw, nalezen
-    'w.potlood': "مداد", // nieuw, nalezen
-    's.tiling.1': "چسب کاشی هنوز خیس است.", // nieuw, nalezen
-    's.tiling.2': "بین کاشی‌ها یک صلیبی بگذار.", // nieuw, nalezen
-    's.tiling.3': "اول خط وسط را با مداد بکش.", // nieuw, nalezen
-    'c.tiling.q': "با کاشی‌ها از کجا شروع کنم؟", // nieuw, nalezen
-    'c.tiling.a': "از وسط، روی خط وسط.", // nieuw, nalezen
+    'l.tiling': "کاشی، چسب و خط وسط", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tegel': "کاشی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tegellijm': "چسب کاشی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tegelkruisje': "صلیبی کاشی (یک ضربدر کوچک بین کاشی‌ها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hartlijn': "خط وسط (کاشی‌کاری را از آن شروع می‌کنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tegelplaat': "تختهٔ تمرین کاشی (تخته‌ای برای تمرین چیدن کاشی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.potlood': "مداد", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tiling.1': "چسب کاشی هنوز خیس است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tiling.2': "بین کاشی‌ها یک صلیبی بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tiling.3': "اول خط وسط را با مداد بکش.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.tiling.q': "با کاشی‌ها از کجا شروع کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.tiling.a': "از وسط، روی خط وسط.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.tiling': "از خط وسط شروع کن، با کمی چسب", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiling.b': "کاشی‌کار از گوشه شروع نمی‌کند. اول خط وسط را با مداد و تراز می‌کشی، و از همان‌جا شروع می‌کنی. آن وقت کاشی‌های بریده در دو سر، یک اندازه می‌شوند. فقط به اندازه‌ای چسب پهن کن که بتوانی زود با کاشی بپوشانی. چسبی که زیاد بماند، رویش یک پوستهٔ خشک می‌بندد، و آن وقت کاشی‌ها خوب نمی‌چسبند. هر جا که درزها به هم می‌رسند یک صلیبی بگذار، تا همهٔ درزها یک اندازه باشند. زیاد با تراز نگاه کن: کاشی کج را الان راحت می‌شود درست کرد، و فردا سخت.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiling.p': "یک‌دفعه چسب زیادی پهن نمی‌کنم.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2328,18 +2328,18 @@ const t: CultureTranslation = {
     'c.tiling.o2': "کاشی‌ها را با این حال رویش فشار می‌دهی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiling.o3': "با اسفنج خیسش می‌کنی، و ادامه می‌دهی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tiling.w': "چسبی که پوستهٔ خشک دارد، کاشی را خوب نگه نمی‌دارد. بعداً کاشی ممکن است جدا شود، و آن وقت کار باید دوباره انجام شود.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.plaster': "گچ‌کاری", // nieuw, nalezen
-    'w.stucspaan': "مالهٔ گچ‌کاری (یک مالهٔ فولادی صاف برای صاف کردن گچ)", // nieuw, nalezen
-    'w.oplegspaan': "تختهٔ دستی گچ (تختهٔ صافی که گچ را رویش نگه می‌داری)", // nieuw, nalezen
-    'w.spackmes': "کاردک (یک کارد پهن و صاف)", // nieuw, nalezen
-    'w.rei': "شمشه (یک میلهٔ بلند و صاف برای صاف کردن گچ)", // nieuw, nalezen
-    'w.sponsspaan': "مالهٔ اسفنجی", // nieuw, nalezen
-    'w.hoekprofiel': "نبشی گچ (یک نوار فلزی برای گوشهٔ صاف)", // nieuw, nalezen
-    's.plaster.1': "اول نبشی را روی گوشه بگذار.", // nieuw, nalezen
-    's.plaster.2': "دیوار را با مالهٔ گچ‌کاری صاف کن.", // nieuw, nalezen
-    's.plaster.3': "شمشه را روی دیوار بکش.", // nieuw, nalezen
-    'c.plaster.q': "دیوار خشک شده؟", // nieuw, nalezen
-    'c.plaster.a': "نه، یک روز دیگر صبر کن.", // nieuw, nalezen
+    'l.plaster': "گچ‌کاری", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stucspaan': "مالهٔ گچ‌کاری (یک مالهٔ فولادی صاف برای صاف کردن گچ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oplegspaan': "تختهٔ دستی گچ (تختهٔ صافی که گچ را رویش نگه می‌داری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spackmes': "کاردک (یک کارد پهن و صاف)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rei': "شمشه (یک میلهٔ بلند و صاف برای صاف کردن گچ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sponsspaan': "مالهٔ اسفنجی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hoekprofiel': "نبشی گچ (یک نوار فلزی برای گوشهٔ صاف)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plaster.1': "اول نبشی را روی گوشه بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plaster.2': "دیوار را با مالهٔ گچ‌کاری صاف کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plaster.3': "شمشه را روی دیوار بکش.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plaster.q': "دیوار خشک شده؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plaster.a': "نه، یک روز دیگر صبر کن.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.plaster': "گچ برای خشک شدن وقت لازم دارد", // nieuw, nalezen // nagelezen AI 22 nov
     'c.plaster.b': "گچ تازه مدت زیادی خیس می‌ماند. دیوار خیس تیره‌تر از دیوار خشک است. نقاش فقط وقتی می‌تواند شروع کند که دیوار همه‌جا خشک باشد، و این می‌تواند چند روز یا چند هفته طول بکشد. آن را با بخاری زودتر خشک نکن: آن وقت گچ ممکن است ترک بخورد. کسی می‌خواهد خیلی زود رنگ بزند؟ بگو که دیوار هنوز خشک نیست. و قبل از اینکه شروع کنی، کف، پنجره‌ها و پریزها را بپوشان: گچ سخت پاک می‌شود.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.plaster.p': "دیوار هنوز خیس است. هنوز نمی‌توانی رنگ بزنی.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2349,20 +2349,20 @@ const t: CultureTranslation = {
     'c.plaster.o3': "چیزی نمی‌گویی: نقاش خودش می‌بیند.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.plaster.w': "لکه‌های تیره یعنی گچ هنوز خیس است. رنگ روی دیوار خیس ممکن است جدا شود، و بخاری می‌تواند ترک بیندازد. صبر کردن کمتر از دوباره‌کاری خرج دارد.", // nieuw, nalezen // nagelezen AI 22 nov
     // l.paint and l.prep (u.afbouw), "Metselen, hout en vastmaken" (u.ruwbouw), three lessons of Rekenen (u.numbers) and "Machines en gereedschap" (u.machines), 20-21 November 2026.
-    'u.ruwbouw': "آجر، چوب و محکم کردن", // nieuw, nalezen
-    'u.machines': "دستگاه‌ها و ابزار", // nieuw, nalezen
-    'l.shapes': "شکل‌ها", // nieuw, nalezen
-    'w.vierkant': "مربع", // nieuw, nalezen
-    'w.rechthoek': "مستطیل", // nieuw, nalezen
-    'w.driehoek': "مثلث", // nieuw, nalezen
-    'w.cirkel': "دایره", // nieuw, nalezen
-    'w.kubus': "مکعب", // nieuw, nalezen
-    'w.balk': "مکعب مستطیل (شکل یک جعبهٔ دراز)", // nieuw, nalezen
-    's.shapes.1': "کاشی مربع است.", // nieuw, nalezen
-    's.shapes.2': "این اتاق مستطیل است.", // nieuw, nalezen
-    's.shapes.3': "آجر شکل مکعب مستطیل دارد.", // nieuw, nalezen
-    'c.shapes.q': "مربع است؟", // nieuw, nalezen
-    'c.shapes.a': "نه، مستطیل است. طولش از عرضش بیشتر است.", // nieuw, nalezen
+    'u.ruwbouw': "آجر، چوب و محکم کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.machines': "دستگاه‌ها و ابزار", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.shapes': "شکل‌ها", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vierkant': "مربع", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rechthoek': "مستطیل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.driehoek': "مثلث", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.cirkel': "دایره", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kubus': "مکعب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.balk': "مکعب مستطیل (شکل یک جعبهٔ دراز)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shapes.1': "کاشی مربع است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shapes.2': "این اتاق مستطیل است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shapes.3': "آجر شکل مکعب مستطیل دارد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shapes.q': "مربع است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shapes.a': "نه، مستطیل است. طولش از عرضش بیشتر است.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.shapes': "مستطیل را با دو خط ضربدری بررسی کن", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shapes.b': "اتاق، کف یا قاب اغلب مستطیل است. ولی آیا گوشه‌ها واقعاً قائمه‌اند؟ یک راه ساده برای بررسی هست. از یک گوشه تا گوشهٔ روبه‌رو اندازه بگیر. بعد بین دو گوشهٔ دیگر اندازه بگیر. دو اندازه یکی است؟ پس گوشه‌ها درست است. یکی نیست؟ پس شکل کمی کج است، و کاشی یا کف خوب جا نمی‌افتد. قبل از اینکه شروع کنی به سرپرستت بگو.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shapes.p': "این دو اندازه یکی نیستند.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2371,18 +2371,18 @@ const t: CultureTranslation = {
     'c.shapes.o2': "از یک گوشه شروع می‌کنی، درست می‌شود.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shapes.o3': "فقط یک طرف را دوباره اندازه می‌گیری.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.shapes.w': "دو اندازهٔ مختلف یعنی گوشه‌ها قائمه نیستند. آن وقت کاشی یا تخته جا نمی‌افتد. بهتر است این را قبل از شروع بدانی.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.angles': "زاویه‌ها و شکل‌های گرد", // nieuw, nalezen
-    'w.hoek': "زاویه", // nieuw, nalezen
-    'w.graad': "درجه (°)", // nieuw, nalezen
-    'w.geodriehoek': "گونیای نقاله‌دار", // nieuw, nalezen
-    'w.boog': "قوس، انحنا", // nieuw, nalezen
-    'w.cilinder': "استوانه", // nieuw, nalezen
-    'w.parallellogram': "متوازی‌الاضلاع", // nieuw, nalezen
-    's.angles.1': "این زاویه نود درجه است.", // nieuw, nalezen
-    's.angles.2': "زاویه را با گونیای نقاله‌دار اندازه بگیر.", // nieuw, nalezen
-    's.angles.3': "لوله شکل استوانه دارد.", // nieuw, nalezen
-    'c.angles.q': "این زاویه چند درجه است؟", // nieuw, nalezen
-    'c.angles.a': "چهل و پنج. نصف یک زاویهٔ قائمه.", // nieuw, nalezen
+    'l.angles': "زاویه‌ها و شکل‌های گرد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hoek': "زاویه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.graad': "درجه (°)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geodriehoek': "گونیای نقاله‌دار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.boog': "قوس، انحنا", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.cilinder': "استوانه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.parallellogram': "متوازی‌الاضلاع", // nieuw, nalezen // nagelezen AI 28 nov
+    's.angles.1': "این زاویه نود درجه است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.angles.2': "زاویه را با گونیای نقاله‌دار اندازه بگیر.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.angles.3': "لوله شکل استوانه دارد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.angles.q': "این زاویه چند درجه است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.angles.a': "چهل و پنج. نصف یک زاویهٔ قائمه.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.angles': "گوشهٔ بزرگ را با 3، 4 و 5 بررسی کن", // nieuw, nalezen // nagelezen AI 22 nov
     'c.angles.b': "در کارگاه ساختمانی اغلب زاویهٔ قائمه را بررسی می‌کنی: دیوار روی کف، گوشهٔ یک اتاق. گوشهٔ کوچک را با گونیا یا گونیای نقاله‌دار بررسی می‌کنی. برای گوشهٔ بزرگ یک راه قدیمی هست. روی یک طرف 3 متر و روی طرف دیگر 4 متر اندازه بگیر، و سر هر دو علامت بزن. از علامت تا علامت دقیقاً 5 متر است؟ پس زاویه 90 درجه است. کوچک‌تر هم می‌شود: 30، 40 و 50 سانتی‌متر.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.angles.p': "این زاویه قائمه نیست.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2391,18 +2391,18 @@ const t: CultureTranslation = {
     'c.angles.o2': "از دور به آن نگاه می‌کنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.angles.o3': "با این حال از گونیای کوچک استفاده می‌کنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.angles.w': "با 3، 4 و 5 می‌توانی گوشهٔ بزرگ را دقیق بررسی کنی، فقط با یک متر. با چشم، گوشه ممکن است درست به نظر بیاید و باز هم اشتباه باشد.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.size': "طول، مساحت و حجم", // nieuw, nalezen
-    'w.lengte': "طول", // nieuw, nalezen
-    'w.breedte': "عرض، پهنا", // nieuw, nalezen
-    'w.hoogte': "ارتفاع، بلندی", // nieuw, nalezen
-    'w.oppervlakte': "مساحت (طول ضرب در عرض، به متر مربع)", // nieuw, nalezen
-    'w.inhoud': "حجم (طول ضرب در عرض ضرب در ارتفاع)", // nieuw, nalezen
-    'w.centimeter': "سانتی‌متر", // nieuw, nalezen
-    's.size.1': "مساحت یعنی طول ضرب در عرض.", // nieuw, nalezen
-    's.size.2': "حجم یعنی طول ضرب در عرض ضرب در ارتفاع.", // nieuw, nalezen
-    's.size.3': "ده میلی‌متر یک سانتی‌متر است.", // nieuw, nalezen
-    'c.size.q': "کف چند متر مربع است؟", // nieuw, nalezen
-    'c.size.a': "چهار در پنج متر، پس بیست متر مربع.", // nieuw, nalezen
+    'l.size': "طول، مساحت و حجم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lengte': "طول", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.breedte': "عرض، پهنا", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hoogte': "ارتفاع، بلندی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oppervlakte': "مساحت (طول ضرب در عرض، به متر مربع)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inhoud': "حجم (طول ضرب در عرض ضرب در ارتفاع)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.centimeter': "سانتی‌متر", // nieuw, nalezen // nagelezen AI 28 nov
+    's.size.1': "مساحت یعنی طول ضرب در عرض.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.size.2': "حجم یعنی طول ضرب در عرض ضرب در ارتفاع.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.size.3': "ده میلی‌متر یک سانتی‌متر است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.size.q': "کف چند متر مربع است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.size.a': "چهار در پنج متر، پس بیست متر مربع.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.size': "حساب کن چقدر لازم داری، بعد کمی اضافه کن", // nieuw, nalezen // nagelezen AI 22 nov
     'c.size.b': "چند تا کاشی، چقدر رنگ، چقدر ماسه؟ این را با مساحت یا حجم حساب می‌کنی. مساحت: طول ضرب در عرض، به متر مربع. حجم: طول ضرب در عرض ضرب در ارتفاع، به متر مکعب. همه‌چیز را با یک واحد اندازه بگیر: همه به متر، یا همه به سانتی‌متر. اندازه‌ها را بنویس، در ذهنت نگه ندار. بعد کمی اضافه بگذار، برای تکه‌های بریده و برای اشتباه‌ها. مطمئن نیستی؟ از یک همکار بخواه حسابت را بررسی کند.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.size.p': "اندازه‌ها را می‌نویسم.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2411,18 +2411,18 @@ const t: CultureTranslation = {
     'c.size.o2': "به اندازهٔ مساحت سفارش می‌دهی، نه یک کاشی بیشتر.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.size.o3': "حدس می‌زنی: کف را دیده‌ای.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.size.w': "همیشه چند کاشی را می‌بُری، و چند تا هم می‌شکنند. با کمی اضافه، لازم نیست وسط کار دست نگه داری و دوباره سفارش بدهی.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.paint': "رنگ‌کاری", // nieuw, nalezen
-    'w.verf': "رنگ", // nieuw, nalezen
-    'w.kwast': "قلم‌مو (یک قلم‌موی پهن)", // nieuw, nalezen
-    'w.penseel': "قلم‌موی کوچک (برای گوشه‌ها و لبه‌ها)", // nieuw, nalezen
-    'w.roerstok': "چوب هم‌زدن رنگ", // nieuw, nalezen
-    'w.tape': "نوار چسب کاغذی", // nieuw, nalezen
-    'w.strijkvaatje': "ظرف کوچک رنگ (ظرفی که موقع رنگ زدن در دست می‌گیری)", // nieuw, nalezen
-    's.paint.1': "اول رنگ را خوب هم بزن.", // nieuw, nalezen
-    's.paint.2': "لبه را با نوار چسب بپوشان.", // nieuw, nalezen
-    's.paint.3': "کمی رنگ در ظرف کوچک رنگ بریز.", // nieuw, nalezen
-    'c.paint.q': "کدام قلم‌مو را بردارم؟", // nieuw, nalezen
-    'c.paint.a': "پهن را برای دیوار، قلم‌موی کوچک را برای گوشه‌ها.", // nieuw, nalezen
+    'l.paint': "رنگ‌کاری", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verf': "رنگ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kwast': "قلم‌مو (یک قلم‌موی پهن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.penseel': "قلم‌موی کوچک (برای گوشه‌ها و لبه‌ها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.roerstok': "چوب هم‌زدن رنگ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tape': "نوار چسب کاغذی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.strijkvaatje': "ظرف کوچک رنگ (ظرفی که موقع رنگ زدن در دست می‌گیری)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.paint.1': "اول رنگ را خوب هم بزن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.paint.2': "لبه را با نوار چسب بپوشان.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.paint.3': "کمی رنگ در ظرف کوچک رنگ بریز.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.paint.q': "کدام قلم‌مو را بردارم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.paint.a': "پهن را برای دیوار، قلم‌موی کوچک را برای گوشه‌ها.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.paint': "خوب هم بزن، و از بالا به پایین رنگ بزن", // nieuw, nalezen // nagelezen AI 22 nov
     'c.paint.b': "رنگی که مدتی مانده، ته قوطی غلیظ می‌شود. پس اول آن را با چوب هم‌زدن خوب هم بزن، تا رنگش همه‌جا یکی شود. از قوطی بزرگ رنگ نزن: کمی رنگ در ظرف کوچک رنگ بریز، و در قوطی را دوباره ببند. آن وقت رنگ خوب می‌ماند. از بالا به پایین رنگ بزن، تا قطره‌ها روی رنگ خیس بیفتند و هنوز بتوانی با قلم‌مو پاکشان کنی. قلم‌موی پهن را برای دیوار و قلم‌موی کوچک را برای گوشه‌ها به کار ببر. آخر کار، قلم‌موها را فوراً تمیز کن.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.paint.p': "اول رنگ را خوب هم می‌زنم.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2431,18 +2431,18 @@ const t: CultureTranslation = {
     'c.paint.o2': "با رنگ رقیقِ رویی رنگ می‌زنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.paint.o3': "آب اضافه می‌کنی تا همه‌جا رقیق شود.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.paint.w': "بخشی از رنگ ته قوطی نشسته. بدون هم زدن، دیوار لک و رگه‌رگه می‌شود.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.prep': "آماده شدن برای رنگ‌کاری", // nieuw, nalezen
-    'w.plamuurmes': "کاردک بتونه (برای پر کردن سوراخ‌ها)", // nieuw, nalezen
-    'w.schuurpapier': "کاغذ سنباده", // nieuw, nalezen
-    'w.verfkrabber': "رنگ‌تراش", // nieuw, nalezen
-    'w.stoffertje': "فرچهٔ کوچک (برای جارو کردن گرد و خاک)", // nieuw, nalezen
-    'w.schuren': "سنباده زدن", // nieuw, nalezen
-    'w.afplakken': "نوار چسب زدن (لبه‌ای را با نوار چسب می‌پوشانی)", // nieuw, nalezen
-    's.prep.1': "اول رنگ قدیمی را بتراش.", // nieuw, nalezen
-    's.prep.2': "چوب را با سنباده صاف کن.", // nieuw, nalezen
-    's.prep.3': "گرد و خاک را با فرچهٔ کوچک جارو کن.", // nieuw, nalezen
-    'c.prep.q': "می‌توانم دیگر رنگ بزنم؟", // nieuw, nalezen
-    'c.prep.a': "نه، اول سنباده بزن و سوراخ را پر کن.", // nieuw, nalezen
+    'l.prep': "آماده شدن برای رنگ‌کاری", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plamuurmes': "کاردک بتونه (برای پر کردن سوراخ‌ها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schuurpapier': "کاغذ سنباده", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verfkrabber': "رنگ‌تراش", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stoffertje': "فرچهٔ کوچک (برای جارو کردن گرد و خاک)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schuren': "سنباده زدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afplakken': "نوار چسب زدن (لبه‌ای را با نوار چسب می‌پوشانی)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.prep.1': "اول رنگ قدیمی را بتراش.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.prep.2': "چوب را با سنباده صاف کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.prep.3': "گرد و خاک را با فرچهٔ کوچک جارو کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.prep.q': "می‌توانم دیگر رنگ بزنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.prep.a': "نه، اول سنباده بزن و سوراخ را پر کن.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.prep': "رنگ‌کاری خوب قبل از رنگ شروع می‌شود", // nieuw, nalezen // nagelezen AI 22 nov
     'c.prep.b': "رنگ روی کثیفی، گرد و خاک یا رنگ قدیمیِ شل خوب نمی‌چسبد. پس اول رنگ شل را با رنگ‌تراش بتراش. سوراخ‌ها را با بتونه و کاردک بتونه پر کن، و بگذار بتونه خشک شود. بعد آن را با سنباده صاف کن. بعد از سنباده زدن، گرد و خاک را با فرچهٔ کوچک جارو کن، از لبه‌ها هم. آخر سر، چیزهایی را که باید تمیز بمانند، مثل پنجره‌ها و پریزها، با نوار چسب بپوشان. سنباده زدن گرد و خاک ریز درست می‌کند: ماسک گرد و غبار بزن، و بپرس کدام ماسک. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.prep.p': "اول سنباده، بعد رنگ.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2451,18 +2451,18 @@ const t: CultureTranslation = {
     'c.prep.o2': "می‌گذاری رنگ بزند: رنگ گرد و خاک را می‌پوشاند.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.prep.o3': "گرد و خاک را با دستت پاک می‌کنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.prep.w': "رنگ روی گرد و خاک خوب نمی‌چسبد. بعداً پوسته‌پوسته جدا می‌شود، و آن وقت همهٔ کار باید دوباره انجام شود.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.brick': "آجرچینی", // nieuw, nalezen
-    'w.speciekuip': "تشت ملات", // nieuw, nalezen
-    'w.metseltroffel': "کمچهٔ بنایی", // nieuw, nalezen
-    'w.baksteen': "آجر", // nieuw, nalezen
-    'w.cement': "سیمان", // nieuw, nalezen
-    'w.voegijzer': "ابزار بندکشی (برای صاف کردن درزهای بین آجرها)", // nieuw, nalezen
-    'w.handveger': "جارو دستی", // nieuw, nalezen
-    's.brick.1': "هنوز در تشت ملات سیمان هست.", // nieuw, nalezen
-    's.brick.2': "درز را با ابزار بندکشی صاف کن.", // nieuw, nalezen
-    's.brick.3': "دیوار را با جارو دستی تمیز کن.", // nieuw, nalezen
-    'c.brick.q': "چند تا آجر برایت مانده؟", // nieuw, nalezen
-    'c.brick.a': "یک پالت دیگر. برای امروز بس است.", // nieuw, nalezen
+    'l.brick': "آجرچینی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.speciekuip': "تشت ملات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.metseltroffel': "کمچهٔ بنایی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.baksteen': "آجر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.cement': "سیمان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voegijzer': "ابزار بندکشی (برای صاف کردن درزهای بین آجرها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handveger': "جارو دستی", // nieuw, nalezen // nagelezen AI 28 nov
+    's.brick.1': "هنوز در تشت ملات سیمان هست.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.brick.2': "درز را با ابزار بندکشی صاف کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.brick.3': "دیوار را با جارو دستی تمیز کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.brick.q': "چند تا آجر برایت مانده؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.brick.a': "یک پالت دیگر. برای امروز بس است.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.brick': "دیوار را موقع کار تمیز نگه دار", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brick.b': "ملات موقع چیدن آجرها خیس است، و در چند ساعت سفت می‌شود. پس تمیز کار کن. ملاتی را که از درز بیرون می‌زند فوراً با کمچه بتراش. درزها را وقتی با ابزار بندکشی صاف کن که ملات کمی سفت شده، نه وقتی هنوز خیس است. بعد دیوار را با جارو دستی تمیز کن. ملات سفت روی نمای آجر خیلی سخت پاک می‌شود. آخر روز، بالای دیوار را بپوشان، تا باران ملات را نشوید.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brick.p': "درزها را صاف می‌کنم.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2471,18 +2471,18 @@ const t: CultureTranslation = {
     'c.brick.o2': "ولش می‌کنی: هفتهٔ بعد تمیزش می‌کنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brick.o3': "دیوار را با آب زیاد می‌شویی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brick.w': "ملات تازه با جارو راحت پاک می‌شود. ملات سفت روی آجر می‌ماند، و آن وقت دیوار خوب به نظر نمی‌آید.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.wall': "یک دیوار صاف", // nieuw, nalezen
-    'w.metseltouw': "ریسمان بنایی (یک نخ برای ردیف صاف)", // nieuw, nalezen
-    'w.klos': "گیرهٔ ریسمان (نخ را در گوشه نگه می‌دارد)", // nieuw, nalezen
-    'w.lagenmaatlat': "شمشهٔ ردیف (ارتفاع هر ردیف را نشان می‌دهد)", // nieuw, nalezen
-    'w.profiel': "شاخص گوشه (یک تیرک صاف در سر دیوار)", // nieuw, nalezen
-    'w.kop': "کلهٔ آجر (طرف کوتاه آجر)", // nieuw, nalezen
-    'w.strek': "راستهٔ آجر (طرف بلند آجر)", // nieuw, nalezen
-    's.wall.1': "ریسمان بنایی را سفت بکش.", // nieuw, nalezen
-    's.wall.2': "شاخص گوشه باید صاف بایستد.", // nieuw, nalezen
-    's.wall.3': "آجر را طوری بگذار که طرف بلندش رو به بیرون باشد.", // nieuw, nalezen
-    'c.wall.q': "این ردیف باید چقدر بلند باشد؟", // nieuw, nalezen
-    'c.wall.a': "به شمشهٔ ردیف نگاه کن.", // nieuw, nalezen
+    'l.wall': "یک دیوار صاف", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.metseltouw': "ریسمان بنایی (یک نخ برای ردیف صاف)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.klos': "گیرهٔ ریسمان (نخ را در گوشه نگه می‌دارد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lagenmaatlat': "شمشهٔ ردیف (ارتفاع هر ردیف را نشان می‌دهد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.profiel': "شاخص گوشه (یک تیرک صاف در سر دیوار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kop': "کلهٔ آجر (طرف کوتاه آجر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.strek': "راستهٔ آجر (طرف بلند آجر)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wall.1': "ریسمان بنایی را سفت بکش.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wall.2': "شاخص گوشه باید صاف بایستد.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wall.3': "آجر را طوری بگذار که طرف بلندش رو به بیرون باشد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wall.q': "این ردیف باید چقدر بلند باشد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wall.a': "به شمشهٔ ردیف نگاه کن.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.wall': "ریسمان دیوار را صاف نگه می‌دارد", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wall.b': "بنا با چشم نمی‌سازد. اول شاخص‌های گوشه در دو سر دیوار صاف می‌ایستند. بین آن‌ها ریسمان بنایی را سفت می‌کشی، به ارتفاع ردیف بعدی. هر آجر را کنار ریسمان بگذار، ولی ریسمان را کنار نزن. شمشهٔ ردیف نشان می‌دهد هر ردیف چقدر باید بلند باشد. زیاد با تراز بررسی کن. آجر کج را وقتی ملات خیس است راحت می‌شود درست کرد، و فردا خیلی سخت.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wall.p': "ریسمان بنایی سفت است؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2491,18 +2491,18 @@ const t: CultureTranslation = {
     'c.wall.o2': "با این حال آجرها را زیرش می‌چینی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wall.o3': "آجرها را با چشم می‌چینی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wall.w': "ریسمان شل وسطش آویزان است، پس ردیف هم آویزان می‌شود. ریسمان سفت یک ردیف صاف می‌دهد.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.wood': "کار با چوب", // nieuw, nalezen
-    'w.handzaag': "ارهٔ دستی", // nieuw, nalezen
-    'w.kapzaag': "ارهٔ پشت‌دار (یک ارهٔ کوچک با پشت سفت)", // nieuw, nalezen
-    'w.houtbeitel': "مغار چوب", // nieuw, nalezen
-    'w.handschaaf': "رندهٔ دستی", // nieuw, nalezen
-    'w.timmermanshamer': "چکش نجاری", // nieuw, nalezen
-    'w.houtenhamer': "تخماق (یک چکش چوبی)", // nieuw, nalezen
-    's.wood.1': "تخته را اندازه اره کن.", // nieuw, nalezen
-    's.wood.2': "لبه را با رنده صاف کن.", // nieuw, nalezen
-    's.wood.3': "با تخماق روی مغار بزن.", // nieuw, nalezen
-    'c.wood.q': "کدام اره را لازم دارم؟", // nieuw, nalezen
-    'c.wood.a': "ارهٔ پشت‌دار، برای این تکهٔ کوچک.", // nieuw, nalezen
+    'l.wood': "کار با چوب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handzaag': "ارهٔ دستی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kapzaag': "ارهٔ پشت‌دار (یک ارهٔ کوچک با پشت سفت)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.houtbeitel': "مغار چوب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handschaaf': "رندهٔ دستی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.timmermanshamer': "چکش نجاری", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.houtenhamer': "تخماق (یک چکش چوبی)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wood.1': "تخته را اندازه اره کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wood.2': "لبه را با رنده صاف کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wood.3': "با تخماق روی مغار بزن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wood.q': "کدام اره را لازم دارم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wood.a': "ارهٔ پشت‌دار، برای این تکهٔ کوچک.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.wood': "چوبِ کوتاه‌شده را نمی‌شود درست کرد", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wood.b': "چوبی که کوتاه بریده شده، دیگر بلند نمی‌شود. پس دو بار اندازه بگیر، و قبل از اره کردن خط را بکش. کنار خط اره کن، در طرف تکه‌ای که لازم نداری. چوب را ثابت نگه دار: روی میز کار یا با گیره، نه روی زانویت. بگذار اره کار را بکند، با حرکت‌های بلند و آرام. مغار را رو به بیرون از بدنت و دست دیگرت فشار بده. و مغار و رنده را تیز نگه دار: ابزار کُند راحت‌تر لیز می‌خورد.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wood.p': "یک بار دیگر اندازه‌اش می‌گیرم.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2511,18 +2511,18 @@ const t: CultureTranslation = {
     'c.wood.o2': "الان اره می‌کنی: احتمالاً درست است.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wood.o3': "با چشم اره می‌کنی، بدون خط.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wood.w': "بلند را می‌شود دوباره اره کرد، کوتاه را نمی‌شود درست کرد. دوباره اندازه گرفتن یک دقیقه طول می‌کشد؛ یک تختهٔ نو خیلی بیشتر.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.square': "علامت‌گذاری", // nieuw, nalezen
-    'w.winkelhaak': "گونیا (زاویهٔ قائمه را نشان می‌دهد)", // nieuw, nalezen
-    'w.verstekhaak': "گونیای فارسی‌بر (45 درجه)", // nieuw, nalezen
-    'w.zwaaihaak': "گونیای متحرک (زاویه را خودت تنظیم می‌کنی)", // nieuw, nalezen
-    'w.kruishout': "خط‌انداز (در امتداد لبه یک خط می‌کشد)", // nieuw, nalezen
-    'w.passer': "پرگار (دایره می‌کشد)", // nieuw, nalezen
-    'w.aftekenen': "علامت زدن (جایی را که می‌بُری می‌کشی)", // nieuw, nalezen
-    's.square.1': "خط را با گونیا علامت بزن.", // nieuw, nalezen
-    's.square.2': "گونیای متحرک را روی زاویهٔ درست تنظیم کن.", // nieuw, nalezen
-    's.square.3': "با پرگار یک دایره بکش.", // nieuw, nalezen
-    'c.square.q': "زاویه قائمه است؟", // nieuw, nalezen
-    'c.square.a': "بله، گونیا دقیقاً جا می‌افتد.", // nieuw, nalezen
+    'l.square': "علامت‌گذاری", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.winkelhaak': "گونیا (زاویهٔ قائمه را نشان می‌دهد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verstekhaak': "گونیای فارسی‌بر (45 درجه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zwaaihaak': "گونیای متحرک (زاویه را خودت تنظیم می‌کنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kruishout': "خط‌انداز (در امتداد لبه یک خط می‌کشد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.passer': "پرگار (دایره می‌کشد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aftekenen': "علامت زدن (جایی را که می‌بُری می‌کشی)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.square.1': "خط را با گونیا علامت بزن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.square.2': "گونیای متحرک را روی زاویهٔ درست تنظیم کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.square.3': "با پرگار یک دایره بکش.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.square.q': "زاویه قائمه است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.square.a': "بله، گونیا دقیقاً جا می‌افتد.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.square': "از یک لبهٔ صاف علامت بزن", // nieuw, nalezen // nagelezen AI 22 nov
     'c.square.b': "قبل از اینکه اره کنی یا سوراخ کنی، جایش را علامت می‌زنی. از مداد تیز استفاده کن: خط کلفت دقیق نیست. یک لبهٔ صاف چوب را انتخاب کن، و همه‌چیز را از همان لبه اندازه بگیر. قسمت کلفت گونیا را محکم به آن بچسبان، و خط را کنار تیغهٔ فولادی بکش. روی تکه‌ای که استفاده نمی‌کنی یک ضربدر کوچک بکش. بعد کنار خط اره می‌کنی، در طرف ضربدر.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.square.p': "اول علامتش می‌زنم.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2531,18 +2531,18 @@ const t: CultureTranslation = {
     'c.square.o2': "با این حال خط را می‌کشی، اشکالی ندارد.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.square.o3': "با ناخنت علامت می‌زنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.square.w': "خط کلفت چند میلی‌متر پهنا دارد. آن وقت نمی‌دانی کجا را اره کنی، و تکه دقیق نمی‌شود.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.screw': "دریل و پیچ", // nieuw, nalezen
-    'w.accuboor': "دریل شارژی", // nieuw, nalezen
-    'w.boormachine': "دریل برقی (با سیم)", // nieuw, nalezen
-    'w.bitje': "سرپیچ‌گوشتی", // nieuw, nalezen
-    'w.plug': "رول‌پلاک", // nieuw, nalezen
-    'w.schroevendraaier': "پیچ‌گوشتی", // nieuw, nalezen
-    'w.spijker': "میخ", // nieuw, nalezen
-    's.screw.1': "یک سوراخ بزن و یک رول‌پلاک در آن بگذار.", // nieuw, nalezen
-    's.screw.2': "کدام سرپیچ‌گوشتی به این پیچ می‌خورد؟", // nieuw, nalezen
-    's.screw.3': "میخ را در چوب بکوب.", // nieuw, nalezen
-    'c.screw.q': "دریل شارژی کجاست؟", // nieuw, nalezen
-    'c.screw.a': "روی شارژر است، تقریباً پر شده.", // nieuw, nalezen
+    'l.screw': "دریل و پیچ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.accuboor': "دریل شارژی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.boormachine': "دریل برقی (با سیم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bitje': "سرپیچ‌گوشتی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plug': "رول‌پلاک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schroevendraaier': "پیچ‌گوشتی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spijker': "میخ", // nieuw, nalezen // nagelezen AI 28 nov
+    's.screw.1': "یک سوراخ بزن و یک رول‌پلاک در آن بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.screw.2': "کدام سرپیچ‌گوشتی به این پیچ می‌خورد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.screw.3': "میخ را در چوب بکوب.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.screw.q': "دریل شارژی کجاست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.screw.a': "روی شارژر است، تقریباً پر شده.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.screw': "قبل از سوراخ کردن نگاه کن", // nieuw, nalezen // nagelezen AI 22 nov
     'c.screw.b': "قبل از اینکه دیوار را سوراخ کنی، فکر کن پشتش چه هست. لوله‌ها و کابل‌ها اغلب از پریز یا کلید برق صاف به بالا، پایین یا کنار می‌روند. بپرس کجا هستند، یا با کابل‌یاب بررسی کن. مته‌ای هم‌اندازهٔ رول‌پلاک انتخاب کن، و سوراخ را کمی عمیق‌تر از رول‌پلاک بزن. سرپیچ‌گوشتیِ درست را برای پیچ به کار ببر: سرِ اشتباه لیز می‌خورد و سر پیچ را خراب می‌کند. موقع سوراخ کردن عینک ایمنی بزن.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.screw.p': "می‌توانم اینجا سوراخ کنم؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2551,18 +2551,18 @@ const t: CultureTranslation = {
     'c.screw.o2': "سوراخ می‌کنی: هیچ‌وقت کابلی آنجا نیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.screw.o3': "آرام سوراخ می‌کنی، آن وقت بی‌خطر است.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.screw.w': "کابل اغلب از پریز صاف به بالا می‌رود. سوراخ کردن آن خطرناک است، و تعمیرش کار زیادی دارد.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.fix': "محکم کردن چیزها", // nieuw, nalezen
-    'w.bevestigen': "نصب کردن (چیزی را محکم به دیوار وصل می‌کنی)", // nieuw, nalezen
-    'w.vastzetten': "سفت کردن (می‌چرخانی تا سفت شود)", // nieuw, nalezen
-    'w.lijmen': "چسب زدن", // nieuw, nalezen
-    'w.inbussleutel': "آچار آلن (آچار شش‌گوش)", // nieuw, nalezen
-    'w.kruisschroevendraaier': "پیچ‌گوشتی چهارسو (سرِ ضربدری)", // nieuw, nalezen
-    'w.platteschroevendraaier': "پیچ‌گوشتی دوسو", // nieuw, nalezen
-    's.fix.1': "قفسه را به دیوار نصب کن.", // nieuw, nalezen
-    's.fix.2': "پیچ را با آچار آلن سفت کن.", // nieuw, nalezen
-    's.fix.3': "پیچ‌گوشتی دوسو را بردار، نه چهارسو را.", // nieuw, nalezen
-    'c.fix.q': "این قفسه را چطور محکم کنم؟", // nieuw, nalezen
-    'c.fix.a': "با دو رول‌پلاک و دو پیچ.", // nieuw, nalezen
+    'l.fix': "محکم کردن چیزها", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bevestigen': "نصب کردن (چیزی را محکم به دیوار وصل می‌کنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vastzetten': "سفت کردن (می‌چرخانی تا سفت شود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lijmen': "چسب زدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inbussleutel': "آچار آلن (آچار شش‌گوش)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kruisschroevendraaier': "پیچ‌گوشتی چهارسو (سرِ ضربدری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.platteschroevendraaier': "پیچ‌گوشتی دوسو", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fix.1': "قفسه را به دیوار نصب کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fix.2': "پیچ را با آچار آلن سفت کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fix.3': "پیچ‌گوشتی دوسو را بردار، نه چهارسو را.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.fix.q': "این قفسه را چطور محکم کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.fix.a': "با دو رول‌پلاک و دو پیچ.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.fix': "سفت، ولی نه خیلی سفت", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fix.b': "پیچ یا پیچ مهره‌خور باید سفت باشد، ولی نه خیلی سفت. اگر خیلی زور بدهی، رزوه خراب می‌شود یا چوب ترک می‌خورد. بچرخان تا دیگر تکان نخورد، بعد دست نگه دار. روی دریل شارژی، اول حلقهٔ شماره‌دار را روی یک عدد کم بگذار. قفسه روی دیوار رول‌پلاکی لازم دارد که به دیوار بخورد: دیوار سنگی رول‌پلاک دیگری می‌خواهد تا دیوار نازک تخته‌ای. چسب وقت لازم دارد: قطعه‌ها را به هم فشار بده، با گیره نگهشان دار، و صبر کن تا چسب خشک شود.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fix.p': "قفسه خوب محکم شده؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2571,18 +2571,18 @@ const t: CultureTranslation = {
     'c.fix.o2': "می‌گذاری استفاده کند: چسب زود می‌گیرد.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fix.o3': "یک دقیقه آن را در دستت نگه می‌داری.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fix.w': "چسب خیس هنوز نگه نمی‌دارد. اگر زود از آن استفاده کنی، قطعه‌ها دوباره جدا می‌شوند. آن وقت باید از اول شروع کنی.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.atmachine': "کنار دستگاه", // nieuw, nalezen
-    'w.bedieningspaneel': "صفحهٔ کنترل (دکمه‌ها و صفحه‌نمایش دستگاه)", // nieuw, nalezen
-    'w.startknop': "دکمهٔ شروع (سبز)", // nieuw, nalezen
-    'w.hendel': "اهرم", // nieuw, nalezen
-    'w.afscherming': "حفاظ دستگاه (یک پوشش روی قسمت‌های متحرک)", // nieuw, nalezen
-    'w.sensor': "حسگر (می‌بیند چیزی آنجا هست یا نه)", // nieuw, nalezen
-    'w.signaallamp': "چراغ هشدار (چراغ‌های رنگی بالای دستگاه)", // nieuw, nalezen
-    's.atmachine.1': "دکمهٔ سبز شروع را بزن.", // nieuw, nalezen
-    's.atmachine.2': "چراغ هشدار قرمز است. خرابی پیش آمده.", // nieuw, nalezen
-    's.atmachine.3': "هیچ‌وقت حفاظ دستگاه را برندار.", // nieuw, nalezen
-    'c.atmachine.q': "چرا دستگاه مدام می‌ایستد؟", // nieuw, nalezen
-    'c.atmachine.a': "حسگر جعبه را خوب نمی‌بیند.", // nieuw, nalezen
+    'l.atmachine': "کنار دستگاه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedieningspaneel': "صفحهٔ کنترل (دکمه‌ها و صفحه‌نمایش دستگاه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.startknop': "دکمهٔ شروع (سبز)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hendel': "اهرم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afscherming': "حفاظ دستگاه (یک پوشش روی قسمت‌های متحرک)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sensor': "حسگر (می‌بیند چیزی آنجا هست یا نه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.signaallamp': "چراغ هشدار (چراغ‌های رنگی بالای دستگاه)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.atmachine.1': "دکمهٔ سبز شروع را بزن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.atmachine.2': "چراغ هشدار قرمز است. خرابی پیش آمده.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.atmachine.3': "هیچ‌وقت حفاظ دستگاه را برندار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.atmachine.q': "چرا دستگاه مدام می‌ایستد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.atmachine.a': "حسگر جعبه را خوب نمی‌بیند.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.atmachine': "حفاظ سر جایش می‌ماند", // nieuw, nalezen // nagelezen AI 22 nov
     'c.atmachine.b': "قسمت‌های متحرک دستگاه می‌توانند در کمتر از یک ثانیه دست، آستین یا مو را به داخل بکشند. حفاظ برای همین است. هیچ‌وقت آن را برندار، و وقتی دستگاه روشن است هیچ‌وقت دستت را پشتش نبر. حفاظ یا حسگری کار نمی‌کند؟ پس دستگاه ایمن نیست: آن را خاموش کن و به سرپرست تیمت بگو. چیزی گیر کرده؟ اول دستگاه را خاموش کن، و مطمئن شو که تا وقتی کار می‌کنی کسی نمی‌تواند روشنش کند. این کار در هر شرکت فرق دارد: قبل از شروع بخواه برایت توضیح بدهند. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.atmachine.p': "حفاظ دستگاه خراب است.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2591,18 +2591,18 @@ const t: CultureTranslation = {
     'c.atmachine.o2': "زود دستت را داخل می‌بری و جعبه را بیرون می‌کشی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.atmachine.o3': "وقتی دستگاه روشن است حفاظ را باز می‌کنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.atmachine.w': "دستگاه روشن می‌تواند دستت را به داخل بکشد، قبل از اینکه بتوانی واکنش نشان بدهی. خاموش کردنش یک لحظه طول می‌کشد؛ دست آسیب‌دیده چند ماه.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.inspect': "اندازه گرفتن و بررسی کردن", // nieuw, nalezen
-    'w.weegschaal': "ترازو", // nieuw, nalezen
-    'w.meetklok': "ساعت اندازه‌گیری (فرق‌های خیلی کوچک را اندازه می‌گیرد)", // nieuw, nalezen
-    'w.loep': "ذره‌بین", // nieuw, nalezen
-    'w.monster': "نمونه (یک محصول که برای بررسی برمی‌داری)", // nieuw, nalezen
-    'w.afkeurbak': "سطل محصولات رد شده (برای محصولاتی که خوب نیستند)", // nieuw, nalezen
-    'w.teller': "شمارنده (محصولات را می‌شمارد)", // nieuw, nalezen
-    's.inspect.1': "محصول را روی ترازو بگذار.", // nieuw, nalezen
-    's.inspect.2': "این محصول آسیب دیده. در سطل محصولات رد شده می‌رود.", // nieuw, nalezen
-    's.inspect.3': "با ذره‌بین به برچسب نگاه می‌کنم.", // nieuw, nalezen
-    'c.inspect.q': "هر چند وقت یک بار نمونه بردارم؟", // nieuw, nalezen
-    'c.inspect.a': "هر ساعت یکی. آن را در فهرست بنویس.", // nieuw, nalezen
+    'l.inspect': "اندازه گرفتن و بررسی کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.weegschaal': "ترازو", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meetklok': "ساعت اندازه‌گیری (فرق‌های خیلی کوچک را اندازه می‌گیرد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.loep': "ذره‌بین", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.monster': "نمونه (یک محصول که برای بررسی برمی‌داری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afkeurbak': "سطل محصولات رد شده (برای محصولاتی که خوب نیستند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teller': "شمارنده (محصولات را می‌شمارد)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.inspect.1': "محصول را روی ترازو بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.inspect.2': "این محصول آسیب دیده. در سطل محصولات رد شده می‌رود.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.inspect.3': "با ذره‌بین به برچسب نگاه می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspect.q': "هر چند وقت یک بار نمونه بردارم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspect.a': "هر ساعت یکی. آن را در فهرست بنویس.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.inspect': "چیزی را که بررسی می‌کنی بنویس", // nieuw, nalezen // nagelezen AI 22 nov
     'c.inspect.b': "در کارخانه محصولات را وسط کار بررسی می‌کنی: وزنشان می‌کنی، اندازه‌شان می‌گیری، یا از نزدیک نگاهشان می‌کنی. هر بررسی را فوراً در فهرست بنویس، با ساعتش. نه بعداً، از حافظه. یک محصول درست نیست؟ آن را در سطل محصولات رد شده بگذار و با دقت به محصولات بعدی نگاه کن. محصولات بیشتری اشکال دارند؟ پس دستگاه مشکلی دارد. فوراً به سرپرست تیمت بگو. مشکلی که زود پیدا شود، جلوی هدر رفتن کلی محصول را می‌گیرد. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.inspect.p': "محصولات بیشتری اشکال دارند.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2611,18 +2611,18 @@ const t: CultureTranslation = {
     'c.inspect.o2': "آن‌ها را دوباره روی خط می‌گذاری.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.inspect.o3': "چیزی نمی‌گویی: پیش می‌آید.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.inspect.w': "سه محصول اشتباه پشت سر هم نشانهٔ مشکلی در دستگاه است. هر چه زودتر بگویی، محصولات کمتری هدر می‌روند.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.packing': "بسته‌بندی", // nieuw, nalezen
-    'w.verpakking': "بسته‌بندی", // nieuw, nalezen
-    'w.krimpfolie': "نایلون شرینک (پلاستیک نازکی که با گرما سفت می‌شود)", // nieuw, nalezen
-    'w.sealmachine': "دستگاه دوخت حرارتی (بسته را با گرما می‌بندد)", // nieuw, nalezen
-    'w.vulmateriaal': "پرکننده (بالشتک هوا یا کاغذ در جعبه)", // nieuw, nalezen
-    'w.afbreekmes': "کاتر", // nieuw, nalezen
-    'w.tapepistool': "چسب‌زن کارتن", // nieuw, nalezen
-    's.packing.1': "در جعبه پرکننده بگذار.", // nieuw, nalezen
-    's.packing.2': "جعبه را با چسب‌زن کارتن ببند.", // nieuw, nalezen
-    's.packing.3': "دستگاه دوخت حرارتی داغ است. مواظب باش!", // nieuw, nalezen
-    'c.packing.q': "چند محصول در یک جعبه می‌رود؟", // nieuw, nalezen
-    'c.packing.a': "دوازده تا. در فهرست نوشته شده.", // nieuw, nalezen
+    'l.packing': "بسته‌بندی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verpakking': "بسته‌بندی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.krimpfolie': "نایلون شرینک (پلاستیک نازکی که با گرما سفت می‌شود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sealmachine': "دستگاه دوخت حرارتی (بسته را با گرما می‌بندد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vulmateriaal': "پرکننده (بالشتک هوا یا کاغذ در جعبه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afbreekmes': "کاتر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tapepistool': "چسب‌زن کارتن", // nieuw, nalezen // nagelezen AI 28 nov
+    's.packing.1': "در جعبه پرکننده بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.packing.2': "جعبه را با چسب‌زن کارتن ببند.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.packing.3': "دستگاه دوخت حرارتی داغ است. مواظب باش!", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.packing.q': "چند محصول در یک جعبه می‌رود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.packing.a': "دوازده تا. در فهرست نوشته شده.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.packing': "رو به بیرون از بدنت ببُر", // nieuw, nalezen // nagelezen AI 22 nov
     'c.packing.b': "بسته‌بندی کار سریعی است، و کاتر خیلی تیز است. همیشه رو به بیرون از بدنت و دور از دست دیگرت ببُر. بعد از هر بریدن تیغه را برگردان داخل، حتی وقتی کاتر را یک لحظه زمین می‌گذاری. تکهٔ کُند تیغه را با احتیاط بشکن، و آن را در جعبهٔ تیغه‌های کهنه بینداز، نه در سطل زبالهٔ معمولی. دستگاه دوخت حرارتی و سشوار صنعتیِ نایلون شرینک خیلی داغ می‌شوند: به قسمت‌های داغ دست نزن. و هر جعبه را بررسی کن: محصول درست، تعداد درست، و برچسب صاف. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.packing.p': "اول تیغه را برمی‌گردانم داخل.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2631,18 +2631,18 @@ const t: CultureTranslation = {
     'c.packing.o2': "ولش می‌کنی: زود دوباره لازمش داری.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.packing.o3': "همین‌طوری آن را در جیبت می‌گذاری.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.packing.w': "تیغهٔ باز روی میز یا در جیب می‌تواند تو یا یک همکار را ببُرد. برگرداندنش یک ثانیه طول می‌کشد.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.upkeep': "تعمیر و نگهداری", // nieuw, nalezen
-    'w.persluchtpistool': "بادپاش (تفنگ باد فشرده)", // nieuw, nalezen
-    'w.steeksleutel': "آچار تخت", // nieuw, nalezen
-    'w.oliekannetje': "روغن‌دان", // nieuw, nalezen
-    'w.smeerpistool': "گریس‌پمپ", // nieuw, nalezen
-    'w.lekbak': "سینی نشتی (روغنی را که چکه می‌کند جمع می‌کند)", // nieuw, nalezen
-    'w.poetsdoek': "دستمال تمیزکاری", // nieuw, nalezen
-    's.upkeep.1': "روغن نشت می‌کند. سینی نشتی را زیرش بگذار.", // nieuw, nalezen
-    's.upkeep.2': "روغن را با دستمال تمیزکاری پاک کن.", // nieuw, nalezen
-    's.upkeep.3': "هیچ‌وقت بادپاش را به طرف کسی نگیر.", // nieuw, nalezen
-    'c.upkeep.q': "کی دستگاه را گریس‌کاری می‌کنیم؟", // nieuw, nalezen
-    'c.upkeep.a': "هر دوشنبه، قبل از شیفت اول.", // nieuw, nalezen
+    'l.upkeep': "تعمیر و نگهداری", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.persluchtpistool': "بادپاش (تفنگ باد فشرده)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.steeksleutel': "آچار تخت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oliekannetje': "روغن‌دان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.smeerpistool': "گریس‌پمپ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lekbak': "سینی نشتی (روغنی را که چکه می‌کند جمع می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.poetsdoek': "دستمال تمیزکاری", // nieuw, nalezen // nagelezen AI 28 nov
+    's.upkeep.1': "روغن نشت می‌کند. سینی نشتی را زیرش بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.upkeep.2': "روغن را با دستمال تمیزکاری پاک کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.upkeep.3': "هیچ‌وقت بادپاش را به طرف کسی نگیر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.upkeep.q': "کی دستگاه را گریس‌کاری می‌کنیم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.upkeep.a': "هر دوشنبه، قبل از شیفت اول.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.upkeep': "دستگاه تمیز مشکلاتش را نشان می‌دهد", // nieuw, nalezen // nagelezen AI 22 nov
     'c.upkeep.b': "نگهداری کوچک اغلب بخشی از کار است: پاک کردن، روغن‌کاری و گریس‌کاری. فقط وقتی این کار را بکن که دستگاه خاموش است، و وقتی یاد گرفته‌ای چطور. دستگاه تمیز را راحت می‌شود بررسی کرد: نشتی یا قطعهٔ شل را فوراً می‌بینی. روغن روی زمین لیز است. زیر نشتی یک سینی نشتی بگذار، زمین را پاک کن، و به سرپرست تیمت بگو. دستمال‌های روغنی را در سطل مخصوص بینداز. هیچ‌وقت بادپاش را به طرف کسی نگیر، و هیچ‌وقت لباس یا پوستت را با آن تمیز نکن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.upkeep.p': "دستگاه روغن نشت می‌کند.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2652,19 +2652,19 @@ const t: CultureTranslation = {
     'c.upkeep.o3': "کمی کاغذ رویش می‌گذاری، و ادامه می‌دهی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.upkeep.w': "نشتی بزرگ‌تر می‌شود، و روغن روی زمین باعث می‌شود آدم‌ها لیز بخورند. اگر زود پیدا شود، تعمیرش کوچک است.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Elektra, leidingen en metaal" (u.install, 21 November 2026).
-    'u.install': "برق، لوله‌کشی و فلز", // nieuw, nalezen
-    'l.wiring': "سیم‌کشی", // nieuw, nalezen
-    'w.draad': "سیم (یک رشته سیم، داخل کابل)", // nieuw, nalezen
-    'w.stopcontact': "پریز (روی دیوار)", // nieuw, nalezen
-    'w.schakelaar': "کلید برق (برای چراغ)", // nieuw, nalezen
-    'w.lasklem': "ترمینال اهرمی (سیم‌ها را به هم وصل می‌کند)", // nieuw, nalezen
-    'w.striptang': "سیم‌لخت‌کن", // nieuw, nalezen
-    'w.kabelgoot': "داکت کابل (کانالی برای کابل‌ها)", // nieuw, nalezen
-    's.wiring.1': "یک سانتی‌متر از سیم را لخت کن.", // nieuw, nalezen
-    's.wiring.2': "سیم‌ها را در ترمینال اهرمی محکم کن.", // nieuw, nalezen
-    's.wiring.3': "کابل‌ها داخل داکت کابل می‌روند.", // nieuw, nalezen
-    'c.wiring.q': "کدام سیم کجا می‌رود؟", // nieuw, nalezen
-    'c.wiring.a': "قهوه‌ای به قهوه‌ای، آبی به آبی.", // nieuw, nalezen
+    'u.install': "برق، لوله‌کشی و فلز", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.wiring': "سیم‌کشی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.draad': "سیم (یک رشته سیم، داخل کابل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stopcontact': "پریز (روی دیوار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schakelaar': "کلید برق (برای چراغ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lasklem': "ترمینال اهرمی (سیم‌ها را به هم وصل می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.striptang': "سیم‌لخت‌کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kabelgoot': "داکت کابل (کانالی برای کابل‌ها)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wiring.1': "یک سانتی‌متر از سیم را لخت کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wiring.2': "سیم‌ها را در ترمینال اهرمی محکم کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wiring.3': "کابل‌ها داخل داکت کابل می‌روند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wiring.q': "کدام سیم کجا می‌رود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wiring.a': "قهوه‌ای به قهوه‌ای، آبی به آبی.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.wiring': "رنگ‌ها می‌گویند سیم چه کار می‌کند", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wiring.b': "در ساختمان، سیم‌ها رنگ‌های ثابتی دارند. قهوه‌ای (گاهی سیاه یا خاکستری) برق را می‌آورد. آبی برمی‌گردد. سبز و زرد سیم ارت است: از آدم‌ها محافظت می‌کند، و هیچ‌وقت برای کار دیگری استفاده نمی‌شود. هر رنگ را به همان رنگ وصل کن. فقط به اندازه‌ای لخت کن که در ترمینال جا شود: هیچ مس لختی نباید بیرون بماند. سیم را داخل فشار بده، بعد آرام بکشش تا مطمئن شوی محکم است. نمی‌دانی کدام سیم کدام است؟ دست نگه دار و بپرس.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wiring.p': "سیم ارت کدام رنگ است؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2673,18 +2673,18 @@ const t: CultureTranslation = {
     'c.wiring.o2': "ولش می‌کنی: لامپ کار می‌کند.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wiring.o3': "یک تکه نوار چسب دورش می‌پیچی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.wiring.w': "مس لخت بیرون از ترمینال ممکن است به چیزی بخورد. این می‌تواند باعث برق‌گرفتگی یا اتصال کوتاه شود، حتی چند ماه بعد.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.testing': "اندازه‌گیری و کار ایمن", // nieuw, nalezen
-    'w.multimeter': "مولتی‌متر (برق را اندازه می‌گیرد)", // nieuw, nalezen
-    'w.spanningzoeker': "فازمتر (پیچ‌گوشتی با یک چراغ کوچک)", // nieuw, nalezen
-    'w.meterkast': "تابلو برق (جعبهٔ فیوزها)", // nieuw, nalezen
-    'w.zekering': "فیوز (وقتی ایرادی هست، برق را قطع می‌کند)", // nieuw, nalezen
-    'w.hangslot': "قفل آویز", // nieuw, nalezen
-    'w.aardedraad': "سیم ارت (سبز و زرد)", // nieuw, nalezen
-    's.testing.1': "فیوز پریده است.", // nieuw, nalezen
-    's.testing.2': "روی کلید یک قفل آویز بزن.", // nieuw, nalezen
-    's.testing.3': "اول با مولتی‌متر اندازه بگیر.", // nieuw, nalezen
-    'c.testing.q': "اجازه دارم تابلو برق را باز کنم؟", // nieuw, nalezen
-    'c.testing.a': "نه، این کار را برقکار می‌کند.", // nieuw, nalezen
+    'l.testing': "اندازه‌گیری و کار ایمن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.multimeter': "مولتی‌متر (برق را اندازه می‌گیرد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spanningzoeker': "فازمتر (پیچ‌گوشتی با یک چراغ کوچک)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meterkast': "تابلو برق (جعبهٔ فیوزها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zekering': "فیوز (وقتی ایرادی هست، برق را قطع می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hangslot': "قفل آویز", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aardedraad': "سیم ارت (سبز و زرد)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.testing.1': "فیوز پریده است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.testing.2': "روی کلید یک قفل آویز بزن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.testing.3': "اول با مولتی‌متر اندازه بگیر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.testing.q': "اجازه دارم تابلو برق را باز کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.testing.a': "نه، این کار را برقکار می‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.testing': "قطع، قفل، اندازه‌گیری", // nieuw, nalezen // nagelezen AI 22 nov
     'c.testing.b': "قبل از اینکه روی برق کار کنی، سه مرحله را انجام بده. قطع کن: فیوز درست را در تابلو برق، نه فقط کلید روی دیوار. قفل کن: قفل آویز خودت را رویش بزن و کلیدش را پیش خودت نگه دار، تا کسی نتواند دوباره وصلش کند. اندازه بگیر: با فازمتر یا مولتی‌متر بررسی کن که واقعاً برق نیست. فقط بعد از آن شروع کن. فیوزی مدام می‌پرد؟ مدام وصلش نکن: به سرپرستت بگو. فقط وقتی کار برقی بکن که به تو گفته‌اند اجازه داری. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.testing.p': "دیگر برق رویش نیست.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2693,18 +2693,18 @@ const t: CultureTranslation = {
     'c.testing.o2': "شروع می‌کنی: همکارت می‌داند.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.testing.o3': "برای امتحان، زود به سیم دست می‌زنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.testing.w': "گاهی فیوز اشتباه قطع شده، یا کسی دوباره وصلش می‌کند. قفل و اندازه‌گیری نشان می‌دهند که واقعاً ایمن است.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.pipes': "لوله و آب", // nieuw, nalezen
-    'w.buis': "لوله", // nieuw, nalezen
-    'w.koppeling': "اتصال لوله (دو لوله را به هم وصل می‌کند)", // nieuw, nalezen
-    'w.pijpsnijder': "لوله‌بُر", // nieuw, nalezen
-    'w.waterpomptang': "انبر کلاغی", // nieuw, nalezen
-    'w.afsluiter': "شیر فلکه (آب را می‌بندد)", // nieuw, nalezen
-    'w.teflontape': "نوار تفلون (نوار سفید برای رزوهٔ لوله)", // nieuw, nalezen
-    's.pipes.1': "شیر فلکه را ببند.", // nieuw, nalezen
-    's.pipes.2': "لوله را با لوله‌بُر ببُر.", // nieuw, nalezen
-    's.pipes.3': "نوار تفلون را دور رزوه بپیچ.", // nieuw, nalezen
-    'c.pipes.q': "اتصال هنوز نشت می‌کند؟", // nieuw, nalezen
-    'c.pipes.a': "یک کم. کمی سفت‌ترش می‌کنم.", // nieuw, nalezen
+    'l.pipes': "لوله و آب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.buis': "لوله", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koppeling': "اتصال لوله (دو لوله را به هم وصل می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pijpsnijder': "لوله‌بُر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.waterpomptang': "انبر کلاغی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afsluiter': "شیر فلکه (آب را می‌بندد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teflontape': "نوار تفلون (نوار سفید برای رزوهٔ لوله)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pipes.1': "شیر فلکه را ببند.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pipes.2': "لوله را با لوله‌بُر ببُر.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pipes.3': "نوار تفلون را دور رزوه بپیچ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pipes.q': "اتصال هنوز نشت می‌کند؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pipes.a': "یک کم. کمی سفت‌ترش می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.pipes': "اول آب را ببند، و یک سطل آماده کن", // nieuw, nalezen // nagelezen AI 22 nov
     'c.pipes.b': "قبل از اینکه لولهٔ آب را باز کنی، شیر فلکه را ببند. بعد یک شیر پایین‌تر را باز کن، تا لوله خالی شود. یک سطل و یک دستمال زیر جایی که کار می‌کنی بگذار. لولهٔ مسی را با لوله‌بُر ببُر، نه با اره: سر لوله گرد و تمیز می‌ماند. اتصال را محکم سفت کن، ولی نه خیلی زیاد. وقتی کارت تمام شد، آب را آرام باز کن و دنبال قطره بگرد. نشتی کوچکی که ولش کنی، به خسارت آب تبدیل می‌شود.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.pipes.p': "آب بسته است؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2713,18 +2713,18 @@ const t: CultureTranslation = {
     'c.pipes.o2': "ولش می‌کنی: فقط یک قطره است.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.pipes.o3': "یک سطل زیرش می‌گذاری و می‌روی خانه.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.pipes.w': "یک قطره در دقیقه، در هفته چندین لیتر می‌شود. آب می‌تواند به کف یا به سقف طبقهٔ پایین آسیب بزند.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.metalwork': "کار با فلز", // nieuw, nalezen
-    'w.bankschroef': "گیرهٔ رومیزی (قطعه را روی میز کار محکم نگه می‌دارد)", // nieuw, nalezen
-    'w.vijl': "سوهان (برای صاف کردن فلز با دست)", // nieuw, nalezen
-    'w.ijzerzaag': "ارهٔ آهن‌بر (اره‌ای برای فلز)", // nieuw, nalezen
-    'w.kolomboormachine': "دریل ستونی (دریل بزرگ روی پایه)", // nieuw, nalezen
-    'w.draadtap': "قلاویز (در سوراخ رزوه می‌زند)", // nieuw, nalezen
-    'w.braam': "پلیسه (لبهٔ تیز بعد از بریدن فلز)", // nieuw, nalezen
-    's.metalwork.1': "فلز را در گیرهٔ رومیزی محکم کن.", // nieuw, nalezen
-    's.metalwork.2': "پلیسه را با سوهان بگیر.", // nieuw, nalezen
-    's.metalwork.3': "دست‌هایت را از مته دور نگه دار.", // nieuw, nalezen
-    'c.metalwork.q': "چرا لبه این‌قدر تیز است؟", // nieuw, nalezen
-    'c.metalwork.a': "هنوز پلیسه دارد.", // nieuw, nalezen
+    'l.metalwork': "کار با فلز", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bankschroef': "گیرهٔ رومیزی (قطعه را روی میز کار محکم نگه می‌دارد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vijl': "سوهان (برای صاف کردن فلز با دست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ijzerzaag': "ارهٔ آهن‌بر (اره‌ای برای فلز)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kolomboormachine': "دریل ستونی (دریل بزرگ روی پایه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.draadtap': "قلاویز (در سوراخ رزوه می‌زند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.braam': "پلیسه (لبهٔ تیز بعد از بریدن فلز)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.metalwork.1': "فلز را در گیرهٔ رومیزی محکم کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.metalwork.2': "پلیسه را با سوهان بگیر.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.metalwork.3': "دست‌هایت را از مته دور نگه دار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.metalwork.q': "چرا لبه این‌قدر تیز است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.metalwork.a': "هنوز پلیسه دارد.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.metalwork': "محکمش کن، هیچ‌وقت با دست نگهش ندار", // nieuw, nalezen // nagelezen AI 22 nov
     'c.metalwork.b': "کنار دریل ستونی، هیچ‌وقت قطعهٔ کوچک را با دست نگه ندار. مته می‌تواند آن را بگیرد و خیلی تند بچرخاند. آن را در گیرهٔ رومیزی محکم کن. موی بلند را ببند، و کنار مته‌ای که می‌چرخد دستکش نپوش: می‌تواند دستکش را به داخل بکشد. عینک ایمنی بزن. بعد از اره کردن یا سوراخ کردن، فلز پلیسه دارد: یک لبهٔ تیز. قبل از اینکه قطعه را در دست بگیری یا به کسی بدهی، پلیسه را با سوهان بگیر. براده‌های فلز را با برس جمع کن، نه با دست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.metalwork.p': "اول محکمش می‌کنم.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2734,19 +2734,19 @@ const t: CultureTranslation = {
     'c.metalwork.o3': "دستکش می‌پوشی و نگهش می‌داری.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.metalwork.w': "مته می‌تواند قطعهٔ کوچک را بگیرد و بچرخاند. آن وقت به دستت می‌خورد. در گیره، قطعه تکان نمی‌خورد.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Assemblage en montage" (u.montage, 21 November 2026).
-    'u.montage': "مونتاژ", // nieuw, nalezen
-    'l.assembly': "کنار خط مونتاژ", // nieuw, nalezen
-    'w.werkinstructie': "دستورالعمل کار (برگه‌ای با مرحله‌های کار)", // nieuw, nalezen
-    'w.onderdelenbak': "جعبهٔ قطعات", // nieuw, nalezen
-    'w.mal': "قالب نگهدارنده (قطعه را در جای درست نگه می‌دارد)", // nieuw, nalezen
-    'w.rolbaan': "نقالهٔ غلتکی", // nieuw, nalezen
-    'w.montagetafel': "میز مونتاژ", // nieuw, nalezen
-    'w.voetpedaal': "پدال پایی (کلیدی که با پایت فشارش می‌دهی)", // nieuw, nalezen
-    's.assembly.1': "اول دستورالعمل کار را بخوان.", // nieuw, nalezen
-    's.assembly.2': "جعبهٔ قطعات تقریباً خالی است.", // nieuw, nalezen
-    's.assembly.3': "قطعه را در قالب بگذار.", // nieuw, nalezen
-    'c.assembly.q': "حالا کدام مرحله است؟", // nieuw, nalezen
-    'c.assembly.a': "مرحلهٔ چهار. به دستورالعمل کار نگاه کن.", // nieuw, nalezen
+    'u.montage': "مونتاژ", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.assembly': "کنار خط مونتاژ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkinstructie': "دستورالعمل کار (برگه‌ای با مرحله‌های کار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderdelenbak': "جعبهٔ قطعات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mal': "قالب نگهدارنده (قطعه را در جای درست نگه می‌دارد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rolbaan': "نقالهٔ غلتکی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.montagetafel': "میز مونتاژ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voetpedaal': "پدال پایی (کلیدی که با پایت فشارش می‌دهی)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.assembly.1': "اول دستورالعمل کار را بخوان.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.assembly.2': "جعبهٔ قطعات تقریباً خالی است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.assembly.3': "قطعه را در قالب بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.assembly.q': "حالا کدام مرحله است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.assembly.a': "مرحلهٔ چهار. به دستورالعمل کار نگاه کن.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.assembly': "مرحله‌ها را به همان ترتیب انجام بده", // nieuw, nalezen // nagelezen AI 22 nov
     'c.assembly.b': "در خط مونتاژ هر مرحله جا و ترتیب خودش را دارد. دستورالعمل کار آن‌ها را نشان می‌دهد، اغلب با عکس. مرحله‌ها را هر بار به همان ترتیب انجام بده، حتی وقتی فکر می‌کنی راه سریع‌تری بلدی. ترتیب دیگر ممکن است محصولی بسازد که ظاهرش خوب است ولی کار نمی‌کند. یک جعبه تقریباً خالی است؟ به‌موقع بگو، تا خط نایستد. مرحله‌ای می‌بینی که می‌شود بهترش کرد؟ به سرپرست تیمت بگو: آن وقت می‌شود آن را برای همه عوض کرد.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.assembly.p': "قطعه‌های نو لازم دارم.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2755,18 +2755,18 @@ const t: CultureTranslation = {
     'c.assembly.o2': "از این به بعد به روش خودت انجامش می‌دهی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.assembly.o3': "روش خودت را به همکارانت یاد می‌دهی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.assembly.w': "ترتیب اغلب دلیلی دارد که تو نمی‌بینی. اگر روش تو بهتر است، می‌شود آن را برای همه عوض کرد.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.fastening': "بستن و سفت کردن", // nieuw, nalezen
-    'w.schroefmachine': "پیچ‌گوشتی برقی (بالای خط آویزان است)", // nieuw, nalezen
-    'w.momentsleutel': "آچار ترک‌متر (وقتی پیچ به اندازهٔ کافی سفت شد، تق صدا می‌دهد)", // nieuw, nalezen
-    'w.tiewrap': "بست کمربندی", // nieuw, nalezen
-    'w.sluitring': "واشر", // nieuw, nalezen
-    'w.klinknagel': "پرچ", // nieuw, nalezen
-    'w.popnageltang': "انبر پرچ", // nieuw, nalezen
-    's.fastening.1': "پیچ را با آچار ترک‌متر سفت کن.", // nieuw, nalezen
-    's.fastening.2': "واشر را فراموش نکن.", // nieuw, nalezen
-    's.fastening.3': "کابل‌ها را با بست کمربندی به هم ببند.", // nieuw, nalezen
-    'c.fastening.q': "این پیچ چقدر باید سفت باشد؟", // nieuw, nalezen
-    'c.fastening.a': "تا وقتی آچار ترک‌متر تق صدا بدهد.", // nieuw, nalezen
+    'l.fastening': "بستن و سفت کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schroefmachine': "پیچ‌گوشتی برقی (بالای خط آویزان است)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.momentsleutel': "آچار ترک‌متر (وقتی پیچ به اندازهٔ کافی سفت شد، تق صدا می‌دهد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tiewrap': "بست کمربندی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sluitring': "واشر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.klinknagel': "پرچ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.popnageltang': "انبر پرچ", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fastening.1': "پیچ را با آچار ترک‌متر سفت کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fastening.2': "واشر را فراموش نکن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.fastening.3': "کابل‌ها را با بست کمربندی به هم ببند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.fastening.q': "این پیچ چقدر باید سفت باشد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.fastening.a': "تا وقتی آچار ترک‌متر تق صدا بدهد.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.fastening': "صدای تق کافی است", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fastening.b': "آچار ترک‌متر وقتی پیچ به اندازهٔ کافی سفت شد، تق صدا می‌دهد. با صدای تق دست نگه دار: بیشتر نچرخان. خیلی سفت ممکن است پیچ یا قطعه را بشکند، و خیلی شل ممکن است باز شود. پیچ‌گوشتی برقی هم همین‌طور کار می‌کند: خودش می‌ایستد. هر واشر را سر جایش بگذار: واشری که جا افتاده، بعداً به سختی دیده می‌شود. پیچ‌هایت را بشمار. یکی اضافه مانده، یا یکی دیگر لازم داری؟ پس چیزی اشتباه است: به سرپرست تیمت بگو.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fastening.p': "یک پیچ اضافه مانده.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2775,18 +2775,18 @@ const t: CultureTranslation = {
     'c.fastening.o2': "آن را با دست کمی بیشتر می‌چرخانی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fastening.o3': "از یک آچار بلندتر استفاده می‌کنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.fastening.w': "تق روی نیروی درست تنظیم شده. اگر به نظرت درست نیست، شاید آچار باید بررسی شود. بیشتر چرخاندن ممکن است پیچ را بشکند.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.handling': "بلند کردن و جابه‌جا کردن", // nieuw, nalezen
-    'w.takel': "جرثقیل زنجیری (قطعه‌های سنگین را با زنجیر بلند می‌کند)", // nieuw, nalezen
-    'w.hijshaak': "قلاب جرثقیل", // nieuw, nalezen
-    'w.tilhulp': "بالابر کمکی (قطعه را با مکش نگه می‌دارد)", // nieuw, nalezen
-    'w.onderdelenkar': "چرخ دستی قطعات", // nieuw, nalezen
-    'w.draaitafel': "میز گردان (قطعه را می‌چرخانی، نه خودت را)", // nieuw, nalezen
-    'w.rolcontainer': "قفسهٔ چرخ‌دار (یک قفس بلند روی چرخ)", // nieuw, nalezen
-    's.handling.1': "این را تنهایی بلند نکن. از جرثقیل زنجیری استفاده کن.", // nieuw, nalezen
-    's.handling.2': "قلاب جرثقیل درست بسته شده؟", // nieuw, nalezen
-    's.handling.3': "چرخ دستی قطعات را هل بده، نکشش.", // nieuw, nalezen
-    'c.handling.q': "اجازه دارم زیر جرثقیل بایستم؟", // nieuw, nalezen
-    'c.handling.a': "نه، هیچ‌وقت زیر بار آویزان.", // nieuw, nalezen
+    'l.handling': "بلند کردن و جابه‌جا کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.takel': "جرثقیل زنجیری (قطعه‌های سنگین را با زنجیر بلند می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hijshaak': "قلاب جرثقیل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tilhulp': "بالابر کمکی (قطعه را با مکش نگه می‌دارد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderdelenkar': "چرخ دستی قطعات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.draaitafel': "میز گردان (قطعه را می‌چرخانی، نه خودت را)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rolcontainer': "قفسهٔ چرخ‌دار (یک قفس بلند روی چرخ)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.handling.1': "این را تنهایی بلند نکن. از جرثقیل زنجیری استفاده کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.handling.2': "قلاب جرثقیل درست بسته شده؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.handling.3': "چرخ دستی قطعات را هل بده، نکشش.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.handling.q': "اجازه دارم زیر جرثقیل بایستم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.handling.a': "نه، هیچ‌وقت زیر بار آویزان.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.handling': "بگذار جرثقیل کار سنگین را بکند", // nieuw, nalezen // nagelezen AI 22 nov
     'c.handling.b': "قطعه‌های سنگین را با جرثقیل زنجیری یا بالابر کمکی بلند می‌کنند، نه با کمرت. قبل از بلند کردن قلاب را بررسی کن: زبانهٔ ایمنی قلاب باید بسته شود. آرام بلند کن، و دست‌ها و پاهایت را از بار دور نگه دار. هیچ‌وقت زیر بار آویزان نایست و از زیرش رد نشو. برای چرخاندن قطعه از میز گردان استفاده کن: آن وقت لازم نیست کمرت را بپیچانی. چرخ دستی یا قفسهٔ چرخ‌دار را هل بده: می‌بینی کجا می‌روی، و کمرت کمتر زحمت می‌کشد. فقط وقتی از جرثقیل زنجیری استفاده کن که یاد گرفته‌ای چطور. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.handling.p': "از جرثقیل زنجیری استفاده می‌کنم.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2795,18 +2795,18 @@ const t: CultureTranslation = {
     'c.handling.o2': "زود، تنهایی بلندش می‌کنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.handling.o3': "آن را روی زمین می‌کشی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.handling.w': "قطعهٔ سنگین می‌تواند در یک ثانیه به کمرت آسیب بزند. ده دقیقه صبر بهتر از چند ماه درد است.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.finalcheck': "بازرسی نهایی", // nieuw, nalezen
-    'w.typeplaatje': "پلاک مشخصات (یک پلاک کوچک فلزی با نوع و شماره)", // nieuw, nalezen
-    'w.stempel': "مهر", // nieuw, nalezen
-    'w.testbank': "میز تست", // nieuw, nalezen
-    'w.goedkeursticker': "برچسب تأیید (یک برچسب سبز: محصول سالم است)", // nieuw, nalezen
-    'w.kras': "خراش", // nieuw, nalezen
-    'w.barst': "ترک", // nieuw, nalezen
-    's.finalcheck.1': "پلاک مشخصات کج است.", // nieuw, nalezen
-    's.finalcheck.2': "روی این محصول یک خراش هست.", // nieuw, nalezen
-    's.finalcheck.3': "بدون برچسب تأیید بیرون نمی‌رود.", // nieuw, nalezen
-    'c.finalcheck.q': "این محصول سالم است؟", // nieuw, nalezen
-    'c.finalcheck.a': "نه، ترک دارد.", // nieuw, nalezen
+    'l.finalcheck': "بازرسی نهایی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.typeplaatje': "پلاک مشخصات (یک پلاک کوچک فلزی با نوع و شماره)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stempel': "مهر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.testbank': "میز تست", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedkeursticker': "برچسب تأیید (یک برچسب سبز: محصول سالم است)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kras': "خراش", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.barst': "ترک", // nieuw, nalezen // nagelezen AI 28 nov
+    's.finalcheck.1': "پلاک مشخصات کج است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.finalcheck.2': "روی این محصول یک خراش هست.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.finalcheck.3': "بدون برچسب تأیید بیرون نمی‌رود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.finalcheck.q': "این محصول سالم است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.finalcheck.a': "نه، ترک دارد.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.finalcheck': "فقط محصولات سالم برچسب می‌گیرند", // nieuw, nalezen // nagelezen AI 22 nov
     'c.finalcheck.b': "بازرسی نهایی آخرین فرصت است تا اشتباهی را پیدا کنی، قبل از اینکه مشتری پیدایش کند. همهٔ موارد فهرست را بررسی کن، حتی وقتی سرت شلوغ است. خراش یا ترک کوچک راحت از چشم می‌افتد: در نور خوب نگاه کن، و از بیشتر از یک طرف. فقط وقتی برچسب تأیید یا مهر را بزن که همهٔ موارد خوب باشند. مطمئن نیستی؟ محصول را کنار بگذار و بپرس. اشتباهی که اینجا پیدا شود هزینهٔ کمی دارد، و اشتباهی که به مشتری برسد هزینهٔ زیادی. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.finalcheck.p': "این محصول کنار گذاشته می‌شود.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2816,19 +2816,19 @@ const t: CultureTranslation = {
     'c.finalcheck.o3': "برچسب را طوری جابه‌جا می‌کنی که خراش را بپوشاند.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.finalcheck.w': "خراش کوچک می‌تواند نشانهٔ مشکلی در خط باشد. پنهان کردنش فقط مشکل را به مشتری می‌رساند.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Kweken, sorteren en de kas" (u.kweek) and "Banden, olie en remmen" (u.carservice), 22 November 2026.
-    'u.kweek': "کاشت، جدا کردن و گلخانه", // nieuw, nalezen
-    'l.sowing': "کاشت بذر و قلمه", // nieuw, nalezen
-    'w.zaad': "بذر", // nieuw, nalezen
-    'w.zaaibak': "سینی کاشت", // nieuw, nalezen
-    'w.stek': "قلمه (تکه‌ای از گیاه که ریشهٔ تازه می‌دهد)", // nieuw, nalezen
-    'w.potgrond': "خاک گلدان", // nieuw, nalezen
-    'w.kweekpot': "گلدان پرورش", // nieuw, nalezen
-    'w.gieter': "آب‌پاش", // nieuw, nalezen
-    's.sowing.1': "در هر خانه دو بذر بگذار.", // nieuw, nalezen
-    's.sowing.2': "قلمه را در خاک گلدان بگذار.", // nieuw, nalezen
-    's.sowing.3': "به گیاه‌های جوان کمی آب بده.", // nieuw, nalezen
-    'c.sowing.q': "بذر چقدر باید عمیق باشد؟", // nieuw, nalezen
-    'c.sowing.a': "نیم سانتی‌متر. نه عمیق‌تر.", // nieuw, nalezen
+    'u.kweek': "کاشت، جدا کردن و گلخانه", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.sowing': "کاشت بذر و قلمه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zaad': "بذر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zaaibak': "سینی کاشت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stek': "قلمه (تکه‌ای از گیاه که ریشهٔ تازه می‌دهد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.potgrond': "خاک گلدان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kweekpot': "گلدان پرورش", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gieter': "آب‌پاش", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sowing.1': "در هر خانه دو بذر بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sowing.2': "قلمه را در خاک گلدان بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sowing.3': "به گیاه‌های جوان کمی آب بده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sowing.q': "بذر چقدر باید عمیق باشد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sowing.a': "نیم سانتی‌متر. نه عمیق‌تر.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.sowing': "گیاه‌های کوچک دست نرم می‌خواهند", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sowing.b': "گیاه‌های جوان ضعیف‌اند. قلمه یا نشا را از برگ بگیر، نه از ساقه: برگ دوباره رشد می‌کند، ساقهٔ شکسته نه. خاک را آرام فشار بده، نه محکم. آب را آهسته و با افشانهٔ ریز بده، تا بذرها شسته نشوند. با دست‌های تمیز و سینی‌های تمیز کار کن: گیاه‌های جوان زود مریض می‌شوند. روی هر سینی تاریخ و نوع گیاه را بنویس، تا همه بدانند در آن چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sowing.p': "از برگ نگهش می‌دارم.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2837,18 +2837,18 @@ const t: CultureTranslation = {
     'c.sowing.o2': "از ساقه بیرونش می‌کشی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sowing.o3': "آن را با خاکش فشار می‌دهی تا بیرون بیاید.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sowing.w': "برگ می‌تواند دوباره رشد کند. ساقهٔ شکسته نمی‌تواند، و آن وقت گیاه می‌میرد.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.sorting': "جدا کردن و بسته‌بندی", // nieuw, nalezen
-    'w.tros': "خوشه (چند گوجه‌فرنگی روی یک ساقه)", // nieuw, nalezen
-    'w.bakje': "ظرف میوه (جعبهٔ کوچکی برای میوه)", // nieuw, nalezen
-    'w.sorteermachine': "دستگاه جداسازی", // nieuw, nalezen
-    'w.etiketpistool': "دستگاه برچسب‌زن", // nieuw, nalezen
-    'w.kleurenkaart': "کارت رنگ (نشان می‌دهد میوه چقدر باید رسیده باشد)", // nieuw, nalezen
-    'w.tomatenschaar': "قیچی برداشت", // nieuw, nalezen
-    's.sorting.1': "خوشه‌ها را با احتیاط در جعبه بگذار.", // nieuw, nalezen
-    's.sorting.2': "این گوجه‌فرنگی زیادی رسیده. کنار گذاشته می‌شود.", // nieuw, nalezen
-    's.sorting.3': "به کارت رنگ نگاه کن.", // nieuw, nalezen
-    'c.sorting.q': "این گوجه‌فرنگی به اندازهٔ کافی رسیده؟", // nieuw, nalezen
-    'c.sorting.a': "نه، هنوز زیادی سبز است. بگذار روی بوته بماند.", // nieuw, nalezen
+    'l.sorting': "جدا کردن و بسته‌بندی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tros': "خوشه (چند گوجه‌فرنگی روی یک ساقه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bakje': "ظرف میوه (جعبهٔ کوچکی برای میوه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sorteermachine': "دستگاه جداسازی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.etiketpistool': "دستگاه برچسب‌زن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kleurenkaart': "کارت رنگ (نشان می‌دهد میوه چقدر باید رسیده باشد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tomatenschaar': "قیچی برداشت", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sorting.1': "خوشه‌ها را با احتیاط در جعبه بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sorting.2': "این گوجه‌فرنگی زیادی رسیده. کنار گذاشته می‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sorting.3': "به کارت رنگ نگاه کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sorting.q': "این گوجه‌فرنگی به اندازهٔ کافی رسیده؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sorting.a': "نه، هنوز زیادی سبز است. بگذار روی بوته بماند.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.sorting': "هر میوه مهم است", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sorting.b': "میوه و سبزی زود ضرب می‌بینند. آن‌ها را آرام بگذار، نینداز و پرت نکن. امروز جای ضربه را نمی‌بینی، ولی فردا میوه نرم و قهوه‌ای است. به کارت رنگ نگاه کن تا بدانی کدام رنگ کجا می‌رود. میوهٔ آسیب‌دیده یا گندیده را کنار بگذار: یک میوهٔ خراب در یک ظرف می‌تواند بقیه را خراب کند. ظرف‌ها و جعبه‌ها را تمیز نگه دار، و هیچ‌وقت روی زمین نگذارشان.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sorting.p': "این یکی آسیب دیده.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2857,18 +2857,18 @@ const t: CultureTranslation = {
     'c.sorting.o2': "آن را ته ظرف قایم می‌کنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sorting.o3': "با این حال آن را هم بسته‌بندی می‌کنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.sorting.w': "گوجه‌فرنگی گندیده باعث می‌شود بقیه زودتر بگندند. مشتری آن را پیدا می‌کند، و کل ظرف برمی‌گردد.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.greenhouse': "گلخانه و آب‌وهوای آن", // nieuw, nalezen
-    'w.buisrailkar': "چرخ ریلی (روی لوله‌های گرمایش حرکت می‌کند)", // nieuw, nalezen
-    'w.druppelaar': "قطره‌چکان (آب را قطره‌قطره می‌دهد)", // nieuw, nalezen
-    'w.luchtraam': "دریچهٔ سقف (پنجره‌ای در سقف)", // nieuw, nalezen
-    'w.kasscherm': "پردهٔ گلخانه (پارچه‌ای زیر سقف)", // nieuw, nalezen
-    'w.ventilator': "پنکه، هواکش", // nieuw, nalezen
-    'w.thermometer': "دماسنج", // nieuw, nalezen
-    's.greenhouse.1': "چرخ ریلی را تا ته ردیف ببر.", // nieuw, nalezen
-    's.greenhouse.2': "قطره‌چکان شل است.", // nieuw, nalezen
-    's.greenhouse.3': "هوا گرم است. دریچه‌های سقف دارند باز می‌شوند.", // nieuw, nalezen
-    'c.greenhouse.q': "چرا گلخانه این‌قدر گرم است؟", // nieuw, nalezen
-    'c.greenhouse.a': "پرده بسته است، دریچه‌ها هم.", // nieuw, nalezen
+    'l.greenhouse': "گلخانه و آب‌وهوای آن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.buisrailkar': "چرخ ریلی (روی لوله‌های گرمایش حرکت می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.druppelaar': "قطره‌چکان (آب را قطره‌قطره می‌دهد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.luchtraam': "دریچهٔ سقف (پنجره‌ای در سقف)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kasscherm': "پردهٔ گلخانه (پارچه‌ای زیر سقف)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ventilator': "پنکه، هواکش", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.thermometer': "دماسنج", // nieuw, nalezen // nagelezen AI 28 nov
+    's.greenhouse.1': "چرخ ریلی را تا ته ردیف ببر.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.greenhouse.2': "قطره‌چکان شل است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.greenhouse.3': "هوا گرم است. دریچه‌های سقف دارند باز می‌شوند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.greenhouse.q': "چرا گلخانه این‌قدر گرم است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.greenhouse.a': "پرده بسته است، دریچه‌ها هم.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.greenhouse': "آب‌وهوا را به کامپیوتر بسپار", // nieuw, nalezen // nagelezen AI 22 nov
     'c.greenhouse.b': "در گلخانه یک کامپیوتر آب‌وهوا را تنظیم می‌کند: دریچه‌ها، پرده، گرمایش و آب. خودت دریچه‌ای را باز نکن و تنظیمی را عوض نکن. چیز عجیبی می‌بینی، مثلاً قطره‌چکانی که نشت می‌کند یا دریچه‌ای که بسته نمی‌شود؟ به سرپرستت بگو. چرخ ریلی روی لوله‌های گرمایش حرکت می‌کند: فقط وقتی از آن استفاده کن که طرز کارش را یاد گرفته‌ای. پاهایت را روی سکو نگه دار، و هیچ‌وقت به لوله‌ها دست نزن: ممکن است داغ باشند. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.greenhouse.p': "این قطره‌چکان نشت می‌کند.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2877,18 +2877,18 @@ const t: CultureTranslation = {
     'c.greenhouse.o2': "ولش می‌کنی: فقط آب است.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.greenhouse.o3': "آب کل ردیف را می‌بندی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.greenhouse.w': "قطره‌چکان شل آب را هدر می‌دهد، گیاه آب کم می‌گیرد، و زمین خیس لیز است.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.pests': "آفت‌ها و کار تمیز", // nieuw, nalezen
-    'w.luis': "شته (حشرهٔ سبز کوچکی روی گیاه)", // nieuw, nalezen
-    'w.vangplaat': "کارت چسبی (کارت زردی که حشره‌ها را می‌گیرد)", // nieuw, nalezen
-    'w.rups': "کرم برگ‌خوار، کرم پروانه", // nieuw, nalezen
-    'w.sluipwesp': "زنبور پارازیت (زنبور کوچکی که آفت‌ها را می‌کشد)", // nieuw, nalezen
-    'w.schimmel': "کپک", // nieuw, nalezen
-    'w.ontsmettingsmat': "پادری ضدعفونی (دم در پا رویش می‌گذاری)", // nieuw, nalezen
-    's.pests.1': "روی این برگ شته هست.", // nieuw, nalezen
-    's.pests.2': "کارت چسبی را بالای گیاه‌ها آویزان کن.", // nieuw, nalezen
-    's.pests.3': "از روی پادری ضدعفونی رد شو.", // nieuw, nalezen
-    'c.pests.q': "می‌توانم این زنبور را بکشم؟", // nieuw, nalezen
-    'c.pests.a': "نه، این زنبور پارازیت است. به ما کمک می‌کند.", // nieuw, nalezen
+    'l.pests': "آفت‌ها و کار تمیز", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.luis': "شته (حشرهٔ سبز کوچکی روی گیاه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vangplaat': "کارت چسبی (کارت زردی که حشره‌ها را می‌گیرد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rups': "کرم برگ‌خوار، کرم پروانه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sluipwesp': "زنبور پارازیت (زنبور کوچکی که آفت‌ها را می‌کشد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schimmel': "کپک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ontsmettingsmat': "پادری ضدعفونی (دم در پا رویش می‌گذاری)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pests.1': "روی این برگ شته هست.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pests.2': "کارت چسبی را بالای گیاه‌ها آویزان کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pests.3': "از روی پادری ضدعفونی رد شو.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pests.q': "می‌توانم این زنبور را بکشم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pests.a': "نه، این زنبور پارازیت است. به ما کمک می‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.pests': "بیماری را از ردیفی به ردیف دیگر نبر", // nieuw, nalezen // nagelezen AI 22 nov
     'c.pests.b': "بیماری یا آفت در گلخانه زود پخش می‌شود. ممکن است آن را با دست‌ها، لباس‌ها و ابزارت جابه‌جا کنی. پس دم هر در از روی پادری ضدعفونی رد شو، و وقتی به قسمت دیگری از گلخانه می‌روی دست‌هایت را بشوی. کارت را در ردیف‌های سالم شروع کن، و در ردیف‌های مریض تمام کن. روی گیاهی حشره، لکه یا کپک می‌بینی؟ به آن دست نزن، ولی به سرپرستت بگو کجاست. بعضی از حشره‌های گلخانه کمک‌کننده‌اند: کاری به کارشان نداشته باش. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.pests.p': "این‌جا کپک هست.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2897,19 +2897,19 @@ const t: CultureTranslation = {
     'c.pests.o2': "برگ‌های خراب را می‌کنی و ادامه می‌دهی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.pests.o3': "چیزی نمی‌گویی: فقط چند گیاه است.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.pests.w': "کپک زود پخش می‌شود. سرپرستت می‌داند چه باید کرد، و از کجا باید شروع کرد.", // nieuw, nalezen // nagelezen AI 22 nov
-    'u.carservice': "لاستیک، روغن و ترمز", // nieuw, nalezen
-    'l.tyres': "عوض کردن لاستیک", // nieuw, nalezen
-    'w.wielbout': "پیچ چرخ", // nieuw, nalezen
-    'w.slagmoersleutel': "آچار بادی", // nieuw, nalezen
-    'w.bandenspanningsmeter': "فشارسنج لاستیک", // nieuw, nalezen
-    'w.bandenprofiel': "آج لاستیک (شیارهای روی لاستیک)", // nieuw, nalezen
-    'w.velg': "رینگ چرخ", // nieuw, nalezen
-    'w.bandenwisselaar': "دستگاه لاستیک‌درآر (دستگاهی برای درآوردن لاستیک از رینگ)", // nieuw, nalezen
-    's.tyres.1': "پیچ‌های چرخ را ضربدری سفت کن.", // nieuw, nalezen
-    's.tyres.2': "آج لاستیک خیلی کم است.", // nieuw, nalezen
-    's.tyres.3': "فشار را با فشارسنج لاستیک اندازه بگیر.", // nieuw, nalezen
-    'c.tyres.q': "این لاستیک‌ها باید عوض شوند؟", // nieuw, nalezen
-    'c.tyres.a': "بله، آجش تقریباً تمام شده.", // nieuw, nalezen
+    'u.carservice': "لاستیک، روغن و ترمز", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.tyres': "عوض کردن لاستیک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wielbout': "پیچ چرخ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.slagmoersleutel': "آچار بادی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bandenspanningsmeter': "فشارسنج لاستیک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bandenprofiel': "آج لاستیک (شیارهای روی لاستیک)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.velg': "رینگ چرخ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bandenwisselaar': "دستگاه لاستیک‌درآر (دستگاهی برای درآوردن لاستیک از رینگ)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tyres.1': "پیچ‌های چرخ را ضربدری سفت کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tyres.2': "آج لاستیک خیلی کم است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.tyres.3': "فشار را با فشارسنج لاستیک اندازه بگیر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.tyres.q': "این لاستیک‌ها باید عوض شوند؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.tyres.a': "بله، آجش تقریباً تمام شده.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.tyres': "با دست ببند، با آچار ترک‌متر سفت کن", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tyres.b': "آچار بادی سریع و خیلی قوی است. برای باز کردن پیچ‌های چرخ از آن استفاده کن، ولی نه برای محکم سفت کردنشان. اول پیچ‌ها را با دست ببند. بعد آن‌ها را ضربدری با آچار ترک‌متر سفت کن، با نیرویی که برای آن ماشین تعیین شده. چرخی که سفت نباشد ممکن است در رانندگی جدا شود. آج و فشار هر لاستیکی را که دستت می‌گیری بررسی کن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tyres.p': "اول آن‌ها را با دست می‌بندم.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2918,18 +2918,18 @@ const t: CultureTranslation = {
     'c.tyres.o2': "با آچار بادی محکم سفتشان می‌کنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tyres.o3': "با دست می‌بندی، و همین‌طور ولش می‌کنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.tyres.w': "آچار بادی ممکن است پیچ را زیادی سفت کند یا به اندازهٔ کافی سفت نکند. فقط آچار ترک‌متر نیروی درست را می‌دهد.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.oilchange': "عوض کردن روغن", // nieuw, nalezen
-    'w.oliefilter': "فیلتر روغن", // nieuw, nalezen
-    'w.oliepeilstok': "گیج روغن (نشان می‌دهد چقدر روغن هست)", // nieuw, nalezen
-    'w.opvangbak': "تشت روغن (روغن کهنه را جمع می‌کند)", // nieuw, nalezen
-    'w.trechter': "قیف", // nieuw, nalezen
-    'w.aftapplug': "پیچ تخلیهٔ روغن", // nieuw, nalezen
-    'w.olievat': "بشکهٔ روغن", // nieuw, nalezen
-    's.oilchange.1': "تشت روغن را زیر موتور بگذار.", // nieuw, nalezen
-    's.oilchange.2': "پیچ تخلیه را باز کن.", // nieuw, nalezen
-    's.oilchange.3': "به گیج روغن نگاه کن.", // nieuw, nalezen
-    'c.oilchange.q': "چقدر روغن باید بریزیم؟", // nieuw, nalezen
-    'c.oilchange.a': "چهار لیتر. بعد به گیج نگاه کن.", // nieuw, nalezen
+    'l.oilchange': "عوض کردن روغن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oliefilter': "فیلتر روغن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oliepeilstok': "گیج روغن (نشان می‌دهد چقدر روغن هست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opvangbak': "تشت روغن (روغن کهنه را جمع می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.trechter': "قیف", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aftapplug': "پیچ تخلیهٔ روغن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.olievat': "بشکهٔ روغن", // nieuw, nalezen // nagelezen AI 28 nov
+    's.oilchange.1': "تشت روغن را زیر موتور بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.oilchange.2': "پیچ تخلیه را باز کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.oilchange.3': "به گیج روغن نگاه کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.oilchange.q': "چقدر روغن باید بریزیم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.oilchange.a': "چهار لیتر. بعد به گیج نگاه کن.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.oilchange': "روغن کهنه در بشکه، نه در فاضلاب", // nieuw, nalezen // nagelezen AI 22 nov
     'c.oilchange.b': "روغن کهنه برای آب و خاک بد است. کمی روغن می‌تواند مقدار زیادی آب را آلوده کند. پس همهٔ روغن کهنه را در تشت جمع کن، و آن را در بشکهٔ روغن کهنه بریز. هیچ‌وقت آن را در فاضلاب یا سینک نریز. فیلترهای کهنه و دستمال‌های روغنی در سطل مخصوص خودشان می‌روند. روغن داغ می‌تواند پوستت را بسوزاند: اول بگذار موتور کمی خنک شود، و دستکش بپوش. روغن ریخته را فوراً پاک کن: روغن روی زمین لیز است. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.oilchange.p': "روغن کهنه کجا می‌رود؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2938,18 +2938,18 @@ const t: CultureTranslation = {
     'c.oilchange.o2': "بیرون، در فاضلاب خالی‌اش می‌کنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.oilchange.o3': "برای بعد زیر ماشین ولش می‌کنی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.oilchange.w': "روغن کهنه در فاضلاب آب را آلوده می‌کند. تشت پر زیر ماشین بالاخره زیر پای کسی می‌رود و می‌ریزد.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.brakes': "ترمز و چراغ‌ها", // nieuw, nalezen
-    'w.remschijf': "دیسک ترمز", // nieuw, nalezen
-    'w.remblok': "لنت ترمز", // nieuw, nalezen
-    'w.koplamp': "چراغ جلو", // nieuw, nalezen
-    'w.remvloeistof': "روغن ترمز", // nieuw, nalezen
-    'w.remklauw': "کالیپر ترمز", // nieuw, nalezen
-    'w.achterlamp': "چراغ عقب", // nieuw, nalezen
-    's.brakes.1': "لنت‌های ترمز ساییده شده‌اند.", // nieuw, nalezen
-    's.brakes.2': "روغن ترمز را بررسی کن.", // nieuw, nalezen
-    's.brakes.3': "چراغ عقب سمت چپ کار نمی‌کند.", // nieuw, nalezen
-    'c.brakes.q': "دیسک ترمز هم باید عوض شود؟", // nieuw, nalezen
-    'c.brakes.a': "بله، زیادی نازک شده.", // nieuw, nalezen
+    'l.brakes': "ترمز و چراغ‌ها", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.remschijf': "دیسک ترمز", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.remblok': "لنت ترمز", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koplamp': "چراغ جلو", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.remvloeistof': "روغن ترمز", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.remklauw': "کالیپر ترمز", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.achterlamp': "چراغ عقب", // nieuw, nalezen // nagelezen AI 28 nov
+    's.brakes.1': "لنت‌های ترمز ساییده شده‌اند.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.brakes.2': "روغن ترمز را بررسی کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.brakes.3': "چراغ عقب سمت چپ کار نمی‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.brakes.q': "دیسک ترمز هم باید عوض شود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.brakes.a': "بله، زیادی نازک شده.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.brakes': "ترمز: دو بار بررسی کن", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.b': "ترمز جان آدم‌ها را حفظ می‌کند. پس با آرامش کار کن، و کارت را دو بار بررسی کن. بعد از لنت یا دیسک نو، قبل از اینکه ماشین حرکت کند چند بار پدال ترمز را فشار بده: فشار اول اغلب زیادی پایین می‌رود. روغن ترمز برای پوست و رنگ ماشین بد است: دستکش بپوش، و قطره‌ها را فوراً پاک کن. گرد ترمز را با باد کمپرسور نپران: آن را با اسپری ترمزشوی و دستمال تمیز کن. قبل از اینکه ماشین برود، همهٔ چراغ‌ها را بررسی کن، چراغ‌های ترمز را هم.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.p': "چند بار پدال ترمز را فشار می‌دهم.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2958,18 +2958,18 @@ const t: CultureTranslation = {
     'c.brakes.o2': "فوراً با آن بیرون می‌رانی.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.o3': "بدون بررسی هلش می‌دهی بیرون.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.brakes.w': "بعد از لنت نو، پدال ممکن است بار اول زیادی پایین برود. آن وقت ماشین نمی‌ایستد.", // nieuw, nalezen // nagelezen AI 22 nov
-    'l.diagnosis': "خواندن خطاها و برگهٔ کار", // nieuw, nalezen
-    'w.diagnosecomputer': "دستگاه دیاگ (خطاهای ماشین را می‌خواند)", // nieuw, nalezen
-    'w.waarschuwingslampje': "چراغ هشدار (روی داشبورد)", // nieuw, nalezen
-    'w.werkorder': "برگهٔ کار (کارهایی که باید روی ماشین انجام شود)", // nieuw, nalezen
-    'w.kentekenplaat': "پلاک ماشین", // nieuw, nalezen
-    'w.autosleutel': "سوئیچ ماشین", // nieuw, nalezen
-    'w.stoelhoes': "روکش صندلی (صندلی را تمیز نگه می‌دارد)", // nieuw, nalezen
-    's.diagnosis.1': "دستگاه دیاگ را وصل کن.", // nieuw, nalezen
-    's.diagnosis.2': "چراغ هشدار روشن است.", // nieuw, nalezen
-    's.diagnosis.3': "روی صندلی روکش بکش.", // nieuw, nalezen
-    'c.diagnosis.q': "روی این ماشین چه کاری باید انجام شود؟", // nieuw, nalezen
-    'c.diagnosis.a': "به برگهٔ کار نگاه کن.", // nieuw, nalezen
+    'l.diagnosis': "خواندن خطاها و برگهٔ کار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.diagnosecomputer': "دستگاه دیاگ (خطاهای ماشین را می‌خواند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.waarschuwingslampje': "چراغ هشدار (روی داشبورد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkorder': "برگهٔ کار (کارهایی که باید روی ماشین انجام شود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kentekenplaat': "پلاک ماشین", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.autosleutel': "سوئیچ ماشین", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stoelhoes': "روکش صندلی (صندلی را تمیز نگه می‌دارد)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.diagnosis.1': "دستگاه دیاگ را وصل کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.diagnosis.2': "چراغ هشدار روشن است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.diagnosis.3': "روی صندلی روکش بکش.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.diagnosis.q': "روی این ماشین چه کاری باید انجام شود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.diagnosis.a': "به برگهٔ کار نگاه کن.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.diagnosis': "با ماشین طوری رفتار کن که انگار مال خودت است", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.b': "مشتری ماشین و سوئیچش را به تو می‌سپارد. با هر دو با دقت رفتار کن. قبل از سوار شدن، روی صندلی روکش بکش و کف ماشین کفپوش بگذار. فقط کاری را بکن که در برگهٔ کار است. ایراد دیگری پیدا می‌کنی؟ آن را یادداشت کن و به سرپرستت بگو: مشتری تصمیم می‌گیرد. سوئیچ را با برچسبش سر جای خودش نگه دار. از رادیو، تلفن یا وسایل داخل ماشین استفاده نکن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.p': "این در برگهٔ کار نیست.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -2979,2191 +2979,2191 @@ const t: CultureTranslation = {
     'c.diagnosis.o3': "چیزی نمی‌گویی: کار تو نیست.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.diagnosis.w': "مشتری تصمیم می‌گیرد چه کاری انجام شود و پولش را بدهد. ولی باید بداند که لاستیک خطرناک است.", // nieuw, nalezen // nagelezen AI 22 nov
     // The new sectors Groen, Facilitair, Beveiliging, Voedingsindustrie, Afval en recycling and Kinderopvang, two units each (23 November 2026).
-    'u.mowing': "چمن‌زنی و هرس", // nieuw, nalezen
-    'l.mowing': "چمن زدن", // nieuw, nalezen
-    'w.gras': "چمن، علف", // nieuw, nalezen
-    'w.maaien': "چمن زدن (کوتاه کردن علف)", // nieuw, nalezen
-    'w.grasmaaier': "ماشین چمن‌زنی", // nieuw, nalezen
-    'w.zitmaaier': "چمن‌زن سواری (چمن‌زنی که رویش می‌نشینی)", // nieuw, nalezen
-    'w.bosmaaier': "علف‌زن دستی (چمن‌زن روی یک دستهٔ بلند)", // nieuw, nalezen
-    'w.gelaatsscherm': "شیلد صورت", // nieuw, nalezen
-    's.mowing.1': "اول چمنِ لبه را بزن.", // nieuw, nalezen
-    's.mowing.2': "چمن زیادی خیس است. فردا چمن می‌زنیم.", // nieuw, nalezen
-    's.mowing.3': "شیلد صورتت را بزن.", // nieuw, nalezen
-    'c.mowing.q': "می‌توانم چمن‌زن سواری را بردارم؟", // nieuw, nalezen
-    'c.mowing.a': "بله، ولی اول سنگ‌ها را جمع کن.", // nieuw, nalezen
-    'c.mowing': "سنگ دور پرت می‌شود", // nieuw, nalezen
-    'c.mowing.b': "چمن‌زن یا علف‌زن دستی می‌تواند یک سنگ را خیلی دور و خیلی محکم پرت کند. پس اول روی چمن راه برو، و سنگ، شیشه و شاخه‌ها را جمع کن. شیلد صورت یا عینک ایمنی، محافظ گوش و کفش ایمنی بپوش. آدم‌های دیگر را خیلی دور نگه دار. کسی نزدیک می‌آید؟ دستگاه را خاموش کن. وقتی موتور روشن است هیچ‌وقت دستت را زیر چمن‌زن نبر: خاموشش کن، و صبر کن تا تیغه کاملاً بایستد. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.mowing.p': "لطفاً فاصله‌تان را حفظ کنید.", // nieuw, nalezen
-    'c.mowing.s': "داری با علف‌زن دستی کار می‌کنی. مردی با یک سگ به طرفت می‌آید. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.mowing.o1': "دستگاه را خاموش می‌کنی تا رد شود.", // nieuw, nalezen
-    'c.mowing.o2': "ادامه می‌دهی: او تو را می‌بیند.", // nieuw, nalezen
-    'c.mowing.o3': "رویت را از او برمی‌گردانی، و ادامه می‌دهی.", // nieuw, nalezen
-    'c.mowing.w': "سنگی که از علف‌زن پرت می‌شود می‌تواند کسی را بد زخمی کند، حتی از دور.", // nieuw, nalezen
-    'l.pruning': "هرس کردن", // nieuw, nalezen
-    'w.snoeien': "هرس کردن (بریدن شاخه‌های یک گیاه)", // nieuw, nalezen
-    'w.snoeischaar': "قیچی باغبانی", // nieuw, nalezen
-    'w.tak': "شاخه", // nieuw, nalezen
-    'w.struik': "بوته، درختچه", // nieuw, nalezen
-    'w.boom': "درخت", // nieuw, nalezen
-    'w.snoeizaag': "ارهٔ هرس", // nieuw, nalezen
-    's.pruning.1': "بوته‌های کنار راه را هرس کن.", // nieuw, nalezen
-    's.pruning.2': "این شاخه خشک شده. با اره ببُرش.", // nieuw, nalezen
-    's.pruning.3': "شاخه‌ها را روی هم بگذار.", // nieuw, nalezen
-    'c.pruning.q': "کدام شاخه‌ها باید بریده شوند؟", // nieuw, nalezen
-    'c.pruning.a': "فقط شاخه‌های خشک.", // nieuw, nalezen
-    'c.pruning': "برش تمیز بهتر خوب می‌شود", // nieuw, nalezen
-    'c.pruning.b': "با قیچی تیز و تمیز هرس کن. برش تمیز زود خوب می‌شود؛ شاخهٔ پاره‌شده بیمار می‌شود. درست بالای یک جوانه یا یک شاخهٔ کناری ببُر، و تکهٔ بلند جا نگذار. اول شاخه‌های خشک و شکسته را ببُر. دست دیگرت را از تیغه‌ها دور نگه دار. دستکش بپوش: بعضی گیاه‌ها خار دارند، یا پوستت را قرمز می‌کنند. بعد از کار قیچی را تمیز کن.", // nieuw, nalezen
-    'c.pruning.p': "کجا را باید ببُرم؟", // nieuw, nalezen
-    'c.pruning.s': "قیچی باغبانی‌ات کُند است. شاخه‌ها را پاره می‌کند. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.pruning.o1': "یک قیچی تیز می‌خواهی.", // nieuw, nalezen
-    'c.pruning.o2': "شاخه را محکم‌تر می‌کشی.", // nieuw, nalezen
-    'c.pruning.o3': "ادامه می‌دهی: فقط یک بوته است.", // nieuw, nalezen
-    'c.pruning.w': "قیچی کُند شاخه را پاره می‌کند. گیاه بیمار می‌شود، و تو هم بیشتر زحمت می‌کشی.", // nieuw, nalezen
-    'l.hedge': "کوتاه کردن پرچین", // nieuw, nalezen
-    'w.heg': "پرچین", // nieuw, nalezen
-    'w.heggenschaar': "شمشادزن (دستگاهی که پرچین را کوتاه می‌کند)", // nieuw, nalezen
-    'w.kruiwagen': "فرغون", // nieuw, nalezen
-    'w.hark': "شن‌کش", // nieuw, nalezen
-    'w.snoeiafval': "زبالهٔ سبز (شاخه و برگ بریده)", // nieuw, nalezen
-    'w.zeil': "برزنت (یک ورقهٔ پلاستیکی بزرگ)", // nieuw, nalezen
-    's.hedge.1': "برزنت را زیر پرچین پهن کن.", // nieuw, nalezen
-    's.hedge.2': "پرچین را مرتب و صاف کوتاه کن.", // nieuw, nalezen
-    's.hedge.3': "زبالهٔ سبز را با فرغون ببر.", // nieuw, nalezen
-    'c.hedge.q': "پرچین تا چه ارتفاعی باید بماند؟", // nieuw, nalezen
-    'c.hedge.a': "تا خط. پایین‌تر نه.", // nieuw, nalezen
-    'c.hedge': "اول دنبال لانه بگرد", // nieuw, nalezen
-    'c.hedge.b': "در بهار و تابستان، پرنده‌ها در پرچین‌ها و بوته‌ها لانه می‌سازند. لانه‌هایی که پرنده‌ها از آن‌ها استفاده می‌کنند حمایت قانونی دارند. پس قبل از بریدن، داخل پرچین را نگاه کن. لانه‌ای با تخم یا جوجه می‌بینی؟ آنجا را نبُر، و به سرپرستت بگو. شمشادزن را با هر دو دست بگیر. محکم روی زمین یا روی یک نردبان خوب بایست، هیچ‌وقت روی صندلی یا سطل. کابل را پشت سرت نگه دار.", // nieuw, nalezen
-    'c.hedge.p': "اینجا یک لانه هست.", // nieuw, nalezen
-    'c.hedge.s': "در ماه مه داری یک پرچین را کوتاه می‌کنی. لانه‌ای با جوجه می‌بینی. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.hedge.o1': "آنجا دست نگه می‌داری، و به سرپرستت می‌گویی.", // nieuw, nalezen
-    'c.hedge.o2': "با احتیاط دور آن را می‌بُری.", // nieuw, nalezen
-    'c.hedge.o3': "لانه را برمی‌داری، و ادامه می‌دهی.", // nieuw, nalezen
-    'c.hedge.w': "لانه‌هایی که پرنده‌ها از آن‌ها استفاده می‌کنند حمایت قانونی دارند. سرپرستت تصمیم می‌گیرد با این قسمت پرچین چه کار شود.", // nieuw, nalezen
-    'l.chainsaw': "اره‌موتوری و دمندهٔ برگ", // nieuw, nalezen
-    'w.kettingzaag': "اره‌موتوری", // nieuw, nalezen
-    'w.stam': "تنه (درخت)", // nieuw, nalezen
-    'w.zaagbroek': "شلوار ضد اره (زنجیر را متوقف می‌کند)", // nieuw, nalezen
-    'w.bladblazer': "دمندهٔ برگ", // nieuw, nalezen
-    'w.bladeren': "برگ‌ها", // nieuw, nalezen
-    'w.jerrycan': "گالن (ظرفی برای سوخت)", // nieuw, nalezen
-    's.chainsaw.1': "شلوار ضد اره‌ات را بپوش.", // nieuw, nalezen
-    's.chainsaw.2': "برگ‌ها را با باد روی هم جمع کن.", // nieuw, nalezen
-    's.chainsaw.3': "فقط وقتی موتور سرد است سوخت بریز.", // nieuw, nalezen
-    'c.chainsaw.q': "می‌توانم با اره‌موتوری کار کنم؟", // nieuw, nalezen
-    'c.chainsaw.a': "هنوز نه. اول دوره می‌بینی.", // nieuw, nalezen
-    'c.chainsaw': "اره‌موتوری فقط با آموزش", // nieuw, nalezen
-    'c.chainsaw.b': "اره‌موتوری یکی از خطرناک‌ترین ابزارها در کار فضای سبز است. فقط وقتی با آن کار کن که دوره دیده‌ای، و سرپرستت می‌گوید اجازه داری. همیشه شلوار ضد اره، کلاه ایمنی با شیلد صورت و محافظ گوش، دستکش و پوتین ایمنی بپوش. هیچ‌وقت با اره‌موتوری تنها کار نکن. آن را با هر دو دست بگیر، و هیچ‌وقت بالاتر از شانه‌هایت اره نکن. با دمندهٔ برگ: هیچ‌وقت به طرف آدم‌ها، ماشین‌ها یا پنجره‌های باز باد نزن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.chainsaw.p': "هنوز برای این دوره ندیده‌ام.", // nieuw, nalezen
-    'c.chainsaw.s': "یک همکار می‌گوید: «اره‌موتوری را بردار، آسان است». تو هیچ‌وقت دوره ندیده‌ای. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.chainsaw.o1': "می‌گویی که هنوز دوره ندیده‌ای.", // nieuw, nalezen
-    'c.chainsaw.o2': "با احتیاط امتحانش می‌کنی، فقط یک بار.", // nieuw, nalezen
-    'c.chainsaw.o3': "برش می‌داری، و اول یک ویدیو می‌بینی.", // nieuw, nalezen
-    'c.chainsaw.w': "اره‌موتوری می‌تواند در یک ثانیه پایت را ببُرد. بدون آموزش نمی‌دانی چطور ممکن است پس بزند.", // nieuw, nalezen
-    'u.planting': "کاشتن، علف هرز و خیابان", // nieuw, nalezen
-    'l.weeding': "وجین کردن", // nieuw, nalezen
-    'w.onkruid': "علف هرز (گیاهی که باید برود)", // nieuw, nalezen
-    'w.wieden': "وجین کردن (کندن علف هرز)", // nieuw, nalezen
-    'w.schoffel': "کج‌بیل", // nieuw, nalezen
-    'w.perk': "باغچه", // nieuw, nalezen
-    'w.onkruidbrander': "مشعل علف‌سوز (علف هرز را با گرما از بین می‌برد)", // nieuw, nalezen
-    'w.wortel': "ریشه (گیاه)", // nieuw, nalezen
-    's.weeding.1': "علف هرز را با ریشه بکَن.", // nieuw, nalezen
-    's.weeding.2': "باغچهٔ کنار ورودی را با کج‌بیل وجین کن.", // nieuw, nalezen
-    's.weeding.3': "مواظب باش: مشعل علف‌سوز داغ است.", // nieuw, nalezen
-    'c.weeding.q': "این علف هرز است؟", // nieuw, nalezen
-    'c.weeding.a': "نه، این گیاه است. ولش کن.", // nieuw, nalezen
-    'c.weeding': "علف هرز: ریشه باید برود", // nieuw, nalezen
-    'c.weeding.b': "وقتی ریشه در خاک بماند، علف هرز دوباره رشد می‌کند. پس آن را با ریشه بکَن، یا درست زیر خاک را با کج‌بیل بزن. وقتی خاک کمی خیس است کار کن: آن وقت ریشه راحت بیرون می‌آید. از اسپری علف‌کش استفاده نکن، مگر اینکه طرز کارش را یاد گرفته باشی و سرپرستت بگوید. مشعل علف‌سوز خیلی داغ است: آن را از چمن خشک، برگ، پرچین، ماشین و سطل زباله دور نگه دار. هیچ‌وقت وقتی روشن است زمینش نگذار. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.weeding.p': "این علف هرز است یا گیاه؟", // nieuw, nalezen
-    'c.weeding.s': "داری با مشعل علف‌سوز کار می‌کنی. کنار راه یک پرچین خشک است. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.weeding.o1': "علف هرز آنجا را با دست می‌کَنی.", // nieuw, nalezen
-    'c.weeding.o2': "سریع می‌سوزانی، و رد می‌شوی.", // nieuw, nalezen
-    'c.weeding.o3': "می‌سوزانی، و یک بار پشت سرت را نگاه می‌کنی.", // nieuw, nalezen
-    'c.weeding.w': "پرچین خشک زود آتش می‌گیرد. آتش نزدیک خانه‌ها یا ماشین‌ها خیلی خطرناک است.", // nieuw, nalezen
-    'l.planting': "کاشتن", // nieuw, nalezen
-    'w.planten': "کاشتن", // nieuw, nalezen
-    'w.schep': "بیل", // nieuw, nalezen
-    'w.plantgat': "چالهٔ کاشت", // nieuw, nalezen
-    'w.kluit': "گلوله‌خاک (خاک دور ریشه‌ها)", // nieuw, nalezen
-    'w.compost': "کمپوست", // nieuw, nalezen
-    'w.boompaal': "قیم درخت (چوبی که درخت جوان را نگه می‌دارد)", // nieuw, nalezen
-    's.planting.1': "برای درخت یک چالهٔ کاشت بکَن.", // nieuw, nalezen
-    's.planting.2': "درخت را صاف، کنار قیم بگذار.", // nieuw, nalezen
-    's.planting.3': "به گیاه‌های تازه آب زیاد بده.", // nieuw, nalezen
-    'c.planting.q': "این گیاه کجا می‌رود؟", // nieuw, nalezen
-    'c.planting.a': "ته باغچه، کنار دیوار.", // nieuw, nalezen
-    'c.planting': "زیر زمین: کابل و لوله", // nieuw, nalezen
-    'c.planting.b': "زیر چمن و پیاده‌رو اغلب کابل و لوله هست: برای برق، گاز، آب و اینترنت. پس با احتیاط بکَن. یک نوار رنگی یا یک صفحهٔ پلاستیکی در خاک می‌بینی، یا به چیز سفتی می‌خوری؟ کندن را متوقف کن، و به سرپرستت بگو. هیچ‌وقت با زور ادامه نده. درخت سنگین یا گلوله‌خاک بزرگ را با هم بلند کنید، با زانوی خم. به گیاه تازه همان روز آب بده. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.planting.p': "به چیز سفتی می‌خورم.", // nieuw, nalezen
-    'c.planting.s': "داری یک چالهٔ کاشت می‌کَنی. بیلت به یک نوار پلاستیکی قرمز می‌خورد. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.planting.o1': "کندن را متوقف می‌کنی، و به سرپرستت می‌گویی.", // nieuw, nalezen
-    'c.planting.o2': "با احتیاط کنار نوار به کندن ادامه می‌دهی.", // nieuw, nalezen
-    'c.planting.o3': "نوار را بیرون می‌کشی، و ادامه می‌دهی.", // nieuw, nalezen
-    'c.planting.w': "نوار در خاک هشدار می‌دهد که زیرش کابل یا لوله است. لولهٔ گاز یا کابل برق خیلی خطرناک است.", // nieuw, nalezen
-    'l.roadside': "کار کنار جاده", // nieuw, nalezen
-    'w.pion': "مخروط ترافیکی", // nieuw, nalezen
-    'w.verkeer': "ترافیک، رفت‌وآمد", // nieuw, nalezen
-    'w.stoep': "پیاده‌رو (راه کنار خیابان)", // nieuw, nalezen
-    'w.fietser': "دوچرخه‌سوار", // nieuw, nalezen
-    'w.pijlwagen': "تریلر فلش‌دار (تریلری با یک فلش بزرگ که به راننده‌ها هشدار می‌دهد)", // nieuw, nalezen
-    'w.berm': "حاشیهٔ جاده (چمن کنار جاده)", // nieuw, nalezen
-    's.roadside.1': "جلیقه‌ات را بپوش. کنار جاده کار می‌کنیم.", // nieuw, nalezen
-    's.roadside.2': "مخروط‌ها را پشت ون بگذار.", // nieuw, nalezen
-    's.roadside.3': "مواظب دوچرخه‌سوارها باش.", // nieuw, nalezen
-    'c.roadside.q': "الان می‌توانم رد شوم؟", // nieuw, nalezen
-    'c.roadside.a': "نه، صبر کن. یک کامیون دارد می‌آید.", // nieuw, nalezen
-    'c.roadside': "کنار جاده: دیده شو، پشت مخروط‌ها بمان", // nieuw, nalezen
-    'c.roadside.b': "کار کنار جاده خطرناک است: راننده‌ها به گوشی‌شان نگاه می‌کنند، یا تند می‌رانند. پس همیشه جلیقهٔ شب‌رنگت را بپوش، حتی برای یک کار کوتاه. قبل از شروع مخروط‌ها و تابلوها را بگذار، و آخر از همه جمعشان کن. ون را مثل یک سپر بین خودت و ترافیک پارک کن. پشت مخروط‌ها بمان. هیچ‌وقت بدون نگاه کردن عقب نرو، و هر وقت می‌توانی رو به ترافیک کار کن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.roadside.p': "اول مخروط‌ها را می‌گذارم.", // nieuw, nalezen
-    'c.roadside.s': "باید یک بوتهٔ کوچک کنار جاده را ببُری. پنج دقیقه طول می‌کشد. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.roadside.o1': "جلیقه را می‌پوشی، و مخروط‌ها را می‌گذاری.", // nieuw, nalezen
-    'c.roadside.o2': "سریع انجامش می‌دهی، بدون مخروط.", // nieuw, nalezen
-    'c.roadside.o3': "از یک همکار می‌خواهی حواسش به ماشین‌ها باشد.", // nieuw, nalezen
-    'c.roadside.w': "تصادف فقط یک ثانیه طول می‌کشد. پنج دقیقه بدون مخروط یعنی پنج دقیقه بدون محافظت.", // nieuw, nalezen
-    'l.litter': "زباله و محله", // nieuw, nalezen
-    'w.zwerfafval': "زبالهٔ رهاشده (آشغال در خیابان)", // nieuw, nalezen
-    'w.grijper': "انبر زباله‌برداری (دسته‌ای که آشغال را برمی‌دارد)", // nieuw, nalezen
-    'w.vuilniszak': "کیسه زباله", // nieuw, nalezen
-    'w.scherven': "خرده‌شیشه (تکه‌های تیز)", // nieuw, nalezen
-    'w.aanhanger': "تریلر", // nieuw, nalezen
-    'w.bewoner': "ساکن (کسی که اینجا زندگی می‌کند)", // nieuw, nalezen
-    's.litter.1': "آشغال‌ها را با انبر زباله‌برداری جمع کن.", // nieuw, nalezen
-    's.litter.2': "مواظب باش، اینجا خرده‌شیشه هست.", // nieuw, nalezen
-    's.litter.3': "کیسه‌های زباله را کنار تریلر بگذار.", // nieuw, nalezen
-    'c.litter.q': "این درخت کی هرس می‌شود؟", // nieuw, nalezen
-    'c.litter.a': "نمی‌دانم. از شهرداری بپرسید.", // nieuw, nalezen
-    'c.litter': "هیچ‌وقت به سوزن دست نزن", // nieuw, nalezen
-    'c.litter.b': "در پارک‌ها و بوته‌ها گاهی سوزن سرنگ پیدا می‌کنی. هیچ‌وقت آن را با دست برندار، حتی با دستکش. از انبر زباله‌برداری استفاده کن، و سوزن را در یک جعبه یا بطری سفت دربدار بگذار، هیچ‌وقت در کیسه زباله. به سرپرستت بگو. سوزن در دستت رفت؟ زخم را با آب زیاد بشوی، و فوراً به پزشک زنگ بزن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.litter.p': "اینجا یک سوزن هست.", // nieuw, nalezen
-    'c.litter.s': "کنار یک نیمکت، در چمن یک سوزن می‌بینی. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.litter.o1': "آن را با انبر زباله‌برداری برمی‌داری.", // nieuw, nalezen
-    'c.litter.o2': "آن را با دستکش برمی‌داری.", // nieuw, nalezen
-    'c.litter.o3': "آن را در کیسه زباله می‌گذاری.", // nieuw, nalezen
-    'c.litter.w': "سوزن ممکن است بیماری منتقل کند. دستکش جلوی سوزن را نمی‌گیرد، و جعبهٔ سفت بقیه را در امان نگه می‌دارد.", // nieuw, nalezen
-    'u.frontdesk': "پذیرش، پست و جلسه‌ها", // nieuw, nalezen
-    'l.reception': "پشت میز پذیرش", // nieuw, nalezen
-    'w.balie': "میز پذیرش، پیشخوان", // nieuw, nalezen
-    'w.bezoeker': "مراجعه‌کننده، مهمان", // nieuw, nalezen
-    'w.intercom': "آیفون (با کسی که دم در است حرف می‌زنی)", // nieuw, nalezen
-    'w.doorverbinden': "وصل کردن (تماس تلفنی)", // nieuw, nalezen
-    'w.toestel': "داخلی (شمارهٔ تلفن داخل ساختمان)", // nieuw, nalezen
-    'w.wachtruimte': "سالن انتظار", // nieuw, nalezen
-    's.reception.1': "صبح بخیر، می‌توانم کمکتان کنم؟", // nieuw, nalezen
-    's.reception.2': "وصلتان می‌کنم.", // nieuw, nalezen
-    's.reception.3': "لطفاً در سالن انتظار بنشینید.", // nieuw, nalezen
-    'c.reception.q': "با خانم یانسن قرار ملاقات دارم.", // nieuw, nalezen
-    'c.reception.a': "یک لحظه. به او زنگ می‌زنم.", // nieuw, nalezen
-    'c.reception': "تو اولین چهره هستی", // nieuw, nalezen
-    'c.reception.b': "پشت میز پذیرش تو اولین کسی هستی که مهمان می‌بیند. سرت را بالا بیاور، لبخند بزن و سلام کن، حتی وقتی سرت با تلفن گرم است. با مهمان‌ها با «u» (شکل مؤدبانه) حرف بزن. تلفن را با اسم شرکت و اسم خودت جواب بده. جواب را نمی‌دانی؟ همین را بگو، و کسی را پیدا کن که می‌داند. هیچ‌وقت اسم، شمارهٔ تلفن یا اتاق کارکنان را به کسی که نمی‌شناسی نده.", // nieuw, nalezen
-    'c.reception.p': "صبح بخیر، چطور می‌توانم کمکتان کنم؟", // nieuw, nalezen
-    'c.reception.s': "پشت تلفنی. یک مهمان به میز می‌آید و منتظر می‌ماند. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.reception.o1': "سرت را بالا می‌آوری، و نشان می‌دهی که زود می‌آیی.", // nieuw, nalezen
-    'c.reception.o2': "تماست را تمام می‌کنی، بدون اینکه سرت را بالا بیاوری.", // nieuw, nalezen
-    'c.reception.o3': "فوراً گوشی را می‌گذاری.", // nieuw, nalezen
-    'c.reception.w': "مهمانی که دیده می‌شود آرام منتظر می‌ماند. مهمانی که دیده نمی‌شود احساس می‌کند خوش‌آمد نیست.", // nieuw, nalezen
-    'l.visitors': "پذیرفتن مهمان‌ها", // nieuw, nalezen
-    'w.bezoekerspasje': "کارت مهمان", // nieuw, nalezen
-    'w.lift': "آسانسور", // nieuw, nalezen
-    'w.garderobe': "رختکن (جایی که کتت را آویزان می‌کنی)", // nieuw, nalezen
-    'w.parkeerplaats': "جای پارک", // nieuw, nalezen
-    'w.hal': "لابی (سالن بزرگ ورودی)", // nieuw, nalezen
-    'w.begeleiden': "همراهی کردن (کسی را جایی بردن)", // nieuw, nalezen
-    's.visitors.1': "لطفاً اسمتان را اینجا بنویسید.", // nieuw, nalezen
-    's.visitors.2': "این کارت مهمان شماست.", // nieuw, nalezen
-    's.visitors.3': "شما را تا آسانسور همراهی می‌کنم.", // nieuw, nalezen
-    'c.visitors.q': "کتم را کجا می‌توانم بگذارم؟", // nieuw, nalezen
-    'c.visitors.a': "در رختکن، کنار آسانسور.", // nieuw, nalezen
-    'c.visitors': "هر مهمان ثبت‌نام می‌کند", // nieuw, nalezen
-    'c.visitors.b': "هر مهمان اسمش را در فهرست می‌نویسد، یا روی صفحه‌نمایش ثبت‌نام می‌کند، و یک کارت مهمان می‌گیرد. آن وقت می‌دانی چه کسی در ساختمان است. این وقتی آتش‌سوزی می‌شود مهم است: همه باید بیرون بروند، و کسی فهرست را بررسی می‌کند. آخر ملاقات، مهمان کارت را پس می‌دهد. نگذار کسانی که نمی‌شناسی پشت سرت وارد شوند: مؤدبانه بپرس با چه کسی کار دارند. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.visitors.p': "با چه کسی کار دارید؟", // nieuw, nalezen
-    'c.visitors.s': "مردی پشت سر یک همکار وارد می‌شود. کارت ندارد. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.visitors.o1': "مؤدبانه از او می‌پرسی با چه کسی کار دارد.", // nieuw, nalezen
-    'c.visitors.o2': "می‌گذاری برود: با کارکنان آمد داخل.", // nieuw, nalezen
-    'c.visitors.o3': "فوراً به پلیس زنگ می‌زنی.", // nieuw, nalezen
-    'c.visitors.w': "در شرایط اضطراری باید بدانی چه کسی داخل است. و هر کسی که وارد می‌شود دلیلی برای بودن در آنجا ندارد.", // nieuw, nalezen
-    'l.mailroom': "نامه و بسته", // nieuw, nalezen
-    'w.postkamer': "اتاق پست", // nieuw, nalezen
-    'w.koerier': "پیک (کسی که بسته می‌آورد)", // nieuw, nalezen
-    'w.postvak': "جانامه‌ای (جعبه‌ای برای نامه، یکی برای هر نفر)", // nieuw, nalezen
-    'w.envelop': "پاکت نامه", // nieuw, nalezen
-    'w.afdeling': "بخش، واحد", // nieuw, nalezen
-    'w.postkar': "چرخ دستی پست", // nieuw, nalezen
-    's.mailroom.1': "پیک یک بسته می‌آورد.", // nieuw, nalezen
-    's.mailroom.2': "نامه‌ها را در جانامه‌ای درست بگذار.", // nieuw, nalezen
-    's.mailroom.3': "این بسته آسیب دیده.", // nieuw, nalezen
-    'c.mailroom.q': "این بسته مال کیست؟", // nieuw, nalezen
-    'c.mailroom.a': "برای واحد مالی، طبقهٔ دوم.", // nieuw, nalezen
-    'c.mailroom': "نامه خصوصی است", // nieuw, nalezen
-    'c.mailroom.b': "نامه و بسته خصوصی است. هیچ‌وقت نامه یا بستهٔ کس دیگری را باز نکن. اسم و بخش را روی هر مرسوله بررسی کن، و آن را در جانامه‌ای درست بگذار. وقتی پیک بسته‌ای می‌آورد، قبل از امضا نگاهش کن: آسیب دیده؟ این را یادداشت کن. بسته‌ای عجیب است: بو می‌دهد، نشت می‌کند، یا فرستنده ندارد؟ بازش نکن، و به سرپرستت بگو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.mailroom.p': "جعبه خیس و پاره است.", // nieuw, nalezen
-    'c.mailroom.s': "یک پیک بسته‌ای می‌آورد. یک گوشه‌اش خیس و پاره است. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.mailroom.o1': "قبل از امضا آسیب را یادداشت می‌کنی.", // nieuw, nalezen
-    'c.mailroom.o2': "امضا می‌کنی، و به هیچ‌کس نمی‌گویی.", // nieuw, nalezen
-    'c.mailroom.o3': "بازش می‌کنی تا ببینی همه‌چیز هست یا نه.", // nieuw, nalezen
-    'c.mailroom.w': "بعد از امضای تو، به نظر می‌رسد بسته سالم بوده. آن وقت هیچ‌کس پول خسارت را نمی‌دهد.", // nieuw, nalezen
-    'l.meetingroom': "آماده کردن اتاق جلسه", // nieuw, nalezen
-    'w.vergaderzaal': "اتاق جلسه", // nieuw, nalezen
-    'w.beamer': "ویدیو پروژکتور", // nieuw, nalezen
-    'w.whiteboard': "وایت‌برد", // nieuw, nalezen
-    'w.thermoskan': "فلاسک (قهوه را داغ نگه می‌دارد)", // nieuw, nalezen
-    'w.kopje': "فنجان", // nieuw, nalezen
-    'w.koffieautomaat': "دستگاه قهوه", // nieuw, nalezen
-    's.meetingroom.1': "ده صندلی دور میز بگذار.", // nieuw, nalezen
-    's.meetingroom.2': "قهوه و چای را آماده کن.", // nieuw, nalezen
-    's.meetingroom.3': "ویدیو پروژکتور کار نمی‌کند.", // nieuw, nalezen
-    'c.meetingroom.q': "جلسه ساعت چند شروع می‌شود؟", // nieuw, nalezen
-    'c.meetingroom.a': "ساعت ده. مطمئن شو همه‌چیز آماده است.", // nieuw, nalezen
-    'c.meetingroom': "آماده قبل از اولین مهمان", // nieuw, nalezen
-    'c.meetingroom.b': "اتاق جلسه باید قبل از اینکه اولین نفر وارد شود آماده باشد. صندلی‌ها، میز، ویدیو پروژکتور و کابل‌ها را بررسی کن. قهوه، چای و آب را با فنجان و شیر بچین. نوشیدنی داغ را با احتیاط ببر، و هیچ‌وقت از بالای سر آدم‌ها رد نکن. بعد از جلسه، میز را تمیز کن و همه‌چیز را برگردان. چیزی را که در اتاق جلسه می‌شنوی، پیش خودت نگه می‌داری.", // nieuw, nalezen
-    'c.meetingroom.p': "اتاق آماده است.", // nieuw, nalezen
-    'c.meetingroom.s': "جلسه پنج دقیقهٔ دیگر شروع می‌شود. ویدیو پروژکتور کار نمی‌کند. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.meetingroom.o1': "فوراً به برگزارکننده می‌گویی.", // nieuw, nalezen
-    'c.meetingroom.o2': "صبر می‌کنی: شاید کسی لازمش نداشته باشد.", // nieuw, nalezen
-    'c.meetingroom.o3': "یک یادداشت روی میز می‌گذاری.", // nieuw, nalezen
-    'c.meetingroom.w': "پنج دقیقه هنوز برای درست کردنش یا پیدا کردن یک اتاق دیگر وقت است. بعداً، همه منتظر می‌مانند.", // nieuw, nalezen
-    'u.maintenance': "خرابی، تعمیر و جابه‌جایی", // nieuw, nalezen
-    'l.faults': "گزارش خرابی", // nieuw, nalezen
-    'w.melding': "گزارش (می‌گویی که چیزی خراب است)", // nieuw, nalezen
-    'w.lekkage': "نشتی (آب بیرون می‌آید)", // nieuw, nalezen
-    'w.verwarming': "شوفاژ، گرمایش", // nieuw, nalezen
-    'w.airco': "کولر", // nieuw, nalezen
-    'w.afvoer': "فاضلاب، راه آب", // nieuw, nalezen
-    'w.verstopt': "گرفته (هیچ چیز رد نمی‌شود)", // nieuw, nalezen
-    's.faults.1': "خرابی را گزارش می‌دهم.", // nieuw, nalezen
-    's.faults.2': "در آشپزخانه نشتی هست.", // nieuw, nalezen
-    's.faults.3': "راه آب توالت گرفته.", // nieuw, nalezen
-    'c.faults.q': "چرا اینجا این‌قدر سرد است؟", // nieuw, nalezen
-    'c.faults.a': "شوفاژ خراب است. تعمیرکار فردا می‌آید.", // nieuw, nalezen
-    'c.faults': "گزارش بده، تنهایی تعمیر نکن", // nieuw, nalezen
-    'c.faults.b': "چیز خرابی می‌بینی، مثل نشتی، لامپی که سوخته یا دری که بسته نمی‌شود؟ گزارشش بده، حتی وقتی کوچک است: در سیستم یا به سرپرستت. بگو کجاست، چه می‌بینی و از کی. برق، گاز یا گرمایش را خودت تعمیر نکن. بوی گاز می‌آید؟ نزدیکش از کلید برق یا گوشی استفاده نکن، پنجره‌ها را باز کن، آدم‌ها را بیرون ببر، و بیرون کمک خبر کن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.faults.p': "می‌خواهم یک خرابی را گزارش بدهم.", // nieuw, nalezen
-    'c.faults.s': "در راهرو از سقف آب می‌چکد. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.faults.o1': "گزارشش می‌دهی، و یک سطل زیرش می‌گذاری.", // nieuw, nalezen
-    'c.faults.o2': "صبر می‌کنی: شاید خودش بند بیاید.", // nieuw, nalezen
-    'c.faults.o3': "سقف را باز می‌کنی تا نگاه کنی.", // nieuw, nalezen
-    'c.faults.w': "یک نشتی کوچک می‌تواند خسارت بزرگی بشود. سطل کف را خشک نگه می‌دارد، تا کسی لیز نخورد.", // nieuw, nalezen
-    'l.repairs': "تعمیرهای کوچک", // nieuw, nalezen
-    'w.vervangen': "عوض کردن (یک نو جایش گذاشتن)", // nieuw, nalezen
-    'w.deurklink': "دستگیرهٔ در", // nieuw, nalezen
-    'w.scharnier': "لولا", // nieuw, nalezen
-    'w.gereedschapskist': "جعبه‌ابزار", // nieuw, nalezen
-    'w.rookmelder': "دتکتور دود", // nieuw, nalezen
-    'w.batterij': "باتری", // nieuw, nalezen
-    's.repairs.1': "لامپ راهرو را عوض کن.", // nieuw, nalezen
-    's.repairs.2': "دستگیرهٔ در شل است.", // nieuw, nalezen
-    's.repairs.3': "چهارپایه را بردار، نه صندلی.", // nieuw, nalezen
-    'c.repairs.q': "دتکتور دود بوق می‌زند؟", // nieuw, nalezen
-    'c.repairs.a': "بله، باتری‌اش تقریباً تمام شده.", // nieuw, nalezen
-    'c.repairs': "چهارپایه، هیچ‌وقت صندلی", // nieuw, nalezen
-    'c.repairs.b': "برای لامپ یا قفسهٔ بلند، از چهارپایه استفاده کن، هیچ‌وقت صندلی، میز یا جعبه. آن را روی کف صاف بگذار، کاملاً بازش کن، و روی پلهٔ آخر بالا نایست. قبل از عوض کردن لامپ چراغ را خاموش کن، و بگذار لامپ کهنه خنک شود. فقط تعمیرهایی را انجام بده که یاد گرفته‌ای. وقتی کارت تمام شد ابزارت را به جعبه‌ابزار برگردان، تا کسی به آن‌ها گیر نکند و زمین نخورد. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.repairs.p': "چهارپایه را می‌آورم.", // nieuw, nalezen
-    'c.repairs.s': "یک لامپ در دفتر سوخته. چهارپایه در طبقهٔ دیگری است. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.repairs.o1': "چهارپایه را می‌آوری.", // nieuw, nalezen
-    'c.repairs.o2': "روی صندلی اداری می‌ایستی.", // nieuw, nalezen
-    'c.repairs.o3': "روی میز می‌ایستی.", // nieuw, nalezen
-    'c.repairs.w': "صندلی ممکن است سُر بخورد یا واژگون شود. افتادن از صندلی می‌تواند تو را بد زخمی کند.", // nieuw, nalezen
-    'l.moving': "جابه‌جا کردن محل کار", // nieuw, nalezen
-    'w.verhuisdoos': "کارتن اسباب‌کشی", // nieuw, nalezen
-    'w.bureau': "میز تحریر", // nieuw, nalezen
-    'w.bureaustoel': "صندلی اداری", // nieuw, nalezen
-    'w.werkplek': "محل کار (میزی که کسی پشتش کار می‌کند)", // nieuw, nalezen
-    'w.kamernummer': "شمارهٔ اتاق", // nieuw, nalezen
-    'w.plattegrond': "نقشهٔ طبقه (نقشهٔ ساختمان)", // nieuw, nalezen
-    's.moving.1': "شمارهٔ اتاق را روی هر کارتن بنویس.", // nieuw, nalezen
-    's.moving.2': "کارتن‌ها را روی چرخ‌دستی بگذار.", // nieuw, nalezen
-    's.moving.3': "محل کار را خالی کن.", // nieuw, nalezen
-    'c.moving.q': "این میز کجا باید برود؟", // nieuw, nalezen
-    'c.moving.a': "به اتاق دوازده. به نقشهٔ طبقه نگاه کن.", // nieuw, nalezen
-    'c.moving': "جابه‌جایی: درست بلند کن، روی همه‌چیز برچسب بزن", // nieuw, nalezen
-    'c.moving.b': "جابه‌جایی کار سنگینی است. کارتن را زیادی پر نکن: کتاب و پرونده سنگین است. با زانوی خم و کمر صاف، نزدیک به بدنت بلند کن. برای چند کارتن از چرخ‌دستی استفاده کن، و میز را با هم بلند کنید. شمارهٔ اتاق جدید را روی هر کارتن، صندلی و کامپیوتر بنویس. اول کابل‌ها را از برق بکش. هیچ‌وقت کارتن را در راهرو یا جلوی خروجی اضطراری نگذار.", // nieuw, nalezen
-    'c.moving.p': "می‌توانی کمکم کنی این را بلند کنم؟", // nieuw, nalezen
-    'c.moving.s': "باید یک میز سنگین را جابه‌جا کنی. همکارت در استراحت است. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.moving.o1': "منتظر کمک می‌مانی، و با هم بلندش می‌کنید.", // nieuw, nalezen
-    'c.moving.o2': "خودت تنهایی آن را روی زمین می‌کشی.", // nieuw, nalezen
-    'c.moving.o3': "تنهایی بلندش می‌کنی، خیلی با احتیاط.", // nieuw, nalezen
-    'c.moving.w': "میز سنگین وقتی تنهایی بلندش کنی می‌تواند به کمرت آسیب بزند. با هم آسان و ایمن است.", // nieuw, nalezen
-    'l.closing': "باز و بسته کردن ساختمان", // nieuw, nalezen
-    'w.sleutelbos': "دسته‌کلید", // nieuw, nalezen
-    'w.afsluiten': "قفل کردن، بستن", // nieuw, nalezen
-    'w.ronde': "سرکشی (سر زدن به همهٔ اتاق‌ها)", // nieuw, nalezen
-    'w.raam': "پنجره", // nieuw, nalezen
-    'w.alarmcode': "رمز دزدگیر", // nieuw, nalezen
-    'w.nachtslot': "قفل شب (قفل اضافه برای شب)", // nieuw, nalezen
-    's.closing.1': "دارم آخرین سرکشی ساختمان را انجام می‌دهم.", // nieuw, nalezen
-    's.closing.2': "همهٔ پنجره‌ها بسته‌اند؟", // nieuw, nalezen
-    's.closing.3': "در را با قفل شب ببند.", // nieuw, nalezen
-    'c.closing.q': "هنوز کسی داخل هست؟", // nieuw, nalezen
-    'c.closing.a': "نه، همه رفته‌اند. دارم قفل می‌کنم.", // nieuw, nalezen
-    'c.closing': "رمز دزدگیر محرمانه است", // nieuw, nalezen
-    'c.closing.b': "آخر روز آخرین سرکشی را انجام می‌دهی. بررسی کن که کسی داخل نمانده، پنجره‌ها بسته‌اند و چراغ‌ها خاموش‌اند. خروجی‌های اضطراری باز می‌مانند. کلیدها را همراه خودت نگه دار، هیچ‌وقت در کشو. رمز دزدگیر محرمانه است: هیچ‌وقت آن را به کسی نده، حتی پشت تلفن. دزدگیر به صدا درمی‌آید؟ مراحل شرکتت را دنبال کن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.closing.p': "رمز دزدگیر را به کسی نمی‌دهم.", // nieuw, nalezen
-    'c.closing.s': "کسی زنگ می‌زند: «از شرکت دزدگیر هستم. رمزتان چیست»؟ چه کار می‌کنی؟", // nieuw, nalezen
-    'c.closing.o1': "نه می‌گویی، و به سرپرستت می‌گویی.", // nieuw, nalezen
-    'c.closing.o2': "رمز را می‌دهی: صدایش مهربان است.", // nieuw, nalezen
-    'c.closing.o3': "فقط نصف رمز را می‌دهی.", // nieuw, nalezen
-    'c.closing.w': "یک شرکت دزدگیر واقعی پشت تلفن رمزت را نمی‌پرسد. یک دزد شاید بپرسد.", // nieuw, nalezen
-    'u.guarding': "گشت‌زنی و کنترل ورود", // nieuw, nalezen
-    'l.patrol': "گشت", // nieuw, nalezen
-    'w.surveilleren': "گشت زدن (دور زدن و مراقبت کردن)", // nieuw, nalezen
-    'w.zaklamp': "چراغ‌قوه", // nieuw, nalezen
-    'w.terrein': "محوطه (زمین دور یک ساختمان)", // nieuw, nalezen
-    'w.hek': "نرده، دروازه", // nieuw, nalezen
-    'w.inbraak': "دزدی (کسی برای دزدی وارد می‌شود)", // nieuw, nalezen
-    'w.openstaan': "باز ماندن (دری یا پنجره‌ای که باید بسته باشد)", // nieuw, nalezen
-    's.patrol.1': "هر دو ساعت یک گشت می‌زنم.", // nieuw, nalezen
-    's.patrol.2': "دروازهٔ پشت سالن باز است.", // nieuw, nalezen
-    's.patrol.3': "چراغ‌قوه‌ات را همراهت ببر.", // nieuw, nalezen
-    'c.patrol.q': "در گشتت چیزی دیدی؟", // nieuw, nalezen
-    'c.patrol.a': "بله. یک پنجره کنار در پشتی باز بود.", // nieuw, nalezen
-    'c.patrol': "نگاه کن و گزارش بده، قهرمان‌بازی درنیاور", // nieuw, nalezen
-    'c.patrol.b': "در گشتت نگاه می‌کنی: درها و پنجره‌ها بسته‌اند، نرده سالم است، کسی هست که نباید آنجا باشد؟ چیزی را که می‌بینی با ساعتش یادداشت کن. چیز عجیبی می‌بینی، مثل پنجرهٔ شکسته یا کسی در شب؟ تنها وارد نشو. با بی‌سیم یا تلفن به اتاق کنترل یا پلیس خبر بده، و در جای امن منتظر بمان. ایمنی خودت اول است. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.patrol.p': "کسی را کنار نرده می‌بینم.", // nieuw, nalezen
-    'c.patrol.s': "شب دری را می‌بینی که شکسته و باز شده. از داخل صدا می‌شنوی. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.patrol.o1': "بیرون می‌مانی، و کمک خبر می‌کنی.", // nieuw, nalezen
-    'c.patrol.o2': "سریع داخل می‌روی، و نگاه می‌کنی.", // nieuw, nalezen
-    'c.patrol.o3': "به داخل داد می‌زنی که داری می‌آیی.", // nieuw, nalezen
-    'c.patrol.w': "دزدی که داخل است می‌تواند خطرناک باشد. پلیس می‌داند چه کار کند؛ کار تو دیدن و گزارش دادن است.", // nieuw, nalezen
-    'l.access': "کنترل ورود", // nieuw, nalezen
-    'w.slagboom': "راهبند (میله‌ای روی راه که بالا می‌رود)", // nieuw, nalezen
-    'w.toegangspas': "کارت ورود (کارتی که در را باز می‌کند)", // nieuw, nalezen
-    'w.legitimatie': "مدرک شناسایی (پاسپورت یا کارت شناسایی)", // nieuw, nalezen
-    'w.draaihek': "گیت گردان (دری که می‌چرخد، هر بار برای یک نفر)", // nieuw, nalezen
-    'w.kenteken': "شمارهٔ پلاک (حروف و عددهای یک ماشین)", // nieuw, nalezen
-    'w.toegang': "ورود، دسترسی (اجازه داری وارد شوی)", // nieuw, nalezen
-    's.access.1': "می‌توانم مدرک شناسایی‌تان را ببینم؟", // nieuw, nalezen
-    's.access.2': "کارتتان کار نمی‌کند. یک تماس می‌گیرم.", // nieuw, nalezen
-    's.access.3': "راهبند را باز می‌کنم.", // nieuw, nalezen
-    'c.access.q': "می‌توانم بروم داخل؟ کارتم را جا گذاشته‌ام.", // nieuw, nalezen
-    'c.access.a': "ببخشید، بدون کارت اجازه ندارید وارد شوید.", // nieuw, nalezen
-    'c.access': "بدون کارت، ورود ممنوع", // nieuw, nalezen
-    'c.access.b': "دم دروازه یا پشت میز، بررسی می‌کنی چه کسی وارد می‌شود. همه کارت لازم دارند، یا باید در فهرست باشند. مهربان باش، حتی وقتی کسی عصبانی است یا عجله دارد. به خاطر اینکه کسی می‌گوید رئیس است استثنا قائل نشو: بررسی‌اش کن. هیچ‌وقت کارت خودت را به کسی قرض نده، و هیچ‌وقت نگذار کسی پشت سرت وارد شود. کارتی که گم شده باید فوراً گزارش شود. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.access.p': "می‌توانم کارتتان را ببینم؟", // nieuw, nalezen
-    'c.access.s': "مردی با کت‌وشلوار می‌گوید: «من مدیر جدید هستم. هنوز کارت ندارم». چه کار می‌کنی؟", // nieuw, nalezen
-    'c.access.o1': "قبل از اینکه راهش بدهی، بررسی می‌کنی.", // nieuw, nalezen
-    'c.access.o2': "راهش می‌دهی: آدم مهمی به نظر می‌رسد.", // nieuw, nalezen
-    'c.access.o3': "کارت خودت را به او می‌دهی.", // nieuw, nalezen
-    'c.access.w': "هر کسی می‌تواند بگوید مدیر است. یک بررسی کوتاه ساختمان را ایمن نگه می‌دارد، و یک مدیر واقعی درک می‌کند.", // nieuw, nalezen
-    'l.cameras': "دوربین‌ها و اتاق کنترل", // nieuw, nalezen
-    'w.meldkamer': "اتاق کنترل (جایی که آدم‌ها دوربین‌ها را نگاه می‌کنند و تماس‌ها را جواب می‌دهند)", // nieuw, nalezen
-    'w.beeldscherm': "مانیتور، صفحه‌نمایش", // nieuw, nalezen
-    'w.camerabeelden': "تصویرهای دوربین (چیزی که دوربین فیلم گرفته)", // nieuw, nalezen
-    'w.inzoomen': "زوم کردن", // nieuw, nalezen
-    'w.bewegingsmelder': "سنسور حرکت (می‌فهمد چیزی حرکت می‌کند)", // nieuw, nalezen
-    'w.verdachte': "مظنون", // nieuw, nalezen
-    's.cameras.1': "در دوربین سه کسی را کنار نرده می‌بینم.", // nieuw, nalezen
-    's.cameras.2': "زوم می‌کنم.", // nieuw, nalezen
-    's.cameras.3': "اتاق کنترل به پلیس زنگ می‌زند.", // nieuw, nalezen
-    'c.cameras.q': "روی صفحه چه می‌بینی؟", // nieuw, nalezen
-    'c.cameras.a': "مردی کنار نرده. یک همکار را می‌فرستم.", // nieuw, nalezen
-    'c.cameras': "تصویرهای دوربین خصوصی است", // nieuw, nalezen
-    'c.cameras.b': "دوربین‌ها از آدم‌ها فیلم می‌گیرند: کارکنان، مهمان‌ها و رهگذرها. چیزی که روی صفحه‌ها می‌بینی خصوصی است. فقط برای کارت نگاه کن، و هیچ‌وقت با گوشی‌ات از صفحه فیلم نگیر. هیچ‌وقت تصویرها را برای دوستانت نفرست یا در اینترنت نگذار. اتفاقی افتاده؟ دوربین و ساعت را یادداشت کن، و به سرپرستت بگو. فقط شرکتت تصمیم می‌گیرد چه کسی تصویرها را بگیرد، مثلاً پلیس. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.cameras.p': "اجازه ندارم این را نشان بدهم.", // nieuw, nalezen
-    'c.cameras.s': "یک همکار از تو می‌خواهد یک کلیپ خنده‌دار از دوربین‌ها برایش بفرستی. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.cameras.o1': "نه می‌گویی: تصویرها خصوصی است.", // nieuw, nalezen
-    'c.cameras.o2': "می‌فرستی، فقط برای او.", // nieuw, nalezen
-    'c.cameras.o3': "با گوشی‌ات از صفحه فیلم می‌گیری.", // nieuw, nalezen
-    'c.cameras.w': "آدم‌های داخل تصویرها موافقت نکرده‌اند که پخش شوند. فرستادنش ممکن است کارت را از دستت بگیرد.", // nieuw, nalezen
-    'l.report': "بی‌سیم و گزارش", // nieuw, nalezen
-    'w.portofoon': "بی‌سیم، واکی‌تاکی", // nieuw, nalezen
-    'w.rapport': "گزارش (اتفاقی که افتاده، نوشته‌شده)", // nieuw, nalezen
-    'w.incident': "حادثه (چیزی که بد پیش رفته)", // nieuw, nalezen
-    'w.tijdstip': "زمان (کی اتفاقی افتاده)", // nieuw, nalezen
-    'w.logboek': "دفتر ثبت (دفتر یا اپی که همه‌چیز را در آن می‌نویسی)", // nieuw, nalezen
-    'w.oproepen': "صدا زدن (با بی‌سیم)", // nieuw, nalezen
-    's.report.1': "دارم گزارش حادثه را می‌نویسم.", // nieuw, nalezen
-    's.report.2': "دقیقاً ساعت چند بود؟", // nieuw, nalezen
-    's.report.3': "صدایت را خوب نمی‌شنوم. دوباره بگو.", // nieuw, nalezen
-    'c.report.q': "چه چیزی باید در گزارش بیاید؟", // nieuw, nalezen
-    'c.report.a': "چه اتفاقی افتاد، کجا و چه ساعتی.", // nieuw, nalezen
-    'c.report': "فوراً بنویسش", // nieuw, nalezen
-    'c.report.b': "گزارش را درست بعد از حادثه بنویس، وقتی هنوز خوب یادت هست. چیزی را بنویس که خودت دیدی و شنیدی: چه اتفاقی افتاد، کجا، چه ساعتی، و چه کسانی آنجا بودند. واقعیت‌ها را بنویس، نه چیزی که فکر می‌کنی. پشت بی‌سیم کوتاه و واضح حرف بزن، و صبر کن تا حرف طرف مقابل تمام شود. بگو کی هستی و کجایی. یک گزارش خوب به پلیس، شرکتت و خودت کمک می‌کند.", // nieuw, nalezen
-    'c.report.p': "فوراً یادداشتش می‌کنم.", // nieuw, nalezen
-    'c.report.s': "بعد از یک شب شلوغ خیلی خسته‌ای. یک حادثهٔ کوچک پیش آمد. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.report.o1': "قبل از رفتن به خانه گزارش را می‌نویسی.", // nieuw, nalezen
-    'c.report.o2': "فردا، بعد از یک خواب خوب، می‌نویسی‌اش.", // nieuw, nalezen
-    'c.report.o3': "ولش می‌کنی: فقط کوچک بود.", // nieuw, nalezen
-    'c.report.w': "فردا جزئیات یادت می‌رود. گزارشی بدون ساعت یا مکان به هیچ‌کس کمک نمی‌کند.", // nieuw, nalezen
-    'u.incidents': "شرایط اضطراری و فروشگاه", // nieuw, nalezen
-    'l.evacuation': "آتش‌سوزی و تخلیه", // nieuw, nalezen
-    'w.brandmelder': "شستی اعلام حریق (جعبهٔ قرمزی که وقت آتش‌سوزی فشارش می‌دهی)", // nieuw, nalezen
-    'w.brandweer': "آتش‌نشانی", // nieuw, nalezen
-    'w.branddeur': "درِ ضد حریق (جلوی آتش و دود را می‌گیرد)", // nieuw, nalezen
-    'w.brandmeldcentrale': "پنل اعلام حریق (نشان می‌دهد آژیر کجاست)", // nieuw, nalezen
-    'w.ontruimingsplan': "طرح تخلیه (چه کسی چه کار کند وقتی همه باید بیرون بروند)", // nieuw, nalezen
-    'w.sirene': "آژیر", // nieuw, nalezen
-    's.evacuation.1': "در سالن دو اعلام حریق شده.", // nieuw, nalezen
-    's.evacuation.2': "درهای ضد حریق را بسته نگه دار.", // nieuw, nalezen
-    's.evacuation.3': "دم ورودی منتظر آتش‌نشانی هستم.", // nieuw, nalezen
-    'c.evacuation.q': "همه بیرون‌اند؟", // nieuw, nalezen
-    'c.evacuation.a': "نه، دو نفر از فهرست هنوز نیستند.", // nieuw, nalezen
-    'c.evacuation': "آتش: اول اعلام حریق، بعد بیرون", // nieuw, nalezen
-    'c.evacuation.b': "آتش یا دود می‌بینی؟ شستی اعلام حریق را بزن، یا به ۱۱۲ زنگ بزن. بعد به آدم‌ها کمک کن از راه‌های فرار بیرون بروند، هیچ‌وقت با آسانسور. درها را پشت سرت ببند، ولی قفلشان نکن. فقط وقتی با آتش مقابله کن که کوچک است و طرزش را یاد گرفته‌ای. به محل تجمع برو، و بشمار چه کسانی آنجا هستند. دم ورودی به آتش‌نشانی برس، و هر چه می‌دانی به آن‌ها بگو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.evacuation.p': "همه بیرون، به محل تجمع.", // nieuw, nalezen
-    'c.evacuation.s': "آژیر آتش به صدا درمی‌آید. مردی می‌خواهد سوار آسانسور شود. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.evacuation.o1': "او را به طرف پله‌ها می‌فرستی.", // nieuw, nalezen
-    'c.evacuation.o2': "می‌گذاری برود: آسانسور سریع‌تر است.", // nieuw, nalezen
-    'c.evacuation.o3': "با او سوار آسانسور می‌شوی.", // nieuw, nalezen
-    'c.evacuation.w': "در آتش‌سوزی، آسانسور ممکن است بایستد یا پر از دود شود. پله‌ها راه امن بیرون رفتن است.", // nieuw, nalezen
-    'l.firstaid': "کمک‌های اولیه و ۱۱۲", // nieuw, nalezen
-    'w.ehbo': "کمک‌های اولیه", // nieuw, nalezen
-    'w.aed': "دستگاه AED (دستگاهی که به قلبی که ایستاده کمک می‌کند)", // nieuw, nalezen
-    'w.reanimeren': "احیای قلبی کردن (فشار دادن قفسهٔ سینه برای نجات جان)", // nieuw, nalezen
-    'w.bewusteloos': "بیهوش (آدم به هوش نمی‌آید)", // nieuw, nalezen
-    'w.ademen': "نفس کشیدن", // nieuw, nalezen
-    'w.alarmnummer': "شمارهٔ اضطراری (۱۱۲)", // nieuw, nalezen
-    's.firstaid.1': "به ۱۱۲ زنگ بزن. آمبولانس بخواه.", // nieuw, nalezen
-    's.firstaid.2': "دستگاه AED را از پذیرش بیاور.", // nieuw, nalezen
-    's.firstaid.3': "نفس نمی‌کشد. می‌خواهم احیای قلبی کنم.", // nieuw, nalezen
-    'c.firstaid.q': "دستگاه AED کجاست؟", // nieuw, nalezen
-    'c.firstaid.a': "دم ورودی، کنار آسانسور.", // nieuw, nalezen
-    'c.firstaid': "به ۱۱۲ زنگ بزن، احیا را شروع کن، AED را بیاور", // nieuw, nalezen
-    'c.firstaid.b': "کسی زمین می‌خورد و واکنش نشان نمی‌دهد؟ فوراً به ۱۱۲ زنگ بزن، یا بگذار کس دیگری زنگ بزند. بررسی کن که آن آدم عادی نفس می‌کشد یا نه. اگر نه: احیای قلبی را شروع کن، و بگذار کسی دستگاه AED را بیاورد. دستگاه AED حرف می‌زند و به تو می‌گوید چه کار کنی؛ نمی‌توانی اشتباه کنی. ادامه بده تا آمبولانس کار را به دست بگیرد. دورهٔ کمک‌های اولیه دیده‌ای؟ به همکارانت بگو، تا بدانند چه کسی را صدا کنند.", // nieuw, nalezen
-    'c.firstaid.p': "به ۱۱۲ زنگ بزن و دستگاه AED را بیاور.", // nieuw, nalezen
-    'c.firstaid.s': "مردی در سالن زمین می‌خورد. تکان نمی‌خورد و نفس نمی‌کشد. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.firstaid.o1': "به ۱۱۲ زنگ می‌زنی، و احیای قلبی را شروع می‌کنی.", // nieuw, nalezen
-    'c.firstaid.o2': "صبر می‌کنی ببینی به هوش می‌آید یا نه.", // nieuw, nalezen
-    'c.firstaid.o3': "بلندش می‌کنی، و روی صندلی می‌نشانی‌اش.", // nieuw, nalezen
-    'c.firstaid.w': "وقتی قلب می‌ایستد، هر دقیقه مهم است. احیای قلبی و دستگاه AED می‌توانند قبل از رسیدن آمبولانس جانی را نجات دهند.", // nieuw, nalezen
-    'l.shoplifting': "دزدی از فروشگاه", // nieuw, nalezen
-    'w.winkeldiefstal': "دزدی از فروشگاه", // nieuw, nalezen
-    'w.heterdaad': "حین ارتکاب (می‌بینی که اتفاق می‌افتد)", // nieuw, nalezen
-    'w.aanhouden': "نگه داشتن کسی (تا پلیس برسد)", // nieuw, nalezen
-    'w.detectiepoortje': "گیت امنیتی (دم در بوق می‌زند)", // nieuw, nalezen
-    'w.alarmlabel': "برچسب امنیتی (باعث می‌شود گیت بوق بزند)", // nieuw, nalezen
-    'w.verstoppen': "قایم کردن", // nieuw, nalezen
-    's.shoplifting.1': "گیت دم خروجی بوق می‌زند.", // nieuw, nalezen
-    's.shoplifting.2': "دیدم که اتفاق افتاد.", // nieuw, nalezen
-    's.shoplifting.3': "تا پلیس بیاید نگهش می‌دارم.", // nieuw, nalezen
-    'c.shoplifting.q': "می‌توانم کیفش را بگردم؟", // nieuw, nalezen
-    'c.shoplifting.a': "نه. این کار پلیس است.", // nieuw, nalezen
-    'c.shoplifting': "دزدی از فروشگاه: نگاه کن، گزارش بده، بدون زور زیاد", // nieuw, nalezen
-    'c.shoplifting.b': "دیدی کسی دزدی می‌کند؟ آرام بمان، و فوراً به پلیس زنگ بزن. بعضی فروشگاه‌ها اجازه می‌دهند نگهبان دزد را تا رسیدن پلیس نگه دارد؛ بعضی دیگر می‌گویند: فقط نگاه کن، گزارش بده و یادت بماند آن آدم چه شکلی است. هیچ‌وقت نزن یا لگد نزن، و هیچ‌وقت کسی را از گردن نگیر. هیچ‌وقت آدم، جیب‌ها یا کیفش را نگرد: این کار پلیس است. چیزی را که دیدی یادداشت کن، و تصویرهای دوربین را نگه دار. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.shoplifting.p': "لطفاً با من بیایید.", // nieuw, nalezen
-    'c.shoplifting.s': "دیدی زنی یک بطری در کیفش گذاشت. دارد بیرون می‌رود. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.shoplifting.o1': "آرام جلویش را می‌گیری، و به پلیس زنگ می‌زنی.", // nieuw, nalezen
-    'c.shoplifting.o2': "دم در سریع کیفش را می‌گردی.", // nieuw, nalezen
-    'c.shoplifting.o3': "محکم هلش می‌دهی زمین.", // nieuw, nalezen
-    'c.shoplifting.w': "گشتن آدم‌ها کار پلیس است، و زور زیاد می‌تواند به کسی آسیب بزند و تو را به دردسر بیندازد.", // nieuw, nalezen
-    'l.aggression': "آدم‌های سخت", // nieuw, nalezen
-    'w.agressie': "پرخاشگری (رفتار عصبانی و خشن)", // nieuw, nalezen
-    'w.schelden': "فحش دادن به کسی", // nieuw, nalezen
-    'w.kalmeren': "آرام شدن", // nieuw, nalezen
-    'w.afstand': "فاصله", // nieuw, nalezen
-    'w.huisverbod': "ممنوعیت ورود (دیگر اجازه نداری اینجا بیایی)", // nieuw, nalezen
-    'w.bodycam': "دوربین بدن (دوربین کوچکی روی لباس فرمت)", // nieuw, nalezen
-    's.aggression.1': "آرام باشید، آقا. می‌خواهم کمکتان کنم.", // nieuw, nalezen
-    's.aggression.2': "فاصله‌ات را نگه دار و آرام بمان.", // nieuw, nalezen
-    's.aggression.3': "ورود شما ممنوع است. باید الان بروید.", // nieuw, nalezen
-    'c.aggression.q': "چرا اجازه ندارم بروم داخل؟", // nieuw, nalezen
-    'c.aggression.a': "ورود شما اینجا ممنوع است.", // nieuw, nalezen
-    'c.aggression': "آرام بمان، فاصله‌ات را نگه دار", // nieuw, nalezen
-    'c.aggression.b': "آدم عصبانی وقتی تو آرام بمانی زودتر آرام می‌شود. آهسته و آرام حرف بزن، و آن آدم را با «u» (شکل مؤدبانه) صدا کن. یک دست یا بیشتر بین خودتان فاصله نگه دار، و پشت سرت یک راه بیرون نگه دار. به آن آدم دست نزن و سرش داد نزن. خطرناک می‌شود؟ عقب برو، و یک همکار یا پلیس را خبر کن. بعداً آن را یادداشت کن. بعد از یک حادثهٔ بد، با کسی درباره‌اش حرف بزن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.aggression.p': "آرام باشید. می‌خواهم کمکتان کنم.", // nieuw, nalezen
-    'c.aggression.s': "مردی سرت داد می‌زند و خیلی نزدیک می‌آید. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.aggression.o1': "عقب می‌روی، و آرام حرف می‌زنی.", // nieuw, nalezen
-    'c.aggression.o2': "بلندتر از او داد می‌زنی.", // nieuw, nalezen
-    'c.aggression.o3': "او را از خودت دور هل می‌دهی.", // nieuw, nalezen
-    'c.aggression.w': "حرف آرام و فاصله، تنش را کم می‌کند. داد زدن یا هل دادن بدترش می‌کند.", // nieuw, nalezen
-    'u.foodhygiene': "بهداشت و سرما", // nieuw, nalezen
-    'l.hygienelock': "اتاقک بهداشت", // nieuw, nalezen
-    'w.hygienesluis': "اتاقک بهداشت (اتاقی که قبل از ورود در آن تمیز می‌شوی)", // nieuw, nalezen
-    'w.baardnetje': "تور ریش", // nieuw, nalezen
-    'w.laarzenwasser': "چکمه‌شوی (برس‌هایی که چکمه‌ات را تمیز می‌کنند)", // nieuw, nalezen
-    'w.desinfecteren': "ضدعفونی کردن (کشتن میکروب‌ها)", // nieuw, nalezen
-    'w.werkjas': "روپوش کار", // nieuw, nalezen
-    'w.bacterie': "میکروب، باکتری", // nieuw, nalezen
-    's.hygienelock.1': "دست‌هایت را بشوی و ضدعفونی کن.", // nieuw, nalezen
-    's.hygienelock.2': "تور مو و تور ریشت را بگذار.", // nieuw, nalezen
-    's.hygienelock.3': "از چکمه‌شوی رد شو.", // nieuw, nalezen
-    'c.hygienelock.q': "می‌توانم ساعتم را نگه دارم؟", // nieuw, nalezen
-    'c.hygienelock.a': "نه، همهٔ زیورآلات باید درآورده شوند.", // nieuw, nalezen
-    'c.hygienelock': "هر بار تمیز وارد شو", // nieuw, nalezen
-    'c.hygienelock.b': "در کارخانهٔ مواد غذایی، تو بزرگ‌ترین خطر برای غذا هستی: میکروب از دست‌ها، مو و لباست می‌آید. پس هر بار که وارد می‌شوی از اتاقک بهداشت رد شو، حتی بعد از استراحت یا دستشویی. تور مو سرت، تور ریش اگر ریش داری، لباس کار تمیز، همهٔ زیورآلات درآورده. دست‌هایت را با صابون بشوی، خشک کن و ضدعفونی کن. مریضی، با اسهال یا استفراغ؟ قبل از شروع به سرپرستت بگو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.hygienelock.p': "اسهال دارم. امروز می‌توانم کار کنم؟", // nieuw, nalezen
-    'c.hygienelock.s': "از دستشویی برمی‌گردی. همکارت می‌گوید: «اتاقک را ول کن، سرمان شلوغ است». چه کار می‌کنی؟", // nieuw, nalezen
-    'c.hygienelock.o1': "با این حال از اتاقک رد می‌شوی.", // nieuw, nalezen
-    'c.hygienelock.o2': "ولش می‌کنی، فقط همین یک بار.", // nieuw, nalezen
-    'c.hygienelock.o3': "فقط دستکش نو می‌پوشی.", // nieuw, nalezen
-    'c.hygienelock.w': "میکروب دستشویی می‌تواند مشتری‌های زیادی را مریض کند. چند دقیقه در اتاقک جلوی این را می‌گیرد.", // nieuw, nalezen
-    'l.allergens': "آلرژن‌ها", // nieuw, nalezen
-    'w.allergeen': "آلرژن (غذایی که بعضی‌ها را خیلی مریض می‌کند)", // nieuw, nalezen
-    'w.noten': "آجیل، مغزها", // nieuw, nalezen
-    'w.pinda': "بادام‌زمینی", // nieuw, nalezen
-    'w.gluten': "گلوتن (در گندم، پس در نان و کیک)", // nieuw, nalezen
-    'w.sesam': "کنجد (دانه‌های کوچک، مثلاً روی نان)", // nieuw, nalezen
-    'w.kruisbesmetting': "آلودگی متقاطع (چیزی وارد غذایی می‌شود که نباید در آن باشد)", // nieuw, nalezen
-    's.allergens.1': "این محصول آجیل دارد.", // nieuw, nalezen
-    's.allergens.2': "روی برچسب نگاه کن چه آلرژن‌هایی در آن است.", // nieuw, nalezen
-    's.allergens.3': "بعد از بادام‌زمینی همه‌چیز را خوب تمیز کن.", // nieuw, nalezen
-    'c.allergens.q': "این ظرف می‌تواند با بقیه برود؟", // nieuw, nalezen
-    'c.allergens.a': "نه، داخلش آجیل هست.", // nieuw, nalezen
-    'c.allergens': "یک ذره کافی است", // nieuw, nalezen
-    'c.allergens.b': "برای بعضی‌ها، ذرهٔ خیلی کوچکی از آجیل، بادام‌زمینی، شیر، تخم‌مرغ، گلوتن یا کنجد می‌تواند جانشان را به خطر بیندازد. برای همین برچسب باید دقیقاً بگوید چه چیزی در محصول است. آلرژن‌ها را جدا نگه دار: ظرف‌ها، ابزارها و رنگ‌های خودشان. بعد از محصولی با آلرژن، خط قبل از محصول بعدی تمیز می‌شود. هیچ‌وقت یک ماده را با مادهٔ دیگری عوض نکن، حتی وقتی شبیه هم به نظر می‌رسند. شک داری؟ بپرس. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.allergens.p': "این آجیل دارد؟", // nieuw, nalezen
-    'c.allergens.s': "بادام تمام شده. یک همکار می‌گوید: «فندق بریز، کسی نمی‌فهمد». چه کار می‌کنی؟", // nieuw, nalezen
-    'c.allergens.o1': "نه می‌گویی، و به سرپرستت می‌گویی.", // nieuw, nalezen
-    'c.allergens.o2': "از آن استفاده می‌کنی: آجیل آجیل است.", // nieuw, nalezen
-    'c.allergens.o3': "از آن استفاده می‌کنی، و چیزی روی برچسب عوض نمی‌کنی.", // nieuw, nalezen
-    'c.allergens.w': "برچسب باید بگوید داخلش چیست. یک مغز اشتباه می‌تواند کسی را که آلرژی دارد خیلی مریض کند.", // nieuw, nalezen
-    'l.coldroom': "سردخانه و فریزر", // nieuw, nalezen
-    'w.temperatuur': "دما", // nieuw, nalezen
-    'w.graden': "درجه (°C)", // nieuw, nalezen
-    'w.bevroren': "یخ‌زده", // nieuw, nalezen
-    'w.ontdooien': "یخ‌زدایی کردن، از یخ درآوردن", // nieuw, nalezen
-    'w.koelketen': "زنجیرهٔ سرما (غذا در تمام مسیر سرد می‌ماند)", // nieuw, nalezen
-    'w.thermokleding': "لباس گرم (لباس گرم برای سرما)", // nieuw, nalezen
-    's.coldroom.1': "در فریزر دما منفی هجده درجه است.", // nieuw, nalezen
-    's.coldroom.2': "گوشت را فوراً در سردخانه بگذار.", // nieuw, nalezen
-    's.coldroom.3': "دما را در فهرست بنویس.", // nieuw, nalezen
-    'c.coldroom.q': "چرا سردخانه بوق می‌زند؟", // nieuw, nalezen
-    'c.coldroom.a': "در باز است. زود ببندش.", // nieuw, nalezen
-    'c.coldroom': "کار در سرما: گرم بپوش، سرد نگه دار", // nieuw, nalezen
-    'c.coldroom.b': "غذا باید در تمام مسیر سرد بماند: از کامیون تا سردخانه تا فروشگاه. پس محصولات سرد را فوراً سر جایشان بگذار، و درهای سردخانه و فریزر را بسته نگه دار. دما را بررسی کن و یادداشت کن. در فریزر لباس گرم، دستکش و کلاه بپوش، و به موقع برای گرم شدن استراحت کن. مطمئن شو که همیشه می‌توانی در را از داخل باز کنی. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.coldroom.p': "اینجا زیادی گرم است. سرمایش کار نمی‌کند.", // nieuw, nalezen
-    'c.coldroom.s': "دماسنج سردخانه عددی خیلی بالاتر از معمول نشان می‌دهد. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.coldroom.o1': "فوراً به سرپرستت می‌گویی.", // nieuw, nalezen
-    'c.coldroom.o2': "صبر می‌کنی: دوباره سرد می‌شود.", // nieuw, nalezen
-    'c.coldroom.o3': "عدد معمولی را در فهرست می‌نویسی.", // nieuw, nalezen
-    'c.coldroom.w': "زیادی گرم یعنی میکروب رشد می‌کند. سرپرستت تصمیم می‌گیرد که غذا هنوز سالم است یا نه.", // nieuw, nalezen
-    'l.foreignbody': "شیشه، فلز و پلاستیک در غذا", // nieuw, nalezen
-    'w.metaaldetector': "فلزیاب", // nieuw, nalezen
-    'w.glasbreuk': "شکستن شیشه (شیشه‌ای که شکسته)", // nieuw, nalezen
-    'w.splinter': "تراشه (تکهٔ کوچک تیز)", // nieuw, nalezen
-    'w.vreemdvoorwerp': "جسم خارجی (چیزی در غذا که جایش آنجا نیست)", // nieuw, nalezen
-    'w.vervuild': "آلوده (چیز کثیفی واردش شده)", // nieuw, nalezen
-    'w.ploegleider': "سرپرست شیفت", // nieuw, nalezen
-    's.foreignbody.1': "فلزیاب بوق می‌زند. خط را متوقف کن.", // nieuw, nalezen
-    's.foreignbody.2': "در خط دو شیشه شکسته.", // nieuw, nalezen
-    's.foreignbody.3': "محصول را در سطل ضایعات بگذار.", // nieuw, nalezen
-    'c.foreignbody.q': "با این تکه پلاستیک چه کار کنم؟", // nieuw, nalezen
-    'c.foreignbody.a': "آن را به سرپرست شیفت نشان بده.", // nieuw, nalezen
-    'c.foreignbody': "چیزی در غذا؟ بایست و گزارش بده", // nieuw, nalezen
-    'c.foreignbody.b': "شیشه، فلز، پلاستیک، چسب زخم یا مو هیچ‌وقت نباید در غذا بیفتد. فلزیاب بوق می‌زند، یا چیز عجیبی پیدا می‌کنی؟ محصول را کنار بگذار، و به سرپرست شیفت بگو. شیشه شکسته؟ خط نزدیک آن را متوقف کن: سرپرست شیفت تصمیم می‌گیرد چه چیزی باید دور ریخته شود. فقط از چسب زخم آبی استفاده کن، تا راحت دیده شود. هیچ‌وقت شیشه، خودکار یا چیزهای شل به سالن کار نبر. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.foreignbody.p': "در محصول چیزی پیدا کردم.", // nieuw, nalezen
-    'c.foreignbody.s': "یک لامپ شیشه‌ای بالای خط می‌شکند. محصولات همین‌طور می‌روند. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.foreignbody.o1': "خط را متوقف می‌کنی، و سرپرست شیفت را صدا می‌کنی.", // nieuw, nalezen
-    'c.foreignbody.o2': "شیشه‌هایی را که می‌بینی برمی‌داری.", // nieuw, nalezen
-    'c.foreignbody.o3': "ادامه می‌دهی: فلزیاب شیشه را پیدا می‌کند.", // nieuw, nalezen
-    'c.foreignbody.w': "فلزیاب شیشه را پیدا نمی‌کند. تکه‌های کوچکی که نمی‌بینی می‌توانند به مشتری آسیب بدی بزنند.", // nieuw, nalezen
-    'u.foodline': "خط تولید", // nieuw, nalezen
-    'l.cutting': "بریدن و وزن کردن", // nieuw, nalezen
-    'w.uitbenen': "استخوان گرفتن (درآوردن استخوان از گوشت)", // nieuw, nalezen
-    'w.fileren': "فیله کردن (بریدن ماهی یا گوشت به تکه‌های پهن)", // nieuw, nalezen
-    'w.portie': "پُرس، سهم", // nieuw, nalezen
-    'w.wegen': "وزن کردن", // nieuw, nalezen
-    'w.gewicht': "وزن", // nieuw, nalezen
-    'w.snijplank': "تختهٔ گوشت", // nieuw, nalezen
-    's.cutting.1': "هر پُرس را وزن کن.", // nieuw, nalezen
-    's.cutting.2': "وزن زیادی کم است.", // nieuw, nalezen
-    's.cutting.3': "قبل از شروع چاقویت را تیز کن.", // nieuw, nalezen
-    'c.cutting.q': "چقدر باید در یک ظرف برود؟", // nieuw, nalezen
-    'c.cutting.a': "پانصد گرم. به ترازو نگاه کن.", // nieuw, nalezen
-    'c.cutting': "چاقوی تیز، دست امن", // nieuw, nalezen
-    'c.cutting.b': "چاقوی تیز از چاقوی کُند ایمن‌تر است: زور کمتری لازم داری، پس کمتر لیز می‌خورد. همیشه دستکش ضد برشت را در دست دیگرت بپوش. رو به بیرون از بدنت ببُر. چاقو را صاف روی تخته بگذار، هیچ‌وقت در سینک یا زیر گوشت. سعی نکن چاقویی را که می‌افتد بگیری: عقب برو. چاقو را با نوک رو به پایین، نزدیک پایت ببر. حتی یک بریدگی کوچک باید پوشانده و گزارش شود.", // nieuw, nalezen
-    'c.cutting.p': "چاقویم کُند است.", // nieuw, nalezen
-    'c.cutting.s': "چاقو از دستت لیز می‌خورد و می‌افتد. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.cutting.o1': "عقب می‌روی، و می‌گذاری بیفتد.", // nieuw, nalezen
-    'c.cutting.o2': "سریع می‌گیری‌اش.", // nieuw, nalezen
-    'c.cutting.o3': "با پایت جلویش را می‌گیری.", // nieuw, nalezen
-    'c.cutting.w': "چاقویی که می‌افتد وقتی بگیری‌اش عمیق می‌بُرد. روی زمین آسیبی نمی‌زند.", // nieuw, nalezen
-    'l.labels': "بسته‌بندی و برچسب", // nieuw, nalezen
-    'w.etiketteren': "برچسب زدن", // nieuw, nalezen
-    'w.lotnummer': "شمارهٔ بچ (یک شماره برای یک سری محصول)", // nieuw, nalezen
-    'w.vacuum': "وکیوم‌شده (همهٔ هوا بیرون کشیده شده)", // nieuw, nalezen
-    'w.schaal': "ظرف (ظرف کم‌عمق برای غذا)", // nieuw, nalezen
-    'w.printer': "پرینتر", // nieuw, nalezen
-    'w.omdoos': "کارتن بیرونی (جعبهٔ بزرگ دور بسته‌های کوچک)", // nieuw, nalezen
-    's.labels.1': "بررسی کن که تاریخ روی برچسب درست باشد.", // nieuw, nalezen
-    's.labels.2': "این بسته وکیوم نشده. دوباره بسته‌بندی‌اش کن.", // nieuw, nalezen
-    's.labels.3': "شمارهٔ بچ را در فهرست بنویس.", // nieuw, nalezen
-    'c.labels.q': "چه تاریخی باید رویش بخورد؟", // nieuw, nalezen
-    'c.labels.a': "ده روز دیگر. به فهرست نگاه کن.", // nieuw, nalezen
-    'c.labels': "برچسب اشتباه خطرناک است", // nieuw, nalezen
-    'c.labels.b': "برچسب به مشتری می‌گوید داخلش چیست، چقدر وزن دارد و تا کی خوب است. تاریخ اشتباه یا برچسب اشتباه می‌تواند آدم‌ها را مریض کند، مثلاً وقتی یک آلرژن جا افتاده. پس اولین برچسب‌های هر سری جدید را بررسی کن: محصول، تاریخ و شمارهٔ بچ. چیزی اشتباه است؟ دست نگه دار، و به سرپرستت بگو. محصولات با برچسب اشتباه کنار گذاشته می‌شوند، هیچ‌وقت فروخته نمی‌شوند. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.labels.p': "برچسب درست نیست.", // nieuw, nalezen
-    'c.labels.s': "می‌بینی که تاریخ روی برچسب‌ها یک هفته دیرتر است. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.labels.o1': "بسته‌بندی را متوقف می‌کنی، و به سرپرستت می‌گویی.", // nieuw, nalezen
-    'c.labels.o2': "ادامه می‌دهی: یک هفته مهم نیست.", // nieuw, nalezen
-    'c.labels.o3': "تاریخ را با خودکار عوض می‌کنی.", // nieuw, nalezen
-    'c.labels.w': "تاریخ اشتباه ممکن است باعث شود آدم‌ها غذایی بخورند که دیگر سالم نیست. بهتر است الان دست نگه داری تا اینکه بعداً آن را جمع کنند.", // nieuw, nalezen
-    'l.linecleaning': "تمیز کردن خط", // nieuw, nalezen
-    'w.schuim': "کف", // nieuw, nalezen
-    'w.hogedrukspuit': "کارواش فشار قوی", // nieuw, nalezen
-    'w.naspoelen': "آب کشیدن (شستن با آب تمیز)", // nieuw, nalezen
-    'w.demonteren': "باز کردن (قطعه‌قطعه کردن دستگاه)", // nieuw, nalezen
-    'w.borstel': "برس", // nieuw, nalezen
-    'w.restjes': "پس‌مانده (تکه‌های کوچک غذا)", // nieuw, nalezen
-    's.linecleaning.1': "اول دستگاه را خاموش کن.", // nieuw, nalezen
-    's.linecleaning.2': "کف را روی نوار بپاش.", // nieuw, nalezen
-    's.linecleaning.3': "بعد همه‌چیز را با آب تمیز آب بکش.", // nieuw, nalezen
-    'c.linecleaning.q': "نوار تمیز شده؟", // nieuw, nalezen
-    'c.linecleaning.a': "هنوز نه. هنوز باید آبش بکشم.", // nieuw, nalezen
-    'c.linecleaning': "قبل از تمیز کردن، برق قطع", // nieuw, nalezen
-    'c.linecleaning.b': "هیچ‌وقت دستگاهی را که کار می‌کند تمیز نکن. خاموشش کن، و مطمئن شو کسی نمی‌تواند دوباره روشنش کند: مراحل شرکتت را دنبال کن. دستکش، عینک و چکمهٔ مناسب بپوش: مواد شوینده می‌توانند پوست و چشمت را بسوزانند. هیچ‌وقت مواد را با هم مخلوط نکن. اول پس‌مانده‌ها را بردار، بعد کف بزن، بساب و آب بکش. روی جعبه‌های برق یا پریزها آب نپاش. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.linecleaning.p': "دستگاه خاموش است؟", // nieuw, nalezen
-    'c.linecleaning.s': "کمی گوشت در نوار گیر کرده. دستگاه هنوز کار می‌کند. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.linecleaning.o1': "اول خاموشش می‌کنی، بعد درش می‌آوری.", // nieuw, nalezen
-    'c.linecleaning.o2': "سریع با دست بیرونش می‌کشی.", // nieuw, nalezen
-    'c.linecleaning.o3': "با چاقو بیرونش می‌دهی.", // nieuw, nalezen
-    'c.linecleaning.w': "نواری که کار می‌کند می‌تواند در یک ثانیه دستت را به داخل بکشد. خاموش کردنش فقط یک لحظه طول می‌کشد.", // nieuw, nalezen
-    'l.haccp': "بررسی و ثبت کردن (HACCP)", // nieuw, nalezen
-    'w.controlepunt': "نقطهٔ کنترل (مرحله‌ای که باید چیزی را بررسی کنی)", // nieuw, nalezen
-    'w.kerntemperatuur': "دمای مرکز (دمای داخل غذا)", // nieuw, nalezen
-    'w.prikthermometer': "دماسنج سوزنی (آن را در غذا فرو می‌کنی)", // nieuw, nalezen
-    'w.afwijking': "انحراف (چیزی آن‌طور که باید نیست)", // nieuw, nalezen
-    'w.steekproef': "نمونه‌برداری (چند محصول را امتحان می‌کنی)", // nieuw, nalezen
-    'w.kwaliteitsdienst': "واحد کنترل کیفیت (QA)", // nieuw, nalezen
-    's.haccp.1': "دمای مرکز را با دماسنج سوزنی اندازه بگیر.", // nieuw, nalezen
-    's.haccp.2': "همه‌چیز را در فهرست بنویس.", // nieuw, nalezen
-    's.haccp.3': "چیزی اشتباه است؟ فوراً گزارشش بده.", // nieuw, nalezen
-    'c.haccp.q': "چرا باید همه‌چیز را بنویسم؟", // nieuw, nalezen
-    'c.haccp.a': "این‌طوری می‌دانیم غذا سالم است.", // nieuw, nalezen
-    'c.haccp': "HACCP: بررسی کن، بنویس، گزارش بده", // nieuw, nalezen
-    'c.haccp.b': "هر شرکت مواد غذایی با یک برنامهٔ ایمنی غذا (HACCP) کار می‌کند. این برنامه می‌گوید در کدام مرحله‌ها باید چیزی را بررسی کنی، مثل دمای سردخانه یا دمای مرکز گوشت پخته. بررسی می‌کنی، یادداشت می‌کنی، و امضا می‌کنی. چیزی را بنویس که واقعاً اندازه گرفتی، حتی وقتی اشتباه است. عدد بد تقصیر تو نیست، ولی پنهان کردنش خطرناک است. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.haccp.p': "دما زیادی بالاست.", // nieuw, nalezen
-    'c.haccp.s': "یادت رفت ساعت ده اندازه بگیری. همکارت می‌گوید: «یک عدد خوب بنویس و تمام». چه کار می‌کنی؟", // nieuw, nalezen
-    'c.haccp.o1': "الان اندازه می‌گیری، و ساعت واقعی را می‌نویسی.", // nieuw, nalezen
-    'c.haccp.o2': "برای ساعت ده یک عدد خوب می‌نویسی.", // nieuw, nalezen
-    'c.haccp.o3': "آن خط را خالی می‌گذاری.", // nieuw, nalezen
-    'c.haccp.w': "فهرست باید نشان بدهد واقعاً چه اتفاقی افتاده. یک عدد ساختگی مشکلی را پنهان می‌کند که می‌تواند آدم‌ها را مریض کند.", // nieuw, nalezen
-    'u.collection': "جمع‌آوری زباله", // nieuw, nalezen
-    'l.binlorry': "ماشین حمل زباله", // nieuw, nalezen
-    'w.vuilniswagen': "ماشین حمل زباله، کامیون زباله", // nieuw, nalezen
-    'w.kliko': "سطل زبالهٔ چرخ‌دار", // nieuw, nalezen
-    'w.kieplift': "بالابر سطل (سطل را بلند می‌کند و خالی می‌کند)", // nieuw, nalezen
-    'w.treeplank': "رکاب عقب (پله‌ای پشت کامیون)", // nieuw, nalezen
-    'w.bijplaatsing': "زبالهٔ اضافه (کیسه‌هایی که کنار سطل گذاشته شده)", // nieuw, nalezen
-    'w.ophaaldag': "روز جمع‌آوری", // nieuw, nalezen
-    's.binlorry.1': "سطل چرخ‌دار را روی بالابر بگذار.", // nieuw, nalezen
-    's.binlorry.2': "کنار مخزن کیسه گذاشته‌اند.", // nieuw, nalezen
-    's.binlorry.3': "سطل چرخ‌دار زیادی سنگین است. ولش کن.", // nieuw, nalezen
-    'c.binlorry.q': "می‌توانم پشت کامیون سوار شوم؟", // nieuw, nalezen
-    'c.binlorry.a': "نه، سوار کابین می‌شوی.", // nieuw, nalezen
-    'c.binlorry': "دیده شو، و داخل سوار شو", // nieuw, nalezen
-    'c.binlorry.b': "در هر دور لباس شب‌رنگت را بپوش. از سمت پیاده‌رو سوار و پیاده شو، هیچ‌وقت از سمت ترافیک. داخل کابین سوار شو، نه پشت کامیون: فقط وقتی شرکتت به‌روشنی اجازه می‌دهد، و هیچ‌وقت وقتی کامیون دنده‌عقب می‌رود یا تند می‌رود. وقتی بالابر حرکت می‌کند از آن دور بمان. سطلی زیادی سنگین است، یا چیزی از آن بیرون زده؟ ولش کن، و گزارشش بده. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.binlorry.p': "این سطل چرخ‌دار زیادی سنگین است.", // nieuw, nalezen
-    'c.binlorry.s': "خیابان بعدی خیلی نزدیک است. راننده می‌گوید: «روی رکاب عقب بایست». چه کار می‌کنی؟", // nieuw, nalezen
-    'c.binlorry.o1': "با این حال سوار کابین می‌شوی.", // nieuw, nalezen
-    'c.binlorry.o2': "روی رکاب می‌ایستی: نزدیک است.", // nieuw, nalezen
-    'c.binlorry.o3': "پشت کامیون پیاده می‌روی.", // nieuw, nalezen
-    'c.binlorry.w': "افتادن از کامیونی که حرکت می‌کند یکی از بزرگ‌ترین خطرهای این کار است. داخل کابین در امانی.", // nieuw, nalezen
-    'l.reversing': "دنده‌عقب رفتن ایمن", // nieuw, nalezen
-    'w.achteruitrijden': "دنده‌عقب رفتن (به عقب راندن)", // nieuw, nalezen
-    'w.dodehoek': "نقطهٔ کور (جایی که راننده نمی‌تواند تو را ببیند)", // nieuw, nalezen
-    'w.aanwijzer': "راهنما (کسی که راننده را هدایت می‌کند)", // nieuw, nalezen
-    'w.oogcontact': "تماس چشمی", // nieuw, nalezen
-    'w.piepen': "بوق زدن، بیپ کردن", // nieuw, nalezen
-    'w.cabine': "کابین (جایی که راننده می‌نشیند)", // nieuw, nalezen
-    's.reversing.1': "هیچ‌وقت پشت کامیون نایست.", // nieuw, nalezen
-    's.reversing.2': "در آینه نمی‌بینمت.", // nieuw, nalezen
-    's.reversing.3': "با راننده تماس چشمی بگیر.", // nieuw, nalezen
-    'c.reversing.q': "می‌توانی کمکم کنی دنده‌عقب بروم؟", // nieuw, nalezen
-    'c.reversing.a': "بله، من سمت چپم. در آینه‌ات نگاه کن.", // nieuw, nalezen
-    'c.reversing': "هیچ‌وقت پشت کامیونی که دنده‌عقب می‌رود", // nieuw, nalezen
-    'c.reversing.b': "خیلی از تصادف‌های کامیون زباله وقتی پیش می‌آید که به عقب می‌روند. راننده نمی‌تواند درست پشت کامیون را ببیند: نقطهٔ کور. پس هیچ‌وقت پشت کامیونی که ممکن است دنده‌عقب برود نایست یا راه نرو. راننده را از کنار هدایت کن، جایی که در آینه همدیگر را می‌بینید. تماس چشمی قطع شد؟ راننده می‌ایستد. قبل از شروع روی علامت‌های واضح توافق کنید. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.reversing.p': "بایست! دیگر نمی‌بینمت.", // nieuw, nalezen
-    'c.reversing.s': "کامیون دنده‌عقب می‌رود. تو برای برداشتن یک کیسه پشتش می‌روی. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.reversing.o1': "صبر می‌کنی تا کامیون کاملاً بایستد.", // nieuw, nalezen
-    'c.reversing.o2': "سریع می‌روی: فقط یک ثانیه است.", // nieuw, nalezen
-    'c.reversing.o3': "برای راننده دست تکان می‌دهی، و می‌روی.", // nieuw, nalezen
-    'c.reversing.w': "راننده نمی‌تواند تو را پشت کامیون ببیند. یک ثانیه برای یک تصادف کافی است.", // nieuw, nalezen
-    'l.wastesorting': "تفکیک زباله", // nieuw, nalezen
-    'w.papier': "کاغذ", // nieuw, nalezen
-    'w.plastic': "پلاستیک", // nieuw, nalezen
-    'w.gft': "زبالهٔ تر (میوه، سبزی و گیاه)", // nieuw, nalezen
-    'w.restafval': "زبالهٔ عمومی (چیزی که قابل تفکیک نیست)", // nieuw, nalezen
-    'w.karton': "مقوا", // nieuw, nalezen
-    'w.blik': "قوطی", // nieuw, nalezen
-    's.wastesorting.1': "شیشه در مخزن شیشه می‌رود.", // nieuw, nalezen
-    's.wastesorting.2': "این جزو زبالهٔ عمومی است.", // nieuw, nalezen
-    's.wastesorting.3': "مقوا را صاف تا کن.", // nieuw, nalezen
-    'c.wastesorting.q': "جعبهٔ پیتزا کجا می‌رود؟", // nieuw, nalezen
-    'c.wastesorting.a': "در زبالهٔ عمومی. رویش چربی هست.", // nieuw, nalezen
-    'c.wastesorting': "تفکیک خوب کار را کم می‌کند", // nieuw, nalezen
-    'c.wastesorting.b': "زبالهٔ تفکیک‌شده دوباره قابل استفاده است: کاغذ کاغذ می‌شود، شیشه شیشه. ولی یک چیز اشتباه می‌تواند یک بار کامل را خراب کند. پس قبل از خالی کردن، داخل سطل را نگاه کن. چیزی آنجا جایش نیست، مثل کیسه‌ای زبالهٔ عمومی بین کاغذها؟ ولش کن، یا قانون‌های شرکتت را دنبال کن. اینکه کدام زباله کجا می‌رود در هر شهر فرق دارد: قانون‌های منطقه‌ات را یاد بگیر. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.wastesorting.p': "این جایش اینجا نیست.", // nieuw, nalezen
-    'c.wastesorting.s': "یک سطل کاغذ پر از کیسه زبالهٔ سیاه است. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.wastesorting.o1': "ولش می‌کنی، و گزارشش می‌دهی.", // nieuw, nalezen
-    'c.wastesorting.o2': "آن را در بار کاغذ خالی می‌کنی.", // nieuw, nalezen
-    'c.wastesorting.o3': "کیسه‌ها را با دست بیرون می‌آوری.", // nieuw, nalezen
-    'c.wastesorting.w': "زباله در کاغذ کل بار را خراب می‌کند. کیسه‌ها ممکن است چیزهای تیز یا کثیف هم داشته باشند.", // nieuw, nalezen
-    'l.wastesafety': "چیزهای تیز و بلند کردن", // nieuw, nalezen
-    'w.snijwond': "بریدگی (زخمی از یک چیز تیز)", // nieuw, nalezen
-    'w.prikken': "فرو رفتن (یک نوک تیز در پوستت فرو می‌رود)", // nieuw, nalezen
-    'w.naald': "سوزن", // nieuw, nalezen
-    'w.scherp': "تیز", // nieuw, nalezen
-    'w.rugpijn': "کمردرد", // nieuw, nalezen
-    'w.tetanusprik': "واکسن کزاز (آمپولی برای یک بیماری که از کثیفی در زخم می‌آید)", // nieuw, nalezen
-    's.wastesafety.1': "هیچ‌وقت کیسه را از زیر نگیر.", // nieuw, nalezen
-    's.wastesafety.2': "مواظب باش، در این کیسه شیشه هست.", // nieuw, nalezen
-    's.wastesafety.3': "سوزن در دستم رفت.", // nieuw, nalezen
-    'c.wastesafety.q': "دستم را بریده‌ام. چه کار باید بکنم؟", // nieuw, nalezen
-    'c.wastesafety.a': "زخم را خوب بشوی. و به من بگو.", // nieuw, nalezen
-    'c.wastesafety': "هیچ‌وقت کیسه را فشار نده", // nieuw, nalezen
-    'c.wastesafety.b': "کیسه زباله ممکن است شیشه، چاقو یا سوزن داشته باشد. پس هیچ‌وقت کیسه را به بدنت نچسبان، هیچ‌وقت فشارش نده، و هیچ‌وقت آن را روی پایت حمل نکن: از بالا بگیرش، دور از خودت. دستکش‌هایت را بپوش. با زانوی خم و کمر صاف بلند کن، و سطل را هل بده، حمل نکن. چیزی در دستت فرو رفت یا بریدت؟ زخم را با آب خوب بشوی، و همان روز به سرپرستت بگو.", // nieuw, nalezen
-    'c.wastesafety.p': "چیزی در دستم فرو رفت.", // nieuw, nalezen
-    'c.wastesafety.s': "یک کیسه پاره می‌شود. داخلش یک سوزن می‌بینی. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.wastesafety.o1': "به آن دست نمی‌زنی، و گزارشش می‌دهی.", // nieuw, nalezen
-    'c.wastesafety.o2': "با دستکش برش می‌داری.", // nieuw, nalezen
-    'c.wastesafety.o3': "آن را دوباره در کیسه هل می‌دهی.", // nieuw, nalezen
-    'c.wastesafety.w': "دستکش جلوی سوزن را نمی‌گیرد. سوزن ممکن است بیماری منتقل کند.", // nieuw, nalezen
-    'u.recycling': "مرکز بازیافت", // nieuw, nalezen
-    'l.yard': "در مرکز بازیافت", // nieuw, nalezen
-    'w.milieustraat': "مرکز بازیافت (جایی که مردم زبالهٔ بزرگ یا خاص می‌آورند)", // nieuw, nalezen
-    'w.grofvuil': "زبالهٔ حجیم (چیزهای بزرگ، مثل مبل)", // nieuw, nalezen
-    'w.puin': "نخاله (سنگ و آجر شکسته)", // nieuw, nalezen
-    'w.matras': "تشک", // nieuw, nalezen
-    'w.weegbrug': "باسکول (ترازویی برای ماشین و کامیون)", // nieuw, nalezen
-    'w.afvalpas': "کارت زباله (ساکنان دم در نشانش می‌دهند)", // nieuw, nalezen
-    's.yard.1': "نخاله در مخزن چهار می‌رود.", // nieuw, nalezen
-    's.yard.2': "می‌توانم کارت زباله‌تان را ببینم؟", // nieuw, nalezen
-    's.yard.3': "اول از روی باسکول رد شوید.", // nieuw, nalezen
-    'c.yard.q': "این تشک کجا می‌رود؟", // nieuw, nalezen
-    'c.yard.a': "در مخزن زبالهٔ حجیم، آن ته.", // nieuw, nalezen
-    'c.yard': "کمک کن، ولی محوطه را ایمن نگه دار", // nieuw, nalezen
-    'c.yard.b': "در مرکز بازیافت به مراجعه‌کننده‌ها می‌گویی زباله‌شان کجا می‌رود، و بررسی می‌کنی که درست تفکیک شده باشد. مهربان باش: خیلی‌ها فقط چند بار در سال می‌آیند و قانون‌ها را نمی‌دانند. بچه‌ها و مراجعه‌کننده‌ها را از دستگاه‌ها و از لبهٔ مخزن‌های بلند دور نگه دار. چیزهای سنگین را با هم بلند کنید، یا بگذار مراجعه‌کننده خودش وسایلش را ببرد. کسی چیزی می‌آورد که نمی‌شناسی؟ قبل از اینکه داخل برود بپرس. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.yard.p': "این در مخزن چهار می‌رود.", // nieuw, nalezen
-    'c.yard.s': "مردی می‌خواهد یک کیسهٔ پر را در مخزن چوب بیندازد. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.yard.o1': "می‌پرسی داخل کیسه چیست.", // nieuw, nalezen
-    'c.yard.o2': "می‌گذاری بیندازد: زبالهٔ خودش است.", // nieuw, nalezen
-    'c.yard.o3': "خودت آن را برایش می‌اندازی.", // nieuw, nalezen
-    'c.yard.w': "یک چیز اشتباه می‌تواند یک مخزن پر را خراب کند. یک سؤال مؤدبانه زباله را تمیز نگه می‌دارد.", // nieuw, nalezen
-    'l.hazardous': "زبالهٔ شیمیایی", // nieuw, nalezen
-    'w.chemischafval': "زبالهٔ شیمیایی (زبالهٔ خطرناک، مثل رنگ و روغن)", // nieuw, nalezen
-    'w.spuitbus': "قوطی اسپری", // nieuw, nalezen
-    'w.asbest': "آزبست (مادهٔ خطرناکی در ساختمان‌های قدیمی)", // nieuw, nalezen
-    'w.lekken': "نشت کردن", // nieuw, nalezen
-    'w.gevarensymbool': "علامت خطر (تصویری که دربارهٔ خطر هشدار می‌دهد)", // nieuw, nalezen
-    'w.vat': "بشکه", // nieuw, nalezen
-    's.hazardous.1': "رنگ را کنار زبالهٔ شیمیایی بگذار.", // nieuw, nalezen
-    's.hazardous.2': "این بطری نشت می‌کند. با دستکش برش دار.", // nieuw, nalezen
-    's.hazardous.3': "آزبست باید خوب بسته‌بندی شود.", // nieuw, nalezen
-    'c.hazardous.q': "در این بطری چیست؟", // nieuw, nalezen
-    'c.hazardous.a': "نمی‌دانم. کنارش بگذار.", // nieuw, nalezen
-    'c.hazardous': "ناشناخته؟ باز نکن، بو نکن", // nieuw, nalezen
-    'c.hazardous.b': "زبالهٔ شیمیایی، مثل رنگ، روغن، مواد شوینده، باتری و قوطی اسپری، می‌تواند بسوزاند، مسموم کند یا منفجر شود. دنبال علامت‌های خطر بگرد. دستکش و عینک ایمنی بپوش. هیچ‌وقت بطری را باز نکن تا بو کنی داخلش چیست، و هیچ‌وقت مواد را با هم مخلوط نکن. بطری‌ای را که نشت می‌کند صاف نگه دار، و آن را در یک سینی بگذار. آزبست فقط وقتی اجازه دارد وارد شود که خوب بسته‌بندی شده باشد: هیچ‌وقت آن را نشکن، و از بسته‌بندی درش نیاور. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.hazardous.p': "داخل این چیست؟", // nieuw, nalezen
-    'c.hazardous.s': "زنی یک بطری بدون برچسب می‌آورد. بوی تندی می‌دهد. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.hazardous.o1': "جدا می‌گذاری‌اش، و به سرپرستت می‌گویی.", // nieuw, nalezen
-    'c.hazardous.o2': "بازش می‌کنی، و بو می‌کنی ببینی چیست.", // nieuw, nalezen
-    'c.hazardous.o3': "آن را در بشکهٔ رنگ خالی می‌کنی.", // nieuw, nalezen
-    'c.hazardous.w': "محصولات ناشناخته ممکن است با بقیه واکنش نشان بدهند. سرپرستت می‌داند کجا می‌تواند ایمن برود.", // nieuw, nalezen
-    'l.baler': "دستگاه پرس", // nieuw, nalezen
-    'w.balenpers': "دستگاه پرس (دستگاهی که زباله را به شکل بلوک فشرده می‌کند)", // nieuw, nalezen
-    'w.baal': "عدل (بلوک فشردهٔ کاغذ یا پلاستیک)", // nieuw, nalezen
-    'w.persen': "پرس کردن، فشردن", // nieuw, nalezen
-    'w.vastlopen': "گیر کردن", // nieuw, nalezen
-    'w.binddraad': "سیم بسته‌بندی", // nieuw, nalezen
-    'w.vulopening': "دهانهٔ بارگیری (جایی که زباله داخل می‌رود)", // nieuw, nalezen
-    's.baler.1': "پرس گیر کرده. دکمهٔ توقف اضطراری را بزن.", // nieuw, nalezen
-    's.baler.2': "هیچ‌وقت دستت را داخل پرس نبر.", // nieuw, nalezen
-    's.baler.3': "عدل را خوب ببند.", // nieuw, nalezen
-    'c.baler.q': "پرس گیر می‌کند. می‌توانم نگاهی بیندازم؟", // nieuw, nalezen
-    'c.baler.a': "نه. اول برق قطع می‌شود.", // nieuw, nalezen
-    'c.baler': "هیچ‌وقت دستت را داخل پرس نبر", // nieuw, nalezen
-    'c.baler.b': "دستگاه پرس با نیروی خیلی زیادی فشار می‌دهد. فقط وقتی از آن استفاده کن که طرز کارش را یاد گرفته‌ای. هیچ‌وقت دست، بازو یا پا را داخل دهانهٔ بارگیری نبر، حتی وقتی دستگاه ساکن به نظر می‌رسد. گیر می‌کند؟ دکمهٔ توقف اضطراری را بزن، خاموشش کن و مطمئن شو کسی نمی‌تواند روشنش کند: مراحل شرکتت را دنبال کن. فقط بعد از آن نگاه کن. هیچ‌وقت داخل دستگاه پرس یا مخزن نرو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.baler.p': "پرس گیر کرده.", // nieuw, nalezen
-    'c.baler.s': "یک تکه مقوا در دهانه گیر کرده. دستگاه ایستاده. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.baler.o1': "کاملاً خاموشش می‌کنی، بعد درش می‌آوری.", // nieuw, nalezen
-    'c.baler.o2': "سریع با دست بیرونش می‌کشی.", // nieuw, nalezen
-    'c.baler.o3': "با پایت داخلش هل می‌دهی.", // nieuw, nalezen
-    'c.baler.w': "دستگاهی که ایستاده ممکن است دوباره راه بیفتد. بدون قطع برق، دستت در خطر است.", // nieuw, nalezen
-    'l.shovel': "لودر در محوطه", // nieuw, nalezen
-    'w.shovel': "لودر (دستگاه بزرگی با یک جام در جلو)", // nieuw, nalezen
-    'w.zwaailamp': "چراغ گردان (چراغ نارنجی بالای یک دستگاه)", // nieuw, nalezen
-    'w.bunker': "سوله (فضای بتنی بزرگ برای یک نوع زباله)", // nieuw, nalezen
-    'w.looppad': "مسیر عابر (راهی فقط برای آدم‌ها)", // nieuw, nalezen
-    'w.toeteren': "بوق زدن", // nieuw, nalezen
-    'w.opscheppen': "برداشتن با جام، بیل زدن", // nieuw, nalezen
-    's.shovel.1': "روی مسیر عابر بمان.", // nieuw, nalezen
-    's.shovel.2': "لودر دنده‌عقب می‌رود. مواظب باش!", // nieuw, nalezen
-    's.shovel.3': "چراغ گردان روشن است. دستگاه حرکت می‌کند.", // nieuw, nalezen
-    'c.shovel.q': "می‌توانم از کنار لودر رد شوم؟", // nieuw, nalezen
-    'c.shovel.a': "فقط اگر راننده تو را ببیند.", // nieuw, nalezen
-    'c.shovel': "از سر راه لودر کنار برو", // nieuw, nalezen
-    'c.shovel.b': "لودر بزرگ است، و راننده‌اش دور و برش را کم می‌بیند، مخصوصاً پشتش را. پس روی مسیرهای عابر بمان، و لباس شب‌رنگت را بپوش. هیچ‌وقت پشت دستگاهی که حرکت می‌کند راه نرو. می‌خواهی رد شوی؟ صبر کن تا راننده تو را ببیند و علامت بدهد. چراغ گردان یعنی: این دستگاه دارد کار می‌کند. مراجعه‌کننده‌ها را از آن خیلی دور نگه دار. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.shovel.p': "مرا دیدی؟", // nieuw, nalezen
-    'c.shovel.s': "باید از کنار لودری که کار می‌کند رد شوی. راننده به طرف دیگر نگاه می‌کند. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.shovel.o1': "صبر می‌کنی تا تو را ببیند.", // nieuw, nalezen
-    'c.shovel.o2': "سریع از کنارش رد می‌شوی.", // nieuw, nalezen
-    'c.shovel.o3': "از پشت دستگاه رد می‌شوی.", // nieuw, nalezen
-    'c.shovel.w': "راننده‌ای که تو را ندیده نمی‌تواند برایت بایستد.", // nieuw, nalezen
-    'u.toddlers': "بچه‌ها", // nieuw, nalezen
-    'l.nappies': "عوض کردن پوشک", // nieuw, nalezen
-    'w.luier': "پوشک", // nieuw, nalezen
-    'w.verschonen': "عوض کردن (پوشک)", // nieuw, nalezen
-    'w.commode': "میز تعویض پوشک", // nieuw, nalezen
-    'w.billendoekje': "دستمال مرطوب بچه", // nieuw, nalezen
-    'w.potje': "لگن بچه", // nieuw, nalezen
-    'w.zindelijk': "از پوشک گرفته‌شده (بچه می‌تواند از توالت استفاده کند)", // nieuw, nalezen
-    's.nappies.1': "می‌روم پوشک سِم را عوض کنم.", // nieuw, nalezen
-    's.nappies.2': "بعد از عوض کردن پوشک دست‌هایت را بشوی.", // nieuw, nalezen
-    's.nappies.3': "هیچ‌وقت بچه را روی میز تعویض تنها نگذار.", // nieuw, nalezen
-    'c.nappies.q': "پوشک نور را کی عوض کردی؟", // nieuw, nalezen
-    'c.nappies.a': "ساعت ده. در اپ ثبت شده.", // nieuw, nalezen
-    'c.nappies': "یک دست روی بچه", // nieuw, nalezen
-    'c.nappies.b': "قبل از اینکه بچه را روی میز تعویض بگذاری، همه‌چیز را آماده کن: پوشک تمیز، دستمال مرطوب و لباس. بعد همیشه یک دستت را روی بچه نگه دار. هیچ‌وقت دور نشو، حتی برای یک ثانیه. بعد از هر بار عوض کردن دست‌هایت را بشوی، و میز را تمیز کن. یادداشت کن کی پوشک را عوض کردی، تا پدر و مادر بدانند. سوختگی پوشک یا زخم می‌بینی؟ یادداشتش کن، و به یک همکار بگو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.nappies.p': "دارم پوشکش را عوض می‌کنم.", // nieuw, nalezen
-    'c.nappies.s': "داری پوشک یک نوزاد را عوض می‌کنی. دستمال مرطوب یادت رفته؛ آن طرف اتاق است. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.nappies.o1': "نوزاد را با خودت می‌بری.", // nieuw, nalezen
-    'c.nappies.o2': "سریع می‌آوری‌اش: نزدیک است.", // nieuw, nalezen
-    'c.nappies.o3': "نوزاد را ول می‌کنی، و کسی را صدا می‌زنی.", // nieuw, nalezen
-    'c.nappies.w': "نوزاد می‌تواند در یک ثانیه از روی میز تعویض بیفتد. هیچ‌وقت بچه را آن بالا تنها نگذار.", // nieuw, nalezen
-    'l.mealtime': "خوردن و نوشیدن", // nieuw, nalezen
-    'w.fles': "شیشه شیر (برای نوزاد)", // nieuw, nalezen
-    'w.slabbetje': "پیش‌بند بچه", // nieuw, nalezen
-    'w.beker': "لیوان (دسته‌دار)", // nieuw, nalezen
-    'w.kinderstoel': "صندلی غذای بچه", // nieuw, nalezen
-    'w.fruithap': "پورهٔ میوه", // nieuw, nalezen
-    'w.boertje': "آروغ", // nieuw, nalezen
-    's.mealtime.1': "قبل از غذا دست‌هایت را بشوی.", // nieuw, nalezen
-    's.mealtime.2': "ساعت دوازده شیشه شیر لیزا را به او بده.", // nieuw, nalezen
-    's.mealtime.3': "همه سر میز می‌نشینند.", // nieuw, nalezen
-    'c.mealtime.q': "دان می‌تواند یک بیسکویت بخورد؟", // nieuw, nalezen
-    'c.mealtime.a': "نه، آلرژی دارد. به فهرست نگاه کن.", // nieuw, nalezen
-    'c.mealtime': "قبل از دادن غذا فهرست را نگاه کن", // nieuw, nalezen
-    'c.mealtime.b': "قبل از اینکه به بچه‌ای خوراکی یا نوشیدنی بدهی، فهرست را نگاه کن: بعضی بچه‌ها آلرژی دارند، بعضی دیگر به خاطر سلامتی یا دینشان نباید بعضی غذاها را بخورند. قبل از غذا دست‌های خودت و بچه‌ها را بشوی. بگذار بچه‌ها وقتی می‌خورند و می‌نوشند بنشینند، هیچ‌وقت راه نروند یا ندوند. برای بچه‌های کوچک غذا را ریز ببُر، مثلاً انگور را تکه‌تکه. هیچ‌وقت چیزی را که بچهٔ دیگری از خانه آورده به یک بچه نده. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.mealtime.p': "می‌تواند این را بخورد؟", // nieuw, nalezen
-    'c.mealtime.s': "بچه‌ای برای یک بیسکویت گریه می‌کند. این بچه را خوب نمی‌شناسی. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.mealtime.o1': "اول فهرست را نگاه می‌کنی.", // nieuw, nalezen
-    'c.mealtime.o2': "می‌دهی: فقط یک بیسکویت است.", // nieuw, nalezen
-    'c.mealtime.o3': "نصف بیسکویت می‌دهی.", // nieuw, nalezen
-    'c.mealtime.w': "بیسکویت ممکن است آجیل، شیر یا تخم‌مرغ داشته باشد. برای بچه‌ای که آلرژی دارد، این می‌تواند خیلی خطرناک باشد.", // nieuw, nalezen
-    'l.naptime': "خوابیدن", // nieuw, nalezen
-    'w.bedje': "تخت نوزاد (تخت کوچک برای نوزاد)", // nieuw, nalezen
-    'w.slaapkamer': "اتاق خواب", // nieuw, nalezen
-    'w.knuffel': "عروسک پولیشی", // nieuw, nalezen
-    'w.speen': "پستانک", // nieuw, nalezen
-    'w.babyfoon': "پیجر کودک (دستگاهی برای شنیدن صدای نوزاد)", // nieuw, nalezen
-    'w.slaapzak': "کیسه‌خواب نوزاد", // nieuw, nalezen
-    's.naptime.1': "نوزاد را به پشت بخوابان.", // nieuw, nalezen
-    's.naptime.2': "زیاد به اتاق خواب سر می‌زنم.", // nieuw, nalezen
-    's.naptime.3': "این عروسکت. خوب بخوابی.", // nieuw, nalezen
-    'c.naptime.q': "میلا خوابش برده؟", // nieuw, nalezen
-    'c.naptime.a': "بله، از ساعت یک. الان دوباره سر می‌زنم.", // nieuw, nalezen
-    'c.naptime': "نوزاد به پشت می‌خوابد", // nieuw, nalezen
-    'c.naptime.b': "نوزاد به پشت، در کیسه‌خواب، در تخت خودش، از همه ایمن‌تر می‌خوابد. در تخت بالش، پتوی شل و اسباب‌بازی بزرگ نباشد. اتاق را خنک و با هوای تازه نگه دار. زیاد به بچه‌هایی که خوابند سر بزن: نگاه کن و گوش کن، حتی وقتی پیجر کودک روشن است. پدر یا مادری از تو می‌خواهد نوزادش را طور دیگری بخوابانی؟ اول به سرپرستت بگو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.naptime.p': "می‌روم به اتاق خواب سر بزنم.", // nieuw, nalezen
-    'c.naptime.s': "نوزادی در تختش روی شکم خوابش برده. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.naptime.o1': "آرام او را به پشت برمی‌گردانی.", // nieuw, nalezen
-    'c.naptime.o2': "می‌گذاری بخوابد: حالا خوابش برده.", // nieuw, nalezen
-    'c.naptime.o3': "یک بالش کنارش می‌گذاری.", // nieuw, nalezen
-    'c.naptime.w': "نوزاد به پشت راحت نفس می‌کشد. بالش ممکن است صورتش را بپوشاند.", // nieuw, nalezen
-    'l.playtime': "بازی کردن", // nieuw, nalezen
-    'w.spelen': "بازی کردن", // nieuw, nalezen
-    'w.speelgoed': "اسباب‌بازی", // nieuw, nalezen
-    'w.zandbak': "جعبهٔ شن (برای بازی)", // nieuw, nalezen
-    'w.glijbaan': "سرسره", // nieuw, nalezen
-    'w.puzzel': "پازل", // nieuw, nalezen
-    'w.buitenspelen': "بیرون بازی کردن", // nieuw, nalezen
-    's.playtime.1': "می‌رویم بیرون بازی کنیم. کاپشن‌ها را بپوشید!", // nieuw, nalezen
-    's.playtime.2': "اسباب‌بازی‌ها را جمع کن.", // nieuw, nalezen
-    's.playtime.3': "روی سرسره هر بار یک بچه.", // nieuw, nalezen
-    'c.playtime.q': "می‌توانم با پازل بازی کنم؟", // nieuw, nalezen
-    'c.playtime.a': "بله، سر میز. بعد جمعش می‌کنی.", // nieuw, nalezen
-    'c.playtime': "بازی ایمن: نگاه کن، بشمار، بررسی کن", // nieuw, nalezen
-    'c.playtime.b': "بچه‌ها با بازی یاد می‌گیرند، پس بگذار چیزها را امتحان کنند. ولی همیشه آن‌ها را جلوی چشمت نگه دار، بیرون هم. وقتی بیرون می‌روید و وقتی برمی‌گردید داخل، بچه‌ها را بشمار. اول زمین بازی را بررسی کن: در بسته است، شیشه یا آشغال هست؟ اسباب‌بازی با قطعه‌های کوچک برای بچه‌های زیر سه سال نیست: ممکن است در گلویشان گیر کند و خفه شوند. اسباب‌بازی‌هایی را که به دهان می‌برند زیاد تمیز کن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.playtime.p': "همه هستند؟", // nieuw, nalezen
-    'c.playtime.s': "از زمین بازی برمی‌گردی داخل. یک بچه کم می‌شماری. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.playtime.o1': "به یک همکار می‌گویی، و فوراً دنبالش می‌گردی.", // nieuw, nalezen
-    'c.playtime.o2': "صبر می‌کنی: بچه خودش می‌آید داخل.", // nieuw, nalezen
-    'c.playtime.o3': "فردا دوباره می‌شماری.", // nieuw, nalezen
-    'c.playtime.w': "بچه‌ای که تنها بیرون است ممکن است آسیب ببیند یا دور شود. هر دقیقه مهم است.", // nieuw, nalezen
-    'u.daycare': "والدین، ایمنی و گروه", // nieuw, nalezen
-    'l.pickup': "آوردن و بردن بچه", // nieuw, nalezen
-    'w.ouder': "والد (پدر یا مادر)", // nieuw, nalezen
-    'w.afscheid': "خداحافظی", // nieuw, nalezen
-    'w.oppas': "پرستار بچه", // nieuw, nalezen
-    'w.schriftje': "دفترچه (برای یادداشت بین والدین و مربی‌ها)", // nieuw, nalezen
-    'w.ouderapp': "اپ والدین (برای عکس و پیام به والدین)", // nieuw, nalezen
-    'w.wennen': "عادت کردن (خو گرفتن به جای جدید)", // nieuw, nalezen
-    's.pickup.1': "آن را در دفترچه می‌نویسم.", // nieuw, nalezen
-    's.pickup.2': "به بابا بای‌بای کن.", // nieuw, nalezen
-    's.pickup.3': "یک عکس در اپ والدین می‌گذارم.", // nieuw, nalezen
-    'c.pickup.q': "امروز چه کسی سِم را می‌برد؟", // nieuw, nalezen
-    'c.pickup.a': "مادربزرگش. اسمش در فهرست هست.", // nieuw, nalezen
-    'c.pickup': "فقط به کسانی که در فهرست‌اند", // nieuw, nalezen
-    'c.pickup.b': "بچه را فقط به پدر یا مادر بده، یا به کسی که والدین درباره‌اش به تو گفته‌اند. آن آدم را نمی‌شناسی؟ بپرس کیست، مدرک شناسایی‌اش را نگاه کن، و با والدین یا سرپرستت هماهنگ کن. موقع بردن بچه، به پدر یا مادر بگو روز چطور گذشت: غذا، خواب، بازی، و هر چیز خاص. چیزهای مهم را در دفترچه یا اپ بنویس. دربارهٔ بچه‌های دیگر فقط با پدر و مادر خودشان حرف بزن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.pickup.p': "شما کی هستید؟ به والدین زنگ می‌زنم.", // nieuw, nalezen
-    'c.pickup.s': "مردی که نمی‌شناسی برای بردن سِم می‌آید. اسمش در فهرست نیست. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.pickup.o1': "قبل از اینکه سِم برود به والدین زنگ می‌زنی.", // nieuw, nalezen
-    'c.pickup.o2': "می‌گذاری سِم برود: اسمش را می‌داند.", // nieuw, nalezen
-    'c.pickup.o3': "از سِم می‌پرسی او را می‌شناسد یا نه.", // nieuw, nalezen
-    'c.pickup.w': "تو مسئول بچه هستی تا وقتی کسی که والدین انتخاب کرده‌اند او را تحویل بگیرد.", // nieuw, nalezen
-    'l.childsafety': "ایمنی در گروه", // nieuw, nalezen
-    'w.traphekje': "درِ محافظ پله", // nieuw, nalezen
-    'w.vingerstrip': "محافظ انگشت (روی در، تا انگشت لای آن گیر نکند)", // nieuw, nalezen
-    'w.verslikken': "چیزی در گلو پریدن (غذا به راه اشتباه می‌رود)", // nieuw, nalezen
-    'w.bult': "قلنبه، ورم (روی سر)", // nieuw, nalezen
-    'w.schaafwond': "خراشیدگی (پوست خراشیده شده)", // nieuw, nalezen
-    'w.toezicht': "مراقبت (بچه‌ها را زیر نظر داری)", // nieuw, nalezen
-    's.childsafety.1': "درِ محافظ پله را همیشه ببند.", // nieuw, nalezen
-    's.childsafety.2': "کمی یخ روی ورم می‌گذارم.", // nieuw, nalezen
-    's.childsafety.3': "چیزی در گلوی سِم پریده. دارم کمکش می‌کنم.", // nieuw, nalezen
-    'c.childsafety.q': "بو زمین خورد؟", // nieuw, nalezen
-    'c.childsafety.a': "بله، سرش ورم کرده. به مادرش زنگ می‌زنم.", // nieuw, nalezen
-    'c.childsafety': "با چشم یک بچه دور و برت را نگاه کن", // nieuw, nalezen
-    'c.childsafety.b': "بچه‌های کوچک همه‌چیز را در دهانشان می‌گذارند و از همه‌چیز بالا می‌روند. پس درِ محافظ پله را بسته نگه دار، مواد شوینده و داروها را دور از دسترس بگذار، و نوشیدنی داغ را از بچه‌ها دور نگه دار. هر روز اتاق را بررسی کن. بچه‌ای آسیب می‌بیند؟ کمک‌های اولیه بده، بچه را آرام کن، به والدین بگو، و آن را یادداشت کن. جدی است؟ به ۱۱۲ زنگ بزن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.childsafety.p': "درِ محافظ پله باز است.", // nieuw, nalezen
-    'c.childsafety.s': "قهوهٔ داغت را روی یک میز کوتاه گذاشته‌ای. یک بچهٔ نوپا به طرفش می‌رود. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.childsafety.o1': "فوراً قهوه را بالا می‌گذاری.", // nieuw, nalezen
-    'c.childsafety.o2': "به بچه می‌گویی به آن دست نزند.", // nieuw, nalezen
-    'c.childsafety.o3': "سریع می‌خوری‌اش.", // nieuw, nalezen
-    'c.childsafety.w': "قهوهٔ داغ می‌تواند یک بچهٔ کوچک را بد بسوزاند. دور از دسترس تنها جای امن است.", // nieuw, nalezen
-    'l.sickchild': "بچهٔ مریض و آلرژی", // nieuw, nalezen
-    'w.huiduitslag': "جوش پوستی (لکه‌های قرمز روی پوست)", // nieuw, nalezen
-    'w.diarree': "اسهال", // nieuw, nalezen
-    'w.overgeven': "استفراغ کردن، بالا آوردن", // nieuw, nalezen
-    'w.allergielijst': "فهرست آلرژی", // nieuw, nalezen
-    'w.adrenalinepen': "قلم آدرنالین (قلم دارویی برای آلرژی شدید)", // nieuw, nalezen
-    'w.temperaturen': "تب گرفتن (اندازه گرفتن دمای بدن)", // nieuw, nalezen
-    's.sickchild.1': "سِم تب دارد. به پدرش زنگ می‌زنم.", // nieuw, nalezen
-    's.sickchild.2': "قبل از غذا فهرست آلرژی را نگاه کن.", // nieuw, nalezen
-    's.sickchild.3': "هیچ‌وقت بدون اجازه دارو نده.", // nieuw, nalezen
-    'c.sickchild.q': "حال یِپ چطور است؟", // nieuw, nalezen
-    'c.sickchild.a': "خیلی داغ است. می‌خواهم تبش را بگیرم.", // nieuw, nalezen
-    'c.sickchild': "بچهٔ مریض: بگو، حدس نزن", // nieuw, nalezen
-    'c.sickchild.b': "حواست باشد بچه‌ها در چه حالی‌اند. بچه‌ای داغ است، خیلی خسته است، استفراغ می‌کند، یا جوش پوستی دارد؟ تبش را بگیر، به همکارت بگو، و به والدین زنگ بزن. فقط با اجازهٔ کتبی والدین دارو بده، و یادداشت کن چه دادی و کی. بدان کدام بچه‌ها آلرژی دارند، و داروی آن‌ها کجاست. بچه‌ای با واکنش آلرژیک شدید: اگر یاد گرفته‌ای قلم آدرنالین را بزن، و به ۱۱۲ زنگ بزن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.sickchild.p': "بچه‌تان مریض است. می‌توانید بیایید دنبالش؟", // nieuw, nalezen
-    'c.sickchild.s': "مادری می‌گوید: «ساعت دو به او شربت تب بده». فرمی در کار نیست. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.sickchild.o1': "از او می‌خواهی اول فرم را امضا کند.", // nieuw, nalezen
-    'c.sickchild.o2': "می‌دهی: مادرش خواسته.", // nieuw, nalezen
-    'c.sickchild.o3': "برای احتیاط نصفش را می‌دهی.", // nieuw, nalezen
-    'c.sickchild.w': "بدون اجازهٔ کتبی اجازه نداری دارو بدهی. فرم از بچه و از خودت محافظت می‌کند.", // nieuw, nalezen
-    'l.grouprules': "گروه و قانون‌ها", // nieuw, nalezen
-    'w.pedagogischmedewerker': "مربی کودک", // nieuw, nalezen
-    'w.mentor': "منتور (مربی‌ای که یک بچه را از نزدیک دنبال می‌کند)", // nieuw, nalezen
-    'w.vierogenprincipe': "قانون چهار چشم (یک بزرگسال دیگر همیشه می‌تواند تو را ببیند یا بشنود)", // nieuw, nalezen
-    'w.observeren': "مشاهده کردن (با دقت نگاه کردن، و یادداشت کردن)", // nieuw, nalezen
-    'w.peuter': "بچهٔ نوپا (بچهٔ دو یا سه ساله)", // nieuw, nalezen
-    'w.groep': "گروه (بچه‌هایی که هر روز با هم‌اند)", // nieuw, nalezen
-    's.grouprules.1': "من منتور لیزا هستم.", // nieuw, nalezen
-    's.grouprules.2': "یک همکار همیشه می‌تواند ما را ببیند یا بشنود.", // nieuw, nalezen
-    's.grouprules.3': "نگران دان هستم.", // nieuw, nalezen
-    'c.grouprules.q': "می‌توانم تنها با گروه بیرون بروم؟", // nieuw, nalezen
-    'c.grouprules.a': "بله، ولی اول به یک همکار بگو.", // nieuw, nalezen
-    'c.grouprules': "هیچ‌وقت تنها و دور از چشم", // nieuw, nalezen
-    'c.grouprules.b': "در مهدکودک، وقتی با بچه‌ها هستی، یک بزرگسال دیگر همیشه باید بتواند تو را ببیند یا بشنود. این از بچه‌ها و از خودت محافظت می‌کند. هر بچه یک منتور دارد: یک مربی که آن بچه را از نزدیک دنبال می‌کند و با والدین حرف می‌زند. نگران وضع بچه‌ای در خانه هستی، مثلاً کبودی یا ترس؟ از بچه زیاد سؤال نکن: به سرپرستت بگو، که مراحل را می‌داند. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.grouprules.p': "نگران این بچه هستم.", // nieuw, nalezen
-    'c.grouprules.s': "باز روی بدن یک بچه کبودی می‌بینی. بچه ساکت است. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.grouprules.o1': "همان روز به سرپرستت می‌گویی.", // nieuw, nalezen
-    'c.grouprules.o2': "از بچه سؤال‌های زیادی می‌پرسی.", // nieuw, nalezen
-    'c.grouprules.o3': "به والدین زنگ می‌زنی و می‌پرسی چرا.", // nieuw, nalezen
-    'c.grouprules.w': "سرپرستت مراحل نگرانی دربارهٔ یک بچه را می‌داند. سؤال‌های زیاد می‌تواند بچه را بترساند.", // nieuw, nalezen
+    'u.mowing': "چمن‌زنی و هرس", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.mowing': "چمن زدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gras': "چمن، علف", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.maaien': "چمن زدن (کوتاه کردن علف)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.grasmaaier': "ماشین چمن‌زنی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zitmaaier': "چمن‌زن سواری (چمن‌زنی که رویش می‌نشینی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bosmaaier': "علف‌زن دستی (چمن‌زن روی یک دستهٔ بلند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gelaatsscherm': "شیلد صورت", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mowing.1': "اول چمنِ لبه را بزن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mowing.2': "چمن زیادی خیس است. فردا چمن می‌زنیم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mowing.3': "شیلد صورتت را بزن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.q': "می‌توانم چمن‌زن سواری را بردارم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.a': "بله، ولی اول سنگ‌ها را جمع کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing': "سنگ دور پرت می‌شود", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.b': "چمن‌زن یا علف‌زن دستی می‌تواند یک سنگ را خیلی دور و خیلی محکم پرت کند. پس اول روی چمن راه برو، و سنگ، شیشه و شاخه‌ها را جمع کن. شیلد صورت یا عینک ایمنی، محافظ گوش و کفش ایمنی بپوش. آدم‌های دیگر را خیلی دور نگه دار. کسی نزدیک می‌آید؟ دستگاه را خاموش کن. وقتی موتور روشن است هیچ‌وقت دستت را زیر چمن‌زن نبر: خاموشش کن، و صبر کن تا تیغه کاملاً بایستد. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.p': "لطفاً فاصله‌تان را حفظ کنید.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.s': "داری با علف‌زن دستی کار می‌کنی. مردی با یک سگ به طرفت می‌آید. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.o1': "دستگاه را خاموش می‌کنی تا رد شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.o2': "ادامه می‌دهی: او تو را می‌بیند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.o3': "رویت را از او برمی‌گردانی، و ادامه می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mowing.w': "سنگی که از علف‌زن پرت می‌شود می‌تواند کسی را بد زخمی کند، حتی از دور.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.pruning': "هرس کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snoeien': "هرس کردن (بریدن شاخه‌های یک گیاه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snoeischaar': "قیچی باغبانی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tak': "شاخه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.struik': "بوته، درختچه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.boom': "درخت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snoeizaag': "ارهٔ هرس", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pruning.1': "بوته‌های کنار راه را هرس کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pruning.2': "این شاخه خشک شده. با اره ببُرش.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pruning.3': "شاخه‌ها را روی هم بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.q': "کدام شاخه‌ها باید بریده شوند؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.a': "فقط شاخه‌های خشک.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning': "برش تمیز بهتر خوب می‌شود", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.b': "با قیچی تیز و تمیز هرس کن. برش تمیز زود خوب می‌شود؛ شاخهٔ پاره‌شده بیمار می‌شود. درست بالای یک جوانه یا یک شاخهٔ کناری ببُر، و تکهٔ بلند جا نگذار. اول شاخه‌های خشک و شکسته را ببُر. دست دیگرت را از تیغه‌ها دور نگه دار. دستکش بپوش: بعضی گیاه‌ها خار دارند، یا پوستت را قرمز می‌کنند. بعد از کار قیچی را تمیز کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.p': "کجا را باید ببُرم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.s': "قیچی باغبانی‌ات کُند است. شاخه‌ها را پاره می‌کند. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.o1': "یک قیچی تیز می‌خواهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.o2': "شاخه را محکم‌تر می‌کشی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.o3': "ادامه می‌دهی: فقط یک بوته است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pruning.w': "قیچی کُند شاخه را پاره می‌کند. گیاه بیمار می‌شود، و تو هم بیشتر زحمت می‌کشی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.hedge': "کوتاه کردن پرچین", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.heg': "پرچین", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.heggenschaar': "شمشادزن (دستگاهی که پرچین را کوتاه می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kruiwagen': "فرغون", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hark': "شن‌کش", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snoeiafval': "زبالهٔ سبز (شاخه و برگ بریده)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zeil': "برزنت (یک ورقهٔ پلاستیکی بزرگ)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hedge.1': "برزنت را زیر پرچین پهن کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hedge.2': "پرچین را مرتب و صاف کوتاه کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hedge.3': "زبالهٔ سبز را با فرغون ببر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.q': "پرچین تا چه ارتفاعی باید بماند؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.a': "تا خط. پایین‌تر نه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge': "اول دنبال لانه بگرد", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.b': "در بهار و تابستان، پرنده‌ها در پرچین‌ها و بوته‌ها لانه می‌سازند. لانه‌هایی که پرنده‌ها از آن‌ها استفاده می‌کنند حمایت قانونی دارند. پس قبل از بریدن، داخل پرچین را نگاه کن. لانه‌ای با تخم یا جوجه می‌بینی؟ آنجا را نبُر، و به سرپرستت بگو. شمشادزن را با هر دو دست بگیر. محکم روی زمین یا روی یک نردبان خوب بایست، هیچ‌وقت روی صندلی یا سطل. کابل را پشت سرت نگه دار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.p': "اینجا یک لانه هست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.s': "در ماه مه داری یک پرچین را کوتاه می‌کنی. لانه‌ای با جوجه می‌بینی. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.o1': "آنجا دست نگه می‌داری، و به سرپرستت می‌گویی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.o2': "با احتیاط دور آن را می‌بُری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.o3': "لانه را برمی‌داری، و ادامه می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hedge.w': "لانه‌هایی که پرنده‌ها از آن‌ها استفاده می‌کنند حمایت قانونی دارند. سرپرستت تصمیم می‌گیرد با این قسمت پرچین چه کار شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.chainsaw': "اره‌موتوری و دمندهٔ برگ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kettingzaag': "اره‌موتوری", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stam': "تنه (درخت)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zaagbroek': "شلوار ضد اره (زنجیر را متوقف می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bladblazer': "دمندهٔ برگ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bladeren': "برگ‌ها", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.jerrycan': "گالن (ظرفی برای سوخت)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.chainsaw.1': "شلوار ضد اره‌ات را بپوش.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.chainsaw.2': "برگ‌ها را با باد روی هم جمع کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.chainsaw.3': "فقط وقتی موتور سرد است سوخت بریز.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.q': "می‌توانم با اره‌موتوری کار کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.a': "هنوز نه. اول دوره می‌بینی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw': "اره‌موتوری فقط با آموزش", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.b': "اره‌موتوری یکی از خطرناک‌ترین ابزارها در کار فضای سبز است. فقط وقتی با آن کار کن که دوره دیده‌ای، و سرپرستت می‌گوید اجازه داری. همیشه شلوار ضد اره، کلاه ایمنی با شیلد صورت و محافظ گوش، دستکش و پوتین ایمنی بپوش. هیچ‌وقت با اره‌موتوری تنها کار نکن. آن را با هر دو دست بگیر، و هیچ‌وقت بالاتر از شانه‌هایت اره نکن. با دمندهٔ برگ: هیچ‌وقت به طرف آدم‌ها، ماشین‌ها یا پنجره‌های باز باد نزن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.p': "هنوز برای این دوره ندیده‌ام.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.s': "یک همکار می‌گوید: «اره‌موتوری را بردار، آسان است». تو هیچ‌وقت دوره ندیده‌ای. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.o1': "می‌گویی که هنوز دوره ندیده‌ای.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.o2': "با احتیاط امتحانش می‌کنی، فقط یک بار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.o3': "برش می‌داری، و اول یک ویدیو می‌بینی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.chainsaw.w': "اره‌موتوری می‌تواند در یک ثانیه پایت را ببُرد. بدون آموزش نمی‌دانی چطور ممکن است پس بزند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.planting': "کاشتن، علف هرز و خیابان", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.weeding': "وجین کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onkruid': "علف هرز (گیاهی که باید برود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wieden': "وجین کردن (کندن علف هرز)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schoffel': "کج‌بیل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.perk': "باغچه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onkruidbrander': "مشعل علف‌سوز (علف هرز را با گرما از بین می‌برد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wortel': "ریشه (گیاه)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.weeding.1': "علف هرز را با ریشه بکَن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.weeding.2': "باغچهٔ کنار ورودی را با کج‌بیل وجین کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.weeding.3': "مواظب باش: مشعل علف‌سوز داغ است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.q': "این علف هرز است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.a': "نه، این گیاه است. ولش کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding': "علف هرز: ریشه باید برود", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.b': "وقتی ریشه در خاک بماند، علف هرز دوباره رشد می‌کند. پس آن را با ریشه بکَن، یا درست زیر خاک را با کج‌بیل بزن. وقتی خاک کمی خیس است کار کن: آن وقت ریشه راحت بیرون می‌آید. از اسپری علف‌کش استفاده نکن، مگر اینکه طرز کارش را یاد گرفته باشی و سرپرستت بگوید. مشعل علف‌سوز خیلی داغ است: آن را از چمن خشک، برگ، پرچین، ماشین و سطل زباله دور نگه دار. هیچ‌وقت وقتی روشن است زمینش نگذار. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.p': "این علف هرز است یا گیاه؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.s': "داری با مشعل علف‌سوز کار می‌کنی. کنار راه یک پرچین خشک است. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.o1': "علف هرز آنجا را با دست می‌کَنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.o2': "سریع می‌سوزانی، و رد می‌شوی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.o3': "می‌سوزانی، و یک بار پشت سرت را نگاه می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.weeding.w': "پرچین خشک زود آتش می‌گیرد. آتش نزدیک خانه‌ها یا ماشین‌ها خیلی خطرناک است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.planting': "کاشتن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.planten': "کاشتن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schep': "بیل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plantgat': "چالهٔ کاشت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kluit': "گلوله‌خاک (خاک دور ریشه‌ها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.compost': "کمپوست", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.boompaal': "قیم درخت (چوبی که درخت جوان را نگه می‌دارد)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.planting.1': "برای درخت یک چالهٔ کاشت بکَن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.planting.2': "درخت را صاف، کنار قیم بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.planting.3': "به گیاه‌های تازه آب زیاد بده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.q': "این گیاه کجا می‌رود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.a': "ته باغچه، کنار دیوار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting': "زیر زمین: کابل و لوله", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.b': "زیر چمن و پیاده‌رو اغلب کابل و لوله هست: برای برق، گاز، آب و اینترنت. پس با احتیاط بکَن. یک نوار رنگی یا یک صفحهٔ پلاستیکی در خاک می‌بینی، یا به چیز سفتی می‌خوری؟ کندن را متوقف کن، و به سرپرستت بگو. هیچ‌وقت با زور ادامه نده. درخت سنگین یا گلوله‌خاک بزرگ را با هم بلند کنید، با زانوی خم. به گیاه تازه همان روز آب بده. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.p': "به چیز سفتی می‌خورم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.s': "داری یک چالهٔ کاشت می‌کَنی. بیلت به یک نوار پلاستیکی قرمز می‌خورد. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.o1': "کندن را متوقف می‌کنی، و به سرپرستت می‌گویی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.o2': "با احتیاط کنار نوار به کندن ادامه می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.o3': "نوار را بیرون می‌کشی، و ادامه می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.planting.w': "نوار در خاک هشدار می‌دهد که زیرش کابل یا لوله است. لولهٔ گاز یا کابل برق خیلی خطرناک است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.roadside': "کار کنار جاده", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pion': "مخروط ترافیکی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verkeer': "ترافیک، رفت‌وآمد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stoep': "پیاده‌رو (راه کنار خیابان)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.fietser': "دوچرخه‌سوار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pijlwagen': "تریلر فلش‌دار (تریلری با یک فلش بزرگ که به راننده‌ها هشدار می‌دهد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.berm': "حاشیهٔ جاده (چمن کنار جاده)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.roadside.1': "جلیقه‌ات را بپوش. کنار جاده کار می‌کنیم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.roadside.2': "مخروط‌ها را پشت ون بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.roadside.3': "مواظب دوچرخه‌سوارها باش.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.q': "الان می‌توانم رد شوم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.a': "نه، صبر کن. یک کامیون دارد می‌آید.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside': "کنار جاده: دیده شو، پشت مخروط‌ها بمان", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.b': "کار کنار جاده خطرناک است: راننده‌ها به گوشی‌شان نگاه می‌کنند، یا تند می‌رانند. پس همیشه جلیقهٔ شب‌رنگت را بپوش، حتی برای یک کار کوتاه. قبل از شروع مخروط‌ها و تابلوها را بگذار، و آخر از همه جمعشان کن. ون را مثل یک سپر بین خودت و ترافیک پارک کن. پشت مخروط‌ها بمان. هیچ‌وقت بدون نگاه کردن عقب نرو، و هر وقت می‌توانی رو به ترافیک کار کن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.p': "اول مخروط‌ها را می‌گذارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.s': "باید یک بوتهٔ کوچک کنار جاده را ببُری. پنج دقیقه طول می‌کشد. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.o1': "جلیقه را می‌پوشی، و مخروط‌ها را می‌گذاری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.o2': "سریع انجامش می‌دهی، بدون مخروط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.o3': "از یک همکار می‌خواهی حواسش به ماشین‌ها باشد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roadside.w': "تصادف فقط یک ثانیه طول می‌کشد. پنج دقیقه بدون مخروط یعنی پنج دقیقه بدون محافظت.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.litter': "زباله و محله", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zwerfafval': "زبالهٔ رهاشده (آشغال در خیابان)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.grijper': "انبر زباله‌برداری (دسته‌ای که آشغال را برمی‌دارد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vuilniszak': "کیسه زباله", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scherven': "خرده‌شیشه (تکه‌های تیز)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanhanger': "تریلر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bewoner': "ساکن (کسی که اینجا زندگی می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.litter.1': "آشغال‌ها را با انبر زباله‌برداری جمع کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.litter.2': "مواظب باش، اینجا خرده‌شیشه هست.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.litter.3': "کیسه‌های زباله را کنار تریلر بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.q': "این درخت کی هرس می‌شود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.a': "نمی‌دانم. از شهرداری بپرسید.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter': "هیچ‌وقت به سوزن دست نزن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.b': "در پارک‌ها و بوته‌ها گاهی سوزن سرنگ پیدا می‌کنی. هیچ‌وقت آن را با دست برندار، حتی با دستکش. از انبر زباله‌برداری استفاده کن، و سوزن را در یک جعبه یا بطری سفت دربدار بگذار، هیچ‌وقت در کیسه زباله. به سرپرستت بگو. سوزن در دستت رفت؟ زخم را با آب زیاد بشوی، و فوراً به پزشک زنگ بزن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.p': "اینجا یک سوزن هست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.s': "کنار یک نیمکت، در چمن یک سوزن می‌بینی. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.o1': "آن را با انبر زباله‌برداری برمی‌داری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.o2': "آن را با دستکش برمی‌داری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.o3': "آن را در کیسه زباله می‌گذاری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.litter.w': "سوزن ممکن است بیماری منتقل کند. دستکش جلوی سوزن را نمی‌گیرد، و جعبهٔ سفت بقیه را در امان نگه می‌دارد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.frontdesk': "پذیرش، پست و جلسه‌ها", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.reception': "پشت میز پذیرش", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.balie': "میز پذیرش، پیشخوان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bezoeker': "مراجعه‌کننده، مهمان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.intercom': "آیفون (با کسی که دم در است حرف می‌زنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doorverbinden': "وصل کردن (تماس تلفنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toestel': "داخلی (شمارهٔ تلفن داخل ساختمان)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wachtruimte': "سالن انتظار", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reception.1': "صبح بخیر، می‌توانم کمکتان کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reception.2': "وصلتان می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reception.3': "لطفاً در سالن انتظار بنشینید.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.q': "با خانم یانسن قرار ملاقات دارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.a': "یک لحظه. به او زنگ می‌زنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception': "تو اولین چهره هستی", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.b': "پشت میز پذیرش تو اولین کسی هستی که مهمان می‌بیند. سرت را بالا بیاور، لبخند بزن و سلام کن، حتی وقتی سرت با تلفن گرم است. با مهمان‌ها با «u» (شکل مؤدبانه) حرف بزن. تلفن را با اسم شرکت و اسم خودت جواب بده. جواب را نمی‌دانی؟ همین را بگو، و کسی را پیدا کن که می‌داند. هیچ‌وقت اسم، شمارهٔ تلفن یا اتاق کارکنان را به کسی که نمی‌شناسی نده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.p': "صبح بخیر، چطور می‌توانم کمکتان کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.s': "پشت تلفنی. یک مهمان به میز می‌آید و منتظر می‌ماند. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.o1': "سرت را بالا می‌آوری، و نشان می‌دهی که زود می‌آیی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.o2': "تماست را تمام می‌کنی، بدون اینکه سرت را بالا بیاوری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.o3': "فوراً گوشی را می‌گذاری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reception.w': "مهمانی که دیده می‌شود آرام منتظر می‌ماند. مهمانی که دیده نمی‌شود احساس می‌کند خوش‌آمد نیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.visitors': "پذیرفتن مهمان‌ها", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bezoekerspasje': "کارت مهمان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lift': "آسانسور", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.garderobe': "رختکن (جایی که کتت را آویزان می‌کنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.parkeerplaats': "جای پارک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hal': "لابی (سالن بزرگ ورودی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.begeleiden': "همراهی کردن (کسی را جایی بردن)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.visitors.1': "لطفاً اسمتان را اینجا بنویسید.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.visitors.2': "این کارت مهمان شماست.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.visitors.3': "شما را تا آسانسور همراهی می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.q': "کتم را کجا می‌توانم بگذارم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.a': "در رختکن، کنار آسانسور.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors': "هر مهمان ثبت‌نام می‌کند", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.b': "هر مهمان اسمش را در فهرست می‌نویسد، یا روی صفحه‌نمایش ثبت‌نام می‌کند، و یک کارت مهمان می‌گیرد. آن وقت می‌دانی چه کسی در ساختمان است. این وقتی آتش‌سوزی می‌شود مهم است: همه باید بیرون بروند، و کسی فهرست را بررسی می‌کند. آخر ملاقات، مهمان کارت را پس می‌دهد. نگذار کسانی که نمی‌شناسی پشت سرت وارد شوند: مؤدبانه بپرس با چه کسی کار دارند. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.p': "با چه کسی کار دارید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.s': "مردی پشت سر یک همکار وارد می‌شود. کارت ندارد. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.o1': "مؤدبانه از او می‌پرسی با چه کسی کار دارد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.o2': "می‌گذاری برود: با کارکنان آمد داخل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.o3': "فوراً به پلیس زنگ می‌زنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.visitors.w': "در شرایط اضطراری باید بدانی چه کسی داخل است. و این‌طور نیست که هر کسی که وارد می‌شود دلیلی برای بودن در آنجا داشته باشد.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'l.mailroom': "نامه و بسته", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.postkamer': "اتاق پست", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koerier': "پیک (کسی که بسته می‌آورد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.postvak': "قفسهٔ نامه (جعبه‌ای برای نامه، یکی برای هر نفر)", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'w.envelop': "پاکت نامه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afdeling': "بخش، واحد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.postkar': "چرخ دستی پست", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mailroom.1': "پیک یک بسته می‌آورد.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mailroom.2': "نامه‌ها را در قفسهٔ نامهٔ درست بگذار.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    's.mailroom.3': "این بسته آسیب دیده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.q': "این بسته مال کیست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.a': "برای واحد مالی، طبقهٔ دوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom': "نامه خصوصی است", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.b': "نامه و بسته خصوصی است. هیچ‌وقت نامه یا بستهٔ کس دیگری را باز نکن. اسم و بخش را روی هر مرسوله بررسی کن، و آن را در قفسهٔ نامهٔ درست بگذار. وقتی پیک بسته‌ای می‌آورد، قبل از امضا نگاهش کن: آسیب دیده؟ این را یادداشت کن. بسته‌ای عجیب است: بو می‌دهد، نشت می‌کند، یا فرستنده ندارد؟ بازش نکن، و به سرپرستت بگو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.mailroom.p': "جعبه خیس و پاره است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.s': "یک پیک بسته‌ای می‌آورد. یک گوشه‌اش خیس و پاره است. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.o1': "قبل از امضا آسیب را یادداشت می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.o2': "امضا می‌کنی، و به هیچ‌کس نمی‌گویی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.o3': "بازش می‌کنی تا ببینی همه‌چیز هست یا نه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mailroom.w': "بعد از امضای تو، به نظر می‌رسد بسته سالم بوده. آن وقت هیچ‌کس پول خسارت را نمی‌دهد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.meetingroom': "آماده کردن اتاق جلسه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vergaderzaal': "اتاق جلسه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beamer': "ویدیو پروژکتور", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.whiteboard': "وایت‌برد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.thermoskan': "فلاسک (قهوه را داغ نگه می‌دارد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kopje': "فنجان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koffieautomaat': "دستگاه قهوه", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meetingroom.1': "ده صندلی دور میز بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meetingroom.2': "قهوه و چای را آماده کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meetingroom.3': "ویدیو پروژکتور کار نمی‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.q': "جلسه ساعت چند شروع می‌شود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.a': "ساعت ده. مطمئن شو همه‌چیز آماده است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom': "آماده قبل از اولین مهمان", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.b': "اتاق جلسه باید قبل از اینکه اولین نفر وارد شود آماده باشد. صندلی‌ها، میز، ویدیو پروژکتور و کابل‌ها را بررسی کن. قهوه، چای و آب را با فنجان و شیر بچین. نوشیدنی داغ را با احتیاط ببر، و هیچ‌وقت از بالای سر آدم‌ها رد نکن. بعد از جلسه، میز را تمیز کن و همه‌چیز را برگردان. چیزی را که در اتاق جلسه می‌شنوی، پیش خودت نگه می‌داری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.p': "اتاق آماده است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.s': "جلسه پنج دقیقهٔ دیگر شروع می‌شود. ویدیو پروژکتور کار نمی‌کند. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.o1': "فوراً به برگزارکننده می‌گویی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.o2': "صبر می‌کنی: شاید کسی لازمش نداشته باشد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.o3': "یک یادداشت روی میز می‌گذاری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.meetingroom.w': "پنج دقیقه هنوز برای درست کردنش یا پیدا کردن یک اتاق دیگر وقت است. بعداً، همه منتظر می‌مانند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.maintenance': "خرابی، تعمیر و جابه‌جایی", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.faults': "گزارش خرابی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.melding': "گزارش (می‌گویی که چیزی خراب است)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lekkage': "نشتی (آب بیرون می‌آید)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verwarming': "شوفاژ، گرمایش", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.airco': "کولر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afvoer': "فاضلاب، راه آب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verstopt': "گرفته (هیچ چیز رد نمی‌شود)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.faults.1': "خرابی را گزارش می‌دهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.faults.2': "در آشپزخانه نشتی هست.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.faults.3': "راه آب توالت گرفته.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.q': "چرا اینجا این‌قدر سرد است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.a': "شوفاژ خراب است. تعمیرکار فردا می‌آید.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults': "گزارش بده، تنهایی تعمیر نکن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.b': "چیز خرابی می‌بینی، مثل نشتی، لامپی که سوخته یا دری که بسته نمی‌شود؟ گزارشش بده، حتی وقتی کوچک است: در سیستم یا به سرپرستت. بگو کجاست، چه می‌بینی و از کی. برق، گاز یا گرمایش را خودت تعمیر نکن. بوی گاز می‌آید؟ نزدیکش از کلید برق یا گوشی استفاده نکن، پنجره‌ها را باز کن، آدم‌ها را بیرون ببر، و بیرون کمک خبر کن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.p': "می‌خواهم یک خرابی را گزارش بدهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.s': "در راهرو از سقف آب می‌چکد. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.o1': "گزارشش می‌دهی، و یک سطل زیرش می‌گذاری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.o2': "صبر می‌کنی: شاید خودش بند بیاید.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.o3': "سقف را باز می‌کنی تا نگاه کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.faults.w': "یک نشتی کوچک می‌تواند خسارت بزرگی بشود. سطل کف را خشک نگه می‌دارد، تا کسی لیز نخورد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.repairs': "تعمیرهای کوچک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vervangen': "عوض کردن (یک نو جایش گذاشتن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.deurklink': "دستگیرهٔ در", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scharnier': "لولا", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gereedschapskist': "جعبه‌ابزار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rookmelder': "دتکتور دود", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.batterij': "باتری", // nieuw, nalezen // nagelezen AI 28 nov
+    's.repairs.1': "لامپ راهرو را عوض کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.repairs.2': "دستگیرهٔ در شل است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.repairs.3': "چهارپایه را بردار، نه صندلی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.q': "دتکتور دود بوق می‌زند؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.a': "بله، باتری‌اش تقریباً تمام شده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs': "چهارپایه، هیچ‌وقت صندلی", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.b': "برای لامپ یا قفسهٔ بلند، از چهارپایه استفاده کن، هیچ‌وقت صندلی، میز یا جعبه. آن را روی کف صاف بگذار، کاملاً بازش کن، و روی پلهٔ آخر بالا نایست. قبل از عوض کردن لامپ چراغ را خاموش کن، و بگذار لامپ کهنه خنک شود. فقط تعمیرهایی را انجام بده که یاد گرفته‌ای. وقتی کارت تمام شد ابزارت را به جعبه‌ابزار برگردان، تا کسی به آن‌ها گیر نکند و زمین نخورد. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.p': "چهارپایه را می‌آورم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.s': "یک لامپ در دفتر سوخته. چهارپایه در طبقهٔ دیگری است. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.o1': "چهارپایه را می‌آوری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.o2': "روی صندلی اداری می‌ایستی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.o3': "روی میز می‌ایستی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.repairs.w': "صندلی ممکن است سُر بخورد یا واژگون شود. افتادن از صندلی می‌تواند تو را بد زخمی کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.moving': "جابه‌جا کردن محل کار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verhuisdoos': "کارتن اسباب‌کشی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bureau': "میز تحریر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bureaustoel': "صندلی اداری", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkplek': "محل کار (میزی که کسی پشتش کار می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kamernummer': "شمارهٔ اتاق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plattegrond': "نقشهٔ طبقه (نقشهٔ ساختمان)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.moving.1': "شمارهٔ اتاق را روی هر کارتن بنویس.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.moving.2': "کارتن‌ها را روی چرخ‌دستی بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.moving.3': "محل کار را خالی کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.q': "این میز کجا باید برود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.a': "به اتاق دوازده. به نقشهٔ طبقه نگاه کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving': "جابه‌جایی: درست بلند کن، روی همه‌چیز برچسب بزن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.b': "جابه‌جایی کار سنگینی است. کارتن را زیادی پر نکن: کتاب و پرونده سنگین است. با زانوی خم و کمر صاف، نزدیک به بدنت بلند کن. برای چند کارتن از چرخ‌دستی استفاده کن، و میز را با هم بلند کنید. شمارهٔ اتاق جدید را روی هر کارتن، صندلی و کامپیوتر بنویس. اول کابل‌ها را از برق بکش. هیچ‌وقت کارتن را در راهرو یا جلوی خروجی اضطراری نگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.p': "می‌توانی کمکم کنی این را بلند کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.s': "باید یک میز سنگین را جابه‌جا کنی. همکارت در استراحت است. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.o1': "منتظر کمک می‌مانی، و با هم بلندش می‌کنید.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.o2': "خودت تنهایی آن را روی زمین می‌کشی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.o3': "تنهایی بلندش می‌کنی، خیلی با احتیاط.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.moving.w': "میز سنگین وقتی تنهایی بلندش کنی می‌تواند به کمرت آسیب بزند. با هم آسان و ایمن است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.closing': "باز و بسته کردن ساختمان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sleutelbos': "دسته‌کلید", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afsluiten': "قفل کردن، بستن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ronde': "سرکشی (سر زدن به همهٔ اتاق‌ها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.raam': "پنجره", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alarmcode': "رمز دزدگیر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nachtslot': "قفل شب (قفل اضافه برای شب)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.closing.1': "دارم آخرین سرکشی ساختمان را انجام می‌دهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.closing.2': "همهٔ پنجره‌ها بسته‌اند؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.closing.3': "در را با قفل شب ببند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.q': "هنوز کسی داخل هست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.a': "نه، همه رفته‌اند. دارم قفل می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing': "رمز دزدگیر محرمانه است", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.b': "آخر روز آخرین سرکشی را انجام می‌دهی. بررسی کن که کسی داخل نمانده، پنجره‌ها بسته‌اند و چراغ‌ها خاموش‌اند. خروجی‌های اضطراری باز می‌مانند. کلیدها را همراه خودت نگه دار، هیچ‌وقت در کشو. رمز دزدگیر محرمانه است: هیچ‌وقت آن را به کسی نده، حتی پشت تلفن. دزدگیر به صدا درمی‌آید؟ مراحل شرکتت را دنبال کن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.p': "رمز دزدگیر را به کسی نمی‌دهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.s': "کسی زنگ می‌زند: «از شرکت دزدگیر هستم. رمزتان چیست»؟ چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.o1': "نه می‌گویی، و به سرپرستت می‌گویی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.o2': "رمز را می‌دهی: صدایش مهربان است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.o3': "فقط نصف رمز را می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.closing.w': "یک شرکت دزدگیر واقعی پشت تلفن رمزت را نمی‌پرسد. یک دزد شاید بپرسد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.guarding': "گشت‌زنی و کنترل ورود", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.patrol': "گشت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.surveilleren': "گشت زدن (دور زدن و مراقبت کردن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zaklamp': "چراغ‌قوه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.terrein': "محوطه (زمین دور یک ساختمان)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hek': "نرده، دروازه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inbraak': "دزدی (کسی برای دزدی وارد می‌شود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.openstaan': "باز ماندن (دری یا پنجره‌ای که باید بسته باشد)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.patrol.1': "هر دو ساعت یک گشت می‌زنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.patrol.2': "دروازهٔ پشت سالن باز است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.patrol.3': "چراغ‌قوه‌ات را همراهت ببر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.q': "در گشتت چیزی دیدی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.a': "بله. یک پنجره کنار در پشتی باز بود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol': "نگاه کن و گزارش بده، قهرمان‌بازی درنیاور", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.b': "در گشتت نگاه می‌کنی: درها و پنجره‌ها بسته‌اند، نرده سالم است، کسی هست که نباید آنجا باشد؟ چیزی را که می‌بینی با ساعتش یادداشت کن. چیز عجیبی می‌بینی، مثل پنجرهٔ شکسته یا کسی در شب؟ تنها وارد نشو. با بی‌سیم یا تلفن به اتاق کنترل یا پلیس خبر بده، و در جای امن منتظر بمان. ایمنی خودت اول است. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.p': "کسی را کنار نرده می‌بینم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.s': "شب دری را می‌بینی که شکسته و باز شده. از داخل صدا می‌شنوی. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.o1': "بیرون می‌مانی، و کمک خبر می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.o2': "سریع داخل می‌روی، و نگاه می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.o3': "به داخل داد می‌زنی که داری می‌آیی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.patrol.w': "دزدی که داخل است می‌تواند خطرناک باشد. پلیس می‌داند چه کار کند؛ کار تو دیدن و گزارش دادن است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.access': "کنترل ورود", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.slagboom': "راهبند (میله‌ای روی راه که بالا می‌رود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toegangspas': "کارت ورود (کارتی که در را باز می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.legitimatie': "مدرک شناسایی (پاسپورت یا کارت شناسایی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.draaihek': "گیت گردان (دری که می‌چرخد، هر بار برای یک نفر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kenteken': "شمارهٔ پلاک (حروف و عددهای یک ماشین)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toegang': "ورود، دسترسی (اجازه داری وارد شوی)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.access.1': "می‌توانم مدرک شناسایی‌تان را ببینم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.access.2': "کارتتان کار نمی‌کند. یک تماس می‌گیرم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.access.3': "راهبند را باز می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.q': "می‌توانم بروم داخل؟ کارتم را جا گذاشته‌ام.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.a': "ببخشید، بدون کارت اجازه ندارید وارد شوید.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access': "بدون کارت، ورود ممنوع", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.b': "دم دروازه یا پشت میز، بررسی می‌کنی چه کسی وارد می‌شود. همه کارت لازم دارند، یا باید در فهرست باشند. مهربان باش، حتی وقتی کسی عصبانی است یا عجله دارد. به خاطر اینکه کسی می‌گوید رئیس است استثنا قائل نشو: بررسی‌اش کن. هیچ‌وقت کارت خودت را به کسی قرض نده، و هیچ‌وقت نگذار کسی پشت سرت وارد شود. کارتی که گم شده باید فوراً گزارش شود. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.p': "می‌توانم کارتتان را ببینم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.s': "مردی با کت‌وشلوار می‌گوید: «من مدیر جدید هستم. هنوز کارت ندارم». چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.o1': "قبل از اینکه راهش بدهی، بررسی می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.o2': "راهش می‌دهی: آدم مهمی به نظر می‌رسد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.o3': "کارت خودت را به او می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.access.w': "هر کسی می‌تواند بگوید مدیر است. یک بررسی کوتاه ساختمان را ایمن نگه می‌دارد، و یک مدیر واقعی درک می‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.cameras': "دوربین‌ها و اتاق کنترل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meldkamer': "اتاق کنترل (جایی که آدم‌ها دوربین‌ها را نگاه می‌کنند و تماس‌ها را جواب می‌دهند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beeldscherm': "مانیتور، صفحه‌نمایش", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.camerabeelden': "تصویرهای دوربین (چیزی که دوربین فیلم گرفته)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inzoomen': "زوم کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bewegingsmelder': "سنسور حرکت (می‌فهمد چیزی حرکت می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verdachte': "مظنون", // nieuw, nalezen // nagelezen AI 28 nov
+    's.cameras.1': "در دوربین سه کسی را کنار نرده می‌بینم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.cameras.2': "زوم می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.cameras.3': "اتاق کنترل به پلیس زنگ می‌زند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.q': "روی صفحه چه می‌بینی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.a': "مردی کنار نرده. یک همکار را می‌فرستم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras': "تصویرهای دوربین خصوصی است", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.b': "دوربین‌ها از آدم‌ها فیلم می‌گیرند: کارکنان، مهمان‌ها و رهگذرها. چیزی که روی صفحه‌ها می‌بینی خصوصی است. فقط برای کارت نگاه کن، و هیچ‌وقت با گوشی‌ات از صفحه فیلم نگیر. هیچ‌وقت تصویرها را برای دوستانت نفرست یا در اینترنت نگذار. اتفاقی افتاده؟ دوربین و ساعت را یادداشت کن، و به سرپرستت بگو. فقط شرکتت تصمیم می‌گیرد چه کسی تصویرها را بگیرد، مثلاً پلیس. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.p': "اجازه ندارم این را نشان بدهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.s': "یک همکار از تو می‌خواهد یک کلیپ خنده‌دار از دوربین‌ها برایش بفرستی. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.o1': "نه می‌گویی: تصویرها خصوصی است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.o2': "می‌فرستی، فقط برای او.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.o3': "با گوشی‌ات از صفحه فیلم می‌گیری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cameras.w': "آدم‌های داخل تصویرها موافقت نکرده‌اند که پخش شوند. فرستادنش ممکن است کارت را از دستت بگیرد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.report': "بی‌سیم و گزارش", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.portofoon': "بی‌سیم، واکی‌تاکی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rapport': "گزارش (اتفاقی که افتاده، نوشته‌شده)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.incident': "حادثه (چیزی که بد پیش رفته)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tijdstip': "زمان (کی اتفاقی افتاده)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.logboek': "دفتر ثبت (دفتر یا اپی که همه‌چیز را در آن می‌نویسی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oproepen': "صدا زدن (با بی‌سیم)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.report.1': "دارم گزارش حادثه را می‌نویسم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.report.2': "دقیقاً ساعت چند بود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.report.3': "صدایت را خوب نمی‌شنوم. دوباره بگو.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.q': "چه چیزی باید در گزارش بیاید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.a': "چه اتفاقی افتاد، کجا و چه ساعتی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report': "فوراً بنویسش", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.b': "گزارش را درست بعد از حادثه بنویس، وقتی هنوز خوب یادت هست. چیزی را بنویس که خودت دیدی و شنیدی: چه اتفاقی افتاد، کجا، چه ساعتی، و چه کسانی آنجا بودند. واقعیت‌ها را بنویس، نه چیزی که فکر می‌کنی. پشت بی‌سیم کوتاه و واضح حرف بزن، و صبر کن تا حرف طرف مقابل تمام شود. بگو کی هستی و کجایی. یک گزارش خوب به پلیس، شرکتت و خودت کمک می‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.p': "فوراً یادداشتش می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.s': "بعد از یک شب شلوغ خیلی خسته‌ای. یک حادثهٔ کوچک پیش آمد. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.o1': "قبل از رفتن به خانه گزارش را می‌نویسی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.o2': "فردا، بعد از یک خواب خوب، می‌نویسی‌اش.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.o3': "ولش می‌کنی: فقط کوچک بود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.report.w': "فردا جزئیات یادت می‌رود. گزارشی بدون ساعت یا مکان به هیچ‌کس کمک نمی‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.incidents': "شرایط اضطراری و فروشگاه", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.evacuation': "آتش‌سوزی و تخلیه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brandmelder': "شستی اعلام حریق (جعبهٔ قرمزی که وقت آتش‌سوزی فشارش می‌دهی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brandweer': "آتش‌نشانی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.branddeur': "درِ ضد حریق (جلوی آتش و دود را می‌گیرد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brandmeldcentrale': "پنل اعلام حریق (نشان می‌دهد آژیر کجاست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ontruimingsplan': "طرح تخلیه (چه کسی چه کار کند وقتی همه باید بیرون بروند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sirene': "آژیر", // nieuw, nalezen // nagelezen AI 28 nov
+    's.evacuation.1': "در سالن دو اعلام حریق شده.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.evacuation.2': "درهای ضد حریق را بسته نگه دار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.evacuation.3': "دم ورودی منتظر آتش‌نشانی هستم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.q': "همه بیرون‌اند؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.a': "نه، دو نفر از فهرست هنوز نیستند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation': "آتش: اول اعلام حریق، بعد بیرون", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.b': "آتش یا دود می‌بینی؟ شستی اعلام حریق را بزن، یا به ۱۱۲ زنگ بزن. بعد به آدم‌ها کمک کن از راه‌های فرار بیرون بروند، هیچ‌وقت با آسانسور. درها را پشت سرت ببند، ولی قفلشان نکن. فقط وقتی با آتش مقابله کن که کوچک است و طرزش را یاد گرفته‌ای. به محل تجمع برو، و بشمار چه کسانی آنجا هستند. دم ورودی به آتش‌نشانی برس، و هر چه می‌دانی به آن‌ها بگو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.p': "همه بیرون، به محل تجمع.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.s': "آژیر آتش به صدا درمی‌آید. مردی می‌خواهد سوار آسانسور شود. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.o1': "او را به طرف پله‌ها می‌فرستی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.o2': "می‌گذاری برود: آسانسور سریع‌تر است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.o3': "با او سوار آسانسور می‌شوی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.evacuation.w': "در آتش‌سوزی، آسانسور ممکن است بایستد یا پر از دود شود. پله‌ها راه امن بیرون رفتن است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.firstaid': "کمک‌های اولیه و ۱۱۲", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ehbo': "کمک‌های اولیه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aed': "دستگاه AED (دستگاهی که به قلبی که ایستاده کمک می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.reanimeren': "احیای قلبی کردن (فشار دادن قفسهٔ سینه برای نجات جان)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bewusteloos': "بیهوش (آدم به هوش نمی‌آید)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ademen': "نفس کشیدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alarmnummer': "شمارهٔ اضطراری (۱۱۲)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.firstaid.1': "به ۱۱۲ زنگ بزن. آمبولانس بخواه.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.firstaid.2': "دستگاه AED را از پذیرش بیاور.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.firstaid.3': "نفس نمی‌کشد. می‌خواهم احیای قلبی کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.q': "دستگاه AED کجاست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.a': "دم ورودی، کنار آسانسور.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid': "به ۱۱۲ زنگ بزن، احیا را شروع کن، AED را بیاور", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.b': "کسی زمین می‌خورد و واکنش نشان نمی‌دهد؟ فوراً به ۱۱۲ زنگ بزن، یا بگذار کس دیگری زنگ بزند. بررسی کن که آن آدم عادی نفس می‌کشد یا نه. اگر نه: احیای قلبی را شروع کن، و بگذار کسی دستگاه AED را بیاورد. دستگاه AED حرف می‌زند و به تو می‌گوید چه کار کنی؛ نمی‌توانی اشتباه کنی. ادامه بده تا آمبولانس کار را به دست بگیرد. دورهٔ کمک‌های اولیه دیده‌ای؟ به همکارانت بگو، تا بدانند چه کسی را صدا کنند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.p': "به ۱۱۲ زنگ بزن و دستگاه AED را بیاور.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.s': "مردی در سالن زمین می‌خورد. تکان نمی‌خورد و نفس نمی‌کشد. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.o1': "به ۱۱۲ زنگ می‌زنی، و احیای قلبی را شروع می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.o2': "صبر می‌کنی ببینی به هوش می‌آید یا نه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.o3': "بلندش می‌کنی، و روی صندلی می‌نشانی‌اش.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstaid.w': "وقتی قلب می‌ایستد، هر دقیقه مهم است. احیای قلبی و دستگاه AED می‌توانند قبل از رسیدن آمبولانس جانی را نجات دهند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.shoplifting': "دزدی از فروشگاه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.winkeldiefstal': "دزدی از فروشگاه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.heterdaad': "حین ارتکاب (می‌بینی که اتفاق می‌افتد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanhouden': "نگه داشتن کسی (تا پلیس برسد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.detectiepoortje': "گیت امنیتی (دم در بوق می‌زند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alarmlabel': "برچسب امنیتی (باعث می‌شود گیت بوق بزند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verstoppen': "قایم کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shoplifting.1': "گیت دم خروجی بوق می‌زند.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shoplifting.2': "دیدم که اتفاق افتاد.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shoplifting.3': "تا پلیس بیاید نگهش می‌دارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.q': "می‌توانم کیفش را بگردم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.a': "نه. این کار پلیس است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting': "دزدی از فروشگاه: نگاه کن، گزارش بده، بدون زور زیاد", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.b': "دیدی کسی دزدی می‌کند؟ آرام بمان، و فوراً به پلیس زنگ بزن. بعضی فروشگاه‌ها اجازه می‌دهند نگهبان دزد را تا رسیدن پلیس نگه دارد؛ بعضی دیگر می‌گویند: فقط نگاه کن، گزارش بده و یادت بماند آن آدم چه شکلی است. هیچ‌وقت نزن یا لگد نزن، و هیچ‌وقت کسی را از گردن نگیر. هیچ‌وقت آدم، جیب‌ها یا کیفش را نگرد: این کار پلیس است. چیزی را که دیدی یادداشت کن، و تصویرهای دوربین را نگه دار. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.p': "لطفاً با من بیایید.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.s': "دیدی زنی یک بطری در کیفش گذاشت. دارد بیرون می‌رود. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.o1': "آرام جلویش را می‌گیری، و به پلیس زنگ می‌زنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.o2': "دم در سریع کیفش را می‌گردی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.o3': "محکم هلش می‌دهی زمین.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shoplifting.w': "گشتن آدم‌ها کار پلیس است، و زور زیاد می‌تواند به کسی آسیب بزند و تو را به دردسر بیندازد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.aggression': "آدم‌های سخت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.agressie': "پرخاشگری (رفتار عصبانی و خشن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schelden': "فحش دادن به کسی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kalmeren': "آرام شدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afstand': "فاصله", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huisverbod': "ممنوعیت ورود (دیگر اجازه نداری اینجا بیایی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bodycam': "دوربین بدن (دوربین کوچکی روی لباس فرمت)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.aggression.1': "آرام باشید، آقا. می‌خواهم کمکتان کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.aggression.2': "فاصله‌ات را نگه دار و آرام بمان.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.aggression.3': "ورود شما ممنوع است. باید الان بروید.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.q': "چرا اجازه ندارم بروم داخل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.a': "ورود شما اینجا ممنوع است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression': "آرام بمان، فاصله‌ات را نگه دار", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.b': "آدم عصبانی وقتی تو آرام بمانی زودتر آرام می‌شود. آهسته و آرام حرف بزن، و آن آدم را با «u» (شکل مؤدبانه) صدا کن. یک دست یا بیشتر بین خودتان فاصله نگه دار، و پشت سرت یک راه بیرون نگه دار. به آن آدم دست نزن و سرش داد نزن. خطرناک می‌شود؟ عقب برو، و یک همکار یا پلیس را خبر کن. بعداً آن را یادداشت کن. بعد از یک حادثهٔ بد، با کسی درباره‌اش حرف بزن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.p': "آرام باشید. می‌خواهم کمکتان کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.s': "مردی سرت داد می‌زند و خیلی نزدیک می‌آید. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.o1': "عقب می‌روی، و آرام حرف می‌زنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.o2': "بلندتر از او داد می‌زنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.o3': "او را از خودت دور هل می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.aggression.w': "حرف آرام و فاصله، تنش را کم می‌کند. داد زدن یا هل دادن بدترش می‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.foodhygiene': "بهداشت و سرما", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.hygienelock': "اتاقک بهداشت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hygienesluis': "اتاقک بهداشت (اتاقی که قبل از ورود در آن تمیز می‌شوی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.baardnetje': "تور ریش", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.laarzenwasser': "چکمه‌شوی (برس‌هایی که چکمه‌ات را تمیز می‌کنند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.desinfecteren': "ضدعفونی کردن (کشتن میکروب‌ها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkjas': "روپوش کار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bacterie': "میکروب، باکتری", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hygienelock.1': "دست‌هایت را بشوی و ضدعفونی کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hygienelock.2': "تور مو و تور ریشت را بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hygienelock.3': "از چکمه‌شوی رد شو.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.q': "می‌توانم ساعتم را نگه دارم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.a': "نه، همهٔ زیورآلات باید درآورده شوند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock': "هر بار تمیز وارد شو", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.b': "در کارخانهٔ مواد غذایی، تو بزرگ‌ترین خطر برای غذا هستی: میکروب از دست‌ها، مو و لباست می‌آید. پس هر بار که وارد می‌شوی از اتاقک بهداشت رد شو، حتی بعد از استراحت یا دستشویی. تور مو سرت، تور ریش اگر ریش داری، لباس کار تمیز، همهٔ زیورآلات درآورده. دست‌هایت را با صابون بشوی، خشک کن و ضدعفونی کن. مریضی، با اسهال یا استفراغ؟ قبل از شروع به سرپرستت بگو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.p': "اسهال دارم. امروز می‌توانم کار کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.s': "از دستشویی برمی‌گردی. همکارت می‌گوید: «اتاقک را ول کن، سرمان شلوغ است». چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.o1': "با این حال از اتاقک رد می‌شوی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.o2': "ولش می‌کنی، فقط همین یک بار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.o3': "فقط دستکش نو می‌پوشی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hygienelock.w': "میکروب دستشویی می‌تواند مشتری‌های زیادی را مریض کند. چند دقیقه در اتاقک جلوی این را می‌گیرد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.allergens': "آلرژن‌ها", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.allergeen': "آلرژن (غذایی که بعضی‌ها را خیلی مریض می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.noten': "آجیل، مغزها", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pinda': "بادام‌زمینی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gluten': "گلوتن (در گندم، پس در نان و کیک)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sesam': "کنجد (دانه‌های کوچک، مثلاً روی نان)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kruisbesmetting': "آلودگی متقاطع (چیزی وارد غذایی می‌شود که نباید در آن باشد)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.allergens.1': "این محصول آجیل دارد.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.allergens.2': "روی برچسب نگاه کن چه آلرژن‌هایی در آن است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.allergens.3': "بعد از بادام‌زمینی همه‌چیز را خوب تمیز کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.q': "این ظرف می‌تواند با بقیه برود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.a': "نه، داخلش آجیل هست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens': "یک ذره کافی است", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.b': "برای بعضی‌ها، ذرهٔ خیلی کوچکی از آجیل، بادام‌زمینی، شیر، تخم‌مرغ، گلوتن یا کنجد می‌تواند جانشان را به خطر بیندازد. برای همین برچسب باید دقیقاً بگوید چه چیزی در محصول است. آلرژن‌ها را جدا نگه دار: ظرف‌ها، ابزارها و رنگ‌های خودشان. بعد از محصولی با آلرژن، خط قبل از محصول بعدی تمیز می‌شود. هیچ‌وقت یک ماده را با مادهٔ دیگری عوض نکن، حتی وقتی شبیه هم به نظر می‌رسند. شک داری؟ بپرس. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.p': "این آجیل دارد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.s': "بادام تمام شده. یک همکار می‌گوید: «فندق بریز، کسی نمی‌فهمد». چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.o1': "نه می‌گویی، و به سرپرستت می‌گویی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.o2': "از آن استفاده می‌کنی: آجیل آجیل است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.o3': "از آن استفاده می‌کنی، و چیزی روی برچسب عوض نمی‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.allergens.w': "برچسب باید بگوید داخلش چیست. یک مغز اشتباه می‌تواند کسی را که آلرژی دارد خیلی مریض کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.coldroom': "سردخانه و فریزر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.temperatuur': "دما", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.graden': "درجه (°C)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bevroren': "یخ‌زده", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ontdooien': "یخ‌زدایی کردن، از یخ درآوردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koelketen': "زنجیرهٔ سرما (غذا در تمام مسیر سرد می‌ماند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.thermokleding': "لباس گرم (لباس گرم برای سرما)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.coldroom.1': "در فریزر دما منفی هجده درجه است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.coldroom.2': "گوشت را فوراً در سردخانه بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.coldroom.3': "دما را در فهرست بنویس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.q': "چرا سردخانه بوق می‌زند؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.a': "در باز است. زود ببندش.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom': "کار در سرما: گرم بپوش، سرد نگه دار", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.b': "غذا باید در تمام مسیر سرد بماند: از کامیون تا سردخانه تا فروشگاه. پس محصولات سرد را فوراً سر جایشان بگذار، و درهای سردخانه و فریزر را بسته نگه دار. دما را بررسی کن و یادداشت کن. در فریزر لباس گرم، دستکش و کلاه بپوش، و به موقع برای گرم شدن استراحت کن. مطمئن شو که همیشه می‌توانی در را از داخل باز کنی. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.p': "اینجا زیادی گرم است. سرمایش کار نمی‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.s': "دماسنج سردخانه عددی خیلی بالاتر از معمول نشان می‌دهد. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.o1': "فوراً به سرپرستت می‌گویی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.o2': "صبر می‌کنی: دوباره سرد می‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.o3': "عدد معمولی را در فهرست می‌نویسی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.coldroom.w': "زیادی گرم یعنی میکروب رشد می‌کند. سرپرستت تصمیم می‌گیرد که غذا هنوز سالم است یا نه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.foreignbody': "شیشه، فلز و پلاستیک در غذا", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.metaaldetector': "فلزیاب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.glasbreuk': "شکستن شیشه (شیشه‌ای که شکسته)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.splinter': "تراشه (تکهٔ کوچک تیز)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vreemdvoorwerp': "جسم خارجی (چیزی در غذا که جایش آنجا نیست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vervuild': "آلوده (چیز کثیفی واردش شده)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ploegleider': "سرپرست شیفت", // nieuw, nalezen // nagelezen AI 28 nov
+    's.foreignbody.1': "فلزیاب بوق می‌زند. خط را متوقف کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.foreignbody.2': "در خط دو شیشه شکسته.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.foreignbody.3': "محصول را در سطل ضایعات بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.q': "با این تکه پلاستیک چه کار کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.a': "آن را به سرپرست شیفت نشان بده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody': "چیزی در غذا؟ بایست و گزارش بده", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.b': "شیشه، فلز، پلاستیک، چسب زخم یا مو هیچ‌وقت نباید در غذا بیفتد. فلزیاب بوق می‌زند، یا چیز عجیبی پیدا می‌کنی؟ محصول را کنار بگذار، و به سرپرست شیفت بگو. شیشه شکسته؟ خط نزدیک آن را متوقف کن: سرپرست شیفت تصمیم می‌گیرد چه چیزی باید دور ریخته شود. فقط از چسب زخم آبی استفاده کن، تا راحت دیده شود. هیچ‌وقت شیشه، خودکار یا چیزهای شل به سالن کار نبر. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.p': "در محصول چیزی پیدا کردم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.s': "یک لامپ شیشه‌ای بالای خط می‌شکند. محصولات همین‌طور می‌روند. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.o1': "خط را متوقف می‌کنی، و سرپرست شیفت را صدا می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.o2': "شیشه‌هایی را که می‌بینی برمی‌داری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.o3': "ادامه می‌دهی: فلزیاب شیشه را پیدا می‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.foreignbody.w': "فلزیاب شیشه را پیدا نمی‌کند. تکه‌های کوچکی که نمی‌بینی می‌توانند به مشتری آسیب بدی بزنند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.foodline': "خط تولید", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.cutting': "بریدن و وزن کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitbenen': "استخوان گرفتن (درآوردن استخوان از گوشت)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.fileren': "فیله کردن (بریدن ماهی یا گوشت به تکه‌های پهن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.portie': "پُرس، سهم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wegen': "وزن کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gewicht': "وزن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snijplank': "تختهٔ گوشت", // nieuw, nalezen // nagelezen AI 28 nov
+    's.cutting.1': "هر پُرس را وزن کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.cutting.2': "وزن زیادی کم است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.cutting.3': "قبل از شروع چاقویت را تیز کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.q': "چقدر باید در یک ظرف برود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.a': "پانصد گرم. به ترازو نگاه کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting': "چاقوی تیز، دست امن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.b': "چاقوی تیز از چاقوی کُند ایمن‌تر است: زور کمتری لازم داری، پس کمتر لیز می‌خورد. همیشه دستکش ضد برشت را در دست دیگرت بپوش. رو به بیرون از بدنت ببُر. چاقو را صاف روی تخته بگذار، هیچ‌وقت در سینک یا زیر گوشت. سعی نکن چاقویی را که می‌افتد بگیری: عقب برو. چاقو را با نوک رو به پایین، نزدیک پایت ببر. حتی یک بریدگی کوچک باید پوشانده و گزارش شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.p': "چاقویم کُند است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.s': "چاقو از دستت لیز می‌خورد و می‌افتد. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.o1': "عقب می‌روی، و می‌گذاری بیفتد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.o2': "سریع می‌گیری‌اش.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.o3': "با پایت جلویش را می‌گیری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.cutting.w': "چاقویی که می‌افتد وقتی بگیری‌اش عمیق می‌بُرد. روی زمین آسیبی نمی‌زند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.labels': "بسته‌بندی و برچسب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.etiketteren': "برچسب زدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lotnummer': "شمارهٔ بچ (یک شماره برای یک سری محصول)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vacuum': "وکیوم‌شده (همهٔ هوا بیرون کشیده شده)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schaal': "ظرف (ظرف کم‌عمق برای غذا)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.printer': "پرینتر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.omdoos': "کارتن بیرونی (جعبهٔ بزرگ دور بسته‌های کوچک)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.labels.1': "بررسی کن که تاریخ روی برچسب درست باشد.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.labels.2': "این بسته وکیوم نشده. دوباره بسته‌بندی‌اش کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.labels.3': "شمارهٔ بچ را در فهرست بنویس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.q': "چه تاریخی باید رویش بخورد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.a': "ده روز دیگر. به فهرست نگاه کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels': "برچسب اشتباه خطرناک است", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.b': "برچسب به مشتری می‌گوید داخلش چیست، چقدر وزن دارد و تا کی خوب است. تاریخ اشتباه یا برچسب اشتباه می‌تواند آدم‌ها را مریض کند، مثلاً وقتی یک آلرژن جا افتاده. پس اولین برچسب‌های هر سری جدید را بررسی کن: محصول، تاریخ و شمارهٔ بچ. چیزی اشتباه است؟ دست نگه دار، و به سرپرستت بگو. محصولات با برچسب اشتباه کنار گذاشته می‌شوند، هیچ‌وقت فروخته نمی‌شوند. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.p': "برچسب درست نیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.s': "می‌بینی که تاریخ روی برچسب‌ها یک هفته دیرتر است. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.o1': "بسته‌بندی را متوقف می‌کنی، و به سرپرستت می‌گویی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.o2': "ادامه می‌دهی: یک هفته مهم نیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.o3': "تاریخ را با خودکار عوض می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.labels.w': "تاریخ اشتباه ممکن است باعث شود آدم‌ها غذایی بخورند که دیگر سالم نیست. بهتر است الان دست نگه داری تا اینکه بعداً آن را جمع کنند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.linecleaning': "تمیز کردن خط", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schuim': "کف", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hogedrukspuit': "کارواش فشار قوی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.naspoelen': "آب کشیدن (شستن با آب تمیز)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.demonteren': "باز کردن (قطعه‌قطعه کردن دستگاه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.borstel': "برس", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.restjes': "پس‌مانده (تکه‌های کوچک غذا)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.linecleaning.1': "اول دستگاه را خاموش کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.linecleaning.2': "کف را روی نوار بپاش.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.linecleaning.3': "بعد همه‌چیز را با آب تمیز آب بکش.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.q': "نوار تمیز شده؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.a': "هنوز نه. هنوز باید آبش بکشم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning': "قبل از تمیز کردن، برق قطع", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.b': "هیچ‌وقت دستگاهی را که کار می‌کند تمیز نکن. خاموشش کن، و مطمئن شو کسی نمی‌تواند دوباره روشنش کند: مراحل شرکتت را دنبال کن. دستکش، عینک و چکمهٔ مناسب بپوش: مواد شوینده می‌توانند پوست و چشمت را بسوزانند. هیچ‌وقت مواد را با هم مخلوط نکن. اول پس‌مانده‌ها را بردار، بعد کف بزن، بساب و آب بکش. روی جعبه‌های برق یا پریزها آب نپاش. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.p': "دستگاه خاموش است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.s': "کمی گوشت در نوار گیر کرده. دستگاه هنوز کار می‌کند. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.o1': "اول خاموشش می‌کنی، بعد درش می‌آوری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.o2': "سریع با دست بیرونش می‌کشی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.o3': "با چاقو بیرونش می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.linecleaning.w': "نواری که کار می‌کند می‌تواند در یک ثانیه دستت را به داخل بکشد. خاموش کردنش فقط یک لحظه طول می‌کشد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.haccp': "بررسی و ثبت کردن (HACCP)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.controlepunt': "نقطهٔ کنترل (مرحله‌ای که باید چیزی را بررسی کنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kerntemperatuur': "دمای مرکز (دمای داخل غذا)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.prikthermometer': "دماسنج سوزنی (آن را در غذا فرو می‌کنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afwijking': "انحراف (چیزی آن‌طور که باید نیست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.steekproef': "نمونه‌برداری (چند محصول را امتحان می‌کنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kwaliteitsdienst': "واحد کنترل کیفیت (QA)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.haccp.1': "دمای مرکز را با دماسنج سوزنی اندازه بگیر.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.haccp.2': "همه‌چیز را در فهرست بنویس.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.haccp.3': "چیزی اشتباه است؟ فوراً گزارشش بده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.q': "چرا باید همه‌چیز را بنویسم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.a': "این‌طوری می‌دانیم غذا سالم است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp': "HACCP: بررسی کن، بنویس، گزارش بده", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.b': "هر شرکت مواد غذایی با یک برنامهٔ ایمنی غذا (HACCP) کار می‌کند. این برنامه می‌گوید در کدام مرحله‌ها باید چیزی را بررسی کنی، مثل دمای سردخانه یا دمای مرکز گوشت پخته. بررسی می‌کنی، یادداشت می‌کنی، و امضا می‌کنی. چیزی را بنویس که واقعاً اندازه گرفتی، حتی وقتی اشتباه است. عدد بد تقصیر تو نیست، ولی پنهان کردنش خطرناک است. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.p': "دما زیادی بالاست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.s': "یادت رفت ساعت ده اندازه بگیری. همکارت می‌گوید: «یک عدد خوب بنویس و تمام». چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.o1': "الان اندازه می‌گیری، و ساعت واقعی را می‌نویسی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.o2': "برای ساعت ده یک عدد خوب می‌نویسی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.o3': "آن خط را خالی می‌گذاری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.haccp.w': "فهرست باید نشان بدهد واقعاً چه اتفاقی افتاده. یک عدد ساختگی مشکلی را پنهان می‌کند که می‌تواند آدم‌ها را مریض کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.collection': "جمع‌آوری زباله", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.binlorry': "ماشین حمل زباله", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vuilniswagen': "ماشین حمل زباله، کامیون زباله", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kliko': "سطل زبالهٔ چرخ‌دار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kieplift': "بالابر سطل (سطل را بلند می‌کند و خالی می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.treeplank': "رکاب عقب (پله‌ای پشت کامیون)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijplaatsing': "زبالهٔ اضافه (کیسه‌هایی که کنار سطل گذاشته شده)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ophaaldag': "روز جمع‌آوری", // nieuw, nalezen // nagelezen AI 28 nov
+    's.binlorry.1': "سطل چرخ‌دار را روی بالابر بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.binlorry.2': "کنار مخزن کیسه گذاشته‌اند.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.binlorry.3': "سطل چرخ‌دار زیادی سنگین است. ولش کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.q': "می‌توانم پشت کامیون سوار شوم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.a': "نه، سوار کابین می‌شوی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry': "دیده شو، و داخل سوار شو", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.b': "در هر دور لباس شب‌رنگت را بپوش. از سمت پیاده‌رو سوار و پیاده شو، هیچ‌وقت از سمت ترافیک. داخل کابین سوار شو، نه پشت کامیون: فقط وقتی شرکتت به‌روشنی اجازه می‌دهد، و هیچ‌وقت وقتی کامیون دنده‌عقب می‌رود یا تند می‌رود. وقتی بالابر حرکت می‌کند از آن دور بمان. سطلی زیادی سنگین است، یا چیزی از آن بیرون زده؟ ولش کن، و گزارشش بده. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.p': "این سطل چرخ‌دار زیادی سنگین است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.s': "خیابان بعدی خیلی نزدیک است. راننده می‌گوید: «روی رکاب عقب بایست». چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.o1': "با این حال سوار کابین می‌شوی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.o2': "روی رکاب می‌ایستی: نزدیک است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.o3': "پشت کامیون پیاده می‌روی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.binlorry.w': "افتادن از کامیونی که حرکت می‌کند یکی از بزرگ‌ترین خطرهای این کار است. داخل کابین در امانی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.reversing': "دنده‌عقب رفتن ایمن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.achteruitrijden': "دنده‌عقب رفتن (به عقب راندن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dodehoek': "نقطهٔ کور (جایی که راننده نمی‌تواند تو را ببیند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanwijzer': "راهنما (کسی که راننده را هدایت می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oogcontact': "تماس چشمی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.piepen': "بوق زدن، بیپ کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.cabine': "کابین (جایی که راننده می‌نشیند)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reversing.1': "هیچ‌وقت پشت کامیون نایست.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reversing.2': "در آینه نمی‌بینمت.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reversing.3': "با راننده تماس چشمی بگیر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.q': "می‌توانی کمکم کنی دنده‌عقب بروم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.a': "بله، من سمت چپم. در آینه‌ات نگاه کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing': "هیچ‌وقت پشت کامیونی که دنده‌عقب می‌رود", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.b': "خیلی از تصادف‌های کامیون زباله وقتی پیش می‌آید که به عقب می‌روند. راننده نمی‌تواند درست پشت کامیون را ببیند: نقطهٔ کور. پس هیچ‌وقت پشت کامیونی که ممکن است دنده‌عقب برود نایست یا راه نرو. راننده را از کنار هدایت کن، جایی که در آینه همدیگر را می‌بینید. تماس چشمی قطع شد؟ راننده می‌ایستد. قبل از شروع روی علامت‌های واضح توافق کنید. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.p': "بایست! دیگر نمی‌بینمت.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.s': "کامیون دنده‌عقب می‌رود. تو برای برداشتن یک کیسه پشتش می‌روی. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.o1': "صبر می‌کنی تا کامیون کاملاً بایستد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.o2': "سریع می‌روی: فقط یک ثانیه است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.o3': "برای راننده دست تکان می‌دهی، و می‌روی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.reversing.w': "راننده نمی‌تواند تو را پشت کامیون ببیند. یک ثانیه برای یک تصادف کافی است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.wastesorting': "تفکیک زباله", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.papier': "کاغذ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plastic': "پلاستیک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gft': "زبالهٔ تر (میوه، سبزی و گیاه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.restafval': "زبالهٔ عمومی (چیزی که قابل تفکیک نیست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.karton': "مقوا", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.blik': "قوطی", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wastesorting.1': "شیشه در مخزن شیشه می‌رود.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wastesorting.2': "این جزو زبالهٔ عمومی است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wastesorting.3': "مقوا را صاف تا کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.q': "جعبهٔ پیتزا کجا می‌رود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.a': "در زبالهٔ عمومی. رویش چربی هست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting': "تفکیک خوب کار را کم می‌کند", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.b': "زبالهٔ تفکیک‌شده دوباره قابل استفاده است: کاغذ کاغذ می‌شود، شیشه شیشه. ولی یک چیز اشتباه می‌تواند یک بار کامل را خراب کند. پس قبل از خالی کردن، داخل سطل را نگاه کن. چیزی آنجا جایش نیست، مثل کیسه‌ای زبالهٔ عمومی بین کاغذها؟ ولش کن، یا قانون‌های شرکتت را دنبال کن. اینکه کدام زباله کجا می‌رود در هر شهر فرق دارد: قانون‌های منطقه‌ات را یاد بگیر. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.p': "این جایش اینجا نیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.s': "یک سطل کاغذ پر از کیسه زبالهٔ سیاه است. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.o1': "ولش می‌کنی، و گزارشش می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.o2': "آن را در بار کاغذ خالی می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.o3': "کیسه‌ها را با دست بیرون می‌آوری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesorting.w': "زباله در کاغذ کل بار را خراب می‌کند. کیسه‌ها ممکن است چیزهای تیز یا کثیف هم داشته باشند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.wastesafety': "چیزهای تیز و بلند کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snijwond': "بریدگی (زخمی از یک چیز تیز)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.prikken': "فرو رفتن (یک نوک تیز در پوستت فرو می‌رود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.naald': "سوزن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scherp': "تیز", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rugpijn': "کمردرد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tetanusprik': "واکسن کزاز (آمپولی برای یک بیماری که از کثیفی در زخم می‌آید)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wastesafety.1': "هیچ‌وقت کیسه را از زیر نگیر.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wastesafety.2': "مواظب باش، در این کیسه شیشه هست.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.wastesafety.3': "سوزن در دستم رفت.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.q': "دستم را بریده‌ام. چه کار باید بکنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.a': "زخم را خوب بشوی. و به من بگو.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety': "هیچ‌وقت کیسه را فشار نده", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.b': "کیسه زباله ممکن است شیشه، چاقو یا سوزن داشته باشد. پس هیچ‌وقت کیسه را به بدنت نچسبان، هیچ‌وقت فشارش نده، و هیچ‌وقت آن را روی پایت حمل نکن: از بالا بگیرش، دور از خودت. دستکش‌هایت را بپوش. با زانوی خم و کمر صاف بلند کن، و سطل را هل بده، حمل نکن. چیزی در دستت فرو رفت یا بریدت؟ زخم را با آب خوب بشوی، و همان روز به سرپرستت بگو.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.p': "چیزی در دستم فرو رفت.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.s': "یک کیسه پاره می‌شود. داخلش یک سوزن می‌بینی. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.o1': "به آن دست نمی‌زنی، و گزارشش می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.o2': "با دستکش برش می‌داری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.o3': "آن را دوباره در کیسه هل می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wastesafety.w': "دستکش جلوی سوزن را نمی‌گیرد. سوزن ممکن است بیماری منتقل کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.recycling': "مرکز بازیافت", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.yard': "در مرکز بازیافت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.milieustraat': "مرکز بازیافت (جایی که مردم زبالهٔ بزرگ یا خاص می‌آورند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.grofvuil': "زبالهٔ حجیم (چیزهای بزرگ، مثل مبل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.puin': "نخاله (سنگ و آجر شکسته)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.matras': "تشک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.weegbrug': "باسکول (ترازویی برای ماشین و کامیون)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afvalpas': "کارت زباله (ساکنان دم در نشانش می‌دهند)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.yard.1': "نخاله در مخزن چهار می‌رود.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.yard.2': "می‌توانم کارت زباله‌تان را ببینم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.yard.3': "اول از روی باسکول رد شوید.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.q': "این تشک کجا می‌رود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.a': "در مخزن زبالهٔ حجیم، آن ته.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard': "کمک کن، ولی محوطه را ایمن نگه دار", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.b': "در مرکز بازیافت به مراجعه‌کننده‌ها می‌گویی زباله‌شان کجا می‌رود، و بررسی می‌کنی که درست تفکیک شده باشد. مهربان باش: خیلی‌ها فقط چند بار در سال می‌آیند و قانون‌ها را نمی‌دانند. بچه‌ها و مراجعه‌کننده‌ها را از دستگاه‌ها و از لبهٔ مخزن‌های بلند دور نگه دار. چیزهای سنگین را با هم بلند کنید، یا بگذار مراجعه‌کننده خودش وسایلش را ببرد. کسی چیزی می‌آورد که نمی‌شناسی؟ قبل از اینکه داخل برود بپرس. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.p': "این در مخزن چهار می‌رود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.s': "مردی می‌خواهد یک کیسهٔ پر را در مخزن چوب بیندازد. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.o1': "می‌پرسی داخل کیسه چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.o2': "می‌گذاری بیندازد: زبالهٔ خودش است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.o3': "خودت آن را برایش می‌اندازی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.yard.w': "یک چیز اشتباه می‌تواند یک مخزن پر را خراب کند. یک سؤال مؤدبانه زباله را تمیز نگه می‌دارد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.hazardous': "زبالهٔ شیمیایی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.chemischafval': "زبالهٔ شیمیایی (زبالهٔ خطرناک، مثل رنگ و روغن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spuitbus': "قوطی اسپری", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.asbest': "آزبست (مادهٔ خطرناکی در ساختمان‌های قدیمی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lekken': "نشت کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gevarensymbool': "علامت خطر (تصویری که دربارهٔ خطر هشدار می‌دهد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vat': "بشکه", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hazardous.1': "رنگ را کنار زبالهٔ شیمیایی بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hazardous.2': "این بطری نشت می‌کند. با دستکش برش دار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hazardous.3': "آزبست باید خوب بسته‌بندی شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.q': "در این بطری چیست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.a': "نمی‌دانم. کنارش بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous': "ناشناخته؟ باز نکن، بو نکن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.b': "زبالهٔ شیمیایی، مثل رنگ، روغن، مواد شوینده، باتری و قوطی اسپری، می‌تواند بسوزاند، مسموم کند یا منفجر شود. دنبال علامت‌های خطر بگرد. دستکش و عینک ایمنی بپوش. هیچ‌وقت بطری را باز نکن تا بو کنی داخلش چیست، و هیچ‌وقت مواد را با هم مخلوط نکن. بطری‌ای را که نشت می‌کند صاف نگه دار، و آن را در یک سینی بگذار. آزبست فقط وقتی اجازه دارد وارد شود که خوب بسته‌بندی شده باشد: هیچ‌وقت آن را نشکن، و از بسته‌بندی درش نیاور. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.p': "داخل این چیست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.s': "زنی یک بطری بدون برچسب می‌آورد. بوی تندی می‌دهد. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.o1': "جدا می‌گذاری‌اش، و به سرپرستت می‌گویی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.o2': "بازش می‌کنی، و بو می‌کنی ببینی چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.o3': "آن را در بشکهٔ رنگ خالی می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hazardous.w': "محصولات ناشناخته ممکن است با بقیه واکنش نشان بدهند. سرپرستت می‌داند کجا می‌تواند ایمن برود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.baler': "دستگاه پرس", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.balenpers': "دستگاه پرس (دستگاهی که زباله را به شکل بلوک فشرده می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.baal': "عدل (بلوک فشردهٔ کاغذ یا پلاستیک)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.persen': "پرس کردن، فشردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vastlopen': "گیر کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.binddraad': "سیم بسته‌بندی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vulopening': "دهانهٔ بارگیری (جایی که زباله داخل می‌رود)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.baler.1': "پرس گیر کرده. دکمهٔ توقف اضطراری را بزن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.baler.2': "هیچ‌وقت دستت را داخل پرس نبر.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.baler.3': "عدل را خوب ببند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.q': "پرس گیر می‌کند. می‌توانم نگاهی بیندازم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.a': "نه. اول برق قطع می‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler': "هیچ‌وقت دستت را داخل پرس نبر", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.b': "دستگاه پرس با نیروی خیلی زیادی فشار می‌دهد. فقط وقتی از آن استفاده کن که طرز کارش را یاد گرفته‌ای. هیچ‌وقت دست، بازو یا پا را داخل دهانهٔ بارگیری نبر، حتی وقتی دستگاه ساکن به نظر می‌رسد. گیر می‌کند؟ دکمهٔ توقف اضطراری را بزن، خاموشش کن و مطمئن شو کسی نمی‌تواند روشنش کند: مراحل شرکتت را دنبال کن. فقط بعد از آن نگاه کن. هیچ‌وقت داخل دستگاه پرس یا مخزن نرو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.p': "پرس گیر کرده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.s': "یک تکه مقوا در دهانه گیر کرده. دستگاه ایستاده. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.o1': "کاملاً خاموشش می‌کنی، بعد درش می‌آوری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.o2': "سریع با دست بیرونش می‌کشی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.o3': "با پایت داخلش هل می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.baler.w': "دستگاهی که ایستاده ممکن است دوباره راه بیفتد. بدون قطع برق، دستت در خطر است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.shovel': "لودر در محوطه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.shovel': "لودر (دستگاه بزرگی با یک جام در جلو)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zwaailamp': "چراغ گردان (چراغ نارنجی بالای یک دستگاه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bunker': "سوله (فضای بتنی بزرگ برای یک نوع زباله)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.looppad': "مسیر عابر (راهی فقط برای آدم‌ها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toeteren': "بوق زدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opscheppen': "برداشتن با جام، بیل زدن", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shovel.1': "روی مسیر عابر بمان.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shovel.2': "لودر دنده‌عقب می‌رود. مواظب باش!", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shovel.3': "چراغ گردان روشن است. دستگاه حرکت می‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.q': "می‌توانم از کنار لودر رد شوم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.a': "فقط اگر راننده تو را ببیند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel': "از سر راه لودر کنار برو", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.b': "لودر بزرگ است، و راننده‌اش دور و برش را کم می‌بیند، مخصوصاً پشتش را. پس روی مسیرهای عابر بمان، و لباس شب‌رنگت را بپوش. هیچ‌وقت پشت دستگاهی که حرکت می‌کند راه نرو. می‌خواهی رد شوی؟ صبر کن تا راننده تو را ببیند و علامت بدهد. چراغ گردان یعنی: این دستگاه دارد کار می‌کند. مراجعه‌کننده‌ها را از آن خیلی دور نگه دار. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.p': "مرا دیدی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.s': "باید از کنار لودری که کار می‌کند رد شوی. راننده به طرف دیگر نگاه می‌کند. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.o1': "صبر می‌کنی تا تو را ببیند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.o2': "سریع از کنارش رد می‌شوی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.o3': "از پشت دستگاه رد می‌شوی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shovel.w': "راننده‌ای که تو را ندیده نمی‌تواند برایت بایستد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.toddlers': "بچه‌ها", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.nappies': "عوض کردن پوشک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.luier': "پوشک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verschonen': "عوض کردن (پوشک)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.commode': "میز تعویض پوشک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.billendoekje': "دستمال مرطوب بچه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.potje': "لگن بچه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zindelijk': "از پوشک گرفته‌شده (بچه می‌تواند از توالت استفاده کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.nappies.1': "می‌روم پوشک سِم را عوض کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.nappies.2': "بعد از عوض کردن پوشک دست‌هایت را بشوی.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.nappies.3': "هیچ‌وقت بچه را روی میز تعویض تنها نگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.q': "پوشک نور را کی عوض کردی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.a': "ساعت ده. در اپ ثبت شده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies': "یک دست روی بچه", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.b': "قبل از اینکه بچه را روی میز تعویض بگذاری، همه‌چیز را آماده کن: پوشک تمیز، دستمال مرطوب و لباس. بعد همیشه یک دستت را روی بچه نگه دار. هیچ‌وقت دور نشو، حتی برای یک ثانیه. بعد از هر بار عوض کردن دست‌هایت را بشوی، و میز را تمیز کن. یادداشت کن کی پوشک را عوض کردی، تا پدر و مادر بدانند. سوختگی پوشک یا زخم می‌بینی؟ یادداشتش کن، و به یک همکار بگو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.p': "دارم پوشکش را عوض می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.s': "داری پوشک یک نوزاد را عوض می‌کنی. دستمال مرطوب یادت رفته؛ آن طرف اتاق است. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.o1': "نوزاد را با خودت می‌بری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.o2': "سریع می‌آوری‌اش: نزدیک است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.o3': "نوزاد را ول می‌کنی، و کسی را صدا می‌زنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.nappies.w': "نوزاد می‌تواند در یک ثانیه از روی میز تعویض بیفتد. هیچ‌وقت بچه را آن بالا تنها نگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.mealtime': "خوردن و نوشیدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.fles': "شیشه شیر (برای نوزاد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.slabbetje': "پیش‌بند بچه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beker': "لیوان (دسته‌دار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kinderstoel': "صندلی غذای بچه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.fruithap': "پورهٔ میوه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.boertje': "آروغ", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mealtime.1': "قبل از غذا دست‌هایت را بشوی.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mealtime.2': "ساعت دوازده شیشه شیر لیزا را به او بده.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mealtime.3': "همه سر میز می‌نشینند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.q': "دان می‌تواند یک بیسکویت بخورد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.a': "نه، آلرژی دارد. به فهرست نگاه کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime': "قبل از دادن غذا فهرست را نگاه کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.b': "قبل از اینکه به بچه‌ای خوراکی یا نوشیدنی بدهی، فهرست را نگاه کن: بعضی بچه‌ها آلرژی دارند، بعضی دیگر به خاطر سلامتی یا دینشان نباید بعضی غذاها را بخورند. قبل از غذا دست‌های خودت و بچه‌ها را بشوی. بگذار بچه‌ها وقتی می‌خورند و می‌نوشند بنشینند، هیچ‌وقت راه نروند یا ندوند. برای بچه‌های کوچک غذا را ریز ببُر، مثلاً انگور را تکه‌تکه. هیچ‌وقت چیزی را که بچهٔ دیگری از خانه آورده به یک بچه نده. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.p': "می‌تواند این را بخورد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.s': "بچه‌ای برای یک بیسکویت گریه می‌کند. این بچه را خوب نمی‌شناسی. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.o1': "اول فهرست را نگاه می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.o2': "می‌دهی: فقط یک بیسکویت است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.o3': "نصف بیسکویت می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mealtime.w': "بیسکویت ممکن است آجیل، شیر یا تخم‌مرغ داشته باشد. برای بچه‌ای که آلرژی دارد، این می‌تواند خیلی خطرناک باشد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.naptime': "خوابیدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedje': "تخت نوزاد (تخت کوچک برای نوزاد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.slaapkamer': "اتاق خواب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.knuffel': "عروسک پولیشی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.speen': "پستانک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.babyfoon': "پیجر کودک (دستگاهی برای شنیدن صدای نوزاد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.slaapzak': "کیسه‌خواب نوزاد", // nieuw, nalezen // nagelezen AI 28 nov
+    's.naptime.1': "نوزاد را به پشت بخوابان.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.naptime.2': "زیاد به اتاق خواب سر می‌زنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.naptime.3': "این عروسکت. خوب بخوابی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.q': "میلا خوابش برده؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.a': "بله، از ساعت یک. الان دوباره سر می‌زنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime': "نوزاد به پشت می‌خوابد", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.b': "نوزاد به پشت، در کیسه‌خواب، در تخت خودش، از همه ایمن‌تر می‌خوابد. در تخت بالش، پتوی شل و اسباب‌بازی بزرگ نباشد. اتاق را خنک و با هوای تازه نگه دار. زیاد به بچه‌هایی که خوابند سر بزن: نگاه کن و گوش کن، حتی وقتی پیجر کودک روشن است. پدر یا مادری از تو می‌خواهد نوزادش را طور دیگری بخوابانی؟ اول به سرپرستت بگو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.p': "می‌روم به اتاق خواب سر بزنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.s': "نوزادی در تختش روی شکم خوابش برده. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.o1': "آرام او را به پشت برمی‌گردانی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.o2': "می‌گذاری بخوابد: حالا خوابش برده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.o3': "یک بالش کنارش می‌گذاری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.naptime.w': "نوزاد به پشت راحت نفس می‌کشد. بالش ممکن است صورتش را بپوشاند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.playtime': "بازی کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spelen': "بازی کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.speelgoed': "اسباب‌بازی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zandbak': "جعبهٔ شن (برای بازی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.glijbaan': "سرسره", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.puzzel': "پازل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.buitenspelen': "بیرون بازی کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    's.playtime.1': "می‌رویم بیرون بازی کنیم. کاپشن‌ها را بپوشید!", // nieuw, nalezen // nagelezen AI 28 nov
+    's.playtime.2': "اسباب‌بازی‌ها را جمع کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.playtime.3': "روی سرسره هر بار یک بچه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.q': "می‌توانم با پازل بازی کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.a': "بله، سر میز. بعد جمعش می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime': "بازی ایمن: نگاه کن، بشمار، بررسی کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.b': "بچه‌ها با بازی یاد می‌گیرند، پس بگذار چیزها را امتحان کنند. ولی همیشه آن‌ها را جلوی چشمت نگه دار، بیرون هم. وقتی بیرون می‌روید و وقتی برمی‌گردید داخل، بچه‌ها را بشمار. اول زمین بازی را بررسی کن: در بسته است، شیشه یا آشغال هست؟ اسباب‌بازی با قطعه‌های کوچک برای بچه‌های زیر سه سال نیست: ممکن است در گلویشان گیر کند و خفه شوند. اسباب‌بازی‌هایی را که به دهان می‌برند زیاد تمیز کن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.p': "همه هستند؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.s': "از زمین بازی برمی‌گردی داخل. یک بچه کم می‌شماری. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.o1': "به یک همکار می‌گویی، و فوراً دنبالش می‌گردی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.o2': "صبر می‌کنی: بچه خودش می‌آید داخل.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.o3': "فردا دوباره می‌شماری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.playtime.w': "بچه‌ای که تنها بیرون است ممکن است آسیب ببیند یا دور شود. هر دقیقه مهم است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.daycare': "والدین، ایمنی و گروه", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.pickup': "آوردن و بردن بچه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ouder': "والد (پدر یا مادر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afscheid': "خداحافظی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oppas': "پرستار بچه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schriftje': "دفترچه (برای یادداشت بین والدین و مربی‌ها)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ouderapp': "اپ والدین (برای عکس و پیام به والدین)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wennen': "عادت کردن (خو گرفتن به جای جدید)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pickup.1': "آن را در دفترچه می‌نویسم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pickup.2': "به بابا بای‌بای کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pickup.3': "یک عکس در اپ والدین می‌گذارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.q': "امروز چه کسی سِم را می‌برد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.a': "مادربزرگش. اسمش در فهرست هست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup': "فقط به کسانی که در فهرست‌اند", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.b': "بچه را فقط به پدر یا مادر بده، یا به کسی که والدین درباره‌اش به تو گفته‌اند. آن آدم را نمی‌شناسی؟ بپرس کیست، مدرک شناسایی‌اش را نگاه کن، و با والدین یا سرپرستت هماهنگ کن. موقع بردن بچه، به پدر یا مادر بگو روز چطور گذشت: غذا، خواب، بازی، و هر چیز خاص. چیزهای مهم را در دفترچه یا اپ بنویس. دربارهٔ بچه‌های دیگر فقط با پدر و مادر خودشان حرف بزن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.p': "شما کی هستید؟ به والدین زنگ می‌زنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.s': "مردی که نمی‌شناسی برای بردن سِم می‌آید. اسمش در فهرست نیست. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.o1': "قبل از اینکه سِم برود به والدین زنگ می‌زنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.o2': "می‌گذاری سِم برود: اسمش را می‌داند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.o3': "از سِم می‌پرسی او را می‌شناسد یا نه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pickup.w': "تو مسئول بچه هستی تا وقتی کسی که والدین انتخاب کرده‌اند او را تحویل بگیرد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.childsafety': "ایمنی در گروه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.traphekje': "درِ محافظ پله", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vingerstrip': "محافظ انگشت (روی در، تا انگشت لای آن گیر نکند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verslikken': "چیزی در گلو پریدن (غذا به راه اشتباه می‌رود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bult': "قلنبه، ورم (روی سر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schaafwond': "خراشیدگی (پوست خراشیده شده)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toezicht': "مراقبت (بچه‌ها را زیر نظر داری)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.childsafety.1': "درِ محافظ پله را همیشه ببند.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.childsafety.2': "کمی یخ روی ورم می‌گذارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.childsafety.3': "چیزی در گلوی سِم پریده. دارم کمکش می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.q': "بو زمین خورد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.a': "بله، سرش ورم کرده. به مادرش زنگ می‌زنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety': "با چشم یک بچه دور و برت را نگاه کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.b': "بچه‌های کوچک همه‌چیز را در دهانشان می‌گذارند و از همه‌چیز بالا می‌روند. پس درِ محافظ پله را بسته نگه دار، مواد شوینده و داروها را دور از دسترس بگذار، و نوشیدنی داغ را از بچه‌ها دور نگه دار. هر روز اتاق را بررسی کن. بچه‌ای آسیب می‌بیند؟ کمک‌های اولیه بده، بچه را آرام کن، به والدین بگو، و آن را یادداشت کن. جدی است؟ به ۱۱۲ زنگ بزن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.p': "درِ محافظ پله باز است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.s': "قهوهٔ داغت را روی یک میز کوتاه گذاشته‌ای. یک بچهٔ نوپا به طرفش می‌رود. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.o1': "فوراً قهوه را بالا می‌گذاری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.o2': "به بچه می‌گویی به آن دست نزند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.o3': "سریع می‌خوری‌اش.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.childsafety.w': "قهوهٔ داغ می‌تواند یک بچهٔ کوچک را بد بسوزاند. دور از دسترس تنها جای امن است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.sickchild': "بچهٔ مریض و آلرژی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huiduitslag': "جوش پوستی (لکه‌های قرمز روی پوست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.diarree': "اسهال", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.overgeven': "استفراغ کردن، بالا آوردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.allergielijst': "فهرست آلرژی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.adrenalinepen': "قلم آدرنالین (قلم دارویی برای آلرژی شدید)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.temperaturen': "تب گرفتن (اندازه گرفتن دمای بدن)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sickchild.1': "سِم تب دارد. به پدرش زنگ می‌زنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sickchild.2': "قبل از غذا فهرست آلرژی را نگاه کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sickchild.3': "هیچ‌وقت بدون اجازه دارو نده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.q': "حال یِپ چطور است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.a': "خیلی داغ است. می‌خواهم تبش را بگیرم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild': "بچهٔ مریض: بگو، حدس نزن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.b': "حواست باشد بچه‌ها در چه حالی‌اند. بچه‌ای داغ است، خیلی خسته است، استفراغ می‌کند، یا جوش پوستی دارد؟ تبش را بگیر، به همکارت بگو، و به والدین زنگ بزن. فقط با اجازهٔ کتبی والدین دارو بده، و یادداشت کن چه دادی و کی. بدان کدام بچه‌ها آلرژی دارند، و داروی آن‌ها کجاست. بچه‌ای با واکنش آلرژیک شدید: اگر یاد گرفته‌ای قلم آدرنالین را بزن، و به ۱۱۲ زنگ بزن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.p': "بچه‌تان مریض است. می‌توانید بیایید دنبالش؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.s': "مادری می‌گوید: «ساعت دو به او شربت تب بده». فرمی در کار نیست. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.o1': "از او می‌خواهی اول فرم را امضا کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.o2': "می‌دهی: مادرش خواسته.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.o3': "برای احتیاط نصفش را می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sickchild.w': "بدون اجازهٔ کتبی اجازه نداری دارو بدهی. فرم از بچه و از خودت محافظت می‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.grouprules': "گروه و قانون‌ها", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pedagogischmedewerker': "مربی کودک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mentor': "منتور (مربی‌ای که یک بچه را از نزدیک دنبال می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vierogenprincipe': "قانون چهار چشم (یک بزرگسال دیگر همیشه می‌تواند تو را ببیند یا بشنود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.observeren': "مشاهده کردن (با دقت نگاه کردن، و یادداشت کردن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.peuter': "بچهٔ نوپا (بچهٔ دو یا سه ساله)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.groep': "گروه (بچه‌هایی که هر روز با هم‌اند)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.grouprules.1': "من منتور لیزا هستم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.grouprules.2': "یک همکار همیشه می‌تواند ما را ببیند یا بشنود.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.grouprules.3': "نگران دان هستم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.q': "می‌توانم تنها با گروه بیرون بروم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.a': "بله، ولی اول به یک همکار بگو.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules': "هیچ‌وقت تنها و دور از چشم", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.b': "در مهدکودک، وقتی با بچه‌ها هستی، یک بزرگسال دیگر همیشه باید بتواند تو را ببیند یا بشنود. این از بچه‌ها و از خودت محافظت می‌کند. هر بچه یک منتور دارد: یک مربی که آن بچه را از نزدیک دنبال می‌کند و با والدین حرف می‌زند. نگران وضع بچه‌ای در خانه هستی، مثلاً کبودی یا ترس؟ از بچه زیاد سؤال نکن: به سرپرستت بگو، که مراحل را می‌داند. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.p': "نگران این بچه هستم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.s': "باز روی بدن یک بچه کبودی می‌بینی. بچه ساکت است. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.o1': "همان روز به سرپرستت می‌گویی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.o2': "از بچه سؤال‌های زیادی می‌پرسی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.o3': "به والدین زنگ می‌زنی و می‌پرسی چرا.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.grouprules.w': "سرپرستت مراحل نگرانی دربارهٔ یک بچه را می‌داند. سؤال‌های زیاد می‌تواند بچه را بترساند.", // nieuw, nalezen // nagelezen AI 28 nov
     // Second units for Schoonmaak, Horeca, Zorg and Winkel, and "Werken via een uitzendbureau" (23 November 2026).
-    'u.housekeeping': "توالت‌ها، اتاق‌های هتل و دستگاه‌ها", // nieuw, nalezen
-    'l.sanitary': "توالت‌ها و روشویی‌ها", // nieuw, nalezen
-    'w.wastafel': "روشویی (سینک حمام یا دستشویی)", // nieuw, nalezen
-    'w.toiletpot': "کاسهٔ توالت", // nieuw, nalezen
-    'w.toiletborstel': "برس توالت", // nieuw, nalezen
-    'w.urinoir': "توالت ایستاده (پیسوار)", // nieuw, nalezen
-    'w.kalk': "جرم آب (لکهٔ سفیدی که آب روی شیر و کاشی می‌گذارد)", // nieuw, nalezen
-    'w.ontstopper': "پمپ توالت (وسیله‌ای برای توالت یا لولهٔ گرفته)", // nieuw, nalezen
-    's.sanitary.1': "اول روشویی‌ها را تمیز می‌کنم، بعد توالت‌ها را.", // nieuw, nalezen
-    's.sanitary.2': "روی شیر آب جرم نشسته است.", // nieuw, nalezen
-    's.sanitary.3': "توالت طبقهٔ اول گرفته است.", // nieuw, nalezen
-    'c.sanitary.q': "کار توالت‌ها تمام شد؟", // nieuw, nalezen
-    'c.sanitary.a': "هنوز نه. یکی از توالت‌ها گرفته است.", // nieuw, nalezen
-    'c.sanitary': "از تمیز به کثیف", // nieuw, nalezen
-    'c.sanitary.b': "در سرویس بهداشتی از تمیز به کثیف کار می‌کنی: اول آینه‌ها و روشویی‌ها، بعد توالت‌ها، و آخر از همه کف. این‌طوری کثیفی توالت را به روشویی نمی‌بری. از دستمال‌هایی که رنگشان برای توالت است استفاده کن، و دستکش بپوش. برس توالت را هم تمیز کن، و بگذار خشک شود. توالتی گرفته یا خراب است؟ یک تابلو روی در بگذار، و آن را گزارش بده. وقتی کارت تمام شد دست‌هایت را بشوی، حتی اگر دستکش پوشیده بودی. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.sanitary.p': "این توالت گرفته است. یک تابلو رویش می‌گذارم.", // nieuw, nalezen
-    'c.sanitary.s': "یک توالت را تمیز کردی. نوبت روشویی است. هنوز همان دستمال در دستت است. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.sanitary.o1': "دستمالی برمی‌داری که رنگش برای روشویی است.", // nieuw, nalezen
-    'c.sanitary.o2': "از همان دستمال استفاده می‌کنی: هنوز تمیز به نظر می‌رسد.", // nieuw, nalezen
-    'c.sanitary.o3': "اول دستمال را در توالت آب می‌کشی.", // nieuw, nalezen
-    'c.sanitary.w': "میکروب‌های توالت روی دستمال هستند، حتی وقتی آن‌ها را نمی‌بینی. دستمال تازه آن‌ها را از دست‌ها و صورت‌ها دور نگه می‌دارد.", // nieuw, nalezen
-    'l.hotelroom': "اتاق‌های هتل", // nieuw, nalezen
-    'w.laken': "ملافه (روی تخت)", // nieuw, nalezen
-    'w.kussensloop': "روبالشی", // nieuw, nalezen
-    'w.dekbed': "لحاف", // nieuw, nalezen
-    'w.handdoek': "حوله", // nieuw, nalezen
-    'w.kamerlijst': "فهرست اتاق‌ها (اتاق‌هایی که امروز باید تمیز کنی)", // nieuw, nalezen
-    'w.opmaken': "مرتب کردن (تخت)", // nieuw, nalezen
-    's.hotelroom.1': "تخت را با ملافه‌های تمیز مرتب می‌کنم.", // nieuw, nalezen
-    's.hotelroom.2': "دو حولهٔ تمیز در حمام بگذار.", // nieuw, nalezen
-    's.hotelroom.3': "اتاق دوازده تمام شد. می‌روم سراغ سیزده.", // nieuw, nalezen
-    'c.hotelroom.q': "چند اتاق دیگر برایت مانده؟", // nieuw, nalezen
-    'c.hotelroom.a': "چهار تا دیگر. بعد فهرستم تمام می‌شود.", // nieuw, nalezen
-    'c.hotelroom': "در بزن، بگو کی هستی، و صبر کن", // nieuw, nalezen
-    'c.hotelroom.b': "قبل از اینکه وارد اتاق هتل شوی، در بزن و بگو کی هستی، مثلاً «Housekeeping!». کمی صبر کن، و دوباره در بزن. روی در تابلوی «Niet storen» (مزاحم نشوید) هست؟ پس وارد نشو، و آن را در فهرست اتاق‌هایت بنویس. مهمان در اتاق است؟ بپرس اجازه داری الان تمیز کنی، یا بعداً برگرد. وسایل مهمان همان‌جا که هست می‌ماند. مهمانی چیزی جا گذاشته؟ آن را به پذیرش ببر. هیچ‌وقت هیچ چیزی را برای خودت برندار، حتی یک چیز کوچک. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.hotelroom.p': "صبح بخیر. اجازه هست الان اتاق را تمیز کنم؟", // nieuw, nalezen
-    'c.hotelroom.s': "در یک اتاق خالی یک گوشی زیر تخت پیدا می‌کنی. مهمان رفته است. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.hotelroom.o1': "آن را به پذیرش می‌بری.", // nieuw, nalezen
-    'c.hotelroom.o2': "برای خودت برش می‌داری: مهمان رفته است.", // nieuw, nalezen
-    'c.hotelroom.o3': "همان‌جا زیر تخت ولش می‌کنی.", // nieuw, nalezen
-    'c.hotelroom.w': "وسایل گمشده هنوز مال مهمان است. پذیرش می‌تواند آن‌ها را پس بدهد. برداشتنشان دزدی است، و می‌تواند کارت را از دستت بگیرد.", // nieuw, nalezen
-    'l.dosing': "مواد شوینده و دستگاه‌ها", // nieuw, nalezen
-    'w.doseren': "اندازه گرفتن (استفاده از مقدار درست یک ماده)", // nieuw, nalezen
-    'w.maatbeker': "پیمانه", // nieuw, nalezen
-    'w.sprayflacon': "بطری اسپری", // nieuw, nalezen
-    'w.concentraat': "کنسانتره (مادهٔ غلیظی که با آب مخلوطش می‌کنی)", // nieuw, nalezen
-    'w.veiligheidsblad': "برگهٔ اطلاعات ایمنی (خطرهای یک ماده و کاری را که باید کرد می‌گوید)", // nieuw, nalezen
-    'w.schrobzuigmachine': "دستگاه کف‌شوی (دستگاهی که کف را می‌ساید و با مکش خشک می‌کند)", // nieuw, nalezen
-    's.dosing.1': "یک درپوش در یک سطل آب بریز.", // nieuw, nalezen
-    's.dosing.2': "اول برچسب را بخوان.", // nieuw, nalezen
-    's.dosing.3': "دستگاه کف‌شوی باید به شارژ زده شود.", // nieuw, nalezen
-    'c.dosing.q': "کمی بیشتر ماده بریز. آن‌وقت تمیزتر می‌شود.", // nieuw, nalezen
-    'c.dosing.a': "نه، بیشتر بهتر نیست. از پیمانه استفاده می‌کنم.", // nieuw, nalezen
-    'c.dosing': "مقدار درست، نه بیشتر", // nieuw, nalezen
-    'c.dosing.b': "مادهٔ بیشتر بهتر تمیز نمی‌کند. مقدار زیاد یک لایهٔ چسبناک باقی می‌گذارد، پس کف زودتر کثیف می‌شود و ممکن است لیز شود. برای پوست و ریه‌هایت هم بدتر است. از پیمانه یا پمپ اندازه‌گیری استفاده کن، و از برچسب پیروی کن. اول آب، بعد ماده: تا پاشیده نشود. قبل از استفاده از دستگاه کف‌شوی، بررسی کن که شارژ داشته باشد و در مخزنش آب تمیز باشد. در پایان، مخزن آب کثیف را خالی کن و آب بکش. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.dosing.p': "چقدر باید بریزم؟", // nieuw, nalezen
-    'c.dosing.s': "کف چسبناک می‌ماند. یک همکار می‌گوید: «دو برابر ماده بریز». چه کار می‌کنی؟", // nieuw, nalezen
-    'c.dosing.o1': "مقدار روی برچسب را می‌ریزی، و می‌پرسی.", // nieuw, nalezen
-    'c.dosing.o2': "دو برابر می‌ریزی: آن‌وقت تمیز می‌شود.", // nieuw, nalezen
-    'c.dosing.o3': "ماده را مستقیم روی کف می‌ریزی.", // nieuw, nalezen
-    'c.dosing.w': "کف چسبناک اغلب یعنی مادهٔ زیاد، نه کم. مقدار درست از همه بهتر تمیز می‌کند و از همه ایمن‌تر است.", // nieuw, nalezen
-    'l.officenight': "دفترها، صبح زود یا شب دیروقت", // nieuw, nalezen
-    'w.toetsenbord': "صفحه‌کلید", // nieuw, nalezen
-    'w.papierbak': "سطل کاغذ (برای کاغذ باطله)", // nieuw, nalezen
-    'w.lichtschakelaar': "کلید برق", // nieuw, nalezen
-    'w.pantry': "آبدارخانه (آشپزخانهٔ کوچک دفتر)", // nieuw, nalezen
-    'w.deurmat': "پادری (فرش جلوی ورودی)", // nieuw, nalezen
-    'w.alleenwerken': "تنها کار کردن (هیچ‌کس دیگری در ساختمان نیست)", // nieuw, nalezen
-    's.officenight.1': "سطل‌های زباله و سطل کاغذ را خالی می‌کنم.", // nieuw, nalezen
-    's.officenight.2': "به کاغذهای روی میز دست نمی‌زنم.", // nieuw, nalezen
-    's.officenight.3': "وقتی کارم تمام شد چراغ را خاموش می‌کنم.", // nieuw, nalezen
-    'c.officenight.q': "امشب در ساختمان تنها کار می‌کنی؟", // nieuw, nalezen
-    'c.officenight.a': "بله. وقتی کارم تمام شد به تو پیام می‌دهم.", // nieuw, nalezen
-    'c.officenight': "تنها در ساختمان", // nieuw, nalezen
-    'c.officenight.b': "صبح زود یا شب دیروقت، اغلب یک دفتر را تنها تمیز می‌کنی. بدان اگر اتفاقی افتاد چه کار کنی: به چه کسی زنگ می‌زنی، و جعبهٔ کمک‌های اولیه کجاست؟ گوشی‌ات را همراهت نگه دار. با سرپرستت یا یک همکار قرار بگذار که وقتی شروع می‌کنی و وقتی تمام می‌کنی پیام بدهی. هیچ کسی را که نمی‌شناسی راه نده. به کاغذها، صفحه‌نمایش‌ها یا صفحه‌کلیدها بیشتر از آنچه برای تمیز کردن لازم است دست نزن، و هیچ‌وقت چیزی را که رویشان است نخوان. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.officenight.p': "کارم تمام شد و الان می‌روم خانه.", // nieuw, nalezen
-    'c.officenight.s': "شب مردی به در شیشه‌ای می‌زند. می‌گوید اینجا کار می‌کند و کلیدش را جا گذاشته. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.officenight.o1': "در را باز نمی‌کنی. به سرپرستت زنگ می‌زنی.", // nieuw, nalezen
-    'c.officenight.o2': "راهش می‌دهی: آدم مهربانی به نظر می‌رسد.", // nieuw, nalezen
-    'c.officenight.o3': "کلید خودت را به او می‌دهی.", // nieuw, nalezen
-    'c.officenight.w': "هر کسی می‌تواند بگوید آنجا کار می‌کند. سرپرستت می‌تواند آن را بررسی کند. ایمنی تو و ساختمان در درجهٔ اول است.", // nieuw, nalezen
-    'u.cooking': "آشپزخانه و سرو غذا", // nieuw, nalezen
-    'l.knives': "چاقوها و بریدن", // nieuw, nalezen
-    'w.koksmes': "چاقوی سرآشپز (چاقوی بزرگ آشپزخانه)", // nieuw, nalezen
-    'w.dunschiller': "پوست‌کن", // nieuw, nalezen
-    'w.schillen': "پوست کندن", // nieuw, nalezen
-    'w.hakken': "خرد کردن (خیلی ریز بریدن)", // nieuw, nalezen
-    'w.raspen': "رنده کردن", // nieuw, nalezen
-    'w.blokjes': "مکعب‌ها (تکه‌های کوچک چهارگوش)", // nieuw, nalezen
-    's.knives.1': "هویج‌ها را مکعبی خرد کن.", // nieuw, nalezen
-    's.knives.2': "چاقو را در سینک نگذار.", // nieuw, nalezen
-    's.knives.3': "جعفری را ریز خرد کن.", // nieuw, nalezen
-    'c.knives.q': "می‌توانی پیازها را خرد کنی؟", // nieuw, nalezen
-    'c.knives.a': "بله، سرآشپز. حلقه‌ای یا مکعبی؟", // nieuw, nalezen
-    'c.knives': "چاقو ابزار است، نه اسباب‌بازی", // nieuw, nalezen
-    'c.knives.b': "چاقویت را تیز نگه دار: چاقوی کُند راحت‌تر لیز می‌خورد. روی تخته‌ای ببُر که تکان نخورد: یک دستمال خیس زیرش بگذار. انگشت‌هایت را مثل چنگال به داخل خم کن. با نوک چاقو رو به پایین و نزدیک پایت راه برو. وقتی از کنار کسی رد می‌شوی، بگو «Mes!». هیچ‌وقت چاقو را در سینک پر از آب نگذار: ممکن است کسی بدون اینکه آن را ببیند دست به آن بزند. چاقویی دارد می‌افتد؟ عقب برو، آن را نگیر. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.knives.p': "چاقو! دارم از پشتت رد می‌شوم.", // nieuw, nalezen
-    'c.knives.s': "داری می‌بُری. چاقویت از روی تخته لیز می‌خورد و می‌افتد. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.knives.o1': "عقب می‌روی، و می‌گذاری بیفتد.", // nieuw, nalezen
-    'c.knives.o2': "سریع با دستت می‌گیری‌اش.", // nieuw, nalezen
-    'c.knives.o3': "با پایت جلویش را می‌گیری.", // nieuw, nalezen
-    'c.knives.w': "چاقویی که می‌افتد می‌تواند دست یا پایت را عمیق ببُرد. چاقویی که روی زمین است فقط باید شسته شود.", // nieuw, nalezen
-    'l.rawcooked': "خام، پخته و مواد حساسیت‌زا", // nieuw, nalezen
-    'w.rauw': "خام (پخته‌نشده)", // nieuw, nalezen
-    'w.gaar': "پخته (آمادهٔ خوردن)", // nieuw, nalezen
-    'w.afdekken': "پوشاندن (با درپوش یا فویل)", // nieuw, nalezen
-    'w.kleurcode': "کد رنگی (برای هر نوع غذا یک رنگ تخته و چاقو)", // nieuw, nalezen
-    'w.allergenenlijst': "فهرست مواد حساسیت‌زا (می‌گوید در هر غذا چه هست)", // nieuw, nalezen
-    'w.glutenvrij': "بدون گلوتن", // nieuw, nalezen
-    's.rawcooked.1': "گوشت خام در طبقهٔ پایین یخچال می‌رود.", // nieuw, nalezen
-    's.rawcooked.2': "مرغ پخته شده است؟", // nieuw, nalezen
-    's.rawcooked.3': "روی ظرف‌های داخل سردخانه را بپوشان.", // nieuw, nalezen
-    'c.rawcooked.q': "این سس بدون گلوتن است؟", // nieuw, nalezen
-    'c.rawcooked.a': "مطمئن نیستم. فهرست مواد حساسیت‌زا را نگاه می‌کنم.", // nieuw, nalezen
-    'c.rawcooked': "خام و آماده هیچ‌وقت به هم نمی‌خورند", // nieuw, nalezen
-    'c.rawcooked.b': "گوشت خام، ماهی و تخم‌مرغ ممکن است میکروب داشته باشند. آن‌ها را از غذای آمادهٔ خوردن دور نگه دار. از تخته و چاقوی جدا یا کد رنگی آشپزخانه‌ات استفاده کن، و بعد از دست زدن به غذای خام دست‌هایت را بشوی. گوشت خام در طبقهٔ پایین یخچال می‌رود، تا چیزی روی غذاهای دیگر نچکد. روی غذا را بپوشان و رویش تاریخ بزن. در حساسیت غذایی، یک ذرهٔ کوچک هم می‌تواند کافی باشد: از ابزار تمیز استفاده کن. رستوران باید بتواند به مهمان‌ها بگوید در یک غذا چه مواد حساسیت‌زایی هست: فهرست مواد حساسیت‌زا را نگاه کن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.rawcooked.p': "کدام تخته برای گوشت خام است؟", // nieuw, nalezen
-    'c.rawcooked.s': "مرغ خام بریدی. حالا باید برای یک سالاد گوجه‌فرنگی ببُری. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.rawcooked.o1': "یک تختهٔ تمیز و یک چاقوی تمیز برمی‌داری.", // nieuw, nalezen
-    'c.rawcooked.o2': "تخته را با دستمال پاک می‌کنی، و ادامه می‌دهی.", // nieuw, nalezen
-    'c.rawcooked.o3': "گوجه‌ها را روی همان تخته می‌بُری.", // nieuw, nalezen
-    'c.rawcooked.w': "میکروب‌های مرغ خام روی گوجه‌ها می‌رود، و سالاد دیگر پخته نمی‌شود. تختهٔ تمیز جلوی این را می‌گیرد.", // nieuw, nalezen
-    'l.pass': "ظرف‌شوی‌خانه و پاس", // nieuw, nalezen
-    'w.pass': "پاس (پیشخوانی که بشقاب‌ها روی آن منتظر گارسون می‌مانند)", // nieuw, nalezen
-    'w.bon': "برگهٔ سفارش (سفارش گارسون برای آشپزخانه)", // nieuw, nalezen
-    'w.spoelkeuken': "ظرف‌شوی‌خانه (جایی که ظرف‌ها شسته می‌شوند)", // nieuw, nalezen
-    'w.vaatwaskorf': "سبد ظرف‌شویی (سبدی که داخل ماشین ظرف‌شویی می‌رود)", // nieuw, nalezen
-    'w.voorspoelen': "پیش‌شویی کردن (آب کشیدن قبل از ماشین)", // nieuw, nalezen
-    'w.warmhoudlamp': "لامپ گرم‌کن (بشقاب‌ها را گرم نگه می‌دارد)", // nieuw, nalezen
-    's.pass.1': "میز هشت روی پاس است.", // nieuw, nalezen
-    's.pass.2': "دو برگهٔ سفارش جدید دارد می‌آید.", // nieuw, nalezen
-    's.pass.3': "اول بشقاب‌ها را پیش‌شویی کن.", // nieuw, nalezen
-    'c.pass.q': "غذای میز دوازده کجا ماند؟", // nieuw, nalezen
-    'c.pass.a': "روی پاس است. الان می‌آورمش.", // nieuw, nalezen
-    'c.pass': "پاس: بشقاب‌ها منتظر نمی‌مانند", // nieuw, nalezen
-    'c.pass.b': "آشپزخانه بشقاب‌ها را برای گارسون روی پاس می‌گذارد. غذای گرم باید زود به مهمان برسد، پس بشقاب مدت زیادی روی پاس نمی‌ماند. برگهٔ سفارش را بررسی کن: میز درست، غذاهای درست، لبهٔ تمیز بشقاب؟ بعد آن را ببر. در ظرف‌شوی‌خانه: پیش‌شویی کن، همه چیز را در سبدها بگذار، و بقیه را به ماشین بسپار. وقتی ماشین کار می‌کند آن را باز نکن: بخارش خیلی داغ است. وقتی مواد ماشین را پر می‌کنی دستکش بپوش. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.pass.p': "این برای کدام میز است؟", // nieuw, nalezen
-    'c.pass.s': "دو بشقاب روی پاس است. نمی‌دانی برای کدام میز هستند. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.pass.o1': "برگهٔ سفارش را نگاه می‌کنی، یا از سرآشپز می‌پرسی.", // nieuw, nalezen
-    'c.pass.o2': "آن‌ها را به میزی می‌بری که منتظر است.", // nieuw, nalezen
-    'c.pass.o3': "صبر می‌کنی تا کس دیگری آن‌ها را ببرد.", // nieuw, nalezen
-    'c.pass.w': "بشقابی که به میز اشتباه برود یعنی دو مهمان منتظر و غذای سرد. یک سؤال کوتاه سریع‌تر است.", // nieuw, nalezen
-    'l.bill': "بخش‌های غذا و صورت‌حساب", // nieuw, nalezen
-    'w.voorgerecht': "پیش‌غذا (اولین بخش غذا)", // nieuw, nalezen
-    'w.hoofdgerecht': "غذای اصلی", // nieuw, nalezen
-    'w.nagerecht': "دسر", // nieuw, nalezen
-    'w.reservering': "رزرو (میزی که از قبل گرفته شده)", // nieuw, nalezen
-    'w.pinapparaat': "دستگاه کارت‌خوان", // nieuw, nalezen
-    'w.apartbetalen': "جدا حساب کردن (هر کس سهم خودش را می‌پردازد)", // nieuw, nalezen
-    's.bill.1': "رزرو کرده‌اید؟", // nieuw, nalezen
-    's.bill.2': "می‌خواهید با هم حساب کنید یا جدا؟", // nieuw, nalezen
-    's.bill.3': "غذای اصلی را الان بیاورم؟", // nieuw, nalezen
-    'c.bill.q': "می‌شود جدا حساب کنیم؟", // nieuw, nalezen
-    'c.bill.a': "بله، حتماً. دستگاه کارت‌خوان را می‌آورم.", // nieuw, nalezen
-    'c.bill': "پول سر میز: دو بار بشمار", // nieuw, nalezen
-    'c.bill.b': "وقتی مهمان پول می‌دهد، مبلغ را واضح بگو و بگذار مهمان دستگاه کارت‌خوان را ببیند. با پول نقد، وقتی پول را می‌گیری آن را بشمار، و وقتی بقیهٔ پول را می‌دهی دوباره بشمار. پول در صندوق یا کیف پول گارسونی‌ات می‌رود، هیچ‌وقت در جیب خودت. انعام (fooi) به جایی می‌رود که شرکتت می‌گوید، مثلاً در ظرف انعام. مهمانی بدون پرداخت رفته؟ دنبالش ندو: به مدیرت بگو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.bill.p': "می‌شود چهل‌وپنج یورو، لطفاً.", // nieuw, nalezen
-    'c.bill.s': "مهمانی به تو پول می‌دهد و می‌گوید: «درست است». تو آن را نشمرده‌ای. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.bill.o1': "وقتی مهمان آنجاست آن را می‌شماری.", // nieuw, nalezen
-    'c.bill.o2': "آن را کنار می‌گذاری، و بعداً می‌شماری.", // nieuw, nalezen
-    'c.bill.o3': "به مهمان اعتماد می‌کنی: تشکر می‌کنی.", // nieuw, nalezen
-    'c.bill.w': "اگر بعداً بشماری و پول کم باشد، هیچ‌کس نمی‌تواند بررسی کند چه شده. شمردن سر میز هم از مهمان محافظت می‌کند و هم از تو.", // nieuw, nalezen
-    'u.carework': "مراقبت شخصی و مراقبت در منزل", // nieuw, nalezen
-    'l.washing': "شستن و لباس پوشاندن", // nieuw, nalezen
-    'w.washandje': "لیف دستکشی (دستمال کوچکی مثل دستکش)", // nieuw, nalezen
-    'w.douchestoel': "صندلی حمام", // nieuw, nalezen
-    'w.tandenpoetsen': "مسواک زدن", // nieuw, nalezen
-    'w.kammen': "شانه کردن", // nieuw, nalezen
-    'w.scheren': "اصلاح کردن (تراشیدن ریش)", // nieuw, nalezen
-    'w.steunkous': "جوراب واریس (جوراب تنگ برای پاها)", // nieuw, nalezen
-    's.washing.1': "آب به اندازهٔ کافی گرم است؟", // nieuw, nalezen
-    's.washing.2': "می‌خواهید صورتتان را خودتان بشویید؟", // nieuw, nalezen
-    's.washing.3': "الان جوراب‌های واریستان را پایتان می‌کنم.", // nieuw, nalezen
-    'c.washing.q': "امروز نمی‌خواهم دوش بگیرم.", // nieuw, nalezen
-    'c.washing.a': "اشکالی ندارد. کنار روشویی کمکتان کنم؟", // nieuw, nalezen
-    'c.washing': "اول بپرس، بپوشان، و بگذار انتخاب کند", // nieuw, nalezen
-    'c.washing.b': "شستن کسی کار خیلی خصوصی است. بگو چه کار می‌خواهی بکنی، و اول بپرس. جاهایی از بدن را که نمی‌شویی با حوله بپوشان. در یا پرده را ببند. بگذار مراجع انتخاب کند: دوش یا شستن کنار روشویی، و چه لباسی بپوشد. بگذار مراجع کارهایی را که هنوز می‌تواند خودش انجام بدهد، حتی اگر کندتر باشد. مراجعی می‌گوید نه؟ مجبورش نکن. بعداً دوباره امتحان کن، چیز دیگری پیشنهاد بده، و به پرستار بگو.", // nieuw, nalezen
-    'c.washing.p': "امروز دوست دارید چه بپوشید؟", // nieuw, nalezen
-    'c.washing.s': "یک مراجع می‌گوید امروز نمی‌خواهد شسته شود. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.washing.o1': "قبول می‌کنی، و به پرستار می‌گویی.", // nieuw, nalezen
-    'c.washing.o2': "به هر حال او را می‌شویی: در فهرست هست.", // nieuw, nalezen
-    'c.washing.o3': "آن را رد می‌کنی، و چیزی نمی‌گویی.", // nieuw, nalezen
-    'c.washing.w': "مراجع اجازه دارد نه بگوید. مراقبت به زور به اعتماد آسیب می‌زند. پرستار می‌تواند ببیند چرا، و چه کاری می‌شود کرد.", // nieuw, nalezen
-    'l.observing': "مشاهده و گزارش", // nieuw, nalezen
-    'w.rapporteren': "گزارش نوشتن (نوشتن چیزی که دیدی در پروندهٔ مراقبت)", // nieuw, nalezen
-    'w.zorgdossier': "پروندهٔ مراقبت (همه چیز دربارهٔ مراقبت از یک مراجع)", // nieuw, nalezen
-    'w.drukplek': "زخم فشاری (لکهٔ قرمز از دراز کشیدن یا نشستن طولانی)", // nieuw, nalezen
-    'w.huid': "پوست", // nieuw, nalezen
-    'w.plassen': "ادرار کردن", // nieuw, nalezen
-    'w.vochtlijst': "جدول مایعات (اینکه مراجع چقدر می‌نوشد)", // nieuw, nalezen
-    's.observing.1': "خانم روی پاشنه‌اش یک لکهٔ قرمز دارد.", // nieuw, nalezen
-    's.observing.2': "آقا امروز کم نوشیده است.", // nieuw, nalezen
-    's.observing.3': "آن را در پروندهٔ مراقبت می‌نویسم.", // nieuw, nalezen
-    'c.observing.q': "دربارهٔ خانم یانسن چیز خاصی هست؟", // nieuw, nalezen
-    'c.observing.a': "بله. امروز تقریباً ادرار نکرده است.", // nieuw, nalezen
-    'c.observing': "چیزی را بنویس که می‌بینی، نه چیزی که فکر می‌کنی", // nieuw, nalezen
-    'c.observing.b': "چیزی را که در پروندهٔ مراقبت می‌نویسی، همکار بعدی می‌خواند. واقعیت‌ها را بنویس: چه دیدی، شنیدی یا اندازه گرفتی، و کی. نه «Mevrouw is lastig» (خانم بداخلاق است)، بلکه «Mevrouw wilde niet eten en duwde het bord weg» (خانم نخواست غذا بخورد و بشقاب را کنار زد). همان روز بنویس، با جمله‌های کوتاه. مطمئن نیستی چطور به هلندی بنویسی؟ به پرستار بگو، و با هم بنویسید. وقتی کسی را می‌شویی به پوستش نگاه کن: لکهٔ قرمزی که از بین نمی‌رود می‌تواند شروع زخم فشاری باشد. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.observing.p': "دارم چیزی را که دیدم می‌نویسم.", // nieuw, nalezen
-    'c.observing.s': "یک مراجع موقع شستن عصبانی بود. باید آن را در پرونده بنویسی. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.observing.o1': "می‌نویسی او چه گفت و چه کرد، و کی.", // nieuw, nalezen
-    'c.observing.o2': "می‌نویسی: «خانم بداخلاق، مثل همیشه.»", // nieuw, nalezen
-    'c.observing.o3': "هیچ چیز نمی‌نویسی: عادی است.", // nieuw, nalezen
-    'c.observing.w': "واقعیت‌ها به همکار بعدی و پرستار کمک می‌کنند کاری بکنند. نظر شخصی نمی‌گوید چه اتفاقی افتاد.", // nieuw, nalezen
-    'l.homecare': "مراقبت در منزل", // nieuw, nalezen
-    'w.thuiszorg': "مراقبت در منزل (مراقبت در خانهٔ خود مراجع)", // nieuw, nalezen
-    'w.sleutelkluis': "صندوقچهٔ کلید (جعبهٔ کوچک رمزدار که کلید خانه در آن است)", // nieuw, nalezen
-    'w.zorgplan': "برنامهٔ مراقبت (مراجع چه مراقبتی می‌گیرد، و چطور)", // nieuw, nalezen
-    'w.wijkverpleegkundige': "پرستار محله (پرستار تیم مراقبت در منزل)", // nieuw, nalezen
-    'w.mantelzorger': "مراقب خانوادگی (خویشاوند یا دوستی که از مراجع مراقبت می‌کند)", // nieuw, nalezen
-    'w.alarmknop': "دکمهٔ هشدار (مراجع آن را همراه دارد تا کمک بخواهد)", // nieuw, nalezen
-    's.homecare.1': "اول زنگ در را می‌زنم. بعد کلید را برمی‌دارم.", // nieuw, nalezen
-    's.homecare.2': "در برنامهٔ مراقبت چه نوشته شده؟", // nieuw, nalezen
-    's.homecare.3': "امروز یک ربع دیرتر می‌آیم.", // nieuw, nalezen
-    'c.homecare.q': "کیه؟", // nieuw, nalezen
-    'c.homecare.a': "صبح بخیر، از مراقبت در منزل آمده‌ام. اجازه هست بیایم داخل؟", // nieuw, nalezen
-    'c.homecare': "مهمان در خانهٔ کسی", // nieuw, nalezen
-    'c.homecare.b': "در مراقبت در منزل، در خانهٔ خود مراجع کار می‌کنی. آنجا مهمانی: زنگ بزن و بگو کی هستی، حتی وقتی کلید داری. رمز صندوقچهٔ کلید محرمانه است. هیچ‌وقت آن را جایی ننویس که دیگران ببینند، و همیشه صندوقچهٔ کلید را دوباره ببند. از برنامهٔ مراقبت پیروی کن: کاری که می‌کنی در آن نوشته شده. چیزی فرق کرده، یا مراجع در را باز نمی‌کند؟ همین‌طوری نرو. به تیمت یا پرستار محله زنگ بزن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.homecare.p': "صبح بخیر، از مراقبت در منزل هستم.", // nieuw, nalezen
-    'c.homecare.s': "زنگ در را می‌زنی. مراجع در را باز نمی‌کند. ماشینش آنجاست. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.homecare.o1': "به تیمت زنگ می‌زنی، و صبر می‌کنی.", // nieuw, nalezen
-    'c.homecare.o2': "می‌روی سراغ مراجع بعدی.", // nieuw, nalezen
-    'c.homecare.o3': "یک بار دیگر زنگ می‌زنی، بعد می‌روی.", // nieuw, nalezen
-    'c.homecare.w': "ممکن است مراجع زمین خورده یا مریض باشد. تیمت می‌داند چه کار کند، و کلید دست چه کسی است.", // nieuw, nalezen
-    'l.liftaids': "وسایل کمکی بلند کردن و ایمنی", // nieuw, nalezen
-    'w.glijlaken': "ملافهٔ لغزنده (ملافهٔ صاف برای جابه‌جا کردن مراجع در تخت)", // nieuw, nalezen
-    'w.tilband': "تسمهٔ بالابر (زیر مراجع می‌رود، برای بالابر)", // nieuw, nalezen
-    'w.stalift': "بالابر ایستاده (به مراجع کمک می‌کند بایستد)", // nieuw, nalezen
-    'w.werkhoogte': "ارتفاع کار (تخت هم‌سطح باسن تو)", // nieuw, nalezen
-    'w.bedhek': "نردهٔ تخت", // nieuw, nalezen
-    'w.transferplank': "تختهٔ انتقال (تخته‌ای برای سر خوردن از تخت به صندلی)", // nieuw, nalezen
-    's.liftaids.1': "تخت را روی ارتفاع کار بگذار.", // nieuw, nalezen
-    's.liftaids.2': "ترمز ویلچر کشیده است؟", // nieuw, nalezen
-    's.liftaids.3': "این کار را دو نفری انجام می‌دهیم.", // nieuw, nalezen
-    'c.liftaids.q': "می‌توانی خانم را تنهایی برگردانی؟", // nieuw, nalezen
-    'c.liftaids.a': "با ملافهٔ لغزنده می‌توانم. الان می‌آورمش.", // nieuw, nalezen
-    'c.liftaids': "بگذار وسیلهٔ کمکی بلند کند", // nieuw, nalezen
-    'c.liftaids.b': "قبل از استفاده از بالابر، آن را بررسی کن: باتری شارژ است، تسمه اندازهٔ درست است و پاره نیست؟ ترمز تخت و ویلچر را بکش. تخت را تا ارتفاع باسنت بالا بیاور، تا خم نشوی. هر مرحله را به مراجع بگو. برنامهٔ مراقبت می‌گوید مراجع به کدام وسیلهٔ کمکی نیاز دارد. وسیلهٔ کمکی خراب است یا نیست؟ بدون آن سرهم‌بندی نکن: گزارشش بده، و از یک همکار کمک بخواه. به تو نشان نداده‌اند وسیله چطور کار می‌کند؟ قبل از شروع بپرس. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.liftaids.p': "تسمه خراب است. یکی دیگر می‌آورم.", // nieuw, nalezen
-    'c.liftaids.s': "می‌خواهی از بالابر استفاده کنی. تسمه یک پارگی کوچک دارد. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.liftaids.o1': "تسمهٔ دیگری برمی‌داری، و پارگی را گزارش می‌دهی.", // nieuw, nalezen
-    'c.liftaids.o2': "از آن استفاده می‌کنی: پارگی خیلی کوچک است.", // nieuw, nalezen
-    'c.liftaids.o3': "به تسمه گره می‌زنی.", // nieuw, nalezen
-    'c.liftaids.w': "پارگی کوچک زیر وزن یک آدم می‌تواند بزرگ‌تر شود. افتادن از بالابر می‌تواند به مراجع آسیب جدی بزند.", // nieuw, nalezen
-    'u.shopfloor': "صندوق، موجودی و بستن فروشگاه", // nieuw, nalezen
-    'l.returns': "مرجوعی و صندوق", // nieuw, nalezen
-    'w.terugbrengen': "پس آوردن (یک کالا به فروشگاه)", // nieuw, nalezen
-    'w.klantenkaart': "کارت مشتری (کارتی برای جمع کردن امتیاز)", // nieuw, nalezen
-    'w.statiegeld': "پول بطری (پولی که برای بطری یا قوطی خالی پس می‌گیری)", // nieuw, nalezen
-    'w.kassalade': "کشوی صندوق (کشویی که پول در آن است)", // nieuw, nalezen
-    'w.streepjescode': "بارکد", // nieuw, nalezen
-    'w.tegoedbon': "بن اعتباری (برگه‌ای که بعداً در فروشگاه خرج می‌کنی)", // nieuw, nalezen
-    's.returns.1': "با کارت مشتری امتیاز جمع می‌کنید؟", // nieuw, nalezen
-    's.returns.2': "بارکد کار نمی‌کند.", // nieuw, nalezen
-    's.returns.3': "پولتان را پس می‌خواهید یا بن اعتباری؟", // nieuw, nalezen
-    'c.returns.q': "می‌خواهم این پلیور را پس بدهم.", // nieuw, nalezen
-    'c.returns.a': "می‌شود. رسید خریدتان را هنوز دارید؟", // nieuw, nalezen
-    'c.returns': "مرجوعی: از قانون‌های فروشگاه پیروی کن", // nieuw, nalezen
-    'c.returns.b': "هر فروشگاهی برای مرجوعی قانون‌های خودش را دارد: چند روز، با رسید یا بدون رسید، پس دادن پول یا بن اعتباری. آن‌ها را یاد بگیر، و برای هر مشتری رعایتشان کن. مطمئن نیستی؟ از یک همکار یا مدیر بپرس، و تنهایی تصمیم نگیر. آخر شیفتت کشوی صندوقت را بشمار، اگر فروشگاهت این‌طور کار می‌کند با یک همکار. هیچ‌وقت از صندوق برای خودت پول برندار، حتی برای قرض گرفتن یک لحظه‌ای. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.returns.p': "الان از مدیر فروشگاه می‌پرسم.", // nieuw, nalezen
-    'c.returns.s': "مشتری‌ای برای کفش‌ها پولش را پس می‌خواهد. رسید ندارد. تو قانون را نمی‌دانی. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.returns.o1': "از مدیر می‌پرسی چه کار کنی.", // nieuw, nalezen
-    'c.returns.o2': "پول را پس می‌دهی: آدم خوبی است.", // nieuw, nalezen
-    'c.returns.o3': "می‌گویی نه، و ردش می‌کنی.", // nieuw, nalezen
-    'c.returns.w': "مدیر قانون‌ها را می‌داند و می‌تواند تصمیم بگیرد. آن‌وقت مشتری جواب منصفانه‌ای می‌گیرد، و تقصیر گردن تو نمی‌افتد.", // nieuw, nalezen
-    'l.facing': "مرتب کردن قفسه و کالاهای سرد", // nieuw, nalezen
-    'w.facen': "جلو کشیدن (کالاها را به جلو کشیدن، برچسب رو به جلو)", // nieuw, nalezen
-    'w.afprijzen': "تخفیف زدن (قیمت پایین‌تر گذاشتن)", // nieuw, nalezen
-    'w.koelvak': "یخچال فروشگاه (قفسهٔ سرد در فروشگاه)", // nieuw, nalezen
-    'w.diepvries': "فریزر", // nieuw, nalezen
-    'w.uitpakken': "باز کردن بسته‌ها", // nieuw, nalezen
-    'w.schapkaartje': "برچسب قفسه (کارت قیمت روی قفسه)", // nieuw, nalezen
-    's.facing.1': "اول یخچال، بعد بقیه.", // nieuw, nalezen
-    's.facing.2': "همه چیز را مرتب جلو بکش.", // nieuw, nalezen
-    's.facing.3': "کالاهای امروز را تخفیف بزن.", // nieuw, nalezen
-    'c.facing.q': "کارت با یخچال تمام شد؟", // nieuw, nalezen
-    'c.facing.a': "تقریباً. هنوز باید کالاها را جلو بکشم.", // nieuw, nalezen
-    'c.facing': "اول سردها، و قفسه پر به نظر برسد", // nieuw, nalezen
-    'c.facing.b': "کالاهای سرد و یخ‌زده اول از همه به یخچال یا فریزر می‌روند، قبل از هر چیز دیگر. نباید مدت زیادی گرم بمانند. بعد بقیه. جلو کشیدن یعنی: کالاها را به جلو بکش، با برچسب رو به مشتری. آن‌وقت قفسه پر و مرتب به نظر می‌رسد. برچسب قفسه را بررسی کن: قیمت برای این کالا درست است؟ وقتی جعبه‌ها را باز می‌کنی، رو به بیرون از بدنت ببُر، و نه خیلی عمیق: ممکن است به کالا آسیب بزنی. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.facing.p': "اول کالاهای سرد، بعد بقیه.", // nieuw, nalezen
-    'c.facing.s': "یک پالت شیر و یک پالت چیپس می‌رسد. تنها هستی. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.facing.o1': "اول شیر را در یخچال می‌گذاری.", // nieuw, nalezen
-    'c.facing.o2': "با چیپس شروع می‌کنی: سبک‌تر است.", // nieuw, nalezen
-    'c.facing.o3': "هر دو را می‌گذاری تا همکاری بیاید.", // nieuw, nalezen
-    'c.facing.w': "شیری که خیلی طولانی گرم بماند می‌تواند مشتری‌ها را مریض کند، و باید دور ریخته شود. چیپس می‌تواند صبر کند.", // nieuw, nalezen
-    'l.shrink': "خرابی و دزدی", // nieuw, nalezen
-    'w.derving': "ضایعات (آنچه فروشگاه از دست می‌دهد: کالای شکسته، کهنه یا دزدیده‌شده)", // nieuw, nalezen
-    'w.afschrijven': "از حساب خارج کردن (ثبت یک کالا به عنوان ازدست‌رفته)", // nieuw, nalezen
-    'w.personeelsaankoop': "خرید کارکنان (چیزی که از فروشگاه خودت می‌خری)", // nieuw, nalezen
-    'w.tassencontrole': "بازرسی کیف", // nieuw, nalezen
-    'w.kassamedewerker': "صندوق‌دار", // nieuw, nalezen
-    'w.winkelwagen': "چرخ خرید", // nieuw, nalezen
-    's.shrink.1': "این شیشه شکسته است. آن را از حساب خارج می‌کنم.", // nieuw, nalezen
-    's.shrink.2': "خریدم را سر صندوق یک همکار حساب می‌کنم.", // nieuw, nalezen
-    's.shrink.3': "یک چرخ خرید پر کنار در خروجی است.", // nieuw, nalezen
-    'c.shrink.q': "اجازه هست یک نگاه به کیفت بیندازم؟", // nieuw, nalezen
-    'c.shrink.a': "بله، حتماً. این رسید من است.", // nieuw, nalezen
-    'c.shrink': "خرید خودت: مثل مشتری پول بده", // nieuw, nalezen
-    'c.shrink.b': "فروشگاه به خاطر کالاهای شکسته، کالاهای کهنه و دزدی چیزهای زیادی از دست می‌دهد. کمک کن این کم بماند. کالای شکسته یا آسیب‌دیده؟ آن را سر جایش برنگردان: همان‌طور که فروشگاهت می‌گوید آن را از حساب خارج کن. خرید خودت: مثل هر مشتری سر صندوق پول بده، و رسید را نگه دار. در خیلی از فروشگاه‌ها اجازه نداری خرید خودت را خودت حساب کنی: یک همکار این کار را می‌کند. هیچ‌وقت بدون پرداخت کالایی نخور یا برندار، حتی یک چیز کوچک. بعضی فروشگاه‌ها کیف‌ها را بازرسی می‌کنند: این قانون فروشگاه است، نه نشانهٔ بی‌اعتمادی به تو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.shrink.p': "اول پول می‌دهم، و رسید را نگه می‌دارم.", // nieuw, nalezen
-    'c.shrink.s': "آخر شیفتت گرسنه‌ای. تاریخ یک ساندویچ امروز گذشته است. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.shrink.o1': "از مدیر می‌پرسی قانون چیست.", // nieuw, nalezen
-    'c.shrink.o2': "آن را می‌خوری: به هر حال دور ریخته می‌شود.", // nieuw, nalezen
-    'c.shrink.o3': "آن را در کیفت به خانه می‌بری.", // nieuw, nalezen
-    'c.shrink.w': "در خیلی از فروشگاه‌ها برداشتن کالا بدون پرداخت دزدی است، حتی وقتی کهنه است. اول پرسیدن تو را در امان نگه می‌دارد.", // nieuw, nalezen
-    'l.shopclose': "بستن فروشگاه", // nieuw, nalezen
-    'w.sluitingstijd': "ساعت بسته شدن", // nieuw, nalezen
-    'w.rolluik': "کرکره", // nieuw, nalezen
-    'w.kasverschil': "اختلاف صندوق (پول بیشتر یا کمتر از آنچه باید در صندوق باشد)", // nieuw, nalezen
-    'w.kluis': "گاوصندوق (جعبهٔ محکم برای پول)", // nieuw, nalezen
-    'w.overval': "سرقت مسلحانه (کسی با تهدید پول می‌برد)", // nieuw, nalezen
-    'w.achterdeur': "در پشتی", // nieuw, nalezen
-    's.shopclose.1': "ده دقیقهٔ دیگر می‌بندیم.", // nieuw, nalezen
-    's.shopclose.2': "صندوق را دو نفری می‌شماریم.", // nieuw, nalezen
-    's.shopclose.3': "در پشتی قفل است؟", // nieuw, nalezen
-    'c.shopclose.q': "می‌شود سریع بیایم داخل؟", // nieuw, nalezen
-    'c.shopclose.a': "ببخشید، بسته‌ایم. فردا ساعت هشت باز می‌کنیم.", // nieuw, nalezen
-    'c.shopclose': "سرقت: بده، و در امان بمان", // nieuw, nalezen
-    'c.shopclose.b': "موقع بستن فروشگاه پول زیادی در صندوق است، پس فروشگاه‌ها قانون دارند: دو نفری بشمار، پول را به گاوصندوق ببر، و اول در پشتی را قفل کن. سرقت مسلحانه (overval)؟ جان تو از پول باارزش‌تر است. آرام بمان، هر چه می‌گویند انجام بده، و درگیر نشو یا دنبالشان ندو. هر چه می‌توانی به خاطر بسپار: لباس، قد، صدا. وقتی رفتند: در را قفل کن، به ۱۱۲ زنگ بزن، و به هیچ چیز دست نزن. بعداً با مدیرت یا کسی که به او اعتماد داری درباره‌اش حرف بزن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.shopclose.p': "داریم می‌بندیم. در را قفل می‌کنم.", // nieuw, nalezen
-    'c.shopclose.s': "مردی با چاقو پول صندوقت را می‌خواهد. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.shopclose.o1': "آرام می‌مانی، و پول را به او می‌دهی.", // nieuw, nalezen
-    'c.shopclose.o2': "با او درگیر می‌شوی: پول مال او نیست.", // nieuw, nalezen
-    'c.shopclose.o3': "به پشت فروشگاه می‌دوی، و خودت را حبس می‌کنی.", // nieuw, nalezen
-    'c.shopclose.w': "درگیر شدن یا فرار کردن سارق را عصبی‌تر و خطرناک‌تر می‌کند. پول را می‌شود جایگزین کرد. تو را نمی‌شود.", // nieuw, nalezen
-    'u.uitzend': "کار از طریق شرکت کاریابی", // nieuw, nalezen
-    'l.hirer': "شرکت کاریابی و شرکت به‌کارگیرنده", // nieuw, nalezen
-    'w.inlener': "شرکت به‌کارگیرنده (شرکتی که شرکت کاریابی تو را برای کار به آنجا می‌فرستد)", // nieuw, nalezen
-    'w.vestiging': "شعبه (دفتر شرکت کاریابی در شهر تو)", // nieuw, nalezen
-    'w.intakegesprek': "مصاحبهٔ اولیه (اولین گفت‌وگو در شرکت کاریابی)", // nieuw, nalezen
-    'w.opstapplaats': "محل سوار شدن (جایی که اتوبوس شرکت کاریابی تو را سوار می‌کند)", // nieuw, nalezen
-    'w.bedrijfsregels': "قانون‌های شرکت (قانون‌های شرکت به‌کارگیرنده)", // nieuw, nalezen
-    'w.aanspreekpunt': "فرد رابط (کسی که با سؤال‌هایت پیشش می‌روی)", // nieuw, nalezen
-    's.hirer.1': "فردا در یک شرکت به‌کارگیرندهٔ جدید کار می‌کنی.", // nieuw, nalezen
-    's.hirer.2': "فرد رابط من اینجا کیست؟", // nieuw, nalezen
-    's.hirer.3': "اتوبوس ساعت شش از محل سوار شدن حرکت می‌کند.", // nieuw, nalezen
-    'c.hirer.q': "می‌توانی فردا در یک شرکت به‌کارگیرندهٔ جدید شروع کنی؟", // nieuw, nalezen
-    'c.hirer.a': "بله. چه ساعتی باید آنجا باشم؟", // nieuw, nalezen
-    'c.hirer': "دو شرکت: کی چه کار می‌کند؟", // nieuw, nalezen
-    'c.hirer.b': "تو از طریق یک شرکت کاریابی (uitzendbureau) کار می‌کنی، ولی کار را در شرکت دیگری انجام می‌دهی: شرکت به‌کارگیرنده (inlener). شرکت کاریابی کارفرمای توست: قرارداد، حقوق، فیش حقوقی و روزهای مرخصی‌ات از شرکت کاریابی است. شرکت به‌کارگیرنده در محل کار به تو می‌گوید چه کار کنی، و باید کارت را ایمن نگه دارد، درست مثل کارکنان خودش. بیماری‌ات را همان‌طور که شرکت کاریابی‌ات می‌گوید اعلام کن: اغلب هم به شرکت کاریابی و هم به شرکت به‌کارگیرنده. اسم و شمارهٔ تلفن فرد رابطت در شرکت کاریابی را در گوشی‌ات نگه دار. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen
-    'c.hirer.p': "فرد رابط من در شرکت کاریابی کیست؟", // nieuw, nalezen
-    'c.hirer.s': "در شرکت به‌کارگیرنده باید با یک دستگاه کار کنی. هیچ‌کس به تو نشان نداده چطور. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.hirer.o1': "از شرکت به‌کارگیرنده می‌خواهی اول به تو نشان بدهد.", // nieuw, nalezen
-    'c.hirer.o2': "امتحانش می‌کنی: مسئولیتش با شرکت کاریابی است.", // nieuw, nalezen
-    'c.hirer.o3': "به خانه می‌روی، و چیزی نمی‌گویی.", // nieuw, nalezen
-    'c.hirer.w': "شرکت به‌کارگیرنده باید به تو نشان بدهد چطور ایمن کار کنی، همان‌طور که به کارکنان خودش نشان می‌دهد. خواستن آن حق توست.", // nieuw, nalezen
-    'l.phases': "قراردادت و مرحله‌ها", // nieuw, nalezen
-    'w.fase': "مرحله (یک گام در قرارداد کاریابی‌ات: A، B یا C)", // nieuw, nalezen
-    'w.uitzendbeding': "بند کاریابی (کارت می‌تواند تمام شود وقتی شرکت به‌کارگیرنده دیگر به تو نیاز ندارد)", // nieuw, nalezen
-    'w.aflopen': "تمام شدن، به پایان رسیدن (قرارداد)", // nieuw, nalezen
-    'w.doorwerken': "ادامه دادن کار (در همان محل)", // nieuw, nalezen
-    'w.vastecontract': "قرارداد دائم (قراردادی بدون تاریخ پایان)", // nieuw, nalezen
-    'w.onderbreking': "وقفه (مدتی بدون کار بین دو قرارداد)", // nieuw, nalezen
-    's.phases.1': "الان در کدام مرحله هستم؟", // nieuw, nalezen
-    's.phases.2': "قراردادم هفتهٔ بعد تمام می‌شود.", // nieuw, nalezen
-    's.phases.3': "می‌توانم اینجا به کار ادامه بدهم؟", // nieuw, nalezen
-    'c.phases.q': "کارت در این شرکت جمعه تمام می‌شود.", // nieuw, nalezen
-    'c.phases.a': "باشه. کار دیگری برای من دارید؟", // nieuw, nalezen
-    'c.phases': "مرحله‌های A، B و C", // nieuw, nalezen
-    'c.phases.b': "بیشتر نیروهای کار موقت تحت یک cao برای نیروهای کار موقت (uitzend-cao) کار می‌کنند. این cao مرحله دارد. در مرحلهٔ A، کارت معمولاً می‌تواند تمام شود وقتی شرکت به‌کارگیرنده دیگر به تو نیاز ندارد (uitzendbeding). در مرحلهٔ B، قراردادهای مدت‌دار می‌گیری. در مرحلهٔ C، با شرکت کاریابی قرارداد دائم می‌گیری. اینکه هر مرحله چقدر طول می‌کشد در cao تو آمده است. از شرکت کاریابی بپرس در کدام مرحله هستی، و همهٔ قراردادهایت را نگه دار. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen
-    'c.phases.p': "مرحلهٔ A برای من چقدر طول می‌کشد؟", // nieuw, nalezen
-    'c.phases.s': "مدت زیادی برای همان شرکت کاریابی کار کرده‌ای. هنوز قراردادهای کوتاه می‌گیری. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.phases.o1': "از شرکت کاریابی می‌پرسی در کدام مرحله هستی.", // nieuw, nalezen
-    'c.phases.o2': "هیچ کاری نمی‌کنی: کار موقت همیشه کوتاه است.", // nieuw, nalezen
-    'c.phases.o3': "کار را ول می‌کنی، و دنبال شرکت کاریابی دیگری می‌گردی.", // nieuw, nalezen
-    'c.phases.w': "بعد از مدت کافی، cao به تو امنیت بیشتری می‌دهد. شرکت کاریابی می‌تواند بگوید کجای کار هستی، و اتحادیهٔ کارگری می‌تواند همراه تو آن را بررسی کند.", // nieuw, nalezen
-    'l.deductions': "حقوق و کسورات", // nieuw, nalezen
-    'w.inhouding': "کسر از حقوق (پولی که از حقوقت کم می‌شود)", // nieuw, nalezen
-    'w.vastekracht': "نیروی ثابت (کارمندی که خود شرکت به‌کارگیرنده استخدامش کرده)", // nieuw, nalezen
-    'w.vervoer': "رفت‌وآمد (اتوبوس یا ون تا محل کار)", // nieuw, nalezen
-    'w.schriftelijk': "کتبی (روی کاغذ یا در ایمیل)", // nieuw, nalezen
-    'w.navragen': "پرس‌وجو کردن (فهمیدن اینکه چیزی درست است یا نه)", // nieuw, nalezen
-    'w.brutoloon': "حقوق ناخالص (حقوقت قبل از مالیات و کسورات)", // nieuw, nalezen
-    's.deductions.1': "این کسر در فیش حقوقی من چیست؟", // nieuw, nalezen
-    's.deductions.2': "من به اندازهٔ نیروهای ثابت درآمد دارم؟", // nieuw, nalezen
-    's.deductions.3': "اول می‌خواهم آن را روی کاغذ ببینم.", // nieuw, nalezen
-    'c.deductions.q': "هزینهٔ اتوبوس را از حقوقت کم می‌کنیم.", // nieuw, nalezen
-    'c.deductions.a': "این کار مجاز است؟ اول پرس‌وجو می‌کنم.", // nieuw, nalezen
-    'c.deductions': "چه چیزی را می‌شود از حقوقت کم کرد؟", // nieuw, nalezen
-    'c.deductions.b': "حق داری دست‌کم همان حقوقی را بگیری که کارکنان شرکت به‌کارگیرنده برای همان کار می‌گیرند. پولی که از حقوقت کم می‌شود (inhouding) باید در فیش حقوقی‌ات باشد. مالیات و حق بیمه طبق قانون کم می‌شود. جدا از این‌ها، شرکت کاریابی فقط دو هزینه را می‌تواند از حداقل دستمزد کم کند: اجارهٔ مسکنت و حق بیمهٔ درمانی، و فقط اگر کتبی با آن موافقت کرده باشی. هزینه‌های دیگر، مثل رفت‌وآمد، لباس کار، جریمه یا پول برای پیدا کردن کار برایت، نباید از حداقل دستمزد کم شود. کسری را نمی‌فهمی؟ از شرکت کاریابی بخواه آن را کتبی توضیح بدهد. اطلاعات کلی. برای وضعیت خودت: از اتحادیهٔ کارگری، Juridisch Loket یا FairWork بپرس.", // nieuw, nalezen
-    'c.deductions.p': "این کسر برای چیست؟", // nieuw, nalezen
-    'c.deductions.s': "شرکت کاریابی برای اتوبوس تا محل کار از حقوقت پول کم می‌کند. تو حداقل دستمزد می‌گیری. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.deductions.o1': "دربارهٔ آن می‌پرسی: این کار مجاز نیست.", // nieuw, nalezen
-    'c.deductions.o2': "هیچ کاری نمی‌کنی: هر روز سوار اتوبوس می‌شوی.", // nieuw, nalezen
-    'c.deductions.o3': "دیگر سوار اتوبوس نمی‌شوی، و پیاده می‌روی.", // nieuw, nalezen
-    'c.deductions.w': "از حداقل دستمزد فقط اجاره و بیمهٔ درمانی را می‌شود کم کرد، و فقط با موافقت کتبی تو. اتحادیهٔ کارگری یا Juridisch Loket می‌تواند کمکت کند.", // nieuw, nalezen
-    'l.agencyhome': "مسکن و کمک", // nieuw, nalezen
-    'w.huisvesting': "مسکن (جای زندگی که شرکت کاریابی جور می‌کند)", // nieuw, nalezen
-    'w.huisgenoot': "هم‌خانه (کسی که در همان خانه زندگی می‌کند)", // nieuw, nalezen
-    'w.huisregels': "قانون‌های خانه (قانون‌های خانه‌ای که در آن زندگی می‌کنی)", // nieuw, nalezen
-    'w.huismeester': "مسئول خانه (کسی که به خانه رسیدگی می‌کند)", // nieuw, nalezen
-    'w.meldpunt': "مرکز گزارش (جایی که می‌توانی مشکلی را گزارش بدهی)", // nieuw, nalezen
-    'w.advies': "مشاوره", // nieuw, nalezen
-    's.agencyhome.1': "یک قرارداد اجاره به اسم خودم می‌خواهم.", // nieuw, nalezen
-    's.agencyhome.2': "در حمام کپک هست.", // nieuw, nalezen
-    's.agencyhome.3': "برای مشاوره به اتحادیهٔ کارگری زنگ می‌زنم.", // nieuw, nalezen
-    'c.agencyhome.q': "باید جمعه از خانه بروی.", // nieuw, nalezen
-    'c.agencyhome.a': "این خیلی زود است. اول مشورت می‌گیرم.", // nieuw, nalezen
-    'c.agencyhome': "خانه‌ات، و از کجا کمک بگیری", // nieuw, nalezen
-    'c.agencyhome.b': "شرکت کاریابی برایت خانه جور می‌کند؟ پس یک قرارداد اجارهٔ کتبی به اسم خودت می‌گیری، جدا از قرارداد کارت. یک نسخه از آن نگه دار. در آن نوشته چقدر می‌پردازی، و اجاره چطور و کی تمام می‌شود. کارت تمام می‌شود؟ خانه‌ات همیشه همان روز تمام نمی‌شود: قبل از اینکه بروی مشورت بگیر. خانهٔ ناامن یا خیلی شلوغ، تهدید، یا حقوق خیلی کم؟ کمک بگیر: اتحادیهٔ کارگری، Juridisch Loket (مشاورهٔ حقوقی رایگان)، FairWork، یا Nederlandse Arbeidsinspectie، که آنجا می‌توانی بی‌نام هم گزارش بدهی. اطلاعات کلی. برای وضعیت خودت: از اتحادیهٔ کارگری، Juridisch Loket یا FairWork بپرس.", // nieuw, nalezen
-    'c.agencyhome.p': "می‌شود یک نسخه از قرارداد اجاره‌ام را بگیرم؟", // nieuw, nalezen
-    'c.agencyhome.s': "کارت تمام می‌شود. مسئول خانه می‌گوید باید امروز از خانه بروی. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.agencyhome.o1': "اول از اتحادیهٔ کارگری یا Juridisch Loket می‌پرسی.", // nieuw, nalezen
-    'c.agencyhome.o2': "امروز می‌روی، و پیش یک دوست می‌خوابی.", // nieuw, nalezen
-    'c.agencyhome.o3': "کیفت را می‌بندی، و بیرون می‌خوابی.", // nieuw, nalezen
-    'c.agencyhome.w': "قرارداد اجاره‌ات قانون‌های خودش را دارد، جدا از کارت. مشاوره کمک می‌کند بدانی واقعاً کی باید بروی.", // nieuw, nalezen
+    'u.housekeeping': "توالت‌ها، اتاق‌های هتل و دستگاه‌ها", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.sanitary': "توالت‌ها و روشویی‌ها", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wastafel': "روشویی (سینک حمام یا دستشویی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toiletpot': "کاسهٔ توالت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toiletborstel': "برس توالت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.urinoir': "توالت ایستاده (پیسوار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kalk': "جرم آب (لکهٔ سفیدی که آب روی شیر و کاشی می‌گذارد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ontstopper': "پمپ توالت (وسیله‌ای برای توالت یا لولهٔ گرفته)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sanitary.1': "اول روشویی‌ها را تمیز می‌کنم، بعد توالت‌ها را.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sanitary.2': "روی شیر آب جرم نشسته است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.sanitary.3': "توالت طبقهٔ اول گرفته است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.q': "کار توالت‌ها تمام شد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.a': "هنوز نه. یکی از توالت‌ها گرفته است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary': "از تمیز به کثیف", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.b': "در سرویس بهداشتی از تمیز به کثیف کار می‌کنی: اول آینه‌ها و روشویی‌ها، بعد توالت‌ها، و آخر از همه کف. این‌طوری کثیفی توالت را به روشویی نمی‌بری. از دستمال‌هایی که رنگشان برای توالت است استفاده کن، و دستکش بپوش. برس توالت را هم تمیز کن، و بگذار خشک شود. توالتی گرفته یا خراب است؟ یک تابلو روی در بگذار، و آن را گزارش بده. وقتی کارت تمام شد دست‌هایت را بشوی، حتی اگر دستکش پوشیده بودی. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.p': "این توالت گرفته است. یک تابلو رویش می‌گذارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.s': "یک توالت را تمیز کردی. نوبت روشویی است. هنوز همان دستمال در دستت است. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.o1': "دستمالی برمی‌داری که رنگش برای روشویی است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.o2': "از همان دستمال استفاده می‌کنی: هنوز تمیز به نظر می‌رسد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.o3': "اول دستمال را در توالت آب می‌کشی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.sanitary.w': "میکروب‌های توالت روی دستمال هستند، حتی وقتی آن‌ها را نمی‌بینی. دستمال تازه آن‌ها را از دست‌ها و صورت‌ها دور نگه می‌دارد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.hotelroom': "اتاق‌های هتل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.laken': "ملافه (روی تخت)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kussensloop': "روبالشی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dekbed': "لحاف", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handdoek': "حوله", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kamerlijst': "فهرست اتاق‌ها (اتاق‌هایی که امروز باید تمیز کنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opmaken': "مرتب کردن (تخت)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hotelroom.1': "تخت را با ملافه‌های تمیز مرتب می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hotelroom.2': "دو حولهٔ تمیز در حمام بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hotelroom.3': "اتاق دوازده تمام شد. می‌روم سراغ سیزده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.q': "چند اتاق دیگر برایت مانده؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.a': "چهار تا دیگر. بعد فهرستم تمام می‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom': "در بزن، بگو کی هستی، و صبر کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.b': "قبل از اینکه وارد اتاق هتل شوی، در بزن و بگو کی هستی، مثلاً «Housekeeping!». کمی صبر کن، و دوباره در بزن. روی در تابلوی «Niet storen» (مزاحم نشوید) هست؟ پس وارد نشو، و آن را در فهرست اتاق‌هایت بنویس. مهمان در اتاق است؟ بپرس اجازه داری الان تمیز کنی، یا بعداً برگرد. وسایل مهمان همان‌جا که هست می‌ماند. مهمانی چیزی جا گذاشته؟ آن را به پذیرش ببر. هیچ‌وقت هیچ چیزی را برای خودت برندار، حتی یک چیز کوچک. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.p': "صبح بخیر. اجازه هست الان اتاق را تمیز کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.s': "در یک اتاق خالی یک گوشی زیر تخت پیدا می‌کنی. مهمان رفته است. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.o1': "آن را به پذیرش می‌بری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.o2': "برای خودت برش می‌داری: مهمان رفته است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.o3': "همان‌جا زیر تخت ولش می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hotelroom.w': "وسایل گمشده هنوز مال مهمان است. پذیرش می‌تواند آن‌ها را پس بدهد. برداشتنشان دزدی است، و می‌تواند کارت را از دستت بگیرد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.dosing': "مواد شوینده و دستگاه‌ها", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doseren': "اندازه گرفتن (استفاده از مقدار درست یک ماده)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.maatbeker': "پیمانه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sprayflacon': "بطری اسپری", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.concentraat': "کنسانتره (مادهٔ غلیظی که با آب مخلوطش می‌کنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.veiligheidsblad': "برگهٔ اطلاعات ایمنی (خطرهای یک ماده و کاری را که باید کرد می‌گوید)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schrobzuigmachine': "دستگاه کف‌شوی (دستگاهی که کف را می‌ساید و با مکش خشک می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dosing.1': "به اندازهٔ یک درپوش در یک سطل آب بریز.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    's.dosing.2': "اول برچسب را بخوان.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dosing.3': "دستگاه کف‌شوی باید به شارژ زده شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.q': "کمی بیشتر ماده بریز. آن‌وقت تمیزتر می‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.a': "نه، بیشتر بهتر نیست. از پیمانه استفاده می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing': "مقدار درست، نه بیشتر", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.b': "مادهٔ بیشتر بهتر تمیز نمی‌کند. مقدار زیاد یک لایهٔ چسبناک باقی می‌گذارد، پس کف زودتر کثیف می‌شود و ممکن است لیز شود. برای پوست و ریه‌هایت هم بدتر است. از پیمانه یا پمپ اندازه‌گیری استفاده کن، و از برچسب پیروی کن. اول آب، بعد ماده: تا پاشیده نشود. قبل از استفاده از دستگاه کف‌شوی، بررسی کن که شارژ داشته باشد و در مخزنش آب تمیز باشد. در پایان، مخزن آب کثیف را خالی کن و آب بکش. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.p': "چقدر باید بریزم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.s': "کف چسبناک می‌ماند. یک همکار می‌گوید: «دو برابر ماده بریز». چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.o1': "مقدار روی برچسب را می‌ریزی، و می‌پرسی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.o2': "دو برابر می‌ریزی: آن‌وقت تمیز می‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.o3': "ماده را مستقیم روی کف می‌ریزی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dosing.w': "کف چسبناک اغلب یعنی مادهٔ زیاد، نه کم. مقدار درست از همه بهتر تمیز می‌کند و از همه ایمن‌تر است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.officenight': "دفترها، صبح زود یا شب دیروقت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.toetsenbord': "صفحه‌کلید", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.papierbak': "سطل کاغذ (برای کاغذ باطله)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lichtschakelaar': "کلید برق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pantry': "آبدارخانه (آشپزخانهٔ کوچک دفتر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.deurmat': "پادری (فرش جلوی ورودی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alleenwerken': "تنها کار کردن (هیچ‌کس دیگری در ساختمان نیست)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.officenight.1': "سطل‌های زباله و سطل کاغذ را خالی می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.officenight.2': "به کاغذهای روی میز دست نمی‌زنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.officenight.3': "وقتی کارم تمام شد چراغ را خاموش می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.q': "امشب در ساختمان تنها کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.a': "بله. وقتی کارم تمام شد به تو پیام می‌دهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight': "تنها در ساختمان", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.b': "صبح زود یا شب دیروقت، اغلب یک دفتر را تنها تمیز می‌کنی. بدان اگر اتفاقی افتاد چه کار کنی: به چه کسی زنگ می‌زنی، و جعبهٔ کمک‌های اولیه کجاست؟ گوشی‌ات را همراهت نگه دار. با سرپرستت یا یک همکار قرار بگذار که وقتی شروع می‌کنی و وقتی تمام می‌کنی پیام بدهی. هیچ کسی را که نمی‌شناسی راه نده. به کاغذها، صفحه‌نمایش‌ها یا صفحه‌کلیدها بیشتر از آنچه برای تمیز کردن لازم است دست نزن، و هیچ‌وقت چیزی را که رویشان است نخوان. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.p': "کارم تمام شد و الان می‌روم خانه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.s': "شب مردی به در شیشه‌ای می‌زند. می‌گوید اینجا کار می‌کند و کلیدش را جا گذاشته. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.o1': "در را باز نمی‌کنی. به سرپرستت زنگ می‌زنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.o2': "راهش می‌دهی: آدم مهربانی به نظر می‌رسد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.o3': "کلید خودت را به او می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.officenight.w': "هر کسی می‌تواند بگوید آنجا کار می‌کند. سرپرستت می‌تواند آن را بررسی کند. ایمنی تو و ساختمان در درجهٔ اول است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.cooking': "آشپزخانه و سرو غذا", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.knives': "چاقوها و بریدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koksmes': "چاقوی سرآشپز (چاقوی بزرگ آشپزخانه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dunschiller': "پوست‌کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schillen': "پوست کندن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hakken': "خرد کردن (خیلی ریز بریدن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.raspen': "رنده کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.blokjes': "مکعب‌ها (تکه‌های کوچک چهارگوش)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.knives.1': "هویج‌ها را مکعبی خرد کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.knives.2': "چاقو را در سینک نگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.knives.3': "جعفری را ریز خرد کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.q': "می‌توانی پیازها را خرد کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.a': "بله، سرآشپز. حلقه‌ای یا مکعبی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives': "چاقو ابزار است، نه اسباب‌بازی", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.b': "چاقویت را تیز نگه دار: چاقوی کُند راحت‌تر لیز می‌خورد. روی تخته‌ای ببُر که تکان نخورد: یک دستمال خیس زیرش بگذار. انگشت‌هایت را مثل پنجهٔ گربه به داخل خم کن. با نوک چاقو رو به پایین و نزدیک پایت راه برو، و وقتی از کنار کسی رد می‌شوی بگو «Mes!». هیچ‌وقت چاقو را در سینک پر از آب نگذار: ممکن است کسی بدون اینکه آن را ببیند دست به آن بزند. چاقویی دارد می‌افتد؟ عقب برو، آن را نگیر. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.knives.p': "چاقو! دارم از پشتت رد می‌شوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.s': "داری می‌بُری. چاقویت از روی تخته لیز می‌خورد و می‌افتد. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.o1': "عقب می‌روی، و می‌گذاری بیفتد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.o2': "سریع با دستت می‌گیری‌اش.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.o3': "با پایت جلویش را می‌گیری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.knives.w': "چاقویی که می‌افتد می‌تواند دست یا پایت را عمیق ببُرد. چاقویی که روی زمین است فقط باید شسته شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.rawcooked': "خام، پخته و مواد حساسیت‌زا", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rauw': "خام (پخته‌نشده)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gaar': "پخته (آمادهٔ خوردن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afdekken': "پوشاندن (با درپوش یا فویل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kleurcode': "کد رنگی (برای هر نوع غذا یک رنگ تخته و چاقو)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.allergenenlijst': "فهرست مواد حساسیت‌زا (می‌گوید در هر غذا چه هست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.glutenvrij': "بدون گلوتن", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rawcooked.1': "گوشت خام در طبقهٔ پایین یخچال می‌رود.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rawcooked.2': "مرغ پخته شده است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.rawcooked.3': "روی ظرف‌های داخل سردخانه را بپوشان.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.q': "این سس بدون گلوتن است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.a': "مطمئن نیستم. فهرست مواد حساسیت‌زا را نگاه می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked': "خام و آماده هیچ‌وقت به هم نمی‌خورند", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.b': "گوشت خام، ماهی و تخم‌مرغ ممکن است میکروب داشته باشند. آن‌ها را از غذای آمادهٔ خوردن دور نگه دار. از تخته و چاقوی جدا یا کد رنگی آشپزخانه‌ات استفاده کن، و بعد از دست زدن به غذای خام دست‌هایت را بشوی. گوشت خام در طبقهٔ پایین یخچال می‌رود، تا چیزی روی غذاهای دیگر نچکد. روی غذا را بپوشان و رویش تاریخ بزن. در حساسیت غذایی، یک ذرهٔ کوچک هم می‌تواند کافی باشد: از ابزار تمیز استفاده کن. رستوران باید بتواند به مهمان‌ها بگوید در یک غذا چه مواد حساسیت‌زایی هست: فهرست مواد حساسیت‌زا را نگاه کن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.p': "کدام تخته برای گوشت خام است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.s': "مرغ خام بریدی. حالا باید برای یک سالاد گوجه‌فرنگی ببُری. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.o1': "یک تختهٔ تمیز و یک چاقوی تمیز برمی‌داری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.o2': "تخته را با دستمال پاک می‌کنی، و ادامه می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.o3': "گوجه‌ها را روی همان تخته می‌بُری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.rawcooked.w': "میکروب‌های مرغ خام روی گوجه‌ها می‌رود، و سالاد دیگر پخته نمی‌شود. تختهٔ تمیز جلوی این را می‌گیرد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.pass': "ظرف‌شوی‌خانه و پاس", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pass': "پاس (پیشخوانی که بشقاب‌ها روی آن منتظر گارسون می‌مانند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bon': "برگهٔ سفارش (سفارش گارسون برای آشپزخانه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.spoelkeuken': "ظرف‌شوی‌خانه (جایی که ظرف‌ها شسته می‌شوند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vaatwaskorf': "سبد ظرف‌شویی (سبدی که داخل ماشین ظرف‌شویی می‌رود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorspoelen': "پیش‌شویی کردن (آب کشیدن قبل از ماشین)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.warmhoudlamp': "لامپ گرم‌کن (بشقاب‌ها را گرم نگه می‌دارد)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pass.1': "میز هشت روی پاس است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pass.2': "دو برگهٔ سفارش جدید دارد می‌آید.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.pass.3': "اول بشقاب‌ها را پیش‌شویی کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.q': "غذای میز دوازده کجا ماند؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.a': "روی پاس است. الان می‌آورمش.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass': "پاس: بشقاب‌ها منتظر نمی‌مانند", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.b': "آشپزخانه بشقاب‌ها را برای گارسون روی پاس می‌گذارد. غذای گرم باید زود به مهمان برسد، پس بشقاب مدت زیادی روی پاس نمی‌ماند. برگهٔ سفارش را بررسی کن: میز درست، غذاهای درست، لبهٔ تمیز بشقاب؟ بعد آن را ببر. در ظرف‌شوی‌خانه: پیش‌شویی کن، همه چیز را در سبدها بگذار، و بقیه را به ماشین بسپار. وقتی ماشین کار می‌کند آن را باز نکن: بخارش خیلی داغ است. وقتی مواد ماشین را پر می‌کنی دستکش بپوش. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.p': "این برای کدام میز است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.s': "دو بشقاب روی پاس است. نمی‌دانی برای کدام میز هستند. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.o1': "برگهٔ سفارش را نگاه می‌کنی، یا از سرآشپز می‌پرسی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.o2': "آن‌ها را به میزی می‌بری که منتظر است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.o3': "صبر می‌کنی تا کس دیگری آن‌ها را ببرد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.pass.w': "بشقابی که به میز اشتباه برود یعنی دو مهمان منتظر و غذای سرد. یک سؤال کوتاه سریع‌تر است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.bill': "بخش‌های غذا و صورت‌حساب", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorgerecht': "پیش‌غذا (اولین بخش غذا)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hoofdgerecht': "غذای اصلی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nagerecht': "دسر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.reservering': "رزرو (میزی که از قبل گرفته شده)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pinapparaat': "دستگاه کارت‌خوان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.apartbetalen': "جدا حساب کردن (هر کس سهم خودش را می‌پردازد)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.bill.1': "رزرو کرده‌اید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.bill.2': "می‌خواهید با هم حساب کنید یا جدا؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.bill.3': "غذای اصلی را الان بیاورم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.q': "می‌شود جدا حساب کنیم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.a': "بله، حتماً. دستگاه کارت‌خوان را می‌آورم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill': "پول سر میز: دو بار بشمار", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.b': "وقتی مهمان پول می‌دهد، مبلغ را واضح بگو و بگذار مهمان دستگاه کارت‌خوان را ببیند. با پول نقد، وقتی پول را می‌گیری آن را بشمار، و وقتی بقیهٔ پول را می‌دهی دوباره بشمار. پول در صندوق یا کیف پول گارسونی‌ات می‌رود، هیچ‌وقت در جیب خودت. انعام (fooi) به جایی می‌رود که شرکتت می‌گوید، مثلاً در ظرف انعام. مهمانی بدون پرداخت رفته؟ دنبالش ندو: به مدیرت بگو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.p': "می‌شود چهل‌وپنج یورو، لطفاً.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.s': "مهمانی به تو پول می‌دهد و می‌گوید: «درست است». تو آن را نشمرده‌ای. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.o1': "وقتی مهمان آنجاست آن را می‌شماری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.o2': "آن را کنار می‌گذاری، و بعداً می‌شماری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.o3': "به مهمان اعتماد می‌کنی: تشکر می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.bill.w': "اگر بعداً بشماری و پول کم باشد، هیچ‌کس نمی‌تواند بررسی کند چه شده. شمردن سر میز هم از مهمان محافظت می‌کند و هم از تو.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.carework': "مراقبت شخصی و مراقبت در منزل", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.washing': "شستن و لباس پوشاندن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.washandje': "لیف دستکشی (دستمال کوچکی مثل دستکش)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.douchestoel': "صندلی حمام", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tandenpoetsen': "مسواک زدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kammen': "شانه کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scheren': "اصلاح کردن (تراشیدن ریش)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.steunkous': "جوراب واریس (جوراب تنگ برای پاها)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.washing.1': "آب به اندازهٔ کافی گرم است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.washing.2': "می‌خواهید صورتتان را خودتان بشویید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.washing.3': "الان جوراب‌های واریستان را پایتان می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.q': "امروز نمی‌خواهم دوش بگیرم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.a': "اشکالی ندارد. کنار روشویی کمکتان کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing': "اول بپرس، بپوشان، و بگذار انتخاب کند", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.b': "شستن کسی کار خیلی خصوصی است. بگو چه کار می‌خواهی بکنی، و اول بپرس. جاهایی از بدن را که نمی‌شویی با حوله بپوشان. در یا پرده را ببند. بگذار مراجع انتخاب کند: دوش یا شستن کنار روشویی، و چه لباسی بپوشد. بگذار مراجع کارهایی را که هنوز می‌تواند خودش انجام بدهد، حتی اگر کندتر باشد. مراجعی می‌گوید نه؟ مجبورش نکن. بعداً دوباره امتحان کن، چیز دیگری پیشنهاد بده، و به پرستار بگو.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.p': "امروز دوست دارید چه بپوشید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.s': "یک مراجع می‌گوید امروز نمی‌خواهد شسته شود. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.o1': "قبول می‌کنی، و به پرستار می‌گویی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.o2': "به هر حال او را می‌شویی: در فهرست هست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.o3': "آن را رد می‌کنی، و چیزی نمی‌گویی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.washing.w': "مراجع اجازه دارد نه بگوید. مراقبت به زور به اعتماد آسیب می‌زند. پرستار می‌تواند ببیند چرا، و چه کاری می‌شود کرد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.observing': "مشاهده و گزارش", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rapporteren': "گزارش نوشتن (نوشتن چیزی که دیدی در پروندهٔ مراقبت)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zorgdossier': "پروندهٔ مراقبت (همه چیز دربارهٔ مراقبت از یک مراجع)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.drukplek': "زخم فشاری (لکهٔ قرمز از دراز کشیدن یا نشستن طولانی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huid': "پوست", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.plassen': "ادرار کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vochtlijst': "جدول مایعات (اینکه مراجع چقدر می‌نوشد)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.observing.1': "خانم روی پاشنه‌اش یک لکهٔ قرمز دارد.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.observing.2': "آقا امروز کم نوشیده است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.observing.3': "آن را در پروندهٔ مراقبت می‌نویسم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.q': "دربارهٔ خانم یانسن چیز خاصی هست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.a': "بله. امروز تقریباً ادرار نکرده است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing': "چیزی را بنویس که می‌بینی، نه چیزی که فکر می‌کنی", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.b': "چیزی را که در پروندهٔ مراقبت می‌نویسی، همکار بعدی می‌خواند. واقعیت‌ها را بنویس: چه دیدی، شنیدی یا اندازه گرفتی، و کی. نه «Mevrouw is lastig» (خانم بداخلاق است)، بلکه «Mevrouw wilde niet eten en duwde het bord weg» (خانم نخواست غذا بخورد و بشقاب را کنار زد). همان روز بنویس، با جمله‌های کوتاه. مطمئن نیستی چطور به هلندی بنویسی؟ به پرستار بگو، و با هم بنویسید. وقتی کسی را می‌شویی به پوستش نگاه کن: لکهٔ قرمزی که از بین نمی‌رود می‌تواند شروع زخم فشاری باشد. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.p': "دارم چیزی را که دیدم می‌نویسم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.s': "یک مراجع موقع شستن عصبانی بود. باید آن را در پرونده بنویسی. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.o1': "می‌نویسی او چه گفت و چه کرد، و کی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.o2': "می‌نویسی: «خانم بداخلاق، مثل همیشه.»", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.o3': "هیچ چیز نمی‌نویسی: عادی است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.observing.w': "واقعیت‌ها به همکار بعدی و پرستار کمک می‌کنند کاری بکنند. نظر شخصی نمی‌گوید چه اتفاقی افتاد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.homecare': "مراقبت در منزل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.thuiszorg': "مراقبت در منزل (مراقبت در خانهٔ خود مراجع)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sleutelkluis': "صندوقچهٔ کلید (جعبهٔ کوچک رمزدار که کلید خانه در آن است)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zorgplan': "برنامهٔ مراقبت (مراجع چه مراقبتی می‌گیرد، و چطور)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wijkverpleegkundige': "پرستار محله (پرستار تیم مراقبت در منزل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mantelzorger': "مراقب خانوادگی (خویشاوند یا دوستی که از مراجع مراقبت می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alarmknop': "دکمهٔ هشدار (مراجع آن را همراه دارد تا کمک بخواهد)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.homecare.1': "اول زنگ در را می‌زنم. بعد کلید را برمی‌دارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.homecare.2': "در برنامهٔ مراقبت چه نوشته شده؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.homecare.3': "امروز یک ربع دیرتر می‌آیم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.q': "کیه؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.a': "صبح بخیر، از مراقبت در منزل آمده‌ام. اجازه هست بیایم داخل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare': "مهمان در خانهٔ کسی", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.b': "در مراقبت در منزل، در خانهٔ خود مراجع کار می‌کنی. آنجا مهمانی: زنگ بزن و بگو کی هستی، حتی وقتی کلید داری. رمز صندوقچهٔ کلید محرمانه است. هیچ‌وقت آن را جایی ننویس که دیگران ببینند، و همیشه صندوقچهٔ کلید را دوباره ببند. از برنامهٔ مراقبت پیروی کن: کاری که می‌کنی در آن نوشته شده. چیزی فرق کرده، یا مراجع در را باز نمی‌کند؟ همین‌طوری نرو. به تیمت یا پرستار محله زنگ بزن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.p': "صبح بخیر، از مراقبت در منزل هستم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.s': "زنگ در را می‌زنی. مراجع در را باز نمی‌کند. ماشینش آنجاست. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.o1': "به تیمت زنگ می‌زنی، و صبر می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.o2': "می‌روی سراغ مراجع بعدی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.o3': "یک بار دیگر زنگ می‌زنی، بعد می‌روی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.homecare.w': "ممکن است مراجع زمین خورده یا مریض باشد. تیمت می‌داند چه کار کند، و کلید دست چه کسی است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.liftaids': "وسایل کمکی بلند کردن و ایمنی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.glijlaken': "ملافهٔ لغزنده (ملافهٔ صاف برای جابه‌جا کردن مراجع در تخت)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tilband': "تسمهٔ بالابر (زیر مراجع می‌رود، برای بالابر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stalift': "بالابر ایستاده (به مراجع کمک می‌کند بایستد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkhoogte': "ارتفاع کار (تخت هم‌سطح باسن تو)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedhek': "نردهٔ تخت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.transferplank': "تختهٔ انتقال (تخته‌ای برای سر خوردن از تخت به صندلی)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.liftaids.1': "تخت را روی ارتفاع کار بگذار.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.liftaids.2': "ترمز ویلچر کشیده است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.liftaids.3': "این کار را دو نفری انجام می‌دهیم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.q': "می‌توانی خانم را تنهایی برگردانی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.a': "با ملافهٔ لغزنده می‌توانم. الان می‌آورمش.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids': "بگذار وسیلهٔ کمکی بلند کند", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.b': "قبل از استفاده از بالابر، آن را بررسی کن: باتری شارژ است، تسمه اندازهٔ درست است و پاره نیست؟ ترمز تخت و ویلچر را بکش. تخت را تا ارتفاع باسنت بالا بیاور، تا خم نشوی. هر مرحله را به مراجع بگو. برنامهٔ مراقبت می‌گوید مراجع به کدام وسیلهٔ کمکی نیاز دارد. وسیلهٔ کمکی خراب است یا نیست؟ بدون آن سرهم‌بندی نکن: گزارشش بده، و از یک همکار کمک بخواه. به تو نشان نداده‌اند وسیله چطور کار می‌کند؟ قبل از شروع بپرس. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.p': "تسمه خراب است. یکی دیگر می‌آورم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.s': "می‌خواهی از بالابر استفاده کنی. تسمه یک پارگی کوچک دارد. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.o1': "تسمهٔ دیگری برمی‌داری، و پارگی را گزارش می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.o2': "از آن استفاده می‌کنی: پارگی خیلی کوچک است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.o3': "به تسمه گره می‌زنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.liftaids.w': "پارگی کوچک زیر وزن یک آدم می‌تواند بزرگ‌تر شود. افتادن از بالابر می‌تواند به مراجع آسیب جدی بزند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.shopfloor': "صندوق، موجودی و بستن فروشگاه", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.returns': "مرجوعی و صندوق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.terugbrengen': "پس آوردن (یک کالا به فروشگاه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.klantenkaart': "کارت مشتری (کارتی برای جمع کردن امتیاز)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.statiegeld': "پول بطری (پولی که برای بطری یا قوطی خالی پس می‌گیری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kassalade': "کشوی صندوق (کشویی که پول در آن است)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.streepjescode': "بارکد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tegoedbon': "بن اعتباری (برگه‌ای که بعداً در فروشگاه خرج می‌کنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.returns.1': "با کارت مشتری امتیاز جمع می‌کنید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.returns.2': "بارکد کار نمی‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.returns.3': "پولتان را پس می‌خواهید یا بن اعتباری؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.q': "می‌خواهم این پلیور را پس بدهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.a': "می‌شود. رسید خریدتان را هنوز دارید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns': "مرجوعی: از قانون‌های فروشگاه پیروی کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.b': "هر فروشگاهی برای مرجوعی قانون‌های خودش را دارد: چند روز، با رسید یا بدون رسید، پس دادن پول یا بن اعتباری. آن‌ها را یاد بگیر، و برای هر مشتری رعایتشان کن. مطمئن نیستی؟ از یک همکار یا مدیر بپرس، و تنهایی تصمیم نگیر. آخر شیفتت کشوی صندوقت را بشمار، اگر فروشگاهت این‌طور کار می‌کند با یک همکار. هیچ‌وقت از صندوق برای خودت پول برندار، حتی برای قرض گرفتن یک لحظه‌ای. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.p': "الان از مدیر فروشگاه می‌پرسم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.s': "مشتری‌ای برای کفش‌ها پولش را پس می‌خواهد. رسید ندارد. تو قانون را نمی‌دانی. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.o1': "از مدیر می‌پرسی چه کار کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.o2': "پول را پس می‌دهی: آدم خوبی است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.o3': "می‌گویی نه، و ردش می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.returns.w': "مدیر قانون‌ها را می‌داند و می‌تواند تصمیم بگیرد. آن‌وقت مشتری جواب منصفانه‌ای می‌گیرد، و تقصیر گردن تو نمی‌افتد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.facing': "مرتب کردن قفسه و کالاهای سرد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.facen': "جلو کشیدن (کالاها را به جلو کشیدن، برچسب رو به جلو)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afprijzen': "تخفیف زدن (قیمت پایین‌تر گذاشتن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.koelvak': "یخچال فروشگاه (قفسهٔ سرد در فروشگاه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.diepvries': "فریزر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitpakken': "باز کردن بسته‌ها", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schapkaartje': "برچسب قفسه (کارت قیمت روی قفسه)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.facing.1': "اول یخچال، بعد بقیه.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.facing.2': "همه چیز را مرتب جلو بکش.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.facing.3': "کالاهای امروز را تخفیف بزن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.q': "کارت با یخچال تمام شد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.a': "تقریباً. هنوز باید کالاها را جلو بکشم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing': "اول سردها، و قفسه پر به نظر برسد", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.b': "کالاهای سرد و یخ‌زده اول از همه به یخچال یا فریزر می‌روند، قبل از هر چیز دیگر. نباید مدت زیادی گرم بمانند. بعد بقیه. جلو کشیدن یعنی: کالاها را به جلو بکش، با برچسب رو به مشتری. آن‌وقت قفسه پر و مرتب به نظر می‌رسد. برچسب قفسه را بررسی کن: قیمت برای این کالا درست است؟ وقتی جعبه‌ها را باز می‌کنی، رو به بیرون از بدنت ببُر، و نه خیلی عمیق: ممکن است به کالا آسیب بزنی. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.p': "اول کالاهای سرد، بعد بقیه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.s': "یک پالت شیر و یک پالت چیپس می‌رسد. تنها هستی. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.o1': "اول شیر را در یخچال می‌گذاری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.o2': "با چیپس شروع می‌کنی: سبک‌تر است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.o3': "هر دو را می‌گذاری تا همکاری بیاید.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.facing.w': "شیری که خیلی طولانی گرم بماند می‌تواند مشتری‌ها را مریض کند، و باید دور ریخته شود. چیپس می‌تواند صبر کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.shrink': "خرابی و دزدی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.derving': "ضایعات (آنچه فروشگاه از دست می‌دهد: کالای شکسته، کهنه یا دزدیده‌شده)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afschrijven': "از حساب خارج کردن (ثبت یک کالا به عنوان ازدست‌رفته)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.personeelsaankoop': "خرید کارکنان (چیزی که از فروشگاه خودت می‌خری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tassencontrole': "بازرسی کیف", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kassamedewerker': "صندوق‌دار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.winkelwagen': "چرخ خرید", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shrink.1': "این شیشه شکسته است. آن را از حساب خارج می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shrink.2': "خریدم را سر صندوق یک همکار حساب می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shrink.3': "یک چرخ خرید پر کنار در خروجی است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.q': "اجازه هست یک نگاه به کیفت بیندازم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.a': "بله، حتماً. این رسید من است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink': "خرید خودت: مثل مشتری پول بده", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.b': "فروشگاه به خاطر کالاهای شکسته، کالاهای کهنه و دزدی چیزهای زیادی از دست می‌دهد. کمک کن این کم بماند. کالای شکسته یا آسیب‌دیده؟ آن را سر جایش برنگردان: همان‌طور که فروشگاهت می‌گوید آن را از حساب خارج کن. خرید خودت: مثل هر مشتری سر صندوق پول بده، و رسید را نگه دار. در خیلی از فروشگاه‌ها اجازه نداری خرید خودت را خودت حساب کنی: یک همکار این کار را می‌کند. هیچ‌وقت بدون پرداخت کالایی نخور یا برندار، حتی یک چیز کوچک. بعضی فروشگاه‌ها کیف‌ها را بازرسی می‌کنند: این قانون فروشگاه است، نه نشانهٔ بی‌اعتمادی به تو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.p': "اول پول می‌دهم، و رسید را نگه می‌دارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.s': "آخر شیفتت گرسنه‌ای. تاریخ یک ساندویچ امروز گذشته است. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.o1': "از مدیر می‌پرسی قانون چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.o2': "آن را می‌خوری: به هر حال دور ریخته می‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.o3': "آن را در کیفت به خانه می‌بری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shrink.w': "در خیلی از فروشگاه‌ها برداشتن کالا بدون پرداخت دزدی است، حتی وقتی کهنه است. اول پرسیدن تو را در امان نگه می‌دارد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.shopclose': "بستن فروشگاه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sluitingstijd': "ساعت بسته شدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rolluik': "کرکره", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kasverschil': "اختلاف صندوق (پول بیشتر یا کمتر از آنچه باید در صندوق باشد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kluis': "گاوصندوق (جعبهٔ محکم برای پول)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.overval': "سرقت مسلحانه (کسی با تهدید پول می‌برد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.achterdeur': "در پشتی", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shopclose.1': "ده دقیقهٔ دیگر می‌بندیم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shopclose.2': "صندوق را دو نفری می‌شماریم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shopclose.3': "در پشتی قفل است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.q': "می‌شود سریع بیایم داخل؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.a': "ببخشید، بسته‌ایم. فردا ساعت هشت باز می‌کنیم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose': "سرقت: بده، و در امان بمان", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.b': "موقع بستن فروشگاه پول زیادی در صندوق است، پس فروشگاه‌ها قانون دارند: دو نفری بشمار، پول را به گاوصندوق ببر، و اول در پشتی را قفل کن. سرقت مسلحانه (overval)؟ جان تو از پول باارزش‌تر است. آرام بمان، هر چه می‌گویند انجام بده، و درگیر نشو یا دنبالشان ندو. هر چه می‌توانی به خاطر بسپار: لباس، قد، صدا. وقتی رفتند: در را قفل کن، به ۱۱۲ زنگ بزن، و به هیچ چیز دست نزن. بعداً با مدیرت یا کسی که به او اعتماد داری درباره‌اش حرف بزن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.p': "داریم می‌بندیم. در را قفل می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.s': "مردی با چاقو پول صندوقت را می‌خواهد. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.o1': "آرام می‌مانی، و پول را به او می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.o2': "با او درگیر می‌شوی: پول مال او نیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.o3': "به پشت فروشگاه می‌دوی، و خودت را حبس می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shopclose.w': "درگیر شدن یا فرار کردن سارق را عصبی‌تر و خطرناک‌تر می‌کند. پول را می‌شود جایگزین کرد. تو را نمی‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.uitzend': "کار از طریق شرکت کاریابی", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.hirer': "شرکت کاریابی و شرکت به‌کارگیرنده", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inlener': "شرکت به‌کارگیرنده (شرکتی که شرکت کاریابی تو را برای کار به آنجا می‌فرستد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vestiging': "شعبه (دفتر شرکت کاریابی در شهر تو)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.intakegesprek': "مصاحبهٔ اولیه (اولین گفت‌وگو در شرکت کاریابی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opstapplaats': "محل سوار شدن (جایی که اتوبوس شرکت کاریابی تو را سوار می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedrijfsregels': "قانون‌های شرکت (قانون‌های شرکت به‌کارگیرنده)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanspreekpunt': "فرد رابط (کسی که با سؤال‌هایت پیشش می‌روی)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hirer.1': "فردا در یک شرکت به‌کارگیرندهٔ جدید کار می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hirer.2': "فرد رابط من اینجا کیست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.hirer.3': "اتوبوس ساعت شش از محل سوار شدن حرکت می‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.q': "می‌توانی فردا در یک شرکت به‌کارگیرندهٔ جدید شروع کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.a': "بله. چه ساعتی باید آنجا باشم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer': "دو شرکت: کی چه کار می‌کند؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.b': "تو از طریق یک شرکت کاریابی (uitzendbureau) کار می‌کنی، ولی کار را در شرکت دیگری انجام می‌دهی: شرکت به‌کارگیرنده (inlener). شرکت کاریابی کارفرمای توست: قرارداد، حقوق، فیش حقوقی و روزهای مرخصی‌ات از شرکت کاریابی است. شرکت به‌کارگیرنده در محل کار به تو می‌گوید چه کار کنی، و باید کارت را ایمن نگه دارد، درست مثل کارکنان خودش. بیماری‌ات را همان‌طور که شرکت کاریابی‌ات می‌گوید اعلام کن: اغلب هم به شرکت کاریابی و هم به شرکت به‌کارگیرنده. اسم و شمارهٔ تلفن فرد رابطت در شرکت کاریابی را در گوشی‌ات نگه دار. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.p': "فرد رابط من در شرکت کاریابی کیست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.s': "در شرکت به‌کارگیرنده باید با یک دستگاه کار کنی. هیچ‌کس به تو نشان نداده چطور. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.o1': "از شرکت به‌کارگیرنده می‌خواهی اول به تو نشان بدهد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.o2': "امتحانش می‌کنی: مسئولیتش با شرکت کاریابی است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.o3': "به خانه می‌روی، و چیزی نمی‌گویی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.hirer.w': "شرکت به‌کارگیرنده باید به تو نشان بدهد چطور ایمن کار کنی، همان‌طور که به کارکنان خودش نشان می‌دهد. خواستن آن حق توست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.phases': "قراردادت و مرحله‌ها", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.fase': "مرحله (یک گام در قرارداد کاریابی‌ات: A، B یا C)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitzendbeding': "بند کاریابی (کارت می‌تواند تمام شود وقتی شرکت به‌کارگیرنده دیگر به تو نیاز ندارد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aflopen': "تمام شدن، به پایان رسیدن (قرارداد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doorwerken': "ادامه دادن کار (در همان محل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vastecontract': "قرارداد دائم (قراردادی بدون تاریخ پایان)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderbreking': "وقفه (مدتی بدون کار بین دو قرارداد)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.phases.1': "الان در کدام مرحله هستم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.phases.2': "قراردادم هفتهٔ بعد تمام می‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.phases.3': "می‌توانم اینجا به کار ادامه بدهم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.q': "کارت در این شرکت جمعه تمام می‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.a': "باشه. کار دیگری برای من دارید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases': "مرحله‌های A، B و C", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.b': "بیشتر نیروهای کار موقت تحت یک cao برای نیروهای کار موقت (uitzend-cao) کار می‌کنند. این cao مرحله دارد. در مرحلهٔ A، کارت معمولاً می‌تواند تمام شود وقتی شرکت به‌کارگیرنده دیگر به تو نیاز ندارد (uitzendbeding). در مرحلهٔ B، قراردادهای مدت‌دار می‌گیری. در مرحلهٔ C، با شرکت کاریابی قرارداد دائم می‌گیری. اینکه هر مرحله چقدر طول می‌کشد در cao تو آمده است. از شرکت کاریابی بپرس در کدام مرحله هستی، و همهٔ قراردادهایت را نگه دار. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.p': "مرحلهٔ A برای من چقدر طول می‌کشد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.s': "مدت زیادی برای همان شرکت کاریابی کار کرده‌ای. هنوز قراردادهای کوتاه می‌گیری. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.o1': "از شرکت کاریابی می‌پرسی در کدام مرحله هستی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.o2': "هیچ کاری نمی‌کنی: کار موقت همیشه کوتاه است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.o3': "کار را ول می‌کنی، و دنبال شرکت کاریابی دیگری می‌گردی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.phases.w': "بعد از مدت کافی، cao به تو امنیت بیشتری می‌دهد. شرکت کاریابی می‌تواند بگوید کجای کار هستی، و اتحادیهٔ کارگری می‌تواند همراه تو آن را بررسی کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.deductions': "حقوق و کسورات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inhouding': "کسر از حقوق (پولی که از حقوقت کم می‌شود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vastekracht': "نیروی ثابت (کارمندی که خود شرکت به‌کارگیرنده استخدامش کرده)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vervoer': "رفت‌وآمد (اتوبوس یا ون تا محل کار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schriftelijk': "کتبی (روی کاغذ یا در ایمیل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.navragen': "پرس‌وجو کردن (فهمیدن اینکه چیزی درست است یا نه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brutoloon': "حقوق ناخالص (حقوقت قبل از مالیات و کسورات)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.deductions.1': "این کسر در فیش حقوقی من چیست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.deductions.2': "من به اندازهٔ نیروهای ثابت درآمد دارم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.deductions.3': "اول می‌خواهم آن را روی کاغذ ببینم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.q': "هزینهٔ اتوبوس را از حقوقت کم می‌کنیم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.a': "این کار مجاز است؟ اول پرس‌وجو می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions': "چه چیزی را می‌شود از حقوقت کم کرد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.b': "حق داری دست‌کم همان حقوقی را بگیری که کارکنان شرکت به‌کارگیرنده برای همان کار می‌گیرند. پولی که از حقوقت کم می‌شود (inhouding) باید در فیش حقوقی‌ات باشد. مالیات و حق بیمه طبق قانون کم می‌شود. جدا از این‌ها، شرکت کاریابی فقط اجازه دارد دو هزینه را از حداقل دستمزد کم کند: اجارهٔ مسکنت و حق بیمهٔ درمانی، و فقط اگر کتبی با آن موافقت کرده باشی. هزینه‌های دیگر، مثل رفت‌وآمد، لباس کار، جریمه یا پول برای پیدا کردن کار برایت، نباید از حداقل دستمزد کم شود. یک کسر را نمی‌فهمی؟ از شرکت کاریابی بخواه آن را کتبی توضیح بدهد. اطلاعات کلی. برای وضعیت خودت: از اتحادیهٔ کارگری، Juridisch Loket یا FairWork بپرس.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.deductions.p': "این کسر برای چیست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.s': "شرکت کاریابی برای اتوبوس تا محل کار از حقوقت پول کم می‌کند. تو حداقل دستمزد می‌گیری. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.o1': "دربارهٔ آن می‌پرسی: این کار مجاز نیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.o2': "هیچ کاری نمی‌کنی: هر روز سوار اتوبوس می‌شوی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.o3': "دیگر سوار اتوبوس نمی‌شوی، و پیاده می‌روی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.deductions.w': "از حداقل دستمزد فقط اجاره و بیمهٔ درمانی را می‌شود کم کرد، و فقط با موافقت کتبی تو. اتحادیهٔ کارگری یا Juridisch Loket می‌تواند کمکت کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.agencyhome': "مسکن و کمک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huisvesting': "مسکن (جای زندگی که شرکت کاریابی جور می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huisgenoot': "هم‌خانه (کسی که در همان خانه زندگی می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huisregels': "قانون‌های خانه (قانون‌های خانه‌ای که در آن زندگی می‌کنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huismeester': "مسئول خانه (کسی که به خانه رسیدگی می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meldpunt': "مرکز گزارش (جایی که می‌توانی مشکلی را گزارش بدهی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.advies': "مشاوره", // nieuw, nalezen // nagelezen AI 28 nov
+    's.agencyhome.1': "یک قرارداد اجاره به اسم خودم می‌خواهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.agencyhome.2': "در حمام کپک هست.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.agencyhome.3': "برای مشاوره به اتحادیهٔ کارگری زنگ می‌زنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.q': "باید جمعه از خانه بروی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.a': "این خیلی زود است. اول مشورت می‌گیرم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome': "خانه‌ات، و از کجا کمک بگیری", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.b': "شرکت کاریابی برایت خانه جور می‌کند؟ پس یک قرارداد اجارهٔ کتبی به اسم خودت می‌گیری، جدا از قرارداد کارت. یک نسخه از آن نگه دار. در آن نوشته چقدر می‌پردازی، و اجاره چطور و کی تمام می‌شود. کارت تمام می‌شود؟ خانه‌ات همیشه همان روز تمام نمی‌شود: قبل از اینکه بروی مشورت بگیر. خانهٔ ناامن یا خیلی شلوغ، تهدید، یا حقوق خیلی کم؟ کمک بگیر: اتحادیهٔ کارگری، Juridisch Loket (مشاورهٔ حقوقی رایگان)، FairWork، یا Nederlandse Arbeidsinspectie، که آنجا می‌توانی بی‌نام هم گزارش بدهی. اطلاعات کلی. برای وضعیت خودت: از اتحادیهٔ کارگری، Juridisch Loket یا FairWork بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.p': "می‌شود یک نسخه از قرارداد اجاره‌ام را بگیرم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.s': "کارت تمام می‌شود. مسئول خانه می‌گوید باید امروز از خانه بروی. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.o1': "اول از اتحادیهٔ کارگری یا Juridisch Loket می‌پرسی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.o2': "امروز می‌روی، و پیش یک دوست می‌خوابی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.o3': "کیفت را می‌بندی، و بیرون می‌خوابی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.agencyhome.w': "قرارداد اجاره‌ات قانون‌های خودش را دارد، جدا از کارت. مشاوره کمک می‌کند بدانی واقعاً کی باید بروی.", // nieuw, nalezen // nagelezen AI 28 nov
     // The basis units at four lessons (23 November 2026): two new lessons each in Solliciteren, Wonen en papieren, Loon, Verlof, Ziekte, Uitbuiting herkennen, Naar je werk, Je werk afronden, Stage lopen, Meedoen in Nederland and Online op je werk.
-    'l.vacancy': "خواندن آگهی استخدام", // nieuw, nalezen
-    'w.advertentie': "آگهی (متنی که یک کار یا یک چیز را پیشنهاد می‌کند)", // nieuw, nalezen
-    'w.eis': "شرط لازم (چیزی که باید داشته باشی یا بلد باشی)", // nieuw, nalezen
-    'w.parttime': "پاره‌وقت (ساعت‌های کمتر در هفته)", // nieuw, nalezen
-    'w.fulltime': "تمام‌وقت (یک هفتهٔ کاری کامل)", // nieuw, nalezen
-    'w.sollicitatiebrief': "نامهٔ درخواست کار", // nieuw, nalezen
-    'w.contactpersoon': "فرد رابط (کسی که می‌توانی به او زنگ بزنی یا برایش بنویسی)", // nieuw, nalezen
-    's.vacancy.1': "آگهی شما را در اینترنت دیدم.", // nieuw, nalezen
-    's.vacancy.2': "این کار پاره‌وقت است یا تمام‌وقت؟", // nieuw, nalezen
-    's.vacancy.3': "شرایط لازم چیست؟", // nieuw, nalezen
-    'c.vacancy.q': "برای چه زنگ می‌زنید؟", // nieuw, nalezen
-    'c.vacancy.a': "دربارهٔ آگهی استخدامتان زنگ می‌زنم. هنوز جای خالی هست؟", // nieuw, nalezen
-    'l.result': "بعد از مصاحبه", // nieuw, nalezen
-    'w.aangenomen': "استخدام‌شده (کار را گرفتی)", // nieuw, nalezen
-    'w.afwijzing': "جواب رد (کار را نگرفتی)", // nieuw, nalezen
-    'w.aanbod': "پیشنهاد (کار را به تو پیشنهاد می‌کنند)", // nieuw, nalezen
-    'w.proefdag': "روز آزمایشی (یک روز کار، برای امتحان کردن)", // nieuw, nalezen
-    'w.nabellen': "دوباره زنگ زدن (برای پرسیدن اینکه کار به کجا رسیده)", // nieuw, nalezen
-    'w.teleurgesteld': "ناامید، دلسرد", // nieuw, nalezen
-    's.result.1': "استخدام شدی!", // nieuw, nalezen
-    's.result.2': "جواب رد گرفتم.", // nieuw, nalezen
-    's.result.3': "روز آزمایشی حقوق دارد؟", // nieuw, nalezen
-    'c.result.q': "متأسفانه کس دیگری را انتخاب می‌کنیم.", // nieuw, nalezen
-    'c.result.a': "حیف شد. می‌توانم بپرسم چرا؟", // nieuw, nalezen
-    'l.residence': "مدارک اقامتت", // nieuw, nalezen
-    'w.verblijfsvergunning': "اجازهٔ اقامت", // nieuw, nalezen
-    'w.pasfoto': "عکس پرسنلی", // nieuw, nalezen
-    'w.vingerafdruk': "اثر انگشت", // nieuw, nalezen
-    'w.geldig': "معتبر (هنوز قابل استفاده است)", // nieuw, nalezen
-    'w.verloopdatum': "تاریخ انقضا (آخرین روزی که معتبر است)", // nieuw, nalezen
-    'w.volgnummer': "شمارهٔ نوبت (برگه‌ای با نوبت تو)", // nieuw, nalezen
-    's.residence.1': "اجازهٔ اقامتم یک سال دیگر معتبر است.", // nieuw, nalezen
-    's.residence.2': "تاریخ انقضای پاسپورتت کی است؟", // nieuw, nalezen
-    's.residence.3': "در شهرداری وقت ملاقات دارم.", // nieuw, nalezen
-    'c.residence.q': "اجازهٔ اقامتت تقریباً منقضی شده.", // nieuw, nalezen
-    'c.residence.a': "پس فوراً برای یک اجازهٔ جدید درخواست می‌دهم.", // nieuw, nalezen
-    'l.newhome': "اسباب‌کشی", // nieuw, nalezen
-    'w.brievenbus': "صندوق نامه", // nieuw, nalezen
-    'w.meterstand': "عدد کنتور (عددهای روی کنتور گاز، برق یا آب)", // nieuw, nalezen
-    'w.naambordje': "تابلوی اسم (اسم تو کنار در)", // nieuw, nalezen
-    'w.woning': "خانه (یک خانه یا یک آپارتمان)", // nieuw, nalezen
-    'w.doorsturen': "فرستادن به جای دیگر (ارسال به آدرس جدید)", // nieuw, nalezen
-    'w.verhuisdag': "روز اسباب‌کشی", // nieuw, nalezen
-    's.newhome.1': "هفتهٔ بعد اسباب‌کشی می‌کنم.", // nieuw, nalezen
-    's.newhome.2': "اسمم روی صندوق نامه نیست.", // nieuw, nalezen
-    's.newhome.3': "آدرس جدیدم را اعلام می‌کنم.", // nieuw, nalezen
-    'c.newhome.q': "الان کجا زندگی می‌کنی؟", // nieuw, nalezen
-    'c.newhome.a': "در یک خانهٔ جدید. این آدرس جدید من است.", // nieuw, nalezen
-    'l.payparts': "چه چیزهایی در فیش حقوقی‌ات هست", // nieuw, nalezen
-    'w.pensioen': "حقوق بازنشستگی (پول برای وقتی که پیر می‌شوی)", // nieuw, nalezen
-    'w.periode': "دوره (هفته‌ها یا ماهِ این حقوق)", // nieuw, nalezen
-    'w.bedrag': "مبلغ (پول)", // nieuw, nalezen
-    'w.totaal': "جمع کل", // nieuw, nalezen
-    'w.afkorting': "مخفف (شکل کوتاه یک کلمه)", // nieuw, nalezen
-    'w.personeelsnummer': "شمارهٔ پرسنلی (شمارهٔ تو در شرکت)", // nieuw, nalezen
-    's.payparts.1': "این مخفف یعنی چه؟", // nieuw, nalezen
-    's.payparts.2': "این مبلغ به حساب بازنشستگی‌ام می‌رود.", // nieuw, nalezen
-    's.payparts.3': "این حقوق برای کدام دوره است؟", // nieuw, nalezen
-    'c.payparts.q': "شمارهٔ پرسنلی‌ات چیست؟", // nieuw, nalezen
-    'c.payparts.a': "بالای صفحه است، کنار اسمم.", // nieuw, nalezen
-    'l.latepay': "حقوق دیر، ناقص یا نقدی", // nieuw, nalezen
-    'w.zwartwerken': "کار سیاه کردن (بدون قرارداد، بدون مالیات، بدون حق روی کاغذ)", // nieuw, nalezen
-    'w.voorschot': "پیش‌پرداخت (بخشی از حقوقت قبل از روز پرداخت)", // nieuw, nalezen
-    'w.nabetaling': "پرداخت معوقه (پولی که بعداً می‌گیری تا حقوقت درست شود)", // nieuw, nalezen
-    'w.tekort': "کسری (پولی که کم است)", // nieuw, nalezen
-    'w.betaaldag': "روز پرداخت حقوق", // nieuw, nalezen
-    'w.bankafschrift': "صورت‌حساب بانکی (فهرست پولی که وارد و خارج شده)", // nieuw, nalezen
-    's.latepay.1': "حقوقم دیر شده.", // nieuw, nalezen
-    's.latepay.2': "من کار سیاه نمی‌کنم.", // nieuw, nalezen
-    's.latepay.3': "می‌توانم پیش‌پرداخت بگیرم؟", // nieuw, nalezen
-    'c.latepay.q': "پولی را که کم است ماه بعد می‌گیری.", // nieuw, nalezen
-    'c.latepay.a': "می‌توانم این را کتبی داشته باشم؟", // nieuw, nalezen
-    'l.holiday': "برنامه‌ریزی تعطیلات", // nieuw, nalezen
-    'w.saldo': "مانده (چند روز هنوز داری)", // nieuw, nalezen
-    'w.goedkeuren': "تأیید کردن (به آن بله گفتن)", // nieuw, nalezen
-    'w.verlopen': "منقضی شدن (دیگر معتبر نیست)", // nieuw, nalezen
-    'w.zomervakantie': "تعطیلات تابستان", // nieuw, nalezen
-    'w.drukte': "شلوغی (کار زیاد)", // nieuw, nalezen
-    'w.aanvraag': "درخواست (چیزی را می‌خواهی، اغلب با یک فرم)", // nieuw, nalezen
-    's.holiday.1': "چند روز مرخصی هنوز دارم؟", // nieuw, nalezen
-    's.holiday.2': "مرخصی‌ام تأیید شده.", // nieuw, nalezen
-    's.holiday.3': "دارم فرم را پر می‌کنم.", // nieuw, nalezen
-    'c.holiday.q': "تابستان سرمان شلوغ است. می‌توانی در ماه مه به تعطیلات بروی؟", // nieuw, nalezen
-    'c.holiday.a': "ترجیح می‌دهم ژوئیه بروم. آن موقع خانواده‌ام خانه هستند.", // nieuw, nalezen
-    'l.special': "مرخصی‌های ویژه", // nieuw, nalezen
-    'w.bruiloft': "عروسی", // nieuw, nalezen
-    'w.begrafenis': "مراسم خاکسپاری", // nieuw, nalezen
-    'w.geboorteverlof': "مرخصی تولد (برای شریک زندگی، وقتی بچه به دنیا می‌آید)", // nieuw, nalezen
-    'w.bijzonderverlof': "مرخصی ویژه (مثلاً برای عروسی یا خاکسپاری)", // nieuw, nalezen
-    'w.kerstdagen': "کریسمس (دو روز کریسمس)", // nieuw, nalezen
-    'w.vrijvragen': "یک روز مرخصی خواستن", // nieuw, nalezen
-    's.special.1': "برادرم دارد ازدواج می‌کند. می‌توانم یک روز مرخصی بخواهم؟", // nieuw, nalezen
-    's.special.2': "عمویم فوت کرده. مراسم خاکسپاری جمعه است.", // nieuw, nalezen
-    's.special.3': "باید کریسمس کار کنم؟", // nieuw, nalezen
-    'c.special.q': "تولد بچه‌ات مبارک! مرخصی تولد می‌گیری؟", // nieuw, nalezen
-    'c.special.a': "بله، هفتهٔ اول خانه هستم.", // nieuw, nalezen
-    'l.unwell': "حالت خوب نیست", // nieuw, nalezen
-    'w.hoofdpijn': "سردرد", // nieuw, nalezen
-    'w.griep': "آنفولانزا", // nieuw, nalezen
-    'w.verkouden': "سرماخوردگی داشتن", // nieuw, nalezen
-    'w.nietlekker': "ناخوش (کمی احساس مریضی می‌کنی)", // nieuw, nalezen
-    'w.naarhuis': "به خانه رفتن", // nieuw, nalezen
-    'w.uitzieken': "در خانه ماندن تا خوب شوی", // nieuw, nalezen
-    's.unwell.1': "حالم خوب نیست.", // nieuw, nalezen
-    's.unwell.2': "سرم درد می‌کند و سرما خورده‌ام.", // nieuw, nalezen
-    's.unwell.3': "دارم می‌روم خانه. مریضم.", // nieuw, nalezen
-    'c.unwell.q': "رنگت پریده. حالت خوب است؟", // nieuw, nalezen
-    'c.unwell.a': "نه، حالم خوب نیست. می‌توانم بروم خانه؟", // nieuw, nalezen
-    'l.injury': "آسیب دیدن در کار", // nieuw, nalezen
-    'w.bedrijfsongeval': "حادثهٔ کاری", // nieuw, nalezen
-    'w.verzekering': "بیمه", // nieuw, nalezen
-    'w.schadevergoeding': "غرامت (پول برای خسارت)", // nieuw, nalezen
-    'w.oorzaak': "علت (چرا اتفاق افتاد)", // nieuw, nalezen
-    'w.letsel': "جراحت (آسیب به بدنت)", // nieuw, nalezen
-    'w.verklaring': "اظهارنامه (آنچه دربارهٔ اتفاق می‌نویسی یا می‌گویی)", // nieuw, nalezen
-    's.injury.1': "سر کار دچار حادثه شده‌ام.", // nieuw, nalezen
-    's.injury.2': "علتش چه بود؟", // nieuw, nalezen
-    's.injury.3': "همکارم آن را دید.", // nieuw, nalezen
-    'c.injury.q': "اظهارنامه‌ات را اینجا می‌نویسی؟", // nieuw, nalezen
-    'c.injury.a': "بله. می‌توانم یک کپی داشته باشم؟", // nieuw, nalezen
-    'l.debt': "بدهی به رئیس یا شرکت کاریابی", // nieuw, nalezen
-    'w.lening': "وام", // nieuw, nalezen
-    'w.lenen': "قرض گرفتن، قرض دادن", // nieuw, nalezen
-    'w.vastzitten': "گیر افتادن (نمی‌توانی بروی)", // nieuw, nalezen
-    'w.tussenpersoon': "واسطه (کسی که در ازای پول کار جور می‌کند)", // nieuw, nalezen
-    'w.rente': "بهره (پول اضافه‌ای که روی وام می‌دهی)", // nieuw, nalezen
-    'w.belofte': "قول", // nieuw, nalezen
-    's.debt.1': "مجبور شدم برای این کار پول بدهم.", // nieuw, nalezen
-    's.debt.2': "بدهی‌ام هر ماه بیشتر می‌شود.", // nieuw, nalezen
-    's.debt.3': "پاسپورتم دست واسطه است.", // nieuw, nalezen
-    'c.debt.q': "فقط وقتی بدهی‌ات صاف شد می‌توانی بروی.", // nieuw, nalezen
-    'c.debt.a': "این مجاز نیست. دارم کمک می‌خواهم.", // nieuw, nalezen
-    'l.inspection': "بازرسی و کمک‌های دیگر", // nieuw, nalezen
-    'w.inspectie': "بازرسی (کسانی که بررسی می‌کنند کار منصفانه و ایمن است یا نه)", // nieuw, nalezen
-    'w.controle': "بازبینی، کنترل", // nieuw, nalezen
-    'w.slachtoffer': "قربانی", // nieuw, nalezen
-    'w.mensenhandel': "قاچاق انسان (از آدم‌ها برای کار یا سکس سوءاستفاده می‌شود و فروخته می‌شوند)", // nieuw, nalezen
-    'w.vertrouwen': "اعتماد کردن", // nieuw, nalezen
-    'w.tolk': "مترجم شفاهی", // nieuw, nalezen
-    's.inspection.1': "فردا بازرسی می‌آید.", // nieuw, nalezen
-    's.inspection.2': "می‌توانم مترجم داشته باشم؟", // nieuw, nalezen
-    's.inspection.3': "به این مرد اعتماد ندارم.", // nieuw, nalezen
-    'c.inspection.q': "می‌خواهی با بازرسی حرف بزنی؟", // nieuw, nalezen
-    'c.inspection.a': "بله، ولی رئیسم نباید آن را بشنود.", // nieuw, nalezen
-    'l.carpool': "هم‌سفری با ماشین و ون کار", // nieuw, nalezen
-    'w.carpoolen': "هم‌سفری کردن (با هم با یک ماشین سر کار رفتن)", // nieuw, nalezen
-    'w.meerijden': "با کسی رفتن (در ماشین کس دیگر)", // nieuw, nalezen
-    'w.gordel': "کمربند ایمنی", // nieuw, nalezen
-    'w.instappen': "سوار شدن (ماشین، اتوبوس یا قطار)", // nieuw, nalezen
-    'w.uitstappen': "پیاده شدن (از ماشین، اتوبوس یا قطار)", // nieuw, nalezen
-    'w.bijrijder': "سرنشین جلو (کنار راننده)", // nieuw, nalezen
-    's.carpool.1': "می‌توانم با تو بیایم؟", // nieuw, nalezen
-    's.carpool.2': "کمربندت را ببند.", // nieuw, nalezen
-    's.carpool.3': "من در ایستگاه پیاده می‌شوم.", // nieuw, nalezen
-    'c.carpool.q': "فردا کی رانندگی می‌کند؟", // nieuw, nalezen
-    'c.carpool.a': "من رانندگی می‌کنم. ساعت شش دنبالت می‌آیم.", // nieuw, nalezen
-    'l.train': "قطار، تأخیر و دیر رسیدن", // nieuw, nalezen
-    'w.station': "ایستگاه", // nieuw, nalezen
-    'w.perron': "سکو (جایی که سوار قطار می‌شوی)", // nieuw, nalezen
-    'w.overstappen': "عوض کردن (به قطار یا اتوبوس دیگر)", // nieuw, nalezen
-    'w.uitvallen': "لغو شدن (قطار نمی‌رود)", // nieuw, nalezen
-    'w.kaartje': "بلیت", // nieuw, nalezen
-    'w.reisplanner': "برنامه‌ریز سفر (اپی که قطارها و اتوبوس‌ها را نشان می‌دهد)", // nieuw, nalezen
-    's.train.1': "قطارم لغو شده.", // nieuw, nalezen
-    's.train.2': "باید یک بار قطار عوض کنم.", // nieuw, nalezen
-    's.train.3': "قطار از کدام سکو حرکت می‌کند؟", // nieuw, nalezen
-    'c.train.q': "چرا این‌قدر دیر کردی؟", // nieuw, nalezen
-    'c.train.a': "قطارم لغو شد. برایت پیام فرستادم.", // nieuw, nalezen
-    'l.checklist': "قبل از تمام کردن، بررسی کن", // nieuw, nalezen
-    'w.checklist': "چک‌لیست (فهرست چیزهایی که باید بررسی شوند)", // nieuw, nalezen
-    'w.afvinken': "تیک زدن (کنار یک کار تیک گذاشتن)", // nieuw, nalezen
-    'w.overdoen': "دوباره انجام دادن", // nieuw, nalezen
-    'w.compleet': "کامل (چیزی کم نیست)", // nieuw, nalezen
-    'w.vergeten': "فراموش کردن", // nieuw, nalezen
-    'w.resultaat': "نتیجه", // nieuw, nalezen
-    's.checklist.1': "همه‌چیز را در چک‌لیست تیک می‌زنم.", // nieuw, nalezen
-    's.checklist.2': "سفارش کامل است؟", // nieuw, nalezen
-    's.checklist.3': "باید این را دوباره انجام بدهم.", // nieuw, nalezen
-    'c.checklist.q': "چیزی یادت نرفته؟", // nieuw, nalezen
-    'c.checklist.a': "یک بار دیگر به چک‌لیست نگاه می‌کنم.", // nieuw, nalezen
-    'l.leavesite': "ترک محل کار", // nieuw, nalezen
-    'w.terugzetten': "سر جایش گذاشتن", // nieuw, nalezen
-    'w.vegen': "جارو کردن", // nieuw, nalezen
-    'w.vloer': "کف زمین", // nieuw, nalezen
-    'w.uitdoen': "خاموش کردن (چراغ، دستگاه)", // nieuw, nalezen
-    'w.alslaatste': "نفر آخر", // nieuw, nalezen
-    'w.achterlaten': "به جا گذاشتن (جایت را چطور ترک می‌کنی)", // nieuw, nalezen
-    's.leavesite.1': "جایم را مرتب ترک می‌کنم.", // nieuw, nalezen
-    's.leavesite.2': "کی آخر از همه می‌رود؟", // nieuw, nalezen
-    's.leavesite.3': "چراغ را خاموش کن و در را ببند.", // nieuw, nalezen
-    'c.leavesite.q': "امروز تو آخرین نفری هستی که می‌روی؟", // nieuw, nalezen
-    'c.leavesite.a': "بله. همه‌چیز را خاموش می‌کنم و در را قفل می‌کنم.", // nieuw, nalezen
-    'l.stagedays': "هر روز در محل کارآموزی‌ات", // nieuw, nalezen
-    'w.stageplek': "محل کارآموزی (شرکتی که کارآموزی‌ات را آنجا می‌گذرانی)", // nieuw, nalezen
-    'w.afwezig': "غایب (آنجا نیست)", // nieuw, nalezen
-    'w.aanwezig': "حاضر (آنجا هست)", // nieuw, nalezen
-    'w.stagevergoeding': "کمک‌هزینهٔ کارآموزی (پولی که ممکن است در کارآموزی بگیری)", // nieuw, nalezen
-    'w.begeleiding': "راهنمایی (کمک از مربی‌ات)", // nieuw, nalezen
-    'w.leerling': "دانش‌آموز (در مدرسه)", // nieuw, nalezen
-    's.stagedays.1': "فردا غایبم. مریضم.", // nieuw, nalezen
-    's.stagedays.2': "کمک‌هزینهٔ کارآموزی می‌گیرم؟", // nieuw, nalezen
-    's.stagedays.3': "در محل کارآموزی‌ام چهار روز کار می‌کنم.", // nieuw, nalezen
-    'c.stagedays.q': "چرا دیروز غایب بودی؟", // nieuw, nalezen
-    'c.stagedays.a': "مریض بودم. به مدرسه و شرکت زنگ زدم.", // nieuw, nalezen
-    'l.stageend': "پایان کارآموزی‌ات", // nieuw, nalezen
-    'w.eindgesprek': "گفت‌وگوی پایانی (در پایان کارآموزی‌ات)", // nieuw, nalezen
-    'w.geslaagd': "قبول (به اندازهٔ کافی خوب انجامش دادی)", // nieuw, nalezen
-    'w.gezakt': "رد شده (این بار به اندازهٔ کافی خوب نبود)", // nieuw, nalezen
-    'w.herkansing': "فرصت جبران (یک شانس جدید)", // nieuw, nalezen
-    'w.bedanken': "تشکر کردن", // nieuw, nalezen
-    'w.trakteren': "شیرینی دادن (برای همه چیز خوشمزه‌ای آوردن)", // nieuw, nalezen
-    's.stageend.1': "فردا گفت‌وگوی پایانی دارم.", // nieuw, nalezen
-    's.stageend.2': "کارآموزی‌ام را قبول شدم.", // nieuw, nalezen
-    's.stageend.3': "می‌خواهم از همه تشکر کنم.", // nieuw, nalezen
-    'c.stageend.q': "روز آخرت است! حالا می‌خواهی چه کار کنی؟", // nieuw, nalezen
-    'c.stageend.a': "اول مدرکم را می‌گیرم. بعد دنبال کار می‌گردم.", // nieuw, nalezen
-    'l.neighbours': "محله‌ات", // nieuw, nalezen
-    'w.buurt': "محله", // nieuw, nalezen
-    'w.buurthuis': "خانهٔ محله (جایی برای فعالیت‌ها در محله‌ات)", // nieuw, nalezen
-    'w.straat': "خیابان", // nieuw, nalezen
-    'w.kennismaken': "آشنا شدن (اولین بار کسی را دیدن)", // nieuw, nalezen
-    'w.overlast': "مزاحمت (سروصدا یا دردسر برای دیگران)", // nieuw, nalezen
-    'w.buurvrouw': "همسایه (یک زن)", // nieuw, nalezen
-    's.neighbours.1': "مدت کوتاهی است که در این خیابان زندگی می‌کنم.", // nieuw, nalezen
-    's.neighbours.2': "در کتابخانه هلندی تمرین می‌کنم.", // nieuw, nalezen
-    's.neighbours.3': "ببخشید بابت مزاحمت.", // nieuw, nalezen
-    'c.neighbours.q': "سلام، من همسایهٔ جدیدتان هستم.", // nieuw, nalezen
-    'c.neighbours.a': "از آشنایی‌تان خوشوقتم! من علی هستم.", // nieuw, nalezen
-    'l.join': "مدرسه، ورزش و کار داوطلبانه", // nieuw, nalezen
-    'w.vrijwilliger': "داوطلب (کسی که بدون دستمزد کمک می‌کند)", // nieuw, nalezen
-    'w.vrijwilligerswerk': "کار داوطلبانه", // nieuw, nalezen
-    'w.sportclub': "باشگاه ورزشی", // nieuw, nalezen
-    'w.ouderavond': "جلسهٔ اولیا (در مدرسه)", // nieuw, nalezen
-    'w.leraar': "معلم", // nieuw, nalezen
-    'w.basisschool': "دبستان", // nieuw, nalezen
-    's.join.1': "پسرم به دبستان می‌رود.", // nieuw, nalezen
-    's.join.2': "در یک باشگاه ورزشی فوتبال بازی می‌کنم.", // nieuw, nalezen
-    's.join.3': "شنبه‌ها کار داوطلبانه می‌کنم.", // nieuw, nalezen
-    'c.join.q': "به جلسهٔ اولیا می‌آیی؟", // nieuw, nalezen
-    'c.join.a': "بله. می‌خواهم با معلم حرف بزنم.", // nieuw, nalezen
-    'l.workphotos': "عکس‌ها و اطلاعات", // nieuw, nalezen
-    'w.gezicht': "صورت", // nieuw, nalezen
-    'w.klantgegevens': "اطلاعات مشتری (اسم، آدرس، تلفن یک مشتری)", // nieuw, nalezen
-    'w.onlinezetten': "در اینترنت گذاشتن", // nieuw, nalezen
-    'w.wissen': "پاک کردن", // nieuw, nalezen
-    'w.werktelefoon': "گوشی کاری", // nieuw, nalezen
-    'w.bestand': "فایل (روی کامپیوتر)", // nieuw, nalezen
-    's.workphotos.1': "عکس‌های کار را در اینترنت نمی‌گذارم.", // nieuw, nalezen
-    's.workphotos.2': "عکس را فوراً پاک می‌کنم.", // nieuw, nalezen
-    's.workphotos.3': "صورتش در عکس است.", // nieuw, nalezen
-    'c.workphotos.q': "می‌توانم از تو عکس بگیرم؟ برای اینترنت.", // nieuw, nalezen
-    'c.workphotos.a': "نه، ترجیح می‌دهم نه. نمی‌خواهم در اینترنت باشم.", // nieuw, nalezen
-    'l.device': "گوشی و کامپیوتر امن", // nieuw, nalezen
-    'w.update': "به‌روزرسانی (نسخهٔ جدید یک اپ یا برنامه)", // nieuw, nalezen
-    'w.virus': "ویروس (برنامه‌ای که به کامپیوترت آسیب می‌زند)", // nieuw, nalezen
-    'w.wifi': "وای‌فای", // nieuw, nalezen
-    'w.usbstick': "فلش USB", // nieuw, nalezen
-    'w.installeren': "نصب کردن", // nieuw, nalezen
-    'w.openbaar': "عمومی (برای همه)", // nieuw, nalezen
-    's.device.1': "امشب به‌روزرسانی را نصب می‌کنم.", // nieuw, nalezen
-    's.device.2': "این فلش USB روی زمین افتاده بود.", // nieuw, nalezen
-    's.device.3': "این وای‌فای امن است؟", // nieuw, nalezen
-    'c.device.q': "می‌توانم این اپ را روی گوشی کاری نصب کنم؟", // nieuw, nalezen
-    'c.device.a': "اول از بخش IT بپرس.", // nieuw, nalezen
-    'c.vacancy': "زنگ بزن، یا یک پیام کوتاه بفرست", // nieuw, nalezen
-    'c.vacancy.b': "آگهی را خوب بخوان: ساعت‌ها، محل کار، و چیزهایی که باید داشته باشی، مثل گواهی‌نامهٔ رانندگی یا یک گواهی‌نامهٔ آموزشی. لازم نیست همه‌چیز را داشته باشی: اگر بیشترش را داری، باز هم امتحان کن. زنگ بزن یا یک پیام کوتاه بنویس: اسمت را بگو، کدام کار، و چرا آن را می‌خواهی. هرگز برای گرفتن کار پول نده، و هرگز برای یک آگهی کدهای ورودت را نفرست.", // nieuw, nalezen
-    'c.vacancy.p': "مدرک ندارم، ولی تجربهٔ زیادی دارم.", // nieuw, nalezen
-    'c.vacancy.s': "یک آگهی ۳ سال تجربه می‌خواهد. تو ۲ سال تجربه داری. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.vacancy.o1': "باز هم درخواست می‌دهی، و می‌گویی چه کارهایی بلدی.", // nieuw, nalezen
-    'c.vacancy.o2': "درخواست نمی‌دهی: تجربه‌ات خیلی کم است.", // nieuw, nalezen
-    'c.vacancy.o3': "می‌نویسی ۳ سال: کسی بررسی نمی‌کند.", // nieuw, nalezen
-    'c.vacancy.w': "آگهی اغلب بیشتر از آنچه کار واقعاً لازم دارد می‌خواهد. صادق بودن دربارهٔ کارهایی که بلدی بهتر از دروغ گفتن جواب می‌دهد.", // nieuw, nalezen
-    'c.result': "«نه» پایان کار نیست", // nieuw, nalezen
-    'c.result.b': "بعد از یک هفته خبری نشد؟ می‌توانی دوباره زنگ بزنی و مؤدبانه بپرسی. جواب رد گرفتی؟ بپرس دفعهٔ بعد چه کاری را بهتر می‌توانی انجام بدهی: خیلی از کارفرماها می‌گویند. بعد دوباره امتحان کن: بیشتر آدم‌ها اول چند بار جواب رد می‌گیرند. جواب مثبت گرفتی؟ بپرس کی شروع می‌کنی، و قبل از شروع قراردادت را بخواه. برای روز آزمایشی دعوت شدی؟ از قبل بپرس چقدر طول می‌کشد، و آیا حقوق دارد.", // nieuw, nalezen
-    'c.result.p': "دفعهٔ بعد چه کاری را بهتر می‌توانم انجام بدهم؟", // nieuw, nalezen
-    'c.result.s': "بعد از یک مصاحبهٔ کاری، با ایمیل جواب رد می‌گیری. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.result.o1': "مؤدبانه می‌پرسی چه کاری را بهتر می‌توانی انجام بدهی.", // nieuw, nalezen
-    'c.result.o2': "در جواب می‌نویسی که اشتباه کرده‌اند.", // nieuw, nalezen
-    'c.result.o3': "دیگر درخواست نمی‌دهی: فایده ندارد.", // nieuw, nalezen
-    'c.result.w': "بازخورد در مصاحبهٔ بعدی کمکت می‌کند. یک سؤال مؤدبانه هم تصویر خوبی از تو به جا می‌گذارد.", // nieuw, nalezen
-    'c.residence': "مدارکت: تاریخ را بررسی کن", // nieuw, nalezen
-    'c.residence.b': "اهل اتحادیهٔ اروپا هستی؟ پس با پاسپورت یا کارت شناسایی معتبر می‌توانی اینجا زندگی و کار کنی: به اجازه نیاز نداری. اهل خارج از اتحادیهٔ اروپا هستی؟ پس به اجازهٔ اقامت معتبر نیاز داری. روی کارت نوشته که اجازهٔ کار داری یا نه. تاریخ انقضای مدارکت را بررسی کن. برای اجازهٔ جدید به موقع در IND درخواست بده: ماه‌ها قبل از آن تاریخ، نه در هفتهٔ آخر. از هر نامه یک کپی نگه دار. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen
-    'c.residence.p': "اجازه‌ام به‌زودی منقضی می‌شود. باید چه کار کنم؟", // nieuw, nalezen
-    'c.residence.s': "اجازهٔ اقامتت دو ماه دیگر منقضی می‌شود. سر کار خیلی سرت شلوغ است. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.residence.o1': "همین حالا برای اجازهٔ جدید درخواست می‌دهی.", // nieuw, nalezen
-    'c.residence.o2': "تا هفتهٔ آخر صبر می‌کنی.", // nieuw, nalezen
-    'c.residence.o3': "هیچ کاری نمی‌کنی: اول کار.", // nieuw, nalezen
-    'c.residence.w': "بدون اجازهٔ معتبر، ممکن است اجازهٔ کار نداشته باشی. گرفتن اجازهٔ جدید وقت می‌برد، پس زود شروع می‌کنی.", // nieuw, nalezen
-    'c.newhome': "آدرس جدید؟ به همه خبر بده", // nieuw, nalezen
-    'c.newhome.b': "اسباب‌کشی می‌کنی؟ آدرس جدیدت را زود به شهرداری (gemeente) بگو: این کار را باید انجام بدهی. به کارفرما، بانک، بیمه و پزشکت هم خبر بده. اسمت را روی صندوق نامه بگذار، وگرنه نامه‌ها به دستت نمی‌رسند. روز اسباب‌کشی، عددهای کنتورها را یادداشت کن و از آن‌ها عکس بگیر. آن وقت فقط پول چیزی را می‌دهی که مصرف کرده‌ای.", // nieuw, nalezen
-    'c.newhome.p': "اسباب‌کشی کرده‌ام. این آدرس جدید من است.", // nieuw, nalezen
-    'c.newhome.s': "دو هفته پیش اسباب‌کشی کردی. نامه‌هایت هنوز به آدرس قدیمت می‌رود. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.newhome.o1': "همین حالا آدرس جدیدت را به شهرداری می‌دهی.", // nieuw, nalezen
-    'c.newhome.o2': "صبر می‌کنی: نامه‌ها خودشان پیدایت می‌کنند.", // nieuw, nalezen
-    'c.newhome.o3': "از همسایهٔ قدیمت می‌خواهی نامه‌هایت را نگه دارد.", // nieuw, nalezen
-    'c.newhome.w': "نامه‌های مهم، مثل جریمه یا نامه‌های مالیاتی، تاریخ دارند. وقتی به آدرس اشتباه بروند، ممکن است آن‌ها را از دست بدهی.", // nieuw, nalezen
-    'c.payparts': "هر خط را بخوان", // nieuw, nalezen
-    'c.payparts.b': "فیش حقوقی‌ات خط‌ها و کلمه‌های کوتاه زیادی دارد. بالای آن: اسمت، شمارهٔ پرسنلی‌ات و دوره. بعد حقوق ناخالص، ساعت‌ها و هر پول اضافه‌ای. بعد آنچه کم می‌شود: مالیات و حق بیمه. در خیلی از کارها، هم تو و هم کارفرما برای بازنشستگی‌ات پول می‌دهید: سهم خودت را در فیش حقوقی‌ات می‌بینی. پایین آن: حقوق خالص. یک خط را نمی‌فهمی؟ از کارفرما بخواه آن را توضیح بدهد. همهٔ فیش‌های حقوقی‌ات را نگه دار. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen
-    'c.payparts.p': "این خط در فیش حقوقی‌ام یعنی چه؟", // nieuw, nalezen
-    'c.payparts.s': "در فیش حقوقی‌ات، پولی به «pensioen» می‌رود. نمی‌دانی چرا. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.payparts.o1': "از کارفرما می‌خواهی آن را توضیح بدهد.", // nieuw, nalezen
-    'c.payparts.o2': "می‌خواهی قطعش کنند، تا الان پول بیشتری بگیری.", // nieuw, nalezen
-    'c.payparts.o3': "به آن توجه نمی‌کنی: آن‌قدر نمی‌مانی.", // nieuw, nalezen
-    'c.payparts.w': "پول بازنشستگی برای تو، برای بعدها، پس‌انداز می‌شود. وقتی کارت را عوض می‌کنی معمولاً آن را از دست نمی‌دهی. پرسیدن کمکت می‌کند بدانی چه چیزی مال توست.", // nieuw, nalezen
-    'c.latepay': "حقوق دیر یا نقدی؟ به موقع اقدام کن", // nieuw, nalezen
-    'c.latepay.b': "حقوقت باید در روزی که در قرارداد یا cao آمده برسد. دیر شده، یا پولی کم است؟ کتبی درباره‌اش بپرس، مثلاً با ایمیل. صورت‌حساب‌های بانکی و فهرست ساعت‌های خودت را نگه دار. نقدی پول می‌گیری، بدون فیش حقوقی؟ پس اغلب کار سیاه است (zwart): ساعت‌هایت ثبت نمی‌شود، و بعداً ثابت کردن کارت یا گرفتن کمک‌هزینه سخت است. فیش حقوقی بخواه. اطلاعات کلی. برای وضعیت خودت: از اتحادیهٔ کارگری، Juridisch Loket یا FairWork بپرس.", // nieuw, nalezen
-    'c.latepay.p': "حقوقم هنوز واریز نشده. کی می‌آید؟", // nieuw, nalezen
-    'c.latepay.s': "رئیست می‌گوید: «از این به بعد نقدی به تو پول می‌دهم. فیش حقوقی نه، این‌طوری راحت‌تر است». چه کار می‌کنی؟", // nieuw, nalezen
-    'c.latepay.o1': "می‌گویی نه، و فیش حقوقی می‌خواهی.", // nieuw, nalezen
-    'c.latepay.o2': "می‌گویی بله: نقدی یعنی پول بیشتر.", // nieuw, nalezen
-    'c.latepay.o3': "می‌گویی بله، ولی فقط برای این ماه.", // nieuw, nalezen
-    'c.latepay.w': "بدون فیش حقوقی، کارت روی کاغذ نیست. آن وقت ممکن است حق‌هایت را از دست بدهی، مثلاً حق کمک‌هزینه وقتی کارت را از دست می‌دهی.", // nieuw, nalezen
-    'c.holiday': "روزهای مرخصی‌ات: به موقع استفاده‌شان کن", // nieuw, nalezen
-    'c.holiday.b': "بررسی کن چند روز مرخصی هنوز داری: اغلب در فیش حقوقی یا در اپ آمده. تعطیلاتت را زود برنامه‌ریزی کن، و کتبی درخواست بده. روزهای مرخصی قانونی‌ات ۶ ماه بعد از پایان سال منقضی می‌شوند، مگر اینکه نتوانسته باشی از آن‌ها استفاده کنی. روزهای اضافه از cao یا قراردادت مدت بیشتری معتبر می‌مانند، معمولاً ۵ سال. کارت تمام می‌شود؟ پس برای روزهایی که استفاده نکرده‌ای پول می‌گیری. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen
-    'c.holiday.p': "می‌خواهم روزهای مرخصی‌ام را امسال استفاده کنم.", // nieuw, nalezen
-    'c.holiday.s': "ماه نوامبر است. هنوز ۱۲ روز مرخصی از امسال داری. سرپرستت چیزی درباره‌اش نمی‌گوید. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.holiday.o1': "می‌پرسی کی می‌توانی از آن‌ها استفاده کنی.", // nieuw, nalezen
-    'c.holiday.o2': "هیچ کاری نمی‌کنی: برای همیشه می‌مانند.", // nieuw, nalezen
-    'c.holiday.o3': "فراموششان می‌کنی: دیگر از دست رفته‌اند.", // nieuw, nalezen
-    'c.holiday.w': "روزهای مرخصی برای استراحت است، و می‌توانند منقضی شوند. وقتی به موقع بپرسی، هنوز می‌توانی برایشان برنامه بریزی.", // nieuw, nalezen
-    'c.special': "عروسی، خاکسپاری، بچه", // nieuw, nalezen
-    'c.special.b': "بچه‌ات به دنیا آمده، و تو شریک زندگی مادر هستی؟ پس ۱ هفته مرخصی تولد با حقوق می‌گیری، در ۴ هفتهٔ اول. اغلب cao تو برای عروسی‌ات، یا برای خاکسپاری در خانواده‌ات، مرخصی ویژه (bijzonder verlof) می‌دهد. تعطیلات رسمی، مثل کریسمس: هیچ قانونی نمی‌گوید که تعطیلی. قرارداد یا cao تو می‌گوید که تعطیلی، یا پول اضافه می‌گیری. روزهای مرخصی‌ات را به موقع درخواست کن. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen
-    'c.special.p': "همسرم بچه‌دار می‌شود. چطور مرخصی تولد بخواهم؟", // nieuw, nalezen
-    'c.special.s': "پدرت در خارج از کشور فوت کرده. می‌خواهی به مراسم خاکسپاری بروی. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.special.o1': "به کارفرما می‌گویی، و می‌پرسی چه مرخصی‌ای می‌توانی بگیری.", // nieuw, nalezen
-    'c.special.o2': "همین‌طوری می‌روی، و وقتی برگشتی به آن‌ها می‌گویی.", // nieuw, nalezen
-    'c.special.o3': "نمی‌روی: دیگر روز مرخصی نداری.", // nieuw, nalezen
-    'c.special.w': "کارفرما می‌فهمد که این خیلی مهم است. خیلی از cao‌ها مرخصی ویژه می‌دهند، و می‌توانی از روزهای مرخصی‌ات هم استفاده کنی.", // nieuw, nalezen
-    'c.unwell': "مریض سر کار، یا در تعطیلات", // nieuw, nalezen
-    'c.unwell.b': "سر کار احساس مریضی می‌کنی؟ قبل از اینکه به خانه بروی به سرپرستت بگو: این خبر دادن بیماری توست. همین‌طوری نرو. در تعطیلات مریض شدی؟ همان‌طور که در خانه خبر می‌دهی به کارفرما خبر بده، از خارج از کشور هم. آن وقت روزهای مریضی معمولاً جزو روزهای مرخصی حساب نمی‌شوند. ممکن است به یادداشتی از یک پزشک در آنجا نیاز داشته باشی. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen
-    'c.unwell.p': "در تعطیلات مریض شدم.", // nieuw, nalezen
-    'c.unwell.s': "در تعطیلات در کشور خودت هستی. آنفولانزا می‌گیری و ۵ روز در رختخواب می‌مانی. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.unwell.o1': "فوراً به کارفرما خبر می‌دهی.", // nieuw, nalezen
-    'c.unwell.o2': "هیچ کاری: به هر حال در تعطیلات هستی.", // nieuw, nalezen
-    'c.unwell.o3': "وقتی برگشتی به کارفرما می‌گویی.", // nieuw, nalezen
-    'c.unwell.w': "وقتی به موقع خبر بدهی، روزهای مریضی معمولاً جزو روزهای مرخصی حساب نمی‌شوند. آن وقت می‌توانی بعداً از آن روزها استفاده کنی.", // nieuw, nalezen
-    'c.injury': "آسیب در کار: یادداشتش کن", // nieuw, nalezen
-    'c.injury.b': "سر کار آسیب دیدی؟ بنویس چه اتفاقی افتاد، کی و کجا، و چه کسی آن را دید. عکس بگیر، و همهٔ کاغذهای پزشک را نگه دار. یک کپی از گزارش حادثه بخواه. آسیب دیدی چون کار ایمن نبود؟ پس کارفرما معمولاً باید خسارتت را بپردازد. لازم نیست ثابت کنی که تقصیر آن‌ها بوده: کارفرما باید نشان بدهد که برای ایمنی‌ات به اندازهٔ کافی کار کرده. قبل از امضای هر چیزی مشورت بگیر. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen
-    'c.injury.p': "می‌توانم یک کپی از گزارش داشته باشم؟", // nieuw, nalezen
-    'c.injury.s': "دستت با دستگاهی که محافظ ندارد آسیب می‌بیند. بعداً رئیست از تو می‌خواهد کاغذی را امضا کنی: «تقصیر خودم بود». چه کار می‌کنی؟", // nieuw, nalezen
-    'c.injury.o1': "امضایش نمی‌کنی. اول مشورت می‌گیری.", // nieuw, nalezen
-    'c.injury.o2': "امضایش می‌کنی، تا مشکلی پیش نیاید.", // nieuw, nalezen
-    'c.injury.o3': "امضایش می‌کنی، ولی یک عکس از آن نگه می‌داری.", // nieuw, nalezen
-    'c.injury.w': "چیزی که امضا می‌کنی ممکن است بعداً حساب شود، مثلاً وقتی غرامت می‌خواهی. اول از اتحادیهٔ کارگری یا Juridisch Loket مشورت بگیر.", // nieuw, nalezen
-    'c.debt': "بدهی‌ای که هیچ‌وقت تمام نمی‌شود", // nieuw, nalezen
-    'c.debt.b': "در هلند، شرکت کاریابی اجازه ندارد برای پیدا کردن کار از تو پول بخواهد. مجبور شدی برای سفر یا برای کار پول قرض کنی، و بدهی مدام بیشتر می‌شود؟ باید بمانی تا بدهی صاف شود؟ این نشانهٔ بهره‌کشی است. بدهی هیچ‌وقت به این معنی نیست که باید به کار ادامه بدهی: می‌توانی دست بکشی. هر کاغذ و پیامی دربارهٔ بدهی را نگه دار. اطلاعات کلی. برای وضعیت خودت: از اتحادیهٔ کارگری، Juridisch Loket یا FairWork بپرس.", // nieuw, nalezen
-    'c.debt.p': "هنوز چقدر باید بپردازم؟ می‌خواهم آن را کتبی داشته باشم.", // nieuw, nalezen
-    'c.debt.s': "شرکت کاریابی بلیت اتوبوست را پرداخت. حالا هر هفته از حقوقت پول کم می‌کند، و بدهی کمتر نمی‌شود. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.debt.o1': "یک فهرست کتبی می‌خواهی، و کمک می‌گیری.", // nieuw, nalezen
-    'c.debt.o2': "ساعت‌های بیشتری کار می‌کنی تا زودتر صافش کنی.", // nieuw, nalezen
-    'c.debt.o3': "چیزی نمی‌گویی: شرکت کاریابی به تو کمک کرد.", // nieuw, nalezen
-    'c.debt.w': "بدهی‌ای که کمتر نمی‌شود تو را گیر می‌اندازد. با آن فهرست، اتحادیهٔ کارگری یا FairWork می‌تواند بررسی کند که منصفانه است یا نه.", // nieuw, nalezen
-    'c.inspection': "بازرسی برای توست", // nieuw, nalezen
-    'c.inspection.b': "Nederlandse Arbeidsinspectie (بازرسی کار) بررسی می‌کند که کار ایمن و منصفانه است یا نه: حقوق، ساعت‌ها و بهره‌کشی. بازرس‌ها ممکن است به محل کارت بیایند و با کارگران حرف بزنند. می‌توانی حقیقت را به آن‌ها بگویی: آن‌ها به رئیست نمی‌گویند چه کسی چیزی را گزارش داده. به کمک به زبان خودت نیاز داری؟ مترجم بخواه. FairWork به قربانیان بهره‌کشی رایگان کمک می‌کند، حتی به کسانی که مدارک معتبر ندارند. اطلاعات کلی. برای وضعیت خودت: از اتحادیهٔ کارگری، Juridisch Loket یا FairWork بپرس.", // nieuw, nalezen
-    'c.inspection.p': "می‌خواهم چیزی بگویم، ولی بدون اینکه رئیسم آنجا باشد.", // nieuw, nalezen
-    'c.inspection.s': "یک بازرس دربارهٔ ساعت‌های کارت می‌پرسد. رئیست به تو گفته بگویی ۸ ساعت. تو ۱۲ ساعت کار می‌کنی. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.inspection.o1': "حقیقت را به بازرس می‌گویی.", // nieuw, nalezen
-    'c.inspection.o2': "همان‌طور که رئیست گفت، می‌گویی ۸ ساعت.", // nieuw, nalezen
-    'c.inspection.o3': "چیزی نمی‌گویی، و می‌روی.", // nieuw, nalezen
-    'c.inspection.w': "بازرس فقط وقتی می‌تواند کمک کند که حقیقت را بداند. چیزی که می‌گویی به تو کمک می‌کند، و به همکارانت هم.", // nieuw, nalezen
-    'c.carpool': "در ماشین: کمربند ببند، و دربارهٔ هزینه‌ها توافق کن", // nieuw, nalezen
-    'c.carpool.b': "همه در ماشین کمربند ایمنی می‌بندند، صندلی عقب هم. راننده باید گواهی‌نامهٔ رانندگی معتبر داشته باشد، و نباید قبل از رانندگی الکل بنوشد. آدم‌های خیلی زیادی در ون هستند، یا راننده خطرناک رانندگی می‌کند؟ بگو، و سوار نشو. با همکارانت هم‌سفری می‌کنی؟ اول توافق کنید که هزینهٔ سوخت را چطور تقسیم می‌کنید. در ون کاری شرکت کاریابی هستی؟ بپرس چقدر برایت هزینه دارد، و آن را کتبی بگیر.", // nieuw, nalezen
-    'c.carpool.p': "آدم‌های خیلی زیادی در ون هستند. من سوار نمی‌شوم.", // nieuw, nalezen
-    'c.carpool.s': "ون کاری ۹ صندلی دارد. امروز صبح ۱۱ نفر می‌خواهند سوار شوند. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.carpool.o1': "سوار نمی‌شوی، و به سرپرستت زنگ می‌زنی.", // nieuw, nalezen
-    'c.carpool.o2': "عقب، روی کف ماشین می‌نشینی.", // nieuw, nalezen
-    'c.carpool.o3': "خودت را جا می‌دهی: فقط ۲۰ دقیقه است.", // nieuw, nalezen
-    'c.carpool.w': "بدون صندلی و کمربند، یک تصادف کوچک می‌تواند خیلی جدی باشد. کارفرما یا شرکت کاریابی می‌تواند راه دیگری پیدا کند.", // nieuw, nalezen
-    'c.train': "قطار دیر کرده؟ فوراً پیام بفرست", // nieuw, nalezen
-    'c.train.b': "قبل از رفتن به برنامه‌ریز سفر نگاه کن: قطارها و اتوبوس‌ها ممکن است دیر کنند یا لغو شوند. قطارت دیر کرده؟ فوراً به سرپرستت پیام بفرست، با ساعتی که می‌رسی. روزهایی که طوفان است یا روی خط کار تعمیراتی هست، با قطار زودتری برو. بعد از تأخیر طولانی، اغلب می‌توانی پولت را پس بگیری: در وب‌سایت شرکت قطار نگاه کن.", // nieuw, nalezen
-    'c.train.p': "قطارم تأخیر دارد. ساعت نه آنجا هستم.", // nieuw, nalezen
-    'c.train.s': "قطارت لغو شده. قطار بعدی ۳۰ دقیقهٔ دیگر حرکت می‌کند. شیفتت ۴۰ دقیقهٔ دیگر شروع می‌شود. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.train.o1': "همین حالا پیام می‌فرستی که دیر می‌رسی.", // nieuw, nalezen
-    'c.train.o2': "صبر می‌کنی، و وقتی رسیدی توضیح می‌دهی.", // nieuw, nalezen
-    'c.train.o3': "به خانه می‌روی: تقصیر تو نیست.", // nieuw, nalezen
-    'c.train.w': "سرپرستت وقتی زود بداند، بهتر می‌تواند برنامه‌ریزی کند. تأخیر تقصیر تو نیست، ولی خبر دادنش وظیفهٔ توست.", // nieuw, nalezen
-    'c.checklist': "اول خودت بررسی کن", // nieuw, nalezen
-    'c.checklist.b': "قبل از اینکه بگویی «klaar»، کار خودت را بررسی کن. اگر چک‌لیست هست، از آن استفاده کن، و هر مرحله را تیک بزن. طوری به کارت نگاه کن که انگار مشتری هستی. چیزی خوب نیست؟ همین حالا دوباره انجامش بده: این از بعداً سریع‌تر است. مطمئن نیستی؟ از یک همکار بخواه نگاه کند. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.checklist.p': "تمام شد. یک نگاهی به آن می‌اندازی؟", // nieuw, nalezen
-    'c.checklist.s': "کارت تمام شده. در چک‌لیست، یک مرحله تیک نخورده. فکر می‌کنی آن را انجام داده‌ای. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.checklist.o1': "آن مرحله را دوباره بررسی می‌کنی، بعد تیکش می‌زنی.", // nieuw, nalezen
-    'c.checklist.o2': "تیکش می‌زنی: احتمالاً انجامش داده‌ای.", // nieuw, nalezen
-    'c.checklist.o3': "خالی‌اش می‌گذاری: کسی فهرست را نمی‌خواند.", // nieuw, nalezen
-    'c.checklist.w': "چک‌لیست فقط وقتی کمک می‌کند که درست باشد. یک نگاه دیگر یک دقیقه وقت می‌برد. یک اشتباه ممکن است ساعت‌ها وقت ببرد.", // nieuw, nalezen
-    'c.leavesite': "طوری ترکش کن که می‌خواهی پیدایش کنی", // nieuw, nalezen
-    'c.leavesite.b': "در پایان کار، جایت را تمیز و ایمن ترک کن. ابزار و مواد را سر جایشان بگذار، و کف زمین را جارو کن. دستگاه‌ها و چراغ‌هایی را که استفاده کردی خاموش کن. نفر آخر هستی؟ پنجره‌ها و درها را بررسی کن، و همان‌طور که شرکتت می‌گوید قفل کن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.leavesite.p': "من نفر آخرم. باید در را قفل کنم؟", // nieuw, nalezen
-    'c.leavesite.s': "تو آخرین نفر سر کار هستی. نمی‌دانی آژیر خطر را چطور روشن کنی. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.leavesite.o1': "به سرپرستت زنگ می‌زنی و می‌پرسی.", // nieuw, nalezen
-    'c.leavesite.o2': "بدون روشن کردن آژیر می‌روی: دیر است.", // nieuw, nalezen
-    'c.leavesite.o3': "دکمه‌ها را امتحان می‌کنی تا بوق بزند.", // nieuw, nalezen
-    'c.leavesite.w': "ساختمانی که آژیرش روشن نیست ایمن نیست. سرپرستت ترجیح می‌دهد یک تلفن بگیرد تا اینکه فردا با یک مشکل روبه‌رو شود.", // nieuw, nalezen
-    'c.stagedays': "دانش‌آموز، و همکار", // nieuw, nalezen
-    'c.stagedays.b': "در محل کارآموزی برای یاد گرفتن آنجایی، ولی مثل یک همکار کار می‌کنی: سر وقت، طبق قانون‌های محل کار، و وقتی مریضی زنگ می‌زنی. می‌توانی خیلی سؤال بپرسی: برای همین آنجایی. کارت باید به یادگیری‌ات کمک کند، نه اینکه فقط تمام روز تمیز کنی یا بار ببری. این‌طور نیست؟ با مسئول کارآموزی‌ات در مدرسه حرف بزن. کمک‌هزینهٔ کارآموزی همیشه داده نمی‌شود: قبل از شروع درباره‌اش بپرس. قانون‌ها در هر مدرسه فرق دارد: از مسئول کارآموزی‌ات بپرس.", // nieuw, nalezen
-    'c.stagedays.p': "می‌خواهم این را هم یاد بگیرم. می‌توانم نگاه کنم؟", // nieuw, nalezen
-    'c.stagedays.s': "در محل کارآموزی‌ات سه هفته است که هر روز فقط غذاخوری را تمیز می‌کنی. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.stagedays.o1': "با مسئول کارآموزی‌ات درباره‌اش حرف می‌زنی.", // nieuw, nalezen
-    'c.stagedays.o2': "انجامش می‌دهی و چیزی نمی‌گویی: تو دانش‌آموزی.", // nieuw, nalezen
-    'c.stagedays.o3': "خانه می‌مانی تا کار دیگری به تو بدهند.", // nieuw, nalezen
-    'c.stagedays.w': "کارآموزی برای یاد گرفتن حرفه‌ات است. مسئول کارآموزی‌ات می‌تواند با شرکت دربارهٔ کارهای بهتر حرف بزند.", // nieuw, nalezen
-    'c.stageend': "خوب تمامش کن، و معرف بخواه", // nieuw, nalezen
-    'c.stageend.b': "در گفت‌وگوی پایانی می‌شنوی چه چیزی خوب پیش رفت و چه چیزی می‌تواند بهتر شود. مثال بخواه، و برای کار بعدی‌ات یادداشتشان کن. خوب پیش رفت؟ بپرس آیا می‌توانی اسمشان را به‌عنوان معرف بدهی. روز آخرت از همکارانت تشکر کن: اینجا خیلی‌ها چیز کوچکی برای خوردن می‌آورند، مثل کیک یا شیرینی. قانون‌ها در هر مدرسه فرق دارد: از مسئول کارآموزی‌ات بپرس.", // nieuw, nalezen
-    'c.stageend.p': "می‌توانم اسم شما را به‌عنوان معرف بدهم؟", // nieuw, nalezen
-    'c.stageend.s': "روز آخر کارآموزی‌ات است. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.stageend.o1': "از همکارانت تشکر می‌کنی، و خداحافظی می‌کنی.", // nieuw, nalezen
-    'c.stageend.o2': "بی‌صدا می‌روی، بدون اینکه چیزی بگویی.", // nieuw, nalezen
-    'c.stageend.o3': "از شرکت هدیه می‌خواهی.", // nieuw, nalezen
-    'c.stageend.w': "یک خداحافظی خوب تصویر خوبی به جا می‌گذارد. شاید بخواهی بعداً آنجا کار کنی، یا به آن‌ها به‌عنوان معرف نیاز داشته باشی.", // nieuw, nalezen
-    'c.neighbours': "به همسایه‌هایت سلام کن", // nieuw, nalezen
-    'c.neighbours.b': "در یک خیابان تازه‌واردی؟ به همسایه‌هایت سلام کن و اسمت را بگو. این کار حل کردن مشکلات را بعداً آسان‌تر می‌کند. شب کار می‌کنی، یا با آدم‌های زیادی زندگی می‌کنی؟ آخر شب و در شب سروصدا نکن. زباله‌ات را در روز درستش بیرون بگذار. در کتابخانه و خانهٔ محله اغلب می‌توانی هلندی تمرین کنی، گاهی رایگان.", // nieuw, nalezen
-    'c.neighbours.p': "سلام، من علی هستم. خانهٔ بغلی زندگی می‌کنم.", // nieuw, nalezen
-    'c.neighbours.s': "با پنج همکار زندگی می‌کنی. یک همسایه می‌گوید شب‌ها اغلب سروصدا است. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.neighbours.o1': "عذرخواهی می‌کنی، و قرار می‌گذارید که ساکت باشید.", // nieuw, nalezen
-    'c.neighbours.o2': "می‌گویی همه‌تان کار می‌کنید و باید استراحت کنید.", // nieuw, nalezen
-    'c.neighbours.o3': "چیزی نمی‌گویی، و در را می‌بندی.", // nieuw, nalezen
-    'c.neighbours.w': "یک گفت‌وگوی خوب در همان اول جلوی مشکلات بزرگ‌تر را می‌گیرد. همسایه‌هایی که تو را می‌شناسند اغلب مهربان‌تر و کمک‌کننده‌ترند.", // nieuw, nalezen
-    'c.join': "شرکت کن: هلندی را سریع‌تر یاد می‌گیری", // nieuw, nalezen
-    'c.join.b': "بیرون از کار، هلندی را از همه سریع‌تر با کار کردن با آدم‌ها یاد می‌گیری: ورزش، یک باشگاه، یا کار داوطلبانه. بچه‌ات مدرسه می‌رود؟ به جلسهٔ اولیا برو، حتی اگر هلندی‌ات کامل نیست: معلم می‌خواهد تو را ببیند. می‌توانی بخواهی آهسته هلندی صحبت کنند، یا از اپ ترجمه استفاده کنی. کار داوطلبانه در رزومه‌ات هم خوب به نظر می‌رسد.", // nieuw, nalezen
-    'c.join.p': "می‌شود کمی آهسته‌تر صحبت کنید؟", // nieuw, nalezen
-    'c.join.s': "به جلسهٔ اولیا دعوت شده‌ای. هلندی‌ات هنوز خوب نیست. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.join.o1': "می‌روی، و از هلندی ساده یا یک اپ استفاده می‌کنی.", // nieuw, nalezen
-    'c.join.o2': "نمی‌روی: معلم حرفت را نمی‌فهمد.", // nieuw, nalezen
-    'c.join.o3': "یک پیام کوتاه می‌فرستی که سرت شلوغ است.", // nieuw, nalezen
-    'c.join.w': "معلم می‌خواهد دربارهٔ بچه‌ات حرف بزند، نه دربارهٔ هلندی‌ات. آمدنت نشان می‌دهد که برایت مهم است.", // nieuw, nalezen
-    'c.workphotos': "اول بپرس، بعد بگذار", // nieuw, nalezen
-    'c.workphotos.b': "یک عکس در محل کار می‌تواند بیشتر از آنچه فکر می‌کنی نشان بدهد: یک مشتری، یک مراجع، یک صفحه‌نمایش یا کاغذی با اسم‌ها. عکس‌های کار را بدون اجازهٔ کارفرما در اینترنت نگذار، و هرگز عکس آدم‌ها را بدون رضایتشان نگذار. اطلاعات مشتری در محل کار می‌ماند: آن را به گوشی یا ایمیل شخصی‌ات نفرست. اشتباهی چیزی فرستادی؟ فوراً به سرپرستت بگو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.workphotos.p': "اول اجازه می‌گیرم.", // nieuw, nalezen
-    'c.workphotos.s': "یک همکار عکس خنده‌داری از یک مشتری در اپ تیم می‌گذارد. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.workphotos.o1': "می‌گویی که این درست نیست، و آن را به اشتراک نمی‌گذاری.", // nieuw, nalezen
-    'c.workphotos.o2': "به اشتراکش می‌گذاری: فقط در اپ تیم است.", // nieuw, nalezen
-    'c.workphotos.o3': "لایکش می‌کنی، ولی به اشتراکش نمی‌گذاری.", // nieuw, nalezen
-    'c.workphotos.w': "مشتری به این عکس بله نگفته. عکس‌ها در یک اپ می‌توانند خیلی سریع به هر جایی بروند. گفتنش با مهربانی، از مشتری و از همکارت محافظت می‌کند.", // nieuw, nalezen
-    'c.device': "به‌روزرسانی آره، فلش‌های عجیب نه", // nieuw, nalezen
-    'c.device.b': "به‌روزرسانی‌ها را روی گوشی و کامپیوترت نصب کن: آن‌ها حفره‌هایی را می‌بندند که هکرها استفاده می‌کنند. فلش USB پیدا کردی؟ آن را به کامپیوترت وصل نکن: آن را به بخش IT بده. روی گوشی یا کامپیوتر کاری، فقط اپ‌هایی را نصب کن که محل کارت اجازه می‌دهد. روی وای‌فای عمومی، وارد حساب بانکی یا حساب کاری‌ات نشو. گوشی‌ات را با یک رمز قفل کن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.device.p': "یک فلش USB پیدا کردم. با آن چه کار کنم؟", // nieuw, nalezen
-    'c.device.s': "در پارکینگ یک فلش USB پیدا می‌کنی. رویش نوشته «Salaris». چه کار می‌کنی؟", // nieuw, nalezen
-    'c.device.o1': "آن را به بخش IT می‌دهی.", // nieuw, nalezen
-    'c.device.o2': "آن را به کامپیوترت وصل می‌کنی تا ببینی مال کیست.", // nieuw, nalezen
-    'c.device.o3': "آن را به خانه می‌بری و آنجا نگاهش می‌کنی.", // nieuw, nalezen
-    'c.device.w': "روی یک فلش ممکن است ویروس باشد، حتی وقتی جالب به نظر می‌رسد. بخش IT می‌تواند آن را با امنیت بررسی کند.", // nieuw, nalezen
+    'l.vacancy': "خواندن آگهی استخدام", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.advertentie': "آگهی (متنی که یک کار یا یک چیز را پیشنهاد می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.eis': "شرط لازم (چیزی که باید داشته باشی یا بلد باشی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.parttime': "پاره‌وقت (ساعت‌های کمتر در هفته)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.fulltime': "تمام‌وقت (یک هفتهٔ کاری کامل)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sollicitatiebrief': "نامهٔ درخواست کار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.contactpersoon': "فرد رابط (کسی که می‌توانی به او زنگ بزنی یا برایش بنویسی)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vacancy.1': "آگهی شما را در اینترنت دیدم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vacancy.2': "این کار پاره‌وقت است یا تمام‌وقت؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vacancy.3': "شرایط لازم چیست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.q': "برای چه زنگ می‌زنید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.a': "دربارهٔ آگهی استخدامتان زنگ می‌زنم. هنوز جای خالی هست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.result': "بعد از مصاحبه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aangenomen': "استخدام‌شده (کار را گرفتی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afwijzing': "جواب رد (کار را نگرفتی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanbod': "پیشنهاد (کار را به تو پیشنهاد می‌کنند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.proefdag': "روز آزمایشی (یک روز کار، برای امتحان کردن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nabellen': "دوباره زنگ زدن (برای پرسیدن اینکه کار به کجا رسیده)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teleurgesteld': "ناامید، دلسرد", // nieuw, nalezen // nagelezen AI 28 nov
+    's.result.1': "استخدام شدید!", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    's.result.2': "جواب رد گرفتم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.result.3': "روز آزمایشی حقوق دارد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.q': "متأسفانه کس دیگری را انتخاب می‌کنیم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.a': "حیف شد. می‌توانم بپرسم چرا؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.residence': "مدارک اقامتت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verblijfsvergunning': "اجازهٔ اقامت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pasfoto': "عکس پرسنلی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vingerafdruk': "اثر انگشت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geldig': "معتبر (هنوز قابل استفاده است)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verloopdatum': "تاریخ انقضا (آخرین روزی که معتبر است)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.volgnummer': "شمارهٔ نوبت (برگه‌ای با نوبت تو)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.residence.1': "اجازهٔ اقامتم یک سال دیگر معتبر است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.residence.2': "تاریخ انقضای پاسپورتت کی است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.residence.3': "در شهرداری وقت ملاقات دارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.q': "اجازهٔ اقامتتان به‌زودی منقضی می‌شود.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.residence.a': "پس فوراً برای یک اجازهٔ جدید درخواست می‌دهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.newhome': "اسباب‌کشی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brievenbus': "صندوق نامه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meterstand': "عدد کنتور (عددهای روی کنتور گاز، برق یا آب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.naambordje': "تابلوی اسم (اسم تو کنار در)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.woning': "خانه (یک خانه یا یک آپارتمان)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doorsturen': "فرستادن به جای دیگر (ارسال به آدرس جدید)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verhuisdag': "روز اسباب‌کشی", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newhome.1': "هفتهٔ بعد اسباب‌کشی می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newhome.2': "اسمم روی صندوق نامه نیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newhome.3': "آدرس جدیدم را اعلام می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.q': "الان کجا زندگی می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.a': "در یک خانهٔ جدید. این آدرس جدید من است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.payparts': "چه چیزهایی در فیش حقوقی‌ات هست", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pensioen': "حقوق بازنشستگی (پول برای وقتی که پیر می‌شوی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.periode': "دوره (هفته‌ها یا ماهِ این حقوق)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedrag': "مبلغ (پول)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.totaal': "جمع کل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afkorting': "مخفف (شکل کوتاه یک کلمه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.personeelsnummer': "شمارهٔ پرسنلی (شمارهٔ تو در شرکت)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.payparts.1': "این مخفف یعنی چه؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.payparts.2': "این مبلغ به حساب بازنشستگی‌ام می‌رود.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.payparts.3': "این حقوق برای کدام دوره است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.q': "شمارهٔ پرسنلی‌ات چیست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.a': "بالای صفحه است، کنار اسمم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.latepay': "حقوق دیر، ناقص یا نقدی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zwartwerken': "کار سیاه کردن (بدون قرارداد، بدون مالیات، بدون حق روی کاغذ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorschot': "پیش‌پرداخت (بخشی از حقوقت قبل از روز پرداخت)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nabetaling': "پرداخت معوقه (پولی که بعداً می‌گیری تا حقوقت درست شود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tekort': "کسری (پولی که کم است)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.betaaldag': "روز پرداخت حقوق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bankafschrift': "صورت‌حساب بانکی (فهرست پولی که وارد و خارج شده)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.latepay.1': "حقوقم دیر شده.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.latepay.2': "من کار سیاه نمی‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.latepay.3': "می‌توانم پیش‌پرداخت بگیرم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.q': "پولی را که کم است ماه بعد می‌گیری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.a': "می‌توانم این را کتبی داشته باشم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.holiday': "برنامه‌ریزی تعطیلات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.saldo': "مانده (چند روز هنوز داری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedkeuren': "تأیید کردن (به آن بله گفتن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verlopen': "منقضی شدن (دیگر معتبر نیست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zomervakantie': "تعطیلات تابستان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.drukte': "شلوغی (کار زیاد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanvraag': "درخواست (چیزی را می‌خواهی، اغلب با یک فرم)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.holiday.1': "چند روز مرخصی هنوز دارم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.holiday.2': "مرخصی‌ام تأیید شده.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.holiday.3': "دارم فرم را پر می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.q': "تابستان سرمان شلوغ است. می‌توانی در ماه مه به تعطیلات بروی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.a': "ترجیح می‌دهم ژوئیه بروم. آن موقع خانواده‌ام خانه هستند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.special': "مرخصی‌های ویژه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bruiloft': "عروسی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.begrafenis': "مراسم خاکسپاری", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geboorteverlof': "مرخصی تولد (برای شریک زندگی، وقتی بچه به دنیا می‌آید)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijzonderverlof': "مرخصی ویژه (مثلاً برای عروسی یا خاکسپاری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kerstdagen': "کریسمس (دو روز کریسمس)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vrijvragen': "یک روز مرخصی خواستن", // nieuw, nalezen // nagelezen AI 28 nov
+    's.special.1': "برادرم دارد ازدواج می‌کند. می‌توانم یک روز مرخصی بخواهم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.special.2': "عمویم فوت کرده. مراسم خاکسپاری جمعه است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.special.3': "باید کریسمس کار کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.q': "تولد بچه‌ات مبارک! مرخصی تولد می‌گیری؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.a': "بله، هفتهٔ اول خانه هستم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.unwell': "حالت خوب نیست", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hoofdpijn': "سردرد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.griep': "آنفولانزا", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verkouden': "سرماخوردگی داشتن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nietlekker': "ناخوش (کمی احساس مریضی می‌کنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.naarhuis': "به خانه رفتن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitzieken': "در خانه ماندن تا خوب شوی", // nieuw, nalezen // nagelezen AI 28 nov
+    's.unwell.1': "حالم خوب نیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.unwell.2': "سرم درد می‌کند و سرما خورده‌ام.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.unwell.3': "دارم می‌روم خانه. مریضم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.q': "رنگت پریده. حالت خوب است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.a': "نه، حالم خوب نیست. می‌توانم بروم خانه؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.injury': "آسیب دیدن در کار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedrijfsongeval': "حادثهٔ کاری", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verzekering': "بیمه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schadevergoeding': "غرامت (پول برای خسارت)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oorzaak': "علت (چرا اتفاق افتاد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.letsel': "جراحت (آسیب به بدنت)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verklaring': "اظهارنامه (آنچه دربارهٔ اتفاق می‌نویسی یا می‌گویی)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.injury.1': "سر کار دچار حادثه شده‌ام.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.injury.2': "علتش چه بود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.injury.3': "همکارم آن را دید.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.q': "اظهارنامه‌ات را اینجا می‌نویسی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.a': "بله. می‌توانم یک کپی داشته باشم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.debt': "بدهی به رئیس یا شرکت کاریابی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lening': "وام", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lenen': "قرض گرفتن، قرض دادن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vastzitten': "گیر افتادن (نمی‌توانی بروی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tussenpersoon': "واسطه (کسی که در ازای پول کار جور می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rente': "بهره (پول اضافه‌ای که روی وام می‌دهی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.belofte': "قول", // nieuw, nalezen // nagelezen AI 28 nov
+    's.debt.1': "مجبور شدم برای این کار پول بدهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.debt.2': "بدهی‌ام هر ماه بیشتر می‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.debt.3': "پاسپورتم دست واسطه است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.q': "فقط وقتی بدهی‌ات صاف شد می‌توانی بروی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.a': "این مجاز نیست. دارم کمک می‌خواهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.inspection': "بازرسی و کمک‌های دیگر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inspectie': "بازرسی (کسانی که بررسی می‌کنند کار منصفانه و ایمن است یا نه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.controle': "بازبینی، کنترل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.slachtoffer': "قربانی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mensenhandel': "قاچاق انسان (از آدم‌ها برای کار یا سکس سوءاستفاده می‌شود و فروخته می‌شوند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vertrouwen': "اعتماد کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tolk': "مترجم شفاهی", // nieuw, nalezen // nagelezen AI 28 nov
+    's.inspection.1': "فردا بازرسی می‌آید.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.inspection.2': "می‌توانم مترجم داشته باشم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.inspection.3': "به این مرد اعتماد ندارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.q': "می‌خواهی با بازرسی حرف بزنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.a': "بله، ولی رئیسم نباید آن را بشنود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.carpool': "هم‌سفری با ماشین و ون کار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.carpoolen': "هم‌سفری کردن (با هم با یک ماشین سر کار رفتن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meerijden': "با کسی رفتن (در ماشین کس دیگر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gordel': "کمربند ایمنی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.instappen': "سوار شدن (ماشین، اتوبوس یا قطار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitstappen': "پیاده شدن (از ماشین، اتوبوس یا قطار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijrijder': "سرنشین جلو (کنار راننده)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carpool.1': "می‌توانم با تو بیایم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carpool.2': "کمربندت را ببند.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.carpool.3': "من در ایستگاه پیاده می‌شوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.q': "فردا کی رانندگی می‌کند؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.a': "من رانندگی می‌کنم. ساعت شش دنبالت می‌آیم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.train': "قطار، تأخیر و دیر رسیدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.station': "ایستگاه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.perron': "سکو (جایی که سوار قطار می‌شوی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.overstappen': "عوض کردن (به قطار یا اتوبوس دیگر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitvallen': "لغو شدن (قطار نمی‌رود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kaartje': "بلیت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.reisplanner': "برنامه‌ریز سفر (اپی که قطارها و اتوبوس‌ها را نشان می‌دهد)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.train.1': "قطارم لغو شده.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.train.2': "باید یک بار قطار عوض کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.train.3': "قطار از کدام سکو حرکت می‌کند؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.q': "چرا این‌قدر دیر کردی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.a': "قطارم لغو شد. برایت پیام فرستادم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.checklist': "قبل از تمام کردن، بررسی کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.checklist': "چک‌لیست (فهرست چیزهایی که باید بررسی شوند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afvinken': "تیک زدن (کنار یک کار تیک گذاشتن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.overdoen': "دوباره انجام دادن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.compleet': "کامل (چیزی کم نیست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vergeten': "فراموش کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.resultaat': "نتیجه", // nieuw, nalezen // nagelezen AI 28 nov
+    's.checklist.1': "همه‌چیز را در چک‌لیست تیک می‌زنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.checklist.2': "سفارش کامل است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.checklist.3': "باید این را دوباره انجام بدهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.q': "چیزی یادت نرفته؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.a': "یک بار دیگر به چک‌لیست نگاه می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.leavesite': "ترک محل کار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.terugzetten': "سر جایش گذاشتن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vegen': "جارو کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vloer': "کف زمین", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitdoen': "خاموش کردن (چراغ، دستگاه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alslaatste': "نفر آخر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.achterlaten': "به جا گذاشتن (جایت را چطور ترک می‌کنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.leavesite.1': "جایم را مرتب ترک می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.leavesite.2': "کی آخر از همه می‌رود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.leavesite.3': "چراغ را خاموش کن و در را ببند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.q': "امروز تو آخرین نفری هستی که می‌روی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.a': "بله. همه‌چیز را خاموش می‌کنم و در را قفل می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.stagedays': "هر روز در محل کارآموزی‌ات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stageplek': "محل کارآموزی (شرکتی که کارآموزی‌ات را آنجا می‌گذرانی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afwezig': "غایب (آنجا نیست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanwezig': "حاضر (آنجا هست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stagevergoeding': "کمک‌هزینهٔ کارآموزی (پولی که ممکن است در کارآموزی بگیری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.begeleiding': "راهنمایی (کمک از مربی‌ات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.leerling': "دانش‌آموز (در مدرسه)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.stagedays.1': "فردا غایبم. مریضم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.stagedays.2': "کمک‌هزینهٔ کارآموزی می‌گیرم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.stagedays.3': "در محل کارآموزی‌ام چهار روز کار می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.q': "چرا دیروز غایب بودی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.a': "مریض بودم. به مدرسه و شرکت زنگ زدم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.stageend': "پایان کارآموزی‌ات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.eindgesprek': "گفت‌وگوی پایانی (در پایان کارآموزی‌ات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geslaagd': "قبول (به اندازهٔ کافی خوب انجامش دادی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gezakt': "رد شده (این بار به اندازهٔ کافی خوب نبود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.herkansing': "فرصت جبران (یک شانس جدید)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedanken': "تشکر کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.trakteren': "شیرینی دادن (برای همه چیز خوشمزه‌ای آوردن)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.stageend.1': "فردا گفت‌وگوی پایانی دارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.stageend.2': "کارآموزی‌ام را قبول شدم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.stageend.3': "می‌خواهم از همه تشکر کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.q': "روز آخرت است! حالا می‌خواهی چه کار کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.a': "اول مدرکم را می‌گیرم. بعد دنبال کار می‌گردم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.neighbours': "محله‌ات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.buurt': "محله", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.buurthuis': "خانهٔ محله (جایی برای فعالیت‌ها در محله‌ات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.straat': "خیابان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kennismaken': "آشنا شدن (اولین بار کسی را دیدن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.overlast': "مزاحمت (سروصدا یا دردسر برای دیگران)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.buurvrouw': "همسایه (یک زن)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.neighbours.1': "مدت کوتاهی است که در این خیابان زندگی می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.neighbours.2': "در کتابخانه هلندی تمرین می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.neighbours.3': "ببخشید بابت مزاحمت.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.q': "سلام، من همسایهٔ جدیدت هستم.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.neighbours.a': "از آشنایی‌تان خوشوقتم! من علی هستم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.join': "مدرسه، ورزش و کار داوطلبانه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vrijwilliger': "داوطلب (کسی که بدون دستمزد کمک می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vrijwilligerswerk': "کار داوطلبانه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.sportclub': "باشگاه ورزشی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ouderavond': "جلسهٔ اولیا (در مدرسه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.leraar': "معلم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.basisschool': "دبستان", // nieuw, nalezen // nagelezen AI 28 nov
+    's.join.1': "پسرم به دبستان می‌رود.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.join.2': "در یک باشگاه ورزشی فوتبال بازی می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.join.3': "شنبه‌ها کار داوطلبانه می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.q': "به جلسهٔ اولیا می‌آیی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.a': "بله. می‌خواهم با معلم حرف بزنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.workphotos': "عکس‌ها و اطلاعات", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gezicht': "صورت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.klantgegevens': "اطلاعات مشتری (اسم، آدرس، تلفن یک مشتری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onlinezetten': "در اینترنت گذاشتن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wissen': "پاک کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werktelefoon': "گوشی کاری", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bestand': "فایل (روی کامپیوتر)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workphotos.1': "عکس‌های کار را در اینترنت نمی‌گذارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workphotos.2': "عکس را فوراً پاک می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.workphotos.3': "صورتش در عکس است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.q': "می‌توانم از تو عکس بگیرم؟ برای اینترنت.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.a': "نه، ترجیح می‌دهم نه. نمی‌خواهم در اینترنت باشم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.device': "گوشی و کامپیوتر امن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.update': "به‌روزرسانی (نسخهٔ جدید یک اپ یا برنامه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.virus': "ویروس (برنامه‌ای که به کامپیوترت آسیب می‌زند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wifi': "وای‌فای", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.usbstick': "فلش USB", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.installeren': "نصب کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.openbaar': "عمومی (برای همه)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.device.1': "امشب به‌روزرسانی را نصب می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.device.2': "این فلش USB روی زمین افتاده بود.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.device.3': "این وای‌فای امن است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.q': "می‌توانم این اپ را روی گوشی کاری نصب کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.a': "اول از بخش IT بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy': "زنگ بزن، یا یک پیام کوتاه بفرست", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.b': "آگهی را خوب بخوان: ساعت‌ها، محل کار، و چیزهایی که باید داشته باشی، مثل گواهی‌نامهٔ رانندگی یا یک گواهی‌نامهٔ آموزشی. لازم نیست همه‌چیز را داشته باشی: اگر بیشترش را داری، باز هم امتحان کن. زنگ بزن یا یک پیام کوتاه بنویس: اسمت را بگو، کدام کار، و چرا آن را می‌خواهی. هرگز برای گرفتن کار پول نده، و هرگز برای یک آگهی کدهای ورودت را نفرست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.p': "مدرک ندارم، ولی تجربهٔ زیادی دارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.s': "یک آگهی ۳ سال تجربه می‌خواهد. تو ۲ سال تجربه داری. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.o1': "باز هم درخواست می‌دهی، و می‌گویی چه کارهایی بلدی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.o2': "درخواست نمی‌دهی: تجربه‌ات خیلی کم است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.o3': "می‌نویسی ۳ سال: کسی بررسی نمی‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vacancy.w': "آگهی اغلب بیشتر از آنچه کار واقعاً لازم دارد می‌خواهد. صادق بودن دربارهٔ کارهایی که بلدی بهتر از دروغ گفتن جواب می‌دهد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result': "«نه» پایان کار نیست", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.b': "بعد از یک هفته خبری نشد؟ می‌توانی دوباره زنگ بزنی و مؤدبانه بپرسی. جواب رد گرفتی؟ بپرس دفعهٔ بعد چه کاری را بهتر می‌توانی انجام بدهی: خیلی از کارفرماها می‌گویند. بعد دوباره امتحان کن: بیشتر آدم‌ها اول چند بار جواب رد می‌گیرند. جواب مثبت گرفتی؟ بپرس کی شروع می‌کنی، و قبل از شروع قراردادت را بخواه. برای روز آزمایشی دعوت شدی؟ از قبل بپرس چقدر طول می‌کشد، و آیا حقوق دارد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.p': "دفعهٔ بعد چه کاری را بهتر می‌توانم انجام بدهم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.s': "بعد از یک مصاحبهٔ کاری، با ایمیل جواب رد می‌گیری. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.o1': "مؤدبانه می‌پرسی چه کاری را بهتر می‌توانی انجام بدهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.o2': "در جواب می‌نویسی که اشتباه کرده‌اند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.o3': "دیگر درخواست نمی‌دهی: فایده ندارد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.result.w': "بازخورد در مصاحبهٔ بعدی کمکت می‌کند. یک سؤال مؤدبانه هم تصویر خوبی از تو به جا می‌گذارد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence': "مدارکت: تاریخ را بررسی کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.b': "اهل اتحادیهٔ اروپا هستی؟ پس با پاسپورت یا کارت شناسایی معتبر می‌توانی اینجا زندگی و کار کنی: به اجازه نیاز نداری. اهل خارج از اتحادیهٔ اروپا هستی؟ پس به اجازهٔ اقامت معتبر نیاز داری. روی کارت نوشته که اجازهٔ کار داری یا نه. تاریخ انقضای مدارکت را بررسی کن. برای اجازهٔ جدید به موقع در IND درخواست بده: ماه‌ها قبل از آن تاریخ، نه در هفتهٔ آخر. از هر نامه یک کپی نگه دار. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.p': "اجازه‌ام به‌زودی منقضی می‌شود. باید چه کار کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.s': "اجازهٔ اقامتت دو ماه دیگر منقضی می‌شود. سر کار خیلی سرت شلوغ است. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.o1': "همین حالا برای اجازهٔ جدید درخواست می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.o2': "تا هفتهٔ آخر صبر می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.o3': "هیچ کاری نمی‌کنی: اول کار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.residence.w': "بدون اجازهٔ معتبر، ممکن است اجازهٔ کار نداشته باشی. گرفتن اجازهٔ جدید وقت می‌برد، پس زود شروع می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome': "آدرس جدید؟ به همه خبر بده", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.b': "اسباب‌کشی می‌کنی؟ آدرس جدیدت را زود به شهرداری (gemeente) بگو: این کار را باید انجام بدهی. به کارفرما، بانک، بیمه و پزشکت هم خبر بده. اسمت را روی صندوق نامه بگذار، وگرنه نامه‌ها به دستت نمی‌رسند. روز اسباب‌کشی، عددهای کنتورها را یادداشت کن و از آن‌ها عکس بگیر. آن وقت فقط پول چیزی را می‌دهی که مصرف کرده‌ای.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.p': "اسباب‌کشی کرده‌ام. این آدرس جدید من است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.s': "دو هفته پیش اسباب‌کشی کردی. نامه‌هایت هنوز به آدرس قدیمت می‌رود. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.o1': "همین حالا آدرس جدیدت را به شهرداری می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.o2': "صبر می‌کنی: نامه‌ها خودشان پیدایت می‌کنند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.o3': "از همسایهٔ قدیمت می‌خواهی نامه‌هایت را نگه دارد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.newhome.w': "نامه‌های مهم، مثل جریمه یا نامه‌های مالیاتی، تاریخ دارند. وقتی به آدرس اشتباه بروند، ممکن است آن‌ها را از دست بدهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts': "هر خط را بخوان", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.b': "فیش حقوقی‌ات خط‌ها و کلمه‌های کوتاه زیادی دارد. بالای آن: اسمت، شمارهٔ پرسنلی‌ات و دوره. بعد حقوق ناخالص، ساعت‌ها و هر پول اضافه‌ای. بعد آنچه کم می‌شود: مالیات و حق بیمه. در خیلی از کارها، هم تو و هم کارفرما برای بازنشستگی‌ات پول می‌دهید: سهم خودت را در فیش حقوقی‌ات می‌بینی. پایین آن: حقوق خالص. یک خط را نمی‌فهمی؟ از کارفرما بخواه آن را توضیح بدهد. همهٔ فیش‌های حقوقی‌ات را نگه دار. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.p': "این خط در فیش حقوقی‌ام یعنی چه؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.s': "در فیش حقوقی‌ات، پولی به «pensioen» می‌رود. نمی‌دانی چرا. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.o1': "از کارفرما می‌خواهی آن را توضیح بدهد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.o2': "می‌خواهی قطعش کنند، تا الان پول بیشتری بگیری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.o3': "به آن توجه نمی‌کنی: آن‌قدر نمی‌مانی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.payparts.w': "پول بازنشستگی برای تو، برای بعدها، پس‌انداز می‌شود. وقتی کارت را عوض می‌کنی معمولاً آن را از دست نمی‌دهی. پرسیدن کمکت می‌کند بدانی چه چیزی مال توست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay': "حقوق دیر یا نقدی؟ به موقع اقدام کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.b': "حقوقت باید در روزی که در قرارداد یا cao آمده برسد. دیر شده، یا پولی کم است؟ کتبی درباره‌اش بپرس، مثلاً با ایمیل. صورت‌حساب‌های بانکی و فهرست ساعت‌های خودت را نگه دار. نقدی پول می‌گیری، بدون فیش حقوقی؟ پس اغلب کار سیاه است (zwart): ساعت‌هایت ثبت نمی‌شود، و بعداً ثابت کردن کارت یا گرفتن کمک‌هزینه سخت است. فیش حقوقی بخواه. اطلاعات کلی. برای وضعیت خودت: از اتحادیهٔ کارگری، Juridisch Loket یا FairWork بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.p': "حقوقم هنوز واریز نشده. کی می‌آید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.s': "رئیست می‌گوید: «از این به بعد نقدی به تو پول می‌دهم. فیش حقوقی نه، این‌طوری راحت‌تر است». چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.o1': "می‌گویی نه، و فیش حقوقی می‌خواهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.o2': "می‌گویی بله: نقدی یعنی پول بیشتر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.o3': "می‌گویی بله، ولی فقط برای این ماه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.latepay.w': "بدون فیش حقوقی، کارت روی کاغذ نیست. آن وقت ممکن است حق‌هایت را از دست بدهی، مثلاً حق کمک‌هزینه وقتی کارت را از دست می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday': "روزهای مرخصی‌ات: به موقع استفاده‌شان کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.b': "بررسی کن چند روز مرخصی هنوز داری: اغلب در فیش حقوقی یا در اپ آمده. تعطیلاتت را زود برنامه‌ریزی کن، و کتبی درخواست بده. روزهای مرخصی قانونی‌ات ۶ ماه بعد از پایان سال منقضی می‌شوند، مگر اینکه نتوانسته باشی از آن‌ها استفاده کنی. روزهای اضافه از cao یا قراردادت مدت بیشتری معتبر می‌مانند، معمولاً ۵ سال. کارت تمام می‌شود؟ پس برای روزهایی که استفاده نکرده‌ای پول می‌گیری. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.p': "می‌خواهم روزهای مرخصی‌ام را امسال استفاده کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.s': "ماه نوامبر است. هنوز ۱۲ روز مرخصی از امسال داری. سرپرستت چیزی درباره‌اش نمی‌گوید. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.o1': "می‌پرسی کی می‌توانی از آن‌ها استفاده کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.o2': "هیچ کاری نمی‌کنی: برای همیشه می‌مانند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.o3': "فراموششان می‌کنی: دیگر از دست رفته‌اند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.holiday.w': "روزهای مرخصی برای استراحت است، و می‌توانند منقضی شوند. وقتی به موقع بپرسی، هنوز می‌توانی برایشان برنامه بریزی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special': "عروسی، خاکسپاری، بچه", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.b': "بچه‌ات به دنیا آمده، و تو شریک زندگی مادر هستی؟ پس ۱ هفته مرخصی تولد با حقوق می‌گیری، در ۴ هفتهٔ اول. اغلب cao تو برای عروسی‌ات، یا برای خاکسپاری در خانواده‌ات، مرخصی ویژه (bijzonder verlof) می‌دهد. تعطیلات رسمی، مثل کریسمس: هیچ قانونی نمی‌گوید که تعطیلی. قرارداد یا cao تو می‌گوید که تعطیلی، یا پول اضافه می‌گیری. روزهای مرخصی‌ات را به موقع درخواست کن. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.p': "همسرم بچه‌دار می‌شود. چطور مرخصی تولد بخواهم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.s': "پدرت در خارج از کشور فوت کرده. می‌خواهی به مراسم خاکسپاری بروی. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.o1': "به کارفرما می‌گویی، و می‌پرسی چه مرخصی‌ای می‌توانی بگیری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.o2': "همین‌طوری می‌روی، و وقتی برگشتی به آن‌ها می‌گویی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.o3': "نمی‌روی: دیگر روز مرخصی نداری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.special.w': "کارفرما می‌فهمد که این خیلی مهم است. خیلی از cao‌ها مرخصی ویژه می‌دهند، و می‌توانی از روزهای مرخصی‌ات هم استفاده کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell': "مریض سر کار، یا در تعطیلات", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.b': "سر کار احساس مریضی می‌کنی؟ قبل از اینکه به خانه بروی به سرپرستت بگو: این خبر دادن بیماری توست. همین‌طوری نرو. در تعطیلات مریض شدی؟ همان‌طور که در خانه خبر می‌دهی به کارفرما خبر بده، از خارج از کشور هم. آن وقت روزهای مریضی معمولاً جزو روزهای مرخصی حساب نمی‌شوند. ممکن است به یادداشتی از یک پزشک در آنجا نیاز داشته باشی. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.p': "در تعطیلات مریض شدم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.s': "در تعطیلات در کشور خودت هستی. آنفولانزا می‌گیری و ۵ روز در رختخواب می‌مانی. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.o1': "فوراً به کارفرما خبر می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.o2': "هیچ کاری نمی‌کنی: به هر حال در تعطیلات هستی.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.unwell.o3': "وقتی برگشتی به کارفرما می‌گویی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.unwell.w': "وقتی به موقع خبر بدهی، روزهای مریضی معمولاً جزو روزهای مرخصی حساب نمی‌شوند. آن وقت می‌توانی بعداً از آن روزها استفاده کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury': "آسیب در کار: یادداشتش کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.b': "سر کار آسیب دیدی؟ بنویس چه اتفاقی افتاد، کی و کجا، و چه کسی آن را دید. عکس بگیر، و همهٔ کاغذهای پزشک را نگه دار. یک کپی از گزارش حادثه بخواه. آسیب دیدی چون کار ایمن نبود؟ پس کارفرما معمولاً باید خسارتت را بپردازد. لازم نیست ثابت کنی که تقصیر آن‌ها بوده: کارفرما باید نشان بدهد که برای ایمنی‌ات به اندازهٔ کافی کار کرده. قبل از امضای هر چیزی مشورت بگیر. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.p': "می‌توانم یک کپی از گزارش داشته باشم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.s': "دستت با دستگاهی که محافظ ندارد آسیب می‌بیند. بعداً رئیست از تو می‌خواهد کاغذی را امضا کنی: «تقصیر خودم بود». چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.o1': "امضایش نمی‌کنی. اول مشورت می‌گیری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.o2': "امضایش می‌کنی، تا مشکلی پیش نیاید.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.o3': "امضایش می‌کنی، ولی یک عکس از آن نگه می‌داری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.injury.w': "چیزی که امضا می‌کنی ممکن است بعداً حساب شود، مثلاً وقتی غرامت می‌خواهی. اول از اتحادیهٔ کارگری یا Juridisch Loket مشورت بگیر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt': "بدهی‌ای که هیچ‌وقت تمام نمی‌شود", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.b': "در هلند، شرکت کاریابی اجازه ندارد برای پیدا کردن کار از تو پول بخواهد. مجبور شدی برای سفر یا برای کار پول قرض کنی، و بدهی مدام بیشتر می‌شود؟ باید بمانی تا بدهی صاف شود؟ این نشانهٔ بهره‌کشی است. بدهی هیچ‌وقت به این معنی نیست که باید به کار ادامه بدهی: اجازه داری کار را ول کنی. هر کاغذ و پیامی دربارهٔ بدهی را نگه دار. اطلاعات کلی. برای وضعیت خودت: از اتحادیهٔ کارگری، Juridisch Loket یا FairWork بپرس.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.debt.p': "هنوز چقدر باید بپردازم؟ می‌خواهم آن را کتبی داشته باشم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.s': "شرکت کاریابی بلیت اتوبوست را پرداخت. حالا هر هفته از حقوقت پول کم می‌کند، و بدهی کمتر نمی‌شود. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.o1': "یک فهرست کتبی می‌خواهی، و کمک می‌گیری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.o2': "ساعت‌های بیشتری کار می‌کنی تا زودتر صافش کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.o3': "چیزی نمی‌گویی: شرکت کاریابی به تو کمک کرد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debt.w': "بدهی‌ای که کمتر نمی‌شود تو را گیر می‌اندازد. با آن فهرست، اتحادیهٔ کارگری یا FairWork می‌تواند بررسی کند که منصفانه است یا نه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection': "بازرسی برای توست", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.b': "Nederlandse Arbeidsinspectie (بازرسی کار) بررسی می‌کند که کار ایمن و منصفانه است یا نه: حقوق، ساعت‌ها و بهره‌کشی. بازرس‌ها ممکن است به محل کارت بیایند و با کارگران حرف بزنند. می‌توانی حقیقت را به آن‌ها بگویی: آن‌ها به رئیست نمی‌گویند چه کسی چیزی را گزارش داده. به کمک به زبان خودت نیاز داری؟ مترجم بخواه. FairWork به قربانیان بهره‌کشی رایگان کمک می‌کند، حتی به کسانی که مدارک معتبر ندارند. اطلاعات کلی. برای وضعیت خودت: از اتحادیهٔ کارگری، Juridisch Loket یا FairWork بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.p': "می‌خواهم چیزی بگویم، ولی بدون اینکه رئیسم آنجا باشد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.s': "یک بازرس دربارهٔ ساعت‌های کارت می‌پرسد. رئیست به تو گفته بگویی ۸ ساعت. تو ۱۲ ساعت کار می‌کنی. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.o1': "حقیقت را به بازرس می‌گویی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.o2': "همان‌طور که رئیست گفت، می‌گویی ۸ ساعت.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.o3': "چیزی نمی‌گویی، و می‌روی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.inspection.w': "بازرس فقط وقتی می‌تواند کمک کند که حقیقت را بداند. چیزی که می‌گویی به تو کمک می‌کند، و به همکارانت هم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool': "در ماشین: کمربند ببند، و دربارهٔ هزینه‌ها توافق کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.b': "همه در ماشین کمربند ایمنی می‌بندند، صندلی عقب هم. راننده باید گواهی‌نامهٔ رانندگی معتبر داشته باشد، و نباید قبل از رانندگی الکل بنوشد. آدم‌های خیلی زیادی در ون هستند، یا راننده خطرناک رانندگی می‌کند؟ بگو، و سوار نشو. با همکارانت هم‌سفری می‌کنی؟ اول توافق کنید که هزینهٔ سوخت را چطور تقسیم می‌کنید. در ون کاری شرکت کاریابی هستی؟ بپرس چقدر برایت هزینه دارد، و آن را کتبی بگیر.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.p': "آدم‌های خیلی زیادی در ون هستند. من سوار نمی‌شوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.s': "ون کاری ۹ صندلی دارد. امروز صبح ۱۱ نفر می‌خواهند سوار شوند. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.o1': "سوار نمی‌شوی، و به سرپرستت زنگ می‌زنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.o2': "عقب، روی کف ماشین می‌نشینی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.o3': "خودت را جا می‌دهی: فقط ۲۰ دقیقه است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.carpool.w': "بدون صندلی و کمربند، یک تصادف کوچک می‌تواند خیلی جدی باشد. کارفرما یا شرکت کاریابی می‌تواند راه دیگری پیدا کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train': "قطار دیر کرده؟ فوراً پیام بفرست", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.b': "قبل از رفتن به برنامه‌ریز سفر نگاه کن: قطارها و اتوبوس‌ها ممکن است دیر کنند یا لغو شوند. قطارت دیر کرده؟ فوراً به سرپرستت پیام بفرست، با ساعتی که می‌رسی. روزهایی که طوفان است یا روی خط کار تعمیراتی هست، با قطار زودتری برو. بعد از تأخیر طولانی، اغلب می‌توانی پولت را پس بگیری: در وب‌سایت شرکت قطار نگاه کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.p': "قطارم تأخیر دارد. ساعت نه آنجا هستم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.s': "قطارت لغو شده. قطار بعدی ۳۰ دقیقهٔ دیگر حرکت می‌کند. شیفتت ۴۰ دقیقهٔ دیگر شروع می‌شود. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.o1': "همین حالا پیام می‌فرستی که دیر می‌رسی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.o2': "صبر می‌کنی، و وقتی رسیدی توضیح می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.o3': "به خانه می‌روی: تقصیر تو نیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.train.w': "سرپرستت وقتی زود بداند، بهتر می‌تواند برنامه‌ریزی کند. تأخیر تقصیر تو نیست، ولی خبر دادنش وظیفهٔ توست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist': "اول خودت بررسی کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.b': "قبل از اینکه بگویی «klaar»، کار خودت را بررسی کن. اگر چک‌لیست هست، از آن استفاده کن، و هر مرحله را تیک بزن. طوری به کارت نگاه کن که انگار مشتری هستی. چیزی خوب نیست؟ همین حالا دوباره انجامش بده: این از بعداً سریع‌تر است. مطمئن نیستی؟ از یک همکار بخواه نگاه کند. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.p': "تمام شد. یک نگاهی به آن می‌اندازی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.s': "کارت تمام شده. در چک‌لیست، یک مرحله تیک نخورده. فکر می‌کنی آن را انجام داده‌ای. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.o1': "آن مرحله را دوباره بررسی می‌کنی، بعد تیکش می‌زنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.o2': "تیکش می‌زنی: احتمالاً انجامش داده‌ای.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.o3': "خالی‌اش می‌گذاری: کسی فهرست را نمی‌خواند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.checklist.w': "چک‌لیست فقط وقتی کمک می‌کند که درست باشد. یک نگاه دیگر یک دقیقه وقت می‌برد. یک اشتباه ممکن است ساعت‌ها وقت ببرد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite': "طوری ترکش کن که می‌خواهی پیدایش کنی", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.b': "در پایان کار، جایت را تمیز و ایمن ترک کن. ابزار و مواد را سر جایشان بگذار، و کف زمین را جارو کن. دستگاه‌ها و چراغ‌هایی را که استفاده کردی خاموش کن. نفر آخر هستی؟ پنجره‌ها و درها را بررسی کن، و همان‌طور که شرکتت می‌گوید قفل کن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.p': "من نفر آخرم. باید در را قفل کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.s': "تو آخرین نفر سر کار هستی. نمی‌دانی دزدگیر را چطور روشن کنی. چه کار می‌کنی؟", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.leavesite.o1': "به سرپرستت زنگ می‌زنی و می‌پرسی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.o2': "بدون روشن کردن دزدگیر می‌روی: دیر است.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.leavesite.o3': "دکمه‌ها را امتحان می‌کنی تا بوق بزند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.leavesite.w': "ساختمانی که دزدگیرش روشن نیست ایمن نیست. سرپرستت ترجیح می‌دهد یک تلفن بگیرد تا اینکه فردا با یک مشکل روبه‌رو شود.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.stagedays': "دانش‌آموز، و همکار", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.b': "در محل کارآموزی برای یاد گرفتن آنجایی، ولی مثل یک همکار کار می‌کنی: سر وقت، طبق قانون‌های محل کار، و وقتی مریضی زنگ می‌زنی. می‌توانی خیلی سؤال بپرسی: برای همین آنجایی. کارت باید به یادگیری‌ات کمک کند، نه اینکه فقط تمام روز تمیز کنی یا بار ببری. این‌طور نیست؟ با مسئول کارآموزی‌ات در مدرسه حرف بزن. کمک‌هزینهٔ کارآموزی همیشه داده نمی‌شود: قبل از شروع درباره‌اش بپرس. قانون‌ها در هر مدرسه فرق دارد: از مسئول کارآموزی‌ات بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.p': "می‌خواهم این را هم یاد بگیرم. می‌توانم نگاه کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.s': "در محل کارآموزی‌ات سه هفته است که هر روز فقط غذاخوری را تمیز می‌کنی. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.o1': "با مسئول کارآموزی‌ات درباره‌اش حرف می‌زنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.o2': "انجامش می‌دهی و چیزی نمی‌گویی: تو دانش‌آموزی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.o3': "خانه می‌مانی تا کار دیگری به تو بدهند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stagedays.w': "کارآموزی برای یاد گرفتن حرفه‌ات است. مسئول کارآموزی‌ات می‌تواند با شرکت دربارهٔ کارهای بهتر حرف بزند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend': "خوب تمامش کن، و معرف بخواه", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.b': "در گفت‌وگوی پایانی می‌شنوی چه چیزی خوب پیش رفت و چه چیزی می‌تواند بهتر شود. مثال بخواه، و برای کار بعدی‌ات یادداشتشان کن. خوب پیش رفت؟ بپرس آیا می‌توانی اسمشان را به‌عنوان معرف بدهی. روز آخرت از همکارانت تشکر کن: اینجا خیلی‌ها چیز کوچکی برای خوردن می‌آورند، مثل کیک یا شیرینی. قانون‌ها در هر مدرسه فرق دارد: از مسئول کارآموزی‌ات بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.p': "می‌توانم اسم شما را به‌عنوان معرف بدهم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.s': "روز آخر کارآموزی‌ات است. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.o1': "از همکارانت تشکر می‌کنی، و خداحافظی می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.o2': "بی‌صدا می‌روی، بدون اینکه چیزی بگویی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.o3': "از شرکت هدیه می‌خواهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.stageend.w': "یک خداحافظی خوب تصویر خوبی به جا می‌گذارد. شاید بخواهی بعداً آنجا کار کنی، یا به آن‌ها به‌عنوان معرف نیاز داشته باشی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours': "به همسایه‌هایت سلام کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.b': "در یک خیابان تازه‌واردی؟ به همسایه‌هایت سلام کن و اسمت را بگو. این کار حل کردن مشکلات را بعداً آسان‌تر می‌کند. شب کار می‌کنی، یا با آدم‌های زیادی زندگی می‌کنی؟ آخر شب و در شب سروصدا نکن. زباله‌ات را در روز درستش بیرون بگذار. در کتابخانه و خانهٔ محله اغلب می‌توانی هلندی تمرین کنی، گاهی رایگان.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.p': "سلام، من علی هستم. خانهٔ بغلی زندگی می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.s': "با پنج همکار زندگی می‌کنی. یک همسایه می‌گوید شب‌ها اغلب سروصدا است. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.o1': "عذرخواهی می‌کنی، و قرار می‌گذارید که ساکت باشید.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.o2': "می‌گویی همه‌تان کار می‌کنید و باید استراحت کنید.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.o3': "چیزی نمی‌گویی، و در را می‌بندی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.neighbours.w': "یک گفت‌وگوی خوب در همان اول جلوی مشکلات بزرگ‌تر را می‌گیرد. همسایه‌هایی که تو را می‌شناسند اغلب مهربان‌تر و کمک‌کننده‌ترند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join': "شرکت کن: هلندی را سریع‌تر یاد می‌گیری", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.b': "بیرون از کار، هلندی را از همه سریع‌تر با کار کردن با آدم‌ها یاد می‌گیری: ورزش، یک باشگاه، یا کار داوطلبانه. بچه‌ات مدرسه می‌رود؟ به جلسهٔ اولیا برو، حتی اگر هلندی‌ات کامل نیست: معلم می‌خواهد تو را ببیند. می‌توانی بخواهی آهسته هلندی صحبت کنند، یا از اپ ترجمه استفاده کنی. کار داوطلبانه در رزومه‌ات هم خوب به نظر می‌رسد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.p': "می‌شود کمی آهسته‌تر صحبت کنید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.s': "به جلسهٔ اولیا دعوت شده‌ای. هلندی‌ات هنوز خوب نیست. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.o1': "می‌روی، و از هلندی ساده یا یک اپ استفاده می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.o2': "نمی‌روی: معلم حرفت را نمی‌فهمد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.o3': "یک پیام کوتاه می‌فرستی که سرت شلوغ است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.join.w': "معلم می‌خواهد دربارهٔ بچه‌ات حرف بزند، نه دربارهٔ هلندی‌ات. آمدنت نشان می‌دهد که برایت مهم است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos': "اول بپرس، بعد بگذار", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.b': "یک عکس در محل کار می‌تواند بیشتر از آنچه فکر می‌کنی نشان بدهد: یک مشتری، یک مراجع، یک صفحه‌نمایش یا کاغذی با اسم‌ها. عکس‌های کار را بدون اجازهٔ کارفرما در اینترنت نگذار، و هرگز عکس آدم‌ها را بدون رضایتشان نگذار. اطلاعات مشتری در محل کار می‌ماند: آن را به گوشی یا ایمیل شخصی‌ات نفرست. اشتباهی چیزی فرستادی؟ فوراً به سرپرستت بگو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.p': "اول اجازه می‌گیرم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.s': "یک همکار عکس خنده‌داری از یک مشتری در اپ تیم می‌گذارد. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.o1': "می‌گویی که این درست نیست، و آن را به اشتراک نمی‌گذاری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.o2': "به اشتراکش می‌گذاری: فقط در اپ تیم است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.o3': "لایکش می‌کنی، ولی به اشتراکش نمی‌گذاری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.workphotos.w': "مشتری به این عکس بله نگفته. عکس‌ها در یک اپ می‌توانند خیلی سریع به هر جایی بروند. گفتنش با مهربانی، از مشتری و از همکارت محافظت می‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device': "به‌روزرسانی آره، فلش‌های عجیب نه", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.b': "به‌روزرسانی‌ها را روی گوشی و کامپیوترت نصب کن: آن‌ها حفره‌هایی را می‌بندند که هکرها استفاده می‌کنند. فلش USB پیدا کردی؟ آن را به کامپیوترت وصل نکن: آن را به بخش IT بده. روی گوشی یا کامپیوتر کاری، فقط اپ‌هایی را نصب کن که محل کارت اجازه می‌دهد. روی وای‌فای عمومی، وارد حساب بانکی یا حساب کاری‌ات نشو. گوشی‌ات را با یک رمز قفل کن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.p': "یک فلش USB پیدا کردم. با آن چه کار کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.s': "در پارکینگ یک فلش USB پیدا می‌کنی. رویش نوشته «Salaris». چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.o1': "آن را به بخش IT می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.o2': "آن را به کامپیوترت وصل می‌کنی تا ببینی مال کیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.o3': "آن را به خانه می‌بری و آنجا نگاهش می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.device.w': "روی یک فلش ممکن است ویروس باشد، حتی وقتی جالب به نظر می‌رسد. بخش IT می‌تواند آن را با امنیت بررسی کند.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Veiligheid op het werk" (four lessons) and the VOG lesson of "Werken via een uitzendbureau" (23 November 2026).
-    'u.safework': "ایمنی در محل کار", // nieuw, nalezen
-    'l.vog': "گذشته‌ات: VOG", // nieuw, nalezen
-    'w.vog': "گواهی حسن رفتار (VOG: برگه‌ای از طرف دولت که می‌گوید گذشته‌ات برای این کار مشکلی ندارد)", // nieuw, nalezen
-    'w.strafblad': "سوء پیشینه (جرم‌هایی که دادگاه تو را در آن‌ها مقصر دانسته)", // nieuw, nalezen
-    'w.screening': "بررسی سوابق (بررسی گذشته‌ات قبل از شروع کار)", // nieuw, nalezen
-    'w.personenregister': "دفتر ثبت مراقبت از کودک (هر کسی که در مراقبت از کودک کار می‌کند باید در آن ثبت شده باشد)", // nieuw, nalezen
-    'w.beveiligerspas': "کارت نگهبانی (کارتی که برای کار کردن به عنوان نگهبان لازم داری)", // nieuw, nalezen
-    'w.verleden': "گذشته", // nieuw, nalezen
-    's.vog.1': "در کار مراقبت تقریباً همیشه VOG می‌خواهند.", // nieuw, nalezen
-    's.vog.2': "من VOG دارم و در دفتر ثبت مراقبت از کودک ثبت شده‌ام.", // nieuw, nalezen
-    's.vog.3': "کارت نگهبانی‌ام را بعد از بررسی سوابق می‌گیرم.", // nieuw, nalezen
-    'c.vog.q': "شرکت کاریابی VOG می‌خواهد. آن را گرفته‌ای؟", // nieuw, nalezen
-    'c.vog.a': "نه. هنوز منتظر ایمیل Justis هستم.", // nieuw, nalezen
-    'l.safetysigns': "تابلوهای ایمنی", // nieuw, nalezen
-    'w.verbodsbord': "تابلوی ممنوع (دایرهٔ قرمز با یک خط روی آن: اجازه نداری این کار را بکنی)", // nieuw, nalezen
-    'w.gebodsbord': "تابلوی اجباری (دایرهٔ آبی با یک تصویر سفید: باید این کار را بکنی)", // nieuw, nalezen
-    'w.waarschuwingsbord': "تابلوی هشدار (مثلث زرد با لبهٔ سیاه: مواظب باش، خطر)", // nieuw, nalezen
-    'w.reddingsbord': "تابلوی نجات (مستطیل سبز: راه خروج، یا کمک‌های اولیه)", // nieuw, nalezen
-    'w.brandbord': "تابلوی تجهیزات آتش‌نشانی (مربع قرمز: اینجا کپسول آتش‌نشانی یا شیلنگ آتش‌نشانی هست)", // nieuw, nalezen
-    'w.pictogram': "پیکتوگرام (تصویر ساده‌ای که بدون کلمه چیزی را می‌گوید)", // nieuw, nalezen
-    's.safetysigns.1': "تابلوی گرد قرمز یعنی: این کار ممنوع است.", // nieuw, nalezen
-    's.safetysigns.2': "تابلوی آبی می‌گوید چه کاری باید بکنی.", // nieuw, nalezen
-    's.safetysigns.3': "تابلوهای سبز را تا خروجی اضطراری دنبال کن.", // nieuw, nalezen
-    'c.safetysigns.q': "این تابلوی زرد یعنی چه؟", // nieuw, nalezen
-    'c.safetysigns.a': "مواظب باش، خطر. این تابلوی هشدار است.", // nieuw, nalezen
-    'l.substances': "مواد خطرناک", // nieuw, nalezen
-    'w.stofmasker': "ماسک گردوغبار (بینی و دهانت را می‌پوشاند)", // nieuw, nalezen
-    'w.giftig': "سمی", // nieuw, nalezen
-    'w.bijtend': "خورنده (پوستت را می‌سوزاند یا فلز را می‌خورد)", // nieuw, nalezen
-    'w.drinkfles': "بطری نوشیدنی", // nieuw, nalezen
-    'w.opbergen': "سر جایش گذاشتن (در جای مخصوص خودش، مثلاً کمدی که قفل می‌شود)", // nieuw, nalezen
-    'w.dop': "درپوش (درِ بطری یا قوطی)", // nieuw, nalezen
-    's.substances.1': "اول به علامت خطر روی برچسب نگاه کن.", // nieuw, nalezen
-    's.substances.2': "هیچ‌وقت آن را در بطری نوشیدنی نریز.", // nieuw, nalezen
-    's.substances.3': "اینجا باید ماسک گردوغبار بزنی.", // nieuw, nalezen
-    'c.substances.q': "این ماده سمی است؟", // nieuw, nalezen
-    'c.substances.a': "این در برگهٔ اطلاعات ایمنی نوشته شده. نگاه می‌کنم.", // nieuw, nalezen
-    'l.firefight': "آتش", // nieuw, nalezen
-    'w.branddriehoek': "مثلث آتش (آتش به سوخت، هوا و گرما نیاز دارد؛ یکی را بردار و آتش خاموش می‌شود)", // nieuw, nalezen
-    'w.zuurstof': "اکسیژن (در هوا هست؛ آتش به آن نیاز دارد)", // nieuw, nalezen
-    'w.blussen': "خاموش کردن (آتش)", // nieuw, nalezen
-    'w.blusdeken': "پتوی آتش‌نشانی", // nieuw, nalezen
-    'w.openvuur': "آتش باز (شعله، مثلاً از فندک یا مشعل گازی)", // nieuw, nalezen
-    'w.brandslang': "شیلنگ آتش‌نشانی (پیچیده دور یک قرقره در دیوار)", // nieuw, nalezen
-    's.firefight.1': "هیچ‌وقت روی روغنِ در حال سوختن آب نریز.", // nieuw, nalezen
-    's.firefight.2': "فقط آتش کوچک را خودت خاموش می‌کنی.", // nieuw, nalezen
-    's.firefight.3': "پتوی آتش‌نشانی را روی ماهیتابه بینداز.", // nieuw, nalezen
-    'c.firefight.q': "سطل زباله آتش گرفته!", // nieuw, nalezen
-    'c.firefight.a': "کوچک است. کپسول آتش‌نشانی را می‌آورم.", // nieuw, nalezen
-    'l.permitwork': "مجوز ایمنی کار، فضای بسته و بلند کردن بار", // nieuw, nalezen
-    'w.werkvergunningveilig': "مجوز ایمنی کار (برگهٔ ایمنی برای کار خطرناک: چه کاری، کجا و چه خطرهایی؛ این مدارک اقامت یا کار تو نیست)", // nieuw, nalezen
-    'w.beslotenruimte': "فضای بسته (مخزن، چاله یا فاضلاب: کوچک، با هوای تازهٔ کم)", // nieuw, nalezen
-    'w.gasmeting': "سنجش گاز (قبل از اینکه وارد شوی، هوا را اندازه می‌گیری)", // nieuw, nalezen
-    'w.mangatwacht': "نگهبان دریچه (کسی که بیرون کنار دهانه می‌ماند، ارتباط را حفظ می‌کند و اعلام خطر می‌کند)", // nieuw, nalezen
-    'w.signaalgever': "علامت‌دهنده (کسی که با دست به رانندهٔ جرثقیل علامت می‌دهد)", // nieuw, nalezen
-    'w.hijsen': "بالا بردن (یک بار با جرثقیل)", // nieuw, nalezen
-    's.permitwork.1': "بدون مجوز ایمنی کار شروع نمی‌کنیم.", // nieuw, nalezen
-    's.permitwork.2': "اول سنجش گاز، فقط بعد از آن وارد فضای بسته.", // nieuw, nalezen
-    's.permitwork.3': "به علامت‌دهنده نگاه کن: بالا، پایین، ایست.", // nieuw, nalezen
-    'c.permitwork.q': "چه کسی بیرون کنار مخزن می‌ماند؟", // nieuw, nalezen
-    'c.permitwork.a': "من. من نگهبان دریچه‌ام.", // nieuw, nalezen
-    'c.vog': "VOG: بررسی گذشته‌ات", // nieuw, nalezen
-    'c.vog.b': "برای بعضی کارها، شرکت کاریابی یا کارفرما VOG (Verklaring Omtrent het Gedrag) می‌خواهد. این برگه‌ای از طرف دولت است: می‌گوید گذشته‌ات برای این کار مشکلی ندارد. در کار مراقبت، مراقبت از کودک و نگهبانی تقریباً همیشه به آن نیاز داری. معمولاً کارفرما درخواست را آنلاین شروع می‌کند. از Justis یک ایمیل می‌گیری، و درخواست را با DigiD تمام می‌کنی و هزینه‌اش را می‌پردازی. اول بپرس چه کسی پول می‌دهد: اغلب کارفرما پول را پس می‌دهد. برای داوطلبانی که با کودکان یا آدم‌های آسیب‌پذیر کار می‌کنند، اغلب رایگان است. سوء پیشینه داری؟ این همیشه به این معنی نیست که VOG نمی‌گیری: Justis به چیزی نگاه می‌کند که برای این کار مهم است. مطمئن نیستی؟ از Juridisch Loket بپرس. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen
-    'c.vog.p': "باید پول VOG را خودم بدهم؟", // nieuw, nalezen
-    'c.vog.s': "کار جدیدت در یک مرکز مراقبت VOG می‌خواهد. سال‌ها پیش با پلیس مشکلی داشتی. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.vog.o1': "درخواست می‌دهی، و اگر نگرانی، از Juridisch Loket می‌پرسی.", // nieuw, nalezen
-    'c.vog.o2': "درخواست نمی‌دهی: هیچ‌وقت آن را نمی‌گیری.", // nieuw, nalezen
-    'c.vog.o3': "می‌گویی وقت نداری، و دنبال کار دیگری می‌گردی.", // nieuw, nalezen
-    'c.vog.w': "Justis فقط به چیزی نگاه می‌کند که برای آن کار مهم است. خیلی از کسانی که در گذشته‌شان چیزی هست، باز هم VOG می‌گیرند. اگر مطمئن نیستی، مشاوره کمک می‌کند.", // nieuw, nalezen
-    'c.safetysigns': "VCA چیست؟", // nieuw, nalezen
-    'c.safetysigns.b': "VCA یک گواهی ایمنی است. خیلی از شرکت‌ها، حتی وقتی از طریق شرکت کاریابی کار می‌کنی، آن را می‌خواهند، مثلاً در ساختمان‌سازی و صنعت. بیشتر کارگران B-VCA (VCA Basis) را می‌گیرند؛ سرپرست VOL-VCA را می‌گیرد. یک دوره می‌گذرانی، و در یک مرکز آزمون معتبر امتحانی با سؤال‌های چندگزینه‌ای می‌دهی. اغلب می‌توانی امتحان را به چند زبان بدهی، مثلاً انگلیسی یا لهستانی: از مرکز آزمون بپرس. مدرک ۱۰ سال اعتبار دارد. اغلب کارفرما یا شرکت کاریابی پولش را می‌دهد: قبل از اینکه خودت پول بدهی، بپرس. شرکت کاریابی اجازه ندارد هر هزینه‌ای را از حقوقت کم کند (موضوع کار از طریق شرکت کاریابی را ببین). در این درس‌ها چند کلمه یاد می‌گیری که در کار ایمن و در VCA با آن‌ها روبه‌رو می‌شوی. برای VCA یک دوره می‌گذرانی و امتحان می‌دهی. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen
-    'c.safetysigns.p': "چه کسی پول دورهٔ VCA را می‌دهد؟", // nieuw, nalezen
-    'c.safetysigns.s': "یک شرکت کاریابی می‌گوید: «به VCA نیاز داری. پول دوره را خودت می‌دهی، یا از حقوقت کم می‌کنیم». چه کار می‌کنی؟", // nieuw, nalezen
-    'c.safetysigns.o1': "می‌پرسی چه کسی پول می‌دهد، و آن را کتبی می‌گیری.", // nieuw, nalezen
-    'c.safetysigns.o2': "فوراً پول می‌دهی، تا کار را بگیری.", // nieuw, nalezen
-    'c.safetysigns.o3': "چیزی نمی‌گویی، و امضا می‌کنی.", // nieuw, nalezen
-    'c.safetysigns.w': "اغلب کارفرما یا شرکت کاریابی پول VCA را می‌دهد. اگر باید پولی بدهی، می‌خواهی از قبل آن را بدانی، روی کاغذ.", // nieuw, nalezen
-    'c.substances': "اول برچسب را بخوان، بعد کار کن", // nieuw, nalezen
-    'c.substances.b': "یک مادهٔ خطرناک روی برچسبش یک لوزی قرمز دارد، با یک تصویر سیاه داخلش: علامت خطر. تصویر خطر را نشان می‌دهد، مثلاً آتش، سم، یا ماده‌ای که پوستت را می‌سوزاند. برچسب و برگهٔ اطلاعات ایمنی (veiligheidsblad) می‌گویند چطور با آن ایمن کار کنی، و اگر مشکلی پیش آمد چه کار کنی. چیزی را که می‌گویند بپوش: دستکش، عینک ایمنی یا ماسک. درش را ببند، و ماده را در جای مخصوص خودش بگذار. هیچ‌وقت آن را در بطری نوشیدنی نریز: ممکن است کسی آن را بنوشد. وقتی با آن کار می‌کنی، چیزی نخور، ننوش و سیگار نکش، و بعد دست‌هایت را بشوی. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.substances.p': "برگهٔ اطلاعات ایمنی این ماده کجاست؟", // nieuw, nalezen
-    'c.substances.s': "یک همکار یک مادهٔ شوینده را در یک بطری آب خالی می‌ریزد، تا با خودش ببرد. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.substances.o1': "می‌گویی خطرناک است: ممکن است کسی آن را بنوشد.", // nieuw, nalezen
-    'c.substances.o2': "هیچ کاری نمی‌کنی: بطری خودش است.", // nieuw, nalezen
-    'c.substances.o3': "یک برچسب کوچک روی بطری می‌چسبانی.", // nieuw, nalezen
-    'c.substances.w': "در بطری نوشیدنی، ماده شبیه آب یا لیموناد است. ممکن است کسی اشتباهی آن را بنوشد. ماده در بسته‌بندی خودش، با برچسب، می‌ماند.", // nieuw, nalezen
-    'c.firefight': "آتش کوچک یا آتش بزرگ؟", // nieuw, nalezen
-    'c.firefight.b': "آتش به سه چیز نیاز دارد: سوخت، هوا و گرما. این مثلث آتش است. یکی را بردار، و آتش خاموش می‌شود. پتوی آتش‌نشانی هوا را قطع می‌کند. آب گرما را می‌گیرد، ولی هیچ‌وقت روی روغن یا چربیِ در حال سوختن، یا روی وسایل برقی از آب استفاده نکن. به کپسول آتش‌نشانی نگاه کن: رویش نوشته برای چیست. فوم و پودر روی خیلی از آتش‌ها کار می‌کنند؛ CO2 برای آتش وسایل برقی خوب است. جرقه و آتش باز را از موادی که زود آتش می‌گیرند دور نگه دار. فقط آتش کوچک را خودت خاموش کن، و فقط وقتی که ایمن است. بزرگ‌تر است؟ بیرون برو، در را پشت سرت ببند، و اعلام خطر کن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.firefight.p': "پتوی آتش‌نشانی کجا آویزان است؟", // nieuw, nalezen
-    'c.firefight.s': "در غذاخوری، روغن داخل یک ماهیتابه آتش می‌گیرد. شعله‌ها هنوز کوچک‌اند. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.firefight.o1': "پتوی آتش‌نشانی را روی ماهیتابه می‌اندازی.", // nieuw, nalezen
-    'c.firefight.o2': "یک لیوان آب رویش می‌ریزی.", // nieuw, nalezen
-    'c.firefight.o3': "ماهیتابه را بیرون می‌بری.", // nieuw, nalezen
-    'c.firefight.w': "آب روی روغنِ در حال سوختن یک گلولهٔ بزرگ آتش درست می‌کند. پتو هوا را قطع می‌کند، و آتش خاموش می‌شود. اگر می‌توانی، اجاق را خاموش کن.", // nieuw, nalezen
-    'c.permitwork': "کار خطرناک: اول مجوز", // nieuw, nalezen
-    'c.permitwork.b': "برای کار خطرناک، مثل جوشکاری نزدیک چیزهایی که آتش می‌گیرند، یا کار در مخزن یا چاله، شرکت اغلب از مجوز ایمنی کار (werkvergunning) استفاده می‌کند. این یک برگهٔ ایمنی است، نه مدارک اقامت یا کار تو. می‌گوید چه کاری می‌کنی، کجا، چه خطرهایی هست، و برای آن‌ها چه باید کرد. آن را بخوان، و فقط وقتی شروع کن که امضا شده باشد. در فضای بسته ممکن است هوا خیلی کم باشد یا گاز خطرناکی باشد: اول سنجش گاز، و یک نگهبان دریچه بیرون می‌ماند. کسی داخل به دردسر افتاده؟ اعلام خطر کن: هیچ‌وقت بدون وسایل حفاظتی داخل نرو. با جرثقیل، فقط یک نفر علامت می‌دهد: علامت‌دهنده. هیچ‌وقت زیر بار آویزان نایست. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.permitwork.p': "مجوز ایمنی کار امضا شده؟", // nieuw, nalezen
-    'c.permitwork.s': "همکارت داخل مخزن جواب نمی‌دهد. تو نگهبان دریچه هستی. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.permitwork.o1': "اعلام خطر می‌کنی، و بیرون می‌مانی.", // nieuw, nalezen
-    'c.permitwork.o2': "سریع داخل می‌روی تا کمکش کنی.", // nieuw, nalezen
-    'c.permitwork.o3': "چند دقیقه صبر می‌کنی، بعد نگاه می‌کنی.", // nieuw, nalezen
-    'c.permitwork.w': "گازی که به همکارت آسیب زده، می‌تواند به تو هم آسیب بزند. خیلی از قربانیان در مخزن‌ها کسانی بودند که برای کمک رفته بودند. بعد از اعلام خطر، کمک با وسایل حفاظتی می‌آید.", // nieuw, nalezen
+    'u.safework': "ایمنی در محل کار", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.vog': "گذشته‌ات: VOG", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vog': "گواهی حسن رفتار (VOG: برگه‌ای از طرف دولت که می‌گوید گذشته‌ات برای این کار مشکلی ندارد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.strafblad': "سوء پیشینه (جرم‌هایی که دادگاه تو را در آن‌ها مقصر دانسته)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.screening': "بررسی سوابق (بررسی گذشته‌ات قبل از شروع کار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.personenregister': "دفتر ثبت مراقبت از کودک (هر کسی که در مراقبت از کودک کار می‌کند باید در آن ثبت شده باشد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beveiligerspas': "کارت نگهبانی (کارتی که برای کار کردن به عنوان نگهبان لازم داری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verleden': "گذشته", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vog.1': "در کار مراقبت تقریباً همیشه VOG می‌خواهند.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vog.2': "من VOG دارم و در دفتر ثبت مراقبت از کودک ثبت شده‌ام.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.vog.3': "کارت نگهبانی‌ام را بعد از بررسی سوابق می‌گیرم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.q': "شرکت کاریابی VOG می‌خواهد. آن را گرفته‌ای؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.a': "نه. هنوز منتظر ایمیل Justis هستم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.safetysigns': "تابلوهای ایمنی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verbodsbord': "تابلوی ممنوع (دایرهٔ قرمز با یک خط روی آن: اجازه نداری این کار را بکنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gebodsbord': "تابلوی اجباری (دایرهٔ آبی با یک تصویر سفید: باید این کار را بکنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.waarschuwingsbord': "تابلوی هشدار (مثلث زرد با لبهٔ سیاه: مواظب باش، خطر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.reddingsbord': "تابلوی نجات (مستطیل سبز: راه خروج، یا کمک‌های اولیه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brandbord': "تابلوی تجهیزات آتش‌نشانی (مربع قرمز: اینجا کپسول آتش‌نشانی یا شیلنگ آتش‌نشانی هست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pictogram': "پیکتوگرام (تصویر ساده‌ای که بدون کلمه چیزی را می‌گوید)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.safetysigns.1': "تابلوی گرد قرمز یعنی: این کار ممنوع است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.safetysigns.2': "تابلوی آبی می‌گوید چه کاری باید بکنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.safetysigns.3': "تابلوهای سبز را تا خروجی اضطراری دنبال کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.q': "این تابلوی زرد یعنی چه؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.a': "مواظب باش، خطر. این تابلوی هشدار است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.substances': "مواد خطرناک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stofmasker': "ماسک گردوغبار (بینی و دهانت را می‌پوشاند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.giftig': "سمی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bijtend': "خورنده (پوستت را می‌سوزاند یا فلز را می‌خورد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.drinkfles': "بطری نوشیدنی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opbergen': "سر جایش گذاشتن (در جای مخصوص خودش، مثلاً کمدی که قفل می‌شود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dop': "درپوش (درِ بطری یا قوطی)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.substances.1': "اول به علامت خطر روی برچسب نگاه کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.substances.2': "هیچ‌وقت آن را در بطری نوشیدنی نریز.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.substances.3': "اینجا باید ماسک گردوغبار بزنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.q': "این ماده سمی است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.a': "این در برگهٔ اطلاعات ایمنی نوشته شده. نگاه می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.firefight': "آتش", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.branddriehoek': "مثلث آتش (آتش به سوخت، هوا و گرما نیاز دارد؛ یکی را بردار و آتش خاموش می‌شود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zuurstof': "اکسیژن (در هوا هست؛ آتش به آن نیاز دارد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.blussen': "خاموش کردن (آتش)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.blusdeken': "پتوی آتش‌نشانی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.openvuur': "آتش باز (شعله، مثلاً از فندک یا مشعل گازی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.brandslang': "شیلنگ آتش‌نشانی (پیچیده دور یک قرقره در دیوار)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.firefight.1': "هیچ‌وقت روی روغنِ در حال سوختن آب نریز.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.firefight.2': "فقط آتش کوچک را خودت خاموش می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.firefight.3': "پتوی آتش‌نشانی را روی ماهیتابه بینداز.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.q': "سطل زباله آتش گرفته!", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.a': "کوچک است. کپسول آتش‌نشانی را می‌آورم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.permitwork': "مجوز ایمنی کار، فضای بسته و بلند کردن بار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkvergunningveilig': "مجوز ایمنی کار (برگهٔ ایمنی برای کار خطرناک: چه کاری، کجا و چه خطرهایی؛ این مدارک اقامت یا کار تو نیست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beslotenruimte': "فضای بسته (مخزن، چاله یا فاضلاب: کوچک، با هوای تازهٔ کم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gasmeting': "سنجش گاز (قبل از اینکه وارد شوی، هوا را اندازه می‌گیری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mangatwacht': "نگهبان دریچه (کسی که بیرون کنار دهانه می‌ماند، ارتباط را حفظ می‌کند و اعلام خطر می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.signaalgever': "علامت‌دهنده (کسی که با دست به رانندهٔ جرثقیل علامت می‌دهد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hijsen': "بالا بردن (یک بار با جرثقیل)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.permitwork.1': "بدون مجوز ایمنی کار شروع نمی‌کنیم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.permitwork.2': "اول سنجش گاز، فقط بعد از آن وارد فضای بسته.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.permitwork.3': "به علامت‌دهنده نگاه کن: بالا، پایین، ایست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.q': "چه کسی بیرون کنار مخزن می‌ماند؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.a': "من. من نگهبان دریچه‌ام.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog': "VOG: بررسی گذشته‌ات", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.b': "برای بعضی کارها، شرکت کاریابی یا کارفرما VOG (Verklaring Omtrent het Gedrag) می‌خواهد. این برگه‌ای از طرف دولت است: می‌گوید گذشته‌ات برای این کار مشکلی ندارد. در کار مراقبت، مراقبت از کودک و نگهبانی تقریباً همیشه به آن نیاز داری. معمولاً کارفرما درخواست را آنلاین شروع می‌کند. از Justis یک ایمیل می‌گیری، و درخواست را با DigiD تمام می‌کنی و هزینه‌اش را می‌پردازی. اول بپرس چه کسی پول می‌دهد: اغلب کارفرما پول را پس می‌دهد. برای داوطلبانی که با کودکان یا آدم‌های آسیب‌پذیر کار می‌کنند، اغلب رایگان است. سوء پیشینه داری؟ این همیشه به این معنی نیست که VOG نمی‌گیری: Justis به چیزی نگاه می‌کند که برای این کار مهم است. مطمئن نیستی؟ از Juridisch Loket بپرس. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.p': "باید پول VOG را خودم بدهم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.s': "کار جدیدت در یک مرکز مراقبت VOG می‌خواهد. سال‌ها پیش با پلیس مشکلی داشتی. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.o1': "درخواست می‌دهی، و اگر نگرانی، از Juridisch Loket می‌پرسی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.o2': "درخواست نمی‌دهی: هیچ‌وقت آن را نمی‌گیری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.o3': "می‌گویی وقت نداری، و دنبال کار دیگری می‌گردی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.vog.w': "Justis فقط به چیزی نگاه می‌کند که برای آن کار مهم است. خیلی از کسانی که در گذشته‌شان چیزی هست، باز هم VOG می‌گیرند. اگر مطمئن نیستی، مشاوره کمک می‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns': "VCA چیست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.b': "VCA یک گواهی ایمنی است. خیلی از شرکت‌ها، حتی وقتی از طریق شرکت کاریابی کار می‌کنی، آن را می‌خواهند، مثلاً در ساختمان‌سازی و صنعت. بیشتر کارگران B-VCA (VCA Basis) را می‌گیرند؛ سرپرست VOL-VCA را می‌گیرد. یک دوره می‌گذرانی، و در یک مرکز آزمون معتبر امتحانی با سؤال‌های چندگزینه‌ای می‌دهی. اغلب می‌توانی امتحان را به چند زبان بدهی، مثلاً انگلیسی یا لهستانی: از مرکز آزمون بپرس. مدرک ۱۰ سال اعتبار دارد. اغلب کارفرما یا شرکت کاریابی پولش را می‌دهد: قبل از اینکه خودت پول بدهی، بپرس. شرکت کاریابی اجازه ندارد هر هزینه‌ای را از حقوقت کم کند (موضوع کار از طریق شرکت کاریابی را ببین). در این درس‌ها چند کلمه یاد می‌گیری که در کار ایمن و در VCA با آن‌ها روبه‌رو می‌شوی. برای VCA یک دوره می‌گذرانی و امتحان می‌دهی. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.p': "چه کسی پول دورهٔ VCA را می‌دهد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.s': "یک شرکت کاریابی می‌گوید: «به VCA نیاز داری. پول دوره را خودت می‌دهی، یا از حقوقت کم می‌کنیم». چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.o1': "می‌پرسی چه کسی پول می‌دهد، و آن را کتبی می‌گیری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.o2': "فوراً پول می‌دهی، تا کار را بگیری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.o3': "چیزی نمی‌گویی، و امضا می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.safetysigns.w': "اغلب کارفرما یا شرکت کاریابی پول VCA را می‌دهد. اگر باید پولی بدهی، می‌خواهی از قبل آن را بدانی، روی کاغذ.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances': "اول برچسب را بخوان، بعد کار کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.b': "یک مادهٔ خطرناک روی برچسبش یک لوزی قرمز دارد، با یک تصویر سیاه داخلش: علامت خطر. تصویر خطر را نشان می‌دهد، مثلاً آتش، سم، یا ماده‌ای که پوستت را می‌سوزاند. برچسب و برگهٔ اطلاعات ایمنی (veiligheidsblad) می‌گویند چطور با آن ایمن کار کنی، و اگر مشکلی پیش آمد چه کار کنی. چیزی را که می‌گویند بپوش: دستکش، عینک ایمنی یا ماسک. درش را ببند، و ماده را در جای مخصوص خودش بگذار. هیچ‌وقت آن را در بطری نوشیدنی نریز: ممکن است کسی آن را بنوشد. وقتی با آن کار می‌کنی، چیزی نخور، ننوش و سیگار نکش، و بعد دست‌هایت را بشوی. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.p': "برگهٔ اطلاعات ایمنی این ماده کجاست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.s': "یک همکار یک مادهٔ شوینده را در یک بطری آب خالی می‌ریزد، تا با خودش ببرد. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.o1': "می‌گویی خطرناک است: ممکن است کسی آن را بنوشد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.o2': "هیچ کاری نمی‌کنی: بطری خودش است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.o3': "یک برچسب کوچک روی بطری می‌چسبانی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.substances.w': "در بطری نوشیدنی، ماده شبیه آب یا لیموناد است. ممکن است کسی اشتباهی آن را بنوشد. ماده در بسته‌بندی خودش، با برچسب، می‌ماند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight': "آتش کوچک یا آتش بزرگ؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.b': "آتش به سه چیز نیاز دارد: سوخت، هوا و گرما. این مثلث آتش است. یکی را بردار، و آتش خاموش می‌شود. پتوی آتش‌نشانی هوا را قطع می‌کند. آب گرما را می‌گیرد، ولی هیچ‌وقت روی روغن یا چربیِ در حال سوختن، یا روی وسایل برقی از آب استفاده نکن. به کپسول آتش‌نشانی نگاه کن: رویش نوشته برای چیست. فوم و پودر روی خیلی از آتش‌ها کار می‌کنند؛ CO2 برای آتش وسایل برقی خوب است. جرقه و آتش باز را از موادی که زود آتش می‌گیرند دور نگه دار. فقط آتش کوچک را خودت خاموش کن، و فقط وقتی که ایمن است. بزرگ‌تر است؟ بیرون برو، در را پشت سرت ببند، و اعلام خطر کن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.p': "پتوی آتش‌نشانی کجا آویزان است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.s': "در غذاخوری، روغن داخل یک ماهیتابه آتش می‌گیرد. شعله‌ها هنوز کوچک‌اند. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.o1': "پتوی آتش‌نشانی را روی ماهیتابه می‌اندازی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.o2': "یک لیوان آب رویش می‌ریزی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.o3': "ماهیتابه را بیرون می‌بری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firefight.w': "آب روی روغنِ در حال سوختن یک گلولهٔ بزرگ آتش درست می‌کند. پتو هوا را قطع می‌کند، و آتش خاموش می‌شود. اگر می‌توانی، اجاق را خاموش کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork': "کار خطرناک: اول مجوز", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.b': "برای کار خطرناک، مثل جوشکاری نزدیک چیزهایی که آتش می‌گیرند، یا کار در مخزن یا چاله، شرکت اغلب از مجوز ایمنی کار (werkvergunning) استفاده می‌کند. این یک برگهٔ ایمنی است، نه مدارک اقامت یا کار تو. می‌گوید چه کاری می‌کنی، کجا، چه خطرهایی هست، و برای آن‌ها چه باید کرد. آن را بخوان، و فقط وقتی شروع کن که امضا شده باشد. در فضای بسته ممکن است هوا خیلی کم باشد یا گاز خطرناکی باشد: اول سنجش گاز، و یک نگهبان دریچه بیرون می‌ماند. کسی داخل به دردسر افتاده؟ اعلام خطر کن: هیچ‌وقت بدون وسایل حفاظتی داخل نرو. با جرثقیل، فقط یک نفر علامت می‌دهد: علامت‌دهنده. هیچ‌وقت زیر بار آویزان نایست. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.p': "مجوز ایمنی کار امضا شده؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.s': "همکارت داخل مخزن جواب نمی‌دهد. تو نگهبان دریچه هستی. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.o1': "اعلام خطر می‌کنی، و بیرون می‌مانی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.o2': "سریع داخل می‌روی تا کمکش کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.o3': "چند دقیقه صبر می‌کنی، بعد نگاه می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.permitwork.w': "گازی که به همکارت آسیب زده، می‌تواند به تو هم آسیب بزند. خیلی از قربانیان در مخزن‌ها کسانی بودند که برای کمک رفته بودند. بعد از اعلام خطر، کمک با وسایل حفاظتی می‌آید.", // nieuw, nalezen // nagelezen AI 28 nov
     // "Operator in de procesindustrie", the fourth own unit of Productie (23 November 2026).
-    'u.process': "اپراتور در صنایع فرایندی", // nieuw, nalezen
-    'l.plantround': "گشت و اتاق کنترل", // nieuw, nalezen
-    'w.controlekamer': "اتاق کنترل (جایی که اپراتورها کل کارخانه را روی صفحه‌نمایش‌ها زیر نظر دارند)", // nieuw, nalezen
-    'w.operator': "اپراتور (کسی که دستگاه‌های یک کارخانه را راه می‌اندازد و زیر نظر دارد)", // nieuw, nalezen
-    'w.drukmeter': "فشارسنج (یک نشانگر گرد با عقربه)", // nieuw, nalezen
-    'w.niveau': "سطح (اینکه یک مخزن یا سیلو چقدر پر است)", // nieuw, nalezen
-    'w.snelheid': "سرعت (اینکه یک خط یا یک دستگاه چقدر تند کار می‌کند)", // nieuw, nalezen
-    'w.alarmmelding': "پیام هشدار (هشداری روی صفحه که می‌گوید چیزی درست نیست)", // nieuw, nalezen
-    's.plantround.1': "دارم گشتم را می‌زنم.", // nieuw, nalezen
-    's.plantround.2': "فشار خیلی بالاست.", // nieuw, nalezen
-    's.plantround.3': "مقدار را یادداشت می‌کنم.", // nieuw, nalezen
-    'c.plantround.q': "چرا روی صفحه هشدار آمده؟", // nieuw, nalezen
-    'c.plantround.a': "سطح مخزن شمارهٔ دو خیلی بالاست.", // nieuw, nalezen
-    'l.plantfault': "یک خرابی", // nieuw, nalezen
-    'w.stilstand': "توقف (خط می‌ایستد و هیچ چیزی تولید نمی‌شود)", // nieuw, nalezen
-    'w.opstarten': "راه‌اندازی کردن (یک دستگاه یا یک خط، قدم به قدم)", // nieuw, nalezen
-    'w.stilzetten': "متوقف کردن (خاموش کردن دستگاه به روش درست)", // nieuw, nalezen
-    'w.technischedienst': "بخش تعمیر و نگهداری (TD: دستگاه‌ها را تعمیر می‌کنند)", // nieuw, nalezen
-    'w.onderhoudsmonteur': "تعمیرکار بخش نگهداری", // nieuw, nalezen
-    'w.resetten': "ریست کردن (پاک کردن خطا روی صفحه یا تابلوی کنترل)", // nieuw, nalezen
-    's.plantfault.1': "وقتی خرابی پیش بیاید، به سرپرست شیفت زنگ می‌زنم.", // nieuw, nalezen
-    's.plantfault.2': "هیچ‌وقت دستت را داخل دستگاه روشن نبر.", // nieuw, nalezen
-    's.plantfault.3': "بخش تعمیر و نگهداری در راه است.", // nieuw, nalezen
-    'c.plantfault.q': "اجازه دارم خط را دوباره راه بیندازم؟", // nieuw, nalezen
-    'c.plantfault.a': "نه، صبر کن. قفل تعمیرکار هنوز رویش است.", // nieuw, nalezen
-    'l.shiftwork': "شیفت‌ها و شب‌کاری", // nieuw, nalezen
-    'w.ploeg': "گروه شیفت (گروهی که در شیفت‌های یکسان کار می‌کنند)", // nieuw, nalezen
-    'w.ploegwissel': "تعویض شیفت (یک گروه به خانه می‌رود، گروه بعدی شروع می‌کند)", // nieuw, nalezen
-    'w.volcontinu': "شبانه‌روزی (کارخانه شب و روز کار می‌کند، همهٔ روزهای هفته)", // nieuw, nalezen
-    'w.overdagslapen': "روز خوابیدن (بعد از شیفت شب)", // nieuw, nalezen
-    'w.broodtrommel': "ظرف غذا", // nieuw, nalezen
-    'w.aflosser': "جانشین (همکاری که جای تو را می‌گیرد)", // nieuw, nalezen
-    's.shiftwork.1': "کارخانهٔ ما شبانه‌روزی کار می‌کند.", // nieuw, nalezen
-    's.shiftwork.2': "آن را برای گروه شیفت بعدی در دفتر ثبت بنویس.", // nieuw, nalezen
-    's.shiftwork.3': "برای تحویل شیفت سر وقت هستم.", // nieuw, nalezen
-    'c.shiftwork.q': "دیشب چه اتفاقی افتاد؟", // nieuw, nalezen
-    'c.shiftwork.a': "پمپ سه از کار افتاد. در دفتر ثبت نوشته شده.", // nieuw, nalezen
-    'l.heatdust': "گرما، بخار و گردوغبار", // nieuw, nalezen
-    'w.smeltoven': "کورهٔ ذوب (کورهٔ خیلی داغی که شیشه یا فلز را ذوب می‌کند)", // nieuw, nalezen
-    'w.stoom': "بخار (بخار آب خیلی داغ)", // nieuw, nalezen
-    'w.stoomleiding': "لولهٔ بخار (داغ است، حتی وقتی بخاری نمی‌بینی)", // nieuw, nalezen
-    'w.hittekleding': "لباس ضد حرارت", // nieuw, nalezen
-    'w.kwartsstof': "گرد کوارتز، گرد سیلیس (گردوغبار خیلی ریز از خاک رس، ماسه یا سنگ؛ به ریه‌هایت آسیب می‌زند)", // nieuw, nalezen
-    'w.explosiegevaar': "خطر انفجار (گردوغبار یا بخار در هوا می‌تواند منفجر شود؛ یک تابلوی زرد با EX)", // nieuw, nalezen
-    's.heatdust.1': "کنار کورهٔ ذوب مرتب آب بنوش.", // nieuw, nalezen
-    's.heatdust.2': "گرد کوارتز را نمی‌بینی. ماسک گردوغبارت را بزن.", // nieuw, nalezen
-    's.heatdust.3': "اینجا خطر انفجار هست: جرقه ممنوع.", // nieuw, nalezen
-    'c.heatdust.q': "گوشی‌ام اجازه دارد وارد این منطقه شود؟", // nieuw, nalezen
-    'c.heatdust.a': "نه. اینجا خطر انفجار هست.", // nieuw, nalezen
-    'c.plantround': "گشتت را بزن، یادداشت کن", // nieuw, nalezen
-    'c.plantround.b': "کارخانه‌ای که شب و روز کار می‌کند به چشم و گوش نیاز دارد. در گشتت نگاه می‌کنی، گوش می‌دهی و بو می‌کشی: یک صدای تازه، یک نشتی یا یک بوی عجیب می‌تواند اولین نشانهٔ یک مشکل باشد. نشانگرها را می‌خوانی: دما، فشار، سرعت و سطح. هر مقدار را فوراً، با ساعتش، روی فهرست یا در سیستم بنویس. نه بعداً، از حفظ. مقداری خیلی بالا یا خیلی پایین است؟ فوراً به اتاق کنترل یا سرپرست شیفت بگو. هشدار روی صفحه هیچ‌وقت «فقط یک هشدار» نیست: قبل از اینکه بدانی چرا آمده، خاموشش نکن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.plantround.p': "دما خیلی بالاست.", // nieuw, nalezen
-    'c.plantround.s': "در گشتت، فشار کمی زیادی بالاست. شیفتت تقریباً تمام شده. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.plantround.o1': "فوراً به اتاق کنترل خبر می‌دهی.", // nieuw, nalezen
-    'c.plantround.o2': "یادداشتش می‌کنی و به هیچ‌کس نمی‌گویی.", // nieuw, nalezen
-    'c.plantround.o3': "آن را برای شیفت بعد می‌گذاری.", // nieuw, nalezen
-    'c.plantround.w': "در کارخانه یک تغییر کوچک می‌تواند زود بزرگ شود. وقتی اتاق کنترل زود خبردار شود، می‌تواند قبل از اینکه مشکلی پیش بیاید اقدام کند.", // nieuw, nalezen
-    'c.plantfault': "خاموش کن، قفل کن، بعد تعمیر کن", // nieuw, nalezen
-    'c.plantfault.b': "وقتی خرابی پیش می‌آید، خط می‌ایستد و همه می‌خواهند زود دوباره راه بیفتد. ولی خیلی از حادثه‌ها درست همان موقع اتفاق می‌افتند. هیچ‌وقت دستت را داخل دستگاه روشن نبر، حتی «فقط برای یک لحظه». به سرپرست شیفت یا بخش تعمیر و نگهداری زنگ بزن. قبل از اینکه کسی روی دستگاه کار کند، دستگاه خاموش و قفل می‌شود، تا هیچ‌کس نتواند روشنش کند. اغلب هر کسی که روی آن کار می‌کند قفل خودش را رویش می‌زند. فقط وقتی دوباره راه بینداز که همهٔ قفل‌ها برداشته شده باشند و سرپرست شیفت بگوید ایمن است. قدم به قدم راه بینداز، همان‌طور که یاد گرفته‌ای. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.plantfault.p': "هنوز یک قفل رویش است.", // nieuw, nalezen
-    'c.plantfault.s': "یک محصول در دستگاه گیر کرده. دستگاه هنوز روشن است. یک همکار می‌گوید: «زود بکشش بیرون». چه کار می‌کنی؟", // nieuw, nalezen
-    'c.plantfault.o1': "دستت را داخل نمی‌بری: به سرپرست شیفت زنگ می‌زنی.", // nieuw, nalezen
-    'c.plantfault.o2': "با دستت زود آن را بیرون می‌کشی.", // nieuw, nalezen
-    'c.plantfault.o3': "وقتی دستگاه روشن است، با یک چوب آن را بیرون هل می‌دهی.", // nieuw, nalezen
-    'c.plantfault.w': "دستگاهی که هنوز روشن است هر لحظه ممکن است حرکت کند. دستگاهی که خاموش و قفل شده نمی‌تواند به تو آسیب بزند.", // nieuw, nalezen
-    'c.shiftwork': "شب‌کاری: بخواب، بخور، سر وقت باش", // nieuw, nalezen
-    'c.shiftwork.b': "خیلی از کارخانه‌ها شب و روز کار می‌کنند، همهٔ روزهای هفته. به نوبت در شیفت صبح، عصر و شب کار می‌کنی، اغلب در سه یا پنج گروه شیفت. بعد از شیفت شب، در اتاقی تاریک و آرام بخواب، و به خانواده‌ات بگو کی می‌خوابی. سر ساعت‌های ثابت غذا بخور، و غذای خودت را با خودت بیاور: شب‌ها غذاخوری اغلب بسته است. برای تحویل شیفت سر وقت باش: همکارت منتظر است، و کارخانه نباید تنها بماند. برای شیفت شب قانون‌های اضافی هست، در قانون و اغلب در قرارداد جمعی کار (cao)، مثلاً دربارهٔ استراحت بعد از شب‌کاری‌هایت. بپرس قانون‌های محل کارت چیست. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen
-    'c.shiftwork.p': "قانون‌های شیفت شب چیست؟", // nieuw, nalezen
-    'c.shiftwork.s': "بعد از چهار شب، سرپرست شیفت از تو می‌خواهد یک شب دیگر هم کار کنی. خیلی خسته‌ای. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.shiftwork.o1': "می‌گویی خیلی خسته‌ای، و دربارهٔ قانون‌ها می‌پرسی.", // nieuw, nalezen
-    'c.shiftwork.o2': "قبول می‌کنی، و کلی قهوه می‌خوری.", // nieuw, nalezen
-    'c.shiftwork.o3': "قبول می‌کنی، و در زمان استراحتت کمی می‌خوابی.", // nieuw, nalezen
-    'c.shiftwork.w': "آدم‌های خسته بیشتر اشتباه می‌کنند، و در کارخانه یک اشتباه می‌تواند خطرناک باشد. برای استراحت بعد از شیفت شب قانون‌هایی وجود دارد.", // nieuw, nalezen
-    'c.heatdust': "گرما، گردوغبار و جرقه", // nieuw, nalezen
-    'c.heatdust.b': "نزدیک کورهٔ ذوب، کورهٔ پخت یا بخار خیلی داغ است. مرتب آب بنوش، حتی قبل از اینکه تشنه شوی. لباس ضد حرارت را بپوش، و بدون دستکش به لوله‌ها یا قطعه‌ها دست نزن: بخار و فلز داغ می‌سوزانند، حتی وقتی آن‌ها را نمی‌بینی. سرت گیج می‌رود یا حالت بد است؟ دست از کار بکش، به یک جای خنک برو و به کسی بگو. گردوغبار خاک رس، ماسه یا سنگ می‌تواند گرد کوارتز (kwartsstof) داشته باشد. آن را نمی‌بینی، ولی به ریه‌هایت آسیب می‌زند. از سیستم مکش استفاده کن، ماسک گردوغبارت را بزن، و هیچ‌وقت گردوغبار را با باد فشرده نپران. در بعضی منطقه‌ها، گردوغبار یا بخار می‌تواند منفجر شود: یک تابلوی زرد با EX این را نشان می‌دهد. آنجا: نه جرقه، نه آتش، و اغلب نه گوشی معمولی. بپرس در هر منطقه چه چیزی مجاز است. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.heatdust.p': "حالم خوب نیست. می‌روم به یک جای خنک.", // nieuw, nalezen
-    'c.heatdust.s': "روی دستگاهت گرد ریز خاک رس نشسته. یک همکار می‌گوید: «با بادپاش بپرانش». چه کار می‌کنی؟", // nieuw, nalezen
-    'c.heatdust.o1': "آن را خیس، یا با جاروبرقی تمیز می‌کنی.", // nieuw, nalezen
-    'c.heatdust.o2': "با باد می‌پرانی‌اش: سریع‌تر است.", // nieuw, nalezen
-    'c.heatdust.o3': "آن را برای شیفت بعد می‌گذاری.", // nieuw, nalezen
-    'c.heatdust.w': "باد زدن گردوغبار را بلند می‌کند، به هوا و به ریه‌هایت. یک دستمال خیس یا جاروبرقی گردوغبار را پایین نگه می‌دارد.", // nieuw, nalezen
+    'u.process': "اپراتور در صنایع فرایندی", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.plantround': "گشت و اتاق کنترل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.controlekamer': "اتاق کنترل (جایی که اپراتورها کل کارخانه را روی صفحه‌نمایش‌ها زیر نظر دارند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.operator': "اپراتور (کسی که دستگاه‌های یک کارخانه را راه می‌اندازد و زیر نظر دارد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.drukmeter': "فشارسنج (یک نشانگر گرد با عقربه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.niveau': "سطح (اینکه یک مخزن یا سیلو چقدر پر است)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.snelheid': "سرعت (اینکه یک خط یا یک دستگاه چقدر تند کار می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.alarmmelding': "پیام هشدار (هشداری روی صفحه که می‌گوید چیزی درست نیست)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantround.1': "دارم گشتم را می‌زنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantround.2': "فشار خیلی بالاست.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantround.3': "مقدار را یادداشت می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.q': "چرا روی صفحه هشدار آمده؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.a': "سطح مخزن شمارهٔ دو خیلی بالاست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.plantfault': "یک خرابی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stilstand': "توقف (خط می‌ایستد و هیچ چیزی تولید نمی‌شود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opstarten': "راه‌اندازی کردن (یک دستگاه یا یک خط، قدم به قدم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stilzetten': "متوقف کردن (خاموش کردن دستگاه به روش درست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.technischedienst': "بخش تعمیر و نگهداری (TD: دستگاه‌ها را تعمیر می‌کنند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderhoudsmonteur': "تعمیرکار بخش نگهداری", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.resetten': "ریست کردن (پاک کردن خطا روی صفحه یا تابلوی کنترل)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantfault.1': "وقتی خرابی پیش بیاید، به سرپرست شیفت زنگ می‌زنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantfault.2': "هیچ‌وقت دستت را داخل دستگاه روشن نبر.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.plantfault.3': "بخش تعمیر و نگهداری در راه است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.q': "اجازه دارم خط را دوباره راه بیندازم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.a': "نه، صبر کن. قفل تعمیرکار هنوز رویش است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.shiftwork': "شیفت‌ها و شب‌کاری", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ploeg': "گروه شیفت (گروهی که در شیفت‌های یکسان کار می‌کنند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ploegwissel': "تعویض شیفت (یک گروه به خانه می‌رود، گروه بعدی شروع می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.volcontinu': "شبانه‌روزی (کارخانه شب و روز کار می‌کند، همهٔ روزهای هفته)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.overdagslapen': "روز خوابیدن (بعد از شیفت شب)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.broodtrommel': "ظرف غذا", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aflosser': "جانشین (همکاری که جای تو را می‌گیرد)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shiftwork.1': "کارخانهٔ ما شبانه‌روزی کار می‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shiftwork.2': "آن را برای گروه شیفت بعدی در دفتر ثبت بنویس.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.shiftwork.3': "برای تحویل شیفت سر وقت هستم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.q': "دیشب چه اتفاقی افتاد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.a': "پمپ سه از کار افتاد. در دفتر ثبت نوشته شده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.heatdust': "گرما، بخار و گردوغبار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.smeltoven': "کورهٔ ذوب (کورهٔ خیلی داغی که شیشه یا فلز را ذوب می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stoom': "بخار (بخار آب خیلی داغ)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stoomleiding': "لولهٔ بخار (داغ است، حتی وقتی بخاری نمی‌بینی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hittekleding': "لباس ضد حرارت", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kwartsstof': "گرد کوارتز، گرد سیلیس (گردوغبار خیلی ریز از خاک رس، ماسه یا سنگ؛ به ریه‌هایت آسیب می‌زند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.explosiegevaar': "خطر انفجار (گردوغبار یا بخار در هوا می‌تواند منفجر شود؛ یک تابلوی زرد با EX)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.heatdust.1': "کنار کورهٔ ذوب مرتب آب بنوش.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.heatdust.2': "گرد کوارتز را نمی‌بینی. ماسک گردوغبارت را بزن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.heatdust.3': "اینجا خطر انفجار هست: جرقه ممنوع.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.q': "اجازه دارم گوشی‌ام را با خودم به این منطقه بیاورم؟", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.heatdust.a': "نه. اینجا خطر انفجار هست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround': "گشتت را بزن، یادداشت کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.b': "کارخانه‌ای که شب و روز کار می‌کند به چشم و گوش نیاز دارد. در گشتت نگاه می‌کنی، گوش می‌دهی و بو می‌کشی: یک صدای تازه، یک نشتی یا یک بوی عجیب می‌تواند اولین نشانهٔ یک مشکل باشد. نشانگرها را می‌خوانی: دما، فشار، سرعت و سطح. هر مقدار را فوراً، با ساعتش، روی فهرست یا در سیستم بنویس. نه بعداً، از حفظ. مقداری خیلی بالا یا خیلی پایین است؟ فوراً به اتاق کنترل یا سرپرست شیفت بگو. هشدار روی صفحه هیچ‌وقت «فقط یک هشدار» نیست: قبل از اینکه بدانی چرا آمده، خاموشش نکن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.p': "دما خیلی بالاست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.s': "در گشتت، فشار کمی زیادی بالاست. شیفتت تقریباً تمام شده. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.o1': "فوراً به اتاق کنترل خبر می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.o2': "یادداشتش می‌کنی و به هیچ‌کس نمی‌گویی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.o3': "آن را برای شیفت بعد می‌گذاری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantround.w': "در کارخانه یک تغییر کوچک می‌تواند زود بزرگ شود. وقتی اتاق کنترل زود خبردار شود، می‌تواند قبل از اینکه مشکلی پیش بیاید اقدام کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault': "خاموش کن، قفل کن، بعد تعمیر کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.b': "وقتی خرابی پیش می‌آید، خط می‌ایستد و همه می‌خواهند زود دوباره راه بیفتد. ولی خیلی از حادثه‌ها درست همان موقع اتفاق می‌افتند. هیچ‌وقت دستت را داخل دستگاه روشن نبر، حتی «فقط برای یک لحظه». به سرپرست شیفت یا بخش تعمیر و نگهداری زنگ بزن. قبل از اینکه کسی روی دستگاه کار کند، دستگاه خاموش و قفل می‌شود، تا هیچ‌کس نتواند روشنش کند. اغلب هر کسی که روی آن کار می‌کند قفل خودش را رویش می‌زند. فقط وقتی دوباره راه بینداز که همهٔ قفل‌ها برداشته شده باشند و سرپرست شیفت بگوید ایمن است. قدم به قدم راه بینداز، همان‌طور که یاد گرفته‌ای. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.p': "هنوز یک قفل رویش است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.s': "یک محصول در دستگاه گیر کرده. دستگاه هنوز روشن است. یک همکار می‌گوید: «زود بکشش بیرون». چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.o1': "دستت را داخل نمی‌بری: به سرپرست شیفت زنگ می‌زنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.o2': "با دستت زود آن را بیرون می‌کشی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.o3': "وقتی دستگاه روشن است، با یک چوب آن را بیرون هل می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.plantfault.w': "دستگاهی که هنوز روشن است هر لحظه ممکن است حرکت کند. دستگاهی که خاموش و قفل شده نمی‌تواند به تو آسیب بزند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork': "شب‌کاری: بخواب، بخور، سر وقت باش", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.b': "خیلی از کارخانه‌ها شب و روز کار می‌کنند، همهٔ روزهای هفته. به نوبت در شیفت صبح، عصر و شب کار می‌کنی، اغلب در سه یا پنج گروه شیفت. بعد از شیفت شب، در اتاقی تاریک و آرام بخواب، و به خانواده‌ات بگو کی می‌خوابی. سر ساعت‌های ثابت غذا بخور، و غذای خودت را با خودت بیاور: شب‌ها غذاخوری اغلب بسته است. برای تحویل شیفت سر وقت باش: همکارت منتظر است، و کارخانه نباید تنها بماند. برای شیفت شب قانون‌های اضافی هست، در قانون و اغلب در قرارداد جمعی کار (cao)، مثلاً دربارهٔ استراحت بعد از شب‌کاری‌هایت. بپرس قانون‌های محل کارت چیست. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.p': "قانون‌های شیفت شب چیست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.s': "بعد از چهار شب، سرپرست شیفت از تو می‌خواهد یک شب دیگر هم کار کنی. خیلی خسته‌ای. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.o1': "می‌گویی خیلی خسته‌ای، و دربارهٔ قانون‌ها می‌پرسی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.o2': "قبول می‌کنی، و کلی قهوه می‌خوری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.o3': "قبول می‌کنی، و در زمان استراحتت کمی می‌خوابی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.shiftwork.w': "آدم‌های خسته بیشتر اشتباه می‌کنند، و در کارخانه یک اشتباه می‌تواند خطرناک باشد. برای استراحت بعد از شیفت شب قانون‌هایی وجود دارد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust': "گرما، گردوغبار و جرقه", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.b': "نزدیک کورهٔ ذوب، کورهٔ پخت یا بخار خیلی داغ است. مرتب آب بنوش، حتی قبل از اینکه تشنه شوی. لباس ضد حرارت را بپوش، و بدون دستکش به لوله‌ها یا قطعه‌ها دست نزن: بخار و فلز داغ می‌سوزانند، حتی وقتی آن‌ها را نمی‌بینی. سرت گیج می‌رود یا حالت بد است؟ دست از کار بکش، به یک جای خنک برو و به کسی بگو. گردوغبار خاک رس، ماسه یا سنگ می‌تواند گرد کوارتز (kwartsstof) داشته باشد. آن را نمی‌بینی، ولی به ریه‌هایت آسیب می‌زند. از سیستم مکش استفاده کن، ماسک گردوغبارت را بزن، و هیچ‌وقت گردوغبار را با باد فشرده نپران. در بعضی منطقه‌ها، گردوغبار یا بخار می‌تواند منفجر شود: یک تابلوی زرد با EX این را نشان می‌دهد. آنجا: نه جرقه، نه آتش، و اغلب نه گوشی معمولی. بپرس در هر منطقه چه چیزی مجاز است. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.p': "حالم خوب نیست. می‌روم به یک جای خنک.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.s': "روی دستگاهت گرد ریز خاک رس نشسته. یک همکار می‌گوید: «با بادپاش بپرانش». چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.o1': "آن را خیس، یا با جاروبرقی تمیز می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.o2': "با باد می‌پرانی‌اش: سریع‌تر است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.o3': "آن را برای شیفت بعد می‌گذاری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.heatdust.w': "باد زدن گردوغبار را بلند می‌کند، به هوا و به ریه‌هایت. یک دستمال خیس یا جاروبرقی گردوغبار را پایین نگه می‌دارد.", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (debts, taxes, discrimination, the union, kiln, mixing lab, first weeks, order picking) (26 November 2026).
-    'l.discrimination': "تبعیض و آزار", // nieuw, nalezen
-    'w.andersbehandelen': "رفتار متفاوت داشتن (بدتر از بقیه)", // nieuw, nalezen
-    'w.afkomst': "اصل و نسب (کشور یا گروهی که تو یا خانواده‌ات از آن آمده‌اید)", // nieuw, nalezen
-    'w.geloof': "دین، ایمان", // nieuw, nalezen
-    'w.uitschelden': "فحش دادن، توهین کردن (حرف‌های زشت به کسی زدن)", // nieuw, nalezen
-    'w.bedreigen': "تهدید کردن (گفتن اینکه به کسی آسیب می‌زنی)", // nieuw, nalezen
-    'w.geweld': "خشونت", // nieuw, nalezen
-    's.discrimination.1': "به‌خاطر دینم با من رفتار متفاوتی می‌شود.", // nieuw, nalezen
-    's.discrimination.2': "او مرا تهدید می‌کند. احساس امنیت نمی‌کنم.", // nieuw, nalezen
-    's.discrimination.3': "اجازه دارم نه بگویم، حتی به رئیسم.", // nieuw, nalezen
-    'c.discrimination.q': "حالت خوب است؟ مدام به تو فحش می‌دهند.", // nieuw, nalezen
-    'c.discrimination.a': "نه، خوب نیستم. می‌خواهم گزارشش بدهم.", // nieuw, nalezen
-    'l.union': "اتحادیهٔ کارگری و شورای کارکنان", // nieuw, nalezen
-    'w.lidworden': "عضو شدن", // nieuw, nalezen
-    'w.contributie': "حق عضویت (هر ماه آن را می‌پردازی)", // nieuw, nalezen
-    'w.opkomenvoor': "دفاع کردن از (از منافع کسی دفاع کردن)", // nieuw, nalezen
-    'w.onderhandelen': "مذاکره کردن (حرف زدن تا وقتی هر دو طرف توافق کنند)", // nieuw, nalezen
-    'w.loonsverhoging': "افزایش حقوق", // nieuw, nalezen
-    'w.ondernemingsraad': "شورای کارکنان (OR: همکارانی که انتخاب شده‌اند تا با مدیر صحبت کنند)", // nieuw, nalezen
-    's.union.1': "عضو اتحادیهٔ کارگری می‌شوم.", // nieuw, nalezen
-    's.union.2': "اتحادیهٔ کارگری دربارهٔ cao مذاکره می‌کند.", // nieuw, nalezen
-    's.union.3': "چه کسانی در شورای کارکنان هستند؟", // nieuw, nalezen
-    'c.union.q': "چرا عضو اتحادیهٔ کارگری هستی؟", // nieuw, nalezen
-    'c.union.a': "وقتی مشکلی پیش بیاید، از من دفاع می‌کنند.", // nieuw, nalezen
-    'l.debthelp': "بدهی و کمک", // nieuw, nalezen
-    'w.herinnering': "یادآوری (یک نامه: هنوز پرداخت نکرده‌ای)", // nieuw, nalezen
-    'w.aanmaning': "اخطار نهایی (قبل از یک تاریخ بپرداز، وگرنه ممکن است هزینهٔ اضافه بیاید)", // nieuw, nalezen
-    'w.betalingsregeling': "قسط‌بندی (یک بدهی را در قسمت‌های کوچک می‌پردازی)", // nieuw, nalezen
-    'w.deurwaarder': "مأمور اجرا (مأموری که بدهی را وصول می‌کند، اغلب بعد از اینکه قاضی حکم داده)", // nieuw, nalezen
-    'w.schuldhulp': "کمک برای بدهی (کمک رایگان برای بدهی‌هایت، از طرف شهرداری)", // nieuw, nalezen
-    'w.achterstand': "بدهی عقب‌افتاده (پولی که باید تا حالا پرداخته بودی)", // nieuw, nalezen
-    's.debthelp.1': "یک اخطار نهایی گرفته‌ام.", // nieuw, nalezen
-    's.debthelp.2': "می‌توانم قسطی بپردازم؟", // nieuw, nalezen
-    's.debthelp.3': "برای بدهی‌هایم کمک می‌خواهم.", // nieuw, nalezen
-    'c.debthelp.q': "شما هنوز صورت‌حساب را پرداخت نکرده‌اید.", // nieuw, nalezen
-    'c.debthelp.a': "درست است. می‌توانم قسط‌بندی بگیرم؟", // nieuw, nalezen
-    'l.taxes': "مالیات و کمک‌هزینه‌ها", // nieuw, nalezen
-    'w.jaaropgave': "گواهی سالانهٔ درآمد (کاغذی از کارفرمایت با حقوق کل سال)", // nieuw, nalezen
-    'w.blauweenvelop': "پاکت آبی (نامه‌های Belastingdienst در آن می‌آیند)", // nieuw, nalezen
-    'w.teruggave': "بازپرداخت (پول مالیاتی که پس می‌گیری)", // nieuw, nalezen
-    'w.uitstel': "مهلت بیشتر (اجازه داری بعداً انجامش بدهی)", // nieuw, nalezen
-    'w.huurtoeslag': "کمک‌هزینهٔ اجاره (پولی از دولت که کمک می‌کند اجاره را بپردازی)", // nieuw, nalezen
-    'w.belastingtelefoon': "خط تلفن رایگان Belastingdienst", // nieuw, nalezen
-    's.taxes.1': "برای اظهارنامهٔ مالیاتی به گواهی سالانهٔ درآمدم نیاز دارم.", // nieuw, nalezen
-    's.taxes.2': "الان بیشتر درآمد دارم. فوراً اطلاعش می‌دهم.", // nieuw, nalezen
-    's.taxes.3': "از Belastingdienst پول پس می‌گیرم.", // nieuw, nalezen
-    'c.taxes.q': "یک پاکت آبی برایت آمده.", // nieuw, nalezen
-    'c.taxes.a': "ممنون. همین الان بازش می‌کنم.", // nieuw, nalezen
-    'l.kiln': "کوره، شیشه و سرامیک", // nieuw, nalezen
-    'w.pers': "پرس (دستگاهی که خاک رس یا پودر را به یک شکل فشرده می‌کند)", // nieuw, nalezen
-    'w.glazuur': "لعاب (لایه‌ای براق و شیشه‌مانند روی کاشی یا فنجان)", // nieuw, nalezen
-    'w.tunneloven': "کورهٔ تونلی (یک کورهٔ دراز؛ محصولات آرام از داخلش رد می‌شوند)", // nieuw, nalezen
-    'w.scherf': "خرده (تکهٔ تیز از شیشه یا کاشی شکسته)", // nieuw, nalezen
-    'w.gloeiend': "گداخته (آن‌قدر داغ که سرخ می‌درخشد)", // nieuw, nalezen
-    'w.armbeschermer': "محافظ بازو (آستینی که بازویت را در برابر بریدگی محافظت می‌کند)", // nieuw, nalezen
-    's.kiln.1': "کاشی‌ها آرام از کورهٔ تونلی رد می‌شوند.", // nieuw, nalezen
-    's.kiln.2': "این کاشی ترک دارد. ضایعات است.", // nieuw, nalezen
-    's.kiln.3': "کنار شیشه محافظ‌های بازویت را بپوش.", // nieuw, nalezen
-    'c.kiln.q': "اجازه دارم خرده‌ها را با دستم جمع کنم؟", // nieuw, nalezen
-    'c.kiln.a': "نه. از جارو و خاک‌انداز استفاده کن.", // nieuw, nalezen
-    'l.mixlab': "سالن اختلاط و آزمایشگاه", // nieuw, nalezen
-    'w.batch': "بچ (مقداری که یک‌جا، با یک دستور ساخت، درست می‌شود)", // nieuw, nalezen
-    'w.afwegen': "وزن کردن (دقیقاً همان‌قدر که دستور ساخت می‌گوید وزن کردن)", // nieuw, nalezen
-    'w.mengvat': "مخزن اختلاط (مخزن بزرگی که یک همزن داخلش است)", // nieuw, nalezen
-    'w.labjas': "روپوش آزمایشگاه", // nieuw, nalezen
-    'w.laboratorium': "آزمایشگاه (لب: اینجا محصول را آزمایش می‌کنند)", // nieuw, nalezen
-    'w.grondstof': "مادهٔ اولیه (چیزی که محصول را از آن می‌سازی)", // nieuw, nalezen
-    's.mixlab.1': "مواد اولیه را دقیق وزن کن.", // nieuw, nalezen
-    's.mixlab.2': "دارم برای آزمایشگاه نمونه برمی‌دارم.", // nieuw, nalezen
-    's.mixlab.3': "این کدام بچ است؟ به برچسب نگاه کن.", // nieuw, nalezen
-    'c.mixlab.q': "بچ تأیید شده؟", // nieuw, nalezen
-    'c.mixlab.a': "هنوز نه. آزمایشگاه دارد نمونه را آزمایش می‌کند.", // nieuw, nalezen
-    'c.discrimination': "رفتار ناعادلانه؟ تقصیر تو نیست", // nieuw, nalezen
-    'c.discrimination.b': "تبعیض یعنی به‌خاطر اینکه چه کسی هستی، با تو متفاوت یا بدتر رفتار شود: به‌خاطر اصل و نسب، رنگ پوست، دین، جنسیت، سن، معلولیت یا اینکه چه کسی را دوست داری. آزار مثلاً لمس ناخواسته، حرف‌های جنسی، تهدید یا فحش دادن به توست. هر دو سر کار ممنوع است، و هیچ‌وقت تقصیر تو نیست. اجازه داری نه بگویی، حتی به رئیست. بنویس چه اتفاقی افتاد، کی، و چه کسی آن را دید. با سرپرستت حرف بزن، یا اگر شرکتت vertrouwenspersoon دارد، با او. بیرون از کارت، دفتر مبارزه با تبعیض در شهرت رایگان کمک می‌کند (discriminatie.nl). College voor de Rechten van de Mens هم می‌تواند رایگان رأی بدهد. خشونت یا تهدید؟ به پلیس برو. در خطر: به ۱۱۲ زنگ بزن. اطلاعات کلی. برای وضعیت خودت: از اتحادیهٔ کارگری، Juridisch Loket یا FairWork بپرس.", // nieuw, nalezen
-    'c.discrimination.p': "می‌خواهم چیزی را گزارش بدهم. می‌توانم محرمانه با شما صحبت کنم؟", // nieuw, nalezen
-    'c.discrimination.s': "یک همکار اغلب به‌خاطر اینکه از کجا آمده‌ای به تو فحش می‌دهد. بقیه می‌خندند. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.discrimination.o1': "آن را می‌نویسی، و به کسی که به او اعتماد داری می‌گویی.", // nieuw, nalezen
-    'c.discrimination.o2': "چیزی نمی‌گویی: این بخشی از کار است.", // nieuw, nalezen
-    'c.discrimination.o3': "کار را ول می‌کنی، و به هیچ‌کس نمی‌گویی چرا.", // nieuw, nalezen
-    'c.discrimination.w': "فحش دادن به‌خاطر اصل و نسب تبعیض است، و ممنوع است. وقتی آن را بنویسی و درباره‌اش حرف بزنی، کسی می‌تواند کمکت کند که تمامش کنی.", // nieuw, nalezen
-    'c.union': "با هم قوی‌تر هستید", // nieuw, nalezen
-    'c.union.b': "اتحادیهٔ کارگری (vakbond)، مثلاً FNV یا CNV، از کارگران دفاع می‌کند. با کارفرماها دربارهٔ حقوق و کار توافق می‌کند: cao. خیلی از cao‌ها برای همه در یک بخش شغلی اعتبار دارند، حتی وقتی عضو نیستی. عضوها هر ماه حق عضویت (contributie) می‌پردازند، و مشورت و کمک می‌گیرند، مثلاً برای مشکلی دربارهٔ حقوق یا اخراج. به موقع عضو شو: اتحادیه اغلب فقط برای مشکلی کمک می‌کند که بعد از عضو شدنت شروع شده باشد. عضو شدن انتخاب خود توست، و کارفرمایت اجازه ندارد به‌خاطرش تو را تنبیه کند. شرکتی که ۵۰ کارگر یا بیشتر دارد باید شورای کارکنان (ondernemingsraad، OR) داشته باشد: همکارانی که کارگران انتخابشان کرده‌اند. OR با مدیر مثلاً دربارهٔ ساعت‌های کار و ایمنی صحبت می‌کند. شرکت کوچک‌تر می‌تواند نمایندگی کارکنان (personeelsvertegenwoordiging) داشته باشد. سؤال داری؟ از یک همکار در OR بپرس. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen
-    'c.union.p': "یک سؤال دربارهٔ برنامه‌های کاری جدید دارم. OR می‌تواند کاری درباره‌اش بکند؟", // nieuw, nalezen
-    'c.union.s': "شرکتت می‌خواهد شیفت‌های عصر را خیلی بیشتر کند. خیلی از همکارها ناراضی‌اند. چه کار می‌توانی بکنی؟", // nieuw, nalezen
-    'c.union.o1': "از یک همکار در OR درباره‌اش می‌پرسی.", // nieuw, nalezen
-    'c.union.o2': "دیگر عصرها سر کار نمی‌آیی.", // nieuw, nalezen
-    'c.union.o3': "چیزی نمی‌گویی: هیچ چیز عوض نمی‌شود.", // nieuw, nalezen
-    'c.union.w': "OR در قانون‌های مربوط به ساعت‌های کار حق نظر دارد. می‌تواند برای همهٔ کارگران با هم، با مدیر درباره‌شان صحبت کند.", // nieuw, nalezen
-    'c.debthelp': "هر نامه را باز کن، و زود کمک بخواه", // nieuw, nalezen
-    'c.debthelp.b': "صورت‌حسابی را به موقع نپرداختی؟ آن وقت اول یک یادآوری (herinnering) می‌گیری، و بعد یک اخطار نهایی (aanmaning). قبل از اینکه یک شرکت اجازه داشته باشد برای این از تو هزینهٔ اضافه بگیرد، باید ۱۴ روز برای پرداخت به تو وقت بدهد. پس هر نامه را باز کن، حتی وقتی از آن می‌ترسی. نمی‌توانی همه را یک‌جا بپردازی؟ زنگ بزن یا بنویس، و قسط‌بندی (betalingsregeling) بخواه. مأمور اجرا (deurwaarder) مأموری است که بدهی‌ها را وصول می‌کند، اغلب بعد از اینکه قاضی حکم داده. او مثلاً می‌تواند بخشی از حقوقت را بردارد، ولی همیشه باید آن‌قدر برایت بگذارد که بتوانی زندگی کنی. بدهی داری؟ زود کمک بخواه، وقتی هنوز کم است. شهرداری (gemeente) کمک رایگان برای بدهی (schuldhulp) می‌دهد. در geldfit.nl می‌توانی یک تست رایگان بدهی و کمکی نزدیک خودت پیدا کنی. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen
-    'c.debthelp.p': "نمی‌توانم همه را یک‌جا بپردازم. می‌توانم قسطی بپردازم؟", // nieuw, nalezen
-    'c.debthelp.s': "برای صورت‌حساب تلفنت یک اخطار نهایی می‌گیری. این ماه پولش را نداری. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.debthelp.o1': "به شرکت زنگ می‌زنی، و قسط‌بندی می‌خواهی.", // nieuw, nalezen
-    'c.debthelp.o2': "نامه را کنار می‌گذاری، و صبر می‌کنی.", // nieuw, nalezen
-    'c.debthelp.o3': "با «الان بخر، بعداً بپرداز» سریع پول قرض می‌کنی.", // nieuw, nalezen
-    'c.debthelp.w': "وقتی به موقع بگویی، شرکت اغلب می‌تواند با پرداخت‌های کوچک موافقت کند. نامه‌ای که کنار بگذاری از بین نمی‌رود: فقط هزینه‌ها بیشتر می‌شود.", // nieuw, nalezen
-    'c.taxes': "اظهارنامهٔ مالیاتی و کمک‌هزینه‌هایت", // nieuw, nalezen
-    'c.taxes.b': "اظهارنامهٔ مالیاتی (aangifte) سال قبل باید قبل از ۱ مه انجام شود. نامه‌ای گرفتی که از تو می‌خواهد آن را انجام بدهی؟ آن وقت باید انجامش بدهی. گاهی پول پس می‌گیری. به گواهی سالانهٔ درآمد (jaaropgave) از کارفرمایت نیاز داری. وقت نداری؟ می‌توانی مهلت بیشتر (uitstel) بخواهی. کمک‌هزینه‌ها (toeslagen)، مثل zorgtoeslag و huurtoeslag، پیش‌پرداخت هستند: به درآمدی که امسال خواهی داشت بستگی دارند. درآمدت بیشتر می‌شود، یا چیز دیگری تغییر می‌کند؟ فوراً در Mijn toeslagen اطلاعش بده. اگر این کار را نکنی، ممکن است بعداً مجبور شوی پول زیادی پس بدهی. باید پس بدهی؟ می‌توانی قسط‌بندی بخواهی. کمک رایگان: BelastingTelefoon، یک دفتر Belastingdienst (اول وقت بگیر) یا کتابخانه. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen
-    'c.taxes.p': "درآمدم تغییر کرده. چطور اطلاعش بدهم؟", // nieuw, nalezen
-    'c.taxes.s': "کار جدیدی پیدا می‌کنی و هر ماه بیشتر درآمد داری. تو huurtoeslag می‌گیری. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.taxes.o1': "درآمد جدیدت را در Mijn toeslagen اطلاع می‌دهی.", // nieuw, nalezen
-    'c.taxes.o2': "صبر می‌کنی تا Belastingdienst بپرسد.", // nieuw, nalezen
-    'c.taxes.o3': "دیگر اجاره‌ات را نمی‌پردازی.", // nieuw, nalezen
-    'c.taxes.w': "کمک‌هزینه‌ات بر اساس درآمدت است. وقتی تغییر را به موقع اطلاع بدهی، مبلغ درست را می‌گیری، و بعداً مجبور نیستی پول زیادی پس بدهی.", // nieuw, nalezen
-    'c.kiln': "تیز، داغ و سنگین", // nieuw, nalezen
-    'c.kiln.b': "در کارخانهٔ کاشی یا شیشه، محصولات به یک شکل پرس می‌شوند، لعاب می‌خورند، و آرام از یک کورهٔ دراز رد می‌شوند. بعد از کوره باید خنک شوند: تا داغ هستند به آن‌ها دست نزن، یا دستکش ضد حرارت بپوش. شیشه و کاشی شکسته خیلی تیز هستند. دستکش ضد برش، محافظ بازو و عینک ایمنی بپوش. هیچ‌وقت ورق شیشه‌ای را که دارد می‌افتد نگیر: عقب برو. خرده‌ها را با جارو و خاک‌انداز جمع کن، هیچ‌وقت با دست، و آن‌ها را در سطل درست بینداز. لعاب و گردوغبار می‌توانند مواد مضر داشته باشند: قبل از خوردن یا نوشیدن دست‌هایت را بشوی. کنار پرس، هیچ‌وقت وقتی کار می‌کند دستت را داخلش نبر. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.kiln.p': "مواظب باش، خرده شیشه! جارو و خاک‌انداز می‌آورم.", // nieuw, nalezen
-    'c.kiln.s': "یک ورق شیشه از قفسه سر می‌خورد و شروع به افتادن می‌کند. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.kiln.o1': "عقب می‌روی، و می‌گذاری بیفتد.", // nieuw, nalezen
-    'c.kiln.o2': "با دست‌هایت آن را می‌گیری.", // nieuw, nalezen
-    'c.kiln.o3': "با پایت جلویش را می‌گیری.", // nieuw, nalezen
-    'c.kiln.w': "ورقی که می‌افتد می‌تواند خیلی عمیق ببُرد، حتی از روی دستکش. یک ورق شکسته فقط هزینه دارد.", // nieuw, nalezen
-    'c.mixlab': "دستور ساخت را دقیق اجرا کن", // nieuw, nalezen
-    'c.mixlab.b': "در سالن اختلاط، یک بچ را طبق دستور ساخت درست می‌کنی: کدام مواد اولیه، چقدر، و به چه ترتیبی. همه چیز را دقیق وزن کن، و بنویس چه چیزی اضافه کردی، با شمارهٔ بچ. مطمئن نیستی؟ بپرس، حدس نزن. قبل از اینکه از یک بشکه یا کیسه استفاده کنی، برچسب را بخوان: چه چیزی داخلش است، شمارهٔ بچ و علامت‌های خطر. هیچ‌وقت چیزی را که مال یک بشکه یا کیسه نیست داخلش نریز. برای نمونه، از یک پیمانهٔ تمیز و یک ظرف تمیز استفاده کن، و فوراً رویش برچسب بزن. پودر و بخار می‌توانند مضر باشند: از سیستم مکش استفاده کن، و آنچه لازم است بپوش، مثل روپوش آزمایشگاه، عینک ایمنی، دستکش یا ماسک. در صنایع غذایی تور مو هم می‌پوشی و دست‌هایت را مرتب می‌شویی. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.mixlab.p': "مطمئن نیستم. چقدر باید داخلش برود؟", // nieuw, nalezen
-    'c.mixlab.s': "در دستور ساخت ۲۵ کیلو نوشته شده. اشتباهی ۲۶ کیلو ریختی، و الان داخل مخزن اختلاط است. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.mixlab.o1': "به سرپرست شیفت می‌گویی، و آن را یادداشت می‌کنی.", // nieuw, nalezen
-    'c.mixlab.o2': "چیزی نمی‌گویی: یک کیلو زیاد نیست.", // nieuw, nalezen
-    'c.mixlab.o3': "با دست کمی از آن را بیرون می‌آوری.", // nieuw, nalezen
-    'c.mixlab.w': "یک مقدار اشتباه می‌تواند کل بچ را خراب کند. وقتی سرپرست شیفت به موقع خبردار شود، آزمایشگاه می‌تواند قبل از اینکه بچ ادامه پیدا کند آن را بررسی کند.", // nieuw, nalezen
+    'l.discrimination': "تبعیض و آزار", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.andersbehandelen': "رفتار متفاوت داشتن (بدتر از بقیه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afkomst': "اصل و نسب (کشور یا گروهی که تو یا خانواده‌ات از آن آمده‌اید)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geloof': "دین، ایمان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitschelden': "فحش دادن، توهین کردن (حرف‌های زشت به کسی زدن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedreigen': "تهدید کردن (گفتن اینکه به کسی آسیب می‌زنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geweld': "خشونت", // nieuw, nalezen // nagelezen AI 28 nov
+    's.discrimination.1': "به‌خاطر دینم با من رفتار متفاوتی می‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.discrimination.2': "او مرا تهدید می‌کند. احساس امنیت نمی‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.discrimination.3': "اجازه دارم نه بگویم، حتی به رئیسم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.q': "حالت خوب است؟ مدام به تو فحش می‌دهند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.a': "نه، خوب نیستم. می‌خواهم گزارشش بدهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.union': "اتحادیهٔ کارگری و شورای کارکنان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lidworden': "عضو شدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.contributie': "حق عضویت (هر ماه آن را می‌پردازی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opkomenvoor': "دفاع کردن از (از منافع کسی دفاع کردن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderhandelen': "مذاکره کردن (حرف زدن تا وقتی هر دو طرف توافق کنند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.loonsverhoging': "افزایش حقوق", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ondernemingsraad': "شورای کارکنان (OR: همکارانی که انتخاب شده‌اند تا با مدیر صحبت کنند)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.union.1': "عضو اتحادیهٔ کارگری می‌شوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.union.2': "اتحادیهٔ کارگری دربارهٔ cao مذاکره می‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.union.3': "چه کسانی در شورای کارکنان هستند؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.q': "چرا عضو اتحادیهٔ کارگری هستی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.a': "وقتی مشکلی پیش بیاید، از من دفاع می‌کنند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.debthelp': "بدهی و کمک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.herinnering': "یادآوری (یک نامه: هنوز پرداخت نکرده‌ای)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanmaning': "اخطار نهایی (قبل از یک تاریخ بپرداز، وگرنه ممکن است هزینهٔ اضافه بیاید)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.betalingsregeling': "قسط‌بندی (یک بدهی را در قسمت‌های کوچک می‌پردازی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.deurwaarder': "مأمور اجرا (مأموری که بدهی را وصول می‌کند، اغلب بعد از اینکه قاضی حکم داده)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.schuldhulp': "کمک برای بدهی (کمک رایگان برای بدهی‌هایت، از طرف شهرداری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.achterstand': "بدهی عقب‌افتاده (پولی که باید تا حالا پرداخته بودی)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.debthelp.1': "یک اخطار نهایی گرفته‌ام.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.debthelp.2': "می‌توانم قسطی بپردازم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.debthelp.3': "برای بدهی‌هایم کمک می‌خواهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.q': "شما هنوز صورت‌حساب را پرداخت نکرده‌اید.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.a': "درست است. می‌توانم قسط‌بندی بگیرم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.taxes': "مالیات و کمک‌هزینه‌ها", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.jaaropgave': "گواهی سالانهٔ درآمد (کاغذی از کارفرمایت با حقوق کل سال)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.blauweenvelop': "پاکت آبی (نامه‌های Belastingdienst در آن می‌آیند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teruggave': "بازپرداخت (پول مالیاتی که پس می‌گیری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitstel': "مهلت بیشتر (اجازه داری بعداً انجامش بدهی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.huurtoeslag': "کمک‌هزینهٔ اجاره (پولی از دولت که کمک می‌کند اجاره را بپردازی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.belastingtelefoon': "خط تلفن رایگان Belastingdienst", // nieuw, nalezen // nagelezen AI 28 nov
+    's.taxes.1': "برای اظهارنامهٔ مالیاتی به گواهی سالانهٔ درآمدم نیاز دارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.taxes.2': "الان بیشتر درآمد دارم. فوراً اطلاعش می‌دهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.taxes.3': "از Belastingdienst پول پس می‌گیرم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.q': "یک پاکت آبی برایت آمده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.a': "ممنون. همین الان بازش می‌کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.kiln': "کوره، شیشه و سرامیک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.pers': "پرس (دستگاهی که خاک رس یا پودر را به یک شکل فشرده می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.glazuur': "لعاب (لایه‌ای براق و شیشه‌مانند روی کاشی یا فنجان)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tunneloven': "کورهٔ تونلی (یک کورهٔ دراز؛ محصولات آرام از داخلش رد می‌شوند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scherf': "خرده (تکهٔ تیز از شیشه یا کاشی شکسته)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gloeiend': "گداخته (آن‌قدر داغ که سرخ می‌درخشد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.armbeschermer': "محافظ بازو (آستینی که بازویت را در برابر بریدگی محافظت می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.kiln.1': "کاشی‌ها آرام از کورهٔ تونلی رد می‌شوند.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.kiln.2': "این کاشی ترک دارد. ضایعات است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.kiln.3': "کنار شیشه محافظ‌های بازویت را بپوش.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.q': "اجازه دارم خرده‌ها را با دستم جمع کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.a': "نه. از جارو و خاک‌انداز استفاده کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.mixlab': "سالن اختلاط و آزمایشگاه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.batch': "بچ (مقداری که یک‌جا، با یک دستور ساخت، درست می‌شود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.afwegen': "وزن کردن (دقیقاً همان‌قدر که دستور ساخت می‌گوید وزن کردن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mengvat': "مخزن اختلاط (مخزن بزرگی که یک همزن داخلش است)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.labjas': "روپوش آزمایشگاه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.laboratorium': "آزمایشگاه (لب: اینجا محصول را آزمایش می‌کنند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.grondstof': "مادهٔ اولیه (چیزی که محصول را از آن می‌سازی)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mixlab.1': "مواد اولیه را دقیق وزن کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mixlab.2': "دارم برای آزمایشگاه نمونه برمی‌دارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.mixlab.3': "این کدام بچ است؟ به برچسب نگاه کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.q': "بچ تأیید شده؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.a': "هنوز نه. آزمایشگاه دارد نمونه را آزمایش می‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination': "رفتار ناعادلانه؟ تقصیر تو نیست", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.b': "تبعیض یعنی به‌خاطر اینکه چه کسی هستی، با تو متفاوت یا بدتر رفتار شود: به‌خاطر اصل و نسب، رنگ پوست، دین، جنسیت، سن، معلولیت یا اینکه چه کسی را دوست داری. آزار مثلاً لمس ناخواسته، حرف‌های جنسی، تهدید یا فحش دادن به توست. هر دو سر کار ممنوع است، و هیچ‌وقت تقصیر تو نیست. اجازه داری نه بگویی، حتی به رئیست. بنویس چه اتفاقی افتاد، کی، و چه کسی آن را دید. با سرپرستت حرف بزن، یا اگر شرکتت vertrouwenspersoon دارد، با او. بیرون از کارت، دفتر مبارزه با تبعیض در شهرت رایگان کمک می‌کند (discriminatie.nl). College voor de Rechten van de Mens هم می‌تواند رایگان رأی بدهد. خشونت یا تهدید؟ به پلیس برو. در خطر: به ۱۱۲ زنگ بزن. اطلاعات کلی. برای وضعیت خودت: از اتحادیهٔ کارگری، Juridisch Loket یا FairWork بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.p': "می‌خواهم چیزی را گزارش بدهم. می‌توانم محرمانه با شما صحبت کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.s': "یک همکار اغلب به‌خاطر اینکه از کجا آمده‌ای به تو فحش می‌دهد. بقیه می‌خندند. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.o1': "آن را می‌نویسی، و به کسی که به او اعتماد داری می‌گویی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.o2': "چیزی نمی‌گویی: این بخشی از کار است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.o3': "کار را ول می‌کنی، و به هیچ‌کس نمی‌گویی چرا.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.discrimination.w': "فحش دادن به‌خاطر اصل و نسب تبعیض است، و ممنوع است. وقتی آن را بنویسی و درباره‌اش حرف بزنی، کسی می‌تواند کمکت کند که تمامش کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union': "با هم قوی‌تر هستید", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.b': "اتحادیهٔ کارگری (vakbond)، مثلاً FNV یا CNV، از کارگران دفاع می‌کند. با کارفرماها دربارهٔ حقوق و کار توافق می‌کند: cao. خیلی از cao‌ها برای همه در یک بخش شغلی اعتبار دارند، حتی وقتی عضو نیستی. عضوها هر ماه حق عضویت (contributie) می‌پردازند، و مشورت و کمک می‌گیرند، مثلاً برای مشکلی دربارهٔ حقوق یا اخراج. به موقع عضو شو: اتحادیه اغلب فقط برای مشکلی کمک می‌کند که بعد از عضو شدنت شروع شده باشد. عضو شدن انتخاب خود توست، و کارفرمایت اجازه ندارد به‌خاطرش تو را تنبیه کند. شرکتی که ۵۰ کارگر یا بیشتر دارد باید شورای کارکنان (ondernemingsraad، OR) داشته باشد: همکارانی که کارگران انتخابشان کرده‌اند. OR با مدیر مثلاً دربارهٔ ساعت‌های کار و ایمنی صحبت می‌کند. شرکت کوچک‌تر می‌تواند نمایندگی کارکنان (personeelsvertegenwoordiging) داشته باشد. سؤال داری؟ از یک همکار در OR بپرس. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.p': "یک سؤال دربارهٔ برنامه‌های کاری جدید دارم. OR می‌تواند کاری درباره‌اش بکند؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.s': "شرکتت می‌خواهد شیفت‌های عصر را خیلی بیشتر کند. خیلی از همکارها ناراضی‌اند. چه کار می‌توانی بکنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.o1': "از یک همکار در OR درباره‌اش می‌پرسی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.o2': "دیگر عصرها سر کار نمی‌آیی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.o3': "چیزی نمی‌گویی: هیچ چیز عوض نمی‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.union.w': "OR در قانون‌های مربوط به ساعت‌های کار حق نظر دارد. می‌تواند برای همهٔ کارگران با هم، با مدیر درباره‌شان صحبت کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp': "هر نامه را باز کن، و زود کمک بخواه", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.b': "صورت‌حسابی را به موقع نپرداختی؟ آن وقت اول یک یادآوری (herinnering) می‌گیری، و بعد یک اخطار نهایی (aanmaning). قبل از اینکه یک شرکت اجازه داشته باشد برای این از تو هزینهٔ اضافه بگیرد، باید ۱۴ روز برای پرداخت به تو وقت بدهد. پس هر نامه را باز کن، حتی وقتی از آن می‌ترسی. نمی‌توانی همه را یک‌جا بپردازی؟ زنگ بزن یا بنویس، و قسط‌بندی (betalingsregeling) بخواه. مأمور اجرا (deurwaarder) مأموری است که بدهی‌ها را وصول می‌کند، اغلب بعد از اینکه قاضی حکم داده. او مثلاً می‌تواند بخشی از حقوقت را بردارد، ولی همیشه باید آن‌قدر برایت بگذارد که بتوانی زندگی کنی. بدهی داری؟ زود کمک بخواه، وقتی هنوز کم است. شهرداری (gemeente) کمک رایگان برای بدهی (schuldhulp) می‌دهد. در geldfit.nl می‌توانی یک تست رایگان بدهی و کمکی نزدیک خودت پیدا کنی. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.p': "نمی‌توانم همه را یک‌جا بپردازم. می‌توانم قسطی بپردازم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.s': "برای صورت‌حساب تلفنت یک اخطار نهایی می‌گیری. این ماه پولش را نداری. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.o1': "به شرکت زنگ می‌زنی، و قسط‌بندی می‌خواهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.o2': "نامه را کنار می‌گذاری، و صبر می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.o3': "با «الان بخر، بعداً بپرداز» سریع پول قرض می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.debthelp.w': "وقتی به موقع بگویی، شرکت اغلب می‌تواند با پرداخت‌های کوچک موافقت کند. نامه‌ای که کنار بگذاری از بین نمی‌رود: فقط هزینه‌ها بیشتر می‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes': "اظهارنامهٔ مالیاتی و کمک‌هزینه‌هایت", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.b': "اظهارنامهٔ مالیاتی (aangifte) سال قبل باید قبل از ۱ مه انجام شود. نامه‌ای گرفتی که از تو می‌خواهد آن را انجام بدهی؟ آن وقت باید انجامش بدهی. گاهی پول پس می‌گیری. به گواهی سالانهٔ درآمد (jaaropgave) از کارفرمایت نیاز داری. وقت نداری؟ می‌توانی مهلت بیشتر (uitstel) بخواهی. کمک‌هزینه‌ها (toeslagen)، مثل zorgtoeslag و huurtoeslag، پیش‌پرداخت هستند: به درآمدی که امسال خواهی داشت بستگی دارند. درآمدت بیشتر می‌شود، یا چیز دیگری تغییر می‌کند؟ فوراً در Mijn toeslagen اطلاعش بده. اگر این کار را نکنی، ممکن است بعداً مجبور شوی پول زیادی پس بدهی. باید پس بدهی؟ می‌توانی قسط‌بندی بخواهی. کمک رایگان: BelastingTelefoon، یک دفتر Belastingdienst (اول وقت بگیر) یا کتابخانه. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.p': "درآمدم تغییر کرده. چطور اطلاعش بدهم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.s': "کار جدیدی پیدا می‌کنی و هر ماه بیشتر درآمد داری. تو huurtoeslag می‌گیری. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.o1': "درآمد جدیدت را در Mijn toeslagen اطلاع می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.o2': "صبر می‌کنی تا Belastingdienst بپرسد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.o3': "دیگر اجاره‌ات را نمی‌پردازی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.taxes.w': "کمک‌هزینه‌ات بر اساس درآمدت است. وقتی تغییر را به موقع اطلاع بدهی، مبلغ درست را می‌گیری، و بعداً مجبور نیستی پول زیادی پس بدهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln': "تیز، داغ و سنگین", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.b': "در کارخانهٔ کاشی یا شیشه، محصولات به یک شکل پرس می‌شوند، لعاب می‌خورند، و آرام از یک کورهٔ دراز رد می‌شوند. بعد از کوره باید خنک شوند: تا داغ هستند به آن‌ها دست نزن، یا دستکش ضد حرارت بپوش. شیشه و کاشی شکسته خیلی تیز هستند. دستکش ضد برش، محافظ بازو و عینک ایمنی بپوش. هیچ‌وقت ورق شیشه‌ای را که دارد می‌افتد نگیر: عقب برو. خرده‌ها را با جارو و خاک‌انداز جمع کن، هیچ‌وقت با دست، و آن‌ها را در سطل درست بینداز. لعاب و گردوغبار می‌توانند مواد مضر داشته باشند: قبل از خوردن یا نوشیدن دست‌هایت را بشوی. کنار پرس، هیچ‌وقت وقتی کار می‌کند دستت را داخلش نبر. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.p': "مواظب باش، خرده شیشه! جارو و خاک‌انداز می‌آورم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.s': "یک ورق شیشه از قفسه سر می‌خورد و شروع به افتادن می‌کند. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.o1': "عقب می‌روی، و می‌گذاری بیفتد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.o2': "با دست‌هایت آن را می‌گیری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.o3': "با پایت جلویش را می‌گیری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.kiln.w': "ورقی که می‌افتد می‌تواند خیلی عمیق ببُرد، حتی از روی دستکش. یک ورق شکسته فقط هزینه دارد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab': "دستور ساخت را دقیق اجرا کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.b': "در سالن اختلاط، یک بچ را طبق دستور ساخت درست می‌کنی: کدام مواد اولیه، چقدر، و به چه ترتیبی. همه چیز را دقیق وزن کن، و بنویس چه چیزی اضافه کردی، با شمارهٔ بچ. مطمئن نیستی؟ بپرس، حدس نزن. قبل از اینکه از یک بشکه یا کیسه استفاده کنی، برچسب را بخوان: چه چیزی داخلش است، شمارهٔ بچ و علامت‌های خطر. هیچ‌وقت چیزی را که مال یک بشکه یا کیسه نیست داخلش نریز. برای نمونه، از یک پیمانهٔ تمیز و یک ظرف تمیز استفاده کن، و فوراً رویش برچسب بزن. پودر و بخار می‌توانند مضر باشند: از سیستم مکش استفاده کن، و آنچه لازم است بپوش، مثل روپوش آزمایشگاه، عینک ایمنی، دستکش یا ماسک. در صنایع غذایی تور مو هم می‌پوشی و دست‌هایت را مرتب می‌شویی. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.p': "مطمئن نیستم. چقدر باید داخلش برود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.s': "در دستور ساخت ۲۵ کیلو نوشته شده. اشتباهی ۲۶ کیلو ریختی، و الان داخل مخزن اختلاط است. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.o1': "به سرپرست شیفت می‌گویی، و آن را یادداشت می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.o2': "چیزی نمی‌گویی: یک کیلو زیاد نیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.o3': "با دست کمی از آن را بیرون می‌آوری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.mixlab.w': "یک مقدار اشتباه می‌تواند کل بچ را خراب کند. وقتی سرپرست شیفت به موقع خبردار شود، آزمایشگاه می‌تواند قبل از اینکه بچ ادامه پیدا کند آن را بررسی کند.", // nieuw, nalezen // nagelezen AI 28 nov
     // four new lessons (performance review, forms, voicemail, the dentist) (27 November 2026).
-    'l.forms': "پر کردن فرم", // nieuw, nalezen
-    'w.invullen': "پر کردن (یک فرم)", // nieuw, nalezen
-    'w.vakje': "خانهٔ فرم (مربع کوچکی روی فرم)", // nieuw, nalezen
-    'w.aankruisen': "علامت زدن (ضربدر زدن در یک خانهٔ فرم)", // nieuw, nalezen
-    'w.verplichtveld': "قسمت اجباری (باید پرش کنی؛ اغلب با * مشخص شده)", // nieuw, nalezen
-    'w.postcode': "کد پستی (کد کوتاهی برای خیابان یا شهرت، بخشی از آدرست)", // nieuw, nalezen
-    'w.hoofdletters': "حروف بزرگ (A، B، C)", // nieuw, nalezen
-    's.forms.1': "اسمت را با حروف بزرگ بنویس.", // nieuw, nalezen
-    's.forms.2': "خانهٔ درست را علامت بزن.", // nieuw, nalezen
-    's.forms.3': "می‌توانید در این فرم به من کمک کنید؟", // nieuw, nalezen
-    'c.forms.q': "فرم را پر کردی؟", // nieuw, nalezen
-    'c.forms.a': "تقریباً. امضایم را کجا بزنم؟", // nieuw, nalezen
-    'l.voicemail': "پیام صوتی و دوباره زنگ زدن", // nieuw, nalezen
-    'w.piep': "بوق (صدای کوتاه؛ بعد از آن پیامت را می‌گویی)", // nieuw, nalezen
-    'w.beluisteren': "گوش دادن به (یک پیام)", // nieuw, nalezen
-    'w.boodschap': "پیام (چیزی که روی پیام‌گیر کسی می‌گویی)", // nieuw, nalezen
-    'w.noemen': "گفتن، نام بردن (اسمت، شماره‌ات)", // nieuw, nalezen
-    'w.zosnelmogelijk': "هر چه زودتر", // nieuw, nalezen
-    'w.opnieuw': "دوباره (یک بار دیگر)", // nieuw, nalezen
-    's.voicemail.1': "علی حداد هستم. دربارهٔ برنامهٔ کاری‌ام زنگ می‌زنم.", // nieuw, nalezen
-    's.voicemail.2': "هر روز به پیام‌های صوتی‌ام گوش می‌دهم.", // nieuw, nalezen
-    's.voicemail.3': "بعداً دوباره زنگ می‌زنم.", // nieuw, nalezen
-    'c.voicemail.q': "بعد از صدای بوق، نام و شماره‌تان را بگویید.", // nieuw, nalezen
-    'c.voicemail.a': "علی هستم. می‌شود هر چه زودتر به من زنگ بزنید؟", // nieuw, nalezen
-    'l.dentist': "دندانپزشک", // nieuw, nalezen
-    'w.tandarts': "دندانپزشک", // nieuw, nalezen
-    'w.kiespijn': "دندان‌درد", // nieuw, nalezen
-    'w.gaatje': "پوسیدگی دندان (سوراخ کوچکی در دندان)", // nieuw, nalezen
-    'w.vulling': "پرکردگی (دندانپزشک سوراخ دندان را می‌بندد)", // nieuw, nalezen
-    'w.gebit': "دندان‌ها (همهٔ دندان‌هایت با هم)", // nieuw, nalezen
-    'w.aanvullendeverzekering': "بیمهٔ تکمیلی (می‌توانی آن را علاوه بر بیمهٔ درمانی پایه انتخاب کنی)", // nieuw, nalezen
-    's.dentist.1': "دو روز است دندان‌درد دارم.", // nieuw, nalezen
-    's.dentist.2': "دندانم پوسیده است. دندانم را پر می‌کنند.", // nieuw, nalezen
-    's.dentist.3': "پر کردن یک دندان چقدر می‌شود؟", // nieuw, nalezen
-    'c.dentist.q': "آخرین بار کی پیش دندانپزشک رفتی؟", // nieuw, nalezen
-    'c.dentist.a': "یک سال پیش. یک معاینه می‌خواهم.", // nieuw, nalezen
-    'c.forms': "فرم: خوانا بنویس، و مواظب BSN خودت باش", // nieuw, nalezen
-    'c.forms.b': "یک فرم اغلب اسم، تاریخ تولد، آدرس و کد پستی‌ات را می‌خواهد. خوانا بنویس، اغلب با حروف بزرگ. قسمتی که ستاره (*) دارد اجباری است: باید پرش کنی. خانهٔ درست را علامت بزن. سؤالی را نمی‌فهمی؟ قبل از امضا کمک بخواه. هیچ‌وقت چیزی را که نمی‌فهمی امضا نکن. BSN تو: فقط بعضی سازمان‌ها اجازه دارند آن را بخواهند، مثل کارفرمایت، gemeente، Belastingdienst، شرکت بیمهٔ درمانی‌ات، پزشکت و بانکت. یک مغازه یا باشگاه ورزشی اجازه ندارد. هیچ‌وقت BSN خودت را به یک غریبه، در یک اپ یا پشت تلفن نده. مطمئن نیستی؟ بپرس چرا لازمش دارند. خیلی از کتابخانه‌ها رایگان در پر کردن فرم کمک می‌کنند، اغلب در ساعتی که بدون وقت قبلی می‌شود رفت. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen
-    'c.forms.p': "آیا BSN من اینجا اجباری است؟", // nieuw, nalezen
-    'c.forms.s': "در یک باشگاه ورزشی ثبت‌نام می‌کنی. فرم BSN تو را می‌خواهد. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.forms.o1': "خالی‌اش می‌گذاری، و می‌پرسی چرا لازمش دارند.", // nieuw, nalezen
-    'c.forms.o2': "پرش می‌کنی: هر فرمی اجازه دارد آن را بخواهد.", // nieuw, nalezen
-    'c.forms.o3': "به جایش اطلاعات ورود DigiD خودت را می‌دهی.", // nieuw, nalezen
-    'c.forms.w': "یک باشگاه ورزشی اجازه ندارد از BSN تو استفاده کند. فقط بعضی سازمان‌ها اجازه دارند، مثل کارفرمایت، gemeente و شرکت بیمهٔ درمانی‌ات. وقتی می‌پرسی چرا، از شماره‌ات محافظت می‌کنی.", // nieuw, nalezen
-    'c.voicemail': "پیام: چه کسی، چرا، شماره‌ات", // nieuw, nalezen
-    'c.voicemail.b': "کسی جواب نمی‌دهد؟ بعد از بوق (piep) یک پیام کوتاه (boodschap) بگذار. اسمت، دلیل تماست و شمارهٔ تلفنت را بگو. آرام حرف بزن، و شماره‌ات را دو بار بگو. تماسی را از دست دادی؟ اول به پیام‌های صوتی‌ات گوش بده، بعد هر چه زودتر دوباره زنگ بزن. پیامی را نمی‌فهمی؟ دوباره به آن گوش بده، یا از یک همکار بخواه با تو گوش بدهد. پیام‌گیرت را راه بینداز، و هر روز به آن گوش بده. می‌خواهی مریضی‌ات را خبر بدهی؟ در خیلی از شرکت‌ها پیام گذاشتن کافی نیست: دوباره زنگ بزن تا با کسی حرف بزنی. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.voicemail.p': "می‌توانم پیام بگذارم؟", // nieuw, nalezen
-    'c.voicemail.s': "دیر می‌رسی، و به سرپرستت زنگ می‌زنی. پیام‌گیرش را می‌شنوی. بعد از بوق چه می‌گویی؟", // nieuw, nalezen
-    'c.voicemail.o1': "اسمت، دلیل تماست، و شماره‌ات را.", // nieuw, nalezen
-    'c.voicemail.o2': "فقط «Bel me terug» می‌گویی، و قطع می‌کنی.", // nieuw, nalezen
-    'c.voicemail.o3': "هیچ: قطع می‌کنی، و صبر می‌کنی.", // nieuw, nalezen
-    'c.voicemail.w': "با اسمت، دلیل و شماره‌ات، سرپرستت می‌داند چه خبر است، و می‌تواند فوراً به تو زنگ بزند.", // nieuw, nalezen
-    'c.dentist': "دندانپزشک: معاینه، و قیمت را بپرس", // nieuw, nalezen
-    'c.dentist.b': "نزدیک خانه‌ات پیش یک دندانپزشک (tandarts) ثبت‌نام کن، و مرتب برای معاینه (controle) برو، اغلب سالی یک بار. دندان‌درد؟ به دندانپزشکت زنگ بزن و بگو که خیلی درد داری: آن وقت اغلب زود وقت می‌گیری. شب یا آخر هفته، به دندانپزشک خودت زنگ بزن: پیام تلفنی به تو می‌گوید الان کدام دندانپزشک کمک می‌کند. برای بزرگسالان، بیمهٔ درمانی پایه برای دندانپزشک خیلی کم پول می‌دهد: معمولاً نه معاینه را و نه پرکردگی را. می‌توانی یک بیمهٔ تکمیلی (aanvullende verzekering) برای دندانپزشک انتخاب کنی: ببین چه چیزهایی را پوشش می‌دهد. برای بچه‌های زیر ۱۸ سال، بیمهٔ پایه بیشتر خدمات دندانپزشکی را پوشش می‌دهد. قبل از شروع درمان بپرس چقدر هزینه دارد. برای یک درمان بزرگ، دندانپزشک باید اول قیمت را روی کاغذ به تو بدهد. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen
-    'c.dentist.p': "خیلی درد دارم. می‌توانم همین امروز بیایم؟", // nieuw, nalezen
-    'c.dentist.s': "شنبه شب است. دندان‌درد شدیدی داری، و مسکن کمکی نمی‌کند. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.dentist.o1': "به دندانپزشکت زنگ می‌زنی: پیام می‌گوید الان چه کسی کمک می‌کند.", // nieuw, nalezen
-    'c.dentist.o2': "به ۱۱۲ زنگ می‌زنی: وضعیت اضطراری است.", // nieuw, nalezen
-    'c.dentist.o3': "تا دوشنبه صبر می‌کنی، و مسکن بیشتری می‌خوری.", // nieuw, nalezen
-    'c.dentist.w': "بیرون از ساعت اداری، یک دندانپزشک کشیک به درد فوری رسیدگی می‌کند. ۱۱۲ فقط برای وضعیت اضطراری است، مثل خطر جانی.", // nieuw, nalezen
+    'l.forms': "پر کردن فرم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.invullen': "پر کردن (یک فرم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vakje': "خانهٔ فرم (مربع کوچکی روی فرم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aankruisen': "علامت زدن (ضربدر زدن در یک خانهٔ فرم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verplichtveld': "قسمت اجباری (باید پرش کنی؛ اغلب با * مشخص شده)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.postcode': "کد پستی (کد کوتاهی برای خیابان یا شهرت، بخشی از آدرست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.hoofdletters': "حروف بزرگ (A، B، C)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.forms.1': "اسمت را با حروف بزرگ بنویس.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.forms.2': "خانهٔ درست را علامت بزن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.forms.3': "می‌توانید در این فرم به من کمک کنید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.q': "فرم را پر کردی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.a': "تقریباً. امضایم را کجا بزنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.voicemail': "پیام صوتی و دوباره زنگ زدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.piep': "بوق (صدای کوتاه؛ بعد از آن پیامت را می‌گویی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beluisteren': "گوش دادن به (یک پیام)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.boodschap': "پیام (چیزی که روی پیام‌گیر کسی می‌گویی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.noemen': "گفتن، نام بردن (اسمت، شماره‌ات)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zosnelmogelijk': "هر چه زودتر", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opnieuw': "دوباره (یک بار دیگر)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.voicemail.1': "علی حداد هستم. دربارهٔ برنامهٔ کاری‌ام زنگ می‌زنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.voicemail.2': "هر روز به پیام‌های صوتی‌ام گوش می‌دهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.voicemail.3': "بعداً دوباره زنگ می‌زنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.q': "بعد از صدای بوق، نام و شماره‌تان را بگویید.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.a': "علی هستم. می‌شود هر چه زودتر به من زنگ بزنید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.dentist': "دندانپزشک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tandarts': "دندانپزشک", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kiespijn': "دندان‌درد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gaatje': "پوسیدگی دندان (سوراخ کوچکی در دندان)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vulling': "پرکردگی (دندانپزشک سوراخ دندان را می‌بندد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gebit': "دندان‌ها (همهٔ دندان‌هایت با هم)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aanvullendeverzekering': "بیمهٔ تکمیلی (می‌توانی آن را علاوه بر بیمهٔ درمانی پایه انتخاب کنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dentist.1': "دو روز است دندان‌درد دارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dentist.2': "دندانم پوسیده است. دندانم را پر می‌کنند.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.dentist.3': "پر کردن یک دندان چقدر می‌شود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.q': "آخرین بار کی پیش دندانپزشک رفتی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.a': "یک سال پیش. یک معاینه می‌خواهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms': "فرم: خوانا بنویس، و مواظب BSN خودت باش", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.b': "یک فرم اغلب اسم، تاریخ تولد، آدرس و کد پستی‌ات را می‌خواهد. خوانا بنویس، اغلب با حروف بزرگ. قسمتی که ستاره (*) دارد اجباری است: باید پرش کنی. خانهٔ درست را علامت بزن. سؤالی را نمی‌فهمی؟ قبل از امضا کمک بخواه. هیچ‌وقت چیزی را که نمی‌فهمی امضا نکن. BSN تو: فقط بعضی سازمان‌ها اجازه دارند آن را بخواهند، مثل کارفرمایت، gemeente، Belastingdienst، شرکت بیمهٔ درمانی‌ات، پزشکت و بانکت. یک مغازه یا باشگاه ورزشی اجازه ندارد. هیچ‌وقت BSN خودت را به یک غریبه، در یک اپ یا پشت تلفن نده. مطمئن نیستی؟ بپرس چرا لازمش دارند. خیلی از کتابخانه‌ها رایگان در پر کردن فرم کمک می‌کنند، اغلب در ساعتی که بدون وقت قبلی می‌شود رفت. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.p': "آیا BSN من اینجا اجباری است؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.s': "در یک باشگاه ورزشی ثبت‌نام می‌کنی. فرم BSN تو را می‌خواهد. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.o1': "خالی‌اش می‌گذاری، و می‌پرسی چرا لازمش دارند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.o2': "پرش می‌کنی: هر فرمی اجازه دارد آن را بخواهد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.o3': "به جایش اطلاعات ورود DigiD خودت را می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.forms.w': "یک باشگاه ورزشی اجازه ندارد از BSN تو استفاده کند. فقط بعضی سازمان‌ها اجازه دارند، مثل کارفرمایت، gemeente و شرکت بیمهٔ درمانی‌ات. وقتی می‌پرسی چرا، از شماره‌ات محافظت می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail': "پیام: چه کسی، چرا، شماره‌ات", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.b': "کسی جواب نمی‌دهد؟ بعد از بوق (piep) یک پیام کوتاه (boodschap) بگذار. اسمت، دلیل تماست و شمارهٔ تلفنت را بگو. آرام حرف بزن، و شماره‌ات را دو بار بگو. تماسی را از دست دادی؟ اول به پیام‌های صوتی‌ات گوش بده، بعد هر چه زودتر دوباره زنگ بزن. پیامی را نمی‌فهمی؟ دوباره به آن گوش بده، یا از یک همکار بخواه با تو گوش بدهد. پیام‌گیرت را راه بینداز، و هر روز به آن گوش بده. می‌خواهی مریضی‌ات را خبر بدهی؟ در خیلی از شرکت‌ها پیام گذاشتن کافی نیست: دوباره زنگ بزن تا با کسی حرف بزنی. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.p': "می‌توانم پیام بگذارم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.s': "دیر می‌رسی، و به سرپرستت زنگ می‌زنی. پیام‌گیرش را می‌شنوی. بعد از بوق چه می‌گویی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.o1': "اسمت، دلیل تماست، و شماره‌ات را.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.o2': "فقط «Bel me terug» می‌گویی، و قطع می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.o3': "هیچ: قطع می‌کنی، و صبر می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.voicemail.w': "با اسمت، دلیل و شماره‌ات، سرپرستت می‌داند چه خبر است، و می‌تواند فوراً به تو زنگ بزند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist': "دندانپزشک: معاینه، و قیمت را بپرس", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.b': "نزدیک خانه‌ات پیش یک دندانپزشک (tandarts) ثبت‌نام کن، و مرتب برای معاینه (controle) برو، اغلب سالی یک بار. دندان‌درد؟ به دندانپزشکت زنگ بزن و بگو که خیلی درد داری: آن وقت اغلب زود وقت می‌گیری. شب یا آخر هفته، به دندانپزشک خودت زنگ بزن: پیام تلفنی به تو می‌گوید الان کدام دندانپزشک کمک می‌کند. برای بزرگسالان، بیمهٔ درمانی پایه برای دندانپزشک خیلی کم پول می‌دهد: معمولاً نه معاینه را و نه پرکردگی را. می‌توانی یک بیمهٔ تکمیلی (aanvullende verzekering) برای دندانپزشک انتخاب کنی: ببین چه چیزهایی را پوشش می‌دهد. برای بچه‌های زیر ۱۸ سال، بیمهٔ پایه بیشتر خدمات دندانپزشکی را پوشش می‌دهد. قبل از شروع درمان بپرس چقدر هزینه دارد. برای یک درمان بزرگ، دندانپزشک باید اول قیمت را روی کاغذ به تو بدهد. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.p': "خیلی درد دارم. می‌توانم همین امروز بیایم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.s': "شنبه شب است. دندان‌درد شدیدی داری، و مسکن کمکی نمی‌کند. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.o1': "به دندانپزشکت زنگ می‌زنی: پیام می‌گوید الان چه کسی کمک می‌کند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.o2': "به ۱۱۲ زنگ می‌زنی: وضعیت اضطراری است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.o3': "تا دوشنبه صبر می‌کنی، و مسکن بیشتری می‌خوری.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.dentist.w': "بیرون از ساعت اداری، یک دندانپزشک کشیک به درد فوری رسیدگی می‌کند. ۱۱۲ فقط برای وضعیت اضطراری است، مثل خطر جانی.", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 

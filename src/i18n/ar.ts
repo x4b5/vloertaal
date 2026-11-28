@@ -255,7 +255,7 @@ const lang: HelpLanguageSource = {
     chorusAlone: "الآن وحدك", // nieuw, nalezen
     speakBrave: "الأخطاء جزء من التعلّم. لم يفهموك؟ قلها مرة أخرى.", // nieuw, nalezen
     speakBrave2: "متوتر؟ هذا طبيعي. قلها على أي حال.", // nieuw, nalezen
-    speakBrave3: "لا يجب أن تقولها بشكل مثالي. فقط جرّب.", // nieuw, nalezen
+    speakBrave3: "ليس من الضروري أن تكون الجملة مثالية. المهم المحاولة.", // nieuw, nalezen (AI-correctie 28 nov 2026)
     reasonTitle: "لماذا تتعلّم الهولندية؟", // nieuw, nalezen
     reasonHint: "اختر واحدًا أو اثنين.", // nieuw, nalezen
     reasonDone: "تم", // nieuw, nalezen
@@ -517,7 +517,7 @@ const lang: HelpLanguageSource = {
     lawStale: 'تاريخ هذا الشرح: {month}. أحدث القواعد موجودة لدى Juridisch Loket أو Work in NL.', // nieuw, nalezen
     lawStaleBe: 'تاريخ هذا الشرح: {month}. أحدث القواعد موجودة لدى justitiehuis أو على werk.belgie.be.', // nieuw, nalezen
     aboutMore: 'قراءة المزيد عن Vloertaal', // nieuw, nalezen (AI-correctie 2 nov 2026)
-    geluktAsk: { m: 'هل قلتَ هذا في العمل؟', f: 'هل قلتِ هذا في العمل؟', x: 'هل قلت هذا في العمل؟' }, // nieuw, nalezen
+    geluktAsk: { m: 'هل قلتَ هذا في العمل؟', f: 'هل قلتِ هذا في العمل؟', x: 'هل قيلت هذه الجملة في العمل؟' }, // nieuw, nalezen (AI-correctie 28 nov 2026)
     geluktYes: 'نعم، نجح', // nieuw, nalezen
     geluktNotYet: 'ليس بعد', // nieuw, nalezen
     geluktDoneN: { m: 'أحسنت! الجمل التي نجحت في العمل: {n}', f: 'أحسنتِ! الجمل التي نجحت في العمل: {n}', x: 'عمل رائع! الجمل التي نجحت في العمل: {n}' }, // nieuw, nalezen

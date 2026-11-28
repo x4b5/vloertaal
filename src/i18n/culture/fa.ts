@@ -186,30 +186,30 @@ const t: CultureTranslation = {
     's.task.3': 'می‌شود یک بار دیگر نشانم بدهید؟',
     'd.task.q': 'کارت تمام شد؟',
     'd.task.a': 'تقریباً. پنج دقیقهٔ دیگر.',
-    'l.clear': 'کوتاه و روشن', // nieuw, nalezen
-    'w.kort': 'کوتاه', // nieuw, nalezen
-    'w.duidelijk': 'روشن، واضح', // nieuw, nalezen
-    'w.belangrijkste': 'مهم‌ترین چیز', // nieuw, nalezen
-    'w.rustig': 'آرام، با آرامش', // nieuw, nalezen
-    'w.teveel': 'زیادی، بیش از حد', // nieuw, nalezen
-    'w.vraag': 'سؤال', // nieuw, nalezen
-    's.clear.1': 'خلاصه می‌گویم: دستگاه خراب است.', // nieuw, nalezen
-    's.clear.2': 'اول مهم‌ترین چیز: من مریضم.', // nieuw, nalezen
-    's.clear.3': 'ببخشید، خیلی تند و خیلی زیاد حرف می‌زنم.', // nieuw, nalezen
-    'd.clear.q': 'روشن است؟', // nieuw, nalezen
-    'd.clear.a': 'بله. یک سؤال دیگر دارم.', // nieuw, nalezen
-    'l.newcolleague': "کمک به یک همکار تازه", // nieuw, nalezen
-    'w.welkom': "خوش آمدی", // nieuw, nalezen
-    'w.inwerken': "کار را به همکار تازه یاد دادن (در روزهای اول)", // nieuw, nalezen
-    'w.stap': "مرحله، قدم (یک بخش کوچک از یک کار)", // nieuw, nalezen
-    'w.nadoen': "تقلید کردن (کاری را که کسی نشانت داده، انجام دادن)", // nieuw, nalezen
-    'w.geduld': "صبر، حوصله", // nieuw, nalezen
-    'w.kast': "کمد", // nieuw, nalezen
-    's.newcolleague.1': "خوش آمدی! امروز کار را نشانت می‌دهم.", // nieuw, nalezen
-    's.newcolleague.2': "اول نگاه کن. بعد خودت همان کار را بکن.", // nieuw, nalezen
-    's.newcolleague.3': "دستکش‌ها توی آن کمد است.", // nieuw, nalezen
-    'd.newcolleague.q': "فکر کنم فهمیدم.", // nieuw, nalezen
-    'd.newcolleague.a': "خوب است. نشانم بده.", // nieuw, nalezen
+    'l.clear': 'کوتاه و روشن', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kort': 'کوتاه', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.duidelijk': 'روشن، واضح', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.belangrijkste': 'مهم‌ترین چیز', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.rustig': 'آرام، با آرامش', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.teveel': 'زیادی، بیش از حد', // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vraag': 'سؤال', // nieuw, nalezen // nagelezen AI 28 nov
+    's.clear.1': 'خلاصه می‌گویم: دستگاه خراب است.', // nieuw, nalezen // nagelezen AI 28 nov
+    's.clear.2': 'اول مهم‌ترین چیز: من مریضم.', // nieuw, nalezen // nagelezen AI 28 nov
+    's.clear.3': 'ببخشید، خیلی تند و خیلی زیاد حرف می‌زنم.', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.clear.q': 'روشن است؟', // nieuw, nalezen // nagelezen AI 28 nov
+    'd.clear.a': 'بله. یک سؤال دیگر دارم.', // nieuw, nalezen // nagelezen AI 28 nov
+    'l.newcolleague': "کمک به یک همکار تازه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.welkom': "خوش آمدی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.inwerken': "کار را به همکار تازه یاد دادن (در روزهای اول)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stap': "مرحله، قدم (یک بخش کوچک از یک کار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nadoen': "تقلید کردن (کاری را که کسی نشانت داده، انجام دادن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.geduld': "صبر، حوصله", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kast': "کمد", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.1': "خوش آمدی! امروز کار را نشانت می‌دهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.2': "اول نگاه کن. بعد خودت همان کار را بکن.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.newcolleague.3': "دستکش‌ها توی آن کمد است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.newcolleague.q': "فکر کنم فهمیدم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.newcolleague.a': "خوب است. نشانم بده.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.newcolleague': "نشانش بده، قدم به قدم", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.b': "چیزی که در هفته‌های اول برای تو سخت بود، برای یک همکار تازه هم سخت است. کار را در قدم‌های کوچک توضیح بده: اول این، بعد آن. تندتر یا بلندتر حرف نزن: نشانش بده، و بگذار بعد از تو همان کار را بکند. نپرس «Snap je het?»: خیلی‌ها بله می‌گویند، حتی وقتی نفهمیده‌اند. به‌جایش بگو «Laat eens zien» و نگاه کن. بگو چیزها کجاست، مثل توالت، غذاخوری و دستکش‌ها. صبور باش (geduld): یاد گرفتن برای همه وقت می‌برد.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.p': "آفرین! حالا قدم بعدی.", // nieuw, nalezen // nagelezen AI 22 nov
@@ -219,104 +219,104 @@ const t: CultureTranslation = {
     'c.newcolleague.o3': "همه را دوباره توضیح بده، تندتر و بلندتر.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.newcolleague.w': "خیلی‌ها «ja» می‌گویند، حتی وقتی نفهمیده‌اند. وقتی او نشان می‌دهد، هر دو می‌بینید که درست کار می‌کند یا نه. این سریع‌تر از درست کردن یک اشتباه در آینده است.", // nieuw, nalezen // nagelezen AI 22 nov
     // Goed communiceren en Feedback en overleg (5 nov 2026)
-    'u.communicate': "ارتباط خوب", // nieuw, nalezen
-    'u.feedback': "بازخورد و جلسهٔ تیم", // nieuw, nalezen
-    'l.explain': "گفتن اینکه چه مشکلی هست", // nieuw, nalezen
-    'w.ietsmis': "یک چیزی درست نیست، مشکلی هست", // nieuw, nalezen
-    'w.stilstaan': "ایستادن، از کار افتادن (دستگاه، نوار نقاله)", // nieuw, nalezen
-    'w.lampje': "چراغ (چراغ هشدار)", // nieuw, nalezen
-    'w.komen': "آمدن", // nieuw, nalezen
-    'w.nodighebben': "لازم داشتن", // nieuw, nalezen
-    'w.meteen': "فوراً، همین الان", // nieuw, nalezen
-    's.explain.1': "نوار نقاله ایستاده. کنار خط دو. می‌توانی بیایی؟", // nieuw, nalezen
-    's.explain.2': "روی دستگاه یک چراغ قرمز روشن است.", // nieuw, nalezen
-    's.explain.3': "خطرناک است. می‌توانی همین الان بیایی؟", // nieuw, nalezen
-    'd.explain.q': "چه مشکلی هست؟", // nieuw, nalezen
-    'd.explain.a': "اسکنر کار نمی‌کند. یک اسکنر نو لازم دارم.", // nieuw, nalezen
-    'l.listen': "خوب گوش دادن", // nieuw, nalezen
-    'w.uitpraten': "حرف را تمام کردن (گذاشتن که کسی حرفش را تمام کند)", // nieuw, nalezen
-    'w.onderbreken': "وسط حرف کسی پریدن", // nieuw, nalezen
-    'w.aankijken': "نگاه کردن (به کسی)", // nieuw, nalezen
-    'w.bedoelen': "منظور داشتن", // nieuw, nalezen
-    'w.dus': "پس (برای چک کردن چیزی که شنیدی)", // nieuw, nalezen
-    'w.doorvragen': "بیشتر پرسیدن (تا روشن شود)", // nieuw, nalezen
-    's.listen.1': "پس اول جعبه‌ها را بشمارم، بعد بسته‌بندی کنم؟", // nieuw, nalezen
-    's.listen.2': "منظورت از این کلمه چیست؟", // nieuw, nalezen
-    's.listen.3': "ببخشید، حرفت را تمام کن.", // nieuw, nalezen
-    'd.listen.q': "فردا زود شروع می‌کنی، ساعت چهار.", // nieuw, nalezen
-    'd.listen.a': "واقعاً؟ یا شوخی بود؟", // nieuw, nalezen
-    'l.calm': "آرام ماندن", // nieuw, nalezen
-    'w.nadenken': "فکر کردن (دربارهٔ چیزی)", // nieuw, nalezen
-    'w.ademhalen': "نفس کشیدن", // nieuw, nalezen
-    'w.oplossen': "حل کردن", // nieuw, nalezen
-    'w.druk': "شلوغ (کار زیاد)", // nieuw, nalezen
-    'w.straks': "کمی بعد، بعداً (امروز)", // nieuw, nalezen
-    'w.misverstand': "سوءتفاهم", // nieuw, nalezen
-    's.calm.1': "می‌خواهم با آرامش حلش کنم.", // nieuw, nalezen
-    's.calm.2': "اجازه هست کمی فکر کنم؟", // nieuw, nalezen
-    's.calm.3': "می‌توانیم کمی بعد حرف بزنیم؟", // nieuw, nalezen
-    'd.calm.q': "چرا این هنوز تمام نشده؟", // nieuw, nalezen
-    'd.calm.a': "ببخشید، خیلی شلوغ است. اول چه کاری باید انجام شود؟", // nieuw, nalezen
-    'l.talkintime': "به‌موقع حرف زدن", // nieuw, nalezen
-    'w.gesprek': "گفت‌وگو", // nieuw, nalezen
-    'w.bespreken': "دربارهٔ چیزی حرف زدن، مطرح کردن", // nieuw, nalezen
-    'w.zorgenmaken': "نگران بودن", // nieuw, nalezen
-    'w.oplossing': "راه‌حل", // nieuw, nalezen
-    'w.ineens': "یک‌دفعه، ناگهان", // nieuw, nalezen
-    'w.wegblijven': "نیامدن (سر کار نیامدن)", // nieuw, nalezen
-    's.talkintime.1': "یک چیزی ذهنم را مشغول کرده. کمی وقت داری؟", // nieuw, nalezen
-    's.talkintime.2': "می‌خواهم دربارهٔ چیزی با تو حرف بزنم.", // nieuw, nalezen
-    's.talkintime.3': "به فکر ترک کار هستم. می‌توانیم اول حرف بزنیم؟", // nieuw, nalezen
-    'd.talkintime.q': "کمی وقت داری؟ یک چیزی ذهنم را مشغول کرده.", // nieuw, nalezen
-    'd.talkintime.a': "حتماً. چه شده؟", // nieuw, nalezen
-    'l.reachable': "در دسترس بودن", // nieuw, nalezen
-    'w.opnemen': "جواب دادن (تلفن)، برداشتن", // nieuw, nalezen
-    'w.gemisteoproep': "تماس بی‌پاسخ", // nieuw, nalezen
-    'w.voicemail': "پیام صوتی (پیغام‌گیر)", // nieuw, nalezen
-    'w.beltegoed': "شارژ تلفن (اعتبار پیش‌پرداخت)", // nieuw, nalezen
-    'w.bereik': "آنتن (گوشی)", // nieuw, nalezen
-    'w.onbekend': "ناشناس (شمارهٔ ناشناس)", // nieuw, nalezen
-    's.reachable.1': "هلندی‌ام هنوز خوب نیست. می‌شود آهسته حرف بزنید؟", // nieuw, nalezen
-    's.reachable.2': "می‌شود آن را پیام هم بدهید؟", // nieuw, nalezen
-    's.reachable.3': "یک شمارهٔ جدید دارم.", // nieuw, nalezen
-    'd.reachable.q': "صبح بخیر، از بخش برنامه‌ریزی تماس می‌گیرم.", // nieuw, nalezen
-    'd.reachable.a': "صبح بخیر. به من زنگ زده بودید؟ ببخشید، نتوانستم جواب بدهم.", // nieuw, nalezen
-    'l.getfeedback': "بازخورد گرفتن", // nieuw, nalezen
-    'w.tip': "نکته (یک توصیهٔ کوتاه)", // nieuw, nalezen
-    'w.verbeterpunt': "نکتهٔ قابل بهبود (چیزی که می‌تواند بهتر شود)", // nieuw, nalezen
-    'w.goedbedoeld': "از روی خیرخواهی (برای کمک به تو)", // nieuw, nalezen
-    'w.kritiek': "انتقاد (چیزی که کسی فکر می‌کند خوب نیست)", // nieuw, nalezen
-    'w.normaal': "عادی", // nieuw, nalezen
-    'w.positief': "مثبت (دربارهٔ چیزی که خوب پیش می‌رود)", // nieuw, nalezen
-    's.getfeedback.1': "ممنون، خوب است که بدانم.", // nieuw, nalezen
-    's.getfeedback.2': "می‌توانی یک مثال بزنی؟", // nieuw, nalezen
-    's.getfeedback.3': "چه کاری را می‌توانم بهتر انجام بدهم؟", // nieuw, nalezen
-    'd.getfeedback.q': "اجازه هست کمی به تو بازخورد بدهم؟", // nieuw, nalezen
-    'd.getfeedback.a': "بله، لطفاً. می‌خواهم کارم را خوب انجام بدهم.", // nieuw, nalezen
-    'l.givefeedback': "بازخورد دادن", // nieuw, nalezen
-    'w.dichtplakken': "با چسب بستن", // nieuw, nalezen
-    'w.netjes': "مرتب، تمیز", // nieuw, nalezen
-    'w.scheef': "کج، ناصاف", // nieuw, nalezen
-    'w.vriendelijk': "مهربان، دوستانه", // nieuw, nalezen
-    'w.concreet': "مشخص (با یک مثال روشن)", // nieuw, nalezen
-    'w.ondervierogen': "خصوصی (فقط دو نفری)", // nieuw, nalezen
-    's.givefeedback.1': "این کار را خوب انجام می‌دهی.", // nieuw, nalezen
-    's.givefeedback.2': "می‌توانی جعبه‌ها را هم چسب بزنی؟", // nieuw, nalezen
-    's.givefeedback.3': "می‌بینم که جعبه‌ها کج هستند.", // nieuw, nalezen
-    'd.givefeedback.q': "کار من را چطور می‌بینی؟", // nieuw, nalezen
-    'd.givefeedback.a': "مرتب است! فقط جعبه‌ها کج هستند.", // nieuw, nalezen
-    'l.meeting': "حرف زدن در جلسهٔ تیم", // nieuw, nalezen
-    'w.werkoverleg': "جلسهٔ تیم (دربارهٔ کار)", // nieuw, nalezen
-    'w.beurt': "نوبت (وقتی که نوبت حرف زدن توست)", // nieuw, nalezen
-    'w.idee': "ایده", // nieuw, nalezen
-    'w.mening': "نظر (چیزی که دربارهٔ آن فکر می‌کنی)", // nieuw, nalezen
-    'w.handopsteken': "دست بالا بردن", // nieuw, nalezen
-    'w.agenda': "دستور جلسه (فهرست موضوع‌های جلسه)", // nieuw, nalezen
-    's.meeting.1': "اجازه هست چیزی بگویم؟", // nieuw, nalezen
-    's.meeting.2': "دربارهٔ برنامهٔ کاری یک سؤال دارم.", // nieuw, nalezen
-    's.meeting.3': "یک ایده دارم.", // nieuw, nalezen
-    'd.meeting.q': "کسی سؤالی دارد؟", // nieuw, nalezen
-    'd.meeting.a': "بله. برنامهٔ کاری جدید کی می‌آید؟", // nieuw, nalezen
+    'u.communicate': "ارتباط خوب", // nieuw, nalezen // nagelezen AI 28 nov
+    'u.feedback': "بازخورد و جلسهٔ تیم", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.explain': "گفتن اینکه چه مشکلی هست", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ietsmis': "یک چیزی درست نیست، مشکلی هست", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.stilstaan': "ایستادن، از کار افتادن (دستگاه، نوار نقاله)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.lampje': "چراغ (چراغ هشدار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.komen': "آمدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nodighebben': "لازم داشتن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.meteen': "فوراً، همین الان", // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.1': "نوار نقاله ایستاده. کنار خط دو. می‌توانی بیایی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.2': "روی دستگاه یک چراغ قرمز روشن است.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.explain.3': "خطرناک است. می‌توانی همین الان بیایی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.explain.q': "چه مشکلی هست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.explain.a': "اسکنر کار نمی‌کند. یک اسکنر نو لازم دارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.listen': "خوب گوش دادن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.uitpraten': "حرف را تمام کردن (گذاشتن که کسی حرفش را تمام کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onderbreken': "وسط حرف کسی پریدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.aankijken': "نگاه کردن (به کسی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bedoelen': "منظور داشتن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dus': "پس (برای چک کردن چیزی که شنیدی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doorvragen': "بیشتر پرسیدن (تا روشن شود)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.1': "پس اول جعبه‌ها را بشمارم، بعد بسته‌بندی کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.2': "منظورت از این کلمه چیست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.listen.3': "ببخشید، حرفت را تمام کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.listen.q': "فردا زود شروع می‌کنی، ساعت چهار.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.listen.a': "واقعاً؟ یا شوخی بود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.calm': "آرام ماندن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.nadenken': "فکر کردن (دربارهٔ چیزی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ademhalen': "نفس کشیدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oplossen': "حل کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.druk': "شلوغ (کار زیاد)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.straks': "کمی بعد، بعداً (امروز)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.misverstand': "سوءتفاهم", // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.1': "می‌خواهم با آرامش حلش کنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.2': "اجازه هست کمی فکر کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.calm.3': "می‌توانیم کمی بعد حرف بزنیم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.calm.q': "چرا این هنوز تمام نشده؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.calm.a': "ببخشید، خیلی شلوغ است. اول چه کاری باید انجام شود؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.talkintime': "به‌موقع حرف زدن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gesprek': "گفت‌وگو", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bespreken': "دربارهٔ چیزی حرف زدن، مطرح کردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.zorgenmaken': "نگران بودن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.oplossing': "راه‌حل", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ineens': "یک‌دفعه، ناگهان", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.wegblijven': "نیامدن (سر کار نیامدن)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.1': "یک چیزی ذهنم را مشغول کرده. کمی وقت داری؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.2': "می‌خواهم دربارهٔ چیزی با تو حرف بزنم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.talkintime.3': "به فکر ترک کار هستم. می‌توانیم اول حرف بزنیم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.talkintime.q': "کمی وقت داری؟ یک چیزی ذهنم را مشغول کرده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.talkintime.a': "حتماً. چه شده؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.reachable': "در دسترس بودن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.opnemen': "جواب دادن (تلفن)، برداشتن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.gemisteoproep': "تماس بی‌پاسخ", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voicemail': "پیام صوتی (پیغام‌گیر)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beltegoed': "شارژ تلفن (اعتبار پیش‌پرداخت)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.bereik': "آنتن (گوشی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.onbekend': "ناشناس (شمارهٔ ناشناس)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.1': "هلندی‌ام هنوز خوب نیست. می‌شود آهسته حرف بزنید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.2': "می‌شود آن را پیام هم بدهید؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.reachable.3': "یک شمارهٔ جدید دارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.reachable.q': "صبح بخیر، از بخش برنامه‌ریزی تماس می‌گیرم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.reachable.a': "صبح بخیر. به من زنگ زده بودید؟ ببخشید، نتوانستم جواب بدهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.getfeedback': "بازخورد گرفتن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.tip': "نکته (یک توصیهٔ کوتاه)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.verbeterpunt': "نکتهٔ قابل بهبود (چیزی که می‌تواند بهتر شود)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedbedoeld': "از روی خیرخواهی (برای کمک به تو)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.kritiek': "انتقاد (چیزی که کسی فکر می‌کند خوب نیست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.normaal': "عادی", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.positief': "مثبت (دربارهٔ چیزی که خوب پیش می‌رود)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.1': "ممنون، خوب است که بدانم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.2': "می‌توانی یک مثال بزنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.getfeedback.3': "چه کاری را می‌توانم بهتر انجام بدهم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.getfeedback.q': "اجازه هست کمی به تو بازخورد بدهم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.getfeedback.a': "بله، لطفاً. می‌خواهم کارم را خوب انجام بدهم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.givefeedback': "بازخورد دادن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.dichtplakken': "با چسب بستن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.netjes': "مرتب، تمیز", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.scheef': "کج، ناصاف", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.vriendelijk': "مهربان، دوستانه", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.concreet': "مشخص (با یک مثال روشن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.ondervierogen': "خصوصی (فقط دو نفری)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.1': "این کار را خوب انجام می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.2': "می‌توانی جعبه‌ها را هم چسب بزنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.givefeedback.3': "می‌بینم که جعبه‌ها کج هستند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.givefeedback.q': "کار من را چطور می‌بینی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.givefeedback.a': "مرتب است! فقط جعبه‌ها کج هستند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'l.meeting': "حرف زدن در جلسهٔ تیم", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.werkoverleg': "جلسهٔ تیم (دربارهٔ کار)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beurt': "نوبت (وقتی که نوبت حرف زدن توست)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.idee': "ایده", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.mening': "نظر (چیزی که دربارهٔ آن فکر می‌کنی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.handopsteken': "دست بالا بردن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.agenda': "دستور جلسه (فهرست موضوع‌های جلسه)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.1': "اجازه هست چیزی بگویم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.2': "دربارهٔ برنامهٔ کاری یک سؤال دارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.meeting.3': "یک ایده دارم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.meeting.q': "کسی سؤالی دارد؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.meeting.a': "بله. برنامهٔ کاری جدید کی می‌آید؟", // nieuw, nalezen // nagelezen AI 28 nov
     'c.explain': "چه، کجا، چه لازم داری", // nieuw, nalezen // nagelezen AI 22 nov
     'c.explain.b': "وقتی سر کار یک چیزی درست نیست، آن را در سه قدم بگو. اول اینکه چه مشکلی هست: «De band staat stil.». بعد کجا: «Bij lijn twee.». بعد اینکه چه لازم داری: «Kun je komen?». حالا طرف مقابل می‌داند چه کار کند، بدون سؤال‌های زیاد. کلمه‌اش را نمی‌دانی؟ با دست نشانش بده. خطرناک است؟ اول همین را بگو: «Het is gevaarlijk.». حادثه؟ اول کمک بگیر (بیشتر در درس «گزارش دادن حادثه»).", // nieuw, nalezen // nagelezen AI 22 nov
     'c.explain.p': "می‌توانی بیایی یک نگاهی بیندازی؟", // nieuw, nalezen // nagelezen AI 22 nov
@@ -424,76 +424,76 @@ const t: CultureTranslation = {
     'c.whereis.o3': "با لباس خودت کار را شروع کن.", // nieuw, nalezen // nagelezen AI 22 nov
     'c.whereis.w': "پرسیدن ده ثانیه وقت می‌گیرد. تنهایی گشتن می‌تواند باعث شود دیر برسی. همکارها می‌دانند که پیدا کردن راه در جای تازه سخت است.", // nieuw, nalezen // nagelezen AI 22 nov
     // "Tijd en rooster" and "Als het misgaat" at four lessons (23 November 2026): the tips of l.roster, l.breaks, l.wound and l.callhelp.
-    'c.wound': "سوختگی؟ با آب خنکش کن", // nieuw, nalezen
-    'c.wound.b': "یک بریدگی کوچک: با یک پارچهٔ تمیز یا باند رویش فشار بده، و به امدادگر شرکت بگو. سوختگی: فوراً با آب ولرم روان خنکش کن، دست‌کم ۱۰ دقیقه. چیزی در چشمت رفته؟ با آب، یا با دوش چشم، بشویش. جدی است؟ به ۱۱۲ زنگ بزن. روز اول کارت بپرس جعبهٔ کمک‌های اولیه و دوش چشم کجا هستند.", // nieuw, nalezen
-    'c.wound.p': "خودم را سوزاندم. شیر آب کجاست؟", // nieuw, nalezen
-    'c.wound.s': "یک همکار دستش را با یک دستگاه داغ می‌سوزاند. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.wound.o1': "با آب ولرم روان خنکش می‌کنی.", // nieuw, nalezen
-    'c.wound.o2': "فوراً رویش کره یا کرم می‌مالی.", // nieuw, nalezen
-    'c.wound.o3': "یخ را مستقیم روی پوست می‌گذاری، و صبر می‌کنی.", // nieuw, nalezen
-    'c.wound.w': "آب گرما را از پوست بیرون می‌کشد، پس سوختگی کمتر عمیق می‌شود. یخ، کره و کرم ممکن است آن را بدتر کنند.", // nieuw, nalezen
-    'c.callhelp': "زنگ زدن به ۱۱۲: اول بگو کجا", // nieuw, nalezen
-    'c.callhelp.b': "وقتی جان کسی در خطر است، یا وقتی هر دقیقه مهم است، به ۱۱۲ زنگ بزن. اول بگو کجا هستی: خیابان، شماره و شهر. بعد بگو چه اتفاقی افتاده. پشت خط بمان و به سؤال‌ها جواب بده. از یک همکار بخواه کنار ورودی منتظر آمبولانس بماند. آدرس محل کارت را نمی‌دانی؟ همین امروز پیدایش کن.", // nieuw, nalezen
-    'c.callhelp.p': "به ۱۱۲ زنگ می‌زنم. تو منتظر آمبولانس می‌مانی؟", // nieuw, nalezen
-    'c.callhelp.s': "به ۱۱۲ زنگ می‌زنی. اپراتور سؤال‌های زیادی می‌پرسد، ولی تو می‌خواهی به همکارت کمک کنی. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.callhelp.o1': "پشت خط می‌مانی و جواب می‌دهی.", // nieuw, nalezen
-    'c.callhelp.o2': "قطع می‌کنی، و پیش همکارت می‌روی.", // nieuw, nalezen
-    'c.callhelp.o3': "می‌گویی «زود بیایید»، و قطع می‌کنی.", // nieuw, nalezen
-    'c.callhelp.w': "اپراتور در حالی که حرف می‌زنی کمک می‌فرستد، و به تو می‌گوید چه کار کنی. اگر خیلی زود قطع کنی، ممکن است کمک به جای اشتباهی برود.", // nieuw, nalezen
-    'c.roster': "هر روز به برنامهٔ کاری‌ات نگاه کن", // nieuw, nalezen
-    'c.roster.b': "برنامهٔ کاری ممکن است تغییر کند، حتی در آخرین لحظه. هر روز به آن نگاه کن، در اپ یا روی تابلو. تغییری می‌بینی؟ بررسی کن که می‌توانی بیایی. یک روز نمی‌توانی کار کنی؟ زود بگو، نه در همان روز. می‌خواهی شیفتت را عوض کنی؟ اول از سرپرستت بپرس: خیلی از شرکت‌ها برایش قانون دارند. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.roster.p': "شنبه نمی‌توانم کار کنم. می‌توانم شیفتم را عوض کنم؟", // nieuw, nalezen
-    'c.roster.s': "برنامهٔ کاری‌ات عوض شده. حالا باید شنبه کار کنی، ولی نمی‌توانی. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.roster.o1': "امروز به سرپرستت می‌گویی، و می‌خواهی شیفتت را عوض کنی.", // nieuw, nalezen
-    'c.roster.o2': "چیزی نمی‌گویی، و شنبه خانه می‌مانی.", // nieuw, nalezen
-    'c.roster.o3': "از یک همکار می‌خواهی برود، و به هیچ‌کس نمی‌گویی.", // nieuw, nalezen
-    'c.roster.w': "وقتی زود بگویی، سرپرستت می‌تواند کس دیگری پیدا کند. نیامدن بدون خبر خیلی جدی گرفته می‌شود.", // nieuw, nalezen
-    'c.breaks': "ساعت‌هایت را یادداشت کن", // nieuw, nalezen
-    'c.breaks.b': "هر روز یادداشت کن کی شروع می‌کنی، کی تمام می‌کنی و استراحتت چقدر است. فهرست خودت وقتی حقوقت درست نیست کمک می‌کند. باید زودتر بروی، مثلاً برای دکتر؟ به موقع از سرپرستت بپرس. بیشتر از برنامه کار کردی؟ آن را هم یادداشت کن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.breaks.p': "فردا باید پیش دکتر بروم. می‌توانم زودتر بروم؟", // nieuw, nalezen
-    'c.breaks.s': "فردا ساعت سه باید پیش دکتر بروی. شیفتت ساعت پنج تمام می‌شود. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.breaks.o1': "امروز از سرپرستت می‌پرسی که می‌توانی زودتر بروی یا نه.", // nieuw, nalezen
-    'c.breaks.o2': "ساعت سه می‌روی، و روز بعد توضیح می‌دهی.", // nieuw, nalezen
-    'c.breaks.o3': "دکتر را کنار می‌گذاری، و شیفتت را تمام می‌کنی.", // nieuw, nalezen
-    'c.breaks.w': "به موقع پرسیدن به سرپرستت اجازه می‌دهد کار را برنامه‌ریزی کند. رفتن بدون پرسیدن نشانهٔ قابل اعتماد نبودن دیده می‌شود.", // nieuw, nalezen
+    'c.wound': "سوختگی؟ با آب خنکش کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.b': "یک بریدگی کوچک: با یک پارچهٔ تمیز یا باند رویش فشار بده، و به امدادگر شرکت بگو. سوختگی: فوراً با آب ولرم روان خنکش کن، دست‌کم ۱۰ دقیقه. چیزی در چشمت رفته؟ با آب، یا با دوش چشم، بشویش. جدی است؟ به ۱۱۲ زنگ بزن. روز اول کارت بپرس جعبهٔ کمک‌های اولیه و دوش چشم کجا هستند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.p': "خودم را سوزاندم. شیر آب کجاست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.s': "یک همکار دستش را با یک دستگاه داغ می‌سوزاند. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o1': "با آب ولرم روان خنکش می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o2': "فوراً رویش کره یا کرم می‌مالی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.o3': "یخ را مستقیم روی پوست می‌گذاری، و صبر می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.wound.w': "آب گرما را از پوست بیرون می‌کشد، پس سوختگی کمتر عمیق می‌شود. یخ، کره و کرم ممکن است آن را بدتر کنند.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp': "زنگ زدن به ۱۱۲: اول بگو کجا", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.b': "وقتی جان کسی در خطر است، یا وقتی هر دقیقه مهم است، به ۱۱۲ زنگ بزن. اول بگو کجا هستی: خیابان، شماره و شهر. بعد بگو چه اتفاقی افتاده. پشت خط بمان و به سؤال‌ها جواب بده. از یک همکار بخواه کنار ورودی منتظر آمبولانس بماند. آدرس محل کارت را نمی‌دانی؟ همین امروز پیدایش کن.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.p': "به ۱۱۲ زنگ می‌زنم. تو منتظر آمبولانس می‌مانی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.s': "به ۱۱۲ زنگ می‌زنی. اپراتور سؤال‌های زیادی می‌پرسد، ولی تو می‌خواهی به همکارت کمک کنی. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o1': "پشت خط می‌مانی و جواب می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o2': "قطع می‌کنی، و پیش همکارت می‌روی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.o3': "می‌گویی «زود بیایید»، و قطع می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.callhelp.w': "اپراتور در حالی که حرف می‌زنی کمک می‌فرستد، و به تو می‌گوید چه کار کنی. اگر خیلی زود قطع کنی، ممکن است کمک به جای اشتباهی برود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster': "هر روز به برنامهٔ کاری‌ات نگاه کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.b': "برنامهٔ کاری ممکن است تغییر کند، حتی در آخرین لحظه. هر روز به آن نگاه کن، در اپ یا روی تابلو. تغییری می‌بینی؟ بررسی کن که می‌توانی بیایی. یک روز نمی‌توانی کار کنی؟ زود بگو، نه در همان روز. می‌خواهی شیفتت را عوض کنی؟ اول از سرپرستت بپرس: خیلی از شرکت‌ها برایش قانون دارند. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.p': "شنبه نمی‌توانم کار کنم. می‌توانم شیفتم را عوض کنم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.s': "برنامهٔ کاری‌ات عوض شده. حالا باید شنبه کار کنی، ولی نمی‌توانی. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o1': "امروز به سرپرستت می‌گویی، و می‌خواهی شیفتت را عوض کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o2': "چیزی نمی‌گویی، و شنبه خانه می‌مانی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.o3': "از یک همکار می‌خواهی برود، و به هیچ‌کس نمی‌گویی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.roster.w': "وقتی زود بگویی، سرپرستت می‌تواند کس دیگری پیدا کند. نیامدن بدون خبر خیلی جدی گرفته می‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks': "ساعت‌هایت را یادداشت کن", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.b': "هر روز یادداشت کن کی شروع می‌کنی، کی تمام می‌کنی و استراحتت چقدر است. فهرست خودت وقتی حقوقت درست نیست کمک می‌کند. باید زودتر بروی، مثلاً برای دکتر؟ به موقع از سرپرستت بپرس. بیشتر از برنامه کار کردی؟ آن را هم یادداشت کن. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.p': "فردا باید پیش دکتر بروم. می‌توانم زودتر بروم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.s': "فردا ساعت سه باید پیش دکتر بروی. شیفتت ساعت پنج تمام می‌شود. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o1': "امروز از سرپرستت می‌پرسی که می‌توانی زودتر بروی یا نه.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o2': "ساعت سه می‌روی، و روز بعد توضیح می‌دهی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.o3': "دکتر را کنار می‌گذاری، و شیفتت را تمام می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.breaks.w': "به موقع پرسیدن به سرپرستت اجازه می‌دهد کار را برنامه‌ریزی کند. رفتن بدون پرسیدن نشانهٔ قابل اعتماد نبودن دیده می‌شود.", // nieuw, nalezen // nagelezen AI 28 nov
     // eight new lessons (26 November 2026).
-    'c.firstweeks': "دوباره بپرس: عادی است", // nieuw, nalezen
-    'c.firstweeks.b': "در هفته‌های اول، هیچ‌کس انتظار ندارد همه چیز را بدانی. اغلب یک بازدید آشنایی (rondleiding) داری و همکاری که راهنمایی‌ات می‌کند. اول نگاه کن، بعد خودت انجامش بده، در حالی که همکارت نگاه می‌کند. چیزی را فراموش کردی؟ دوباره بپرس: «Wil je het nog een keer laten zien?». این بهتر از حدس زدن است. کلمه‌ها و مرحله‌های جدید را در یک دفترچهٔ کوچک بنویس. بعضی قراردادها با یک دورهٔ آزمایشی (proeftijd) شروع می‌شوند: در این دوره تو یا کارفرمایت می‌توانید کار را سریع تمام کنید. بپرس آیا قراردادت دورهٔ آزمایشی دارد. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.firstweeks.p': "فراموشش کردم. می‌شود یک بار دیگر نشانم بدهی؟", // nieuw, nalezen
-    'c.firstweeks.s': "دیروز همکارت به تو نشان داد چطور دستگاه را روشن کنی. امروز مرحلهٔ سوم یادت نیست. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.firstweeks.o1': "از همکارت بخواه یک بار دیگر نشانت بدهد.", // nieuw, nalezen
-    'c.firstweeks.o2': "حدس بزن، و امتحانش کن.", // nieuw, nalezen
-    'c.firstweeks.o3': "صبر کن تا کس دیگری آن را روشن کند.", // nieuw, nalezen
-    'c.firstweeks.w': "دوباره پرسیدن در هفته‌های اول عادی است. حدس زدن کنار یک دستگاه می‌تواند خطرناک باشد، و وقت بیشتری می‌گیرد.", // nieuw, nalezen
-    'c.orderpick': "روی مسیر عابر راه برو", // nieuw, nalezen
-    'c.orderpick.b': "در یک انبار بزرگ، سفارش‌ها را با فهرست برداشت و اسکنر جمع می‌کنی: هر کالا را اسکن می‌کنی، تا کالاهای درست به مشتری درست برسند. خیلی از جمع‌کننده‌های سفارش با یک وسیلهٔ کوچک کار می‌کنند که آن‌ها را بالا می‌برد، یا با ریچ‌تراک برای قفسه‌های بلند. فقط وقتی با آن‌ها کار کن که آموزشش را دیده‌ای، اغلب با گواهی‌نامه. روی مسیرهای عابر راه برو، و از لیفتراک‌هایی که در حرکت‌اند دور بمان: راننده همیشه نمی‌تواند تو را ببیند. در سردخانه یا اتاق انجماد، لباس گرم، دستکش و کلاهی را که از محل کار می‌گیری بپوش. استراحت‌های گرم شدنت را بگیر، و وقتی داخل می‌روی به کسی بگو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen
-    'c.orderpick.p': "می‌روم کمی در غذاخوری گرم شوم.", // nieuw, nalezen
-    'c.orderpick.s': "باید به راهروی دیگر بروی. مسیر عابر دور می‌زند؛ مستقیم رد شدن، از بین لیفتراک‌ها، سریع‌تر است. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.orderpick.o1': "از مسیر عابر برو، حتی اگر طولانی‌تر است.", // nieuw, nalezen
-    'c.orderpick.o2': "سریع از بین لیفتراک‌ها بدو و رد شو.", // nieuw, nalezen
-    'c.orderpick.o3': "پیاده رد شو، و برای راننده‌ها دست تکان بده.", // nieuw, nalezen
-    'c.orderpick.w': "رانندهٔ لیفتراک اغلب نمی‌تواند تو را ببیند، مثلاً پشت یک بار بلند. روی مسیر عابر، انتظار آدم‌ها را دارند و امن است.", // nieuw, nalezen
+    'c.firstweeks': "دوباره بپرس: عادی است", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.b': "در هفته‌های اول، هیچ‌کس انتظار ندارد همه چیز را بدانی. اغلب یک بازدید آشنایی (rondleiding) داری و همکاری که راهنمایی‌ات می‌کند. اول نگاه کن، بعد خودت انجامش بده، در حالی که همکارت نگاه می‌کند. چیزی را فراموش کردی؟ دوباره بپرس: «Wil je het nog een keer laten zien?». این بهتر از حدس زدن است. کلمه‌ها و مرحله‌های جدید را در یک دفترچهٔ کوچک بنویس. بعضی قراردادها با یک دورهٔ آزمایشی (proeftijd) شروع می‌شوند: در این دوره تو یا کارفرمایت می‌توانید کار را سریع تمام کنید. بپرس آیا قراردادت دورهٔ آزمایشی دارد. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.p': "فراموشش کردم. می‌شود یک بار دیگر نشانم بدهی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.s': "دیروز همکارت به تو نشان داد چطور دستگاه را روشن کنی. امروز مرحلهٔ سوم یادت نیست. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.firstweeks.o1': "از همکارت می‌خواهی یک بار دیگر نشانت بدهد.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.firstweeks.o2': "حدس می‌زنی، و امتحانش می‌کنی.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.firstweeks.o3': "صبر می‌کنی تا کس دیگری آن را روشن کند.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'c.firstweeks.w': "دوباره پرسیدن در هفته‌های اول عادی است. حدس زدن کنار یک دستگاه می‌تواند خطرناک باشد، و وقت بیشتری می‌گیرد.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick': "روی مسیر عابر راه برو", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.b': "در یک انبار بزرگ، سفارش‌ها را با فهرست برداشت و اسکنر جمع می‌کنی: هر کالا را اسکن می‌کنی، تا کالاهای درست به مشتری درست برسند. خیلی از جمع‌کننده‌های سفارش با یک وسیلهٔ کوچک کار می‌کنند که آن‌ها را بالا می‌برد، یا با ریچ‌تراک برای قفسه‌های بلند. فقط وقتی با آن‌ها کار کن که آموزشش را دیده‌ای، اغلب با گواهی‌نامه. روی مسیرهای عابر راه برو، و از لیفتراک‌هایی که در حرکت‌اند دور بمان: راننده همیشه نمی‌تواند تو را ببیند. در سردخانه یا اتاق انجماد، لباس گرم، دستکش و کلاهی را که از محل کار می‌گیری بپوش. استراحت‌های گرم شدنت را بگیر، و وقتی داخل می‌روی به کسی بگو. قانون‌ها در هر شرکت فرق دارد: از سرپرستت بپرس قانون‌های محل کارت چیست.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.p': "می‌روم کمی در غذاخوری گرم شوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.s': "باید به راهروی دیگر بروی. مسیر عابر دور می‌زند؛ مستقیم رد شدن، از بین لیفتراک‌ها، سریع‌تر است. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o1': "از مسیر عابر برو، حتی اگر طولانی‌تر است.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o2': "سریع از بین لیفتراک‌ها بدو و رد شو.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.o3': "پیاده رد شو، و برای راننده‌ها دست تکان بده.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.orderpick.w': "رانندهٔ لیفتراک اغلب نمی‌تواند تو را ببیند، مثلاً پشت یک بار بلند. روی مسیر عابر، انتظار آدم‌ها را دارند و امن است.", // nieuw, nalezen // nagelezen AI 28 nov
     // four new lessons (27 November 2026).
-    'l.appraisal': "گفت‌وگو دربارهٔ عملکرد", // nieuw, nalezen
-    'w.functioneringsgesprek': "گفت‌وگو دربارهٔ عملکرد (صحبتی با سرپرستت دربارهٔ اینکه کارت چطور پیش می‌رود و چه می‌خواهی یاد بگیری)", // nieuw, nalezen
-    'w.beoordelingsgesprek': "جلسهٔ ارزیابی (صحبتی که در آن سرپرستت دربارهٔ کارت نظر می‌دهد و آن را ارزیابی می‌کند)", // nieuw, nalezen
-    'w.voorbereiden': "آماده کردن (برای چیزی آماده شدن)", // nieuw, nalezen
-    'w.goedgaan': "خوب پیش رفتن", // nieuw, nalezen
-    'w.doel': "هدف (چیزی که می‌خواهی به آن برسی)", // nieuw, nalezen
-    'w.voorgezien': "«دیده شد» امضا کردن (آن را خوانده‌ای؛ معنی‌اش این نیست که موافقی)", // nieuw, nalezen
-    's.appraisal.1': "برای این گفت‌وگو خوب آماده می‌شوم.", // nieuw, nalezen
-    's.appraisal.2': "دوست دارم چیز جدیدی یاد بگیرم.", // nieuw, nalezen
-    's.appraisal.3': "می‌توانم اول گزارش را بخوانم؟", // nieuw, nalezen
-    'd.appraisal.q': "هدفت برای سال بعد چیست؟", // nieuw, nalezen
-    'd.appraisal.a': "دوست دارم گواهی‌نامهٔ لیفتراکم را بگیرم.", // nieuw, nalezen
-    'c.appraisal': "گفت‌وگو دربارهٔ کارت: آماده شو، بخوان", // nieuw, nalezen
-    'c.appraisal.b': "خیلی از شرکت‌ها سالی یک یا دو بار دربارهٔ کارت با تو گفت‌وگو می‌کنند. در گفت‌وگو دربارهٔ عملکرد (functioneringsgesprek) با هم حرف می‌زنید: چه خوب پیش می‌رود، چه می‌تواند بهتر شود، و چه می‌خواهی یاد بگیری. در جلسهٔ ارزیابی (beoordelingsgesprek) سرپرستت کارت را ارزیابی می‌کند. این می‌تواند روی حقوقت یا یک قرارداد جدید اثر بگذارد. برای گفت‌وگو آماده شو: بنویس چه خوب پیش می‌رود، چه سخت است، و چه می‌خواهی یاد بگیری. اجازه داری یک دوره یا آموزش بخواهی. در آخر توافق‌هایی (afspraken) می‌کنید، اغلب در یک گزارش کوتاه. قبل از امضا آن را خوب بخوان، و یک کپی بخواه. موافق نیستی؟ «voor gezien» (دیده شد) امضا کن، نه «voor akkoord» (موافقم)، و نظر خودت را بنویس. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen
-    'c.appraisal.p': "آن را «دیده شد» امضا می‌کنم، نه «موافقم».", // nieuw, nalezen
-    'c.appraisal.s': "بعد از جلسهٔ ارزیابی، گزارش را برای امضا می‌گیری. به نظرت یک نکته در آن درست نیست. چه کار می‌کنی؟", // nieuw, nalezen
-    'c.appraisal.o1': "«voor gezien» امضا می‌کنی، و نظرت را می‌نویسی.", // nieuw, nalezen
-    'c.appraisal.o2': "سریع «voor akkoord» امضا می‌کنی، تا تمام شود.", // nieuw, nalezen
-    'c.appraisal.o3': "چیزی نمی‌گویی، و اصلاً امضا نمی‌کنی.", // nieuw, nalezen
-    'c.appraisal.w': "«Voor gezien» یعنی آن را خوانده‌ای، نه اینکه موافقی. وقتی این را بگویی و نظر خودت را بنویسی، سرپرستت می‌داند چه فکری می‌کنی.", // nieuw, nalezen
+    'l.appraisal': "گفت‌وگو دربارهٔ عملکرد", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.functioneringsgesprek': "گفت‌وگو دربارهٔ عملکرد (صحبتی با سرپرستت دربارهٔ اینکه کارت چطور پیش می‌رود و چه می‌خواهی یاد بگیری)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.beoordelingsgesprek': "جلسهٔ ارزیابی (صحبتی که در آن سرپرستت دربارهٔ کارت نظر می‌دهد و آن را ارزیابی می‌کند)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorbereiden': "آماده کردن (برای چیزی آماده شدن)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.goedgaan': "خوب پیش رفتن", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.doel': "هدف (چیزی که می‌خواهی به آن برسی)", // nieuw, nalezen // nagelezen AI 28 nov
+    'w.voorgezien': "«دیده شد» امضا کردن (آن را خوانده‌ای؛ معنی‌اش این نیست که موافقی)", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.1': "برای این گفت‌وگو خوب آماده می‌شوم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.2': "دوست دارم چیز جدیدی یاد بگیرم.", // nieuw, nalezen // nagelezen AI 28 nov
+    's.appraisal.3': "می‌توانم اول گزارش را بخوانم؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.appraisal.q': "هدفت برای سال بعد چیست؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'd.appraisal.a': "دوست دارم گواهی‌نامهٔ لیفتراکم را بگیرم.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal': "گفت‌وگو دربارهٔ کارت: آماده شو، بخوان", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.b': "خیلی از شرکت‌ها سالی یک یا دو بار دربارهٔ کارت با تو گفت‌وگو می‌کنند. در گفت‌وگو دربارهٔ عملکرد (functioneringsgesprek) با هم حرف می‌زنید: چه خوب پیش می‌رود، چه می‌تواند بهتر شود، و چه می‌خواهی یاد بگیری. در جلسهٔ ارزیابی (beoordelingsgesprek) سرپرستت کارت را ارزیابی می‌کند. این می‌تواند روی حقوقت یا یک قرارداد جدید اثر بگذارد. برای گفت‌وگو آماده شو: بنویس چه خوب پیش می‌رود، چه سخت است، و چه می‌خواهی یاد بگیری. اجازه داری یک دوره یا آموزش بخواهی. در آخر توافق‌هایی (afspraken) می‌کنید، اغلب در یک گزارش کوتاه. قبل از امضا آن را خوب بخوان، و یک کپی بخواه. موافق نیستی؟ «voor gezien» (دیده شد) امضا کن، نه «voor akkoord» (موافقم)، و نظر خودت را بنویس. اطلاعات کلی. برای وضعیت خودت: از کارفرما، اتحادیهٔ کارگری یا Juridisch Loket بپرس.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.p': "آن را «دیده شد» امضا می‌کنم، نه «موافقم».", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.s': "بعد از جلسهٔ ارزیابی، گزارش را برای امضا می‌گیری. به نظرت یک نکته در آن درست نیست. چه کار می‌کنی؟", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o1': "«voor gezien» امضا می‌کنی، و نظرت را می‌نویسی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o2': "سریع «voor akkoord» امضا می‌کنی، تا تمام شود.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.o3': "چیزی نمی‌گویی، و اصلاً امضا نمی‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
+    'c.appraisal.w': "«Voor gezien» یعنی آن را خوانده‌ای، نه اینکه موافقی. وقتی این را بگویی و نظر خودت را بنویسی، سرپرستت می‌داند چه فکری می‌کنی.", // nieuw, nalezen // nagelezen AI 28 nov
   },
 };
 
