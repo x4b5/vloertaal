@@ -1276,7 +1276,7 @@ const t: CultureTranslation = {
     'w.totenmet': "do … włącznie (ostatni dzień też się liczy)",
     's.dates.1': "Mogę od poniedziałku do czwartku włącznie.",
     's.dates.2': "W przyszłym tygodniu pracuję cztery dni.",
-    's.dates.3': { m: "W zeszłym tygodniu pracowałem czterdzieści godzin.", f: "W zeszłym tygodniu pracowałam czterdzieści godzin.", x: 'W zeszłym tygodniu moja praca trwała czterdzieści godzin.' }, // x: nieuw, nalezen (AI-correctie 28 nov 2026)
+    's.dates.3': { m: "W zeszłym tygodniu pracowałem czterdzieści godzin.", f: "W zeszłym tygodniu pracowałam czterdzieści godzin.", x: 'W zeszłym tygodniu wyszło mi czterdzieści godzin pracy.' }, // x: nieuw, nalezen (AI-correctie 28 nov 2026)
     'c.dates.q': "Jaka jest dzisiaj data?",
     'c.dates.a': "Jest poniedziałek, trzeci czerwca.",
     'l.permit': "Dokumenty, integracja i twoja praca", // nagelezen AI 22 nov

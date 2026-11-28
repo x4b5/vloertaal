@@ -445,7 +445,7 @@ const t: CultureTranslation = {
     'w.ladder': 'la escalera de mano',
     'w.boor': 'el taladro',
     'w.hamer': 'el martillo',
-    'w.beton': 'el hormigón', // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'w.beton': 'el hormigón, el concreto', // nieuw, nalezen // nagelezen AI 28 nov
     'w.kraan': 'la grúa',
     's.tools.1': 'Pásame el martillo un momento.',
     's.tools.2': 'La escalera está apoyada en el andamio.',
@@ -1441,7 +1441,7 @@ const t: CultureTranslation = {
     'c.garage.a': "Sí. ¿Dónde están los neumáticos de invierno?", // nieuw, nalezen // nagelezen AI 28 nov
     'l.carjob': "El cliente decide", // nieuw, nalezen // nagelezen AI 28 nov
     'w.proefrit': "la prueba de conducción", // nieuw, nalezen // nagelezen AI 28 nov
-    'w.rijbewijs': "el carné de conducir", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'w.rijbewijs': "el carné de conducir, la licencia de conducir", // nieuw, nalezen // nagelezen AI 28 nov
     'w.akkoord': "de acuerdo, vale (dices que sí)", // nieuw, nalezen // nagelezen AI 28 nov
     'w.kosten': "los costes (lo que hay que pagar)", // nieuw, nalezen // nagelezen AI 28 nov
     'w.repareren': "reparar, arreglar", // nieuw, nalezen // nagelezen AI 28 nov
@@ -1728,7 +1728,7 @@ const t: CultureTranslation = {
     'w.snijhandschoen': "el guante anticorte (un guante contra los cortes)", // nieuw, nalezen // nagelezen AI 28 nov
     'w.vriescel': "la cámara de congelación (una sala muy fría)", // nieuw, nalezen // nagelezen AI 28 nov
     'w.sieraden': "las joyas (un anillo, un reloj, unos pendientes)", // nieuw, nalezen // nagelezen AI 28 nov
-    'w.pleister': "la tirita", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'w.pleister': "la tirita, la curita (para un corte pequeño)", // nieuw, nalezen // nagelezen AI 28 nov
     'w.vlees': "la carne", // nieuw, nalezen // nagelezen AI 28 nov
     's.food.1': "Me quito las joyas.", // nieuw, nalezen // nagelezen AI 28 nov
     's.food.2': "¿Dónde están los guantes anticorte?", // nieuw, nalezen // nagelezen AI 28 nov
@@ -2249,7 +2249,7 @@ const t: CultureTranslation = {
     'c.onoff.w': "Tu compañero quizá ve algo que tú no ves. Primero parar, luego hablar: así todos están seguros.", // nieuw, nalezen // nagelezen AI 22 nov
     'l.fillempty': "Empujar, tirar, llenar", // nieuw, nalezen // nagelezen AI 28 nov
     'w.duwen': "empujar", // nieuw, nalezen // nagelezen AI 28 nov
-    'w.trekken': "tirar (hacia ti)", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'w.trekken': "tirar (hacia ti), jalar", // nieuw, nalezen // nagelezen AI 28 nov
     'w.vullen': "llenar", // nieuw, nalezen // nagelezen AI 28 nov
     'w.leegmaken': "vaciar", // nieuw, nalezen // nagelezen AI 28 nov
     'w.schoonmaken': "limpiar", // nieuw, nalezen // nagelezen AI 28 nov

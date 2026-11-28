@@ -643,7 +643,7 @@ const lang: HelpLanguageSource = {
     'l.things': 'Cosas del almacén',
     'w.doos': 'la caja',
     'w.pallet': 'el palé',
-    'w.heftruck': 'la carretilla elevadora', // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'w.heftruck': 'la carretilla elevadora, el montacargas', // nieuw, nalezen // nagelezen AI 28 nov
     'w.kar': 'el carro (de mano)',
     'w.stelling': 'la estantería',
     'w.scanner': 'el escáner',

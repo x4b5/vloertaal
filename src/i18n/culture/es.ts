@@ -268,7 +268,7 @@ const t: CultureTranslation = {
     'd.talkintime.q': '¿Tienes un momento? Hay algo que me molesta.', // nieuw, nalezen // nagelezen AI 28 nov
     'd.talkintime.a': 'Claro. ¿Qué pasa?', // nieuw, nalezen // nagelezen AI 28 nov
     'l.reachable': 'Estar localizable', // nieuw, nalezen // nagelezen AI 28 nov
-    'w.opnemen': 'contestar (el teléfono), coger', // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'w.opnemen': 'contestar (el teléfono), atender', // nieuw, nalezen // nagelezen AI 28 nov
     'w.gemisteoproep': 'la llamada perdida', // nieuw, nalezen // nagelezen AI 28 nov
     'w.voicemail': 'el buzón de voz', // nieuw, nalezen // nagelezen AI 28 nov
     'w.beltegoed': 'el saldo del teléfono (prepago)', // nieuw, nalezen // nagelezen AI 28 nov

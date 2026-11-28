@@ -2168,12 +2168,12 @@ const t: CultureTranslation = {
     // Logistiek at four lessons per unit (14 November 2026).
     'l.vancheck': "Verificarea dubei", // nieuw, nalezen // nagelezen AI 28 nov
     'w.schade': "dauna", // nieuw, nalezen // nagelezen AI 28 nov
-    'w.deuk': "adâncitura", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    'w.deuk': "îndoitura", // nieuw, nalezen // nagelezen AI 28 nov
     'w.spiegel': "oglinda", // nieuw, nalezen // nagelezen AI 28 nov
     'w.tanken': "a alimenta (a pune combustibil în dubă)", // nieuw, nalezen // nagelezen AI 28 nov
     'w.opladen': "a încărca (o dubă electrică, un telefon)", // nieuw, nalezen // nagelezen AI 28 nov
     'w.parkeren': "a parca", // nieuw, nalezen // nagelezen AI 28 nov
-    's.vancheck.1': "E o adâncitură în ușă.", // nieuw, nalezen (AI-correctie 28 nov 2026)
+    's.vancheck.1': "E o îndoitură în ușă.", // nieuw, nalezen // nagelezen AI 28 nov
     's.vancheck.2': "Dauna asta era deja acolo.", // nieuw, nalezen // nagelezen AI 28 nov
     's.vancheck.3': "Mai trebuie întâi să alimentez.", // nieuw, nalezen // nagelezen AI 28 nov
     'c.vancheck.q': "E totul în regulă cu duba?", // nieuw, nalezen // nagelezen AI 28 nov
