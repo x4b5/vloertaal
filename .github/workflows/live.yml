@@ -1,0 +1,45 @@
+name: Live
+
+# Is the new main really on vloertaal.nl? statichost.eu builds and publishes every push to main by
+# itself (statichost.yml); from 23 to 26 November 2026 those builds failed for four days and nobody
+# noticed. After each push to main this waits for https://vloertaal.nl/version.txt (written by the
+# build, vite.config.ts versionFile) to name this commit. If it does not within about 30 minutes,
+# the run fails: GitHub then mails whoever pushed, and the failure shows on the commit. Look in
+# the statichost dashboard for the build log (docs/livegang.md, "Staat het live?").
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# A newer push replaces the wait for an older one (statichost builds the newest main).
+concurrency:
+  group: live-check
+  cancel-in-progress: true
+
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Wait for this commit on vloertaal.nl
+        env:
+          SHA: ${{ github.sha }}
+        run: |
+          for i in $(seq 1 40); do
+            live=$(curl -fsS --max-time 20 -H 'Cache-Control: no-cache' "https://vloertaal.nl/version.txt?t=$(date +%s)" | tr -d '[:space:]' || true)
+            if [ -n "$live" ] && [ "${SHA#"$live"}" != "$SHA" ]; then
+              echo "vloertaal.nl runs $live (this commit, $SHA) after about $(( (i - 1) * 45 )) s."
+              echo "### Live: \`$live\`" >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
+            echo "Try $i: vloertaal.nl says '${live:-nothing}', waiting for ${SHA:0:8}…"
+            sleep 45
+          done
+          echo "::error title=Niet live::vloertaal.nl draait na 30 minuten nog niet ${SHA:0:8} (wel: '${live:-niets}'). Kijk in het dashboard van statichost naar het bouwlog (docs/livegang.md)."
+          echo "### Niet live na 30 minuten" >> "$GITHUB_STEP_SUMMARY"
+          echo "vloertaal.nl/version.txt zegt \`${live:-niets}\`, verwacht \`${SHA:0:8}\`. Kijk in het dashboard van statichost naar het bouwlog." >> "$GITHUB_STEP_SUMMARY"
+          exit 1

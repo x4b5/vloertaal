@@ -217,6 +217,22 @@ export function swSource(sw: string, files: { fileName: string; source: string |
     .replace(/^const FILES = \[\];$/m, `const FILES = ${JSON.stringify(assets.map((f) => `./${f}`))};`);
 }
 
+/**
+ * version.txt next to the site: this build's commit (buildVersion), one line. The check after each
+ * deploy (.github/workflows/live.yml) reads it to see that vloertaal.nl really runs the new main:
+ * from 23 to 26 November 2026 the site did not update for four days without anyone noticing
+ * (docs/livegang.md). Not cached long: public/_headers gives every page "no-cache".
+ */
+function versionFile(): Plugin {
+  return {
+    name: 'version-file',
+    apply: 'build',
+    generateBundle() {
+      this.emitFile({ type: 'asset', fileName: 'version.txt', source: `${buildVersion()}\n` });
+    },
+  };
+}
+
 function swBuild(): Plugin {
   let files: { fileName: string; source: string | Uint8Array }[] = [];
   let outDir = 'dist';
@@ -310,7 +326,7 @@ export default defineConfig({
   // 14.4 s), and the build on statichost.eu runs `npm test` first on a slower one: a test over its
   // time stops the build, and the site stays at the old version (from #398 on, the site did not update).
   test: { exclude: ['.claude/**', 'node_modules/**', 'dist/**'], testTimeout: 60000, setupFiles: ['tests/setup.tips.ts'] },
-  plugins: [react(), beLangSplit(), nonBlockingCss(), lazyScreenLinks(), voicesIndexFile(), updatesPagePlugin(), introPagePlugin(), langPagesPlugin(), swBuild()],
+  plugins: [react(), beLangSplit(), nonBlockingCss(), lazyScreenLinks(), voicesIndexFile(), updatesPagePlugin(), introPagePlugin(), langPagesPlugin(), swBuild(), versionFile()],
   build: {
     // Old, cheap phones (Android 7–10 with an old Chrome or Samsung Internet, iPhones on iOS 13–15):
     // Vite's own default is 'baseline-widely-available' (Chrome 111, iOS 16.4), whose ?. ?? ??= and
